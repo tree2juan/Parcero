@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn Colombian Spanish and practical English through context.">
+    <title>Parcero — Colombian Spanish in Context</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#lesson">Skip to lesson</a>
+    <header class="site-header">
+      <div>
+        <p class="eyebrow">Colombian Spanish in context</p>
+        <h1>Parcero</h1>
+      </div>
+      <button id="reset-progress" class="text-button" type="button">Reset progress</button>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="hero-title">
+        <p class="eyebrow">Learn how people actually speak</p>
+        <h2 id="hero-title">Language belongs in a conversation.</h2>
+        <p>Explore Colombian Spanish and practical English from either point of view—with context, culture, sound, and practice.</p>
+        <fieldset class="direction-picker">
+          <legend>I want to learn</legend>
+          <label><input type="radio" name="direction" value="es" checked> Colombian Spanish</label>
+          <label><input type="radio" name="direction" value="en"> English</label>
+        </fieldset>
+      </section>
+
+      <section class="progress-panel" aria-label="Your progress">
+        <div>
+          <p class="eyebrow">Your path</p>
+          <strong id="progress-label">0 of 1 lessons explored</strong>
+        </div>
+        <div class="progress-track" aria-hidden="true"><div id="progress-bar"></div></div>
+      </section>
+
+      <section id="lesson" class="lesson" aria-live="polite">
+        <div class="lesson-heading">
+          <p id="lesson-level" class="eyebrow"></p>
+          <h2 id="lesson-title"></h2>
+          <p id="lesson-situation"></p>
+        </div>
+
+        <div class="tabs" role="tablist" aria-label="Lesson sections">
+          <button class="tab active" type="button" role="tab" aria-selected="true" aria-controls="dialogue-panel" id="dialogue-tab" data-panel="dialogue-panel">Dialogue</button>
+          <button class="tab" type="button" role="tab" aria-selected="false" aria-controls="understand-panel" id="understand-tab" data-panel="understand-panel">Understand</button>
+          <button class="tab" type="button" role="tab" aria-selected="false" aria-controls="practice-panel" id="practice-tab" data-panel="practice-panel">Practice</button>
+        </div>
+
+        <section id="dialogue-panel" class="tab-panel" role="tabpanel" aria-labelledby="dialogue-tab">
+          <div id="dialogue" class="dialogue"></div>
+          <button id="listen-dialogue" class="primary-button" type="button">Listen to the target language</button>
+          <p id="speech-status" class="assistive-text" aria-live="polite"></p>
+        </section>
+
+        <section id="understand-panel" class="tab-panel" role="tabpanel" aria-labelledby="understand-tab" hidden>
+          <div id="vocabulary" class="vocabulary"></div>
+          <aside class="context-note">
+            <p class="eyebrow">Colombian context</p>
+            <p id="culture-note"></p>
+          </aside>
+        </section>
+
+        <section id="practice-panel" class="tab-panel" role="tabpanel" aria-labelledby="practice-tab" hidden>
+          <p id="practice-prompt" class="practice-prompt"></p>
+          <div id="choices" class="choices"></div>
+          <p id="practice-feedback" aria-live="polite"></p>
+          <button id="complete-lesson" class="primary-button" type="button">Mark lesson explored</button>
+        </section>
+      </section>
+    </main>
+
+    <footer>Made for curious conversations. Your progress stays on this device.</footer>
+    <script src="data/lessons.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
