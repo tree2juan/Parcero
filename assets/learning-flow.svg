@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="390" viewBox="0 0 1000 390" role="img" aria-labelledby="title description">
+  <title id="title">Parcero learning flow</title>
+  <desc id="description">Placement identifies knowledge gaps, then learners progress through contextual foundations to Year 12 local mastery, and can continue through academic or professional pathways.</desc>
+  <style>text{font-family:system-ui,sans-serif;fill:#17251f}.label{font-size:17px;font-weight:700}.small{font-size:13px}.box{stroke:#146c4d;stroke-width:2;rx:16}.arrow{stroke:#146c4d;stroke-width:3;fill:none;marker-end:url(#head)}</style>
+  <defs><marker id="head" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3z" fill="#146c4d"/></marker></defs>
+  <rect width="1000" height="390" fill="#fffdf8"/><text x="45" y="42" font-size="24" font-weight="800">A learning path built from evidence, not guesses</text>
+  <rect class="box" x="45" y="95" width="185" height="105" fill="#eaf2e8"/><text class="label" x="64" y="132">1. Placement</text><text class="small" x="64" y="158">Five skill signals</text><text class="small" x="64" y="178">“I don’t know” = gap</text>
+  <path class="arrow" d="M230 147H286"/><rect class="box" x="290" y="95" width="185" height="105" fill="#eaf2e8"/><text class="label" x="309" y="132">2. Context first</text><text class="small" x="309" y="158">Dialogue · use · sound</text><text class="small" x="309" y="178">Regional awareness</text>
+  <path class="arrow" d="M475 147H531"/><rect class="box" x="535" y="95" width="200" height="105" fill="#cce56f"/><text class="label" x="554" y="132">3. Year 12 mastery</text><text class="small" x="554" y="158">Read, write, speak, listen</text><text class="small" x="554" y="178">as a capable local</text>
+  <path class="arrow" d="M735 147H791"/><rect class="box" x="795" y="95" width="160" height="105" fill="#fff0e9"/><text class="label" x="814" y="132">4. Choose path</text><text class="small" x="814" y="158">Academic or</text><text class="small" x="814" y="178">professional</text>
+  <path class="arrow" d="M875 200V255H705"/><path class="arrow" d="M875 200V255H320"/>
+  <rect class="box" x="75" y="260" width="245" height="82" fill="#eaf2e8"/><text class="label" x="94" y="294">Academic pathway</text><text class="small" x="94" y="318">Lectures · research · argument</text>
+  <rect class="box" x="705" y="260" width="245" height="82" fill="#fff0e9"/><text class="label" x="724" y="294">Professional pathway</text><text class="small" x="724" y="318">Workplace situations · register</text>
+</svg>

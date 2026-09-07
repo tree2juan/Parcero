@@ -1,6 +1,10 @@
 const lessons = [{
   id: "greeting-at-the-cafe",
   level: "Starter · Everyday life",
+  skills: ["listening", "speaking", "context", "pronunciation"],
+  domain: "everyday life",
+  register: "friendly informal",
+  pathways: ["foundation", "professional-customer-service"],
   es: {
     title: "Un café y una conversación",
     situation: "Pides un café en una tienda de barrio de Bogotá.",

@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-    <a class="skip-link" href="#lesson">Skip to lesson</a>
+    <a class="skip-link" href="#placement">Skip to placement</a>
     <header class="site-header">
       <div>
         <p class="eyebrow">Colombian Spanish in context</p>
@@ -29,7 +29,24 @@
         </fieldset>
       </section>
 
-      <section class="progress-panel" aria-label="Your progress">
+      <section id="placement" class="placement" aria-labelledby="placement-title">
+        <p class="eyebrow">Start here</p>
+        <h2 id="placement-title">Find your next best step.</h2>
+        <p id="placement-intro">Answer from experience, not a guess. “I don’t know” helps us find what to focus on.</p>
+        <div id="assessment" aria-live="polite"></div>
+        <button id="assessment-next" class="primary-button" type="button">Next question</button>
+        <section id="placement-result" hidden aria-live="polite"></section>
+      </section>
+
+      <section id="roadmap" class="roadmap" aria-labelledby="roadmap-title" hidden>
+        <p class="eyebrow">Your roadmap</p>
+        <h2 id="roadmap-title">Build toward confident, local fluency.</h2>
+        <p id="focus-summary"></p>
+        <img class="flow-image" src="assets/learning-flow.svg" alt="Learning flow from placement through contextual foundations and Year 12 local mastery, continuing to academic and professional pathways.">
+        <div id="pathways" class="pathways"></div>
+      </section>
+
+      <section class="progress-panel" aria-label="Your lesson progress">
         <div>
           <p class="eyebrow">Your path</p>
           <strong id="progress-label">0 of 1 lessons explored</strong>
