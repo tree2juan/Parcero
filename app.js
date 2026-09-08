@@ -28,6 +28,18 @@ const state = {
 };
 const lesson = lessons[0];
 const $ = (selector) => document.querySelector(selector);
+function renderVerbs(query = "") {
+  const search = query.trim().toLowerCase();
+  const matches = curriculum.filter((verb) => !search || `${verb.spanish} ${verb.english}`.toLowerCase().includes(search));
+  $("#verb-count").textContent = `${matches.length} of ${curriculum.length} high-frequency verbs`;
+  $("#verb-results").innerHTML = matches.map((verb) => `<article class="reference-card"><h3>${verb.spanish} <small>— ${verb.english}</small></h3><p><strong>Useful forms:</strong> yo ${verb.forms.presentYo}; ayer ${verb.forms.preteriteYo}; ${verb.forms.participle}</p><span class="tag">${verb.level}</span><span class="tag">${verb.register}</span><span class="tag">${verb.regionality}</span></article>`).join("");
+}
+function renderFluency() {
+  $("#fluency-results").innerHTML = fluencyItems.map(([spanish, english, type, region, note]) => `<article class="reference-card"><h3>${spanish}</h3><p><strong>${english}</strong></p><p>${note}</p><span class="tag">${type}</span><span class="tag">${region}</span></article>`).join("");
+}
+function renderMature() {
+  $("#mature-results").innerHTML = matureItems.map(([phrase, equivalent, severity, note]) => `<article class="reference-card"><h3>${phrase}</h3><p><strong>${equivalent}</strong></p><p>${note}</p><span class="tag">Severity: ${severity}</span><span class="tag">Recognition & safety</span></article>`).join("");
+}
 function content() { return lesson[state.direction]; }
 function save() {
   localStorage.setItem("parcero-direction", state.direction);
@@ -130,4 +142,27 @@ $("#listen-dialogue").addEventListener("click", () => {
   speechSynthesis.speak(utterance);
   $("#speech-status").textContent = "Playing dialogue.";
 });
+$("#verb-search").addEventListener("input", (event) => renderVerbs(event.target.value));
+document.querySelectorAll(".library-tab").forEach((tab) => tab.addEventListener("click", () => {
+  document.querySelectorAll(".library-tab").forEach((item) => {
+    const active = item === tab;
+    item.classList.toggle("active", active);
+    item.setAttribute("aria-selected", active);
+    $(`#${item.dataset.library}-library`).hidden = !active;
+  });
+}));
+$("#mature-confirm").addEventListener("change", (event) => { $("#mature-open").disabled = !event.target.checked; });
+$("#mature-open").addEventListener("click", () => {
+  localStorage.setItem("parcero-mature-enabled", "true");
+  $("#mature-gate").hidden = true;
+  $("#mature-results").hidden = false;
+  renderMature();
+});
+if (localStorage.getItem("parcero-mature-enabled") === "true") {
+  $("#mature-gate").hidden = true;
+  $("#mature-results").hidden = false;
+  renderMature();
+}
+renderVerbs();
+renderFluency();
 render();

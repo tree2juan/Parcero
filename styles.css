@@ -27,6 +27,7 @@ h2 { font-size: clamp(2rem, 5vw, 3.75rem); line-height: 1.05; }
 .direction-picker label { padding: .6rem .85rem; border: 1px solid var(--line); border-radius: 99px; }
 .progress-panel { display: grid; gap: .75rem; padding: 1.25rem; background: var(--mist); border-radius: 1rem; }
 .placement, .roadmap { padding-block: 3.5rem 1rem; max-width: 760px; }
+.library { padding-block: 3.5rem 1rem; }
 .placement h2, .roadmap h2 { font-size: clamp(1.8rem, 4vw, 2.8rem); }
 .assessment-card { padding: 1.5rem; margin-block: 1.5rem; border: 1px solid var(--line); border-radius: 1rem; background: #fff; }
 .assessment-card h3 { margin-top: 0; font-size: 1.25rem; }
@@ -39,6 +40,19 @@ h2 { font-size: clamp(2rem, 5vw, 3.75rem); line-height: 1.05; }
 .pathways { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 1rem; }
 .pathway { padding: 1.1rem; border-radius: .75rem; background: #fff0e9; }
 .pathway h3 { margin-top: 0; }
+.search-label { display: grid; gap: .5rem; max-width: 32rem; margin-block: 1.5rem; font-weight: 700; }
+input[type="search"] { padding: .75rem; border: 1px solid var(--line); border-radius: .5rem; }
+.library-tab { border: 0; background: transparent; color: var(--ink); padding: .75rem 1rem; }
+.library-tab.active { border-bottom: 3px solid var(--green); font-weight: 800; }
+.library-panel { padding-block: 1.5rem; }
+.reference-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 1rem; }
+.reference-card { padding: 1rem; border: 1px solid var(--line); border-radius: .75rem; background: white; }
+.reference-card h3 { margin: 0; }
+.reference-card p { margin: .4rem 0; }
+.tag { display: inline-block; margin: .3rem .25rem 0 0; padding: .15rem .45rem; border-radius: 99px; background: var(--mist); font-size: .78rem; font-weight: 700; }
+.source-note { margin-top: 1.5rem; color: #526059; font-size: .9rem; }
+.mature-gate { max-width: 650px; padding: 1.5rem; border-left: .35rem solid var(--clay); background: #fff0e9; }
+.mature-gate label { display: block; margin-block: 1rem; font-weight: 700; }
 .progress-track { height: .6rem; background: white; border-radius: 1rem; overflow: hidden; }
 #progress-bar { height: 100%; width: 0; background: var(--green); transition: width .2s; }
 .lesson { padding-block: 4rem; }

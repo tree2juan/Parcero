@@ -29,7 +29,9 @@ Then visit `http://localhost:8000`.
 
 ## Content contributions
 
-Lessons live in `data/lessons.js`. Keep both translations, context, pronunciation, cultural notes, and practice prompts together. Tag each lesson with its skills, domain, register, and learning pathways. Avoid presenting a regional expression as universal Spanish; identify its Colombian usage and invite Colombian Spanish and English-language education specialists to review new placement or pathway content before publishing.
+Lessons live in `data/lessons.js`, and the verb and fluency starting lists live in `data/curriculum.js`. The 200-verb list is a source-attributed frequency starting point, not a claim of a final Colombian ranking. Keep both translations, context, pronunciation, cultural notes, and practice prompts together. Tag each lesson with its skills, domain, register, and learning pathways. Avoid presenting a regional expression as universal Spanish; identify its Colombian usage and invite Colombian Spanish and English-language education specialists to review new placement or pathway content before publishing.
+
+The mature-language reference is opt-in, educational, and recognition-focused. Review severity, local usage, and de-escalation guidance with qualified reviewers; do not add content that encourages harassment or abuse.
 
 ## Deployment
 
