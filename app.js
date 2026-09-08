@@ -32,7 +32,7 @@ function renderVerbs(query = "") {
   const search = query.trim().toLowerCase();
   const matches = curriculum.filter((verb) => !search || `${verb.spanish} ${verb.english}`.toLowerCase().includes(search));
   $("#verb-count").textContent = `${matches.length} of ${curriculum.length} high-frequency verbs`;
-  $("#verb-results").innerHTML = matches.map((verb) => `<article class="reference-card"><h3>${verb.spanish} <small>— ${verb.english}</small></h3><p><strong>Useful forms:</strong> yo ${verb.forms.presentYo}; ayer ${verb.forms.preteriteYo}; ${verb.forms.participle}</p><span class="tag">${verb.level}</span><span class="tag">${verb.register}</span><span class="tag">${verb.regionality}</span></article>`).join("");
+  $("#verb-results").innerHTML = matches.map((verb) => `<article class="reference-card"><h3><span lang="es">${verb.spanish}</span> <small>— ${verb.english}</small></h3><p><strong>Useful forms:</strong> <span lang="es">yo ${verb.forms.presentYo}; ayer ${verb.forms.preteriteYo}; ${verb.forms.participle}</span></p><span class="tag">${verb.level}</span><span class="tag">${verb.register}</span><span class="tag">${verb.regionality}</span></article>`).join("");
 }
 function renderFluency() {
   $("#fluency-results").innerHTML = fluencyItems.map(([spanish, english, type, region, note]) => `<article class="reference-card"><h3>${spanish}</h3><p><strong>${english}</strong></p><p>${note}</p><span class="tag">${type}</span><span class="tag">${region}</span></article>`).join("");
@@ -83,12 +83,13 @@ function completePlacement() {
 }
 function render() {
   const current = content();
-  document.documentElement.lang = state.direction === "es" ? "es" : "en";
+  document.documentElement.lang = "en";
   $("#lesson-level").textContent = lesson.level;
   $("#lesson-title").textContent = current.title;
   $("#lesson-situation").textContent = current.situation;
-  $("#dialogue").innerHTML = current.dialogue.map(([speaker, target, translation, pronunciation]) => `<article class="line"><strong>${speaker}</strong><div>${target}</div><p class="translation">${translation}</p><p class="pronunciation">${pronunciation}</p></article>`).join("");
-  $("#vocabulary").innerHTML = current.vocabulary.map(([word, meaning]) => `<article class="word-card"><h3>${word}</h3><p>${meaning}</p></article>`).join("");
+  const targetLanguage = state.direction === "es" ? ' lang="es"' : "";
+  $("#dialogue").innerHTML = current.dialogue.map(([speaker, target, translation, pronunciation]) => `<article class="line"><strong>${speaker}</strong><div${targetLanguage}>${target}</div><p class="translation">${translation}</p><p class="pronunciation">${pronunciation}</p></article>`).join("");
+  $("#vocabulary").innerHTML = current.vocabulary.map(([word, meaning]) => `<article class="word-card"><h3${targetLanguage}>${word}</h3><p>${meaning}</p></article>`).join("");
   $("#culture-note").textContent = current.note;
   $("#practice-prompt").textContent = current.prompt;
   $("#choices").innerHTML = current.choices.map((choice, index) => `<button class="choice" type="button" data-answer="${index}">${choice}</button>`).join("");
