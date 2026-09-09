@@ -71,7 +71,7 @@ function flashcardsFromLesson(lesson, direction) {
     cards.push({
       id: `${key}/vocabulary/${index}`,
       kind: "vocabulary",
-      ask: "What does this mean here?",
+      askKey: "deck.ask.vocabulary",
       front: term,
       frontLang: target,
       back: meaning,
@@ -84,7 +84,8 @@ function flashcardsFromLesson(lesson, direction) {
     cards.push({
       id: `${key}/meaning/${index}`,
       kind: "meaning",
-      ask: `${speaker} says this. What does it mean?`,
+      askKey: "deck.ask.meaning",
+      askValues: { speaker },
       front: line,
       frontLang: target,
       back: translation,
@@ -97,7 +98,7 @@ function flashcardsFromLesson(lesson, direction) {
     cards.push({
       id: `${key}/pronunciation/${index}`,
       kind: "pronunciation",
-      ask: "How would you say this out loud?",
+      askKey: "deck.ask.pronunciation",
       front: line,
       frontLang: target,
       back: pronunciation,
@@ -110,7 +111,7 @@ function flashcardsFromLesson(lesson, direction) {
     cards.push({
       id: `${key}/context`,
       kind: "context",
-      ask: "Why does the language work the way it does here?",
+      askKey: "deck.ask.context",
       front: content.situation,
       frontLang: target,
       back: content.note,
@@ -124,7 +125,7 @@ function flashcardsFromLesson(lesson, direction) {
     cards.push({
       id: `${key}/practice`,
       kind: "practice",
-      ask: "Answer from the situation, not from a dictionary.",
+      askKey: "deck.ask.practice",
       front: content.prompt,
       frontLang: null,
       back: answer,
@@ -149,7 +150,7 @@ function flashcardFromVerb(verb, direction) {
   return {
     id: `${verb.id}/${direction}`,
     kind: "verb",
-    ask: "Say it in the language you are learning.",
+    askKey: "deck.ask.verb",
     front: known,
     frontLang: support,
     back: learning,
@@ -166,7 +167,7 @@ function flashcardFromFluency(item, index, direction) {
   return {
     id: `fluency/${index}/${direction}`,
     kind: "fluency",
-    ask: "How would you say this naturally?",
+    askKey: "deck.ask.fluency",
     front: target === "es" ? english : spanish,
     frontLang: support,
     back: target === "es" ? spanish : english,
@@ -180,6 +181,10 @@ function flashcardFromFluency(item, index, direction) {
  * studied, then the verbs behind them, then the phrases that hold a
  * conversation together. Levels are read from the data rather than listed
  * here, so a new verb level becomes a new topic on its own.
+ *
+ * Wording is emitted as i18n keys, not sentences. A topic that carries real
+ * content — a lesson's own title and level — passes it straight through,
+ * because that is already authored in both directions.
  */
 function flashcardTopics(direction, sources) {
   const { lessons = [], curriculum = [], fluencyItems = [] } = sources || {};
@@ -190,7 +195,7 @@ function flashcardTopics(direction, sources) {
     if (!cards.length) continue;
     topics.push({
       id: `lesson-${lesson.id}`,
-      group: "Situations",
+      groupKey: "deck.group.situations",
       title: lesson[direction].title,
       meta: lesson.level,
       cards
@@ -202,9 +207,14 @@ function flashcardTopics(direction, sources) {
     if (!cards.length) continue;
     topics.push({
       id: `verbs-${flashcardSlug(level)}`,
-      group: "Verbs",
-      title: `Verbs · ${flashcardSentenceCase(level)}`,
-      meta: `${cards.length} high-frequency verbs`,
+      groupKey: "deck.group.verbs",
+      titleKey: "deck.topic.verbs",
+      // A level the string table has never seen still names itself, in the
+      // wording the data used. Untranslated beats blank.
+      levelKey: `deck.level.${flashcardSlug(level)}`,
+      level: flashcardSentenceCase(level),
+      metaKey: "deck.meta.verbs",
+      metaCount: cards.length,
       cards
     });
   }
@@ -213,9 +223,10 @@ function flashcardTopics(direction, sources) {
   if (fluency.length) {
     topics.push({
       id: "fluency",
-      group: "Fluency",
-      title: "Connectors and softeners",
-      meta: `${fluency.length} phrases that keep a conversation moving`,
+      groupKey: "deck.group.fluency",
+      titleKey: "deck.topic.fluency",
+      metaKey: "deck.meta.fluency",
+      metaCount: fluency.length,
       cards: fluency
     });
   }
@@ -228,16 +239,11 @@ function flashcardSets(direction, sources, size = FLASHCARD_SET_SIZE) {
   return flashcardTopics(direction, sources).flatMap((topic) => {
     const groups = flashcardSplit(topic.cards, size);
     return groups.map((cards, index) => ({
+      ...topic,
       id: `${topic.id}/${index + 1}`,
       topicId: topic.id,
-      group: topic.group,
-      title: topic.title,
-      meta: topic.meta,
       index,
       total: groups.length,
-      label: groups.length === 1
-        ? `${cards.length} cards`
-        : `Set ${index + 1} of ${groups.length} · ${cards.length} cards`,
       cards
     }));
   });

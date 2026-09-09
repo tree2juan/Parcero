@@ -106,6 +106,8 @@ There is no flashcard content file. `data/flashcards.js` reads the same `lessons
 
 So adding a lesson to `data/lessons.js` adds a flashcard topic. Adding verbs adds cards to the matching level. Nothing has to be written twice, and no card can drift out of sync with the lesson it came from. The decks follow the language direction toggle, and switching direction keeps your place in the set.
 
+The surrounding interface follows the direction too. `data/flashcards.js` emits i18n keys rather than sentences — `deck.ask.pronunciation`, not `"How would you say this out loud?"` — and `flashcards.js` resolves them through `i18n.js` at paint time, so the prompts, controls and screen-reader announcements are in the learner's own language. A test derives the key list from the real content, so a new verb level that nobody has translated yet is caught rather than shipped.
+
 Sets are split evenly rather than greedily, so a topic never ends in a stub round — 13 cards become 7 + 6, not 10 + 3. `FLASHCARD_SET_SIZE` in `data/flashcards.js` is the single knob for the target size.
 
 ## Placement and pathways
@@ -230,6 +232,7 @@ The mature-language reference needs the same care from qualified reviewers — s
 ```
 index.html          The whole app shell — every element id app.js binds to
 app.js              Rendering, placement scoring, lesson navigation, progress
+i18n.js             Interface strings for both languages, and applyI18n()
 flashcards.js       Swipeable flashcard decks: gestures, round queue, reset
 review.js           Review anchors: parse, resolve, validate, build issue payloads
 review-ui.js        The Report an error tab: content picker, report form, queue, issue export

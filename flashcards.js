@@ -39,6 +39,47 @@
     fluency: "Fluency"
   };
 
+  /*
+   * i18n.js loads before this file, but the app must not break if it does not.
+   * Every lookup falls back to the English wording the markup already ships.
+   */
+  const FALLBACK = {
+    "deck.showAnswer": "Show answer",
+    "deck.hideAnswer": "Hide answer",
+    "deck.badge.known": "Knew it",
+    "deck.badge.again": "Review again",
+    "deck.hint.swipe": "Swipe left if you knew it, right to see it again",
+    "deck.hint.tap": "Tap to show the answer"
+  };
+
+  function t(key, values) {
+    if (window.ParceroI18n) {
+      const text = window.ParceroI18n.t(key, currentDirection(), values);
+      if (text !== key) return text;
+    }
+    return FALLBACK[key] !== undefined ? FALLBACK[key] : key;
+  }
+
+  function tp(key, count, values) {
+    return window.ParceroI18n
+      ? window.ParceroI18n.tPlural(key, currentDirection(), count, values)
+      : t(`${key}.${Math.abs(count) === 1 ? "one" : "other"}`, { count, ...(values || {}) });
+  }
+
+  /* A key the table has never seen leaves the authored wording in place. */
+  const tOr = (key, fallback) => {
+    const text = t(key);
+    return text === key ? fallback : text;
+  };
+
+  const topicTitle = (set) => (set.titleKey
+    ? t(set.titleKey, { level: set.levelKey ? tOr(set.levelKey, set.level) : set.level })
+    : set.title);
+
+  const setLabel = (set) => (set.total === 1
+    ? tp("deck.label.cards", set.cards.length)
+    : tp("deck.label.set", set.cards.length, { index: set.index + 1, total: set.total }));
+
   const CARD_SHELL = `
     <div class="flashcard-face">
       <span class="flashcard-tag"></span>
@@ -115,15 +156,15 @@
     for (const set of deck.sets) {
       if (seen.has(set.topicId)) continue;
       seen.add(set.topicId);
-      if (set.group !== group) {
-        group = set.group;
+      if (set.groupKey !== group) {
+        group = set.groupKey;
         holder = document.createElement("optgroup");
-        holder.label = group;
+        holder.label = t(group);
         select.append(holder);
       }
       const option = document.createElement("option");
       option.value = set.topicId;
-      option.textContent = set.title;
+      option.textContent = topicTitle(set);
       (holder || select).append(option);
     }
   }
@@ -135,7 +176,8 @@
     for (const set of deck.sets.filter((item) => item.topicId === topicId)) {
       const option = document.createElement("option");
       option.value = set.id;
-      option.textContent = done.has(set.id) ? `${set.label} · done` : set.label;
+      const label = setLabel(set);
+      option.textContent = done.has(set.id) ? t("deck.label.done", { label }) : label;
       select.append(option);
     }
   }
@@ -172,18 +214,18 @@
     const total = set ? set.cards.length : 0;
     const card = currentCard();
     const finished = Boolean(set) && !card;
-    $("#deck-progress").textContent = `${deck.known.size} of ${total} known`;
+    $("#deck-progress").textContent = t("deck.progress", { known: deck.known.size, total });
     $("#deck-bar").style.width = total ? `${Math.round((deck.known.size / total) * 100)}%` : "0%";
     $("#deck-tally").textContent = finished
-      ? "Nothing left in this round."
-      : `${deck.queue.length} still in this round${deck.repeats ? ` · ${deck.repeats} cycled back` : ""}`;
+      ? t("deck.tally.none")
+      : tp("deck.tally", deck.queue.length) + (deck.repeats ? t("deck.tally.cycled", { count: deck.repeats }) : "");
     $("#deck-card").hidden = finished;
     $("#deck-summary").hidden = !finished;
     $("#deck-known").disabled = finished;
     $("#deck-flip").disabled = finished;
     $("#deck-review").disabled = finished;
     if (finished) {
-      $("#deck-flip").textContent = "Show answer";
+      $("#deck-flip").textContent = t("deck.showAnswer");
       paintSummary(total);
     } else if (card) {
       paintCard(card);
@@ -198,8 +240,10 @@
   function paintCard(card) {
     const root = $("#deck-card");
     if (!root.querySelector(".flashcard-face")) root.innerHTML = CARD_SHELL;
-    root.querySelector(".flashcard-tag").textContent = KIND_LABELS[card.kind] || card.kind;
-    root.querySelector(".flashcard-ask").textContent = card.ask;
+    root.querySelector(".flashcard-tag").textContent = tOr(`deck.kind.${card.kind}`, KIND_LABELS[card.kind] || card.kind);
+    root.querySelector(".flashcard-ask").textContent = t(card.askKey, card.askValues);
+    root.querySelector(".swipe-badge-known").textContent = t("deck.badge.known");
+    root.querySelector(".swipe-badge-again").textContent = t("deck.badge.again");
     const front = root.querySelector(".flashcard-front");
     front.textContent = card.front;
     setLang(front, card.frontLang);
@@ -211,26 +255,26 @@
     note.hidden = !card.note;
     root.querySelector(".flashcard-answer").hidden = !deck.revealed;
     root.querySelector(".flashcard-hint").textContent = deck.revealed
-      ? "Swipe left if you knew it, right to see it again"
-      : "Tap to show the answer";
+      ? t("deck.hint.swipe")
+      : t("deck.hint.tap");
     root.dataset.kind = card.kind;
     root.classList.toggle("is-revealed", deck.revealed);
-    $("#deck-flip").textContent = deck.revealed ? "Hide answer" : "Show answer";
+    $("#deck-flip").textContent = deck.revealed ? t("deck.hideAnswer") : t("deck.showAnswer");
   }
 
   function paintSummary(total) {
     const set = currentSet();
     const clean = deck.repeats === 0;
-    $("#deck-summary-title").textContent = clean ? "Clean run." : "That set has stuck.";
+    $("#deck-summary-title").textContent = clean ? t("deck.summary.clean") : t("deck.summary.repeat");
     $("#deck-summary-detail").textContent = clean
-      ? `All ${total} cards, first time through.`
-      : `${total} cards, and ${deck.repeats} came back around before you had them.`;
+      ? t("deck.summary.cleanDetail", { total })
+      : t("deck.summary.repeatDetail", { total, repeats: deck.repeats });
     const following = nextSet();
     $("#deck-next").hidden = !following;
     if (following) {
       $("#deck-next").textContent = set && following.topicId === set.topicId
-        ? `Next set: ${following.index + 1} of ${following.total} →`
-        : `Next topic: ${following.title} →`;
+        ? t("deck.next.set", { index: following.index + 1, total: following.total })
+        : t("deck.next.topic", { title: topicTitle(following) });
     }
   }
 
@@ -319,8 +363,8 @@
     void root.offsetWidth;
     root.classList.remove("is-instant");
     $("#deck-live").textContent = verdict === "known"
-      ? `Knew it. ${deck.known.size} of ${total} known.`
-      : `Sent back for review. ${deck.queue.length} cards still in this round.`;
+      ? t("deck.live.known", { known: deck.known.size, total })
+      : tp("deck.live.again", deck.queue.length);
   }
 
   /* ---------- wiring ---------- */
@@ -397,7 +441,7 @@
   $("#deck-review").addEventListener("click", () => answer("again"));
   $("#deck-reset").addEventListener("click", () => {
     startSet(deck.setId);
-    $("#deck-live").textContent = "Set reset. Every card is back in the round.";
+    $("#deck-live").textContent = t("deck.live.reset");
     card.focus();
   });
   $("#deck-again").addEventListener("click", () => {

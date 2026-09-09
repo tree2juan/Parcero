@@ -215,23 +215,23 @@
 
       <section id="flashcards" class="flashcards" aria-labelledby="flashcards-title">
         <div class="section-head">
-          <p class="eyebrow">Flashcards</p>
-          <h2 id="flashcards-title">Short sets, one area at a time.</h2>
-          <p class="section-lead">Every card is built from a lesson, a verb or a fluency phrase you have already met here. Swipe left when you knew it, right when you did not — the ones you miss come back around until they stick.</p>
+          <p class="eyebrow" data-i18n="deck.eyebrow">Flashcards</p>
+          <h2 id="flashcards-title" data-i18n="deck.title">Short sets, one area at a time.</h2>
+          <p class="section-lead" data-i18n="deck.lead">Every card is built from a lesson, a verb or a fluency phrase you have already met here. Swipe left when you knew it, right when you did not — the ones you miss come back around until they stick.</p>
         </div>
 
         <div class="deck-picker">
-          <label class="field" for="deck-topic"><span>Topic</span>
+          <label class="field" for="deck-topic"><span data-i18n="deck.topicLabel">Topic</span>
             <select id="deck-topic"></select>
           </label>
-          <label class="field" for="deck-set"><span>Set</span>
+          <label class="field" for="deck-set"><span data-i18n="deck.setLabel">Set</span>
             <select id="deck-set"></select>
           </label>
         </div>
 
         <div class="deck-status">
           <div class="deck-status-head">
-            <strong id="deck-progress">0 of 0 known</strong>
+            <strong id="deck-progress"></strong>
             <span id="deck-tally" class="deck-tally"></span>
           </div>
           <div class="progress-track" aria-hidden="true"><div id="deck-bar"></div></div>
@@ -240,25 +240,25 @@
         <div id="deck-stage" class="deck-stage">
           <article id="deck-card" class="flashcard" role="button" tabindex="0" aria-describedby="deck-help"></article>
           <section id="deck-summary" class="deck-summary" hidden aria-live="polite">
-            <p class="eyebrow">Set complete</p>
-            <h3 id="deck-summary-title">That set is done.</h3>
+            <p class="eyebrow" data-i18n="deck.summaryEyebrow">Set complete</p>
+            <h3 id="deck-summary-title" data-i18n="deck.summaryTitle">That set is done.</h3>
             <p id="deck-summary-detail"></p>
             <div class="deck-summary-actions">
-              <button id="deck-again" class="primary-button" type="button">Go through it again</button>
-              <button id="deck-next" class="ghost-button" type="button">Next set →</button>
+              <button id="deck-again" class="primary-button" type="button" data-i18n="deck.again">Go through it again</button>
+              <button id="deck-next" class="ghost-button" type="button" data-i18n="deck.next">Next set →</button>
             </div>
           </section>
         </div>
 
         <div class="deck-actions">
-          <button id="deck-known" class="deck-verdict deck-known" type="button">← Knew it</button>
-          <button id="deck-flip" class="primary-button" type="button">Show answer</button>
-          <button id="deck-review" class="deck-verdict deck-again" type="button">Didn’t know it →</button>
+          <button id="deck-known" class="deck-verdict deck-known" type="button" data-i18n="deck.knownButton">← Knew it</button>
+          <button id="deck-flip" class="primary-button" type="button" data-i18n="deck.showAnswer">Show answer</button>
+          <button id="deck-review" class="deck-verdict deck-again" type="button" data-i18n="deck.reviewButton">Didn’t know it →</button>
         </div>
 
         <div class="deck-footer">
-          <p id="deck-help" class="deck-help">Tap the card to show the answer. Swipe left if you knew it, right to send it back for review. Keyboard: space flips, ← and → answer.</p>
-          <button id="deck-reset" class="ghost-button" type="button">Reset this set</button>
+          <p id="deck-help" class="deck-help" data-i18n="deck.help">Tap the card to show the answer. Swipe left if you knew it, right to send it back for review. Keyboard: space flips, ← and → answer.</p>
+          <button id="deck-reset" class="ghost-button" type="button" data-i18n="deck.reset">Reset this set</button>
         </div>
         <p id="deck-live" class="assistive-text" aria-live="polite"></p>
       </section>

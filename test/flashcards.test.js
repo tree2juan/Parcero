@@ -11,12 +11,12 @@ const bundle = [
   read("data/lessons.js"),
   read("data/curriculum.js"),
   read("data/flashcards.js"),
-  "({ lessons, curriculum, fluencyItems, FLASHCARD_SET_SIZE, flashcardSplit, flashcardTopics, flashcardSets });"
+  "({ lessons, curriculum, fluencyItems, FLASHCARD_SET_SIZE, flashcardSlug, flashcardSplit, flashcardTopics, flashcardSets });"
 ].join("\n");
 
 const {
   lessons, curriculum, fluencyItems,
-  FLASHCARD_SET_SIZE, flashcardSplit, flashcardTopics, flashcardSets
+  FLASHCARD_SET_SIZE, flashcardSlug, flashcardSplit, flashcardTopics, flashcardSets
 } = vm.runInNewContext(bundle, {}, { filename: "parcero-flashcard-bundle.js" });
 
 const directions = ["es", "en"];
@@ -73,7 +73,7 @@ test("every card is complete, in both directions", () => {
       for (const card of topic.cards) {
         assert.ok(isText(card.id), `${topic.id}: a card is missing its id`);
         assert.ok(isText(card.kind), `${card.id}: missing kind`);
-        assert.ok(isText(card.ask), `${card.id}: missing the question it is asking`);
+        assert.ok(isText(card.askKey), `${card.id}: missing the question it is asking`);
         assert.ok(isText(card.front), `${card.id}: missing a front`);
         assert.ok(isText(card.back), `${card.id}: missing an answer`);
         for (const key of ["frontLang", "backLang"]) {
@@ -120,7 +120,7 @@ test("sets carry every card of their topic, once, in order", () => {
       mine.forEach((set, index) => {
         assert.strictEqual(set.index, index);
         assert.strictEqual(set.total, mine.length);
-        assert.ok(isText(set.label), `${set.id}: a set needs a label a learner can read`);
+        assert.ok(isText(set.groupKey), `${set.id}: a set needs a group a learner can read`);
       });
     }
     assert.deepStrictEqual(duplicates(sets.map((set) => set.id)), [], `${direction}: two sets share an id`);
@@ -133,9 +133,12 @@ test("every lesson, verb level and the fluency list becomes a topic", () => {
     assert.ok(topics.some((topic) => topic.id === `lesson-${lesson.id}`), `no flashcards for lesson ${lesson.id}`);
   }
   for (const level of new Set(curriculum.map((verb) => verb.level))) {
-    assert.ok(topics.some((topic) => topic.group === "Verbs" && topic.meta.includes("verbs")), `no verb topic for ${level}`);
+    assert.ok(
+      topics.some((topic) => topic.id === `verbs-${flashcardSlug(level)}` && topic.metaCount > 0),
+      `no verb topic for ${level}`
+    );
   }
-  const verbCards = topics.filter((topic) => topic.group === "Verbs").reduce((total, topic) => total + topic.cards.length, 0);
+  const verbCards = topics.filter((topic) => topic.groupKey === "deck.group.verbs").reduce((total, topic) => total + topic.cards.length, 0);
   assert.strictEqual(verbCards, curriculum.length, "every verb should be drillable");
   assert.ok(topics.some((topic) => topic.id === "fluency"), "the fluency list should be drillable");
 });
@@ -161,7 +164,7 @@ test("lesson cards are drawn from the lesson, not written separately", () => {
 test("the direction decides which language is asked for and which is recalled", () => {
   for (const direction of directions) {
     const other = direction === "es" ? "en" : "es";
-    const verbs = flashcardTopics(direction, sources).find((topic) => topic.group === "Verbs");
+    const verbs = flashcardTopics(direction, sources).find((topic) => topic.groupKey === "deck.group.verbs");
     const [card] = verbs.cards;
     const verb = curriculum[0];
     assert.strictEqual(card.back, direction === "es" ? verb.spanish : verb.english);
@@ -188,6 +191,56 @@ test("new content flows into the decks with no edit here", () => {
   assert.ok(after.length > before.length, "adding content should add sets");
   assert.ok(after.some((set) => set.topicId === "lesson-a-brand-new-situation"), "a new lesson should become a topic");
   assert.ok(after.some((set) => set.topicId === "verbs-a-new-level"), "a new verb level should become a topic");
+});
+
+/* ---------- interface language ---------- */
+
+test("every string the deck asks for is translated in both languages", () => {
+  const { UI_STRINGS } = require(path.join(root, "i18n.js"));
+  const missing = [];
+  const want = (key) => {
+    for (const language of ["en", "es"]) {
+      if (UI_STRINGS[language][key] === undefined) missing.push(`${language}: ${key}`);
+    }
+  };
+
+  // Keys the derived decks emit, taken from the real content rather than a list
+  // here, so new lessons and new verb levels are checked too.
+  for (const direction of directions) {
+    for (const topic of flashcardTopics(direction, sources)) {
+      for (const key of [topic.groupKey, topic.titleKey, topic.levelKey, topic.metaKey]) {
+        if (key) want(key);
+      }
+      for (const card of topic.cards) {
+        want(card.askKey);
+        want(`deck.kind.${card.kind}`);
+      }
+    }
+  }
+
+  // Keys the swipe UI asks for by name.
+  const ui = read("flashcards.js");
+  const fallback = ui.slice(ui.indexOf("const FALLBACK"), ui.indexOf("function t("));
+  const plurals = new Set([...ui.matchAll(/\btp\("(deck\.[\w.]+)"/g)].map((match) => match[1]));
+  for (const key of plurals) {
+    want(`${key}.one`);
+    want(`${key}.other`);
+  }
+  for (const [, key] of ui.matchAll(/\bt\("(deck\.[\w.]+)"/g)) {
+    if (!plurals.has(key)) want(key);
+  }
+
+  assert.deepStrictEqual([...new Set(missing)], [], "untranslated flashcard strings");
+  assert.ok(fallback.length > 0, "the UI should keep an English fallback for when i18n.js is absent");
+});
+
+test("the flashcards section is marked up for translation", () => {
+  const html = read("index.html");
+  const section = html.slice(html.indexOf('id="flashcards"'), html.indexOf('id="placement"'));
+  const untranslated = [...section.matchAll(/<(h2|h3|p|span|button|strong)\b([^>]*)>([^<]+)</g)]
+    .filter(([, , attrs, text]) => text.trim() && !attrs.includes("data-i18n"))
+    .map(([, tag, , text]) => `<${tag}> ${text.trim()}`);
+  assert.deepStrictEqual(untranslated, [], "authored text in the flashcards section needs a data-i18n key");
 });
 
 /* ---------- the page ---------- */
