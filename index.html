@@ -113,6 +113,11 @@
               <span data-i18n="review.pendingLesson">No Colombian native speaker has signed this lesson off yet, so the regional wording may still change.</span>
               <button id="lesson-review-start" class="text-button" type="button" data-i18n="review.helpCheck">Help check this lesson</button>
             </p>
+            <p id="lesson-provenance" class="review-badge provenance-badge" hidden>
+              <span data-i18n="provenance.machine">The Spanish explanations in this lesson were machine-translated and have not yet been checked by a native speaker.</span>
+              <span id="lesson-provenance-count" class="provenance-count"></span>
+              <button id="lesson-provenance-start" class="text-button" type="button" data-i18n="provenance.helpCheck">Help check the translation</button>
+            </p>
           </div>
 
           <div class="tabs" role="tablist" data-i18n-aria="tabs.aria" aria-label="Lesson sections">
@@ -309,6 +314,7 @@
 
     <script src="data/lesson-schema.js"></script>
     <script src="data/lessons.js"></script>
+<script src="data/provenance.js"></script>
     <script src="data/curriculum.js"></script>
     <script src="i18n.js"></script>
     <script src="app.js"></script>

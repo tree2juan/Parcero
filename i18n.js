@@ -163,6 +163,9 @@ const UI_STRINGS = {
     /* Review and flagging. Keys are shared with review.js / review-ui.js. */
     "review.pendingLesson": "No Colombian native speaker has signed this lesson off yet, so the regional wording may still change.",
     "review.helpCheck": "Report something in this lesson",
+    "provenance.machine": "The Spanish explanations in this lesson were machine-translated and have not yet been checked by a native speaker.",
+    "provenance.count": "{count} fields affected",
+    "provenance.helpCheck": "Report a translation that reads wrong",
     "review.count.none": "Nothing reported yet",
     "review.count.one": "{count} report ready to send",
     "review.count.other": "{count} reports ready to send",
@@ -383,6 +386,9 @@ const UI_STRINGS = {
     /* Revisión y marcas. Las claves se comparten con review.js / review-ui.js. */
     "review.pendingLesson": "Ningún hablante nativo colombiano ha aprobado esta lección todavía, así que el uso regional puede cambiar.",
     "review.helpCheck": "Reportar algo de esta lección",
+    "provenance.machine": "Las explicaciones en español de esta lección se tradujeron automáticamente y todavía no las ha revisado un hablante nativo.",
+    "provenance.count": "{count} campos afectados",
+    "provenance.helpCheck": "Reportar una traducción que suene mal",
     "review.count.none": "Todavía no has reportado nada",
     "review.count.one": "{count} reporte listo para enviar",
     "review.count.other": "{count} reportes listos para enviar",
