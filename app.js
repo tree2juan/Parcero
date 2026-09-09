@@ -33,6 +33,9 @@ function currentLesson() { return lessons[lessonIndex()]; }
 const $ = (selector) => document.querySelector(selector);
 const VERB_PAGE_SIZE = 24;
 const verbView = { query: "", shown: VERB_PAGE_SIZE };
+const t = (key, values) => (window.ParceroI18n ? window.ParceroI18n.t(key, state.direction, values) : key);
+const tn = (key, count, values) => (window.ParceroI18n ? window.ParceroI18n.tPlural(key, state.direction, count, values) : key);
+const listJoin = (items) => (items.length < 2 ? items.join("") : `${items.slice(0, -1).join(", ")} ${t("common.and")} ${items[items.length - 1]}`);
 function matchingVerbs() {
   const search = verbView.query.trim().toLowerCase();
   return search ? curriculum.filter((verb) => `${verb.spanish} ${verb.english}`.toLowerCase().includes(search)) : curriculum;
@@ -41,19 +44,19 @@ function renderVerbs() {
   const matches = matchingVerbs();
   const visible = matches.slice(0, verbView.shown);
   $("#verb-count").textContent = matches.length === 0
-    ? `No verb matches “${verbView.query.trim()}”. Try the other language, or the infinitive.`
+    ? t("library.verbNone", { query: verbView.query.trim() })
     : matches.length === curriculum.length
-      ? `Showing ${visible.length} of ${curriculum.length} high-frequency verbs`
-      : `${matches.length} of ${curriculum.length} verbs match — showing ${visible.length}`;
-  $("#verb-results").innerHTML = visible.map((verb) => `<article class="reference-card" data-anchor="verb:${verb.id}"><h3><span lang="es">${verb.spanish}</span> <small>— ${verb.english}</small></h3><p><strong>Useful forms:</strong> <span lang="es">yo ${verb.forms.presentYo}; ayer ${verb.forms.preteriteYo}; ${verb.forms.participle}</span></p><span class="tag">${verb.level}</span><span class="tag">${verb.register}</span><span class="tag">${verb.regionality}</span></article>`).join("");
+      ? t("library.verbCount", { shown: visible.length, total: curriculum.length })
+      : t("library.verbMatching", { matches: matches.length, total: curriculum.length, shown: visible.length });
+  $("#verb-results").innerHTML = visible.map((verb) => `<article class="reference-card" data-anchor="verb:${verb.id}"><h3><span lang="es">${verb.spanish}</span> <small>— ${verb.english}</small></h3><p><strong>${t("library.usefulForms")}</strong> <span lang="es">yo ${verb.forms.presentYo}; ayer ${verb.forms.preteriteYo}; ${verb.forms.participle}</span></p><span class="tag">${verb.level}</span><span class="tag">${verb.register}</span><span class="tag">${verb.regionality}</span></article>`).join("");
   $("#verb-more").hidden = visible.length >= matches.length;
-  $("#verb-more").textContent = `Show ${Math.min(VERB_PAGE_SIZE, matches.length - visible.length)} more verbs`;
+  $("#verb-more").textContent = t("library.moreCount", { count: Math.min(VERB_PAGE_SIZE, matches.length - visible.length) });
 }
 function renderFluency() {
   $("#fluency-results").innerHTML = fluencyItems.map(([spanish, english, type, region, note], index) => `<article class="reference-card" data-anchor="fluency:${index}"><h3>${spanish}</h3><p><strong>${english}</strong></p><p>${note}</p><span class="tag">${type}</span><span class="tag">${region}</span></article>`).join("");
 }
 function renderMature() {
-  $("#mature-results").innerHTML = matureItems.map(([phrase, equivalent, severity, note], index) => `<article class="reference-card" data-anchor="mature:${index}"><h3>${phrase}</h3><p><strong>${equivalent}</strong></p><p>${note}</p><span class="tag">Severity: ${severity}</span><span class="tag">Recognition &amp; safety</span></article>`).join("");
+  $("#mature-results").innerHTML = matureItems.map(([phrase, equivalent, severity, note], index) => `<article class="reference-card" data-anchor="mature:${index}"><h3>${phrase}</h3><p><strong>${equivalent}</strong></p><p>${note}</p><span class="tag">${t("mature.severity")}: ${severity}</span><span class="tag">${t("mature.tag")}</span></article>`).join("");
 }
 function content() { return currentLesson()[state.direction]; }
 function save() {
@@ -69,30 +72,30 @@ function renderPlacement() {
     $("#assessment-next").hidden = true;
     $("#placement-intro").hidden = true;
     $("#placement-result").hidden = false;
-    $("#placement-result").innerHTML = `<div class="result-card"><p class="eyebrow">Your starting point</p><h3>${state.placement.level}</h3><p>${state.placement.summary}</p><p><strong>Focus first:</strong> ${state.placement.focus.join(", ")}</p></div>`;
+    $("#placement-result").innerHTML = `<div class="result-card"><p class="eyebrow">${t("placement.startingPoint")}</p><h3>${state.placement.level}</h3><p>${state.placement.summary}</p><p><strong>${t("placement.focusFirst")}</strong> ${state.placement.focus.join(", ")}</p></div>`;
     $("#roadmap").hidden = false;
-    $("#focus-summary").textContent = `Your recommended focus is ${state.placement.focus.join(" and ")}. Strengthen these through contextual practice before moving to the next stage.`;
+    $("#focus-summary").textContent = t("roadmap.focus", { focus: listJoin(state.placement.focus) });
     $("#pathways").innerHTML = pathways.map(([title, description]) => `<article class="pathway"><h3>${title}</h3><p>${description}</p></article>`).join("");
     return;
   }
   const [skill, prompt, options] = questions[state.question];
   $("#assessment").hidden = false;
   $("#assessment-next").hidden = false;
-  $("#assessment").innerHTML = `<p class="assessment-progress">Question ${state.question + 1} of ${questions.length} · ${skill}</p><article class="assessment-card"><h3>${prompt}</h3><div class="assessment-options">${options.map((option, index) => `<button class="assessment-option" type="button" data-choice="${index}">${option}</button>`).join("")}<button class="assessment-option" type="button" data-choice="unknown">I don’t know</button></div></article>`;
+  $("#assessment").innerHTML = `<p class="assessment-progress">${t("placement.question", { number: state.question + 1, total: questions.length, skill })}</p><article class="assessment-card"><h3>${prompt}</h3><div class="assessment-options">${options.map((option, index) => `<button class="assessment-option" type="button" data-choice="${index}">${option}</button>`).join("")}<button class="assessment-option" type="button" data-choice="unknown">${t("placement.dontKnow")}</button></div></article>`;
   $("#assessment-next").disabled = true;
-  $("#assessment-next").textContent = state.question === questions.length - 1 ? "See my learning focus" : "Next question";
+  $("#assessment-next").textContent = state.question === questions.length - 1 ? t("placement.finish") : t("placement.next");
 }
 function completePlacement() {
   const unknown = state.responses.filter((response) => response.choice === "unknown").map((response) => response.skill);
   const incorrect = state.responses.filter((response) => response.choice !== "unknown" && !response.correct).map((response) => response.skill);
   const focus = [...new Set([...unknown, ...incorrect])];
   const correct = state.responses.filter((response) => response.correct).length;
-  const level = correct <= 1 ? "Contextual foundations" : correct <= 3 ? "Developing independence" : "Ready to extend";
+  const level = correct <= 1 ? t("placement.level.foundations") : correct <= 3 ? t("placement.level.developing") : t("placement.level.ready");
   state.placement = {
     direction: state.direction, responses: state.responses, level,
-    confidence: `${correct} of ${state.responses.length} demonstrated; ${unknown.length} explicit knowledge gap${unknown.length === 1 ? "" : "s"}.`,
-    focus: focus.length ? focus : ["professional and academic register"],
-    summary: focus.length ? "Your answers show specific areas to build without making you guess." : "You demonstrated a strong foundation. Extend your range through new contexts and registers."
+    confidence: tn("placement.confidence", unknown.length, { correct, total: state.responses.length, gaps: unknown.length }),
+    focus: focus.length ? focus : [t("placement.defaultFocus")],
+    summary: focus.length ? t("placement.summary.focus") : t("placement.summary.strong")
   };
   save();
   renderPlacement();
@@ -101,7 +104,7 @@ function renderLessonList() {
   $("#lesson-list").innerHTML = lessons.map((item, index) => {
     const done = state.completed.has(item.id);
     const active = item.id === state.lessonId;
-    return `<li><button class="lesson-link${active ? " active" : ""}" type="button" data-lesson="${item.id}" aria-current="${active ? "true" : "false"}"><span class="lesson-link-index">${index + 1}</span><span class="lesson-link-body"><strong>${item[state.direction].title}</strong><span class="lesson-link-meta">${item.level}</span></span><span class="lesson-link-state">${done ? "Explored" : ""}</span></button></li>`;
+    return `<li><button class="lesson-link${active ? " active" : ""}" type="button" data-lesson="${item.id}" aria-current="${active ? "true" : "false"}"><span class="lesson-link-index">${index + 1}</span><span class="lesson-link-body"><strong>${item[state.direction].title}</strong><span class="lesson-link-meta">${item.level}</span></span><span class="lesson-link-state">${done ? t("lesson.explored") : ""}</span></button></li>`;
   }).join("");
 }
 function selectLesson(id) {
@@ -117,10 +120,20 @@ function selectLesson(id) {
   });
   $("#lesson").scrollIntoView({ behavior: "smooth", block: "start" });
 }
+function renderPreview() {
+  const first = lessons[0][state.direction];
+  const [, target, translation, pronunciation] = first.dialogue[0];
+  const [word, meaning] = first.vocabulary[0];
+  $("#preview-target").textContent = target;
+  $("#preview-target").lang = state.direction === "es" ? "es" : "en";
+  $("#preview-translation").textContent = translation;
+  $("#preview-pronunciation").textContent = pronunciation;
+  $("#preview-note").innerHTML = `<strong>${word}</strong> — ${meaning}`;
+}
 function render() {
   const current = content();
   const lesson = currentLesson();
-  document.documentElement.lang = "en";
+  if (window.ParceroI18n) window.ParceroI18n.applyI18n(state.direction);
   $("#lesson-level").textContent = lesson.level;
   $("#lesson-title").textContent = current.title;
   $("#lesson-situation").textContent = current.situation;
@@ -138,6 +151,7 @@ function render() {
   $("#practice-feedback").textContent = "";
   $("#speech-status").textContent = "";
   renderLessonList();
+  renderPreview();
   updateProgress();
   renderPlacement();
 }
@@ -147,10 +161,10 @@ function updateProgress() {
   const completed = state.completed.has(lesson.id);
   const total = lessons.length;
   const explored = lessons.filter((item) => state.completed.has(item.id)).length;
-  $("#progress-label").textContent = `${explored} of ${total} lessons explored`;
+  $("#progress-label").textContent = t("progress.count", { explored, total });
   $("#progress-bar").style.width = `${Math.round((explored / total) * 100)}%`;
-  $("#complete-lesson").textContent = completed ? "Lesson explored" : "Mark lesson explored";
-  $("#lesson-position").textContent = `Lesson ${index + 1} of ${total}`;
+  $("#complete-lesson").textContent = completed ? t("action.completed") : t("action.complete");
+  $("#lesson-position").textContent = t("pager.position", { index: index + 1, total });
   $("#previous-lesson").disabled = index === 0;
   $("#next-lesson").disabled = index === total - 1;
 }
@@ -182,7 +196,7 @@ $("#choices").addEventListener("click", (event) => {
   document.querySelectorAll(".choice").forEach((item) => item.disabled = true);
   choice.classList.add(correct ? "correct" : "incorrect");
   if (!correct) document.querySelector(`[data-answer="${content().answer}"]`).classList.add("correct");
-  $("#practice-feedback").textContent = correct ? "Exactly—notice how the meaning comes from the whole situation." : "Look back at the dialogue and the context note, then try again in the next lesson.";
+  $("#practice-feedback").textContent = correct ? t("practice.correct") : t("practice.incorrect");
 });
 $("#complete-lesson").addEventListener("click", () => { state.completed.add(currentLesson().id); save(); renderLessonList(); updateProgress(); });
 $("#lesson-list").addEventListener("click", (event) => {
@@ -193,12 +207,12 @@ $("#previous-lesson").addEventListener("click", () => selectLesson(lessons[Math.
 $("#next-lesson").addEventListener("click", () => selectLesson(lessons[Math.min(lessons.length - 1, lessonIndex() + 1)].id));
 $("#reset-progress").addEventListener("click", () => { state.completed.clear(); state.placement = null; state.question = 0; state.responses = []; save(); render(); });
 $("#listen-dialogue").addEventListener("click", () => {
-  if (!("speechSynthesis" in window)) { $("#speech-status").textContent = "Audio playback is not supported in this browser."; return; }
+  if (!("speechSynthesis" in window)) { $("#speech-status").textContent = t("speech.unsupported"); return; }
   speechSynthesis.cancel();
   const utterance = new SpeechSynthesisUtterance(content().dialogue.map((line) => line[1]).join(" "));
   utterance.lang = state.direction === "es" ? "es-CO" : "en-US";
   speechSynthesis.speak(utterance);
-  $("#speech-status").textContent = "Playing dialogue.";
+  $("#speech-status").textContent = t("speech.playing");
 });
 $("#verb-search").addEventListener("input", (event) => {
   verbView.query = event.target.value;

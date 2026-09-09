@@ -1,0 +1,476 @@
+/*
+ * Interface language for Parcero.
+ *
+ * The app teaches in two directions and the interface has to follow, because the
+ * learner's own language is the opposite of the one they are studying:
+ *
+ *   direction "es"  ->  learning Colombian Spanish  ->  the learner reads English
+ *   direction "en"  ->  learning English            ->  the learner reads Spanish
+ *
+ * Lesson content already switches with `direction`. These are the surrounding
+ * strings — navigation, buttons, headings, feedback — which previously did not.
+ *
+ * The language picker itself is deliberately NOT translated. It is always
+ * bilingual, because a Spanish speaker cannot find an English-labelled control
+ * that switches the interface out of English.
+ *
+ * Everything below is wrapped in an IIFE. These are classic scripts, so a
+ * top-level `const t` in one file and a top-level `function t` in another are
+ * the SAME binding, and the second file to load throws
+ * "Identifier 't' has already been declared" — which kills that whole file
+ * before it runs. Names this generic must never reach global scope; the only
+ * thing this file exposes is ParceroI18n.
+ */
+(function () {
+"use strict";
+
+const UI_STRINGS = {
+  en: {
+    "brand.tagline": "Colombian Spanish in context",
+    "common.and": "and",
+    "nav.lessons": "Lessons",
+    "nav.placement": "Placement",
+    "nav.library": "Library",
+    "nav.github": "GitHub",
+    "nav.sections": "Sections",
+    "action.reset": "Reset progress",
+
+    "hero.eyebrow": "Learn how people actually speak",
+    "hero.title": "Language belongs in a conversation.",
+    "hero.lead": "Explore Colombian Spanish and practical English from either point of view — with context, culture, sound, and practice. Nothing to install, nothing to sign up for, and your progress never leaves this device.",
+    "hero.start": "Start the first lesson",
+    "hero.placement": "Find my level first",
+    "stats.lessons": "Lessons",
+    "stats.verbs": "Verbs",
+    "stats.cost": "Cost",
+    "stats.free": "Free",
+    "preview.label": "A line from lesson one",
+    "preview.aria": "Example of a lesson line",
+
+    "lessons.eyebrow": "Lessons",
+    "lessons.title": "Pick a situation.",
+    "lessons.lead": "Each lesson is one real moment: what is said, why it works, how it sounds, and what it would mean to get it wrong.",
+    "progress.eyebrow": "Your path",
+    "progress.count": "{explored} of {total} lessons explored",
+
+    "tabs.aria": "Lesson sections",
+    "tab.dialogue": "Dialogue",
+    "tab.understand": "Understand",
+    "tab.practice": "Practice",
+
+    "action.listen": "Listen to the target language",
+    "context.eyebrow": "Colombian context",
+    "action.complete": "Mark lesson explored",
+    "action.completed": "Lesson explored",
+    "lesson.explored": "Explored",
+    "pager.previous": "← Previous lesson",
+    "pager.next": "Next lesson →",
+    "pager.position": "Lesson {index} of {total}",
+
+    "practice.correct": "Exactly—notice how the meaning comes from the whole situation.",
+    "practice.incorrect": "Look back at the dialogue and the context note, then try again in the next lesson.",
+    "speech.unsupported": "Audio playback is not supported in this browser.",
+    "speech.playing": "Playing dialogue.",
+
+    "placement.eyebrow": "Optional",
+    "placement.title": "Find your next best step.",
+    "placement.intro": "Answer from experience, not a guess. “I don’t know” helps us find what to focus on — it never counts against you.",
+    "placement.question": "Question {number} of {total} · {skill}",
+    "placement.dontKnow": "I don’t know",
+    "placement.next": "Next question",
+    "placement.finish": "See my learning focus",
+    "placement.startingPoint": "Your starting point",
+    "placement.focusFirst": "Focus first:",
+    "placement.level.foundations": "Contextual foundations",
+    "placement.level.developing": "Developing independence",
+    "placement.level.ready": "Ready to extend",
+    "placement.summary.focus": "Your answers show specific areas to build without making you guess.",
+    "placement.summary.strong": "You demonstrated a strong foundation. Extend your range through new contexts and registers.",
+    "placement.defaultFocus": "professional and academic register",
+    "placement.confidence.one": "{correct} of {total} demonstrated; {gaps} explicit knowledge gap.",
+    "placement.confidence.other": "{correct} of {total} demonstrated; {gaps} explicit knowledge gaps.",
+
+    "roadmap.eyebrow": "Your roadmap",
+    "roadmap.title": "Build toward confident, local fluency.",
+    "roadmap.focus": "Your recommended focus is {focus}. Strengthen these through contextual practice before moving to the next stage.",
+
+    "library.eyebrow": "Reference library",
+    "library.title": "Build fluency, one useful choice at a time.",
+    "library.lead": "Look things up when you need them. These lists are references, not memorization drills.",
+    "library.aria": "Reference library sections",
+    "library.tab.verbs": "200 verbs",
+    "library.tab.fluency": "Fluency",
+    "library.tab.mature": "Mature language",
+    "library.search": "Search English or Spanish verb",
+    "library.searchPlaceholder": "e.g., hablar or speak",
+    "library.more": "Show more verbs",
+    "library.moreCount": "Show {count} more verbs",
+    "library.verbNone": "No verb matches “{query}”. Try the other language, or the infinitive.",
+    "library.verbMatching": "{matches} of {total} verbs match — showing {shown}",
+    "library.usefulForms": "Useful forms:",
+    "library.verbCount": "Showing {shown} of {total} verbs",
+    "library.sourceNote.before": "Frequency starting list: ",
+    "library.sourceNote.link": "SUBTLEX-ESP and SUBTLEX-US frequency resources",
+    "library.sourceNote.after": "; Colombian labels require native-speaker review before publication.",
+    "library.fluencyIntro": "These phrases connect ideas and keep conversation moving. They are context notes—not universal replacements.",
+
+    "mature.title": "Recognition and safety reference",
+    "mature.warning": "This optional reference includes adult or insulting language for comprehension, boundaries, and de-escalation. It is not for directing abuse at people. Confirm that you are of age under the rules where you live.",
+    "mature.confirm": "I am eligible to view mature educational content.",
+    "mature.open": "View reference",
+    "mature.severity": "Severity",
+    "mature.tag": "Recognition & safety",
+
+    "footer.tagline": "— made for curious conversations. Your progress stays on this device.",
+    "footer.source": "Source on GitHub",
+    "footer.flagLine": "Flag a line in the page",
+    "footer.signOff": "Sign off a whole lesson",
+    "footer.report": "Report a problem",
+    "footer.note": "Lessons no native speaker has signed off yet say so in place. Regional usage varies across Colombia; treat every note as a starting point for listening, not a rule — and if something reads wrong to you, flag it where you found it.",
+
+    /* Review and flagging. Keys are shared with review.js / review-ui.js. */
+    "review.toggle": "Review mode",
+    "review.mode.off": "Review mode",
+    "review.mode.on": "Review mode: on",
+    "review.barHeading": "Review mode is on.",
+    "review.barHelp": "Every line, term and note now has a Flag button. Flag anything a Colombian speaker would not actually say. Nothing leaves this browser until you choose to submit.",
+    "review.openQueue": "Review my flags",
+    "review.exit": "Exit review mode",
+    "review.pendingLesson": "No Colombian native speaker has signed this lesson off yet, so the regional wording may still change.",
+    "review.helpCheck": "Help check this lesson",
+    "review.count.none": "No flags yet",
+    "review.count.one": "{count} flag saved",
+    "review.count.other": "{count} flags saved",
+    "review.flag": "Flag",
+    "review.flagged.one": "Flagged ({count})",
+    "review.flagged.other": "Flagged ({count})",
+    "review.flagAria": "Flag this for native-speaker revision",
+    "review.flaggedAria.one": "Flagged once. Add another note, or review it.",
+    "review.flaggedAria.other": "Flagged {count} times. Add another note, or review them.",
+    "review.flagTitle": "Flag this for revision",
+    "review.whichPart": "Which part is wrong?",
+    "review.whatProblem": "What is the problem?",
+    "review.suggestion": "How would you say it instead?",
+    "review.suggestionHint": "Write the wording you would actually use.",
+    "review.comment": "Why — and where is it used that way?",
+    "review.commentHint": "e.g. In Medellín this is completely normal, but in Bogotá it sounds abrupt.",
+    "review.severity": "How serious is it?",
+    "review.region": "Where do you speak from?",
+    "review.regionHint": "Bogotá, Medellín, the coast…",
+    "review.role": "You are reviewing as",
+    "review.cancel": "Cancel",
+    "review.save": "Add to my flags",
+    "review.saveChanges": "Save changes",
+    "review.missingText": "This text is no longer in the lesson.",
+    "review.saved.one": "Flag saved. {count} waiting to be submitted.",
+    "review.saved.other": "Flags saved. {count} waiting to be submitted.",
+    "review.edit": "Edit",
+    "review.remove": "Remove",
+    "review.queueTitle": "Your flags",
+    "review.queue.empty": "Nothing flagged yet.",
+    "review.queue.notSent": "{summary}. Nothing has been sent anywhere yet.",
+    "review.queue.yourWording": "Your wording:",
+    "review.queue.drift": "This text has changed since you flagged it — please reopen and check it.",
+    "review.confirmClear": "Delete every flag you have saved? This cannot be undone.",
+    "review.submit": "Open a GitHub issue with these",
+    "review.copy": "Copy as Markdown",
+    "review.download": "Download JSON",
+    "review.clear": "Clear all",
+    "review.close": "Close",
+    "review.status.opened": "GitHub opened in a new tab. Your flags stay here until you clear them.",
+    "review.status.tooLongCopied": "That is too much to fit in a link, so it is on your clipboard — paste it into the issue GitHub just opened.",
+    "review.status.tooLongDownload": "That is too much to fit in a link. Use “Download JSON” and attach the file to the issue GitHub just opened.",
+    "review.status.copied": "Copied. Paste it into a GitHub issue, an email, or a message.",
+    "review.status.copyFailed": "Could not reach the clipboard — use “Download JSON” instead.",
+    "review.status.downloaded": "Downloaded. Attach it to a GitHub issue, or send it to a maintainer.",
+    "review.status.cleared": "All flags cleared.",
+
+    /* Display labels for [code, label] pairs. The code half never changes. */
+    "review.issueType.not-natural": "No one really says it this way",
+    "review.issueType.regional": "Wrong region — this is not general Colombian usage",
+    "review.issueType.register": "Wrong register (usted / tú / vos, or formality)",
+    "review.issueType.translation": "The translation does not match",
+    "review.issueType.pronunciation": "The pronunciation respelling would mislead",
+    "review.issueType.spelling": "Spelling, accent mark or typo",
+    "review.issueType.culture": "The cultural explanation is wrong or incomplete",
+    "review.issueType.risky": "Could embarrass or endanger a learner who repeats it",
+    "review.issueType.outdated": "Understood, but dated or class-marked",
+    "review.issueType.other": "Something else",
+    "review.severity.blocker": "Blocker — do not publish as written",
+    "review.severity.should-fix": "Should fix before sign-off",
+    "review.severity.nitpick": "Nitpick — safe either way",
+    "review.role.native-es-co": "Native Colombian Spanish speaker",
+    "review.role.native-es-other": "Native Spanish speaker, not Colombian",
+    "review.role.native-en": "Native or expert English speaker",
+    "review.role.educator": "Language educator"
+  },
+
+  es: {
+    "brand.tagline": "Español colombiano en contexto",
+    "common.and": "y",
+    "nav.lessons": "Lecciones",
+    "nav.placement": "Nivelación",
+    "nav.library": "Biblioteca",
+    "nav.github": "GitHub",
+    "nav.sections": "Secciones",
+    "action.reset": "Borrar mi progreso",
+
+    "hero.eyebrow": "Aprende cómo habla la gente de verdad",
+    "hero.title": "El idioma vive en la conversación.",
+    "hero.lead": "Explora el español colombiano y el inglés práctico desde cualquiera de los dos lados: con contexto, cultura, sonido y práctica. No hay nada que instalar ni registro que llenar, y tu progreso nunca sale de este dispositivo.",
+    "hero.start": "Empezar la primera lección",
+    "hero.placement": "Primero quiero saber mi nivel",
+    "stats.lessons": "Lecciones",
+    "stats.verbs": "Verbos",
+    "stats.cost": "Precio",
+    "stats.free": "Gratis",
+    "preview.label": "Una frase de la primera lección",
+    "preview.aria": "Ejemplo de una frase de la lección",
+
+    "lessons.eyebrow": "Lecciones",
+    "lessons.title": "Elige una situación.",
+    "lessons.lead": "Cada lección es un momento real: qué se dice, por qué funciona, cómo suena y qué pasaría si lo dijeras de otra manera.",
+    "progress.eyebrow": "Tu camino",
+    "progress.count": "{explored} de {total} lecciones exploradas",
+
+    "tabs.aria": "Secciones de la lección",
+    "tab.dialogue": "Diálogo",
+    "tab.understand": "Entender",
+    "tab.practice": "Practicar",
+
+    "action.listen": "Escuchar el idioma que estás aprendiendo",
+    "context.eyebrow": "Contexto colombiano",
+    "action.complete": "Marcar la lección como explorada",
+    "action.completed": "Lección explorada",
+    "lesson.explored": "Explorada",
+    "pager.previous": "← Lección anterior",
+    "pager.next": "Siguiente lección →",
+    "pager.position": "Lección {index} de {total}",
+
+    "practice.correct": "Exacto: fíjate en cómo el significado sale de toda la situación.",
+    "practice.incorrect": "Vuelve al diálogo y a la nota de contexto, y inténtalo de nuevo en la siguiente lección.",
+    "speech.unsupported": "Este navegador no permite reproducir audio.",
+    "speech.playing": "Reproduciendo el diálogo.",
+
+    "placement.eyebrow": "Opcional",
+    "placement.title": "Encuentra tu siguiente paso.",
+    "placement.intro": "Responde desde tu experiencia, no adivinando. Decir “No sé” nos ayuda a encontrar en qué enfocarnos; nunca cuenta en tu contra.",
+    "placement.question": "Pregunta {number} de {total} · {skill}",
+    "placement.dontKnow": "No sé",
+    "placement.next": "Siguiente pregunta",
+    "placement.finish": "Ver mi enfoque de aprendizaje",
+    "placement.startingPoint": "Tu punto de partida",
+    "placement.focusFirst": "Enfócate primero en:",
+    "placement.level.foundations": "Bases en contexto",
+    "placement.level.developing": "Ganando independencia",
+    "placement.level.ready": "Listo para ampliar",
+    "placement.summary.focus": "Tus respuestas muestran áreas concretas para trabajar, sin obligarte a adivinar.",
+    "placement.summary.strong": "Demostraste una base sólida. Amplía tu rango con nuevos contextos y registros.",
+    "placement.defaultFocus": "registro profesional y académico",
+    "placement.confidence.one": "{correct} de {total} demostradas; {gaps} vacío de conocimiento declarado.",
+    "placement.confidence.other": "{correct} de {total} demostradas; {gaps} vacíos de conocimiento declarados.",
+
+    "roadmap.eyebrow": "Tu ruta",
+    "roadmap.title": "Avanza hacia una fluidez local y segura.",
+    "roadmap.focus": "Tu enfoque recomendado es {focus}. Refuérzalo con práctica en contexto antes de pasar a la siguiente etapa.",
+
+    "library.eyebrow": "Biblioteca de referencia",
+    "library.title": "Gana fluidez, una decisión útil a la vez.",
+    "library.lead": "Consulta lo que necesites cuando lo necesites. Estas listas son de referencia, no ejercicios de memorización.",
+    "library.aria": "Secciones de la biblioteca de referencia",
+    "library.tab.verbs": "200 verbos",
+    "library.tab.fluency": "Fluidez",
+    "library.tab.mature": "Lenguaje adulto",
+    "library.search": "Buscar un verbo en inglés o en español",
+    "library.searchPlaceholder": "por ejemplo, hablar o speak",
+    "library.more": "Ver más verbos",
+    "library.moreCount": "Ver {count} verbos más",
+    "library.verbNone": "Ningún verbo coincide con “{query}”. Prueba en el otro idioma, o con el infinitivo.",
+    "library.verbMatching": "{matches} de {total} verbos coinciden — mostrando {shown}",
+    "library.usefulForms": "Formas útiles:",
+    "library.verbCount": "Mostrando {shown} de {total} verbos",
+    "library.sourceNote.before": "Lista inicial de frecuencia: ",
+    "library.sourceNote.link": "recursos de frecuencia SUBTLEX-ESP y SUBTLEX-US",
+    "library.sourceNote.after": "; las etiquetas colombianas necesitan revisión de hablantes nativos antes de publicarse.",
+    "library.fluencyIntro": "Estas expresiones conectan ideas y mantienen viva la conversación. Son notas de contexto, no reemplazos universales.",
+
+    "mature.title": "Referencia de reconocimiento y seguridad",
+    "mature.warning": "Esta referencia opcional incluye lenguaje adulto u ofensivo para ayudarte a entenderlo, poner límites y bajar la tensión. No es para agredir a nadie. Confirma que tienes la edad permitida donde vives.",
+    "mature.confirm": "Tengo la edad para ver contenido educativo para adultos.",
+    "mature.open": "Ver la referencia",
+    "mature.severity": "Intensidad",
+    "mature.tag": "Reconocimiento y seguridad",
+
+    "footer.tagline": "— hecho para conversaciones curiosas. Tu progreso se queda en este dispositivo.",
+    "footer.source": "Código en GitHub",
+    "footer.flagLine": "Marca una línea en la página",
+    "footer.signOff": "Aprueba una lección completa",
+    "footer.report": "Reportar un problema",
+    "footer.note": "Las lecciones que ningún hablante nativo ha aprobado lo dicen ahí mismo. El uso regional cambia por toda Colombia; toma cada nota como un punto de partida para escuchar, no como una regla — y si algo te suena mal, márcalo donde lo encontraste.",
+
+    /* Revisión y marcas. Las claves se comparten con review.js / review-ui.js. */
+    "review.toggle": "Modo revisión",
+    "review.mode.off": "Modo revisión",
+    "review.mode.on": "Modo revisión: activado",
+    "review.barHeading": "El modo revisión está activado.",
+    "review.barHelp": "Ahora cada frase, término y nota tiene un botón Marcar. Marca todo lo que un colombiano no diría de verdad. Nada sale de este navegador hasta que tú decidas enviarlo.",
+    "review.openQueue": "Ver mis marcas",
+    "review.exit": "Salir del modo revisión",
+    "review.pendingLesson": "Ningún hablante nativo colombiano ha aprobado esta lección todavía, así que el uso regional puede cambiar.",
+    "review.helpCheck": "Ayúdanos a revisar esta lección",
+    "review.count.none": "Aún no hay marcas",
+    "review.count.one": "{count} marca guardada",
+    "review.count.other": "{count} marcas guardadas",
+    "review.flag": "Marcar",
+    "review.flagged.one": "Marcado ({count})",
+    "review.flagged.other": "Marcado ({count})",
+    "review.flagAria": "Marcar esto para que lo revise un hablante nativo",
+    "review.flaggedAria.one": "Marcado una vez. Agrega otra nota o revísala.",
+    "review.flaggedAria.other": "Marcado {count} veces. Agrega otra nota o revísalas.",
+    "review.flagTitle": "Marcar esto para corregir",
+    "review.whichPart": "¿Qué parte está mal?",
+    "review.whatProblem": "¿Cuál es el problema?",
+    "review.suggestion": "¿Cómo lo dirías tú?",
+    "review.suggestionHint": "Escribe como lo dirías de verdad.",
+    "review.comment": "Por qué — y dónde se usa así",
+    "review.commentHint": "por ejemplo: en Medellín esto es de lo más normal, pero en Bogotá suena cortante.",
+    "review.severity": "¿Qué tan grave es?",
+    "review.region": "¿Desde dónde hablas?",
+    "review.regionHint": "Bogotá, Medellín, la costa…",
+    "review.role": "Estás revisando como",
+    "review.cancel": "Cancelar",
+    "review.save": "Agregar a mis marcas",
+    "review.saveChanges": "Guardar los cambios",
+    "review.missingText": "Este texto ya no está en la lección.",
+    "review.saved.one": "Marca guardada. {count} esperando a ser enviada.",
+    "review.saved.other": "Marcas guardadas. {count} esperando a ser enviadas.",
+    "review.edit": "Editar",
+    "review.remove": "Quitar",
+    "review.queueTitle": "Tus marcas",
+    "review.queue.empty": "Todavía no has marcado nada.",
+    "review.queue.notSent": "{summary}. Todavía no se ha enviado nada a ninguna parte.",
+    "review.queue.yourWording": "Tu versión:",
+    "review.queue.drift": "Este texto cambió desde que lo marcaste; ábrelo otra vez y revísalo.",
+    "review.confirmClear": "¿Borrar todas las marcas que guardaste? Esto no se puede deshacer.",
+    "review.submit": "Abrir una issue de GitHub con estas marcas",
+    "review.copy": "Copiar como Markdown",
+    "review.download": "Descargar JSON",
+    "review.clear": "Borrar todas",
+    "review.close": "Cerrar",
+    "review.status.opened": "Se abrió GitHub en una pestaña nueva. Tus marcas se quedan aquí hasta que las borres.",
+    "review.status.tooLongCopied": "Es demasiado para caber en un enlace, así que quedó en tu portapapeles: pégalo en la issue que GitHub acaba de abrir.",
+    "review.status.tooLongDownload": "Es demasiado para caber en un enlace. Usa “Descargar JSON” y adjunta el archivo a la issue que GitHub acaba de abrir.",
+    "review.status.copied": "Copiado. Pégalo en una issue de GitHub, en un correo o en un mensaje.",
+    "review.status.copyFailed": "No se pudo acceder al portapapeles; mejor usa “Descargar JSON”.",
+    "review.status.downloaded": "Descargado. Adjúntalo a una issue de GitHub o envíaselo a alguien del proyecto.",
+    "review.status.cleared": "Se borraron todas las marcas.",
+
+    /* Etiquetas visibles de los pares [código, etiqueta]. El código nunca cambia. */
+    "review.issueType.not-natural": "Nadie dice esto así",
+    "review.issueType.regional": "Región equivocada — no es uso general colombiano",
+    "review.issueType.register": "Registro equivocado (usted / tú / vos, o la formalidad)",
+    "review.issueType.translation": "La traducción no corresponde",
+    "review.issueType.pronunciation": "La guía de pronunciación confunde",
+    "review.issueType.spelling": "Ortografía, tilde o error de escritura",
+    "review.issueType.culture": "La explicación cultural está mal o incompleta",
+    "review.issueType.risky": "Podría avergonzar o poner en riesgo a quien lo repita",
+    "review.issueType.outdated": "Se entiende, pero suena anticuado o marca clase social",
+    "review.issueType.other": "Otra cosa",
+    "review.severity.blocker": "Grave — no publicar así",
+    "review.severity.should-fix": "Hay que corregirlo antes de aprobar",
+    "review.severity.nitpick": "Detalle menor — funciona de cualquier forma",
+    "review.role.native-es-co": "Hablante nativo de español colombiano",
+    "review.role.native-es-other": "Hablante nativo de español, no colombiano",
+    "review.role.native-en": "Hablante nativo o experto de inglés",
+    "review.role.educator": "Docente de idiomas"
+  }
+};
+
+/*
+ * The learner reads the language they are NOT studying. Someone working through
+ * the "en" lessons is a Spanish speaker, so they get a Spanish interface.
+ */
+function uiLanguageFor(direction) {
+  return direction === "es" ? "en" : "es";
+}
+
+function t(key, direction, values) {
+  const language = uiLanguageFor(direction);
+  const table = UI_STRINGS[language] || UI_STRINGS.en;
+  let text = table[key] ?? UI_STRINGS.en[key] ?? key;
+  if (values) {
+    for (const [name, value] of Object.entries(values)) {
+      text = text.split(`{${name}}`).join(String(value));
+    }
+  }
+  return text;
+}
+
+/*
+ * English and Spanish both need only a one/other distinction, so a key like
+ * "review.count" is stored as "review.count.one" and "review.count.other" and
+ * selected here. {count} is interpolated automatically.
+ */
+function tPlural(key, direction, count, values) {
+  const suffix = Math.abs(count) === 1 ? "one" : "other";
+  return t(`${key}.${suffix}`, direction, { count, ...(values || {}) });
+}
+
+/*
+ * Swaps every marked element in place. Elements opt in with an attribute:
+ *   data-i18n              -> textContent
+ *   data-i18n-placeholder  -> placeholder
+ *   data-i18n-aria         -> aria-label
+ * so that markup stays the source of truth for structure and this file stays
+ * the source of truth for wording.
+ *
+ * Because data-i18n writes textContent, it must sit on an element that holds
+ * text and nothing else. A <label> wrapping an <input>, or a sentence with a
+ * link inside it, needs the key on an inner <span> — otherwise the child
+ * element is destroyed on the first language switch. That mistake is silent
+ * and looks like a rendering bug, so it is caught and reported here instead.
+ */
+function applyI18n(direction, root) {
+  const scope = root || document;
+  const known = (key) => UI_STRINGS.en[key] !== undefined || UI_STRINGS.es[key] !== undefined;
+  scope.querySelectorAll("[data-i18n]").forEach((node) => {
+    const key = node.dataset.i18n;
+    // An unknown key must never overwrite good markup with its own name. Leaving
+    // the authored text in place degrades to "untranslated", not "broken".
+    if (!known(key)) {
+      console.warn(`i18n: no string for "${key}"; leaving the markup text in place.`);
+      return;
+    }
+    if (node.firstElementChild) {
+      console.warn(`i18n: "${key}" is on an element containing markup; move the key to an inner <span> or its children will be erased.`);
+      return;
+    }
+    node.textContent = t(key, direction);
+  });
+  scope.querySelectorAll("[data-i18n-placeholder]").forEach((node) => {
+    node.setAttribute("placeholder", t(node.dataset.i18nPlaceholder, direction));
+  });
+  scope.querySelectorAll("[data-i18n-aria]").forEach((node) => {
+    node.setAttribute("aria-label", t(node.dataset.i18nAria, direction));
+  });
+  document.documentElement.lang = uiLanguageFor(direction);
+}
+
+/*
+ * Exposed globally so other scripts (review-ui.js) can translate strings they
+ * build in JS rather than in markup. Load this file before them.
+ *
+ * Note for callers: `direction` is the *content* direction ("es" = learning
+ * Colombian Spanish). It is read here, never written. Interface language is
+ * derived from it through uiLanguageFor(); the two are related but not the same
+ * concept, and nothing in this file should be used to normalise or collapse the
+ * direction value that lesson content and review anchors depend on.
+ */
+if (typeof window !== "undefined") {
+  window.ParceroI18n = { UI_STRINGS, uiLanguageFor, t, tPlural, applyI18n };
+}
+
+if (typeof module !== "undefined" && module.exports) {
+  module.exports = { UI_STRINGS, uiLanguageFor, t, tPlural, applyI18n };
+}
+})();
