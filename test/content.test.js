@@ -470,61 +470,39 @@ test("no fallback is guarded by a typeof that an element id makes impossible", (
   const impossible = [];
   for (const src of scripts) {
   const text = read(src);
-  const structure = blankLiterals(text);  // for reading code shape
+  const structure = blankLiterals(text);  // for deciding what is code
   const prose = blankComments(text);      // keeps "undefined" readable
   /*
-   * A typeof probe on such a name is only a defect when its result is used as
-   * the data. Feeding it through a shape check first is the correct remedy and
-   * must not be reported as the disease: #8 writes
+   * What this asserts is REACHABILITY, not safety, and the distinction is the
+   * whole point. Wrapping the probe in a shape check fixes the crash and
+   * leaves the dead branch:
    *
    *   dataArray(typeof lessons === "undefined" ? null : lessons)
    *
-   * where dataArray does the Array.isArray. The typeof is then doing the one
-   * job it can do -- avoiding a ReferenceError on a name nothing declares --
-   * and the element case is caught by shape, exactly as this check demands.
-   * Flagging it would push someone to delete a working guard.
+   * `lessons` resolves either way -- to the const binding when data/lessons.js
+   * loads, and to <section id="lessons"> through named access when it does
+   * not -- so the "undefined" arm is unreachable in both worlds and the
+   * fallback it appears to provide does not exist. Array.isArray is what
+   * actually rescues the element case; the typeof contributes nothing except
+   * the impression of a guard, and anyone who later trusts that impression and
+   * drops the shape check gets an element where the data should be.
    *
-   * "Is it shape-checked" is answered by walking out through the unclosed
-   * parens that enclose the probe and naming the calls they belong to, not by
-   * reading a fixed window of characters around it. A window is not a scope:
-   * the first version of this used +/-200 chars, and it took a mutation to
-   * show that what it really measured was proximity.
+   * The remedy is to delete the probe, not to wrap it: dataArray(lessons).
+   *
+   * This is deliberately strict, and it is strict only where it is entitled to
+   * be. A probe on a name with no element id IS load-bearing -- curriculum,
+   * fluencyItems and matureItems would throw ReferenceError on a bare read if
+   * their script failed -- so only names that index.html also declares as ids
+   * are reported.
+   *
+   * I had narrowed this to accept the shape-checked form, on a peer's report
+   * that it was a false positive. It was not; they retracted it and they were
+   * right to. Recorded because the narrowing looked reasonable and cost the
+   * check its only real finding.
    */
-  const span = (from) => {
-    let depth = 0;
-    for (let i = from; i < structure.length; i += 1) {
-      const ch = structure[i];
-      if (ch === "(" || ch === "[" || ch === "{") depth += 1;
-      else if (ch === ")" || ch === "]" || ch === "}") {
-        depth -= 1;
-        if (depth === 0 && ch === "}") return structure.slice(from, i + 1);
-        if (depth < 0) return structure.slice(from, i);
-      } else if (ch === ";" && depth === 0) return structure.slice(from, i);
-    }
-    return structure.slice(from);
-  };
-  const shapeCheckers = new Set(["isArray"]);
-  for (const match of structure.matchAll(/(?:const|let|var|function)\s+([A-Za-z_$][\w$]*)/g)) {
-    if (/Array\.isArray/.test(span(match.index))) shapeCheckers.add(match[1]);
-  }
-  const enclosingCalls = (index) => {
-    const names = [];
-    let depth = 0;
-    for (let i = index; i >= 0; i -= 1) {
-      const ch = structure[i];
-      if (ch === ")") depth += 1;
-      else if (ch === "(") {
-        if (depth > 0) { depth -= 1; continue; }
-        const before = structure.slice(0, i).match(/([A-Za-z_$][\w$]*)\s*$/);
-        if (before) names.push(before[1]);
-      } else if ((ch === ";" || ch === "{" || ch === "}") && depth === 0) break;
-    }
-    return names;
-  };
   for (const match of prose.matchAll(/typeof\s+([A-Za-z_$][\w$]*)\s*===?\s*["']undefined["']/g)) {
     if (!idGlobals.has(match[1])) continue;
     if (structure[match.index] === " ") continue;  // the probe is quoted prose, not code
-    if (enclosingCalls(match.index).some((name) => shapeCheckers.has(name))) continue;
     impossible.push(`${src}: typeof ${match[1]} === "undefined" can never be true; #${match[1]} is an element id`);
   }
   }
