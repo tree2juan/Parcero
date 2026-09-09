@@ -92,11 +92,33 @@
     }
   }
 
+  /*
+   * Read each data global through a thunk and judge it by shape.
+   *
+   * `typeof lessons === "undefined"` cannot work here: `index.html` has
+   * `id="lessons"`, and named access on Window makes every element id a global,
+   * so the name is always defined — the fallback never fires and a <section>
+   * reaches code expecting an array. Nor can this read globalThis[name], because
+   * a top-level `const` is a lexical binding and never becomes a property of the
+   * global object; globalThis.lessons would return the element, not the data.
+   *
+   * So: reference lexically inside a thunk, catch the ReferenceError for a name
+   * that genuinely never loaded, and require Array.isArray for everything else.
+   */
+  const arrayFrom = (read) => {
+    let value;
+    try {
+      value = read();
+    } catch {
+      return [];
+    }
+    return Array.isArray(value) ? value : [];
+  };
   const data = () => ({
-    lessons: typeof lessons === "undefined" ? [] : lessons,
-    curriculum: typeof curriculum === "undefined" ? [] : curriculum,
-    fluencyItems: typeof fluencyItems === "undefined" ? [] : fluencyItems,
-    matureItems: typeof matureItems === "undefined" ? [] : matureItems
+    lessons: arrayFrom(() => lessons),
+    curriculum: arrayFrom(() => curriculum),
+    fluencyItems: arrayFrom(() => fluencyItems),
+    matureItems: arrayFrom(() => matureItems)
   });
 
   const escapeHtml = (value) => String(value == null ? "" : value)

@@ -341,6 +341,49 @@ test("no script calls a bare name that another script owns", () => {
     "Either give the caller its own definition, or, if the global is intentional API, add the name to `shared` above.");
 });
 
+test("no fallback is guarded by a typeof that an element id makes impossible", () => {
+  /*
+   * Named access on Window turns every element id into a global, so with
+   * `<section id="lessons">` in the page, `typeof lessons` is "object" even
+   * when data/lessons.js never loads. A `typeof x === "undefined"` fallback on
+   * such a name can never fire, and instead of degrading it hands a <section>
+   * to code expecting an array.
+   *
+   * node --test cannot see this and does worse than miss it: with no document
+   * in the harness the name really is undefined, the fallback really does fire,
+   * and the guard tests green. The harness inverts the condition rather than
+   * merely hiding it. Found by the flashcards session (#8) in their own copy of
+   * this pattern; this branch had it in review-ui.js.
+   *
+   * Derived from the page's ids rather than a list of names, so renaming an id
+   * cannot leave this passing while guarding nothing.
+   */
+  const html = read("index.html");
+  const idGlobals = new Set(
+  [...html.matchAll(/id="([\w-]+)"/g)]
+    .map((match) => match[1])
+    .filter((id) => /^[A-Za-z_$][\w$]*$/.test(id))
+  );
+  assert.ok(idGlobals.size > 0,
+  "expected index.html to contain ids that are valid identifiers; without any, this check verifies nothing");
+
+  const scripts = [...html.matchAll(/<script[^>]*src="([^"]+)"/g)].map((match) => match[1])
+  .filter((src) => fs.existsSync(path.join(root, src)));
+
+  const impossible = [];
+  for (const src of scripts) {
+  // Comments are prose, and the prose here quotes the very pattern being banned.
+  const code = read(src).replace(/\/\*[\s\S]*?\*\//g, "").replace(/^\s*\/\/.*$/gm, "");
+  for (const match of code.matchAll(/typeof\s+([A-Za-z_$][\w$]*)\s*===?\s*["']undefined["']/g)) {
+    if (idGlobals.has(match[1])) impossible.push(`${src}: typeof ${match[1]} === "undefined" can never be true; #${match[1]} is an element id`);
+  }
+  }
+
+  assert.deepStrictEqual([...new Set(impossible)], [],
+  "guard on shape (Array.isArray) instead — an element never satisfies it, and the typeof probe only helps\n" +
+  "for a name no script and no element declares.");
+});
+
 test("the read-aloud button speaks the taught line", () => {
   const app = read("app.js");
   const utterance = app.match(/new SpeechSynthesisUtterance\(([^;]*?)\);/);
