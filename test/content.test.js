@@ -14,6 +14,87 @@ const directions = ["es", "en"];
 const isText = (value) => typeof value === "string" && value.trim().length > 0;
 const duplicates = (list) => [...new Set(list.filter((item, index) => list.indexOf(item) !== index))];
 
+/*
+ * Blank out everything that is not executable code, preserving offsets so line
+ * numbers in failure messages stay true.
+ *
+ * The static checks below used to strip comments only, on the reasoning that
+ * "the prose here quotes the very bugs being banned". That reasoning was right
+ * and incomplete: a *string literal* is prose too, and the file most likely to
+ * contain the banned words is the test that names the fields it is checking.
+ * `for (const [field, expected] of [["dialogue", ...], ["vocabulary", ...]])`
+ * destructures a (name, count) pair and was flagged as a positional row read,
+ * because "dialogue" appeared inside the quotes.
+ *
+ * #8's cross-script scanner solves the same problem the same way; when that
+ * branch lands, these two should become one helper rather than two.
+ */
+const scan = (source, { literals = true } = {}) => {
+  const out = source.split("");
+  const blank = (from, to) => {
+    for (let i = from; i < to && i < out.length; i += 1) if (out[i] !== "\n") out[i] = " ";
+  };
+  let i = 0;
+  let prev = "";
+  while (i < source.length) {
+    const two = source.slice(i, i + 2);
+    if (two === "//") {
+      let end = source.indexOf("\n", i);
+      if (end < 0) end = source.length;
+      blank(i, end);
+      i = end;
+      continue;
+    }
+    if (two === "/*") {
+      let end = source.indexOf("*/", i + 2);
+      end = end < 0 ? source.length : end + 2;
+      blank(i, end);
+      i = end;
+      continue;
+    }
+    const ch = source[i];
+    if (ch === '"' || ch === "'" || ch === "`") {
+      let j = i + 1;
+      while (j < source.length) {
+        if (source[j] === "\\") { j += 2; continue; }
+        if (source[j] === ch) break;
+        j += 1;
+      }
+      if (literals) blank(i + 1, j);
+      i = j + 1;
+      prev = ch;
+      continue;
+    }
+    // A "/" is a regex only where a value cannot already have ended; otherwise
+    // it is division. Guessing wrong the safe way means treating a regex as
+    // code, which over-reports rather than going quiet.
+    if (ch === "/" && /[(,=:[!&|?{};+\-*%~^]/.test(prev)) {
+      let j = i + 1;
+      let inClass = false;
+      while (j < source.length) {
+        if (source[j] === "\\") { j += 2; continue; }
+        if (source[j] === "[") inClass = true;
+        else if (source[j] === "]") inClass = false;
+        else if (source[j] === "/" && !inClass) break;
+        else if (source[j] === "\n") { j = -1; break; }
+        j += 1;
+      }
+      if (j > 0) {
+        if (literals) blank(i + 1, j);
+        i = j + 1;
+        prev = "/";
+        continue;
+      }
+    }
+    if (!/\s/.test(ch)) prev = ch;
+    i += 1;
+  }
+  return out.join("");
+};
+
+const blankLiterals = (source) => scan(source, { literals: true });
+const blankComments = (source) => scan(source, { literals: false });
+
 test("lessons are present and uniquely identified", () => {
   assert.ok(Array.isArray(lessons) && lessons.length > 1, "expected more than one lesson");
   const ids = lessons.map((lesson) => lesson.id);
@@ -239,8 +320,10 @@ test("nothing reads a lesson row by position", () => {
     /\b(?:dialogue|vocabulary)\s*\.\s*(?:map|forEach|filter|flatMap|some|every|find)\(\s*\(?\s*\[/,
   ];
 
-  // Comments are prose, and the prose here quotes the very bugs being banned.
-  const code = (source) => source.replace(/\/\*[\s\S]*?\*\//g, "").replace(/^\s*\/\/.*$/gm, "");
+  // Comments and string literals are both prose, and the prose here quotes the
+  // very bugs being banned. See blankLiterals: stripping comments alone flagged
+  // a (name, count) pair whose name happened to be "dialogue".
+  const code = (source) => blankLiterals(source);
 
   const tests = fs.readdirSync(path.join(root, "test"))
     .filter((name) => name.endsWith(".test.js"))
@@ -327,10 +410,24 @@ test("no script calls a bare name that another script owns", () => {
   for (const src of scripts) {
     const text = read(src);
     const mine = declaredIn(text);
-    for (const match of text.matchAll(/(^|[^.\w$])([A-Za-z_$][\w$]*)\s*\(/g)) {
+    for (const match of blankLiterals(text).matchAll(/(^|[^.\w$])([A-Za-z_$][\w$]*)\s*\(/g)) {
       const name = match[2];
       if (keywords.has(name) || shared.has(name) || mine.has(name)) continue;
-      const owners = scripts.filter((other) => other !== src && owns.get(other).has(name));
+      /*
+       * A data/ script loaded BEFORE the caller is a provider, and the caller
+       * reaching its top-level name is the architecture, not an accident --
+       * data/flashcards.js defining flashcardSets for flashcards.js is exactly
+       * what data/lessons.js does for app.js. What stays banned is the sibling
+       * reach that motivated this check: a handler calling render(), resolving
+       * to app.js's render, doing nothing visible and re-rendering someone
+       * else's section.
+       *
+       * Order is load order, and it is required rather than assumed: a name
+       * from a script loaded after the caller is not available when the caller
+       * runs, so that reach is still a bug and is still reported.
+       */
+      const owners = scripts.filter((other) => other !== src && owns.get(other).has(name))
+        .filter((other) => !(other.startsWith("data/") && scripts.indexOf(other) < scripts.indexOf(src)));
       if (owners.length) reaches.push(`${src} calls bare ${name}(), which ${owners.join(", ")} defines at top level`);
     }
   }
@@ -372,10 +469,63 @@ test("no fallback is guarded by a typeof that an element id makes impossible", (
 
   const impossible = [];
   for (const src of scripts) {
-  // Comments are prose, and the prose here quotes the very pattern being banned.
-  const code = read(src).replace(/\/\*[\s\S]*?\*\//g, "").replace(/^\s*\/\/.*$/gm, "");
-  for (const match of code.matchAll(/typeof\s+([A-Za-z_$][\w$]*)\s*===?\s*["']undefined["']/g)) {
-    if (idGlobals.has(match[1])) impossible.push(`${src}: typeof ${match[1]} === "undefined" can never be true; #${match[1]} is an element id`);
+  const text = read(src);
+  const structure = blankLiterals(text);  // for reading code shape
+  const prose = blankComments(text);      // keeps "undefined" readable
+  /*
+   * A typeof probe on such a name is only a defect when its result is used as
+   * the data. Feeding it through a shape check first is the correct remedy and
+   * must not be reported as the disease: #8 writes
+   *
+   *   dataArray(typeof lessons === "undefined" ? null : lessons)
+   *
+   * where dataArray does the Array.isArray. The typeof is then doing the one
+   * job it can do -- avoiding a ReferenceError on a name nothing declares --
+   * and the element case is caught by shape, exactly as this check demands.
+   * Flagging it would push someone to delete a working guard.
+   *
+   * "Is it shape-checked" is answered by walking out through the unclosed
+   * parens that enclose the probe and naming the calls they belong to, not by
+   * reading a fixed window of characters around it. A window is not a scope:
+   * the first version of this used +/-200 chars, and it took a mutation to
+   * show that what it really measured was proximity.
+   */
+  const span = (from) => {
+    let depth = 0;
+    for (let i = from; i < structure.length; i += 1) {
+      const ch = structure[i];
+      if (ch === "(" || ch === "[" || ch === "{") depth += 1;
+      else if (ch === ")" || ch === "]" || ch === "}") {
+        depth -= 1;
+        if (depth === 0 && ch === "}") return structure.slice(from, i + 1);
+        if (depth < 0) return structure.slice(from, i);
+      } else if (ch === ";" && depth === 0) return structure.slice(from, i);
+    }
+    return structure.slice(from);
+  };
+  const shapeCheckers = new Set(["isArray"]);
+  for (const match of structure.matchAll(/(?:const|let|var|function)\s+([A-Za-z_$][\w$]*)/g)) {
+    if (/Array\.isArray/.test(span(match.index))) shapeCheckers.add(match[1]);
+  }
+  const enclosingCalls = (index) => {
+    const names = [];
+    let depth = 0;
+    for (let i = index; i >= 0; i -= 1) {
+      const ch = structure[i];
+      if (ch === ")") depth += 1;
+      else if (ch === "(") {
+        if (depth > 0) { depth -= 1; continue; }
+        const before = structure.slice(0, i).match(/([A-Za-z_$][\w$]*)\s*$/);
+        if (before) names.push(before[1]);
+      } else if ((ch === ";" || ch === "{" || ch === "}") && depth === 0) break;
+    }
+    return names;
+  };
+  for (const match of prose.matchAll(/typeof\s+([A-Za-z_$][\w$]*)\s*===?\s*["']undefined["']/g)) {
+    if (!idGlobals.has(match[1])) continue;
+    if (structure[match.index] === " ") continue;  // the probe is quoted prose, not code
+    if (enclosingCalls(match.index).some((name) => shapeCheckers.has(name))) continue;
+    impossible.push(`${src}: typeof ${match[1]} === "undefined" can never be true; #${match[1]} is an element id`);
   }
   }
 
