@@ -49,6 +49,7 @@
     "report.scope.mature": "Mature language",
     "report.noLesson": "Open a lesson first and it will show up here.",
     "report.formCleared": "Form cleared.",
+    "report.holding": "Still reporting on the line you picked. Clear the form to report on something else.",
     "report.editing": "Editing a report you already saved."
   };
 
@@ -191,22 +192,25 @@
       .join("");
 
     /*
-     * A saved report can point at a lesson the reader has since navigated away
-     * from. When reopening one for editing, offer it as its own option so the
-     * edit lands on the string that was actually reported. Only then: on an
-     * ordinary re-render a stale anchor must fall away, or paging to the next
-     * lesson would keep showing the previous one's line.
+     * A report that points somewhere the reader has since navigated away from
+     * is still a valid report, so offer its anchor as its own option rather
+     * than dropping it. Only when asked: on an ordinary re-render a stale
+     * anchor must fall away, or paging to the next lesson would keep showing
+     * the previous one's line.
      */
+    let pinned = false;
     if (preferred && allowMissing && !anchors.includes(preferred)) {
       const option = document.createElement("option");
       option.value = preferred;
       option.textContent = itemLabel(preferred);
       select.prepend(option);
+      pinned = true;
     }
     if (preferred && [...select.options].some((option) => option.value === preferred)) {
       select.value = preferred;
     }
     select.disabled = select.options.length === 0;
+    return pinned;
   }
 
   function renderParts(keepAnchor) {
@@ -236,10 +240,25 @@
     $("#flag-location").textContent = resolved.ok ? resolved.label : anchor;
   }
 
+  /*
+   * A report being written owns its target. Anchors are scoped to a lesson and
+   * a direction, so navigating or switching direction rebuilds the item list
+   * without the anchor the reviewer is describing — and the picker would
+   * quietly re-point at some other string while their words stayed in the box.
+   * That files a correction against a line nobody was looking at. So: a form
+   * with work in it holds its target; an empty one is free to follow the reader.
+   */
+  const formDirty = () => Boolean(
+    $("#flag-suggestion").value.trim()
+    || $("#flag-comment").value.trim()
+    || state.editing !== null
+  );
+
   /* Rebuild every control in the tab. Safe to call whenever the page changes. */
   function renderPanel() {
     const item = $("#report-item").value;
     const part = $("#flag-part").value;
+    const holding = formDirty();
     renderScopes();
     fillSelect($("#flag-type"), ParceroReview.ISSUE_TYPES, "issueType");
     fillSelect($("#flag-severity"), ParceroReview.SEVERITIES, "severity");
@@ -247,8 +266,9 @@
     /* Suggestions show in the reviewer's language; the code they map back to does not. */
     $("#flag-regions").innerHTML = ParceroReview.REGION_SUGGESTIONS
       .map(([code, fallback]) => `<option value="${escapeHtml(label("region", code, fallback))}"></option>`).join("");
-    renderItems(item);
+    const held = renderItems(item, holding);
     renderParts(part);
+    if (held) $("#review-status").textContent = t("report.holding");
     refreshCounts();
     renderQueue();
   }
@@ -328,7 +348,8 @@
     }
     resetForm();
     persistFlags();
-    renderQueue();
+    /* The form is clean again, so the picker is free to follow the reader. */
+    renderPanel();
     $("#review-status").textContent = tp("review.saved", state.flags.length);
   }
 

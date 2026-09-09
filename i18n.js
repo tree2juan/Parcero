@@ -210,6 +210,7 @@ const UI_STRINGS = {
     "report.scope.mature": "Mature language",
     "report.noLesson": "Open a lesson first and it will show up here.",
     "report.formCleared": "Form cleared.",
+    "report.holding": "Still reporting on the line you picked. Clear the form to report on something else.",
     "report.editing": "Editing a report you already saved.",
   },
 
@@ -398,6 +399,7 @@ const UI_STRINGS = {
     "report.scope.mature": "Lenguaje fuerte",
     "report.noLesson": "Abre una lección primero y aparecerá aquí.",
     "report.formCleared": "Formulario limpiado.",
+    "report.holding": "Sigues reportando la línea que elegiste. Limpia el formulario para reportar otra cosa.",
     "report.editing": "Estás editando un reporte que ya guardaste.",
   }
 };

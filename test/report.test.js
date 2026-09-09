@@ -79,8 +79,7 @@ test("the picker reaches every kind of content a reviewer can see", () => {
 
 test("a stale item cannot outlive the lesson it belonged to", () => {
   /*
-   * Editing a saved report may target a lesson the reader has paged away from,
-   * so the picker can offer an anchor that is not in the current list. That
+   * The picker can offer an anchor that is not in the current list, but that
    * escape hatch has to stay opt-in: when it was unconditional, paging to the
    * next lesson kept showing the previous lesson's line.
    */
@@ -88,10 +87,39 @@ test("a stale item cannot outlive the lesson it belonged to", () => {
   assert.match(ui, /if \(preferred && allowMissing && !anchors\.includes\(preferred\)\)/,
     "offering a missing anchor must be guarded by allowMissing");
   assert.match(ui, /renderItems\(ParceroReview\.groupAnchor\(flag\.anchor\) \|\| flag\.anchor, true\)/,
-    "editing a saved report is the one caller allowed to keep a missing anchor");
+    "editing a saved report is the one caller allowed to hard-code a missing anchor");
   const panelRender = ui.match(/function renderPanel\(\)[\s\S]*?\n  \}/)[0];
-  assert.ok(/renderItems\(item\);/.test(panelRender),
-    "an ordinary re-render must not pass allowMissing, or navigation will stick");
+  assert.ok(!/renderItems\([^)]*,\s*true\)/.test(panelRender),
+    "an ordinary re-render must not hard-code allowMissing, or navigation will stick");
+});
+
+test("a report being written keeps its target when the page moves under it", () => {
+  /*
+   * Anchors are scoped to a lesson and a direction. Paging to the next lesson
+   * or toggling direction rebuilds the item list without the anchor the
+   * reviewer is describing, and the picker used to re-point at whatever came
+   * first while their typed suggestion stayed put — filing a correction
+   * against a line nobody was looking at. Measured in a browser: selecting the
+   * English translation of a dialogue line and toggling direction silently
+   * moved the target to the lesson title.
+   */
+  assert.match(ui, /const formDirty = \(\) => Boolean\(/, "there must be a single definition of an in-progress report");
+  const dirty = ui.match(/const formDirty = \(\) => Boolean\([\s\S]*?\);/)[0];
+  for (const field of ["#flag-suggestion", "#flag-comment"]) {
+    assert.ok(dirty.includes(field), `${field} holds reviewer prose and must count as work in progress`);
+  }
+  assert.ok(/state\.editing !== null/.test(dirty), "reopening a saved report is also work in progress");
+
+  const panelRender = ui.match(/function renderPanel\(\)[\s\S]*?\n  \}/)[0];
+  assert.ok(/const holding = formDirty\(\);/.test(panelRender), "a rebuild must ask whether anything is at stake");
+  assert.ok(/renderItems\(item, holding\)/.test(panelRender), "a dirty form must pin its own target");
+  assert.ok(/if \(held\) \$\("#review-status"\)\.textContent = t\("report\.holding"\);/.test(panelRender),
+    "silently keeping the old target is as confusing as silently changing it — say so");
+  assert.match(ui, /return pinned;/, "renderItems must report back whether it had to hold the anchor");
+
+  const save = ui.match(/function saveFlag\(\)[\s\S]*?\n  \}/)[0];
+  assert.ok(/resetForm\(\);\s*\n\s*persistFlags\(\);[\s\S]*renderPanel\(\);/.test(save),
+    "saving clears the form, so the pin must be released in the same breath or the picker stays stuck");
 });
 
 test("the reporting tab is reachable without knowing it is there", () => {
