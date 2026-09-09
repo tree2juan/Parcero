@@ -246,6 +246,8 @@ For each flag it prints the file, the field, the current wording, and the sugges
 - **Drifted** — the text changed after it was flagged. The tool refuses to call these ready, because applying one blind would silently revert a newer edit. Re-read it and decide.
 - **Unresolved** — the anchor no longer points at anything, usually because content was deleted or renamed. Exits non-zero.
 
+You do not have to run it yourself. When a flag is filed from the page, the **Triage native-speaker flags** workflow runs this same tool against the content as it stands right now and posts the result on the issue, labelling it `triage-ready`, `triage-needs-human`, or `triage-manual`. Editing the issue re-runs it and updates the same comment rather than adding another. A flag filed by hand, without the machine-readable block, is labelled `triage-manual` and left for a person — it is still a valid flag, it simply cannot be resolved automatically. The workflow reads the issue body through the environment rather than interpolating it into a shell command, and asks for no write access beyond the issue it is commenting on.
+
 Once a lesson's flags are applied and both sides are signed off, set its `review` field to `"reviewed"`.
 
 The mature-language reference needs the same care from qualified reviewers — severity labels, local usage, and de-escalation guidance. Content that encourages harassment does not belong here.
@@ -262,6 +264,7 @@ data/lessons.js     The lessons
 data/lesson-schema.js  The lesson shape: defaults, normalisation, legacy tuples
 data/curriculum.js  200 verbs, fluency connectors, mature-language reference
 scripts/            Maintainer tools: triage flags back to the lines to edit
+.github/workflows/  CI, Pages deploy, and automatic triage of filed flags
 assets/             Favicon, social card, roadmap diagram
 test/               Dependency-free content validation
 .github/workflows/  CI on every PR, Pages deployment on main
