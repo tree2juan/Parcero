@@ -11,12 +11,12 @@ const bundle = [
   read("data/lessons.js"),
   read("data/curriculum.js"),
   read("data/flashcards.js"),
-  "({ lessons, curriculum, fluencyItems, FLASHCARD_SET_SIZE, flashcardSlug, flashcardSplit, flashcardTopics, flashcardSets });"
+  "({ lessons, curriculum, fluencyItems, FLASHCARD_SET_SIZE, flashcardSlug, flashcardSplit, flashcardsFromLesson, flashcardTopics, flashcardSets });"
 ].join("\n");
 
 const {
   lessons, curriculum, fluencyItems,
-  FLASHCARD_SET_SIZE, flashcardSlug, flashcardSplit, flashcardTopics, flashcardSets
+  FLASHCARD_SET_SIZE, flashcardSlug, flashcardSplit, flashcardsFromLesson, flashcardTopics, flashcardSets
 } = vm.runInNewContext(bundle, {}, { filename: "parcero-flashcard-bundle.js" });
 
 const directions = ["es", "en"];
@@ -191,6 +191,79 @@ test("new content flows into the decks with no edit here", () => {
   assert.ok(after.length > before.length, "adding content should add sets");
   assert.ok(after.some((set) => set.topicId === "lesson-a-brand-new-situation"), "a new lesson should become a topic");
   assert.ok(after.some((set) => set.topicId === "verbs-a-new-level"), "a new verb level should become a topic");
+});
+
+/*
+ * The shape guard.
+ *
+ * Lesson rows are migrating from positional tuples to named objects carrying
+ * far more per entry. Reading a row positionally does not degrade when the row
+ * becomes an object — it throws, because objects are not iterable — so this
+ * asserts equivalence rather than merely that nothing crashed. A row read
+ * positionally anywhere in the derivation fails here.
+ */
+test("a lesson reads the same whether its rows are tuples or named objects", () => {
+  const asTuples = {
+    id: "shape-check",
+    level: "Starter · Shapes",
+    es: {
+      title: "Prueba de forma",
+      situation: "Una situación de prueba.",
+      note: "Una nota de prueba.",
+      dialogue: [["Ana", "¿Cómo vas?", "How's it going?", "KOH-moh vahs"]],
+      vocabulary: [["parcero", "friend, mate"]],
+      prompt: "¿Qué significa “parcero”?",
+      choices: ["a stranger", "a friend", "a coffee"],
+      answer: 1
+    }
+  };
+
+  const asObjects = JSON.parse(JSON.stringify(asTuples));
+  asObjects.es.dialogue = [{
+    speaker: "Ana",
+    target: "¿Cómo vas?",
+    translation: "How's it going?",
+    pronunciation: "KOH-moh vahs",
+    literal: "How you go?",
+    why: "A standard Colombian greeting."
+  }];
+  asObjects.es.vocabulary = [{
+    term: "parcero",
+    explanation: "friend, mate",
+    literal: "partner",
+    useWhen: "Talking to a friend.",
+    register: "casual",
+    region: "General Colombian",
+    related: ["parce"],
+    example: { target: "¿Todo bien, parcero?", translation: "All good, mate?" }
+  }];
+
+  const fromTuples = flashcardsFromLesson(asTuples, "es");
+  const fromObjects = flashcardsFromLesson(asObjects, "es");
+
+  assert.ok(fromTuples.length > 0, "the tuple shape should still produce cards");
+  assert.deepStrictEqual(
+    fromObjects,
+    fromTuples,
+    "the same lesson in either row shape must produce identical cards"
+  );
+});
+
+test("extra practice questions become cards without an edit here", () => {
+  const lesson = JSON.parse(JSON.stringify(lessons[0]));
+  const before = flashcardsFromLesson(lesson, "es").filter((card) => card.kind === "practice");
+  lesson.es.practiceExtra = [
+    { prompt: "¿Una pregunta añadida?", choices: ["no", "sí"], answer: 1, tests: "extras become cards" }
+  ];
+  const after = flashcardsFromLesson(lesson, "es").filter((card) => card.kind === "practice");
+
+  assert.strictEqual(after.length, before.length + 1, "an added question should add a card");
+  assert.ok(after.some((card) => card.back === "sí"), "the card should answer with the declared choice");
+  assert.deepStrictEqual(
+    duplicates(after.map((card) => card.id)),
+    [],
+    "extra practice cards need their own ids"
+  );
 });
 
 /* ---------- interface language ---------- */

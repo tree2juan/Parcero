@@ -55,6 +55,33 @@ function flashcardSentenceCase(value) {
 }
 
 /*
+ * Read one field from a lesson row that may be a tuple or a named object.
+ *
+ * Dialogue and vocabulary rows are migrating from positional tuples to objects
+ * carrying much more per entry. Both shapes are valid input and both have to
+ * keep working, so no row is ever read positionally: destructuring an object
+ * does not degrade to undefined, it throws, because objects are not iterable.
+ * The positions here match the tuple order the older rows still use.
+ */
+function flashcardSlot(row, name, index) {
+  if (!row) return "";
+  const value = Array.isArray(row) ? row[index] : row[name];
+  return value == null ? "" : String(value);
+}
+
+/*
+ * Every practice question for one direction, primary first.
+ *
+ * The original question lives on the content itself; later ones arrive in
+ * practiceExtra. Reading both here means added questions become cards without
+ * a change to this file.
+ */
+function flashcardQuestions(content) {
+  const extra = Array.isArray(content.practiceExtra) ? content.practiceExtra : [];
+  return [content].concat(extra).filter((question) => question && question.prompt);
+}
+
+/*
  * One lesson becomes a topic: its vocabulary, what each line means, how each
  * line sounds, the context note, and the practice question. Cards are ordered
  * by kind so that splitting a lesson keeps the same line's meaning and
@@ -67,7 +94,10 @@ function flashcardsFromLesson(lesson, direction) {
   const key = `${lesson.id}/${direction}`;
   const cards = [];
 
-  (content.vocabulary || []).forEach(([term, meaning], index) => {
+  (content.vocabulary || []).forEach((entry, index) => {
+    const term = flashcardSlot(entry, "term", 0);
+    const meaning = flashcardSlot(entry, "explanation", 1);
+    if (!term || !meaning) return;
     cards.push({
       id: `${key}/vocabulary/${index}`,
       kind: "vocabulary",
@@ -80,12 +110,15 @@ function flashcardsFromLesson(lesson, direction) {
     });
   });
 
-  (content.dialogue || []).forEach(([speaker, line, translation], index) => {
+  (content.dialogue || []).forEach((entry, index) => {
+    const line = flashcardSlot(entry, "target", 1);
+    const translation = flashcardSlot(entry, "translation", 2);
+    if (!line || !translation) return;
     cards.push({
       id: `${key}/meaning/${index}`,
       kind: "meaning",
       askKey: "deck.ask.meaning",
-      askValues: { speaker },
+      askValues: { speaker: flashcardSlot(entry, "speaker", 0) },
       front: line,
       frontLang: target,
       back: translation,
@@ -94,7 +127,10 @@ function flashcardsFromLesson(lesson, direction) {
     });
   });
 
-  (content.dialogue || []).forEach(([, line, , pronunciation], index) => {
+  (content.dialogue || []).forEach((entry, index) => {
+    const line = flashcardSlot(entry, "target", 1);
+    const pronunciation = flashcardSlot(entry, "pronunciation", 3);
+    if (!line || !pronunciation) return;
     cards.push({
       id: `${key}/pronunciation/${index}`,
       kind: "pronunciation",
@@ -120,19 +156,20 @@ function flashcardsFromLesson(lesson, direction) {
     });
   }
 
-  const answer = (content.choices || [])[content.answer];
-  if (content.prompt && answer) {
+  flashcardQuestions(content).forEach((question, index) => {
+    const answer = (question.choices || [])[question.answer];
+    if (!answer) return;
     cards.push({
-      id: `${key}/practice`,
+      id: index === 0 ? `${key}/practice` : `${key}/practice/${index}`,
       kind: "practice",
       askKey: "deck.ask.practice",
-      front: content.prompt,
+      front: question.prompt,
       frontLang: null,
       back: answer,
       backLang: null,
       note: null
     });
-  }
+  });
 
   return cards;
 }
