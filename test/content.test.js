@@ -256,6 +256,91 @@ test("nothing reads a lesson row by position", () => {
   }
 });
 
+test("no script calls a bare name that another script owns", () => {
+  /*
+   * The page loads every script into ONE global scope, so a bare call in
+   * review-ui.js can silently reach a function defined in app.js. require()
+   * gives each module its own scope, which makes that structurally invisible
+   * to the rest of this suite — not missed, impossible to see. The flashcards
+   * session shipped exactly this: a handler calling `render()`, which reached
+   * app.js's `render`. The button did nothing and an unrelated part of the
+   * page re-rendered, with no error anywhere.
+   *
+   * This branch rewrote three of these scripts and removed declarations from
+   * review-ui.js's IIFE head, which is precisely the edit that creates the bug:
+   * delete a declaration, leave the call behind, and the name still resolves.
+   *
+   * `shared` is the intentional cross-script API. A new global has to be argued
+   * into it, so an accidental reach is caught by default.
+   *
+   * `owns` is deliberately over-inclusive: it lists every column-0 declaration,
+   * which for an IIFE-wrapped file includes names that never become globals.
+   * Measured in a browser, the seven scripts declare 81 such names and only 51
+   * are real globals — 45 of them app.js's, with review.js and review-ui.js
+   * exposing one and none. Over-inclusion costs nothing, because a bare call to
+   * a name that turns out to be IIFE-internal elsewhere resolves to nothing at
+   * all: still a bug, just a ReferenceError instead of a silent misdirection.
+   * Narrowing this list is what would be unsafe.
+   */
+  const shared = new Set(["t", "ParceroReview", "ParceroReviewUI", "ParceroLessonSchema", "ParceroI18n",
+    "lessons", "curriculum", "fluencyItems", "matureItems"]);
+  const keywords = new Set(["if", "for", "while", "switch", "catch", "return", "typeof", "function", "new",
+    "await", "case", "do", "else", "in", "of", "delete", "void", "throw", "yield", "super", "this"]);
+
+  const html = read("index.html");
+  const scripts = [...html.matchAll(/<script[^>]*src="([^"]+)"/g)].map((match) => match[1])
+    .filter((src) => fs.existsSync(path.join(root, src)));
+  assert.ok(scripts.length > 1, "expected index.html to load several scripts");
+
+  const owns = new Map();
+  for (const src of scripts) {
+    const text = read(src);
+    const names = new Set();
+    for (const match of text.matchAll(/^(?:const|let|var)\s+([A-Za-z_$][\w$]*)/gm)) names.add(match[1]);
+    for (const match of text.matchAll(/^function\s+([A-Za-z_$][\w$]*)/gm)) names.add(match[1]);
+    owns.set(src, names);
+  }
+
+  const declaredIn = (text) => {
+    const names = new Set();
+    for (const match of text.matchAll(/\b(?:const|let|var)\s+([A-Za-z_$][\w$]*)/g)) names.add(match[1]);
+    for (const match of text.matchAll(/\bfunction\s*\*?\s*([A-Za-z_$][\w$]*)/g)) names.add(match[1]);
+    for (const match of text.matchAll(/\bcatch\s*\(\s*([A-Za-z_$][\w$]*)/g)) names.add(match[1]);
+    for (const match of text.matchAll(/\b(?:const|let|var)\s*[{[]([^}\]]*)[}\]]/g)) {
+      for (const part of match[1].split(",")) {
+        const name = part.split(":").pop().replace(/[^\w$]/g, "");
+        if (name) names.add(name);
+      }
+    }
+    for (const match of text.matchAll(/\(([^)]*)\)\s*(?:=>|\{)/g)) {
+      for (const part of match[1].split(",")) {
+        const name = part.trim().split(/[=:\s]/)[0].replace(/[^\w$]/g, "");
+        if (name) names.add(name);
+      }
+    }
+    for (const match of text.matchAll(/([A-Za-z_$][\w$]*)\s*=>/g)) names.add(match[1]);
+    for (const match of text.matchAll(/^\s*([A-Za-z_$][\w$]*)\s*\([^)]*\)\s*\{/gm)) names.add(match[1]);
+    return names;
+  };
+
+  const reaches = [];
+  for (const src of scripts) {
+    const text = read(src);
+    const mine = declaredIn(text);
+    for (const match of text.matchAll(/(^|[^.\w$])([A-Za-z_$][\w$]*)\s*\(/g)) {
+      const name = match[2];
+      if (keywords.has(name) || shared.has(name) || mine.has(name)) continue;
+      const owners = scripts.filter((other) => other !== src && owns.get(other).has(name));
+      if (owners.length) reaches.push(`${src} calls bare ${name}(), which ${owners.join(", ")} defines at top level`);
+    }
+  }
+
+  assert.deepStrictEqual([...new Set(reaches)], [],
+    "a bare call to a name another script declares at top level is either a silent reach for its global\n" +
+    "or a ReferenceError, and node --test can see neither, because require() gives every module its own scope.\n" +
+    "Either give the caller its own definition, or, if the global is intentional API, add the name to `shared` above.");
+});
+
 test("the read-aloud button speaks the taught line", () => {
   const app = read("app.js");
   const utterance = app.match(/new SpeechSynthesisUtterance\(([^;]*?)\);/);
