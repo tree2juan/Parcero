@@ -25,6 +25,7 @@ const fs = require("node:fs");
 const path = require("node:path");
 const vm = require("node:vm");
 const review = require("../review.js");
+const i18n = require("../i18n.js");
 
 const root = path.join(__dirname, "..");
 const read = (file) => fs.readFileSync(path.join(root, file), "utf8");
@@ -87,6 +88,29 @@ const who = (flag) => [review.labelOf(review.REVIEWER_ROLES, flag.role), flag.re
   .join(" · ");
 
 /*
+ * Region labels for every interface language, keyed by code.
+ *
+ * The page canonicalises a region as it is filed, so a flag raised from the site
+ * always arrives with a regionCode. A flag raised through the GitHub issue form
+ * does not: that is a plain text field with no JavaScript behind it, so whatever
+ * the reviewer typed is all we get. Matching against one language would quietly
+ * drop every reviewer who wrote their own region in their own language, which is
+ * the reverse of what the field is for.
+ */
+const REGION_LABEL_TABLES = Object.values(i18n.UI_STRINGS).map((strings) =>
+  Object.fromEntries(review.REGION_SUGGESTIONS.map(([code]) => [code, strings[review.labelKey("region", code)]]))
+);
+
+function regionCodeOf(flag) {
+  if (flag.regionCode) return flag.regionCode;
+  for (const labels of REGION_LABEL_TABLES) {
+    const code = review.regionCodeFor(flag.region, labels);
+    if (code) return code;
+  }
+  return "";
+}
+
+/*
  * Group by regionCode where a flag has one, and fall back to matching the free
  * text so flags filed before codes existed still aggregate. Anything we can't
  * place keeps the reviewer's own words as its own bucket rather than vanishing.
@@ -94,7 +118,7 @@ const who = (flag) => [review.labelOf(review.REVIEWER_ROLES, flag.role), flag.re
 function regionTally(entries) {
   const counts = new Map();
   for (const { flag } of entries) {
-    const code = flag.regionCode || review.regionCodeFor(flag.region);
+    const code = regionCodeOf(flag);
     const name = code ? review.labelOf(review.REGION_SUGGESTIONS, code) : String(flag.region || "").trim();
     if (!name) continue;
     counts.set(name, (counts.get(name) || 0) + 1);
