@@ -167,6 +167,42 @@ test("every leaf anchor maps to a group the page actually renders", () => {
   }
 });
 
+test("a missing slot is reported as missing, never as empty text", () => {
+  /*
+   * The dangerous answer here is not a throw, it is `ok: true` with
+   * `text: undefined`. Every caller trusts `ok`, so partsForAnchor silently
+   * drops the entry and the report picker just thins out with nothing logged —
+   * the reviewer sees fewer options and no reason why.
+   *
+   * The lesson branch guarded this and the reference-list branch did not, which
+   * is exactly the kind of gap that survives review, so this asserts the
+   * invariant across every branch of the resolver rather than the one that was
+   * wrong. Rows in data/curriculum.js are still tuples, and a short tuple
+   * yields undefined rather than throwing.
+   */
+  const gutted = JSON.parse(JSON.stringify(content));
+  delete gutted.lessons[0].es.dialogue[1].target;
+  gutted.fluencyItems[0] = gutted.fluencyItems[0].slice(0, 2);
+  gutted.matureItems[0] = gutted.matureItems[0].slice(0, 2);
+  const verbSlot = Object.keys(gutted.curriculum[0])
+    .find((key) => key !== "id" && typeof gutted.curriculum[0][key] === "string");
+  delete gutted.curriculum[0][verbSlot];
+
+  const probes = [
+    `lesson:${gutted.lessons[0].id}/es/dialogue/1/target`,
+    "fluency:0/note",
+    "mature:0/note",
+    `verb:${gutted.curriculum[0].id}/${verbSlot}`,
+  ];
+  for (const anchor of probes) {
+    const resolved = review.resolveAnchor(anchor, gutted);
+    assert.strictEqual(resolved.ok, false, `${anchor} resolved ok with nothing behind it`);
+    assert.ok(isText(resolved.reason), `${anchor} must say why it could not resolve`);
+    assert.ok(!("text" in resolved) || resolved.text === undefined,
+      `${anchor} must not hand back text it does not have`);
+  }
+});
+
 test("the quoted original is tagged with the language it is written in", () => {
   const spanish = review.resolveAnchor("lesson:greeting-at-the-cafe/es/dialogue/0/target", content);
   const english = review.resolveAnchor("lesson:greeting-at-the-cafe/es/dialogue/0/translation", content);

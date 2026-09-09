@@ -436,6 +436,11 @@ const ParceroReview = (function () {
     if (!row) return { anchor, ok: false, reason: `${listName} has no entry ${parsed.index + 1}` };
     const slots = parsed.kind === "fluency" ? FLUENCY_SLOTS : MATURE_SLOTS;
     const slotIndex = slots.indexOf(parsed.slot);
+    /* These rows are still tuples, so a short one yields undefined rather than
+       throwing. Answering ok:true with nothing in it is the worst outcome: every
+       caller believes ok, and the part picker just thins out with nothing said. */
+    const value = SCHEMA.slotValue(row, slots, parsed.slot);
+    if (!isText(value)) return { anchor, ok: false, reason: `${listName} entry ${parsed.index + 1} has no "${parsed.slot}"` };
     const slotLabels = parsed.kind === "fluency"
       ? { phrase: "Phrase", meaning: "Meaning", type: "Type label", region: "Region label", note: "Usage note" }
       : { phrase: "Phrase", equivalent: "Equivalent", severity: "Severity label", note: "Safety note" };
@@ -443,8 +448,8 @@ const ParceroReview = (function () {
     return {
       anchor, ok: true, kind: parsed.kind, source: "data/curriculum.js",
       path: `${listName}[${parsed.index}][${slotIndex}]`,
-      text: row[slotIndex], slotLabel: slotLabels[parsed.slot],
-      label: `${family} “${row[0]}” · ${slotLabels[parsed.slot]}`, lang: null
+      text: value, slotLabel: slotLabels[parsed.slot],
+      label: `${family} “${SCHEMA.slotValue(row, slots, slots[0])}” · ${slotLabels[parsed.slot]}`, lang: null
     };
   }
 
