@@ -202,7 +202,18 @@ const UI_STRINGS = {
     "review.role.native-es-co": "Native Colombian Spanish speaker",
     "review.role.native-es-other": "Native Spanish speaker, not Colombian",
     "review.role.native-en": "Native or expert English speaker",
-    "review.role.educator": "Language educator"
+    "review.role.educator": "Language educator",
+
+    "review.region.bogota": "Bogotá (rolo / cachaco)",
+    "review.region.antioquia": "Medellín and Antioquia (paisa)",
+    "review.region.valle": "Cali and Valle del Cauca (valluno)",
+    "review.region.caribe": "Caribbean coast (costeño)",
+    "review.region.eje-cafetero": "Eje Cafetero",
+    "review.region.santander": "Santander",
+    "review.region.narino": "Nariño and the south",
+    "review.region.llanos": "Llanos",
+    "review.region.pacifico": "Pacific coast (Chocó)",
+    "review.region.co-general": "Colombian, no particular region"
   },
 
   es: {
@@ -382,7 +393,18 @@ const UI_STRINGS = {
     "review.role.native-es-co": "Hablante nativo de español colombiano",
     "review.role.native-es-other": "Hablante nativo de español, no colombiano",
     "review.role.native-en": "Hablante nativo o experto de inglés",
-    "review.role.educator": "Docente de idiomas"
+    "review.role.educator": "Docente de idiomas",
+
+    "review.region.bogota": "Bogotá (rolo / cachaco)",
+    "review.region.antioquia": "Medellín y Antioquia (paisa)",
+    "review.region.valle": "Cali y Valle del Cauca (valluno)",
+    "review.region.caribe": "Costa Caribe (costeño)",
+    "review.region.eje-cafetero": "Eje Cafetero",
+    "review.region.santander": "Santander",
+    "review.region.narino": "Nariño y el sur",
+    "review.region.llanos": "Llanos",
+    "review.region.pacifico": "Costa Pacífica (Chocó)",
+    "review.region.co-general": "Colombiano, sin región particular"
   }
 };
 

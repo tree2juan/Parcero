@@ -183,7 +183,7 @@ test("every key the review feature sets from JS is translated", () => {
 
 test("every review dropdown code has a translated label", () => {
   const source = readRoot("review.js");
-  const groups = { ISSUE_TYPES: "issueType", SEVERITIES: "severity", REVIEWER_ROLES: "role" };
+  const groups = { ISSUE_TYPES: "issueType", SEVERITIES: "severity", REVIEWER_ROLES: "role", REGION_SUGGESTIONS: "region" };
   const missing = [];
   for (const [constant, group] of Object.entries(groups)) {
     const start = source.indexOf(`const ${constant} = [`);
