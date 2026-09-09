@@ -11,6 +11,7 @@
   --sun: #f0b429;
   --mist: #eaf2e8;
   --warm: #fff0e9;
+  --clay-ink: #a8401f;
   --line: #ced8ce;
   --shadow: 0 1px 2px rgba(23, 37, 31, .06), 0 8px 24px -12px rgba(23, 37, 31, .18);
   --shadow-lift: 0 2px 4px rgba(23, 37, 31, .08), 0 16px 40px -16px rgba(23, 37, 31, .28);
@@ -31,6 +32,7 @@
     --green-deep: #8fd9b3;
     --mist: #1e2a23;
     --warm: #2a2019;
+    --clay-ink: #f6a98d;
     --line: #314137;
     --shadow: 0 1px 2px rgba(0, 0, 0, .4), 0 8px 24px -12px rgba(0, 0, 0, .6);
     --shadow-lift: 0 2px 4px rgba(0, 0, 0, .5), 0 16px 40px -16px rgba(0, 0, 0, .75);
@@ -218,8 +220,8 @@ main, footer { max-width: var(--wrap); margin: auto; padding-inline: 1.5rem; }
 
 /* ---------- Sections ---------- */
 
-.lessons-section, .placement, .roadmap, .library { padding-block: 4rem 1rem; }
-.placement h2, .roadmap h2, .library h2, .lessons-section h2 { font-size: clamp(1.7rem, 3.6vw, 2.6rem); }
+.lessons-section, .flashcards, .placement, .roadmap, .library { padding-block: 4rem 1rem; }
+.placement h2, .roadmap h2, .library h2, .lessons-section h2, .flashcards h2 { font-size: clamp(1.7rem, 3.6vw, 2.6rem); }
 
 .progress-panel {
   display: grid; gap: .8rem;
@@ -402,6 +404,142 @@ main, footer { max-width: var(--wrap); margin: auto; padding-inline: 1.5rem; }
 .practice-tests { margin: .4rem 0 0; font-size: .9rem; color: var(--ink-soft); }
 .practice-actions { display: flex; flex-wrap: wrap; align-items: center; gap: .75rem; }
 
+/* ---------- Flashcards ---------- */
+
+.deck-picker { display: grid; grid-template-columns: 2fr 1fr; gap: 0 1rem; align-items: end; }
+
+.deck-status {
+  display: grid; gap: .6rem;
+  padding: 1rem 1.2rem; margin-bottom: 1.25rem;
+  background: var(--mist); border-radius: var(--radius);
+}
+.deck-status-head { display: flex; flex-wrap: wrap; justify-content: space-between; gap: .25rem 1rem; }
+.deck-tally { color: var(--ink-soft); font-size: .9rem; }
+#deck-bar { height: 100%; width: 0; background: linear-gradient(90deg, var(--green), var(--lime)); transition: width .35s ease; }
+
+/* The card and the end-of-set panel occupy the same cell, so the deck never jumps. */
+.deck-stage { display: grid; min-height: 19rem; margin-bottom: 1.25rem; }
+.flashcard, .deck-summary { grid-area: 1 / 1; justify-self: center; width: min(100%, 34rem); }
+
+.flashcard {
+  --swipe-known: 0;
+  --swipe-again: 0;
+  position: relative; overflow: hidden;
+  display: flex; flex-direction: column; justify-content: center;
+  padding: 2rem 1.75rem;
+  background: var(--surface);
+  border: 1px solid var(--line); border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  text-align: center;
+  cursor: grab;
+  /* Horizontal drags are ours; vertical ones stay with the page. */
+  touch-action: pan-y;
+  user-select: none; -webkit-user-select: none;
+  transition: transform .28s cubic-bezier(.2, .8, .3, 1), opacity .2s, border-color .15s, box-shadow .2s;
+}
+.flashcard:hover { box-shadow: var(--shadow-lift); }
+.flashcard.is-dragging { cursor: grabbing; transition: opacity .2s, border-color .15s, box-shadow .2s; }
+.flashcard.is-instant { transition: none; }
+.flashcard.is-leaving { opacity: 0; transition: transform .26s ease-in, opacity .26s ease-in; }
+.flashcard[data-swipe="known"] { border-color: var(--green); }
+.flashcard[data-swipe="again"] { border-color: var(--clay); }
+
+/* Verdict tints, driven straight from how far the card has been dragged. */
+.flashcard::before, .flashcard::after {
+  content: ""; position: absolute; inset: 0;
+  border-radius: inherit; pointer-events: none;
+  transition: opacity .12s linear;
+}
+.flashcard::before {
+  background: linear-gradient(to right, color-mix(in srgb, var(--green) 36%, transparent), transparent 62%);
+  opacity: var(--swipe-known);
+}
+.flashcard::after {
+  background: linear-gradient(to left, color-mix(in srgb, var(--clay) 36%, transparent), transparent 62%);
+  opacity: var(--swipe-again);
+}
+
+.flashcard-face { position: relative; z-index: 1; display: grid; gap: .65rem; }
+.flashcard-tag {
+  justify-self: center;
+  padding: .15rem .6rem; border-radius: 99px;
+  background: var(--mist); color: var(--ink-soft);
+  font-size: .72rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase;
+}
+.flashcard-ask { margin: 0; color: var(--ink-soft); font-size: .92rem; }
+.flashcard-front { margin: 0; font-size: clamp(1.25rem, 3.2vw, 1.85rem); font-weight: 700; line-height: 1.3; }
+.flashcard-answer { margin-top: .35rem; padding-top: .9rem; border-top: 1px dashed var(--line); }
+.flashcard-back { margin: 0; color: var(--green-deep); font-size: clamp(1.05rem, 2.4vw, 1.35rem); font-weight: 650; }
+.flashcard-note { margin: .55rem 0 0; color: var(--ink-soft); font-size: .9rem; }
+.flashcard-hint { margin: 0; color: var(--ink-soft); font-size: .82rem; }
+
+/*
+ * Answers derived from prose rather than a single term are clamped to a few
+ * lines and opened with #deck-expand, so that one long culture note cannot
+ * stretch the card past a phone screen.
+ *
+ * Both rules below set `display:`, which outranks the `hidden` attribute — they
+ * rely on the `[hidden]` reset near the top of this file, as #mature-results
+ * and .deck-summary do. Removing that reset leaves the disclosure button
+ * permanently on screen, captioned for a card it is not describing.
+ */
+.flashcard-back.is-clamped {
+  display: -webkit-box; -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4; line-clamp: 4;
+  overflow: hidden;
+}
+.deck-expand {
+  display: block; justify-self: center;
+  margin: -.4rem auto 1rem; padding: .35rem .9rem;
+  border: 1px solid var(--line); border-radius: 99px;
+  background: var(--surface); color: var(--ink-soft);
+  font: inherit; font-size: .82rem; font-weight: 700;
+  cursor: pointer;
+}
+.deck-expand:hover { color: var(--ink); border-color: var(--ink-soft); }
+.deck-expand:focus-visible { outline: 2px solid var(--green-deep); outline-offset: 2px; }
+
+/* Fixed badge colours: these must read the same in light and dark. */
+.swipe-badge {
+  position: absolute; top: 1rem; z-index: 2;
+  padding: .3rem .7rem; border-radius: .5rem;
+  color: #fff; font-size: .74rem; font-weight: 800;
+  letter-spacing: .07em; text-transform: uppercase;
+  transition: opacity .12s linear;
+}
+.swipe-badge-known { left: 1rem; background: #146c4d; opacity: var(--swipe-known); }
+.swipe-badge-again { right: 1rem; background: #b8462a; opacity: var(--swipe-again); }
+
+.deck-summary {
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: .2rem; padding: 2rem; text-align: center;
+  background: var(--mist); border-radius: var(--radius);
+}
+.deck-summary h3 { margin: 0; font-size: 1.6rem; }
+.deck-summary p { margin: 0; color: var(--ink-soft); }
+.deck-summary-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: .6rem; margin-top: 1.1rem; }
+
+.deck-actions {
+  display: grid; grid-template-columns: 1fr auto 1fr; gap: .6rem;
+  margin-bottom: 1rem;
+}
+.deck-verdict {
+  width: 100%;
+  padding: .8rem 1.1rem;
+  background: transparent;
+  border: 1px solid; border-radius: .6rem;
+  font-weight: 700;
+  transition: background .15s, border-color .15s;
+}
+.deck-verdict[disabled], .deck-actions .primary-button[disabled] { opacity: .35; cursor: not-allowed; }
+.deck-known { border-color: var(--green); color: var(--green-deep); }
+.deck-known:hover:not([disabled]) { background: color-mix(in srgb, var(--green) 14%, var(--paper)); }
+.deck-again { border-color: var(--clay); color: var(--clay-ink); }
+.deck-again:hover:not([disabled]) { background: color-mix(in srgb, var(--clay) 14%, var(--paper)); }
+
+.deck-footer { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem; }
+.deck-help { max-width: 34rem; margin: 0; color: var(--ink-soft); font-size: .88rem; }
+
 /* ---------- Placement ---------- */
 
 .assessment-card {
@@ -546,6 +684,10 @@ footer {
   .lesson { padding: 1.25rem; }
   .hero-stats { gap: 1.5rem; }
   .lesson-pager { flex-wrap: wrap; justify-content: center; }
+  .deck-picker { grid-template-columns: 1fr; }
+  .deck-actions { grid-template-columns: 1fr 1fr; }
+  .deck-actions .primary-button { grid-column: 1 / -1; order: -1; }
+  .deck-footer { justify-content: center; }
 }
 
 @media (prefers-reduced-motion: reduce) {
