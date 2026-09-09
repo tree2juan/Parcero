@@ -55,6 +55,17 @@ const ParceroReview = (function () {
   /* Fields addressed as field/slot, with no index. */
   const OBJECT_FIELDS = { setting: SETTING_KEYS, address: ADDRESS_SLOTS };
   const LESSON_TEXT_FIELDS = ["title", "situation", "note", "prompt"];
+  /* Authored on the lesson rather than on one direction's content, but rendered
+     on every lesson view, so a reviewer has to be able to reach it. */
+  const LESSON_META_FIELDS = ["level"];
+  /* Text hanging off a row that isn't one of the row's flat slots. Deliberately
+     kept out of the SCHEMA slot lists: those double as the positional order for
+     legacy tuple rows, so appending a name there would renumber reports filed
+     before it existed. */
+  const ROW_NESTED_SLOTS = { vocabulary: ["example.target", "example.translation"] };
+  /* Row slots holding a list of strings, addressed as field/index/slot/n. */
+  const ROW_LIST_SLOTS = { vocabulary: ["related"] };
+  const nestedValue = (row, slot) => slot.split(".").reduce((node, key) => (node == null ? node : node[key]), row);
   const VERB_SLOTS = ["spanish", "english", "presentYo", "preteriteYo", "participle", "level", "register", "regionality"];
   const VERB_FORM_SLOTS = ["presentYo", "preteriteYo", "participle"];
   const FLUENCY_SLOTS = ["phrase", "meaning", "type", "region", "note"];
@@ -170,6 +181,9 @@ const ParceroReview = (function () {
       if (LESSON_TEXT_FIELDS.includes(field)) {
         return segments.length === 3 ? { kind, id, direction, field, index: null, slot: null } : null;
       }
+      if (LESSON_META_FIELDS.includes(field)) {
+        return segments.length === 3 ? { kind, id, direction, field, index: null, slot: null } : null;
+      }
       if (field === "heading") {
         return segments.length === 3 ? { kind, id, direction, field, index: null, slot: null } : null;
       }
@@ -188,15 +202,21 @@ const ParceroReview = (function () {
       if (ROW_FIELDS[field]) {
         if (!/^\d+$/.test(third || "")) return null;
         const slots = ROW_FIELDS[field];
+        const nested = ROW_NESTED_SLOTS[field] || [];
+        const lists = ROW_LIST_SLOTS[field] || [];
         if (segments.length === 4) return { kind, id, direction, field, index: Number(third), slot: null };
-        return segments.length === 5 && slots.includes(fourth)
-          ? { kind, id, direction, field, index: Number(third), slot: fourth }
+        if (segments.length === 5 && (slots.includes(fourth) || nested.includes(fourth))) {
+          return { kind, id, direction, field, index: Number(third), slot: fourth, item: null };
+        }
+        return segments.length === 6 && lists.includes(fourth) && /^\d+$/.test(fifth || "")
+          ? { kind, id, direction, field, index: Number(third), slot: fourth, item: Number(fifth) }
           : null;
       }
       if (field === "practice") {
         if (!/^\d+$/.test(third || "")) return null;
         const index = Number(third);
         if (segments.length === 5 && fourth === "prompt") return { kind, id, direction, field, index, slot: "prompt", choice: null };
+        if (segments.length === 5 && fourth === "tests") return { kind, id, direction, field, index, slot: "tests", choice: null };
         if (segments.length === 5 && fourth === "choices") return { kind, id, direction, field, index, slot: "choices", choice: null };
         return segments.length === 6 && fourth === "choices" && /^\d+$/.test(fifth || "")
           ? { kind, id, direction, field, index, slot: "choices", choice: Number(fifth) }
@@ -276,7 +296,10 @@ const ParceroReview = (function () {
       return {
         term: `${target} term`, explanation: "Explanation", literal: "Literal sense",
         useWhen: "When to use it", avoidWhen: "When to avoid it",
-        register: "Register label", region: "Where it is used"
+        register: "Register label", region: "Where it is used",
+        "example.target": `Example sentence (${target})`,
+        "example.translation": `Example sentence (${support})`,
+        related: "Related expression"
       }[slot];
     }
     if (field === "setting") {
@@ -293,7 +316,7 @@ const ParceroReview = (function () {
     if (field === "variations") {
       return { form: `${target} wording`, register: "Register label", region: "Region label", whenToUse: "When to use it" }[slot];
     }
-    return { title: "Lesson title", situation: "Situation", note: "Colombian context note", prompt: "Practice question" }[field];
+    return { title: "Lesson title", situation: "Situation", note: "Colombian context note", prompt: "Practice question", level: "Level and topic" }[field];
   }
 
   function slotLanguage(kind, field, slot, direction) {
@@ -302,10 +325,14 @@ const ParceroReview = (function () {
     const target = direction;
     const support = direction === "es" ? "en" : "es";
     if (field === "dialogue") return slot === "target" ? target : slot === "translation" || slot === "literal" ? support : null;
-    if (field === "vocabulary") return slot === "term" ? target : null;
+    if (field === "vocabulary") {
+      if (slot === "term" || slot === "example.target" || slot === "related") return target;
+      return slot === "example.translation" ? support : null;
+    }
     if (field === "variations") return slot === "form" ? target : null;
     if (field === "pitfalls") return slot === "sayInstead" ? target : null;
-    if (field === "practice") return target;
+    if (field === "practice") return slot === "tests" ? support : target;
+    if (field === "level") return support;
     if (field === "title" || field === "situation" || field === "note" || field === "prompt") return target;
     if (field === "choices") return target;
     return null;
@@ -338,6 +365,18 @@ const ParceroReview = (function () {
           text: content[parsed.field],
           slotLabel: lessonSlotLabel(parsed.field, null, parsed.direction),
           label: `${where} · ${lessonSlotLabel(parsed.field, null, parsed.direction)}`,
+          lang: slotLanguage("lesson", parsed.field, null, parsed.direction)
+        };
+      }
+
+      if (LESSON_META_FIELDS.includes(parsed.field)) {
+        const value = found.lesson[parsed.field];
+        if (!isText(value)) return { anchor, ok: false, reason: `lesson "${parsed.id}" has no ${parsed.field}` };
+        const slotLabel = lessonSlotLabel(parsed.field, null, parsed.direction);
+        return {
+          anchor, ok: true, kind: "lesson", source: "data/lessons.js",
+          path: `lessons[${found.index}].${parsed.field}`,
+          text: value, slotLabel, label: `${where} · ${slotLabel}`,
           lang: slotLanguage("lesson", parsed.field, null, parsed.direction)
         };
       }
@@ -380,6 +419,15 @@ const ParceroReview = (function () {
             lang: slotLanguage("lesson", "practice", parsed.slot, parsed.direction)
           };
         }
+        if (parsed.slot === "tests") {
+          if (!isText(question.tests)) return { anchor, ok: false, reason: `practice question ${parsed.index + 1} has no "tests" note` };
+          const slotLabel = `Question ${parsed.index + 1}, what it tests`;
+          return {
+            anchor, ok: true, kind: "lesson", source: "data/lessons.js", path: `${holder}.tests`,
+            text: question.tests, slotLabel, label: `${where} · ${slotLabel}`,
+            lang: slotLanguage("lesson", "practice", parsed.slot, parsed.direction)
+          };
+        }
         const choice = (question.choices || [])[parsed.choice];
         if (!isText(choice)) return { anchor, ok: false, reason: `practice question ${parsed.index + 1} has no choice ${parsed.choice + 1}` };
         const slotLabel = `Question ${parsed.index + 1}, answer choice ${parsed.choice + 1}${question.answer === parsed.choice ? " (the correct one)" : ""}`;
@@ -394,17 +442,29 @@ const ParceroReview = (function () {
       const row = rows[parsed.index];
       if (!row) return { anchor, ok: false, reason: `lesson "${parsed.id}" has no ${parsed.field} entry ${parsed.index + 1}` };
       const slots = ROW_FIELDS[parsed.field];
-      const value = SCHEMA.slotValue(row, slots, parsed.slot);
-      if (!isText(value)) return { anchor, ok: false, reason: `lesson "${parsed.id}" ${parsed.field} entry ${parsed.index + 1} has no "${parsed.slot}"` };
-      const slotLabel = lessonSlotLabel(parsed.field, parsed.slot, parsed.direction);
+      const isNested = (ROW_NESTED_SLOTS[parsed.field] || []).includes(parsed.slot);
+      const isList = (ROW_LIST_SLOTS[parsed.field] || []).includes(parsed.slot);
+      const value = isList
+        ? ((row[parsed.slot] || [])[parsed.item])
+        : isNested ? nestedValue(row, parsed.slot) : SCHEMA.slotValue(row, slots, parsed.slot);
+      if (!isText(value)) {
+        const which = isList ? `"${parsed.slot}" ${parsed.item + 1}` : `"${parsed.slot}"`;
+        return { anchor, ok: false, reason: `lesson "${parsed.id}" ${parsed.field} entry ${parsed.index + 1} has no ${which}` };
+      }
+      const slotLabel = isList
+        ? `${lessonSlotLabel(parsed.field, parsed.slot, parsed.direction)} ${parsed.item + 1}`
+        : lessonSlotLabel(parsed.field, parsed.slot, parsed.direction);
       const rowNames = {
         dialogue: "Dialogue line", vocabulary: "Vocabulary entry",
         culture: "Context note", pitfalls: "Pitfall", variations: "Variation"
       };
       const rowLabel = `${rowNames[parsed.field]} ${parsed.index + 1}`;
+      const suffix = isList
+        ? `.${parsed.slot}[${parsed.item}]`
+        : isNested ? `.${parsed.slot}` : SCHEMA.slotPath(row, slots, parsed.slot);
       return {
         anchor, ok: true, kind: "lesson", source: "data/lessons.js",
-        path: `${base}.${parsed.field}[${parsed.index}]${SCHEMA.slotPath(row, slots, parsed.slot)}`,
+        path: `${base}.${parsed.field}[${parsed.index}]${suffix}`,
         text: value, slotLabel, label: `${where} · ${rowLabel} · ${slotLabel}`,
         lang: slotLanguage("lesson", parsed.field, parsed.slot, parsed.direction)
       };
@@ -455,37 +515,45 @@ const ParceroReview = (function () {
 
   /* ---------- groups ---------- */
 
+  /* Every leaf, indexed by the group it belongs to. Built from listAnchors so
+     the picker cannot offer less than the resolver knows about: an independent
+     leaf list here drifts the moment content grows a field, and it drifts
+     silently — the anchors still resolve, so a test that walks anchors stays
+     green while the reviewer is never shown the part. That is how the example
+     sentences, the related expressions and the "what this tests" notes were
+     reachable in principle and unreportable in practice. */
+  const partsIndexCache = new WeakMap();
+  function partsIndex(data) {
+    const cached = partsIndexCache.get(data);
+    if (cached) return cached;
+    const index = new Map();
+    for (const leaf of listAnchors(data)) {
+      const group = groupAnchor(leaf) || leaf;
+      if (!index.has(group)) index.set(group, []);
+      index.get(group).push(leaf);
+    }
+    partsIndexCache.set(data, index);
+    return index;
+  }
+
+  /* The taught line is offered before the speaker's name; everything else keeps
+     the order listAnchors produced, which is the schema's slot order. */
+  function orderLeaves(parsed, leaves) {
+    if (!(parsed.kind === "lesson" && parsed.field === "dialogue")) return leaves;
+    const rank = (leaf) => {
+      const slot = parseAnchor(leaf)?.slot;
+      const at = DIALOGUE_PART_ORDER.indexOf(slot);
+      return at === -1 ? DIALOGUE_PART_ORDER.length : at;
+    };
+    return leaves.slice().sort((a, b) => rank(a) - rank(b));
+  }
+
   function partsForAnchor(anchor, data) {
     const parsed = parseAnchor(anchor);
     if (!parsed) return [];
-    const leaves = [];
-    if (parsed.kind === "lesson") {
-      const base = `lesson:${parsed.id}/${parsed.direction}`;
-      if (parsed.field === "heading") leaves.push(`${base}/title`, `${base}/situation`);
-      else if (parsed.field === "choices" && parsed.index === null) {
-        const found = findLesson(data, parsed.id);
-        const total = found ? (found.lesson[parsed.direction]?.choices || []).length : 0;
-        for (let index = 0; index < total; index += 1) leaves.push(`${base}/choices/${index}`);
-      } else if (parsed.field === "practice" && parsed.slot === "choices" && parsed.choice === null) {
-        const found = findLesson(data, parsed.id);
-        const question = found ? practiceQuestionAt(found.lesson[parsed.direction] || {}, parsed.index) : null;
-        const total = question ? (question.choices || []).length : 0;
-        for (let index = 0; index < total; index += 1) leaves.push(`${base}/practice/${parsed.index}/choices/${index}`);
-      } else if (OBJECT_FIELDS[parsed.field] && parsed.slot === null) {
-        for (const slot of OBJECT_FIELDS[parsed.field]) leaves.push(`${base}/${parsed.field}/${slot}`);
-      } else if (ROW_FIELDS[parsed.field] && parsed.slot === null) {
-        const slots = parsed.field === "dialogue" ? DIALOGUE_PART_ORDER : ROW_FIELDS[parsed.field];
-        for (const slot of slots) leaves.push(`${base}/${parsed.field}/${parsed.index}/${slot}`);
-      } else leaves.push(anchor);
-    } else if (parsed.kind === "verb") {
-      if (parsed.slot) leaves.push(anchor);
-      else for (const slot of VERB_SLOTS) leaves.push(`verb:${parsed.id}/${slot}`);
-    } else {
-      const slots = parsed.kind === "fluency" ? FLUENCY_SLOTS : MATURE_SLOTS;
-      if (parsed.slot) leaves.push(anchor);
-      else for (const slot of slots) leaves.push(`${parsed.kind}:${parsed.index}/${slot}`);
-    }
-    return leaves.map((leaf) => resolveAnchor(leaf, data)).filter((entry) => entry.ok && isText(entry.text));
+    const found = partsIndex(data).get(anchor);
+    const leaves = found || (isGroupAnchor(anchor) ? [] : [anchor]);
+    return orderLeaves(parsed, leaves).map((leaf) => resolveAnchor(leaf, data)).filter((entry) => entry.ok && isText(entry.text));
   }
 
   function listAnchors(data) {
@@ -496,6 +564,7 @@ const ParceroReview = (function () {
         if (!content) continue;
         const base = `lesson:${lesson.id}/${direction}`;
         for (const field of LESSON_TEXT_FIELDS) all.push(`${base}/${field}`);
+        for (const field of LESSON_META_FIELDS) if (isText(lesson[field])) all.push(`${base}/${field}`);
         /* Optional fields are enumerated only where they actually carry text, so
            the part picker never offers a reviewer an empty slot to flag. */
         for (const field of Object.keys(OBJECT_FIELDS)) {
@@ -509,12 +578,22 @@ const ParceroReview = (function () {
             for (const slot of slots) {
               if (isText(SCHEMA.slotValue(row, slots, slot))) all.push(`${base}/${field}/${index}/${slot}`);
             }
+            for (const slot of ROW_NESTED_SLOTS[field] || []) {
+              if (isText(nestedValue(row, slot))) all.push(`${base}/${field}/${index}/${slot}`);
+            }
+            for (const slot of ROW_LIST_SLOTS[field] || []) {
+              (row[slot] || []).forEach((item, at) => {
+                if (isText(item)) all.push(`${base}/${field}/${index}/${slot}/${at}`);
+              });
+            }
           });
         }
         (content.choices || []).forEach((_, index) => all.push(`${base}/choices/${index}`));
+        if (isText(content.tests)) all.push(`${base}/practice/0/tests`);
         (content.practiceExtra || []).forEach((question, offset) => {
           const index = offset + 1;
           if (isText(question.prompt)) all.push(`${base}/practice/${index}/prompt`);
+          if (isText(question.tests)) all.push(`${base}/practice/${index}/tests`);
           (question.choices || []).forEach((_, choice) => all.push(`${base}/practice/${index}/choices/${choice}`));
         });
       }

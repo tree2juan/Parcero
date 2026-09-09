@@ -148,6 +148,7 @@ test("every leaf anchor maps to a group the page actually renders", () => {
       const base = `lesson:${lesson.id}/${direction}`;
       const side = schema.normalizeContent(lesson[direction]);
       rendered.add(`${base}/heading`).add(`${base}/note`).add(`${base}/prompt`).add(`${base}/choices`);
+      rendered.add(`${base}/level`);
       rendered.add(`${base}/setting`).add(`${base}/address`);
       for (const field of ["dialogue", "vocabulary", "culture", "pitfalls", "variations"]) {
         side[field].forEach((_, index) => rendered.add(`${base}/${field}/${index}`));
@@ -533,3 +534,73 @@ test("adding regionCode did not break payloads filed before it existed", () => {
   assert.strictEqual(filed.region, old.region);
   assert.deepStrictEqual(review.validateFlag(old), [], "an old flag must still validate");
 });
+
+test("every authored string in a lesson is offered by the report picker", () => {
+  /*
+   * Coverage, not mechanism. The test above asks "does every anchor resolve to
+   * text?" and passes at 5022/5022 — but that is the wrong direction. It stays
+   * green no matter how much unreachable content is added, because content the
+   * resolver was never told about produces no anchor to check.
+   *
+   * This asks the converse, which is the question that fails when someone ADDS
+   * content, and that is when under-coverage is actually born. It caught 661
+   * strings the enrichment had made unreportable: every vocabulary example
+   * sentence, every related expression, every "what this question tests" note,
+   * and the level line on every lesson — the most opinionated Colombian-usage
+   * prose in the repo, rendered on the page, with no way for a native speaker
+   * to say "we don't say it like that".
+   *
+   * It walks the picker, not listAnchors. The first version of this test read
+   * listAnchors directly, passed, and was wrong: partsForAnchor kept its own
+   * separate leaf list, so all 661 strings resolved fine and still never
+   * appeared in the picker. Checking the mechanism I had just fixed rather
+   * than the path a reviewer actually clicks is the same mistake one level up.
+   *
+   * The exclusions below are the whole design. They name what is NOT prose, so
+   * a newly authored field is covered by default and has to be argued out of
+   * this list rather than into it. A list of what IS covered would have passed
+   * silently through the same 661.
+   */
+  const notProse = {
+    id: "an identifier, never shown to a reader",
+    review: "internal workflow state",
+    domain: "a taxonomy slug used for filtering, not rendered",
+    skills: "taxonomy slugs used for filtering, not rendered",
+    pathways: "taxonomy slugs used for filtering, not rendered",
+    answer: "an index into choices, not text",
+    "address.form": 'an enum ("usted"/"tú"/"vos"); the page renders t("address.form.*") from i18n.js, so the visible string is the translator\'s, not the author\'s'
+  };
+
+  // Exactly what review-ui.js does: group the anchors, then ask for each group's parts.
+  const groups = [...new Set(anchors.map((anchor) => review.groupAnchor(anchor) || anchor))];
+  const reachable = new Set();
+  for (const group of groups) {
+    for (const part of review.partsForAnchor(group, content)) {
+      if (isText(part.text)) reachable.add(part.text.trim());
+    }
+  }
+
+  const missed = [];
+  const walk = (node, trail) => {
+    if (isText(node)) {
+      if (!reachable.has(node.trim())) missed.push(`${trail}: ${JSON.stringify(node.slice(0, 60))}`);
+      return;
+    }
+    if (Array.isArray(node)) return node.forEach((item, index) => walk(item, `${trail}[${index}]`));
+    if (!node || typeof node !== "object") return;
+    for (const [key, value] of Object.entries(node)) {
+      const next = trail ? `${trail}.${key}` : key;
+      const family = next.replace(/\[\d+\]/g, "").split(".").slice(-2).join(".");
+      if (notProse[key] || notProse[family]) continue;
+      walk(value, next);
+    }
+  };
+
+  for (const lesson of content.lessons) walk(lesson, lesson.id);
+
+  assert.deepStrictEqual(missed, [],
+    `${missed.length} authored string(s) are rendered but never offered by the report picker.\n` +
+    `Add them to listAnchors in review.js, or, if they are not prose, to notProse above with a reason.\n` +
+    missed.slice(0, 12).join("\n"));
+});
+
