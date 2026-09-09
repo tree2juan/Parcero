@@ -291,20 +291,47 @@ test("every string the deck asks for is translated in both languages", () => {
     }
   }
 
-  // Keys the swipe UI asks for by name.
+  // Keys the swipe UI asks for. Matched as literals rather than by call shape,
+  // so both arms of t(flag ? "deck.a" : "deck.b") are checked, not only the key
+  // that happens to sit directly after the parenthesis.
   const ui = read("flashcards.js");
-  const fallback = ui.slice(ui.indexOf("const FALLBACK"), ui.indexOf("function t("));
   const plurals = new Set([...ui.matchAll(/\btp\("(deck\.[\w.]+)"/g)].map((match) => match[1]));
   for (const key of plurals) {
     want(`${key}.one`);
     want(`${key}.other`);
   }
-  for (const [, key] of ui.matchAll(/\bt\("(deck\.[\w.]+)"/g)) {
+  for (const [, key] of ui.matchAll(/"(deck\.[\w.]+)"/g)) {
     if (!plurals.has(key)) want(key);
   }
 
   assert.deepStrictEqual([...new Set(missing)], [], "untranslated flashcard strings");
-  assert.ok(fallback.length > 0, "the UI should keep an English fallback for when i18n.js is absent");
+});
+
+/*
+ * The fallback stands in for i18n.js when it is absent, so it has to say the
+ * same thing i18n.js would. Asserting only that the table is non-empty passes
+ * just as happily when the wording has drifted or the key no longer exists,
+ * which is the failure that would actually reach a reader.
+ */
+test("the English fallback says the same thing as the table it stands in for", () => {
+  const { UI_STRINGS } = require(path.join(root, "i18n.js"));
+  const ui = read("flashcards.js");
+  const block = ui.slice(ui.indexOf("const FALLBACK"), ui.indexOf("function t("));
+  const entries = [...block.matchAll(/"(deck\.[\w.]+)":\s*"([^"]+)"/g)];
+
+  assert.ok(entries.length > 0, "the UI should keep an English fallback for when i18n.js is absent");
+  for (const [, key, wording] of entries) {
+    assert.notStrictEqual(
+      UI_STRINGS.en[key],
+      undefined,
+      `${key} is a fallback for a key i18n.js does not have`
+    );
+    assert.strictEqual(
+      wording,
+      UI_STRINGS.en[key],
+      `the fallback wording for ${key} has drifted from i18n.js`
+    );
+  }
 });
 
 test("the flashcards section is marked up for translation", () => {
