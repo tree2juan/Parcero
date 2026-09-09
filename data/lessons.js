@@ -21,8 +21,8 @@ const lessons = [{
     ],
     note: "“Buenas” is a warm, common short greeting in Colombia. “¿Me regalas...?” is polite in everyday service situations, but its literal wording does not mean the item is free.",
     prompt: "What does Alex mean by “¿Me regalas un tinto?”",
-    choices: ["Could you give me a small black coffee, please?", "Would you like a glass of red wine?", "Can I buy you a gift?"],
-    answer: 0
+    choices: ["Would you like a glass of red wine with dinner?", "Could you give me a small black coffee, please?", "Can I buy you a gift for the occasion?"],
+    answer: 1
   },
   en: {
     title: "Coffee and a quick chat",
@@ -39,8 +39,8 @@ const lessons = [{
     ],
     note: "“Could I have...?” softens a request. In cafés, it is more conversational than a direct “Give me...” and can be followed by “please.”",
     prompt: "What does “I’ll bring it right over” mean?",
-    choices: ["I will bring it very soon.", "I will carry it to the right side.", "I brought it yesterday."],
-    answer: 0
+    choices: ["I will carry it to the right side.", "I brought it over yesterday morning.", "I will bring it over very soon."],
+    answer: 2
   }
 }, {
   id: "taxi-to-downtown",
@@ -66,8 +66,8 @@ const lessons = [{
     ],
     note: "Confirming the fare before the trip is normal in Colombian cities and is not treated as distrust. Agreeing to the taxímetro keeps the price on the meter instead of a negotiated figure.",
     prompt: "Why does Alex ask “¿Cuánto me cobra?” before getting in?",
-    choices: ["To settle the price before the trip starts.", "To complain about the driver.", "To ask for a loyalty discount."],
-    answer: 0
+    choices: ["To complain about the driver’s route choice.", "To ask for a loyalty discount on the fare.", "To settle the price before the trip starts."],
+    answer: 2
   },
   en: {
     title: "A ride downtown",
@@ -85,7 +85,7 @@ const lessons = [{
     ],
     note: "“Just what the meter says” is a short answer built on ellipsis—English drops the obvious words. The full sentence would be “It will be just what the meter says.”",
     prompt: "What is the driver promising with “Just what the meter says”?",
-    choices: ["The metered price, with nothing added.", "A flat discount.", "A free ride downtown."],
+    choices: ["The metered price, with nothing added.", "A flat discount off the metered price.", "A free ride to the downtown area."],
     answer: 0
   }
 }, {
@@ -112,7 +112,7 @@ const lessons = [{
     ],
     note: "“Regáleme” works like “¿Me regalas...?” from the café lesson—it is a soft request, not a request for something free. Terms like “mi amor” from a vendor are ordinary market warmth; you are not expected to use them back.",
     prompt: "What is “la ñapa”?",
-    choices: ["A small extra the seller adds for free.", "A tax added at the market.", "A receipt you must keep."],
+    choices: ["A small extra the seller adds for free.", "A small tax added at the market stall.", "A receipt you must keep for returns."],
     answer: 0
   },
   en: {
@@ -131,8 +131,8 @@ const lessons = [{
     ],
     note: "“You got it” means “yes, certainly”—it is a warm confirmation, not a statement that you already have the item. Service English leans on short idioms like this one.",
     prompt: "What does “I’ll throw in an extra one” mean?",
-    choices: ["I will add one more at no cost.", "I will discard one.", "I will toss it to you."],
-    answer: 0
+    choices: ["I will discard one of them for you.", "I will add one more at no cost.", "I will toss it across to you."],
+    answer: 1
   }
 }, {
   id: "making-plans-parche",
@@ -158,8 +158,8 @@ const lessons = [{
     ],
     note: "In and around Medellín, friends often use “vos” (vos tenés, vos sabés) where Bogotá would use “tú” or even “usted”. Colombians also use “usted” affectionately with close friends and family, so a formal-looking pronoun is not always distance.",
     prompt: "What is Alex saying with “De una”?",
-    choices: ["Yes, definitely—count me in.", "Only one person can come.", "Maybe next week instead."],
-    answer: 0
+    choices: ["Only one person can come along.", "Maybe next week instead of today.", "Yes, definitely—count me in."],
+    answer: 2
   },
   en: {
     title: "What’s the plan?",
@@ -177,8 +177,8 @@ const lessons = [{
     ],
     note: "Casual English invitations are usually indirect: “Any plans for Saturday?” is an invitation, not just a question. Answering with only “No” can accidentally close the door, so add what you are open to.",
     prompt: "What does “Let’s nail down a time” mean?",
-    choices: ["Let’s agree on a definite time.", "Let’s attach something to a wall.", "Let’s cancel the plan."],
-    answer: 0
+    choices: ["Let’s attach something to a wall.", "Let’s agree on a definite time.", "Let’s cancel the plan for now."],
+    answer: 1
   }
 }, {
   id: "at-the-clinic",
@@ -204,8 +204,8 @@ const lessons = [{
     ],
     note: "Colombian clinics usually route care through your EPS (health provider), so staff may ask which EPS you belong to before anything else. “Siga” at a doorway is an invitation, and “¿Qué la trae por aquí?” is a warm, standard opening question.",
     prompt: "What does “Me duele la garganta hace tres días” tell the doctor?",
-    choices: ["The sore throat started three days ago and continues.", "The throat hurt once, three days ago.", "The pain will start in three days."],
-    answer: 0
+    choices: ["The throat hurt once, three days ago, and then stopped.", "The sore throat started three days ago and continues.", "The pain is expected to start in three days."],
+    answer: 1
   },
   en: {
     title: "A doctor’s appointment",
@@ -223,7 +223,7 @@ const lessons = [{
     ],
     note: "The present perfect is the core clinic tense: “I’ve had”, “it’s been”, “I’ve been feeling”. Using the simple past instead tells the clinician the problem has already resolved.",
     prompt: "Why does Alex say “I’ve had a sore throat” instead of “I had a sore throat”?",
-    choices: ["Because it started three days ago and is still happening.", "Because it is more formal.", "Because it finished yesterday."],
+    choices: ["Because it started three days ago and is still happening.", "Because it is the more formal way to phrase the complaint.", "Because it finished yesterday and no longer hurts."],
     answer: 0
   }
 }, {
@@ -250,7 +250,7 @@ const lessons = [{
     ],
     note: "Colombian workplaces often use “usted” between colleagues, even friendly ones, so “le hago seguimiento” is warm rather than stiff. “Pendiente” is the standard word for an open item and appears constantly in meetings and email.",
     prompt: "What does Alex mean by “Me falta revisar las cifras”?",
-    choices: ["Checking the figures is still to be done.", "The figures are wrong.", "Someone else reviewed the figures."],
+    choices: ["Checking the figures is still to be done.", "The figures are wrong and need redoing.", "Someone else reviewed the figures."],
     answer: 0
   },
   en: {
@@ -269,8 +269,8 @@ const lessons = [{
     ],
     note: "Workplace English softens status reports with hedges—“I still need to”, “Sounds good”, “Just the sign-off”. Stating a delay flatly can sound harsher in English than the equivalent does in Spanish, so name the next step alongside it.",
     prompt: "What is Laura asking with “Anything blocked on my end?”",
-    choices: ["Whether anything is waiting for her to act.", "Whether her computer is broken.", "Whether the meeting should end."],
-    answer: 0
+    choices: ["Whether her computer connection is broken.", "Whether the meeting should end early.", "Whether anything is waiting for her to act."],
+    answer: 2
   }
 }, {
   id: "seminar-discussion",
@@ -296,8 +296,8 @@ const lessons = [{
     ],
     note: "Academic Spanish disagrees through hedging rather than contradiction: “estoy de acuerdo en parte”, “quisiera matizar”, “no me queda del todo claro”. Naming your evidence (“en los datos del capítulo tres”) is expected before the objection lands.",
     prompt: "What is Alex doing with “quisiera matizar un punto”?",
-    choices: ["Politely adding nuance to a claim, not rejecting it.", "Fully rejecting the thesis.", "Asking to change the topic."],
-    answer: 0
+    choices: ["Fully rejecting the thesis as unfounded.", "Asking to change the topic of discussion.", "Politely adding nuance, not rejecting it."],
+    answer: 2
   },
   en: {
     title: "In the seminar",
@@ -315,8 +315,8 @@ const lessons = [{
     ],
     note: "Academic English disagrees with hedges: “I’d agree up to a point”, “I’m not sure the data supports that”, “I’d push back gently on”. Dropping the hedge (“That’s wrong”) reads as far more aggressive than the same directness would in many other settings.",
     prompt: "What does “the data doesn’t bear that out” mean?",
-    choices: ["The evidence does not support that conclusion.", "The data was carried away.", "The conclusion is unreadable."],
-    answer: 0
+    choices: ["The data was physically carried away by someone.", "The evidence does not support that conclusion.", "The conclusion is unreadable as it is written."],
+    answer: 1
   }
 }, {
   id: "job-interview",
@@ -342,8 +342,8 @@ const lessons = [{
     ],
     note: "Colombian professional settings use “usted” by default with interviewers, and courtesy formulas like “con mucho gusto” and “a la orden” are expected rather than excessive. “Cuénteme” invites a short narrative, not a one-word answer.",
     prompt: "What does “llevo tres años trabajando” express?",
-    choices: ["Three years of work that continues to now.", "A plan to work for three years.", "A job that ended three years ago."],
-    answer: 0
+    choices: ["A plan to work there for three years.", "Three years of work that continues to now.", "A job that ended about three years ago."],
+    answer: 1
   },
   en: {
     title: "The job interview",
@@ -361,7 +361,7 @@ const lessons = [{
     ],
     note: "Interview English rewards concrete examples over stated qualities. Offering one—“I’m happy to walk you through an example”—is expected, and speaking about your own achievements directly is read as clarity rather than boasting.",
     prompt: "What is Alex offering with “walk you through an example”?",
-    choices: ["To explain an example step by step.", "To take a walk during the interview.", "To skip the question."],
+    choices: ["To explain an example step by step.", "To take a walk during the interview.", "To skip the question entirely."],
     answer: 0
   }
 }];
