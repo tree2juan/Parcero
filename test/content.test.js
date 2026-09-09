@@ -218,17 +218,36 @@ test("nothing reads a lesson row by position", () => {
    * read-aloud button built its utterance with `line[1]`, got `undefined` for
    * every line, and simply spoke nothing — no error, no visible change, and a
    * green suite. A silent feature is worth a loud test.
+   *
+   * Test files are checked too. The first version of this guard looked only at
+   * the product, on the reasoning that a broken test fails and announces
+   * itself. That reasoning is wrong: a positional read in a test yields
+   * `undefined`, and a test that never asserts on the value it misread stays
+   * green while checking nothing. Two tests in the flashcards branch had
+   * exactly that, green in CI, against product code that was correct.
    */
-  for (const file of ["app.js", "review.js", "review-ui.js"]) {
-    const source = read(file);
-    const offenders = [
-      // first.dialogue[0][1]
-      /\.(?:dialogue|vocabulary)\s*\[\s*\d+\s*\]\s*\[\s*\d+\s*\]/,
-      // const [, target] = first.dialogue[0]
-      /const\s*\[[^\]]*\]\s*=\s*[^;\n]*\b(?:dialogue|vocabulary)\b[^;\n]*/,
-      // dialogue.map((line) => line[1]) — the one that spoke silence
-      /\b(?:dialogue|vocabulary)\s*\.\s*(?:map|forEach|filter|flatMap)\(\s*\(?\s*(\w+)[\s\S]{0,120}?\b\1\s*\[\s*\d+\s*\]/,
-    ];
+  const offenders = [
+    // first.dialogue[0][1]
+    /\.(?:dialogue|vocabulary)\s*\[\s*\d+\s*\]\s*\[\s*\d+\s*\]/,
+    // const [, target] = first.dialogue[0]
+    /const\s*\[[^\]]*\]\s*=\s*[^;\n]*\b(?:dialogue|vocabulary)\b[^;\n]*/,
+    // for (const [term, meaning] of content.vocabulary)
+    /for\s*\(\s*(?:const|let|var)\s*\[[^\]]*\]\s+of\s+[^)]*\b(?:dialogue|vocabulary)\b/,
+    // dialogue.map((line) => line[1]) — the one that spoke silence
+    /\b(?:dialogue|vocabulary)\s*\.\s*(?:map|forEach|filter|flatMap)\(\s*\(?\s*(\w+)[\s\S]{0,120}?\b\1\s*\[\s*\d+\s*\]/,
+    // .map(([, target]) => ...)
+    /\b(?:dialogue|vocabulary)\s*\.\s*(?:map|forEach|filter|flatMap|some|every|find)\(\s*\(?\s*\[/,
+  ];
+
+  // Comments are prose, and the prose here quotes the very bugs being banned.
+  const code = (source) => source.replace(/\/\*[\s\S]*?\*\//g, "").replace(/^\s*\/\/.*$/gm, "");
+
+  const tests = fs.readdirSync(path.join(root, "test"))
+    .filter((name) => name.endsWith(".test.js"))
+    .map((name) => `test/${name}`);
+
+  for (const file of ["app.js", "review.js", "review-ui.js", ...tests]) {
+    const source = code(read(file));
     for (const pattern of offenders) {
       const found = source.match(pattern);
       assert.strictEqual(found, null,
