@@ -71,6 +71,10 @@
     return value && value !== key ? value : fallback;
   }
 
+  /* Translated region labels, keyed by code, for matching what the reviewer typed. */
+  const regionLabels = () => ParceroReview.REGION_SUGGESTIONS
+    .reduce((all, [code, fallback]) => Object.assign(all, { [code]: label("region", code, fallback) }), {});
+
   const state = {
     mode: false,
     flags: readJson(STORE.flags, []),
@@ -207,12 +211,14 @@
   function saveFlag() {
     const anchor = $("#flag-part").value;
     const resolved = ParceroReview.resolveAnchor(anchor, data());
+    const region = $("#flag-region").value.trim();
     const flag = {
       anchor,
       issueType: $("#flag-type").value,
       severity: $("#flag-severity").value,
       role: $("#flag-role").value,
-      region: $("#flag-region").value.trim(),
+      region,
+      regionCode: ParceroReview.regionCodeFor(region, regionLabels()),
       original: resolved.ok ? resolved.text : "",
       suggestion: $("#flag-suggestion").value.trim(),
       comment: $("#flag-comment").value.trim(),
@@ -328,8 +334,9 @@
   fillSelect($("#flag-type"), ParceroReview.ISSUE_TYPES, "issueType");
   fillSelect($("#flag-severity"), ParceroReview.SEVERITIES, "severity");
   fillSelect($("#flag-role"), ParceroReview.REVIEWER_ROLES, "role");
+  /* Suggestions show in the reviewer's language; the code they map back to does not. */
   $("#flag-regions").innerHTML = ParceroReview.REGION_SUGGESTIONS
-    .map((region) => `<option value="${escapeHtml(region)}"></option>`).join("");
+    .map(([code, fallback]) => `<option value="${escapeHtml(label("region", code, fallback))}"></option>`).join("");
 
   document.addEventListener("click", (event) => {
     const flagButton = event.target.closest(".flag-button");

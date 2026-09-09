@@ -64,16 +64,16 @@ const ParceroReview = (function () {
   ];
 
   const REGION_SUGGESTIONS = [
-    "Bogotá (rolo / cachaco)",
-    "Medellín and Antioquia (paisa)",
-    "Cali and Valle del Cauca (valluno)",
-    "Caribbean coast (costeño)",
-    "Eje Cafetero",
-    "Santander",
-    "Nariño and the south",
-    "Llanos",
-    "Pacific coast (Chocó)",
-    "Colombian, no particular region"
+    ["bogota", "Bogotá (rolo / cachaco)"],
+    ["antioquia", "Medellín and Antioquia (paisa)"],
+    ["valle", "Cali and Valle del Cauca (valluno)"],
+    ["caribe", "Caribbean coast (costeño)"],
+    ["eje-cafetero", "Eje Cafetero"],
+    ["santander", "Santander"],
+    ["narino", "Nariño and the south"],
+    ["llanos", "Llanos"],
+    ["pacifico", "Pacific coast (Chocó)"],
+    ["co-general", "Colombian, no particular region"]
   ];
 
   const codes = (pairs) => pairs.map(([code]) => code);
@@ -86,11 +86,43 @@ const ParceroReview = (function () {
    * change, while the label is display-only and may be translated. labelKey maps
    * one to the other for a translation table.
    *
-   * Regions are deliberately absent: a reviewer types their own, so the list is
-   * a suggestion rather than a closed vocabulary and has no stable codes.
+   * Regions are the odd one out. The field stays deliberately open — a reviewer
+   * from somewhere not on the list types their own words and we keep them
+   * verbatim — but the suggestions carry codes so the common answers can be
+   * translated and still aggregate. A flag therefore files both: `region` is
+   * always the human text exactly as entered or shown, and `regionCode` is the
+   * canonical code when that text matches a known suggestion in any language,
+   * or "" when it doesn't. Display paths read `region`; grouping reads
+   * `regionCode`. Neither is derived from the other after the fact.
    */
-  const LABEL_KEY_PREFIX = { issueType: "review.issueType", severity: "review.severity", role: "review.role" };
+  const LABEL_KEY_PREFIX = {
+    issueType: "review.issueType",
+    severity: "review.severity",
+    role: "review.role",
+    region: "review.region"
+  };
   const labelKey = (group, code) => `${LABEL_KEY_PREFIX[group] || `review.${group}`}.${code}`;
+
+  /*
+   * Matching is forgiving because the reviewer is typing a place name, not a
+   * key: case, spacing and accents are all normalised away, so "Medellin" finds
+   * the same region as "Medellín". Only the match is normalised — what we file
+   * is untouched.
+   */
+  const normalizeRegion = (value) => (typeof value === "string" ? value : "")
+    .normalize("NFD").replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase().replace(/\s+/g, " ").trim();
+
+  function regionCodeFor(text, labels) {
+    const needle = normalizeRegion(text);
+    if (!needle) return "";
+    const translated = labels || {};
+    for (const [code, english] of REGION_SUGGESTIONS) {
+      const candidates = [code, english, translated[code]];
+      if (candidates.some((candidate) => isText(candidate) && normalizeRegion(candidate) === needle)) return code;
+    }
+    return "";
+  }
 
   /* ---------- anchors ---------- */
 
@@ -364,6 +396,9 @@ const ParceroReview = (function () {
     if (!codes(ISSUE_TYPES).includes(flag.issueType)) errors.push("issueType is not one of the known problem types");
     if (!codes(SEVERITIES).includes(flag.severity)) errors.push("severity is not one of the known levels");
     if (!codes(REVIEWER_ROLES).includes(flag.role)) errors.push("role is not one of the known reviewer roles");
+    if (isText(flag.regionCode) && !codes(REGION_SUGGESTIONS).includes(flag.regionCode)) {
+      errors.push("regionCode is not one of the known regions");
+    }
     if (!isText(flag.original)) errors.push("original text is missing");
     if (!isText(flag.suggestion) && !isText(flag.comment)) errors.push("give a suggested wording, an explanation, or both");
     return errors;
@@ -382,6 +417,7 @@ const ParceroReview = (function () {
         severity: flag.severity,
         role: flag.role,
         region: flag.region || "",
+        regionCode: flag.regionCode || "",
         original: flag.original,
         suggestion: flag.suggestion || "",
         comment: flag.comment || "",
@@ -491,7 +527,7 @@ const ParceroReview = (function () {
     DIRECTIONS, DIALOGUE_SLOTS, VOCABULARY_SLOTS, LESSON_TEXT_FIELDS,
     VERB_SLOTS, FLUENCY_SLOTS, MATURE_SLOTS,
     ISSUE_TYPES, SEVERITIES, REVIEWER_ROLES, REGION_SUGGESTIONS,
-    labelOf, labelKey, parseAnchor, isGroupAnchor, groupAnchor, resolveAnchor, partsForAnchor, listAnchors,
+    labelOf, labelKey, regionCodeFor, parseAnchor, isGroupAnchor, groupAnchor, resolveAnchor, partsForAnchor, listAnchors,
     validateFlag, flagKey, buildPayload, payloadBlock, extractPayload,
     flagsToMarkdown, summarise, issueTitle, issueBody, buildIssueUrl, blankIssueUrl
   };

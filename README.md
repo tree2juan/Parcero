@@ -166,6 +166,8 @@ Flagging one asks what is wrong (not natural, wrong region, wrong register, mist
 
 Nothing is sent anywhere until you press submit. Flags live only in your browser, under their own storage key, so *Reset progress* never destroys them.
 
+Because regional usage is the thing this project most needs help with, the form also asks where you speak from. Ten Colombian regions are offered as suggestions, but the field is open — type wherever you are from and it is recorded in your own words. Where what you typed matches a suggestion, the flag also carries a stable region code, so that a year of flags can be counted by region without anyone having to guess that "Medellin" and "Medellín and Antioquia (paisa)" meant the same place. `node scripts/review-flags.js` prints that tally.
+
 ### Sign off a whole lesson
 
 For a considered pass over a complete lesson, open **[Issues → New issue → Lesson review](https://github.com/tree2juan/Parcero/issues/new?template=lesson-review.yml)**, pick a lesson, and answer a short form covering naturalness, regional framing, register, and pronunciation. A maintainer applies the wording and flips that lesson to `"reviewed"`.

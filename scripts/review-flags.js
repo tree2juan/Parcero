@@ -86,6 +86,24 @@ const who = (flag) => [review.labelOf(review.REVIEWER_ROLES, flag.role), flag.re
   .filter((part) => part && String(part).trim())
   .join(" · ");
 
+/*
+ * Group by regionCode where a flag has one, and fall back to matching the free
+ * text so flags filed before codes existed still aggregate. Anything we can't
+ * place keeps the reviewer's own words as its own bucket rather than vanishing.
+ */
+function regionTally(entries) {
+  const counts = new Map();
+  for (const { flag } of entries) {
+    const code = flag.regionCode || review.regionCodeFor(flag.region);
+    const name = code ? review.labelOf(review.REGION_SUGGESTIONS, code) : String(flag.region || "").trim();
+    if (!name) continue;
+    counts.set(name, (counts.get(name) || 0) + 1);
+  }
+  if (counts.size === 0) return [];
+  const sorted = [...counts.entries()].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]));
+  return ["Where reviewers spoke from", ...sorted.map(([name, n]) => `    ${String(n).padStart(3)}  ${name}`), ""];
+}
+
 function renderText(entries) {
   const lines = [];
   entries.forEach((entry, index) => {
@@ -115,7 +133,7 @@ function renderText(entries) {
     if (reviewer) lines.push(`    By       ${reviewer}`);
     lines.push("");
   });
-  return lines.join("\n");
+  return [...lines, ...regionTally(entries)].join("\n");
 }
 
 function renderMarkdown(entries) {
