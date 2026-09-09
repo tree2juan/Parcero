@@ -81,6 +81,60 @@ Eight lessons spanning starter through extending, mapped onto the roadmap's path
 
 Alongside the lessons there is a reference **library**: 200 high-frequency verbs with their most useful forms, a fluency list of connectors and softeners, and an age-gated recognition reference for insulting or adult language — included so learners can *understand* it and de-escalate, never to direct it at anyone.
 
+<a id="flashcards"></a>
+
+## Flashcards
+
+Short swipeable sets for the retrieval practice that makes any of it stick. Tap a card to show the answer, then:
+
+- **Swipe left** — green, *knew it*. The card is done for this round.
+- **Swipe right** — red, *didn't know it*. The card goes to the back of the queue and comes back around before the set ends.
+
+A set is finished only when every card has been swiped left, so you never leave a set with something still unlearned. **Go through it again** replays the set from scratch, **Reset this set** clears it mid-round, and the global *Reset progress* clears every deck.
+
+Everything works without a touchscreen: the card is a real button, space flips it, and ← / → answer it. Vertical scrolling is preserved on phones (`touch-action: pan-y`), so a swipe down scrolls the page rather than grading the card. Large **← Knew it** and **Didn't know it →** buttons sit under the card for anyone who would rather not drag.
+
+Answers drawn from prose rather than a single term — a culture note, why a mistake fails — are clamped to a few lines with a **Read the rest** control, so one long card cannot stretch past a phone screen. Whether a card needs it is measured after the card is painted rather than guessed from a character count, because the same sentence wraps to four lines on a laptop and nine on a phone. The control sits outside the card deliberately: the card carries `role="button"`, and ARIA treats the descendants of a button as presentational, so a control nested inside it would be invisible to a screen reader.
+
+### Cards are derived, never authored
+
+There is no flashcard content file. `data/flashcards.js` reads the same `lessons`, `curriculum`, and `fluencyItems` that the rest of the app renders, and builds decks from them:
+
+| Group | Topic | Cards from |
+| --- | --- | --- |
+| **Situations** | one per lesson | vocabulary, meaning-in-context, pronunciation, worked examples, region and register, culture notes, common mistakes, phrasing variations, the form of address, the practice questions |
+| **Verbs** | one per level (foundation, independent, extension) | each verb, asked in the productive direction |
+| **Fluency** | one | connectors and softeners, asked in the productive direction |
+
+So adding a lesson to `data/lessons.js` adds a flashcard topic. Adding verbs adds cards to the matching level. Nothing has to be written twice, and no card can drift out of sync with the lesson it came from. The decks follow the language direction toggle, and switching direction keeps your place in the set.
+
+### Reading richer lessons without a second code path
+
+Lesson rows are moving from positional tuples (`[speaker, line, translation]`) to named objects carrying much more per entry. `data/flashcards.js` reads every row through one shape-tolerant accessor, so both shapes produce identical cards for the fields they share, and the richer fields simply add more.
+
+This matters more than it sounds. Destructuring an object throws outright, so reading a row positionally does not degrade as the data grows — it takes the whole section down. A test asserts that a lesson written both ways yields the same cards, rather than merely that nothing crashed, and a second test pins each rich field to the card it feeds, so a renamed field is a failure rather than a card that quietly stops being generated.
+
+The card kinds a lesson can yield:
+
+| Kind | Front | Back |
+| --- | --- | --- |
+| `vocabulary` / `meaning` | a term, or its explanation | the other one |
+| `pronunciation` | a line of dialogue | how to say it |
+| `example` | the phrase in use | what it means |
+| `region` | a term | where it is said, and how formal |
+| `context` | the situation | the culture note |
+| `address` | who you are speaking to | *usted*, *tú* or *vos*, and why |
+| `culture` | a cultural point | what to know about it |
+| `pitfall` | a mistake learners make | what to say instead |
+| `variation` | when you would use it | the phrasing that fits |
+| `practice` | a practice question | its answer |
+
+A kind that current content happens not to produce is still checked for wording, because the checked list is read out of the derivation itself rather than from the cards it currently emits.
+
+The surrounding interface follows the direction too. `data/flashcards.js` emits i18n keys rather than sentences — `deck.ask.pronunciation`, not `"How would you say this out loud?"` — and `flashcards.js` resolves them through `i18n.js` at paint time, so the prompts, controls and screen-reader announcements are in the learner's own language. A test derives the key list from the real content, so a new verb level that nobody has translated yet is caught rather than shipped.
+
+Sets are split evenly rather than greedily, so a topic never ends in a stub round — 13 cards become 7 + 6, not 10 + 3. `FLASHCARD_SET_SIZE` in `data/flashcards.js` is the single knob for the target size. Deck size scales with the lessons: the eight lessons here currently yield 314 cards across 38 sets, and richer lesson content raises that to 658 across 71 without a line of flashcard code changing.
+
 ## Placement and pathways
 
 The app opens with an optional five-signal placement check: receptive understanding, productive use, grammar, context, and pronunciation. Every question includes **"I don't know"**, which records a genuine knowledge gap instead of forcing a guess — a wrong guess and an honest gap mean different things, and the app treats them differently.
@@ -138,6 +192,8 @@ House rules for content:
 - **Teach the pragmatics, not just the words.** `usted` vs `tú` vs `vos` carries more meaning than most vocabulary does.
 - **Leave `review: "pending"`.** The lesson keeps inviting a native speaker to check it until one has.
 
+Nothing else needs touching: the lesson appears in the lesson picker, its anchors become flaggable in review mode, and it becomes a [flashcard topic](#flashcards) on its own.
+
 ## Tests
 
 Content is validated by a dependency-free suite. Node 20+ only, nothing to install:
@@ -146,7 +202,7 @@ Content is validated by a dependency-free suite. Node 20+ only, nothing to insta
 node --test test/*.test.js
 ```
 
-It checks that every lesson teaches in both directions, that dialogue and vocabulary rows match the shape the renderers expect, that each practice question points at a real answer among distinct choices, that verb entries are complete and uniquely identified, that every review anchor resolves to a real string, and — the one that catches the most damage — that **every element `app.js` and `review-ui.js` look up actually exists in `index.html`**. CI runs the same command on every pull request.
+It checks that every lesson teaches in both directions, that dialogue and vocabulary rows match the shape the renderers expect, that each practice question points at a real answer among distinct choices, that verb entries are complete and uniquely identified, that every review anchor resolves to a real string, that flashcard sets split evenly and expand when new content is added, and — the one that catches the most damage — that **every element `app.js`, `flashcards.js`, and `review-ui.js` look up actually exists in `index.html`**. CI runs the same command on every pull request.
 
 `test/globals.test.js` covers a failure the rest of the suite structurally cannot see. The page loads every script into one global scope, so a name a script does not define does not fail — it silently resolves to whatever another script put there. A handler calling `render()` from a file that has no `render` reaches `app.js`'s, and the result is a control that does nothing while an unrelated section redraws, with no error on any content. Under `node --test`, `require()` gives every module its own scope, so those two names can never meet; the bug is not merely untested there, it is untestable there. The guard reads the scripts as text in the order `index.html` loads them.
 
@@ -207,11 +263,14 @@ The mature-language reference needs the same care from qualified reviewers — s
 ```
 index.html          The whole app shell — every element id app.js binds to
 app.js              Rendering, placement scoring, lesson navigation, progress
+i18n.js             Interface strings for both languages, and applyI18n()
+flashcards.js       Swipeable flashcard decks: gestures, round queue, reset
 review.js           Review anchors: parse, resolve, validate, build issue payloads
 review-ui.js        The Report an error tab: content picker, report form, queue, issue export
 styles.css          Design system: light/dark tokens, layout, components
 data/lessons.js     The lessons
 data/curriculum.js  200 verbs, fluency connectors, mature-language reference
+data/flashcards.js  Derives flashcard topics and sets from the content above
 scripts/            Maintainer tools: triage flags back to the lines to edit
 .github/workflows/  CI, Pages deploy, and automatic triage of filed flags
 assets/             Favicon, social card, roadmap diagram

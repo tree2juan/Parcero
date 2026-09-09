@@ -35,6 +35,7 @@
       </a>
       <nav class="site-nav" data-i18n-aria="nav.sections" aria-label="Sections">
         <a href="#lessons" data-i18n="nav.lessons">Lessons</a>
+        <a href="#flashcards" data-i18n="nav.flashcards">Flashcards</a>
         <a href="#placement" data-i18n="nav.placement">Placement</a>
         <a href="#library" data-i18n="nav.library">Library</a>
         <a class="nav-repo" href="https://github.com/tree2juan/Parcero" data-i18n="nav.github">GitHub</a>
@@ -212,6 +213,58 @@
         </section>
       </section>
 
+      <section id="flashcards" class="flashcards" aria-labelledby="flashcards-title">
+        <div class="section-head">
+          <p class="eyebrow" data-i18n="deck.eyebrow">Flashcards</p>
+          <h2 id="flashcards-title" data-i18n="deck.title">Short sets, one area at a time.</h2>
+          <p class="section-lead" data-i18n="deck.lead">Every card is built from a lesson, a verb or a fluency phrase you have already met here. Swipe left when you knew it, right when you did not — the ones you miss come back around until they stick.</p>
+        </div>
+
+        <div class="deck-picker">
+          <label class="field" for="deck-topic"><span data-i18n="deck.topicLabel">Topic</span>
+            <select id="deck-topic"></select>
+          </label>
+          <label class="field" for="deck-set"><span data-i18n="deck.setLabel">Set</span>
+            <select id="deck-set"></select>
+          </label>
+        </div>
+
+        <div class="deck-status">
+          <div class="deck-status-head">
+            <strong id="deck-progress"></strong>
+            <span id="deck-tally" class="deck-tally"></span>
+          </div>
+          <div class="progress-track" aria-hidden="true"><div id="deck-bar"></div></div>
+        </div>
+
+        <div id="deck-stage" class="deck-stage">
+          <article id="deck-card" class="flashcard" role="button" tabindex="0" aria-describedby="deck-help"></article>
+          <section id="deck-summary" class="deck-summary" hidden aria-live="polite">
+            <p class="eyebrow" data-i18n="deck.summaryEyebrow">Set complete</p>
+            <h3 id="deck-summary-title" data-i18n="deck.summaryTitle">That set is done.</h3>
+            <p id="deck-summary-detail"></p>
+            <div class="deck-summary-actions">
+              <button id="deck-again" class="primary-button" type="button" data-i18n="deck.again">Go through it again</button>
+              <button id="deck-next" class="ghost-button" type="button" data-i18n="deck.next">Next set →</button>
+            </div>
+          </section>
+        </div>
+
+        <button id="deck-expand" class="deck-expand" type="button" hidden aria-expanded="false" aria-controls="deck-card-back" data-i18n="deck.readMore">Read the rest</button>
+
+        <div class="deck-actions">
+          <button id="deck-known" class="deck-verdict deck-known" type="button" data-i18n="deck.knownButton">← Knew it</button>
+          <button id="deck-flip" class="primary-button" type="button" data-i18n="deck.showAnswer">Show answer</button>
+          <button id="deck-review" class="deck-verdict deck-again" type="button" data-i18n="deck.reviewButton">Didn’t know it →</button>
+        </div>
+
+        <div class="deck-footer">
+          <p id="deck-help" class="deck-help" data-i18n="deck.help">Tap the card to show the answer. Swipe left if you knew it, right to send it back for review. Keyboard: space flips, ← and → answer.</p>
+          <button id="deck-reset" class="ghost-button" type="button" data-i18n="deck.reset">Reset this set</button>
+        </div>
+        <p id="deck-live" class="assistive-text" aria-live="polite"></p>
+      </section>
+
       <section id="placement" class="placement" aria-labelledby="placement-title">
         <div class="section-head">
           <p class="eyebrow" data-i18n="placement.eyebrow">Optional</p>
@@ -281,7 +334,9 @@
     <script src="data/lessons.js"></script>
     <script src="data/curriculum.js"></script>
     <script src="i18n.js"></script>
+    <script src="data/flashcards.js"></script>
     <script src="app.js"></script>
+    <script src="flashcards.js"></script>
     <script src="review.js"></script>
     <script src="review-ui.js"></script>
   </body>
