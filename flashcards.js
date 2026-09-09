@@ -148,21 +148,39 @@
   /*
    * A data file that fails to load must not take the deck down with it.
    *
-   * The shape check is the point. index.html carries id="lessons", and named
-   * access on window means `lessons` is that <section> whenever the data script
-   * is missing — so `typeof lessons` is "object", not "undefined", and a
-   * fallback keyed on undefined never fires. The page then dies on "lessons is
-   * not iterable". Only something array-shaped is usable here. The typeof probe
-   * still guards the genuinely-undeclared case, which would throw on read.
+   * Two different failures hide behind one name. index.html carries
+   * id="lessons", and named access on window means `lessons` is that <section>
+   * whenever data/lessons.js is missing — so a fallback keyed on "undefined"
+   * never fires and the deck dies on "lessons is not iterable". But that
+   * rescue is the id's doing, not ours: `curriculum` and `fluencyItems` have
+   * no matching element, so for them a missing data file leaves the name
+   * genuinely undeclared and a bare read throws instead.
+   *
+   * Reading through a thunk covers both without asking which is which. The
+   * ReferenceError is the undeclared case; the shape check is the element
+   * case. Neither depends on an id in someone else's markup staying put.
+   *
+   * Matched on `name` rather than `instanceof`, because an error raised in
+   * another realm — a vm context in the tests, say — is not an instance of
+   * this realm's ReferenceError however much it looks like one.
    */
-  const dataArray = (value) => (Array.isArray(value) ? value : []);
+  const arrayFrom = (read) => {
+    let value;
+    try {
+      value = read();
+    } catch (error) {
+      if (error && error.name === "ReferenceError") return [];
+      throw error;
+    }
+    return Array.isArray(value) ? value : [];
+  };
 
   function rebuild(preferredSetId) {
     deck.direction = currentDirection();
     deck.sets = flashcardSets(deck.direction, {
-      lessons: dataArray(typeof lessons === "undefined" ? null : lessons),
-      curriculum: dataArray(typeof curriculum === "undefined" ? null : curriculum),
-      fluencyItems: dataArray(typeof fluencyItems === "undefined" ? null : fluencyItems)
+      lessons: arrayFrom(() => lessons),
+      curriculum: arrayFrom(() => curriculum),
+      fluencyItems: arrayFrom(() => fluencyItems)
     });
     renderTopics();
     const wanted = [preferredSetId, deck.setId, readStore().setId].find((id) => deck.sets.some((set) => set.id === id));

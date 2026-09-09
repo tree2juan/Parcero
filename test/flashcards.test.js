@@ -538,14 +538,23 @@ test("the card is reachable without a pointer", () => {
 });
 
 /*
- * An element id is a global too.
+ * An element id is a global too — and only for some of the names.
  *
  * Named access on the Window object means <section id="lessons"> puts `lessons`
- * on the page whether or not data/lessons.js loaded. A fallback written as
- * `typeof lessons === "undefined" ? [] : lessons` therefore never fires: the
- * name resolves to the section, and the deck dies on "lessons is not iterable"
- * instead of degrading. node --test cannot see this — there is no document
- * here, so the name really is undefined and the guard looks fine.
+ * on the page whether or not data/lessons.js loaded, so a fallback written as
+ * `typeof lessons === "undefined" ? [] : lessons` never fires: the name
+ * resolves to the section and the deck dies on "lessons is not iterable".
+ * `curriculum` and `fluencyItems` have no such element, so the same missing
+ * file leaves them genuinely undeclared and a bare read throws instead. One
+ * name, two opposite failures, and which one you get depends on markup.
+ *
+ * Reading through a thunk answers both, but only in the thunk form: written
+ * `arrayFrom(lessons)` the argument is evaluated at the call site, so the
+ * ReferenceError escapes before arrayFrom can catch it. That reads as a
+ * harmless tidy-up and is why the shape is asserted here and not just the name.
+ *
+ * node --test cannot see any of this — there is no document, so every name is
+ * simply undefined and a broken guard tests green.
  */
 test("a data file that fails to load cannot be mistaken for a same-named element", () => {
   const source = codeOnly(read("flashcards.js"));
@@ -559,12 +568,13 @@ test("a data file that fails to load cannot be mistaken for a same-named element
   assert.strictEqual(sources.length, 3, "expected the three data sources handed to flashcardSets");
 
   const unchecked = sources
-    .filter(([, , expr]) => !/Array\.isArray|dataArray/.test(expr))
+    .filter(([, , expr]) => !/arrayFrom\(\s*\(\s*\)\s*=>/.test(expr))
     .map(([, name]) => name);
   assert.deepStrictEqual(
     unchecked,
     [],
-    `${unchecked.join(", ")} is trusted without a shape check, so a same-named element would be read as data`
+    `${unchecked.join(", ")} is not read through arrayFrom(() => ...), so a missing data file either ` +
+      "throws on read or hands an element to code expecting an array"
   );
 
   // And this is not hypothetical: without a live collision the rule above would
@@ -573,6 +583,43 @@ test("a data file that fails to load cannot be mistaken for a same-named element
   assert.ok(
     colliding.length > 0,
     "no data source shares an element id any more — re-check whether this guard still earns its place"
+  );
+
+  // The other half of the pair: at least one source must NOT collide, or the
+  // ReferenceError arm is dead too and a bare read would be just as safe.
+  const undeclarable = sources.map(([, name]) => name).filter((name) => !ids.has(name));
+  assert.ok(
+    undeclarable.length > 0,
+    "every data source is now backed by an element id, so nothing can be genuinely undeclared"
+  );
+});
+
+/*
+ * The reader itself, exercised rather than described.
+ *
+ * Lifted out of flashcards.js by source so the behaviour under test is the
+ * shipped one. Both arms matter and neither is reachable from a plain
+ * `require()` of the module: the undeclared arm needs a name no scope binds,
+ * the element arm needs a document.
+ */
+test("arrayFrom survives both an undeclared name and an element of the same name", () => {
+  const source = codeOnly(read("flashcards.js"));
+  const start = source.indexOf("const arrayFrom");
+  assert.ok(start > -1, "arrayFrom is gone from flashcards.js — this test is checking nothing");
+  const body = read("flashcards.js").slice(start, source.indexOf("};", start) + 2);
+
+  const arrayFrom = new Function(`${body} return arrayFrom;`)();
+
+  assert.deepStrictEqual([...arrayFrom(() => nameNothingDeclares)], [], "undeclared name should degrade to []");
+  assert.deepStrictEqual([...arrayFrom(() => ({ nodeType: 1, tagName: "SECTION" }))], [], "an element is not data");
+  assert.deepStrictEqual([...arrayFrom(() => [1, 2])], [1, 2], "a real array must pass through untouched");
+
+  // A thrown error that is not a ReferenceError is a bug worth hearing about,
+  // so it must not be swallowed alongside the two cases above.
+  assert.throws(
+    () => arrayFrom(() => { throw new TypeError("boom"); }),
+    /boom/,
+    "arrayFrom must not swallow errors it was not written for"
   );
 });
 
