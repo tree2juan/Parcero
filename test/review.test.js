@@ -148,8 +148,7 @@ test("every leaf anchor maps to a group the page actually renders", () => {
       const base = `lesson:${lesson.id}/${direction}`;
       const side = schema.normalizeContent(lesson[direction]);
       rendered.add(`${base}/heading`).add(`${base}/note`).add(`${base}/prompt`).add(`${base}/choices`);
-      for (const key of schema.SETTING_KEYS) rendered.add(`${base}/setting/${key}`);
-      for (const slot of schema.ADDRESS_SLOTS) rendered.add(`${base}/address/${slot}`);
+      rendered.add(`${base}/setting`).add(`${base}/address`);
       for (const field of ["dialogue", "vocabulary", "culture", "pitfalls", "variations"]) {
         side[field].forEach((_, index) => rendered.add(`${base}/${field}/${index}`));
       }
@@ -432,4 +431,69 @@ test("the triage CLI explains a missing file instead of crashing", () => {
   assert.strictEqual(status, 2);
   assert.match(stderr, /No such file: no-such-file\.json/);
   assert.doesNotMatch(stderr, /ENOENT|at Object\./, "a maintainer should not see a Node stack trace");
+});
+
+/* ---------- region codes ---------- */
+
+test("region suggestions carry codes the translation table can key off", () => {
+  for (const entry of review.REGION_SUGGESTIONS) {
+    assert.ok(Array.isArray(entry) && entry.length === 2, `expected a [code, label] pair, got ${JSON.stringify(entry)}`);
+    const [code, label] = entry;
+    assert.match(code, /^[\w-]+$/, `region code ${code} must be word characters and hyphens only`);
+    assert.strictEqual(code, code.toLowerCase(), `region code ${code} must be lowercase`);
+    assert.ok(isText(label), `region ${code} needs a label`);
+    assert.strictEqual(review.labelKey("region", code), `review.region.${code}`);
+  }
+  const codes = review.REGION_SUGGESTIONS.map(([code]) => code);
+  assert.strictEqual(new Set(codes).size, codes.length, "region codes must be unique");
+  assert.ok(codes.includes("co-general"), "the catch-all region needs a stable code, not an empty value");
+});
+
+test("a reviewer's own words survive canonicalisation", () => {
+  const flag = sampleFlag({ region: "Barranquilla, mi barrio", regionCode: "" });
+  const [filed] = review.buildPayload([flag], {}).flags;
+  assert.strictEqual(filed.region, "Barranquilla, mi barrio", "free text must be filed verbatim");
+  assert.strictEqual(filed.regionCode, "", "unrecognised text must not be forced into a code");
+  assert.strictEqual(review.regionCodeFor("Barranquilla, mi barrio"), "");
+});
+
+test("region matching forgives case, spacing and missing accents", () => {
+  assert.strictEqual(review.regionCodeFor("Medellín and Antioquia (paisa)"), "antioquia");
+  assert.strictEqual(review.regionCodeFor("medellin and antioquia (paisa)"), "antioquia");
+  assert.strictEqual(review.regionCodeFor("  Medellin   and Antioquia (paisa)  "), "antioquia");
+  assert.strictEqual(review.regionCodeFor("Bogota (rolo / cachaco)"), "bogota");
+  assert.strictEqual(review.regionCodeFor(""), "");
+  assert.strictEqual(review.regionCodeFor(undefined), "");
+});
+
+test("a translated region label still resolves to the same code", () => {
+  const spanish = { caribe: "Costa Caribe (costeño)", "co-general": "Colombiano, sin región particular" };
+  assert.strictEqual(review.regionCodeFor("Costa Caribe (costeño)", spanish), "caribe");
+  assert.strictEqual(review.regionCodeFor("costa caribe (costeno)", spanish), "caribe");
+  assert.strictEqual(review.regionCodeFor("Colombiano, sin region particular", spanish), "co-general");
+  assert.strictEqual(review.regionCodeFor("Caribbean coast (costeño)", spanish), "caribe",
+    "English must keep resolving even when a translation is supplied");
+});
+
+test("the reviewer line in triage output stays human text, never a code", () => {
+  const flag = sampleFlag({ region: "Medellín and Antioquia (paisa)", regionCode: "antioquia" });
+  const markdown = review.flagsToMarkdown([flag], content);
+  assert.match(markdown, /Medellín and Antioquia \(paisa\)/, "the reviewer's words belong in the output");
+  assert.doesNotMatch(markdown, /\bantioquia\b/, "the machine code must not leak into the display path");
+});
+
+test("an unknown region code is rejected but a blank one is fine", () => {
+  assert.deepStrictEqual(review.validateFlag(sampleFlag({ regionCode: "" })), []);
+  assert.deepStrictEqual(review.validateFlag(sampleFlag({ regionCode: undefined })), []);
+  const errors = review.validateFlag(sampleFlag({ regionCode: "atlantis" }));
+  assert.ok(errors.some((message) => /regionCode/.test(message)), `expected a regionCode error, got ${JSON.stringify(errors)}`);
+});
+
+test("adding regionCode did not break payloads filed before it existed", () => {
+  const old = sampleFlag({});
+  delete old.regionCode;
+  const [filed] = review.buildPayload([old], {}).flags;
+  assert.strictEqual(filed.regionCode, "", "a missing regionCode must read as empty, not undefined");
+  assert.strictEqual(filed.region, old.region);
+  assert.deepStrictEqual(review.validateFlag(old), [], "an old flag must still validate");
 });

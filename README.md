@@ -54,7 +54,7 @@ Then open `http://localhost:8000`. You can also just open `index.html` directly 
 
 ## How a lesson works
 
-Each lesson has four tabs, in the order a real conversation demands them:
+Each lesson has five tabs, in the order a real conversation demands them:
 
 | Tab | What it gives you |
 | --- | --- |
@@ -62,6 +62,7 @@ Each lesson has four tabs, in the order a real conversation demands them:
 | **Dialogue** | A short exchange with the target language, a natural translation, and a plain-English pronunciation respelling. Lines that hide something carry a literal gloss and a note on why it is phrased that way. A "Listen" button reads it aloud with your browser's speech engine. |
 | **Understand** | The vocabulary *as used in this exchange* — with a literal reading, when to reach for it, when not to, what region it belongs to, and an example — then what is going on underneath the exchange, what learners get wrong here and what to say instead, and the same thing said differently across registers and regions. |
 | **Practice** | Several retrieval questions that check meaning-in-context rather than translation, each naming what it is testing. |
+| **Report an error** | Tell a maintainer that something is wrong, without leaving the lesson. See [Native-speaker review](#native-speaker-review). |
 
 <a id="lessons"></a>
 
@@ -188,7 +189,7 @@ House rules for content:
 - **Name the address form.** `usted` vs `tú` vs `vos` carries more meaning than most vocabulary does, so say which one is in play and what switching would signal.
 - **Never present a regional expression as universal.** Every vocabulary entry states its `region`. `vos` is paisa and Valle, not Colombian at large.
 - **Say what goes wrong.** A pitfall without `sayInstead` leaves the learner stuck, so all three fields are required.
-- **Do not make the right answer guessable.** CI fails if every correct answer sits at the same index, or if an answer stands out by length. Vary the position and match the distractors' length.
+- **Do not make the right answer guessable.** `choices` and `answer` are a pair — `answer` is an index, so moving one means moving the other. CI fails if answers cluster at one position, if the correct choice is reliably the longest, if it towers over its distractors, or if a distractor is too short to be worth considering. See [`test/practice.test.js`](test/practice.test.js).
 - **Leave `review: "pending"`.** The lesson keeps inviting a native speaker to check it until one has.
 
 ## Tests
@@ -199,7 +200,7 @@ Content is validated by a dependency-free suite. Node 20+ only, nothing to insta
 node --test test/*.test.js
 ```
 
-It checks that every lesson teaches in both directions, that every lesson answers who/what/when/where/why and names its address form, that dialogue and vocabulary rows match the shape the renderers expect, that pitfalls always say what to say instead, that each practice question points at a real answer among distinct choices — and that the right answer is not guessable from its position or its length — that verb entries are complete and uniquely identified, that every review anchor resolves to a real string, and — the one that catches the most damage — that **every element `app.js` and `review-ui.js` look up actually exists in `index.html`**. CI runs the same command on every pull request.
+It checks that every lesson teaches in both directions, that every lesson answers who/what/when/where/why and names its address form, that dialogue and vocabulary rows match the shape the renderers expect, that pitfalls always say what to say instead, that each practice question points at a real answer among distinct choices — and that the right answer is not guessable from its position or its length — that verb entries are complete and uniquely identified, that every review anchor resolves to a real string, that the report picker can reach every kind of content a lesson now holds, and — the one that catches the most damage — that **every element `app.js` and `review-ui.js` look up actually exists in `index.html`**. CI runs the same command on every pull request.
 
 > Pass the glob, not the bare directory. Node 22 and newer resolve `node --test test/` as a *module* path and fail with `Cannot find module`; `test/*.test.js` works on every version.
 
@@ -211,13 +212,17 @@ Regional usage is the part most easily got wrong, so the app is honest about it:
 
 Review happens at two grains, and both need a reviewer who knows the language, not the codebase.
 
-### Flag a line from the page
+### Report an error from the page
 
-The fastest correction is the one made while looking at the mistake. Add `?review=1` to the URL — **[open the site in review mode](https://tree2juan.github.io/Parcero/?review=1)** — or press **Review mode** in the header. A **Flag** control appears on every reviewable block: each line of the situation, the address-form note, every dialogue line, vocabulary entry, context note, pitfall, variation, practice question, verb, connector, and mature-language entry.
+The fastest correction is the one made while looking at the mistake. Every lesson has a **Report an error** tab, next to Dialogue, Understand and Practice. Nothing is added to the lesson itself: no controls hang off individual lines, so a learner reading a lesson never has to see review furniture.
 
-Flagging one asks what is wrong (not natural, wrong region, wrong register, mistranslation, misleading pronunciation, spelling, culture, risky, dated), how much it matters, and — the field that does the real work — **how you would say it instead**. Flags collect in your browser, so you can read a whole lesson and flag as you go. **Submit flags** then opens a prefilled GitHub issue containing both a readable report and a machine-readable payload. Copy-to-clipboard and download-JSON are offered as fallbacks, including when a batch is too large for a URL.
+The tab asks two questions to find the string: **what are you reporting on** — the lesson you are reading, a verb, a fluency phrase, or a mature-language entry — and **which one**, listed by its own words rather than by position. Everything a lesson holds is reachable: each line of the situation, the address-form note, every dialogue line, vocabulary entry, context note, pitfall, variation and practice question. It then narrows to the exact part: the Spanish line, the translation, the pronunciation respelling, the speaker's name, and so on. The text you picked is quoted back to you before you say anything about it.
 
-Nothing is sent anywhere until you press submit. Flags live only in your browser, under their own storage key, so *Reset progress* never destroys them.
+From there it asks what is wrong (not natural, wrong region, wrong register, mistranslation, misleading pronunciation, spelling, culture, risky, dated), how much it matters, and — the field that does the real work — **how you would say it instead**. Reports collect in your browser, so you can read a whole lesson and report as you go, and any saved report can be reopened and edited. A half-written report keeps hold of the line it is about: paging to the next lesson or switching language will not quietly re-point it at something else. **Open a GitHub issue with these** then opens a prefilled issue containing both a readable report and a machine-readable payload. Copy-to-clipboard and download-JSON are offered as fallbacks, including when a batch is too large for a URL.
+
+Nothing is sent anywhere until you press submit. Reports live only in your browser, under their own storage key, so *Reset progress* never destroys them.
+
+Because regional usage is the thing this project most needs help with, the form also asks where you speak from. Ten Colombian regions are offered as suggestions, but the field is open — type wherever you are from and it is recorded in your own words. Where what you typed matches a suggestion, the report also carries a stable region code, so that a year of reports can be counted by region without anyone having to guess that "Medellin" and "Medellín and Antioquia (paisa)" meant the same place. `node scripts/review-flags.js` prints that tally.
 
 ### Sign off a whole lesson
 
@@ -251,7 +256,7 @@ The mature-language reference needs the same care from qualified reviewers — s
 index.html          The whole app shell — every element id app.js binds to
 app.js              Rendering, placement scoring, lesson navigation, progress
 review.js           Review anchors: parse, resolve, validate, build issue payloads
-review-ui.js        Review mode: flag controls, the flag queue, issue export
+review-ui.js        The Report an error tab: content picker, report form, queue, issue export
 styles.css          Design system: light/dark tokens, layout, components
 data/lessons.js     The lessons
 data/lesson-schema.js  The lesson shape: defaults, normalisation, legacy tuples

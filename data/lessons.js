@@ -122,7 +122,7 @@ const lessons = [{
       { form: "Just a black coffee, thanks.", register: "casual", region: "Universal", whenToUse: "“Just” minimises the request and sounds relaxed." },
       { form: "Might I have a black coffee?", register: "formal / dated", region: "British", whenToUse: "Rarely — it will read as ironic or theatrical in a café." }
     ],
-    prompt: "What does “I'll bring it right over” mean?",
+    prompt: "What does “I’ll bring it right over” mean?",
     choices: ["I will carry it to the right side.", "I brought it over yesterday morning.", "I will bring it over very soon."],
     answer: 2,
     practiceExtra: [
@@ -194,8 +194,8 @@ const lessons = [{
       { form: "¿Me puede dejar en el centro, por favor?", register: "more formal polite", region: "General Colombian", whenToUse: "With an older driver, at a hotel taxi line, or whenever you want extra distance." }
     ],
     prompt: "Why does Alex ask “¿Cuánto me cobra?” before getting in?",
-    choices: ["To settle the price before the trip starts.", "To complain about the driver.", "To ask for a loyalty discount."],
-    answer: 0,
+    choices: ["To complain about the driver’s route choice.", "To ask for a loyalty discount on the fare.", "To settle the price before the trip starts."],
+    answer: 2,
     practiceExtra: [
       { prompt: "The driver says “Lo que marque el taxímetro, no más.” What has he agreed to?", choices: ["Only the amount shown by the meter.", "A cheaper price if traffic is heavy.", "A free ride if the route is short."], answer: 0, tests: "meter fare as the agreement" },
       { prompt: "Why is “¿me lleva al centro?” better than “¿puede conducir al centro?” here?", choices: ["It asks for the ride in normal taxi wording.", "It proves Alex owns the taxi route.", "It demands a discount before greeting."], answer: 0, tests: "natural taxi request formula" },
@@ -257,8 +257,8 @@ const lessons = [{
       { form: "Could you drop me downtown?", register: "casual polite", region: "Universal", whenToUse: "When the focus is where the driver will leave you, not the whole ride." }
     ],
     prompt: "What is the driver promising with “Just what the meter says”?",
-    choices: ["A flat rate agreed before setting off.", "The metered price, with nothing added.", "A discount once they reach downtown."],
-    answer: 1,
+    choices: ["The metered price, with nothing added.", "A flat discount off the metered price.", "A free ride to the downtown area."],
+    answer: 0,
     practiceExtra: [
       { prompt: "Why does Alex say “Could you take me downtown?” rather than “Drive me downtown”?", choices: ["The modal makes the request polite.", "The driver cannot understand “drive”.", "Downtown must always be capitalised."], answer: 0, tests: "modal verb as politeness" },
       { prompt: "The driver asks “Highway or surface streets?” What is he asking Alex to choose?", choices: ["A fast road or ordinary city streets.", "A front seat or a back seat.", "A cash fare or card fare."], answer: 0, tests: "route vocabulary in context" },
@@ -328,7 +328,7 @@ const lessons = [{
       { form: "¿Cuánto cuesta la libra de mango?", register: "neutral", region: "Universal Spanish", whenToUse: "Safe fallback if local market phrasing feels too idiomatic." }
     ],
     prompt: "What is “la ñapa”?",
-    choices: ["A small extra the seller adds for free.", "A tax added at the market.", "A receipt you must keep."],
+    choices: ["A small extra the seller adds for free.", "A small tax added at the market stall.", "A receipt you must keep for returns."],
     answer: 0,
     practiceExtra: [
       { prompt: "The vendor says “A tres mil, mi amor.” How should Alex understand “mi amor”?", choices: ["As ordinary market warmth.", "As a romantic invitation.", "As the name of the fruit."], answer: 0, tests: "address terms in market context" },
@@ -391,8 +391,8 @@ const lessons = [{
       { form: "I’ll throw in an extra one.", register: "casual sales", region: "Universal", whenToUse: "A seller adds a bonus item for free." }
     ],
     prompt: "What does “I’ll throw in an extra one” mean?",
-    choices: ["I will add one more at no cost.", "I will discard one.", "I will toss it to you."],
-    answer: 0,
+    choices: ["I will discard one of them for you.", "I will add one more at no cost.", "I will toss it across to you."],
+    answer: 1,
     practiceExtra: [
       { prompt: "Why does Alex ask “How much are the mangoes?” with “are”?", choices: ["Because “mangoes” is plural.", "Because markets require formal grammar.", "Because “mango” is uncountable."], answer: 0, tests: "plural agreement in price questions" },
       { prompt: "The vendor asks “How many can I get you?” What does she mean?", choices: ["How many would you like?", "How many can you carry home?", "How many did you already buy?"], answer: 0, tests: "service formula meaning" },
@@ -463,8 +463,8 @@ const lessons = [{
       { form: "Cuadramos la hora mañana.", register: "casual neutral", region: "General Colombian", whenToUse: "When the plan is accepted but the exact detail can wait." }
     ],
     prompt: "What is Alex saying with “De una”?",
-    choices: ["Yes, definitely—count me in.", "Only one person can come.", "Maybe next week instead."],
-    answer: 0,
+    choices: ["Only one person can come along.", "Maybe next week instead of today.", "Yes, definitely—count me in."],
+    answer: 2,
     practiceExtra: [
       { prompt: "Santiago asks “¿Cuál es el parche el sábado?” What is he really asking?", choices: ["Who is repairing something on Saturday?", "What the Saturday plan or hangout is.", "Which jacket Alex will wear that day."], answer: 1, tests: "parche as plan or hangout" },
       { prompt: "Why does Alex say “¿Vos qué tenés en mente?”", choices: ["He is mirroring a paisa or Valle-style informal address.", "He is switching into formal clinic Spanish.", "He is avoiding any regional signal at all."], answer: 0, tests: "regional vos in close informal speech" },
@@ -527,8 +527,8 @@ const lessons = [{
       { form: "Let’s nail down a time tomorrow.", register: "neutral casual", region: "Universal", whenToUse: "The plan is accepted and only the exact time needs confirming." }
     ],
     prompt: "What does “Let’s nail down a time” mean?",
-    choices: ["Let’s agree on a definite time.", "Let’s attach something to a wall.", "Let’s cancel the plan."],
-    answer: 0,
+    choices: ["Let’s attach something to a wall.", "Let’s agree on a definite time.", "Let’s cancel the plan for now."],
+    answer: 1,
     practiceExtra: [
       { prompt: "Sam asks “Any plans for Saturday?” What is likely happening?", choices: ["Sam is only collecting calendar data.", "Sam may be leading into an invitation.", "Sam is ending the conversation early."], answer: 1, tests: "indirect invitation opener" },
       { prompt: "Why is “Nothing yet. What do you have in mind?” a good answer?", choices: ["It keeps the possible invitation open.", "It refuses the plan very politely.", "It asks Sam to stop texting."], answer: 0, tests: "cooperative response to casual planning" },
@@ -600,8 +600,8 @@ const lessons = [{
       { form: "¿Me puede dar la fórmula médica?", register: "polite usted", region: "Colombia", whenToUse: "Asking for the prescription or medication order after the doctor explains treatment." }
     ],
     prompt: "What does “Me duele la garganta hace tres días” tell the doctor?",
-    choices: ["The sore throat started three days ago and continues.", "The throat hurt once, three days ago.", "The pain will start in three days."],
-    answer: 0,
+    choices: ["The throat hurt once, three days ago, and then stopped.", "The sore throat started three days ago and continues.", "The pain is expected to start in three days."],
+    answer: 1,
     practiceExtra: [
       { prompt: "The doctor says “Siga” from the doorway. What should Alex understand?", choices: ["Continue talking without entering.", "Come in or go ahead now.", "Leave and book another visit."], answer: 1, tests: "Siga as doorway invitation" },
       { prompt: "Why is “hace tres días” important in Alex’s symptom sentence?", choices: ["It says the symptom is imaginary.", "It names the medicine dosage.", "It gives duration that continues now."], answer: 2, tests: "hace plus time with ongoing symptoms" },
@@ -665,8 +665,8 @@ const lessons = [{
       { form: "Could I get a note for work?", register: "polite practical", region: "Universal, exact document names vary", whenToUse: "You need written proof for an employer or school." }
     ],
     prompt: "Why does Alex say “I’ve had a sore throat” instead of “I had a sore throat”?",
-    choices: ["Because the pain stopped before the appointment.", "Because the present perfect sounds more formal.", "Because it started three days ago and is still happening."],
-    answer: 2,
+    choices: ["Because it started three days ago and is still happening.", "Because it is the more formal way to phrase the complaint.", "Because it finished yesterday and no longer hurts."],
+    answer: 0,
     practiceExtra: [
       { prompt: "The doctor asks “What brings you in today?” What should Alex give?", choices: ["The bus route to the clinic.", "The reason for the visit.", "The name of the receptionist."], answer: 1, tests: "clinical opener meaning" },
       { prompt: "Which sentence clearly says the symptom continues now?", choices: ["I had a sore throat last week.", "I will have a sore throat soon.", "I’ve had a sore throat for three days."], answer: 2, tests: "present perfect for ongoing symptom" },
@@ -737,7 +737,7 @@ const lessons = [{
       { form: "Si no sale nada adicional, quedaría listo el jueves.", register: "professional hedged", region: "General Colombian", whenToUse: "Use when giving a realistic timeline with a condition attached." }
     ],
     prompt: "What does Alex mean by “Me falta revisar las cifras”?",
-    choices: ["Checking the figures is still to be done.", "The figures are wrong.", "Someone else reviewed the figures."],
+    choices: ["Checking the figures is still to be done.", "The figures are wrong and need redoing.", "Someone else reviewed the figures."],
     answer: 0,
     practiceExtra: [
       { prompt: "Laura asks “¿Algo pendiente de mi lado?” What is she checking?", choices: ["Whether she owes an action before the work can move.", "Whether Alex has already sent the finished report.", "Whether the meeting should move to another room."], answer: 0, tests: "pendiente as an open action item" },
@@ -801,8 +801,8 @@ const lessons = [{
       { form: "That should be ready Thursday, assuming nothing else comes up.", register: "professional hedged", region: "Universal", whenToUse: "Use for a likely timeline that is not a guarantee." }
     ],
     prompt: "What is Laura asking with “Anything blocked on my end?”",
-    choices: ["Whether anything is waiting for her to act.", "Whether her computer is broken.", "Whether the meeting should end."],
-    answer: 0,
+    choices: ["Whether her computer connection is broken.", "Whether the meeting should end early.", "Whether anything is waiting for her to act."],
+    answer: 2,
     practiceExtra: [
       { prompt: "Alex says “I still need to check the figures.” What tone does this create?", choices: ["Accountable and calm about a remaining step.", "Angry that Laura failed to approve the report.", "Certain that the report cannot be finished."], answer: 0, tests: "soft accountable status phrasing" },
       { prompt: "Why is “Just the sign-off. I’ll follow up tomorrow” better than “Laura hasn’t approved it”?", choices: ["It hides the blocker so no one notices it.", "It names the blocker and gives a next step without blame.", "It means the approval is no longer needed."], answer: 1, tests: "delay plus next action in English" },
@@ -874,8 +874,8 @@ const lessons = [{
       { form: "Si me permite, quisiera plantear una objeción.", register: "very formal", region: "General Spanish", whenToUse: "Use with a professor, panel, or highly formal seminar." }
     ],
     prompt: "What is Alex doing with “quisiera matizar un punto”?",
-    choices: ["Withdrawing the argument he made a moment ago.", "Politely adding nuance to a claim, not rejecting it.", "Asking the group to move on to the next topic."],
-    answer: 1,
+    choices: ["Fully rejecting the thesis as unfounded.", "Asking to change the topic of discussion.", "Politely adding nuance, not rejecting it."],
+    answer: 2,
     practiceExtra: [
       { prompt: "Why does Alex begin with “Estoy de acuerdo en parte”?", choices: ["To establish common ground before limiting the claim.", "To avoid discussing evidence from the reading.", "To tell the professor the thesis is fully correct."], answer: 0, tests: "partial agreement as academic hedge" },
       { prompt: "The professor asks “¿En qué se apoya?” What does the professor want?", choices: ["A louder restatement of Alex’s opinion.", "The evidence or basis for the claim.", "A new topic for the next seminar."], answer: 1, tests: "evidence basis in academic exchange" },
@@ -939,8 +939,8 @@ const lessons = [{
       { form: "I wonder whether the sample is broad enough.", register: "very soft academic", region: "Universal", whenToUse: "Use when you want to invite discussion rather than assert an objection." }
     ],
     prompt: "What does “the data doesn’t bear that out” mean?",
-    choices: ["The evidence does not support that conclusion.", "The data was carried away.", "The conclusion is unreadable."],
-    answer: 0,
+    choices: ["The data was physically carried away by someone.", "The evidence does not support that conclusion.", "The conclusion is unreadable as it is written."],
+    answer: 1,
     practiceExtra: [
       { prompt: "What does “I’d agree up to a point” prepare listeners for?", choices: ["Partial agreement followed by a limitation.", "Complete rejection with no evidence.", "A request to leave the seminar."], answer: 0, tests: "qualified agreement in English" },
       { prompt: "Why does Alex mention “the data in chapter three” before the objection?", choices: ["To change the topic away from the author.", "To ground the challenge in evidence.", "To show the reading was too long."], answer: 1, tests: "evidence before disagreement" },
@@ -1014,8 +1014,8 @@ const lessons = [{
       { form: "Si le parece, le amplío ese punto.", register: "formal collaborative (usted)", region: "General Colombian workplace", whenToUse: "When you want to add detail without taking over the interview." }
     ],
     prompt: "What does “llevo tres años trabajando” express?",
-    choices: ["Three years of work that continues to now.", "A plan to work for three years.", "A job that ended three years ago."],
-    answer: 0,
+    choices: ["A plan to work there for three years.", "Three years of work that continues to now.", "A job that ended about three years ago."],
+    answer: 1,
     practiceExtra: [
       { prompt: "The interviewer says “Cuénteme”. What kind of answer is she inviting?", choices: ["A one-word confirmation.", "A short professional story.", "A salary negotiation."], answer: 1, tests: "Cuénteme as a narrative invitation" },
       { prompt: "Alex says “Con mucho gusto le amplío”. What is he doing?", choices: ["Ending the interview politely.", "Refusing to discuss details.", "Offering to give more detail."], answer: 2, tests: "courtesy formula as an offer" },
@@ -1081,7 +1081,7 @@ const lessons = [{
       { form: "I can give you a specific example from my last role.", register: "clear professional", region: "Universal English", whenToUse: "A plainer alternative if “walk you through” feels too idiomatic." }
     ],
     prompt: "What is Alex offering with “walk you through an example”?",
-    choices: ["To explain an example step by step.", "To take a walk during the interview.", "To skip the question."],
+    choices: ["To explain an example step by step.", "To take a walk during the interview.", "To skip the question entirely."],
     answer: 0,
     practiceExtra: [
       { prompt: "Why does Alex say “I’ve been working” in this interview?", choices: ["The work is planned but not started.", "The work began earlier and continues now.", "The work ended before the interview."], answer: 1, tests: "present perfect continuous for ongoing experience" },

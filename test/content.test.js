@@ -206,6 +206,45 @@ test("reference lists match the shape the renderers expect", () => {
   }
 });
 
+test("nothing reads a lesson row by position", () => {
+  /*
+   * Dialogue and vocabulary rows used to be tuples, and readers destructured
+   * them: `const [, target] = line`, `dialogue.map((line) => line[1])`. Rows are
+   * named objects now, and the schema still accepts the old tuples, so the
+   * supported way to read a slot is by name.
+   *
+   * This is here because of how the tuple reads failed rather than that they
+   * failed. Destructuring an object throws and you find it immediately; the
+   * read-aloud button built its utterance with `line[1]`, got `undefined` for
+   * every line, and simply spoke nothing — no error, no visible change, and a
+   * green suite. A silent feature is worth a loud test.
+   */
+  for (const file of ["app.js", "review.js", "review-ui.js"]) {
+    const source = read(file);
+    const offenders = [
+      // first.dialogue[0][1]
+      /\.(?:dialogue|vocabulary)\s*\[\s*\d+\s*\]\s*\[\s*\d+\s*\]/,
+      // const [, target] = first.dialogue[0]
+      /const\s*\[[^\]]*\]\s*=\s*[^;\n]*\b(?:dialogue|vocabulary)\b[^;\n]*/,
+      // dialogue.map((line) => line[1]) — the one that spoke silence
+      /\b(?:dialogue|vocabulary)\s*\.\s*(?:map|forEach|filter|flatMap)\(\s*\(?\s*(\w+)[\s\S]{0,120}?\b\1\s*\[\s*\d+\s*\]/,
+    ];
+    for (const pattern of offenders) {
+      const found = source.match(pattern);
+      assert.strictEqual(found, null,
+        `${file} reads a lesson row by position (${found && found[0].trim()}); read the slot by name instead`);
+    }
+  }
+});
+
+test("the read-aloud button speaks the taught line", () => {
+  const app = read("app.js");
+  const utterance = app.match(/new SpeechSynthesisUtterance\(([^;]*?)\);/);
+  assert.ok(utterance, "expected app.js to build a speech utterance");
+  assert.match(utterance[1], /\.target\b/,
+    "the utterance must read the target slot by name, or it speaks a string of undefined");
+});
+
 test("every element app.js looks up exists in index.html", () => {
   const app = read("app.js");
   const html = read("index.html");

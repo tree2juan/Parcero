@@ -181,9 +181,60 @@ test("every key the review feature sets from JS is translated", () => {
   assert.deepStrictEqual(missing, [], `review-ui.js uses untranslated keys: ${missing.join(", ")}`);
 });
 
+test("every review key the page can ask for is in the fallback table", () => {
+  /*
+   * The test above runs table -> i18n.js. This one runs the other way, which is
+   * the direction that catches a key nobody remembered to list: review-ui.js
+   * falls back to its own EN table whenever ParceroI18n is absent, so a key
+   * missing from the table renders as its own name.
+   *
+   * Matching every review./report. literal outside the table, rather than
+   * parsing t(...) call shapes, is deliberate: it catches both arms of a
+   * ternary like t(ok ? "review.status.copied" : "review.status.copyFailed")
+   * and any key handed to a helper, neither of which a call-shape regex sees.
+   */
+  const source = readRoot("review-ui.js");
+  const tableStart = source.indexOf("const EN = {");
+  const tableEnd = source.indexOf("};", tableStart);
+  const tableKeys = new Set(matchAll(source.slice(tableStart, tableEnd), /"([\w.-]+)":/g));
+  const asked = [...new Set(matchAll(source.slice(tableEnd), /"((?:review|report)\.[\w.-]+)"/g))];
+  assert.ok(asked.length > 10, "expected to find the keys review-ui.js asks for");
+
+  // tp("review.count", n) asks for the .one/.other pair, not the stem itself.
+  const known = (key) => tableKeys.has(key)
+    || (tableKeys.has(`${key}.one`) && tableKeys.has(`${key}.other`));
+  const missing = asked.filter((key) => !known(key));
+  assert.deepStrictEqual(missing, [], `review-ui.js asks for keys its fallback table lacks: ${missing.join(", ")}`);
+});
+
+test("a new report scope cannot ship untranslated", () => {
+  /*
+   * report.scope.* is reached only through t(`report.scope.${code}`), so those
+   * keys appear as literals nowhere in the call path. Adding a fifth scope
+   * would render as a raw key on screen with every other test still green.
+   * Derive the codes from the list the code actually iterates, so the check
+   * grows with the feature instead of being hand-maintained alongside it.
+   */
+  const source = readRoot("review-ui.js");
+  const declaration = source.match(/const SCOPES = \[([^\]]+)\]/);
+  assert.ok(declaration, "expected to find the scope list review-ui.js iterates");
+  const scopes = matchAll(declaration[1], /"([\w-]+)"/g);
+  assert.ok(scopes.length >= 4, `expected the four reportable scopes, found ${scopes.length}`);
+
+  const tableStart = source.indexOf("const EN = {");
+  const tableKeys = new Set(matchAll(source.slice(tableStart, source.indexOf("};", tableStart)), /"([\w.-]+)":/g));
+  for (const scope of scopes) {
+    const key = `report.scope.${scope}`;
+    assert.ok(tableKeys.has(key), `${key} is missing from the review-ui.js fallback table`);
+    for (const language of languages) {
+      assert.ok(UI_STRINGS[language][key] !== undefined, `${key} is untranslated in ${language}`);
+    }
+  }
+});
+
 test("every review dropdown code has a translated label", () => {
   const source = readRoot("review.js");
-  const groups = { ISSUE_TYPES: "issueType", SEVERITIES: "severity", REVIEWER_ROLES: "role" };
+  const groups = { ISSUE_TYPES: "issueType", SEVERITIES: "severity", REVIEWER_ROLES: "role", REGION_SUGGESTIONS: "region" };
   const missing = [];
   for (const [constant, group] of Object.entries(groups)) {
     const start = source.indexOf(`const ${constant} = [`);
