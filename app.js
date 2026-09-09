@@ -45,15 +45,15 @@ function renderVerbs() {
     : matches.length === curriculum.length
       ? `Showing ${visible.length} of ${curriculum.length} high-frequency verbs`
       : `${matches.length} of ${curriculum.length} verbs match — showing ${visible.length}`;
-  $("#verb-results").innerHTML = visible.map((verb) => `<article class="reference-card"><h3><span lang="es">${verb.spanish}</span> <small>— ${verb.english}</small></h3><p><strong>Useful forms:</strong> <span lang="es">yo ${verb.forms.presentYo}; ayer ${verb.forms.preteriteYo}; ${verb.forms.participle}</span></p><span class="tag">${verb.level}</span><span class="tag">${verb.register}</span><span class="tag">${verb.regionality}</span></article>`).join("");
+  $("#verb-results").innerHTML = visible.map((verb) => `<article class="reference-card" data-anchor="verb:${verb.id}"><h3><span lang="es">${verb.spanish}</span> <small>— ${verb.english}</small></h3><p><strong>Useful forms:</strong> <span lang="es">yo ${verb.forms.presentYo}; ayer ${verb.forms.preteriteYo}; ${verb.forms.participle}</span></p><span class="tag">${verb.level}</span><span class="tag">${verb.register}</span><span class="tag">${verb.regionality}</span></article>`).join("");
   $("#verb-more").hidden = visible.length >= matches.length;
   $("#verb-more").textContent = `Show ${Math.min(VERB_PAGE_SIZE, matches.length - visible.length)} more verbs`;
 }
 function renderFluency() {
-  $("#fluency-results").innerHTML = fluencyItems.map(([spanish, english, type, region, note]) => `<article class="reference-card"><h3>${spanish}</h3><p><strong>${english}</strong></p><p>${note}</p><span class="tag">${type}</span><span class="tag">${region}</span></article>`).join("");
+  $("#fluency-results").innerHTML = fluencyItems.map(([spanish, english, type, region, note], index) => `<article class="reference-card" data-anchor="fluency:${index}"><h3>${spanish}</h3><p><strong>${english}</strong></p><p>${note}</p><span class="tag">${type}</span><span class="tag">${region}</span></article>`).join("");
 }
 function renderMature() {
-  $("#mature-results").innerHTML = matureItems.map(([phrase, equivalent, severity, note]) => `<article class="reference-card"><h3>${phrase}</h3><p><strong>${equivalent}</strong></p><p>${note}</p><span class="tag">Severity: ${severity}</span><span class="tag">Recognition & safety</span></article>`).join("");
+  $("#mature-results").innerHTML = matureItems.map(([phrase, equivalent, severity, note], index) => `<article class="reference-card" data-anchor="mature:${index}"><h3>${phrase}</h3><p><strong>${equivalent}</strong></p><p>${note}</p><span class="tag">Severity: ${severity}</span><span class="tag">Recognition &amp; safety</span></article>`).join("");
 }
 function content() { return currentLesson()[state.direction]; }
 function save() {
@@ -126,11 +126,15 @@ function render() {
   $("#lesson-situation").textContent = current.situation;
   $("#lesson-review").hidden = lesson.review !== "pending";
   const targetLanguage = state.direction === "es" ? ' lang="es"' : "";
-  $("#dialogue").innerHTML = current.dialogue.map(([speaker, target, translation, pronunciation]) => `<article class="line"><strong>${speaker}</strong><div${targetLanguage}>${target}</div><p class="translation">${translation}</p><p class="pronunciation">${pronunciation}</p></article>`).join("");
-  $("#vocabulary").innerHTML = current.vocabulary.map(([word, meaning]) => `<article class="word-card"><h3${targetLanguage}>${word}</h3><p>${meaning}</p></article>`).join("");
+  $("#dialogue").innerHTML = current.dialogue.map(([speaker, target, translation, pronunciation], index) => `<article class="line" data-anchor="lesson:${lesson.id}/${state.direction}/dialogue/${index}"><strong>${speaker}</strong><div${targetLanguage}>${target}</div><p class="translation">${translation}</p><p class="pronunciation">${pronunciation}</p></article>`).join("");
+  $("#vocabulary").innerHTML = current.vocabulary.map(([word, meaning], index) => `<article class="word-card" data-anchor="lesson:${lesson.id}/${state.direction}/vocabulary/${index}"><h3${targetLanguage}>${word}</h3><p>${meaning}</p></article>`).join("");
   $("#culture-note").textContent = current.note;
   $("#practice-prompt").textContent = current.prompt;
   $("#choices").innerHTML = current.choices.map((choice, index) => `<button class="choice" type="button" data-answer="${index}">${choice}</button>`).join("");
+  $("#lesson-heading").dataset.anchor = `lesson:${lesson.id}/${state.direction}/heading`;
+  $("#culture-note").dataset.anchor = `lesson:${lesson.id}/${state.direction}/note`;
+  $("#practice-prompt").dataset.anchor = `lesson:${lesson.id}/${state.direction}/prompt`;
+  $("#choices").dataset.anchor = `lesson:${lesson.id}/${state.direction}/choices`;
   $("#practice-feedback").textContent = "";
   $("#speech-status").textContent = "";
   renderLessonList();

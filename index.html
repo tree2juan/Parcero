@@ -39,8 +39,22 @@
         <a href="#library">Library</a>
         <a class="nav-repo" href="https://github.com/tree2juan/Parcero">GitHub</a>
       </nav>
+      <button id="review-mode" class="text-button" type="button" aria-pressed="false" data-i18n="review.toggle">Review mode</button>
       <button id="reset-progress" class="text-button" type="button">Reset progress</button>
     </header>
+
+    <div id="review-bar" class="review-bar" hidden>
+      <p class="review-bar-text">
+        <strong data-i18n="review.barHeading">Review mode is on.</strong>
+        <span data-i18n="review.barHelp">Every line, term and note now has a Flag button. Flag anything a Colombian speaker would not actually say. Nothing leaves this browser until you choose to submit.</span>
+      </p>
+      <div class="review-bar-actions">
+        <span id="review-count" class="review-count">No flags yet</span>
+        <button id="review-queue-open" class="ghost-button" type="button" disabled data-i18n="review.openQueue">Review my flags</button>
+        <button id="review-mode-off" class="text-button" type="button" data-i18n="review.exit">Exit review mode</button>
+      </div>
+      <p id="review-status" class="assistive-text" aria-live="polite"></p>
+    </div>
 
     <main id="top">
       <section class="hero" aria-labelledby="hero-title">
@@ -90,11 +104,14 @@
         <ol id="lesson-list" class="lesson-list"></ol>
 
         <section id="lesson" class="lesson" aria-live="polite">
-          <div class="lesson-heading">
+          <div class="lesson-heading" id="lesson-heading">
             <p id="lesson-level" class="eyebrow"></p>
             <h2 id="lesson-title"></h2>
             <p id="lesson-situation"></p>
-            <p id="lesson-review" class="review-badge" hidden>Awaiting native-speaker review — regional usage may still change.</p>
+            <p id="lesson-review" class="review-badge" hidden>
+              <span data-i18n="review.pendingLesson">No Colombian native speaker has signed this lesson off yet, so the regional wording may still change.</span>
+              <button id="lesson-review-start" class="text-button" type="button" data-i18n="review.helpCheck">Help check this lesson</button>
+            </p>
           </div>
 
           <div class="tabs" role="tablist" aria-label="Lesson sections">
@@ -191,14 +208,66 @@
       <p><strong>Parcero</strong> — made for curious conversations. Your progress stays on this device.</p>
       <p class="footer-links">
         <a href="https://github.com/tree2juan/Parcero">Source on GitHub</a>
-        <a href="https://github.com/tree2juan/Parcero/issues/new?template=lesson-review.yml">Review a lesson</a>
+        <a href="?review=1#lessons">Flag a line in the page</a>
+        <a href="https://github.com/tree2juan/Parcero/issues/new?template=lesson-review.yml">Sign off a whole lesson</a>
         <a href="https://github.com/tree2juan/Parcero/issues/new">Report a problem</a>
       </p>
-      <p class="footer-note">Lessons awaiting native-speaker review are labelled in place. Regional usage varies across Colombia; treat every note as a starting point for listening, not a rule.</p>
+      <p class="footer-note">Lessons no native speaker has signed off yet say so in place. Regional usage varies across Colombia; treat every note as a starting point for listening, not a rule — and if something reads wrong to you, flag it where you found it.</p>
     </footer>
+
+    <dialog id="flag-dialog" class="review-dialog" aria-labelledby="flag-dialog-title">
+      <h2 id="flag-dialog-title" data-i18n="review.flagTitle">Flag this for revision</h2>
+      <p id="flag-location" class="flag-location"></p>
+      <label class="field" for="flag-part"><span data-i18n="review.whichPart">Which part is wrong?</span>
+        <select id="flag-part"></select>
+      </label>
+      <blockquote id="flag-original" class="flag-original"></blockquote>
+      <label class="field" for="flag-type"><span data-i18n="review.whatProblem">What is the problem?</span>
+        <select id="flag-type"></select>
+      </label>
+      <label class="field" for="flag-suggestion"><span data-i18n="review.suggestion">How would you say it instead?</span>
+        <textarea id="flag-suggestion" rows="2" data-i18n-placeholder="review.suggestionHint" placeholder="Write the wording you would actually use."></textarea>
+      </label>
+      <label class="field" for="flag-comment"><span data-i18n="review.comment">Why — and where is it used that way?</span>
+        <textarea id="flag-comment" rows="3" data-i18n-placeholder="review.commentHint" placeholder="e.g. In Medellín this is completely normal, but in Bogotá it sounds abrupt."></textarea>
+      </label>
+      <div class="field-row">
+        <label class="field" for="flag-severity"><span data-i18n="review.severity">How serious is it?</span>
+          <select id="flag-severity"></select>
+        </label>
+        <label class="field" for="flag-region"><span data-i18n="review.region">Where do you speak from?</span>
+          <input id="flag-region" type="text" list="flag-regions" data-i18n-placeholder="review.regionHint" placeholder="Bogotá, Medellín, the coast…" autocomplete="off">
+          <datalist id="flag-regions"></datalist>
+        </label>
+      </div>
+      <label class="field" for="flag-role"><span data-i18n="review.role">You are reviewing as</span>
+        <select id="flag-role"></select>
+      </label>
+      <p id="flag-error" class="flag-error" role="alert"></p>
+      <div class="dialog-actions">
+        <button type="button" id="flag-cancel" class="text-button" data-i18n="review.cancel">Cancel</button>
+        <button type="button" id="flag-save" class="primary-button" data-i18n="review.save">Add to my flags</button>
+      </div>
+    </dialog>
+
+    <dialog id="queue-dialog" class="review-dialog" aria-labelledby="queue-dialog-title">
+      <h2 id="queue-dialog-title" data-i18n="review.queueTitle">Your flags</h2>
+      <p id="queue-summary" class="assistive-text"></p>
+      <div id="queue-list" class="queue-list"></div>
+      <div class="dialog-actions dialog-actions-wrap">
+        <button type="button" id="queue-submit" class="primary-button" data-i18n="review.submit">Open a GitHub issue with these</button>
+        <button type="button" id="queue-copy" class="ghost-button" data-i18n="review.copy">Copy as Markdown</button>
+        <button type="button" id="queue-download" class="ghost-button" data-i18n="review.download">Download JSON</button>
+        <button type="button" id="queue-clear" class="text-button" data-i18n="review.clear">Clear all</button>
+        <button type="button" id="queue-close" class="text-button" data-i18n="review.close">Close</button>
+      </div>
+      <p id="queue-status" class="assistive-text" aria-live="polite"></p>
+    </dialog>
 
     <script src="data/lessons.js"></script>
     <script src="data/curriculum.js"></script>
     <script src="app.js"></script>
+    <script src="review.js"></script>
+    <script src="review-ui.js"></script>
   </body>
 </html>

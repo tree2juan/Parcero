@@ -15,4 +15,4 @@ jobs:
         with:
           node-version: 20
       - name: Validate lesson and curriculum content
-        run: node --test test/
+        run: node --test test/*.test.js
