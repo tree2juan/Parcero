@@ -538,6 +538,45 @@ test("the card is reachable without a pointer", () => {
 });
 
 /*
+ * An element id is a global too.
+ *
+ * Named access on the Window object means <section id="lessons"> puts `lessons`
+ * on the page whether or not data/lessons.js loaded. A fallback written as
+ * `typeof lessons === "undefined" ? [] : lessons` therefore never fires: the
+ * name resolves to the section, and the deck dies on "lessons is not iterable"
+ * instead of degrading. node --test cannot see this — there is no document
+ * here, so the name really is undefined and the guard looks fine.
+ */
+test("a data file that fails to load cannot be mistaken for a same-named element", () => {
+  const source = codeOnly(read("flashcards.js"));
+  const ids = new Set(
+    [...read("index.html").matchAll(/id="([^"]+)"/g)]
+      .map((m) => m[1])
+      .filter((id) => /^[A-Za-z_$][\w$]*$/.test(id))
+  );
+
+  const sources = [...source.matchAll(/(lessons|curriculum|fluencyItems)\s*:\s*([^,\n]+)/g)];
+  assert.strictEqual(sources.length, 3, "expected the three data sources handed to flashcardSets");
+
+  const unchecked = sources
+    .filter(([, , expr]) => !/Array\.isArray|dataArray/.test(expr))
+    .map(([, name]) => name);
+  assert.deepStrictEqual(
+    unchecked,
+    [],
+    `${unchecked.join(", ")} is trusted without a shape check, so a same-named element would be read as data`
+  );
+
+  // And this is not hypothetical: without a live collision the rule above would
+  // still pass while guarding nothing, so pin that one really exists.
+  const colliding = sources.map(([, name]) => name).filter((name) => ids.has(name));
+  assert.ok(
+    colliding.length > 0,
+    "no data source shares an element id any more — re-check whether this guard still earns its place"
+  );
+});
+
+/*
  * Blank out comments, strings, template literals and regex literals, leaving
  * length and newlines intact so line numbers stay true.
  *

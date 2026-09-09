@@ -145,12 +145,24 @@
 
   /* ---------- building the decks ---------- */
 
+  /*
+   * A data file that fails to load must not take the deck down with it.
+   *
+   * The shape check is the point. index.html carries id="lessons", and named
+   * access on window means `lessons` is that <section> whenever the data script
+   * is missing — so `typeof lessons` is "object", not "undefined", and a
+   * fallback keyed on undefined never fires. The page then dies on "lessons is
+   * not iterable". Only something array-shaped is usable here. The typeof probe
+   * still guards the genuinely-undeclared case, which would throw on read.
+   */
+  const dataArray = (value) => (Array.isArray(value) ? value : []);
+
   function rebuild(preferredSetId) {
     deck.direction = currentDirection();
     deck.sets = flashcardSets(deck.direction, {
-      lessons: typeof lessons === "undefined" ? [] : lessons,
-      curriculum: typeof curriculum === "undefined" ? [] : curriculum,
-      fluencyItems: typeof fluencyItems === "undefined" ? [] : fluencyItems
+      lessons: dataArray(typeof lessons === "undefined" ? null : lessons),
+      curriculum: dataArray(typeof curriculum === "undefined" ? null : curriculum),
+      fluencyItems: dataArray(typeof fluencyItems === "undefined" ? null : fluencyItems)
     });
     renderTopics();
     const wanted = [preferredSetId, deck.setId, readStore().setId].find((id) => deck.sets.some((set) => set.id === id));
