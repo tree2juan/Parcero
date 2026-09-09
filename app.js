@@ -23,10 +23,13 @@ const state = {
   direction: localStorage.getItem("parcero-direction") || "es",
   completed: new Set(JSON.parse(localStorage.getItem("parcero-completed") || "[]")),
   placement: JSON.parse(localStorage.getItem("parcero-placement") || "null"),
+  lessonId: localStorage.getItem("parcero-lesson") || lessons[0].id,
   question: 0,
   responses: []
 };
-const lesson = lessons[0];
+if (!lessons.some((item) => item.id === state.lessonId)) state.lessonId = lessons[0].id;
+function lessonIndex() { return lessons.findIndex((item) => item.id === state.lessonId); }
+function currentLesson() { return lessons[lessonIndex()]; }
 const $ = (selector) => document.querySelector(selector);
 function renderVerbs(query = "") {
   const search = query.trim().toLowerCase();
@@ -40,11 +43,12 @@ function renderFluency() {
 function renderMature() {
   $("#mature-results").innerHTML = matureItems.map(([phrase, equivalent, severity, note]) => `<article class="reference-card"><h3>${phrase}</h3><p><strong>${equivalent}</strong></p><p>${note}</p><span class="tag">Severity: ${severity}</span><span class="tag">Recognition & safety</span></article>`).join("");
 }
-function content() { return lesson[state.direction]; }
+function content() { return currentLesson()[state.direction]; }
 function save() {
   localStorage.setItem("parcero-direction", state.direction);
   localStorage.setItem("parcero-completed", JSON.stringify([...state.completed]));
   localStorage.setItem("parcero-placement", JSON.stringify(state.placement));
+  localStorage.setItem("parcero-lesson", state.lessonId);
 }
 function renderPlacement() {
   const questions = placementQuestions[state.direction];
@@ -81,12 +85,34 @@ function completePlacement() {
   save();
   renderPlacement();
 }
+function renderLessonList() {
+  $("#lesson-list").innerHTML = lessons.map((item, index) => {
+    const done = state.completed.has(item.id);
+    const active = item.id === state.lessonId;
+    return `<li><button class="lesson-link${active ? " active" : ""}" type="button" data-lesson="${item.id}" aria-current="${active ? "true" : "false"}"><span class="lesson-link-index">${index + 1}</span><span class="lesson-link-body"><strong>${item[state.direction].title}</strong><span class="lesson-link-meta">${item.level}</span></span><span class="lesson-link-state">${done ? "Explored" : ""}</span></button></li>`;
+  }).join("");
+}
+function selectLesson(id) {
+  if (!lessons.some((item) => item.id === id)) return;
+  state.lessonId = id;
+  save();
+  render();
+  document.querySelectorAll(".tab").forEach((item, index) => {
+    const active = index === 0;
+    item.classList.toggle("active", active);
+    item.setAttribute("aria-selected", active);
+    $(`#${item.dataset.panel}`).hidden = !active;
+  });
+  $("#lesson").scrollIntoView({ behavior: "smooth", block: "start" });
+}
 function render() {
   const current = content();
+  const lesson = currentLesson();
   document.documentElement.lang = "en";
   $("#lesson-level").textContent = lesson.level;
   $("#lesson-title").textContent = current.title;
   $("#lesson-situation").textContent = current.situation;
+  $("#lesson-review").hidden = lesson.review !== "pending";
   const targetLanguage = state.direction === "es" ? ' lang="es"' : "";
   $("#dialogue").innerHTML = current.dialogue.map(([speaker, target, translation, pronunciation]) => `<article class="line"><strong>${speaker}</strong><div${targetLanguage}>${target}</div><p class="translation">${translation}</p><p class="pronunciation">${pronunciation}</p></article>`).join("");
   $("#vocabulary").innerHTML = current.vocabulary.map(([word, meaning]) => `<article class="word-card"><h3${targetLanguage}>${word}</h3><p>${meaning}</p></article>`).join("");
@@ -94,14 +120,23 @@ function render() {
   $("#practice-prompt").textContent = current.prompt;
   $("#choices").innerHTML = current.choices.map((choice, index) => `<button class="choice" type="button" data-answer="${index}">${choice}</button>`).join("");
   $("#practice-feedback").textContent = "";
+  $("#speech-status").textContent = "";
+  renderLessonList();
   updateProgress();
   renderPlacement();
 }
 function updateProgress() {
+  const lesson = currentLesson();
+  const index = lessonIndex();
   const completed = state.completed.has(lesson.id);
-  $("#progress-label").textContent = `${completed ? 1 : 0} of 1 lessons explored`;
-  $("#progress-bar").style.width = completed ? "100%" : "0%";
+  const total = lessons.length;
+  const explored = lessons.filter((item) => state.completed.has(item.id)).length;
+  $("#progress-label").textContent = `${explored} of ${total} lessons explored`;
+  $("#progress-bar").style.width = `${Math.round((explored / total) * 100)}%`;
   $("#complete-lesson").textContent = completed ? "Lesson explored" : "Mark lesson explored";
+  $("#lesson-position").textContent = `Lesson ${index + 1} of ${total}`;
+  $("#previous-lesson").disabled = index === 0;
+  $("#next-lesson").disabled = index === total - 1;
 }
 document.querySelectorAll("input[name=direction]").forEach((input) => {
   input.checked = input.value === state.direction;
@@ -131,9 +166,15 @@ $("#choices").addEventListener("click", (event) => {
   document.querySelectorAll(".choice").forEach((item) => item.disabled = true);
   choice.classList.add(correct ? "correct" : "incorrect");
   if (!correct) document.querySelector(`[data-answer="${content().answer}"]`).classList.add("correct");
-  $("#practice-feedback").textContent = correct ? "Exactly—notice how the meaning comes from the whole situation." : "Look at the context and try the next lesson.";
+  $("#practice-feedback").textContent = correct ? "Exactly—notice how the meaning comes from the whole situation." : "Look back at the dialogue and the context note, then try again in the next lesson.";
 });
-$("#complete-lesson").addEventListener("click", () => { state.completed.add(lesson.id); save(); updateProgress(); });
+$("#complete-lesson").addEventListener("click", () => { state.completed.add(currentLesson().id); save(); renderLessonList(); updateProgress(); });
+$("#lesson-list").addEventListener("click", (event) => {
+  const button = event.target.closest("[data-lesson]");
+  if (button) selectLesson(button.dataset.lesson);
+});
+$("#previous-lesson").addEventListener("click", () => selectLesson(lessons[Math.max(0, lessonIndex() - 1)].id));
+$("#next-lesson").addEventListener("click", () => selectLesson(lessons[Math.min(lessons.length - 1, lessonIndex() + 1)].id));
 $("#reset-progress").addEventListener("click", () => { state.completed.clear(); state.placement = null; state.question = 0; state.responses = []; save(); render(); });
 $("#listen-dialogue").addEventListener("click", () => {
   if (!("speechSynthesis" in window)) { $("#speech-status").textContent = "Audio playback is not supported in this browser."; return; }

@@ -56,6 +56,21 @@ input[type="search"] { padding: .75rem; border: 1px solid var(--line); border-ra
 .progress-track { height: .6rem; background: white; border-radius: 1rem; overflow: hidden; }
 #progress-bar { height: 100%; width: 0; background: var(--green); transition: width .2s; }
 .lesson { padding-block: 4rem; }
+.lesson-nav { padding-block: 3rem 0; }
+.lesson-nav h2 { font-size: clamp(1.8rem, 4vw, 2.8rem); }
+.lesson-list { display: grid; gap: .6rem; margin: 0; padding: 0; list-style: none; counter-reset: none; }
+.lesson-link { display: flex; gap: .9rem; align-items: center; width: 100%; text-align: left; padding: .85rem 1rem; background: white; border: 1px solid var(--line); border-radius: .75rem; }
+.lesson-link:hover, .lesson-link:focus { border-color: var(--green); }
+.lesson-link.active { background: var(--mist); border-color: var(--green); border-left: .35rem solid var(--green); }
+.lesson-link-index { flex: 0 0 1.75rem; height: 1.75rem; display: grid; place-items: center; border-radius: 99px; background: var(--mist); color: var(--green); font-size: .85rem; font-weight: 800; }
+.lesson-link.active .lesson-link-index { background: var(--green); color: white; }
+.lesson-link-body { display: grid; gap: .1rem; flex: 1; }
+.lesson-link-meta { color: #526059; font-size: .85rem; }
+.lesson-link-state { color: var(--green); font-size: .78rem; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; }
+.lesson-pager { display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding-top: 1.5rem; border-top: 1px solid var(--line); }
+.lesson-pager .assistive-text { margin: 0; color: #526059; font-weight: 700; }
+.text-button[disabled] { opacity: .4; cursor: not-allowed; }
+.review-badge { margin-block: .75rem 1.25rem; padding: .6rem .85rem; border-left: .35rem solid var(--clay); background: #fff0e9; font-size: .9rem; font-weight: 650; }
 .lesson-heading { border-bottom: 1px solid var(--line); }
 .tabs { display: flex; gap: .25rem; padding-top: 1.5rem; border-bottom: 1px solid var(--line); }
 .tab, .text-button { border: 0; background: transparent; color: var(--ink); padding: .75rem 1rem; }

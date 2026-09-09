@@ -78,16 +78,23 @@
       <section class="progress-panel" aria-label="Your lesson progress">
         <div>
           <p class="eyebrow">Your path</p>
-          <strong id="progress-label">0 of 1 lessons explored</strong>
+          <strong id="progress-label">0 of 8 lessons explored</strong>
         </div>
         <div class="progress-track" aria-hidden="true"><div id="progress-bar"></div></div>
       </section>
+
+      <nav class="lesson-nav" aria-labelledby="lesson-nav-title">
+        <p class="eyebrow">Lessons</p>
+        <h2 id="lesson-nav-title">Pick a situation.</h2>
+        <ol id="lesson-list" class="lesson-list"></ol>
+      </nav>
 
       <section id="lesson" class="lesson" aria-live="polite">
         <div class="lesson-heading">
           <p id="lesson-level" class="eyebrow"></p>
           <h2 id="lesson-title"></h2>
           <p id="lesson-situation"></p>
+          <p id="lesson-review" class="review-badge" hidden>Awaiting native-speaker review — regional usage may still change.</p>
         </div>
 
         <div class="tabs" role="tablist" aria-label="Lesson sections">
@@ -116,6 +123,12 @@
           <p id="practice-feedback" aria-live="polite"></p>
           <button id="complete-lesson" class="primary-button" type="button">Mark lesson explored</button>
         </section>
+
+        <div class="lesson-pager">
+          <button id="previous-lesson" class="text-button" type="button">← Previous lesson</button>
+          <p id="lesson-position" class="assistive-text"></p>
+          <button id="next-lesson" class="text-button" type="button">Next lesson →</button>
+        </div>
       </section>
     </main>
 
