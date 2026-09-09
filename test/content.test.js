@@ -125,3 +125,73 @@ test("app.js renders the whole lesson set rather than a single hard-coded lesson
   assert.doesNotMatch(app, /=\s*lessons\[0\]\s*;/, "app.js must not pin the view to lessons[0]");
   assert.match(app, /lessons\.length/, "app.js should size progress against the full lesson list");
 });
+
+/*
+ * The verb list was seeded from a frequency list and has never had a Colombian
+ * speaker over it. These tests guard the two things that follow from that: the
+ * entries that are demonstrably wrong stay fixed, and the labels nobody has
+ * checked are not shown to learners as though they were.
+ */
+test("English glosses are English", () => {
+  // A gloss that reads like a Spanish infinitive means the wrong column was
+  // filled in. "live/trabajar" shipped that way.
+  const spanishInfinitive = /^[a-záéíóúñ]+(?:ar|er|ir)$/;
+  const englishExceptions = new Set(["answer", "offer", "enter", "remember", "consider", "deliver", "gather", "hear", "prefer", "matter", "discover", "wear", "suffer", "cover", "order", "differ", "transfer"]);
+  for (const verb of curriculum) {
+    for (const sense of verb.english.split("/").map((part) => part.trim())) {
+      assert.ok(isText(sense), `${verb.spanish} has an empty sense in "${verb.english}"`);
+      if (spanishInfinitive.test(sense) && !englishExceptions.has(sense)) {
+        assert.fail(`${verb.spanish} is glossed "${verb.english}" — "${sense}" looks like Spanish`);
+      }
+    }
+    const senses = verb.english.split("/").map((part) => part.trim());
+    const redundant = senses.some((a, i) => senses.some((b, j) => i !== j && a === b));
+    assert.ok(!redundant, `${verb.spanish} repeats a sense in "${verb.english}"`);
+  }
+});
+
+test("first-person forms are plausible Spanish", () => {
+  // "oo" was published as the yo form of oír for as long as the list existed.
+  for (const verb of curriculum) {
+    const yo = verb.forms.presentYo;
+    assert.match(yo, /[oyeéí]$/, `${verb.spanish}: "${yo}" is not a first-person singular`);
+    assert.ok(!/(.)\1$/.test(yo), `${verb.spanish}: "${yo}" doubles its final letter`);
+    // A strong vowel before -ido needs the accent, or the syllable collapses.
+    assert.ok(!/[aeo]ido$/.test(verb.forms.participle),
+      `${verb.spanish}: participle "${verb.forms.participle}" is missing its accent`);
+  }
+});
+
+test("labels nobody has reviewed are not rendered as fact", () => {
+  const unreviewed = curriculum.filter((verb) => verb.reviewStatus);
+  assert.ok(unreviewed.length > 0, "this test is meaningless once every verb is reviewed — delete it then");
+
+  // Every unreviewed verb still carries the seeded placeholder, identical
+  // across the list. Rendering it would tell 200 different lies in one voice.
+  const registers = new Set(unreviewed.map((verb) => verb.register));
+  const regions = new Set(unreviewed.map((verb) => verb.regionality));
+  assert.equal(registers.size, 1, "unreviewed verbs should still share one placeholder register");
+  assert.equal(regions.size, 1, "unreviewed verbs should still share one placeholder regionality");
+
+  const app = read("app.js");
+  const tags = app.match(/function verbTags\(verb\)[\s\S]*?\n\}/);
+  assert.ok(tags, "app.js must build verb tags through verbTags()");
+  assert.match(tags[0], /if \(!verb\.reviewStatus\)/,
+    "register and regionality must be withheld while the verb is unreviewed");
+  assert.ok(!/\$\{verb\.register\}/.test(app.replace(tags[0], "")),
+    "nothing outside verbTags may render the unreviewed register");
+  assert.ok(!/\$\{verb\.regionality\}/.test(app.replace(tags[0], "")),
+    "nothing outside verbTags may render the unreviewed regionality");
+});
+
+test("the page does not promise a review it has not done", () => {
+  // The note used to say labels are reviewed "before publication" while 200
+  // unreviewed labels were on screen.
+  const { UI_STRINGS } = require("../i18n.js");
+  for (const language of Object.keys(UI_STRINGS)) {
+    const note = UI_STRINGS[language]["library.sourceNote.after"];
+    assert.ok(isText(note), `${language} is missing the source note`);
+    assert.ok(!/before publication|antes de publicarse/.test(note),
+      `${language} still claims labels are reviewed before publication`);
+  }
+});
