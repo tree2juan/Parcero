@@ -31,11 +31,23 @@ if (!lessons.some((item) => item.id === state.lessonId)) state.lessonId = lesson
 function lessonIndex() { return lessons.findIndex((item) => item.id === state.lessonId); }
 function currentLesson() { return lessons[lessonIndex()]; }
 const $ = (selector) => document.querySelector(selector);
-function renderVerbs(query = "") {
-  const search = query.trim().toLowerCase();
-  const matches = curriculum.filter((verb) => !search || `${verb.spanish} ${verb.english}`.toLowerCase().includes(search));
-  $("#verb-count").textContent = `${matches.length} of ${curriculum.length} high-frequency verbs`;
-  $("#verb-results").innerHTML = matches.map((verb) => `<article class="reference-card"><h3><span lang="es">${verb.spanish}</span> <small>— ${verb.english}</small></h3><p><strong>Useful forms:</strong> <span lang="es">yo ${verb.forms.presentYo}; ayer ${verb.forms.preteriteYo}; ${verb.forms.participle}</span></p><span class="tag">${verb.level}</span><span class="tag">${verb.register}</span><span class="tag">${verb.regionality}</span></article>`).join("");
+const VERB_PAGE_SIZE = 24;
+const verbView = { query: "", shown: VERB_PAGE_SIZE };
+function matchingVerbs() {
+  const search = verbView.query.trim().toLowerCase();
+  return search ? curriculum.filter((verb) => `${verb.spanish} ${verb.english}`.toLowerCase().includes(search)) : curriculum;
+}
+function renderVerbs() {
+  const matches = matchingVerbs();
+  const visible = matches.slice(0, verbView.shown);
+  $("#verb-count").textContent = matches.length === 0
+    ? `No verb matches “${verbView.query.trim()}”. Try the other language, or the infinitive.`
+    : matches.length === curriculum.length
+      ? `Showing ${visible.length} of ${curriculum.length} high-frequency verbs`
+      : `${matches.length} of ${curriculum.length} verbs match — showing ${visible.length}`;
+  $("#verb-results").innerHTML = visible.map((verb) => `<article class="reference-card"><h3><span lang="es">${verb.spanish}</span> <small>— ${verb.english}</small></h3><p><strong>Useful forms:</strong> <span lang="es">yo ${verb.forms.presentYo}; ayer ${verb.forms.preteriteYo}; ${verb.forms.participle}</span></p><span class="tag">${verb.level}</span><span class="tag">${verb.register}</span><span class="tag">${verb.regionality}</span></article>`).join("");
+  $("#verb-more").hidden = visible.length >= matches.length;
+  $("#verb-more").textContent = `Show ${Math.min(VERB_PAGE_SIZE, matches.length - visible.length)} more verbs`;
 }
 function renderFluency() {
   $("#fluency-results").innerHTML = fluencyItems.map(([spanish, english, type, region, note]) => `<article class="reference-card"><h3>${spanish}</h3><p><strong>${english}</strong></p><p>${note}</p><span class="tag">${type}</span><span class="tag">${region}</span></article>`).join("");
@@ -184,7 +196,16 @@ $("#listen-dialogue").addEventListener("click", () => {
   speechSynthesis.speak(utterance);
   $("#speech-status").textContent = "Playing dialogue.";
 });
-$("#verb-search").addEventListener("input", (event) => renderVerbs(event.target.value));
+$("#verb-search").addEventListener("input", (event) => {
+  verbView.query = event.target.value;
+  verbView.shown = VERB_PAGE_SIZE;
+  renderVerbs();
+});
+$("#verb-more").addEventListener("click", () => {
+  verbView.shown += VERB_PAGE_SIZE;
+  renderVerbs();
+  $("#verb-more").focus();
+});
 document.querySelectorAll(".library-tab").forEach((tab) => tab.addEventListener("click", () => {
   document.querySelectorAll(".library-tab").forEach((item) => {
     const active = item === tab;
@@ -205,6 +226,8 @@ if (localStorage.getItem("parcero-mature-enabled") === "true") {
   $("#mature-results").hidden = false;
   renderMature();
 }
+$("#stat-lessons").textContent = lessons.length;
+$("#stat-verbs").textContent = curriculum.length;
 renderVerbs();
 renderFluency();
 render();

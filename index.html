@@ -3,61 +3,172 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Learn Colombian Spanish and practical English through context.">
-    <title>Parcero — Colombian Spanish in Context</title>
+    <title>Parcero — Learn Colombian Spanish in Context</title>
+    <meta name="description" content="A free, open lesson set for understanding Colombian Spanish through real situations — cafés, taxis, clinics, offices, seminars and interviews. Works both ways: English speakers learning Colombian Spanish, Spanish speakers strengthening practical English.">
+    <meta name="theme-color" content="#146c4d">
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+    <link rel="canonical" href="https://tree2juan.github.io/Parcero/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Parcero">
+    <meta property="og:title" content="Parcero — Learn Colombian Spanish in Context">
+    <meta property="og:description" content="Eight situational lessons with dialogue, cultural context, pronunciation and practice. Free, open, and it runs entirely in your browser.">
+    <meta property="og:url" content="https://tree2juan.github.io/Parcero/">
+    <meta property="og:image" content="https://tree2juan.github.io/Parcero/assets/social-card.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Parcero — Learn Colombian Spanish in Context">
+    <meta name="twitter:description" content="Eight situational lessons with dialogue, cultural context, pronunciation and practice. Free, open, and it runs entirely in your browser.">
+    <meta name="twitter:image" content="https://tree2juan.github.io/Parcero/assets/social-card.png">
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-    <a class="skip-link" href="#placement">Skip to placement</a>
+    <a class="skip-link" href="#lessons">Skip to the lessons</a>
+
     <header class="site-header">
-      <div>
-        <p class="eyebrow">Colombian Spanish in context</p>
-        <h1>Parcero</h1>
-      </div>
+      <a class="brand" href="#top">
+        <span class="brand-mark" aria-hidden="true">P</span>
+        <span class="brand-text">
+          <strong>Parcero</strong>
+          <span>Colombian Spanish in context</span>
+        </span>
+      </a>
+      <nav class="site-nav" aria-label="Sections">
+        <a href="#lessons">Lessons</a>
+        <a href="#placement">Placement</a>
+        <a href="#library">Library</a>
+        <a class="nav-repo" href="https://github.com/tree2juan/Parcero">GitHub</a>
+      </nav>
       <button id="reset-progress" class="text-button" type="button">Reset progress</button>
     </header>
 
-    <main>
+    <main id="top">
       <section class="hero" aria-labelledby="hero-title">
-        <p class="eyebrow">Learn how people actually speak</p>
-        <h2 id="hero-title">Language belongs in a conversation.</h2>
-        <p>Explore Colombian Spanish and practical English from either point of view—with context, culture, sound, and practice.</p>
-        <fieldset class="direction-picker">
-          <legend>I want to learn</legend>
-          <label><input type="radio" name="direction" value="es" checked> Colombian Spanish</label>
-          <label><input type="radio" name="direction" value="en"> English</label>
-        </fieldset>
+        <div class="hero-copy">
+          <p class="eyebrow">Learn how people actually speak</p>
+          <h2 id="hero-title">Language belongs in a conversation.</h2>
+          <p class="hero-lead">Explore Colombian Spanish and practical English from either point of view — with context, culture, sound, and practice. Nothing to install, nothing to sign up for, and your progress never leaves this device.</p>
+          <fieldset class="direction-picker">
+            <legend>I want to learn</legend>
+            <label><input type="radio" name="direction" value="es" checked> <span>Colombian Spanish</span></label>
+            <label><input type="radio" name="direction" value="en"> <span>English</span></label>
+          </fieldset>
+          <div class="hero-actions">
+            <a class="primary-button" href="#lessons">Start the first lesson</a>
+            <a class="ghost-button" href="#placement">Find my level first</a>
+          </div>
+          <dl class="hero-stats">
+            <div><dt>Lessons</dt><dd id="stat-lessons">8</dd></div>
+            <div><dt>Verbs</dt><dd id="stat-verbs">200</dd></div>
+            <div><dt>Cost</dt><dd>Free</dd></div>
+          </dl>
+        </div>
+        <aside class="hero-preview" aria-label="Example of a lesson line">
+          <p class="preview-label">A line from lesson one</p>
+          <p class="preview-target" lang="es">¿Me regalas un tinto, por favor?</p>
+          <p class="preview-translation">Could I have a black coffee, please?</p>
+          <p class="preview-pronunciation">meh reh-GAH-las oon TEEN-toh por fah-VOR</p>
+          <p class="preview-note"><strong>tinto</strong> — in Colombia, a small black coffee, not red wine.</p>
+        </aside>
+      </section>
+
+      <section id="lessons" class="lessons-section" aria-labelledby="lesson-nav-title">
+        <div class="section-head">
+          <p class="eyebrow">Lessons</p>
+          <h2 id="lesson-nav-title">Pick a situation.</h2>
+          <p class="section-lead">Each lesson is one real moment: what is said, why it works, how it sounds, and what it would mean to get it wrong.</p>
+        </div>
+
+        <div class="progress-panel">
+          <div>
+            <p class="eyebrow">Your path</p>
+            <strong id="progress-label">0 of 8 lessons explored</strong>
+          </div>
+          <div class="progress-track" aria-hidden="true"><div id="progress-bar"></div></div>
+        </div>
+
+        <ol id="lesson-list" class="lesson-list"></ol>
+
+        <section id="lesson" class="lesson" aria-live="polite">
+          <div class="lesson-heading">
+            <p id="lesson-level" class="eyebrow"></p>
+            <h2 id="lesson-title"></h2>
+            <p id="lesson-situation"></p>
+            <p id="lesson-review" class="review-badge" hidden>Awaiting native-speaker review — regional usage may still change.</p>
+          </div>
+
+          <div class="tabs" role="tablist" aria-label="Lesson sections">
+            <button class="tab active" type="button" role="tab" aria-selected="true" aria-controls="dialogue-panel" id="dialogue-tab" data-panel="dialogue-panel">Dialogue</button>
+            <button class="tab" type="button" role="tab" aria-selected="false" aria-controls="understand-panel" id="understand-tab" data-panel="understand-panel">Understand</button>
+            <button class="tab" type="button" role="tab" aria-selected="false" aria-controls="practice-panel" id="practice-tab" data-panel="practice-panel">Practice</button>
+          </div>
+
+          <section id="dialogue-panel" class="tab-panel" role="tabpanel" aria-labelledby="dialogue-tab">
+            <div id="dialogue" class="dialogue"></div>
+            <button id="listen-dialogue" class="primary-button" type="button">Listen to the target language</button>
+            <p id="speech-status" class="assistive-text" aria-live="polite"></p>
+          </section>
+
+          <section id="understand-panel" class="tab-panel" role="tabpanel" aria-labelledby="understand-tab" hidden>
+            <div id="vocabulary" class="vocabulary"></div>
+            <aside class="context-note">
+              <p class="eyebrow">Colombian context</p>
+              <p id="culture-note"></p>
+            </aside>
+          </section>
+
+          <section id="practice-panel" class="tab-panel" role="tabpanel" aria-labelledby="practice-tab" hidden>
+            <p id="practice-prompt" class="practice-prompt"></p>
+            <div id="choices" class="choices"></div>
+            <p id="practice-feedback" aria-live="polite"></p>
+            <button id="complete-lesson" class="primary-button" type="button">Mark lesson explored</button>
+          </section>
+
+          <div class="lesson-pager">
+            <button id="previous-lesson" class="text-button" type="button">← Previous lesson</button>
+            <p id="lesson-position" class="assistive-text"></p>
+            <button id="next-lesson" class="text-button" type="button">Next lesson →</button>
+          </div>
+        </section>
       </section>
 
       <section id="placement" class="placement" aria-labelledby="placement-title">
-        <p class="eyebrow">Start here</p>
-        <h2 id="placement-title">Find your next best step.</h2>
-        <p id="placement-intro">Answer from experience, not a guess. “I don’t know” helps us find what to focus on.</p>
+        <div class="section-head">
+          <p class="eyebrow">Optional</p>
+          <h2 id="placement-title">Find your next best step.</h2>
+          <p id="placement-intro" class="section-lead">Answer from experience, not a guess. “I don’t know” helps us find what to focus on — it never counts against you.</p>
+        </div>
         <div id="assessment" aria-live="polite"></div>
         <button id="assessment-next" class="primary-button" type="button">Next question</button>
         <section id="placement-result" hidden aria-live="polite"></section>
       </section>
 
       <section id="roadmap" class="roadmap" aria-labelledby="roadmap-title" hidden>
-        <p class="eyebrow">Your roadmap</p>
-        <h2 id="roadmap-title">Build toward confident, local fluency.</h2>
-        <p id="focus-summary"></p>
+        <div class="section-head">
+          <p class="eyebrow">Your roadmap</p>
+          <h2 id="roadmap-title">Build toward confident, local fluency.</h2>
+          <p id="focus-summary" class="section-lead"></p>
+        </div>
         <img class="flow-image" src="assets/learning-flow.svg" alt="Learning flow from placement through contextual foundations and Year 12 local mastery, continuing to academic and professional pathways.">
         <div id="pathways" class="pathways"></div>
       </section>
 
       <section id="library" class="library" aria-labelledby="library-title">
-        <p class="eyebrow">Reference library</p>
-        <h2 id="library-title">Build fluency, one useful choice at a time.</h2>
+        <div class="section-head">
+          <p class="eyebrow">Reference library</p>
+          <h2 id="library-title">Build fluency, one useful choice at a time.</h2>
+          <p class="section-lead">Look things up when you need them. These lists are references, not memorization drills.</p>
+        </div>
         <div class="tabs" role="tablist" aria-label="Reference library sections">
           <button class="library-tab active" type="button" role="tab" aria-selected="true" data-library="verbs">200 verbs</button>
           <button class="library-tab" type="button" role="tab" aria-selected="false" data-library="fluency">Fluency</button>
           <button class="library-tab" type="button" role="tab" aria-selected="false" data-library="mature">Mature language</button>
         </div>
         <section id="verbs-library" class="library-panel">
-          <label class="search-label" for="verb-search">Search English or Spanish verb <input id="verb-search" type="search" placeholder="e.g., hablar or speak"></label>
+          <label class="search-label" for="verb-search">Search English or Spanish verb <input id="verb-search" type="search" placeholder="e.g., hablar or speak" autocomplete="off"></label>
           <p id="verb-count" class="assistive-text"></p>
           <div id="verb-results" class="reference-grid"></div>
+          <button id="verb-more" class="ghost-button" type="button" hidden>Show more verbs</button>
           <p class="source-note">Frequency starting list: <a href="https://www.wordfrequency.info/">SUBTLEX-ESP and SUBTLEX-US frequency resources</a>; Colombian labels require native-speaker review before publication.</p>
         </section>
         <section id="fluency-library" class="library-panel" hidden>
@@ -74,65 +185,18 @@
           <div id="mature-results" class="reference-grid" hidden></div>
         </section>
       </section>
-
-      <section class="progress-panel" aria-label="Your lesson progress">
-        <div>
-          <p class="eyebrow">Your path</p>
-          <strong id="progress-label">0 of 8 lessons explored</strong>
-        </div>
-        <div class="progress-track" aria-hidden="true"><div id="progress-bar"></div></div>
-      </section>
-
-      <nav class="lesson-nav" aria-labelledby="lesson-nav-title">
-        <p class="eyebrow">Lessons</p>
-        <h2 id="lesson-nav-title">Pick a situation.</h2>
-        <ol id="lesson-list" class="lesson-list"></ol>
-      </nav>
-
-      <section id="lesson" class="lesson" aria-live="polite">
-        <div class="lesson-heading">
-          <p id="lesson-level" class="eyebrow"></p>
-          <h2 id="lesson-title"></h2>
-          <p id="lesson-situation"></p>
-          <p id="lesson-review" class="review-badge" hidden>Awaiting native-speaker review — regional usage may still change.</p>
-        </div>
-
-        <div class="tabs" role="tablist" aria-label="Lesson sections">
-          <button class="tab active" type="button" role="tab" aria-selected="true" aria-controls="dialogue-panel" id="dialogue-tab" data-panel="dialogue-panel">Dialogue</button>
-          <button class="tab" type="button" role="tab" aria-selected="false" aria-controls="understand-panel" id="understand-tab" data-panel="understand-panel">Understand</button>
-          <button class="tab" type="button" role="tab" aria-selected="false" aria-controls="practice-panel" id="practice-tab" data-panel="practice-panel">Practice</button>
-        </div>
-
-        <section id="dialogue-panel" class="tab-panel" role="tabpanel" aria-labelledby="dialogue-tab">
-          <div id="dialogue" class="dialogue"></div>
-          <button id="listen-dialogue" class="primary-button" type="button">Listen to the target language</button>
-          <p id="speech-status" class="assistive-text" aria-live="polite"></p>
-        </section>
-
-        <section id="understand-panel" class="tab-panel" role="tabpanel" aria-labelledby="understand-tab" hidden>
-          <div id="vocabulary" class="vocabulary"></div>
-          <aside class="context-note">
-            <p class="eyebrow">Colombian context</p>
-            <p id="culture-note"></p>
-          </aside>
-        </section>
-
-        <section id="practice-panel" class="tab-panel" role="tabpanel" aria-labelledby="practice-tab" hidden>
-          <p id="practice-prompt" class="practice-prompt"></p>
-          <div id="choices" class="choices"></div>
-          <p id="practice-feedback" aria-live="polite"></p>
-          <button id="complete-lesson" class="primary-button" type="button">Mark lesson explored</button>
-        </section>
-
-        <div class="lesson-pager">
-          <button id="previous-lesson" class="text-button" type="button">← Previous lesson</button>
-          <p id="lesson-position" class="assistive-text"></p>
-          <button id="next-lesson" class="text-button" type="button">Next lesson →</button>
-        </div>
-      </section>
     </main>
 
-    <footer>Made for curious conversations. Your progress stays on this device.</footer>
+    <footer>
+      <p><strong>Parcero</strong> — made for curious conversations. Your progress stays on this device.</p>
+      <p class="footer-links">
+        <a href="https://github.com/tree2juan/Parcero">Source on GitHub</a>
+        <a href="https://github.com/tree2juan/Parcero/issues/new?template=lesson-review.yml">Review a lesson</a>
+        <a href="https://github.com/tree2juan/Parcero/issues/new">Report a problem</a>
+      </p>
+      <p class="footer-note">Lessons awaiting native-speaker review are labelled in place. Regional usage varies across Colombia; treat every note as a starting point for listening, not a rule.</p>
+    </footer>
+
     <script src="data/lessons.js"></script>
     <script src="data/curriculum.js"></script>
     <script src="app.js"></script>
