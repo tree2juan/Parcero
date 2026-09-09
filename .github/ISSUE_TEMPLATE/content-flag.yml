@@ -1,0 +1,70 @@
+name: Flag content for revision
+description: Flag specific lines, terms or notes that a native speaker would change. Raised from the page in review mode.
+title: "Native-speaker flags: "
+labels: ["content-review", "native-speaker-flag"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        This form is for **line-level** corrections — one word, one line, one note at a time.
+
+        The easiest way to fill it in is from the site itself: open
+        [the app in review mode](https://tree2juan.github.io/Parcero/?review=1), press **Flag**
+        next to anything that reads wrong, then **Open a GitHub issue with these**. Everything below
+        is filled in for you, including the machine-readable block at the end.
+
+        Reviewing a whole lesson and signing it off instead? Use the
+        [Lesson review](https://github.com/tree2juan/Parcero/issues/new?template=lesson-review.yml) form.
+
+  - type: dropdown
+    id: role
+    attributes:
+      label: You are reviewing as
+      options:
+        - Native Colombian Spanish speaker
+        - Native Spanish speaker, not Colombian
+        - Native or expert English speaker
+        - Language educator
+    validations:
+      required: true
+
+  - type: input
+    id: region
+    attributes:
+      label: Where do you speak from?
+      description: Regional usage is the thing we get wrong most often, so this matters more than it looks.
+      placeholder: Medellín and Antioquia (paisa)
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: What needs to change
+      description: One entry per flag — where it is, what is wrong, and how you would say it instead.
+      placeholder: |
+        **Where:** Coffee and a quick chat · Colombian Spanish · Dialogue line 2 · Spanish line
+        **Problem:** Wrong region — this is not general Colombian usage
+        **As written:** ¿Me regalas un tinto, por favor?
+        **Suggested:** fine in Bogotá, but on the coast you would hear "¿Me das un tinto?"
+    validations:
+      required: true
+
+  - type: textarea
+    id: payload
+    attributes:
+      label: Machine-readable flags
+      description: >
+        Pasted automatically when you submit from the page. It tells a maintainer exactly which
+        string each flag refers to, so nothing is guessed at. Please do not edit it by hand —
+        if you are filling this form in manually, leave it empty and describe the location above.
+      render: json
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: confirmations
+    attributes:
+      label: Confirmations
+      options:
+        - label: I am flagging language as a speaker of it, not correcting it to match another country's usage.
+          required: true
+        - label: Where I have marked something as regional, I have said which region.

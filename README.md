@@ -136,27 +136,59 @@ House rules for content:
 - **Both directions, always.** A lesson without its `en` counterpart will fail CI.
 - **Never present a regional expression as universal.** Say where it is used and by whom.
 - **Teach the pragmatics, not just the words.** `usted` vs `tú` vs `vos` carries more meaning than most vocabulary does.
-- **Leave `review: "pending"`.** The app shows an honest banner until a native speaker has checked it.
+- **Leave `review: "pending"`.** The lesson keeps inviting a native speaker to check it until one has.
 
 ## Tests
 
 Content is validated by a dependency-free suite. Node 20+ only, nothing to install:
 
 ```sh
-node --test test/
+node --test test/*.test.js
 ```
 
-It checks that every lesson teaches in both directions, that dialogue and vocabulary rows match the shape the renderers expect, that each practice question points at a real answer among distinct choices, that verb entries are complete and uniquely identified, and — the one that catches the most damage — that **every element `app.js` looks up actually exists in `index.html`**. CI runs the same command on every pull request.
+It checks that every lesson teaches in both directions, that dialogue and vocabulary rows match the shape the renderers expect, that each practice question points at a real answer among distinct choices, that verb entries are complete and uniquely identified, that every review anchor resolves to a real string, and — the one that catches the most damage — that **every element `app.js` and `review-ui.js` look up actually exists in `index.html`**. CI runs the same command on every pull request.
+
+> Pass the glob, not the bare directory. Node 22 and newer resolve `node --test test/` as a *module* path and fail with `Cannot find module`; `test/*.test.js` works on every version.
 
 <a id="native-speaker-review"></a>
 
 ## Native-speaker review
 
-Regional usage is the part most easily got wrong, so the app is honest about it: every lesson carries a `review` field, and while it is `"pending"` the learner sees a banner saying so. Nothing unverified is presented as settled.
+Regional usage is the part most easily got wrong, so the app is honest about it: every lesson carries a `review` field, and while it is `"pending"` the lesson invites a native speaker to check it. Nothing unverified is presented as settled.
 
-**Reviewers need no code editor.** Open **[Issues → New issue → Lesson review](https://github.com/tree2juan/Parcero/issues/new?template=lesson-review.yml)**, pick a lesson from the dropdown, and answer a short form covering naturalness, regional framing, register, and pronunciation. A maintainer applies the wording and flips that lesson to `"reviewed"`, which removes the banner.
+Review happens at two grains, and both need a reviewer who knows the language, not the codebase.
+
+### Flag a line from the page
+
+The fastest correction is the one made while looking at the mistake. Add `?review=1` to the URL — **[open the site in review mode](https://tree2juan.github.io/Parcero/?review=1)** — or press **Review mode** in the header. A **Flag** control appears on every reviewable block: each dialogue line, vocabulary entry, culture note, practice question, verb, connector, and mature-language entry.
+
+Flagging one asks what is wrong (not natural, wrong region, wrong register, mistranslation, misleading pronunciation, spelling, culture, risky, dated), how much it matters, and — the field that does the real work — **how you would say it instead**. Flags collect in your browser, so you can read a whole lesson and flag as you go. **Submit flags** then opens a prefilled GitHub issue containing both a readable report and a machine-readable payload. Copy-to-clipboard and download-JSON are offered as fallbacks, including when a batch is too large for a URL.
+
+Nothing is sent anywhere until you press submit. Flags live only in your browser, under their own storage key, so *Reset progress* never destroys them.
+
+### Sign off a whole lesson
+
+For a considered pass over a complete lesson, open **[Issues → New issue → Lesson review](https://github.com/tree2juan/Parcero/issues/new?template=lesson-review.yml)**, pick a lesson, and answer a short form covering naturalness, regional framing, register, and pronunciation. A maintainer applies the wording and flips that lesson to `"reviewed"`.
 
 Aim for two sign-offs per lesson: a native Colombian Spanish speaker for the `es` side, and a native or expert English speaker for the `en` side.
+
+### Triaging flags as a maintainer
+
+Every flag stores an **anchor** — a stable address such as `lesson:greeting-at-the-cafe/es/dialogue/1/target` — plus the exact text the reviewer was looking at. Resolve a filed issue back to the lines to edit:
+
+```sh
+node scripts/review-flags.js flags.json          # a downloaded payload
+gh issue view 42 --json body -q .body | node scripts/review-flags.js -
+node scripts/review-flags.js flags.json --format markdown   # to paste back into the issue
+```
+
+For each flag it prints the file, the field, the current wording, and the suggestion, then sorts them:
+
+- **Ready** — the text still matches what the reviewer saw. Apply the suggestion.
+- **Drifted** — the text changed after it was flagged. The tool refuses to call these ready, because applying one blind would silently revert a newer edit. Re-read it and decide.
+- **Unresolved** — the anchor no longer points at anything, usually because content was deleted or renamed. Exits non-zero.
+
+Once a lesson's flags are applied and both sides are signed off, set its `review` field to `"reviewed"`.
 
 The mature-language reference needs the same care from qualified reviewers — severity labels, local usage, and de-escalation guidance. Content that encourages harassment does not belong here.
 
@@ -165,9 +197,12 @@ The mature-language reference needs the same care from qualified reviewers — s
 ```
 index.html          The whole app shell — every element id app.js binds to
 app.js              Rendering, placement scoring, lesson navigation, progress
+review.js           Review anchors: parse, resolve, validate, build issue payloads
+review-ui.js        Review mode: flag controls, the flag queue, issue export
 styles.css          Design system: light/dark tokens, layout, components
 data/lessons.js     The lessons
 data/curriculum.js  200 verbs, fluency connectors, mature-language reference
+scripts/            Maintainer tools: triage flags back to the lines to edit
 assets/             Favicon, social card, roadmap diagram
 test/               Dependency-free content validation
 .github/workflows/  CI on every PR, Pages deployment on main
@@ -186,4 +221,4 @@ Pushes to `main` publish the repository root to GitHub Pages via [`.github/workf
 
 ## Contributing
 
-Lesson contributions, corrections to regional framing, and accessibility fixes are all welcome. Open an issue first for new lessons so we can check the situation is not already covered, run `node --test test/` before opening a pull request, and keep the app dependency-free.
+Lesson contributions, corrections to regional framing, and accessibility fixes are all welcome. Open an issue first for new lessons so we can check the situation is not already covered, run `node --test test/*.test.js` before opening a pull request, and keep the app dependency-free.
