@@ -58,7 +58,16 @@ function renderFluency() {
 function renderMature() {
   $("#mature-results").innerHTML = matureItems.map(([phrase, equivalent, severity, note], index) => `<article class="reference-card" data-anchor="mature:${index}"><h3>${phrase}</h3><p><strong>${equivalent}</strong></p><p>${note}</p><span class="tag">${t("mature.severity")}: ${severity}</span><span class="tag">${t("mature.tag")}</span></article>`).join("");
 }
-function content() { return currentLesson()[state.direction]; }
+function content() { return ParceroLessonSchema.normalizeContent(currentLesson()[state.direction]); }
+/* Authored content is trusted, but it is still text going into innerHTML. A
+   lesson that legitimately needs to show "<" should render it, not break the page. */
+const escapeChars = { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" };
+const esc = (value) => (value === null || value === undefined ? "" : String(value).replace(/[&<>"]/g, (char) => escapeChars[char]));
+const targetLang = () => (state.direction === "es" ? ' lang="es"' : ' lang="en"');
+const supportLang = () => (state.direction === "es" ? ' lang="en"' : ' lang="es"');
+const anchorFor = (field) => `lesson:${currentLesson().id}/${state.direction}/${field}`;
+/* A labelled line that simply disappears when the lesson has nothing to say. */
+const detail = (key, value, lang) => (value ? `<p class="detail"><strong>${t(key)}</strong> <span${lang || ""}>${esc(value)}</span></p>` : "");
 function save() {
   localStorage.setItem("parcero-direction", state.direction);
   localStorage.setItem("parcero-completed", JSON.stringify([...state.completed]));
@@ -121,14 +130,125 @@ function selectLesson(id) {
   $("#lesson").scrollIntoView({ behavior: "smooth", block: "start" });
 }
 function renderPreview() {
-  const first = lessons[0][state.direction];
-  const [, target, translation, pronunciation] = first.dialogue[0];
-  const [word, meaning] = first.vocabulary[0];
-  $("#preview-target").textContent = target;
+  const first = ParceroLessonSchema.normalizeContent(lessons[0][state.direction]);
+  const line = first.dialogue[0];
+  const word = first.vocabulary[0];
+  $("#preview-target").textContent = line.target;
   $("#preview-target").lang = state.direction === "es" ? "es" : "en";
-  $("#preview-translation").textContent = translation;
-  $("#preview-pronunciation").textContent = pronunciation;
-  $("#preview-note").innerHTML = `<strong>${word}</strong> — ${meaning}`;
+  $("#preview-translation").textContent = line.translation;
+  $("#preview-pronunciation").textContent = line.pronunciation;
+  $("#preview-note").innerHTML = `<strong>${esc(word.term)}</strong> — ${esc(word.explanation)}`;
+}
+/* Which practice question is on screen. Lessons now ask several, so "the
+   question" is a position rather than a fact about the lesson. */
+const practiceView = { index: 0 };
+function practiceQuestions() { return content().practice; }
+function currentQuestion() { return practiceQuestions()[practiceView.index] || null; }
+/*
+ * The first question keeps the original prompt/choices anchors so flags filed
+ * against it before this change still resolve. Later questions get their own.
+ */
+function practiceAnchor(field) {
+  return practiceView.index === 0 ? anchorFor(field) : anchorFor(`practice/${practiceView.index}/${field}`);
+}
+/* Set text and keep the review anchor honest: no text means nothing to flag. */
+function setField(selector, value, anchor) {
+  const element = $(selector);
+  element.textContent = value || "";
+  if (value && anchor) element.dataset.anchor = anchor;
+  else delete element.dataset.anchor;
+  return Boolean(value);
+}
+function settingLabels() {
+  return { who: t("setting.who"), what: t("setting.what"), when: t("setting.when"), where: t("setting.where"), why: t("setting.why") };
+}
+function addressFormLabel(form) {
+  return { usted: t("address.form.usted"), "tú": t("address.form.tu"), vos: t("address.form.vos"), mixed: t("address.form.mixed") }[form] || form;
+}
+function renderSetting(current) {
+  const setting = current.setting;
+  const labels = settingLabels();
+  const rows = setting
+    ? ParceroLessonSchema.SETTING_KEYS.filter((key) => setting[key]).map((key) =>
+      `<div class="setting-row" data-anchor="${anchorFor(`setting/${key}`)}"><dt>${labels[key]}</dt><dd>${esc(setting[key])}</dd></div>`).join("")
+    : "";
+  $("#setting-list").innerHTML = rows;
+  $("#setting-list").hidden = !rows;
+}
+function renderAddress(current) {
+  const address = current.address;
+  $("#address-card").hidden = !address;
+  if (!address) return;
+  $("#address-form").textContent = addressFormLabel(address.form);
+  setField("#address-who", address.who, anchorFor("address/who"));
+  setField("#address-why", address.why, anchorFor("address/why"));
+  setField("#address-switch", address.ifYouSwitch, anchorFor("address/ifYouSwitch"));
+}
+function renderDialogue(current) {
+  $("#dialogue").innerHTML = current.dialogue.map((line, index) => {
+    const extras = detail("dialogue.literally", line.literal, supportLang()) + detail("dialogue.why", line.why);
+    return `<article class="line" data-anchor="${anchorFor(`dialogue/${index}`)}"><strong>${esc(line.speaker)}</strong><div${targetLang()}>${esc(line.target)}</div><p class="translation">${esc(line.translation)}</p><p class="pronunciation">${esc(line.pronunciation)}</p>${extras ? `<div class="line-extras">${extras}</div>` : ""}</article>`;
+  }).join("");
+}
+function renderVocabulary(current) {
+  $("#vocabulary").innerHTML = current.vocabulary.map((word, index) => {
+    const example = word.example
+      ? `<p class="word-example"><span${targetLang()}>${esc(word.example.target)}</span><span class="translation">${esc(word.example.translation)}</span></p>`
+      : "";
+    const related = word.related.length
+      ? `<p class="detail"><strong>${t("vocab.related")}</strong> <span${targetLang()}>${word.related.map(esc).join(" · ")}</span></p>`
+      : "";
+    const body = [
+      `<p class="word-gloss">${esc(word.explanation)}</p>`,
+      detail("vocab.literally", word.literal),
+      detail("vocab.useWhen", word.useWhen),
+      detail("vocab.avoidWhen", word.avoidWhen),
+      example,
+      detail("vocab.region", word.region),
+      related,
+      word.register ? `<span class="tag">${esc(word.register)}</span>` : ""
+    ].join("");
+    return `<article class="word-card" data-anchor="${anchorFor(`vocabulary/${index}`)}"><h3${targetLang()}>${esc(word.term)}</h3>${body}</article>`;
+  }).join("");
+}
+function renderCulture(current) {
+  const html = current.culture.filter((row) => row.label || row.body).map((row, index) =>
+    `<article class="culture-card" data-anchor="${anchorFor(`culture/${index}`)}"><h4>${esc(row.label)}</h4><p>${esc(row.body)}</p></article>`).join("");
+  $("#culture-notes").innerHTML = html;
+  $("#culture-section").hidden = !html;
+}
+function renderPitfalls(current) {
+  const html = current.pitfalls.filter((row) => row.mistake).map((row, index) =>
+    `<article class="pitfall-card" data-anchor="${anchorFor(`pitfalls/${index}`)}"><h4>${esc(row.mistake)}</h4><p>${esc(row.whyItFails)}</p>${detail("pitfall.instead", row.sayInstead, targetLang())}</article>`).join("");
+  $("#pitfalls").innerHTML = html;
+  $("#pitfalls-section").hidden = !html;
+}
+function renderVariations(current) {
+  const html = current.variations.filter((row) => row.form).map((row, index) => {
+    const tags = [row.register, row.region].filter(Boolean).map((value) => `<span class="tag">${esc(value)}</span>`).join("");
+    return `<article class="variation-card" data-anchor="${anchorFor(`variations/${index}`)}"><p class="variation-form"${targetLang()}>${esc(row.form)}</p><p class="variation-when">${esc(row.whenToUse)}</p><p class="word-tags">${tags}</p></article>`;
+  }).join("");
+  $("#variations").innerHTML = html;
+  $("#variations-section").hidden = !html;
+}
+function renderPractice() {
+  const questions = practiceQuestions();
+  const question = questions[practiceView.index];
+  $("#practice-progress").textContent = questions.length > 1
+    ? t("practice.progress", { number: practiceView.index + 1, total: questions.length })
+    : "";
+  $("#practice-feedback").textContent = "";
+  $("#practice-next").hidden = true;
+  if (!question) {
+    $("#practice-prompt").textContent = "";
+    $("#practice-tests").textContent = "";
+    $("#choices").innerHTML = "";
+    return;
+  }
+  setField("#practice-prompt", question.prompt, practiceAnchor("prompt"));
+  $("#practice-tests").textContent = question.tests ? t("practice.tests", { tests: question.tests }) : "";
+  $("#choices").innerHTML = question.choices.map((choice, index) => `<button class="choice" type="button" data-answer="${index}">${esc(choice)}</button>`).join("");
+  $("#choices").dataset.anchor = practiceAnchor("choices");
 }
 function render() {
   const current = content();
@@ -138,17 +258,18 @@ function render() {
   $("#lesson-title").textContent = current.title;
   $("#lesson-situation").textContent = current.situation;
   $("#lesson-review").hidden = lesson.review !== "pending";
-  const targetLanguage = state.direction === "es" ? ' lang="es"' : "";
-  $("#dialogue").innerHTML = current.dialogue.map(([speaker, target, translation, pronunciation], index) => `<article class="line" data-anchor="lesson:${lesson.id}/${state.direction}/dialogue/${index}"><strong>${speaker}</strong><div${targetLanguage}>${target}</div><p class="translation">${translation}</p><p class="pronunciation">${pronunciation}</p></article>`).join("");
-  $("#vocabulary").innerHTML = current.vocabulary.map(([word, meaning], index) => `<article class="word-card" data-anchor="lesson:${lesson.id}/${state.direction}/vocabulary/${index}"><h3${targetLanguage}>${word}</h3><p>${meaning}</p></article>`).join("");
+  renderSetting(current);
+  renderAddress(current);
+  renderDialogue(current);
+  renderVocabulary(current);
+  renderCulture(current);
+  renderPitfalls(current);
+  renderVariations(current);
   $("#culture-note").textContent = current.note;
-  $("#practice-prompt").textContent = current.prompt;
-  $("#choices").innerHTML = current.choices.map((choice, index) => `<button class="choice" type="button" data-answer="${index}">${choice}</button>`).join("");
-  $("#lesson-heading").dataset.anchor = `lesson:${lesson.id}/${state.direction}/heading`;
-  $("#culture-note").dataset.anchor = `lesson:${lesson.id}/${state.direction}/note`;
-  $("#practice-prompt").dataset.anchor = `lesson:${lesson.id}/${state.direction}/prompt`;
-  $("#choices").dataset.anchor = `lesson:${lesson.id}/${state.direction}/choices`;
-  $("#practice-feedback").textContent = "";
+  $("#lesson-heading").dataset.anchor = anchorFor("heading");
+  $("#culture-note").dataset.anchor = anchorFor("note");
+  practiceView.index = 0;
+  renderPractice();
   $("#speech-status").textContent = "";
   renderLessonList();
   renderPreview();
@@ -192,11 +313,21 @@ document.querySelectorAll(".tab").forEach((tab) => tab.addEventListener("click",
 $("#choices").addEventListener("click", (event) => {
   const choice = event.target.closest("[data-answer]");
   if (!choice) return;
-  const correct = Number(choice.dataset.answer) === content().answer;
+  const question = currentQuestion();
+  if (!question) return;
+  const correct = Number(choice.dataset.answer) === question.answer;
   document.querySelectorAll(".choice").forEach((item) => item.disabled = true);
   choice.classList.add(correct ? "correct" : "incorrect");
-  if (!correct) document.querySelector(`[data-answer="${content().answer}"]`).classList.add("correct");
+  if (!correct) document.querySelector(`[data-answer="${question.answer}"]`).classList.add("correct");
   $("#practice-feedback").textContent = correct ? t("practice.correct") : t("practice.incorrect");
+  $("#practice-next").hidden = practiceView.index >= practiceQuestions().length - 1;
+});
+$("#practice-next").addEventListener("click", () => {
+  if (practiceView.index >= practiceQuestions().length - 1) return;
+  practiceView.index += 1;
+  renderPractice();
+  const first = $("#choices").querySelector(".choice");
+  if (first) first.focus();
 });
 $("#complete-lesson").addEventListener("click", () => { state.completed.add(currentLesson().id); save(); renderLessonList(); updateProgress(); });
 $("#lesson-list").addEventListener("click", (event) => {
@@ -209,7 +340,7 @@ $("#reset-progress").addEventListener("click", () => { state.completed.clear(); 
 $("#listen-dialogue").addEventListener("click", () => {
   if (!("speechSynthesis" in window)) { $("#speech-status").textContent = t("speech.unsupported"); return; }
   speechSynthesis.cancel();
-  const utterance = new SpeechSynthesisUtterance(content().dialogue.map((line) => line[1]).join(" "));
+  const utterance = new SpeechSynthesisUtterance(content().dialogue.map((line) => line.target).join(" "));
   utterance.lang = state.direction === "es" ? "es-CO" : "en-US";
   speechSynthesis.speak(utterance);
   $("#speech-status").textContent = t("speech.playing");

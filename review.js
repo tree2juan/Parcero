@@ -24,18 +24,48 @@ const ParceroReview = (function () {
   const MAX_ISSUE_URL = 6000;
 
   const DIRECTIONS = ["es", "en"];
-  /* Data layout: a dialogue row is [speaker, target, translation, pronunciation].
-     This order indexes the tuple, so it must not be reordered. */
-  const DIALOGUE_SLOTS = ["speaker", "target", "translation", "pronunciation"];
+  /*
+   * The canonical shape lives in data/lesson-schema.js so that the renderer, the
+   * tests, the maintainer CLI and this file cannot drift apart on what a lesson
+   * is. A row may be a legacy tuple or a rich object; the schema reads either by
+   * slot NAME, which is why an anchor can survive a new field being added.
+   */
+  const SCHEMA = typeof ParceroLessonSchema !== "undefined"
+    ? ParceroLessonSchema
+    : require("./data/lesson-schema.js");
+
+  const DIALOGUE_SLOTS = SCHEMA.DIALOGUE_SLOTS;
   /* Order the part picker offers instead: the taught line first, the character
      name last, because that is the order a reviewer is likely to want them. */
-  const DIALOGUE_PART_ORDER = ["target", "translation", "pronunciation", "speaker"];
-  const VOCABULARY_SLOTS = ["term", "explanation"];
+  const DIALOGUE_PART_ORDER = ["target", "translation", "pronunciation", "literal", "why", "speaker"];
+  const VOCABULARY_SLOTS = SCHEMA.VOCABULARY_SLOTS;
+  const CULTURE_SLOTS = SCHEMA.CULTURE_SLOTS;
+  const PITFALL_SLOTS = SCHEMA.PITFALL_SLOTS;
+  const VARIATION_SLOTS = SCHEMA.VARIATION_SLOTS;
+  const ADDRESS_SLOTS = SCHEMA.ADDRESS_SLOTS;
+  const SETTING_KEYS = SCHEMA.SETTING_KEYS;
+  /* Fields addressed as field/index/slot. */
+  const ROW_FIELDS = {
+    dialogue: DIALOGUE_SLOTS,
+    vocabulary: VOCABULARY_SLOTS,
+    culture: CULTURE_SLOTS,
+    pitfalls: PITFALL_SLOTS,
+    variations: VARIATION_SLOTS
+  };
+  /* Fields addressed as field/slot, with no index. */
+  const OBJECT_FIELDS = { setting: SETTING_KEYS, address: ADDRESS_SLOTS };
   const LESSON_TEXT_FIELDS = ["title", "situation", "note", "prompt"];
   const VERB_SLOTS = ["spanish", "english", "presentYo", "preteriteYo", "participle", "level", "register", "regionality"];
   const VERB_FORM_SLOTS = ["presentYo", "preteriteYo", "participle"];
   const FLUENCY_SLOTS = ["phrase", "meaning", "type", "region", "note"];
   const MATURE_SLOTS = ["phrase", "equivalent", "severity", "note"];
+
+  /* Practice question 0 is the lesson's original prompt/choices; 1 and up are
+     practiceExtra. Keeping that mapping means flags filed against the original
+     question before extra questions existed still resolve to the same string. */
+  function practiceQuestionAt(content, index) {
+    return index === 0 ? content : (content.practiceExtra || [])[index - 1];
+  }
 
   const ISSUE_TYPES = [
     ["not-natural", "No one really says it this way"],
@@ -103,7 +133,7 @@ const ParceroReview = (function () {
     if (segments.length === 0) return null;
 
     if (kind === "lesson") {
-      const [id, direction, field, third, fourth] = segments;
+      const [id, direction, field, third, fourth, fifth] = segments;
       if (!isText(id) || !DIRECTIONS.includes(direction) || !isText(field)) return null;
       if (LESSON_TEXT_FIELDS.includes(field)) {
         return segments.length === 3 ? { kind, id, direction, field, index: null, slot: null } : null;
@@ -117,12 +147,27 @@ const ParceroReview = (function () {
           ? { kind, id, direction, field, index: Number(third), slot: null }
           : null;
       }
-      if (field === "dialogue" || field === "vocabulary") {
+      if (OBJECT_FIELDS[field]) {
+        if (segments.length === 3) return { kind, id, direction, field, index: null, slot: null };
+        return segments.length === 4 && OBJECT_FIELDS[field].includes(third)
+          ? { kind, id, direction, field, index: null, slot: third }
+          : null;
+      }
+      if (ROW_FIELDS[field]) {
         if (!/^\d+$/.test(third || "")) return null;
-        const slots = field === "dialogue" ? DIALOGUE_SLOTS : VOCABULARY_SLOTS;
+        const slots = ROW_FIELDS[field];
         if (segments.length === 4) return { kind, id, direction, field, index: Number(third), slot: null };
         return segments.length === 5 && slots.includes(fourth)
           ? { kind, id, direction, field, index: Number(third), slot: fourth }
+          : null;
+      }
+      if (field === "practice") {
+        if (!/^\d+$/.test(third || "")) return null;
+        const index = Number(third);
+        if (segments.length === 5 && fourth === "prompt") return { kind, id, direction, field, index, slot: "prompt", choice: null };
+        if (segments.length === 5 && fourth === "choices") return { kind, id, direction, field, index, slot: "choices", choice: null };
+        return segments.length === 6 && fourth === "choices" && /^\d+$/.test(fifth || "")
+          ? { kind, id, direction, field, index, slot: "choices", choice: Number(fifth) }
           : null;
       }
       return null;
@@ -151,7 +196,8 @@ const ParceroReview = (function () {
     if (!parsed) return false;
     if (parsed.kind === "lesson") {
       if (parsed.field === "heading" || parsed.field === "choices") return parsed.index === null;
-      if (parsed.field === "dialogue" || parsed.field === "vocabulary") return parsed.slot === null;
+      if (parsed.field === "practice") return parsed.slot === "choices" && parsed.choice === null;
+      if (ROW_FIELDS[parsed.field] || OBJECT_FIELDS[parsed.field]) return parsed.slot === null;
       return false;
     }
     return parsed.slot === null;
@@ -164,7 +210,13 @@ const ParceroReview = (function () {
       const base = `lesson:${parsed.id}/${parsed.direction}`;
       if (parsed.field === "title" || parsed.field === "situation") return `${base}/heading`;
       if (parsed.field === "choices") return `${base}/choices`;
-      if (parsed.field === "dialogue" || parsed.field === "vocabulary") return `${base}/${parsed.field}/${parsed.index}`;
+      if (parsed.field === "practice") {
+        return parsed.slot === "choices" ? `${base}/practice/${parsed.index}/choices` : `${base}/practice/${parsed.index}/prompt`;
+      }
+      /* The situation rows are rendered one slot at a time, so each slot is its
+         own smallest reviewable unit rather than part of a larger card. */
+      if (OBJECT_FIELDS[parsed.field]) return parsed.slot ? `${base}/${parsed.field}/${parsed.slot}` : `${base}/${parsed.field}`;
+      if (ROW_FIELDS[parsed.field]) return `${base}/${parsed.field}/${parsed.index}`;
       return `${base}/${parsed.field}`;
     }
     if (parsed.kind === "verb") return `verb:${parsed.id}`;
@@ -183,11 +235,31 @@ const ParceroReview = (function () {
         speaker: "Speaker name",
         target: `${target} line`,
         translation: `${support} translation`,
-        pronunciation: "Pronunciation respelling"
+        pronunciation: "Pronunciation respelling",
+        literal: "Word-for-word rendering",
+        why: "Why it is said this way"
       }[slot];
     }
     if (field === "vocabulary") {
-      return { term: `${target} term`, explanation: "Explanation" }[slot];
+      return {
+        term: `${target} term`, explanation: "Explanation", literal: "Literal sense",
+        useWhen: "When to use it", avoidWhen: "When to avoid it",
+        register: "Register label", region: "Where it is used"
+      }[slot];
+    }
+    if (field === "setting") {
+      return {
+        who: "Who is speaking", what: "What is happening", when: "When it happens",
+        where: "Where it happens", why: "Why they are speaking"
+      }[slot];
+    }
+    if (field === "address") {
+      return { who: "Who addresses whom", why: "Why this address form", ifYouSwitch: "What changes if you switch" }[slot];
+    }
+    if (field === "culture") return { label: "Context heading", body: "Context explanation" }[slot];
+    if (field === "pitfalls") return { mistake: "The mistake", whyItFails: "Why it fails", sayInstead: "What to say instead" }[slot];
+    if (field === "variations") {
+      return { form: `${target} wording`, register: "Register label", region: "Region label", whenToUse: "When to use it" }[slot];
     }
     return { title: "Lesson title", situation: "Situation", note: "Colombian context note", prompt: "Practice question" }[field];
   }
@@ -197,8 +269,11 @@ const ParceroReview = (function () {
     if (kind !== "lesson") return null;
     const target = direction;
     const support = direction === "es" ? "en" : "es";
-    if (field === "dialogue") return slot === "target" ? target : slot === "translation" ? support : null;
+    if (field === "dialogue") return slot === "target" ? target : slot === "translation" || slot === "literal" ? support : null;
     if (field === "vocabulary") return slot === "term" ? target : null;
+    if (field === "variations") return slot === "form" ? target : null;
+    if (field === "pitfalls") return slot === "sayInstead" ? target : null;
+    if (field === "practice") return target;
     if (field === "title" || field === "situation" || field === "note" || field === "prompt") return target;
     if (field === "choices") return target;
     return null;
@@ -246,17 +321,59 @@ const ParceroReview = (function () {
         };
       }
 
+      if (OBJECT_FIELDS[parsed.field]) {
+        const holder = content[parsed.field];
+        const value = holder ? holder[parsed.slot] : null;
+        if (!isText(value)) return { anchor, ok: false, reason: `lesson "${parsed.id}" has no ${parsed.field} "${parsed.slot}"` };
+        const slotLabel = lessonSlotLabel(parsed.field, parsed.slot, parsed.direction);
+        const fieldLabel = parsed.field === "setting" ? "The situation" : "Address form";
+        return {
+          anchor, ok: true, kind: "lesson", source: "data/lessons.js",
+          path: `${base}.${parsed.field}.${parsed.slot}`,
+          text: value, slotLabel, label: `${where} · ${fieldLabel} · ${slotLabel}`,
+          lang: slotLanguage("lesson", parsed.field, parsed.slot, parsed.direction)
+        };
+      }
+
+      if (parsed.field === "practice") {
+        const question = practiceQuestionAt(content, parsed.index);
+        if (!question) return { anchor, ok: false, reason: `lesson "${parsed.id}" has no practice question ${parsed.index + 1}` };
+        const holder = parsed.index === 0 ? base : `${base}.practiceExtra[${parsed.index - 1}]`;
+        if (parsed.slot === "prompt") {
+          if (!isText(question.prompt)) return { anchor, ok: false, reason: `practice question ${parsed.index + 1} has no prompt` };
+          const slotLabel = `Practice question ${parsed.index + 1}`;
+          return {
+            anchor, ok: true, kind: "lesson", source: "data/lessons.js", path: `${holder}.prompt`,
+            text: question.prompt, slotLabel, label: `${where} · ${slotLabel}`,
+            lang: slotLanguage("lesson", "practice", parsed.slot, parsed.direction)
+          };
+        }
+        const choice = (question.choices || [])[parsed.choice];
+        if (!isText(choice)) return { anchor, ok: false, reason: `practice question ${parsed.index + 1} has no choice ${parsed.choice + 1}` };
+        const slotLabel = `Question ${parsed.index + 1}, answer choice ${parsed.choice + 1}${question.answer === parsed.choice ? " (the correct one)" : ""}`;
+        return {
+          anchor, ok: true, kind: "lesson", source: "data/lessons.js", path: `${holder}.choices[${parsed.choice}]`,
+          text: choice, slotLabel, label: `${where} · ${slotLabel}`,
+          lang: slotLanguage("lesson", "practice", parsed.slot, parsed.direction)
+        };
+      }
+
       const rows = content[parsed.field] || [];
       const row = rows[parsed.index];
       if (!row) return { anchor, ok: false, reason: `lesson "${parsed.id}" has no ${parsed.field} entry ${parsed.index + 1}` };
-      const slots = parsed.field === "dialogue" ? DIALOGUE_SLOTS : VOCABULARY_SLOTS;
-      const slotIndex = slots.indexOf(parsed.slot);
+      const slots = ROW_FIELDS[parsed.field];
+      const value = SCHEMA.slotValue(row, slots, parsed.slot);
+      if (!isText(value)) return { anchor, ok: false, reason: `lesson "${parsed.id}" ${parsed.field} entry ${parsed.index + 1} has no "${parsed.slot}"` };
       const slotLabel = lessonSlotLabel(parsed.field, parsed.slot, parsed.direction);
-      const rowLabel = parsed.field === "dialogue" ? `Dialogue line ${parsed.index + 1}` : `Vocabulary entry ${parsed.index + 1}`;
+      const rowNames = {
+        dialogue: "Dialogue line", vocabulary: "Vocabulary entry",
+        culture: "Context note", pitfalls: "Pitfall", variations: "Variation"
+      };
+      const rowLabel = `${rowNames[parsed.field]} ${parsed.index + 1}`;
       return {
         anchor, ok: true, kind: "lesson", source: "data/lessons.js",
-        path: `${base}.${parsed.field}[${parsed.index}][${slotIndex}]`,
-        text: row[slotIndex], slotLabel, label: `${where} · ${rowLabel} · ${slotLabel}`,
+        path: `${base}.${parsed.field}[${parsed.index}]${SCHEMA.slotPath(row, slots, parsed.slot)}`,
+        text: value, slotLabel, label: `${where} · ${rowLabel} · ${slotLabel}`,
         lang: slotLanguage("lesson", parsed.field, parsed.slot, parsed.direction)
       };
     }
@@ -312,8 +429,15 @@ const ParceroReview = (function () {
         const found = findLesson(data, parsed.id);
         const total = found ? (found.lesson[parsed.direction]?.choices || []).length : 0;
         for (let index = 0; index < total; index += 1) leaves.push(`${base}/choices/${index}`);
-      } else if ((parsed.field === "dialogue" || parsed.field === "vocabulary") && parsed.slot === null) {
-        const slots = parsed.field === "dialogue" ? DIALOGUE_PART_ORDER : VOCABULARY_SLOTS;
+      } else if (parsed.field === "practice" && parsed.slot === "choices" && parsed.choice === null) {
+        const found = findLesson(data, parsed.id);
+        const question = found ? practiceQuestionAt(found.lesson[parsed.direction] || {}, parsed.index) : null;
+        const total = question ? (question.choices || []).length : 0;
+        for (let index = 0; index < total; index += 1) leaves.push(`${base}/practice/${parsed.index}/choices/${index}`);
+      } else if (OBJECT_FIELDS[parsed.field] && parsed.slot === null) {
+        for (const slot of OBJECT_FIELDS[parsed.field]) leaves.push(`${base}/${parsed.field}/${slot}`);
+      } else if (ROW_FIELDS[parsed.field] && parsed.slot === null) {
+        const slots = parsed.field === "dialogue" ? DIALOGUE_PART_ORDER : ROW_FIELDS[parsed.field];
         for (const slot of slots) leaves.push(`${base}/${parsed.field}/${parsed.index}/${slot}`);
       } else leaves.push(anchor);
     } else if (parsed.kind === "verb") {
@@ -335,13 +459,27 @@ const ParceroReview = (function () {
         if (!content) continue;
         const base = `lesson:${lesson.id}/${direction}`;
         for (const field of LESSON_TEXT_FIELDS) all.push(`${base}/${field}`);
-        (content.dialogue || []).forEach((_, index) => {
-          for (const slot of DIALOGUE_SLOTS) all.push(`${base}/dialogue/${index}/${slot}`);
-        });
-        (content.vocabulary || []).forEach((_, index) => {
-          for (const slot of VOCABULARY_SLOTS) all.push(`${base}/vocabulary/${index}/${slot}`);
-        });
+        /* Optional fields are enumerated only where they actually carry text, so
+           the part picker never offers a reviewer an empty slot to flag. */
+        for (const field of Object.keys(OBJECT_FIELDS)) {
+          const holder = content[field];
+          if (!holder) continue;
+          for (const slot of OBJECT_FIELDS[field]) if (isText(holder[slot])) all.push(`${base}/${field}/${slot}`);
+        }
+        for (const field of Object.keys(ROW_FIELDS)) {
+          const slots = ROW_FIELDS[field];
+          (content[field] || []).forEach((row, index) => {
+            for (const slot of slots) {
+              if (isText(SCHEMA.slotValue(row, slots, slot))) all.push(`${base}/${field}/${index}/${slot}`);
+            }
+          });
+        }
         (content.choices || []).forEach((_, index) => all.push(`${base}/choices/${index}`));
+        (content.practiceExtra || []).forEach((question, offset) => {
+          const index = offset + 1;
+          if (isText(question.prompt)) all.push(`${base}/practice/${index}/prompt`);
+          (question.choices || []).forEach((_, choice) => all.push(`${base}/practice/${index}/choices/${choice}`));
+        });
       }
     }
     for (const verb of data.curriculum || []) for (const slot of VERB_SLOTS) all.push(`verb:${verb.id}/${slot}`);
@@ -489,6 +627,8 @@ const ParceroReview = (function () {
   return {
     SCHEMA_VERSION, PAYLOAD_MARKER, REPO_URL, ISSUE_TEMPLATE, MAX_ISSUE_URL,
     DIRECTIONS, DIALOGUE_SLOTS, VOCABULARY_SLOTS, LESSON_TEXT_FIELDS,
+    CULTURE_SLOTS, PITFALL_SLOTS, VARIATION_SLOTS, ADDRESS_SLOTS, SETTING_KEYS,
+    ROW_FIELDS, OBJECT_FIELDS,
     VERB_SLOTS, FLUENCY_SLOTS, MATURE_SLOTS,
     ISSUE_TYPES, SEVERITIES, REVIEWER_ROLES, REGION_SUGGESTIONS,
     labelOf, labelKey, parseAnchor, isGroupAnchor, groupAnchor, resolveAnchor, partsForAnchor, listAnchors,

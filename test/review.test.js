@@ -7,6 +7,7 @@ const vm = require("node:vm");
 const { execFileSync } = require("node:child_process");
 
 const review = require("../review.js");
+const schema = require("../data/lesson-schema.js");
 
 const root = path.join(__dirname, "..");
 const read = (file) => fs.readFileSync(path.join(root, file), "utf8");
@@ -57,13 +58,26 @@ test("anchors are unique, so two different strings can never share an address", 
 test("every lesson string a reviewer can see has an anchor", () => {
   for (const lesson of content.lessons) {
     for (const direction of review.DIRECTIONS) {
-      const side = lesson[direction];
-      const expected = ["title", "situation", "note", "prompt"].length
-        + side.dialogue.length * review.DIALOGUE_SLOTS.length
-        + side.vocabulary.length * review.VOCABULARY_SLOTS.length
-        + side.choices.length;
-      const actual = anchors.filter((anchor) => anchor.startsWith(`lesson:${lesson.id}/${direction}/`)).length;
-      assert.strictEqual(actual, expected, `${lesson.id}.${direction}: expected ${expected} anchors, found ${actual}`);
+      const side = schema.normalizeContent(lesson[direction]);
+      const base = `lesson:${lesson.id}/${direction}`;
+      const mine = new Set(anchors.filter((anchor) => anchor.startsWith(`${base}/`)));
+      const expect = (suffix) => assert.ok(mine.has(`${base}/${suffix}`), `${lesson.id}.${direction}: nothing addresses ${suffix}`);
+
+      for (const field of ["title", "situation", "note", "prompt"]) expect(field);
+      for (const key of schema.SETTING_KEYS) expect(`setting/${key}`);
+      for (const slot of schema.ADDRESS_SLOTS) expect(`address/${slot}`);
+      side.dialogue.forEach((_, index) => {
+        for (const slot of ["speaker", "target", "translation", "pronunciation"]) expect(`dialogue/${index}/${slot}`);
+      });
+      side.vocabulary.forEach((_, index) => expect(`vocabulary/${index}/term`));
+      side.culture.forEach((_, index) => expect(`culture/${index}/body`));
+      side.pitfalls.forEach((_, index) => expect(`pitfalls/${index}/sayInstead`));
+      side.variations.forEach((_, index) => expect(`variations/${index}/form`));
+      side.choices.forEach((_, index) => expect(`choices/${index}`));
+      side.practice.slice(1).forEach((question, offset) => {
+        expect(`practice/${offset + 1}/prompt`);
+        question.choices.forEach((_, index) => expect(`practice/${offset + 1}/choices/${index}`));
+      });
     }
   }
 });
@@ -132,9 +146,16 @@ test("every leaf anchor maps to a group the page actually renders", () => {
   for (const lesson of content.lessons) {
     for (const direction of review.DIRECTIONS) {
       const base = `lesson:${lesson.id}/${direction}`;
+      const side = schema.normalizeContent(lesson[direction]);
       rendered.add(`${base}/heading`).add(`${base}/note`).add(`${base}/prompt`).add(`${base}/choices`);
-      lesson[direction].dialogue.forEach((_, index) => rendered.add(`${base}/dialogue/${index}`));
-      lesson[direction].vocabulary.forEach((_, index) => rendered.add(`${base}/vocabulary/${index}`));
+      for (const key of schema.SETTING_KEYS) rendered.add(`${base}/setting/${key}`);
+      for (const slot of schema.ADDRESS_SLOTS) rendered.add(`${base}/address/${slot}`);
+      for (const field of ["dialogue", "vocabulary", "culture", "pitfalls", "variations"]) {
+        side[field].forEach((_, index) => rendered.add(`${base}/${field}/${index}`));
+      }
+      side.practice.slice(1).forEach((_, offset) => {
+        rendered.add(`${base}/practice/${offset + 1}/prompt`).add(`${base}/practice/${offset + 1}/choices`);
+      });
     }
   }
   for (const verb of content.curriculum) rendered.add(`verb:${verb.id}`);
@@ -230,9 +251,17 @@ test("index.html loads the review scripts after the data and the app", () => {
 
 test("app.js tags every reviewable block with an anchor", () => {
   const app = read("app.js");
-  for (const fragment of ["/dialogue/${index}", "/vocabulary/${index}", "/heading`", "/note`", "/prompt`", "/choices`", 'data-anchor="verb:${verb.id}"', 'data-anchor="fluency:${index}"', 'data-anchor="mature:${index}"']) {
+  const fragments = [
+    'anchorFor(`setting/${key}`)', 'anchorFor("address/who")',
+    'anchorFor(`dialogue/${index}`)', 'anchorFor(`vocabulary/${index}`)',
+    'anchorFor(`culture/${index}`)', 'anchorFor(`pitfalls/${index}`)', 'anchorFor(`variations/${index}`)',
+    'anchorFor("heading")', 'anchorFor("note")',
+    'data-anchor="verb:${verb.id}"', 'data-anchor="fluency:${index}"', 'data-anchor="mature:${index}"'
+  ];
+  for (const fragment of fragments) {
     assert.ok(app.includes(fragment), `app.js no longer emits a data-anchor for ${fragment}`);
   }
+  assert.match(app, /practiceAnchor|anchorFor\(`practice\//, "practice questions must stay addressable");
 });
 
 test("the flag dialog offers a problem type, a severity and a reviewer role", () => {
@@ -267,7 +296,7 @@ test("the triage CLI points a maintainer at the exact field to revise", () => {
   assert.strictEqual(status, 0, stdout);
   assert.match(stdout, /1 ready, 0 drifted, 0 unresolved/);
   assert.match(stdout, /data\/lessons\.js/);
-  assert.match(stdout, /lessons\[0\]\.es\.dialogue\[1\]\[1\]/);
+  assert.match(stdout, /lessons\[0\]\.es\.dialogue\[1\]\.target/);
   assert.match(stdout, /¿Me das un tinto\?/);
 });
 
@@ -346,10 +375,39 @@ test("the part picker offers the taught line before the speaker's name", () => {
 test("the display order of dialogue parts never changes what an anchor resolves to", () => {
   const lesson = content.lessons.find((item) => item.id === "greeting-at-the-cafe");
   const row = lesson.es.dialogue[1];
-  review.DIALOGUE_SLOTS.forEach((slot, index) => {
+  for (const slot of review.DIALOGUE_SLOTS) {
     const resolved = review.resolveAnchor(`lesson:greeting-at-the-cafe/es/dialogue/1/${slot}`, content);
-    assert.strictEqual(resolved.text, row[index], `${slot} must keep resolving to tuple position ${index}`);
-  });
+    const stored = schema.slotValue(row, review.DIALOGUE_SLOTS, slot);
+    if (!isText(stored)) continue;
+    assert.strictEqual(resolved.text, stored, `${slot} must keep resolving to the "${slot}" value, whatever order it is displayed in`);
+  }
+});
+
+/*
+ * Legacy lessons stored a dialogue line as a bare tuple. Anchors are resolved by
+ * slot name now, but a tuple still has to land on the same text it always did,
+ * or every anchor recorded before the schema change would silently shift.
+ */
+test("anchors still resolve against a legacy tuple lesson", () => {
+  const legacy = {
+    lessons: [{
+      id: "legacy", level: "A1",
+      es: {
+        title: "T", situation: "S", note: "N", prompt: "P", choices: ["a", "b"], answer: 1,
+        dialogue: [["Ana", "Buenas", "Morning", "BWEH-nas"]],
+        vocabulary: [["parce", "friend"]]
+      }
+    }],
+    curriculum: [], fluencyItems: [], matureItems: []
+  };
+  assert.strictEqual(review.resolveAnchor("lesson:legacy/es/dialogue/0/speaker", legacy).text, "Ana");
+  assert.strictEqual(review.resolveAnchor("lesson:legacy/es/dialogue/0/target", legacy).text, "Buenas");
+  assert.strictEqual(review.resolveAnchor("lesson:legacy/es/dialogue/0/pronunciation", legacy).text, "BWEH-nas");
+  assert.strictEqual(review.resolveAnchor("lesson:legacy/es/vocabulary/0/explanation", legacy).text, "friend");
+  assert.match(review.resolveAnchor("lesson:legacy/es/dialogue/0/target", legacy).path, /dialogue\[0\]\[1\]$/,
+    "a tuple lesson must still be described to the maintainer by tuple position");
+  assert.strictEqual(review.resolveAnchor("lesson:legacy/es/dialogue/0/why", legacy).ok, false,
+    "a slot the legacy row never had must not resolve to something else");
 });
 
 test("the triage CLI reads an issue body piped in as -", () => {

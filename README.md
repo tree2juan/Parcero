@@ -54,13 +54,14 @@ Then open `http://localhost:8000`. You can also just open `index.html` directly 
 
 ## How a lesson works
 
-Each lesson has three tabs, in the order a real conversation demands them:
+Each lesson has four tabs, in the order a real conversation demands them:
 
 | Tab | What it gives you |
 | --- | --- |
-| **Dialogue** | A short exchange with the target language, a natural translation, and a plain-English pronunciation respelling. A "Listen" button reads it aloud with your browser's speech engine. |
-| **Understand** | The vocabulary *as used in this exchange*, plus a Colombian context note explaining why the phrasing works and where it would mislead you. |
-| **Practice** | One retrieval question that checks meaning-in-context rather than translation. |
+| **The situation** | Who is talking, what they want, when and where it happens, and why any of it matters — plus the address form the exchange runs on (`usted`, `tú` or `vos`), who uses it, and what changes if you switch. Spanish decides half its grammar from this, so it comes first. |
+| **Dialogue** | A short exchange with the target language, a natural translation, and a plain-English pronunciation respelling. Lines that hide something carry a literal gloss and a note on why it is phrased that way. A "Listen" button reads it aloud with your browser's speech engine. |
+| **Understand** | The vocabulary *as used in this exchange* — with a literal reading, when to reach for it, when not to, what region it belongs to, and an example — then what is going on underneath the exchange, what learners get wrong here and what to say instead, and the same thing said differently across registers and regions. |
+| **Practice** | Several retrieval questions that check meaning-in-context rather than translation, each naming what it is testing. |
 
 <a id="lessons"></a>
 
@@ -105,6 +106,8 @@ Results stay in browser storage and identify a starting level plus the skills to
 
 Lessons live in [`data/lessons.js`](data/lessons.js) as plain objects — no build step, no JSON schema to learn. Add an entry to the `lessons` array and it appears in the picker automatically.
 
+Every field below except `title`, `situation`, `dialogue`, `vocabulary`, `note`, `prompt`, `choices` and `answer` is optional: [`data/lesson-schema.js`](data/lesson-schema.js) fills in the rest, so a partly written lesson still renders. Rows may be written as objects (preferred) or as the original short tuples.
+
 ```js
 {
   id: "at-the-bank",              // kebab-case, unique
@@ -117,15 +120,62 @@ Lessons live in [`data/lessons.js`](data/lessons.js) as plain objects — no bui
   es: {
     title: "...",
     situation: "...",
+
+    // The five questions a learner has to answer before the words mean anything.
+    setting: {
+      who: "A teller in her forties and a foreign customer.",
+      what: "Opening a savings account without a Colombian ID.",
+      when: "Mid-morning on a weekday, the branch is busy.",
+      where: "A bank branch in Bogotá.",
+      why: "Bank staff are scripted and formal; warmth arrives through diminutives, not first names."
+    },
+
+    // Which "you" the exchange runs on, and what moving off it would signal.
+    address: {
+      form: "usted",              // "usted" | "tú" | "vos" | "mixed"
+      who: "The teller to the customer, and back.",
+      why: "Service encounters in Bogotá default to usted regardless of age.",
+      ifYouSwitch: "Tú here sounds over-familiar and slightly presumptuous."
+    },
+
     dialogue: [
-      // [speaker, target language, natural translation, pronunciation respelling]
-      ["Cajero", "¿En qué le puedo colaborar?", "How can I help you?", "en keh leh PWEH-doh koh-lah-boh-RAR"]
+      {
+        speaker: "Cajero",
+        target: "¿En qué le puedo colaborar?",
+        translation: "How can I help you?",
+        pronunciation: "en keh leh PWEH-doh koh-lah-boh-RAR",
+        literal: "In what can I collaborate for you?",   // optional
+        why: "Colombians say colaborar where other Spanishes say ayudar; it is warmer and less transactional."
+      }
     ],
-    vocabulary: [["term", "how it is used here"]],
+
+    vocabulary: [
+      {
+        term: "colaborar",
+        explanation: "To help — the standard Colombian service verb.",
+        literal: "to collaborate",
+        useWhen: "Offering or asking for help in any shop, bank or office.",
+        avoidWhen: "Talking about joint work on a project; there it means literal collaboration.",
+        register: "polite",
+        region: "General Colombian",
+        related: ["ayudar", "servir"],
+        example: { target: "¿Me colabora con la dirección?", translation: "Could you help me with the address?" }
+      }
+    ],
+
     note: "The Colombian context that makes this phrasing work.",
+
+    culture: [{ label: "Why it is so formal", body: "..." }],
+    pitfalls: [{ mistake: "...", whyItFails: "...", sayInstead: "..." }],
+    variations: [{ form: "...", register: "casual", region: "Medellín", whenToUse: "..." }],
+
     prompt: "A meaning-in-context question",
     choices: ["...", "...", "..."],
-    answer: 0                     // index into choices
+    answer: 1,                    // index into choices
+    tests: "Whether you heard colaborar as an offer of help",  // optional
+
+    // Any number of further questions, same shape as prompt/choices/answer.
+    practiceExtra: [{ prompt: "...", choices: ["...", "...", "..."], answer: 2, tests: "..." }]
   },
   en: { /* the same shape, with English as the target language */ }
 }
@@ -134,8 +184,11 @@ Lessons live in [`data/lessons.js`](data/lessons.js) as plain objects — no bui
 House rules for content:
 
 - **Both directions, always.** A lesson without its `en` counterpart will fail CI.
-- **Never present a regional expression as universal.** Say where it is used and by whom.
-- **Teach the pragmatics, not just the words.** `usted` vs `tú` vs `vos` carries more meaning than most vocabulary does.
+- **Answer the five questions.** `setting` is where a learner works out who is speaking and why it is phrased this way. CI fails if any of the five is missing.
+- **Name the address form.** `usted` vs `tú` vs `vos` carries more meaning than most vocabulary does, so say which one is in play and what switching would signal.
+- **Never present a regional expression as universal.** Every vocabulary entry states its `region`. `vos` is paisa and Valle, not Colombian at large.
+- **Say what goes wrong.** A pitfall without `sayInstead` leaves the learner stuck, so all three fields are required.
+- **Do not make the right answer guessable.** CI fails if every correct answer sits at the same index, or if an answer stands out by length. Vary the position and match the distractors' length.
 - **Leave `review: "pending"`.** The lesson keeps inviting a native speaker to check it until one has.
 
 ## Tests
@@ -146,7 +199,7 @@ Content is validated by a dependency-free suite. Node 20+ only, nothing to insta
 node --test test/*.test.js
 ```
 
-It checks that every lesson teaches in both directions, that dialogue and vocabulary rows match the shape the renderers expect, that each practice question points at a real answer among distinct choices, that verb entries are complete and uniquely identified, that every review anchor resolves to a real string, and — the one that catches the most damage — that **every element `app.js` and `review-ui.js` look up actually exists in `index.html`**. CI runs the same command on every pull request.
+It checks that every lesson teaches in both directions, that every lesson answers who/what/when/where/why and names its address form, that dialogue and vocabulary rows match the shape the renderers expect, that pitfalls always say what to say instead, that each practice question points at a real answer among distinct choices — and that the right answer is not guessable from its position or its length — that verb entries are complete and uniquely identified, that every review anchor resolves to a real string, and — the one that catches the most damage — that **every element `app.js` and `review-ui.js` look up actually exists in `index.html`**. CI runs the same command on every pull request.
 
 > Pass the glob, not the bare directory. Node 22 and newer resolve `node --test test/` as a *module* path and fail with `Cannot find module`; `test/*.test.js` works on every version.
 
@@ -160,7 +213,7 @@ Review happens at two grains, and both need a reviewer who knows the language, n
 
 ### Flag a line from the page
 
-The fastest correction is the one made while looking at the mistake. Add `?review=1` to the URL — **[open the site in review mode](https://tree2juan.github.io/Parcero/?review=1)** — or press **Review mode** in the header. A **Flag** control appears on every reviewable block: each dialogue line, vocabulary entry, culture note, practice question, verb, connector, and mature-language entry.
+The fastest correction is the one made while looking at the mistake. Add `?review=1` to the URL — **[open the site in review mode](https://tree2juan.github.io/Parcero/?review=1)** — or press **Review mode** in the header. A **Flag** control appears on every reviewable block: each line of the situation, the address-form note, every dialogue line, vocabulary entry, context note, pitfall, variation, practice question, verb, connector, and mature-language entry.
 
 Flagging one asks what is wrong (not natural, wrong region, wrong register, mistranslation, misleading pronunciation, spelling, culture, risky, dated), how much it matters, and — the field that does the real work — **how you would say it instead**. Flags collect in your browser, so you can read a whole lesson and flag as you go. **Submit flags** then opens a prefilled GitHub issue containing both a readable report and a machine-readable payload. Copy-to-clipboard and download-JSON are offered as fallbacks, including when a batch is too large for a URL.
 
@@ -201,6 +254,7 @@ review.js           Review anchors: parse, resolve, validate, build issue payloa
 review-ui.js        Review mode: flag controls, the flag queue, issue export
 styles.css          Design system: light/dark tokens, layout, components
 data/lessons.js     The lessons
+data/lesson-schema.js  The lesson shape: defaults, normalisation, legacy tuples
 data/curriculum.js  200 verbs, fluency connectors, mature-language reference
 scripts/            Maintainer tools: triage flags back to the lines to edit
 assets/             Favicon, social card, roadmap diagram
