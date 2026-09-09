@@ -1,5 +1,5 @@
 name: Flag content for revision
-description: Flag specific lines, terms or notes that a native speaker would change. Raised from the page in review mode.
+description: Flag specific lines, terms or notes that a native speaker would change. Raised from the Report an error tab.
 title: "Native-speaker flags: "
 labels: ["content-review", "native-speaker-flag"]
 body:
@@ -9,8 +9,8 @@ body:
         This form is for **line-level** corrections — one word, one line, one note at a time.
 
         The easiest way to fill it in is from the site itself: open
-        [the app in review mode](https://tree2juan.github.io/Parcero/?review=1), press **Flag**
-        next to anything that reads wrong, then **Open a GitHub issue with these**. Everything below
+        [the app](https://tree2juan.github.io/Parcero/), go to the **Report an error** tab in any
+        lesson, pick what is wrong, then **Open a GitHub issue with these**. Everything below
         is filled in for you, including the machine-readable block at the end.
 
         Reviewing a whole lesson and signing it off instead? Use the
