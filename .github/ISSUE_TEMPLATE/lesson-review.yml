@@ -1,0 +1,94 @@
+name: Lesson review (Colombian Spanish / English)
+description: Sign off on one lesson, or flag wording that needs to change. No coding required.
+title: "Review: <lesson name>"
+labels: ["content-review"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reviewing. Open the site, pick the lesson from the lesson list, and answer below.
+        You do not need a code editor — a maintainer will apply your wording.
+        Answer only for the language you are a native or expert speaker of.
+
+  - type: dropdown
+    id: lesson
+    attributes:
+      label: Which lesson are you reviewing?
+      options:
+        - greeting-at-the-cafe — Coffee and a quick chat
+        - taxi-to-downtown — A ride downtown
+        - market-and-la-napa — At the market
+        - making-plans-parche — What's the plan?
+        - at-the-clinic — A doctor's appointment
+        - team-standup — The team stand-up
+        - seminar-discussion — In the seminar
+        - job-interview — The job interview
+    validations:
+      required: true
+
+  - type: dropdown
+    id: expertise
+    attributes:
+      label: You are reviewing as a
+      options:
+        - Native Colombian Spanish speaker
+        - Native or expert English speaker
+        - Language educator (either language)
+    validations:
+      required: true
+
+  - type: dropdown
+    id: verdict
+    attributes:
+      label: Overall verdict
+      options:
+        - Approve as written
+        - Approve with the small changes below
+        - Needs rework before publishing
+    validations:
+      required: true
+
+  - type: textarea
+    id: dialogue
+    attributes:
+      label: Does the dialogue sound like a real person?
+      description: Flag anything stiff, textbook-ish, or that a Colombian speaker would not actually say. Quote the line and give your version.
+      placeholder: |
+        Line: "¿Me lleva al centro?"
+        Suggested: fine as written in Bogotá and Medellín.
+    validations:
+      required: true
+
+  - type: textarea
+    id: regional
+    attributes:
+      label: Is the regional framing accurate?
+      description: Is anything presented as general Colombian usage that is really local (paisa, costeño, rolo, etc.), dated, or class-marked? Is anything presented as Colombian that is actually pan-Hispanic?
+    validations:
+      required: true
+
+  - type: textarea
+    id: register
+    attributes:
+      label: Is the register right for the situation?
+      description: usted / tú / vos choices, formality at a clinic or interview, and whether the politeness level matches the setting.
+
+  - type: textarea
+    id: pronunciation
+    attributes:
+      label: Is the pronunciation respelling helpful?
+      description: The respellings are approximations for learners, not IPA. Flag any that would mislead.
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Anything else
+      description: Cultural notes, the practice question, or anything that could embarrass a learner who repeats it.
+
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Confirmations
+      options:
+        - label: Nothing in this lesson would mislead or embarrass a learner who repeats it in Colombia.
+        - label: No regional expression is presented as universal Spanish (or universal English).
