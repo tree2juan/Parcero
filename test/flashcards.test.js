@@ -538,28 +538,127 @@ test("the card is reachable without a pointer", () => {
 });
 
 /*
+ * Blank out comments, strings, template literals and regex literals, leaving
+ * length and newlines intact so line numbers stay true.
+ *
+ * This is a character walk rather than a set of replace() calls on purpose. A
+ * regex stripper has no idea which construct it is inside, so it desynchronises
+ * and then reports confidently in both directions: "#deck-save" looks like a
+ * call to save(), and a comment naming render() looks like a call to render().
+ * Both of those were live false positives in the earlier version of this check.
+ */
+function codeOnly(src) {
+  const out = src.split("");
+  const hide = (i) => { if (out[i] !== "\n" && out[i] !== "\r") out[i] = " "; };
+  const AFTER = new Set(["", "(", ",", "=", ":", "[", "!", "&", "|", "?", "{", "}", ";", "+", "-", "*", "%", "^", "<", ">", "~"]);
+  const WORDS = new Set(["return", "typeof", "instanceof", "in", "of", "new", "delete", "void", "throw", "do", "else", "case"]);
+  let i = 0;
+  let prev = "";
+  let prevWord = "";
+
+  while (i < src.length) {
+    const c = src[i];
+    const d = src[i + 1];
+
+    if (c === "/" && d === "/") {
+      while (i < src.length && src[i] !== "\n") hide(i++);
+      continue;
+    }
+    if (c === "/" && d === "*") {
+      hide(i++); hide(i++);
+      while (i < src.length && !(src[i] === "*" && src[i + 1] === "/")) hide(i++);
+      hide(i++); hide(i++);
+      continue;
+    }
+    if (c === '"' || c === "'") {
+      hide(i++);
+      while (i < src.length && src[i] !== c) {
+        if (src[i] === "\\") hide(i++);
+        if (i < src.length) hide(i++);
+      }
+      hide(i++);
+      prev = "x"; prevWord = "";
+      continue;
+    }
+    if (c === "`") {
+      hide(i++);
+      let depth = 0;
+      while (i < src.length) {
+        if (src[i] === "\\") { hide(i++); hide(i++); continue; }
+        if (depth === 0 && src[i] === "`") break;
+        // ${ ... } holds real code, so it stays visible.
+        if (depth === 0 && src[i] === "$" && src[i + 1] === "{") { depth = 1; i += 2; continue; }
+        if (depth > 0) {
+          if (src[i] === "{") depth++;
+          else if (src[i] === "}") { depth--; i++; continue; }
+          i++;
+          continue;
+        }
+        hide(i++);
+      }
+      hide(i++);
+      prev = "x"; prevWord = "";
+      continue;
+    }
+    if (c === "/" && (AFTER.has(prev) || WORDS.has(prevWord))) {
+      hide(i++);
+      let inClass = false;
+      while (i < src.length && src[i] !== "\n") {
+        if (src[i] === "\\") { hide(i++); hide(i++); continue; }
+        if (src[i] === "[") inClass = true;
+        else if (src[i] === "]") inClass = false;
+        else if (src[i] === "/" && !inClass) break;
+        hide(i++);
+      }
+      hide(i++);
+      while (i < src.length && /[a-z]/.test(src[i])) hide(i++);
+      prev = "x"; prevWord = "";
+      continue;
+    }
+
+    if (!/\s/.test(c)) {
+      if (/[\w$]/.test(c)) {
+        let j = i;
+        while (j < src.length && /[\w$]/.test(src[j])) j++;
+        prevWord = src.slice(i, j);
+        prev = src[j - 1];
+        i = j;
+        continue;
+      }
+      prev = c;
+      prevWord = "";
+    }
+    i++;
+  }
+  return out.join("");
+}
+
+/*
  * The collision this cannot be left to catch itself.
  *
  * flashcards.js runs as an IIFE in a page that has already defined globals in
- * app.js, review.js and review-ui.js. Calling a name it does not define — say
- * render(), which flashcards.js has no such thing of — silently reaches
+ * app.js, review.js and review-ui.js. Reaching a name it does not define — say
+ * render(), which flashcards.js has no such thing of — silently lands on
  * app.js's global instead. The flashcard does nothing and an unrelated section
- * re-renders, with no error at all on today's content.
+ * re-renders, with no error at all on today's content. That shipped once.
  *
  * node --test cannot see this: require() hands every module its own scope, so
  * the two names never meet. This reads the scripts as the page loads them.
+ *
+ * It looks at every reference, not just calls: `setTimeout(render, 0)` and a
+ * bare read of `state` reach another script's global just as surely as
+ * `render()` does, and an earlier version of this check missed both.
+ *
+ * Known limit: a class method named after another script's global would be
+ * reported, since this does not track class bodies. flashcards.js has no
+ * classes; add the name to `mine` if that changes.
  */
-test("flashcards.js calls its own functions, not another script's globals", () => {
-  const source = read("flashcards.js");
+test("flashcards.js reaches a name only if it owns it", () => {
+  const source = codeOnly(read("flashcards.js"));
 
   const topLevel = (text) => new Set(
     [...text.matchAll(/^(?:function|const|let|var)\s+([A-Za-z_$][\w$]*)/gm)].map((m) => m[1])
   );
-
-  const mine = new Set([
-    ...[...source.matchAll(/function\s+([A-Za-z_$][\w$]*)/g)].map((m) => m[1]),
-    ...[...source.matchAll(/(?:const|let|var)\s+([A-Za-z_$][\w$]*)/g)].map((m) => m[1])
-  ]);
 
   // Data files are shared on purpose; the page has no other way to reach them.
   const shared = new Set([
@@ -570,19 +669,36 @@ test("flashcards.js calls its own functions, not another script's globals", () =
 
   const theirs = new Set();
   for (const file of ["app.js", "review.js", "review-ui.js", "i18n.js"]) {
-    for (const name of topLevel(read(file))) if (!shared.has(name)) theirs.add(name);
+    for (const name of topLevel(codeOnly(read(file)))) if (!shared.has(name)) theirs.add(name);
   }
 
-  // A bare call only. `window.ParceroI18n.tPlural(...)` reaches a property, not a global.
-  const called = new Set(
-    [...source.matchAll(/(?<![.\w$])([A-Za-z_$][\w$]*)\s*\(/g)].map((m) => m[1])
-  );
-  const collisions = [...called].filter((name) => theirs.has(name) && !mine.has(name));
+  // Every name flashcards.js binds: declarations, parameters, destructuring, arrows.
+  const mine = new Set();
+  const bind = (name) => { if (/^[A-Za-z_$][\w$]*$/.test(name)) mine.add(name); };
+  for (const m of source.matchAll(/(?:function|const|let|var|class)\s+([A-Za-z_$][\w$]*)/g)) bind(m[1]);
+  for (const m of source.matchAll(/([A-Za-z_$][\w$]*)\s*=>/g)) bind(m[1]);
+  for (const m of source.matchAll(/\(([^()]*)\)\s*(?:=>|\{)/g)) {
+    for (const part of m[1].split(",")) bind(part.trim().replace(/[=[\]{}.]/g, " ").trim().split(/\s+/)[0]);
+  }
+  for (const m of source.matchAll(/(?:const|let|var)\s*[[{]([^\]}]*)[\]}]/g)) {
+    for (const part of m[1].split(",")) bind(part.trim().split(":").pop().trim().split("=")[0].trim());
+  }
 
+  const reached = new Map();
+  for (const m of source.matchAll(/(?<![.\w$?])([A-Za-z_$][\w$]*)/g)) {
+    const name = m[1];
+    if (source[m.index + name.length] === ":") continue; // an object key, not a reference
+    if (!theirs.has(name) || mine.has(name)) continue;
+    const line = source.slice(0, m.index).split("\n").length;
+    if (!reached.has(name)) reached.set(name, []);
+    reached.get(name).push(line);
+  }
+
+  const collisions = [...reached].map(([name, lines]) => `${name} (line ${lines.join(", ")})`);
   assert.deepStrictEqual(
     collisions,
     [],
-    `flashcards.js calls ${collisions.join(", ")}, which belongs to another script on the page`
+    `flashcards.js reaches ${collisions.join("; ")}, which belongs to another script on the page`
   );
 });
 
