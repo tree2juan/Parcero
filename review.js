@@ -37,6 +37,17 @@ const ParceroReview = (function () {
   const FLUENCY_SLOTS = ["phrase", "meaning", "type", "region", "note"];
   const MATURE_SLOTS = ["phrase", "equivalent", "severity", "note"];
 
+  /* Read a row by slot name. Rows are tuples today, but a row that arrives as a
+     named object still resolves, because a positional read of one returns
+     undefined without throwing — which would empty the part picker in silence. */
+  function rowSlot(row, slots, slot) {
+    const index = slots.indexOf(slot);
+    if (index === -1) return { value: undefined, path: "" };
+    return Array.isArray(row)
+      ? { value: row[index], path: `[${index}]` }
+      : { value: row[slot], path: `.${slot}` };
+  }
+
   const ISSUE_TYPES = [
     ["not-natural", "No one really says it this way"],
     ["regional", "Wrong region — this is not general Colombian usage"],
@@ -282,13 +293,16 @@ const ParceroReview = (function () {
       const row = rows[parsed.index];
       if (!row) return { anchor, ok: false, reason: `lesson "${parsed.id}" has no ${parsed.field} entry ${parsed.index + 1}` };
       const slots = parsed.field === "dialogue" ? DIALOGUE_SLOTS : VOCABULARY_SLOTS;
-      const slotIndex = slots.indexOf(parsed.slot);
+      const cell = rowSlot(row, slots, parsed.slot);
+      if (cell.value === undefined) {
+        return { anchor, ok: false, reason: `lesson "${parsed.id}" ${parsed.field} entry ${parsed.index + 1} has no "${parsed.slot}"` };
+      }
       const slotLabel = lessonSlotLabel(parsed.field, parsed.slot, parsed.direction);
       const rowLabel = parsed.field === "dialogue" ? `Dialogue line ${parsed.index + 1}` : `Vocabulary entry ${parsed.index + 1}`;
       return {
         anchor, ok: true, kind: "lesson", source: "data/lessons.js",
-        path: `${base}.${parsed.field}[${parsed.index}][${slotIndex}]`,
-        text: row[slotIndex], slotLabel, label: `${where} · ${rowLabel} · ${slotLabel}`,
+        path: `${base}.${parsed.field}[${parsed.index}]${cell.path}`,
+        text: cell.value, slotLabel, label: `${where} · ${rowLabel} · ${slotLabel}`,
         lang: slotLanguage("lesson", parsed.field, parsed.slot, parsed.direction)
       };
     }
@@ -318,16 +332,19 @@ const ParceroReview = (function () {
     const row = list[parsed.index];
     if (!row) return { anchor, ok: false, reason: `${listName} has no entry ${parsed.index + 1}` };
     const slots = parsed.kind === "fluency" ? FLUENCY_SLOTS : MATURE_SLOTS;
-    const slotIndex = slots.indexOf(parsed.slot);
+    const cell = rowSlot(row, slots, parsed.slot);
+    if (cell.value === undefined) {
+      return { anchor, ok: false, reason: `${listName} entry ${parsed.index + 1} has no "${parsed.slot}"` };
+    }
     const slotLabels = parsed.kind === "fluency"
       ? { phrase: "Phrase", meaning: "Meaning", type: "Type label", region: "Region label", note: "Usage note" }
       : { phrase: "Phrase", equivalent: "Equivalent", severity: "Severity label", note: "Safety note" };
     const family = parsed.kind === "fluency" ? "Fluency reference" : "Mature-language reference";
     return {
       anchor, ok: true, kind: parsed.kind, source: "data/curriculum.js",
-      path: `${listName}[${parsed.index}][${slotIndex}]`,
-      text: row[slotIndex], slotLabel: slotLabels[parsed.slot],
-      label: `${family} “${row[0]}” · ${slotLabels[parsed.slot]}`, lang: null
+      path: `${listName}[${parsed.index}]${cell.path}`,
+      text: cell.value, slotLabel: slotLabels[parsed.slot],
+      label: `${family} “${rowSlot(row, slots, slots[0]).value}” · ${slotLabels[parsed.slot]}`, lang: null
     };
   }
 

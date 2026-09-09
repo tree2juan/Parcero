@@ -9,6 +9,8 @@ const test = require("node:test");
 const assert = require("node:assert");
 const fs = require("node:fs");
 const path = require("node:path");
+const vm = require("node:vm");
+const review = require("../review.js");
 
 const root = path.join(__dirname, "..");
 const read = (file) => fs.readFileSync(path.join(root, file), "utf8");
@@ -137,4 +139,62 @@ test("the tab rebuilds when what it describes changes", () => {
   }
   assert.match(ui, /input\[name=direction\][\s\S]{0,160}renderPanel\(\)/,
     "changing direction must rebuild the panel");
+});
+
+/*
+ * The panel is only useful if it can name the part you are reporting on, and it
+ * gets those parts from review.js. A resolver that returns nothing empties the
+ * part picker without raising anything, so these two tests guard the seam.
+ */
+const bundle = `${read("data/lessons.js")}\n${read("data/curriculum.js")}\n({ lessons, curriculum, fluencyItems, matureItems });`;
+const content = vm.runInNewContext(bundle, {}, { filename: "parcero-data-bundle.js" });
+
+// The same rows, stored as named objects rather than tuples.
+function asNamedObjects(data) {
+  const name = (row, keys) => Object.fromEntries(keys.map((key, i) => [key, row[i]]));
+  const lessons = JSON.parse(JSON.stringify(data.lessons));
+  for (const lesson of lessons) {
+    for (const direction of review.DIRECTIONS) {
+      lesson[direction].dialogue = lesson[direction].dialogue.map((row) => name(row, review.DIALOGUE_SLOTS));
+      lesson[direction].vocabulary = lesson[direction].vocabulary.map((row) => name(row, review.VOCABULARY_SLOTS));
+    }
+  }
+  return { ...data, lessons };
+}
+
+test("a row is read by name, so storing it differently cannot empty the picker", () => {
+  const named = asNamedObjects(content);
+  const anchors = review.listAnchors(content);
+  assert.ok(anchors.length > 0, "there must be anchors to check");
+
+  for (const anchor of anchors) {
+    const fromTuple = review.resolveAnchor(anchor, content);
+    const fromObject = review.resolveAnchor(anchor, named);
+    assert.equal(fromObject.ok, fromTuple.ok, `${anchor} resolves differently once rows are named`);
+    assert.equal(fromObject.text, fromTuple.text, `${anchor} yields different text once rows are named`);
+  }
+
+  // The observable symptom this protects: the part picker going quietly empty.
+  const lesson = content.lessons[0].id;
+  for (const [field, expected] of [["dialogue", review.DIALOGUE_SLOTS.length], ["vocabulary", review.VOCABULARY_SLOTS.length]]) {
+    const parts = review.partsForAnchor(`lesson:${lesson}/es/${field}/0`, named);
+    assert.equal(parts.length, expected, `${field} must still offer every part when rows are named objects`);
+  }
+});
+
+test("a part that cannot be found is reported missing rather than resolved empty", () => {
+  // ok:true with no text is the dangerous answer: callers believe it, and the
+  // reviewer is shown a blank quote instead of an error.
+  const lesson = content.lessons[0].id;
+  const gutted = JSON.parse(JSON.stringify(content));
+  gutted.lessons.find((entry) => entry.id === lesson).es.dialogue[0] = { speaker: "Camila" };
+
+  const resolved = review.resolveAnchor(`lesson:${lesson}/es/dialogue/0/target`, gutted);
+  assert.equal(resolved.ok, false, "a missing part must not resolve");
+  assert.match(resolved.reason, /target/, "the reason must name the part that is missing");
+
+  const fluency = JSON.parse(JSON.stringify(content));
+  fluency.fluencyItems[0] = ["Bueno…"];
+  assert.equal(review.resolveAnchor("fluency:0/note", fluency).ok, false,
+    "the same rule must hold for the reference lists, not just lessons");
 });
