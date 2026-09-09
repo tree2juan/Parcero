@@ -65,7 +65,7 @@ function flashcardSentenceCase(value) {
  */
 function flashcardSlot(row, name, index) {
   if (!row) return "";
-  const value = Array.isArray(row) ? row[index] : row[name];
+  const value = Array.isArray(row) ? (index == null ? undefined : row[index]) : row[name];
   return value == null ? "" : String(value);
 }
 
@@ -82,10 +82,15 @@ function flashcardQuestions(content) {
 }
 
 /*
- * One lesson becomes a topic: its vocabulary, what each line means, how each
- * line sounds, the context note, and the practice question. Cards are ordered
- * by kind so that splitting a lesson keeps the same line's meaning and
- * pronunciation cards out of the same set.
+ * One lesson becomes a topic: its vocabulary and how each word is used, what
+ * each line means, how each line sounds, the context and culture notes, the
+ * mistakes worth avoiding, the ways the same thing can be said, and the
+ * practice questions. Cards are ordered by kind so that splitting a lesson
+ * keeps the same line's meaning and pronunciation cards out of the same set.
+ *
+ * Every kind past the first few reads a field that older lessons do not carry.
+ * A lesson without them simply produces fewer cards; a lesson with them needs
+ * no edit here.
  */
 function flashcardsFromLesson(lesson, direction) {
   const content = lesson && lesson[direction];
@@ -143,6 +148,39 @@ function flashcardsFromLesson(lesson, direction) {
     });
   });
 
+  (content.vocabulary || []).forEach((entry, index) => {
+    const example = entry && !Array.isArray(entry) ? entry.example : null;
+    const sentence = flashcardSlot(example, "target", 0);
+    const meaning = flashcardSlot(example, "translation", 1);
+    if (!sentence || !meaning) return;
+    cards.push({
+      id: `${key}/example/${index}`,
+      kind: "example",
+      askKey: "deck.ask.example",
+      front: sentence,
+      frontLang: target,
+      back: meaning,
+      backLang: support,
+      note: flashcardSlot(entry, "term", 0) || null
+    });
+  });
+
+  (content.vocabulary || []).forEach((entry, index) => {
+    const term = flashcardSlot(entry, "term", 0);
+    const region = flashcardSlot(entry, "region");
+    if (!term || !region) return;
+    cards.push({
+      id: `${key}/region/${index}`,
+      kind: "region",
+      askKey: "deck.ask.region",
+      front: term,
+      frontLang: target,
+      back: region,
+      backLang: null,
+      note: flashcardSlot(entry, "register") || null
+    });
+  });
+
   if (content.situation && content.note) {
     cards.push({
       id: `${key}/context`,
@@ -155,6 +193,78 @@ function flashcardsFromLesson(lesson, direction) {
       note: null
     });
   }
+
+  /*
+   * Who the speakers are to each other is what decides tú, usted or vos, so
+   * the relationship is the cue rather than the scene. The scene is already
+   * the front of the context card, and one prompt with two right answers is
+   * not a flashcard.
+   */
+  const address = content.address;
+  const addressForm = flashcardSlot(address, "form");
+  const addressCue = flashcardSlot(content.setting, "who") || content.situation;
+  if (addressForm && addressCue) {
+    cards.push({
+      id: `${key}/address`,
+      kind: "address",
+      askKey: "deck.ask.address",
+      front: addressCue,
+      frontLang: null,
+      back: addressForm,
+      backLang: null,
+      note: flashcardSlot(address, "why") || null
+    });
+  }
+
+  (content.culture || []).forEach((entry, index) => {
+    const label = flashcardSlot(entry, "label", 0);
+    const body = flashcardSlot(entry, "body", 1);
+    if (!label || !body) return;
+    cards.push({
+      id: `${key}/culture/${index}`,
+      kind: "culture",
+      askKey: "deck.ask.culture",
+      front: label,
+      frontLang: null,
+      back: body,
+      backLang: null,
+      note: null
+    });
+  });
+
+  (content.pitfalls || []).forEach((entry, index) => {
+    const mistake = flashcardSlot(entry, "mistake", 0);
+    const sayInstead = flashcardSlot(entry, "sayInstead", 2);
+    if (!mistake || !sayInstead) return;
+    cards.push({
+      id: `${key}/pitfall/${index}`,
+      kind: "pitfall",
+      askKey: "deck.ask.pitfall",
+      front: mistake,
+      frontLang: null,
+      back: sayInstead,
+      backLang: target,
+      note: flashcardSlot(entry, "whyItFails", 1) || null
+    });
+  });
+
+  (content.variations || []).forEach((entry, index) => {
+    const whenToUse = flashcardSlot(entry, "whenToUse", 3);
+    const form = flashcardSlot(entry, "form", 0);
+    if (!whenToUse || !form) return;
+    const register = flashcardSlot(entry, "register", 1);
+    const region = flashcardSlot(entry, "region", 2);
+    cards.push({
+      id: `${key}/variation/${index}`,
+      kind: "variation",
+      askKey: "deck.ask.variation",
+      front: whenToUse,
+      frontLang: null,
+      back: form,
+      backLang: target,
+      note: [register, region].filter(Boolean).join(" · ") || null
+    });
+  });
 
   flashcardQuestions(content).forEach((question, index) => {
     const answer = (question.choices || [])[question.answer];

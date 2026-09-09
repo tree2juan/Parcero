@@ -143,16 +143,32 @@ test("every lesson, verb level and the fluency list becomes a topic", () => {
   assert.ok(topics.some((topic) => topic.id === "fluency"), "the fluency list should be drillable");
 });
 
+/*
+ * Read a lesson row the way a reader of the data would, tolerating both the
+ * positional tuples and the named objects. Deliberately a second, independent
+ * implementation rather than the derivation's own accessor: a test that reads
+ * rows through the code it is checking cannot fail when that code is wrong.
+ */
+function field(row, name, index) {
+  if (Array.isArray(row)) return index == null ? undefined : row[index];
+  return row[name];
+}
+
 test("lesson cards are drawn from the lesson, not written separately", () => {
   const lesson = lessons[0];
   const topic = flashcardTopics("es", sources).find((item) => item.id === `lesson-${lesson.id}`);
   const backs = topic.cards.map((card) => card.back);
   const fronts = topic.cards.map((card) => card.front);
-  for (const [term, meaning] of lesson.es.vocabulary) {
+  for (const row of lesson.es.vocabulary) {
+    const term = field(row, "term", 0);
+    const meaning = field(row, "explanation", 1);
     assert.ok(fronts.includes(term), `vocabulary "${term}" is missing from the deck`);
     assert.ok(backs.includes(meaning), `the explanation of "${term}" is missing from the deck`);
   }
-  for (const [, line, translation, pronunciation] of lesson.es.dialogue) {
+  for (const row of lesson.es.dialogue) {
+    const line = field(row, "target", 1);
+    const translation = field(row, "translation", 2);
+    const pronunciation = field(row, "pronunciation", 3);
     assert.ok(fronts.includes(line), `dialogue line "${line}" is missing from the deck`);
     assert.ok(backs.includes(translation), "a dialogue translation is missing from the deck");
     assert.ok(backs.includes(pronunciation), "a pronunciation respelling is missing from the deck");
@@ -201,6 +217,10 @@ test("new content flows into the decks with no edit here", () => {
  * becomes an object — it throws, because objects are not iterable — so this
  * asserts equivalence rather than merely that nothing crashed. A row read
  * positionally anywhere in the derivation fails here.
+ *
+ * Equivalence is over the fields a tuple can express. The object rows also
+ * carry fields with no tuple slot, which are deliberately included here to
+ * prove that a field feeding no card changes nothing.
  */
 test("a lesson reads the same whether its rows are tuples or named objects", () => {
   const asTuples = {
@@ -232,10 +252,7 @@ test("a lesson reads the same whether its rows are tuples or named objects", () 
     explanation: "friend, mate",
     literal: "partner",
     useWhen: "Talking to a friend.",
-    register: "casual",
-    region: "General Colombian",
-    related: ["parce"],
-    example: { target: "¿Todo bien, parcero?", translation: "All good, mate?" }
+    related: ["parce"]
   }];
 
   const fromTuples = flashcardsFromLesson(asTuples, "es");
@@ -252,9 +269,9 @@ test("a lesson reads the same whether its rows are tuples or named objects", () 
 test("extra practice questions become cards without an edit here", () => {
   const lesson = JSON.parse(JSON.stringify(lessons[0]));
   const before = flashcardsFromLesson(lesson, "es").filter((card) => card.kind === "practice");
-  lesson.es.practiceExtra = [
+  lesson.es.practiceExtra = (lesson.es.practiceExtra || []).concat([
     { prompt: "¿Una pregunta añadida?", choices: ["no", "sí"], answer: 1, tests: "extras become cards" }
-  ];
+  ]);
   const after = flashcardsFromLesson(lesson, "es").filter((card) => card.kind === "practice");
 
   assert.strictEqual(after.length, before.length + 1, "an added question should add a card");
@@ -263,6 +280,128 @@ test("extra practice questions become cards without an edit here", () => {
     duplicates(after.map((card) => card.id)),
     [],
     "extra practice cards need their own ids"
+  );
+});
+
+/*
+ * Kinds that current content happens not to produce are still shipped strings.
+ * Deriving the checked list from real content cannot see them, so the list is
+ * read out of the derivation itself: a kind added without wording fails here
+ * rather than reaching a reader as a raw key.
+ */
+test("every card kind the derivation can emit is named and asked in both languages", () => {
+  const { UI_STRINGS } = require(path.join(root, "i18n.js"));
+  const source = read("data/flashcards.js");
+  const kinds = [...new Set([...source.matchAll(/\bkind:\s*"([\w-]+)"/g)].map((match) => match[1]))];
+  const askKeys = [...new Set([...source.matchAll(/\baskKey:\s*"(deck\.[\w.]+)"/g)].map((match) => match[1]))];
+  const ui = read("flashcards.js");
+  const labels = ui.slice(ui.indexOf("const KIND_LABELS"), ui.indexOf("const FALLBACK"));
+
+  assert.ok(kinds.length > 0, "the derivation should emit at least one kind");
+  const missing = [];
+  for (const language of ["en", "es"]) {
+    for (const kind of kinds) {
+      if (UI_STRINGS[language][`deck.kind.${kind}`] === undefined) missing.push(`${language}: deck.kind.${kind}`);
+    }
+    for (const key of askKeys) {
+      if (UI_STRINGS[language][key] === undefined) missing.push(`${language}: ${key}`);
+    }
+  }
+  assert.deepStrictEqual(missing, [], "card kinds the string tables do not cover");
+
+  for (const kind of kinds) {
+    assert.match(labels, new RegExp(`\\b${kind}:\\s*"`), `${kind} has no English fallback label`);
+  }
+});
+
+/*
+ * The richer lesson fields are optional, so a lesson without them produces
+ * fewer cards rather than failing. That is right, and it is also how a renamed
+ * field would look: cards quietly stop being made and nothing complains. This
+ * pins each field name to the card it feeds, so a shape change is loud.
+ */
+test("a lesson carrying the richer fields produces a card of every kind", () => {
+  const rich = {
+    id: "rich-shape",
+    level: "Starter · Rich",
+    es: {
+      title: "Lección rica",
+      situation: "Una situación de prueba.",
+      note: "Una nota de contexto.",
+      setting: { who: "Dos vecinos que se ven a diario.", what: "Un saludo.", when: "Por la mañana.", where: "La tienda.", why: "Cortesía." },
+      address: { form: "tú", who: "Vecinos.", why: "Es el trato normal entre vecinos.", ifYouSwitch: "Usted marca distancia." },
+      dialogue: [{ speaker: "Ana", target: "¿Cómo vas?", translation: "How's it going?", pronunciation: "KOH-moh vahs", literal: "How you go?", why: "Saludo corriente." }],
+      vocabulary: [{
+        term: "parcero",
+        explanation: "friend, mate",
+        literal: "partner",
+        useWhen: "Con amigos.",
+        avoidWhen: "En una entrevista.",
+        register: "casual",
+        region: "General Colombian.",
+        related: ["parce"],
+        example: { target: "¿Todo bien, parcero?", translation: "All good, mate?" }
+      }],
+      culture: [{ label: "El diminutivo es cortesía", body: "Añadir -ito suaviza la frase, no encoge la cosa." }],
+      pitfalls: [{ mistake: "Saying “un café” and expecting a tinto", whyItFails: "It is vague in a tienda.", sayInstead: "¿Me regalas un tinto?" }],
+      variations: [{ form: "¿Me regala un tinto?", register: "polite (usted)", region: "General", whenToUse: "With someone much older." }],
+      prompt: "¿Qué significa “parcero”?",
+      choices: ["a stranger", "a friend", "a coffee"],
+      answer: 1
+    }
+  };
+
+  const cards = flashcardsFromLesson(rich, "es");
+  const byKind = new Map(cards.map((card) => [card.kind, card]));
+
+  for (const kind of ["vocabulary", "meaning", "pronunciation", "example", "region", "context", "address", "culture", "pitfall", "variation", "practice"]) {
+    assert.ok(byKind.has(kind), `the rich lesson should produce a ${kind} card`);
+  }
+
+  // Each new kind reads the field it is meant to read, front and back.
+  assert.strictEqual(byKind.get("example").front, "¿Todo bien, parcero?");
+  assert.strictEqual(byKind.get("example").back, "All good, mate?");
+  assert.strictEqual(byKind.get("region").front, "parcero");
+  assert.strictEqual(byKind.get("region").back, "General Colombian.");
+  assert.strictEqual(byKind.get("pitfall").back, "¿Me regalas un tinto?");
+  assert.strictEqual(byKind.get("pitfall").note, "It is vague in a tienda.");
+  assert.strictEqual(byKind.get("variation").back, "¿Me regala un tinto?");
+  assert.strictEqual(byKind.get("culture").back, "Añadir -ito suaviza la frase, no encoge la cosa.");
+  assert.strictEqual(byKind.get("address").back, "tú");
+
+  // The address card is cued by the relationship, not the scene, so it does not
+  // ask the same question the context card already asks.
+  assert.strictEqual(byKind.get("address").front, "Dos vecinos que se ven a diario.");
+  assert.notStrictEqual(byKind.get("address").front, byKind.get("context").front);
+
+  assert.deepStrictEqual(duplicates(cards.map((card) => card.id)), [], "rich cards need unique ids");
+  for (const card of cards) {
+    assert.ok(isText(card.front) && isText(card.back), `${card.kind} card is incomplete`);
+    assert.notStrictEqual(card.front, card.back, `${card.kind} card answers itself`);
+  }
+});
+
+test("a lesson without the richer fields still builds, and adds no empty cards", () => {
+  const plain = {
+    id: "plain-shape",
+    level: "Starter · Plain",
+    es: {
+      title: "Lección sencilla",
+      situation: "Una situación.",
+      note: "Una nota.",
+      dialogue: [["Ana", "¿Cómo vas?", "How's it going?", "KOH-moh vahs"]],
+      vocabulary: [["parcero", "friend, mate"]],
+      prompt: "¿Qué significa “parcero”?",
+      choices: ["a stranger", "a friend"],
+      answer: 1
+    }
+  };
+
+  const kinds = new Set(flashcardsFromLesson(plain, "es").map((card) => card.kind));
+  assert.deepStrictEqual(
+    [...kinds].sort(),
+    ["context", "meaning", "practice", "pronunciation", "vocabulary"],
+    "a lesson without the richer fields should produce only the older kinds"
   );
 });
 

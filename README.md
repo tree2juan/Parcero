@@ -100,15 +100,38 @@ There is no flashcard content file. `data/flashcards.js` reads the same `lessons
 
 | Group | Topic | Cards from |
 | --- | --- | --- |
-| **Situations** | one per lesson | vocabulary, meaning-in-context, pronunciation, culture notes, the practice question |
+| **Situations** | one per lesson | vocabulary, meaning-in-context, pronunciation, worked examples, region and register, culture notes, common mistakes, phrasing variations, the form of address, the practice questions |
 | **Verbs** | one per level (foundation, independent, extension) | each verb, asked in the productive direction |
 | **Fluency** | one | connectors and softeners, asked in the productive direction |
 
 So adding a lesson to `data/lessons.js` adds a flashcard topic. Adding verbs adds cards to the matching level. Nothing has to be written twice, and no card can drift out of sync with the lesson it came from. The decks follow the language direction toggle, and switching direction keeps your place in the set.
 
+### Reading richer lessons without a second code path
+
+Lesson rows are moving from positional tuples (`[speaker, line, translation]`) to named objects carrying much more per entry. `data/flashcards.js` reads every row through one shape-tolerant accessor, so both shapes produce identical cards for the fields they share, and the richer fields simply add more.
+
+This matters more than it sounds. Destructuring an object throws outright, so reading a row positionally does not degrade as the data grows — it takes the whole section down. A test asserts that a lesson written both ways yields the same cards, rather than merely that nothing crashed, and a second test pins each rich field to the card it feeds, so a renamed field is a failure rather than a card that quietly stops being generated.
+
+The card kinds a lesson can yield:
+
+| Kind | Front | Back |
+| --- | --- | --- |
+| `vocabulary` / `meaning` | a term, or its explanation | the other one |
+| `pronunciation` | a line of dialogue | how to say it |
+| `example` | the phrase in use | what it means |
+| `region` | a term | where it is said, and how formal |
+| `context` | the situation | the culture note |
+| `address` | who you are speaking to | *usted*, *tú* or *vos*, and why |
+| `culture` | a cultural point | what to know about it |
+| `pitfall` | a mistake learners make | what to say instead |
+| `variation` | when you would use it | the phrasing that fits |
+| `practice` | a practice question | its answer |
+
+A kind that current content happens not to produce is still checked for wording, because the checked list is read out of the derivation itself rather than from the cards it currently emits.
+
 The surrounding interface follows the direction too. `data/flashcards.js` emits i18n keys rather than sentences — `deck.ask.pronunciation`, not `"How would you say this out loud?"` — and `flashcards.js` resolves them through `i18n.js` at paint time, so the prompts, controls and screen-reader announcements are in the learner's own language. A test derives the key list from the real content, so a new verb level that nobody has translated yet is caught rather than shipped.
 
-Sets are split evenly rather than greedily, so a topic never ends in a stub round — 13 cards become 7 + 6, not 10 + 3. `FLASHCARD_SET_SIZE` in `data/flashcards.js` is the single knob for the target size.
+Sets are split evenly rather than greedily, so a topic never ends in a stub round — 13 cards become 7 + 6, not 10 + 3. `FLASHCARD_SET_SIZE` in `data/flashcards.js` is the single knob for the target size. Deck size scales with the lessons: the eight lessons here currently yield 314 cards across 38 sets, and richer lesson content raises that to 658 across 71 without a line of flashcard code changing.
 
 ## Placement and pathways
 

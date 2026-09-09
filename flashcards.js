@@ -33,7 +33,13 @@
     vocabulary: "Vocabulary",
     meaning: "Meaning",
     pronunciation: "Pronunciation",
+    example: "In use",
+    region: "Where it is said",
     context: "Context",
+    address: "Tú or usted",
+    culture: "Culture",
+    pitfall: "Pitfall",
+    variation: "Another way",
     practice: "In context",
     verb: "Verb",
     fluency: "Fluency"
