@@ -35,6 +35,7 @@
       </a>
       <nav class="site-nav" data-i18n-aria="nav.sections" aria-label="Sections">
         <a href="#lessons" data-i18n="nav.lessons">Lessons</a>
+        <a href="#flashcards" data-i18n="nav.flashcards">Flashcards</a>
         <a href="#placement" data-i18n="nav.placement">Placement</a>
         <a href="#library" data-i18n="nav.library">Library</a>
         <a class="nav-repo" href="https://github.com/tree2juan/Parcero" data-i18n="nav.github">GitHub</a>
@@ -113,16 +114,33 @@
               <span data-i18n="review.pendingLesson">No Colombian native speaker has signed this lesson off yet, so the regional wording may still change.</span>
               <button id="lesson-review-start" class="text-button" type="button" data-i18n="review.helpCheck">Help check this lesson</button>
             </p>
+            <p id="lesson-provenance" class="review-badge provenance-badge" hidden>
+              <span data-i18n="provenance.machine">The Spanish explanations in this lesson were machine-translated and have not yet been checked by a native speaker.</span>
+              <span id="lesson-provenance-count" class="provenance-count"></span>
+              <button id="lesson-provenance-start" class="text-button" type="button" data-i18n="provenance.helpCheck">Help check the translation</button>
+            </p>
           </div>
 
           <div class="tabs" role="tablist" data-i18n-aria="tabs.aria" aria-label="Lesson sections">
-            <button class="tab active" type="button" role="tab" aria-selected="true" aria-controls="dialogue-panel" id="dialogue-tab" data-panel="dialogue-panel" data-i18n="tab.dialogue">Dialogue</button>
+            <button class="tab active" type="button" role="tab" aria-selected="true" aria-controls="situation-panel" id="situation-tab" data-panel="situation-panel" data-i18n="tab.situation">The situation</button>
+            <button class="tab" type="button" role="tab" aria-selected="false" aria-controls="dialogue-panel" id="dialogue-tab" data-panel="dialogue-panel" data-i18n="tab.dialogue">Dialogue</button>
             <button class="tab" type="button" role="tab" aria-selected="false" aria-controls="understand-panel" id="understand-tab" data-panel="understand-panel" data-i18n="tab.understand">Understand</button>
             <button class="tab" type="button" role="tab" aria-selected="false" aria-controls="practice-panel" id="practice-tab" data-panel="practice-panel" data-i18n="tab.practice">Practice</button>
             <button class="tab" type="button" role="tab" aria-selected="false" aria-controls="report-panel" id="report-tab" data-panel="report-panel" data-i18n="tab.report">Report an error</button>
           </div>
 
-          <section id="dialogue-panel" class="tab-panel" role="tabpanel" aria-labelledby="dialogue-tab">
+          <section id="situation-panel" class="tab-panel" role="tabpanel" aria-labelledby="situation-tab">
+            <p class="panel-lead" data-i18n="situation.lead">Colombian Spanish is decided by the situation more than by the dictionary. Read who is speaking, and to whom, before you read what they say.</p>
+            <dl id="setting-list" class="setting-list"></dl>
+            <aside id="address-card" class="address-card" hidden>
+              <p class="eyebrow" data-i18n="address.eyebrow">How they address each other</p>
+              <p class="address-form"><strong id="address-form"></strong> <span id="address-who"></span></p>
+              <p id="address-why"></p>
+              <p class="address-switch"><strong data-i18n="address.ifYouSwitch">If you switch:</strong> <span id="address-switch"></span></p>
+            </aside>
+          </section>
+
+          <section id="dialogue-panel" class="tab-panel" role="tabpanel" aria-labelledby="dialogue-tab" hidden>
             <div id="dialogue" class="dialogue"></div>
             <button id="listen-dialogue" class="primary-button" type="button" data-i18n="action.listen">Listen to the target language</button>
             <p id="speech-status" class="assistive-text" aria-live="polite"></p>
@@ -134,13 +152,30 @@
               <p class="eyebrow" data-i18n="context.eyebrow">Colombian context</p>
               <p id="culture-note"></p>
             </aside>
+            <section id="culture-section" class="understand-block" hidden>
+              <h3 data-i18n="culture.title">What is going on underneath</h3>
+              <div id="culture-notes" class="culture-notes"></div>
+            </section>
+            <section id="pitfalls-section" class="understand-block" hidden>
+              <h3 data-i18n="pitfalls.title">What goes wrong</h3>
+              <div id="pitfalls" class="pitfalls"></div>
+            </section>
+            <section id="variations-section" class="understand-block" hidden>
+              <h3 data-i18n="variations.title">The same thing, said differently</h3>
+              <div id="variations" class="variations"></div>
+            </section>
           </section>
 
           <section id="practice-panel" class="tab-panel" role="tabpanel" aria-labelledby="practice-tab" hidden>
+            <p id="practice-progress" class="assistive-text" aria-live="polite"></p>
             <p id="practice-prompt" class="practice-prompt"></p>
+            <p id="practice-tests" class="practice-tests"></p>
             <div id="choices" class="choices"></div>
             <p id="practice-feedback" aria-live="polite"></p>
-            <button id="complete-lesson" class="primary-button" type="button">Mark lesson explored</button>
+            <div class="practice-actions">
+              <button id="practice-next" class="ghost-button" type="button" hidden data-i18n="practice.next">Next question</button>
+              <button id="complete-lesson" class="primary-button" type="button">Mark lesson explored</button>
+            </div>
           </section>
 
           <section id="report-panel" class="tab-panel report-panel" role="tabpanel" aria-labelledby="report-tab" hidden>
@@ -212,6 +247,58 @@
         </section>
       </section>
 
+      <section id="flashcards" class="flashcards" aria-labelledby="flashcards-title">
+        <div class="section-head">
+          <p class="eyebrow" data-i18n="deck.eyebrow">Flashcards</p>
+          <h2 id="flashcards-title" data-i18n="deck.title">Short sets, one area at a time.</h2>
+          <p class="section-lead" data-i18n="deck.lead">Every card is built from a lesson, a verb or a fluency phrase you have already met here. Swipe left when you knew it, right when you did not — the ones you miss come back around until they stick.</p>
+        </div>
+
+        <div class="deck-picker">
+          <label class="field" for="deck-topic"><span data-i18n="deck.topicLabel">Topic</span>
+            <select id="deck-topic"></select>
+          </label>
+          <label class="field" for="deck-set"><span data-i18n="deck.setLabel">Set</span>
+            <select id="deck-set"></select>
+          </label>
+        </div>
+
+        <div class="deck-status">
+          <div class="deck-status-head">
+            <strong id="deck-progress"></strong>
+            <span id="deck-tally" class="deck-tally"></span>
+          </div>
+          <div class="progress-track" aria-hidden="true"><div id="deck-bar"></div></div>
+        </div>
+
+        <div id="deck-stage" class="deck-stage">
+          <article id="deck-card" class="flashcard" role="button" tabindex="0" aria-describedby="deck-help"></article>
+          <section id="deck-summary" class="deck-summary" hidden aria-live="polite">
+            <p class="eyebrow" data-i18n="deck.summaryEyebrow">Set complete</p>
+            <h3 id="deck-summary-title" data-i18n="deck.summaryTitle">That set is done.</h3>
+            <p id="deck-summary-detail"></p>
+            <div class="deck-summary-actions">
+              <button id="deck-again" class="primary-button" type="button" data-i18n="deck.again">Go through it again</button>
+              <button id="deck-next" class="ghost-button" type="button" data-i18n="deck.next">Next set →</button>
+            </div>
+          </section>
+        </div>
+
+        <button id="deck-expand" class="deck-expand" type="button" hidden aria-expanded="false" aria-controls="deck-card-back" data-i18n="deck.readMore">Read the rest</button>
+
+        <div class="deck-actions">
+          <button id="deck-known" class="deck-verdict deck-known" type="button" data-i18n="deck.knownButton">← Knew it</button>
+          <button id="deck-flip" class="primary-button" type="button" data-i18n="deck.showAnswer">Show answer</button>
+          <button id="deck-review" class="deck-verdict deck-again" type="button" data-i18n="deck.reviewButton">Didn’t know it →</button>
+        </div>
+
+        <div class="deck-footer">
+          <p id="deck-help" class="deck-help" data-i18n="deck.help">Tap the card to show the answer. Swipe left if you knew it, right to send it back for review. Keyboard: space flips, ← and → answer.</p>
+          <button id="deck-reset" class="ghost-button" type="button" data-i18n="deck.reset">Reset this set</button>
+        </div>
+        <p id="deck-live" class="assistive-text" aria-live="polite"></p>
+      </section>
+
       <section id="placement" class="placement" aria-labelledby="placement-title">
         <div class="section-head">
           <p class="eyebrow" data-i18n="placement.eyebrow">Optional</p>
@@ -278,10 +365,14 @@
       <p class="footer-note" data-i18n="footer.note">Lessons no native speaker has signed off yet say so in place. Regional usage varies across Colombia; treat every note as a starting point for listening, not a rule — and if something reads wrong to you, flag it where you found it.</p>
     </footer>
 
+    <script src="data/lesson-schema.js"></script>
     <script src="data/lessons.js"></script>
+<script src="data/provenance.js"></script>
     <script src="data/curriculum.js"></script>
     <script src="i18n.js"></script>
+    <script src="data/flashcards.js"></script>
     <script src="app.js"></script>
+    <script src="flashcards.js"></script>
     <script src="review.js"></script>
     <script src="review-ui.js"></script>
   </body>

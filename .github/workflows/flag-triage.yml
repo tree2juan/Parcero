@@ -1,0 +1,151 @@
+name: Triage native-speaker flags
+
+# When a reviewer files a flag from the Report an error tab, resolve every
+# flagged anchor against the content as it stands right now and post the result
+# on the issue. A flag filed last month may describe a line that has since been
+# rewritten; saying so up front is the whole point of the triage script.
+
+on:
+  issues:
+    # `labeled` lets a maintainer trigger triage by applying the flag label to an
+    # issue filed by hand. The labels this workflow adds cannot retrigger it:
+    # events raised by the default GITHUB_TOKEN do not start new workflow runs.
+    types: [opened, edited, labeled]
+  workflow_dispatch:
+    inputs:
+      issue:
+        description: Issue number to re-triage
+        required: true
+        type: string
+
+permissions:
+  contents: read
+  issues: write
+
+concurrency:
+  group: flag-triage-${{ github.event.issue.number || inputs.issue }}
+  cancel-in-progress: true
+
+jobs:
+  triage:
+    # Only flags raised from the page carry a machine-readable block worth parsing.
+    if: >-
+      github.event_name == 'workflow_dispatch' ||
+      contains(github.event.issue.labels.*.name, 'native-speaker-flag')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Fetch the issue body
+        id: body
+        env:
+          GH_TOKEN: ${{ github.token }}
+          NUMBER: ${{ github.event.issue.number || inputs.issue }}
+          # Passed through the environment, never interpolated into the shell:
+          # an issue body is attacker-controlled text.
+          EVENT_BODY: ${{ github.event.issue.body }}
+        run: |
+          if [ -n "${EVENT_BODY:-}" ]; then
+            printf '%s' "$EVENT_BODY" > issue-body.md
+          else
+            gh issue view "$NUMBER" --repo "$GITHUB_REPOSITORY" --json body -q .body > issue-body.md
+          fi
+          echo "number=$NUMBER" >> "$GITHUB_OUTPUT"
+          wc -c < issue-body.md | xargs -I{} echo "Issue body: {} bytes"
+
+      - name: Triage the flags against current content
+        id: triage
+        run: |
+          set +e
+          node scripts/review-flags.js issue-body.md --format markdown > triage.md 2> triage-err.txt
+          echo "status=$?" >> "$GITHUB_OUTPUT"
+          set -e
+          echo "--- stdout ---"; cat triage.md
+          echo "--- stderr ---"; cat triage-err.txt
+
+      - name: Comment on the issue and label it
+        uses: actions/github-script@v7
+        env:
+          STATUS: ${{ steps.triage.outputs.status }}
+          NUMBER: ${{ steps.body.outputs.number }}
+        with:
+          script: |
+            const fs = require("fs");
+            const marker = "<!-- parcero-flag-triage -->";
+            const issue_number = Number(process.env.NUMBER);
+            const status = Number(process.env.STATUS);
+            const read = (f) => { try { return fs.readFileSync(f, "utf8").trim(); } catch { return ""; } };
+
+            const report = read("triage.md");
+            const errors = read("triage-err.txt");
+
+            // 0 = every flag resolves, 1 = something needs a human, 2 = no machine-readable block.
+            const outcome = {
+              0: {
+                label: "triage-ready",
+                drop: ["triage-needs-human", "triage-manual"],
+                body: report || "_No output._"
+              },
+              1: {
+                label: "triage-needs-human",
+                drop: ["triage-ready", "triage-manual"],
+                body: (report || "") + (errors ? `\n\n<details><summary>Details</summary>\n\n\`\`\`\n${errors}\n\`\`\`\n\n</details>` : "")
+              },
+              2: {
+                label: "triage-manual",
+                drop: ["triage-ready", "triage-needs-human"],
+                body: [
+                  "This flag has no machine-readable block, so it has not been resolved against the content automatically.",
+                  "",
+                  "That is fine — a flag described in your own words is still a valid flag, and a maintainer will read it.",
+                  "If you would like it resolved automatically next time, raising it from the **Report an error** tab on",
+                  "[the site](https://tree2juan.github.io/Parcero/) fills the block in for you.",
+                  errors ? `\n<details><summary>Details</summary>\n\n\`\`\`\n${errors}\n\`\`\`\n\n</details>` : ""
+                ].join("\n")
+              }
+            }[status] || {
+              label: "triage-needs-human",
+              drop: ["triage-ready", "triage-manual"],
+              body: `The triage script exited with status ${status}.\n\n\`\`\`\n${errors || "no output"}\n\`\`\``
+            };
+
+            const LIMIT = 60000;
+            const truncated = outcome.body.length > LIMIT
+              ? outcome.body.slice(0, LIMIT) + "\n\n_Output truncated. Run `node scripts/review-flags.js` locally for the full report._"
+              : outcome.body;
+            const body = `${marker}\n${truncated}`;
+
+            // Update the previous triage comment rather than adding one per edit.
+            const comments = await github.paginate(github.rest.issues.listComments, {
+              ...context.repo, issue_number, per_page: 100
+            });
+            const existing = comments.find((c) => c.body && c.body.includes(marker));
+            if (existing) {
+              await github.rest.issues.updateComment({ ...context.repo, comment_id: existing.id, body });
+            } else {
+              await github.rest.issues.createComment({ ...context.repo, issue_number, body });
+            }
+
+            const ensure = async (name, color, description) => {
+              try {
+                await github.rest.issues.createLabel({ ...context.repo, name, color, description });
+              } catch (error) {
+                if (error.status !== 422) throw error;
+              }
+            };
+            await ensure("triage-ready", "0e8a16", "Every flagged string still matches; ready to edit");
+            await ensure("triage-needs-human", "d93f0b", "A flagged string has moved or is malformed");
+            await ensure("triage-manual", "fbca04", "Filed without a machine-readable block");
+
+            await github.rest.issues.addLabels({ ...context.repo, issue_number, labels: [outcome.label] });
+            for (const name of outcome.drop) {
+              try {
+                await github.rest.issues.removeLabel({ ...context.repo, issue_number, name });
+              } catch (error) {
+                if (error.status !== 404) throw error;
+              }
+            }

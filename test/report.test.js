@@ -9,6 +9,7 @@ const test = require("node:test");
 const assert = require("node:assert");
 const fs = require("node:fs");
 const path = require("node:path");
+const vm = require("node:vm");
 
 const root = path.join(__dirname, "..");
 const read = (file) => fs.readFileSync(path.join(root, file), "utf8");
@@ -17,6 +18,12 @@ const html = read("index.html");
 const ui = read("review-ui.js");
 const css = read("styles.css");
 const { UI_STRINGS } = require("../i18n.js");
+const review = require("../review.js");
+const content = vm.runInNewContext(
+  `${read("data/lesson-schema.js")}\n${read("data/lessons.js")}\n${read("data/curriculum.js")}\n({ lessons, curriculum, fluencyItems, matureItems });`,
+  {},
+  { filename: "parcero-data-bundle.js" }
+);
 
 test("the reporting tab is wired to its panel", () => {
   const tab = html.match(/<button[^>]*id="report-tab"[^>]*>/)[0];
@@ -74,6 +81,36 @@ test("the picker reaches every kind of content a reviewer can see", () => {
       const key = `report.scope.${code}`;
       assert.ok(UI_STRINGS[language][key], `${key} is missing from the ${language} table`);
     }
+  }
+});
+
+test("every part of a lesson is reachable from the report picker", () => {
+  /*
+   * The picker used to hold a hand-written array of anchor families — heading,
+   * dialogue rows, vocabulary rows, note, prompt, choices. That list was right
+   * when it was written and silently wrong the moment lessons grew a situation,
+   * culture notes, pitfalls, variations and extra practice questions: a reviewer
+   * could read those on the page and had no way to report a mistake in any of
+   * them. Nothing failed, because the picker only ever promised what it listed —
+   * which is exactly why this test asserts the property rather than the list.
+   */
+  assert.match(ui, /ParceroReview\.listAnchors\(/,
+    "the picker must enumerate from the shared anchor list, not a literal array");
+
+  const lesson = content.lessons[0];
+  const base = `lesson:${lesson.id}/es/`;
+  const groups = new Set();
+  for (const leaf of review.listAnchors(content)) {
+    if (leaf.indexOf(base) === 0) groups.add(review.groupAnchor(leaf));
+  }
+
+  const reachable = [
+    "heading", "setting", "address", "dialogue/0", "vocabulary/0", "note",
+    "culture/0", "pitfalls/0", "variations/0", "prompt", "choices", "practice/1/prompt",
+  ];
+  for (const family of reachable) {
+    assert.ok(groups.has(base + family),
+      `${family} is content a reviewer can see, but the picker cannot reach it`);
   }
 });
 

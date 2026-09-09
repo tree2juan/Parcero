@@ -54,13 +54,15 @@ Then open `http://localhost:8000`. You can also just open `index.html` directly 
 
 ## How a lesson works
 
-Each lesson has three tabs, in the order a real conversation demands them:
+Each lesson has five tabs, in the order a real conversation demands them:
 
 | Tab | What it gives you |
 | --- | --- |
-| **Dialogue** | A short exchange with the target language, a natural translation, and a plain-English pronunciation respelling. A "Listen" button reads it aloud with your browser's speech engine. |
-| **Understand** | The vocabulary *as used in this exchange*, plus a Colombian context note explaining why the phrasing works and where it would mislead you. |
-| **Practice** | One retrieval question that checks meaning-in-context rather than translation. |
+| **The situation** | Who is talking, what they want, when and where it happens, and why any of it matters — plus the address form the exchange runs on (`usted`, `tú` or `vos`), who uses it, and what changes if you switch. Spanish decides half its grammar from this, so it comes first. |
+| **Dialogue** | A short exchange with the target language, a natural translation, and a plain-English pronunciation respelling. Lines that hide something carry a literal gloss and a note on why it is phrased that way. A "Listen" button reads it aloud with your browser's speech engine. |
+| **Understand** | The vocabulary *as used in this exchange* — with a literal reading, when to reach for it, when not to, what region it belongs to, and an example — then what is going on underneath the exchange, what learners get wrong here and what to say instead, and the same thing said differently across registers and regions. |
+| **Practice** | Several retrieval questions that check meaning-in-context rather than translation, each naming what it is testing. |
+| **Report an error** | Tell a maintainer that something is wrong, without leaving the lesson. See [Native-speaker review](#native-speaker-review). |
 
 <a id="lessons"></a>
 
@@ -83,6 +85,59 @@ Alongside the lessons there is a reference **library**: 200 high-frequency verbs
 
 The verb list was seeded from published frequency data, so the **level** on each card is real. The **register** and **regionality** fields are not: every entry still carries the same placeholder text, because no Colombian speaker has been over them. Those two labels are therefore **not displayed**. Showing them would have stated the same unverified claim two hundred times in the app's own voice. They stay in `data/curriculum.js`, they remain reportable through the Report an error tab, and each one appears on its card as soon as a real value replaces the placeholder and `reviewStatus` is dropped from that verb.
 
+<a id="flashcards"></a>
+
+## Flashcards
+
+Short swipeable sets for the retrieval practice that makes any of it stick. Tap a card to show the answer, then:
+
+- **Swipe left** — green, *knew it*. The card is done for this round.
+- **Swipe right** — red, *didn't know it*. The card goes to the back of the queue and comes back around before the set ends.
+
+A set is finished only when every card has been swiped left, so you never leave a set with something still unlearned. **Go through it again** replays the set from scratch, **Reset this set** clears it mid-round, and the global *Reset progress* clears every deck.
+
+Everything works without a touchscreen: the card is a real button, space flips it, and ← / → answer it. Vertical scrolling is preserved on phones (`touch-action: pan-y`), so a swipe down scrolls the page rather than grading the card. Large **← Knew it** and **Didn't know it →** buttons sit under the card for anyone who would rather not drag.
+
+Answers drawn from prose rather than a single term — a culture note, why a mistake fails — are clamped to a few lines with a **Read the rest** control, so one long card cannot stretch past a phone screen. Whether a card needs it is measured after the card is painted rather than guessed from a character count, because the same sentence wraps to four lines on a laptop and nine on a phone. The control sits outside the card deliberately: the card carries `role="button"`, and ARIA treats the descendants of a button as presentational, so a control nested inside it would be invisible to a screen reader.
+
+### Cards are derived, never authored
+
+There is no flashcard content file. `data/flashcards.js` reads the same `lessons`, `curriculum`, and `fluencyItems` that the rest of the app renders, and builds decks from them:
+
+| Group | Topic | Cards from |
+| --- | --- | --- |
+| **Situations** | one per lesson | vocabulary, meaning-in-context, pronunciation, worked examples, region and register, culture notes, common mistakes, phrasing variations, the form of address, the practice questions |
+| **Verbs** | one per level (foundation, independent, extension) | each verb, asked in the productive direction |
+| **Fluency** | one | connectors and softeners, asked in the productive direction |
+
+So adding a lesson to `data/lessons.js` adds a flashcard topic. Adding verbs adds cards to the matching level. Nothing has to be written twice, and no card can drift out of sync with the lesson it came from. The decks follow the language direction toggle, and switching direction keeps your place in the set.
+
+### Reading richer lessons without a second code path
+
+Lesson rows are moving from positional tuples (`[speaker, line, translation]`) to named objects carrying much more per entry. `data/flashcards.js` reads every row through one shape-tolerant accessor, so both shapes produce identical cards for the fields they share, and the richer fields simply add more.
+
+This matters more than it sounds. Destructuring an object throws outright, so reading a row positionally does not degrade as the data grows — it takes the whole section down. A test asserts that a lesson written both ways yields the same cards, rather than merely that nothing crashed, and a second test pins each rich field to the card it feeds, so a renamed field is a failure rather than a card that quietly stops being generated.
+
+The card kinds a lesson can yield:
+
+| Kind | Front | Back |
+| --- | --- | --- |
+| `vocabulary` / `meaning` | a term, or its explanation | the other one |
+| `pronunciation` | a line of dialogue | how to say it |
+| `example` | the phrase in use | what it means |
+| `region` | a term | where it is said, and how formal |
+| `context` | the situation | the culture note |
+| `address` | who you are speaking to | *usted*, *tú* or *vos*, and why |
+| `culture` | a cultural point | what to know about it |
+| `pitfall` | a mistake learners make | what to say instead |
+| `variation` | when you would use it | the phrasing that fits |
+| `practice` | a practice question | its answer |
+
+A kind that current content happens not to produce is still checked for wording, because the checked list is read out of the derivation itself rather than from the cards it currently emits.
+
+The surrounding interface follows the direction too. `data/flashcards.js` emits i18n keys rather than sentences — `deck.ask.pronunciation`, not `"How would you say this out loud?"` — and `flashcards.js` resolves them through `i18n.js` at paint time, so the prompts, controls and screen-reader announcements are in the learner's own language. A test derives the key list from the real content, so a new verb level that nobody has translated yet is caught rather than shipped.
+
+Sets are split evenly rather than greedily, so a topic never ends in a stub round — 13 cards become 7 + 6, not 10 + 3. `FLASHCARD_SET_SIZE` in `data/flashcards.js` is the single knob for the target size. Deck size scales with the lessons: the eight lessons here currently yield 314 cards across 38 sets, and richer lesson content raises that to 658 across 71 without a line of flashcard code changing.
 ## Placement and pathways
 
 The app opens with an optional five-signal placement check: receptive understanding, productive use, grammar, context, and pronunciation. Every question includes **"I don't know"**, which records a genuine knowledge gap instead of forcing a guess — a wrong guess and an honest gap mean different things, and the app treats them differently.
@@ -107,6 +162,8 @@ Results stay in browser storage and identify a starting level plus the skills to
 
 Lessons live in [`data/lessons.js`](data/lessons.js) as plain objects — no build step, no JSON schema to learn. Add an entry to the `lessons` array and it appears in the picker automatically.
 
+Every field below except `title`, `situation`, `dialogue`, `vocabulary`, `note`, `prompt`, `choices` and `answer` is optional: [`data/lesson-schema.js`](data/lesson-schema.js) fills in the rest, so a partly written lesson still renders. Rows may be written as objects (preferred) or as the original short tuples.
+
 ```js
 {
   id: "at-the-bank",              // kebab-case, unique
@@ -119,15 +176,62 @@ Lessons live in [`data/lessons.js`](data/lessons.js) as plain objects — no bui
   es: {
     title: "...",
     situation: "...",
+
+    // The five questions a learner has to answer before the words mean anything.
+    setting: {
+      who: "A teller in her forties and a foreign customer.",
+      what: "Opening a savings account without a Colombian ID.",
+      when: "Mid-morning on a weekday, the branch is busy.",
+      where: "A bank branch in Bogotá.",
+      why: "Bank staff are scripted and formal; warmth arrives through diminutives, not first names."
+    },
+
+    // Which "you" the exchange runs on, and what moving off it would signal.
+    address: {
+      form: "usted",              // "usted" | "tú" | "vos" | "mixed"
+      who: "The teller to the customer, and back.",
+      why: "Service encounters in Bogotá default to usted regardless of age.",
+      ifYouSwitch: "Tú here sounds over-familiar and slightly presumptuous."
+    },
+
     dialogue: [
-      // [speaker, target language, natural translation, pronunciation respelling]
-      ["Cajero", "¿En qué le puedo colaborar?", "How can I help you?", "en keh leh PWEH-doh koh-lah-boh-RAR"]
+      {
+        speaker: "Cajero",
+        target: "¿En qué le puedo colaborar?",
+        translation: "How can I help you?",
+        pronunciation: "en keh leh PWEH-doh koh-lah-boh-RAR",
+        literal: "In what can I collaborate for you?",   // optional
+        why: "Colombians say colaborar where other Spanishes say ayudar; it is warmer and less transactional."
+      }
     ],
-    vocabulary: [["term", "how it is used here"]],
+
+    vocabulary: [
+      {
+        term: "colaborar",
+        explanation: "To help — the standard Colombian service verb.",
+        literal: "to collaborate",
+        useWhen: "Offering or asking for help in any shop, bank or office.",
+        avoidWhen: "Talking about joint work on a project; there it means literal collaboration.",
+        register: "polite",
+        region: "General Colombian",
+        related: ["ayudar", "servir"],
+        example: { target: "¿Me colabora con la dirección?", translation: "Could you help me with the address?" }
+      }
+    ],
+
     note: "The Colombian context that makes this phrasing work.",
+
+    culture: [{ label: "Why it is so formal", body: "..." }],
+    pitfalls: [{ mistake: "...", whyItFails: "...", sayInstead: "..." }],
+    variations: [{ form: "...", register: "casual", region: "Medellín", whenToUse: "..." }],
+
     prompt: "A meaning-in-context question",
     choices: ["...", "...", "..."],
-    answer: 0                     // index into choices
+    answer: 1,                    // index into choices
+    tests: "Whether you heard colaborar as an offer of help",  // optional
+
+    // Any number of further questions, same shape as prompt/choices/answer.
+    practiceExtra: [{ prompt: "...", choices: ["...", "...", "..."], answer: 2, tests: "..." }]
   },
   en: { /* the same shape, with English as the target language */ }
 }
@@ -136,9 +240,14 @@ Lessons live in [`data/lessons.js`](data/lessons.js) as plain objects — no bui
 House rules for content:
 
 - **Both directions, always.** A lesson without its `en` counterpart will fail CI.
-- **Never present a regional expression as universal.** Say where it is used and by whom.
-- **Teach the pragmatics, not just the words.** `usted` vs `tú` vs `vos` carries more meaning than most vocabulary does.
+- **Answer the five questions.** `setting` is where a learner works out who is speaking and why it is phrased this way. CI fails if any of the five is missing.
+- **Name the address form.** `usted` vs `tú` vs `vos` carries more meaning than most vocabulary does, so say which one is in play and what switching would signal.
+- **Never present a regional expression as universal.** Every vocabulary entry states its `region`. `vos` is paisa and Valle, not Colombian at large.
+- **Say what goes wrong.** A pitfall without `sayInstead` leaves the learner stuck, so all three fields are required.
+- **Do not make the right answer guessable.** `choices` and `answer` are a pair — `answer` is an index, so moving one means moving the other. CI fails if answers cluster at one position, if the correct choice is reliably the longest, if it towers over its distractors, or if a distractor is too short to be worth considering. See [`test/practice.test.js`](test/practice.test.js).
 - **Leave `review: "pending"`.** The lesson keeps inviting a native speaker to check it until one has.
+
+Nothing else needs touching: the lesson appears in the lesson picker, its anchors become flaggable in review mode, and it becomes a [flashcard topic](#flashcards) on its own.
 
 ## Tests
 
@@ -148,7 +257,11 @@ Content is validated by a dependency-free suite. Node 20+ only, nothing to insta
 node --test test/*.test.js
 ```
 
-It checks that every lesson teaches in both directions, that dialogue and vocabulary rows match the shape the renderers expect, that each practice question points at a real answer among distinct choices, that verb entries are complete and uniquely identified, that every review anchor resolves to a real string, and — the one that catches the most damage — that **every element `app.js` and `review-ui.js` look up actually exists in `index.html`**. CI runs the same command on every pull request.
+It checks that every lesson teaches in both directions, that every lesson answers who/what/when/where/why and names its address form, that dialogue and vocabulary rows match the shape the renderers expect, that pitfalls always say what to say instead, that each practice question points at a real answer among distinct choices — and that the right answer is not guessable from its position or its length — that verb entries are complete and uniquely identified, that every review anchor resolves to a real string, that the report picker can reach every kind of content a lesson now holds, that flashcard sets split evenly and expand when new content is added, and — the one that catches the most damage — that **every element `app.js`, `flashcards.js`, and `review-ui.js` look up actually exists in `index.html`**. CI runs the same command on every pull request.
+
+`test/globals.test.js` covers a failure the rest of the suite structurally cannot see. The page loads every script into one global scope, so a name a script does not define does not fail — it silently resolves to whatever another script put there. A handler calling `render()` from a file that has no `render` reaches `app.js`'s, and the result is a control that does nothing while an unrelated section redraws, with no error on any content. Under `node --test`, `require()` gives every module its own scope, so those two names can never meet; the bug is not merely untested there, it is untestable there. The guard reads the scripts as text in the order `index.html` loads them.
+
+Cross-script API is therefore marked by name, with the `Parcero*` prefix, and data bundles publish their globals by living in `data/`. That is a rule rather than a preference because no runtime check can replace it: `const` at the top level of a classic script creates a binding in the global *scope* and no property on the global *object*, so `globalThis.curriculum` is `undefined` while bare `curriculum` is the array, and `globalThis.lessons` is not the data but the `<section id="lessons">`, via named access on `window`. Reflection cannot see a `const` global at all, and cannot tell published API from a function declaration.
 
 > Pass the glob, not the bare directory. Node 22 and newer resolve `node --test test/` as a *module* path and fail with `Cannot find module`; `test/*.test.js` works on every version.
 
@@ -164,13 +277,13 @@ Review happens at two grains, and both need a reviewer who knows the language, n
 
 The fastest correction is the one made while looking at the mistake. Every lesson has a **Report an error** tab, next to Dialogue, Understand and Practice. Nothing is added to the lesson itself: no controls hang off individual lines, so a learner reading a lesson never has to see review furniture.
 
-The tab asks two questions to find the string: **what are you reporting on** — the lesson you are reading, a verb, a fluency phrase, or a mature-language entry — and **which one**, listed by its own words rather than by position. It then narrows to the exact part: the Spanish line, the translation, the pronunciation respelling, the speaker's name, and so on. The text you picked is quoted back to you before you say anything about it.
+The tab asks two questions to find the string: **what are you reporting on** — the lesson you are reading, a verb, a fluency phrase, or a mature-language entry — and **which one**, listed by its own words rather than by position. Everything a lesson holds is reachable: each line of the situation, the address-form note, every dialogue line, vocabulary entry, context note, pitfall, variation and practice question. It then narrows to the exact part: the Spanish line, the translation, the pronunciation respelling, the speaker's name, and so on. The text you picked is quoted back to you before you say anything about it.
 
 From there it asks what is wrong (not natural, wrong region, wrong register, mistranslation, misleading pronunciation, spelling, culture, risky, dated), how much it matters, and — the field that does the real work — **how you would say it instead**. Reports collect in your browser, so you can read a whole lesson and report as you go, and any saved report can be reopened and edited. A half-written report keeps hold of the line it is about: paging to the next lesson or switching language will not quietly re-point it at something else. **Open a GitHub issue with these** then opens a prefilled issue containing both a readable report and a machine-readable payload. Copy-to-clipboard and download-JSON are offered as fallbacks, including when a batch is too large for a URL.
 
 Nothing is sent anywhere until you press submit. Reports live only in your browser, under their own storage key, so *Reset progress* never destroys them.
 
-Because regional usage is the thing this project most needs help with, the form also asks where you speak from. Ten Colombian regions are offered as suggestions, but the field is open — type wherever you are from and it is recorded in your own words. Where what you typed matches a suggestion, the report also carries a stable region code, so that a year of reports can be counted by region without anyone having to guess that "Medellin" and "Medellín and Antioquia (paisa)" meant the same place. `node scripts/review-flags.js` prints that tally.
+Because regional usage is the thing this project most needs help with, the form also asks where you speak from. Ten Colombian regions are offered as suggestions, but the field is open — type wherever you are from and it is recorded in your own words. Where what you typed matches a suggestion, the report also carries a stable region code, so that a year of reports can be counted by region without anyone having to guess that "Medellin" and "Medellín and Antioquia (paisa)" meant the same place. `node scripts/review-flags.js` prints that tally. Reports filed through the issue form instead of the page arrive without a code, because that form is plain text with no JavaScript behind it, so the tool canonicalises those itself — in either interface language, so a region written in Spanish is counted alongside the same region written in English. Anything it does not recognise keeps the reviewer's own words and is counted under them rather than discarded.
 
 ### Sign off a whole lesson
 
@@ -194,6 +307,8 @@ For each flag it prints the file, the field, the current wording, and the sugges
 - **Drifted** — the text changed after it was flagged. The tool refuses to call these ready, because applying one blind would silently revert a newer edit. Re-read it and decide.
 - **Unresolved** — the anchor no longer points at anything, usually because content was deleted or renamed. Exits non-zero.
 
+You do not have to run it yourself. When a flag is filed from the page, the **Triage native-speaker flags** workflow runs this same tool against the content as it stands right now and posts the result on the issue, labelling it `triage-ready`, `triage-needs-human`, or `triage-manual`. Editing the issue re-runs it and updates the same comment rather than adding another. A flag filed by hand, without the machine-readable block, is labelled `triage-manual` and left for a person — it is still a valid flag, it simply cannot be resolved automatically. The workflow reads the issue body through the environment rather than interpolating it into a shell command, and asks for no write access beyond the issue it is commenting on.
+
 Once a lesson's flags are applied and both sides are signed off, set its `review` field to `"reviewed"`.
 
 The mature-language reference needs the same care from qualified reviewers — severity labels, local usage, and de-escalation guidance. Content that encourages harassment does not belong here.
@@ -203,12 +318,17 @@ The mature-language reference needs the same care from qualified reviewers — s
 ```
 index.html          The whole app shell — every element id app.js binds to
 app.js              Rendering, placement scoring, lesson navigation, progress
+i18n.js             Interface strings for both languages, and applyI18n()
+flashcards.js       Swipeable flashcard decks: gestures, round queue, reset
 review.js           Review anchors: parse, resolve, validate, build issue payloads
 review-ui.js        The Report an error tab: content picker, report form, queue, issue export
 styles.css          Design system: light/dark tokens, layout, components
 data/lessons.js     The lessons
+data/lesson-schema.js  The lesson shape: defaults, normalisation, legacy tuples
 data/curriculum.js  200 verbs, fluency connectors, mature-language reference
+data/flashcards.js  Derives flashcard topics and sets from the content above
 scripts/            Maintainer tools: triage flags back to the lines to edit
+.github/workflows/  CI, Pages deploy, and automatic triage of filed flags
 assets/             Favicon, social card, roadmap diagram
 test/               Dependency-free content validation
 .github/workflows/  CI on every PR, Pages deployment on main

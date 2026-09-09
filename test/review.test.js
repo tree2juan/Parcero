@@ -7,6 +7,7 @@ const vm = require("node:vm");
 const { execFileSync } = require("node:child_process");
 
 const review = require("../review.js");
+const schema = require("../data/lesson-schema.js");
 
 const root = path.join(__dirname, "..");
 const read = (file) => fs.readFileSync(path.join(root, file), "utf8");
@@ -57,13 +58,26 @@ test("anchors are unique, so two different strings can never share an address", 
 test("every lesson string a reviewer can see has an anchor", () => {
   for (const lesson of content.lessons) {
     for (const direction of review.DIRECTIONS) {
-      const side = lesson[direction];
-      const expected = ["title", "situation", "note", "prompt"].length
-        + side.dialogue.length * review.DIALOGUE_SLOTS.length
-        + side.vocabulary.length * review.VOCABULARY_SLOTS.length
-        + side.choices.length;
-      const actual = anchors.filter((anchor) => anchor.startsWith(`lesson:${lesson.id}/${direction}/`)).length;
-      assert.strictEqual(actual, expected, `${lesson.id}.${direction}: expected ${expected} anchors, found ${actual}`);
+      const side = schema.normalizeContent(lesson[direction]);
+      const base = `lesson:${lesson.id}/${direction}`;
+      const mine = new Set(anchors.filter((anchor) => anchor.startsWith(`${base}/`)));
+      const expect = (suffix) => assert.ok(mine.has(`${base}/${suffix}`), `${lesson.id}.${direction}: nothing addresses ${suffix}`);
+
+      for (const field of ["title", "situation", "note", "prompt"]) expect(field);
+      for (const key of schema.SETTING_KEYS) expect(`setting/${key}`);
+      for (const slot of schema.ADDRESS_SLOTS) expect(`address/${slot}`);
+      side.dialogue.forEach((_, index) => {
+        for (const slot of ["speaker", "target", "translation", "pronunciation"]) expect(`dialogue/${index}/${slot}`);
+      });
+      side.vocabulary.forEach((_, index) => expect(`vocabulary/${index}/term`));
+      side.culture.forEach((_, index) => expect(`culture/${index}/body`));
+      side.pitfalls.forEach((_, index) => expect(`pitfalls/${index}/sayInstead`));
+      side.variations.forEach((_, index) => expect(`variations/${index}/form`));
+      side.choices.forEach((_, index) => expect(`choices/${index}`));
+      side.practice.slice(1).forEach((question, offset) => {
+        expect(`practice/${offset + 1}/prompt`);
+        question.choices.forEach((_, index) => expect(`practice/${offset + 1}/choices/${index}`));
+      });
     }
   }
 });
@@ -132,9 +146,16 @@ test("every leaf anchor maps to a group the page actually renders", () => {
   for (const lesson of content.lessons) {
     for (const direction of review.DIRECTIONS) {
       const base = `lesson:${lesson.id}/${direction}`;
+      const side = schema.normalizeContent(lesson[direction]);
       rendered.add(`${base}/heading`).add(`${base}/note`).add(`${base}/prompt`).add(`${base}/choices`);
-      lesson[direction].dialogue.forEach((_, index) => rendered.add(`${base}/dialogue/${index}`));
-      lesson[direction].vocabulary.forEach((_, index) => rendered.add(`${base}/vocabulary/${index}`));
+      rendered.add(`${base}/level`);
+      rendered.add(`${base}/setting`).add(`${base}/address`);
+      for (const field of ["dialogue", "vocabulary", "culture", "pitfalls", "variations"]) {
+        side[field].forEach((_, index) => rendered.add(`${base}/${field}/${index}`));
+      }
+      side.practice.slice(1).forEach((_, offset) => {
+        rendered.add(`${base}/practice/${offset + 1}/prompt`).add(`${base}/practice/${offset + 1}/choices`);
+      });
     }
   }
   for (const verb of content.curriculum) rendered.add(`verb:${verb.id}`);
@@ -144,6 +165,42 @@ test("every leaf anchor maps to a group the page actually renders", () => {
   for (const anchor of anchors) {
     const group = review.groupAnchor(anchor);
     assert.ok(rendered.has(group), `${anchor} belongs to ${group}, which nothing renders`);
+  }
+});
+
+test("a missing slot is reported as missing, never as empty text", () => {
+  /*
+   * The dangerous answer here is not a throw, it is `ok: true` with
+   * `text: undefined`. Every caller trusts `ok`, so partsForAnchor silently
+   * drops the entry and the report picker just thins out with nothing logged —
+   * the reviewer sees fewer options and no reason why.
+   *
+   * The lesson branch guarded this and the reference-list branch did not, which
+   * is exactly the kind of gap that survives review, so this asserts the
+   * invariant across every branch of the resolver rather than the one that was
+   * wrong. Rows in data/curriculum.js are still tuples, and a short tuple
+   * yields undefined rather than throwing.
+   */
+  const gutted = JSON.parse(JSON.stringify(content));
+  delete gutted.lessons[0].es.dialogue[1].target;
+  gutted.fluencyItems[0] = gutted.fluencyItems[0].slice(0, 2);
+  gutted.matureItems[0] = gutted.matureItems[0].slice(0, 2);
+  const verbSlot = Object.keys(gutted.curriculum[0])
+    .find((key) => key !== "id" && typeof gutted.curriculum[0][key] === "string");
+  delete gutted.curriculum[0][verbSlot];
+
+  const probes = [
+    `lesson:${gutted.lessons[0].id}/es/dialogue/1/target`,
+    "fluency:0/note",
+    "mature:0/note",
+    `verb:${gutted.curriculum[0].id}/${verbSlot}`,
+  ];
+  for (const anchor of probes) {
+    const resolved = review.resolveAnchor(anchor, gutted);
+    assert.strictEqual(resolved.ok, false, `${anchor} resolved ok with nothing behind it`);
+    assert.ok(isText(resolved.reason), `${anchor} must say why it could not resolve`);
+    assert.ok(!("text" in resolved) || resolved.text === undefined,
+      `${anchor} must not hand back text it does not have`);
   }
 });
 
@@ -230,9 +287,17 @@ test("index.html loads the review scripts after the data and the app", () => {
 
 test("app.js tags every reviewable block with an anchor", () => {
   const app = read("app.js");
-  for (const fragment of ["/dialogue/${index}", "/vocabulary/${index}", "/heading`", "/note`", "/prompt`", "/choices`", 'data-anchor="verb:${verb.id}"', 'data-anchor="fluency:${index}"', 'data-anchor="mature:${index}"']) {
+  const fragments = [
+    'anchorFor(`setting/${key}`)', 'anchorFor("address/who")',
+    'anchorFor(`dialogue/${index}`)', 'anchorFor(`vocabulary/${index}`)',
+    'anchorFor(`culture/${index}`)', 'anchorFor(`pitfalls/${index}`)', 'anchorFor(`variations/${index}`)',
+    'anchorFor("heading")', 'anchorFor("note")',
+    'data-anchor="verb:${verb.id}"', 'data-anchor="fluency:${index}"', 'data-anchor="mature:${index}"'
+  ];
+  for (const fragment of fragments) {
     assert.ok(app.includes(fragment), `app.js no longer emits a data-anchor for ${fragment}`);
   }
+  assert.match(app, /practiceAnchor|anchorFor\(`practice\//, "practice questions must stay addressable");
 });
 
 test("the flag dialog offers a problem type, a severity and a reviewer role", () => {
@@ -267,7 +332,7 @@ test("the triage CLI points a maintainer at the exact field to revise", () => {
   assert.strictEqual(status, 0, stdout);
   assert.match(stdout, /1 ready, 0 drifted, 0 unresolved/);
   assert.match(stdout, /data\/lessons\.js/);
-  assert.match(stdout, /lessons\[0\]\.es\.dialogue\[1\]\[1\]/);
+  assert.match(stdout, /lessons\[0\]\.es\.dialogue\[1\]\.target/);
   assert.match(stdout, /¿Me das un tinto\?/);
 });
 
@@ -346,10 +411,39 @@ test("the part picker offers the taught line before the speaker's name", () => {
 test("the display order of dialogue parts never changes what an anchor resolves to", () => {
   const lesson = content.lessons.find((item) => item.id === "greeting-at-the-cafe");
   const row = lesson.es.dialogue[1];
-  review.DIALOGUE_SLOTS.forEach((slot, index) => {
+  for (const slot of review.DIALOGUE_SLOTS) {
     const resolved = review.resolveAnchor(`lesson:greeting-at-the-cafe/es/dialogue/1/${slot}`, content);
-    assert.strictEqual(resolved.text, row[index], `${slot} must keep resolving to tuple position ${index}`);
-  });
+    const stored = schema.slotValue(row, review.DIALOGUE_SLOTS, slot);
+    if (!isText(stored)) continue;
+    assert.strictEqual(resolved.text, stored, `${slot} must keep resolving to the "${slot}" value, whatever order it is displayed in`);
+  }
+});
+
+/*
+ * Legacy lessons stored a dialogue line as a bare tuple. Anchors are resolved by
+ * slot name now, but a tuple still has to land on the same text it always did,
+ * or every anchor recorded before the schema change would silently shift.
+ */
+test("anchors still resolve against a legacy tuple lesson", () => {
+  const legacy = {
+    lessons: [{
+      id: "legacy", level: "A1",
+      es: {
+        title: "T", situation: "S", note: "N", prompt: "P", choices: ["a", "b"], answer: 1,
+        dialogue: [["Ana", "Buenas", "Morning", "BWEH-nas"]],
+        vocabulary: [["parce", "friend"]]
+      }
+    }],
+    curriculum: [], fluencyItems: [], matureItems: []
+  };
+  assert.strictEqual(review.resolveAnchor("lesson:legacy/es/dialogue/0/speaker", legacy).text, "Ana");
+  assert.strictEqual(review.resolveAnchor("lesson:legacy/es/dialogue/0/target", legacy).text, "Buenas");
+  assert.strictEqual(review.resolveAnchor("lesson:legacy/es/dialogue/0/pronunciation", legacy).text, "BWEH-nas");
+  assert.strictEqual(review.resolveAnchor("lesson:legacy/es/vocabulary/0/explanation", legacy).text, "friend");
+  assert.match(review.resolveAnchor("lesson:legacy/es/dialogue/0/target", legacy).path, /dialogue\[0\]\[1\]$/,
+    "a tuple lesson must still be described to the maintainer by tuple position");
+  assert.strictEqual(review.resolveAnchor("lesson:legacy/es/dialogue/0/why", legacy).ok, false,
+    "a slot the legacy row never had must not resolve to something else");
 });
 
 test("the triage CLI reads an issue body piped in as -", () => {
@@ -439,4 +533,111 @@ test("adding regionCode did not break payloads filed before it existed", () => {
   assert.strictEqual(filed.regionCode, "", "a missing regionCode must read as empty, not undefined");
   assert.strictEqual(filed.region, old.region);
   assert.deepStrictEqual(review.validateFlag(old), [], "an old flag must still validate");
+});
+
+test("every authored string in a lesson is offered by the report picker", () => {
+  /*
+   * Coverage, not mechanism. The test above asks "does every anchor resolve to
+   * text?" and passes at 5022/5022 — but that is the wrong direction. It stays
+   * green no matter how much unreachable content is added, because content the
+   * resolver was never told about produces no anchor to check.
+   *
+   * This asks the converse, which is the question that fails when someone ADDS
+   * content, and that is when under-coverage is actually born. It caught 661
+   * strings the enrichment had made unreportable: every vocabulary example
+   * sentence, every related expression, every "what this question tests" note,
+   * and the level line on every lesson — the most opinionated Colombian-usage
+   * prose in the repo, rendered on the page, with no way for a native speaker
+   * to say "we don't say it like that".
+   *
+   * It walks the picker, not listAnchors. The first version of this test read
+   * listAnchors directly, passed, and was wrong: partsForAnchor kept its own
+   * separate leaf list, so all 661 strings resolved fine and still never
+   * appeared in the picker. Checking the mechanism I had just fixed rather
+   * than the path a reviewer actually clicks is the same mistake one level up.
+   *
+   * The exclusions below are the whole design. They name what is NOT prose, so
+   * a newly authored field is covered by default and has to be argued out of
+   * this list rather than into it. A list of what IS covered would have passed
+   * silently through the same 661.
+   */
+  const notProse = {
+    id: "an identifier, never shown to a reader",
+    review: 'a state key: app.js:260 does `hidden = lesson.review !== "pending"`, so it toggles a banner whose words come from i18n; the value itself is never rendered',
+    domain: "authored metadata no script reads; grep for `.domain` across all four scripts returns nothing, so it reaches no page",
+    skills: "authored metadata no script reads; same check as domain",
+    pathways: "authored metadata no script reads; same check as domain",
+    answer: "an index into choices, not text",
+    "address.form": 'an enum ("usted"/"tú"/"vos"); the page renders t("address.form.*") from i18n.js, so the visible string is the translator\'s, not the author\'s'
+  };
+
+  // Exactly what review-ui.js does: group the anchors, then ask for each group's parts.
+  const groups = [...new Set(anchors.map((anchor) => review.groupAnchor(anchor) || anchor))];
+  const reachable = new Set();
+  for (const group of groups) {
+    for (const part of review.partsForAnchor(group, content)) {
+      if (isText(part.text)) reachable.add(part.text.trim());
+    }
+  }
+
+  const missed = [];
+  const walk = (node, trail) => {
+    if (isText(node)) {
+      if (!reachable.has(node.trim())) missed.push(`${trail}: ${JSON.stringify(node.slice(0, 60))}`);
+      return;
+    }
+    if (Array.isArray(node)) return node.forEach((item, index) => walk(item, `${trail}[${index}]`));
+    if (!node || typeof node !== "object") return;
+    for (const [key, value] of Object.entries(node)) {
+      const next = trail ? `${trail}.${key}` : key;
+      const family = next.replace(/\[\d+\]/g, "").split(".").slice(-2).join(".");
+      if (notProse[key] || notProse[family]) continue;
+      walk(value, next);
+    }
+  };
+
+  for (const lesson of content.lessons) walk(lesson, lesson.id);
+
+  assert.deepStrictEqual(missed, [],
+    `${missed.length} authored string(s) are rendered but never offered by the report picker.\n` +
+    `Add them to listAnchors in review.js, or, if they are not prose, to notProse above with a reason.\n` +
+    missed.slice(0, 12).join("\n"));
+});
+
+/*
+ * A flag raised from the page always carries a regionCode, because the page
+ * canonicalises the region as it files. A flag raised through the GitHub issue
+ * form does not — that form has no JavaScript, so the region arrives as whatever
+ * the reviewer typed. The CLI has to canonicalise those itself, in either
+ * language, or a Colombian who writes their own region in Spanish drops out of
+ * the tally that exists specifically to count them.
+ */
+test("the triage CLI groups a region typed in Spanish with the same one typed in English", () => {
+  const flags = [
+    sampleFlag({ region: "Costa Caribe (costeño)" }),
+    sampleFlag({ region: "Caribbean coast (costeño)" }),
+    sampleFlag({ region: "costa caribe (costeno)" })
+  ];
+  flags.forEach((flag) => delete flag.regionCode);
+  const { status, stdout } = runCli(review.buildPayload(flags, {}));
+  assert.strictEqual(status, 0, stdout);
+  const tally = stdout.slice(stdout.indexOf("Where reviewers spoke from"));
+  assert.match(tally, /3\s+Caribbean coast \(costeño\)/,
+    `all three spellings must land in one bucket, got:\n${tally}`);
+});
+
+test("the triage CLI still keeps unrecognised regions as the reviewer's own words", () => {
+  const flag = sampleFlag({ region: "Leticia, Amazonas" });
+  delete flag.regionCode;
+  const { stdout } = runCli(review.buildPayload([flag], {}));
+  const tally = stdout.slice(stdout.indexOf("Where reviewers spoke from"));
+  assert.match(tally, /1\s+Leticia, Amazonas/, "an open-vocabulary answer must never be discarded");
+});
+
+test("a regionCode already on the flag wins over re-matching the free text", () => {
+  const flag = sampleFlag({ region: "wherever I happen to live", regionCode: "narino" });
+  const { stdout } = runCli(review.buildPayload([flag], {}));
+  const tally = stdout.slice(stdout.indexOf("Where reviewers spoke from"));
+  assert.match(tally, new RegExp(`1\\s+${review.labelOf(review.REGION_SUGGESTIONS, "narino").replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}`),
+    "the filed code is authoritative; free text is only a fallback");
 });
