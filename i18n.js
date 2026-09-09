@@ -147,6 +147,8 @@ const UI_STRINGS = {
     "deck.tally.cycled": " · {count} cycled back",
     "deck.hint.swipe": "Swipe left if you knew it, right to see it again",
     "deck.hint.tap": "Tap to show the answer",
+    "deck.readMore": "Read the rest",
+    "deck.readLess": "Show less",
     "deck.badge.known": "Knew it",
     "deck.badge.again": "Review again",
 
@@ -424,6 +426,8 @@ const UI_STRINGS = {
     "deck.tally.cycled": " · {count} volvieron a aparecer",
     "deck.hint.swipe": "Desliza a la izquierda si la sabías, a la derecha para volver a verla",
     "deck.hint.tap": "Toca para ver la respuesta",
+    "deck.readMore": "Leer el resto",
+    "deck.readLess": "Mostrar menos",
     "deck.badge.known": "La sabía",
     "deck.badge.again": "Repasar",
 

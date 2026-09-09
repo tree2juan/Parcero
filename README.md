@@ -94,6 +94,8 @@ A set is finished only when every card has been swiped left, so you never leave 
 
 Everything works without a touchscreen: the card is a real button, space flips it, and ← / → answer it. Vertical scrolling is preserved on phones (`touch-action: pan-y`), so a swipe down scrolls the page rather than grading the card. Large **← Knew it** and **Didn't know it →** buttons sit under the card for anyone who would rather not drag.
 
+Answers drawn from prose rather than a single term — a culture note, why a mistake fails — are clamped to a few lines with a **Read the rest** control, so one long card cannot stretch past a phone screen. Whether a card needs it is measured after the card is painted rather than guessed from a character count, because the same sentence wraps to four lines on a laptop and nine on a phone. The control sits outside the card deliberately: the card carries `role="button"`, and ARIA treats the descendants of a button as presentational, so a control nested inside it would be invisible to a screen reader.
+
 ### Cards are derived, never authored
 
 There is no flashcard content file. `data/flashcards.js` reads the same `lessons`, `curriculum`, and `fluencyItems` that the rest of the app renders, and builds decks from them:

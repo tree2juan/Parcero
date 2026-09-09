@@ -55,7 +55,9 @@
     "deck.badge.known": "Knew it",
     "deck.badge.again": "Review again",
     "deck.hint.swipe": "Swipe left if you knew it, right to see it again",
-    "deck.hint.tap": "Tap to show the answer"
+    "deck.hint.tap": "Tap to show the answer",
+    "deck.readMore": "Read the rest",
+    "deck.readLess": "Show less"
   };
 
   function t(key, values) {
@@ -92,7 +94,7 @@
       <p class="flashcard-ask"></p>
       <p class="flashcard-front"></p>
       <div class="flashcard-answer" hidden>
-        <p class="flashcard-back"></p>
+        <p class="flashcard-back" id="deck-card-back"></p>
         <p class="flashcard-note"></p>
       </div>
       <p class="flashcard-hint"></p>
@@ -108,6 +110,8 @@
     known: new Set(),
     repeats: 0,
     revealed: false,
+    expanded: false,
+    shownCardId: null,
     busy: false
   };
 
@@ -266,6 +270,41 @@
     root.dataset.kind = card.kind;
     root.classList.toggle("is-revealed", deck.revealed);
     $("#deck-flip").textContent = deck.revealed ? t("deck.hideAnswer") : t("deck.showAnswer");
+    paintOverflow(back, card);
+  }
+
+  /*
+   * Cards derived from prose — a culture note, why a mistake fails — run far
+   * longer than a vocabulary term, so the answer is clamped to a few lines with
+   * a disclosure rather than allowed to grow the card without limit.
+   *
+   * Whether a card needs the control is measured after paint rather than
+   * guessed from a character count, because the same text wraps to four lines
+   * on a laptop and nine on a phone. Measuring asks the question that actually
+   * matters: is any of this hidden right now.
+   *
+   * The control is a sibling of the card, not a child, because the card carries
+   * role="button" and ARIA treats the descendants of a button as presentational
+   * — a button nested inside it would be unreachable for a screen reader. As a
+   * sibling with aria-controls it is an ordinary disclosure.
+   */
+  function paintOverflow(back, card) {
+    const toggle = $("#deck-expand");
+    if (!toggle) return;
+    if (deck.shownCardId !== card.id) {
+      deck.shownCardId = card.id;
+      deck.expanded = false;
+    }
+    back.classList.toggle("is-clamped", !deck.expanded);
+    const overflowing = deck.expanded || back.scrollHeight > back.clientHeight + 1;
+    const show = deck.revealed && overflowing;
+    toggle.hidden = !show;
+    if (!show) {
+      back.classList.remove("is-clamped");
+      return;
+    }
+    toggle.textContent = deck.expanded ? t("deck.readLess") : t("deck.readMore");
+    toggle.setAttribute("aria-expanded", deck.expanded ? "true" : "false");
   }
 
   function paintSummary(total) {
@@ -443,6 +482,11 @@
   });
 
   $("#deck-flip").addEventListener("click", () => flip());
+  $("#deck-expand").addEventListener("click", () => {
+    deck.expanded = !deck.expanded;
+    paint();
+    $("#deck-expand").focus();
+  });
   $("#deck-known").addEventListener("click", () => answer("known"));
   $("#deck-review").addEventListener("click", () => answer("again"));
   $("#deck-reset").addEventListener("click", () => {

@@ -537,10 +537,134 @@ test("the card is reachable without a pointer", () => {
   }
 });
 
+/*
+ * The collision this cannot be left to catch itself.
+ *
+ * flashcards.js runs as an IIFE in a page that has already defined globals in
+ * app.js, review.js and review-ui.js. Calling a name it does not define — say
+ * render(), which flashcards.js has no such thing of — silently reaches
+ * app.js's global instead. The flashcard does nothing and an unrelated section
+ * re-renders, with no error at all on today's content.
+ *
+ * node --test cannot see this: require() hands every module its own scope, so
+ * the two names never meet. This reads the scripts as the page loads them.
+ */
+test("flashcards.js calls its own functions, not another script's globals", () => {
+  const source = read("flashcards.js");
+
+  const topLevel = (text) => new Set(
+    [...text.matchAll(/^(?:function|const|let|var)\s+([A-Za-z_$][\w$]*)/gm)].map((m) => m[1])
+  );
+
+  const mine = new Set([
+    ...[...source.matchAll(/function\s+([A-Za-z_$][\w$]*)/g)].map((m) => m[1]),
+    ...[...source.matchAll(/(?:const|let|var)\s+([A-Za-z_$][\w$]*)/g)].map((m) => m[1])
+  ]);
+
+  // Data files are shared on purpose; the page has no other way to reach them.
+  const shared = new Set([
+    ...topLevel(read("data/flashcards.js")),
+    ...topLevel(read("data/lessons.js")),
+    ...topLevel(read("data/curriculum.js"))
+  ]);
+
+  const theirs = new Set();
+  for (const file of ["app.js", "review.js", "review-ui.js", "i18n.js"]) {
+    for (const name of topLevel(read(file))) if (!shared.has(name)) theirs.add(name);
+  }
+
+  // A bare call only. `window.ParceroI18n.tPlural(...)` reaches a property, not a global.
+  const called = new Set(
+    [...source.matchAll(/(?<![.\w$])([A-Za-z_$][\w$]*)\s*\(/g)].map((m) => m[1])
+  );
+  const collisions = [...called].filter((name) => theirs.has(name) && !mine.has(name));
+
+  assert.deepStrictEqual(
+    collisions,
+    [],
+    `flashcards.js calls ${collisions.join(", ")}, which belongs to another script on the page`
+  );
+});
+
 test("the card leaves vertical scrolling to the page", () => {
   assert.match(
     read("styles.css"),
     /\.flashcard\s*\{[^}]*touch-action:\s*pan-y/,
     "without touch-action: pan-y a swipe deck traps vertical scrolling on a phone"
   );
+});
+
+/*
+ * The disclosure that opens a clamped answer has to sit outside the card.
+ * The card carries role="button", and ARIA makes the descendants of a button
+ * presentational, so a control nested inside it is simply absent for a screen
+ * reader — visibly fine, and unusable. This is not visible in a rendered page
+ * either, which is why it is pinned here.
+ */
+test("the read-more control is reachable, not buried inside the card", () => {
+  const html = read("index.html");
+  const card = html.slice(html.indexOf('id="deck-card"'));
+  const cardEnd = card.indexOf("</article>");
+
+  assert.ok(html.includes('id="deck-expand"'), "the disclosure is missing from the page");
+  assert.ok(
+    card.slice(0, cardEnd).indexOf('id="deck-expand"') === -1,
+    "a control inside role=button is presentational to assistive tech; keep the disclosure a sibling"
+  );
+
+  const button = html.slice(html.indexOf('id="deck-expand"'));
+  const attrs = button.slice(0, button.indexOf(">"));
+  assert.match(attrs, /aria-controls="deck-card-back"/, "the disclosure should name the text it opens");
+  assert.match(attrs, /aria-expanded="false"/, "a disclosure starts collapsed and says so");
+  assert.match(attrs, /\bhidden\b/, "most cards are short; the control appears only when text is actually cut");
+  assert.match(
+    read("flashcards.js"),
+    /id="deck-card-back"/,
+    "aria-controls points at an id the card shell never renders"
+  );
+});
+
+/*
+ * A re-render must not collapse text the reader is part-way through. Every
+ * repaint runs paintCard, so resetting the expansion there would close a long
+ * culture note when something unrelated — a tally, a progress bar — changed.
+ * The reset is tied to the card actually changing instead.
+ */
+test("opening a long answer survives a repaint of the same card", () => {
+  const source = read("flashcards.js");
+  const fn = source.slice(source.indexOf("function paintOverflow"));
+  const body = fn.slice(0, fn.indexOf("\n  }"));
+
+  assert.match(
+    body,
+    /deck\.shownCardId\s*!==\s*card\.id/,
+    "collapse should be conditional on the card changing, not on a repaint happening"
+  );
+  assert.ok(
+    !/^\s*deck\.expanded\s*=\s*false;?\s*$/m.test(body.replace(/if\s*\([^)]*\)\s*\{[\s\S]*?\n    \}/g, "")),
+    "an unconditional collapse in paintOverflow closes the answer under the reader"
+  );
+});
+
+/*
+ * .deck-expand and .is-clamped both set display:, which outranks the hidden
+ * attribute. They are the third and fourth things in this file to depend on
+ * the [hidden] reset, so it is worth failing here rather than discovering a
+ * permanently visible "Read the rest" button on a card that has no more to read.
+ */
+test("the clamped answer and its control still obey the hidden attribute", () => {
+  const css = read("styles.css");
+  assert.match(
+    css,
+    /\[hidden\]\s*\{[^}]*display:\s*none\s*!important/,
+    "removing the [hidden] reset leaves every display:-setting class visible when hidden"
+  );
+  for (const selector of [".deck-expand", ".flashcard-back.is-clamped"]) {
+    const rule = css.slice(css.indexOf(selector));
+    assert.match(
+      rule.slice(0, rule.indexOf("}")),
+      /display:/,
+      `${selector} is expected to set display:, which is what makes the reset load-bearing`
+    );
+  }
 });

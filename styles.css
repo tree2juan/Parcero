@@ -401,6 +401,32 @@ main, footer { max-width: var(--wrap); margin: auto; padding-inline: 1.5rem; }
 .flashcard-note { margin: .55rem 0 0; color: var(--ink-soft); font-size: .9rem; }
 .flashcard-hint { margin: 0; color: var(--ink-soft); font-size: .82rem; }
 
+/*
+ * Answers derived from prose rather than a single term are clamped to a few
+ * lines and opened with #deck-expand, so that one long culture note cannot
+ * stretch the card past a phone screen.
+ *
+ * Both rules below set `display:`, which outranks the `hidden` attribute — they
+ * rely on the `[hidden]` reset near the top of this file, as #mature-results
+ * and .deck-summary do. Removing that reset leaves the disclosure button
+ * permanently on screen, captioned for a card it is not describing.
+ */
+.flashcard-back.is-clamped {
+  display: -webkit-box; -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4; line-clamp: 4;
+  overflow: hidden;
+}
+.deck-expand {
+  display: block; justify-self: center;
+  margin: -.4rem auto 1rem; padding: .35rem .9rem;
+  border: 1px solid var(--line); border-radius: 99px;
+  background: var(--surface); color: var(--ink-soft);
+  font: inherit; font-size: .82rem; font-weight: 700;
+  cursor: pointer;
+}
+.deck-expand:hover { color: var(--ink); border-color: var(--ink-soft); }
+.deck-expand:focus-visible { outline: 2px solid var(--green-deep); outline-offset: 2px; }
+
 /* Fixed badge colours: these must read the same in light and dark. */
 .swipe-badge {
   position: absolute; top: 1rem; z-index: 2;
