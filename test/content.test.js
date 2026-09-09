@@ -407,3 +407,54 @@ test("app.js renders the whole lesson set rather than a single hard-coded lesson
   assert.doesNotMatch(app, /=\s*lessons\[0\]\s*;/, "app.js must not pin the view to lessons[0]");
   assert.match(app, /lessons\.length/, "app.js should size progress against the full lesson list");
 });
+
+
+test("practiceExtra questions hold the same shape guarantees as the main one", () => {
+  /*
+   * test/practice.test.js (merged PR #5) asserts the correct answer is not
+   * identifiable by position or by length. It reads `lesson[direction]`, which
+   * is only the ONE top-level question -- so the four practiceExtra questions
+   * per direction, 64 in total, inherit none of it. They were added after that
+   * test was written, which is exactly when this class of gap is born: the
+   * mechanism is fine and the coverage silently is not.
+   *
+   * Guarded here rather than in practice.test.js so this cannot collide with
+   * the session that owns that file.
+   */
+  const extras = lessons.flatMap((lesson) => directions.flatMap((direction) =>
+    (lesson[direction].practiceExtra || [])
+      .map((question, index) => ({ id: `${lesson.id}/${direction}/extra${index}`, ...question }))
+      .filter((question) => Array.isArray(question.choices) && question.choices.length > 1)));
+
+  assert.ok(extras.length > 0, "no practiceExtra questions found, so this check verifies nothing");
+
+  const towering = [];
+  const filler = [];
+  const outOfRange = [];
+  for (const question of extras) {
+    if (!Number.isInteger(question.answer) || !question.choices[question.answer]) {
+      outOfRange.push(`${question.id}: answer ${question.answer} is not an index into ${question.choices.length} choices`);
+      continue;
+    }
+    const lengths = question.choices.map((choice) => choice.length);
+    const correct = lengths[question.answer];
+    const rival = Math.max(...lengths.filter((_, index) => index !== question.answer));
+    if (correct > rival * 1.5) {
+      towering.push(`${question.id}: correct choice ${correct} chars against a longest distractor of ${rival}`);
+    }
+    // The ">= 3 words" test for filler only holds when the answer is itself
+    // prose. A "which word?" question has a one-word answer, and one-word
+    // distractors are then the right shape -- at-the-clinic/es/extra2 offers
+    // "parche" and "taximetro" against "incapacidad", which are plausible
+    // confusions borrowed from other lessons, not filler.
+    if (question.choices[question.answer].trim().split(/\s+/).length < 3) continue;
+    question.choices.forEach((choice, index) => {
+      if (index === question.answer) return;
+      if (choice.trim().split(/\s+/).length < 3) filler.push(`${question.id}: distractor ${index} is ${JSON.stringify(choice)}`);
+    });
+  }
+
+  assert.deepStrictEqual(outOfRange, [], "choices and answer are a pair; answer indexes into choices");
+  assert.deepStrictEqual(towering, [], "lengthen the distractors rather than trimming the answer");
+  assert.deepStrictEqual(filler, [], "a distractor nobody could pick is not a distractor");
+});
