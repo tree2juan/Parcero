@@ -440,3 +440,41 @@ test("adding regionCode did not break payloads filed before it existed", () => {
   assert.strictEqual(filed.region, old.region);
   assert.deepStrictEqual(review.validateFlag(old), [], "an old flag must still validate");
 });
+
+/*
+ * A flag raised from the page always carries a regionCode, because the page
+ * canonicalises the region as it files. A flag raised through the GitHub issue
+ * form does not — that form has no JavaScript, so the region arrives as whatever
+ * the reviewer typed. The CLI has to canonicalise those itself, in either
+ * language, or a Colombian who writes their own region in Spanish drops out of
+ * the tally that exists specifically to count them.
+ */
+test("the triage CLI groups a region typed in Spanish with the same one typed in English", () => {
+  const flags = [
+    sampleFlag({ region: "Costa Caribe (costeño)" }),
+    sampleFlag({ region: "Caribbean coast (costeño)" }),
+    sampleFlag({ region: "costa caribe (costeno)" })
+  ];
+  flags.forEach((flag) => delete flag.regionCode);
+  const { status, stdout } = runCli(review.buildPayload(flags, {}));
+  assert.strictEqual(status, 0, stdout);
+  const tally = stdout.slice(stdout.indexOf("Where reviewers spoke from"));
+  assert.match(tally, /3\s+Caribbean coast \(costeño\)/,
+    `all three spellings must land in one bucket, got:\n${tally}`);
+});
+
+test("the triage CLI still keeps unrecognised regions as the reviewer's own words", () => {
+  const flag = sampleFlag({ region: "Leticia, Amazonas" });
+  delete flag.regionCode;
+  const { stdout } = runCli(review.buildPayload([flag], {}));
+  const tally = stdout.slice(stdout.indexOf("Where reviewers spoke from"));
+  assert.match(tally, /1\s+Leticia, Amazonas/, "an open-vocabulary answer must never be discarded");
+});
+
+test("a regionCode already on the flag wins over re-matching the free text", () => {
+  const flag = sampleFlag({ region: "wherever I happen to live", regionCode: "narino" });
+  const { stdout } = runCli(review.buildPayload([flag], {}));
+  const tally = stdout.slice(stdout.indexOf("Where reviewers spoke from"));
+  assert.match(tally, new RegExp(`1\\s+${review.labelOf(review.REGION_SUGGESTIONS, "narino").replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}`),
+    "the filed code is authoritative; free text is only a fallback");
+});
