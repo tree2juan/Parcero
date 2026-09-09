@@ -411,59 +411,26 @@ footer {
 .footer-links { display: flex; flex-wrap: wrap; gap: 1.25rem; }
 .footer-note { max-width: 44rem; font-size: .85rem; }
 
-/* ---------- Review mode ---------- */
+/* ---------- Reporting tab ---------- */
 
-#review-mode[aria-pressed="true"] { background: var(--green); color: #fff; }
-
-.review-bar {
-  position: sticky; top: 3.6rem; z-index: 9;
-  display: flex; flex-wrap: wrap; align-items: center; gap: .6rem 1.25rem;
-  max-width: var(--wrap); margin: auto;
-  padding: .75rem 1.5rem;
+.report-panel { display: grid; gap: 0; max-width: 44rem; }
+.report-intro { margin-bottom: 1.5rem; color: var(--ink-soft); }
+.report-picker {
+  padding: 1rem 1.1rem .1rem;
   background: var(--mist);
-  border-bottom: 1px solid var(--line);
-  font-size: .9rem;
+  border: 1px solid var(--line); border-radius: var(--radius);
+  margin-bottom: 1.25rem;
 }
-.review-bar-text { flex: 1 1 22rem; margin: 0; }
-.review-bar-actions { display: flex; flex-wrap: wrap; align-items: center; gap: .5rem; }
-.review-bar .assistive-text { flex-basis: 100%; min-height: 0; margin: 0; }
-.review-bar .assistive-text:empty { display: none; }
 .review-count { font-weight: 700; color: var(--ink-soft); }
 
-.flag-button { display: none; }
-.review-mode .flaggable { position: relative; }
-.review-mode .flag-button {
-  display: inline-flex; align-items: center; gap: .3rem;
-  margin: .5rem 0 0;
-  padding: .25rem .6rem;
-  background: var(--surface); color: var(--ink-soft);
-  border: 1px dashed var(--line); border-radius: 99px;
-  font-size: .76rem; font-weight: 700;
-  transition: border-color .15s, color .15s, background .15s;
-}
-.review-mode .flag-button:hover { border-style: solid; border-color: var(--clay); color: var(--clay); }
-.review-mode .is-flagged { outline: 2px solid var(--clay); outline-offset: 3px; border-radius: .5rem; }
-.review-mode .is-flagged > .flag-button { border-style: solid; border-color: var(--clay); color: var(--clay); background: var(--warm); }
-.review-mode #culture-note .flag-button, .review-mode #practice-prompt .flag-button { margin-left: .5rem; }
-
-/* ---------- Review dialogs ---------- */
-
-.review-dialog {
-  width: min(38rem, calc(100vw - 2rem));
-  padding: 1.6rem;
-  color: var(--ink); background: var(--surface);
-  border: 1px solid var(--line); border-radius: var(--radius);
-  box-shadow: var(--shadow-lift);
-}
-.review-dialog::backdrop { background: rgba(23, 37, 31, .55); backdrop-filter: blur(2px); }
-.review-dialog h2 { font-size: 1.4rem; margin-bottom: .25rem; }
 .flag-location { margin-bottom: 1rem; color: var(--green); font-size: .85rem; font-weight: 700; }
 .flag-original {
-  margin: 0 0 1rem; padding: .75rem .9rem;
+  margin: 0 0 1.25rem; padding: .75rem .9rem;
   background: var(--mist); border-left: .25rem solid var(--green);
   border-radius: 0 .5rem .5rem 0;
   font-size: 1rem; font-weight: 600;
 }
+.flag-original:empty { display: none; }
 .field { display: block; margin-bottom: 1rem; font-size: .85rem; font-weight: 700; }
 .field select, .field input, .field textarea {
   display: block; width: 100%; margin-top: .35rem;
@@ -476,8 +443,10 @@ footer {
 .field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 0 1rem; }
 .flag-error { min-height: 1.4rem; margin: 0 0 .5rem; color: var(--clay); font-size: .85rem; font-weight: 700; }
 .flag-error:empty { min-height: 0; }
-.dialog-actions { display: flex; justify-content: flex-end; align-items: center; gap: .6rem; }
-.dialog-actions-wrap { flex-wrap: wrap; justify-content: flex-start; padding-top: 1rem; border-top: 1px solid var(--line); }
+.report-actions { display: flex; flex-wrap: wrap; align-items: center; gap: .6rem; }
+.report-actions-wrap { padding-top: 1rem; border-top: 1px solid var(--line); }
+.report-queue { margin-top: 2rem; padding-top: 1.5rem; border-top: 2px solid var(--line); }
+.report-queue h3 { font-size: 1.15rem; margin-bottom: .25rem; }
 
 .queue-list { max-height: 50vh; overflow-y: auto; display: grid; gap: .8rem; margin-block: 1rem; }
 .queue-item { padding: .9rem 1rem; background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius); }

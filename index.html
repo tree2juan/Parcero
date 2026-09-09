@@ -39,22 +39,8 @@
         <a href="#library" data-i18n="nav.library">Library</a>
         <a class="nav-repo" href="https://github.com/tree2juan/Parcero" data-i18n="nav.github">GitHub</a>
       </nav>
-      <button id="review-mode" class="text-button" type="button" aria-pressed="false" data-i18n="review.toggle">Review mode</button>
       <button id="reset-progress" class="text-button" type="button" data-i18n="action.reset">Reset progress</button>
     </header>
-
-    <div id="review-bar" class="review-bar" hidden>
-      <p class="review-bar-text">
-        <strong data-i18n="review.barHeading">Review mode is on.</strong>
-        <span data-i18n="review.barHelp">Every line, term and note now has a Flag button. Flag anything a Colombian speaker would not actually say. Nothing leaves this browser until you choose to submit.</span>
-      </p>
-      <div class="review-bar-actions">
-        <span id="review-count" class="review-count">No flags yet</span>
-        <button id="review-queue-open" class="ghost-button" type="button" disabled data-i18n="review.openQueue">Review my flags</button>
-        <button id="review-mode-off" class="text-button" type="button" data-i18n="review.exit">Exit review mode</button>
-      </div>
-      <p id="review-status" class="assistive-text" aria-live="polite"></p>
-    </div>
 
     <main id="top">
       <section class="hero" aria-labelledby="hero-title">
@@ -133,6 +119,7 @@
             <button class="tab active" type="button" role="tab" aria-selected="true" aria-controls="dialogue-panel" id="dialogue-tab" data-panel="dialogue-panel" data-i18n="tab.dialogue">Dialogue</button>
             <button class="tab" type="button" role="tab" aria-selected="false" aria-controls="understand-panel" id="understand-tab" data-panel="understand-panel" data-i18n="tab.understand">Understand</button>
             <button class="tab" type="button" role="tab" aria-selected="false" aria-controls="practice-panel" id="practice-tab" data-panel="practice-panel" data-i18n="tab.practice">Practice</button>
+            <button class="tab" type="button" role="tab" aria-selected="false" aria-controls="report-panel" id="report-tab" data-panel="report-panel" data-i18n="tab.report">Report an error</button>
           </div>
 
           <section id="dialogue-panel" class="tab-panel" role="tabpanel" aria-labelledby="dialogue-tab">
@@ -154,6 +141,67 @@
             <div id="choices" class="choices"></div>
             <p id="practice-feedback" aria-live="polite"></p>
             <button id="complete-lesson" class="primary-button" type="button">Mark lesson explored</button>
+          </section>
+
+          <section id="report-panel" class="tab-panel report-panel" role="tabpanel" aria-labelledby="report-tab" hidden>
+            <p class="report-intro" data-i18n="report.intro">Something here not quite right? Tell us. Pick the exact words below — nothing leaves this browser until you choose to send it.</p>
+
+            <div class="report-picker">
+              <label class="field" for="report-scope"><span data-i18n="report.scope">What are you reporting on?</span>
+                <select id="report-scope"></select>
+              </label>
+              <label class="field" for="report-item"><span data-i18n="report.item">Which one?</span>
+                <select id="report-item"></select>
+              </label>
+              <label class="field" for="flag-part"><span data-i18n="review.whichPart">Which part is wrong?</span>
+                <select id="flag-part"></select>
+              </label>
+            </div>
+
+            <p id="flag-location" class="flag-location"></p>
+            <blockquote id="flag-original" class="flag-original"></blockquote>
+
+            <label class="field" for="flag-type"><span data-i18n="review.whatProblem">What is the problem?</span>
+              <select id="flag-type"></select>
+            </label>
+            <label class="field" for="flag-suggestion"><span data-i18n="review.suggestion">How would you say it instead?</span>
+              <textarea id="flag-suggestion" rows="2" data-i18n-placeholder="review.suggestionHint" placeholder="Write the wording you would actually use."></textarea>
+            </label>
+            <label class="field" for="flag-comment"><span data-i18n="review.comment">Why — and where is it used that way?</span>
+              <textarea id="flag-comment" rows="3" data-i18n-placeholder="review.commentHint" placeholder="e.g. In Medellín this is completely normal, but in Bogotá it sounds abrupt."></textarea>
+            </label>
+            <div class="field-row">
+              <label class="field" for="flag-severity"><span data-i18n="review.severity">How serious is it?</span>
+                <select id="flag-severity"></select>
+              </label>
+              <label class="field" for="flag-region"><span data-i18n="review.region">Where do you speak from?</span>
+                <input id="flag-region" type="text" list="flag-regions" data-i18n-placeholder="review.regionHint" placeholder="Bogotá, Medellín, the coast…" autocomplete="off">
+                <datalist id="flag-regions"></datalist>
+              </label>
+            </div>
+            <label class="field" for="flag-role"><span data-i18n="review.role">You are reviewing as</span>
+              <select id="flag-role"></select>
+            </label>
+            <p id="flag-error" class="flag-error" role="alert"></p>
+            <div class="report-actions">
+              <button type="button" id="flag-save" class="primary-button" data-i18n="review.save">Add to my report</button>
+              <button type="button" id="flag-cancel" class="text-button" data-i18n="report.clearForm">Clear this form</button>
+            </div>
+            <p id="review-status" class="assistive-text" aria-live="polite"></p>
+
+            <div class="report-queue">
+              <h3 data-i18n="review.queueTitle">Your reports</h3>
+              <p id="queue-summary" class="assistive-text"></p>
+              <span id="review-count" class="review-count"></span>
+              <div id="queue-list" class="queue-list"></div>
+              <div class="report-actions report-actions-wrap">
+                <button type="button" id="queue-submit" class="primary-button" data-i18n="review.submit">Open a GitHub issue with these</button>
+                <button type="button" id="queue-copy" class="ghost-button" data-i18n="review.copy">Copy as Markdown</button>
+                <button type="button" id="queue-download" class="ghost-button" data-i18n="review.download">Download JSON</button>
+                <button type="button" id="queue-clear" class="text-button" data-i18n="review.clear">Clear all</button>
+              </div>
+              <p id="queue-status" class="assistive-text" aria-live="polite"></p>
+            </div>
           </section>
 
           <div class="lesson-pager">
@@ -223,61 +271,12 @@
       <p><strong>Parcero</strong> <span data-i18n="footer.tagline">— made for curious conversations. Your progress stays on this device.</span></p>
       <p class="footer-links">
         <a href="https://github.com/tree2juan/Parcero" data-i18n="footer.source">Source on GitHub</a>
-        <a href="?review=1#lessons" data-i18n="footer.flagLine">Flag a line in the page</a>
+        <a id="footer-report-link" href="#lessons" data-i18n="footer.flagLine">Report something that is wrong</a>
         <a href="https://github.com/tree2juan/Parcero/issues/new?template=lesson-review.yml" data-i18n="footer.signOff">Sign off a whole lesson</a>
         <a href="https://github.com/tree2juan/Parcero/issues/new" data-i18n="footer.report">Report a problem</a>
       </p>
       <p class="footer-note" data-i18n="footer.note">Lessons no native speaker has signed off yet say so in place. Regional usage varies across Colombia; treat every note as a starting point for listening, not a rule — and if something reads wrong to you, flag it where you found it.</p>
     </footer>
-
-    <dialog id="flag-dialog" class="review-dialog" aria-labelledby="flag-dialog-title">
-      <h2 id="flag-dialog-title" data-i18n="review.flagTitle">Flag this for revision</h2>
-      <p id="flag-location" class="flag-location"></p>
-      <label class="field" for="flag-part"><span data-i18n="review.whichPart">Which part is wrong?</span>
-        <select id="flag-part"></select>
-      </label>
-      <blockquote id="flag-original" class="flag-original"></blockquote>
-      <label class="field" for="flag-type"><span data-i18n="review.whatProblem">What is the problem?</span>
-        <select id="flag-type"></select>
-      </label>
-      <label class="field" for="flag-suggestion"><span data-i18n="review.suggestion">How would you say it instead?</span>
-        <textarea id="flag-suggestion" rows="2" data-i18n-placeholder="review.suggestionHint" placeholder="Write the wording you would actually use."></textarea>
-      </label>
-      <label class="field" for="flag-comment"><span data-i18n="review.comment">Why — and where is it used that way?</span>
-        <textarea id="flag-comment" rows="3" data-i18n-placeholder="review.commentHint" placeholder="e.g. In Medellín this is completely normal, but in Bogotá it sounds abrupt."></textarea>
-      </label>
-      <div class="field-row">
-        <label class="field" for="flag-severity"><span data-i18n="review.severity">How serious is it?</span>
-          <select id="flag-severity"></select>
-        </label>
-        <label class="field" for="flag-region"><span data-i18n="review.region">Where do you speak from?</span>
-          <input id="flag-region" type="text" list="flag-regions" data-i18n-placeholder="review.regionHint" placeholder="Bogotá, Medellín, the coast…" autocomplete="off">
-          <datalist id="flag-regions"></datalist>
-        </label>
-      </div>
-      <label class="field" for="flag-role"><span data-i18n="review.role">You are reviewing as</span>
-        <select id="flag-role"></select>
-      </label>
-      <p id="flag-error" class="flag-error" role="alert"></p>
-      <div class="dialog-actions">
-        <button type="button" id="flag-cancel" class="text-button" data-i18n="review.cancel">Cancel</button>
-        <button type="button" id="flag-save" class="primary-button" data-i18n="review.save">Add to my flags</button>
-      </div>
-    </dialog>
-
-    <dialog id="queue-dialog" class="review-dialog" aria-labelledby="queue-dialog-title">
-      <h2 id="queue-dialog-title" data-i18n="review.queueTitle">Your flags</h2>
-      <p id="queue-summary" class="assistive-text"></p>
-      <div id="queue-list" class="queue-list"></div>
-      <div class="dialog-actions dialog-actions-wrap">
-        <button type="button" id="queue-submit" class="primary-button" data-i18n="review.submit">Open a GitHub issue with these</button>
-        <button type="button" id="queue-copy" class="ghost-button" data-i18n="review.copy">Copy as Markdown</button>
-        <button type="button" id="queue-download" class="ghost-button" data-i18n="review.download">Download JSON</button>
-        <button type="button" id="queue-clear" class="text-button" data-i18n="review.clear">Clear all</button>
-        <button type="button" id="queue-close" class="text-button" data-i18n="review.close">Close</button>
-      </div>
-      <p id="queue-status" class="assistive-text" aria-live="polite"></p>
-    </dialog>
 
     <script src="data/lessons.js"></script>
     <script src="data/curriculum.js"></script>

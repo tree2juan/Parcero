@@ -1,54 +1,55 @@
 /*
- * Review mode: the in-page flagging surface for native speakers.
+ * The reporting tab: one place to tell us a string is wrong.
  *
- * Learners never see any of this. A reviewer turns review mode on (header
- * button, or a ?review=1 link a maintainer sends them), which reveals a Flag
- * control on every reviewable block. Flags collect in this browser until the
- * reviewer submits them as one GitHub issue.
+ * An earlier version hung a Flag button off every dialogue line, vocabulary
+ * card, answer choice and library card. It worked, but it put review furniture
+ * in front of learners who only wanted to read the lesson. This replaces all of
+ * that with a single tab: the reviewer picks what they are reporting from two
+ * dropdowns instead of hunting for a control next to it.
+ *
+ * Nothing about the report itself changed. Same anchors, same payload, same
+ * queue, same GitHub issue. Only the way you reach it.
  */
 (function () {
   "use strict";
 
   const $ = (selector) => document.querySelector(selector);
-  const STORE = { mode: "parcero-review-mode", flags: "parcero-flags", reviewer: "parcero-reviewer" };
+  const STORE = { flags: "parcero-flags", reviewer: "parcero-reviewer" };
 
   /*
    * i18n seam. Strings rendered from markup carry data-i18n; these are the ones
    * built here, which are interpolated or pluralised and so need a function.
-   * Until i18n.js lands, the English table below is the source of truth; after
-   * it lands this picks up translations with no further edits.
    */
   const EN = {
-    "review.mode.off": "Review mode",
-    "review.mode.on": "Review mode: on",
-    "review.count.none": "No flags yet",
-    "review.count.one": "{count} flag saved",
-    "review.count.other": "{count} flags saved",
-    "review.flag": "Flag",
-    "review.flagged.one": "Flagged ({count})",
-    "review.flagged.other": "Flagged ({count})",
-    "review.flagAria": "Flag this for native-speaker revision",
-    "review.flaggedAria.one": "Flagged once. Add another note, or review it.",
-    "review.flaggedAria.other": "Flagged {count} times. Add another note, or review them.",
-    "review.save": "Add to my flags",
+    "review.count.none": "Nothing reported yet",
+    "review.count.one": "{count} report ready to send",
+    "review.count.other": "{count} reports ready to send",
+    "review.save": "Add to my report",
     "review.saveChanges": "Save changes",
     "review.missingText": "This text is no longer in the lesson.",
-    "review.saved.one": "Flag saved. {count} waiting to be submitted.",
-    "review.saved.other": "Flags saved. {count} waiting to be submitted.",
+    "review.saved.one": "Saved. {count} waiting to be sent.",
+    "review.saved.other": "Saved. {count} waiting to be sent.",
     "review.edit": "Edit",
     "review.remove": "Remove",
-    "review.queue.empty": "Nothing flagged yet.",
+    "review.queue.empty": "Nothing reported yet.",
     "review.queue.notSent": "{summary}. Nothing has been sent anywhere yet.",
     "review.queue.yourWording": "Your wording:",
-    "review.queue.drift": "This text has changed since you flagged it — please reopen and check it.",
-    "review.confirmClear": "Delete every flag you have saved? This cannot be undone.",
-    "review.status.opened": "GitHub opened in a new tab. Your flags stay here until you clear them.",
+    "review.queue.drift": "This text has changed since you reported it — please reopen and check it.",
+    "review.confirmClear": "Delete every report you have saved? This cannot be undone.",
+    "review.status.opened": "GitHub opened in a new tab. Your reports stay here until you clear them.",
     "review.status.tooLongCopied": "That is too much to fit in a link, so it is on your clipboard — paste it into the issue GitHub just opened.",
     "review.status.tooLongDownload": "That is too much to fit in a link. Use “Download JSON” and attach the file to the issue GitHub just opened.",
     "review.status.copied": "Copied. Paste it into a GitHub issue, an email, or a message.",
     "review.status.copyFailed": "Could not reach the clipboard — use “Download JSON” instead.",
     "review.status.downloaded": "Downloaded. Attach it to a GitHub issue, or send it to a maintainer.",
-    "review.status.cleared": "All flags cleared."
+    "review.status.cleared": "All reports cleared.",
+    "report.scope.lesson": "The lesson I am reading",
+    "report.scope.verb": "A verb in the library",
+    "report.scope.fluency": "A fluency phrase",
+    "report.scope.mature": "Mature language",
+    "report.noLesson": "Open a lesson first and it will show up here.",
+    "report.formCleared": "Form cleared.",
+    "report.editing": "Editing a report you already saved."
   };
 
   const direction = () => (document.querySelector("input[name=direction]:checked") || {}).value || "es";
@@ -76,7 +77,6 @@
     .reduce((all, [code, fallback]) => Object.assign(all, { [code]: label("region", code, fallback) }), {});
 
   const state = {
-    mode: false,
     flags: readJson(STORE.flags, []),
     reviewer: readJson(STORE.reviewer, { role: "native-es-co", region: "" }),
     editing: null
@@ -99,113 +99,201 @@
   });
 
   const escapeHtml = (value) => String(value == null ? "" : value)
-    .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+    .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;").replace(/'/g, "&#39;");
+
+  const preview = (text, max) => {
+    const clean = String(text == null ? "" : text).replace(/\s+/g, " ").trim();
+    const limit = max || 72;
+    return clean.length > limit ? `${clean.slice(0, limit - 1)}…` : clean;
+  };
 
   function persistFlags() {
     localStorage.setItem(STORE.flags, JSON.stringify(state.flags));
     refreshCounts();
-    applyMarks();
-  }
-
-  /* ---------- review mode ---------- */
-
-  function setMode(on) {
-    state.mode = Boolean(on);
-    localStorage.setItem(STORE.mode, state.mode ? "true" : "false");
-    document.body.classList.toggle("review-mode", state.mode);
-    $("#review-mode").setAttribute("aria-pressed", state.mode ? "true" : "false");
-    $("#review-mode").textContent = t(state.mode ? "review.mode.on" : "review.mode.off");
-    $("#review-bar").hidden = !state.mode;
-    sync();
   }
 
   function refreshCounts() {
     const total = state.flags.length;
     $("#review-count").textContent = total === 0 ? t("review.count.none") : tp("review.count", total);
-    $("#review-queue-open").disabled = total === 0;
-  }
-
-  /* ---------- flag affordances ---------- */
-
-  function decorate() {
-    document.querySelectorAll("[data-anchor]").forEach((element) => {
-      const anchor = element.dataset.anchor;
-      if (!anchor || element.querySelector(":scope > .flag-button")) return;
-      if (ParceroReview.partsForAnchor(anchor, data()).length === 0) return;
-      const button = document.createElement("button");
-      button.type = "button";
-      button.className = "flag-button";
-      button.dataset.flagAnchor = anchor;
-      button.innerHTML = '<span aria-hidden="true">⚑</span><span class="flag-button-text"></span>';
-      element.classList.add("flaggable");
-      element.appendChild(button);
-    });
-  }
-
-  function applyMarks() {
-    const counts = new Map();
-    for (const flag of state.flags) {
-      const group = ParceroReview.groupAnchor(flag.anchor);
-      if (group) counts.set(group, (counts.get(group) || 0) + 1);
+    for (const id of ["#queue-submit", "#queue-copy", "#queue-download", "#queue-clear"]) {
+      $(id).disabled = total === 0;
     }
-    document.querySelectorAll("[data-anchor]").forEach((element) => {
-      const total = counts.get(element.dataset.anchor) || 0;
-      element.classList.toggle("is-flagged", total > 0);
-      const button = element.querySelector(":scope > .flag-button");
-      if (!button) return;
-      button.querySelector(".flag-button-text").textContent = total > 0 ? tp("review.flagged", total) : t("review.flag");
-      button.setAttribute("aria-label", total > 0 ? tp("review.flaggedAria", total) : t("review.flagAria"));
-    });
   }
 
-  let observer = null;
-  function sync() {
-    if (observer) observer.disconnect();
-    decorate();
-    applyMarks();
-    if (observer) observer.observe(document.body, { childList: true, subtree: true });
+  /* ---------- what is on screen right now ---------- */
+
+  /*
+   * app.js already stamps the lesson heading with an anchor on every render, so
+   * that attribute is the seam for "which lesson is the reader looking at".
+   * Reading it avoids reaching into app.js's own state.
+   */
+  function currentLesson() {
+    const heading = $("#lesson-heading");
+    const parsed = heading && heading.dataset.anchor
+      ? ParceroReview.parseAnchor(heading.dataset.anchor)
+      : null;
+    return parsed && parsed.kind === "lesson" ? { id: parsed.id, direction: parsed.direction } : null;
   }
 
-  /* ---------- capture dialog ---------- */
+  const SCOPES = ["lesson", "verb", "fluency", "mature"];
 
-  function fillSelect(select, pairs, group) {
-    select.innerHTML = pairs
-      .map(([code, english]) => `<option value="${escapeHtml(code)}">${escapeHtml(label(group, code, english))}</option>`)
-      .join("");
+  /* The group anchors a reviewer can choose from, for one scope. */
+  function groupsForScope(scope) {
+    const current = data();
+    if (scope === "verb") return (current.curriculum || []).map((verb) => `verb:${verb.id}`);
+    if (scope === "fluency") return (current.fluencyItems || []).map((_, index) => `fluency:${index}`);
+    if (scope === "mature") return (current.matureItems || []).map((_, index) => `mature:${index}`);
+
+    const here = currentLesson();
+    if (!here) return [];
+    const lesson = (current.lessons || []).find((entry) => entry.id === here.id);
+    const content = lesson ? lesson[here.direction] : null;
+    if (!content) return [];
+    const base = `lesson:${here.id}/${here.direction}`;
+    const anchors = [`${base}/heading`];
+    (content.dialogue || []).forEach((_, index) => anchors.push(`${base}/dialogue/${index}`));
+    (content.vocabulary || []).forEach((_, index) => anchors.push(`${base}/vocabulary/${index}`));
+    anchors.push(`${base}/note`, `${base}/prompt`);
+    if ((content.choices || []).length > 0) anchors.push(`${base}/choices`);
+    return anchors;
   }
 
-  function openFlagDialog(anchor, editIndex) {
+  /*
+   * Label an item by the words it actually contains. A reviewer recognises
+   * "¿Me regalas un tinto?" instantly; "Dialogue line 3" makes them count.
+   */
+  function itemLabel(anchor) {
     const parts = ParceroReview.partsForAnchor(anchor, data());
-    if (parts.length === 0) return;
-    const existing = typeof editIndex === "number" ? state.flags[editIndex] : null;
-    state.editing = typeof editIndex === "number" ? editIndex : null;
+    if (parts.length === 0) return anchor;
+    if (anchor.startsWith("verb:") && parts.length > 1) {
+      return `${preview(parts[0].text, 28)} — ${preview(parts[1].text, 40)}`;
+    }
+    return preview(parts[0].text);
+  }
 
+  /* ---------- the picker ---------- */
+
+  function renderScopes() {
+    const chosen = $("#report-scope").value;
+    $("#report-scope").innerHTML = SCOPES
+      .map((code) => `<option value="${code}">${escapeHtml(t(`report.scope.${code}`))}</option>`)
+      .join("");
+    if (chosen) $("#report-scope").value = chosen;
+  }
+
+  function renderItems(preferred, allowMissing) {
+    const scope = $("#report-scope").value || "lesson";
+    const anchors = groupsForScope(scope);
+    const select = $("#report-item");
+    select.innerHTML = anchors
+      .map((anchor) => `<option value="${escapeHtml(anchor)}">${escapeHtml(itemLabel(anchor))}</option>`)
+      .join("");
+
+    /*
+     * A saved report can point at a lesson the reader has since navigated away
+     * from. When reopening one for editing, offer it as its own option so the
+     * edit lands on the string that was actually reported. Only then: on an
+     * ordinary re-render a stale anchor must fall away, or paging to the next
+     * lesson would keep showing the previous one's line.
+     */
+    if (preferred && allowMissing && !anchors.includes(preferred)) {
+      const option = document.createElement("option");
+      option.value = preferred;
+      option.textContent = itemLabel(preferred);
+      select.prepend(option);
+    }
+    if (preferred && [...select.options].some((option) => option.value === preferred)) {
+      select.value = preferred;
+    }
+    select.disabled = select.options.length === 0;
+  }
+
+  function renderParts(keepAnchor) {
+    const item = $("#report-item").value;
+    const parts = item ? ParceroReview.partsForAnchor(item, data()) : [];
     $("#flag-part").innerHTML = parts
       .map((part) => `<option value="${escapeHtml(part.anchor)}">${escapeHtml(part.slotLabel)}</option>`)
       .join("");
-    $("#flag-part").value = existing ? existing.anchor : parts[0].anchor;
-    $("#flag-part").disabled = parts.length === 1;
-
-    $("#flag-type").value = existing ? existing.issueType : "not-natural";
-    $("#flag-severity").value = existing ? existing.severity : "should-fix";
-    $("#flag-role").value = existing ? existing.role : state.reviewer.role;
-    $("#flag-region").value = existing ? existing.region || "" : state.reviewer.region || "";
-    $("#flag-suggestion").value = existing ? existing.suggestion || "" : "";
-    $("#flag-comment").value = existing ? existing.comment || "" : "";
-    $("#flag-error").textContent = "";
-    $("#flag-save").textContent = t(existing ? "review.saveChanges" : "review.save");
+    if (keepAnchor && parts.some((part) => part.anchor === keepAnchor)) $("#flag-part").value = keepAnchor;
+    $("#flag-part").disabled = parts.length <= 1;
     showOriginal();
-    $("#flag-dialog").showModal();
-    $("#flag-type").focus();
   }
 
   function showOriginal() {
-    const resolved = ParceroReview.resolveAnchor($("#flag-part").value, data());
+    const anchor = $("#flag-part").value;
     const original = $("#flag-original");
+    if (!anchor) {
+      original.textContent = t("report.noLesson");
+      original.removeAttribute("lang");
+      $("#flag-location").textContent = "";
+      return;
+    }
+    const resolved = ParceroReview.resolveAnchor(anchor, data());
     original.textContent = resolved.ok ? resolved.text : t("review.missingText");
     if (resolved.ok && resolved.lang) original.setAttribute("lang", resolved.lang);
     else original.removeAttribute("lang");
-    $("#flag-location").textContent = resolved.ok ? resolved.label : $("#flag-part").value;
+    $("#flag-location").textContent = resolved.ok ? resolved.label : anchor;
+  }
+
+  /* Rebuild every control in the tab. Safe to call whenever the page changes. */
+  function renderPanel() {
+    const item = $("#report-item").value;
+    const part = $("#flag-part").value;
+    renderScopes();
+    fillSelect($("#flag-type"), ParceroReview.ISSUE_TYPES, "issueType");
+    fillSelect($("#flag-severity"), ParceroReview.SEVERITIES, "severity");
+    fillSelect($("#flag-role"), ParceroReview.REVIEWER_ROLES, "role");
+    /* Suggestions show in the reviewer's language; the code they map back to does not. */
+    $("#flag-regions").innerHTML = ParceroReview.REGION_SUGGESTIONS
+      .map(([code, fallback]) => `<option value="${escapeHtml(label("region", code, fallback))}"></option>`).join("");
+    renderItems(item);
+    renderParts(part);
+    refreshCounts();
+    renderQueue();
+  }
+
+  function fillSelect(select, pairs, group) {
+    const chosen = select.value;
+    select.innerHTML = pairs
+      .map(([code, english]) => `<option value="${escapeHtml(code)}">${escapeHtml(label(group, code, english))}</option>`)
+      .join("");
+    if (chosen) select.value = chosen;
+  }
+
+  /* ---------- the form ---------- */
+
+  function resetForm() {
+    state.editing = null;
+    $("#flag-suggestion").value = "";
+    $("#flag-comment").value = "";
+    $("#flag-error").textContent = "";
+    $("#flag-type").value = "not-natural";
+    $("#flag-severity").value = "should-fix";
+    $("#flag-role").value = state.reviewer.role;
+    $("#flag-region").value = state.reviewer.region || "";
+    $("#flag-save").textContent = t("review.save");
+  }
+
+  /* Load a saved report back into the form so it can be corrected. */
+  function editFlag(index) {
+    const flag = state.flags[index];
+    if (!flag) return;
+    const parsed = ParceroReview.parseAnchor(flag.anchor);
+    state.editing = index;
+    $("#report-scope").value = parsed && parsed.kind === "lesson" ? "lesson" : (parsed || {}).kind || "lesson";
+    renderItems(ParceroReview.groupAnchor(flag.anchor) || flag.anchor, true);
+    renderParts(flag.anchor);
+    $("#flag-type").value = flag.issueType;
+    $("#flag-severity").value = flag.severity;
+    $("#flag-role").value = flag.role;
+    $("#flag-region").value = flag.region || "";
+    $("#flag-suggestion").value = flag.suggestion || "";
+    $("#flag-comment").value = flag.comment || "";
+    $("#flag-error").textContent = "";
+    $("#flag-save").textContent = t("review.saveChanges");
+    $("#review-status").textContent = t("report.editing");
+    $("#flag-type").focus();
   }
 
   function saveFlag() {
@@ -238,13 +326,13 @@
       if (duplicate === -1) state.flags.push(flag);
       else state.flags[duplicate] = flag;
     }
-    state.editing = null;
+    resetForm();
     persistFlags();
-    $("#flag-dialog").close();
+    renderQueue();
     $("#review-status").textContent = tp("review.saved", state.flags.length);
   }
 
-  /* ---------- queue dialog ---------- */
+  /* ---------- the queue ---------- */
 
   function renderQueue() {
     const current = data();
@@ -269,12 +357,6 @@
         </p>
       </article>`;
     }).join("");
-  }
-
-  function openQueue() {
-    renderQueue();
-    $("#queue-status").textContent = "";
-    $("#queue-dialog").showModal();
   }
 
   async function copyText(text) {
@@ -331,53 +413,32 @@
 
   /* ---------- wiring ---------- */
 
-  fillSelect($("#flag-type"), ParceroReview.ISSUE_TYPES, "issueType");
-  fillSelect($("#flag-severity"), ParceroReview.SEVERITIES, "severity");
-  fillSelect($("#flag-role"), ParceroReview.REVIEWER_ROLES, "role");
-  /* Suggestions show in the reviewer's language; the code they map back to does not. */
-  $("#flag-regions").innerHTML = ParceroReview.REGION_SUGGESTIONS
-    .map(([code, fallback]) => `<option value="${escapeHtml(label("region", code, fallback))}"></option>`).join("");
+  const openReportTab = () => {
+    $("#report-tab").click();
+    $("#report-panel").scrollIntoView({ behavior: "smooth", block: "start" });
+  };
 
-  document.addEventListener("click", (event) => {
-    const flagButton = event.target.closest(".flag-button");
-    if (!flagButton) return;
-    event.preventDefault();
-    event.stopPropagation();
-    openFlagDialog(flagButton.dataset.flagAnchor);
-  });
-
-  $("#review-mode").addEventListener("click", () => setMode(!state.mode));
-  $("#review-mode-off").addEventListener("click", () => {
-    setMode(false);
-    $("#review-mode").focus();
-  });
-  $("#review-queue-open").addEventListener("click", openQueue);
-  $("#lesson-review-start").addEventListener("click", () => {
-    setMode(true);
-    $("#review-bar").scrollIntoView({ behavior: "smooth", block: "center" });
-  });
-
+  $("#report-scope").addEventListener("change", () => { renderItems(); renderParts(); });
+  $("#report-item").addEventListener("change", () => renderParts());
   $("#flag-part").addEventListener("change", showOriginal);
   $("#flag-save").addEventListener("click", saveFlag);
   $("#flag-cancel").addEventListener("click", () => {
-    state.editing = null;
-    $("#flag-dialog").close();
+    resetForm();
+    $("#review-status").textContent = t("report.formCleared");
   });
 
   $("#queue-list").addEventListener("click", (event) => {
     const edit = event.target.closest("[data-queue-edit]");
     if (edit) {
-      const index = Number(edit.dataset.queueEdit);
-      $("#queue-dialog").close();
-      openFlagDialog(state.flags[index].anchor, index);
+      editFlag(Number(edit.dataset.queueEdit));
       return;
     }
     const remove = event.target.closest("[data-queue-remove]");
     if (!remove) return;
     state.flags.splice(Number(remove.dataset.queueRemove), 1);
+    if (state.editing !== null) resetForm();
     persistFlags();
     renderQueue();
-    if (state.flags.length === 0) $("#queue-dialog").close();
   });
 
   $("#queue-submit").addEventListener("click", submitFlags);
@@ -386,23 +447,27 @@
   $("#queue-clear").addEventListener("click", () => {
     if (!window.confirm(t("review.confirmClear"))) return;
     state.flags = [];
+    resetForm();
     persistFlags();
     renderQueue();
-    $("#queue-dialog").close();
-    $("#review-status").textContent = t("review.status.cleared");
+    $("#queue-status").textContent = t("review.status.cleared");
   });
-  $("#queue-close").addEventListener("click", () => $("#queue-dialog").close());
 
+  $("#lesson-review-start").addEventListener("click", openReportTab);
+  $("#footer-report-link").addEventListener("click", (event) => {
+    event.preventDefault();
+    openReportTab();
+  });
+
+  /* The tab shows one lesson's strings, so rebuild it whenever that could change. */
+  $("#report-tab").addEventListener("click", () => renderPanel());
+  for (const id of ["#previous-lesson", "#next-lesson"]) {
+    $(id).addEventListener("click", () => renderPanel());
+  }
   document.querySelectorAll("input[name=direction]").forEach((input) => {
-    input.addEventListener("change", () => {
-      setMode(state.mode);
-      refreshCounts();
-    });
+    input.addEventListener("change", () => renderPanel());
   });
 
-  observer = new MutationObserver(() => sync());
-  const params = new URLSearchParams(window.location.search);
-  const invited = params.get("review") === "1" || window.location.hash === "#review";
-  setMode(invited || localStorage.getItem(STORE.mode) === "true");
-  refreshCounts();
+  resetForm();
+  renderPanel();
 })();

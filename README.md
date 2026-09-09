@@ -158,15 +158,17 @@ Regional usage is the part most easily got wrong, so the app is honest about it:
 
 Review happens at two grains, and both need a reviewer who knows the language, not the codebase.
 
-### Flag a line from the page
+### Report an error from the page
 
-The fastest correction is the one made while looking at the mistake. Add `?review=1` to the URL — **[open the site in review mode](https://tree2juan.github.io/Parcero/?review=1)** — or press **Review mode** in the header. A **Flag** control appears on every reviewable block: each dialogue line, vocabulary entry, culture note, practice question, verb, connector, and mature-language entry.
+The fastest correction is the one made while looking at the mistake. Every lesson has a **Report an error** tab, next to Dialogue, Understand and Practice. Nothing is added to the lesson itself: no controls hang off individual lines, so a learner reading a lesson never has to see review furniture.
 
-Flagging one asks what is wrong (not natural, wrong region, wrong register, mistranslation, misleading pronunciation, spelling, culture, risky, dated), how much it matters, and — the field that does the real work — **how you would say it instead**. Flags collect in your browser, so you can read a whole lesson and flag as you go. **Submit flags** then opens a prefilled GitHub issue containing both a readable report and a machine-readable payload. Copy-to-clipboard and download-JSON are offered as fallbacks, including when a batch is too large for a URL.
+The tab asks two questions to find the string: **what are you reporting on** — the lesson you are reading, a verb, a fluency phrase, or a mature-language entry — and **which one**, listed by its own words rather than by position. It then narrows to the exact part: the Spanish line, the translation, the pronunciation respelling, the speaker's name, and so on. The text you picked is quoted back to you before you say anything about it.
 
-Nothing is sent anywhere until you press submit. Flags live only in your browser, under their own storage key, so *Reset progress* never destroys them.
+From there it asks what is wrong (not natural, wrong region, wrong register, mistranslation, misleading pronunciation, spelling, culture, risky, dated), how much it matters, and — the field that does the real work — **how you would say it instead**. Reports collect in your browser, so you can read a whole lesson and report as you go, and any saved report can be reopened and edited. **Open a GitHub issue with these** then opens a prefilled issue containing both a readable report and a machine-readable payload. Copy-to-clipboard and download-JSON are offered as fallbacks, including when a batch is too large for a URL.
 
-Because regional usage is the thing this project most needs help with, the form also asks where you speak from. Ten Colombian regions are offered as suggestions, but the field is open — type wherever you are from and it is recorded in your own words. Where what you typed matches a suggestion, the flag also carries a stable region code, so that a year of flags can be counted by region without anyone having to guess that "Medellin" and "Medellín and Antioquia (paisa)" meant the same place. `node scripts/review-flags.js` prints that tally.
+Nothing is sent anywhere until you press submit. Reports live only in your browser, under their own storage key, so *Reset progress* never destroys them.
+
+Because regional usage is the thing this project most needs help with, the form also asks where you speak from. Ten Colombian regions are offered as suggestions, but the field is open — type wherever you are from and it is recorded in your own words. Where what you typed matches a suggestion, the report also carries a stable region code, so that a year of reports can be counted by region without anyone having to guess that "Medellin" and "Medellín and Antioquia (paisa)" meant the same place. `node scripts/review-flags.js` prints that tally.
 
 ### Sign off a whole lesson
 
@@ -200,7 +202,7 @@ The mature-language reference needs the same care from qualified reviewers — s
 index.html          The whole app shell — every element id app.js binds to
 app.js              Rendering, placement scoring, lesson navigation, progress
 review.js           Review anchors: parse, resolve, validate, build issue payloads
-review-ui.js        Review mode: flag controls, the flag queue, issue export
+review-ui.js        The Report an error tab: content picker, report form, queue, issue export
 styles.css          Design system: light/dark tokens, layout, components
 data/lessons.js     The lessons
 data/curriculum.js  200 verbs, fluency connectors, mature-language reference

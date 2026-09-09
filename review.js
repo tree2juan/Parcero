@@ -497,7 +497,7 @@ const ParceroReview = (function () {
 
   function issueBody(flags, data) {
     return [
-      summarise(flags, data) + ", raised from the page in review mode.",
+      summarise(flags, data) + ", reported from the Report an error tab.",
       "",
       flagsToMarkdown(flags, data)
     ].join("\n");
