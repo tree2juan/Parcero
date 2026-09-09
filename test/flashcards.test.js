@@ -625,8 +625,10 @@ function codeOnly(src) {
       while (i < src.length) {
         if (src[i] === "\\") { hide(i++); hide(i++); continue; }
         if (depth === 0 && src[i] === "`") break;
-        // ${ ... } holds real code, so it stays visible.
-        if (depth === 0 && src[i] === "$" && src[i + 1] === "{") { depth = 1; i += 2; continue; }
+        // ${ ... } holds real code, so it stays visible. The ${ itself does
+        // not: leaving the $ behind reads as a reference to a global named $,
+        // which is a real name in this codebase.
+        if (depth === 0 && src[i] === "$" && src[i + 1] === "{") { hide(i); hide(i + 1); depth = 1; i += 2; continue; }
         if (depth > 0) {
           if (src[i] === "{") depth++;
           else if (src[i] === "}") { depth--; i++; continue; }
