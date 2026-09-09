@@ -281,6 +281,10 @@ main, footer { max-width: var(--wrap); margin: auto; padding-inline: 1.5rem; }
   font-size: .9rem; font-weight: 650;
 }
 .review-badge span { flex: 1 1 18rem; }
+/* A different stripe from .review-badge: "nobody has signed this off" and
+   "nobody has ever read this" are different claims and should not look alike. */
+.provenance-badge { border-left-color: var(--ink); }
+.provenance-count { flex: 0 0 auto !important; font-weight: 500; opacity: .75; white-space: nowrap; }
 .review-badge .text-button { padding: .35rem .7rem; color: var(--green-deep); text-decoration: underline; }
 
 .tabs { display: flex; gap: .2rem; padding-top: 1.25rem; border-bottom: 1px solid var(--line); flex-wrap: wrap; }
@@ -331,6 +335,74 @@ main, footer { max-width: var(--wrap); margin: auto; padding-inline: 1.5rem; }
   padding-top: 1.25rem; border-top: 1px solid var(--line);
 }
 .lesson-pager .assistive-text { margin: 0; color: var(--ink-soft); font-weight: 700; font-size: .9rem; }
+
+/* ---------- The situation ---------- */
+
+.panel-lead { margin: 0 0 1.2rem; color: var(--ink-soft); }
+.setting-list { display: grid; gap: .6rem; margin: 0; }
+.setting-row {
+  display: grid; grid-template-columns: minmax(5.5rem, 7rem) 1fr; gap: .2rem 1rem;
+  padding: .85rem 1.1rem;
+  background: var(--mist);
+  border-radius: var(--radius);
+}
+.setting-row dt { margin: 0; color: var(--green); font-size: .8rem; font-weight: 700; text-transform: uppercase; letter-spacing: .05em; }
+.setting-row dd { margin: 0; }
+
+.address-card {
+  margin-top: 1.5rem; padding: 1.2rem;
+  background: var(--warm);
+  border-left: .3rem solid var(--sun); border-radius: var(--radius);
+}
+.address-card .eyebrow { margin: 0; color: var(--ink-soft); font-size: .8rem; font-weight: 700; text-transform: uppercase; letter-spacing: .05em; }
+.address-form { margin: .15rem 0 .6rem; }
+.address-form strong { font-size: 1.35rem; }
+#address-who { color: var(--ink-soft); }
+.address-card p { margin: 0 0 .45rem; }
+.address-card p:last-child { margin-bottom: 0; }
+.address-switch { font-size: .92rem; color: var(--ink-soft); }
+
+/* ---------- Depth shared by dialogue, vocabulary and pitfalls ---------- */
+
+.detail { margin: .35rem 0 0; font-size: .9rem; }
+.detail strong { color: var(--green); font-weight: 650; }
+.line-extras { margin-top: .7rem; padding-top: .6rem; border-top: 1px dashed var(--line); }
+
+.word-gloss { margin: 0; font-size: .95rem; }
+/* .word-card p zeroes margins, so the depth rows need to win it back. */
+.word-card .detail { margin: .35rem 0 0; }
+.word-card .word-example { margin: .6rem 0 0; }
+.word-card .word-tags { margin: .5rem 0 0; }
+.word-example {
+  display: grid; gap: .15rem;
+  margin: .6rem 0 0; padding: .55rem .75rem;
+  background: var(--surface); border-radius: .5rem;
+  font-size: .92rem;
+}
+.word-example > span:first-child { font-weight: 600; }
+.word-tags { margin: .5rem 0 0; display: flex; flex-wrap: wrap; gap: .35rem; }
+
+.understand-block { margin-top: 2rem; }
+.understand-block h3 { margin: 0 0 .8rem; font-size: 1.05rem; }
+.culture-notes, .pitfalls, .variations { display: grid; gap: .9rem; }
+.culture-notes, .variations { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+.culture-card, .pitfall-card, .variation-card {
+  padding: 1rem 1.15rem;
+  border: 1px solid var(--line); border-radius: var(--radius);
+  background: var(--paper);
+}
+.culture-card h4, .pitfall-card h4 { margin: 0 0 .35rem; font-size: .98rem; }
+.culture-card p, .pitfall-card p { margin: 0; font-size: .93rem; color: var(--ink-soft); }
+.pitfall-card { border-left: .3rem solid var(--clay); }
+.pitfall-card h4 { color: var(--clay); }
+.variation-form { margin: 0; font-size: 1.02rem; font-weight: 650; }
+.variation-when { margin: .3rem 0 0; font-size: .9rem; color: var(--ink-soft); }
+
+/* ---------- Practice ---------- */
+
+#practice-progress { margin: 0 0 .5rem; color: var(--ink-soft); font-size: .85rem; font-weight: 700; letter-spacing: .03em; }
+.practice-tests { margin: .4rem 0 0; font-size: .9rem; color: var(--ink-soft); }
+.practice-actions { display: flex; flex-wrap: wrap; align-items: center; gap: .75rem; }
 
 /* ---------- Flashcards ---------- */
 

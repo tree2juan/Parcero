@@ -92,11 +92,33 @@
     }
   }
 
+  /*
+   * Read each data global through a thunk and judge it by shape.
+   *
+   * `typeof lessons === "undefined"` cannot work here: `index.html` has
+   * `id="lessons"`, and named access on Window makes every element id a global,
+   * so the name is always defined — the fallback never fires and a <section>
+   * reaches code expecting an array. Nor can this read globalThis[name], because
+   * a top-level `const` is a lexical binding and never becomes a property of the
+   * global object; globalThis.lessons would return the element, not the data.
+   *
+   * So: reference lexically inside a thunk, catch the ReferenceError for a name
+   * that genuinely never loaded, and require Array.isArray for everything else.
+   */
+  const arrayFrom = (read) => {
+    let value;
+    try {
+      value = read();
+    } catch {
+      return [];
+    }
+    return Array.isArray(value) ? value : [];
+  };
   const data = () => ({
-    lessons: typeof lessons === "undefined" ? [] : lessons,
-    curriculum: typeof curriculum === "undefined" ? [] : curriculum,
-    fluencyItems: typeof fluencyItems === "undefined" ? [] : fluencyItems,
-    matureItems: typeof matureItems === "undefined" ? [] : matureItems
+    lessons: arrayFrom(() => lessons),
+    curriculum: arrayFrom(() => curriculum),
+    fluencyItems: arrayFrom(() => fluencyItems),
+    matureItems: arrayFrom(() => matureItems)
   });
 
   const escapeHtml = (value) => String(value == null ? "" : value)
@@ -139,25 +161,36 @@
 
   const SCOPES = ["lesson", "verb", "fluency", "mature"];
 
-  /* The group anchors a reviewer can choose from, for one scope. */
+  /*
+   * The group anchors a reviewer can choose from, for one scope.
+   *
+   * Derived from review.js rather than hand-listed. This was a literal array of
+   * heading/dialogue/vocabulary/note/prompt/choices, which quietly stopped being
+   * the whole lesson the moment a lesson grew a situation, a culture note or a
+   * second practice question — content a reviewer could read on the page but had
+   * no way to report. listAnchors already knows every leaf that carries text, so
+   * folding it through groupAnchor keeps the picker complete by construction
+   * rather than by anyone remembering to come back here.
+   */
   function groupsForScope(scope) {
-    const current = data();
-    if (scope === "verb") return (current.curriculum || []).map((verb) => `verb:${verb.id}`);
-    if (scope === "fluency") return (current.fluencyItems || []).map((_, index) => `fluency:${index}`);
-    if (scope === "mature") return (current.matureItems || []).map((_, index) => `mature:${index}`);
-
-    const here = currentLesson();
-    if (!here) return [];
-    const lesson = (current.lessons || []).find((entry) => entry.id === here.id);
-    const content = lesson ? lesson[here.direction] : null;
-    if (!content) return [];
-    const base = `lesson:${here.id}/${here.direction}`;
-    const anchors = [`${base}/heading`];
-    (content.dialogue || []).forEach((_, index) => anchors.push(`${base}/dialogue/${index}`));
-    (content.vocabulary || []).forEach((_, index) => anchors.push(`${base}/vocabulary/${index}`));
-    anchors.push(`${base}/note`, `${base}/prompt`);
-    if ((content.choices || []).length > 0) anchors.push(`${base}/choices`);
-    return anchors;
+    let prefix;
+    if (scope === "lesson") {
+      const here = currentLesson();
+      if (!here) return [];
+      prefix = `lesson:${here.id}/${here.direction}/`;
+    } else {
+      prefix = `${scope}:`;
+    }
+    const seen = new Set();
+    const groups = [];
+    for (const leaf of ParceroReview.listAnchors(data())) {
+      if (leaf.indexOf(prefix) !== 0) continue;
+      const group = ParceroReview.groupAnchor(leaf);
+      if (seen.has(group)) continue;
+      seen.add(group);
+      groups.push(group);
+    }
+    return groups;
   }
 
   /*
@@ -475,6 +508,7 @@
   });
 
   $("#lesson-review-start").addEventListener("click", openReportTab);
+  $("#lesson-provenance-start").addEventListener("click", openReportTab);
   $("#footer-report-link").addEventListener("click", (event) => {
     event.preventDefault();
     openReportTab();
