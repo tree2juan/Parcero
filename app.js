@@ -68,8 +68,19 @@ function renderVerbs() {
 function renderFluency() {
   $("#fluency-results").innerHTML = fluencyItems.map(([spanish, english, type, region, note], index) => `<article class="reference-card" data-anchor="fluency:${index}"><h3>${spanish}</h3><p><strong>${english}</strong></p><p>${note}</p><span class="tag">${type}</span><span class="tag">${region}</span></article>`).join("");
 }
+/* After Dark rows are objects keyed by city. The list is filtered rather than
+   paged: a learner reads one city's set, because the whole point is that the
+   same word carries a different charge in each. */
+const afterDarkView = { city: "bogota" };
 function renderMature() {
-  $("#mature-results").innerHTML = matureItems.map(([phrase, equivalent, severity, note], index) => `<article class="reference-card" data-anchor="mature:${index}"><h3>${phrase}</h3><p><strong>${equivalent}</strong></p><p>${note}</p><span class="tag">${t("mature.severity")}: ${severity}</span><span class="tag">${t("mature.tag")}</span></article>`).join("");
+  const rows = matureItems
+    .map((item, index) => ({ item, index }))
+    .filter((entry) => entry.item.city === afterDarkView.city);
+  $("#mature-results").innerHTML = rows.map(({ item, index }) => {
+    const level = String(item.severity || "").toLowerCase();
+    return `<article class="reference-card severity-${esc(level)}" data-anchor="mature:${index}"><h3 lang="es">${esc(item.phrase)}</h3><p><strong>${esc(item.equivalent)}</strong></p><p>${esc(item.note)}</p><span class="tag tag-severity">${t("mature.severity")}: ${esc(item.severity)}</span><span class="tag">${t("mature.tag")}</span></article>`;
+  }).join("");
+  $("#city-note").textContent = t(`afterDark.note.${afterDarkView.city}`);
 }
 function content() { return ParceroLessonSchema.normalizeContent(currentLesson()[state.direction]); }
 /* Authored content is trusted, but it is still text going into innerHTML. A
@@ -375,18 +386,86 @@ document.querySelectorAll(".library-tab").forEach((tab) => tab.addEventListener(
     $(`#${item.dataset.library}-library`).hidden = !active;
   });
 }));
-$("#mature-confirm").addEventListener("change", (event) => { $("#mature-open").disabled = !event.target.checked; });
-$("#mature-open").addEventListener("click", () => {
-  localStorage.setItem("parcero-mature-enabled", "true");
-  $("#mature-gate").hidden = true;
-  $("#mature-results").hidden = false;
+document.querySelectorAll(".city-tab").forEach((tab) => tab.addEventListener("click", () => {
+  afterDarkView.city = tab.dataset.city;
+  document.querySelectorAll(".city-tab").forEach((item) => {
+    const active = item === tab;
+    item.classList.toggle("active", active);
+    item.setAttribute("aria-selected", active);
+  });
   renderMature();
-});
-if (localStorage.getItem("parcero-mature-enabled") === "true") {
-  $("#mature-gate").hidden = true;
-  $("#mature-results").hidden = false;
-  renderMature();
-}
+}));
 renderVerbs();
 renderFluency();
+renderMature();
 render();
+
+/* ---------- module navigation ----------
+   Each module is a view, so only one is on screen at a time. Routing runs off
+   the hash the nav already used, which keeps every existing in-page link, the
+   back button and any bookmark working without a second link scheme. */
+const VIEWS = ["home", "lessons", "flashcards", "placement", "library", "after-dark"];
+const ROUTE_FOR_HASH = {
+  "": "home", "#top": "home",
+  "#lessons": "lessons", "#lesson": "lessons",
+  "#flashcards": "flashcards",
+  "#placement": "placement", "#roadmap": "placement",
+  "#library": "library",
+  "#after-dark": "after-dark"
+};
+function showView(name, options) {
+  const target = VIEWS.includes(name) ? name : "home";
+  for (const view of VIEWS) $(`#view-${view}`).hidden = view !== target;
+  document.querySelectorAll(".site-nav a[href^='#']").forEach((link) => {
+    const active = ROUTE_FOR_HASH[link.getAttribute("href")] === target;
+    link.classList.toggle("active", active);
+    if (active) link.setAttribute("aria-current", "page");
+    else link.removeAttribute("aria-current");
+  });
+  /* The midnight palette belongs to After Dark alone, so it is a flag on the
+     root element rather than a theme the rest of the app has to opt out of. */
+  document.documentElement.classList.toggle("midnight", target === "after-dark");
+  if (!options || options.scroll !== false) window.scrollTo({ top: 0 });
+}
+const viewForHash = () => ROUTE_FOR_HASH[location.hash] || "home";
+window.addEventListener("hashchange", () => showView(viewForHash()));
+showView(viewForHash(), { scroll: false });
+
+/* ---------- modules menu ---------- */
+const modulesButton = $("#modules-button");
+const modulesMenu = $("#modules-menu");
+function fillModulesMenu() {
+  modulesMenu.innerHTML = lessons.map((lesson, index) =>
+    `<button type="button" role="menuitem" data-goto="${esc(lesson.id)}">` +
+    `<span class="modules-index">${index + 1}</span>` +
+    `<span class="modules-body"><strong>${esc(lesson[state.direction].title)}</strong>` +
+    `<small>${esc(lesson.level)}</small></span></button>`).join("");
+}
+function setModulesOpen(open) {
+  if (open) fillModulesMenu();
+  modulesMenu.hidden = !open;
+  modulesButton.setAttribute("aria-expanded", String(open));
+  modulesButton.parentElement.classList.toggle("is-open", open);
+}
+modulesButton.addEventListener("click", (event) => {
+  event.stopPropagation();
+  setModulesOpen(modulesMenu.hidden);
+});
+modulesMenu.addEventListener("click", (event) => {
+  const item = event.target.closest("[data-goto]");
+  if (!item) return;
+  setModulesOpen(false);
+  if (location.hash !== "#lessons") location.hash = "#lessons";
+  else showView("lessons");
+  /* hashchange is queued, not synchronous, so its scroll-to-top would land
+     after a direct call and undo the jump to the chosen lesson. */
+  setTimeout(() => selectLesson(item.dataset.goto), 0);
+});
+document.addEventListener("click", (event) => {
+  if (!modulesButton.parentElement.contains(event.target)) setModulesOpen(false);
+});
+document.addEventListener("keydown", (event) => {
+  if (event.key !== "Escape" || modulesMenu.hidden) return;
+  setModulesOpen(false);
+  modulesButton.focus();
+});

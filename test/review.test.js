@@ -12,7 +12,7 @@ const schema = require("../data/lesson-schema.js");
 const root = path.join(__dirname, "..");
 const read = (file) => fs.readFileSync(path.join(root, file), "utf8");
 
-const bundle = `${read("data/lessons.js")}\n${read("data/curriculum.js")}\n({ lessons, curriculum, fluencyItems, matureItems });`;
+const bundle = `${read("data/lessons.js")}\n${read("data/curriculum.js")}\n${read("data/after-dark.js")}\n({ lessons, curriculum, fluencyItems, matureItems });`;
 const content = vm.runInNewContext(bundle, {}, { filename: "parcero-data-bundle.js" });
 
 const anchors = review.listAnchors(content);
@@ -43,7 +43,7 @@ test("every reviewable string is addressable, and its anchor resolves back to it
     assert.ok(isText(resolved.text), `${anchor} resolved to empty text`);
     assert.ok(isText(resolved.label), `${anchor} has no human-readable label`);
     assert.ok(isText(resolved.path), `${anchor} has no source path`);
-    assert.ok(["data/lessons.js", "data/curriculum.js"].includes(resolved.source), `${anchor} names an unknown source file`);
+    assert.ok(["data/lessons.js", "data/curriculum.js", "data/after-dark.js"].includes(resolved.source), `${anchor} names an unknown source file`);
   }
 });
 
@@ -99,7 +99,10 @@ test("malformed anchors are rejected rather than silently resolving", () => {
 });
 
 test("anchors that are valid but point at content that no longer exists fail cleanly", () => {
-  for (const anchor of ["lesson:not-a-lesson/es/note", "lesson:greeting-at-the-cafe/es/dialogue/99/target", "verb:verb-9999/register", "mature:99/note"]) {
+  /* The mature index is deliberately far past the end: the After Dark set is
+     150 rows across three cities, so the old probe at 99 became a real entry
+     and this test silently stopped checking anything. */
+  for (const anchor of ["lesson:not-a-lesson/es/note", "lesson:greeting-at-the-cafe/es/dialogue/99/target", "verb:verb-9999/register", "mature:9999/note"]) {
     const resolved = review.resolveAnchor(anchor, content);
     assert.strictEqual(resolved.ok, false, `expected "${anchor}" to fail`);
     assert.ok(isText(resolved.reason), `expected a reason for "${anchor}"`);
@@ -178,13 +181,13 @@ test("a missing slot is reported as missing, never as empty text", () => {
    * The lesson branch guarded this and the reference-list branch did not, which
    * is exactly the kind of gap that survives review, so this asserts the
    * invariant across every branch of the resolver rather than the one that was
-   * wrong. Rows in data/curriculum.js are still tuples, and a short tuple
-   * yields undefined rather than throwing.
+   * wrong. Fluency rows are still tuples, where a short tuple yields undefined;
+   * After Dark rows are objects, where a deleted key does the same thing.
    */
   const gutted = JSON.parse(JSON.stringify(content));
   delete gutted.lessons[0].es.dialogue[1].target;
   gutted.fluencyItems[0] = gutted.fluencyItems[0].slice(0, 2);
-  gutted.matureItems[0] = gutted.matureItems[0].slice(0, 2);
+  delete gutted.matureItems[0].note;
   const verbSlot = Object.keys(gutted.curriculum[0])
     .find((key) => key !== "id" && typeof gutted.curriculum[0][key] === "string");
   delete gutted.curriculum[0][verbSlot];

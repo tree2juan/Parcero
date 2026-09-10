@@ -7,7 +7,7 @@ const vm = require("node:vm");
 const root = path.join(__dirname, "..");
 const read = (file) => fs.readFileSync(path.join(root, file), "utf8");
 
-const bundle = `${read("data/lesson-schema.js")}\n${read("data/lessons.js")}\n${read("data/curriculum.js")}\n({ lessons, curriculum, fluencyItems, matureItems, schema: ParceroLessonSchema });`;
+const bundle = `${read("data/lesson-schema.js")}\n${read("data/lessons.js")}\n${read("data/curriculum.js")}\n${read("data/after-dark.js")}\n({ lessons, curriculum, fluencyItems, matureItems, schema: ParceroLessonSchema });`;
 const { lessons, curriculum, fluencyItems, matureItems, schema } = vm.runInNewContext(bundle, {}, { filename: "parcero-data-bundle.js" });
 
 const directions = ["es", "en"];
@@ -418,9 +418,18 @@ test("reference lists match the shape the renderers expect", () => {
     item.forEach((cell) => assert.ok(isText(cell)));
   }
   assert.ok(matureItems.length > 0);
+  /* After Dark rows moved from tuples to named objects when the set grew to
+     three cities: a 5-slot tuple with two labels at the end is unreadable, and
+     the city has to be addressable by name for the view to filter on it. */
+  const CITIES = new Set(["bogota", "medellin", "barranquilla"]);
+  const SEVERITIES = new Set(["Low", "Medium", "High"]);
   for (const item of matureItems) {
-    assert.strictEqual(item.length, 4, "expected [phrase, equivalent, severity, note]");
-    item.forEach((cell) => assert.ok(isText(cell)));
+    assert.ok(!Array.isArray(item), "After Dark rows are objects, not tuples");
+    for (const slot of ["city", "phrase", "equivalent", "severity", "note"]) {
+      assert.ok(isText(item[slot]), `an After Dark row is missing "${slot}"`);
+    }
+    assert.ok(CITIES.has(item.city), `unknown city "${item.city}" — the view filters on this and would drop the row`);
+    assert.ok(SEVERITIES.has(item.severity), `unknown severity "${item.severity}" — the card colour keys off this`);
   }
 });
 
@@ -899,4 +908,130 @@ test("the tone labels on the Spanish side stay in English", () => {
   }
   assert.deepStrictEqual([...spanish], [],
     "the Spanish side is read by an English speaker; its tone labels belong in English");
+});
+
+/* ---------- module navigation ---------- */
+
+test("every module the nav offers is a view that exists", () => {
+  /*
+   * The page stopped being one long scroll: each module is a view and the nav
+   * switches between them. Two lists have to agree for that to work -- the
+   * VIEWS list in app.js and the #view-* containers in index.html -- and they
+   * live in different files, so nothing but this stops them drifting.
+   */
+  const app = read("app.js");
+  const html = read("index.html");
+
+  const views = app.match(/const VIEWS = \[([^\]]*)\]/);
+  assert.ok(views, "app.js must declare the view list");
+  const names = [...views[1].matchAll(/"([^"]+)"/g)].map((match) => match[1]);
+  assert.ok(names.length > 1, "expected several views; with one this checks nothing");
+
+  for (const name of names) {
+    assert.ok(html.includes(`id="view-${name}"`), `index.html has no #view-${name}, so that view can never show`);
+  }
+  const containers = [...html.matchAll(/id="view-([\w-]+)"/g)].map((match) => match[1]);
+  for (const container of containers) {
+    assert.ok(names.includes(container), `#view-${container} exists but app.js never shows it, so it is unreachable`);
+  }
+
+  // Every nav destination must be routable, or the link silently does nothing.
+  const routes = app.match(/const ROUTE_FOR_HASH = \{([\s\S]*?)\};/);
+  assert.ok(routes, "app.js must declare the hash routes");
+  for (const href of [...html.matchAll(/<a href="(#[\w-]+)"[^>]*data-i18n="nav\./g)].map((match) => match[1])) {
+    assert.ok(routes[1].includes(`"${href}"`), `the nav links to ${href}, which no route maps to a view`);
+  }
+});
+
+test("exactly one view is visible before any script runs", () => {
+  /*
+   * The views are hidden in the markup, not by script, so the page cannot
+   * flash every module at once on a slow load. Home is the one left open.
+   */
+  const html = read("index.html");
+  const open = [...html.matchAll(/<div class="view" id="view-([\w-]+)"([^>]*)>/g)]
+    .filter((match) => !/\bhidden\b/.test(match[2]))
+    .map((match) => match[1]);
+  assert.deepStrictEqual(open, ["home"],
+    "exactly one view may start visible in the markup, and it should be home");
+});
+
+test("the modules menu is built from the lesson list, never hard-coded", () => {
+  const app = read("app.js");
+  const fill = app.match(/function fillModulesMenu\(\)[\s\S]*?\n\}/);
+  assert.ok(fill, "app.js must build the modules menu in fillModulesMenu()");
+  assert.match(fill[0], /lessons\.map\(/,
+    "the menu must map over the lesson list, or it goes stale the moment a lesson is added");
+  assert.match(fill[0], /state\.direction/,
+    "menu titles must follow the direction toggle, or they stay in one language");
+});
+
+test("the language toggle is reachable from every view", () => {
+  /*
+   * It used to live inside the hero. Once the hero became a view you can
+   * navigate away from, a toggle left there would be unreachable from
+   * Flashcards, Library or After Dark.
+   */
+  const html = read("index.html");
+  const header = html.match(/<header class="site-header">[\s\S]*?<\/header>/);
+  assert.ok(header, "index.html must have a site header");
+  assert.match(header[0], /name="direction"/,
+    "the direction toggle must live in the header, which every view shares");
+
+  const views = html.match(/<div class="view"[\s\S]*<\/main>/);
+  assert.ok(views, "expected the view containers");
+  assert.doesNotMatch(views[0], /name="direction"/,
+    "a second copy of the toggle inside a view would drift out of sync with the header one");
+});
+
+/* ---------- After Dark ---------- */
+
+test("After Dark covers every city the page offers, evenly", () => {
+  const html = read("index.html");
+  const tabs = [...html.matchAll(/class="city-tab[^"]*"[^>]*data-city="([\w-]+)"/g)].map((match) => match[1]);
+  assert.ok(tabs.length > 0, "index.html must offer city tabs");
+
+  const counts = new Map();
+  for (const item of matureItems) counts.set(item.city, (counts.get(item.city) || 0) + 1);
+
+  assert.deepStrictEqual([...counts.keys()].sort(), [...tabs].sort(),
+    "the cities in the data and the tabs on the page must be the same set, or a tab renders an empty list");
+  for (const city of tabs) {
+    assert.strictEqual(counts.get(city), 50,
+      `${city} has ${counts.get(city)} entries; each city is meant to carry 50`);
+  }
+});
+
+test("no After Dark phrase is stranded without its city note", () => {
+  const { UI_STRINGS } = require("../i18n.js");
+  /*
+   * The note is looked up as afterDark.note.<city> from a template string, so
+   * the i18n sweep over index.html cannot see it. A missing key would render
+   * the raw key name under the tabs.
+   */
+  for (const city of new Set(matureItems.map((item) => item.city))) {
+    for (const language of Object.keys(UI_STRINGS)) {
+      assert.ok(isText(UI_STRINGS[language][`afterDark.note.${city}`]),
+        `afterDark.note.${city} is missing in "${language}", so the city note would print as a raw key`);
+      assert.ok(isText(UI_STRINGS[language][`afterDark.city.${city}`]),
+        `afterDark.city.${city} is missing in "${language}"`);
+    }
+  }
+});
+
+test("the midnight theme belongs to After Dark and nothing else", () => {
+  const app = read("app.js");
+  const css = read("styles.css");
+  assert.match(app, /classList\.toggle\("midnight", target === "after-dark"\)/,
+    "the midnight class must be tied to the After Dark view, so it cannot leak into other modules");
+
+  const rules = [...css.replace(/\/\*[\s\S]*?\*\//g, "").matchAll(/([^{}]+)\{/g)]
+    .map((match) => match[1].trim())
+    .filter(Boolean);
+  const midnight = rules.filter((selector) => selector.includes("midnight"));
+  assert.ok(midnight.length > 0, "expected midnight rules; without any this checks nothing");
+  for (const selector of midnight) {
+    assert.ok(/^html\.midnight\b/.test(selector),
+      `"${selector}" styles midnight from outside html.midnight, which can apply when After Dark is closed`);
+  }
 });
