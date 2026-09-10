@@ -6,11 +6,10 @@ const vm = require("node:vm");
 
 const root = path.join(__dirname, "..");
 const read = (file) => fs.readFileSync(path.join(root, file), "utf8");
+const { dataSource } = require("./data-source.js");
 
 const bundle = [
-  read("data/lessons.js"),
-  read("data/curriculum.js"),
-  read("data/flashcards.js"),
+  dataSource({ schema: false, flashcards: true }),
   "({ lessons, curriculum, fluencyItems, FLASHCARD_SET_SIZE, flashcardSlug, flashcardSplit, flashcardsFromLesson, flashcardTopics, flashcardSets });"
 ].join("\n");
 

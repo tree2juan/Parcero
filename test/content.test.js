@@ -6,8 +6,9 @@ const vm = require("node:vm");
 
 const root = path.join(__dirname, "..");
 const read = (file) => fs.readFileSync(path.join(root, file), "utf8");
+const { dataSource } = require("./data-source.js");
 
-const bundle = `${read("data/lesson-schema.js")}\n${read("data/lessons.js")}\n${read("data/curriculum.js")}\n({ lessons, curriculum, fluencyItems, matureItems, schema: ParceroLessonSchema });`;
+const bundle = `${dataSource()}\n({ lessons, curriculum, fluencyItems, matureItems, schema: ParceroLessonSchema });`;
 const { lessons, curriculum, fluencyItems, matureItems, schema } = vm.runInNewContext(bundle, {}, { filename: "parcero-data-bundle.js" });
 
 const directions = ["es", "en"];
@@ -504,7 +505,7 @@ test("labels nobody has reviewed are not rendered as fact", () => {
   // "neutral", which lesson vocabulary uses as a genuine, authored value. A
   // blanket search would fail on correct content.
   const sources = vm.runInNewContext(
-    `${read("data/lessons.js")}\n${read("data/curriculum.js")}\n${read("data/flashcards.js")}\n({ lessons, curriculum, fluencyItems, flashcardTopics })`,
+    `${dataSource({ schema: false, flashcards: true })}\n({ lessons, curriculum, fluencyItems, flashcardTopics })`,
     {}, { filename: "parcero-flashcard-surface.js" });
   const placeholders = [[...registers][0], [...regions][0]];
   const verbCards = directions.flatMap((direction) =>

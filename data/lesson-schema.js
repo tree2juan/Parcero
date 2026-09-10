@@ -247,9 +247,142 @@ function contentDepth(content) {
   };
 }
 
+/*
+ * A lesson is roughly fifteen minutes of reading. That is too long to start on
+ * a bus and too long to come back to, so it is cut into pieces of about three
+ * minutes each.
+ *
+ * Segments are DERIVED, exactly as flashcards are. Nothing about them is
+ * authored, which means a lesson that gains a vocabulary entry re-segments
+ * itself and nobody has to re-balance anything by hand. It also means a
+ * segment can never disagree with the lesson it came from.
+ *
+ * The unit of packing is a ROW, never a field inside one. Splitting a
+ * vocabulary entry would put "use it when" in a different sitting from the
+ * term it qualifies, and a segment running forty seconds long is a smaller
+ * problem than a term whose caveat the learner never sees.
+ */
+var SEGMENT_TARGET_WORDS = 390; /* About three minutes at 130 words a minute. */
+var SEGMENT_WORDS_PER_MINUTE = 130;
+
+function countWords(value) {
+  var text = typeof value === "string" ? value.trim() : "";
+  return text ? text.split(/\s+/).length : 0;
+}
+
+function rowWords(row, slots) {
+  var total = 0;
+  for (var index = 0; index < slots.length; index += 1) total += countWords(row[slots[index]]);
+  return total;
+}
+
+/*
+ * Every packable row, in the order a learner meets it. The situation comes
+ * first because Spanish decides half its grammar from it, and practice comes
+ * last because retrieval only works on something already read.
+ */
+function segmentUnits(normalized) {
+  var units = [];
+  function add(field, index, words) {
+    if (words > 0) units.push({ field: field, index: index, words: words });
+  }
+
+  add("overview", null, countWords(normalized.title) + countWords(normalized.situation) + countWords(normalized.note));
+  if (normalized.setting) add("setting", null, rowWords(normalized.setting, SETTING_KEYS));
+  if (normalized.address) add("address", null, countWords(normalized.address.form) + rowWords(normalized.address, ADDRESS_SLOTS));
+
+  normalized.dialogue.forEach(function (row, index) {
+    add("dialogue", index, rowWords(row, DIALOGUE_SLOTS));
+  });
+  normalized.vocabulary.forEach(function (row, index) {
+    var words = rowWords(row, VOCABULARY_SLOTS);
+    row.related.forEach(function (item) { words += countWords(item); });
+    if (row.example) words += countWords(row.example.target) + countWords(row.example.translation);
+    add("vocabulary", index, words);
+  });
+  normalized.culture.forEach(function (row, index) {
+    add("culture", index, rowWords(row, CULTURE_SLOTS));
+  });
+  normalized.pitfalls.forEach(function (row, index) {
+    add("pitfalls", index, rowWords(row, PITFALL_SLOTS));
+  });
+  normalized.variations.forEach(function (row, index) {
+    add("variations", index, rowWords(row, VARIATION_SLOTS));
+  });
+  normalized.practice.forEach(function (row, index) {
+    var words = countWords(row.prompt) + countWords(row.tests);
+    row.choices.forEach(function (choice) { words += countWords(choice); });
+    add("practice", index, words);
+  });
+
+  return units;
+}
+
+function deriveSegments(content, targetWords) {
+  var normalized = normalizeContent(content);
+  if (!normalized) return [];
+  var budget = typeof targetWords === "number" && targetWords > 0 ? targetWords : SEGMENT_TARGET_WORDS;
+  var units = segmentUnits(normalized);
+  if (!units.length) return [];
+
+  /*
+   * Balance rather than fill.
+   *
+   * Packing greedily to a fixed budget leaves the remainder in the last
+   * segment, and the remainder is the one nobody wants: measured over this
+   * lesson set it produced tails of 34 and 106 words — twenty seconds of
+   * "study" tacked onto the end of a lesson. flashcardSplit solved the same
+   * problem for cards for the same reason. Decide how many segments the
+   * lesson deserves first, then aim at that many equal ones, so the last
+   * segment is the same size as the rest.
+   */
+  var total = 0;
+  for (var count = 0; count < units.length; count += 1) total += units[count].words;
+  var wanted = Math.max(1, Math.round(total / budget));
+  var even = total / wanted;
+
+  var packed = [];
+  var current = { units: [], words: 0 };
+  for (var index = 0; index < units.length; index += 1) {
+    var unit = units[index];
+    var remainingUnits = units.length - index;
+    var remainingSegments = wanted - packed.length;
+    /*
+     * Never close so eagerly that the units left cannot fill the segments
+     * left, and never run so long that a later segment would be empty.
+     */
+    var mustKeep = remainingUnits <= remainingSegments - 1;
+    if (current.words > 0 && !mustKeep && remainingSegments > 1) {
+      var overshoot = current.words + unit.words - even;
+      var undershoot = even - current.words;
+      if (overshoot >= undershoot) {
+        packed.push(current);
+        current = { units: [], words: 0 };
+      }
+    }
+    current.units.push(unit);
+    current.words += unit.words;
+  }
+  if (current.units.length) packed.push(current);
+
+  return packed.map(function (segment, position) {
+    return {
+      index: position,
+      units: segment.units,
+      words: segment.words,
+      minutes: Math.round((segment.words / SEGMENT_WORDS_PER_MINUTE) * 10) / 10
+    };
+  });
+}
+
 return {
   SETTING_KEYS: SETTING_KEYS,
   ADDRESS_FORMS: ADDRESS_FORMS,
+  SEGMENT_TARGET_WORDS: SEGMENT_TARGET_WORDS,
+  SEGMENT_WORDS_PER_MINUTE: SEGMENT_WORDS_PER_MINUTE,
+  countWords: countWords,
+  segmentUnits: segmentUnits,
+  deriveSegments: deriveSegments,
   DIALOGUE_SLOTS: DIALOGUE_SLOTS,
   VOCABULARY_SLOTS: VOCABULARY_SLOTS,
   CULTURE_SLOTS: CULTURE_SLOTS,

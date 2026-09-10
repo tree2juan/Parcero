@@ -16,9 +16,10 @@ const review = require("../review.js");
 
 const root = path.join(__dirname, "..");
 const read = (file) => fs.readFileSync(path.join(root, file), "utf8");
+const { dataSource } = require("./data-source.js");
 const workflow = read(path.join(".github", "workflows", "flag-triage.yml")).replace(/\r\n/g, "\n");
 
-const bundle = `${read("data/lessons.js")}\n${read("data/curriculum.js")}\n({ lessons, curriculum, fluencyItems, matureItems });`;
+const bundle = `${dataSource({ schema: false })}\n({ lessons, curriculum, fluencyItems, matureItems });`;
 const content = vm.runInNewContext(bundle, {}, { filename: "parcero-data-bundle.js" });
 
 function flagFor(anchor) {
