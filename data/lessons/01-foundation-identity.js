@@ -27,9 +27,9 @@ lessons.push(
     verb: "ser",
     review: "pending",
     es: {
-      title: "Saying who you are at the building meeting",
+      title: "Presentarse en la reunión del edificio",
       situation:
-        "Alex has just moved into a Medellín apartment block and turns up to the monthly residents' meeting. Nobody knows him yet. He has to say who he is, where he lives in the building, and what he does — in about four sentences, to a room that is only half listening.",
+        "Alex acaba de mudarse a un edificio en Medellín y llega a la reunión mensual de residentes. Todavía nadie lo conoce. Tiene que decir quién es, en qué apartamento vive y a qué se dedica — en unas cuatro frases, ante una sala que sólo está medio escuchando.",
       setting: {
         who: "Doña Ruth has chaired the residents' meeting for nine years and knows every apartment by number. Alex is the newest resident and has spoken to nobody in the building except the porter.",
         what: "A short round of introductions at the start of the meeting, before the agenda about the water tank.",

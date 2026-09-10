@@ -19,6 +19,8 @@ const vm = require("node:vm");
 const root = path.join(__dirname, "..");
 const read = (file) => fs.readFileSync(path.join(root, file), "utf8");
 
+const { wrongLanguage } = require("./prose-language.js");
+
 const target = process.argv[2];
 if (!target) {
   console.error("usage: node scripts/check-lesson-block.js <path-to-block-file>");
@@ -195,6 +197,22 @@ for (const position of [0, 1, 2]) {
   if (!answerSpread.get(position)) {
     fail(`no question in this block has its answer at position ${position}; `
       + `spread is ${JSON.stringify([...answerSpread.entries()].sort())}`);
+  }
+}
+
+/*
+ * Prose in the wrong language. The two directions are mirrors: the `es`
+ * direction explains in English, the `en` direction explains in Spanish,
+ * because in each case the reader does not yet speak what is being taught.
+ * Get it backwards and every structural check still passes -- the shape is
+ * perfect and only the words are unreadable by the person the lesson is for.
+ */
+for (const lesson of lessons) {
+  for (const direction of directions) {
+    for (const problem of wrongLanguage(lesson[direction], direction)) {
+      fail(`${lesson.id} ${direction}.${problem.trail}: must be ${problem.want}, reads as `
+        + `${problem.got} — "${problem.text.slice(0, 70)}${problem.text.length > 70 ? "…" : ""}"`);
+    }
   }
 }
 
