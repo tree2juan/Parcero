@@ -41,10 +41,6 @@ const UI_STRINGS = {
     "hero.lead": "Explore Colombian Spanish and practical English from either point of view — with context, culture, sound, and practice. Nothing to install, nothing to sign up for, and your progress never leaves this device.",
     "hero.start": "Start the first lesson",
     "hero.placement": "Find my level first",
-    "stats.lessons": "Lessons",
-    "stats.verbs": "Verbs",
-    "stats.cost": "Cost",
-    "stats.free": "Free",
     "preview.label": "A line from lesson one",
     "preview.aria": "Example of a lesson line",
 
@@ -355,10 +351,6 @@ const UI_STRINGS = {
     "hero.lead": "Explora el español colombiano y el inglés práctico desde cualquiera de los dos lados: con contexto, cultura, sonido y práctica. No hay nada que instalar ni registro que llenar, y tu progreso nunca sale de este dispositivo.",
     "hero.start": "Empezar la primera lección",
     "hero.placement": "Primero quiero saber mi nivel",
-    "stats.lessons": "Lecciones",
-    "stats.verbs": "Verbos",
-    "stats.cost": "Precio",
-    "stats.free": "Gratis",
     "preview.label": "Una frase de la primera lección",
     "preview.aria": "Ejemplo de una frase de la lección",
 
