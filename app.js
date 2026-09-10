@@ -387,8 +387,6 @@ if (localStorage.getItem("parcero-mature-enabled") === "true") {
   $("#mature-results").hidden = false;
   renderMature();
 }
-$("#stat-lessons").textContent = lessons.length;
-$("#stat-verbs").textContent = curriculum.length;
 renderVerbs();
 renderFluency();
 render();
