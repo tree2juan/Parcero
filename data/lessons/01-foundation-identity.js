@@ -348,85 +348,85 @@ lessons.push(
       ]
     },
     en: {
-      title: "Saying who you are at the building meeting",
+      title: "Decir quién es usted en la reunión del edificio",
       situation:
-        "Alejandra has just moved into a Toronto apartment building and goes to the monthly residents' meeting. Nobody knows her yet. She has to say who she is, which unit she is in, and what she does — in about four sentences, to a room that is only half listening.",
+        "Alejandra acaba de mudarse a un edificio en Toronto y va a la reunión mensual de residentes. Todavía nadie la conoce. Tiene que decir quién es, en qué apartamento vive y a qué se dedica — en unas cuatro frases, ante una sala que sólo está medio escuchando.",
       setting: {
-        who: "Ruth has chaired the residents' meeting for nine years and knows every unit by number. Alejandra is the newest resident and has spoken to nobody in the building except the superintendent.",
-        what: "A short round of introductions at the start of the meeting, before the agenda item about the water tank.",
-        when: "A Tuesday evening, seven o'clock, in the ground-floor common room.",
-        where: "Toronto, a six-storey building where most residents have lived for a decade or more.",
-        why: "Because Alejandra will be asking these people for favours — a signature, a parcel taken in, patience about noise — for as long as she lives here. The introduction is the whole relationship in miniature."
+        who: "Ruth preside la reunión de residentes desde hace nueve años y conoce cada apartamento por su número. Alejandra es la residente más nueva y no ha hablado con nadie del edificio salvo con el portero.",
+        what: "Una ronda breve de presentaciones al comienzo de la reunión, antes del punto sobre el tanque de agua.",
+        when: "Un martes por la noche, a las siete, en el salón comunal de la planta baja.",
+        where: "Toronto, un edificio de seis pisos donde la mayoría de los residentes lleva una década o más.",
+        why: "Porque Alejandra le va a pedir favores a esta gente — una firma, que le reciban un paquete, paciencia con el ruido — durante todo el tiempo que viva ahí. La presentación es la relación entera en miniatura."
       },
       address: {
         form: "mixed",
-        who: "Ruth and Alejandra both use first names and plain “you” from the first line.",
-        why: "English has one second-person form, so the register is carried by everything around it: first names rather than titles, “hi” rather than “good evening”, and short sentences. The warmth is in the word choice, not in the pronoun.",
+        who: "Ruth y Alejandra se tratan por el nombre de pila y usan el mismo “you” desde la primera línea.",
+        why: "El inglés tiene una sola forma de segunda persona, así que el registro lo carga todo lo demás: nombres de pila en vez de títulos, “hi” en vez de “good evening”, y frases cortas. La cercanía está en la elección de palabras, no en el pronombre.",
         ifYouSwitch:
-          "Saying “ma'am” to Ruth would not offend but would make her feel aged and would put a counter between them. Reserve it for someone serving you in an official capacity."
+          "Decirle “ma'am” a Ruth no ofendería, pero la haría sentir mayor y pondría un mostrador entre las dos. Resérvelo para alguien que la atiende en calidad oficial."
       },
       dialogue: [
         {
           speaker: "Ruth",
           target: "Okay, we've got a new neighbour. And you are?",
           translation: "Bueno, tenemos vecina nueva. ¿Usted quién es?",
-          pronunciation: "oh-KAY, weev got a NOO NAY-ber. and yoo AR",
-          literal: "Okay, we have got a new neighbour. And you are?",
-          why: "“And you are?” is a question with the question word removed. It sounds abrupt written down and is entirely friendly spoken, because the rising tone does the work that “who” would otherwise do."
+          pronunciation: "o-KEI, uiv got a niu NEI-bor. and yu AR",
+          literal: "Bueno, tenemos una vecina nueva. ¿Y usted es?",
+          why: "“And you are?” es una pregunta a la que le quitaron la palabra interrogativa. Escrita se ve brusca y hablada es completamente amable, porque la entonación ascendente hace el trabajo que haría “who”."
         },
         {
           speaker: "Alejandra",
           target: "I'm Alejandra, unit 502. I'm from Colombia.",
           translation: "Soy Alejandra, del 502. Soy de Colombia.",
-          pronunciation: "aym al-e-HAN-dra, YOO-nit fyv-oh-TOO. aym from ko-LUM-bee-a",
-          literal: "I am Alejandra, unit 502. I am from Colombia.",
-          why: "English uses one verb, “be”, where Spanish would choose between ser and estar. The choice a Spanish speaker agonises over simply does not exist here — which is its own small trap when going the other way."
+          pronunciation: "aim a-le-JAN-dra, YU-nit faiv-ou-TU. aim from ko-LOM-bia",
+          literal: "Soy Alejandra, unidad 502. Soy de Colombia.",
+          why: "El inglés usa un solo verbo, “be”, donde el español escogería entre ser y estar. La decisión que a usted le cuesta trabajo aquí simplemente no existe — y eso trae su propia trampa al volver al español."
         },
         {
           speaker: "Ruth",
           target: "Oh, 502! So you're the one with the dog.",
           translation: "¡Ah, el 502! Entonces usted es la del perro.",
-          pronunciation: "oh, fyv-oh-TOO. so yor thuh WUN with thuh dog",
-          literal: "Oh, 502! So you are the one with the dog.",
-          why: "English needs the full frame “the one with” where Spanish gets away with “la del”. Dropping “one” — “you're the with the dog” — is not possible, and this is a common first-year slip for Spanish speakers."
+          pronunciation: "ou, faiv-ou-TU! so yur da UAN uid da dog",
+          literal: "¡Oh, 502! Así que usted es la una con el perro.",
+          why: "El inglés necesita la estructura completa “the one with” donde el español se arregla con “la del”. Quitar “one” — “you're the with the dog” — es imposible, y es un error muy común de los hispanohablantes."
         },
         {
           speaker: "Alejandra",
           target: "Yes, that's me. He's an old dog, he doesn't bark much.",
           translation: "Sí, esa soy yo. Es un perro viejo, no ladra mucho.",
-          pronunciation: "yes, thats MEE. heez an OHLD dog, hee DUZ-uhnt bark much",
-          literal: "Yes, that is me. He is an old dog, he does not bark much.",
-          why: "“That's me” uses the object pronoun where Spanish uses the subject. “That's I” is technically defensible and would sound bizarre; nobody says it."
+          pronunciation: "yes, dats MI. jis an OULD dog, ji DA-sent bark mach",
+          literal: "Sí, eso es mí. Él es un perro viejo, él no ladra mucho.",
+          why: "“That's me” usa el pronombre de objeto donde el español usa el de sujeto. “That's I” es defendible en teoría y sonaría rarísimo; nadie lo dice."
         },
         {
           speaker: "Ruth",
           target: "No worries. And what do you do?",
           translation: "Tranquila. ¿Y usted a qué se dedica?",
-          pronunciation: "no WUR-eez. and WUT doo yoo DOO",
-          literal: "No worries. And what do you do?",
-          why: "“What do you do?” with no object is the standard job question. Adding “for a living” is possible but slightly more formal; adding “for work” sounds like a survey."
+          pronunciation: "nou UO-ris. and UAT du yu DU",
+          literal: "No preocupaciones. ¿Y qué hace usted?",
+          why: "“What do you do?” sin complemento es la pregunta estándar por el oficio. Añadir “for a living” es posible pero un poco más formal; añadir “for work” suena a encuesta."
         },
         {
           speaker: "Alejandra",
           target: "I'm a teacher, but right now I'm between jobs.",
           translation: "Soy profesora, pero ahora estoy sin trabajo fijo.",
-          pronunciation: "aym uh TEE-cher, but ryt now aym bee-TWEEN jobz",
-          literal: "I am a teacher, but right now I am between jobs.",
-          why: "English marks the difference Spanish carries in ser versus estar with “right now”. Without it the two clauses would sit at the same level and the sentence would sound like a contradiction."
+          pronunciation: "aim a TI-cher, bat rait nau aim bi-TUIN yobs",
+          literal: "Soy una profesora, pero justo ahora estoy entre trabajos.",
+          why: "El inglés marca con “right now” la diferencia que el español lleva en ser frente a estar. Sin ese “right now” las dos frases quedarían al mismo nivel y la oración sonaría contradictoria."
         }
       ],
       vocabulary: [
         {
           term: "be",
           explanation:
-            "The single English verb covering everything Spanish splits between ser and estar — identity, origin, profession, mood, location and state.",
+            "El único verbo del inglés que cubre todo lo que el español reparte entre ser y estar: identidad, origen, oficio, ánimo, ubicación y estado.",
           literal: "ser / estar",
           useWhen:
-            "Always. There is no choice to make, which is the good news; the bad news is that the distinction has to be carried by other words.",
+            "Siempre. No hay que elegir, y esa es la buena noticia; la mala es que la distinción tiene que cargarla otra palabra.",
           avoidWhen:
-            "Describing an action in progress without the -ing form. “I am work” is the classic Spanish-speaker error where “I am working” or “I work” is meant.",
+            "Al describir una acción en curso sin la forma -ing. “I am work” es el error clásico del hispanohablante cuando quiere decir “I am working” o “I work”.",
           register: "neutral",
-          region: "Universal English.",
+          region: "Inglés universal.",
           related: ["become", "seem", "feel", "get"],
           example: {
             target: "I'm Alejandra, unit 502.",
@@ -436,14 +436,14 @@ lessons.push(
         {
           term: "What do you do?",
           explanation:
-            "The ordinary way to ask someone's occupation. Short, and understood as being about work rather than about this afternoon.",
+            "La manera corriente de preguntar por el oficio de alguien. Es corta, y se entiende como una pregunta por el trabajo y no por esta tarde.",
           literal: "¿Qué hace usted?",
           useWhen:
-            "Meeting anyone socially. It works across almost every register in English.",
+            "Al conocer a cualquiera en una situación social. Funciona en casi todos los registros del inglés.",
           avoidWhen:
-            "You want to know what someone is doing this minute. Then it has to be “what are you doing?”, and the difference between the two is total.",
+            "Cuando quiere saber qué está haciendo alguien en este momento. Ahí tiene que ser “what are you doing?”, y la diferencia entre las dos es total.",
           register: "neutral",
-          region: "Universal English; “what do you do for a living?” is slightly fuller.",
+          region: "Inglés universal; “what do you do for a living?” es un poco más completo.",
           related: ["What's your job?", "What line of work are you in?", "Where do you work?", "What do you do for a living?"],
           example: {
             target: "And what do you do?",
@@ -453,14 +453,14 @@ lessons.push(
         {
           term: "the one with the dog",
           explanation:
-            "A way to identify someone by something associated with them, using “the one” as a placeholder person.",
+            "Una forma de identificar a alguien por algo que se le asocia, usando “the one” como persona comodín.",
           literal: "el/la del perro",
           useWhen:
-            "Pinning down which person you mean when the group already half-knows them — the one with the red car, the one on the fifth floor.",
+            "Para precisar de quién habla cuando el grupo ya lo ubica a medias — el del carro rojo, la del quinto piso.",
           avoidWhen:
-            "Introducing someone properly. It identifies but does not dignify, and used to someone's face about a sore subject it can sting.",
+            "Al presentar a alguien formalmente. Identifica pero no dignifica, y dicho en la cara sobre un tema sensible puede doler.",
           register: "friendly informal",
-          region: "Universal English.",
+          region: "Inglés universal.",
           related: ["the one on the fifth floor", "the one with the bike", "the guy from 502", "the woman with the stroller"],
           example: {
             target: "So you're the one with the dog.",
@@ -470,14 +470,14 @@ lessons.push(
         {
           term: "that's me",
           explanation:
-            "“That's me.” Used to confirm an identity someone else has just described.",
-          literal: "esa soy yo",
+            "“Esa soy yo.” Sirve para confirmar una identidad que otra persona acaba de describir.",
+          literal: "eso es mí",
           useWhen:
-            "Someone has guessed who you are and you are agreeing, usually with a bit of humour.",
+            "Cuando alguien adivinó quién es usted y usted se lo confirma, casi siempre con algo de humor.",
           avoidWhen:
-            "Introducing yourself cold. It only works as an answer, never as an opener.",
+            "Al presentarse en frío. Sólo funciona como respuesta, nunca para abrir.",
           register: "friendly informal",
-          region: "Universal English.",
+          region: "Inglés universal.",
           related: ["that would be me", "guilty", "yep, that's me", "the very same"],
           example: {
             target: "Yes, that's me.",
@@ -487,14 +487,14 @@ lessons.push(
         {
           term: "no worries",
           explanation:
-            "Reassurance that whatever was just apologised for or explained is not a problem.",
-          literal: "tranquilo/a",
+            "Una manera de decir que aquello por lo que el otro se disculpó o que acaba de explicar no es ningún problema.",
+          literal: "no preocupaciones",
           useWhen:
-            "Waving off someone's concern, or being waved off yourself. Very frequent in Canadian and Australian English.",
+            "Para quitarle peso a la preocupación del otro, o cuando se lo quitan a usted. Muy frecuente en Canadá y Australia.",
           avoidWhen:
-            "Someone is genuinely upset about something you did. Then it reads as dismissive rather than kind.",
+            "Cuando la otra persona está genuinamente molesta por algo que usted hizo. Ahí suena a que la está despachando, no a amabilidad.",
           register: "friendly informal",
-          region: "Universal English; “no worries” is especially common in Canada and Australia, “no problem” in the US.",
+          region: "Inglés universal; “no worries” abunda en Canadá y Australia, y “no problem” en Estados Unidos.",
           related: ["no problem", "don't worry about it", "it's fine", "all good"],
           example: {
             target: "No worries, the dog isn't a bother.",
@@ -504,14 +504,14 @@ lessons.push(
         {
           term: "between jobs",
           explanation:
-            "“Between jobs.” The usual way to say you are not currently employed without saying “unemployed”.",
+            "“Entre trabajos.” La manera habitual de decir que uno no tiene empleo en este momento sin decir “unemployed”.",
           literal: "entre trabajos",
           useWhen:
-            "Being honest about an unsettled situation in a way that keeps its dignity.",
+            "Para ser honesto sobre una situación inestable sin perder la dignidad.",
           avoidWhen:
-            "A formal application. There you would write “seeking employment” or name the contract you are on.",
+            "En una solicitud formal. Ahí escribiría “seeking employment” o nombraría el contrato que tiene.",
           register: "neutral",
-          region: "Universal English.",
+          region: "Inglés universal.",
           related: ["freelancing", "in between things", "looking for work", "self-employed"],
           example: {
             target: "Right now I'm between jobs.",
@@ -521,14 +521,14 @@ lessons.push(
         {
           term: "unit 502",
           explanation:
-            "“Unit 502.” In a North American apartment building, your unit number is a normal way to identify yourself.",
+            "“Unidad 502.” En un edificio norteamericano, el número del apartamento es una forma normal de identificarse.",
           literal: "unidad 502",
           useWhen:
-            "Any building context — the meeting, the front desk, a parcel, a complaint.",
+            "En cualquier asunto del edificio — la reunión, la recepción, un paquete, un reclamo.",
           avoidWhen:
-            "Outside the building, where the number means nothing and you would give the neighbourhood instead.",
+            "Fuera del edificio, donde el número no significa nada y uno diría el barrio.",
           register: "neutral",
-          region: "North American English; British English says “flat 502”.",
+          region: "Inglés norteamericano; en el inglés británico se dice “flat 502”.",
           related: ["apartment 502", "flat 502", "the fifth floor", "502"],
           example: {
             target: "I'm Alejandra, unit 502.",
@@ -537,52 +537,52 @@ lessons.push(
         }
       ],
       note:
-        "The single most useful thing in this lesson is the last line of dialogue. English says “I'm a teacher” and “I'm between jobs” with the same verb, and leans on “right now” to keep them apart. A Spanish speaker who drops that “right now” will be heard as saying the two things carry equal weight.",
+        "Lo más útil de esta lección es la última línea del diálogo. El inglés dice “I'm a teacher” y “I'm between jobs” con el mismo verbo, y se apoya en “right now” para separarlas. Un hispanohablante que se coma ese “right now” será entendido como si las dos cosas pesaran igual.",
       culture: [
         {
-          label: "Your unit number is your name",
+          label: "El número del apartamento es su nombre",
           body:
-            "In North American apartment buildings, residents are routinely known by number long before they are known by name — “502”, “the woman in 301”. It is not impersonal; it is how a building of eighty strangers stays navigable. Offering your number when you introduce yourself is genuinely helpful, and leaving it out makes you harder to place."
+            "En los edificios norteamericanos a los residentes se los conoce por número mucho antes que por nombre — “502”, “la señora del 301”. No es frialdad; es como un edificio de ochenta desconocidos sigue siendo navegable. Dar su número al presentarse ayuda de verdad, y omitirlo lo vuelve a usted más difícil de ubicar."
         },
         {
-          label: "English carries register without changing the pronoun",
+          label: "El inglés marca el registro sin cambiar el pronombre",
           body:
-            "Spanish speakers often look for the English usted and, not finding one, assume English is uniformly informal. It is not. The formality lives in the vocabulary and the length of the sentence: “Could I possibly ask you to…” against “Can you…”. Learning to hear that scale takes the place of learning a pronoun."
+            "Los hispanohablantes suelen buscar el usted del inglés y, al no encontrarlo, concluyen que el inglés es uniformemente informal. No lo es. La formalidad vive en el vocabulario y en el largo de la frase: “Could I possibly ask you to…” frente a “Can you…”. Aprender a oír esa escala reemplaza el aprender un pronombre."
         },
         {
-          label: "The introduction is short on purpose",
+          label: "La presentación es corta a propósito",
           body:
-            "Alejandra gives her name, her unit and where she is from in one line and stops. Introductions in a group setting stay brief; the detail comes later, one-to-one, over coffee. Delivering a paragraph about yourself to a room that has an agenda reads as taking up more than your share."
+            "Alejandra da su nombre, su apartamento y su procedencia en una línea y se detiene. Las presentaciones en grupo se mantienen breves; el detalle viene después, uno a uno, sobre un café. Soltarle un párrafo sobre uno mismo a una sala que tiene agenda se lee como ocupar más de lo que a uno le toca."
         },
         {
-          label: "Being asked about the dog is being accepted",
+          label: "Que le pregunten por el perro es ser aceptada",
           body:
-            "Ruth's “you're the one with the dog” means the building has already noticed her and talked about her. That sounds like surveillance and is closer to welcome — it means she registers as a neighbour rather than a stranger. Bristling at it would be reading the room wrong."
+            "El “you're the one with the dog” de Ruth significa que el edificio ya la notó y ya habló de ella. Eso suena a vigilancia y se parece más a una bienvenida — quiere decir que ya figura como vecina y no como desconocida. Molestarse sería leer mal la sala."
         }
       ],
       pitfalls: [
         {
-          mistake: "Saying “I am teacher” for “I'm a teacher”",
+          mistake: "“I am teacher.”",
           whyItFails:
-            "English requires an article before a singular profession, where Spanish forbids it. “Soy profesora” has no article, and carrying that habit across produces the single most recognisable Spanish-speaker error in English.",
+            "El inglés exige un artículo antes de una profesión en singular, justo donde el español lo prohíbe. “Soy profesora” no lleva artículo, y arrastrar esa costumbre produce el error de hispanohablante más reconocible que existe en inglés.",
           sayInstead: "I'm a teacher."
         },
         {
-          mistake: "Saying “I have 30 years” for “I'm 30”",
+          mistake: "“I have 30 years.”",
           whyItFails:
-            "Spanish uses tener for age; English uses be. The literal translation is grammatical English that means something entirely different — it sounds like you possess three decades of something.",
+            "El español usa tener para la edad; el inglés usa be. La traducción literal es inglés gramatical que significa otra cosa por completo — suena a que uno posee tres décadas de algo.",
           sayInstead: "I'm 30."
         },
         {
-          mistake: "Answering “And you are?” with only a first name",
+          mistake: "Contestar “And you are?” sólo con el nombre de pila",
           whyItFails:
-            "The question at a building meeting is asking where you fit, not what you are called. A bare name leaves everyone still wondering which unit you are.",
+            "La pregunta en una reunión de edificio no es cómo se llama usted, sino dónde encaja. Un nombre a secas deja a toda la sala preguntándose de qué apartamento es.",
           sayInstead: "I'm Alejandra, unit 502."
         },
         {
-          mistake: "Saying “What are you doing?” when you mean “What do you do?”",
+          mistake: "“What are you doing?” cuando se quiere decir “What do you do?”",
           whyItFails:
-            "The continuous form asks about this exact moment. Asked at an introduction it sounds like you have caught someone in the act of something.",
+            "La forma continua pregunta por este preciso instante. Dicha en una presentación suena a que uno acaba de sorprender al otro haciendo algo.",
           sayInstead: "What do you do?"
         }
       ],
@@ -590,81 +590,81 @@ lessons.push(
         {
           form: "I'm Alejandra, unit 502.",
           register: "neutral",
-          region: "North American English",
-          whenToUse: "The default. Name plus unit number, nothing else."
+          region: "Inglés norteamericano",
+          whenToUse: "La opción por defecto. Nombre y número de apartamento, nada más."
         },
         {
           form: "Hi, I'm Alejandra — I'm in 502.",
           register: "friendly informal",
-          region: "Universal English",
-          whenToUse: "A relaxed room where people are talking over each other anyway."
+          region: "Inglés universal",
+          whenToUse: "Una sala relajada donde la gente se pisa las frases de todos modos."
         },
         {
           form: "Good evening, my name is Alejandra and I live in unit 502.",
           register: "polite formal",
-          region: "Universal English",
-          whenToUse: "A board meeting, or introducing yourself to the property manager."
+          region: "Inglés universal",
+          whenToUse: "Una reunión de junta, o presentarse ante el administrador del edificio."
         },
         {
           form: "Alejandra, 502. Just moved in.",
           register: "friendly informal",
-          region: "Universal English",
-          whenToUse: "When the round of introductions is moving fast and nobody wants a sentence."
+          region: "Inglés universal",
+          whenToUse: "Cuando la ronda de presentaciones va rápido y nadie quiere una frase entera."
         },
         {
           form: "I'm the one in 502 — the one with the dog.",
           register: "friendly informal",
-          region: "Universal English",
-          whenToUse: "Once you know the building already has a shorthand for you, and you are leaning into it."
+          region: "Inglés universal",
+          whenToUse: "Cuando ya sabe que el edificio tiene un apodo para usted y decide aprovecharlo."
         }
       ],
-      prompt: "Alejandra says “I'm a teacher, but right now I'm between jobs.” What is she telling the room?",
+      prompt: "Alejandra dice “I'm a teacher, but right now I'm between jobs.” ¿Qué le está diciendo a la sala?",
       choices: [
-        "That teaching is what she is, and the lack of steady work is where she happens to be right now.",
-        "That she used to be a teacher some years ago and has since changed careers entirely.",
-        "That she is temporarily working as a teacher while she looks for something permanent."
+        "Que enseñar es lo que ella es, y que la falta de trabajo estable es donde está en este momento.",
+        "Que fue profesora hace algunos años y que desde entonces cambió de carrera por completo.",
+        "Que está trabajando de profesora temporalmente mientras busca algo más permanente."
       ],
       answer: 0,
       practiceExtra: [
         {
-          prompt: "Ruth says “So you're the one with the dog.” What has just happened?",
+          prompt: "Ruth dice “So you're the one with the dog.” ¿Qué acaba de pasar?",
           choices: [
-            "She is asking her to confirm whether she owns a dog at all.",
-            "She has placed her — the building already knows who she is.",
-            "She is warning her that dogs are not allowed in the building."
+            "Le está preguntando si de verdad tiene un perro o si se confundieron.",
+            "Ya la ubicó — el edificio sabe perfectamente quién es ella.",
+            "Le está advirtiendo que en el edificio no se permiten perros."
           ],
           answer: 1,
-          tests: "“the one with …” as an identifying shorthand rather than a question"
+          tests: "“the one with …” como identificación y no como pregunta"
         },
         {
-          prompt: "Why does Alejandra answer with “unit 502” rather than just her name?",
+          prompt: "¿Por qué Alejandra responde con “unit 502” y no sólo con su nombre?",
           choices: [
-            "Because first names are considered too informal at a first meeting here.",
-            "Because the unit number is required by law at residents' meetings.",
-            "Because in a building the unit number is how people place each other."
+            "Porque aquí los nombres de pila se consideran demasiado informales al conocerse.",
+            "Porque el número de apartamento es obligatorio por ley en estas reuniones.",
+            "Porque en un edificio el número es como la gente ubica a los demás."
           ],
           answer: 2,
-          tests: "the unit number as ordinary self-identification"
+          tests: "el número del apartamento como identificación corriente"
         },
         {
-          prompt: "English has no usted. How is the formality of a room signalled instead?",
+          prompt: "El inglés no tiene usted. ¿Cómo se marca entonces la formalidad de una sala?",
           choices: [
-            "Through word choice and sentence length rather than through the pronoun.",
-            "Through the pronoun “thou”, which is still used in formal settings today.",
-            "It is not signalled at all — English conversation has a single flat register."
+            "Con la elección de palabras y el largo de la frase, no con el pronombre.",
+            "Con el pronombre “thou”, que todavía se usa hoy en contextos formales.",
+            "No se marca de ninguna manera: el inglés tiene un solo registro plano."
           ],
           answer: 0,
-          tests: "register carried lexically rather than pronominally"
+          tests: "el registro marcado por el léxico y no por el pronombre"
         },
         {
-          prompt: "Which of these would sound wrong in Alejandra's introduction?",
+          prompt: "¿Cuál de estas sonaría mal en la presentación de Alejandra?",
           choices: [
             "I'm a teacher.",
             "I am teacher.",
             "I'm from Colombia."
           ],
           answer: 1,
-          tests: "the article before a singular profession"
+          tests: "el artículo antes de una profesión en singular"
         }
       ]
     }

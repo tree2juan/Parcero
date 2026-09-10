@@ -14,10 +14,18 @@ const fs = require("node:fs");
 const path = require("node:path");
 const vm = require("node:vm");
 
-const root = path.join(__dirname, "..");
-const read = (file) => fs.readFileSync(path.join(root, file), "utf8");
+const { lessonSource, read } = require("./data-source.js");
+const { NOT_TRANSLATED, slotOf } = require("../scripts/translated-slots.js");
 
-const bundle = `${read("data/lessons.js")}\n${read("data/provenance.js")}\n({ lessons, provenance });`;
+const root = path.join(__dirname, "..");
+
+/*
+ * Every lesson file, not just data/lessons.js. The block files under
+ * data/lessons/ hold lessons too, and reading only the declaration file meant
+ * a whole block could ship untranslated English prose to a Spanish reader with
+ * this suite green -- which is exactly how the first block did ship.
+ */
+const bundle = `${lessonSource()}\n${read("data/provenance.js")}\n({ lessons, provenance });`;
 const { lessons, provenance } = vm.runInNewContext(bundle, {}, { filename: "parcero-provenance-bundle.js" });
 
 // Read a recorded path without reusing the applier's own accessor. A test that
@@ -126,52 +134,7 @@ test("a reader can act on the marker", () => {
  * slot. Adding a field to a lesson makes this fail until someone decides which
  * it is, which is the only moment the question is cheap to answer.
  */
-const NOT_TRANSLATED = [
-  // The English actually being taught. Translating these would delete the lesson.
-  ["dialogue[].target", "the English line the learner is here to learn"],
-  ["vocabulary[].term", "the English expression being taught"],
-  ["vocabulary[].related[]", "further English expressions"],
-  ["vocabulary[].example.target", "an English example sentence"],
-  ["variations[].form", "an English variant being taught"],
-  ["pitfalls[].mistake", "the English mis-phrasing being warned about"],
-  ["pitfalls[].sayInstead", "the English repair for it"],
-
-  // Authored in Spanish from the start, for this direction's Spanish reader.
-  ["dialogue[].translation", "already Spanish: the gloss of the English line"],
-  ["dialogue[].literal", "already Spanish: the word-for-word reading"],
-  ["dialogue[].pronunciation", "a respelling aimed at Spanish readers"],
-  ["vocabulary[].literal", "already Spanish"],
-  ["vocabulary[].example.translation", "already Spanish"],
-
-  // Not prose.
-  ["dialogue[].speaker", "a person's name"],
-  ["address.form", "an enum rendered through t() -- app.js:166 maps it to address.form.* keys"],
-
-  /*
-   * `register` is a different case and the reason matters: it is NOT routed
-   * through t(). app.js:209 and app.js:228 print it raw inside a tag, so a
-   * Spanish reader sees "polite neutral" in English. That is a live defect, not
-   * an acceptable exclusion -- but it belongs to the i18n migration of
-   * register/regionality/level already in flight, and translating the strings
-   * here would mean migrating the same fields twice, with two chances for the
-   * data and the labels to drift apart. Excused as out of scope, not as fine.
-   */
-  ["vocabulary[].register", "rendered raw in English (app.js:209); belongs to the in-flight register i18n migration"],
-  ["variations[].register", "rendered raw in English (app.js:228); same migration"],
-
-  /*
-   * Options belonging to a question that asks which English utterance fits.
-   * Translating them makes the question unanswerable, so three of these are
-   * deliberately untouched English.
-   *
-   * Honest limitation: this excuses the slot, so it would not catch a question
-   * whose options were *all* wrongly translated -- only the mixed state below.
-   * Stating that rather than implying wider cover.
-   */
-  ["practiceExtra[].choices[]", "options under test in a which-utterance question"],
-];
-
-const slotOf = (trail) => trail.replace(/\[\d+\]/g, "[]");
+/* The slot spec lives in scripts/translated-slots.js, shared with the writer. */
 
 test("every string a lesson renders is either translated or argued out", () => {
   const excused = new Map(NOT_TRANSLATED);
@@ -216,4 +179,19 @@ test("a question's options are translated together or not at all", () => {
     });
   }
   assert.deepStrictEqual([...mixed], [], `options must share one language: ${mixed.join(", ")}`);
+});
+
+/*
+ * The record is generated, so the only way it can be wrong is by being stale.
+ * Regenerating is one command, but nobody runs a command they do not know
+ * exists -- so failing here is what makes a new lesson's unreviewed Spanish
+ * impossible to ship silently.
+ */
+test("the provenance record is not stale", () => {
+  const result = require("node:child_process").spawnSync(
+    process.execPath, [path.join(root, "scripts", "record-provenance.js"), "--check"],
+    { encoding: "utf8" }
+  );
+  assert.strictEqual(result.status, 0,
+    `${result.stdout || ""}${result.stderr || ""}`.trim() || "provenance check failed");
 });
