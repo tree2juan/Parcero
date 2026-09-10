@@ -15,7 +15,7 @@
   ·
   <a href="#add-a-lesson">Add a lesson</a>
   ·
-  <a href="#native-speaker-review">Review a lesson</a>
+  <a href="#native-speaker-review">Report an error</a>
 </p>
 
 <p align="center">
@@ -62,7 +62,7 @@ Each lesson has five tabs, in the order a real conversation demands them:
 | **Dialogue** | A short exchange with the target language, a natural translation, and a plain-English pronunciation respelling. Lines that hide something carry a literal gloss and a note on why it is phrased that way. A "Listen" button reads it aloud with your browser's speech engine. |
 | **Understand** | The vocabulary *as used in this exchange* — with a literal reading, when to reach for it, when not to, what region it belongs to, and an example — then what is going on underneath the exchange, what learners get wrong here and what to say instead, and the same thing said differently across registers and regions. |
 | **Practice** | Several retrieval questions that check meaning-in-context rather than translation, each naming what it is testing. |
-| **Report an error** | Tell a maintainer that something is wrong, without leaving the lesson. See [Native-speaker review](#native-speaker-review). |
+| **Report an error** | Tell a maintainer that something is wrong, without leaving the lesson. See [Reporting an error](#native-speaker-review). |
 
 <a id="lessons"></a>
 
@@ -174,7 +174,7 @@ Every field below except `title`, `situation`, `dialogue`, `vocabulary`, `note`,
   domain: "civic life",
   register: "formal polite",
   pathways: ["year-12-local-mastery"],
-  review: "pending",              // "pending" until a native speaker signs off
+  review: "pending",              // legacy field; not shown to readers
   es: {
     title: "...",
     situation: "...",
@@ -247,7 +247,6 @@ House rules for content:
 - **Never present a regional expression as universal.** Every vocabulary entry states its `region`. `vos` is paisa and Valle, not Colombian at large.
 - **Say what goes wrong.** A pitfall without `sayInstead` leaves the learner stuck, so all three fields are required.
 - **Do not make the right answer guessable.** `choices` and `answer` are a pair — `answer` is an index, so moving one means moving the other. CI fails if answers cluster at one position, if the correct choice is reliably the longest, if it towers over its distractors, or if a distractor is too short to be worth considering. See [`test/practice.test.js`](test/practice.test.js).
-- **Leave `review: "pending"`.** The lesson keeps inviting a native speaker to check it until one has.
 
 Nothing else needs touching: the lesson appears in the lesson picker, its anchors become flaggable in review mode, and it becomes a [flashcard topic](#flashcards) on its own.
 
@@ -269,11 +268,9 @@ Cross-script API is therefore marked by name, with the `Parcero*` prefix, and da
 
 <a id="native-speaker-review"></a>
 
-## Native-speaker review
+## Reporting an error
 
-Regional usage is the part most easily got wrong, so the app is honest about it: every lesson carries a `review` field, and while it is `"pending"` the lesson invites a native speaker to check it. Nothing unverified is presented as settled.
-
-Review happens at two grains, and both need a reviewer who knows the language, not the codebase.
+Regional usage is the part most easily got wrong, so the app makes it easy to say so from wherever you noticed. There is no sign-off gate and no review status shown to readers: corrections arrive through the reporting feature and are applied to the content.
 
 ### Report an error from the page
 
@@ -286,12 +283,6 @@ From there it asks what is wrong (not natural, wrong region, wrong register, mis
 Nothing is sent anywhere until you press submit. Reports live only in your browser, under their own storage key, so *Reset progress* never destroys them.
 
 Because regional usage is the thing this project most needs help with, the form also asks where you speak from. Ten Colombian regions are offered as suggestions, but the field is open — type wherever you are from and it is recorded in your own words. Where what you typed matches a suggestion, the report also carries a stable region code, so that a year of reports can be counted by region without anyone having to guess that "Medellin" and "Medellín and Antioquia (paisa)" meant the same place. `node scripts/review-flags.js` prints that tally. Reports filed through the issue form instead of the page arrive without a code, because that form is plain text with no JavaScript behind it, so the tool canonicalises those itself — in either interface language, so a region written in Spanish is counted alongside the same region written in English. Anything it does not recognise keeps the reviewer's own words and is counted under them rather than discarded.
-
-### Sign off a whole lesson
-
-For a considered pass over a complete lesson, open **[Issues → New issue → Lesson review](https://github.com/tree2juan/Parcero/issues/new?template=lesson-review.yml)**, pick a lesson, and answer a short form covering naturalness, regional framing, register, and pronunciation. A maintainer applies the wording and flips that lesson to `"reviewed"`, which records the sign-off in the data; the invitation to report stays on every lesson either way.
-
-Aim for two sign-offs per lesson: a native Colombian Spanish speaker for the `es` side, and a native or expert English speaker for the `en` side.
 
 ### Triaging flags as a maintainer
 
@@ -311,7 +302,7 @@ For each flag it prints the file, the field, the current wording, and the sugges
 
 You do not have to run it yourself. When a flag is filed from the page, the **Triage native-speaker flags** workflow runs this same tool against the content as it stands right now and posts the result on the issue, labelling it `triage-ready`, `triage-needs-human`, or `triage-manual`. Editing the issue re-runs it and updates the same comment rather than adding another. A flag filed by hand, without the machine-readable block, is labelled `triage-manual` and left for a person — it is still a valid flag, it simply cannot be resolved automatically. The workflow reads the issue body through the environment rather than interpolating it into a shell command, and asks for no write access beyond the issue it is commenting on.
 
-Once a lesson's flags are applied and both sides are signed off, set its `review` field to `"reviewed"`.
+Once a lesson's flags are applied, close the issue. Nothing about review status is shown to readers.
 
 The mature-language reference needs the same care from qualified reviewers — severity labels, local usage, and de-escalation guidance. Content that encourages harassment does not belong here.
 

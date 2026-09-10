@@ -281,10 +281,6 @@ main, footer { max-width: var(--wrap); margin: auto; padding-inline: 1.5rem; }
   font-size: .9rem; font-weight: 650;
 }
 .review-badge span { flex: 1 1 18rem; }
-/* A different stripe from .review-badge: "nobody has signed this off" and
-   "nobody has ever read this" are different claims and should not look alike. */
-.provenance-badge { border-left-color: var(--ink); }
-.provenance-count { flex: 0 0 auto !important; font-weight: 500; opacity: .75; white-space: nowrap; }
 .review-badge .text-button { padding: .35rem .7rem; color: var(--green-deep); text-decoration: underline; }
 
 .tabs { display: flex; gap: .2rem; padding-top: 1.25rem; border-bottom: 1px solid var(--line); flex-wrap: wrap; }

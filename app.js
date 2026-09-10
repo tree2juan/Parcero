@@ -239,29 +239,6 @@ function renderVariations(current) {
   $("#variations").innerHTML = html;
   $("#variations-section").hidden = !html;
 }
-function renderProvenance(lesson) {
-  /*
-   * Say which fields are machine-translated, for the direction that shows them.
-   * lesson.review is per-lesson and "pending" for every lesson, so it cannot
-   * distinguish prose a human wrote and nobody has signed off from prose no
-   * human has ever read. Unflagged is otherwise indistinguishable from unread.
-   *
-   * Read through a thunk for the same reason review-ui.js does: element ids
-   * become globals, so a typeof probe on a data name can never fail.
-   */
-  let record;
-  try {
-    record = provenance;
-  } catch {
-    record = null;
-  }
-  const paths = record && record.fields && record.fields[lesson.id]
-    ? record.fields[lesson.id][state.direction]
-    : null;
-  const count = Array.isArray(paths) ? paths.length : 0;
-  $("#lesson-provenance").hidden = count === 0;
-  $("#lesson-provenance-count").textContent = count === 0 ? "" : t("provenance.count").replace("{count}", count);
-}
 function renderPractice() {
   const questions = practiceQuestions();
   const question = questions[practiceView.index];
@@ -288,7 +265,6 @@ function render() {
   $("#lesson-level").textContent = lesson.level;
   $("#lesson-title").textContent = current.title;
   $("#lesson-situation").textContent = current.situation;
-  renderProvenance(lesson);
   renderSetting(current);
   renderAddress(current);
   renderDialogue(current);
