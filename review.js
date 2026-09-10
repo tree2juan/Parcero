@@ -147,7 +147,20 @@ const ParceroReview = (function () {
   ];
 
   const codes = (pairs) => pairs.map(([code]) => code);
-  const labelOf = (pairs, code) => (pairs.find(([value]) => value === code) || [code, code])[1];
+  /*
+   * An unrecognised code still names itself, so a flag filed by a newer build
+   * survives triage on an older checkout instead of being dropped. A *missing*
+   * code has nothing to name itself with, and the old fallback handed back
+   * undefined -- which crashed the triage CLI on `.split()` and, in markdown
+   * mode, rendered a silent "### undefined" heading. Flags arrive as JSON
+   * pasted into GitHub issues by hand, so a field going missing is ordinary
+   * input, not corruption, and losing the report is the worst outcome here.
+   */
+  const labelOf = (pairs, code) => {
+    const found = pairs.find(([value]) => value === code);
+    if (found) return found[1];
+    return typeof code === "string" && code.trim() ? code : "unspecified";
+  };
   const isText = (value) => typeof value === "string" && value.trim().length > 0;
 
   /*
@@ -387,13 +400,17 @@ const ParceroReview = (function () {
       if (!found) return { anchor, ok: false, reason: `no lesson with id "${parsed.id}"` };
       const content = found.lesson[parsed.direction];
       if (!content) return { anchor, ok: false, reason: `lesson "${parsed.id}" has no "${parsed.direction}" content` };
-      const base = `lessons[${found.index}].${parsed.direction}`;
+      // The file the lesson is written in, and its index within that file -- a
+      // block lesson is not at its global position in any file on disk.
+      const lessonSource = found.lesson.sourceFile || "data/lessons.js";
+      const lessonIndex = found.lesson.sourceIndex ?? found.index;
+      const base = `lessons[${lessonIndex}].${parsed.direction}`;
       const lessonName = content.title || parsed.id;
       const where = `${lessonName} · ${directionName(parsed.direction)}`;
 
       if (LESSON_TEXT_FIELDS.includes(parsed.field)) {
         return {
-          anchor, ok: true, kind: "lesson", source: "data/lessons.js", path: `${base}.${parsed.field}`,
+          anchor, ok: true, kind: "lesson", source: lessonSource, path: `${base}.${parsed.field}`,
           text: content[parsed.field],
           slotLabel: lessonSlotLabel(parsed.field, null, parsed.direction),
           label: `${where} · ${lessonSlotLabel(parsed.field, null, parsed.direction)}`,
@@ -406,8 +423,8 @@ const ParceroReview = (function () {
         if (!isText(value)) return { anchor, ok: false, reason: `lesson "${parsed.id}" has no ${parsed.field}` };
         const slotLabel = lessonSlotLabel(parsed.field, null, parsed.direction);
         return {
-          anchor, ok: true, kind: "lesson", source: "data/lessons.js",
-          path: `lessons[${found.index}].${parsed.field}`,
+          anchor, ok: true, kind: "lesson", source: lessonSource,
+          path: `lessons[${lessonIndex}].${parsed.field}`,
           text: value, slotLabel, label: `${where} · ${slotLabel}`,
           lang: slotLanguage("lesson", parsed.field, null, parsed.direction)
         };
@@ -418,7 +435,7 @@ const ParceroReview = (function () {
         if (choice === undefined) return { anchor, ok: false, reason: `lesson "${parsed.id}" has no choice ${parsed.index + 1}` };
         const slotLabel = `Answer choice ${parsed.index + 1}${content.answer === parsed.index ? " (the correct one)" : ""}`;
         return {
-          anchor, ok: true, kind: "lesson", source: "data/lessons.js", path: `${base}.choices[${parsed.index}]`,
+          anchor, ok: true, kind: "lesson", source: lessonSource, path: `${base}.choices[${parsed.index}]`,
           text: choice, slotLabel, label: `${where} · ${slotLabel}`,
           lang: slotLanguage("lesson", "choices", null, parsed.direction)
         };
@@ -431,7 +448,7 @@ const ParceroReview = (function () {
         const slotLabel = lessonSlotLabel(parsed.field, parsed.slot, parsed.direction);
         const fieldLabel = parsed.field === "setting" ? "The situation" : "Address form";
         return {
-          anchor, ok: true, kind: "lesson", source: "data/lessons.js",
+          anchor, ok: true, kind: "lesson", source: lessonSource,
           path: `${base}.${parsed.field}.${parsed.slot}`,
           text: value, slotLabel, label: `${where} · ${fieldLabel} · ${slotLabel}`,
           lang: slotLanguage("lesson", parsed.field, parsed.slot, parsed.direction)
@@ -446,7 +463,7 @@ const ParceroReview = (function () {
           if (!isText(question.prompt)) return { anchor, ok: false, reason: `practice question ${parsed.index + 1} has no prompt` };
           const slotLabel = `Practice question ${parsed.index + 1}`;
           return {
-            anchor, ok: true, kind: "lesson", source: "data/lessons.js", path: `${holder}.prompt`,
+            anchor, ok: true, kind: "lesson", source: lessonSource, path: `${holder}.prompt`,
             text: question.prompt, slotLabel, label: `${where} · ${slotLabel}`,
             lang: slotLanguage("lesson", "practice", parsed.slot, parsed.direction)
           };
@@ -455,7 +472,7 @@ const ParceroReview = (function () {
           if (!isText(question.tests)) return { anchor, ok: false, reason: `practice question ${parsed.index + 1} has no "tests" note` };
           const slotLabel = `Question ${parsed.index + 1}, what it tests`;
           return {
-            anchor, ok: true, kind: "lesson", source: "data/lessons.js", path: `${holder}.tests`,
+            anchor, ok: true, kind: "lesson", source: lessonSource, path: `${holder}.tests`,
             text: question.tests, slotLabel, label: `${where} · ${slotLabel}`,
             lang: slotLanguage("lesson", "practice", parsed.slot, parsed.direction)
           };
@@ -464,7 +481,7 @@ const ParceroReview = (function () {
         if (!isText(choice)) return { anchor, ok: false, reason: `practice question ${parsed.index + 1} has no choice ${parsed.choice + 1}` };
         const slotLabel = `Question ${parsed.index + 1}, answer choice ${parsed.choice + 1}${question.answer === parsed.choice ? " (the correct one)" : ""}`;
         return {
-          anchor, ok: true, kind: "lesson", source: "data/lessons.js", path: `${holder}.choices[${parsed.choice}]`,
+          anchor, ok: true, kind: "lesson", source: lessonSource, path: `${holder}.choices[${parsed.choice}]`,
           text: choice, slotLabel, label: `${where} · ${slotLabel}`,
           lang: slotLanguage("lesson", "practice", parsed.slot, parsed.direction)
         };
@@ -495,7 +512,7 @@ const ParceroReview = (function () {
         ? `.${parsed.slot}[${parsed.item}]`
         : isNested ? `.${parsed.slot}` : SCHEMA.slotPath(row, slots, parsed.slot);
       return {
-        anchor, ok: true, kind: "lesson", source: "data/lessons.js",
+        anchor, ok: true, kind: "lesson", source: lessonSource,
         path: `${base}.${parsed.field}[${parsed.index}]${suffix}`,
         text: value, slotLabel, label: `${where} · ${rowLabel} · ${slotLabel}`,
         lang: slotLanguage("lesson", parsed.field, parsed.slot, parsed.direction)
@@ -798,3 +815,4 @@ const ParceroReview = (function () {
 })();
 
 if (typeof module !== "undefined" && module.exports) module.exports = ParceroReview;
+

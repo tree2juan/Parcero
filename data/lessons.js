@@ -1091,3 +1091,30 @@ const lessons = [{
     ]
   }
 }];
+
+
+/*
+ * Which file each lesson lives in.
+ *
+ * Lessons are declared here and pushed on by the block files under
+ * data/lessons/, so a lesson's position in this array says nothing about where
+ * its text is written. The review tooling sends native speakers to a file and
+ * an index to fix wording, and before this it sent every one of them to
+ * data/lessons.js at an index that file does not have.
+ *
+ * Stamped rather than authored, so a block file cannot get it wrong: each file
+ * calls markSource once, after its push, and claims only the lessons nobody has
+ * claimed yet. Non-enumerable because the shape and provenance walkers iterate
+ * lesson objects, and this is bookkeeping, not content.
+ */
+function markSource(items, file) {
+  let index = 0;
+  for (const lesson of items) {
+    if (Object.prototype.hasOwnProperty.call(lesson, "sourceFile")) continue;
+    Object.defineProperty(lesson, "sourceFile", { value: file, enumerable: false });
+    Object.defineProperty(lesson, "sourceIndex", { value: index, enumerable: false });
+    index += 1;
+  }
+}
+
+markSource(lessons, "data/lessons.js");

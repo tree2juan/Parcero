@@ -34,6 +34,7 @@ try {
     read("data/lesson-schema.js"),
     read("data/curriculum.js"),
     "const lessons = [];",
+    "function markSource(items, file) { for (const item of items) if (!item.sourceFile) { item.sourceFile = file; } }",
     read(target.replace(/\\/g, "/")),
     "({ lessons, curriculum, schema: ParceroLessonSchema });"
   ].join("\n");
@@ -46,6 +47,16 @@ try {
 const { lessons, curriculum, schema } = loaded;
 const known = new Set(curriculum.map((entry) => entry.spanish));
 const directions = ["es", "en"];
+
+/*
+ * The stamp that tells the review tooling which file to send a native speaker
+ * to. Without it every flag against this block names data/lessons.js, at an
+ * index that file does not have.
+ */
+const relative = target.replace(/\\/g, "/").replace(/^\.\//, "");
+if (!read(relative).includes(`markSource(lessons, "${relative}")`)) {
+  fail(`the file must end with: markSource(lessons, "${relative}");`);
+}
 
 /*
  * Slots that must be present in both directions, and how many the tests demand.

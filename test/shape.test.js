@@ -303,3 +303,24 @@ test("the page loads no lesson block that is not on disk", () => {
       + "that the tests would otherwise never see.");
   }
 });
+
+/*
+ * A block file that forgets markSource still renders, still passes every
+ * content check, and still sends anyone who flags its Spanish to the wrong
+ * file -- so the failure is invisible until a native speaker gives up looking.
+ */
+test("every lesson block stamps the file it lives in", () => {
+  for (const file of lessonBlockFiles()) {
+    const source = read(file);
+    assert.ok(
+      source.includes(`markSource(lessons, "${file}")`),
+      `${file} must end with markSource(lessons, "${file}"); or the review tooling will name the wrong file`);
+  }
+});
+
+test("every lesson knows which file it came from", () => {
+  for (const lesson of lessons) {
+    assert.ok(lesson.sourceFile, `${lesson.id}: no sourceFile; markSource did not claim it`);
+    assert.ok(Number.isInteger(lesson.sourceIndex), `${lesson.id}: no sourceIndex`);
+  }
+});

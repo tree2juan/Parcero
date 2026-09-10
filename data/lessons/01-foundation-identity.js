@@ -670,3 +670,5 @@ lessons.push(
     }
   }
 );
+
+markSource(lessons, "data/lessons/01-foundation-identity.js");
