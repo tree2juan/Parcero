@@ -41,11 +41,10 @@ function matchingVerbs() {
   return search ? curriculum.filter((verb) => `${verb.spanish} ${verb.english}`.toLowerCase().includes(search)) : curriculum;
 }
 function verbTags(verb) {
-  /* level is real, differentiated data. register and regionality are still the
-     seeded placeholder on every verb, so showing them would state as fact
-     something no Colombian speaker has checked. They stay in the data — the
-     report tab can still target them — but they are not published until a
-     review has actually happened. */
+  /* level comes from the frequency data. register and regionality were approved
+     for publication as one blanket decision over the whole list, so they show —
+     but the withholding mechanism stays: any verb that carries reviewStatus has
+     its two labels held back until that flag is dropped again. */
   const tags = [verb.level];
   if (!verb.reviewStatus) tags.push(verb.register, verb.regionality);
   return tags.filter(Boolean).map((tag) => `<span class="tag">${tag}</span>`).join("");

@@ -83,7 +83,9 @@ Eight lessons spanning starter through extending, mapped onto the roadmap's path
 
 Alongside the lessons there is a reference **library**: 200 high-frequency verbs with their most useful forms, a fluency list of connectors and softeners, and an age-gated recognition reference for insulting or adult language — included so learners can *understand* it and de-escalate, never to direct it at anyone.
 
-The verb list was seeded from published frequency data, so the **level** on each card is real. The **register** and **regionality** fields are not: every entry still carries the same placeholder text, because no Colombian speaker has been over them. Those two labels are therefore **not displayed**. Showing them would have stated the same unverified claim two hundred times in the app's own voice. They stay in `data/curriculum.js`, they remain reportable through the Report an error tab, and each one appears on its card as soon as a real value replaces the placeholder and `reviewStatus` is dropped from that verb.
+The verb list was seeded from published frequency data, so the **level** on each card is real. The **register** and **regionality** fields were approved for publication on 2026-09-09 as a single blanket decision covering the whole list rather than 200 separate judgements — every verb carries the same two values, so they are a general guide, not a per-verb finding, and the interface says so where they appear. They remain reportable through the Report an error tab.
+
+The withholding mechanism stays in place: adding `reviewStatus` back to a verb hides its register and regionality again until the flag is dropped, so the next batch of unchecked content is held back automatically rather than published by default.
 
 <a id="flashcards"></a>
 
