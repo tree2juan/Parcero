@@ -13,8 +13,8 @@ const vm = require("node:vm");
 
 const { dataSource } = require("./data-source.js");
 
-const bundle = `${dataSource({ schema: true })}\n({ lessons, schema: ParceroLessonSchema });`;
-const { lessons, schema } = vm.runInNewContext(bundle, {}, { filename: "parcero-shape-bundle.js" });
+const bundle = `${dataSource({ schema: true })}\n({ lessons, curriculum, schema: ParceroLessonSchema });`;
+const { lessons, curriculum, schema } = vm.runInNewContext(bundle, {}, { filename: "parcero-shape-bundle.js" });
 
 const directions = ["es", "en"];
 
@@ -193,5 +193,73 @@ test("segments are derived, never authored", () => {
         !(lesson[direction] && Object.prototype.hasOwnProperty.call(lesson[direction], "segments")),
         `lesson ${lesson.id} (${direction}) authors a segments key; segments are computed from the content`);
     }
+  }
+});
+
+/*
+ * The catalogue's whole claim is that each lesson teaches one curriculum verb.
+ *
+ * Before this, coverage was inferred by searching lesson prose for verb forms,
+ * which credited a verb for appearing in a translation it was never taught in
+ * and missed any verb taught only in a conjugated form the search did not know.
+ * A declared `verb` makes the claim checkable. These tests stop it drifting:
+ * a typo cannot point at a verb that does not exist, and two lessons cannot
+ * quietly cover the same verb while another goes untaught.
+ *
+ * The legacy eight predate the field and are exempt by name rather than by a
+ * blanket "skip anything without a verb" rule, so a new lesson that forgets the
+ * field still fails.
+ */
+const VERBLESS_LEGACY = new Set([
+  "greeting-at-the-cafe", "taxi-to-downtown", "market-and-la-napa", "making-plans-parche",
+  "at-the-clinic", "team-standup", "seminar-discussion", "job-interview"
+]);
+
+test("every lesson names a curriculum verb it is built on", () => {
+  const known = new Set(curriculum.map((entry) => entry.spanish));
+  for (const lesson of lessons) {
+    if (VERBLESS_LEGACY.has(lesson.id)) continue;
+    assert.ok(
+      typeof lesson.verb === "string" && lesson.verb.trim(),
+      `lesson ${lesson.id} names no verb, so nothing proves it teaches any of the curriculum`);
+    assert.ok(
+      known.has(lesson.verb),
+      `lesson ${lesson.id} claims the verb "${lesson.verb}", which is not in data/curriculum.js`);
+  }
+});
+
+test("no two lessons claim the same verb", () => {
+  const seen = new Map();
+  for (const lesson of lessons) {
+    if (!lesson.verb) continue;
+    const earlier = seen.get(lesson.verb);
+    assert.ok(
+      !earlier,
+      `lessons ${earlier} and ${lesson.id} both claim "${lesson.verb}", `
+      + "so one curriculum verb is taught twice and another not at all");
+    seen.set(lesson.verb, lesson.id);
+  }
+});
+
+test("a lesson's declared verb is actually spoken in its dialogue", () => {
+  /*
+   * Declaring the verb is cheap; teaching it is not. A lesson could name
+   * "conducir" and never once put it in a character's mouth, which is exactly
+   * the gap the old inferred coverage hid. Stems rather than whole words,
+   * because the dialogue will nearly always carry a conjugated form -- "soy",
+   * "conduzco" -- not the infinitive.
+   */
+  const stem = (verb) => verb.replace(/se$/, "").replace(/[aeiouáéíóú]?[rn]$/, "").slice(0, 4).toLowerCase();
+  for (const lesson of lessons) {
+    if (!lesson.verb) continue;
+    const spoken = (lesson.es?.dialogue || [])
+      .map((line) => (typeof line === "string" ? line : line.target || ""))
+      .join(" ")
+      .toLowerCase();
+    const root = stem(lesson.verb);
+    const irregular = /^(ser|ir|estar|haber|ver|dar)$/.test(lesson.verb);
+    assert.ok(
+      irregular || (root && spoken.includes(root)),
+      `lesson ${lesson.id} claims "${lesson.verb}" but no dialogue line contains "${root}"`);
   }
 });
