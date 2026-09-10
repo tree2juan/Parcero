@@ -57,9 +57,27 @@
       return MACROS[name];
     });
 
+    /*
+     * \w has the same defect as \b and needs the same repair.
+     *
+     * JavaScript defines \w as [A-Za-z0-9_], so it does not match an accented
+     * letter either. That is subtler than the \b problem because a probe using
+     * \w usually still matches something — just the wrong span. The probe
+     * \w{4,}mente was written to require a four-letter stem before an adverb
+     * ending, and against "rápidamente" the only run of \w characters before
+     * "mente" is "pida", whose left edge sits against the á and therefore is
+     * not a boundary. The probe silently failed on every accented adverb,
+     * which is most of them.
+     *
+     * Rewriting \w here rather than spelling the letter set out in each probe
+     * keeps one copy of the alphabet. A \w inside a character class would be
+     * mangled by this, so no probe may contain one, and a test enforces that.
+     */
+    const widened = expanded.replace(/\\w/g, `[${WORD}]`);
+
     /* \\b inside a character class is a backspace, not a boundary, and must be
        left alone; nothing in data/cefr.js uses one, and this keeps it true. */
-    return new RegExp(expanded.replace(/\\b/g, BOUNDARY), caseSensitive ? "" : "i");
+    return new RegExp(widened.replace(/\\b/g, BOUNDARY), caseSensitive ? "" : "i");
   }
 
   const compiled = {};

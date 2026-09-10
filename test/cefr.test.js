@@ -89,6 +89,34 @@ test("the word boundary survives an accent", () => {
   assert.ok(!cefr.compileProbe("\\bel\\b").test("elefante"));
 });
 
+test("the letter class survives an accent too, and no probe hides a \\w in a class", () => {
+  /* \b was repaired first and \w was left behind, which is worse than it
+     sounds: a probe using \w still matches something, just the wrong span.
+     "\\w{4,}mente" was meant to demand a four-letter stem before an adverb
+     ending, and against "rápidamente" the longest run of ASCII word characters
+     before "mente" is "pida" — whose left edge butts against the á and so is
+     not a boundary. The probe failed on every accented adverb silently. */
+  assert.ok(cefr.compileProbe("\\b\\w{4,}mente\\b").test("Habla rápidamente."));
+  assert.ok(cefr.compileProbe("\\b\\w{4,}mente\\b").test("Normalmente llego temprano."));
+  /* ...without becoming so wide that it swallows the short near misses. */
+  assert.ok(!cefr.compileProbe("\\b\\w{4,}mente\\b").test("La mente humana."));
+  assert.ok(!cefr.compileProbe("\\b\\w{4,}mente\\b").test("Él miente siempre."));
+
+  /* compileProbe rewrites \w into a character class, so a \w already inside
+     one would nest and break. Nothing may contain such a thing. */
+  for (const direction of DIRECTIONS) {
+    for (const feature of CEFR_FEATURES[direction]) {
+      const classes = feature.probe.match(/\[[^\]]*\]/g) || [];
+      for (const group of classes) {
+        assert.ok(
+          !group.includes("\\w"),
+          `${feature.id} puts \\w inside the character class ${group}`
+        );
+      }
+    }
+  }
+});
+
 test("a macro is expanded, and a misspelled one is refused", () => {
   const probe = cefr.compileProbe("\\bha\\s+{ES_PART}\\b");
   assert.ok(probe.test("Ha llegado tarde."), "regular participle");
@@ -182,7 +210,13 @@ test("a lesson is banded by the highest thing it demonstrates, with the line to 
 });
 
 test("a lesson that demonstrates nothing detectable is A1, not unrated", () => {
-  const lesson = { id: "probe", es: { dialogue: [{ target: "El bus sale a las cinco." }] } };
+  /* Interjections only. This used to be "El bus sale a las cinco.", which was
+     undetectable when the Spanish side had four A1 probes and is now caught
+     three times over by the present tense, the article and the clock. With 52
+     features no real lesson lands on the floor any more, so the case has to be
+     built rather than borrowed — but the floor still has to behave, because a
+     band the learner was given is different from a band we measured. */
+  const lesson = { id: "probe", es: { dialogue: [{ target: "¡Ay, hombre! Bueno, listo." }] } };
   const result = cefr.lessonBand(lesson, "es");
   assert.strictEqual(result.band, "A1");
   assert.strictEqual(result.detected, null, "the floor must stay distinguishable from a detection");
@@ -266,9 +300,21 @@ test("a band is not reached by skipping the one below it", () => {
 });
 
 test("a band needs most of its lessons, not one", () => {
+  /* Ten lessons that all sit in the same band, three of them answered well.
+     Built rather than taken from the corpus: the original version scored the
+     real lessons and passed only because A1 happened to be large that week.
+     Expanding the probes moved lessons out of A1, the group shrank to the size
+     of the minimum, and three right answers silently became a whole band. The
+     rule under test is the threshold, so the population is fixed here. */
+  const made = [];
+  for (let i = 0; i < 10; i += 1) {
+    made.push({ id: `synthetic-${i}`, es: { dialogue: [{ target: "Hay un café en la esquina." }] } });
+  }
+  assert.strictEqual(cefr.lessonBand(made[0], "es").band, "A1", "the fixture must sit in one band");
+
   let given = 0;
   const scoreOf = () => (given++ < 3 ? 1 : 0);
-  const result = cefr.attainment(lessons, "es", scoreOf, { minimum: 3 });
+  const result = cefr.attainment(made, "es", scoreOf, { minimum: 3 });
   assert.strictEqual(result.reached, null, "three right answers is not a band");
 });
 
