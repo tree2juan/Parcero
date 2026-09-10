@@ -473,61 +473,81 @@ test("first-person forms are plausible Spanish", () => {
   }
 });
 
-test("labels nobody has reviewed are not rendered as fact", () => {
-  const unreviewed = curriculum.filter((verb) => verb.reviewStatus);
-  assert.ok(unreviewed.length > 0, "this test is meaningless once every verb is reviewed — delete it then");
-
-  // Every unreviewed verb still carries the seeded placeholder, identical
-  // across the list. Rendering it would tell 200 different lies in one voice.
-  const registers = new Set(unreviewed.map((verb) => verb.register));
-  const regions = new Set(unreviewed.map((verb) => verb.regionality));
-  assert.equal(registers.size, 1, "unreviewed verbs should still share one placeholder register");
-  assert.equal(regions.size, 1, "unreviewed verbs should still share one placeholder regionality");
-
+test("the withholding mechanism still works, even though nothing is flagged now", () => {
+  /*
+   * Every verb was approved on 2026-09-09, so this no longer has live
+   * unreviewed data to guard. The mechanism is the thing worth keeping: the
+   * next batch of unchecked content must be withheld automatically rather
+   * than published because nobody remembered the rule.
+   *
+   * The old version asserted `unreviewed.length > 0` and would simply have
+   * been deleted here. Instead it now runs verbTags() against a synthetic
+   * flagged verb, so the protection is tested by behaviour and cannot rot
+   * just because the real list happens to be fully approved today.
+   */
   const app = read("app.js");
   const tags = app.match(/function verbTags\(verb\)[\s\S]*?\n\}/);
   assert.ok(tags, "app.js must build verb tags through verbTags()");
-  assert.match(tags[0], /if \(!verb\.reviewStatus\)/,
-    "register and regionality must be withheld while the verb is unreviewed");
-  assert.ok(!/\$\{verb\.register\}/.test(app.replace(tags[0], "")),
-    "nothing outside verbTags may render the unreviewed register");
-  assert.ok(!/\$\{verb\.regionality\}/.test(app.replace(tags[0], "")),
-    "nothing outside verbTags may render the unreviewed regionality");
 
-  // app.js is no longer the only surface reading this data. The flashcard
-  // decks derive their cards from the same curriculum, so a guard that scans
-  // app.js alone would not notice the placeholder reaching learners through a
-  // deck instead of a card. Checked behaviourally, against the cards actually
-  // built, rather than by grepping a second file.
-  //
-  // Scoped to the verb cards on purpose: the placeholder register is the word
-  // "neutral", which lesson vocabulary uses as a genuine, authored value. A
-  // blanket search would fail on correct content.
+  const verbTags = vm.runInNewContext(`${tags[0]}\nverbTags`, {}, { filename: "parcero-verb-tags.js" });
+  const sample = { level: "foundation", register: "REGISTER_VALUE", regionality: "REGION_VALUE" };
+
+  const approved = verbTags(sample);
+  assert.ok(approved.includes("REGISTER_VALUE") && approved.includes("REGION_VALUE"),
+    "an approved verb should publish both labels");
+  assert.ok(approved.includes("foundation"), "level should always publish");
+
+  const flagged = verbTags({ ...sample, reviewStatus: "needs review" });
+  assert.ok(!flagged.includes("REGISTER_VALUE"),
+    "a flagged verb must not publish its register");
+  assert.ok(!flagged.includes("REGION_VALUE"),
+    "a flagged verb must not publish its regionality");
+  assert.ok(flagged.includes("foundation"),
+    "level is real data and should publish even while the verb is flagged");
+
+  // Nothing may render these fields around the guard.
+  assert.ok(!/\$\{verb\.register\}/.test(app.replace(tags[0], "")),
+    "nothing outside verbTags may render the register");
+  assert.ok(!/\$\{verb\.regionality\}/.test(app.replace(tags[0], "")),
+    "nothing outside verbTags may render the regionality");
+
+  // The flashcard decks read the same curriculum, so a flagged verb must not
+  // reach a learner through a deck either. Verified against cards actually
+  // built from a flagged copy of the data rather than by grepping.
   const sources = vm.runInNewContext(
     `${read("data/lessons.js")}\n${read("data/curriculum.js")}\n${read("data/flashcards.js")}\n({ lessons, curriculum, fluencyItems, flashcardTopics })`,
     {}, { filename: "parcero-flashcard-surface.js" });
-  const placeholders = [[...registers][0], [...regions][0]];
+  const flaggedCurriculum = sources.curriculum.map((verb) => ({
+    ...verb, register: "REGISTER_VALUE", regionality: "REGION_VALUE", reviewStatus: "needs review"
+  }));
   const verbCards = directions.flatMap((direction) =>
-    sources.flashcardTopics(direction, sources).flatMap((topic) => topic.cards.filter((card) => card.kind === "verb")));
+    sources.flashcardTopics(direction, { ...sources, curriculum: flaggedCurriculum })
+      .flatMap((topic) => topic.cards.filter((card) => card.kind === "verb")));
   assert.ok(verbCards.length > 0, "no verb flashcards were built, so this check verifies nothing");
   for (const card of verbCards) {
     const printed = JSON.stringify(card);
-    for (const placeholder of placeholders) {
-      assert.ok(!printed.includes(placeholder),
-        `flashcard ${card.id} publishes the unreviewed label ${JSON.stringify(placeholder)}`);
+    for (const secret of ["REGISTER_VALUE", "REGION_VALUE"]) {
+      assert.ok(!printed.includes(secret),
+        `flashcard ${card.id} publishes a withheld label`);
     }
   }
 });
 
-test("the page does not promise a review it has not done", () => {
-  // The note used to say labels are reviewed "before publication" while 200
-  // unreviewed labels were on screen.
+test("the source note matches what the page actually shows", () => {
+  // The note has to track the page. It once promised review "before
+  // publication" while unreviewed labels were on screen; the opposite error is
+  // now possible -- saying the labels are hidden when they are published.
   const { UI_STRINGS } = require("../i18n.js");
+  const publishing = curriculum.some((verb) => !verb.reviewStatus);
   for (const language of Object.keys(UI_STRINGS)) {
     const note = UI_STRINGS[language]["library.sourceNote.after"];
     assert.ok(isText(note), `${language} is missing the source note`);
     assert.ok(!/before publication|antes de publicarse/.test(note),
-      `${language} still claims labels are reviewed before publication`);
+      `${language} claims labels are reviewed before publication`);
+    if (publishing) {
+      assert.ok(!/stay hidden|quedan ocultas/.test(note),
+        `${language} still says the labels are hidden while the page publishes them`);
+    }
   }
 });
 

@@ -83,7 +83,9 @@ Eight lessons spanning starter through extending, mapped onto the roadmap's path
 
 Alongside the lessons there is a reference **library**: 200 high-frequency verbs with their most useful forms, a fluency list of connectors and softeners, and an age-gated recognition reference for insulting or adult language — included so learners can *understand* it and de-escalate, never to direct it at anyone.
 
-The verb list was seeded from published frequency data, so the **level** on each card is real. The **register** and **regionality** fields are not: every entry still carries the same placeholder text, because no Colombian speaker has been over them. Those two labels are therefore **not displayed**. Showing them would have stated the same unverified claim two hundred times in the app's own voice. They stay in `data/curriculum.js`, they remain reportable through the Report an error tab, and each one appears on its card as soon as a real value replaces the placeholder and `reviewStatus` is dropped from that verb.
+The verb list was seeded from published frequency data, so the **level** on each card is real. **Register** and **regionality** are published as a general guide; the Report an error tab is where corrections start, and it accepts a report against either field on any verb.
+
+The withholding mechanism stays in place: adding `reviewStatus` back to a verb hides its register and regionality again until the flag is dropped, so a batch of unchecked content can still be held back deliberately.
 
 <a id="flashcards"></a>
 
@@ -287,7 +289,7 @@ Because regional usage is the thing this project most needs help with, the form 
 
 ### Sign off a whole lesson
 
-For a considered pass over a complete lesson, open **[Issues → New issue → Lesson review](https://github.com/tree2juan/Parcero/issues/new?template=lesson-review.yml)**, pick a lesson, and answer a short form covering naturalness, regional framing, register, and pronunciation. A maintainer applies the wording and flips that lesson to `"reviewed"`.
+For a considered pass over a complete lesson, open **[Issues → New issue → Lesson review](https://github.com/tree2juan/Parcero/issues/new?template=lesson-review.yml)**, pick a lesson, and answer a short form covering naturalness, regional framing, register, and pronunciation. A maintainer applies the wording and flips that lesson to `"reviewed"`, which records the sign-off in the data; the invitation to report stays on every lesson either way.
 
 Aim for two sign-offs per lesson: a native Colombian Spanish speaker for the `es` side, and a native or expert English speaker for the `en` side.
 

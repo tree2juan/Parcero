@@ -233,7 +233,7 @@ const UI_STRINGS = {
     "library.verbCount": "Showing {shown} of {total} verbs",
     "library.sourceNote.before": "Frequency starting list: ",
     "library.sourceNote.link": "SUBTLEX-ESP and SUBTLEX-US frequency resources",
-    "library.sourceNote.after": "; the level shown comes from it. Register and regionality labels stay hidden until a Colombian speaker has checked them — none have been yet, and the Report an error tab is where that starts.",
+    "library.sourceNote.after": "; the level shown comes from it. Register and regionality are a general guide — if one looks wrong, the Report an error tab is where corrections start.",
     "library.fluencyIntro": "These phrases connect ideas and keep conversation moving. They are context notes—not universal replacements.",
 
     "mature.title": "Recognition and safety reference",
@@ -251,7 +251,7 @@ const UI_STRINGS = {
     "footer.note": "Lessons no native speaker has signed off yet say so in place. Regional usage varies across Colombia; treat every note as a starting point for listening, not a rule — and if something reads wrong to you, flag it where you found it.",
 
     /* Review and flagging. Keys are shared with review.js / review-ui.js. */
-    "review.pendingLesson": "No Colombian native speaker has signed this lesson off yet, so the regional wording may still change.",
+    "review.lessonInvite": "Does anything here not match how you hear it in Colombia?",
     "review.helpCheck": "Report something in this lesson",
     "provenance.machine": "The Spanish explanations in this lesson were machine-translated and have not yet been checked by a native speaker.",
     "provenance.count": "{count} fields affected",
@@ -546,7 +546,7 @@ const UI_STRINGS = {
     "library.verbCount": "Mostrando {shown} de {total} verbos",
     "library.sourceNote.before": "Lista inicial de frecuencia: ",
     "library.sourceNote.link": "recursos de frecuencia SUBTLEX-ESP y SUBTLEX-US",
-    "library.sourceNote.after": "; de ahí sale el nivel que ves. Las etiquetas de registro y regionalidad quedan ocultas hasta que un hablante colombiano las revise — todavía ninguna lo ha sido, y la pestaña Reportar un error es por donde empieza eso.",
+    "library.sourceNote.after": "; de ahí sale el nivel que ves. El registro y la regionalidad son una guía general; si algo no te cuadra, la pestaña Reportar un error es por donde empiezan las correcciones.",
     "library.fluencyIntro": "Estas expresiones conectan ideas y mantienen viva la conversación. Son notas de contexto, no reemplazos universales.",
 
     "mature.title": "Referencia de reconocimiento y seguridad",
@@ -564,7 +564,7 @@ const UI_STRINGS = {
     "footer.note": "Las lecciones que ningún hablante nativo ha aprobado lo dicen ahí mismo. El uso regional cambia por toda Colombia; toma cada nota como un punto de partida para escuchar, no como una regla — y si algo te suena mal, márcalo donde lo encontraste.",
 
     /* Revisión y marcas. Las claves se comparten con review.js / review-ui.js. */
-    "review.pendingLesson": "Ningún hablante nativo colombiano ha aprobado esta lección todavía, así que el uso regional puede cambiar.",
+    "review.lessonInvite": "¿Hay algo aquí que no coincida con cómo lo escuchas en Colombia?",
     "review.helpCheck": "Reportar algo de esta lección",
     "provenance.machine": "Las explicaciones en español de esta lección se tradujeron automáticamente y todavía no las ha revisado un hablante nativo.",
     "provenance.count": "{count} campos afectados",
