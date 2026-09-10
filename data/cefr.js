@@ -548,9 +548,26 @@ const CEFR_FEATURES = {
       id: "es-concession-subjunctive",
       band: "B2",
       name: "Conceding a point",
-      probe: "\\baunque\\s+(sea|est[ée]|tenga|pueda|haya|venga|quiera|fuera|tuviera)\\b",
-      yes: ["Aunque sea difícil, lo haré.", "Aunque tenga razón, no me gusta."],
-      no: ["Aunque llueve, salgo.", "Aunque es difícil, lo haré."]
+      /* The plural forms were missing until a lesson wrote "aunque hayan
+         pasado dos semanas" and the probe did not see it. A concession is no
+         less a concession for having a plural subject, so every form here is
+         paired with its own plural, and the `no` list now includes the
+         indicative plurals that must keep failing: "aunque están" and "aunque
+         son" are not concessions, and an accent is the only thing separating
+         them from "estén" and "sean". */
+      probe: "\\baunque\\s+(sea|sean|est[ée]|est[ée]n|tenga|tengan|pueda|puedan|haya|hayan|venga|vengan|quiera|quieran|fuera|fueran|tuviera|tuvieran)\\b",
+      yes: [
+        "Aunque sea difícil, lo haré.",
+        "Aunque tenga razón, no me gusta.",
+        "Aunque hayan pasado dos semanas, sigue igual.",
+        "Aunque estén cerrados, vale la pena ir."
+      ],
+      no: [
+        "Aunque llueve, salgo.",
+        "Aunque es difícil, lo haré.",
+        "Aunque están cerrados, vale la pena ir.",
+        "Aunque son difíciles, los hago."
+      ]
     },
 
     {

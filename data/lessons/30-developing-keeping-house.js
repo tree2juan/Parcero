@@ -706,7 +706,13 @@ lessons.push(
       variations: [
         { form: "Eso se arregla.", register: "friendly practical", region: "General Colombian", whenToUse: "You want to reassure someone that the object or situation is solvable." },
         { form: "¿En cuánto me lo arregla?", register: "polite practical", region: "General Colombian", whenToUse: "Asking a workshop for the repair price with usted instead of vos." },
-        { form: "Me estoy arreglando; ya salgo.", register: "friendly informal", region: "General Colombian", whenToUse: "You are getting ready to leave, not fixing a broken object." }
+        { form: "Me estoy arreglando; ya salgo.", register: "friendly informal", region: "General Colombian", whenToUse: "You are getting ready to leave, not fixing a broken object." },
+        {
+          form: "Aunque haya quedado firme, la bisagra fue cambiada por el señor del taller.",
+          register: "neutral",
+          region: "Universal Spanish",
+          whenToUse: "Granting a point about work someone else did, and naming who did it. Aunque plus the subjunctive concedes without confirming, and fue cambiada por names the hand behind the job."
+        }
       ],
       prompt: "Lina says “arreglemos eso” and then “arreglarme.” What range is the verb showing?",
       choices: ["It mainly means washing something with water and soap.", "It only means replacing an old item with a new one.", "It can sort out a situation and also mean getting ready."],
@@ -766,7 +772,13 @@ lessons.push(
       variations: [
         { form: "That can be fixed.", register: "neutral reassuring", region: "Inglés universal", whenToUse: "Quiere tranquilizar a alguien diciendo que el problema tiene solución." },
         { form: "How much would you charge to fix it?", register: "polite practical", region: "Inglés universal", whenToUse: "Pregunta el precio de un arreglo específico en un taller." },
-        { form: "I'm getting ready; I'll leave soon.", register: "friendly informal", region: "Inglés universal", whenToUse: "Usted se está arreglando para salir, no reparando un objeto." }
+        { form: "I'm getting ready; I'll leave soon.", register: "friendly informal", region: "Inglés universal", whenToUse: "Usted se está arreglando para salir, no reparando un objeto." },
+        {
+          form: "We had the hinge fixed last week, and the whole door was replaced later.",
+          register: "neutral",
+          region: "Inglés universal",
+          whenToUse: "Cuando mandó a arreglar algo en vez de arreglarlo usted mismo. “Had the hinge fixed” no dice quién lo hizo, y “was replaced” deja el resultado en primer plano."
+        }
       ],
       prompt: "Lina says “let's sort that out” and “get ready.” ¿Qué muestra sobre arreglar?",
       choices: ["Que siempre significa reemplazar una cosa por otra nueva.", "Que en inglés se reparte entre resolver algo y alistarse.", "Que normalmente significa lavar con agua y jabón."],

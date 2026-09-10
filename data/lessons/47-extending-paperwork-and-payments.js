@@ -1334,6 +1334,12 @@ lessons.push(
           register: "neutral",
           region: "Universal Spanish",
           whenToUse: "Saying you will pay after payday."
+        },
+        {
+          form: "¿Me lo puede dejar revisado para el viernes?",
+          register: "courteous",
+          region: "Universal Spanish",
+          whenToUse: "Asking for a job to be finished by a date without naming a price yet. Dejar plus a participle is the everyday way to ask for a finished state."
         }
       ],
       prompt: "Alex is asking a mechanic for the price of checking the car. Which question fits best?",
@@ -1600,6 +1606,12 @@ lessons.push(
           register: "neutral",
           region: "Inglés universal",
           whenToUse: "Decir cuándo cobra el sueldo."
+        },
+        {
+          form: "I need to get the brakes checked, and the tires were replaced last month.",
+          register: "neutral",
+          region: "Inglés universal",
+          whenToUse: "Para encargar un trabajo y, de paso, contar lo que ya se hizo. “Get the brakes checked” encarga; “were replaced” informa sin decir quién."
         }
       ],
       prompt: "Alejandra pregunta por el precio de revisar los frenos. ¿Qué frase es natural?",

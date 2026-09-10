@@ -1601,6 +1601,12 @@ lessons.push(
           register: "neutral",
           region: "General Colombian",
           whenToUse: "The group relies on one condition or resource."
+        },
+        {
+          form: "Depende de si ya abrieron la variante.",
+          register: "courteous",
+          region: "General Colombian",
+          whenToUse: "Naming the one fact the answer hangs on. It turns a vague depende into something useful."
         }
       ],
       prompt: "Maribel answers only “depende.” Why is that enough?",
@@ -1922,6 +1928,12 @@ lessons.push(
           register: "neutral",
           region: "Inglés universal",
           whenToUse: "El grupo se apoya en una condición o recurso."
+        },
+        {
+          form: "They must have closed the shortcut, didn't they?",
+          register: "courteous",
+          region: "Inglés universal",
+          whenToUse: "Para deducir algo y pedir confirmación a la vez. “Must have closed” es la deducción; la coletilla invita al otro a corregirla."
         }
       ],
       prompt: "Maribel answers “it depends.” ¿Por qué la frase está completa?",

@@ -251,6 +251,12 @@ lessons.push(
           register: "neutral",
           region: "General Spanish",
           whenToUse: "You personally add a detail so the terms stay clear."
+        },
+        {
+          form: "El desayuno va incluido; el domicilio se cobra aparte.",
+          register: "courteous",
+          region: "General Colombian",
+          whenToUse: "Splitting what is in the price from what is not. Se cobra aparte is the exact phrase a counter will use."
         }
       ],
       prompt: "Oliver asks “¿la tarifa incluye desayuno?” What is he checking?",
@@ -528,6 +534,12 @@ lessons.push(
           register: "neutral",
           region: "Inglés universal",
           whenToUse: "Usted agrega un detalle para que los términos queden claros."
+        },
+        {
+          form: "Breakfast is included by default; however, the delivery fee is charged separately.",
+          register: "courteous",
+          region: "Inglés universal",
+          whenToUse: "Para separar lo incluido de lo que se cobra aparte. “However” marca el giro, y la pasiva evita señalar a quién cobra."
         }
       ],
       prompt: "Oliver asks “does the rate include breakfast?” ¿Qué está revisando?",

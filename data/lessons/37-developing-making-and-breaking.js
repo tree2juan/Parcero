@@ -1379,6 +1379,12 @@ lessons.push(
           register: "neutral",
           region: "General Spanish",
           whenToUse: "You need to describe visible physical breakage and the result matters."
+        },
+        {
+          form: "Aunque hayan pasado dos semanas, el vidrio fue repuesto por la administración.",
+          register: "courteous",
+          region: "Universal Spanish",
+          whenToUse: "Conceding that a repair took too long while still crediting whoever finally did it. Aunque hayan pasado admits the delay without arguing about it."
         }
       ],
       prompt: "Alex says “se me rompió un vidrio” but “el ventilador se dañó.” What contrast is he making?",
@@ -1656,6 +1662,12 @@ lessons.push(
           register: "neutral",
           region: "Inglés universal",
           whenToUse: "Debe describir una ruptura física visible y el resultado importa."
+        },
+        {
+          form: "We had the pane replaced, and the frame was repaired at the same time.",
+          register: "neutral",
+          region: "Inglés universal",
+          whenToUse: "Para reportar un arreglo que usted encargó. Note que el inglés no nombra al que hizo el trabajo, igual que el español con la pasiva."
         }
       ],
       prompt: "Alex says “a window pane broke” but “the fan stopped working.” ¿Qué contraste marca?",

@@ -94,7 +94,13 @@ lessons.push(
         dl44Variation("No contestó el teléfono.", "neutral", "General Spanish", "Someone did not pick up the call."),
         dl44Variation("Me dejó en visto.", "friendly informal", "Digital Spanish", "The message was seen and ignored or deferred."),
         dl44Variation("No me contestó el mensaje.", "neutral", "General Spanish", "A direct message got no reply."),
-        dl44Variation("Eso merece una respuesta más seria.", "neutral", "General Spanish", "You mean a considered response, not a quick answer.")
+        dl44Variation("Eso merece una respuesta más seria.", "neutral", "General Spanish", "You mean a considered response, not a quick answer."),
+        {
+          form: "De pronto ya lo vio y no ha querido contestar.",
+          register: "familiar",
+          region: "General Colombian",
+          whenToUse: "Guessing out loud without accusing. De pronto is Colombian for maybe, and it keeps the guess friendly."
+        }
       ],
       prompt: "Nico says “no contestó el teléfono.” Why is contestar the right verb?",
       choices: [
@@ -164,7 +170,13 @@ lessons.push(
         dl44Variation("She didn't answer the phone.", "neutral", "Inglés universal", "No recogió la llamada."),
         dl44Variation("She left me on read.", "friendly informal", "Inglés digital", "Vio el mensaje y no respondió."),
         dl44Variation("She never replied.", "neutral", "Inglés universal", "No contestó el mensaje."),
-        dl44Variation("That deserves a serious response.", "neutral", "Inglés universal", "Habla de una respuesta considerada, no de contacto rápido.")
+        dl44Variation("That deserves a serious response.", "neutral", "Inglés universal", "Habla de una respuesta considerada, no de contacto rápido."),
+        {
+          form: "She must have seen it by now, hasn't she?",
+          register: "familiar",
+          region: "Inglés universal",
+          whenToUse: "Para suponer algo y dejar que el otro lo confirme. La coletilla convierte la sospecha en pregunta."
+        }
       ],
       prompt: "Nico says “she didn't answer the phone.” ¿Por qué answer es correcto?",
       choices: [

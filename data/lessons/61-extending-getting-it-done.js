@@ -297,6 +297,12 @@ lessons.push(
           register: "neutral",
           region: "General Colombian",
           whenToUse: "The group got the essential part done, even if work remains."
+        },
+        {
+          form: "La cita fue asignada por la oficina a la que llamamos; sin embargo, habrían podido avisar antes.",
+          register: "formal",
+          region: "Universal Spanish",
+          whenToUse: "Recording what an office did and what it should have done. Sin embargo marks the complaint without raising the voice."
         }
       ],
       prompt: "Adriana says “logré conseguir cita.” What does lograr add?",
@@ -618,6 +624,12 @@ lessons.push(
           register: "neutral",
           region: "Inglés universal",
           whenToUse: "El grupo resolvió lo esencial, aunque falte trabajo."
+        },
+        {
+          form: "Appointments are assigned by the front desk; however, the list is updated only once a day.",
+          register: "formal",
+          region: "Inglés universal",
+          whenToUse: "Para explicar cómo funciona una oficina. La pasiva describe el proceso, y “however” introduce el pero que importa."
         }
       ],
       prompt: "Adriana says “I finally managed to get an appointment.” ¿Qué aporta managed to?",

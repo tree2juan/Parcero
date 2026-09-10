@@ -1336,6 +1336,12 @@ lessons.push(
           register: "polite formal",
           region: "Universal Spanish",
           whenToUse: "A written or professional refusal."
+        },
+        {
+          form: "Ojalá pudiera, pero me queda imposible esta vez.",
+          register: "familiar",
+          region: "General Colombian",
+          whenToUse: "Turning something down warmly. Ojalá pudiera says you would if you could, which is what keeps the invitation open."
         }
       ],
       prompt: "Why is “rechazo tu invitación” a bad spoken answer to Lucía?",
@@ -1603,6 +1609,12 @@ lessons.push(
           register: "friendly informal",
           region: "Inglés universal",
           whenToUse: "Mantener buena voluntad después de un no."
+        },
+        {
+          form: "I wish I could come; if the shift had ended earlier, I would have joined you.",
+          register: "familiar",
+          region: "Inglés universal",
+          whenToUse: "Para decir que no dejando claro que sí quería. “I wish I could” suaviza; la condicional explica el motivo real."
         }
       ],
       prompt: "Sam invita a Alejandra a un concierto, pero ella no puede ir. ¿Qué respuesta suena natural?",

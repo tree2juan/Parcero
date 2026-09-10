@@ -251,6 +251,12 @@ lessons.push(
           register: "polite formal",
           region: "Universal Spanish",
           whenToUse: "Warning someone not to leave form fields empty."
+        },
+        {
+          form: "Los formularios los revisan en ventanilla el mismo día.",
+          register: "courteous",
+          region: "General Colombian",
+          whenToUse: "Saying who handles a form without naming a person. Fronting los formularios is the spoken alternative to a passive."
         }
       ],
       prompt: "At the Girardot counter, which instruction is the most natural Colombian way to ask Alex to fill in the form?",
@@ -517,6 +523,12 @@ lessons.push(
           register: "neutral",
           region: "Inglés universal",
           whenToUse: "Describir una arepa rellena."
+        },
+        {
+          form: "Forms are reviewed by the counter staff; however, nothing is stamped the same day.",
+          register: "courteous",
+          region: "Inglés universal",
+          whenToUse: "Para describir un trámite de ventanilla. La pasiva nombra al responsable sin culparlo, y “however” avisa de la demora."
         }
       ],
       prompt: "In the El Paso office, which phrase is natural for a whole form?",

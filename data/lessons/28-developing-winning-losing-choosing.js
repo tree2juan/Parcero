@@ -223,7 +223,13 @@ lessons.push(
         dl28Variation("Perdimos el bus.", "neutral", "General Spanish", "Use it when the bus left before you arrived."),
         dl28Variation("No perdamos más tiempo.", "neutral", "General Spanish", "Use it when you need to stop circling and act."),
         dl28Variation("Me perdí saliendo del centro.", "neutral", "General Spanish", "Use it when you personally got lost on a route."),
-        dl28Variation("La cita no se puede perder.", "neutral", "General Spanish", "Use it when an appointment matters and missing it would create trouble.")
+        dl28Variation("La cita no se puede perder.", "neutral", "General Spanish", "Use it when an appointment matters and missing it would create trouble."),
+        {
+          form: "Aunque haya salido tarde, yo ya había avisado que no alcanzaba.",
+          register: "familiar",
+          region: "Universal Spanish",
+          whenToUse: "Conceding you were late while pointing out you warned people first. Había avisado puts the warning before the lateness on the timeline."
+        }
       ],
       prompt: "Laura says “se me perdió la cédula.” What is the grammar doing?",
       choices: ["It frames the loss as an accident that affected her.", "It says she deliberately hid the ID from Natalia.", "It means Laura got lost while carrying the ID."],
@@ -289,7 +295,13 @@ lessons.push(
         dl28Variation("We missed the bus.", "neutral", "Inglés universal", "La salida pasó sin ustedes."),
         dl28Variation("Let's not waste more time.", "neutral", "Inglés universal", "Necesitan dejar de dar vueltas."),
         dl28Variation("I got lost leaving downtown.", "neutral", "Inglés universal", "Usted se desorientó en una ruta."),
-        dl28Variation("The ID turned up in my backpack.", "friendly informal", "Inglés universal", "El documento apareció y no quiere dramatizar la culpa.")
+        dl28Variation("The ID turned up in my backpack.", "friendly informal", "Inglés universal", "El documento apareció y no quiere dramatizar la culpa."),
+        {
+          form: "I wish we had left earlier; if we had, we would have caught the bus.",
+          register: "familiar",
+          region: "Inglés universal",
+          whenToUse: "Para lamentar algo que ya no tiene arreglo. “Wish we had left” es el arrepentimiento; la condicional dice qué habría pasado."
+        }
       ],
       prompt: "Laura says “we missed the bus.” ¿Qué evita ese verbo?",
       choices: ["Evita sonar como si extraviaron el bus físico.", "Evita decir que el bus salió tarde por culpa de ellos.", "Evita hablar de una cita médica perdida para siempre."],

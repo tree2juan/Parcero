@@ -285,6 +285,12 @@ lessons.push(
           register: "neutral conversational",
           region: "General Colombian",
           whenToUse: "You need a backup channel in case the call fails."
+        },
+        {
+          form: "Se debió cortar la llamada otra vez.",
+          register: "courteous",
+          region: "General Colombian",
+          whenToUse: "Explaining a dropped call without blaming the line or the person. Deber plus infinitive is deduction, not obligation."
         }
       ],
       prompt: "Rosa says “si espera un momento, le comunico.” What is she doing?",
@@ -606,6 +612,12 @@ lessons.push(
           register: "neutral conversational",
           region: "Inglés universal",
           whenToUse: "Necesita un canal alterno si falla la llamada."
+        },
+        {
+          form: "The call must have dropped again, didn't it?",
+          register: "courteous",
+          region: "Inglés universal",
+          whenToUse: "Para explicar una llamada caída sin culpar a nadie. “Must have dropped” deduce, y la coletilla busca acuerdo."
         }
       ],
       prompt: "Rosa says “hold for a moment; I'll put you through.” ¿Qué hace?",

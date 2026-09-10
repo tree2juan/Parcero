@@ -92,7 +92,13 @@ lessons.push(
         dl53Variation("Yo acuerdo el precio con usted.", "practical polite", "General Spanish", "You personally agree on a price with someone."),
         dl53Variation("Me acordé de tu cumpleaños.", "warm conversational", "General Spanish", "You remembered someone's birthday."),
         dl53Variation("No estoy de acuerdo con ese color.", "neutral", "General Spanish", "You disagree with an opinion or preference."),
-        dl53Variation("Quedamos en viernes a las ocho.", "neutral conversational", "General Colombian", "The arrangement has landed on a date and time.")
+        dl53Variation("Quedamos en viernes a las ocho.", "neutral conversational", "General Colombian", "The arrangement has landed on a date and time."),
+        {
+          form: "Quedamos en que el arreglo se hace el viernes.",
+          register: "courteous",
+          region: "General Colombian",
+          whenToUse: "Closing a deal on a date. Quedar en is what Colombians say where a textbook would say acordar."
+        }
       ],
       prompt: "Daniel says “acordamos el arreglo” but Don Rubén says “me acuerdo de traer la escalera.” What changed?",
       choices: [
@@ -162,7 +168,13 @@ lessons.push(
         dl53Variation("I agree with you.", "neutral", "Inglés universal", "Coincide con una persona u opinión."),
         dl53Variation("We arranged the repair for Friday.", "practical", "Inglés universal", "Organizaron la reparación."),
         dl53Variation("I remembered your birthday.", "warm conversational", "Inglés universal", "Se acordó del cumpleaños."),
-        dl53Variation("Let's confirm the terms.", "practical polite", "Inglés universal", "Quieren dejar claro precio, fecha y condiciones.")
+        dl53Variation("Let's confirm the terms.", "practical polite", "Inglés universal", "Quieren dejar claro precio, fecha y condiciones."),
+        {
+          form: "We're having the tiles replaced, and the leak was repaired on Monday.",
+          register: "neutral",
+          region: "Inglés universal",
+          whenToUse: "Para resumir un acuerdo de obra. “Having the tiles replaced” es trabajo encargado; “was repaired” es trabajo ya hecho."
+        }
       ],
       prompt: "Daniel says “we agreed on Friday” but Ruben says “I'll remember the ladder.” ¿Qué cambia?",
       choices: [
@@ -392,7 +404,13 @@ lessons.push(
         dl53Variation("Exijo que devuelvan la plata.", "formal complaint", "General Spanish", "You demand that someone else refund the money."),
         dl53Variation("Solicito el libro de reclamaciones.", "formal neutral", "General Spanish", "You make the complaint official without shouting."),
         dl53Variation("Quiero hacer valer mis derechos.", "formal civic", "General Spanish", "You ground the insistence in rights."),
-        dl53Variation("Primero pido; después exijo.", "practical", "General Spanish", "You distinguish ordinary requests from warranted demands.")
+        dl53Variation("Primero pido; después exijo.", "practical", "General Spanish", "You distinguish ordinary requests from warranted demands."),
+        {
+          form: "Si me hubieran contestado a tiempo, esto ya estaría resuelto.",
+          register: "courteous",
+          region: "Universal Spanish",
+          whenToUse: "Pressing a complaint by naming the response you never got. Firm without being rude, which is what keeps a counter conversation moving."
+        }
       ],
       prompt: "Marcela says “hoy exijo una respuesta por escrito.” What register is she choosing?",
       choices: [
@@ -462,7 +480,13 @@ lessons.push(
         dl53Variation("I insist on a written response.", "firm neutral", "Inglés universal", "Quiere firmeza sin sonar explosivo."),
         dl53Variation("I request a full refund.", "formal consumer", "Inglés universal", "Pide devolución por vía formal."),
         dl53Variation("Please give me the complaint form.", "polite formal", "Inglés universal", "Pide el mecanismo de reclamo sin gritar."),
-        dl53Variation("I want to assert my rights.", "formal civic", "Inglés universal", "Fundamenta la insistencia en derechos.")
+        dl53Variation("I want to assert my rights.", "formal civic", "Inglés universal", "Fundamenta la insistencia en derechos."),
+        {
+          form: "I wish they had answered in writing; if they had, we would have settled this already.",
+          register: "courteous",
+          region: "Inglés universal",
+          whenToUse: "Para reclamar señalando lo que no se hizo. Es más eficaz que acusar, porque describe el daño en vez de atacar a la persona."
+        }
       ],
       prompt: "Marcela says “I insist on a written response.” ¿Qué tono escoge?",
       choices: [

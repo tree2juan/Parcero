@@ -876,6 +876,12 @@ lessons.push(
           register: "formal practical",
           region: "General Colombian",
           whenToUse: "Attendance will be checked or recorded."
+        },
+        {
+          form: "El acta fue firmada por el funcionario con quien habríamos hablado antes; de hecho, nadie nos avisó.",
+          register: "formal",
+          region: "Universal Spanish",
+          whenToUse: "Reporting an official step and the meeting that never happened. Con quien is the written relative; de hecho adds the sting."
         }
       ],
       prompt: "Dana says “vengo a asistir a la audiencia.” What does “asistir” mean?",
@@ -1170,6 +1176,12 @@ lessons.push(
           register: "formal practical",
           region: "Inglés universal",
           whenToUse: "La asistencia se revisa o queda registrada."
+        },
+        {
+          form: "The minutes are signed by the clerk; however, nothing is announced in advance.",
+          register: "formal",
+          region: "Inglés universal",
+          whenToUse: "Para describir un trámite oficial. La pasiva pone el procedimiento por delante de la persona, que es el tono de cualquier acta."
         }
       ],
       prompt: "Daniela says “I'm here to attend the hearing.” What does “attend” mean?",

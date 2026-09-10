@@ -876,6 +876,12 @@ lessons.push(
           register: "neutral",
           region: "General Spanish",
           whenToUse: "The unfair move or lie is obvious."
+        },
+        {
+          form: "Haga la fila como todos, por favor.",
+          register: "courteous",
+          region: "General Colombian",
+          whenToUse: "Calling out someone who skipped the line, without starting a fight. Como todos does the work, because it appeals to fairness rather than to authority."
         }
       ],
       prompt: "Marisol says “nadie se salta la fila.” What does “saltarse” add here?",
@@ -1170,6 +1176,12 @@ lessons.push(
           register: "neutral conversational",
           region: "Inglés universal",
           whenToUse: "El error salta a la vista."
+        },
+        {
+          form: "Passengers must wait their turn, and the dock is too small to hold everyone at once.",
+          register: "formal",
+          region: "Inglés universal",
+          whenToUse: "Para apelar a la regla y no a la persona. “Must wait their turn” es impersonal, y por eso desarma la discusión."
         }
       ],
       prompt: "Maria says “nobody cuts in line here.” What Spanish idea is this closest to?",

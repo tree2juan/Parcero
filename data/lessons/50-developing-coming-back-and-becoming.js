@@ -297,6 +297,12 @@ lessons.push(
           register: "formal neutral",
           region: "General Colombian",
           whenToUse: "Contrasting a serious return with something that stayed the same."
+        },
+        {
+          form: "Antes vivíamos a dos cuadras de aquí.",
+          register: "familiar",
+          region: "General Colombian",
+          whenToUse: "Setting a past routine against the present. Antes plus the imperfect is the plainest way to say what life used to be."
         }
       ],
       prompt: "Diana contrasts “ya volví” with “regresé.” What is the register split?",
@@ -608,6 +614,12 @@ lessons.push(
           register: "neutral spoken",
           region: "Inglés universal",
           whenToUse: "Contrastar un regreso serio con algo que no cambió."
+        },
+        {
+          form: "My mother told me she was keeping my room the same, and I used to sleep by that window.",
+          register: "familiar",
+          region: "Inglés universal",
+          whenToUse: "Para repetir lo que alguien dijo y añadir una costumbre vieja. “Told me she was” retrocede el tiempo del verbo; “used to sleep” marca lo habitual que ya no es."
         }
       ],
       prompt: "Diana contrasts “I'm back” with “I returned.” ¿Cuál es el corte de registro?",

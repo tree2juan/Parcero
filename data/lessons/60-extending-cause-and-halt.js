@@ -242,7 +242,13 @@ lessons.push(
         dl60Variation("La falla causó retrasos.", "formal practical", "General Spanish", "Explaining operational consequences."),
         dl60Variation("Me causó mucha impresión.", "neutral", "General Spanish", "Something affected you strongly."),
         dl60Variation("Me dio susto ver humo.", "friendly informal", "General Colombian", "A natural everyday fear reaction."),
-        dl60Variation("Me dio risa el comentario.", "friendly informal", "General Colombian", "A natural everyday laughter reaction.")
+        dl60Variation("Me dio risa el comentario.", "friendly informal", "General Colombian", "A natural everyday laughter reaction."),
+        {
+          form: "Aunque ya lo hayan revisado, el carro no había sido entregado por el taller.",
+          register: "courteous",
+          region: "Universal Spanish",
+          whenToUse: "Explaining a delay you cannot fully confirm. Aunque hayan revisado grants the check may have happened; había sido entregado places the handover earlier still."
+        }
       ],
       prompt: "Rosa says both “me causó impresión” and “me dio susto.” What split is she showing?",
       choices: [
@@ -312,7 +318,13 @@ lessons.push(
         dl60Variation("Grease caused damage.", "technical", "Inglés universal", "Explica una falla o daño."),
         dl60Variation("It made a big impression.", "neutral", "Inglés universal", "Algo impactó o marcó a alguien."),
         dl60Variation("It gave me a scare.", "friendly informal", "Inglés universal", "Cuenta un susto cotidiano."),
-        dl60Variation("That made me laugh.", "friendly informal", "Inglés universal", "Traduce me dio risa naturalmente.")
+        dl60Variation("That made me laugh.", "friendly informal", "Inglés universal", "Traduce me dio risa naturalmente."),
+        {
+          form: "I wish someone had called us; if they had, we could have avoided the whole delay.",
+          register: "courteous",
+          region: "Inglés universal",
+          whenToUse: "Para explicar una demora sin culpar a nadie por su nombre. El reproche va en la condicional, no en la acusación."
+        }
       ],
       prompt: "Rosa says “it gave me a scare” instead of “it caused me fear.” ¿Por qué?",
       choices: [

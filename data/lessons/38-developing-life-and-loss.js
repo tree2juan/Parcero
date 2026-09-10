@@ -297,6 +297,12 @@ lessons.push(
           register: "neutral",
           region: "General Colombian",
           whenToUse: "Separating birthplace from the place that formed you."
+        },
+        {
+          form: "Mi abuela contaba que allá no había hospital.",
+          register: "courteous",
+          region: "General Colombian",
+          whenToUse: "Passing on family history. Contaba in the imperfect marks a story told many times, not once."
         }
       ],
       prompt: "Doña Elvira says “Nací en un pueblo cerca de Garzón.” What is she telling Maya?",
@@ -618,6 +624,12 @@ lessons.push(
           register: "neutral",
           region: "Inglés universal",
           whenToUse: "Separar nacimiento y crianza."
+        },
+        {
+          form: "My grandmother told me she was born in a small town, and she used to walk to school.",
+          register: "courteous",
+          region: "Inglés universal",
+          whenToUse: "Para transmitir historia familiar. “Told me she was born” repite lo que ella dijo; “used to walk” describe la rutina de entonces."
         }
       ],
       prompt: "Elvira says “I was born in a town near Garzón.” ¿Qué está diciendo?",

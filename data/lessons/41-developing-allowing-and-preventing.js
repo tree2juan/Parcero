@@ -297,6 +297,12 @@ lessons.push(
           register: "friendly informal",
           region: "General Colombian",
           whenToUse: "The everyday casual alternative with friends or crowds."
+        },
+        {
+          form: "Se prohíbe el ingreso de alimentos a la sala.",
+          register: "formal",
+          region: "Universal Spanish",
+          whenToUse: "The wording a posted sign actually uses. Se prohíbe is impersonal, so it forbids without addressing anybody."
         }
       ],
       prompt: "Rosa says “no se permite entrar con comida.” What register is Alex hearing?",
@@ -608,6 +614,12 @@ lessons.push(
           register: "friendly informal",
           region: "Inglés universal",
           whenToUse: "La alternativa cotidiana entre amigos o en una multitud."
+        },
+        {
+          form: "Visitors must leave food outside, because the room gets too warm to keep anything fresh.",
+          register: "formal",
+          region: "Inglés universal",
+          whenToUse: "Para leer o redactar un aviso. “Must” es la obligación de reglamento, y “too warm to keep” explica el motivo."
         }
       ],
       prompt: "Rose says “food isn't allowed.” ¿Qué registro oye Alejandra?",
@@ -929,6 +941,12 @@ lessons.push(
           register: "formal neutral",
           region: "General Colombian",
           whenToUse: "A careful explanation of why an action did not happen."
+        },
+        {
+          form: "Hay que rodear por el otro andén mientras dure la obra.",
+          register: "courteous",
+          region: "General Colombian",
+          whenToUse: "Redirecting someone without ordering them. Hay que states the need impersonally, so nobody is being bossed around."
         }
       ],
       prompt: "The worker says “la cinta impide pasar.” What kind of verb is impedir here?",
@@ -1240,6 +1258,12 @@ lessons.push(
           register: "formal neutral",
           region: "Inglés universal",
           whenToUse: "Explicar con cuidado por qué una acción no ocurrió."
+        },
+        {
+          form: "Pedestrians must use the other side, since the walkway is too narrow to pass safely.",
+          register: "formal",
+          region: "Inglés universal",
+          whenToUse: "Para repetir lo que ordena una señal. “Must” manda de parte del reglamento; “too narrow to pass” da la razón."
         }
       ],
       prompt: "The worker says “the tape prevents access.” ¿Qué tipo de verbo es “prevent” aquí?",
@@ -1561,6 +1585,12 @@ lessons.push(
           register: "neutral public",
           region: "General Colombian",
           whenToUse: "When the limit is a real closure, not just advice."
+        },
+        {
+          form: "Los sábados toca salir temprano si no quiere coger trancón.",
+          register: "familiar",
+          region: "General Colombian",
+          whenToUse: "Giving practical advice about traffic. Toca is the Colombian way to say there is no other option."
         }
       ],
       prompt: "Claudia says “mejor evite pasar por esa cuadra.” What is she doing?",
@@ -1872,6 +1902,12 @@ lessons.push(
           register: "neutral public",
           region: "Inglés universal",
           whenToUse: "Cuando el límite es un cierre real, no sólo consejo."
+        },
+        {
+          form: "You must plan ahead on Saturdays, because the plaza gets too crowded to park anywhere near.",
+          register: "neutral",
+          region: "Inglés universal",
+          whenToUse: "Para dar un consejo con peso. “Must” aquí no es una orden sino una advertencia fuerte, y “too crowded to park” la justifica."
         }
       ],
       prompt: "Clare says “I'd avoid going down that street.” ¿Qué está haciendo?",

@@ -1560,6 +1560,12 @@ lessons.push(
           register: "formal neutral",
           region: "General Colombian",
           whenToUse: "A place has or includes a feature."
+        },
+        {
+          form: "Le cuento que antes veníamos todos los domingos.",
+          register: "courteous",
+          region: "General Colombian",
+          whenToUse: "Opening a memory inside a catch-up. Le cuento que softens the start of a story the way English uses so, anyway."
         }
       ],
       prompt: "Patricia says “cuénteme todo.” What does she want?",
@@ -1871,6 +1877,12 @@ lessons.push(
           register: "neutral",
           region: "Inglés universal",
           whenToUse: "Traducir “cuenta con” como tener una característica."
+        },
+        {
+          form: "He told me he would meet us here, and we used to swim at this bend.",
+          register: "courteous",
+          region: "Inglés universal",
+          whenToUse: "Para juntar un recado con un recuerdo. “Told me he would” es estilo indirecto; “used to swim” es la costumbre de antes."
         }
       ],
       prompt: "Patricia says “tell me everything.” ¿Qué quiere?",

@@ -244,15 +244,35 @@ test("every lesson in the course gets a band in both directions", () => {
 });
 
 test("the course is a beginner course, and the numbers say so", () => {
-  /* This is the honest answer to "what level does Parcero teach?". If content
-     is added that genuinely reaches B2 in bulk, this test should be updated
-     deliberately — not deleted because it went red. */
+  /* This is the honest answer to "what level does Parcero teach?".
+     The threshold moved once, deliberately, and this is the record of why.
+
+     It used to read > 0.85, and it held while the course was A1-B1 with a thin
+     B2 fringe. Closing the B2 gaps changed the fact it was measuring: seven new
+     lessons teach B2 grammar outright, and twenty-four existing lessons gained
+     a reinforcement row that demonstrates a B2 form. lessonBand reports the
+     highest thing a lesson demonstrates, so those lessons now band B2 and the
+     beginner share fell to 0.84 in Spanish and 0.77 in English.
+
+     Read that honestly. It does not mean twenty-four A2 lessons became hard;
+     it means each now shows one advanced way to say the thing it teaches. The
+     course's center of gravity is still A1-B1, which is what the first
+     assertion checks, and B2 is now genuinely populated rather than
+     decorative, which is what the second one locks in so it cannot rot back.
+
+     If content is added that genuinely reaches C1 in bulk, update this the
+     same way: change the number and say why, rather than deleting the test
+     because it went red. */
   for (const direction of DIRECTIONS) {
     const profile = cefr.corpusProfile(lessons, direction);
     const beginner = profile.counts.A1 + profile.counts.A2 + profile.counts.B1;
     assert.ok(
-      beginner / profile.total > 0.85,
+      beginner / profile.total > 0.72,
       `${direction}: expected a mostly A1-B1 course, got ${beginner}/${profile.total}`
+    );
+    assert.ok(
+      profile.counts.B2 >= 20,
+      `${direction}: B2 holds only ${profile.counts.B2} lessons, so the course cannot claim to reach it`
     );
     assert.strictEqual(profile.counts.C2, 0, `${direction} claims to teach C2`);
   }
@@ -489,26 +509,20 @@ test("every feature the course claims to reach is either taught or admitted", ()
      lessons are written, and it is written to be unable to rot: the second loop
      fails if an id here has since been covered, so closing a gap forces the
      entry out. A list that only shrinks is safe; a list nobody has to update is
-     how every other drift in this project started. */
+     how every other drift in this project started.
+
+     It is now empty, and that is the point. It began with seven Spanish and
+     twelve English admissions; seven new lessons gave the ownerless features an
+     owner, and reinforcement rows in twenty-four existing lessons carried the
+     rest over the floor. Both loops still run, so the first one now holds every
+     A1-B2 feature in both directions to the floor with no exemptions at all.
+
+     Keep the machinery. Admitting a gap here is the correct way to add a
+     feature whose lessons are not written yet; quietly lowering the floor, or
+     deleting the test, is not. */
   const PENDING = {
-    /* Every Spanish gap is at B2, and nowhere else: A1, A2 and B1 turned out to
-       be covered all along once there were probes to see them. */
-    es: [
-      "es-pluperfect", "es-conditional-perfect", "es-perfect-subjunctive",
-      "es-passive-ser", "es-discourse-marker", "es-concession-subjunctive",
-      "es-prep-relative"
-    ],
-    /* English is thinner and lower down, because the corpus was written as
-       translations of Spanish lessons: grammar with no Spanish counterpart --
-       "have something done", question tags, "used to" -- had nothing to be a
-       translation of, so it never appeared. */
-    en: [
-      "en-must-obligation",
-      "en-passive-present", "en-used-to", "en-question-tag",
-      "en-second-third-conditional", "en-modal-deduction", "en-discourse-marker",
-      "en-reported-speech", "en-causative", "en-result-degree", "en-wish",
-      "en-passive-past"
-    ]
+    es: [],
+    en: []
   };
 
   for (const direction of DIRECTIONS) {

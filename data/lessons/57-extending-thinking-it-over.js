@@ -1548,6 +1548,12 @@ lessons.push(
           register: "polite firm",
           region: "Universal Spanish",
           whenToUse: "Calling out pretend recognition."
+        },
+        {
+          form: "Antes nos veíamos todos los días en el colegio.",
+          register: "familiar",
+          region: "General Colombian",
+          whenToUse: "Explaining why a face is familiar. The imperfect carries the repeated past that placing someone depends on."
         }
       ],
       prompt: "Alex says “no te reconocí con esa ruana.” What does he mean?",
@@ -1859,6 +1865,12 @@ lessons.push(
           register: "neutral to formal",
           region: "Inglés universal",
           whenToUse: "Reconocer un error con más calma o formalidad."
+        },
+        {
+          form: "She said that she had moved away, and you used to sit behind me.",
+          register: "familiar",
+          region: "Inglés universal",
+          whenToUse: "Para situar a alguien contando lo que se dijo y lo que se hacía. “Said that she had moved” retrocede un paso más en el pasado."
         }
       ],
       prompt: "Usted ya conocía a Owen, pero no lo ubicó al verlo. ¿Qué dice?",

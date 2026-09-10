@@ -1474,6 +1474,12 @@ lessons.push(
           register: "neutral",
           region: "General Spanish",
           whenToUse: "You want the steps or logic, not just a yes-or-no diagnosis."
+        },
+        {
+          form: "¿Ya mandaron a revisar el medidor?",
+          register: "courteous",
+          region: "General Colombian",
+          whenToUse: "Asking whether someone has commissioned a repair rather than done it. Mandar a plus infinitive is the Colombian workhorse for that."
         }
       ],
       prompt: "Kevin says many Colombians would say “no sirve.” What is the lesson?",
@@ -1768,6 +1774,12 @@ lessons.push(
           register: "polite practical",
           region: "Inglés universal",
           whenToUse: "Pedir los pasos o la lógica de un sistema desconocido."
+        },
+        {
+          form: "I'll get the meter checked tomorrow; the router was replaced already.",
+          register: "neutral",
+          region: "Inglés universal",
+          whenToUse: "Para separar lo que va a encargar de lo que ya se hizo. “Get the meter checked” es lo pendiente; “was replaced” es lo resuelto."
         }
       ],
       prompt: "Kyle contrasts “isn't working,” “broken,” and “how it works.” What is the useful distinction?",
