@@ -41,6 +41,16 @@ const cefr = require("../cefr.js");
 const lessons = vm.runInNewContext(dataSource() + ";lessons;");
 const DIRECTIONS = ["es", "en"];
 
+/* A minimal lesson carrying nothing but the target lines under test. */
+let fixtureCount = 0;
+function lessonWith(direction, targets) {
+  fixtureCount += 1;
+  return {
+    id: `fixture-${fixtureCount}`,
+    [direction]: { dialogue: targets.map((target) => ({ target, translation: "" })) }
+  };
+}
+
 /* --- the probes themselves --- */
 
 test("every probe matches the utterances it claims to, and rejects the near misses", () => {
@@ -434,4 +444,114 @@ test("the level panel is marked up for translation", () => {
   const markup = readRoot("index.html");
   const panel = markup.slice(markup.indexOf('id="level-panel"'), markup.indexOf('id="level-ladder"'));
   assert.ok(panel.includes('data-i18n="level.eyebrow"'), "the panel heading is not translated");
+});
+
+/*
+ * Coverage: whether the course teaches a feature, not how hard a lesson is.
+ *
+ * These two questions look alike and are not. lessonBand takes the hardest
+ * thing in a lesson, so a course could report a healthy spread of bands while
+ * teaching a B2 structure exactly once, in a single lesson, to a learner who
+ * never sees it again. That is the state this corpus was actually in: eight of
+ * the nine Spanish B2 features appeared in four lessons or fewer, and English
+ * "have something done" appeared in none at all.
+ */
+test("coverage counts lessons that use a feature, not occurrences", () => {
+  const corpus = [
+    lessonWith("es", ["Ojalá llegue temprano.", "Ojalá venga mañana."]),
+    lessonWith("es", ["No creo que sea buena idea."]),
+    lessonWith("es", ["Hola, buenos días."])
+  ];
+  const report = cefr.coverage(corpus, "es", { floor: 2 });
+  const doubt = report.features.find((f) => f.id === "es-subjunctive-doubt");
+  /* Two lessons, three sentences. A lesson that leans on a structure twice is
+     still one lesson's worth of exposure. */
+  assert.equal(doubt.uses, 2, "counted sentences instead of lessons");
+  assert.equal(doubt.lessons.length, 2);
+  assert.ok(doubt.met, "two lessons should clear a floor of two");
+});
+
+test("a feature carried by one lesson is not taught", () => {
+  const corpus = [
+    lessonWith("es", ["Ojalá llegue temprano."]),
+    lessonWith("es", ["Hola, buenos días."])
+  ];
+  const report = cefr.coverage(corpus, "es", { floor: 5 });
+  const doubt = report.features.find((f) => f.id === "es-subjunctive-doubt");
+  assert.equal(doubt.uses, 1);
+  assert.ok(!doubt.met, "one mention was reported as instruction");
+  assert.ok(report.thin.some((f) => f.id === "es-subjunctive-doubt"), "thin list missed it");
+});
+
+test("every feature the course claims to reach is either taught or admitted", () => {
+  /* PENDING is the honest list of features the corpus does not yet teach often
+     enough. It exists so this test can be enforcing today rather than after the
+     lessons are written, and it is written to be unable to rot: the second loop
+     fails if an id here has since been covered, so closing a gap forces the
+     entry out. A list that only shrinks is safe; a list nobody has to update is
+     how every other drift in this project started. */
+  const PENDING = {
+    /* Every Spanish gap is at B2, and nowhere else: A1, A2 and B1 turned out to
+       be covered all along once there were probes to see them. */
+    es: [
+      "es-pluperfect", "es-conditional-perfect", "es-perfect-subjunctive",
+      "es-passive-ser", "es-discourse-marker", "es-concession-subjunctive",
+      "es-pluperfect-subjunctive", "es-prep-relative"
+    ],
+    /* English is thinner and lower down, because the corpus was written as
+       translations of Spanish lessons: grammar with no Spanish counterpart --
+       "have something done", question tags, "used to" -- had nothing to be a
+       translation of, so it never appeared. */
+    en: [
+      "en-must-obligation", "en-possessive-pronoun",
+      "en-passive-present", "en-used-to", "en-question-tag",
+      "en-second-third-conditional", "en-modal-deduction", "en-discourse-marker",
+      "en-reported-speech", "en-causative", "en-result-degree", "en-wish",
+      "en-passive-past"
+    ]
+  };
+
+  for (const direction of DIRECTIONS) {
+    const report = cefr.coverage(lessons, direction);
+    const pending = new Set(PENDING[direction]);
+    const taught = new Set(report.features.filter((f) => f.met).map((f) => f.id));
+
+    for (const feature of report.features) {
+      /* C1 and C2 are honestly out of scope, so they are not held to the floor.
+         Claiming otherwise would be the overstatement this whole file guards. */
+      if (feature.band === "C1" || feature.band === "C2") continue;
+      if (pending.has(feature.id)) continue;
+      assert.ok(
+        feature.met,
+        `${direction}: ${feature.id} appears in ${feature.uses} lesson(s), below the floor of ${report.floor}`
+      );
+    }
+
+    const known = new Set(report.features.map((f) => f.id));
+    for (const id of pending) {
+      assert.ok(known.has(id), `${direction}: PENDING names ${id}, which is not a feature`);
+      assert.ok(!taught.has(id), `${direction}: ${id} is now taught — remove it from PENDING`);
+    }
+  }
+});
+
+test("coverage is not fooled by a lesson in the other direction", () => {
+  /* taughtLines reads one direction's block. If coverage leaked across, every
+     English feature would look covered by Spanish lessons and vice versa. */
+  const spanishOnly = [lessonWith("es", ["Ojalá llegue temprano."])];
+  const report = cefr.coverage(spanishOnly, "en", { floor: 1 });
+  assert.ok(report.features.every((f) => f.uses === 0), "English features fired on a Spanish line");
+});
+
+test("a probe that is not a string is refused, not coerced", () => {
+  /* String(undefined) compiles to a regex that matches the literal word
+     "undefined" -- it never throws and never fires, so a caller reading the
+     wrong field gets a clean report full of zeros. That is exactly what
+     happened when coverage() read feature.probe on entries that carry the
+     compiled regex under feature.regex instead. */
+  const feature = cefr.featuresFor("es")[0];
+  assert.ok(!("probe" in feature), "featuresFor now exposes probe; this guard is aimed at the wrong field");
+  assert.throws(() => cefr.compileProbe(feature.probe), /must be a string/);
+  assert.throws(() => cefr.compileProbe(undefined), /must be a string/);
+  assert.throws(() => cefr.compileProbe({ probe: "hola" }), /must be a string/);
 });

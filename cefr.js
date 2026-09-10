@@ -48,11 +48,21 @@
   const BOUNDARY = `(?:(?<=[${WORD}])(?![${WORD}])|(?<![${WORD}])(?=[${WORD}]))`;
 
   function compileProbe(probe, caseSensitive) {
+    /* A non-string probe is a caller reading the wrong field, and String()
+       would turn it into something that compiles and never fires — the same
+       silent-pass shape as an unknown macro. featuresFor() returns entries
+       whose probe is already compiled under the name `regex`, so `feature.probe`
+       is undefined there, and a coverage pass built that way reported every
+       feature as absent from a corpus that plainly used them. */
+    if (typeof probe !== "string") {
+      throw new TypeError(`probe must be a string, got ${probe === null ? "null" : typeof probe}`);
+    }
+
     /* Macros first, so a fragment can carry its own \b and still get the
        accent-aware treatment below. An unknown {NAME} is a typo that would
        otherwise compile into a regex matching the literal braces and quietly
        never fire, so it throws instead. */
-    const expanded = String(probe).replace(/\{([A-Z_]+)\}/g, (whole, name) => {
+    const expanded = probe.replace(/\{([A-Z_]+)\}/g, (whole, name) => {
       if (!MACROS || !MACROS[name]) throw new Error(`unknown probe macro ${whole}`);
       return MACROS[name];
     });
@@ -236,6 +246,64 @@
   }
 
   /*
+   * Which features the course actually puts in front of a learner.
+   *
+   * lessonBand answers "how hard is this lesson" by taking the hardest thing
+   * in it. That maximum makes it structurally unable to answer the question a
+   * syllabus cares about — "does this course teach A1?" — because a lesson
+   * built entirely from beginner grammar still reports B1 the moment one
+   * relative clause slips into its dialogue, and the beginner grammar it does
+   * contain leaves no trace in the profile.
+   *
+   * Coverage asks the other question, per feature rather than per lesson: in
+   * how many lessons does this structure appear at all? A feature carried by
+   * one lesson is a mention, not instruction — a learner who misses that
+   * lesson never meets it, and a learner who takes it never meets it again.
+   * The floor is what separates the two.
+   */
+  function coverage(lessons, direction, options) {
+    const opts = options || {};
+    const floor = typeof opts.floor === "number" ? opts.floor : 5;
+    const corpus = lessons || [];
+
+    /* Reading each lesson's lines once turns 102 x 226 extractions into 226. */
+    const lines = corpus.map((lesson) => ({ id: lesson.id, text: taughtLines(lesson, direction) }));
+
+    const features = featuresFor(direction).map((feature) => {
+      const used = [];
+      for (const entry of lines) {
+        if (entry.text.some((line) => feature.regex.test(line))) used.push(entry.id);
+      }
+      return {
+        id: feature.id,
+        band: feature.band,
+        name: feature.name,
+        uses: used.length,
+        lessons: used,
+        met: used.length >= floor
+      };
+    });
+
+    const bands = {};
+    for (const band of BANDS) {
+      const group = features.filter((feature) => feature.band === band);
+      bands[band] = {
+        total: group.length,
+        met: group.filter((feature) => feature.met).length,
+        thin: group.filter((feature) => !feature.met).map((feature) => feature.id)
+      };
+    }
+
+    return {
+      direction,
+      floor,
+      features,
+      bands,
+      thin: features.filter((feature) => !feature.met)
+    };
+  }
+
+  /*
    * The band a learner has evidence for.
    *
    * Coverage is not attainment: opening every B1 lesson proves nothing. A band
@@ -294,7 +362,7 @@
   const api = {
     BANDS, WORD, BOUNDARY,
     compileProbe, featuresFor, featuresIn, bandOf,
-    taughtLines, lessonBand, corpusProfile, attainment, higher, rankOf
+    taughtLines, lessonBand, corpusProfile, coverage, attainment, higher, rankOf
   };
 
   global.ParceroCEFR = api;
