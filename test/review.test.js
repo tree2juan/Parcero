@@ -575,6 +575,25 @@ test("every authored string in a lesson is offered by the report picker", () => 
     "address.form": 'an enum ("usted"/"tú"/"vos"); the page renders t("address.form.*") from i18n.js, so the visible string is the translator\'s, not the author\'s'
   };
 
+  /*
+   * Lesson-level only, and deliberately not in notProse above. That list matches
+   * on key name at any depth, and `register` also exists on vocabulary rows and
+   * variations rows, where it IS rendered (app.js:248 and app.js:267) and has to
+   * stay reportable — putting it above would quietly strip two rendered fields of
+   * their coverage while looking like a one-line fix.
+   *
+   * `lesson.register` itself reaches no page: app.js reads verb.register from the
+   * curriculum, word.register from vocabulary and row.register from variations,
+   * and never the lesson's own. It survived this test for 94 lessons only because
+   * every one of them happened to reuse a string that curriculum.js also uses
+   * ("neutral", "polite"), so the value was reachable through a verb anchor by
+   * coincidence. Two lessons then wrote "polite civic" and "neutral with official
+   * contrast" and the coincidence ran out. The coverage was never real.
+   */
+  const notProseOnLesson = {
+    register: "authored metadata no script renders at lesson level; app.js reads verb/word/row register, never lesson.register"
+  };
+
   // Exactly what review-ui.js does: group the anchors, then ask for each group's parts.
   const groups = [...new Set(anchors.map((anchor) => review.groupAnchor(anchor) || anchor))];
   const reachable = new Set();
@@ -585,6 +604,7 @@ test("every authored string in a lesson is offered by the report picker", () => 
   }
 
   const missed = [];
+  let lessonRoot = "";
   const walk = (node, trail) => {
     if (isText(node)) {
       if (!reachable.has(node.trim())) missed.push(`${trail}: ${JSON.stringify(node.slice(0, 60))}`);
@@ -596,11 +616,15 @@ test("every authored string in a lesson is offered by the report picker", () => 
       const next = trail ? `${trail}.${key}` : key;
       const family = next.replace(/\[\d+\]/g, "").split(".").slice(-2).join(".");
       if (notProse[key] || notProse[family]) continue;
+      if (trail === lessonRoot && notProseOnLesson[key]) continue;
       walk(value, next);
     }
   };
 
-  for (const lesson of content.lessons) walk(lesson, lesson.id);
+  for (const lesson of content.lessons) {
+    lessonRoot = lesson.id;
+    walk(lesson, lesson.id);
+  }
 
   assert.deepStrictEqual(missed, [],
     `${missed.length} authored string(s) are rendered but never offered by the report picker.\n` +

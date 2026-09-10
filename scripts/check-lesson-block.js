@@ -252,6 +252,75 @@ for (const lesson of lessons) {
   }
 }
 
+/*
+ * Where the Spanish-direction scenes are set. Every brief asked authors to look
+ * beyond the two biggest cities and every brief was ignored: across the first
+ * 72 lessons Medellín and Bogotá drew 511 mentions while Pasto, Cúcuta, Neiva,
+ * Tunja, the Llanos, Chocó and the Amazon drew none at all. A course that claims
+ * to teach Colombian Spanish cannot be a course about two cities, so the
+ * instruction stops being advice here and becomes a check.
+ *
+ * Only the `es` direction is judged. The `en` direction teaches English to
+ * Colombian speakers and is deliberately set abroad, so its `where` says Toronto
+ * or Manchester and has nothing to do with Colombian regional spread.
+ */
+const OVERUSED_SETTING = /(Bogot|Medell)/i;
+const esWhere = (lesson) => lesson.es?.setting?.where || "";
+
+/*
+ * Blocks 01-22 were written before this rule existed and 18 of them break it.
+ * They are not silently forgiven and they are not bulk-rewritten either: some of
+ * those settings are load-bearing. Ajiaco really is a Bogotá dish and a paisa
+ * sancocho really does belong in Antioquia, so find-and-replacing the city name
+ * would trade a spread problem for a factual one. The incidental cases — a
+ * generic corner shop, a bank counter, a bus stop that could be anywhere — are
+ * being relocated one at a time under the `city-spread-backfill` todo. Until
+ * then they are listed here so a sweep of the whole corpus stays quiet and a
+ * genuinely new regression is visible instead of being lost in known noise.
+ */
+const GRANDFATHERED = new Set([
+  "data/lessons/02-foundation-state.js", "data/lessons/03-foundation-ability.js",
+  "data/lessons/04-foundation-perception.js", "data/lessons/05-foundation-meeting.js",
+  "data/lessons/06-foundation-obligation.js", "data/lessons/07-foundation-opinion.js",
+  "data/lessons/08-foundation-conversation.js", "data/lessons/09-foundation-finding.js",
+  "data/lessons/10-foundation-daily-life.js", "data/lessons/11-foundation-reading-writing.js",
+  "data/lessons/12-foundation-learning.js", "data/lessons/13-foundation-asking.js",
+  "data/lessons/14-foundation-handling-things.js",
+  "data/lessons/15-foundation-starting-finishing.js",
+  "data/lessons/16-foundation-coming-and-going.js",
+  "data/lessons/17-foundation-carrying-and-leaving.js",
+  "data/lessons/20-foundation-buying-and-paying.js",
+  "data/lessons/21-foundation-at-the-table.js"
+]);
+
+if (!GRANDFATHERED.has(relative)) {
+  const overused = lessons.filter((lesson) => OVERUSED_SETTING.test(esWhere(lesson)));
+  if (overused.length > 1) {
+    fail(
+      `${overused.length} of this block's ${lessons.length} Spanish scenes are set in Bogotá or `
+      + `Medellín (${overused.map((lesson) => lesson.id).join(", ")}). At most one per block. `
+      + `Those two cities already carry more than half the course while whole regions carry none. `
+      + `Move the others somewhere barely represented — the Caribbean coast, Santander, Nariño, `
+      + `Huila, Tolima, Caldas, the Llanos, Chocó or the Amazon — and keep the dialect general `
+      + `unless you are certain a usage is genuinely local. Do not invent regionalisms to `
+      + `decorate a new setting; a normal conversation that happens to be in Neiva is the goal.`
+    );
+  }
+
+  /*
+   * Three lessons that all open in the same place read as one long scene rather
+   * than three, and it wastes the chance to show a second or third region.
+   */
+  const places = lessons.map((lesson) => esWhere(lesson).split(",")[0].trim().toLowerCase());
+  const duplicatePlace = places.find((place, index) => place && places.indexOf(place) !== index);
+  if (duplicatePlace) {
+    fail(
+      `more than one Spanish scene in this block is set in "${duplicatePlace}". Give each of the `
+      + `three lessons its own location so the block covers three places, not one.`
+    );
+  }
+}
+
 if (problems.length) {
   console.error(`${target}: ${problems.length} problem(s)\n`);
   for (const problem of problems) console.error(`  - ${problem}`);
