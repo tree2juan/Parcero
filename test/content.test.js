@@ -648,6 +648,61 @@ test("first-person forms are plausible Spanish", () => {
   }
 });
 
+test("the yo form of an experiencer verb is a settled question", () => {
+  /*
+   * SETTLED — this is a recorded decision, not an open finding. An audit that
+   * rediscovers the shape below should stop here rather than raise it again.
+   *
+   * A verb card renders `yo <presentYo>`. For gustar that reads "yo gusto"
+   * against the gloss "like", and nobody says "yo gusto" to mean "I like" --
+   * the idiom is "me gusta", where the thing liked is the subject. Six other
+   * verbs in the list have the same shape. Every form stored is grammatically
+   * real, so none of them is a spelling error; what is arguably wrong is the
+   * decision to show a yo column for this class at all.
+   *
+   * Changing that means designing how a dative-experiencer verb is represented
+   * everywhere it appears -- the reference card, the flashcard note and the
+   * report picker's verb slots -- rather than editing seven strings. That
+   * redesign is deliberately not being done, and the current state is accepted.
+   *
+   * What this test protects is the boundary of that acceptance. The decision
+   * covers exactly the seven verbs below. If an eighth is added, it is a new
+   * instance nobody has ruled on and the acceptance must not silently stretch
+   * to cover it, so the wider vocabulary is checked too and this fails with
+   * instructions. It also fails if an accepted verb leaves the list, so the
+   * exemption cannot outlive the thing it exempts.
+   */
+  const accepted = ["gustar", "interesar", "importar", "faltar", "sobrar", "ocurrir", "suceder"];
+
+  // Verbs that take a dative experiencer or are used impersonally. Excludes
+  // parecer, quedar, tocar, costar and pasar, which are in the list already and
+  // have ordinary first-person uses ("yo paso", "yo toco"), so their yo column
+  // is not misleading and they are not part of this question.
+  const experiencerVocabulary = new Set([
+    ...accepted,
+    "encantar", "doler", "apetecer", "molestar", "fascinar", "bastar", "convenir",
+    "disgustar", "agradar", "entusiasmar", "aburrir", "emocionar", "picar", "urgir"
+  ]);
+
+  const present = new Set(curriculum.map((verb) => verb.spanish));
+
+  const departed = accepted.filter((verb) => !present.has(verb));
+  assert.deepStrictEqual(departed, [],
+    `these verbs are exempted but no longer in the list, so drop them from the exemption: ${departed.join(", ")}`);
+
+  // Spread back into this realm: curriculum comes from vm.runInNewContext, so
+  // its map/filter return arrays with a foreign Array.prototype and
+  // deepStrictEqual compares prototypes. The duplicates() helper above sidesteps
+  // the same trap the same way.
+  const undecided = [...curriculum
+    .map((verb) => verb.spanish)
+    .filter((verb) => experiencerVocabulary.has(verb) && !accepted.includes(verb))];
+  assert.deepStrictEqual(undecided, [],
+    `${undecided.join(", ")} is a dative-experiencer verb whose yo form will render as "yo <form>" and read wrongly. `
+    + "The existing acceptance does not cover it. Either decide how this class is represented and change it "
+    + "everywhere, or add the verb to `accepted` above to extend the same decision to it deliberately.");
+});
+
 test("the withholding mechanism still works, even though nothing is flagged now", () => {
   /*
    * Every verb was approved on 2026-09-09, so this no longer has live
