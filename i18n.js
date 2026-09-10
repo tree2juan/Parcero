@@ -238,7 +238,7 @@ const UI_STRINGS = {
     "library.verbCount": "Showing {shown} of {total} verbs",
     "library.sourceNote.before": "Frequency starting list: ",
     "library.sourceNote.link": "SUBTLEX-ESP and SUBTLEX-US frequency resources",
-    "library.sourceNote.after": "; the level shown comes from it. Register and regionality are a general guide — if one looks wrong, the Report an error tab is where corrections start.",
+    "library.sourceNote.after": "; the level shown comes from it. The register label is a general guide — if one looks wrong, the Report an error tab is where corrections start.",
     "library.fluencyIntro": "These phrases connect ideas and keep conversation moving. They are context notes—not universal replacements.",
 
     "mature.title": "Recognition and safety reference",
@@ -552,7 +552,7 @@ const UI_STRINGS = {
     "library.verbCount": "Mostrando {shown} de {total} verbos",
     "library.sourceNote.before": "Lista inicial de frecuencia: ",
     "library.sourceNote.link": "recursos de frecuencia SUBTLEX-ESP y SUBTLEX-US",
-    "library.sourceNote.after": "; de ahí sale el nivel que ves. El registro y la regionalidad son una guía general; si algo no te cuadra, la pestaña Reportar un error es por donde empiezan las correcciones.",
+    "library.sourceNote.after": "; de ahí sale el nivel que ves. La etiqueta de registro es una guía general; si algo no te cuadra, la pestaña Reportar un error es por donde empiezan las correcciones.",
     "library.fluencyIntro": "Estas expresiones conectan ideas y mantienen viva la conversación. Son notas de contexto, no reemplazos universales.",
 
     "mature.title": "Referencia de reconocimiento y seguridad",

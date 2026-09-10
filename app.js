@@ -41,11 +41,16 @@ function matchingVerbs() {
   return search ? curriculum.filter((verb) => `${verb.spanish} ${verb.english}`.toLowerCase().includes(search)) : curriculum;
 }
 function verbTags(verb) {
-  /* level comes from the frequency data. register and regionality publish by
-     default; a verb carrying reviewStatus has those two held back until the
-     flag is dropped. Corrections come in through the Report an error tab. */
+  /* level comes from the frequency data. register publishes by default; a verb
+     carrying reviewStatus has it held back until the flag is dropped.
+     Corrections come in through the Report an error tab.
+
+     regionality is deliberately not rendered. It carries the identical string
+     on all 200 verbs, so as a per-verb tag it looked like verb-specific data
+     while telling a learner nothing. The field stays in the data; if it ever
+     earns per-verb values it can come back here and in VERB_SLOTS together. */
   const tags = [verb.level];
-  if (!verb.reviewStatus) tags.push(verb.register, verb.regionality);
+  if (!verb.reviewStatus) tags.push(verb.register);
   return tags.filter(Boolean).map((tag) => `<span class="tag">${tag}</span>`).join("");
 }
 function renderVerbs() {

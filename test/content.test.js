@@ -723,23 +723,24 @@ test("the withholding mechanism still works, even though nothing is flagged now"
   const sample = { level: "foundation", register: "REGISTER_VALUE", regionality: "REGION_VALUE" };
 
   const approved = verbTags(sample);
-  assert.ok(approved.includes("REGISTER_VALUE") && approved.includes("REGION_VALUE"),
-    "an approved verb should publish both labels");
+  assert.ok(approved.includes("REGISTER_VALUE"),
+    "an approved verb should publish its register");
   assert.ok(approved.includes("foundation"), "level should always publish");
+  assert.ok(!approved.includes("REGION_VALUE"),
+    "regionality is the same string on all 200 verbs, so it must not render as a per-verb tag");
 
   const flagged = verbTags({ ...sample, reviewStatus: "needs review" });
   assert.ok(!flagged.includes("REGISTER_VALUE"),
     "a flagged verb must not publish its register");
-  assert.ok(!flagged.includes("REGION_VALUE"),
-    "a flagged verb must not publish its regionality");
   assert.ok(flagged.includes("foundation"),
     "level is real data and should publish even while the verb is flagged");
 
-  // Nothing may render these fields around the guard.
+  // The register may only reach the page through the guard; the regionality
+  // may not reach it at all.
   assert.ok(!/\$\{verb\.register\}/.test(app.replace(tags[0], "")),
     "nothing outside verbTags may render the register");
-  assert.ok(!/\$\{verb\.regionality\}/.test(app.replace(tags[0], "")),
-    "nothing outside verbTags may render the regionality");
+  assert.ok(!/verb\.regionality/.test(app),
+    "nothing in app.js may render the regionality");
 
   // The flashcard decks read the same curriculum, so a flagged verb must not
   // reach a learner through a deck either. Verified against cards actually

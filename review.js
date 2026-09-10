@@ -7,7 +7,7 @@
  *
  *   lesson:greeting-at-the-cafe/es/dialogue/1/target
  *   lesson:greeting-at-the-cafe/es/vocabulary/0/explanation
- *   verb:verb-1/regionality
+ *   verb:verb-1/register
  *   fluency:6/note
  *
  * This file has no DOM and no I/O so the browser, the tests and the maintainer
@@ -66,7 +66,11 @@ const ParceroReview = (function () {
   /* Row slots holding a list of strings, addressed as field/index/slot/n. */
   const ROW_LIST_SLOTS = { vocabulary: ["related"] };
   const nestedValue = (row, slot) => slot.split(".").reduce((node, key) => (node == null ? node : node[key]), row);
-  const VERB_SLOTS = ["spanish", "english", "presentYo", "preteriteYo", "participle", "level", "register", "regionality"];
+  /* regionality is not listed: it is the same string on all 200 verbs and is no
+     longer rendered, so offering it here would put a field in the report picker
+     that a learner cannot see on the page. Dropped from the end, which renumbers
+     nothing — these slots are matched by name. */
+  const VERB_SLOTS = ["spanish", "english", "presentYo", "preteriteYo", "participle", "level", "register"];
   const VERB_FORM_SLOTS = ["presentYo", "preteriteYo", "participle"];
   const FLUENCY_SLOTS = ["phrase", "meaning", "type", "region", "note"];
   const MATURE_SLOTS = ["phrase", "equivalent", "severity", "note"];
@@ -480,7 +484,7 @@ const ParceroReview = (function () {
       const slotLabel = {
         spanish: "Spanish infinitive", english: "English meaning", presentYo: "Present (yo)",
         preteriteYo: "Preterite (yo)", participle: "Participle", level: "Level label",
-        register: "Register label", regionality: "Colombian regionality label"
+        register: "Register label"
       }[parsed.slot];
       return {
         anchor, ok: true, kind: "verb", source: "data/curriculum.js",
