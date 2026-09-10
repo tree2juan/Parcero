@@ -83,9 +83,11 @@ Eight lessons spanning starter through extending, mapped onto the roadmap's path
 
 Alongside the lessons there is a reference **library**: 200 high-frequency verbs with their most useful forms, a fluency list of connectors and softeners, and an age-gated recognition reference for insulting or adult language — included so learners can *understand* it and de-escalate, never to direct it at anyone.
 
-The verb list was seeded from published frequency data, so the **level** on each card is real. **Register** and **regionality** are published as a general guide; the Report an error tab is where corrections start, and it accepts a report against either field on any verb.
+The verb list was seeded from published frequency data, so the **level** on each card is real. **Register** is published as a general guide; the Report an error tab is where corrections start, and it accepts a report against that field on any verb.
 
-The withholding mechanism stays in place: adding `reviewStatus` back to a verb hides its register and regionality again until the flag is dropped, so a batch of unchecked content can still be held back deliberately.
+Each verb also carries a `regionality` field, but it is not rendered: it holds the identical string on all 200 verbs, so as a per-verb tag it looked like verb-specific data while telling a learner nothing. The field is kept in the data, and `app.js` and `VERB_SLOTS` in `review.js` are where it would come back if it ever earns per-verb values.
+
+The withholding mechanism stays in place: adding `reviewStatus` back to a verb hides its register again until the flag is dropped, so a batch of unchecked content can still be held back deliberately.
 
 <a id="flashcards"></a>
 

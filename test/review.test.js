@@ -99,7 +99,7 @@ test("malformed anchors are rejected rather than silently resolving", () => {
 });
 
 test("anchors that are valid but point at content that no longer exists fail cleanly", () => {
-  for (const anchor of ["lesson:not-a-lesson/es/note", "lesson:greeting-at-the-cafe/es/dialogue/99/target", "verb:verb-9999/regionality", "mature:99/note"]) {
+  for (const anchor of ["lesson:not-a-lesson/es/note", "lesson:greeting-at-the-cafe/es/dialogue/99/target", "verb:verb-9999/register", "mature:99/note"]) {
     const resolved = review.resolveAnchor(anchor, content);
     assert.strictEqual(resolved.ok, false, `expected "${anchor}" to fail`);
     assert.ok(isText(resolved.reason), `expected a reason for "${anchor}"`);
@@ -232,7 +232,7 @@ test("flags are validated before they can be saved or submitted", () => {
 });
 
 test("the payload survives the round trip through a GitHub issue body", () => {
-  const flags = [sampleFlag(), sampleFlag({ anchor: "verb:verb-1/regionality", issueType: "other", original: content.curriculum[0].regionality })];
+  const flags = [sampleFlag(), sampleFlag({ anchor: "verb:verb-1/register", issueType: "other", original: content.curriculum[0].register })];
   const payload = review.buildPayload(flags, {});
   const body = `${review.issueBody(flags, content)}\n\n${review.payloadBlock(payload)}`;
   const recovered = review.extractPayload(body);
@@ -640,4 +640,23 @@ test("a regionCode already on the flag wins over re-matching the free text", () 
   const tally = stdout.slice(stdout.indexOf("Where reviewers spoke from"));
   assert.match(tally, new RegExp(`1\\s+${review.labelOf(review.REGION_SUGGESTIONS, "narino").replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}`),
     "the filed code is authoritative; free text is only a fallback");
+});
+
+test("the report picker never offers a verb field the page does not render", () => {
+  /*
+   * regionality holds the identical string on all 200 verbs, so it was dropped
+   * as a per-verb tag. The picker builds itself from VERB_SLOTS, so leaving the
+   * slot behind would have kept offering learners a field they cannot see on
+   * the page and cannot judge - a correction request against invisible text.
+   *
+   * Asserted as a two-way property rather than "regionality is absent", so it
+   * also holds if the field ever earns per-verb values and comes back: render
+   * it and it must be reportable again.
+   */
+  const app = read("app.js");
+  assert.strictEqual(
+    /verb\.regionality/.test(app),
+    review.VERB_SLOTS.includes("regionality"),
+    "verb.regionality must be rendered and reportable together, or neither"
+  );
 });
