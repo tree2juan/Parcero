@@ -1183,9 +1183,9 @@ lessons.push(
         {
           prompt: "¿Cuál frase dice que el celular se apagó por batería?",
           choices: [
-            "I turned off my phone.",
-            "My phone just died.",
-            "My phone turned off me."
+            "I turned it off.",
+            "My phone died.",
+            "I shut it off."
           ],
           answer: 1,
           tests: "“my phone died” para el celular que se queda sin batería"

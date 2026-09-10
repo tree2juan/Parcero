@@ -229,6 +229,26 @@ for (const lesson of lessons) {
           + `pad the distractors with the reason they are wrong -- strip them back to bare `
           + `alternatives and put the teaching point in "tests".`);
       }
+      /*
+       * A distractor also has to be substantial enough to be worth considering.
+       * The floor is measured against the answer rather than fixed, because a
+       * question whose answer is one word ("parche" / "chuzo" / "gomelo") is
+       * asking something real, and demanding three words there would force the
+       * padding the rule above exists to prevent. This mirrors
+       * test/practice.test.js -- keep the two in step, or a block passes here
+       * and fails the suite.
+       */
+      const words = (value) => value.trim().split(/\s+/).filter(Boolean).length;
+      const answerWords = words(choices[question.answer]);
+      const floor = Math.min(3, answerWords);
+      for (const [index, choice] of choices.entries()) {
+        if (index === question.answer) continue;
+        if (words(choice) < floor) {
+          fail(`${question.at}: distractor ${index} is only ${words(choice)} word(s) against a `
+            + `${answerWords}-word answer -- ${JSON.stringify(choice)}. Give it enough substance `
+            + `to be worth considering; do not shorten the answer to match.`);
+        }
+      }
     }
 
     const segments = schema.deriveSegments(content);
