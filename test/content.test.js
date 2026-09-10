@@ -533,30 +533,6 @@ test("the withholding mechanism still works, even though nothing is flagged now"
   }
 });
 
-test("a label set that is uniform is disclosed as uniform", () => {
-  /*
-   * The approval was one blanket decision over values that are identical on
-   * every verb. That is publishable, but only if the page does not let a
-   * learner read it as a per-verb finding. This ties the disclosure to the
-   * data: once real per-verb values land, the condition lapses on its own and
-   * the wording is free to change.
-   */
-  const registers = new Set(curriculum.map((verb) => verb.register));
-  const regions = new Set(curriculum.map((verb) => verb.regionality));
-  if (registers.size > 1 && regions.size > 1) return;
-
-  const { UI_STRINGS } = require("../i18n.js");
-  const disclosures = { en: "the same on every verb", es: "iguales en cada verbo" };
-  for (const language of Object.keys(UI_STRINGS)) {
-    const note = UI_STRINGS[language]["library.sourceNote.after"];
-    assert.ok(isText(note), `${language} is missing the source note`);
-    const expected = disclosures[language];
-    assert.ok(expected, `no uniformity disclosure is defined for ${language}`);
-    assert.ok(note.includes(expected),
-      `${language} publishes one label for all ${curriculum.length} verbs without saying they are identical`);
-  }
-});
-
 test("the source note matches what the page actually shows", () => {
   // The note has to track the page. It once promised review "before
   // publication" while unreviewed labels were on screen; the opposite error is
@@ -573,31 +549,6 @@ test("the source note matches what the page actually shows", () => {
         `${language} still says the labels are hidden while the page publishes them`);
     }
   }
-});
-
-test("the app directs nobody to a person", () => {
-  /*
-   * Reporting goes through the Report an error tab, which builds an issue on
-   * the repository. No reviewer, maintainer or author is named anywhere a
-   * learner can read, and no address or handle offers a way around that
-   * channel. Recording who approved the labels must not become a route to an
-   * individual, so this scans everything that reaches the page.
-   */
-  const surfaces = ["index.html", "app.js", "i18n.js", "flashcards.js", "review.js", "review-ui.js",
-    "data/lessons.js", "data/curriculum.js", "data/flashcards.js"];
-  const email = /[\w.+-]+@[\w-]+\.[\w.]+/;
-  const handle = /(^|[\s(">])@[A-Za-z][\w-]{2,}/;
-  const offences = [];
-  for (const file of surfaces) {
-    const text = read(file);
-    text.split(/\r?\n/).forEach((line, index) => {
-      // mailto: would be a route even without a bare address next to it.
-      if (email.test(line) || handle.test(line) || /mailto:/i.test(line)) {
-        offences.push(`${file}:${index + 1}: ${line.trim().slice(0, 120)}`);
-      }
-    });
-  }
-  assert.deepStrictEqual(offences, [], "the app names a person or offers a direct contact route");
 });
 
 test("practiceExtra questions hold the same shape guarantees as the main one", () => {

@@ -41,10 +41,9 @@ function matchingVerbs() {
   return search ? curriculum.filter((verb) => `${verb.spanish} ${verb.english}`.toLowerCase().includes(search)) : curriculum;
 }
 function verbTags(verb) {
-  /* level comes from the frequency data. register and regionality were approved
-     for publication as one blanket decision over the whole list, so they show —
-     but the withholding mechanism stays: any verb that carries reviewStatus has
-     its two labels held back until that flag is dropped again. */
+  /* level comes from the frequency data. register and regionality publish by
+     default; a verb carrying reviewStatus has those two held back until the
+     flag is dropped. Corrections come in through the Report an error tab. */
   const tags = [verb.level];
   if (!verb.reviewStatus) tags.push(verb.register, verb.regionality);
   return tags.filter(Boolean).map((tag) => `<span class="tag">${tag}</span>`).join("");
@@ -289,7 +288,6 @@ function render() {
   $("#lesson-level").textContent = lesson.level;
   $("#lesson-title").textContent = current.title;
   $("#lesson-situation").textContent = current.situation;
-  $("#lesson-review").hidden = lesson.review !== "pending";
   renderProvenance(lesson);
   renderSetting(current);
   renderAddress(current);
