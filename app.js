@@ -40,6 +40,16 @@ function matchingVerbs() {
   const search = verbView.query.trim().toLowerCase();
   return search ? curriculum.filter((verb) => `${verb.spanish} ${verb.english}`.toLowerCase().includes(search)) : curriculum;
 }
+function verbTags(verb) {
+  /* level is real, differentiated data. register and regionality are still the
+     seeded placeholder on every verb, so showing them would state as fact
+     something no Colombian speaker has checked. They stay in the data — the
+     report tab can still target them — but they are not published until a
+     review has actually happened. */
+  const tags = [verb.level];
+  if (!verb.reviewStatus) tags.push(verb.register, verb.regionality);
+  return tags.filter(Boolean).map((tag) => `<span class="tag">${tag}</span>`).join("");
+}
 function renderVerbs() {
   const matches = matchingVerbs();
   const visible = matches.slice(0, verbView.shown);
@@ -48,7 +58,7 @@ function renderVerbs() {
     : matches.length === curriculum.length
       ? t("library.verbCount", { shown: visible.length, total: curriculum.length })
       : t("library.verbMatching", { matches: matches.length, total: curriculum.length, shown: visible.length });
-  $("#verb-results").innerHTML = visible.map((verb) => `<article class="reference-card" data-anchor="verb:${verb.id}"><h3><span lang="es">${verb.spanish}</span> <small>— ${verb.english}</small></h3><p><strong>${t("library.usefulForms")}</strong> <span lang="es">yo ${verb.forms.presentYo}; ayer ${verb.forms.preteriteYo}; ${verb.forms.participle}</span></p><span class="tag">${verb.level}</span><span class="tag">${verb.register}</span><span class="tag">${verb.regionality}</span></article>`).join("");
+  $("#verb-results").innerHTML = visible.map((verb) => `<article class="reference-card" data-anchor="verb:${verb.id}"><h3><span lang="es">${verb.spanish}</span> <small>— ${verb.english}</small></h3><p><strong>${t("library.usefulForms")}</strong> <span lang="es">yo ${verb.forms.presentYo}; ayer ${verb.forms.preteriteYo}; ${verb.forms.participle}</span></p>${verbTags(verb)}</article>`).join("");
   $("#verb-more").hidden = visible.length >= matches.length;
   $("#verb-more").textContent = t("library.moreCount", { count: Math.min(VERB_PAGE_SIZE, matches.length - visible.length) });
 }
