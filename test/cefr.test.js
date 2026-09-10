@@ -496,14 +496,14 @@ test("every feature the course claims to reach is either taught or admitted", ()
     es: [
       "es-pluperfect", "es-conditional-perfect", "es-perfect-subjunctive",
       "es-passive-ser", "es-discourse-marker", "es-concession-subjunctive",
-      "es-pluperfect-subjunctive", "es-prep-relative"
+      "es-prep-relative"
     ],
     /* English is thinner and lower down, because the corpus was written as
        translations of Spanish lessons: grammar with no Spanish counterpart --
        "have something done", question tags, "used to" -- had nothing to be a
        translation of, so it never appeared. */
     en: [
-      "en-must-obligation", "en-possessive-pronoun",
+      "en-must-obligation",
       "en-passive-present", "en-used-to", "en-question-tag",
       "en-second-third-conditional", "en-modal-deduction", "en-discourse-marker",
       "en-reported-speech", "en-causative", "en-result-degree", "en-wish",

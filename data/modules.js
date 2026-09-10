@@ -422,5 +422,29 @@ const COURSE_MODULES = [
     id: "74-precision-and-concession",
     block: "data/lessons/74-precision-and-concession.js",
     title: { en: "Precision and concession", es: "Precisión y concesión" }
+  },
+  {
+    id: "75-obligation-and-belonging",
+    block: "data/lessons/75-obligation-and-belonging.js",
+    title: {
+      en: "Obligation and belonging",
+      es: "La obligación y lo que es de quién"
+    }
+  },
+  {
+    id: "76-habits-and-checking",
+    block: "data/lessons/76-habits-and-checking.js",
+    title: {
+      en: "Habits that ended, and checking you agree",
+      es: "Costumbres que se acabaron y coletillas"
+    }
+  },
+  {
+    id: "77-delegation-degree-and-doubt",
+    block: "data/lessons/77-delegation-degree-and-doubt.js",
+    title: {
+      en: "Delegation, degree, and doubt",
+      es: "Mandar a hacer, tanto que, y la duda sobre lo ya pasado"
+    }
   }
 ];
