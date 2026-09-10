@@ -38,36 +38,43 @@
         <a href="#flashcards" data-i18n="nav.flashcards">Flashcards</a>
         <a href="#placement" data-i18n="nav.placement">Placement</a>
         <a href="#library" data-i18n="nav.library">Library</a>
-        <a class="nav-repo" href="https://github.com/tree2juan/Parcero" data-i18n="nav.github">GitHub</a>
+        <a href="#after-dark" data-i18n="nav.afterDark">After Dark</a>
+        <div class="nav-modules">
+          <button id="modules-button" class="nav-modules-button" type="button" aria-expanded="false" aria-haspopup="true" aria-controls="modules-menu">
+            <span data-i18n="nav.modules">Modules</span><span class="nav-caret" aria-hidden="true"></span>
+          </button>
+          <div id="modules-menu" class="nav-modules-menu" role="menu" hidden></div>
+        </div>
       </nav>
+      <fieldset class="direction-picker">
+        <legend>
+          <span lang="en">I want to learn</span>
+          <span lang="es">Quiero aprender</span>
+        </legend>
+        <label>
+          <input type="radio" name="direction" value="es" checked>
+          <span class="direction-option">
+            <strong lang="en">Colombian Spanish</strong>
+            <small lang="es">Español colombiano</small>
+          </span>
+        </label>
+        <label>
+          <input type="radio" name="direction" value="en">
+          <span class="direction-option">
+            <strong lang="es">Inglés</strong>
+            <small lang="en">English</small>
+          </span>
+        </label>
+      </fieldset>
       <button id="reset-progress" class="text-button" type="button" data-i18n="action.reset">Reset progress</button>
     </header>
 
     <main id="top">
+      <div class="view" id="view-home">
       <section class="hero" aria-labelledby="hero-title">
         <div class="hero-copy">
           <p class="eyebrow" data-i18n="hero.eyebrow">Learn how people actually speak</p>
           <h2 id="hero-title" data-i18n="hero.title">Language belongs in a conversation.</h2>
-          <fieldset class="direction-picker">
-            <legend>
-              <span lang="en">I want to learn</span>
-              <span lang="es">Quiero aprender</span>
-            </legend>
-            <label>
-              <input type="radio" name="direction" value="es" checked>
-              <span class="direction-option">
-                <strong lang="en">Colombian Spanish</strong>
-                <small lang="es">Español colombiano</small>
-              </span>
-            </label>
-            <label>
-              <input type="radio" name="direction" value="en">
-              <span class="direction-option">
-                <strong lang="es">Inglés</strong>
-                <small lang="en">English</small>
-              </span>
-            </label>
-          </fieldset>
           <p class="hero-lead" data-i18n="hero.lead">Explore Colombian Spanish and practical English from either point of view — with context, culture, sound, and practice. Nothing to install, nothing to sign up for, and your progress never leaves this device.</p>
           <div class="hero-actions">
             <a class="primary-button" href="#lessons" data-i18n="hero.start">Start the first lesson</a>
@@ -83,6 +90,36 @@
         </aside>
       </section>
 
+      <nav class="module-hub" data-i18n-aria="hub.aria" aria-label="Modules">
+        <a href="#lessons">
+          <strong data-i18n="hub.lessons.title">Lessons</strong>
+          <span data-i18n="hub.lessons.blurb">Eight guided modules: dialogue, culture, pitfalls and practice.</span>
+          <span class="module-hub-go" data-i18n="hub.open">Open</span>
+        </a>
+        <a href="#flashcards">
+          <strong data-i18n="hub.flashcards.title">Flashcards</strong>
+          <span data-i18n="hub.flashcards.blurb">Drill what you have met, in the language you are learning.</span>
+          <span class="module-hub-go" data-i18n="hub.open">Open</span>
+        </a>
+        <a href="#placement">
+          <strong data-i18n="hub.placement.title">Placement</strong>
+          <span data-i18n="hub.placement.blurb">Not sure where to start? Answer a few questions.</span>
+          <span class="module-hub-go" data-i18n="hub.open">Open</span>
+        </a>
+        <a href="#library">
+          <strong data-i18n="hub.library.title">Library</strong>
+          <span data-i18n="hub.library.blurb">200 verbs and a fluency reference you can look things up in.</span>
+          <span class="module-hub-go" data-i18n="hub.open">Open</span>
+        </a>
+        <a href="#after-dark">
+          <strong data-i18n="hub.afterDark.title">After Dark</strong>
+          <span data-i18n="hub.afterDark.blurb">Strong language, city by city, so you can understand what you hear.</span>
+          <span class="module-hub-go" data-i18n="hub.open">Open</span>
+        </a>
+      </nav>
+      </div>
+
+      <div class="view" id="view-lessons" hidden>
       <section id="lessons" class="lessons-section" aria-labelledby="lesson-nav-title">
         <div class="section-head">
           <p class="eyebrow" data-i18n="lessons.eyebrow">Lessons</p>
@@ -236,7 +273,9 @@
           </div>
         </section>
       </section>
+      </div>
 
+      <div class="view" id="view-flashcards" hidden>
       <section id="flashcards" class="flashcards" aria-labelledby="flashcards-title">
         <div class="section-head">
           <p class="eyebrow" data-i18n="deck.eyebrow">Flashcards</p>
@@ -297,7 +336,9 @@
         </div>
         <p id="deck-live" class="assistive-text" aria-live="polite"></p>
       </section>
+      </div>
 
+      <div class="view" id="view-placement" hidden>
       <section id="placement" class="placement" aria-labelledby="placement-title">
         <div class="section-head">
           <p class="eyebrow" data-i18n="placement.eyebrow">Optional</p>
@@ -318,7 +359,9 @@
         <img class="flow-image" src="assets/learning-flow.svg" alt="Learning flow from placement through contextual foundations and Year 12 local mastery, continuing to academic and professional pathways.">
         <div id="pathways" class="pathways"></div>
       </section>
+      </div>
 
+      <div class="view" id="view-library" hidden>
       <section id="library" class="library" aria-labelledby="library-title">
         <div class="section-head">
           <p class="eyebrow" data-i18n="library.eyebrow">Reference library</p>
@@ -328,7 +371,6 @@
         <div class="tabs" role="tablist" data-i18n-aria="library.aria" aria-label="Reference library sections">
           <button class="library-tab active" type="button" role="tab" aria-selected="true" data-library="verbs" data-i18n="library.tab.verbs">200 verbs</button>
           <button class="library-tab" type="button" role="tab" aria-selected="false" data-library="fluency" data-i18n="library.tab.fluency">Fluency</button>
-          <button class="library-tab" type="button" role="tab" aria-selected="false" data-library="mature" data-i18n="library.tab.mature">Mature language</button>
         </div>
         <section id="verbs-library" class="library-panel">
           <label class="search-label" for="verb-search"><span data-i18n="library.search">Search English or Spanish verb</span> <input id="verb-search" type="search" data-i18n-placeholder="library.searchPlaceholder" placeholder="e.g., hablar or speak" autocomplete="off"></label>
@@ -341,16 +383,28 @@
           <p data-i18n="library.fluencyIntro">These phrases connect ideas and keep conversation moving. They are context notes—not universal replacements.</p>
           <div id="fluency-results" class="reference-grid"></div>
         </section>
-        <section id="mature-library" class="library-panel" hidden>
-          <div id="mature-gate" class="mature-gate">
-            <h3 data-i18n="mature.title">Recognition and safety reference</h3>
-            <p data-i18n="mature.warning">This optional reference includes adult or insulting language for comprehension, boundaries, and de-escalation. It is not for directing abuse at people. Confirm that you are of age under the rules where you live.</p>
-            <label><input id="mature-confirm" type="checkbox"> <span data-i18n="mature.confirm">I am eligible to view mature educational content.</span></label>
-            <button id="mature-open" class="primary-button" type="button" disabled data-i18n="mature.open">View reference</button>
-          </div>
-          <div id="mature-results" class="reference-grid" hidden></div>
-        </section>
       </section>
+      </div>
+
+      <div class="view" id="view-after-dark" hidden>
+      <section id="after-dark" class="after-dark" aria-labelledby="after-dark-title">
+        <div class="section-head">
+          <p class="eyebrow" data-i18n="afterDark.eyebrow">After Dark</p>
+          <h2 id="after-dark-title" data-i18n="afterDark.title">The language nobody teaches you.</h2>
+          <p class="section-lead" data-i18n="afterDark.lead">Strong language you will hear in bars, taxis, stadiums and films. This is here so you can understand it and judge a room — never so you can aim it at anyone.</p>
+        </div>
+        <div id="after-dark-body">
+          <div class="tabs" role="tablist" data-i18n-aria="afterDark.aria" aria-label="Cities">
+            <button class="city-tab active" type="button" role="tab" aria-selected="true" data-city="bogota" data-i18n="afterDark.city.bogota">Bogotá</button>
+            <button class="city-tab" type="button" role="tab" aria-selected="false" data-city="medellin" data-i18n="afterDark.city.medellin">Medellín</button>
+            <button class="city-tab" type="button" role="tab" aria-selected="false" data-city="barranquilla" data-i18n="afterDark.city.barranquilla">Barranquilla</button>
+          </div>
+          <p id="city-note" class="section-lead"></p>
+          <p class="after-dark-caution" data-i18n="afterDark.caution">Severity is about the risk of repeating a phrase, not how rude it sounds. The same word can be a joke among friends and a fight between strangers, so when in doubt assume the harsher reading.</p>
+          <div id="mature-results" class="reference-grid"></div>
+        </div>
+      </section>
+      </div>
     </main>
 
     <footer>
@@ -366,6 +420,7 @@
     <script src="data/lesson-schema.js"></script>
     <script src="data/lessons.js"></script>
     <script src="data/curriculum.js"></script>
+    <script src="data/after-dark.js"></script>
     <script src="i18n.js"></script>
     <script src="data/flashcards.js"></script>
     <script src="app.js"></script>

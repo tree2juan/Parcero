@@ -20,7 +20,7 @@ const css = read("styles.css");
 const { UI_STRINGS } = require("../i18n.js");
 const review = require("../review.js");
 const content = vm.runInNewContext(
-  `${read("data/lesson-schema.js")}\n${read("data/lessons.js")}\n${read("data/curriculum.js")}\n({ lessons, curriculum, fluencyItems, matureItems });`,
+  `${read("data/lesson-schema.js")}\n${read("data/lessons.js")}\n${read("data/curriculum.js")}\n${read("data/after-dark.js")}\n({ lessons, curriculum, fluencyItems, matureItems });`,
   {},
   { filename: "parcero-data-bundle.js" }
 );

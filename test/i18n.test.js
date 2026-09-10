@@ -125,7 +125,7 @@ test("applyI18n refuses to erase an element it would destroy", () => {
   // A <label> wrapping a checkbox, or a sentence containing a link: writing
   // textContent here would delete the input. It must warn and leave it alone.
   const safe = { dataset: { i18n: "nav.lessons" }, firstElementChild: null, textContent: "" };
-  const wrapping = { dataset: { i18n: "mature.confirm" }, firstElementChild: {}, textContent: "untouched" };
+  const wrapping = { dataset: { i18n: "afterDark.caution" }, firstElementChild: {}, textContent: "untouched" };
   global.document = stubDocument([safe, wrapping]);
   const warnings = [];
   const realWarn = console.warn;
@@ -139,7 +139,7 @@ test("applyI18n refuses to erase an element it would destroy", () => {
   assert.strictEqual(safe.textContent, "Lessons");
   assert.strictEqual(wrapping.textContent, "untouched", "must not erase the element's children");
   assert.strictEqual(warnings.length, 1, "must report the mistake rather than fail silently");
-  assert.match(warnings[0], /mature\.confirm/);
+  assert.match(warnings[0], /afterDark\.caution/);
 });
 
 test("an unknown key leaves the authored markup alone", () => {

@@ -81,7 +81,9 @@ Eight lessons spanning starter through extending, mapped onto the roadmap's path
 | 7 | In the seminar | Extending · Academic | `matizar`, `quisiera`, academic hedging in both languages |
 | 8 | The job interview | Extending · Professional | `llevo tres años trabajando`, `con mucho gusto`, concrete examples |
 
-Alongside the lessons there is a reference **library**: 200 high-frequency verbs with their most useful forms, a fluency list of connectors and softeners, and an age-gated recognition reference for insulting or adult language — included so learners can *understand* it and de-escalate, never to direct it at anyone.
+Alongside the lessons there is a reference **library**: 200 high-frequency verbs with their most useful forms and a fluency list of connectors and softeners.
+
+**After Dark** is its own area, in its own midnight theme: 150 entries of strong Colombian language, 50 each for Bogotá, Medellín and Barranquilla. Most Colombian profanity is national, but its *force* is not — the same word can be affectionate filler among paisa friends and a fighting word between strangers in Bogotá. That is why shared terms repeat per city with the reading that city gives them; the overlap is the point. Each entry carries a severity that rates the risk of *repeating* the phrase rather than how rude it sounds. It is there so learners can **understand** what they hear and judge a room — never to direct it at anyone.
 
 The verb list was seeded from published frequency data, so the **level** on each card is real. **Register** is published as a general guide; the Report an error tab is where corrections start, and it accepts a report against that field on any verb.
 
@@ -278,7 +280,7 @@ Regional usage is the part most easily got wrong, so the app makes it easy to sa
 
 The fastest correction is the one made while looking at the mistake. Every lesson has a **Report an error** tab, next to Dialogue, Understand and Practice. Nothing is added to the lesson itself: no controls hang off individual lines, so a learner reading a lesson never has to see review furniture.
 
-The tab asks two questions to find the string: **what are you reporting on** — the lesson you are reading, a verb, a fluency phrase, or a mature-language entry — and **which one**, listed by its own words rather than by position. Everything a lesson holds is reachable: each line of the situation, the address-form note, every dialogue line, vocabulary entry, context note, pitfall, variation and practice question. It then narrows to the exact part: the Spanish line, the translation, the pronunciation respelling, the speaker's name, and so on. The text you picked is quoted back to you before you say anything about it.
+The tab asks two questions to find the string: **what are you reporting on** — the lesson you are reading, a verb, a fluency phrase, or an After Dark entry — and **which one**, listed by its own words rather than by position. Everything a lesson holds is reachable: each line of the situation, the address-form note, every dialogue line, vocabulary entry, context note, pitfall, variation and practice question. It then narrows to the exact part: the Spanish line, the translation, the pronunciation respelling, the speaker's name, and so on. The text you picked is quoted back to you before you say anything about it.
 
 From there it asks what is wrong (not natural, wrong region, wrong register, mistranslation, misleading pronunciation, spelling, culture, risky, dated), how much it matters, and — the field that does the real work — **how you would say it instead**. Reports collect in your browser, so you can read a whole lesson and report as you go, and any saved report can be reopened and edited. A half-written report keeps hold of the line it is about: paging to the next lesson or switching language will not quietly re-point it at something else. **Open a GitHub issue with these** then opens a prefilled issue containing both a readable report and a machine-readable payload. Copy-to-clipboard and download-JSON are offered as fallbacks, including when a batch is too large for a URL.
 
@@ -306,7 +308,7 @@ You do not have to run it yourself. When a flag is filed from the page, the **Tr
 
 Once a lesson's flags are applied, close the issue. Nothing about review status is shown to readers.
 
-The mature-language reference needs the same care from qualified reviewers — severity labels, local usage, and de-escalation guidance. Content that encourages harassment does not belong here.
+The After Dark reference needs the most care of anything here — severity labels, per-city usage, and de-escalation notes are exactly where an outsider's confident guess does damage. Report anything that reads wrong. Content that encourages harassment does not belong.
 
 ## Project structure
 
@@ -320,7 +322,8 @@ review-ui.js        The Report an error tab: content picker, report form, queue,
 styles.css          Design system: light/dark tokens, layout, components
 data/lessons.js     The lessons
 data/lesson-schema.js  The lesson shape: defaults, normalisation, legacy tuples
-data/curriculum.js  200 verbs, fluency connectors, mature-language reference
+data/curriculum.js  200 verbs and fluency connectors
+data/after-dark.js  Strong-language reference, 50 entries per city
 data/flashcards.js  Derives flashcard topics and sets from the content above
 scripts/            Maintainer tools: triage flags back to the lines to edit
 .github/workflows/  CI, Pages deploy, and automatic triage of filed flags
