@@ -656,7 +656,7 @@ lessons.push(
       situation:
         "Hannah lleva pocos días en Santa Marta y a la hora del almuerzo no sabe dónde comer. Marlon, un amigo samario, la lleva al mercado y le muestra dos comedores pegados, uno al lado del otro. Entre el bullicio del mediodía van comparando cuál es igual de bueno, cuál sirve tanta comida como el otro y cuál atiende más rápido, para que ella escoja dónde sentarse.",
       setting: {
-        who: "Marlon is a santamarteño who knows every comedor in the market and talks with the quick, teasing warmth of the coast. Hannah is a American on her first week in Santa Marta, learning her lunchtime Spanish one plate at a time.",
+        who: "Marlon is a santamarteño who knows every comedor in the market and talks with the quick, teasing warmth of the coast. Hannah is an American on her first week in Santa Marta, learning her lunchtime Spanish one plate at a time.",
         what: "A lunch decision built on equality: which comedor is as good as the other, which serves as much food, which sits just as close to the beach and just as cheap.",
         when: "High noon, the hour when the market fills and everyone is deciding where to eat.",
         where: "Santa Marta, on the Caribbean coast, at two side-by-side comedores in the market.",

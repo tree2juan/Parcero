@@ -287,7 +287,21 @@ const TIER_A = [
    * adjective (burnt orange is a Texas color), "spelt" is also a grain, and
    * "dreamt" is a listed American variant. Only the unambiguous one is here.
    */
-  ["learnt", "learned"]
+  ["learnt", "learned"],
+
+  /*
+   * Repair the article this tool's own replacements break.
+   *
+   * "a British tenant" -> "a American tenant". The pair above is right about
+   * the word and wrong about the sentence, because "a"/"an" agrees with the
+   * sound that follows and the replacement changed it. These run last, after
+   * every British -> American pair above has fired, so one pass both replaces
+   * and repairs. check-american-english.js scanArticles() verifies the result.
+   */
+  ["a American", "an American"],
+  ["A American", "An American"],
+  ["a Americanized", "an Americanized"],
+  ["A Americanized", "An Americanized"]
 ];
 
 /* Tier C: relocate the English track from Canada to Texas.

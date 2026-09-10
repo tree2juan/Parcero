@@ -214,17 +214,59 @@ function scanText(text, terms) {
   return out;
 }
 
+/*
+ * The damage a word-for-word replacement leaves behind.
+ *
+ * Swapping "British" for "American" is correct on its own terms and wrong in
+ * context: it turns "a British tenant" into "a American tenant", because the
+ * article agrees with the sound of the word that follows and the replacement
+ * changed that sound. Two of these shipped before anyone noticed, in prose a
+ * student reads.
+ *
+ * The scan is narrow on purpose. This corpus is bilingual, and Spanish "a" is
+ * a preposition — "a alguien", "a Instagram", "a error" are all correct and
+ * appear 1,700+ times. Only words americanize.js actually introduces are
+ * checked, so the guard covers the drift the tool itself causes and stays
+ * quiet about the other language.
+ *
+ * `literal` glosses are exempt: they mirror Spanish word-for-word on purpose
+ * ("I-come to to-open a account of-savings" glosses "una cuenta"), so their
+ * ungrammaticality is the teaching point rather than a defect.
+ */
+const VOWEL_SOUND_INTRODUCED = ["American", "Americans", "Americanized", "American-style"];
+
+const ARTICLE_RE = new RegExp(
+  `(?<![\\p{L}\\p{N}_])a (${VOWEL_SOUND_INTRODUCED.join("|")})(?![\\p{L}\\p{N}_])`,
+  "gu"
+);
+
+function scanArticles(text) {
+  const out = [];
+  for (const line of text.split(/\r?\n/)) {
+    if (/^\s*literal:/.test(line)) continue;
+    for (const m of line.matchAll(ARTICLE_RE)) {
+      out.push({
+        term: m[0],
+        index: m.index,
+        context: line.slice(Math.max(0, m.index - 50), m.index + 50).replace(/\s+/g, " ")
+      });
+    }
+  }
+  return out;
+}
+
 /* Returns [{ term, file, context }] for every banned word found. */
 function findViolations() {
   const out = [];
   for (const rel of targetFiles()) {
     const text = fs.readFileSync(path.join(ROOT, rel), "utf8");
     for (const hit of scanText(text)) out.push({ term: hit.term, file: rel, context: hit.context });
+    for (const hit of scanArticles(text)) out.push({ term: hit.term, file: rel, context: hit.context });
   }
   return out;
 }
 
-module.exports = { BRITISH, CANADIAN, findViolations, targetFiles, scanText };
+module.exports = { BRITISH, CANADIAN, findViolations, targetFiles, scanText, scanArticles };
 
 if (require.main === module) {
   const bad = findViolations();

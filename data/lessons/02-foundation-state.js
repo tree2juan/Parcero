@@ -31,7 +31,7 @@ lessons.push(
       situation:
         "A Alex se le dañó la lavadora en su apartamento de Bogotá y el técnico quedó de venir en una ventana de dos horas que ya casi se acaba. Lo llama para saber por dónde va. El apartamento está sin agua, Alex tiene un viaje de trabajo en dos días y necesita que la máquina quede lista hoy.",
       setting: {
-        who: "Don Fabio is the repair technician the building administrator recommended. Alex is a American tenant who has been in Bogotá three months and still finds phone calls harder than face-to-face Spanish.",
+        who: "Don Fabio is the repair technician the building administrator recommended. Alex is an American tenant who has been in Bogotá three months and still finds phone calls harder than face-to-face Spanish.",
         what: "A phone call to find out where the technician is and whether he is still coming this morning.",
         when: "A Wednesday mid-morning, with the two-hour window the technician promised almost used up.",
         where: "Bogotá, in Chapinero, a fifth-floor apartment whose washing machine died mid-cycle and left standing water.",
