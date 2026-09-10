@@ -17,6 +17,17 @@
   if (!$("#deck-card") || typeof flashcardSets !== "function") return;
 
   const STORE = "parcero-flashcards";
+  /*
+   * The schedule lives in its own key rather than inside STORE. STORE is a
+   * small object rewritten wholesale on every set change; the schedule is a
+   * large map rewritten on every swipe, and merging the two would mean
+   * reserialising one every time the other changed.
+   */
+  const SRS_STORE = "parcero-srs";
+  /* srs.js is loaded before this file, but the deck has to survive it being
+     missing the same way it survives a missing data file. */
+  const srs = typeof ParceroSRS === "object" ? ParceroSRS : null;
+  const answers = typeof ParceroAnswer === "object" ? ParceroAnswer : null;
 
   /* Gesture feel. TAP_SLOP separates a tap-to-flip from the start of a swipe. */
   const TAP_SLOP = 6;
@@ -42,6 +53,7 @@
     variation: "Another way",
     practice: "In context",
     verb: "Verb",
+    lexicon: "Word",
     fluency: "Fluency",
     slang: "Slang",
     mature: "Recognition only",
@@ -111,6 +123,9 @@
     setId: null,
     queue: [],
     known: new Set(),
+    schedule: {},
+    typing: false,
+    typedFor: null,
     repeats: 0,
     revealed: false,
     expanded: false,
@@ -145,6 +160,35 @@
   }
 
   const completedSets = () => new Set(readStore().completed || []);
+
+  /* ---------- the review schedule ---------- */
+
+  function readSchedule() {
+    if (!srs) return {};
+    try {
+      const raw = JSON.parse(localStorage.getItem(SRS_STORE) || "null");
+      return (raw && typeof raw === "object" && raw.cards) || {};
+    } catch {
+      return {};
+    }
+  }
+
+  function writeSchedule() {
+    if (!srs) return;
+    try {
+      deck.schedule = srs.prune(deck.schedule, srs.CAP);
+      localStorage.setItem(SRS_STORE, JSON.stringify({ v: 1, cards: deck.schedule }));
+    } catch {
+      /* Full or blocked storage costs the schedule, not the round. */
+    }
+  }
+
+  /* How many cards in a set want reviewing today. Unseen counts as due, so an
+     untouched set reports its real size rather than zero. */
+  function dueIn(set) {
+    if (!srs || !set) return set ? set.cards.length : 0;
+    return srs.dueCount(set.cards, deck.schedule, srs.todayIndex());
+  }
 
   /* ---------- building the decks ---------- */
 
@@ -199,6 +243,7 @@
       lessons: arrayFrom(() => lessons),
       curriculum: arrayFrom(() => curriculum),
       fluencyItems: arrayFrom(() => fluencyItems),
+      lexiconItems: arrayFrom(() => lexiconItems),
       slangItems: arrayFrom(() => slangItems),
       matureItems: arrayFrom(() => matureItems),
       matureSignals: arrayFrom(() => matureSignals),
@@ -245,7 +290,12 @@
       const option = document.createElement("option");
       option.value = set.id;
       const label = setLabel(set);
-      option.textContent = done.has(set.id) ? t("deck.label.done", { label }) : label;
+      /* A finished set that has come back around should say so. "done" is
+         about attendance; "due" is about what the schedule actually wants. */
+      const due = dueIn(set);
+      option.textContent = done.has(set.id) && !due
+        ? t("deck.label.done", { label })
+        : (due && due < set.cards.length ? t("deck.label.due", { label, due }) : label);
       select.append(option);
     }
   }
@@ -257,7 +307,10 @@
     const set = deck.sets.find((item) => item.id === setId) || deck.sets[0];
     if (!set) return;
     deck.setId = set.id;
-    deck.queue = set.cards.slice();
+    deck.schedule = readSchedule();
+    /* Due first, then never-seen, then the rest — so a returning learner meets
+       what they are about to forget instead of card one again. */
+    deck.queue = srs ? srs.orderQueue(set.cards, deck.schedule, srs.todayIndex()) : set.cards.slice();
     deck.known = new Set();
     deck.repeats = 0;
     deck.revealed = false;
@@ -298,6 +351,72 @@
     } else if (card) {
       paintCard(card);
     }
+    paintTyping(card, finished);
+  }
+
+  /*
+   * Show the typing form only when it can honestly be used.
+   *
+   * The toggle is a request, not a guarantee: a card whose back is a full
+   * example sentence is not something anyone should be asked to reproduce
+   * from memory, so those cards fall back to the flip-and-swipe round and say
+   * so, rather than presenting a box the learner cannot win.
+   */
+  function paintTyping(card, finished) {
+    const form = $("#deck-type");
+    if (!form) return;
+    const wanted = deck.typing && answers && !finished && Boolean(card);
+    const usable = wanted && answers.typeable(card);
+    form.hidden = !wanted;
+    if (!wanted) return;
+    const input = $("#deck-answer");
+    const note = $("#deck-verdict");
+    $("#deck-check").disabled = !usable;
+    input.disabled = !usable;
+    if (card && card.id !== deck.typedFor) {
+      deck.typedFor = card.id;
+      input.value = "";
+      note.textContent = usable ? "" : t("deck.typed.unavailable");
+      setLang(input, card.backLang || null);
+      if (usable) {
+        try {
+          input.focus({ preventScroll: true });
+        } catch {
+          /* Focus can be refused while the card is animating; harmless. */
+        }
+      }
+    }
+  }
+
+  /*
+   * Grade what was typed and feed the ordinary verdict path.
+   *
+   * "close" counts as known on purpose. A missing accent or a transposed
+   * letter is a spelling slip, not a failure of recall, and sending the card
+   * back to the start of the schedule for it would train the learner to fear
+   * the keyboard rather than the vocabulary. They are still shown the correct
+   * form, which is the part that teaches.
+   */
+  function checkTyped() {
+    const card = currentCard();
+    if (!card || deck.busy || !answers || !answers.typeable(card)) return;
+    const result = answers.check($("#deck-answer").value, card.back, card.alternatives);
+    const note = $("#deck-verdict");
+    const expected = result.expected || card.back;
+    if (result.verdict === "exact") note.textContent = t("deck.typed.exact");
+    else if (result.empty) {
+      note.textContent = t("deck.typed.empty");
+      return;
+    } else if (result.verdict === "close") {
+      /* "enye" means two different things depending on the verdict: a missing
+         tilde on a word that is not otherwise real, or a genuinely different
+         word. Only the first reaches here. */
+      const key = result.reason === "enye" ? "deck.typed.enyeClose" : `deck.typed.${result.reason}`;
+      note.textContent = t(key, { expected });
+    } else note.textContent = t(result.reason === "enye" ? "deck.typed.enye" : "deck.typed.wrong", { expected });
+
+    deck.revealed = true;
+    commit(card, result.verdict === "wrong" ? "again" : "known");
   }
 
   function setLang(element, lang) {
@@ -453,6 +572,10 @@
     root.classList.add("is-instant");
     resetTransform();
     deck.queue.shift();
+    if (srs) {
+      deck.schedule[card.id] = srs.review(deck.schedule[card.id], verdict, srs.todayIndex());
+      writeSchedule();
+    }
     if (verdict === "known") {
       deck.known.add(card.id);
     } else {
@@ -471,6 +594,23 @@
   }
 
   /* ---------- wiring ---------- */
+
+  const typedToggle = $("#deck-typed");
+  const typeForm = $("#deck-type");
+  if (typedToggle && typeForm) {
+    deck.typing = Boolean(readStore().typing);
+    typedToggle.checked = deck.typing;
+    typedToggle.addEventListener("change", () => {
+      deck.typing = typedToggle.checked;
+      deck.typedFor = null;
+      writeStore({ typing: deck.typing });
+      paint();
+    });
+    typeForm.addEventListener("submit", (event) => {
+      event.preventDefault();
+      checkTyped();
+    });
+  }
 
   const card = $("#deck-card");
 

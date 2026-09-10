@@ -10,11 +10,11 @@ const { dataSource } = require("./data-source.js");
 
 const bundle = [
   dataSource({ schema: false, flashcards: true }),
-  "({ lessons, curriculum, fluencyItems, slangItems, matureItems, matureSignals, FLASHCARD_SET_SIZE, flashcardSlug, flashcardSplit, flashcardsFromLesson, flashcardTopics, flashcardSets });"
+  "({ lessons, curriculum, fluencyItems, lexiconItems, slangItems, matureItems, matureSignals, FLASHCARD_SET_SIZE, flashcardSlug, flashcardSplit, flashcardsFromLesson, flashcardTopics, flashcardSets });"
 ].join("\n");
 
 const {
-  lessons, curriculum, fluencyItems, slangItems, matureItems, matureSignals,
+  lessons, curriculum, fluencyItems, lexiconItems, slangItems, matureItems, matureSignals,
   FLASHCARD_SET_SIZE, flashcardSlug, flashcardSplit, flashcardsFromLesson, flashcardTopics, flashcardSets
 } = vm.runInNewContext(bundle, {}, { filename: "parcero-flashcard-bundle.js" });
 
@@ -25,7 +25,7 @@ const directions = ["es", "en"];
  * caller who has not thought about the age gate passes. Every test using this
  * object is therefore also checking that the unsafe default does not exist.
  */
-const sources = { lessons, curriculum, fluencyItems, slangItems, matureItems, matureSignals };
+const sources = { lessons, curriculum, fluencyItems, lexiconItems, slangItems, matureItems, matureSignals };
 const openSources = { ...sources, matureEnabled: true };
 const isText = (value) => typeof value === "string" && value.trim().length > 0;
 const duplicates = (list) => [...new Set(list.filter((item, index) => list.indexOf(item) !== index))];

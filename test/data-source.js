@@ -35,6 +35,17 @@ function lessonBlockFiles() {
     .map((name) => `data/lessons/${name}`);
 }
 
+/* The same arrangement for the lexicon, and for the same reason. */
+function lexiconBlockFiles() {
+  const dir = path.join(root, "data", "lexicon");
+  if (!fs.existsSync(dir)) return [];
+  return fs
+    .readdirSync(dir)
+    .filter((name) => name.endsWith(".js"))
+    .sort()
+    .map((name) => `data/lexicon/${name}`);
+}
+
 /* Every file holding lesson content, declaration first. */
 function lessonFiles() {
   return ["data/lessons.js", ...lessonBlockFiles()];
@@ -54,10 +65,14 @@ function dataSource({ schema = true, flashcards = false } = {}) {
   if (schema) parts.push(read("data/lesson-schema.js"));
   parts.push(lessonSource());
   parts.push(read("data/curriculum.js"));
+  parts.push(read("data/structures.js"));
+  parts.push(read("data/taxonomy.js"));
+  parts.push(read("data/lexicon.js"));
+  for (const file of lexiconBlockFiles()) parts.push(read(file));
   parts.push(read("data/slang.js"));
   parts.push(read("data/mature.js"));
   if (flashcards) parts.push(read("data/flashcards.js"));
   return parts.join("\n");
 }
 
-module.exports = { root, read, lessonBlockFiles, lessonFiles, lessonSource, dataSource };
+module.exports = { root, read, lessonBlockFiles, lexiconBlockFiles, lessonFiles, lessonSource, dataSource };

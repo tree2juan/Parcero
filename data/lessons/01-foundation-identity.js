@@ -20,9 +20,9 @@ lessons.push(
   {
     id: "who-you-are-at-the-building-meeting",
     level: "Starter · Everyday life",
-    skills: ["speaking", "listening", "context"],
-    domain: "everyday life",
-    register: "friendly informal",
+    skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
+    domain: "home-and-neighbourhood",
+    register: "courteous",
     pathways: ["foundation"],
     verb: "ser",
     review: "pending",

@@ -264,6 +264,10 @@
           <label class="field" for="deck-set"><span data-i18n="deck.setLabel">Set</span>
             <select id="deck-set"></select>
           </label>
+          <label class="field deck-type-toggle" for="deck-typed">
+            <input type="checkbox" id="deck-typed">
+            <span data-i18n="deck.typedLabel">Type the answer</span>
+          </label>
         </div>
 
         <div class="deck-status">
@@ -288,6 +292,14 @@
         </div>
 
         <button id="deck-expand" class="deck-expand" type="button" hidden aria-expanded="false" aria-controls="deck-card-back" data-i18n="deck.readMore">Read the rest</button>
+
+        <form id="deck-type" class="deck-type" hidden>
+          <label class="field" for="deck-answer"><span data-i18n="deck.typedPrompt">Write it from memory</span>
+            <input id="deck-answer" type="text" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false">
+          </label>
+          <button id="deck-check" class="primary-button" type="submit" data-i18n="deck.typedCheck">Check</button>
+          <p id="deck-verdict" class="deck-verdict-note" aria-live="polite"></p>
+        </form>
 
         <div class="deck-actions">
           <button id="deck-known" class="deck-verdict deck-known" type="button" data-i18n="deck.knownButton">← Knew it</button>
@@ -453,13 +465,29 @@
     <script src="data/lessons/66-extending-joining-and-parting.js"></script>
     <script src="data/lessons/67-extending-out-and-across.js"></script>
     <script src="data/lessons/68-extending-turn-and-push.js"></script>
+    <script src="data/lessons/69-comparing-and-degree.js"></script>
+    <script src="data/lessons/70-calendar-colour-and-feeling.js"></script>
+    <script src="data/lessons/71-past-time-and-duration.js"></script>
+    <script src="data/lessons/72-reporting-and-perspective.js"></script>
+    <script src="data/lessons/73-aspect-regret-and-hope.js"></script>
+    <script src="data/lessons/74-precision-and-concession.js"></script>
     <script src="data/provenance.js"></script>
     <script src="data/curriculum.js"></script>
-<script src="data/slang.js"></script>
+    <script src="data/structures.js"></script>
+    <script src="data/taxonomy.js"></script>
+    <script src="data/lexicon.js"></script>
+    <script src="data/lexicon/01-everyday-and-home.js"></script>
+    <script src="data/lexicon/02-food-and-drink.js"></script>
+    <script src="data/lexicon/03-transport-and-travel.js"></script>
+    <script src="data/lexicon/04-home-and-family.js"></script>
+    <script src="data/lexicon/05-work-study-and-services.js"></script>
+    <script src="data/slang.js"></script>
 <script src="data/mature.js"></script>
     <script src="i18n.js"></script>
     <script src="data/flashcards.js"></script>
     <script src="app.js"></script>
+    <script src="srs.js"></script>
+    <script src="answer-check.js"></script>
     <script src="flashcards.js"></script>
     <script src="review.js"></script>
     <script src="review-ui.js"></script>

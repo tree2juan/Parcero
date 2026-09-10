@@ -35,10 +35,11 @@ try {
   const bundle = [
     read("data/lesson-schema.js"),
     read("data/curriculum.js"),
+    read("data/structures.js"),
     "const lessons = [];",
     "function markSource(items, file) { for (const item of items) if (!item.sourceFile) { item.sourceFile = file; } }",
     read(target.replace(/\\/g, "/")),
-    "({ lessons, curriculum, schema: ParceroLessonSchema });"
+    "({ lessons, curriculum, structures: structureItems, schema: ParceroLessonSchema });"
   ].join("\n");
   loaded = vm.runInNewContext(bundle, {}, { filename: "block-check.js" });
 } catch (error) {
@@ -46,9 +47,12 @@ try {
   process.exit(1);
 }
 
-const { lessons, curriculum, schema } = loaded;
+const { lessons, curriculum, structures, schema } = loaded;
 const known = new Set(curriculum.map((entry) => entry.spanish));
+const knownStructures = new Set(structures.map((entry) => entry.key));
+const probeOf = new Map(structures.map((entry) => [entry.key, entry.probe]));
 const tierOf = new Map(curriculum.map((entry) => [entry.spanish, entry.level]));
+for (const entry of structures) tierOf.set(entry.key, entry.level);
 const directions = ["es", "en"];
 
 /*
@@ -125,9 +129,15 @@ const answerSpread = new Map();
 for (const lesson of lessons) {
   const at = lesson.id || "(a lesson with no id)";
 
-  for (const key of ["id", "level", "domain", "register", "verb"]) {
+  for (const key of ["id", "level", "domain", "register"]) {
     if (typeof lesson[key] !== "string" || !lesson[key].trim()) fail(`${at}: missing ${key}`);
   }
+  /* `verb` is deliberately not in the list above. A grammar lesson anchors to a
+     structure and carries no verb, exactly as test/shape.test.js allows, so a
+     blanket "verb must be a non-empty string" would make every structure lesson
+     impossible while the structure-handling checks a few lines down went unused.
+     Verb lessons stay fully covered: the anchor checks below reject a lesson
+     that names neither a verb nor a structure, or an unknown/duplicated verb. */
   if (!lesson.skills?.length) fail(`${at}: missing skills`);
   if (!lesson.pathways?.length) fail(`${at}: missing pathways`);
   if (!["pending", "reviewed"].includes(lesson.review)) {
@@ -136,11 +146,24 @@ for (const lesson of lessons) {
   if (lesson.verb && !known.has(lesson.verb)) {
     fail(`${at}: the verb "${lesson.verb}" is not in data/curriculum.js`);
   }
-  if (lesson.verb && known.has(lesson.verb)) {
-    const want = TIER_LABEL[tierOf.get(lesson.verb)];
+  /* A grammar lesson anchors to data/structures.js instead of a verb, and is
+     held to the same terms: the key must exist, and it may not also claim a
+     verb, or neither list can be counted for coverage. */
+  if (lesson.structure && !knownStructures.has(lesson.structure)) {
+    fail(`${at}: the structure "${lesson.structure}" is not in data/structures.js`);
+  }
+  if (lesson.structure && lesson.verb) {
+    fail(`${at}: claims both a verb and a structure; a lesson teaches one or the other`);
+  }
+  if (!lesson.verb && !lesson.structure) {
+    fail(`${at}: names neither a verb nor a structure, so nothing proves it teaches any of the curriculum`);
+  }
+  const anchor = lesson.verb || lesson.structure;
+  if (anchor && tierOf.has(anchor)) {
+    const want = TIER_LABEL[tierOf.get(anchor)];
     const got = String(lesson.level || "").split("·")[0].trim();
     if (want && got !== want) {
-      fail(`${at}: "${lesson.verb}" is a ${tierOf.get(lesson.verb)} verb, so level must start with "${want} · ", not ${JSON.stringify(lesson.level)}`);
+      fail(`${at}: "${anchor}" is ${tierOf.get(anchor)}, so level must start with "${want} · ", not ${JSON.stringify(lesson.level)}`);
     }
   }
 
@@ -314,6 +337,22 @@ for (const lesson of lessons) {
       fail(`${at}: claims "${lesson.verb}" but no es dialogue line contains any of ${roots.join(", ")}`);
     }
   }
+
+  /*
+   * The same rule for grammar lessons. A structure lesson can talk *about*
+   * comparatives for four hundred words without ever showing one in the
+   * dialogue, which is the failure mode a verb lesson is already protected
+   * from. Each structure carries a `probe` regex in data/structures.js; the
+   * taught pattern has to actually be spoken.
+   */
+  if (lesson.structure && probeOf.get(lesson.structure)) {
+    const spoken = (schema.normalizeContent(lesson.es || {}).dialogue || [])
+      .map((row) => row.target || "").join(" ");
+    if (!new RegExp(probeOf.get(lesson.structure), "i").test(spoken)) {
+      fail(`${at}: claims the structure "${lesson.structure}" but no es dialogue line uses it `
+        + `(must match /${probeOf.get(lesson.structure)}/i)`);
+    }
+  }
 }
 
 /*
@@ -420,5 +459,5 @@ if (problems.length) {
   process.exit(1);
 }
 
-const verbs = lessons.map((lesson) => lesson.verb).join(", ");
+const verbs = lessons.map((lesson) => lesson.verb || lesson.structure).join(", ");
 console.log(`${target}: ${lessons.length} lesson(s) OK — ${verbs}`);

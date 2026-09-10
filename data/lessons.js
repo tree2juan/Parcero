@@ -1,9 +1,9 @@
 const lessons = [{
   id: "greeting-at-the-cafe",
   level: "Starter · Everyday life",
-  skills: ["listening", "speaking", "context", "pronunciation"],
-  domain: "everyday life",
-  register: "friendly informal",
+  skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
+  domain: "food-and-drink",
+  register: "familiar",
   pathways: ["foundation", "professional-customer-service"],
   review: "pending",
   es: {
@@ -135,9 +135,9 @@ const lessons = [{
 }, {
   id: "taxi-to-downtown",
   level: "Starter · Getting around",
-  skills: ["listening", "speaking", "context"],
-  domain: "transport",
-  register: "polite service",
+  skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
+  domain: "transport-and-travel",
+  register: "courteous",
   pathways: ["foundation", "professional-customer-service"],
   review: "pending",
   es: {
@@ -269,9 +269,9 @@ const lessons = [{
 }, {
   id: "market-and-la-napa",
   level: "Starter · Everyday life",
-  skills: ["listening", "speaking", "context", "culture"],
-  domain: "shopping",
-  register: "friendly informal",
+  skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
+  domain: "shopping-and-money",
+  register: "courteous",
   pathways: ["foundation"],
   review: "pending",
   es: {
@@ -403,9 +403,9 @@ const lessons = [{
 }, {
   id: "making-plans-parche",
   level: "Developing · Social life",
-  skills: ["listening", "speaking", "context", "culture"],
-  domain: "social life",
-  register: "close informal",
+  skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
+  domain: "social-life",
+  register: "familiar",
   pathways: ["foundation", "year-12-local-mastery"],
   review: "pending",
   es: {
@@ -539,9 +539,9 @@ const lessons = [{
 }, {
   id: "at-the-clinic",
   level: "Developing · Health",
-  skills: ["listening", "speaking", "grammar", "context"],
-  domain: "healthcare",
-  register: "formal polite",
+  skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
+  domain: "health-and-body",
+  register: "formal",
   pathways: ["year-12-local-mastery", "professional-healthcare"],
   review: "pending",
   es: {
@@ -677,9 +677,9 @@ const lessons = [{
 }, {
   id: "team-standup",
   level: "Developing · Workplace",
-  skills: ["listening", "speaking", "context", "register"],
-  domain: "workplace",
-  register: "professional neutral",
+  skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
+  domain: "work-and-employment",
+  register: "courteous",
   pathways: ["professional-office", "professional-technical"],
   review: "pending",
   es: {
@@ -813,9 +813,9 @@ const lessons = [{
 }, {
   id: "seminar-discussion",
   level: "Extending · Academic",
-  skills: ["listening", "speaking", "reading", "register"],
-  domain: "academic",
-  register: "formal academic",
+  skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
+  domain: "study-and-academia",
+  register: "formal",
   pathways: ["collegiate-academic"],
   review: "pending",
   es: {
@@ -951,9 +951,9 @@ const lessons = [{
 }, {
   id: "job-interview",
   level: "Extending · Professional",
-  skills: ["speaking", "listening", "register", "culture"],
-  domain: "employment",
-  register: "formal professional",
+  skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
+  domain: "work-and-employment",
+  register: "formal",
   pathways: ["professional-interviews", "collegiate-academic"],
   review: "pending",
   es: {

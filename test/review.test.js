@@ -591,7 +591,8 @@ test("every authored string in a lesson is offered by the report picker", () => 
    * contrast" and the coincidence ran out. The coverage was never real.
    */
   const notProseOnLesson = {
-    register: "authored metadata no script renders at lesson level; app.js reads verb/word/row register, never lesson.register"
+    register: "authored metadata no script renders at lesson level; app.js reads verb/word/row register, never lesson.register",
+    structure: "a grammar key like \"comparison-inequality\", the structure twin of `verb`'s anchor; grep for `.structure` across app.js, flashcards.js, review.js, review-ui.js and data/flashcards.js returns nothing, so no page renders it. Scoped to the lesson root — it occurs 18 times there and nowhere nested — so a future rendered `structure` field on a row would not inherit this exemption"
   };
 
   // Exactly what review-ui.js does: group the anchors, then ask for each group's parts.

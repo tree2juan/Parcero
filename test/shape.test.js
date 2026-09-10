@@ -13,8 +13,8 @@ const vm = require("node:vm");
 
 const { dataSource, lessonBlockFiles, read } = require("./data-source.js");
 
-const bundle = `${dataSource({ schema: true })}\n({ lessons, curriculum, schema: ParceroLessonSchema });`;
-const { lessons, curriculum, schema } = vm.runInNewContext(bundle, {}, { filename: "parcero-shape-bundle.js" });
+const bundle = `${dataSource({ schema: true })}\n({ lessons, curriculum, structures: structureItems, taxonomy: TAXONOMY, schema: ParceroLessonSchema });`;
+const { lessons, curriculum, structures, taxonomy, schema } = vm.runInNewContext(bundle, {}, { filename: "parcero-shape-bundle.js" });
 
 const directions = ["es", "en"];
 
@@ -217,14 +217,141 @@ const VERBLESS_LEGACY = new Set([
 
 test("every lesson names a curriculum verb it is built on", () => {
   const known = new Set(curriculum.map((entry) => entry.spanish));
+  const knownStructures = new Set(structures.map((entry) => entry.key));
   for (const lesson of lessons) {
     if (VERBLESS_LEGACY.has(lesson.id)) continue;
+    /* A grammar lesson anchors to data/structures.js instead, on the same terms:
+       declared, real, and used exactly once. It may not claim both. */
+    if (lesson.structure) {
+      assert.ok(
+        !lesson.verb,
+        `lesson ${lesson.id} claims both a verb and a structure, so neither list can be counted`);
+      assert.ok(
+        knownStructures.has(lesson.structure),
+        `lesson ${lesson.id} claims the structure "${lesson.structure}", which is not in data/structures.js`);
+      continue;
+    }
     assert.ok(
       typeof lesson.verb === "string" && lesson.verb.trim(),
       `lesson ${lesson.id} names no verb, so nothing proves it teaches any of the curriculum`);
     assert.ok(
       known.has(lesson.verb),
       `lesson ${lesson.id} claims the verb "${lesson.verb}", which is not in data/curriculum.js`);
+  }
+});
+
+test("no two lessons claim the same structure", () => {
+  const seen = new Map();
+  for (const lesson of lessons) {
+    if (!lesson.structure) continue;
+    const earlier = seen.get(lesson.structure);
+    assert.ok(
+      !earlier,
+      `lessons ${earlier} and ${lesson.id} both claim "${lesson.structure}", `
+      + "so one grammar point is taught twice and another not at all");
+    seen.set(lesson.structure, lesson.id);
+  }
+});
+
+/*
+ * The structure list exists to close measured holes, so it is only worth
+ * anything if every entry actually gets taught. This is the structure twin of
+ * the verb coverage test: the list is closed, and a key with no lesson is a
+ * hole that was named and then left open.
+ */
+test("every structure in the curriculum has a lesson", () => {
+  const taught = new Set(lessons.map((lesson) => lesson.structure).filter(Boolean));
+  const missing = structures.map((entry) => entry.key).filter((key) => !taught.has(key));
+  /* Array.from re-homes the result: `structures` comes out of a vm realm, so
+     arrays derived from it carry that realm's Array.prototype and
+     deepStrictEqual — which compares prototypes — would reject even an empty
+     one against a plain []. Without this the test can never pass. */
+  assert.deepStrictEqual(Array.from(missing), [], "these grammar points are declared in data/structures.js but taught nowhere");
+});
+
+/*
+ * The classification fields have to stay inside the closed lists.
+ *
+ * Before data/taxonomy.js existed these were free text, and free text at this
+ * scale rotted exactly as you would expect: 31 domain spellings for 208
+ * lessons, "social" and "social life" as separate things, 57 register values
+ * of which 39 were used once. Nothing catches that while it is happening,
+ * because every individual lesson looks fine. This does.
+ */
+test("lesson tags come from the closed vocabularies", () => {
+  const offenders = [];
+  for (const lesson of lessons) {
+    for (const field of ["domain", "register"]) {
+      const value = lesson[field];
+      if (value === undefined) continue;
+      if (!taxonomy[field].includes(value)) offenders.push(`${lesson.id}: ${field} "${value}"`);
+    }
+    for (const skill of Array.isArray(lesson.skills) ? lesson.skills : []) {
+      if (!taxonomy.skills.includes(skill)) offenders.push(`${lesson.id}: skills "${skill}"`);
+    }
+  }
+  assert.deepStrictEqual(offenders, [], "these values are not in data/taxonomy.js");
+});
+
+test("curriculum tags come from the closed vocabularies", () => {
+  const offenders = [];
+  for (const entry of curriculum) {
+    for (const field of ["domain", "register"]) {
+      const value = entry[field];
+      if (value === undefined) continue;
+      if (!taxonomy[field].includes(value)) offenders.push(`${entry.verb || entry.key}: ${field} "${value}"`);
+    }
+  }
+  assert.deepStrictEqual(offenders, [], "these values are not in data/taxonomy.js");
+});
+
+/*
+ * A closed list is only worth closing if it is used. A value nobody applies is
+ * a category that exists on paper, and it will quietly mislead anyone who
+ * builds a filter from the list and gets an empty screen.
+ */
+test("every domain and register in the taxonomy is actually used", () => {
+  const used = (field) => new Set(lessons.map((lesson) => lesson[field]).filter(Boolean));
+  for (const field of ["domain", "register"]) {
+    const seen = used(field);
+    const unused = taxonomy[field].filter((value) => !seen.has(value));
+    /* Array.from for the same vm-realm reason as the structure test above. */
+    assert.deepStrictEqual(Array.from(unused), [], `these ${field} values are declared but no lesson uses them`);
+  }
+});
+
+/*
+ * A grammar lesson can discuss its structure at length without ever showing
+ * one in the dialogue — the failure a verb lesson is already protected from
+ * by the verb-in-dialogue rule. Each structure carries a `probe` regex; the
+ * pattern being taught has to be spoken by somebody.
+ */
+test("every structure lesson actually uses its structure in dialogue", () => {
+  const probeOf = new Map(structures.map((entry) => [entry.key, entry.probe]));
+  for (const lesson of lessons) {
+    if (!lesson.structure) continue;
+    const probe = probeOf.get(lesson.structure);
+    assert.ok(probe, `structure "${lesson.structure}" declares no probe in data/structures.js`);
+    const spoken = (lesson.es?.dialogue || [])
+      .map((line) => (typeof line === "string" ? line : line.target || ""))
+      .join(" ");
+    assert.ok(
+      new RegExp(probe, "i").test(spoken),
+      `lesson ${lesson.id} claims "${lesson.structure}" but no es dialogue line matches /${probe}/i`);
+  }
+});
+
+/*
+ * A probe that cannot match its own worked example is measuring nothing, and
+ * would pass every lesson forever. Caught exactly that on the pluperfect,
+ * where `\w+[ai]do` could not match a short participle like "ido".
+ */
+test("every structure probe matches its own example", () => {
+  for (const entry of structures) {
+    assert.ok(entry.probe, `structure "${entry.key}" has no probe`);
+    assert.ok(
+      new RegExp(entry.probe, "i").test(entry.example),
+      `the probe for "${entry.key}" does not match its own example ${JSON.stringify(entry.example)}, so it proves nothing`);
   }
 });
 
@@ -238,13 +365,15 @@ test("every lesson names a curriculum verb it is built on", () => {
 test("a lesson's level agrees with the curriculum tier of its verb", () => {
   const label = { foundation: "Starter", independent: "Developing", extension: "Extending" };
   const tierOf = new Map(curriculum.map((entry) => [entry.spanish, entry.level]));
+  for (const entry of structures) tierOf.set(entry.key, entry.level);
   const wrong = [];
   for (const lesson of lessons) {
-    if (!lesson.verb) continue;
-    const want = label[tierOf.get(lesson.verb)];
+    const anchor = lesson.verb || lesson.structure;
+    if (!anchor) continue;
+    const want = label[tierOf.get(anchor)];
     const got = String(lesson.level || "").split("·")[0].trim();
     if (want && got !== want) {
-      wrong.push(`${lesson.id}: "${lesson.verb}" is ${tierOf.get(lesson.verb)}, so level must start "${want} · ", not ${JSON.stringify(lesson.level)}`);
+      wrong.push(`${lesson.id}: "${anchor}" is ${tierOf.get(anchor)}, so level must start "${want} · ", not ${JSON.stringify(lesson.level)}`);
     }
   }
   assert.deepStrictEqual(wrong, [], "relabel the lesson rather than loosening the tiers");

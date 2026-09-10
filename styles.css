@@ -497,6 +497,36 @@ main, footer { max-width: var(--wrap); margin: auto; padding-inline: 1.5rem; }
   cursor: pointer;
 }
 .deck-expand:hover { color: var(--ink); border-color: var(--ink-soft); }
+
+/* Typed production. The toggle sits with the pickers; the form sits under the
+   card, where the answer buttons are, because that is where attention already
+   is once a card has been read. */
+.deck-type-toggle {
+  flex-direction: row; align-items: center; gap: .45rem;
+  align-self: end; padding-bottom: .55rem;
+  font-size: .85rem; font-weight: 600; color: var(--ink-soft);
+  cursor: pointer;
+}
+.deck-type-toggle input { width: auto; margin: 0; cursor: pointer; }
+.deck-type {
+  display: grid; gap: .6rem; margin: 0 auto 1rem; max-width: 34rem;
+  grid-template-columns: 1fr auto; align-items: end;
+}
+.deck-type .field { margin: 0; }
+.deck-type input[type="text"] {
+  width: 100%; padding: .55rem .7rem;
+  border: 1px solid var(--line); border-radius: .5rem;
+  background: var(--surface); color: var(--ink); font: inherit;
+}
+.deck-type input[type="text"]:focus-visible { outline: 2px solid var(--accent, currentColor); outline-offset: 1px; }
+.deck-type button { white-space: nowrap; }
+.deck-verdict-note {
+  grid-column: 1 / -1; margin: 0; min-height: 1.2em;
+  font-size: .88rem; color: var(--ink-soft);
+}
+@media (max-width: 32rem) {
+  .deck-type { grid-template-columns: 1fr; }
+}
 .deck-expand:focus-visible { outline: 2px solid var(--green-deep); outline-offset: 2px; }
 
 /* Fixed badge colours: these must read the same in light and dark. */

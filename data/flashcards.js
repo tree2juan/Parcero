@@ -366,6 +366,28 @@ function flashcardFromMature(item, index, direction) {
   };
 }
 
+/*
+ * Lexicon cards drill the word the learner is building, in both directions of
+ * the app, because a noun is the one thing here where production is genuinely
+ * the goal. The gender travels *with* the noun on the back — "portero" learned
+ * without "el" is half a word, and the half that is missing is the half that
+ * governs every adjective and article that follows it.
+ */
+function flashcardFromLexicon(item, index, direction) {
+  const [term, english, wordClass, gender, , level, seen, note] = item;
+  const { target, support } = flashcardLanguages(direction);
+  return {
+    id: `lexicon/${index}/${direction}`,
+    kind: "lexicon",
+    askKey: "deck.ask.lexicon",
+    front: target === "es" ? english : term,
+    frontLang: target === "es" ? support : target,
+    back: target === "es" ? term : english,
+    backLang: target === "es" ? target : support,
+    note: [gender ? `${wordClass} · ${gender}` : wordClass, note].filter(Boolean).join(". ")
+  };
+}
+
 function flashcardFromSignal(item, index, direction) {
   const [signal, looksLike, means, , respond] = item;
   return {
@@ -392,7 +414,7 @@ function flashcardFromSignal(item, index, direction) {
  */
 function flashcardTopics(direction, sources) {
   const {
-    lessons = [], curriculum = [], fluencyItems = [],
+    lessons = [], curriculum = [], fluencyItems = [], lexiconItems = [],
     slangItems = [], matureItems = [], matureSignals = [], matureEnabled = false
   } = sources || {};
   const topics = [];
@@ -421,6 +443,30 @@ function flashcardTopics(direction, sources) {
       levelKey: `deck.level.${flashcardSlug(level)}`,
       level: flashcardSentenceCase(level),
       metaKey: "deck.meta.verbs",
+      metaCount: cards.length,
+      cards
+    });
+  }
+
+  /*
+   * Words are grouped by theme rather than by part of speech. "Twelve nouns"
+   * is a grammatical fact about a list; "twelve words about getting around"
+   * is a reason to open it, and it puts words next to the situations the
+   * lessons already teach — which is where they will be needed.
+   */
+  for (const theme of [...new Set(lexiconItems.map((item) => item[4]))]) {
+    const cards = lexiconItems
+      .map((item, index) => ({ item, index }))
+      .filter(({ item }) => item[4] === theme)
+      .map(({ item, index }) => flashcardFromLexicon(item, index, direction));
+    if (!cards.length) continue;
+    topics.push({
+      id: `lexicon-${flashcardSlug(theme)}`,
+      groupKey: "deck.group.lexicon",
+      titleKey: "deck.topic.lexicon",
+      levelKey: `deck.theme.${flashcardSlug(theme)}`,
+      level: flashcardSentenceCase(String(theme).replace(/-/g, " ")),
+      metaKey: "deck.meta.lexicon",
       metaCount: cards.length,
       cards
     });
