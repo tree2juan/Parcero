@@ -277,13 +277,34 @@ test("printing removes the site and keeps the workbook", () => {
   const print = css.slice(css.indexOf("@media print"));
   assert.ok(print.includes("@media print"), "styles.css has no print rules at all");
   /*
-   * display:none on an ancestor takes the workbook with it, so the page is
-   * hidden by visibility and the workbook switched back on.
+   * The workbook runs to about twenty pages, so it has to stay in normal flow
+   * to paginate. Hiding the page with visibility and lifting the workbook out
+   * with position:absolute looks identical on screen and risks dropping
+   * everything after the first sheet.
    */
-  assert.match(print, /body \*\s*\{\s*visibility:\s*hidden/, "the site chrome is not hidden for print");
-  assert.match(print, /#workbook,\s*#workbook \*\s*\{\s*visibility:\s*visible/, "the workbook is not restored for print");
-  for (const chrome of [".site-header", ".hero", "footer", ".workbook-controls"]) {
+  assert.ok(!/position:\s*absolute/.test(print),
+    "taking the workbook out of flow risks losing every page after the first");
+  assert.match(print, /body > \*:not\(main\)\s*\{[^}]*display:\s*none/,
+    "the page around <main> is not hidden for print");
+  assert.match(print, /main > \*:not\(#workbook\)\s*\{[^}]*display:\s*none/,
+    "the other sections are not hidden for print");
+  for (const chrome of [".section-head", ".workbook-controls", ".assistive-text"]) {
     assert.ok(print.includes(chrome), `print styles never deal with ${chrome}`);
+  }
+});
+
+test("the print rules match the page they have to strip", () => {
+  /*
+   * The selectors above name the document's shape, so a reshuffle of
+   * index.html would silently stop hiding the site and print the whole app.
+   * Checked against the markup rather than trusted.
+   */
+  const body = html.slice(html.indexOf("<body"), html.indexOf("</body>"));
+  assert.ok(/<main\b/.test(body), "print CSS assumes a <main>, index.html has none");
+  const main = body.slice(body.indexOf("<main"));
+  assert.ok(main.includes('id="workbook"'), "the workbook section is not inside <main>");
+  for (const child of ["section-head", "workbook-controls", "assistive-text"]) {
+    assert.ok(html.includes(child), `print CSS hides .${child}, which index.html no longer has`);
   }
 });
 
