@@ -274,6 +274,143 @@ test("the verb curriculum is complete and uniquely identified", () => {
   }
 });
 
+test("verb spelling follows the rules that have one right answer", () => {
+  /*
+   * Two families of Spanish form are fully decidable from the infinitive, so a
+   * wrong one is an error rather than a regional preference and needs no native
+   * speaker to adjudicate.
+   *
+   * Both were wrong in the seed data. Thirteen verbs appended the preterite
+   * ending instead of replacing the final consonant ("lleggué" for llegué,
+   * "buscqué" for busqué), and two regularised an irregular participle
+   * ("abrido" for abierto, "rompido" for roto). They rendered on the verb list
+   * and in the flashcard decks, so learners were being taught them.
+   *
+   * The irregular participles are pinned in a table because they cannot be
+   * derived. A new verb belonging to one of those families is covered the
+   * moment it is added; a new irregular has to be added to the table, and the
+   * regular rule will flag it loudly until someone does.
+   */
+  const irregularParticiples = {
+    abrir: "abierto", cubrir: "cubierto", descubrir: "descubierto", decir: "dicho",
+    escribir: "escrito", describir: "descrito", hacer: "hecho", satisfacer: "satisfecho",
+    morir: "muerto", poner: "puesto", componer: "compuesto", proponer: "propuesto",
+    suponer: "supuesto", resolver: "resuelto", romper: "roto", ver: "visto",
+    prever: "previsto", volver: "vuelto", devolver: "devuelto", envolver: "envuelto",
+    imprimir: "impreso", "freír": "frito"
+  };
+
+  // A reflexive infinitive and a reflexive form both carry the pronoun; the
+  // spelling rules apply to what is left once it is set aside.
+  const bare = (infinitive) => (infinitive.endsWith("se") ? infinitive.slice(0, -2) : infinitive);
+  const withoutPronoun = (form) => form.replace(/^(me|te|se|nos) /, "");
+
+  const expectedParticiple = (infinitive) => {
+    const verb = bare(infinitive);
+    if (irregularParticiples[verb]) return irregularParticiples[verb];
+    const stem = verb.slice(0, -2);
+    if (verb.endsWith("ar")) return `${stem}ado`;
+    // A stem ending in a strong vowel takes the accent: leer -> leído. A stem
+    // ending in u does not, because ui is not a hiatus: construir -> construido.
+    if (verb.endsWith("er") || verb.endsWith("ir")) return /[aeo]$/.test(stem) ? `${stem}ído` : `${stem}ido`;
+    return null;
+  };
+
+  // Preterite yo keeps the sound of the infinitive, so the spelling has to move:
+  // -gar -> -gué, -car -> -qué, -zar -> -cé.
+  const expectedPreteriteYo = (infinitive) => {
+    const verb = bare(infinitive);
+    if (verb.endsWith("gar")) return `${verb.slice(0, -3)}gué`;
+    if (verb.endsWith("car")) return `${verb.slice(0, -3)}qué`;
+    if (verb.endsWith("zar")) return `${verb.slice(0, -3)}cé`;
+    return null;
+  };
+
+  // A handful of -iar and -uar verbs break the diphthong in the yo form and
+  // carry a written accent; most do not. It is lexical, not derivable, so the
+  // ones that do are pinned and every other verb in those two families is
+  // asserted to be plain. "envio" and "continuo" were both stored without the
+  // accent, which makes the first a misspelling and the second a different
+  // word — continuo is the adjective "continuous".
+  const accentedYo = { enviar: "envío", continuar: "continúo" };
+
+  const wrong = [];
+  let checkedParticiples = 0;
+  let checkedPreterites = 0;
+  let checkedAccents = 0;
+  for (const verb of curriculum) {
+    const participle = expectedParticiple(verb.spanish);
+    if (participle) {
+      checkedParticiples += 1;
+      const got = withoutPronoun(verb.forms.participle);
+      if (got !== participle) wrong.push(`${verb.id} ${verb.spanish} participle: "${got}" should be "${participle}"`);
+    }
+    const preterite = expectedPreteriteYo(verb.spanish);
+    if (preterite) {
+      checkedPreterites += 1;
+      const got = withoutPronoun(verb.forms.preteriteYo);
+      if (got !== preterite) wrong.push(`${verb.id} ${verb.spanish} preteriteYo: "${got}" should be "${preterite}"`);
+    }
+    const stem = bare(verb.spanish);
+    if (stem.endsWith("iar") || stem.endsWith("uar")) {
+      checkedAccents += 1;
+      const got = withoutPronoun(verb.forms.presentYo);
+      const want = accentedYo[stem] || `${stem.slice(0, -2)}o`;
+      if (got !== want) wrong.push(`${verb.id} ${verb.spanish} presentYo: "${got}" should be "${want}"`);
+    }
+  }
+
+  assert.ok(checkedParticiples > 0, "no participles were checked, so this verifies nothing");
+  assert.ok(checkedPreterites > 0, "no -gar/-car/-zar verbs were checked, so this verifies nothing");
+  assert.ok(checkedAccents > 0, "no -iar/-uar verbs were checked, so this verifies nothing");
+  assert.deepStrictEqual(wrong, [], `the app would teach these forms:\n${wrong.join("\n")}`);
+});
+
+test("both directions of a lesson teach the same amount", () => {
+  /*
+   * A lesson's es and en sides are not translations of each other. Each is
+   * independent material for one learning direction: the es side teaches
+   * Colombian Spanish, the en side teaches English, and their words are
+   * supposed to differ.
+   *
+   * What they cannot differ on is depth. Four lessons offered four related
+   * expressions on one side and three on the other, so whichever direction a
+   * learner picked silently decided how much they were taught. That is
+   * invisible from either side alone, because nothing looks missing when you
+   * only ever see one.
+   *
+   * Compares structure and array lengths, never text, so the two sides stay
+   * free to say entirely different things.
+   */
+  const shapeOf = (node, trail, out) => {
+    if (Array.isArray(node)) {
+      out.push(`${trail}[] = ${node.length}`);
+      node.forEach((item, index) => shapeOf(item, `${trail}[${index}]`, out));
+      return out;
+    }
+    if (node && typeof node === "object") {
+      for (const key of Object.keys(node).sort()) shapeOf(node[key], trail ? `${trail}.${key}` : key, out);
+      return out;
+    }
+    out.push(`${trail} : ${typeof node}`);
+    return out;
+  };
+
+  const gaps = [];
+  for (const lesson of lessons) {
+    for (const direction of directions) {
+      assert.ok(lesson[direction], `${lesson.id}: missing the ${direction} side entirely`);
+    }
+    const es = shapeOf(lesson.es, "", []);
+    const en = shapeOf(lesson.en, "", []);
+    const inEn = new Set(en);
+    const inEs = new Set(es);
+    es.filter((entry) => !inEn.has(entry)).forEach((entry) => gaps.push(`${lesson.id} es only: ${entry}`));
+    en.filter((entry) => !inEs.has(entry)).forEach((entry) => gaps.push(`${lesson.id} en only: ${entry}`));
+  }
+  assert.deepStrictEqual(gaps, [], `one direction is taught less than the other:\n${gaps.join("\n")}`);
+});
+
 test("reference lists match the shape the renderers expect", () => {
   assert.ok(fluencyItems.length > 0);
   for (const item of fluencyItems) {
