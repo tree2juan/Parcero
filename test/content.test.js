@@ -598,6 +598,44 @@ test("English glosses are English", () => {
   }
 });
 
+test("no two verb cards ask the same question", () => {
+  /*
+   * A verb card shows the language you have and asks for the one you are
+   * building, then reveals a single answer. Two verbs sharing an English gloss
+   * therefore produce two cards with an identical prompt and different answers,
+   * and the learner who gives the other right answer is shown they were wrong.
+   *
+   * Four pairs shipped that way: leave (dejar / salir), return (volver /
+   * regresar), answer (responder / contestar) and happen (ocurrir / suceder).
+   * The first is the worst — dejar and salir are not synonyms, so the card was
+   * teaching a false equivalence rather than merely repeating itself.
+   *
+   * Checked on the built cards rather than on the gloss column, because the
+   * prompt is what a learner actually sees.
+   */
+  const sources = vm.runInNewContext(
+    `${read("data/lessons.js")}\n${read("data/curriculum.js")}\n${read("data/flashcards.js")}\n({ lessons, curriculum, fluencyItems, flashcardTopics })`,
+    {}, { filename: "parcero-card-prompts.js" });
+
+  const clashes = [];
+  for (const direction of directions) {
+    const cards = sources.flashcardTopics(direction, sources)
+      .flatMap((topic) => topic.cards)
+      .filter((card) => card.kind === "verb");
+    assert.ok(cards.length > 0, `no verb cards were built for ${direction}`);
+
+    const answersByPrompt = new Map();
+    for (const card of cards) {
+      if (!answersByPrompt.has(card.front)) answersByPrompt.set(card.front, new Set());
+      answersByPrompt.get(card.front).add(card.back);
+    }
+    for (const [prompt, answers] of answersByPrompt) {
+      if (answers.size > 1) clashes.push(`${direction}: "${prompt}" accepts ${[...answers].join(" or ")} but reveals one`);
+    }
+  }
+  assert.deepStrictEqual(clashes, [], `ambiguous cards:\n${clashes.join("\n")}`);
+});
+
 test("first-person forms are plausible Spanish", () => {
   // "oo" was published as the yo form of oír for as long as the list existed.
   for (const verb of curriculum) {
