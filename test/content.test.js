@@ -830,3 +830,72 @@ test("practiceExtra questions hold the same shape guarantees as the main one", (
   assert.deepStrictEqual(towering, [], "lengthen the distractors rather than trimming the answer");
   assert.deepStrictEqual(filler, [], "a distractor nobody could pick is not a distractor");
 });
+
+/*
+ * The tone label beside a vocabulary entry or a variation describes how an
+ * expression sounds. On the `en` side that description is being read by a
+ * Spanish speaker, so it belongs in Spanish, exactly like the `region` note
+ * next to it.
+ *
+ * It did not used to be. app.js prints these raw inside a tag rather than
+ * routing them through t(), and the values were authored in English on both
+ * sides, so a Spanish reader got "polite neutral" and "professional hedged"
+ * in a page that was otherwise entirely in their language.
+ *
+ * The check is a word list rather than a snapshot of the 45 current values,
+ * so that adding a new tone label is not blocked, only doing it in English.
+ * Cognates that are spelled the same in both languages -- casual, formal,
+ * informal, natural, neutral -- are deliberately absent: they are correct
+ * Spanish and flagging them would make the guard cry wolf.
+ */
+const ENGLISH_ONLY_REGISTER_WORDS = [
+  "academic", "bargaining", "clear", "clinical", "concrete", "conversational",
+  "dated", "direct", "efficient", "enthusiastic", "friendly", "hedged",
+  "indirect", "market", "polite", "practical", "professional", "sales",
+  "seminar", "service", "soft", "softened", "specific", "warm"
+];
+
+test("the tone labels on the English side are in Spanish", () => {
+  const pattern = new RegExp(`\\b(${ENGLISH_ONLY_REGISTER_WORDS.join("|")})\\b`, "i");
+  const english = [];
+  let checked = 0;
+  for (const lesson of lessons) {
+    const side = lesson.en;
+    if (!side) continue;
+    const rows = [
+      ...(side.vocabulary || []).map((word) => ["vocabulary", word.term, word.register]),
+      ...(side.variations || []).map((row) => ["variations", row.form, row.register])
+    ];
+    for (const [slot, subject, register] of rows) {
+      if (!register) continue;
+      checked += 1;
+      const hit = register.match(pattern);
+      if (hit) english.push(`${lesson.id} ${slot} "${subject}": register "${register}" is English ("${hit[1]}")`);
+    }
+  }
+  assert.ok(checked > 90, `only ${checked} tone labels were checked, so this guard is not seeing the data`);
+  assert.deepStrictEqual([...english], [],
+    "a Spanish reader should not be told an English expression is 'polite neutral' in English");
+});
+
+/*
+ * The converse, so the guard above cannot be satisfied by translating the
+ * `es` side too. Those labels are read by an English speaker learning Spanish,
+ * so English is what they should be in.
+ */
+test("the tone labels on the Spanish side stay in English", () => {
+  const spanish = [];
+  for (const lesson of lessons) {
+    const side = lesson.es;
+    if (!side) continue;
+    const all = [...(side.vocabulary || []), ...(side.variations || [])];
+    for (const row of all) {
+      if (!row.register) continue;
+      if (/\b(neutro|cortés|amistoso|profesional|académico|clínico|cálido|práctico|matizado|suavizado|regateo)\b/i.test(row.register)) {
+        spanish.push(`${lesson.id}: register "${row.register}" is Spanish`);
+      }
+    }
+  }
+  assert.deepStrictEqual([...spanish], [],
+    "the Spanish side is read by an English speaker; its tone labels belong in English");
+});
