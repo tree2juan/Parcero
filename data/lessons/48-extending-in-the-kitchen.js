@@ -141,9 +141,9 @@ lessons.push(
             "The water service was cut off or went out, the same service-interruption pattern as the power.",
           literal: "the water cut itself",
           useWhen:
-            "Water stops running at home or in a neighbourhood: “se cortó el agua desde temprano”.",
+            "Water stops running at home or in a neighborhood: “se cortó el agua desde temprano”.",
           avoidWhen:
-            "You mean you turned off a tap yourself; that is cerrar la llave or cortar el agua deliberately.",
+            "You mean you turned off a faucet yourself; that is cerrar la llave or cortar el agua deliberately.",
           register: "neutral",
           region: "Universal Spanish; fully natural in Colombia.",
           related: ["servicio de agua", "llave", "tanque", "racionamiento"],
@@ -225,7 +225,7 @@ lessons.push(
         {
           label: "Coconut milk can split too",
           body:
-            "Cortar also names what happens when milk, cream or coconut milk separates. In cooking, that matters because the sauce may look grainy or broken even if the flavour survives. English says curdle or split; Spanish says “se cortó”. It is the same image as a cut service or a cut call: something that should have stayed whole has separated."
+            "Cortar also names what happens when milk, cream or coconut milk separates. In cooking, that matters because the sauce may look grainy or broken even if the flavor survives. English says curdle or split; Spanish says “se cortó”. It is the same image as a cut service or a cut call: something that should have stayed whole has separated."
         }
       ],
       pitfalls: [
@@ -327,14 +327,14 @@ lessons.push(
       ]
     },
     en: {
-      title: "Cortar y perder la señal en una cocina de Vancouver",
+      title: "Cortar y perder la señal en una cocina de Austin",
       situation:
-        "En Vancouver, Alejandra cocina pescado con Denise, una vecina que la corrige con paciencia. Usted aprende a decir “cut it into strips”, pero también que la luz “goes out”, la llamada “drops” o “cuts out”, y la leche “curdles” o “splits”: no todo lo que el español corta se traduce con cut.",
+        "En Austin, Alejandra cocina pescado con Denise, una vecina que la corrige con paciencia. Usted aprende a decir “cut it into strips”, pero también que la luz “goes out”, la llamada “drops” o “cuts out”, y la leche “curdles” o “splits”: no todo lo que el español corta se traduce con cut.",
       setting: {
-        who: "Denise es una vecina canadiense que cocina con calma y explica sin volver la conversación una receta. Alejandra ayuda con el pescado y se tropieza con los falsos amigos de cortar.",
+        who: "Denise es una vecina estadounidense que cocina con calma y explica sin volver la conversación una receta. Alejandra ayuda con el pescado y se tropieza con los falsos amigos de cortar.",
         what: "Una cocina compartida: cortar pescado, hablar cuando se va la luz, explicar una llamada caída y salvar una salsa que amenaza con cortarse.",
         when: "Un sábado al mediodía, mientras esperan a otros amigos para almorzar.",
-        where: "Vancouver, Canadá, en la cocina de un apartamento cerca del puerto.",
+        where: "Austin, Canadá, en la cocina de un apartamento cerca del puerto.",
         why: "Porque en inglés “cut” sirve para el cuchillo, pero no cubre automáticamente la luz, el agua, las llamadas ni la leche. Usted necesita varias frases, no una traducción única."
       },
       address: {
@@ -655,7 +655,7 @@ lessons.push(
         who: "Clara teaches practical cooking workshops and has no patience for students who rush texture. Alex can follow a conversation, but he still needs precise commands with attached pronouns.",
         what: "Mixing masa, seasoning and filling at the right moment, with negative commands and warnings about what not to combine yet.",
         when: "A Saturday morning workshop, after the ingredients are laid out but before anyone starts wrapping the tamales.",
-        where: "Ibagué, Tolima, in a neighbourhood cooking workshop.",
+        where: "Ibagué, Tolima, in a neighborhood cooking workshop.",
         why: "Because mezclar is plain but useful grammar: commands, pronoun placement, negative commands and the difference between mixing ingredients and merely stirring something around."
       },
       address: {
@@ -722,7 +722,7 @@ lessons.push(
             "To mix or combine ingredients so they become one mixture. It is plain, useful and precise.",
           literal: "to mix",
           useWhen:
-            "Combining ingredients, colours, materials or ideas: “mezcle la masa”, “no mezcle esos productos”.",
+            "Combining ingredients, colors, materials or ideas: “mezcle la masa”, “no mezcle esos productos”.",
           avoidWhen:
             "You only mean stirring a pot to keep it from sticking; revolver may be more exact.",
           register: "neutral",
@@ -857,7 +857,7 @@ lessons.push(
         {
           label: "Mixing can be literal or social",
           body:
-            "Mezclar also leaves the kitchen easily: people mix colours, groups, drinks, topics and ideas. But the core image stays stable: separate things become one combined thing. That makes it a good verb for precision. If the things merely move around, revolver may be enough; if they become a mixture, mezclar is the stronger choice."
+            "Mezclar also leaves the kitchen easily: people mix colors, groups, drinks, topics and ideas. But the core image stays stable: separate things become one combined thing. That makes it a good verb for precision. If the things merely move around, revolver may be enough; if they become a mixture, mezclar is the stronger choice."
         }
       ],
       pitfalls: [
@@ -1317,9 +1317,9 @@ lessons.push(
         {
           speaker: "Mariana",
           target: "Espérate; si le echas mucho limón, se pierde el sabor del coco.",
-          translation: "Wait; if you add too much lime, the coconut flavour gets lost.",
+          translation: "Wait; if you add too much lime, the coconut flavor gets lost.",
           pronunciation: "es-PE-ra-te; si le E-chas MU-cho lee-MON, se PYER-de el sa-BOR del KO-ko",
-          literal: "Wait-yourself; if to-it you-throw much lime, itself loses the flavour of-the coconut.",
+          literal: "Wait-yourself; if to-it you-throw much lime, itself loses the flavor of-the coconut.",
           why: "Echar measures dosage. Too much of a good ingredient can ruin balance, so the verb belongs to judgement, not just movement."
         },
         {
@@ -1755,7 +1755,7 @@ lessons.push(
             "Usted sólo quiere decir que algo tomó físicamente un objeto; aquí es figurado.",
           register: "neutral",
           region: "Inglés universal.",
-          related: ["overpower", "too strong", "balance", "flavour"],
+          related: ["overpower", "too strong", "balance", "flavor"],
           example: {
             target: "The lime will take over.",
             translation: "El limón va a dominar todo."

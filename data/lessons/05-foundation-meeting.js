@@ -12,7 +12,7 @@
 // Every lesson is the same situation told twice. The `es` direction follows
 // Alex, an English speaker learning Colombian Spanish in Colombia. The `en`
 // direction follows Alejandra, a Colombian Spanish speaker learning English
-// in Canada. The two directions mirror each other beat for beat: same number
+// in Texas. The two directions mirror each other beat for beat: same number
 // of turns, same speaker alternation, same counts in every list.
 
 lessons.push(
@@ -32,7 +32,7 @@ lessons.push(
         who: "Alex, an English speaker new to Bogotá, meets Laura, a university friend of Santi, the person who brought Alex along tonight.",
         what: "A first introduction at a party: names, a handshake or a single cheek kiss, and the small ritual of explaining how everyone knows each other.",
         when: "Friday night around nine, when the rooftop is filling up but the music is still low enough to actually talk.",
-        where: "A rooftop terrace in Chapinero, a lively, young part of central Bogotá full of bars and flats.",
+        where: "A rooftop terrace in Chapinero, a lively, young part of central Bogotá full of bars and apartments.",
         why: "Alex wants to stop being Santi's tag-along and become someone Laura actually knows, which is how a social circle slowly opens up."
       },
       address: {
@@ -207,7 +207,7 @@ lessons.push(
         },
         {
           label: "Knowing a place is a badge of belonging",
-          body: "The question “¿ya conoces…?” — have you been to, have you experienced it — comes up constantly, about neighbourhoods, dishes, and towns. Saying you already conoces Monserrate or the coffee region signals that you are settling in, not just passing through. Colombians take real pride in their regions and love walking a newcomer through everything they still have to conocer, so treat the question as a warm invitation rather than a quiz you might fail."
+          body: "The question “¿ya conoces…?” — have you been to, have you experienced it — comes up constantly, about neighborhoods, dishes, and towns. Saying you already conoces Monserrate or the coffee region signals that you are settling in, not just passing through. Colombians take real pride in their regions and love walking a newcomer through everything they still have to conocer, so treat the question as a warm invitation rather than a quiz you might fail."
         }
       ],
       pitfalls: [
@@ -316,12 +316,12 @@ lessons.push(
     },
     en: {
       title: "Conocer a la amiga de un amigo",
-      situation: "Es viernes por la noche en una terraza en Toronto. Alejandra llegó con Sam, un amigo del trabajo, y él le presenta a Lauren, una compañera de la universidad. Es la primera vez que Alejandra y Lauren se ven, así que hay que saludar en inglés, decir “nice to meet you” y contar de dónde se conocen. En inglés no hay tú ni usted, así que todo el peso del registro lo llevan las palabras.",
+      situation: "Es viernes por la noche en una terraza en Houston. Alejandra llegó con Sam, un amigo del trabajo, y él le presenta a Lauren, una compañera de la universidad. Es la primera vez que Alejandra y Lauren se ven, así que hay que saludar en inglés, decir “nice to meet you” y contar de dónde se conocen. En inglés no hay tú ni usted, así que todo el peso del registro lo llevan las palabras.",
       setting: {
-        who: "Alejandra, que acaba de llegar a Toronto, conoce a Lauren, una amiga de la universidad de Sam, quien la llevó a la fiesta.",
+        who: "Alejandra, que acaba de llegar a Houston, conoce a Lauren, una amiga de la universidad de Sam, quien la llevó a la fiesta.",
         what: "Una primera presentación: nombres, un apretón de manos y el pequeño ritual de explicar cómo se conoce cada quien.",
         when: "Un viernes por la noche, hacia las nueve, cuando la terraza se va llenando y todavía se puede conversar tranquilo.",
-        where: "Una terraza en un edificio del centro de Toronto, en una zona joven llena de bares y apartamentos.",
+        where: "Una terraza en un edificio del centro de Houston, en una zona joven llena de bares y apartamentos.",
         why: "Alejandra quiere dejar de ser la acompañante de Sam y volverse alguien que Lauren de verdad conoce, que es como se abre un círculo social."
       },
       address: {
@@ -484,7 +484,7 @@ lessons.push(
       culture: [
         {
           label: "A ti también te presentan, no te presentas solo",
-          body: "En una reunión en Canadá también es común que quien te llevó te vaya presentando: “this is Alejandra,” cara por cara. Aun así, presentarte tú mismo con un “hi, I'm Alejandra” se ve mucho más normal que en Colombia y no resulta atrevido. Si nadie te presenta, acércate, di tu nombre y da la mano: en ambientes canadienses eso se lee como seguridad y no como falta de modales."
+          body: "En una reunión en Canadá también es común que quien te llevó te vaya presentando: “this is Alejandra,” cara por cara. Aun así, presentarte tú mismo con un “hi, I'm Alejandra” se ve mucho más normal que en Colombia y no resulta atrevido. Si nadie te presenta, acércate, di tu nombre y da la mano: en ambientes estadounidenses eso se lee como seguridad y no como falta de modales."
         },
         {
           label: "El tamaño de nice to meet you",
@@ -496,7 +496,7 @@ lessons.push(
         },
         {
           label: "Conocer un lugar también se presume",
-          body: "La pregunta “have you been to…?” aparece todo el tiempo: barrios, restaurantes, pueblos cercanos. Responder que ya conoces el mercado de St. Lawrence o las cataratas del Niágara muestra que te estás integrando. A los canadienses les gusta llevar a un recién llegado a conocer su ciudad, así que conviene tomar la pregunta como una invitación y no como un examen; muchas veces termina en un plan concreto para el fin de semana."
+          body: "La pregunta “have you been to…?” aparece todo el tiempo: barrios, restaurantes, pueblos cercanos. Responder que ya conoces el mercado de St. Lawrence o el Álamo muestra que te estás integrando. A los estadounidenses les gusta llevar a un recién llegado a conocer su ciudad, así que conviene tomar la pregunta como una invitación y no como un examen; muchas veces termina en un plan concreto para el fin de semana."
         }
       ],
       pitfalls: [
@@ -620,7 +620,7 @@ lessons.push(
         who: "Alex, learning Colombian Spanish, is out with Manu, an easy-going paisa friend from Medellín who insists on paying.",
         what: "A quick coffee run: ordering a tinto and a snack, turning down and then accepting a treat, and the warm tussle over who pays.",
         when: "Mid-morning, the classic paisa coffee break, when a panadería is busy with people grabbing a tinto standing up.",
-        where: "A neighbourhood panadería in Medellín, part bakery, part café, part meeting point for the whole block.",
+        where: "A neighborhood panadería in Medellín, part bakery, part café, part meeting point for the whole block.",
         why: "Alex wants to order naturally in a paisa setting and understand why Manu keeps saying te quiero to a friend without it being romantic."
       },
       address: {
@@ -782,8 +782,8 @@ lessons.push(
       note: "The one thing to carry away: “querer” covers both wanting and a warm kind of loving, so “te quiero” to a friend is affection, not a confession — save “te amo” for romance. To order, a plain “quiero…” plus por favor is perfectly polite, and in Medellín expect the voseo “querés” and a friendly fight over who gets to pay.",
       culture: [
         {
-          label: "The panadería is the neighbourhood living room",
-          body: "In Colombia a panadería is far more than a bakery. People drop in all day for a tinto and a bite, standing at the counter to chat with neighbours and the owner, who often knows them by name. Deals get made, gossip gets traded, kids get sent to buy bread. Suggesting a friend meet you at the corner panadería is as natural as suggesting a coffee, and it quietly anchors the whole block's social life."
+          label: "The panadería is the neighborhood living room",
+          body: "In Colombia a panadería is far more than a bakery. People drop in all day for a tinto and a bite, standing at the counter to chat with neighbors and the owner, who often knows them by name. Deals get made, gossip gets traded, kids get sent to buy bread. Suggesting a friend meet you at the corner panadería is as natural as suggesting a coffee, and it quietly anchors the whole block's social life."
         },
         {
           label: "Te quiero is not a confession",
@@ -904,12 +904,12 @@ lessons.push(
     },
     en: {
       title: "Pedir y ofrecer en la cafetería",
-      situation: "Es media mañana en una cafetería de Toronto. Alejandra entra con Manny, un amigo, a tomarse un café. Manny le pregunta qué quiere, insiste en invitar y ella aprende a pedir y a ofrecer en inglés. Como el inglés no tiene tú ni usted, la cercanía se nota en el tono y en frases como it's on me. Es una charla corta y cálida sobre querer, pedir y el cariño entre amigos.",
+      situation: "Es media mañana en una cafetería de Houston. Alejandra entra con Manny, un amigo, a tomarse un café. Manny le pregunta qué quiere, insiste en invitar y ella aprende a pedir y a ofrecer en inglés. Como el inglés no tiene tú ni usted, la cercanía se nota en el tono y en frases como it's on me. Es una charla corta y cálida sobre querer, pedir y el cariño entre amigos.",
       setting: {
         who: "Alejandra, que aprende inglés, sale con Manny, un amigo relajado que insiste en pagar el café.",
         what: "Una salida rápida por café: pedir una bebida y un pan, rechazar y luego aceptar un antojo, y el ir y venir sobre quién paga.",
         when: "Media mañana, la clásica pausa del café, cuando la cafetería está llena de gente pidiendo para llevar.",
-        where: "Una cafetería de barrio en Toronto, mitad panadería, mitad café, punto de encuentro de la cuadra.",
+        where: "Una cafetería de barrio en Houston, mitad panadería, mitad café, punto de encuentro de la cuadra.",
         why: "Alejandra quiere pedir con naturalidad en inglés y entender cómo se ofrece y se acepta un antojo sin sonar brusca."
       },
       address: {
@@ -1208,7 +1208,7 @@ lessons.push(
         who: "Alex, running late, calls Doña Marta, the mother of a friend, Andrés, who has cooked a big Sunday sancocho for everyone.",
         what: "A phone call to warn the host you're late, promise you're close, and blame the delay on the city bus.",
         when: "Sunday around noon, the sacred hour of family lunch, when the whole household is waiting to serve.",
-        where: "On the phone between a MÍO station and Doña Marta's flat in Cali, Colombia's warm salsa capital.",
+        where: "On the phone between a MÍO station and Doña Marta's apartment in Cali, Colombia's warm salsa capital.",
         why: "Alex wants to be late politely — reassuring the host, sounding respectful in usted, and not letting the sancocho go cold."
       },
       address: {
@@ -1419,7 +1419,7 @@ lessons.push(
           form: "Voy en camino.",
           register: "neutral",
           region: "Universal",
-          whenToUse: "Simple and clear: I'm on my way, already travelling."
+          whenToUse: "Simple and clear: I'm on my way, already traveling."
         },
         {
           form: "Estoy a cinco minutos.",
@@ -1492,12 +1492,12 @@ lessons.push(
     },
     en: {
       title: "Llegar tarde a la cena",
-      situation: "Es sábado por la noche en Toronto. Alejandra va tarde a la cena de Karen, una amiga, y la llama para avisar. El metro se retrasó y ella no sabe bien cómo decir en inglés que ya casi llega sin sonar grosera. Como el inglés no tiene usted, el respeto y la cercanía dependen del tono y de las palabras. Es una charla sobre llegar, disculparse por la tardanza y prometer que falta poco.",
+      situation: "Es sábado por la noche en Houston. Alejandra va tarde a la cena de Karen, una amiga, y la llama para avisar. El metro se retrasó y ella no sabe bien cómo decir en inglés que ya casi llega sin sonar grosera. Como el inglés no tiene usted, el respeto y la cercanía dependen del tono y de las palabras. Es una charla sobre llegar, disculparse por la tardanza y prometer que falta poco.",
       setting: {
         who: "Alejandra, que va tarde, llama a Karen, una amiga que la invitó a cenar en su casa con más gente.",
         what: "Una llamada para avisar que llega tarde, prometer que ya casi está y echarle la culpa al metro.",
         when: "Un sábado por la noche, cuando la cena estaba pactada para las siete y ya son y cuarto.",
-        where: "Por teléfono, entre una estación del metro y el apartamento de Karen, en Toronto.",
+        where: "Por teléfono, entre una estación del metro y el apartamento de Karen, en Houston.",
         why: "Alejandra quiere avisar con educación que va tarde, sin sonar irresponsable ni dejar a Karen esperando a ciegas."
       },
       address: {
@@ -1659,19 +1659,19 @@ lessons.push(
       note: "Lo clave: en inglés cotidiano se dice más “get here/there” que “arrive,” y para ir con retraso se usa el verbo be (I'm late, running late), no ir como en español. Después de “when” la llegada futura va en presente (when you get here), sin el subjuntivo del “cuando llegues.” Y a tiempo se dice “on time,” no “in time,” que en inglés significa algo distinto.",
       culture: [
         {
-          label: "La hora canadiense es más estricta",
-          body: "En Canadá la puntualidad pesa más que en Colombia. Si te invitan a cenar a las siete, se espera que llegues muy cerca de esa hora, quizá cinco o diez minutos después, no media hora. Llegar tarde sin avisar puede leerse como descuido o falta de respeto. Por eso un mensaje de “running late, so sorry” es casi obligatorio: avisar reconoce que el tiempo del otro importa, algo que en ambientes canadienses se valora mucho."
+          label: "La hora estadounidense es más estricta",
+          body: "En Canadá la puntualidad pesa más que en Colombia. Si te invitan a cenar a las siete, se espera que llegues muy cerca de esa hora, quizá cinco o diez minutos después, no media hora. Llegar tarde sin avisar puede leerse como descuido o falta de respeto. Por eso un mensaje de “running late, so sorry” es casi obligatorio: avisar reconoce que el tiempo del otro importa, algo que en ambientes estadounidenses se valora mucho."
         },
         {
           label: "Avisar siempre que llegues tarde",
           body: "En Colombia la hora es elástica y un retraso corto se perdona sin más. En Canadá, en cambio, lo cortés es avisar: un texto rápido diciendo que el metro se retrasó y que ya casi llegas. No hace falta un discurso; basta con “I'm running about ten minutes late.” Ese aviso corto mantiene la confianza y evita que el anfitrión se quede adivinando. Callar y aparecer tarde sin explicación es lo que de verdad molesta."
         },
         {
-          label: "El metro y el TTC de Toronto",
-          body: "Moverse por Toronto suele implicar el TTC: metro, tranvías y buses. En horas pico o con mal clima puede haber retrasos, y “the subway was delayed” es una excusa tan común como el MÍO en Cali. Conocer las líneas, dónde hacer transbordo y cuánto tarda cada tramo es parte del día a día. Un retraso del transporte se entiende, pero se espera igual que avises, porque la app muestra el retraso casi en tiempo real."
+          label: "El metro y el METRO de Houston",
+          body: "Moverse por Houston suele implicar el METRO: metro, tranvías y buses. En horas pico o con mal clima puede haber retrasos, y “the subway was delayed” es una excusa tan común como el MÍO en Cali. Conocer las líneas, dónde hacer transbordo y cuánto tarda cada tramo es parte del día a día. Un retraso del transporte se entiende, pero se espera igual que avises, porque la app muestra el retraso casi en tiempo real."
         },
         {
-          label: "La cena en casa canadiense",
+          label: "La cena en casa estadounidense",
           body: "Que te inviten a cenar a una casa en Canadá es un gesto de cercanía, y conviene cuidarlo. Se agradece llegar puntual, llevar algo pequeño — vino, postre, algo para compartir — y avisar si te retrasas. A diferencia del largo almuerzo dominical colombiano, la cena puede tener una hora de inicio bastante marcada. Cumplir esos detalles dice que valoras la invitación tanto como quien te abrió la puerta de su casa."
         }
       ],

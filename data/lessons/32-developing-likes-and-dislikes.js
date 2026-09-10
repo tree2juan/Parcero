@@ -44,7 +44,7 @@ lessons.push(
         who: "Natalia uses vos with Jordan, and Jordan answers with the same relaxed friendship.",
         why: "Voseo is heard in Nariño and much of southwestern Colombia, and the object pronoun with gustar stays te: “¿a vos te gusta?”. That lets the lesson show local warmth without inventing special slang.",
         ifYouSwitch:
-          "Tú would be understood and would not damage the friendship, but it would flatten the local flavour. Usted would make Natalia sound suddenly distant for a teasing carnival conversation."
+          "Tú would be understood and would not damage the friendship, but it would flatten the local flavor. Usted would make Natalia sound suddenly distant for a teasing carnival conversation."
       },
       dialogue: [
         {
@@ -154,7 +154,7 @@ lessons.push(
             "To love or really like. It follows the same backwards grammar as gustar and is extremely common in Colombian enthusiasm.",
           literal: "to enchant",
           useWhen:
-            "You want more warmth than “me gusta”: food, places, songs, plans, colours, small discoveries.",
+            "You want more warmth than “me gusta”: food, places, songs, plans, colors, small discoveries.",
           avoidWhen:
             "The feeling is mild or you need to sound restrained. “Me encanta” is genuine enthusiasm, not a neutral rating.",
           register: "friendly informal",
@@ -223,7 +223,7 @@ lessons.push(
         {
           label: "Enthusiasm often uses encantar",
           body:
-            "Colombians do say “me gusta mucho,” but “me encanta” is everywhere in warm everyday speech: a song, a place, a dish, a colour, a plan. It sounds natural when the feeling is genuine and a bit bright. Learners who only use gustar can sound accurate but emotionally flat."
+            "Colombians do say “me gusta mucho,” but “me encanta” is everywhere in warm everyday speech: a song, a place, a dish, a color, a plan. It sounds natural when the feeling is genuine and a bit bright. Learners who only use gustar can sound accurate but emotionally flat."
         },
         {
           label: "People are delicate with gustar",
@@ -238,7 +238,7 @@ lessons.push(
         {
           label: "Voseo does not change the object pronoun",
           body:
-            "A useful surprise with “a vos te gusta” is that the object pronoun is still te. The address form changes the social flavour, but the gustar pattern remains stable: a mí me, a vos te, a usted le."
+            "A useful surprise with “a vos te gusta” is that the object pronoun is still te. The address form changes the social flavor, but the gustar pattern remains stable: a mí me, a vos te, a usted le."
         }
       ],
       pitfalls: [
@@ -320,7 +320,7 @@ lessons.push(
         {
           prompt: "Natalia asks “¿Él te gusta, o sólo te cae bien?” What distinction is she making?",
           choices: [
-            "Whether Jordan knows Daniel's full name or only recognises his face.",
+            "Whether Jordan knows Daniel's full name or only recognizes his face.",
             "Whether Jordan likes Daniel romantically or just likes him as a person.",
             "Whether Daniel likes the carnival floats or only likes the music."
           ],
@@ -352,12 +352,12 @@ lessons.push(
     en: {
       title: "Lo que le gusta en un festival de invierno",
       situation:
-        "Usted está en Toronto con Natalie en un festival de invierno. Hay esculturas de hielo, música, chocolate caliente y una pregunta con doble sentido: si sólo le gustan las esculturas o si también le gusta alguien del grupo.",
+        "Usted está en Houston con Natalie en un festival de invierno. Hay esculturas de hielo, música, chocolate caliente y una pregunta con doble sentido: si sólo le gustan las esculturas o si también le gusta alguien del grupo.",
       setting: {
-        who: "Natalie vive en Toronto y sabe moverse entre el frío sin volverlo una hazaña. Juliana está de visita y ya puede conversar más allá de lo básico.",
+        who: "Natalie vive en Houston y sabe moverse entre el frío sin volverlo una hazaña. Juliana está de visita y ya puede conversar más allá de lo básico.",
         what: "Una conversación sobre gustos: una cosa singular, varias cosas plurales, un “love” enfático y la diferencia delicada entre que alguien le caiga bien y que le guste románticamente.",
         when: "Una tarde fría de sábado, cuando el festival ya está lleno y la luz empieza a ponerse azul.",
-        where: "Toronto, Canadá, en un festival de invierno cerca del lago.",
+        where: "Houston, Canadá, en un festival de invierno cerca del lago.",
         why: "Porque el inglés no tiene el verbo “gustar” al revés: la persona que siente el gusto es el sujeto. Eso simplifica una parte y crea otras trampas, especialmente con personas."
       },
       address: {
@@ -1017,7 +1017,7 @@ lessons.push(
         who: "Camille y Andrés usan el mismo “you” de siempre; el registro se marca con “I'd prefer,” “if that's okay,” y el tono.",
         why: "El inglés no tiene tú ni usted. Para sonar considerado, Andrés no cambia de pronombre; cambia de estructura y suaviza la preferencia.",
         ifYouSwitch:
-          "No hay cambio de pronombre disponible. Decir “your honour” o volverse ceremonial sólo haría rara una decisión sencilla sobre sillas."
+          "No hay cambio de pronombre disponible. Decir “your honor” o volverse ceremonial sólo haría rara una decisión sencilla sobre sillas."
       },
       dialogue: [
         {
@@ -1327,7 +1327,7 @@ lessons.push(
     id: "softening-hate-at-the-quibdo-sound-check",
     level: "Developing · Likes and dislikes",
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
-    domain: "home-and-neighbourhood",
+    domain: "home-and-neighborhood",
     register: "courteous",
     pathways: ["foundation", "year-12"],
     verb: "odiar",
@@ -1337,9 +1337,9 @@ lessons.push(
       situation:
         "Usted acompaña a Marcela a un ensayo comunitario en Quibdó. El sonido está muy alto, un vecino cae pesado y alguien pregunta si usted odia la música. Necesita expresar rechazo sin sonar cruel ni exagerado.",
       setting: {
-        who: "Marcela helps organise a community rehearsal and knows everyone enough to be careful with names. Chris is a guest who dislikes the volume but does not want to insult the room.",
+        who: "Marcela helps organize a community rehearsal and knows everyone enough to be careful with names. Chris is a guest who dislikes the volume but does not want to insult the room.",
         what: "A conversation about strong dislike: when odiar is honest, when it is too heavy, and which softer Colombian phrases keep the peace.",
-        when: "Late afternoon, during a sound check before a small neighbourhood performance.",
+        when: "Late afternoon, during a sound check before a small neighborhood performance.",
         where: "Quibdó, Chocó, in a community hall with rain starting outside and speakers being tested inside.",
         why: "Because odiar exists, but it is strong. Colombian Spanish often reaches first for softer forms: no me gusta nada, no me llama la atención, no soy muy de, and me cae mal for people."
       },
@@ -1386,9 +1386,9 @@ lessons.push(
         {
           speaker: "Chris",
           target: "El vecino de la puerta no me llama la atención, pero no lo odio.",
-          translation: "The neighbour by the door doesn't really appeal to me, but I don't hate him.",
+          translation: "The neighbor by the door doesn't really appeal to me, but I don't hate him.",
           pronunciation: "el beh-SEE-noh deh lah PWER-tah no meh YAH-ma lah ah-ten-SYON, PEH-roh no lo OH-dyoh",
-          literal: "The neighbour of the door does not call my attention, but I don't hate him.",
+          literal: "The neighbor of the door does not call my attention, but I don't hate him.",
           why: "“No me llama la atención” is useful when the reaction is mild or uninterested. It lowers the temperature before anyone gets hurt."
         },
         {
@@ -1424,7 +1424,7 @@ lessons.push(
             "I don't like it at all. Strong dislike without the full force of hate.",
           literal: "it does not please me at all",
           useWhen:
-            "You need to be clear that something bothers you: a volume, smell, habit, plan or flavour.",
+            "You need to be clear that something bothers you: a volume, smell, habit, plan or flavor.",
           avoidWhen:
             "You are talking about a person and want to stay diplomatic. Then “me cae mal” or a more specific reason may be better.",
           register: "neutral",
@@ -1458,7 +1458,7 @@ lessons.push(
             "I dislike them as a person, or they rub me the wrong way. It is the usual alternative to hating a person.",
           literal: "they fall badly to me",
           useWhen:
-            "Someone's manner, behaviour or presence bothers you, and you want a normal social phrase.",
+            "Someone's manner, behavior or presence bothers you, and you want a normal social phrase.",
           avoidWhen:
             "You only disagree with one action. “Me cae mal” judges the person more broadly.",
           register: "neutral",
@@ -1466,7 +1466,7 @@ lessons.push(
           related: ["me cae bien", "no lo soporto", "me molesta", "odiar"],
           example: {
             target: "Ese vecino me cae mal.",
-            translation: "That neighbour rubs me the wrong way."
+            translation: "That neighbor rubs me the wrong way."
           }
         },
         {
@@ -1492,7 +1492,7 @@ lessons.push(
             "I can't stand. Strong, but often more idiomatic than odiar for repeated irritations.",
           literal: "I do not support / bear",
           useWhen:
-            "A sound, habit, heat, smell or behaviour repeatedly gets under your skin.",
+            "A sound, habit, heat, smell or behavior repeatedly gets under your skin.",
           avoidWhen:
             "You need to stay very diplomatic. It is still a strong complaint.",
           register: "strong informal",
@@ -1706,7 +1706,7 @@ lessons.push(
         },
         {
           speaker: "Cristina",
-          target: "The neighbour by the door doesn't really appeal to me, but I don't hate him.",
+          target: "The neighbor by the door doesn't really appeal to me, but I don't hate him.",
           translation: "El vecino de la puerta no me llama la atención, pero no lo odio.",
           pronunciation: "da NEI-bor bai da dor DA-sent RI-li a-PIL tu mi, bot ai dount jeit jim",
           literal: "El vecino por la puerta no apela realmente a mí, pero no lo odio.",
@@ -1786,7 +1786,7 @@ lessons.push(
           region: "Inglés universal.",
           related: ["don't like him", "get on my nerves", "he bothers me", "hate him"],
           example: {
-            target: "That neighbour rubs me the wrong way.",
+            target: "That neighbor rubs me the wrong way.",
             translation: "Ese vecino me cae mal."
           }
         },
@@ -1874,16 +1874,16 @@ lessons.push(
           sayInstead: "I really don't like this volume."
         },
         {
-          mistake: "“I hate that neighbour” casually.",
+          mistake: "“I hate that neighbor” casually.",
           whyItFails:
             "Con una persona, hate pesa mucho. Si sólo le cae mal, el inglés tiene frases menos definitivas.",
-          sayInstead: "That neighbour rubs me the wrong way."
+          sayInstead: "That neighbor rubs me the wrong way."
         },
         {
           mistake: "“It doesn't appeal to me” for a serious boundary.",
           whyItFails:
             "La frase es suave y casi distante. Si el problema es serio o inseguro, baja demasiado la fuerza del mensaje.",
-          sayInstead: "I can't stand that behaviour."
+          sayInstead: "I can't stand that behavior."
         },
         {
           mistake: "“I hate this whole thing” when one detail bothers you.",
@@ -1912,7 +1912,7 @@ lessons.push(
           whenToUse: "Hacer que el rechazo suene a gusto personal."
         },
         {
-          form: "That neighbour rubs me the wrong way.",
+          form: "That neighbor rubs me the wrong way.",
           register: "friendly informal",
           region: "Inglés universal",
           whenToUse: "Decir que una persona le cae mal sin declarar odio."
@@ -1945,9 +1945,9 @@ lessons.push(
         {
           prompt: "¿Cuál frase sirve para alguien que le cae mal?",
           choices: [
-            "That neighbour doesn't appeal the volume.",
-            "That neighbour rubs me the wrong way.",
-            "That neighbour isn't really into me."
+            "That neighbor doesn't appeal the volume.",
+            "That neighbor rubs me the wrong way.",
+            "That neighbor isn't really into me."
           ],
           answer: 1,
           tests: "rub someone the wrong way para una persona"

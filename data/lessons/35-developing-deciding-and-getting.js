@@ -4,7 +4,7 @@
  * The three verbs here — decidir, conseguir and ofrecer — carry everyday
  * decisions, errands and offers. The Spanish scenes deliberately use Neiva,
  * Pasto and Leticia, three different places outside the overused Bogotá /
- * Medellín axis, with general Colombian usage rather than invented local colour.
+ * Medellín axis, with general Colombian usage rather than invented local color.
  */
 lessons.push(
   {
@@ -221,7 +221,7 @@ lessons.push(
         {
           label: "Decision versus choice",
           body:
-            "Spanish separates the verb decidir from the lighter verbs escoger and elegir. You can escoger a flavour or elegir a candidate, but decidir often carries the moment of committing yourself. “Decidirse por” sits between them: it says you chose, but also that you had to settle your mind. This is why “me decidí por el azul” sounds more personal than simply “escogí el azul”."
+            "Spanish separates the verb decidir from the lighter verbs escoger and elegir. You can escoger a flavor or elegir a candidate, but decidir often carries the moment of committing yourself. “Decidirse por” sits between them: it says you chose, but also that you had to settle your mind. This is why “me decidí por el azul” sounds more personal than simply “escogí el azul”."
         },
         {
           label: "Firmness without harshness",
@@ -653,10 +653,10 @@ lessons.push(
       situation:
         "Estás en Pasto y Alex se quedó sin cargador antes de subir a las Lajas. En una papelería pregunta “¿dónde consigo un cargador?”, que en Colombia suena más natural que traducir “where can I buy…?”. Aprende que buscar es mirar, encontrar es dar con algo y conseguir es lograr obtenerlo, a veces con ayuda o esfuerzo.",
       setting: {
-        who: "Maritza is a patient shopkeeper near Pasto's centre. Alex is a traveller with a dying phone and a practical problem to solve before leaving town.",
+        who: "Maritza is a patient shopkeeper near Pasto's center. Alex is a traveler with a dying phone and a practical problem to solve before leaving town.",
         what: "An errand to get hold of a phone charger, distinguishing conseguir from buscar and encontrar while noticing the irregular forms consigo and consigue.",
         when: "Late morning, with a bus leaving for the sanctuary in less than an hour.",
-        where: "Pasto, Nariño, in a small stationery and phone-accessory shop near the centre.",
+        where: "Pasto, Nariño, in a small stationery and phone-accessory shop near the center.",
         why: "Because in Colombia “¿dónde consigo…?” is how people actually ask where to buy or get hold of something. The verb means successful obtaining, not just looking and not merely spotting."
       },
       address: {
@@ -710,9 +710,9 @@ lessons.push(
         {
           speaker: "Maritza",
           target: "Si no hay, se lo conseguimos con el vecino en cinco minutos.",
-          translation: "If there aren't any, we'll get it for you from the neighbour in five minutes.",
+          translation: "If there aren't any, we'll get it for you from the neighbor in five minutes.",
           pronunciation: "si no ai, se lo kon-se-GEE-mos kon el ve-SEE-no en SEEN-ko mi-NU-tos",
-          literal: "If not there-is, to-you it we-get with the neighbour in five minutes.",
+          literal: "If not there-is, to-you it we-get with the neighbor in five minutes.",
           why: "“Se lo conseguimos” makes the favour explicit: we will obtain it for you. Conseguir often carries that hidden effort, contact or favour, which is why it is not just comprar."
         }
       ],
@@ -843,7 +843,7 @@ lessons.push(
         {
           label: "The Colombian “where can I get…?”",
           body:
-            "A Colombian looking for batteries, a SIM card, medicine or a bus ticket will often ask “¿dónde consigo…?”. It does not sound like a quest; it is just the everyday way to ask where something is available. “¿Dónde puedo comprar…?” is correct, but flatter and more literal. Conseguir leaves room for the reality of errands: the thing may be in a shop, with a neighbour, behind the counter or found through someone who knows someone."
+            "A Colombian looking for batteries, a SIM card, medicine or a bus ticket will often ask “¿dónde consigo…?”. It does not sound like a quest; it is just the everyday way to ask where something is available. “¿Dónde puedo comprar…?” is correct, but flatter and more literal. Conseguir leaves room for the reality of errands: the thing may be in a shop, with a neighbor, behind the counter or found through someone who knows someone."
         },
         {
           label: "Getting is not just finding",
@@ -853,12 +853,12 @@ lessons.push(
         {
           label: "Pasto without costume",
           body:
-            "Pasto gives the errand a real place — a traveller leaving for Las Lajas, a small shop, a practical problem — without needing invented regional slang. Nariño has its own speech and culture, but this lesson stays with general Colombian Spanish because “¿dónde consigo…?” belongs everywhere. The local detail is the situation: time pressure before a trip in the south of the country."
+            "Pasto gives the errand a real place — a traveler leaving for Las Lajas, a small shop, a practical problem — without needing invented regional slang. Nariño has its own speech and culture, but this lesson stays with general Colombian Spanish because “¿dónde consigo…?” belongs everywhere. The local detail is the situation: time pressure before a trip in the south of the country."
         },
         {
           label: "The hidden favour in conseguir",
           body:
-            "When a shopkeeper says “se lo consigo”, she is offering more than information. She may call a neighbour, check a drawer, send a helper or promise it for later. That small networked effort is common in Colombian errands, where a problem can be solved through someone else's contact. Conseguir carries that social texture better than comprar, which only names the purchase."
+            "When a shopkeeper says “se lo consigo”, she is offering more than information. She may call a neighbor, check a drawer, send a helper or promise it for later. That small networked effort is common in Colombian errands, where a problem can be solved through someone else's contact. Conseguir carries that social texture better than comprar, which only names the purchase."
         }
       ],
       pitfalls: [
@@ -1285,7 +1285,7 @@ lessons.push(
       situation:
         "Estás en Leticia, a punto de subir a una lancha por el Amazonas. Alex ve a una señora con bolsas y quiere ofrecerle el asiento sin sonar raro ni demasiado solemne. Aprende “le ofrezco mi puesto”, “se ofrece ayuda” y la forma clave “ofrezco”, con -zc- como en conocer.",
       setting: {
-        who: "Rosa is a Leticia local travelling with shopping bags. Alex is a visitor boarding the same river boat and trying to be helpful without overdoing the wording.",
+        who: "Rosa is a Leticia local traveling with shopping bags. Alex is a visitor boarding the same river boat and trying to be helpful without overdoing the wording.",
         what: "A polite offer of a seat and help with bags, teaching ofrecer, ofrezco and the difference between offering something and offering to do something.",
         when: "Late afternoon, as passengers board before the boat leaves.",
         where: "Leticia, Amazonas, at a small river dock on the Amazon.",

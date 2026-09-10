@@ -32,7 +32,7 @@
 /* What the lesson is about. Ordered roughly from private to public life. */
 const LESSON_DOMAINS = [
   "family-and-relationships",
-  "home-and-neighbourhood",
+  "home-and-neighborhood",
   "food-and-drink",
   "social-life",
   "everyday-life",
@@ -52,14 +52,14 @@ const LESSON_DOMAINS = [
  */
 const LESSON_REGISTERS = [
   "intimate",   /* family, a partner, childhood friends. */
-  "familiar",   /* parceros, neighbours you know, workmates your own age. */
+  "familiar",   /* parceros, neighbors you know, workmates your own age. */
   "neutral",    /* the default transaction: a shop, a stranger being helped. */
   "courteous",  /* usted and sumercé; service, elders, anyone owed respect. */
   "formal"      /* institutional, professional, written, or on the record. */
 ];
 
 /*
- * What practising the lesson exercises.
+ * What practicing the lesson exercises.
  *
  * An attempt to make this discriminating failed twice, and the measurement
  * says why: the lesson schema fixes the row counts, so across 208 lessons
@@ -84,17 +84,38 @@ const LESSON_SKILLS = [
   "context"   /* reading the situation: who is present, and what is expected. */
 ];
 
-/* The study routes the course advertises. Kept here so the README, the
-   curriculum and the lessons cannot drift apart on their spelling. */
+/*
+ * The study routes the course advertises. Kept here so the README, the
+ * curriculum and the lessons cannot drift apart on their spelling.
+ *
+ * Two shapes live in this one list, deliberately. The first three are the
+ * difficulty tiers every lesson passes through. The rest are the named tracks
+ * the landing page advertises, and those specialize: a workplace lesson is
+ * tagged `professional-healthcare` rather than a bare `professional`, because
+ * "professional" spans a ward, a helpdesk and an interview, and a learner
+ * filtering for one does not want the other two.
+ *
+ * `professional`, `travel` and `heritage` used to be declared here and were
+ * removed, because no lesson ever carried them. That is the rule the domain
+ * and register lists are already held to a few lines below, and pathways were
+ * escaping it only because the test that enforces these lists had never been
+ * extended to cover this field.
+ */
 const LESSON_PATHWAYS = [
+  /* Difficulty tiers. Every lesson carries exactly one of these. */
   "foundation",
   "independent",
   "extension",
+
+  /* Named tracks, with specializations where the broad name would mislead. */
   "year-12",
+  "year-12-local-mastery",
   "collegiate-academic",
-  "professional",
-  "travel",
-  "heritage"
+  "professional-customer-service",
+  "professional-office",
+  "professional-technical",
+  "professional-healthcare",
+  "professional-interviews"
 ];
 
 const TAXONOMY = {

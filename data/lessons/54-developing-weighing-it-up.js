@@ -33,7 +33,7 @@ lessons.push(
       situation:
         "Estás en Ibagué ayudando a una fundación con un afiche para una feria de barrio. Quieres pedir una reunión tranquila para revisar el diseño, pero alguien dice discutir y la sala oye pelea. Tienes que aprender la diferencia antes de sonar agresivo.",
       setting: {
-        who: "Carolina coordinates a small neighbourhood foundation, and Ben is the foreign volunteer helping with a poster. Both want the poster improved, not a fight.",
+        who: "Carolina coordinates a small neighborhood foundation, and Ben is the foreign volunteer helping with a poster. Both want the poster improved, not a fight.",
         what: "A design check that starts calmly, almost tips into a row over a phrase, and then gets pulled back into a normal review.",
         when: "Thursday afternoon, after the first printed draft has come back with two obvious problems.",
         where: "Ibagué, in a community foundation room with plastic chairs, a printer, and a poster taped to the wall.",
@@ -352,12 +352,12 @@ lessons.push(
     en: {
       title: "Hablar de un proyecto sin pelear",
       situation:
-        "Usted está en Toronto ayudando a una fundación colombiana con un afiche para una feria. Quiere pedir una reunión tranquila para revisar el diseño, y necesita decir discuss, argue, review y talk about sin llevar al inglés el miedo colombiano a discutir.",
+        "Usted está en Houston ayudando a una fundación colombiana con un afiche para una feria. Quiere pedir una reunión tranquila para revisar el diseño, y necesita decir discuss, argue, review y talk about sin llevar al inglés el miedo colombiano a discutir.",
       setting: {
         who: "Carolina coordina una fundación de barrio, y Ben es el voluntario que ayuda con un afiche. Los dos quieren mejorar el diseño, no pelear.",
         what: "Una revisión de diseño que empieza tranquila, casi se enreda por una frase, y vuelve a convertirse en una conversación normal.",
         when: "Jueves por la tarde, después de que el primer borrador impreso salió con dos problemas obvios.",
-        where: "Toronto, en una sala comunitaria de una organización colombiana con sillas plásticas y un afiche pegado en la pared.",
+        where: "Houston, en una sala comunitaria de una organización colombiana con sillas plásticas y un afiche pegado en la pared.",
         why: "Porque discuss en inglés normalmente es neutral. El falso amigo funciona al revés: no hay que oír argue cada vez que aparece discuss."
       },
       address: {
@@ -685,7 +685,7 @@ lessons.push(
       situation:
         "Estás en Florencia ayudando a una amiga a escoger entre dos planes de celular antes de un viaje por carretera. Hay datos, cobertura y precio sobre la mesa. Tienes que comparar con, usar comparado con y decir no hay comparación cuando una opción gana claramente.",
       setting: {
-        who: "Natalia is choosing a phone plan before travelling outside the city. Chris is helping her read the small print without pretending the cheapest plan is always best.",
+        who: "Natalia is choosing a phone plan before traveling outside the city. Chris is helping her read the small print without pretending the cheapest plan is always best.",
         what: "A comparison of two phone plans: monthly price, data, coverage on the road, and whether the contract is flexible.",
         when: "A weekday evening, before the trip, with both plans open on a laptop and a notebook beside them.",
         where: "Florencia, in a quiet kitchen where the family Wi-Fi is good enough to compare the plans carefully.",

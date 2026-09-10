@@ -59,7 +59,7 @@ lessons.push(
           translation: "Man, finally! You're up? You overslept, huh?",
           pronunciation: "ER-da, MA-no! ya te le-van-TAS-te? te ke-DAS-te dor-MEE-do, ah",
           literal: "Wow, brother! Already yourself you-got-up? Yourself you-stayed asleep, huh?",
-          why: "“Quedarse dormido” is the exact phrase for oversleeping or dropping off when you shouldn't — note it is pronominal (te quedaste), not plain dormir. “Erda” and “mano” and the tag “¿ah?” are pure costeño colour; “erda” is a soft coastal exclamation of surprise."
+          why: "“Quedarse dormido” is the exact phrase for oversleeping or dropping off when you shouldn't — note it is pronominal (te quedaste), not plain dormir. “Erda” and “mano” and the tag “¿ah?” are pure costeño color; “erda” is a soft coastal exclamation of surprise."
         },
         {
           speaker: "Alex",
@@ -181,7 +181,7 @@ lessons.push(
           avoidWhen:
             "You went to bed at a sane hour; amanecer claims you were up for the sunrise, awake or arriving.",
           register: "friendly informal",
-          region: "Colombia and much of Latin America; a badge-of-honour word, especially on the coast.",
+          region: "Colombia and much of Latin America; a badge-of-honor word, especially on the coast.",
           related: ["trasnochar", "la amanecida", "el amanecer", "la madrugada"],
           example: {
             target: "Amanecimos en la playa.",
@@ -239,7 +239,7 @@ lessons.push(
         {
           label: "A coast that naps",
           body:
-            "On the Caribbean coast the midday heat genuinely reorganises the day. Shops and offices in smaller towns can still close for a couple of hours after lunch, and a siesta — often a siestica, in the affectionate diminutive — is a sensible response to a sun that flattens you at two in the afternoon. This is a coastal and small-town rhythm more than a rule of the whole country; fast-paced Bogotá, cool and 2,600 metres up, keeps no such pause."
+            "On the Caribbean coast the midday heat genuinely reorganises the day. Shops and offices in smaller towns can still close for a couple of hours after lunch, and a siesta — often a siestica, in the affectionate diminutive — is a sensible response to a sun that flattens you at two in the afternoon. This is a coastal and small-town rhythm more than a rule of the whole country; fast-paced Bogotá, cool and 2,600 meters up, keeps no such pause."
         },
         {
           label: "How the coast talks",
@@ -358,12 +358,12 @@ lessons.push(
     en: {
       title: "Se me fue el bus por quedarme dormida",
       situation:
-        "Alejandra está recién llegada a Toronto y anoche se quedó hasta tarde con Josh, un compañero de la residencia. La idea era madrugar para tomar el bus a una caminata, pero se quedó dormida y no oyó la alarma. Josh la molesta mientras ella, medio dormida, cuenta en inglés cómo se le fue la mañana.",
+        "Alejandra está recién llegada a Houston y anoche se quedó hasta tarde con Josh, un compañero de la residencia. La idea era madrugar para tomar el bus a una caminata, pero se quedó dormida y no oyó la alarma. Josh la molesta mientras ella, medio dormida, cuenta en inglés cómo se le fue la mañana.",
       setting: {
-        who: "Josh es un canadiense relajado de la misma residencia. Alejandra llegó hace poco y quería aprovechar el fin de semana, sin contar con lo tarde que se acostó.",
+        who: "Josh es un estadounidense relajado de la misma residencia. Alejandra llegó hace poco y quería aprovechar el fin de semana, sin contar con lo tarde que se acostó.",
         what: "Una charla de resaca de sueño: Alejandra perdió el bus temprano por quedarse dormida, y entre los dos deciden qué hacer con el día.",
         when: "Media mañana, con el bus de las siete ya ido hace rato.",
-        where: "Toronto, en el pasillo de una residencia estudiantil.",
+        where: "Houston, en el pasillo de una residencia estudiantil.",
         why: "Porque quedarse dormido y perderse algo es de los pequeños desastres más universales que hay, y el inglés arma esa historia con verbos y frases muy distintos de los del español, que conviene tener listos."
       },
       address: {
@@ -716,9 +716,9 @@ lessons.push(
         {
           speaker: "Alex",
           target: "No, nunca he jugado tejo. Yo juego fútbol y también juego guitarra.",
-          translation: "No, I've never played tejo. I play football and I also play guitar.",
+          translation: "No, I've never played tejo. I play soccer and I also play guitar.",
           pronunciation: "no, NOON-ka e hoo-GA-do TE-ho. yo HWE-go FOOT-bol ee tam-BYEN HWE-go gee-TA-rra",
-          literal: "No, never I-have played tejo. I play football and also I play guitar.",
+          literal: "No, never I-have played tejo. I play soccer and also I play guitar.",
           why: "Alex makes the classic error on purpose: “juego guitarra”. An instrument is not something you jugar. Otherwise his jugar is right — “he jugado”, “juego fútbol” — and Colombian in dropping the “a” before the sport."
         },
         {
@@ -896,7 +896,7 @@ lessons.push(
         {
           label: "One English “play”, several Spanish verbs",
           body:
-            "English overloads “play”: you play football, play the piano, play a role, play a record. Spanish splits the load. Games and sport are “jugar”; instruments and music are “tocar”; a part in a film or play is “actuar” or “hacer un papel”; putting a song on is “poner”. Choosing the wrong one is instantly noticeable, and the jugar/tocar split is the first and most important line to keep straight as a learner."
+            "English overloads “play”: you play soccer, play the piano, play a role, play a record. Spanish splits the load. Games and sport are “jugar”; instruments and music are “tocar”; a part in a film or play is “actuar” or “hacer un papel”; putting a song on is “poner”. Choosing the wrong one is instantly noticeable, and the jugar/tocar split is the first and most important line to keep straight as a learner."
         }
       ],
       pitfalls: [
@@ -947,7 +947,7 @@ lessons.push(
         {
           form: "Me la juego por usted.",
           register: "friendly informal",
-          region: "Universal Spanish; usted flavour",
+          region: "Universal Spanish; usted flavor",
           whenToUse: "Saying you'll take a risk on someone."
         },
         {
@@ -978,7 +978,7 @@ lessons.push(
         {
           prompt: "In business, “esa empresa no juega limpio” means—",
           choices: [
-            "that the company keeps its offices and facilities remarkably clean, tidy and well organised for the staff.",
+            "that the company keeps its offices and facilities remarkably clean, tidy and well organized for the staff.",
             "that the company does a lot of sports and team games together as a way of building up everyone's morale.",
             "that the company does not play fair — jugar limpio/sucio works figuratively for honest or shady conduct."
           ],
@@ -1010,12 +1010,12 @@ lessons.push(
     en: {
       title: "Una noche de juego y una lección de “play”",
       situation:
-        "Cody, un amigo canadiense, invita a Alejandra a jugar dardos. Ella confunde “play” con “touch” al hablar de música y aprende que en inglés un instrumento se “plays”. Entre lanzamientos aprende “play fair”, “take a chance” y cómo apostar la ronda — y de paso le cuenta a Cody que en el tejo, en su país, el que pierde también paga las cervezas.",
+        "Cody, un amigo estadounidense, invita a Alejandra a jugar dardos. Ella confunde “play” con “touch” al hablar de música y aprende que en inglés un instrumento se “plays”. Entre lanzamientos aprende “play fair”, “take a chance” y cómo apostar la ronda — y de paso le cuenta a Cody que en el tejo, en su país, el que pierde también paga las cervezas.",
       setting: {
-        who: "Cody es un canadiense de la misma cuadra, fanático de los dardos. Alejandra llegó hace poco y quiere soltarse en inglés en un ambiente relajado.",
+        who: "Cody es un estadounidense de la misma cuadra, fanático de los dardos. Alejandra llegó hace poco y quiere soltarse en inglés en un ambiente relajado.",
         what: "Una primera partida de dardos: aprender el verbo “play”, el falso amigo “touch”, el juego limpio y cómo se apuesta la ronda.",
         when: "Un viernes por la noche, en un bar de barrio con música de fondo.",
-        where: "Toronto, en un pub tranquilo cerca de la residencia.",
+        where: "Houston, en un pub tranquilo cerca de la residencia.",
         why: "Porque “play” es una palabra enorme en inglés — cubre juegos, deportes e instrumentos — y el hispanohablante cae siempre en el mismo error, decir “touch” por tocar. Vale la pena desarmarlo jugando."
       },
       address: {
@@ -1343,11 +1343,11 @@ lessons.push(
       situation:
         "En Pereira, Alex necesita llegar a un pueblo cafetero y le pide ayuda a Mateo, un local. Aprende que en Colombia “colaborar” y “regalar” son verbos de cortesía para pedir un favor, y que “ayudar” quiere una “a” antes del infinitivo. Cuando una señora se acerca a pedir “una ayudita”, descubre que la misma palabra puede significar plata.",
       setting: {
-        who: "Mateo is a friendly pereirano who is happy to point a lost traveller the right way. Alex is trying to reach a coffee town and does not yet know the local politeness verbs.",
+        who: "Mateo is a friendly pereirano who is happy to point a lost traveler the right way. Alex is trying to reach a coffee town and does not yet know the local politeness verbs.",
         what: "Asking for directions, and learning that colaborar and regalar are courtesy verbs — plus how to tell a genuine request for help from a request for money.",
         when: "Late morning at a busy transport hub, buses coming and going.",
         where: "Pereira, in the Eje Cafetero (the coffee region), Risaralda.",
-        why: "Because asking for help is one of the first things a traveller must do, and Colombian Spanish wraps the request in specific verbs — colaborar, regalar, hacer el favor — whose warmth and whose occasional double meaning a learner has to feel out."
+        why: "Because asking for help is one of the first things a traveler must do, and Colombian Spanish wraps the request in specific verbs — colaborar, regalar, hacer el favor — whose warmth and whose occasional double meaning a learner has to feel out."
       },
       address: {
         form: "mixed",
@@ -1392,10 +1392,10 @@ lessons.push(
         {
           speaker: "Señora",
           target: "Vecino, ¿me regala una ayudita para el pasaje?",
-          translation: "Neighbour, could you spare me a little help for the bus fare?",
+          translation: "Neighbor, could you spare me a little help for the bus fare?",
           pronunciation: "ve-SEE-no, me rre-GA-la OO-na a-yoo-DEE-ta PA-ra el pa-SA-he",
-          literal: "Neighbour, to-me you-gift a little-help for the fare?",
-          why: "Same courtesy words — “me regala”, “una ayudita” — but from a stranger asking for fare money, the meaning shifts to a request for cash. “Vecino” (neighbour) is a friendly address to someone you don't actually know. This is the ambiguity the lesson turns on."
+          literal: "Neighbor, to-me you-gift a little-help for the fare?",
+          why: "Same courtesy words — “me regala”, “una ayudita” — but from a stranger asking for fare money, the meaning shifts to a request for cash. “Vecino” (neighbor) is a friendly address to someone you don't actually know. This is the ambiguity the lesson turns on."
         },
         {
           speaker: "Mateo",
@@ -1466,7 +1466,7 @@ lessons.push(
           useWhen:
             "Softening a request: “¿me regala la cuenta?”, “regáleme un momentico”, “¿me regala un vaso de agua?”.",
           avoidWhen:
-            "You mean a literal present — context decides, but in a shop or queue it is pure politeness, not generosity.",
+            "You mean a literal present — context decides, but in a shop or line it is pure politeness, not generosity.",
           register: "polite service",
           region: "Colombia; especially common in the interior and the coffee region.",
           related: ["dar", "colaborar", "hacer el favor", "el regalo"],
@@ -1512,7 +1512,7 @@ lessons.push(
         {
           term: "echar una mano",
           explanation:
-            "An idiom for lending a hand — informal help given or asked for among friends and neighbours.",
+            "An idiom for lending a hand — informal help given or asked for among friends and neighbors.",
           literal: "to throw a hand",
           useWhen:
             "Offering casual help: “¿te echo una mano?”, “necesito que me eches una mano”.",
@@ -1642,7 +1642,7 @@ lessons.push(
           choices: [
             "need you to physically help them carry something heavy or to lift a box down off a very high shelf.",
             "are asking for money — from a stranger, “una ayudita” or “¿me colabora?” is usually a polite request for change.",
-            "want to collaborate with you on a long-term community project that involves the whole neighbourhood together."
+            "want to collaborate with you on a long-term community project that involves the whole neighborhood together."
           ],
           answer: 1,
           tests: "una ayudita as a euphemism for money"
@@ -1650,7 +1650,7 @@ lessons.push(
         {
           prompt: "A shop clerk greets you with “¿en qué le colaboro?” They are—",
           choices: [
-            "asking you to collaborate with them on organising and tidying up the shelves and the shop's front displays.",
+            "asking you to collaborate with them on organizing and tidying up the shelves and the shop's front displays.",
             "asking you for a small donation or a tip before they are willing to show you any of the products at all.",
             "asking “how can I help you?” — “colaborar” is the standard service-counter way to offer help in Colombia."
           ],
@@ -1660,14 +1660,14 @@ lessons.push(
       ]
     },
     en: {
-      title: "Pidiendo ayuda en una estación de Toronto",
+      title: "Pidiendo ayuda en una estación de Houston",
       situation:
-        "En Toronto, Alejandra necesita llegar a un pueblo pequeño y le pide ayuda a un desconocido. Aprende que el inglés pide favores con “help me out”, “could I have…” y “do me a favour”, sin los verbos de cortesía “colaborar” o “regalar”, y que “collaborate” es un falso amigo. Cuando alguien le pide “spare some change”, entiende que es una petición de plata.",
+        "En Houston, Alejandra necesita llegar a un pueblo pequeño y le pide ayuda a un desconocido. Aprende que el inglés pide favores con “help me out”, “could I have…” y “do me a favour”, sin los verbos de cortesía “colaborar” o “regalar”, y que “collaborate” es un falso amigo. Cuando alguien le pide “spare some change”, entiende que es una petición de plata.",
       setting: {
         who: "Ryan es un torontino amable que con gusto orienta a una viajera perdida. Alejandra intenta llegar a un pueblo pequeño y todavía calca los verbos de cortesía del español.",
         what: "Pedir indicaciones y descubrir que el inglés pide favores con “help me out”, “could I have…” y “do me a favour” — y cómo distinguir un pedido de ayuda de uno de plata.",
         when: "Media mañana en una estación concurrida, con buses que entran y salen.",
-        where: "Toronto, Canadá.",
+        where: "Houston, Canadá.",
         why: "Porque pedir ayuda es de lo primero que uno hace como viajero, y el inglés no tiene los verbos “colaborar” ni “regalar”: la cortesía vive en el modal (“could you”) y en los suavizadores, algo que un hispanohablante tiene que reaprender."
       },
       address: {

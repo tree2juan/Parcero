@@ -43,7 +43,7 @@ lessons.push(
       address: {
         form: "tú",
         who: "Mariana and Owen use tú because they are friends and the conversation is reflective rather than formal.",
-        why: "The island setting does not require invented dialect colour. A clear Colombian tú lets the lesson focus on the verb and on respectful curiosity.",
+        why: "The island setting does not require invented dialect color. A clear Colombian tú lets the lesson focus on the verb and on respectful curiosity.",
         ifYouSwitch:
           "Usted would make Owen sound more like a reporter or official visitor. Tú keeps the exchange personal enough for family memory without pretending he belongs to the family."
       },
@@ -689,7 +689,7 @@ lessons.push(
         who: "Laura rents a small apartment and knows the usual water bill by heart. The clerk is patient but has to follow the utility company's procedure.",
         what: "A service-counter conversation about sorting out an unusually high bill, checking whether there was a reading error, and deciding what remains pending.",
         when: "Mid-morning on a hot weekday, with several people waiting and a fan working harder than the line.",
-        where: "Montería, Córdoba, at a public utility office near the city centre.",
+        where: "Montería, Córdoba, at a public utility office near the city center.",
         why: "Because resolver is the verb for problems, cases, doubts and procedures that need an outcome. It is also irregular: resuelvo in the present and resuelto as the participle."
       },
       address: {
@@ -1339,7 +1339,7 @@ lessons.push(
         "Tú vas a salir de Riohacha por carretera y paras en una estación de servicio. El carro suena raro, el viaje es largo y necesitas pedir que revisen el aceite, las llantas y un recibo, sin confundir revisar con reescribir ni con estudiar para un examen.",
       setting: {
         who: "Carolina is driving out of Riohacha and does not want to gamble on a long hot road. The attendant is used to quick checks before people leave town.",
-        what: "A practical service-station check: oil, tyre pressure, a warning light and a receipt that may have the wrong plate number.",
+        what: "A practical service-station check: oil, tire pressure, a warning light and a receipt that may have the wrong plate number.",
         when: "Early morning, before the heat rises and before the road gets busier.",
         where: "Riohacha, La Guajira, at a service station on the way out of town.",
         why: "Because revisar is the workhorse: check the oil, inspect a contract, review a case, check someone's blood pressure. It is not “revise” in the English sense of rewriting."
@@ -1363,9 +1363,9 @@ lessons.push(
         {
           speaker: "Bombero",
           target: "Con gusto. También le reviso la presión de las llantas si va para tramo largo.",
-          translation: "Gladly. I'll also check your tyre pressure if you're going on a long stretch.",
+          translation: "Gladly. I'll also check your tire pressure if you're going on a long stretch.",
           pronunciation: "kon GOOS-toh. tam-BYEN leh rreh-BEE-soh lah preh-SYON deh las YAHN-tas see bah PAH-rah TRAH-moh LAR-goh",
-          literal: "With pleasure. Also for-you I-check the pressure of the tyres if you go for stretch long.",
+          literal: "With pleasure. Also for-you I-check the pressure of the tires if you go for stretch long.",
           why: "The same verb works for oil and pressure. In Colombia, a gas-station attendant may be called a bombero, but here the important word is reviso."
         },
         {
@@ -1408,7 +1408,7 @@ lessons.push(
             "To check, inspect or look over something carefully enough to catch a problem.",
           literal: "to review / check",
           useWhen:
-            "Oil, tyre pressure, a receipt, a contract, symptoms, a case file, a bag, a list or any detail that may be wrong.",
+            "Oil, tire pressure, a receipt, a contract, symptoms, a case file, a bag, a list or any detail that may be wrong.",
           avoidWhen:
             "You mean rewrite or edit a text in the English sense of revise. Spanish often needs corregir for correcting and repasar for studying.",
           register: "neutral",
@@ -1439,7 +1439,7 @@ lessons.push(
         {
           term: "le reviso la presión",
           explanation:
-            "I'll check the pressure for you. Useful for tyres in a service station and blood pressure in a clinic.",
+            "I'll check the pressure for you. Useful for tires in a service station and blood pressure in a clinic.",
           literal: "for-you I-check the pressure",
           useWhen:
             "Someone is offering a quick professional or practical check.",
@@ -1450,7 +1450,7 @@ lessons.push(
           related: ["la presión", "las llantas", "tomar la presión", "medir"],
           example: {
             target: "Le reviso la presión de las llantas.",
-            translation: "I'll check your tyre pressure."
+            translation: "I'll check your tire pressure."
           }
         },
         {
@@ -1583,7 +1583,7 @@ lessons.push(
           form: "Le reviso la presión.",
           register: "polite service",
           region: "General Colombian",
-          whenToUse: "Offering to measure tyre or blood pressure."
+          whenToUse: "Offering to measure tire or blood pressure."
         },
         {
           form: "La revisé por encima.",
@@ -1683,7 +1683,7 @@ lessons.push(
         },
         {
           speaker: "Attendant",
-          target: "Sure. I'll also check the tyre pressure if you're heading out far.",
+          target: "Sure. I'll also check the tire pressure if you're heading out far.",
           translation: "Con gusto. También le reviso la presión de las llantas si va para tramo largo.",
           pronunciation: "shur. ail OL-so chek da TAI-er PRE-shur if yor JE-ding aut far",
           literal: "Claro. También revisaré la presión de las llantas si usted sale lejos.",
@@ -1768,9 +1768,9 @@ lessons.push(
             "Sólo mira sin medir. Pressure implica una lectura.",
           register: "polite service",
           region: "Inglés universal.",
-          related: ["tyre pressure", "blood pressure", "measure", "reading"],
+          related: ["tire pressure", "blood pressure", "measure", "reading"],
           example: {
-            target: "I'll check the tyre pressure.",
+            target: "I'll check the tire pressure.",
             translation: "Le reviso la presión de las llantas."
           }
         },
@@ -1958,7 +1958,7 @@ lessons.push(
           choices: [
             "Correct the plate number.",
             "Review the engine by memory.",
-            "Discover the tyre in writing."
+            "Discover the tire in writing."
           ],
           answer: 0,
           tests: "correct after checking finds an error"
@@ -1967,7 +1967,7 @@ lessons.push(
           prompt: "¿Cuál frase usa review para un documento correctamente?",
           choices: [
             "I reviewed for the exam all night.",
-            "I reviewed the petrol with new words.",
+            "I reviewed the oil with new words.",
             "I reviewed the contract before signing."
           ],
           answer: 2,

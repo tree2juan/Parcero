@@ -32,8 +32,8 @@ lessons.push(
         "Alex está perdido en Bogotá buscando el centro de salud y para a una señora en la calle para preguntarle cómo llegar. Tiene que pedir permiso para preguntar, hacer la pregunta con claridad y agradecer — todo en un par de minutos, sin sonar brusco. En el camino aprende que “preguntar” no es lo mismo que “pedir”.",
       setting: {
         who: "The passerby is Doña Luz, a woman in her sixties who lives nearby and is in no hurry. Alex has been walking in circles for ten minutes with a dying phone battery.",
-        what: "A quick street exchange in which Alex asks the way to the health centre and gets both directions and a small lesson in courtesy.",
-        when: "Mid-morning on a weekday, when the pavements are busy enough that stopping a stranger feels normal.",
+        what: "A quick street exchange in which Alex asks the way to the health center and gets both directions and a small lesson in courtesy.",
+        when: "Mid-morning on a weekday, when the sidewalks are busy enough that stopping a stranger feels normal.",
         where: "Bogotá, a residential stretch of Teusaquillo where the numbered streets confuse newcomers and locals are used to being asked.",
         why: "Because Alex has an appointment and no signal, and because how he opens the question decides whether the stranger warms to him or just points vaguely and walks on."
       },
@@ -64,9 +64,9 @@ lessons.push(
         {
           speaker: "Alex",
           target: "¿Sabe cómo llego al centro de salud? Estoy un poco perdido.",
-          translation: "Do you know how I get to the health centre? I'm a bit lost.",
+          translation: "Do you know how I get to the health center? I'm a bit lost.",
           pronunciation: "SA-be KO-mo YEH-go al SEN-tro de sa-LOOD? es-TOY oon PO-ko per-DEE-do",
-          literal: "You-know(usted) how I-arrive to-the centre of health? I-am a little lost.",
+          literal: "You-know(usted) how I-arrive to-the center of health? I-am a little lost.",
           why: "Notice Alex is asking for information — a question — so the verb underneath is “preguntar”, even though the sentence itself leans on “saber”. If he wanted a thing or a favour he would switch to “pedir”. That split between asking and asking-for is the heart of this lesson."
         },
         {
@@ -350,12 +350,12 @@ lessons.push(
     en: {
       title: "Preguntarle el camino a un desconocido",
       situation:
-        "Alejandra está perdida en Toronto buscando el centro de salud y para a una persona en la calle para preguntarle cómo llegar. Usted tiene que pedir permiso para preguntar, hacer la pregunta con claridad y agradecer — todo en un par de minutos, sin sonar brusca. En el camino aprende que el inglés mete todo en un solo “ask”.",
+        "Alejandra está perdida en Houston buscando el centro de salud y para a una persona en la calle para preguntarle cómo llegar. Usted tiene que pedir permiso para preguntar, hacer la pregunta con claridad y agradecer — todo en un par de minutos, sin sonar brusca. En el camino aprende que el inglés mete todo en un solo “ask”.",
       setting: {
         who: "La persona en la calle es un señor de unos cincuenta años que no lleva prisa. Alejandra lleva diez minutos dando vueltas con el celular casi sin batería.",
         what: "Un intercambio rápido en la calle en el que Alejandra pregunta por el centro de salud y recibe indicaciones y, de paso, una lección de cortesía.",
         when: "Media mañana entre semana, cuando hay suficiente gente en la acera como para que parar a un desconocido se sienta normal.",
-        where: "Toronto, una zona residencial donde las calles numeradas confunden a los recién llegados y la gente está acostumbrada a que le pregunten.",
+        where: "Houston, una zona residencial donde las calles numeradas confunden a los recién llegados y la gente está acostumbrada a que le pregunten.",
         why: "Porque Alejandra tiene una cita y se quedó sin señal, y porque la forma en que abre la pregunta decide si el desconocido se muestra cálido o simplemente señala con vaguedad y sigue su camino."
       },
       address: {
@@ -384,7 +384,7 @@ lessons.push(
         },
         {
           speaker: "Alejandra",
-          target: "Do you know how I get to the health centre? I'm a little lost.",
+          target: "Do you know how I get to the health center? I'm a little lost.",
           translation: "¿Sabe cómo llego al centro de salud? Estoy un poco perdida.",
           pronunciation: "du iú nóu jáo ai get tu de JELZ SÉN-ter? aim a LÍ-rel lost",
           literal: "¿Sabe usted cómo yo llego al centro de salud? Estoy un poco perdida.",
@@ -670,10 +670,10 @@ lessons.push(
     }
   },
   {
-    id: "answering-the-phone-for-a-flatmate",
+    id: "answering-the-phone-for-a-roommate",
     level: "Starter · Everyday life",
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
-    domain: "home-and-neighbourhood",
+    domain: "home-and-neighborhood",
     register: "familiar",
     pathways: ["foundation"],
     verb: "responder",
@@ -683,15 +683,15 @@ lessons.push(
       situation:
         "Alex está en el apartamento que comparte con Caro, en Bogotá, cuando suenan a la vez el teléfono de ella y el timbre. Caro le pide que conteste mientras ella termina algo. Alex tiene que atender la llamada, responder lo que sabe y dejar claro que hay cosas que no puede decidir por ella — todo sin meter la pata.",
       setting: {
-        who: "Caro and Alex have shared the flat for a year and split chores easily. Caro is in the middle of something with her hands full when everything starts ringing at once.",
+        who: "Caro and Alex have shared the apartment for a year and split chores easily. Caro is in the middle of something with her hands full when everything starts ringing at once.",
         what: "A quick domestic scramble in which Alex answers Caro's phone and the door, fields a couple of questions, and works out what he can and can't decide for her.",
         when: "Early evening, the busy stretch after work when calls and visitors pile up.",
-        where: "Bogotá, a shared flat where the landline still rings and neighbours still knock rather than text.",
+        where: "Bogotá, a shared apartment where the landline still rings and neighbors still knock rather than text.",
         why: "Because taking someone's call well is a small act of trust, and because knowing which verb answers a phone and which answers a question keeps Alex from sounding odd at exactly the wrong moment."
       },
       address: {
         form: "tú",
-        who: "Caro and Alex use tú with each other — the natural footing between flatmates and friends of the same age who live together.",
+        who: "Caro and Alex use tú with each other — the natural footing between roommates and friends of the same age who live together.",
         why: "Between peers who share a home, tú is warm and unremarkable. Usted would suddenly sound stiff or sarcastic, as if Alex were mock-formal or annoyed, so tú keeps the everyday closeness intact.",
         ifYouSwitch:
           "Switching to usted mid-favour would read as passive-aggressive, a little jab of distance. Vos is not a Bogotá default, so with Caro it would sound like Alex was putting on an accent that isn't his."
@@ -711,7 +711,7 @@ lessons.push(
           translation: "I'll answer it for you. But if they ask something about you, better you answer.",
           pronunciation: "yo te lo kon-TES-to. PE-ro see preh-GOON-tan AL-go TU-yo, me-HOR res-PON-des tu",
           literal: "I to-you it I-answer. But if they-ask something yours, better you-answer you.",
-          why: "Alex splits the labour: he'll “contestar” the phone but says Caro should “responder” anything about her. “Responder” leans toward answering a question or replying with content, which is exactly the distinction this lesson pulls apart."
+          why: "Alex splits the labor: he'll “contestar” the phone but says Caro should “responder” anything about her. “Responder” leans toward answering a question or replying with content, which is exactly the distinction this lesson pulls apart."
         },
         {
           speaker: "Caro",
@@ -888,7 +888,7 @@ lessons.push(
         {
           label: "“Dar razón”: the art of the relayed message",
           body:
-            "If someone can't come to the phone or the door, Colombians “dan razón” — they pass word along. “Yo le doy razón” means “I'll let them know”. It is the neighbourly infrastructure of a place where messages still travel by mouth: a portero, a shopkeeper, a flatmate all “dan razón”. Offering to “dar razón” when you answer for someone is thoughtful, and asking “¿le doy razón?” is the polite way to close a call you took on their behalf."
+            "If someone can't come to the phone or the door, Colombians “dan razón” — they pass word along. “Yo le doy razón” means “I'll let them know”. It is the neighborly infrastructure of a place where messages still travel by mouth: a portero, a shopkeeper, a roommate all “dan razón”. Offering to “dar razón” when you answer for someone is thoughtful, and asking “¿le doy razón?” is the polite way to close a call you took on their behalf."
         }
       ],
       pitfalls: [
@@ -1002,12 +1002,12 @@ lessons.push(
     en: {
       title: "Contestar el teléfono por la compañera",
       situation:
-        "Alejandra está en el apartamento que comparte con Jen, en Toronto, cuando suenan a la vez el teléfono de ella y el timbre. Jen le pide que conteste mientras termina algo. Usted tiene que atender la llamada, responder lo que sabe y dejar claro que hay cosas que no puede decidir por ella — todo sin meter la pata. En inglés, además, todo se “answer”.",
+        "Alejandra está en el apartamento que comparte con Jen, en Houston, cuando suenan a la vez el teléfono de ella y el timbre. Jen le pide que conteste mientras termina algo. Usted tiene que atender la llamada, responder lo que sabe y dejar claro que hay cosas que no puede decidir por ella — todo sin meter la pata. En inglés, además, todo se “answer”.",
       setting: {
         who: "Jen y Alejandra comparten el apartamento desde hace un año y se reparten las tareas sin problema. Jen está ocupada con las manos llenas cuando todo empieza a sonar a la vez.",
         what: "Un pequeño alboroto doméstico en el que Alejandra contesta el teléfono y la puerta, responde un par de preguntas y descubre qué puede y qué no puede decidir por Jen.",
         when: "Temprano en la noche, esa franja ajetreada después del trabajo en la que se acumulan llamadas y visitas.",
-        where: "Toronto, un apartamento compartido donde el teléfono todavía suena y los vecinos todavía tocan en vez de escribir.",
+        where: "Houston, un apartamento compartido donde el teléfono todavía suena y los vecinos todavía tocan en vez de escribir.",
         why: "Porque atender bien la llamada de alguien es un pequeño acto de confianza, y porque saber cuándo el inglés dice “answer” y cuándo “reply” evita que Alejandra suene rara justo en el peor momento."
       },
       address: {
@@ -1322,10 +1322,10 @@ lessons.push(
     }
   },
   {
-    id: "borrowing-a-drill-from-the-paisa-neighbour",
-    level: "Starter · Home and neighbourhood",
+    id: "borrowing-a-drill-from-the-paisa-neighbor",
+    level: "Starter · Home and neighborhood",
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
-    domain: "home-and-neighbourhood",
+    domain: "home-and-neighborhood",
     register: "familiar",
     pathways: ["foundation"],
     verb: "necesitar",
@@ -1337,14 +1337,14 @@ lessons.push(
       setting: {
         who: "Norbey has lived across the hall for years, keeps a full toolbox and enjoys a chat. Alex moved to Medellín recently and is still finding his feet with the paisa way of speaking.",
         what: "A short doorway exchange in which Alex asks to borrow a drill and ends up with an offer of hands-on help too.",
-        when: "A Saturday afternoon, the classic time for small home jobs and for neighbours to be around and willing.",
-        where: "Medellín, a friendly apartment block in a paisa neighbourhood where vos is the default and toolboxes get shared.",
-        why: "Because a borrowed drill and a bit of help are how neighbours become allies, and because stating a need too bluntly can sour a first favour before it's even granted."
+        when: "A Saturday afternoon, the classic time for small home jobs and for neighbors to be around and willing.",
+        where: "Medellín, a friendly apartment block in a paisa neighborhood where vos is the default and toolboxes get shared.",
+        why: "Because a borrowed drill and a bit of help are how neighbors become allies, and because stating a need too bluntly can sour a first favour before it's even granted."
       },
       address: {
         form: "vos",
-        who: "Norbey and Alex use vos with each other — the everyday paisa footing between neighbours in Medellín, warm and completely normal.",
-        why: "In Antioquia vos is the default among peers and neighbours, not a rude or overly familiar form. It carries the local music, pairs with “pues” and “de una”, and mixes freely with usted even inside one conversation.",
+        who: "Norbey and Alex use vos with each other — the everyday paisa footing between neighbors in Medellín, warm and completely normal.",
+        why: "In Antioquia vos is the default among peers and neighbors, not a rude or overly familiar form. It carries the local music, pairs with “pues” and “de una”, and mixes freely with usted even inside one conversation.",
         ifYouSwitch:
           "Using strict tú here would sound bookish, like someone who learned Spanish elsewhere and hasn't tuned into the city. Sliding into usted is fine and common in Medellín, but dropping vos entirely would cost Alex the local warmth."
       },
@@ -1352,9 +1352,9 @@ lessons.push(
         {
           speaker: "Alex",
           target: "¡Vecino, buenas! ¿Me colaborás con un favorcito? Es que necesito un taladro.",
-          translation: "Neighbour, hi! Can you help me out with a little favour? The thing is I need a drill.",
+          translation: "Neighbor, hi! Can you help me out with a little favour? The thing is I need a drill.",
           pronunciation: "beh-SEE-no, BWEH-nas. me ko-la-bo-RAS kon oon fa-vor-SEE-to? es ke ne-se-SEE-to oon ta-LA-dro",
-          literal: "Neighbour, good-ones! Me you-help(vos) with a little-favour? Is that I-need a drill.",
+          literal: "Neighbor, good-ones! Me you-help(vos) with a little-favour? Is that I-need a drill.",
           why: "Alex wraps his need in “¿me colaborás con un favorcito?” before landing “necesito”. A flat “necesito un taladro” can sound like a demand; Colombians cushion it with a favour frame and the diminutive “favorcito”. “Colaborar” is the local euphemism for helping out."
         },
         {
@@ -1363,7 +1363,7 @@ lessons.push(
           translation: "Of course! What do you need?",
           pronunciation: "KLA-ro, pwes. ke ne-se-SEE-tas",
           literal: "Clear, well! What you-need(vos)?",
-          why: "“¿Qué necesitás?” is the paisa vos form of necesitar, stressed on the last syllable. Norbey answers warmth with warmth. Vos endings — necesitás, prestás, colaborés — are the Medellín default between neighbours, and “pues” is the region's signature filler."
+          why: "“¿Qué necesitás?” is the paisa vos form of necesitar, stressed on the last syllable. Norbey answers warmth with warmth. Vos endings — necesitás, prestás, colaborés — are the Medellín default between neighbors, and “pues” is the region's signature filler."
         },
         {
           speaker: "Alex",
@@ -1392,10 +1392,10 @@ lessons.push(
         {
           speaker: "Norbey",
           target: "¡Listo pues! Esperá que cojo las cosas y ya subo, que para eso somos los vecinos.",
-          translation: "Alright then! Hold on while I grab my things and I'll be up — that's what neighbours are for.",
+          translation: "Alright then! Hold on while I grab my things and I'll be up — that's what neighbors are for.",
           pronunciation: "LEES-to pwes. es-pe-RA ke KO-ho las KO-sas i ya SOO-bo, ke PA-ra E-so SO-mos los beh-SEE-nos",
-          literal: "Ready well! Wait(vos) that I-grab the things and already I-go-up, that for that we-are the neighbours.",
-          why: "“Esperá” is the paisa vos imperative of esperar. “Para eso somos los vecinos” — that's what neighbours are for — frames the favour as ordinary and mutual, the spoken glue of a building where tools and cups of sugar circulate freely."
+          literal: "Ready well! Wait(vos) that I-grab the things and already I-go-up, that for that we-are the neighbors.",
+          why: "“Esperá” is the paisa vos imperative of esperar. “Para eso somos los vecinos” — that's what neighbors are for — frames the favour as ordinary and mutual, the spoken glue of a building where tools and cups of sugar circulate freely."
         }
       ],
       vocabulary: [
@@ -1413,7 +1413,7 @@ lessons.push(
           related: ["hacer falta", "requerir", "necesitar que", "ocupar"],
           example: {
             target: "¿Qué necesitás, vecino?",
-            translation: "What do you need, neighbour?"
+            translation: "What do you need, neighbor?"
           }
         },
         {
@@ -1520,17 +1520,17 @@ lessons.push(
         }
       ],
       note:
-        "“Necesitar” is easy to conjugate and easy to overuse. A bare “necesito que me ayudes” aimed at a neighbour can land like an order, so Colombians soften need into a favour: “¿me colaborás?”, “¿me regalás…?”, “¿me hacés un favorcito?”. Two grammar notes travel with it: “necesitar que” takes the subjunctive, and to “borrow” you flip to “prestar” — you ask the other person to lend, because Spanish has no everyday verb for borrowing.",
+        "“Necesitar” is easy to conjugate and easy to overuse. A bare “necesito que me ayudes” aimed at a neighbor can land like an order, so Colombians soften need into a favour: “¿me colaborás?”, “¿me regalás…?”, “¿me hacés un favorcito?”. Two grammar notes travel with it: “necesitar que” takes the subjunctive, and to “borrow” you flip to “prestar” — you ask the other person to lend, because Spanish has no everyday verb for borrowing.",
       culture: [
         {
           label: "Need, wrapped as a favour",
           body:
-            "Colombians rarely fire a naked “necesito” at another person. A flat “necesito que me ayudes” can sound like an order barked across a counter, so the need gets dressed up: “¿me colaborás?”, “¿me regalás un momentico?”, “¿me hacés un favorcito?”. The requirement underneath is the same; the packaging is what makes it neighbourly. Learners who state needs bluntly aren't rude on purpose, but they can come across that way. Softening here is not weakness — it is the ordinary social lubricant."
+            "Colombians rarely fire a naked “necesito” at another person. A flat “necesito que me ayudes” can sound like an order barked across a counter, so the need gets dressed up: “¿me colaborás?”, “¿me regalás un momentico?”, “¿me hacés un favorcito?”. The requirement underneath is the same; the packaging is what makes it neighborly. Learners who state needs bluntly aren't rude on purpose, but they can come across that way. Softening here is not weakness — it is the ordinary social lubricant."
         },
         {
           label: "Paisa voseo: vos, pues, de una",
           body:
-            "In Medellín and across Antioquia, neighbours use vos, not tú: “¿vos qué necesitás?”, “prestámelo”, “vení”. It travels with a handful of regional tics — “pues” sprinkled through sentences, “de una” for an enthusiastic yes, “¡hágale!” for go-ahead. Vos here is warm and everyday, not rude, and it mixes freely with usted even inside a single conversation. Copying the paisa music — vos plus “pues” — instantly signals you've spent real time in the city, not just studied the grammar."
+            "In Medellín and across Antioquia, neighbors use vos, not tú: “¿vos qué necesitás?”, “prestámelo”, “vení”. It travels with a handful of regional tics — “pues” sprinkled through sentences, “de una” for an enthusiastic yes, “¡hágale!” for go-ahead. Vos here is warm and everyday, not rude, and it mixes freely with usted even inside a single conversation. Copying the paisa music — vos plus “pues” — instantly signals you've spent real time in the city, not just studied the grammar."
         },
         {
           label: "Borrow doesn't exist — you make them lend",
@@ -1540,7 +1540,7 @@ lessons.push(
         {
           label: "“Para eso estamos los vecinos”",
           body:
-            "Neighbourliness in Colombia is spoken aloud. Lend a drill or a cup of sugar and you'll hear “para eso estamos los vecinos” — that's what neighbours are for — or simply “para eso somos”. It frames the favour as ordinary, expected and mutual. Accepting help graciously matters as much as giving it; the right reply is warmth, not over-apology. In a paisa building this small economy of borrowed tools and returned pots is real social glue, and joining in marks you as part of the place."
+            "Neighborliness in Colombia is spoken aloud. Lend a drill or a cup of sugar and you'll hear “para eso estamos los vecinos” — that's what neighbors are for — or simply “para eso somos”. It frames the favour as ordinary, expected and mutual. Accepting help graciously matters as much as giving it; the right reply is warmth, not over-apology. In a paisa building this small economy of borrowed tools and returned pots is real social glue, and joining in marks you as part of the place."
         }
       ],
       pitfalls: [
@@ -1559,7 +1559,7 @@ lessons.push(
         {
           mistake: "Necesito que subás ya.",
           whyItFails:
-            "Grammatically fine, but a bare, command-like “necesito que subás ya” lands as bossy with a neighbour. Colombians cushion it into a favour; the problem here is register, not grammar.",
+            "Grammatically fine, but a bare, command-like “necesito que subás ya” lands as bossy with a neighbor. Colombians cushion it into a favour; the problem here is register, not grammar.",
           sayInstead: "¿Me colaborás subiendo un momentico?"
         },
         {
@@ -1574,7 +1574,7 @@ lessons.push(
           form: "¿Me regalás el taladro un ratico?",
           register: "friendly informal",
           region: "Medellín and Antioquia (paisa)",
-          whenToUse: "Warmly borrowing something small from a neighbour, in vos."
+          whenToUse: "Warmly borrowing something small from a neighbor, in vos."
         },
         {
           form: "¿Me hacés el favor y me prestás el taladro?",
@@ -1586,7 +1586,7 @@ lessons.push(
           form: "¿Me puede prestar el taladro, don Norbey?",
           register: "polite formal",
           region: "General Colombian (usted)",
-          whenToUse: "The same request in usted, for an older neighbour or a first contact."
+          whenToUse: "The same request in usted, for an older neighbor or a first contact."
         },
         {
           form: "Necesito que me colaborés con la pared.",
@@ -1605,16 +1605,16 @@ lessons.push(
       choices: [
         "He flips it around and asks Norbey to lend: “¿me prestás el taladro?” — will you lend it to me for a bit?",
         "He uses the false friend and says “¿me borrás el taladro?”, which really asks Norbey to erase the drill.",
-        "He states the need flatly with “necesito el taladro ya”, which comes across as a demand to a neighbour."
+        "He states the need flatly with “necesito el taladro ya”, which comes across as a demand to a neighbor."
       ],
       answer: 0,
       practiceExtra: [
         {
-          prompt: "Why do Colombians often avoid a flat “necesito que me ayudes” with a neighbour?",
+          prompt: "Why do Colombians often avoid a flat “necesito que me ayudes” with a neighbor?",
           choices: [
             "Because a bare need can sound like an order, so they soften it into a favour: “¿me colaborás?”.",
             "Because “necesitar” is considered rude in Colombia and has been quietly replaced everywhere by “colaborar”.",
-            "Because neighbours only ever respond to usted, so the tú or vos form of “ayudar” would just be ignored."
+            "Because neighbors only ever respond to usted, so the tú or vos form of “ayudar” would just be ignored."
           ],
           answer: 0,
           tests: "softening a need into a favour"
@@ -1640,7 +1640,7 @@ lessons.push(
           tests: "“borrar” (erase) as a false friend of borrow"
         },
         {
-          prompt: "Soften “I need you to come up now” for a paisa neighbour. Which fits best?",
+          prompt: "Soften “I need you to come up now” for a paisa neighbor. Which fits best?",
           choices: [
             "Necesito que subás ya mismo.",
             "Subí ya, que te necesito arriba.",
@@ -1654,12 +1654,12 @@ lessons.push(
     en: {
       title: "Pedirle prestado el taladro al vecino",
       situation:
-        "Alejandra vive en Toronto y necesita colgar una repisa, pero no tiene taladro. Toca la puerta de Mike, el vecino del frente, para pedírselo prestado y, de paso, una mano con la pared. Usted tiene que plantear la necesidad sin sonar mandona, pedir prestado bien y aceptar la ayuda. En inglés, además, hay que separar “borrow” de “lend”.",
+        "Alejandra vive en Houston y necesita colgar una repisa, pero no tiene taladro. Toca la puerta de Mike, el vecino del frente, para pedírselo prestado y, de paso, una mano con la pared. Usted tiene que plantear la necesidad sin sonar mandona, pedir prestado bien y aceptar la ayuda. En inglés, además, hay que separar “borrow” de “lend”.",
       setting: {
-        who: "Mike vive al frente desde hace años, tiene una caja de herramientas completa y es conversador. Alejandra llegó a Toronto hace poco y todavía se está acostumbrando a pedir las cosas en inglés.",
+        who: "Mike vive al frente desde hace años, tiene una caja de herramientas completa y es conversador. Alejandra llegó a Houston hace poco y todavía se está acostumbrando a pedir las cosas en inglés.",
         what: "Un intercambio corto en la puerta en el que Alejandra pide prestado un taladro y termina con una oferta de ayuda con las manos también.",
         when: "Un sábado por la tarde, la hora clásica para los arreglos pequeños de la casa y para encontrar a los vecinos disponibles.",
-        where: "Toronto, un edificio de apartamentos amable donde los vecinos se prestan herramientas y se saludan en el pasillo.",
+        where: "Houston, un edificio de apartamentos amable donde los vecinos se prestan herramientas y se saludan en el pasillo.",
         why: "Porque un taladro prestado y una mano son la manera en que los vecinos se vuelven aliados, y porque plantear una necesidad demasiado en seco puede agriar un primer favor antes de que te lo concedan."
       },
       address: {
@@ -1712,11 +1712,11 @@ lessons.push(
         },
         {
           speaker: "Mike",
-          target: "No problem. Let me grab my stuff and I'll be right up — that's what neighbours are for.",
+          target: "No problem. Let me grab my stuff and I'll be right up — that's what neighbors are for.",
           translation: "Listo pues. Deme un momentico que cojo las cosas y ya subo, que para eso somos los vecinos.",
           pronunciation: "nou PRÓ-blem. let mi grab mai stof and ail bi rait op — dats uót NÉI-bors ar for",
           literal: "No problema. Déjame agarrar mis cosas y estaré justo arriba — eso es para lo que están los vecinos.",
-          why: "“That's what neighbours are for” es el calco exacto de “para eso somos / estamos los vecinos”. “Let me grab my stuff” — “grab” es coger o agarrar de manera informal."
+          why: "“That's what neighbors are for” es el calco exacto de “para eso somos / estamos los vecinos”. “Let me grab my stuff” — “grab” es coger o agarrar de manera informal."
         }
       ],
       vocabulary: [
@@ -1823,19 +1823,19 @@ lessons.push(
           }
         },
         {
-          term: "that's what neighbours are for",
+          term: "that's what neighbors are for",
           explanation:
             "“Para eso somos / estamos los vecinos.” La fórmula que enmarca el favor como algo normal y mutuo.",
           literal: "para eso están los vecinos",
           useWhen:
-            "Al restarle importancia a un favor entre vecinos: “Anytime — that's what neighbours are for.”.",
+            "Al restarle importancia a un favor entre vecinos: “Anytime — that's what neighbors are for.”.",
           avoidWhen:
             "En contextos formales o de negocios, donde suena demasiado casero.",
           register: "friendly informal",
           region: "Inglés universal; el sentimiento es idéntico al colombiano.",
           related: ["anytime", "happy to help", "no problem", "don't mention it"],
           example: {
-            target: "That's what neighbours are for.",
+            target: "That's what neighbors are for.",
             translation: "Para eso somos los vecinos."
           }
         }
@@ -1861,7 +1861,7 @@ lessons.push(
         {
           label: "Pedir prestado entre vecinos",
           body:
-            "La economía de tazas de azúcar y taladros prestados existe igual en Canadá, sólo que con otras palabras. Se abre con “Could you do me a favour?” o “Do you happen to have…?”, se pide con “Could I borrow…?”, y se cierra con “That's what neighbours are for” o “Anytime”. Devolver a tiempo y con un “thanks so much for lending me this” mantiene la buena vecindad. La calidez es la misma; lo que cambia son las fórmulas fijas, y aprenderte tres o cuatro te integra rápido."
+            "La economía de tazas de azúcar y taladros prestados existe igual en Canadá, sólo que con otras palabras. Se abre con “Could you do me a favour?” o “Do you happen to have…?”, se pide con “Could I borrow…?”, y se cierra con “That's what neighbors are for” o “Anytime”. Devolver a tiempo y con un “thanks so much for lending me this” mantiene la buena vecindad. La calidez es la misma; lo que cambia son las fórmulas fijas, y aprenderte tres o cuatro te integra rápido."
         }
       ],
       pitfalls: [

@@ -1258,7 +1258,7 @@ const provenance = {
         "vocabulary[6].useWhen"
       ]
     },
-    "passing-on-what-the-neighbours-said": {
+    "passing-on-what-the-neighbors-said": {
       "en": [
         "address.ifYouSwitch",
         "address.who",
@@ -2018,7 +2018,7 @@ const provenance = {
         "vocabulary[6].useWhen"
       ]
     },
-    "running-into-a-neighbour-before-the-long-weekend": {
+    "running-into-a-neighbor-before-the-long-weekend": {
       "en": [
         "address.ifYouSwitch",
         "address.who",
@@ -2493,7 +2493,7 @@ const provenance = {
         "vocabulary[6].useWhen"
       ]
     },
-    "wondering-if-the-parade-is-cancelled": {
+    "wondering-if-the-parade-is-canceled": {
       "en": [
         "address.ifYouSwitch",
         "address.who",
@@ -3323,7 +3323,7 @@ const provenance = {
         "vocabulary[6].useWhen"
       ]
     },
-    "explaining-to-a-new-neighbour-where-you-live": {
+    "explaining-to-a-new-neighbor-where-you-live": {
       "en": [
         "address.ifYouSwitch",
         "address.who",
@@ -4078,7 +4078,7 @@ const provenance = {
         "vocabulary[6].useWhen"
       ]
     },
-    "answering-the-phone-for-a-flatmate": {
+    "answering-the-phone-for-a-roommate": {
       "en": [
         "address.ifYouSwitch",
         "address.who",
@@ -4173,7 +4173,7 @@ const provenance = {
         "vocabulary[6].useWhen"
       ]
     },
-    "borrowing-a-drill-from-the-paisa-neighbour": {
+    "borrowing-a-drill-from-the-paisa-neighbor": {
       "en": [
         "address.ifYouSwitch",
         "address.who",
@@ -6138,7 +6138,7 @@ const provenance = {
         "vocabulary[6].useWhen"
       ]
     },
-    "selling-a-bike-to-the-paisa-neighbour": {
+    "selling-a-bike-to-the-paisa-neighbor": {
       "en": [
         "address.ifYouSwitch",
         "address.who",
@@ -10471,7 +10471,7 @@ const provenance = {
         "vocabulary[6].useWhen"
       ]
     },
-    "keeping-neighbours-safe-in-quibdo": {
+    "keeping-neighbors-safe-in-quibdo": {
       "en": [
         "address.ifYouSwitch",
         "address.who",
@@ -18132,7 +18132,7 @@ const provenance = {
         "vocabulary[6].useWhen"
       ]
     },
-    "borrowing-a-neighbours-charger-in-arauca": {
+    "borrowing-a-neighbors-charger-in-arauca": {
       "en": [
         "address.ifYouSwitch",
         "address.who",
@@ -19547,7 +19547,7 @@ const provenance = {
         "vocabulary[6].useWhen"
       ]
     },
-    "colours-and-describing-things-in-manizales": {
+    "colors-and-describing-things-in-manizales": {
       "en": [
         "address.ifYouSwitch",
         "address.who",

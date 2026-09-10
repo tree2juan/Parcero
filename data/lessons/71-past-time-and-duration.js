@@ -110,7 +110,7 @@ lessons.push(
           useWhen:
             "Building a perfect from a regular verb: “hablar” gives “hablado”, “comer” gives “comido”.",
           avoidWhen:
-            "The verb is irregular; then you need a memorised form, not the regular ending.",
+            "The verb is irregular; then you need a memorized form, not the regular ending.",
           register: "neutral",
           region: "Universal Spanish.",
           related: ["hablado", "comido", "vivido", "probado"],
@@ -122,7 +122,7 @@ lessons.push(
         {
           term: "los participios irregulares",
           explanation:
-            "The irregular participles you simply memorise: “visto, hecho, dicho, puesto, vuelto, escrito, abierto, muerto, roto”.",
+            "The irregular participles you simply memorize: “visto, hecho, dicho, puesto, vuelto, escrito, abierto, muerto, roto”.",
           literal: "the irregular participles",
           useWhen:
             "The verb is “ver, hacer, decir, poner, volver, escribir, abrir, morir” or “romper”.",
@@ -330,12 +330,12 @@ lessons.push(
     en: {
       title: "‘I have already eaten’: el presente perfecto que el inglés te obliga a usar",
       situation:
-        "En Toronto, Dan recibe a Marcela y no para de preguntarle qué ha hecho y qué le falta por conocer. Aquí usted aprende lo contrario de su instinto: donde en Colombia diría ‘¿ya comió?’, el inglés casi siempre exige el presente perfecto, ‘have you eaten?’. Preste atención a ‘yet’, ‘already’, ‘ever’ y ‘never’, que son las palabras que lo disparan.",
+        "En Houston, Dan recibe a Marcela y no para de preguntarle qué ha hecho y qué le falta por conocer. Aquí usted aprende lo contrario de su instinto: donde en Colombia diría ‘¿ya comió?’, el inglés casi siempre exige el presente perfecto, ‘have you eaten?’. Preste atención a ‘yet’, ‘already’, ‘ever’ y ‘never’, que son las palabras que lo disparan.",
       setting: {
-        who: "Dan es un anfitrión canadiense de trato fácil; Marcela es la visitante que aprende cuándo el inglés obliga al presente perfecto aunque el español usaría un pasado simple.",
+        who: "Dan es un anfitrión estadounidense de trato fácil; Marcela es la visitante que aprende cuándo el inglés obliga al presente perfecto aunque el español usaría un pasado simple.",
         what: "Una conversación de bienvenida que repite la misma pregunta —qué ha probado, dónde ha estado— para que el presente perfecto inglés aparezca una y otra vez.",
         when: "Cerca del mediodía, con una comida de por medio y charla relajada.",
-        where: "Toronto, en la provincia de Ontario, Canadá.",
+        where: "Houston, en la provincia de Texas, Canadá.",
         why: "Porque el instinto colombiano es resolver con el pasado simple —‘ya comí’—, pero el inglés exige el presente perfecto con ‘yet’, ‘already’, ‘ever’ y ‘never’. Sin eso, suena incompleto."
       },
       address: {
@@ -348,26 +348,26 @@ lessons.push(
       dialogue: [
         {
           speaker: "Dan",
-          target: "Sit down. Have you tried poutine yet, or not yet?",
-          translation: "Siéntese. ¿Ya ha probado el poutine, o todavía no?",
+          target: "Sit down. Have you tried brisket yet, or not yet?",
+          translation: "Siéntese. ¿Ya ha probado el brisket, o todavía no?",
           pronunciation: "sit daun. jav yu traid pu-TIN yet, or not yet",
-          literal: "Siéntese. ¿Ha probado usted poutine ya, o no todavía?",
+          literal: "Siéntese. ¿Ha probado usted brisket ya, o no todavía?",
           why: "En inglés, ‘have you tried…?’ es presente perfecto y es obligatorio para preguntar por una experiencia hasta ahora. El español permitiría ‘¿ya probó?’, pero el inglés no."
         },
         {
           speaker: "Marcela",
-          target: "No, I haven't tried it yet. Is it a Toronto thing?",
-          translation: "No, todavía no lo he probado. ¿Es algo típico de Toronto?",
+          target: "No, I haven't tried it yet. Is it a Houston thing?",
+          translation: "No, todavía no lo he probado. ¿Es algo típico de Houston?",
           pronunciation: "nou, ai JA-vent traid it yet. is it a to-RON-tou zing",
-          literal: "No, no lo he probado todavía. ¿Es una cosa de Toronto?",
+          literal: "No, no lo he probado todavía. ¿Es una cosa de Houston?",
           why: "‘Haven't tried yet’ es la respuesta natural: con ‘yet’, el inglés exige el presente perfecto. Traducir ‘no lo probé’ como ‘I didn't try it’ suena incompleto aquí."
         },
         {
           speaker: "Dan",
-          target: "It's all over Canada. Have you ever been to Niagara Falls?",
-          translation: "Se consigue en todo Canadá. ¿Alguna vez ha estado en las cataratas del Niágara?",
+          target: "It's all over Texas. Have you ever been to The Alamo?",
+          translation: "Se consigue en todo Canadá. ¿Alguna vez ha estado en el Álamo?",
           pronunciation: "its ol OU-ver KA-na-da. jav yu E-ver bin tu nai-A-gra fols",
-          literal: "Está por todo Canadá. ¿Alguna vez ha estado en las cataratas Niágara?",
+          literal: "Está por todo Canadá. ¿Alguna vez ha estado en las cataratas El Álamo?",
           why: "‘Have you ever been…?’ es la pregunta de experiencia por excelencia. ‘Ever’ dispara el presente perfecto igual que ‘alguna vez’ en español."
         },
         {
@@ -460,7 +460,7 @@ lessons.push(
           region: "Inglés universal.",
           related: ["always", "before", "in my life", "so far"],
           example: {
-            target: "Have you ever been to Canada?",
+            target: "Have you ever been to Texas?",
             translation: "¿Alguna vez ha estado en Canadá?"
           }
         },
@@ -504,15 +504,15 @@ lessons.push(
             "La pregunta de viaje: ‘¿Ha estado en…?’. En inglés se dice ‘have you been to’, con ‘to’, no ‘have you been in’.",
           literal: "¿ha estado en…?",
           useWhen:
-            "Preguntar por experiencia de viaje: ‘Have you been to Toronto?’.",
+            "Preguntar por experiencia de viaje: ‘Have you been to Houston?’.",
           avoidWhen:
-            "Usar ‘in’ en vez de ‘to’; ‘have you been in Toronto?’ cambia el sentido.",
+            "Usar ‘in’ en vez de ‘to’; ‘have you been in Houston?’ cambia el sentido.",
           register: "neutral",
           region: "Inglés universal.",
           related: ["been to", "gone to", "visited", "traveled to"],
           example: {
-            target: "Have you been to Niagara Falls?",
-            translation: "¿Ha estado en las cataratas del Niágara?"
+            target: "Have you been to The Alamo?",
+            translation: "¿Ha estado en el Álamo?"
           }
         }
       ],
@@ -530,9 +530,9 @@ lessons.push(
             "Muchos colombianos dicen ‘I already ate’ calcando ‘ya comí’. Se entiende, pero a oídos nativos suena incompleto en muchos contextos; lo natural es ‘I have already eaten’. Es el error más común y el más fácil de corregir."
         },
         {
-          label: "Toronto, ciudad de llegada",
+          label: "Houston, ciudad de llegada",
           body:
-            "Toronto es una de las ciudades más multiculturales del mundo, y la pregunta ‘¿ya probó…?, ¿ya estuvo en…?’ es parte de cómo un anfitrión le da la bienvenida. En inglés esa bienvenida pasa siempre por el presente perfecto: ‘have you tried…?’."
+            "Houston es una de las ciudades más multiculturales del mundo, y la pregunta ‘¿ya probó…?, ¿ya estuvo en…?’ es parte de cómo un anfitrión le da la bienvenida. En inglés esa bienvenida pasa siempre por el presente perfecto: ‘have you tried…?’."
         },
         {
           label: "Participios que hay que memorizar",
@@ -563,7 +563,7 @@ lessons.push(
           mistake: "Decir ‘have you been in…?’ por un viaje",
           whyItFails:
             "Para experiencia de viaje el inglés usa ‘been to’. ‘Been in’ sugiere estar dentro de un lugar, no haberlo visitado.",
-          sayInstead: "Have you been to Niagara Falls?"
+          sayInstead: "Have you been to The Alamo?"
         }
       ],
       variations: [
@@ -580,7 +580,7 @@ lessons.push(
           whenToUse: "Algo esperado que todavía no pasa."
         },
         {
-          form: "Have you ever been to Canada?",
+          form: "Have you ever been to Texas?",
           register: "warm conversational",
           region: "Inglés universal",
           whenToUse: "La pregunta clásica de experiencia, con ‘ever’."
@@ -653,7 +653,7 @@ lessons.push(
       situation:
         "En Cúcuta, junto a la frontera, Marleny le cuenta a Édinson un madrugón perdido en el puente internacional. Para que la historia se entienda, tiene que decir qué había pasado antes de que ella llegara: ‘ya habían cerrado’, ‘todavía no había contestado’. Ese es el pluscuamperfecto —‘había’ más participio— y sirve para marcar el más antiguo de dos hechos pasados.",
       setting: {
-        who: "Marleny is a cucuteña who crosses the border often; Édinson is a neighbour who asks what went wrong. She narrates a chain of past events, so she needs the pluperfect to say which happened first.",
+        who: "Marleny is a cucuteña who crosses the border often; Édinson is a neighbor who asks what went wrong. She narrates a chain of past events, so she needs the pluperfect to say which happened first.",
         what: "A retelling of a failed morning at the border bridge, where the order of events is the whole point.",
         when: "Late morning, after a wasted early trip, told as a frustrated story.",
         where: "Cúcuta, on the Colombian side of the border with Venezuela.",
@@ -661,10 +661,10 @@ lessons.push(
       },
       address: {
         form: "usted",
-        who: "Marleny and Édinson use usted, the ordinary neighbourly default in Cúcuta, direct but familiar.",
-        why: "Usted keeps the frank, plain tone of the border story while still being warm between neighbours; it also lets the narration stay clear and unfussy.",
+        who: "Marleny and Édinson use usted, the ordinary neighborly default in Cúcuta, direct but familiar.",
+        why: "Usted keeps the frank, plain tone of the border story while still being warm between neighbors; it also lets the narration stay clear and unfussy.",
         ifYouSwitch:
-          "Switching to “tú” would sound a touch more intimate; in Cúcuta “usted” between neighbours is the neutral, expected choice, so keep it."
+          "Switching to “tú” would sound a touch more intimate; in Cúcuta “usted” between neighbors is the neutral, expected choice, so keep it."
       },
       dialogue: [
         {
@@ -825,7 +825,7 @@ lessons.push(
             "‘A delivery / parcel sent through someone’. Central to border life, where people carry things across for others.",
           literal: "the entrusted errand",
           useWhen:
-            "Something is sent with a traveller: “la encomienda no llegó”.",
+            "Something is sent with a traveler: “la encomienda no llegó”.",
           avoidWhen:
             "You mean a formal courier package; that might be “el envío” or “el paquete”.",
           register: "neutral",

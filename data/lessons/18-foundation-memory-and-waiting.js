@@ -97,9 +97,9 @@ lessons.push(
         {
           speaker: "Alex",
           target: "¡Jaja, verdad! Qué buenos recuerdos. Mandale saludos a tu mamá.",
-          translation: "Haha, true! What good memories. Say hi to your mum.",
+          translation: "Haha, true! What good memories. Say hi to your mom.",
           pronunciation: "HA-ha, ber-DAD! ke BWE-nos rre-KWER-dos. man-DA-le sa-LOO-dos a too ma-MA",
-          literal: "Haha, true! What good memories. Send-her greetings to your mum.",
+          literal: "Haha, true! What good memories. Send-her greetings to your mom.",
           why: "“Recuerdos” is the noun from recordar — memories. In some contexts it also means “regards”, though Colombians usually send “saludos”. “Mandale” is the vos command with the pronoun attached."
         }
       ],
@@ -339,7 +339,7 @@ lessons.push(
           choices: [
             "Memories — “recuerdo” is the noun from recordar, used for the good memories the two of them are sharing right now.",
             "Regards to pass along to someone, taking “recuerdos” only in its send-my-greetings social sense on this occasion.",
-            "Souvenirs they once bought, reading “recuerdos” as the little keepsakes that travellers bring back home from a trip."
+            "Souvenirs they once bought, reading “recuerdos” as the little keepsakes that travelers bring back home from a trip."
           ],
           answer: 0,
           tests: "recuerdos as memories"
@@ -349,12 +349,12 @@ lessons.push(
     en: {
       title: "Reencontrarse con una amiga y recordar viejos tiempos",
       situation:
-        "Alejandra se encuentra por casualidad en Toronto con Rachel, una amiga del colegio que no ve hace años. Se ponen a recordar las fiestas, los profesores y los apodos de entonces, y Alejandra le pide que le recuerde un par de nombres que se le escapan. Toda la charla gira en torno a “remember”, y sobre todo a la diferencia que el inglés hace entre “remember” (recordar uno mismo) y “remind” (recordarle algo a alguien), dos verbos donde el español usa uno.",
+        "Alejandra se encuentra por casualidad en Houston con Rachel, una amiga del colegio que no ve hace años. Se ponen a recordar las fiestas, los profesores y los apodos de entonces, y Alejandra le pide que le recuerde un par de nombres que se le escapan. Toda la charla gira en torno a “remember”, y sobre todo a la diferencia que el inglés hace entre “remember” (recordar uno mismo) y “remind” (recordarle algo a alguien), dos verbos donde el español usa uno.",
       setting: {
         who: "Rachel es una amiga del colegio de Alejandra a la que no ve hace años: cálida, rápida y llena de anécdotas.",
         what: "Un reencuentro espontáneo en la calle, sacando a flote recuerdos, profesores y nombres a medio olvidar.",
         when: "Un encuentro casual, una tarde cualquiera.",
-        where: "Toronto, donde el inglés separa en dos verbos —remember y remind— lo que el español junta en recordar.",
+        where: "Houston, donde el inglés separa en dos verbos —remember y remind— lo que el español junta en recordar.",
         why: "Porque el inglés distingue “remember” (recordar uno mismo) de “remind” (recordarle algo a alguien), y porque “remember” no lleva ni “of” ni reflexivo, dos calcos que el hispanohablante arrastra del español."
       },
       address: {
@@ -407,7 +407,7 @@ lessons.push(
         },
         {
           speaker: "Alejandra",
-          target: "Haha, true! What good memories. Say hi to your mum for me.",
+          target: "Haha, true! What good memories. Say hi to your mom for me.",
           translation: "¡Jaja, verdad! Qué buenos recuerdos. Mandale saludos a tu mamá.",
           pronunciation: "ja-ja, tru! uat gud ME-mo-ris. sei jai tu yor mam for mi",
           literal: "Jaja, ¡verdad! Qué buenas memorias. Di hola a tu mamá por mí.",
@@ -673,7 +673,7 @@ lessons.push(
         "Alex llega a una comida en casa de Yina, una amiga cartagenera, sin la torta que había prometido traer, y encima se dio cuenta de que también dejó las llaves. Le toca reconocer, algo apenado, que se le olvidó todo. La escena vive de las tres formas de olvidar: el neutro “olvidé”, el reflexivo “me olvidé de”, y sobre todo el maravillosamente inocente “se me olvidó”, que reparte la culpa como si el olvido le pasara a uno solito.",
       setting: {
         who: "Yina is a warm, easygoing friend from Cartagena hosting lunch; Alex is the guest who dropped the ball.",
-        what: "Owning up to forgetting the cake and the keys, and being let off the hook with coastal good humour.",
+        what: "Owning up to forgetting the cake and the keys, and being let off the hook with coastal good humor.",
         when: "Lunchtime, arriving at the door empty-handed.",
         where: "Cartagena, on the Caribbean coast, where Spanish is fast, warm and drops its s's into soft aspirations.",
         why: "Because olvidar has three shapes that assign blame differently, and the no-fault “se me olvidó” is the everyday default English has no clean way to copy."
@@ -790,7 +790,7 @@ lessons.push(
         {
           term: "se me fue / se me pasó",
           explanation:
-            "Two everyday cousins of “se me olvidó”: it escaped me, it slipped by me — same no-fault flavour.",
+            "Two everyday cousins of “se me olvidó”: it escaped me, it slipped by me — same no-fault flavor.",
           literal: "itself to-me it-went / it-passed",
           useWhen:
             "For a mild, blame-free slip: “se me fue el nombre”, “se me pasó la hora”.",
@@ -872,7 +872,7 @@ lessons.push(
         {
           label: "The coast: tú, speed and dropped s's",
           body:
-            "Caribbean Colombia — Cartagena, Barranquilla, Santa Marta — sounds unlike the interior. It is tú country, never vos, and the speech is fast, warm and full of aspirated or dropped final s's: “¿oíte?” for “¿oíste?”, “lo do” for “los dos”, “etá bien” for “está bien”. Intonation rises and falls musically, close to the Caribbean Spanish of the islands. Costeños are famous across Colombia for their humour and openness, and the easy “tranquilo, no importa” with which Yina waves off a forgotten cake is very much in that key: warm, unbothered, quick to let a friend off the hook."
+            "Caribbean Colombia — Cartagena, Barranquilla, Santa Marta — sounds unlike the interior. It is tú country, never vos, and the speech is fast, warm and full of aspirated or dropped final s's: “¿oíte?” for “¿oíste?”, “lo do” for “los dos”, “etá bien” for “está bien”. Intonation rises and falls musically, close to the Caribbean Spanish of the islands. Costeños are famous across Colombia for their humor and openness, and the easy “tranquilo, no importa” with which Yina waves off a forgotten cake is very much in that key: warm, unbothered, quick to let a friend off the hook."
         },
         {
           label: "The no-fault family: cayó, perdió, olvidó",
@@ -981,12 +981,12 @@ lessons.push(
     en: {
       title: "Reconocer que se te olvidó un mandado",
       situation:
-        "Alejandra llega a una comida en casa de Tanya, una amiga en Toronto, sin la torta que había prometido traer, y encima se da cuenta de que dejó las llaves en la casa. Le toca reconocer, algo apenada, que se le olvidó todo. La escena enseña algo clave del inglés: no existe el “se me olvidó” que reparte la culpa, así que se dice “I forgot” o “it slipped my mind”; y cuando el olvido pasa en un lugar, el inglés cambia a otro verbo, “leave” — “I left my keys at home”.",
+        "Alejandra llega a una comida en casa de Tanya, una amiga en Houston, sin la torta que había prometido traer, y encima se da cuenta de que dejó las llaves en la casa. Le toca reconocer, algo apenada, que se le olvidó todo. La escena enseña algo clave del inglés: no existe el “se me olvidó” que reparte la culpa, así que se dice “I forgot” o “it slipped my mind”; y cuando el olvido pasa en un lugar, el inglés cambia a otro verbo, “leave” — “I left my keys at home”.",
       setting: {
         who: "Tanya es una amiga relajada y cálida que recibe a Alejandra a almorzar; Alejandra es la invitada que falló.",
         what: "Reconocer que olvidó la torta y las llaves, y que la disculpen con buen humor.",
         when: "A la hora del almuerzo, llegando a la puerta con las manos vacías.",
-        where: "Toronto, donde el inglés no tiene el “se me olvidó” sin culpa y separa “forget” de “leave”.",
+        where: "Houston, donde el inglés no tiene el “se me olvidó” sin culpa y separa “forget” de “leave”.",
         why: "Porque el inglés no copia el “se me olvidó” inocente —dice “I forgot” o “it slipped my mind”— y porque cuando el olvido ocurre en un sitio, cambia a “leave”."
       },
       address: {
@@ -1332,7 +1332,7 @@ lessons.push(
           translation: "Of course. How long is the wait for my turn?",
           pronunciation: "KLA-ro. KWAN-to TO-ka es-pe-RAR PA-ra el TOOR-no?",
           literal: "Clear. How-much it-falls to-wait for the turn?",
-          why: "“Esperar” here is plainly to wait. “¿Cuánto toca...?” is a very Colombian way to ask what one has to do — “tocar” meaning to fall to someone as a duty. “El turno” is your place in the queue."
+          why: "“Esperar” here is plainly to wait. “¿Cuánto toca...?” is a very Colombian way to ask what one has to do — “tocar” meaning to fall to someone as a duty. “El turno” is your place in line."
         },
         {
           speaker: "Recepcionista",
@@ -1356,7 +1356,7 @@ lessons.push(
           translation: "Yes, it's full today. But take a seat — the line is moving.",
           pronunciation: "see, oy es-TA YE-no. PE-ro es-PE-re sen-TA-do, ke la FEE-la a-VAN-sa",
           literal: "Yes, today it-is full. But wait seated, that the line advances.",
-          why: "“Espere sentado” literally means wait sitting down — take a seat. It has a wry double life: said of something unlikely, it means don't hold your breath. Here it is literal and kind. “La fila” is the queue."
+          why: "“Espere sentado” literally means wait sitting down — take a seat. It has a wry double life: said of something unlikely, it means don't hold your breath. Here it is literal and kind. “La fila” is the line."
         },
         {
           speaker: "Alex",
@@ -1456,12 +1456,12 @@ lessons.push(
         {
           term: "el turno / la fila",
           explanation:
-            "Your turn in a queue, and the queue itself — the vocabulary of every clinic, bank and office.",
+            "Your turn in line, and the line itself — the vocabulary of every clinic, bank and office.",
           literal: "the turn / the line",
           useWhen:
-            "Talking about queues: “pedir el turno”, “hacer la fila”, “guardar el puesto”.",
+            "Talking about lines: “pedir el turno”, “hacer la fila”, “guardar el puesto”.",
           avoidWhen:
-            "Using “línea” for a queue; that is a phone line, not a queue of people.",
+            "Using “línea” for people waiting; that is a phone line, not a line of people.",
           register: "neutral",
           region: "General Colombian; “hacer fila” and “hacer cola” both occur.",
           related: ["el turno", "hacer fila", "el puesto", "la cola"],
@@ -1509,7 +1509,7 @@ lessons.push(
         {
           label: "The EPS waiting room and “espere sentado”",
           body:
-            "Healthcare in Colombia runs largely through EPS, the insurers that manage access to care, and their waiting rooms are a national experience: numbered turns, long queues, and the patient art of waiting. “Espere sentado” — wait sitting down — is literally what you do there. But the phrase has a wry second life: told to expect something unlikely, “espéralo sentado” means don't hold your breath, you'll be waiting a while. The receptionist's kindly literal use and the sarcastic idiom live side by side, a small lesson in how the same words about waiting can comfort or gently mock, depending entirely on the tone."
+            "Healthcare in Colombia runs largely through EPS, the insurers that manage access to care, and their waiting rooms are a national experience: numbered turns, long lines, and the patient art of waiting. “Espere sentado” — wait sitting down — is literally what you do there. But the phrase has a wry second life: told to expect something unlikely, “espéralo sentado” means don't hold your breath, you'll be waiting a while. The receptionist's kindly literal use and the sarcastic idiom live side by side, a small lesson in how the same words about waiting can comfort or gently mock, depending entirely on the tone."
         }
       ],
       pitfalls: [
@@ -1574,7 +1574,7 @@ lessons.push(
       choices: [
         "Because “espero que” in its hope sense triggers the subjunctive, so the following verb shifts from “demora” to “demore”.",
         "Because “demorarse” is an irregular verb that only ever appears in the subjunctive form regardless of what comes before it.",
-        "Because the receptionist is giving a polite command to the queue, and Colombian commands always take that particular verb ending."
+        "Because the receptionist is giving a polite command to the line, and Colombian commands always take that particular verb ending."
       ],
       answer: 0,
       practiceExtra: [
@@ -1582,7 +1582,7 @@ lessons.push(
           prompt: "Alex says “no esperaba tanta gente hoy.” Which sense of esperar is this?",
           choices: [
             "Expect — “no esperaba” means he wasn't anticipating this many people; esperar here is about what he assumed would happen.",
-            "Wait — he is saying he had not waited for this many people yet today, describing the length of the queue he stood in.",
+            "Wait — he is saying he had not waited for this many people yet today, describing the length of the line he stood in.",
             "Hope — he is expressing a wish that there had not been so many people, framing the crowd as something he was hoping against."
           ],
           answer: 0,
@@ -1613,12 +1613,12 @@ lessons.push(
     en: {
       title: "Esperar el turno en la clínica",
       situation:
-        "Alejandra llega a una clínica sin cita en Toronto y le pregunta a la recepcionista cuánto le toca esperar para que la atiendan. La recepcionista la hace esperar un momento, calcula media hora y confía en que la fila no se demore más. La escena enseña algo que al hispanohablante lo enreda: el español tiene un solo esperar, pero el inglés lo parte en tres verbos —wait, hope y expect— y además “wait” exige “for” antes de la persona o la cosa.",
+        "Alejandra llega a una clínica sin cita en Houston y le pregunta a la recepcionista cuánto le toca esperar para que la atiendan. La recepcionista la hace esperar un momento, calcula media hora y confía en que la fila no se demore más. La escena enseña algo que al hispanohablante lo enreda: el español tiene un solo esperar, pero el inglés lo parte en tres verbos —wait, hope y expect— y además “wait” exige “for” antes de la persona o la cosa.",
       setting: {
         who: "La recepcionista de una walk-in clinic es amable y eficiente; Alejandra es la paciente que pregunta por la espera.",
         what: "Preguntar cuánto dura la espera y que le digan que tome asiento, con los tres verbos que el español junta en esperar.",
         when: "Una mañana concurrida en la clínica, la sala de espera llena.",
-        where: "Toronto, donde el inglés separa wait, hope y expect y pide “for” tras “wait”.",
+        where: "Houston, donde el inglés separa wait, hope y expect y pide “for” tras “wait”.",
         why: "Porque el español esperar se vuelve tres verbos en inglés —wait, hope, expect— y “wait” exige “for” antes de su objeto."
       },
       address: {
@@ -1765,7 +1765,7 @@ lessons.push(
           }
         },
         {
-          term: "line / queue",
+          term: "line",
           explanation:
             "La fila. En Norteamérica “line” (“wait in line”); en el inglés británico “queue” (“in the queue”).",
           literal: "fila / cola",
@@ -1775,7 +1775,7 @@ lessons.push(
             "Con “row” para una fila de personas; “row” es una hilera de asientos.",
           register: "neutral",
           region: "“Line” en EE. UU./Canadá; “queue” en Reino Unido.",
-          related: ["in line", "the line", "queue", "wait your turn"],
+          related: ["in line", "the line", "wait in line", "wait your turn"],
           example: {
             target: "The line is moving fast.",
             translation: "La fila avanza rápido."

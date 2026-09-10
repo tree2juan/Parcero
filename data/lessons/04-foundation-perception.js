@@ -33,16 +33,16 @@ lessons.push(
       situation:
         "Alex se cruza con don Fabio, su vecino del tercer piso, en las escaleras del edificio en Chapinero. Anoche jugó Millonarios y quedaron dos a dos. Don Fabio quiere comentar cada jugada, y Alex tiene que seguirle la conversación sobre lo que vio — o no vio — por la televisión, aunque va de afán para el trabajo.",
       setting: {
-        who: "Don Fabio has lived on the third floor for twenty years and never misses a Millonarios match. Alex moved in two months ago and follows football only loosely, but has already worked out that don Fabio is the neighbour who knows everyone in the building.",
+        who: "Don Fabio has lived on the third floor for twenty years and never misses a Millonarios match. Alex moved in two months ago and follows soccer only loosely, but has already worked out that don Fabio is the neighbor who knows everyone in the building.",
         what: "A two-minute recap of last night's match, caught on the stairs on the way out the door.",
         when: "Early on a Thursday morning, both of them heading out, Alex already running late for work.",
-        where: "Bogotá, a red-brick building in Chapinero where neighbours still stop to talk on the stairs rather than nodding past each other.",
-        why: "Because this is how Alex stops being a stranger and becomes a neighbour. Don Fabio's match talk is an invitation, and following it — even badly — is what turns a face in the lift into the person who will one day take in a parcel for you."
+        where: "Bogotá, a red-brick building in Chapinero where neighbors still stop to talk on the stairs rather than nodding past each other.",
+        why: "Because this is how Alex stops being a stranger and becomes a neighbor. Don Fabio's match talk is an invitation, and following it — even badly — is what turns a face in the elevator into the person who will one day take in a parcel for you."
       },
       address: {
         form: "usted",
-        who: "Don Fabio uses usted with Alex, and Alex uses usted straight back, the way most people in Bogotá do with a neighbour they do not yet know well.",
-        why: "In Bogotá usted is the safe default between neighbours of different ages: warm but not presumptuous. It lets don Fabio be friendly without pretending they are old friends, and it lets Alex be respectful of an older man without sounding stiff.",
+        who: "Don Fabio uses usted with Alex, and Alex uses usted straight back, the way most people in Bogotá do with a neighbor they do not yet know well.",
+        why: "In Bogotá usted is the safe default between neighbors of different ages: warm but not presumptuous. It lets don Fabio be friendly without pretending they are old friends, and it lets Alex be respectful of an older man without sounding stiff.",
         ifYouSwitch: "Tú would not be rude, but from a younger newcomer to an older resident it moves faster than the friendship actually has. Vos is barely used in Bogotá and would sound borrowed from Medellín."
       },
       dialogue: [
@@ -84,7 +84,7 @@ lessons.push(
           translation: "No, man, I watch it here in peace. At the stadium you can't see a thing.",
           pronunciation: "no, OM-breh, yo lo BEH-o a-KEE tran-KEE-lo. en el es-TA-dyo OO-no no beh NA-da",
           literal: "No, man, I it I-watch here calm. In the stadium one not sees nothing.",
-          why: "Two present-tense forms of ver in one breath: “yo lo veo” for how he habitually watches, and “uno no ve nada”, where “uno” (one) is Colombia's favourite way to make a personal opinion sound like a general truth about everybody."
+          why: "Two present-tense forms of ver in one breath: “yo lo veo” for how he habitually watches, and “uno no ve nada”, where “uno” (one) is Colombia's favorite way to make a personal opinion sound like a general truth about everybody."
         },
         {
           speaker: "Alex",
@@ -156,7 +156,7 @@ lessons.push(
           term: "nos vemos",
           explanation: "The everyday “see you”, built from the reflexive of ver — literally “we see each other”. It assumes a next time and is warmer than a flat goodbye, which is why Colombians reach for it constantly.",
           literal: "us we-see",
-          useWhen: "Leaving anyone you expect, or claim to expect, to cross paths with again — neighbours, colleagues, the shopkeeper.",
+          useWhen: "Leaving anyone you expect, or claim to expect, to cross paths with again — neighbors, colleagues, the shopkeeper.",
           avoidWhen: "A genuine, possibly final farewell, where “que le vaya bien” or a real “adiós” carries the weight.",
           register: "friendly informal",
           region: "Universal Spanish; in Colombia “nos estamos viendo” is an even softer variant that promises nothing firm.",
@@ -173,7 +173,7 @@ lessons.push(
           useWhen: "Reporting how something turned out — a score, a plan, a final arrangement.",
           avoidWhen: "You mean to remain in a place over time; that sense leans on “quedarse”, the reflexive.",
           register: "neutral",
-          region: "Universal Spanish; the two-all football usage is everyday across Colombia.",
+          region: "Universal Spanish; the two-all soccer usage is everyday across Colombia.",
           related: ["empatar", "quedarse", "terminar", "el empate"],
           example: {
             target: "Quedamos dos a dos.",
@@ -203,8 +203,8 @@ lessons.push(
           body: "Dropped at the end of a sentence, “¿si ve?” asks you to agree, not to report on your eyesight. Bogotanos scatter it through a story the way English speakers scatter “you know?”, and a good listener simply nods or murmurs “claro”. Take it literally — pausing to confirm that yes, you can see — and you break the rhythm and mark yourself as new. It is one of the fastest tells of a fluent ear."
         },
         {
-          label: "Football is watched at home for a reason",
-          body: "Don Fabio's preference for watching at home is not only about comfort. For decades many Colombians have treated the stadium as somewhere to weigh up before taking the family, and the living-room television, with neighbours drifting in and out, became the real social centre of a match. Saying you “lo vi por la tele” is completely normal and carries none of the apology an English speaker might expect for not going in person."
+          label: "Soccer is watched at home for a reason",
+          body: "Don Fabio's preference for watching at home is not only about comfort. For decades many Colombians have treated the stadium as somewhere to weigh up before taking the family, and the living-room television, with neighbors drifting in and out, became the real social center of a match. Saying you “lo vi por la tele” is completely normal and carries none of the apology an English speaker might expect for not going in person."
         },
         {
           label: "Colombians would rather not say adiós",
@@ -223,7 +223,7 @@ lessons.push(
         },
         {
           mistake: "Answering “¿si ve?” as though it asked about your eyesight",
-          whyItFails: "“¿Si ve?” is a tag meaning “you know?”. Replying “sí, veo bien” treats it as a literal question and stops the conversation dead, because your neighbour was only asking you to agree with him.",
+          whyItFails: "“¿Si ve?” is a tag meaning “you know?”. Replying “sí, veo bien” treats it as a literal question and stops the conversation dead, because your neighbor was only asking you to agree with him.",
           sayInstead: "Claro."
         },
         {
@@ -242,7 +242,7 @@ lessons.push(
           form: "¿Vio el partido anoche?",
           register: "polite informal",
           region: "Bogotá",
-          whenToUse: "The usted default with a neighbour or an older person you address respectfully."
+          whenToUse: "The usted default with a neighbor or an older person you address respectfully."
         },
         {
           form: "¿Viste el partido?",
@@ -254,7 +254,7 @@ lessons.push(
           form: "¿Vio pues el partido?",
           register: "friendly informal",
           region: "Medellín / paisa",
-          whenToUse: "The paisa colouring, where “pues” softens and rounds off almost any question."
+          whenToUse: "The paisa coloring, where “pues” softens and rounds off almost any question."
         },
         {
           form: "Nos vemos mañana.",
@@ -280,7 +280,7 @@ lessons.push(
         {
           prompt: "Alex says “Lo vi por la tele.” Why does he use ver rather than mirar?",
           choices: [
-            "Because mirar would be far too formal for a casual, early-morning chat with a neighbour on the stairs.",
+            "Because mirar would be far too formal for a casual, early-morning chat with a neighbor on the stairs.",
             "Because in Colombia a screen is something you “ve” — ver is the settled verb for watching television and matches.",
             "Because he only glanced at the match for a second, and ver signals that he was not really paying attention."
           ],
@@ -292,7 +292,7 @@ lessons.push(
           choices: [
             "That he is unsure whether he will ever run into Alex again and wants to leave the door politely open.",
             "That he is being noticeably more formal than usual because they still do not know each other well at all.",
-            "That he treats this as an ordinary parting between neighbours who will cross paths again before long."
+            "That he treats this as an ordinary parting between neighbors who will cross paths again before long."
           ],
           answer: 2,
           tests: "“nos vemos” as the warm, everyday goodbye"
@@ -322,12 +322,12 @@ lessons.push(
     en: {
       title: "Comentar el partido en las escaleras del edificio",
       situation:
-        "Alejandra se cruza con Megan, su vecina del tercer piso, en las escaleras del edificio en Toronto. Anoche jugó el Toronto FC y quedaron dos a dos. Megan quiere comentar cada jugada en inglés, y Alejandra tiene que seguirle la conversación sobre lo que vio — o no vio — por la televisión, aunque va de afán para el trabajo.",
+        "Alejandra se cruza con Megan, su vecina del tercer piso, en las escaleras del edificio en Houston. Anoche jugó el Houston FC y quedaron dos a dos. Megan quiere comentar cada jugada en inglés, y Alejandra tiene que seguirle la conversación sobre lo que vio — o no vio — por la televisión, aunque va de afán para el trabajo.",
       setting: {
-        who: "Megan lleva veinte años en el tercer piso y no se pierde un partido del Toronto FC. Alejandra llegó al edificio hace dos meses y sigue el fútbol apenas de reojo, pero ya aprendió que Megan es la vecina que conoce a todo el mundo.",
+        who: "Megan lleva veinte años en el tercer piso y no se pierde un partido del Houston FC. Alejandra llegó al edificio hace dos meses y sigue el fútbol apenas de reojo, pero ya aprendió que Megan es la vecina que conoce a todo el mundo.",
         what: "Un resumen de dos minutos del partido de anoche, atrapado en las escaleras camino a la puerta.",
         when: "Temprano un jueves por la mañana, las dos saliendo, Alejandra ya sobre el tiempo para el trabajo.",
-        where: "Toronto, un edificio de ladrillo donde los vecinos todavía se paran a conversar en las escaleras en vez de pasar de largo.",
+        where: "Houston, un edificio de ladrillo donde los vecinos todavía se paran a conversar en las escaleras en vez de pasar de largo.",
         why: "Porque así Alejandra deja de ser una desconocida y se vuelve una vecina. La charla futbolera de Megan es una invitación, y seguirla — aunque sea mal — es lo que convierte una cara del ascensor en la persona que un día le recibirá un paquete."
       },
       address: {
@@ -804,7 +804,7 @@ lessons.push(
         },
         {
           label: "“Dar una vuelta” and the art of the stroll",
-          body: "Inviting someone to “dar una vuelta” is a small social ritual: an unhurried walk with no fixed destination, meant mostly for company and conversation. It can mean a loop around the block, a drift through a park, or an errand stretched into an outing. Accepting is easy and low stakes, which is exactly why it's such a common opener among friends and neighbours. It's the Colombian way of turning idle time into shared time."
+          body: "Inviting someone to “dar una vuelta” is a small social ritual: an unhurried walk with no fixed destination, meant mostly for company and conversation. It can mean a loop around the block, a drift through a park, or an errand stretched into an outing. Accepting is easy and low stakes, which is exactly why it's such a common opener among friends and neighbors. It's the Colombian way of turning idle time into shared time."
         }
       ],
       pitfalls: [
@@ -912,14 +912,14 @@ lessons.push(
       ]
     },
     en: {
-      title: "Guardar el celular en el centro de Toronto",
+      title: "Guardar el celular en el centro de Houston",
       situation:
-        "Alejandra camina por el centro de Toronto con Dana, una compañera canadiense, y por reflejo bogotano esconde el celular y le dice a Dana que no “dé papaya”. Dana no entiende la expresión, así que Alejandra tiene que traducir su instinto de seguridad al inglés: descubre que “dar papaya” no tiene una sola palabra en inglés y que le toca decir “make yourself a target”, “put your phone away” y “I got robbed”.",
+        "Alejandra camina por el centro de Houston con Dana, una compañera estadounidense, y por reflejo bogotano esconde el celular y le dice a Dana que no “dé papaya”. Dana no entiende la expresión, así que Alejandra tiene que traducir su instinto de seguridad al inglés: descubre que “dar papaya” no tiene una sola palabra en inglés y que le toca decir “make yourself a target”, “put your phone away” y “I got robbed”.",
       setting: {
-        who: "Dana creció en Toronto y se mueve por el centro sin pensarlo dos veces. Alejandra llegó de Bogotá hace dos meses y trae grabado el instinto de no mostrar el celular en la calle, aunque todavía le faltan las palabras en inglés para explicarlo.",
+        who: "Dana creció en Houston y se mueve por el centro sin pensarlo dos veces. Alejandra llegó de Bogotá hace dos meses y trae grabado el instinto de no mostrar el celular en la calle, aunque todavía le faltan las palabras en inglés para explicarlo.",
         what: "Una pequeña lección de seguridad al revés: la recién llegada le enseña street smarts a la local, mientras aprende cómo se dice todo eso en inglés.",
         when: "Un mediodía entre semana, saliendo a almorzar, con el centro lleno de gente y de afán.",
-        where: "El centro de Toronto, cerca de las calles peatonales concurridas, donde Alejandra todavía mide el riesgo con ojos de Bogotá.",
+        where: "El centro de Houston, cerca de las calles peatonales concurridas, donde Alejandra todavía mide el riesgo con ojos de Bogotá.",
         why: "Porque traducir “no dar papaya” la obliga a descubrir que el inglés reparte la idea en varias frases, y porque enseñarle su instinto a Dana es también su manera de sentirse útil y en casa en una ciudad nueva."
       },
       address: {
@@ -1236,7 +1236,7 @@ lessons.push(
           translation: "Do you know curuba? Try it and tell me what it tastes like.",
           pronunciation: "ko-NO-ses la ku-RU-ba? PRUE-ba-la i me DI-ses a ke SA-be",
           literal: "Know-you the curuba? Try-it and me you-say to what it-tastes.",
-          why: "Two knowing verbs collide here. “Conoces” is “conocer”, to be familiar with a thing, the right choice for meeting a new fruit. “Sabe” is “saber”, and “a qué sabe” asks what it tastes like — flavour uses “saber a”, not “conocer”."
+          why: "Two knowing verbs collide here. “Conoces” is “conocer”, to be familiar with a thing, the right choice for meeting a new fruit. “Sabe” is “saber”, and “a qué sabe” asks what it tastes like — flavor uses “saber a”, not “conocer”."
         },
         {
           speaker: "Alex",
@@ -1252,7 +1252,7 @@ lessons.push(
           translation: "It tastes like passion fruit, but milder. Do you know how to make it into juice?",
           pronunciation: "SA-be a ma-ra-ku-YA, pe-ro mas SUA-ve. SA-bes pre-pa-RAR-la en JU-go",
           literal: "It-tastes to passion-fruit, but more mild. Know-you to-prepare-it in juice?",
-          why: "“Sabe a maracuyá” shows the flavour construction: “saber a” plus the thing it tastes of. Then “sabes prepararla” shows “saber” plus an infinitive, the way Spanish says “know how to” — no separate word for “how” is needed."
+          why: "“Sabe a maracuyá” shows the flavor construction: “saber a” plus the thing it tastes of. Then “sabes prepararla” shows “saber” plus an infinitive, the way Spanish says “know how to” — no separate word for “how” is needed."
         },
         {
           speaker: "Alex",
@@ -1310,10 +1310,10 @@ lessons.push(
         },
         {
           term: "saber a",
-          explanation: "To taste like something. Colombian Spanish uses “saber” — the same verb as for knowing — plus the preposition “a” and the flavour. So a fruit “sabe a maracuyá”, tastes of passion fruit. It's the standard way to describe flavour across the country.",
+          explanation: "To taste like something. Colombian Spanish uses “saber” — the same verb as for knowing — plus the preposition “a” and the flavor. So a fruit “sabe a maracuyá”, tastes of passion fruit. It's the standard way to describe flavor across the country.",
           literal: "to taste of / like",
           useWhen: "Describing what something tastes of, at a market, a meal, or a juice stall.",
-          avoidWhen: "Using “tener gusto a”, which sounds foreign in Colombia; here flavour is “saber a”.",
+          avoidWhen: "Using “tener gusto a”, which sounds foreign in Colombia; here flavor is “saber a”.",
           register: "neutral",
           region: "Colombian usage; “saber a” for taste is the norm, over the “tener gusto a” heard elsewhere.",
           related: ["saber", "sabor", "tener sabor", "saborear"],
@@ -1368,7 +1368,7 @@ lessons.push(
           term: "no saber ni papa",
           explanation: "A colloquial idiom for not having the faintest idea — literally “to not know even a potato”. It's an emphatic, informal way to admit total ignorance of a topic, common and affectionate in Colombian speech.",
           literal: "to not know even a potato",
-          useWhen: "Admitting, casually and with humour, that you know nothing about something.",
+          useWhen: "Admitting, casually and with humor, that you know nothing about something.",
           avoidWhen: "In formal settings, where “no tengo ni idea” or “no sé nada del tema” fit better.",
           register: "friendly informal",
           region: "Colombian and wider Latin American slang; the potato image lands well locally.",
@@ -1388,11 +1388,11 @@ lessons.push(
         },
         {
           label: "In Colombia, food “sabe a”",
-          body: "Ask what a dish tastes like and Colombians reach for “saber”: “¿a qué sabe?” and “sabe a maracuyá”. The same verb that means “to know” also means “to taste of”, joined to the thing by the preposition “a”. Some learners import “tener gusto a” from other regions or textbooks, but in Colombia that sounds off. At a juice stall or a lunch counter, “sabe a” is the natural, local way to talk about flavour."
+          body: "Ask what a dish tastes like and Colombians reach for “saber”: “¿a qué sabe?” and “sabe a maracuyá”. The same verb that means “to know” also means “to taste of”, joined to the thing by the preposition “a”. Some learners import “tener gusto a” from other regions or textbooks, but in Colombia that sounds off. At a juice stall or a lunch counter, “sabe a” is the natural, local way to talk about flavor."
         },
         {
           label: "“Sabía” versus “supe”",
-          body: "The two past tenses of “saber” mean genuinely different things. The imperfect “sabía” is the ongoing state of knowing: “no sabía” means “I didn't know” something all along. The preterite “supe” is the instant of finding out: “supe la noticia ayer” means “I learned the news yesterday”. English blurs both into “knew”, so learners often reach for “supe” when they mean the background state and should say “sabía”. Matching the tense to the moment is worth practising."
+          body: "The two past tenses of “saber” mean genuinely different things. The imperfect “sabía” is the ongoing state of knowing: “no sabía” means “I didn't know” something all along. The preterite “supe” is the instant of finding out: “supe la noticia ayer” means “I learned the news yesterday”. English blurs both into “knew”, so learners often reach for “supe” when they mean the background state and should say “sabía”. Matching the tense to the moment is worth practicing."
         },
         {
           label: "The friendly shrug: “quién sabe”",
@@ -1411,8 +1411,8 @@ lessons.push(
           sayInstead: "Sé nadar."
         },
         {
-          mistake: "Saying “Tiene gusto a mango” to describe a flavour",
-          whyItFails: "In Colombia flavour is expressed with “saber a”, not “tener gusto a”, which sounds imported. Describing taste with “gusto” marks you as a non-local; the natural phrase at any stall is “sabe a mango”.",
+          mistake: "Saying “Tiene gusto a mango” to describe a flavor",
+          whyItFails: "In Colombia flavor is expressed with “saber a”, not “tener gusto a”, which sounds imported. Describing taste with “gusto” marks you as a non-local; the natural phrase at any stall is “sabe a mango”.",
           sayInstead: "Sabe a mango."
         },
         {
@@ -1457,7 +1457,7 @@ lessons.push(
       choices: [
         "That the curuba knows the passion fruit exists, and that is why the two fruits grow together in cold weather.",
         "That Yésica knows passion fruit very well and is confidently recommending it to Alex at her market stall.",
-        "That the curuba has a flavour close to passion fruit, though a little milder and less sharp."
+        "That the curuba has a flavor close to passion fruit, though a little milder and less sharp."
       ],
       answer: 2,
       practiceExtra: [
@@ -1506,12 +1506,12 @@ lessons.push(
     en: {
       title: "La fruta rara en el puesto del mercado",
       situation:
-        "En un mercado de Toronto, Alejandra se para en el puesto de Nora, una vendedora local, frente a una fruta que no conoce: el ruibarbo. Nora la anima a probarlo y a adivinar a qué sabe. En la charla, Alejandra descubre que el inglés usa un solo verbo, “know”, para lo que el español parte en “saber” y “conocer”, y que la comida no “knows”, sino que “tastes like”.",
+        "En un mercado de Houston, Alejandra se para en el puesto de Nora, una vendedora local, frente a una fruta que no conoce: el ruibarbo. Nora la anima a probarlo y a adivinar a qué sabe. En la charla, Alejandra descubre que el inglés usa un solo verbo, “know”, para lo que el español parte en “saber” y “conocer”, y que la comida no “knows”, sino que “tastes like”.",
       setting: {
-        who: "Nora atiende un puesto de frutas y verduras que heredó de su familia y se sabe de memoria cada producto de la mesa. Alejandra lleva dos meses en Toronto y todavía se traba cuando una vendedora nombra una fruta que nunca ha visto.",
+        who: "Nora atiende un puesto de frutas y verduras que heredó de su familia y se sabe de memoria cada producto de la mesa. Alejandra lleva dos meses en Houston y todavía se traba cuando una vendedora nombra una fruta que nunca ha visto.",
         what: "Una degustación amable en un puesto del mercado que se convierte en una lección sobre el único “know” del inglés.",
         when: "A media mañana entre semana, con el mercado movido pero sin agüe, y tiempo para que la vendedora converse.",
-        where: "Un mercado cubierto en Toronto, de esos donde la gente compra verduras y prueba fruta en el mostrador.",
+        where: "Un mercado cubierto en Houston, de esos donde la gente compra verduras y prueba fruta en el mostrador.",
         why: "Porque probar una fruta desconocida es la entrada más fácil y amistosa al inglés real del mercado, y a Nora se le nota que disfruta iniciar a una recién llegada en una fruta que muchos ni miran."
       },
       address: {
@@ -1593,7 +1593,7 @@ lessons.push(
           avoidWhen: "Usando “know” para el sabor; ese es un calco del español que no funciona en inglés.",
           register: "neutral",
           region: "Inglés general; “taste of” es una variante un poco más literaria.",
-          related: ["taste of", "flavour", "tastes good", "have a taste"],
+          related: ["taste of", "flavor", "tastes good", "have a taste"],
           example: {
             target: "It tastes like green apple.",
             translation: "Sabe a manzana verde."
@@ -1692,7 +1692,7 @@ lessons.push(
       ],
       pitfalls: [
         {
-          mistake: "Saying “It knows to passion fruit” for a flavour",
+          mistake: "Saying “It knows to passion fruit” for a flavor",
           whyItFails: "Es un calco del doble sentido español de “saber”. En inglés el sabor va con “taste like”, y “know” solo sirve para datos o personas. “It knows to passion fruit” no significa nada para el oído anglohablante.",
           sayInstead: "It tastes like passion fruit."
         },

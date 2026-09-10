@@ -75,7 +75,7 @@ lessons.push(
           translation: "If you already booked an appointment, only take a number when you get to the service window.",
           pronunciation: "see ya sa-KAS-teh SEE-ta, SOH-loh SA-ka TOOR-noh KWAN-doh YEH-ges a la ben-ta-NEE-ya",
           literal: "If already you-took-out appointment, only take-out turn when you-arrive to the little-window.",
-          why: "“Sacar turno” means take a number or get a place in the queueing system. It is another errand use, not a physical pulling motion."
+          why: "“Sacar turno” means take a number or get a place in line. It is another errand use, not a physical pulling motion."
         },
         {
           speaker: "Emma",
@@ -101,7 +101,7 @@ lessons.push(
             "A highly productive verb meaning take out, get, produce, obtain or score, depending on the object.",
           literal: "to take out",
           useWhen:
-            "Cash, copies, documents, appointments, turns in a queue, trash and grades all naturally use sacar in Colombian Spanish.",
+            "Cash, copies, documents, appointments, turns in a line, trash and grades all naturally use sacar in Colombian Spanish.",
           avoidWhen:
             "Expecting one English verb to cover every use. The Spanish pattern is broader than any single English translation.",
           register: "neutral",
@@ -152,7 +152,7 @@ lessons.push(
             "To book or get an appointment, especially through a website, phone line or service office.",
           literal: "to take out an appointment",
           useWhen:
-            "Public offices, clinics, visa centres and service desks require an appointment before serving you.",
+            "Public offices, clinics, visa centers and service desks require an appointment before serving you.",
           avoidWhen:
             "Assuming it means physically removing an appointment. The point is obtaining a slot.",
           register: "neutral practical",
@@ -169,7 +169,7 @@ lessons.push(
             "To get an official document issued. The office produces the document, but the citizen “saca” it.",
           literal: "to take out the ID card / passport",
           useWhen:
-            "Talking about getting an ID card, passport, licence, certificate or other official document.",
+            "Talking about getting an ID card, passport, license, certificate or other official document.",
           avoidWhen:
             "Translating it as taking the document out of a drawer. This is the issuance process.",
           register: "neutral practical",
@@ -183,7 +183,7 @@ lessons.push(
         {
           term: "sacar turno",
           explanation:
-            "To take a number or get a place in a service queue.",
+            "To take a number or get a place in a service line.",
           literal: "to take out a turn",
           useWhen:
             "Banks, clinics, public offices and service counters use numbered turns.",
@@ -216,7 +216,7 @@ lessons.push(
         }
       ],
       note:
-        "Sacar is not one neat English verb. It is a Colombian errand machine: sacar plata, sacar copias, sacar cita, sacar turno, sacar la cédula, sacar el pasaporte, sacar la basura, sacar buenas notas. The object tells you whether English wants withdraw, make, book, take, get issued, take out or score. And when you say “saqué,” the spelling changes to qu so the hard k sound survives before e.",
+        "Sacar is a Colombian errand machine: sacar plata, sacar copias, sacar cita, sacar turno, sacar la cédula, sacar el pasaporte, sacar la basura, sacar buenas notas. The object tells you whether English wants withdraw, make, book, take, get issued, take out or score. And when you say “saqué,” the spelling changes to qu so the hard k sound survives before e.",
       culture: [
         {
           label: "Errands cluster around copy shops",
@@ -283,7 +283,7 @@ lessons.push(
       prompt: "Emma says “ayer saqué la cita por internet.” What should you notice?",
       choices: [
         "The verb means she booked the appointment, and the spelling changes to qu before e.",
-        "The verb means she cancelled the appointment because the website stopped working.",
+        "The verb means she canceled the appointment because the website stopped working.",
         "The verb means she physically removed a chair from the public office."
       ],
       answer: 0,
@@ -485,7 +485,7 @@ lessons.push(
             "Confundirlo con reservar una cita futura. “Take a number” suele ser para esperar hoy.",
           register: "neutral practical",
           region: "Inglés universal.",
-          related: ["queue", "ticket number", "desk", "wait"],
+          related: ["line", "ticket number", "desk", "wait"],
           example: {
             target: "Take a number when you arrive.",
             translation: "Saque turno cuando llegue."
@@ -606,11 +606,11 @@ lessons.push(
           prompt: "¿Cuál frase corresponde a “sacar turno”?",
           choices: [
             "Book a future appointment.",
-            "Take a number in the queue.",
-            "Withdraw money from the queue."
+            "Take a number in line.",
+            "Withdraw money from the line."
           ],
           answer: 1,
-          tests: "“take a number” for today's service queue"
+          tests: "“take a number” for today's service line"
         }
       ]
     }
@@ -629,11 +629,11 @@ lessons.push(
       situation:
         "Estás en Buenaventura, esperando una lancha, y alguien intenta meterse delante de una fila que ya lleva media hora bajo el sol. La encargada no grita, pero marca el límite: aquí nadie se salta la fila, nadie se salta el paso del registro y saltarse un semáforo tampoco es una viveza.",
       setting: {
-        who: "Marisol manages passengers at a dock with patience sharpened by long lines. Leo is travelling with a small group and notices a man edging toward the front as if nobody were watching.",
+        who: "Marisol manages passengers at a dock with patience sharpened by long lines. Leo is traveling with a small group and notices a man edging toward the front as if nobody were watching.",
         what: "A line-management conversation that moves from literal jumping to the figurative and socially loaded “saltarse la fila.”",
         when: "Late morning, after the first boat filled up and the next one has not yet been called.",
-        where: "Buenaventura, Valle del Cauca, at a passenger dock where heat, luggage and boat schedules make the queue tense.",
-        why: "Saltar is easy when bodies jump. The useful Spanish is figurative: skipping a class, step or queue; running a light; and noticing when something is obvious."
+        where: "Buenaventura, Valle del Cauca, at a passenger dock where heat, luggage and boat schedules make the line tense.",
+        why: "Saltar is easy when bodies jump. The useful Spanish is figurative: skipping a class, step or line; running a light; and noticing when something is obvious."
       },
       address: {
         form: "usted",
@@ -649,7 +649,7 @@ lessons.push(
           translation: "Ms Marisol, I think that man is skipping the line.",
           pronunciation: "seh-NYOH-ra ma-ree-SOL, KREH-oh keh EH-seh seh-NYOR seh es-TA sal-TAN-doh la FEE-la",
           literal: "Ms Marisol, I-think that that man himself is jumping the line.",
-          why: "“Saltarse la fila” is queue-jumping, not an athletic leap. It is socially loaded because it steals other people's waiting time."
+          why: "“Saltarse la fila” is cutting in line, not an athletic leap. It is socially loaded because it steals other people's waiting time."
         },
         {
           speaker: "Marisol",
@@ -699,7 +699,7 @@ lessons.push(
             "To jump, but also to skip over a class, step, rule or place in a line.",
           literal: "to jump",
           useWhen:
-            "Bodies jump, but people also skip classes, steps, traffic lights and queues.",
+            "Bodies jump, but people also skip classes, steps, traffic lights and lines.",
           avoidWhen:
             "Assuming every use is physical. The figurative uses are the ones that matter most in errands and public life.",
           register: "neutral",
@@ -713,12 +713,12 @@ lessons.push(
         {
           term: "saltarse la fila",
           explanation:
-            "To skip the line or queue-jump. It is a breach of the shared order, not a harmless shortcut.",
+            "To skip the line or cut in line. It is a breach of the shared order, not a harmless shortcut.",
           literal: "to jump oneself the line",
           useWhen:
             "Someone cuts ahead of people who have been waiting.",
           avoidWhen:
-            "Describing someone who was invited forward by staff. That is not queue-jumping.",
+            "Describing someone who was invited forward by staff. That is not cutting in line.",
           register: "neutral conversational",
           region: "General Colombian; socially sensitive anywhere people are waiting.",
           related: ["colarse", "meterse", "hacer fila", "turno"],
@@ -769,7 +769,7 @@ lessons.push(
           useWhen:
             "A student misses a scheduled class by choice or irresponsibility.",
           avoidWhen:
-            "A class is cancelled or you are excused officially. Then you did not skip it.",
+            "A class is canceled or you are excused officially. Then you did not skip it.",
           register: "neutral conversational",
           region: "General Spanish.",
           related: ["faltar", "inasistencia", "clase", "excusa"],
@@ -817,9 +817,9 @@ lessons.push(
         "The physical jump is the easiest part of “saltar.” The Colombian daily-life value is in “saltarse”: skip the line, skip a step, skip a class, run a traffic light. It usually means bypassing an order everyone else is expected to respect. And “saltar a la vista” moves the verb again: a fact jumps out because it is obvious.",
       culture: [
         {
-          label: "Queue-jumping is not a tiny detail",
+          label: "Cutting in line is not a tiny detail",
           body:
-            "Lines in transport settings carry a fragile social contract. People may be patient, chatty and flexible, but someone cutting ahead can still trigger immediate correction because it steals time from everyone behind them. “Se está saltando la fila” names the offence without needing a speech about fairness."
+            "Lines in transport settings carry a fragile social contract. People may be patient, chatty and flexible, but someone cutting ahead can still trigger immediate correction because it steals time from everyone behind them. “Se está saltando la fila” names the offense without needing a speech about fairness."
         },
         {
           label: "A skipped step can erase you",
@@ -836,7 +836,7 @@ lessons.push(
         {
           mistake: "Using plain “saltar la fila” instead of “saltarse la fila”",
           whyItFails:
-            "People will understand you, but the pronominal form is the normal way to say someone skipped or bypassed the queue.",
+            "People will understand you, but the pronominal form is the normal way to say someone skipped or bypassed the line.",
           sayInstead: "Se está saltando la fila."
         },
         {
@@ -857,7 +857,7 @@ lessons.push(
           form: "Ese señor se está saltando la fila.",
           register: "neutral conversational",
           region: "General Colombian",
-          whenToUse: "Someone is cutting ahead in a queue."
+          whenToUse: "Someone is cutting ahead in a line."
         },
         {
           form: "No te saltes ese paso.",
@@ -882,19 +882,19 @@ lessons.push(
       choices: [
         "It means every passenger must physically jump before boarding.",
         "It marks bypassing a shared order that others are following.",
-        "It says the line has already been officially cancelled."
+        "It says the line has already been officially canceled."
       ],
       answer: 1,
       practiceExtra: [
         {
-          prompt: "Which sentence names queue-jumping naturally?",
+          prompt: "Which sentence names cutting in line naturally?",
           choices: [
             "Ese señor brinca feliz.",
             "Ese señor cruza la fila.",
             "Ese señor se salta la fila."
           ],
           answer: 2,
-          tests: "pronominal “saltarse la fila” for queue-jumping"
+          tests: "pronominal “saltarse la fila” for cutting in line"
         },
         {
           prompt: "Which line means someone ran a red light?",
@@ -1015,7 +1015,7 @@ lessons.push(
             "El personal invitó a alguien a pasar. Eso no es cut in line.",
           register: "neutral conversational",
           region: "Inglés norteamericano; en Reino Unido se oye “jump the queue.”",
-          related: ["jump the queue", "line", "queue", "wait your turn"],
+          related: ["jump the queue", "line", "turn", "wait your turn"],
           example: {
             target: "That man is cutting in line.",
             translation: "Ese señor se está saltando la fila."
@@ -1365,7 +1365,7 @@ lessons.push(
             "To run into someone by chance, because your paths cross.",
           literal: "to cross oneself with someone",
           useWhen:
-            "You unexpectedly meet a friend, colleague, neighbour or old acquaintance in the street.",
+            "You unexpectedly meet a friend, colleague, neighbor or old acquaintance in the street.",
           avoidWhen:
             "The meeting was planned. Then use a verb for meeting by arrangement.",
           register: "neutral conversational",

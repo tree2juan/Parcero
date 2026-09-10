@@ -350,14 +350,14 @@ lessons.push(
       ]
     },
     en: {
-      title: "Preguntar qué significa una palabra en Toronto",
+      title: "Preguntar qué significa una palabra en Houston",
       situation:
-        "Usted está en Toronto con Paula durante una muestra de música. Oye una palabra nueva en un anuncio y necesita preguntar en inglés what it means, aclarar con I mean, y no sonar demasiado formal con signify.",
+        "Usted está en Houston con Paula durante una muestra de música. Oye una palabra nueva en un anuncio y necesita preguntar en inglés what it means, aclarar con I mean, y no sonar demasiado formal con signify.",
       setting: {
-        who: "Paula estudia música en Toronto y explica referencias sin convertirlas en clase. Bernardo ya conversa con soltura, pero todavía se detiene cuando una palabra tiene más cultura que diccionario.",
+        who: "Paula estudia música en Houston y explica referencias sin convertirlas en clase. Bernardo ya conversa con soltura, pero todavía se detiene cuando una palabra tiene más cultura que diccionario.",
         what: "Un estudiante pregunta qué significa una palabra desconocida y aprende a separar “mean” para definiciones de “I mean” para aclararse.",
         when: "Una tarde de sábado, entre dos presentaciones breves, mientras la gente se mueve por la plaza.",
-        where: "Toronto, Canadá, cerca de un escenario pequeño al aire libre.",
+        where: "Houston, Canadá, cerca de un escenario pequeño al aire libre.",
         why: "Porque “What does … mean?” es una pregunta esencial, y porque “signify” no reemplaza a “mean” en la mayoría de conversaciones."
       },
       address: {
@@ -492,14 +492,14 @@ lessons.push(
             "Significar en un registro más formal, simbólico o escrito. No es el reemplazo cotidiano de mean.",
           literal: "significar",
           useWhen:
-            "Habla de símbolos, importancia cultural o lenguaje más académico: “the colour signifies mourning.”",
+            "Habla de símbolos, importancia cultural o lenguaje más académico: “the color signifies mourning.”",
           avoidWhen:
             "Una pregunta normal de aprendiz. “What does it mean?” suena mucho más natural que “what does it signify?”.",
           register: "formal",
           region: "Inglés universal.",
           related: ["mean", "symbolize", "represent", "stand for"],
           example: {
-            target: "The colour signifies mourning in that context.",
+            target: "The color signifies mourning in that context.",
             translation: "El color significa duelo en ese contexto."
           }
         },
@@ -772,7 +772,7 @@ lessons.push(
             "To develop a project: turn an idea into materials, steps, roles and results.",
           literal: "to develop a project",
           useWhen:
-            "Planning community work, school projects, business ideas, workshops or programmes.",
+            "Planning community work, school projects, business ideas, workshops or programs.",
           avoidWhen:
             "The task is only a quick fix. Desarrollar suggests a process with stages.",
           register: "neutral to formal",
@@ -831,7 +831,7 @@ lessons.push(
           related: ["desarrollar", "aumentar", "madurar", "hacerse grande"],
           example: {
             target: "El barrio creció rápido.",
-            translation: "The neighbourhood grew quickly."
+            translation: "The neighborhood grew quickly."
           }
         },
         {
@@ -890,7 +890,7 @@ lessons.push(
         {
           label: "Buenaventura can hold ordinary planning",
           body:
-            "The setting matters without requiring invented local colour. A normal community room, a practical workshop and a careful plan can show Colombian Spanish beyond the same few cities."
+            "The setting matters without requiring invented local color. A normal community room, a practical workshop and a careful plan can show Colombian Spanish beyond the same few cities."
         }
       ],
       pitfalls: [
@@ -1151,7 +1151,7 @@ lessons.push(
           region: "Inglés universal.",
           related: ["develop", "increase", "mature", "expand"],
           example: {
-            target: "The neighbourhood grew quickly.",
+            target: "The neighborhood grew quickly.",
             translation: "El barrio creció rápido."
           }
         },
@@ -1314,7 +1314,7 @@ lessons.push(
           prompt: "¿Cuál frase es más ligera que “develop the plan”?",
           choices: [
             "The plan is reaching money.",
-            "The plan is meaning petrol.",
+            "The plan is meaning gas.",
             "The plan is taking shape."
           ],
           answer: 2,
@@ -1858,7 +1858,7 @@ lessons.push(
         {
           label: "Last es duración útil",
           body:
-            "Para recursos que deben durar hasta una fecha, “last” es clave: make the money last, make the food last, will the petrol last? Es el alcanzar de supervivencia práctica."
+            "Para recursos que deben durar hasta una fecha, “last” es clave: make the money last, make the food last, will the gas last? Es el alcanzar de supervivencia práctica."
         },
         {
           label: "Hacer cuentas no necesita drama",

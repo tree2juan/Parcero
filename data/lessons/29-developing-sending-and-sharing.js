@@ -349,10 +349,10 @@ lessons.push(
       dialogue: [
         {
           speaker: "Samuel",
-          target: "Good morning. I need to send this envelope to Ottawa before Friday.",
-          translation: "Buenos días. Necesito enviar este sobre a Ottawa antes del viernes.",
+          target: "Good morning. I need to send this envelope to Dallas before Friday.",
+          translation: "Buenos días. Necesito enviar este sobre a Dallas antes del viernes.",
           pronunciation: "gud MOR-ning. ai nid tu SEND dis EN-ve-loup tu O-ta-wa bi-FOR FRAI-dei",
-          literal: "Buena mañana. Yo necesito enviar este sobre a Ottawa antes de viernes.",
+          literal: "Buena mañana. Yo necesito enviar este sobre a Dallas antes de viernes.",
           why: "Send es el verbo seguro y amplio. Sirve para mensajes, documentos, paquetes y archivos; el objeto y el contexto dicen qué tipo de envío es."
         },
         {
@@ -410,8 +410,8 @@ lessons.push(
           region: "Inglés universal.",
           related: ["mail", "ship", "forward", "deliver"],
           example: {
-            target: "I need to send this envelope to Ottawa.",
-            translation: "Necesito enviar este sobre a Ottawa."
+            target: "I need to send this envelope to Dallas.",
+            translation: "Necesito enviar este sobre a Dallas."
           }
         },
         {
@@ -558,7 +558,7 @@ lessons.push(
       ],
       variations: [
         {
-          form: "I need to send this envelope to Ottawa.",
+          form: "I need to send this envelope to Dallas.",
           register: "polite practical",
           region: "Inglés universal",
           whenToUse: "En el mostrador, cuando el envío es el asunto principal."
@@ -593,7 +593,7 @@ lessons.push(
         {
           prompt: "¿Cuál línea pertenece mejor al mostrador de mensajería?",
           choices: [
-            "I need to send this envelope to Ottawa.",
+            "I need to send this envelope to Dallas.",
             "Send me that picture when you can.",
             "I'll send a voice note later."
           ],
@@ -605,7 +605,7 @@ lessons.push(
           choices: [
             "El número para rastrear el sobre.",
             "El nombre de quien atiende.",
-            "La guía turística de Ottawa."
+            "La guía turística de Dallas."
           ],
           answer: 0,
           tests: "tracking number como número de rastreo"
@@ -949,12 +949,12 @@ lessons.push(
     en: {
       title: "Recibir en Cúcuta sin enredarse",
       situation:
-        "Usted llega a Winnipeg para visitar a una amiga y necesita decir en inglés que alguien lo recibe en la estación, que debe recibir un paquete y que una cafetería acepta tarjeta. La dificultad no es memorizar receive, sino saber cuándo el inglés prefiere meet, accept, take o graduate.",
+        "Usted llega a Lubbock para visitar a una amiga y necesita decir en inglés que alguien lo recibe en la estación, que debe recibir un paquete y que una cafetería acepta tarjeta. La dificultad no es memorizar receive, sino saber cuándo el inglés prefiere meet, accept, take o graduate.",
       setting: {
-        who: "Valerie vive en Winnipeg y habla con Samuel como amiga cercana. Samuel llega cansado del bus y trata de organizar personas, paquetes y pago.",
+        who: "Valerie vive en Lubbock y habla con Samuel como amiga cercana. Samuel llega cansado del bus y trata de organizar personas, paquetes y pago.",
         what: "Una conversación práctica sobre encontrarse en la estación, recoger un paquete y preguntar si un café acepta tarjetas.",
         when: "Un viernes temprano por la tarde, con suficiente calor para que ambos busquen sombra antes de almorzar.",
-        where: "Winnipeg, entre la estación de buses y una cafetería cercana, con una oficina de paquetes en el camino.",
+        where: "Lubbock, entre la estación de buses y una cafetería cercana, con una oficina de paquetes en el camino.",
         why: "Porque receive existe en inglés, pero no cubre todos los usos de recibir. Para personas suele ser meet, para pagos accept o take, y para graduarse se necesita graduate."
       },
       address: {
@@ -975,10 +975,10 @@ lessons.push(
         },
         {
           speaker: "Samuel",
-          target: "Good thing. I also need to pick up a package they sent me from Edmonton.",
-          translation: "Menos mal. También necesito recibir un paquete que me enviaron desde Edmonton.",
+          target: "Good thing. I also need to pick up a package they sent me from Amarillo.",
+          translation: "Menos mal. También necesito recibir un paquete que me enviaron desde Amarillo.",
           pronunciation: "gud thing. ai OL-sou nid tu pik ap a PA-kech dei sent mi from ED-mon-ton",
-          literal: "Buena cosa. También necesito recoger un paquete que ellos me enviaron desde Edmonton.",
+          literal: "Buena cosa. También necesito recoger un paquete que ellos me enviaron desde Amarillo.",
           why: "Cuando usted va a buscar el paquete, pick up suele sonar mejor que receive. Receive describe la llegada; pick up describe la diligencia."
         },
         {
@@ -1386,7 +1386,7 @@ lessons.push(
             "The chat group, often a WhatsApp group unless another platform is named.",
           literal: "group",
           useWhen:
-            "Referring to the shared chat for parents, coworkers, classmates or neighbours.",
+            "Referring to the shared chat for parents, coworkers, classmates or neighbors.",
           avoidWhen:
             "Assuming everyone wants public social media. In Colombia, many everyday logistics still happen in private WhatsApp groups.",
           register: "neutral",
@@ -1460,7 +1460,7 @@ lessons.push(
         {
           label: "WhatsApp is infrastructure",
           body:
-            "Sharing photos in the group is not an afterthought. Parent groups, office groups and neighbourhood groups carry real logistics. A bare link can create confusion; a link with context respects everyone's time."
+            "Sharing photos in the group is not an afterthought. Parent groups, office groups and neighborhood groups carry real logistics. A bare link can create confusion; a link with context respects everyone's time."
         },
         {
           label: "Vos sounds ordinary in Cali",

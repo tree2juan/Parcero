@@ -44,7 +44,7 @@ lessons.push(
         who: "María José and Alex use tú because they are friends of the same age staying in a family home.",
         why: "In this relaxed kitchen, tú keeps the advice friendly. For you as a guest, copying tú after your friend uses it is natural and not disrespectful.",
         ifYouSwitch:
-          "Usted would be polite with the father or an older neighbour, but between these two it would add distance. Vos is not the neutral choice for this scene."
+          "Usted would be polite with the father or an older neighbor, but between these two it would add distance. Vos is not the neutral choice for this scene."
       },
       dialogue: [
         {
@@ -171,7 +171,7 @@ lessons.push(
             "Without rushing. A Colombian way to slow the moment down and keep it calm.",
           literal: "without hurry",
           useWhen:
-            "Someone is hurrying, apologising, or about to lift something awkward.",
+            "Someone is hurrying, apologizing, or about to lift something awkward.",
           avoidWhen:
             "The deadline is truly strict. Then it can sound careless rather than reassuring.",
           register: "friendly neutral",
@@ -342,12 +342,12 @@ lessons.push(
     en: {
       title: "Levantarse para el bus de la mañana",
       situation:
-        "Alejandra está en Toronto, alojada en la casa de una amiga, y tiene que salir temprano para tomar un bus hacia un parque. Hace frío, no calor, pero el horario tampoco espera. Usted necesita distinguir “get up”, “lift” y “raise” en inglés.",
+        "Alejandra está en Houston, alojada en la casa de una amiga, y tiene que salir temprano para tomar un bus hacia un parque. Hace frío, no calor, pero el horario tampoco espera. Usted necesita distinguir “get up”, “lift” y “raise” en inglés.",
       setting: {
         who: "Maya hospeda a Alejandra por una noche, y su papá ya revisó el horario del bus antes de irse a trabajar.",
         what: "Una charla somnolienta en la cocina sobre levantarse, levantar una maleta y alzar la mano para que el conductor la vea.",
         when: "Muy temprano, con la casa todavía en silencio y la calle fría.",
-        where: "Toronto, en una cocina de barrio residencial antes de caminar a la parada.",
+        where: "Houston, en una cocina de barrio residencial antes de caminar a la parada.",
         why: "Porque el español usa levantar y levantarse, pero el inglés reparte la idea entre “get up,” “lift” y “raise.” El objeto decide mucho."
       },
       address: {
@@ -544,7 +544,7 @@ lessons.push(
         {
           label: "La mañana fría cambia el tono",
           body:
-            "En Toronto, levantarse temprano puede sentirse menos como ganarle al calor y más como pelear con la oscuridad o el frío. La rutina es distinta, pero la necesidad de decir “I'm up” desde la cocina es igual de cotidiana."
+            "En Houston, levantarse temprano puede sentirse menos como ganarle al calor y más como pelear con la oscuridad o el frío. La rutina es distinta, pero la necesidad de decir “I'm up” desde la cocina es igual de cotidiana."
         },
         {
           label: "“Don't rush” no siempre es permiso",
@@ -665,10 +665,10 @@ lessons.push(
       situation:
         "Priya llega tarde a un taller de tejido en Pasto. Hay pocas sillas libres y una señora mayor acaba de entrar detrás de ella. Tú necesitas distinguir sentar a alguien, sentarse uno mismo y sentir, que no pertenece a esta escena.",
       setting: {
-        who: "Doña Elvira is helping organise the workshop, and Priya is a new participant who wants to be polite about the last chairs.",
+        who: "Doña Elvira is helping organize the workshop, and Priya is a new participant who wants to be polite about the last chairs.",
         what: "A small seating negotiation: who sits where, who is seated first, and how to offer a place without sounding bossy.",
         when: "A cool afternoon, just as the workshop begins and people are still taking out yarn and notebooks.",
-        where: "Pasto, in a community room near the centre, with rain threatening outside and chairs being moved inside.",
+        where: "Pasto, in a community room near the center, with rain threatening outside and chairs being moved inside.",
         why: "Because sentar is not sentir. It is about seating someone or putting something in a seated position, while sentarse is the ordinary way to sit down."
       },
       address: {
@@ -837,7 +837,7 @@ lessons.push(
             "Don't worry. A soft way to refuse special treatment or calm someone who is trying to help.",
           literal: "do not worry yourself",
           useWhen:
-            "Someone is fussing over you, apologising, or rearranging a small problem.",
+            "Someone is fussing over you, apologizing, or rearranging a small problem.",
           avoidWhen:
             "There is a serious problem that needs action. Then reassurance alone can feel dismissive.",
           register: "polite friendly",
@@ -1437,7 +1437,7 @@ lessons.push(
           useWhen:
             "Choosing clothes for warm weather, walking, dancing, or an outdoor event.",
           avoidWhen:
-            "You mean pale in colour. Then clara may be the word.",
+            "You mean pale in color. Then clara may be the word.",
           register: "neutral",
           region: "General Colombian.",
           related: ["tela fresca", "manga corta", "ropa cómoda", "algodón"],

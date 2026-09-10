@@ -31,7 +31,7 @@ lessons.push(
       situation:
         "Estás en la caja de una tienda en Bogotá y solo llevas un billete de cincuenta mil. La cajera te pregunta cómo vas a pagar y resulta que no tiene con qué darte el vuelto. Aprendes a moverte entre el efectivo y la tarjeta, a preguntar por el “sencillo” y a cerrar el pago sin que se te note tan de turista.",
       setting: {
-        who: "Alex is at the till; the cashier is Marcela, who has run this neighbourhood shop's register for years and has seen every kind of customer. A short queue is forming behind him.",
+        who: "Alex is at the till; the cashier is Marcela, who has run this neighborhood shop's register for years and has seen every kind of customer. A short line is forming behind him.",
         what: "A routine checkout that snags on a very Colombian problem: Alex has only a big note and the register has no change to break it.",
         when: "Late afternoon, when people drop in for one or two things on the way home and nearly everyone pays in small amounts.",
         where: "Bogotá, a tienda de barrio in Chapinero where cash is still king but every counter now has a card reader bolted to it.",
@@ -255,7 +255,7 @@ lessons.push(
         {
           mistake: "“No, no cancele nada.”",
           whyItFails:
-            "Hearing “¿me cancela en la caja?” as “are you cancelling?”, learners refuse — and accidentally say they won't pay. In this context cancelar means settle up, so the polite answer is to agree to pay, not to call anything off.",
+            "Hearing “¿me cancela en la caja?” as “are you canceling?”, learners refuse — and accidentally say they won't pay. In this context cancelar means settle up, so the polite answer is to agree to pay, not to call anything off.",
           sayInstead: "Sí, con gusto le cancelo en la caja."
         },
         {
@@ -270,7 +270,7 @@ lessons.push(
           form: "¿Me va a pagar en efectivo o con tarjeta?",
           register: "polite service",
           region: "Bogotá / neutral",
-          whenToUse: "The cashier's standard question. Recognise it and you can answer in a single word — “efectivo” or “tarjeta”."
+          whenToUse: "The cashier's standard question. Recognize it and you can answer in a single word — “efectivo” or “tarjeta”."
         },
         {
           form: "¿Tiene sencillo?",
@@ -338,7 +338,7 @@ lessons.push(
         {
           prompt: "In a clinic, the receptionist asks “¿Ya canceló?” What is she asking?",
           choices: [
-            "Whether you cancelled your appointment earlier today.",
+            "Whether you canceled your appointment earlier today.",
             "Whether you have already paid for the visit.",
             "Whether you would like to reschedule for another afternoon."
           ],
@@ -686,7 +686,7 @@ lessons.push(
         who: "Alex is browsing a fruit stall; the vendor is Yeison, a coast seller in his thirties who banters with every customer and expects a bit of back-and-forth over the price.",
         what: "A friendly haggle over a couple of pounds of mango that turns into a small lesson in how buying really works at a plaza.",
         when: "Mid-morning, when the market is busiest, the fruit is at its freshest and the vendors are in a dealing mood.",
-        where: "Cartagena, on the Caribbean coast, at an open-air stall where prices are spoken rather than labelled and tú is the default even with strangers.",
+        where: "Cartagena, on the Caribbean coast, at an open-air stall where prices are spoken rather than labeled and tú is the default even with strangers.",
         why: "Because the marked-up first price is really an invitation to bargain, and knowing how to nudge it down — warmly, not rudely — is the difference between the tourist price and the local one."
       },
       address: {
@@ -835,7 +835,7 @@ lessons.push(
         {
           term: "comprarse",
           explanation:
-            "The reflexive of comprar, stressing that you bought something for yourself — often a treat or an indulgence. The “se” adds a flavour of self-reward.",
+            "The reflexive of comprar, stressing that you bought something for yourself — often a treat or an indulgence. The “se” adds a flavor of self-reward.",
           literal: "to buy oneself",
           useWhen:
             "Highlighting a purchase for you: “me compré unos zapatos”, “cómprate algo rico”.",
@@ -1322,10 +1322,10 @@ lessons.push(
     }
   },
   {
-    id: "selling-a-bike-to-the-paisa-neighbour",
-    level: "Starter · Home and neighbourhood",
+    id: "selling-a-bike-to-the-paisa-neighbor",
+    level: "Starter · Home and neighborhood",
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
-    domain: "home-and-neighbourhood",
+    domain: "home-and-neighborhood",
     register: "familiar",
     pathways: ["foundation"],
     verb: "vender",
@@ -1335,10 +1335,10 @@ lessons.push(
       situation:
         "Estás vendiendo tu bicicleta antes de irte de Medellín. Un vecino ve el letrero de “se vende” y se acerca a preguntar. Con el voseo paisa aprendes a poner el precio, a decir “le hago precio”, a cerrar con un “de una” y a notar cómo los paisas mezclan el vos y el usted sin pensarlo.",
       setting: {
-        who: "Alex is selling his bike before leaving the country; the buyer is Camilo, a paisa neighbour in his twenties who saw the sign and wandered over.",
+        who: "Alex is selling his bike before leaving the country; the buyer is Camilo, a paisa neighbor in his twenties who saw the sign and wandered over.",
         what: "A doorstep sale of a secondhand bike that turns into a quick lesson in the seller's side of a haggle — and in how paisas weave vos and usted together.",
         when: "A Saturday afternoon, moving boxes half-packed, with a handwritten “se vende” sign taped to the bike out front.",
-        where: "Medellín, in a paisa neighbourhood where vos is the warm everyday form and casual street sales like this are completely routine.",
+        where: "Medellín, in a paisa neighborhood where vos is the warm everyday form and casual street sales like this are completely routine.",
         why: "Because Alex is the seller this time, and knowing the vendor's moves — naming a price, offering “le hago precio”, closing warmly — is what turns a taped-up sign into an actual sale."
       },
       address: {
@@ -1376,9 +1376,9 @@ lessons.push(
         {
           speaker: "Alex",
           target: "Bueno, por ser vecino le hago precio: se la dejo en doscientos cincuenta. Lleve.",
-          translation: "Alright, since you're a neighbour I'll give you a deal: two hundred fifty. Take it.",
+          translation: "Alright, since you're a neighbor I'll give you a deal: two hundred fifty. Take it.",
           pronunciation: "BWEH-no, por ser ve-SEE-no le A-go PRE-syo: se la DEH-ho en dos-SYEN-tos seen-KWEN-ta. YE-ve",
-          literal: "Good, for being neighbour to-you I-make price: to-you it I-leave at two-hundred fifty. Take(usted).",
+          literal: "Good, for being neighbor to-you I-make price: to-you it I-leave at two-hundred fifty. Take(usted).",
           why: "“Le hago precio” is the frozen seller's offer — and it's in usted (“le”), even though they've been vosear-ing. “Lleve” is a usted imperative too. This is the lesson's real point: paisa sales talk locks certain phrases into usted while the chat around them stays vos."
         },
         {
@@ -1392,9 +1392,9 @@ lessons.push(
         {
           speaker: "Alex",
           target: "Claro, recibo transferencia. ¡Vendida! Gracias, vecino, que le vaya bien.",
-          translation: "Sure, I take transfers. Sold! Thanks, neighbour, take care.",
+          translation: "Sure, I take transfers. Sold! Thanks, neighbor, take care.",
           pronunciation: "KLA-ro, re-SEE-bo trans-fe-REN-sya. ven-DEE-da! GRA-syas, ve-SEE-no, ke le VA-ya byen",
-          literal: "Clear, I-receive transfer. Sold! Thanks, neighbour, that to-you it-goes well.",
+          literal: "Clear, I-receive transfer. Sold! Thanks, neighbor, that to-you it-goes well.",
           why: "“¡Vendida!” — “sold!” — is how you triumphantly close a sale, agreeing with the feminine “bici”. Note Alex drifts back to usted for the warm send-off “que le vaya bien”, the very phrase a shopkeeper uses. Vender bookends the whole exchange."
         }
       ],
@@ -1540,7 +1540,7 @@ lessons.push(
         {
           label: "Rematar: the moving sale",
           body:
-            "When people leave — a city, a flat, the country — they “rematan”: sell everything off cheap and fast. Expats offload furniture this way constantly, posting “remato todo” lists before a flight. The word promises a knock-down price and a seller in a hurry, which buyers love. It overlaps with the “de segunda” (secondhand) world of used goods. If you're the one leaving, framing your sale as a remate draws buyers who know they're getting a deal."
+            "When people leave — a city, an apartment, the country — they “rematan”: sell everything off cheap and fast. Expats offload furniture this way constantly, posting “remato todo” lists before a flight. The word promises a knock-down price and a seller in a hurry, which buyers love. It overlaps with the “de segunda” (secondhand) world of used goods. If you're the one leaving, framing your sale as a remate draws buyers who know they're getting a deal."
         }
       ],
       pitfalls: [
@@ -1559,7 +1559,7 @@ lessons.push(
         {
           mistake: "“¿Puedes hacer un precio más bajo para mí?”",
           whyItFails:
-            "It's understandable but long-winded and non-idiomatic. The set phrase is short and fixed: “¿me hace precio?” or, in paisa, “¿me hacés precio?”. That's the line a vendor recognises instantly.",
+            "It's understandable but long-winded and non-idiomatic. The set phrase is short and fixed: “¿me hace precio?” or, in paisa, “¿me hacés precio?”. That's the line a vendor recognizes instantly.",
           sayInstead: "¿Me hacés precio?"
         },
         {
@@ -1601,7 +1601,7 @@ lessons.push(
           whenToUse: "Closing a sale with a flourish, agreeing with the item's gender."
         }
       ],
-      prompt: "Your paisa neighbour says “¿No me hacés precio?” What is he doing?",
+      prompt: "Your paisa neighbor says “¿No me hacés precio?” What is he doing?",
       choices: [
         "He's warning you that the price you set is far too low.",
         "He's asking you to bring the price down a bit for him.",
@@ -1696,7 +1696,7 @@ lessons.push(
         },
         {
           speaker: "Alejandra",
-          target: "For a neighbour, I can come down to two-fifty. It practically sells itself.",
+          target: "For a neighbor, I can come down to two-fifty. It practically sells itself.",
           translation: "Por ser vecino, puedo bajar a doscientos cincuenta. Casi se vende sola.",
           pronunciation: "for a NÉI-bor, ai kan kom dáun tu tu-FIF-ti. it PRÁK-ti-kli sels it-SELF",
           literal: "Para un vecino, yo puedo venir abajo a dos-cincuenta. Ello prácticamente vende sí-misma.",

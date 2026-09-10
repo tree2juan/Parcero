@@ -137,7 +137,7 @@ lessons.push(
           useWhen:
             "Use it for the real Colombian drink in homes, road stops, thermoses, sick days, and hot afternoons.",
           avoidWhen:
-            "Avoid treating it as a colourful tourist prop. For many families, it is an ordinary practical drink.",
+            "Avoid treating it as a colorful tourist prop. For many families, it is an ordinary practical drink.",
           register: "neutral",
           region: "Common across Colombia, with different habits by family and climate.",
           related: ["panela", "limón", "aguapanela", "bebida fría"],
@@ -639,7 +639,7 @@ lessons.push(
         {
           prompt: "¿Cómo debería traducir normalmente el “tinto” colombiano para un oyente en inglés?",
           choices: [
-            "As red wine, because the colour word is the same.",
+            "As red wine, because the color word is the same.",
             "As tinto only, because English already uses it for coffee.",
             "As black coffee or coffee, depending on the needed detail."
           ],
@@ -804,7 +804,7 @@ lessons.push(
             "To fry gently in oil at the start of a dish, often onion, tomato, garlic, or seasoning.",
           literal: "to lightly fry",
           useWhen:
-            "Use it when building a flavour base before adding rice, beans, soup ingredients, or sauce.",
+            "Use it when building a flavor base before adding rice, beans, soup ingredients, or sauce.",
           avoidWhen:
             "Avoid it for deep-frying food. That is freír, not sofreír.",
           register: "neutral",
@@ -821,7 +821,7 @@ lessons.push(
             "A cooked seasoning base or stew-like mixture. In many Colombian kitchens it starts with onion and tomato.",
           literal: "stew / seasoning base",
           useWhen:
-            "Use it for the flavour base that goes into rice, beans, meat, or soup.",
+            "Use it for the flavor base that goes into rice, beans, meat, or soup.",
           avoidWhen:
             "Avoid assuming it always means a complete stew. In a kitchen command, it may mean the base only.",
           register: "neutral",
@@ -975,7 +975,7 @@ lessons.push(
             "Serving the cooked lunch onto plates."
           ],
           answer: 0,
-          tests: "sofreír as gentle frying for a flavour base"
+          tests: "sofreír as gentle frying for a flavor base"
         },
         {
           prompt: "Which sentence best says you know how to cook in general?",
@@ -1293,7 +1293,7 @@ lessons.push(
           choices: [
             "Deep-fry the entire finished pot of sancocho.",
             "Serve the cooked lunch onto everyone’s plates.",
-            "Cook the flavour base gently in a little oil."
+            "Cook the flavor base gently in a little oil."
           ],
           answer: 2,
           tests: "sauté as the English match for sofreír"

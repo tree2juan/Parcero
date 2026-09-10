@@ -236,7 +236,7 @@ lessons.push(
         {
           label: "You learn by throwing yourself in",
           body:
-            "“Bailando se aprende” — you learn by dancing — captures a broader Colombian attitude to learning: start doing it badly and let the skill arrive through repetition, not through a manual. Nobody on a home dance floor expects polish from a beginner, only willingness. This forgiving, jump-in-first pedagogy shows up in kitchens, workshops and football games too. For a learner it's freeing: the expectation is effort and good humour, and competence is assumed to follow on its own."
+            "“Bailando se aprende” — you learn by dancing — captures a broader Colombian attitude to learning: start doing it badly and let the skill arrive through repetition, not through a manual. Nobody on a home dance floor expects polish from a beginner, only willingness. This forgiving, jump-in-first pedagogy shows up in kitchens, workshops and soccer games too. For a learner it's freeing: the expectation is effort and good humor, and competence is assumed to follow on its own."
         }
       ],
       pitfalls: [
@@ -247,7 +247,7 @@ lessons.push(
           sayInstead: "Quiero aprender a bailar."
         },
         {
-          mistake: "Saying “aprendí la canción” when you mean you memorised it",
+          mistake: "Saying “aprendí la canción” when you mean you memorized it",
           whyItFails:
             "Plain aprender means you learned or found it out; the “commit to memory” sense needs the reflexive. Without it, you haven't said you got it by heart.",
           sayInstead: "Me aprendí la canción."
@@ -313,13 +313,13 @@ lessons.push(
             "A future meaning, so that learning the lyrics is postponed until some later, still unnamed day."
           ],
           answer: 0,
-          tests: "aprenderse as memorise / by heart"
+          tests: "aprenderse as memorize / by heart"
         },
         {
           prompt: "Manuela says “ya vas aprendiendo.” What does “ir + gerundio” express?",
           choices: [
             "That Alex has completely finished learning and now dances the whole song without a mistake.",
-            "That Alex should stop dancing and go somewhere else to keep practising the steps on his own.",
+            "That Alex should stop dancing and go somewhere else to keep practicing the steps on his own.",
             "Gradual, ongoing progress — that Alex is getting it bit by bit as he goes, not all at once."
           ],
           answer: 2,
@@ -832,7 +832,7 @@ lessons.push(
         },
         {
           term: "guascas",
-          explanation: "The herb that defines ajiaco's flavour. Without guascas it isn't really ajiaco santafereño.",
+          explanation: "The herb that defines ajiaco's flavor. Without guascas it isn't really ajiaco santafereño.",
           literal: "guascas (herb)",
           useWhen: "Talking about making ajiaco the Bogotá way.",
           avoidWhen: "Outside the dish; it is a specific culinary word, not general vocabulary.",
@@ -978,8 +978,8 @@ lessons.push(
       situation:
         "La misma escena, contada para quien aprende inglés: Alejandra, de Bogotá, está en Canadá y una vecina mayor, Barb, le enseña a hacer butter tarts, el postre típico de allá. Cocinando descubre que el inglés parte en dos el verbo “enseñar”: “teach” es impartir un conocimiento y “show” es dejar ver algo. Decir “teach me the photo” en vez de “show me the photo” es el resbalón clásico del hispanohablante.",
       setting: {
-        who: "Barb es una vecina canadiense de toda la vida que lleva décadas horneando butter tarts. Alejandra es su invitada, una colombiana a la que decidió enseñarle porque se lo pidió con muchas ganas.",
-        what: "Una clase de cocina con las manos en la masa para hacer butter tarts, el postre canadiense de masa crujiente y relleno dulce, aprendiendo los pasos y viendo cómo debe quedar cada cosa.",
+        who: "Barb es una vecina estadounidense de toda la vida que lleva décadas horneando butter tarts. Alejandra es su invitada, una colombiana a la que decidió enseñarle porque se lo pidió con muchas ganas.",
+        what: "Una clase de cocina con las manos en la masa para hacer butter tarts, el postre estadounidense de masa crujiente y relleno dulce, aprendiendo los pasos y viendo cómo debe quedar cada cosa.",
         when: "Una tarde tranquila entre semana, con el horno ya caliente y tiempo de sobra para hacerlo bien.",
         where: "Una cocina en Canadá, donde los butter tarts son motivo de orgullo casero y cada familia jura tener la mejor receta.",
         why: "Porque enseñar una receta de familia es un acto de confianza. Alejandra quiere aprender a hacerlos ella misma y, de paso, entiende que el inglés usa dos verbos, teach y show, donde su español usaba uno solo."
@@ -1127,13 +1127,13 @@ lessons.push(
         },
         {
           term: "butter tarts",
-          explanation: "Un postre clásico canadiense: masa crujiente con relleno dulce de mantequilla y azúcar. Es el plato con identidad local, el equivalente al ajiaco.",
+          explanation: "Un postre clásico estadounidense: masa crujiente con relleno dulce de mantequilla y azúcar. Es el plato con identidad local, el equivalente al ajiaco.",
           literal: "tartaletas de mantequilla",
-          useWhen: "Al hablar de repostería típica canadiense.",
+          useWhen: "Al hablar de repostería típica estadounidense.",
           avoidWhen: "Fuera de ese postre; es un plato concreto, no vocabulario general.",
           register: "neutral",
           region: "Canadá.",
-          related: ["pastry", "filling", "maple", "dessert"],
+          related: ["pastry", "filling", "pecan", "dessert"],
           example: {
             target: "These butter tarts are amazing.",
             translation: "Estas butter tarts están buenísimas."
@@ -1161,7 +1161,7 @@ lessons.push(
         {
           label: "El cariño va en la palabra, no en el usted",
           body:
-            "El inglés no tiene usted, así que el cariño no vive en el pronombre sino en las palabras: “sweetie”, “hon”, “dear”, y en suavizadores como “would you”, “just”, “a little”. Donde el bogotano combina usted con “mijo”, la cocinera canadiense combina el “you” de siempre con “sweetie” y un tono cálido. Para un hispanohablante esto exige cambiar el chip: la temperatura de una conversación en inglés no se mide en el pronombre, sino en el léxico y en la entonación."
+            "El inglés no tiene usted, así que el cariño no vive en el pronombre sino en las palabras: “sweetie”, “hon”, “dear”, y en suavizadores como “would you”, “just”, “a little”. Donde el bogotano combina usted con “mijo”, la cocinera estadounidense combina el “you” de siempre con “sweetie” y un tono cálido. Para un hispanohablante esto exige cambiar el chip: la temperatura de una conversación en inglés no se mide en el pronombre, sino en el léxico y en la entonación."
         }
       ],
       pitfalls: [
@@ -1287,7 +1287,7 @@ lessons.push(
         what: "A friendly bus chat about what each of them studies, sliding through the false friend carrera, the meaning of estoy estudiando, and student life.",
         when: "A hot weekday morning on the Transmetro, the kind of ride long enough for a real conversation.",
         where: "Barranquilla, on the Caribbean coast, where people use tú, drop their s's and talk with music in the voice.",
-        why: "Because small talk about studies is how young Colombians place each other. For Alex it's a low-stakes way to practise, and a chance to stop mistranslating carrera as “career” before it trips him up for good."
+        why: "Because small talk about studies is how young Colombians place each other. For Alex it's a low-stakes way to practice, and a chance to stop mistranslating carrera as “career” before it trips him up for good."
       },
       address: {
         form: "tú",
@@ -1310,7 +1310,7 @@ lessons.push(
           translation: "I'm studying Medicine, I'm in my fifth semester.",
           pronunciation: "es-TOY es-too-DYAN-doh meh-dee-SEE-nah, boy en KEEN-toh seh-MES-treh",
           literal: "I-am studying Medicine, I-go in fifth semester.",
-          why: "“Estar estudiando” + a field often means “I'm at university doing that degree,” not just studying this minute. Progress is counted in semesters, not years."
+          why: "“Estar estudiando” + a field often means “I'm in college doing that degree,” not just studying this minute. Progress is counted in semesters, not years."
         },
         {
           speaker: "Alex",
@@ -1318,7 +1318,7 @@ lessons.push(
           translation: "Wow! And is that degree really hard?",
           pronunciation: "EHR-dah! ee EH-sah kah-REH-rah es mooy DOO-rah",
           literal: "Wow! And that degree is very hard?",
-          why: "Here carrera means the degree programme — a false friend, not “career” in the English sense. “Erda” is a very Costa Caribe exclamation of surprise."
+          why: "Here carrera means the degree program — a false friend, not “career” in the English sense. “Erda” is a very Costa Caribe exclamation of surprise."
         },
         {
           speaker: "Yuranis",
@@ -1362,7 +1362,7 @@ lessons.push(
         },
         {
           term: "estudiar una carrera",
-          explanation: "To do a university degree. “Carrera” here is a degree programme, NOT “career” — a classic false friend.",
+          explanation: "To do a university degree. “Carrera” here is a degree program, NOT “career” — a classic false friend.",
           literal: "to study a degree (career)",
           useWhen: "Talking about what degree someone is doing: estudiar una carrera, estudiar Derecho.",
           avoidWhen: "Don't read carrera as the English “career” (a job path); that is “carrera profesional” or “trayectoria.”",
@@ -1378,14 +1378,14 @@ lessons.push(
           term: "estar estudiando",
           explanation: "Often means “to be a university student,” not just “studying right now.” Context decides which.",
           literal: "to be studying",
-          useWhen: "Answering what you do with your life: “estoy estudiando” = I'm at uni.",
+          useWhen: "Answering what you do with your life: “estoy estudiando” = I'm in college.",
           avoidWhen: "When you literally mean studying this minute, add the object: estoy estudiando para el parcial.",
           register: "friendly informal",
           region: "Colombia.",
           related: ["estoy estudiando", "estar en la universidad", "ser estudiante", "estudiar y trabajar"],
           example: {
             target: "Ahora estoy estudiando.",
-            translation: "Right now I'm at university."
+            translation: "Right now I'm in college."
           }
         },
         {
@@ -1451,7 +1451,7 @@ lessons.push(
         {
           label: "Carrera is a degree, not a career",
           body:
-            "For an English speaker, “carrera” is a trap. “Estudiar una carrera” means to do a university degree — Law, Medicine, Engineering — not to pursue a “career” in the English sense. The job-path meaning exists too, as “carrera profesional” or “trayectoria,” but on its own, in a student's mouth, carrera is the degree. So when Yuranis says “esta carrera es dura,” she means the programme is hard, not that her professional life is difficult. Hearing it as “career” quietly derails the whole exchange."
+            "For an English speaker, “carrera” is a trap. “Estudiar una carrera” means to do a university degree — Law, Medicine, Engineering — not to pursue a “career” in the English sense. The job-path meaning exists too, as “carrera profesional” or “trayectoria,” but on its own, in a student's mouth, carrera is the degree. So when Yuranis says “esta carrera es dura,” she means the program is hard, not that her professional life is difficult. Hearing it as “career” quietly derails the whole exchange."
         },
         {
           label: "Semesters, parciales and the student calendar",
@@ -1472,7 +1472,7 @@ lessons.push(
       pitfalls: [
         {
           mistake: "Reading “carrera” as the English “career.”",
-          whyItFails: "In student talk carrera is the degree programme. Hearing “career” makes you take what someone studies for what job they already hold.",
+          whyItFails: "In student talk carrera is the degree program. Hearing “career” makes you take what someone studies for what job they already hold.",
           sayInstead: "Estudio una carrera en la universidad."
         },
         {
@@ -1502,7 +1502,7 @@ lessons.push(
           form: "¿Qué estás estudiando?",
           register: "friendly informal",
           region: "Universal",
-          whenToUse: "The same idea, leaning a little more on the current programme."
+          whenToUse: "The same idea, leaning a little more on the current program."
         },
         {
           form: "¿Estudiás?",
@@ -1526,8 +1526,8 @@ lessons.push(
       prompt: "Yuranis says “estudio una carrera en la universidad.” What does carrera mean here?",
       choices: [
         "Her career, meaning the professional working life she has already built up over the years.",
-        "A running race she takes part in as part of the university's sports programme each term.",
-        "A university degree programme — carrera is a false friend, not the English “career.”"
+        "A running race she takes part in as part of the university's sports program each term.",
+        "A university degree program — carrera is a false friend, not the English “career.”"
       ],
       answer: 2,
       practiceExtra: [
@@ -1535,11 +1535,11 @@ lessons.push(
           prompt: "A Colombian your age says just “estoy estudiando.” Most likely they mean…",
           choices: [
             "…that they are studying at this very second and honestly can't talk to you right now.",
-            "…that they're a university student — bare “estoy estudiando” usually means being at uni.",
+            "…that they're a university student — bare “estoy estudiando” usually means being in college.",
             "…that they already finished a degree and are now searching for a stable, well-paid job."
           ],
           answer: 1,
-          tests: "estar estudiando = being at university"
+          tests: "estar estudiando = being in college"
         },
         {
           prompt: "What are “parciales”?",
@@ -1578,7 +1578,7 @@ lessons.push(
       situation:
         "La misma charla, pero para quien aprende inglés: Alejandra, de Barranquilla, está en Canadá y en el bus conversa con Megan, una estudiante local, sobre qué estudia. Descubre dos falsos amigos peligrosos: “career” no es su carrera de estudios (eso es “degree” o “major”), y “college” es la universidad, no el colegio. Además, en inglés se cuenta por años, no por semestres, y los parciales son “midterms”.",
       setting: {
-        who: "Megan es una estudiante canadiense de medicina, rápida y amable. Alejandra es la colombiana que comparte asiento y se anima a entablar conversación en inglés.",
+        who: "Megan es una estudiante estadounidense de medicina, rápida y amable. Alejandra es la colombiana que comparte asiento y se anima a entablar conversación en inglés.",
         what: "Una charla de bus sobre qué estudia cada una, pasando por el falso amigo “career”, por “college” y por cómo se cuentan los años de universidad.",
         when: "Una mañana entre semana, en un trayecto lo bastante largo como para una conversación de verdad.",
         where: "Una ciudad de Canadá, en un autobús urbano, lejos del calor pero con las mismas ganas de conversar que en la Costa.",
@@ -1756,7 +1756,7 @@ lessons.push(
         {
           label: "Se cuenta por años: freshman, sophomore…",
           body:
-            "En Estados Unidos y Canadá los estudiantes se cuentan por años, y cada año lleva nombre propio: “freshman” (primero), “sophomore” (segundo), “junior” (tercero) y “senior” (cuarto). Donde un colombiano dice “voy en quinto semestre”, un canadiense dice “I'm a second-year” o “I'm a sophomore”. Los exámenes de mitad de curso son “midterms” y los finales, “finals”. Manejar este vocabulario te deja seguir cualquier conversación de universidad sin perder el hilo ni traducir semestres a años sobre la marcha."
+            "En Estados Unidos y Canadá los estudiantes se cuentan por años, y cada año lleva nombre propio: “freshman” (primero), “sophomore” (segundo), “junior” (tercero) y “senior” (cuarto). Donde un colombiano dice “voy en quinto semestre”, un estadounidense dice “I'm a second-year” o “I'm a sophomore”. Los exámenes de mitad de curso son “midterms” y los finales, “finals”. Manejar este vocabulario te deja seguir cualquier conversación de universidad sin perder el hilo ni traducir semestres a años sobre la marcha."
         },
         {
           label: "“What are you studying?” como saludo",

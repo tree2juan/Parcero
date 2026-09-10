@@ -637,7 +637,7 @@ lessons.push(
     id: "suceder-en-una-cronica-de-monteria",
     level: "Developing · What happened",
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
-    domain: "home-and-neighbourhood",
+    domain: "home-and-neighborhood",
     register: "courteous",
     pathways: ["foundation", "year-12"],
     verb: "suceder",
@@ -647,10 +647,10 @@ lessons.push(
       situation:
         "Estás en Montería ayudando a escribir un relato corto para el grupo del barrio después de que una rifa terminó en confusión. Nadie quiere sonar alarmista: hay que contar lo que sucedió, admitir que en la conversación normal todos preguntaron qué pasó, y ordenar la historia sin culpar de más.",
       setting: {
-        who: "Lucía keeps the neighbourhood group's notes and wants the account to be fair. Jordan saw the raffle confusion from the back of the room and can separate rumour from sequence.",
+        who: "Lucía keeps the neighborhood group's notes and wants the account to be fair. Jordan saw the raffle confusion from the back of the room and can separate rumor from sequence.",
         what: "A careful retelling of a small public mix-up: what happened first, what happened later, and why the written account chooses suceder.",
         when: "Sunday evening, after a community raffle and before the WhatsApp version hardens into gossip.",
-        where: "Montería, in a neighbourhood community room near the Sinú river, after chairs have been stacked and people are still comparing stories.",
+        where: "Montería, in a neighborhood community room near the Sinú river, after chairs have been stacked and people are still comparing stories.",
         why: "Because suceder is another happen verb, but not the one Colombians use for every ordinary “what happened?” It suits written accounts, careful narration, and frames like “sucede que...”"
       },
       address: {
@@ -949,12 +949,12 @@ lessons.push(
     en: {
       title: "Contar lo que sucedió en Montería",
       situation:
-        "Usted está en Ottawa ayudando a redactar un mensaje después de una rifa comunitaria confusa. Necesita usar what happened para hablar normal, what took place o occurred para sonar más formal, y the thing is para introducir el detalle que explica todo.",
+        "Usted está en Dallas ayudando a redactar un mensaje después de una rifa comunitaria confusa. Necesita usar what happened para hablar normal, what took place o occurred para sonar más formal, y the thing is para introducir el detalle que explica todo.",
       setting: {
         who: "Lucía toma notas del grupo comunitario y quiere que el mensaje sea justo. Jordan vio la confusión desde el fondo del salón y puede separar rumor de secuencia.",
         what: "Un recuento cuidadoso de una confusión pública pequeña: qué pasó primero, qué pasó después y qué registro conviene en el mensaje.",
         when: "Un domingo por la tarde, después de una rifa comunitaria y antes de que la versión del chat se vuelva chisme fijo.",
-        where: "Ottawa, en un salón comunitario de barrio, porque esta dirección enseña inglés y ocurre fuera de Colombia.",
+        where: "Dallas, en un salón comunitario de barrio, porque esta dirección enseña inglés y ocurre fuera de Colombia.",
         why: "Porque happen es el verbo cotidiano, mientras occur y take place son más escritos o formales. El inglés también usa the thing is para el valor de sucede que."
       },
       address: {
@@ -1268,7 +1268,7 @@ lessons.push(
         who: "Mateo lives in Arauca and helped Alex plan a document errand. Alex has returned from the office with a story that changed shape halfway through.",
         what: "A conversation about how a plan turned out: the appointment did not exist, the process was harder than expected, and the ending surprised both people.",
         when: "Early afternoon, after Alex has spent the morning at a government office and finally found shade.",
-        where: "Arauca, outside a small office near the river, with the conversation focused on the errand rather than local colour.",
+        where: "Arauca, outside a small office near the river, with the conversation focused on the errand rather than local color.",
         why: "Because resultar means to turn out, and it also builds personal reactions like “me resulta raro” or “me resulta difícil.” That second pattern behaves like gustar: the thing is strange or difficult to me."
       },
       address: {

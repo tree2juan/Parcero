@@ -186,7 +186,7 @@ lessons.push(
             "The power came back. Colombians commonly call electricity “la luz” in household talk.",
           literal: "the light returned",
           useWhen:
-            "After a blackout, power dip or neighbourhood outage ends.",
+            "After a blackout, power dip or neighborhood outage ends.",
           avoidWhen:
             "Over-translating it as only the visible lights. It often means the electricity supply in general.",
           register: "everyday conversational",
@@ -203,7 +203,7 @@ lessons.push(
             "A power dip or voltage drop, the kind that makes devices blink, reset or refuse to start cleanly.",
           literal: "drop of light",
           useWhen:
-            "A device acts strangely right after the electricity flickers but the whole neighbourhood did not fully black out.",
+            "A device acts strangely right after the electricity flickers but the whole neighborhood did not fully black out.",
           avoidWhen:
             "Blaming every broken device on a bajón. It names the power event, not a diagnosis.",
           register: "neutral conversational",
@@ -277,7 +277,7 @@ lessons.push(
           form: "Yo enciendo el ventilador cuando vuelva la luz.",
           register: "careful neutral",
           region: "General Spanish",
-          whenToUse: "Practising the yo stem change or speaking a bit more carefully."
+          whenToUse: "Practicing the yo stem change or speaking a bit more carefully."
         }
       ],
       prompt: "Doña Elvira says “prende” and “enciende” in one instruction. What is she showing Nina?",
@@ -311,7 +311,7 @@ lessons.push(
         {
           prompt: "If someone says “volvió la luz,” what should you understand?",
           choices: [
-            "A single bulb changed colour.",
+            "A single bulb changed color.",
             "The bill arrived by email.",
             "The power came back."
           ],
@@ -619,7 +619,7 @@ lessons.push(
     id: "apagar-the-breaker-in-riohacha",
     level: "Extending · Devices and how things work",
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
-    domain: "home-and-neighbourhood",
+    domain: "home-and-neighborhood",
     register: "familiar",
     pathways: ["foundation", "year-12"],
     verb: "apagar",
@@ -629,7 +629,7 @@ lessons.push(
       situation:
         "Estás en Riohacha, en una casa cerca del malecón, y una nevera vieja empezó a sonar raro después de otro parpadeo de luz. El vecino que sabe de instalaciones te pide apagar el breaker antes de mirar cualquier cosa, mientras tu celular también se apaga justo cuando ibas a grabar el ruido.",
       setting: {
-        who: "Óscar is the neighbour everyone calls before they call a technician. Mara is renting the house for a month and knows enough to be cautious but not enough to touch a breaker box confidently.",
+        who: "Óscar is the neighbor everyone calls before they call a technician. Mara is renting the house for a month and knows enough to be cautious but not enough to touch a breaker box confidently.",
         what: "A safety-first conversation about turning off a breaker and appliances, plus the everyday use of “se apagó” for a phone that dies.",
         when: "A windy afternoon, with the fridge making a new noise after the electricity flickers.",
         where: "Riohacha, La Guajira, in a rented house close enough to the sea for salt, heat and old wiring to be part of the background.",
@@ -637,10 +637,10 @@ lessons.push(
       },
       address: {
         form: "tú",
-        who: "Óscar uses tú because he is a neighbour doing a practical favour, not an official inspector. Mara follows his lead.",
+        who: "Óscar uses tú because he is a neighbor doing a practical favour, not an official inspector. Mara follows his lead.",
         why: "The exchange is serious but not formal. Tú lets Óscar give quick instructions while still sounding like someone helping next door.",
         ifYouSwitch:
-          "Usted would be safe if Mara wanted more distance, especially with an older neighbour. Vos would sound marked here and is not needed for the scene."
+          "Usted would be safe if Mara wanted more distance, especially with an older neighbor. Vos would sound marked here and is not needed for the scene."
       },
       dialogue: [
         {
@@ -819,7 +819,7 @@ lessons.push(
         {
           label: "A breaker is everyday vocabulary",
           body:
-            "Many Colombians say “breaker” without treating it as foreign, especially in practical home talk. More technical terms exist, but the neighbour helping you by the fridge may point at the panel and say “apaga ese breaker.” Understanding that word is more useful than insisting on a purer label while the appliance hums."
+            "Many Colombians say “breaker” without treating it as foreign, especially in practical home talk. More technical terms exist, but the neighbor helping you by the fridge may point at the panel and say “apaga ese breaker.” Understanding that word is more useful than insisting on a purer label while the appliance hums."
         },
         {
           label: "Safety comes before curiosity",

@@ -38,7 +38,7 @@ lessons.push(
         who: "Yina grew up in Barranquilla and treats everyone on the block like family. Alex arrived three months ago for work and is still learning how coastal invitations work — who to greet, what to bring, how late is late.",
         what: "A quick doorway chat about a Sunday sancocho at a mutual friend's place, and what Alex should turn up with.",
         when: "A hot Friday evening, both of them coming home, the weekend's plans still loose.",
-        where: "Barranquilla, on the Caribbean coast, outside a low apartment block where neighbours talk on the pavement in the cool of the evening.",
+        where: "Barranquilla, on the Caribbean coast, outside a low apartment block where neighbors talk on the sidewalk in the cool of the evening.",
         why: "Because this is Alex's first real invitation into a coastal household, and getting the small things right — bringing something, dressing down, not stressing about the time — is what turns a work contact into a friend who saves you a bowl of sancocho."
       },
       address: {
@@ -54,7 +54,7 @@ lessons.push(
           translation: "What's up, Alex? Are you going to take something to the sancocho at Wilmer's on Sunday?",
           pronunciation: "keh MAS, AH-leks? bas a yeh-BAR AL-go pal san-KO-cho DON-deh weel-MER el do-MEEN-go",
           literal: "What more, Alex? Are-you-going to take something for-the sancocho at Wilmer's the Sunday?",
-          why: "“Llevar” is to carry something to a place away from where you stand now: the sancocho is over at Wilmer's, so from the pavement it is “over there”. Note the costeño “pa'l” for “para el”, and “¿qué más?”, the coast's everyday “what's up?”."
+          why: "“Llevar” is to carry something to a place away from where you stand now: the sancocho is over at Wilmer's, so from the sidewalk it is “over there”. Note the costeño “pa'l” for “para el”, and “¿qué más?”, the coast's everyday “what's up?”."
         },
         {
           speaker: "Alex",
@@ -116,7 +116,7 @@ lessons.push(
           term: "traer",
           explanation: "The mirror of llevar: to bring something toward where the speaker is. English often uses “bring” for movement toward the listener too, but Spanish anchors traer strictly to the speaker's own here, which is what trips English speakers up.",
           literal: "to bring",
-          useWhen: "Something is coming to the place where you are: asking a waiter to bring the bill, telling a friend to bring wine to your flat.",
+          useWhen: "Something is coming to the place where you are: asking a waiter to bring the bill, telling a friend to bring wine to your apartment.",
           avoidWhen: "The thing is heading away from you to somewhere else; that outward movement is llevar.",
           register: "neutral",
           region: "Universal Spanish; the speaker-anchored rule is the same everywhere and gets a lesson of its own next.",
@@ -158,7 +158,7 @@ lessons.push(
           term: "llevarse bien (con)",
           explanation: "A reflexive turn of llevar with nothing to do with carrying: to get on well with someone. Its opposite, “llevarse mal”, is to clash. The person you get on with arrives after “con”.",
           literal: "to carry oneself well (with)",
-          useWhen: "Describing a relationship: I get on with my flatmate, they get on badly with the neighbour.",
+          useWhen: "Describing a relationship: I get on with my roommate, they get on badly with the neighbor.",
           avoidWhen: "Don't reach for “estar bien con”, which suggests being on good terms after a quarrel, not the general habit of getting along.",
           register: "neutral",
           region: "Universal Spanish; fully standard throughout Colombia.",
@@ -206,7 +206,7 @@ lessons.push(
         },
         {
           label: "Never quite empty-handed",
-          body: "Turning up to a Colombian gathering with nothing in your hands gets noticed, even among close friends who will insist you needn't have bothered. A couple of litres of gaseosa, a six-pack, a bag of ice or a dessert is plenty; the gesture matters more than the price. On the coast, where hospitality runs warm and loud, adding to the sancocho pot is part of belonging, and “¿qué llevo?” is one of the most useful questions you can learn to ask."
+          body: "Turning up to a Colombian gathering with nothing in your hands gets noticed, even among close friends who will insist you needn't have bothered. A couple of liters of gaseosa, a six-pack, a bag of ice or a dessert is plenty; the gesture matters more than the price. On the coast, where hospitality runs warm and loud, adding to the sancocho pot is part of belonging, and “¿qué llevo?” is one of the most useful questions you can learn to ask."
         },
         {
           label: "Sunday is sancocho",
@@ -310,7 +310,7 @@ lessons.push(
           tests: "llevar for wearing clothes"
         },
         {
-          prompt: "Alex is at home and phones a friend to ask them to bring snacks over to his flat. From Alex's side, which verb fits?",
+          prompt: "Alex is at home and phones a friend to ask them to bring snacks over to his apartment. From Alex's side, which verb fits?",
           choices: [
             "¿Me traes algo de picar cuando vengas, que ya estoy aquí en el apartamento esperándolos a todos ustedes?",
             "¿Me llevas algo de picar cuando vengas, que ya estoy aquí en el apartamento esperándolos a todos ustedes?",
@@ -324,12 +324,12 @@ lessons.push(
     en: {
       title: "Qué llevar al asado del sábado",
       situation:
-        "Alejandra se encuentra a Kayla, una amiga canadiense, en la puerta del edificio en Toronto. El sábado hay un asado donde Josh, un amigo del grupo, y Kayla le confirma que ella también está invitada. Alejandra no sabe si debe aparecer con algo ni cómo vestirse, así que aprovecha para practicar en inglés y preguntarle a Kayla cómo funcionan estas reuniones.",
+        "Alejandra se encuentra a Kayla, una amiga estadounidense, en la puerta del edificio en Houston. El sábado hay un asado donde Josh, un amigo del grupo, y Kayla le confirma que ella también está invitada. Alejandra no sabe si debe aparecer con algo ni cómo vestirse, así que aprovecha para practicar en inglés y preguntarle a Kayla cómo funcionan estas reuniones.",
       setting: {
-        who: "Kayla nació en Toronto y organiza medio grupo de amigos. Alejandra llegó hace tres meses por trabajo y todavía está aprendiendo cómo funcionan las invitaciones aquí: a quién saludar, qué llevar, qué tan tarde es tarde.",
+        who: "Kayla nació en Houston y organiza medio grupo de amigos. Alejandra llegó hace tres meses por trabajo y todavía está aprendiendo cómo funcionan las invitaciones aquí: a quién saludar, qué llevar, qué tan tarde es tarde.",
         what: "Una charla rápida en la puerta sobre un asado del sábado donde un amigo común, y con qué debería aparecer Alejandra.",
         when: "Un viernes por la tarde de verano, las dos llegando a casa, con los planes del fin de semana todavía sueltos.",
-        where: "Toronto, a la salida de un edificio de apartamentos, con el buen clima que saca a los vecinos a la calle.",
+        where: "Houston, a la salida de un edificio de apartamentos, con el buen clima que saca a los vecinos a la calle.",
         why: "Porque es la primera invitación de verdad de Alejandra al grupo, y acertar en los detalles pequeños — llevar algo, vestirse sencillo, no estresarse — es lo que convierte a una compañera de trabajo en una amiga que te guarda un plato."
       },
       address: {
@@ -373,10 +373,10 @@ lessons.push(
         },
         {
           speaker: "Kayla",
-          target: "A T-shirt's fine. You've been in Toronto for three months now — you're basically a local!",
-          translation: "Una camiseta está bien. Ya llevas tres meses en Toronto, ¡ya eres casi de acá!",
+          target: "A T-shirt's fine. You've been in Houston for three months now — you're basically a local!",
+          translation: "Una camiseta está bien. Ya llevas tres meses en Houston, ¡ya eres casi de acá!",
           pronunciation: "a TII-sherts fain. yuv bin in to-RON-tou for zrii monzs nau — yur BEI-sik-li a LOU-kal",
-          literal: "Una camiseta-es bien. Tú-has estado en Toronto por tres meses ahora — tú-eres básicamente un local.",
+          literal: "Una camiseta-es bien. Tú-has estado en Houston por tres meses ahora — tú-eres básicamente un local.",
           why: "Donde el español dice “llevas tres meses”, el inglés usa el present perfect con “for”: “you've been… for three months”. La duración pide “for”; con “since” iría una fecha de inicio, no una cantidad de tiempo."
         },
         {
@@ -441,8 +441,8 @@ lessons.push(
           region: "Inglés general; la distinción “for” (duración) frente a “since” (inicio) es firme en todas partes.",
           related: ["for", "since", "it's been", "ago"],
           example: {
-            target: "I've been in Toronto for three months.",
-            translation: "Llevo tres meses en Toronto."
+            target: "I've been in Houston for three months.",
+            translation: "Llevo tres meses en Houston."
           }
         },
         {
@@ -466,7 +466,7 @@ lessons.push(
           useWhen: "Al aceptar sin dudar: “Wanna come? — For sure!”.",
           avoidWhen: "En un registro formal o escrito, donde “certainly” o “of course” suenan mejor.",
           register: "friendly informal",
-          region: "Inglés norteamericano coloquial; “you bet” tiene un sabor muy canadiense y estadounidense.",
+          region: "Inglés norteamericano coloquial; “you bet” tiene un sabor muy estadounidense.",
           related: ["sure thing", "definitely", "you bet", "absolutely"],
           example: {
             target: "Wanna come? — For sure!",
@@ -500,12 +500,12 @@ lessons.push(
           body: "Llegar a un asado o a una cena en Canadá sin nada tampoco cae del todo bien, aunque el anfitrión diga que no hacía falta. La costumbre del “potluck” — cada quien lleva un plato — está muy arraigada, y preguntar “what should I bring?” es lo más normal del mundo. Una botella de vino, una bolsa de hielo, un postre o unas cervezas bastan. Como en Colombia, importa más el gesto que el precio de lo que lleves."
         },
         {
-          label: "El asado canadiense: el “barbecue”",
-          body: "El “barbecue” o “BBQ” es la reunión al aire libre por excelencia del verano canadiense: hamburguesas, salchichas y maíz a la parrilla, en un patio o un parque, con la gente entrando y saliendo. A diferencia del sancocho costeño, aquí sí se tiende a respetar más la hora de inicio, aunque con algo de margen. Llevar algo para la parrilla o para compartir te integra de inmediato al grupo."
+          label: "El asado estadounidense: el “barbecue”",
+          body: "El “barbecue” o “BBQ” es la reunión al aire libre por excelencia del verano estadounidense: hamburguesas, salchichas y maíz a la parrilla, en un patio o un parque, con la gente entrando y saliendo. A diferencia del sancocho costeño, aquí sí se tiende a respetar más la hora de inicio, aunque con algo de margen. Llevar algo para la parrilla o para compartir te integra de inmediato al grupo."
         },
         {
           label: "“What's up?” no pide un informe",
-          body: "Cuando un canadiense saluda con “what's up?” o “how's it going?”, no espera que le cuentes tu día: es puro saludo, como el “¿qué más?” costeño. La respuesta esperada es breve — “not much, you?” o “good, you?” — y devuelves la pregunta. Contestar con una lista de novedades desconcierta un poco a quien saluda. Tomarlo como fórmula, y no como pregunta literal, es señal de buen oído."
+          body: "Cuando un estadounidense saluda con “what's up?” o “how's it going?”, no espera que le cuentes tu día: es puro saludo, como el “¿qué más?” costeño. La respuesta esperada es breve — “not much, you?” o “good, you?” — y devuelves la pregunta. Contestar con una lista de novedades desconcierta un poco a quien saluda. Tomarlo como fórmula, y no como pregunta literal, es señal de buen oído."
         }
       ],
       pitfalls: [
@@ -571,11 +571,11 @@ lessons.push(
       answer: 1,
       practiceExtra: [
         {
-          prompt: "Alejandra quiere decir que lleva tres meses en Toronto. ¿Cuál es la forma correcta en inglés?",
+          prompt: "Alejandra quiere decir que lleva tres meses en Houston. ¿Cuál es la forma correcta en inglés?",
           choices: [
-            "I am in Toronto since three months, and I already feel almost like a local in this huge, busy city.",
-            "I am in Toronto for three months now, and I already feel almost like a local in this huge, busy city.",
-            "I've been in Toronto for three months now, and I already feel almost like a local in this huge, busy city."
+            "I am in Houston since three months, and I already feel almost like a local in this huge, busy city.",
+            "I am in Houston for three months now, and I already feel almost like a local in this huge, busy city.",
+            "I've been in Houston for three months now, and I already feel almost like a local in this huge, busy city."
           ],
           answer: 2,
           tests: "present perfect con “for” para la duración"
@@ -629,7 +629,7 @@ lessons.push(
       setting: {
         who: "A waiter in a busy set-lunch spot, brisk but courteous, and Alex, ordering alone on a workday. Neither knows the other; the whole exchange runs on the polite formulas of the capital.",
         what: "Ordering lunch: getting the menu, a coffee to sip while deciding, and finally the bill, in a hurry.",
-        when: "Weekday, on the dot of the midday rush, when city-centre restaurants fill with office workers on the clock.",
+        when: "Weekday, on the dot of the midday rush, when city-center restaurants fill with office workers on the clock.",
         where: "Bogotá, a downtown restaurant doing the “almuerzo ejecutivo”, the fixed-price set lunch that feeds the working city.",
         why: "Because the restaurant is where a learner first meets Colombia's service politeness at full strength — the padded requests, the usted, the “¿me regala?” — and getting it right turns you from an awkward foreigner into someone the staff enjoy serving."
       },
@@ -670,7 +670,7 @@ lessons.push(
           translation: "Oh, yes. Could I get a coffee, please? And I'll pick my lunch in a second.",
           pronunciation: "OO-ee, see. me re-GA-la oon TEEN-to, por fa? ee ya es-KO-ho el al-MWER-so",
           literal: "Ugh, yes. To-me you-gift a black-coffee, for fav? And already I-choose the lunch.",
-          why: "“¿Me regala…?” — literally “will you gift me?” — is Colombia's favourite polite request, used even when you are clearly paying. It softens the ask far more than “deme”. “Por fa” is the clipped, friendly “por favor”."
+          why: "“¿Me regala…?” — literally “will you gift me?” — is Colombia's favorite polite request, used even when you are clearly paying. It softens the ask far more than “deme”. “Por fa” is the clipped, friendly “por favor”."
         },
         {
           speaker: "Mesero",
@@ -748,7 +748,7 @@ lessons.push(
         },
         {
           term: "tinto",
-          explanation: "In Colombia a “tinto” is a small cup of black coffee, not red wine. It comes from “café tinto”, dark-coloured coffee. Red wine here is “vino tinto”, always with the “vino” said in full.",
+          explanation: "In Colombia a “tinto” is a small cup of black coffee, not red wine. It comes from “café tinto”, dark-colored coffee. Red wine here is “vino tinto”, always with the “vino” said in full.",
           literal: "black coffee (a dark thing)",
           useWhen: "Ordering the small black coffee that fuels Colombian offices and street corners: “¿me regala un tinto?”.",
           avoidWhen: "Expecting wine; say “una copa de vino tinto” for a glass of red, and note the word means red wine in Spain.",
@@ -914,14 +914,14 @@ lessons.push(
       ]
     },
     en: {
-      title: "Pedir el almuerzo y la cuenta en Vancouver",
+      title: "Pedir el almuerzo y la cuenta en Austin",
       situation:
-        "Alejandra entra a un restaurante de Vancouver a la hora del almuerzo y la atiende un mesero en inglés. Tiene que pedir un café mientras mira la carta, encargar el plato del día y, al final, la cuenta. Todo se juega con las fórmulas norteamericanas “Could I get…?” y “Could you bring…?”, con el falso amigo del tinto y con la cortesía que en inglés va en el verbo, no en el pronombre.",
+        "Alejandra entra a un restaurante de Austin a la hora del almuerzo y la atiende un mesero en inglés. Tiene que pedir un café mientras mira la carta, encargar el plato del día y, al final, la cuenta. Todo se juega con las fórmulas norteamericanas “Could I get…?” y “Could you bring…?”, con el falso amigo del tinto y con la cortesía que en inglés va en el verbo, no en el pronombre.",
       setting: {
         who: "Un mesero de un restaurante concurrido, rápido pero amable, y Alejandra, que almuerza sola en un día de trabajo. No se conocen; todo el intercambio corre sobre las fórmulas corteses del inglés.",
         what: "Pedir el almuerzo: un café mientras decide, el plato del día y, al final, la cuenta, con algo de afán.",
         when: "Entre semana, en plena hora pico del mediodía, cuando los restaurantes del centro se llenan de oficinistas con el tiempo contado.",
-        where: "Vancouver, un restaurante de centro que ofrece “lunch special”, el menú del día a precio fijo del mundo laboral canadiense.",
+        where: "Austin, un restaurante de centro que ofrece “lunch special”, el menú del día a precio fijo del mundo laboral estadounidense.",
         why: "Porque el restaurante es donde Alejandra practica la cortesía de servicio del inglés a plena potencia — los suavizadores, el “could I get…?”, la propina — y acertar la vuelve una clienta con la que da gusto tratar en vez de una extranjera perdida."
       },
       address: {
@@ -1058,7 +1058,7 @@ lessons.push(
           useWhen: "Al terminar de comer: “could we get the bill?”, “just the check, please”.",
           avoidWhen: "No calques “the account” (eso es una cuenta bancaria) ni pidas “the note”; la palabra es “bill” o “check”.",
           register: "neutral",
-          region: "“Check” es más estadounidense; “bill”, más británico y canadiense. Ambas se entienden en todas partes.",
+          region: "“Check” es más estadounidense; “bill”, más británico y estadounidense. Ambas se entienden en todas partes.",
           related: ["the check", "the tab", "the receipt", "the total"],
           example: {
             target: "Could we get the bill, please?",
@@ -1093,7 +1093,7 @@ lessons.push(
         },
         {
           label: "El café del norte no es el tinto",
-          body: "Pedir café en Canadá reserva sorpresas para quien viene del tinto. El “drip coffee” llega en vasos grandes, más aguado, y por defecto se le añade crema y azúcar, así que hay que pedir “black” si lo quieres solo. No existe “a tinto”. Y está la cultura del café para llevar: cadenas como Tim Hortons son casi una institución, y encargar “a double-double” — dos de crema, dos de azúcar — es todo un código local."
+          body: "Pedir café en Canadá reserva sorpresas para quien viene del tinto. El “drip coffee” llega en vasos grandes, más aguado, y por defecto se le añade crema y azúcar, así que hay que pedir “black” si lo quieres solo. No existe “a tinto”. Y está la cultura del café para llevar: cadenas como Shipley Do-Nuts son casi una institución, y encargar “a double-double” — dos de crema, dos de azúcar — es todo un código local."
         },
         {
           label: "La propina no es opcional",
@@ -1108,7 +1108,7 @@ lessons.push(
         },
         {
           mistake: "“Can I get a tinto, please?”",
-          whyItFails: "“Tinto” no existe en inglés; nadie en un café canadiense sabrá qué es. El café solo se pide “a black coffee” o “a coffee, black”. Si lo que quieres es vino, entonces es “a glass of red wine”.",
+          whyItFails: "“Tinto” no existe en inglés; nadie en un café estadounidense sabrá qué es. El café solo se pide “a black coffee” o “a coffee, black”. Si lo que quieres es vino, entonces es “a glass of red wine”.",
           sayInstead: "Could I get a black coffee, please?"
         },
         {
@@ -1163,7 +1163,7 @@ lessons.push(
       answer: 2,
       practiceExtra: [
         {
-          prompt: "Alejandra quiere pedir un café que va a pagar, con cortesía. ¿Cuál es la forma más natural en un café canadiense?",
+          prompt: "Alejandra quiere pedir un café que va a pagar, con cortesía. ¿Cuál es la forma más natural en un café estadounidense?",
           choices: [
             "Could I get a coffee, please? I'll grab a table by the window and wait for it right over there.",
             "Give me one coffee, please. I'll grab a table by the window and wait for it right over there.",
@@ -1183,7 +1183,7 @@ lessons.push(
           tests: "“black coffee” como café negro, el equivalente del tinto"
         },
         {
-          prompt: "¿Cuál petición suena más natural y cortés para pedir la cuenta a un mesero canadiense?",
+          prompt: "¿Cuál petición suena más natural y cortés para pedir la cuenta a un mesero estadounidense?",
           choices: [
             "Bring me the account right now, because I really need to leave this place quickly and get back home.",
             "I want the note here at the table where the two of us are sitting and finishing the last of our food.",
@@ -1207,7 +1207,7 @@ lessons.push(
   },
   {
     id: "wrapping-up-a-visit-at-a-paisa-friends-place",
-    level: "Starter · Home and neighbourhood",
+    level: "Starter · Home and neighborhood",
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "social-life",
     register: "familiar",
@@ -1222,7 +1222,7 @@ lessons.push(
         who: "Alex, an English speaker who has spent the evening at a paisa friend's place, and Samuel, the host, who speaks the warm, vos-heavy Spanish of Medellín. They are close friends, so everything is informal.",
         what: "Saying goodbye at the end of a visit: offering to help clean up, catching up on Samuel quitting smoking, retrieving a forgotten jacket, and reading the paisa sign-off “deje así”.",
         when: "Late on a weeknight, at the point in the evening when the guest starts making leaving noises but nobody is really in a hurry.",
-        where: "A flat in Medellín, the heart of paisa country, where voseo is the everyday default and hospitality is a point of regional pride.",
+        where: "An apartment in Medellín, the heart of paisa country, where voseo is the everyday default and hospitality is a point of regional pride.",
         why: "Because “dejar” is really several verbs wearing one coat — leave behind, quit, let, break up, drop it — and a goodbye at a friend's place packs most of them into five minutes. Reading “deje así” correctly is the difference between relaxing and freezing up."
       },
       address: {
@@ -1510,7 +1510,7 @@ lessons.push(
       situation:
         "Alejandra está de visita en casa de una amiga en Canadá y ya se va a ir. Entre el «leave that there» para que no lave los platos, el «let me tell you» de una historia, la chaqueta que dejó en el cuarto y el «let's drop it» final, el verbo inglés se reparte en varias palabras distintas donde el español solo usaría «dejar». Todo con la cortesía en el verbo, no en el pronombre.",
       setting: {
-        who: "Alejandra, una hispanohablante que pasó la tarde en casa de una amiga canadiense, y Kayla, la anfitriona, que habla el inglés relajado y cordial del día a día. Son amigas, así que todo es informal.",
+        who: "Alejandra, una hispanohablante que pasó la tarde en casa de una amiga estadounidense, y Kayla, la anfitriona, que habla el inglés relajado y cordial del día a día. Son amigas, así que todo es informal.",
         what: "Despedirse al final de una visita: ofrecer ayuda para recoger, ponerse al día sobre que Kayla dejó de fumar, recuperar una chaqueta olvidada y leer bien el «let's drop it».",
         when: "Ya tarde, entre semana, en ese momento de la noche en que el invitado empieza a hacer gestos de irse pero nadie tiene afán de verdad.",
         where: "Un apartamento en Canadá, donde el inglés no marca el respeto con el pronombre y la calidez se dice con el tono y con fórmulas como «go ahead» o «feel free».",
@@ -1689,7 +1689,7 @@ lessons.push(
         },
         {
           label: "El registro va en las palabras, no en el pronombre",
-          body: "El inglés no tiene usted, tú ni vos: solo «you». Toda la calidez o la formalidad que el español mete en el pronombre, el inglés la reparte en el léxico — «go ahead», «feel free», «be my guest», «would you mind», «please». Por eso una anfitriona canadiense suena cálida sin cambiar de pronombre: lo hace con «don't worry about it» y «have a seat». Para el hispanohablante, la lección es dejar de buscar el pronombre correcto y aprender estas fórmulas que cargan el tono."
+          body: "El inglés no tiene usted, tú ni vos: solo «you». Toda la calidez o la formalidad que el español mete en el pronombre, el inglés la reparte en el léxico — «go ahead», «feel free», «be my guest», «would you mind», «please». Por eso una anfitriona estadounidense suena cálida sin cambiar de pronombre: lo hace con «don't worry about it» y «have a seat». Para el hispanohablante, la lección es dejar de buscar el pronombre correcto y aprender estas fórmulas que cargan el tono."
         }
       ],
       pitfalls: [

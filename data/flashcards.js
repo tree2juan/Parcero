@@ -327,8 +327,8 @@ function flashcardFromFluency(item, index, direction) {
  * Slang is drilled the other way round from everything else.
  *
  * Every other card here asks for the language you are building, because
- * production is the harder skill and the one worth practising. Slang inverts
- * that on purpose: most of this list is language a learner should recognise and
+ * production is the harder skill and the one worth practicing. Slang inverts
+ * that on purpose: most of this list is language a learner should recognize and
  * not produce, so asking them to generate "gonorrea" from a prompt would be
  * drilling exactly the wrong reflex. The phrase goes on the front, and the back
  * carries the meaning plus the two things that decide whether it can be used at

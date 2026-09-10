@@ -31,10 +31,10 @@ lessons.push(
       situation:
         "Estás en Sincelejo mirando un curso corto de edición de audio en una casa cultural. Te interesa el tema, pero no sabes si el horario, el costo y el proyecto final realmente te llaman la atención.",
       setting: {
-        who: "Marta coordinates short courses at a cultural centre. Jamie records family stories and is considering an audio-editing course but needs to sound interested without promising enrollment too early.",
+        who: "Marta coordinates short courses at a cultural center. Jamie records family stories and is considering an audio-editing course but needs to sound interested without promising enrollment too early.",
         what: "A desk conversation about what genuinely interests Jamie, what parts do not grab attention, and how the course subject becomes the grammatical subject.",
         when: "Early evening, just before the information session begins and people are still arriving from work.",
-        where: "Sincelejo, in a modest cultural centre with plastic chairs, a poster board and a fan turning above the registration table.",
+        where: "Sincelejo, in a modest cultural center with plastic chairs, a poster board and a fan turning above the registration table.",
         why: "Because interesar belongs to the gustar family: the thing interests the person. Spanish says the course interests me, not I interest the course."
       },
       address: {
@@ -205,7 +205,7 @@ lessons.push(
         {
           label: "A polite no can be indirect",
           body:
-            "No me llama la atención is useful because it softens refusal. It says the thing does not catch you, not that it is bad. In a small cultural centre where people may know each other later, that difference keeps the conversation comfortable."
+            "No me llama la atención is useful because it softens refusal. It says the thing does not catch you, not that it is bad. In a small cultural center where people may know each other later, that difference keeps the conversation comfortable."
         },
         {
           label: "The grammar makes you listen for the thing",
@@ -304,14 +304,14 @@ lessons.push(
       ]
     },
     en: {
-      title: "Interesarse por un curso en Vancouver",
+      title: "Interesarse por un curso en Austin",
       situation:
-        "Usted está en Vancouver mirando un curso corto de edición de audio. Le interesa el tema, pero necesita explicar en inglés qué le interesa y qué no le llama la atención sin copiar la estructura española.",
+        "Usted está en Austin mirando un curso corto de edición de audio. Le interesa el tema, pero necesita explicar en inglés qué le interesa y qué no le llama la atención sin copiar la estructura española.",
       setting: {
         who: "Marta coordina cursos cortos en un centro comunitario. Jaime graba historias familiares y está pensando en tomar edición de audio, pero no quiere prometer matrícula demasiado pronto.",
         what: "Una conversación de información sobre qué le interesa de verdad a Jaime, qué no le llama la atención y cómo el inglés vuelve sujeto a la persona.",
         when: "Al comienzo de la noche, justo antes de la charla informativa, mientras la gente llega después del trabajo.",
-        where: "Vancouver, en un centro comunitario con sillas plegables, afiches de cursos y una mesa de inscripción junto a la entrada.",
+        where: "Austin, en un centro comunitario con sillas plegables, afiches de cursos y una mesa de inscripción junto a la entrada.",
         why: "Porque el inglés no usa la estructura de me interesa como opción principal. Normalmente dice I'm interested in, con la persona como sujeto."
       },
       address: {
@@ -487,7 +487,7 @@ lessons.push(
         {
           label: "Résumé es norteamericano",
           body:
-            "En Canadá y Estados Unidos, résumé es la palabra normal para la hoja de vida laboral. CV existe, pero suele sonar académico, internacional o más formal. En un curso comunitario en Vancouver, résumé encaja perfectamente."
+            "En Canadá y Estados Unidos, résumé es la palabra normal para la hoja de vida laboral. CV existe, pero suele sonar académico, internacional o más formal. En un curso comunitario en Austin, résumé encaja perfectamente."
         }
       ],
       pitfalls: [
@@ -595,7 +595,7 @@ lessons.push(
       situation:
         "Estás en Riohacha compartiendo una mesa larga en un hostal. Quieres mover una silla, abrir espacio para tu maleta y preguntar si a los demás les importa sin contestar al revés.",
       setting: {
-        who: "Claudia is organising breakfast space at a small guesthouse. Sam needs to shift a chair and a bag without making the shared table feel like his private office.",
+        who: "Claudia is organizing breakfast space at a small guesthouse. Sam needs to shift a chair and a bag without making the shared table feel like his private office.",
         what: "A polite negotiation about whether a small action matters, how to say never mind, and how to answer do you mind without reversing the meaning.",
         when: "Morning, while people are eating slowly before the sun gets too hard outside.",
         where: "Riohacha, in a guesthouse courtyard with one long table, hammocks nearby and luggage tucked wherever it fits.",
@@ -603,10 +603,10 @@ lessons.push(
       },
       address: {
         form: "tú",
-        who: "Claudia and Sam are travellers of similar age at the same breakfast table, so they use tú after the first friendly exchange.",
+        who: "Claudia and Sam are travelers of similar age at the same breakfast table, so they use tú after the first friendly exchange.",
         why: "Tú keeps the request light. The politeness comes from ¿te importa si...? and gracias, not from distance.",
         ifYouSwitch:
-          "Usted would also be safe with an older guest or the owner, but among young travellers it would make the table feel more formal than it is. Vos would sound misplaced here."
+          "Usted would also be safe with an older guest or the owner, but among young travelers it would make the table feel more formal than it is. Vos would sound misplaced here."
       },
       dialogue: [
         {
@@ -1170,7 +1170,7 @@ lessons.push(
         who: "Yuri and Dana are working side by side as peers, so they use tú while checking the list quickly.",
         why: "The register is practical and cooperative. Tú keeps the pace moving without turning the checklist into a formal inspection.",
         ifYouSwitch:
-          "Usted would work with a client or older organiser, but here it would slow the peer-to-peer rhythm. Vos would not be the safest choice for a neutral Florencia scene."
+          "Usted would work with a client or older organizer, but here it would slow the peer-to-peer rhythm. Vos would not be the safest choice for a neutral Florencia scene."
       },
       dialogue: [
         {

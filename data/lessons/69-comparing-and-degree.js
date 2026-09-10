@@ -656,7 +656,7 @@ lessons.push(
       situation:
         "Hannah lleva pocos días en Santa Marta y a la hora del almuerzo no sabe dónde comer. Marlon, un amigo samario, la lleva al mercado y le muestra dos comedores pegados, uno al lado del otro. Entre el bullicio del mediodía van comparando cuál es igual de bueno, cuál sirve tanta comida como el otro y cuál atiende más rápido, para que ella escoja dónde sentarse.",
       setting: {
-        who: "Marlon is a santamarteño who knows every comedor in the market and talks with the quick, teasing warmth of the coast. Hannah is a Canadian on her first week in Santa Marta, learning her lunchtime Spanish one plate at a time.",
+        who: "Marlon is a santamarteño who knows every comedor in the market and talks with the quick, teasing warmth of the coast. Hannah is a American on her first week in Santa Marta, learning her lunchtime Spanish one plate at a time.",
         what: "A lunch decision built on equality: which comedor is as good as the other, which serves as much food, which sits just as close to the beach and just as cheap.",
         when: "High noon, the hour when the market fills and everyone is deciding where to eat.",
         where: "Santa Marta, on the Caribbean coast, at two side-by-side comedores in the market.",
@@ -1280,12 +1280,12 @@ lessons.push(
         what: "A food-stall decision made of superlatives: which sancocho is the tastiest in Valledupar, which is absolutely delicious, which is the cheapest, and which plate is the biggest of all.",
         when: "The heat of the Festival Vallenato, accordions everywhere and the smell of sancocho in the air.",
         where: "Valledupar, capital of Cesar on the Caribbean plain, at a food stall during the vallenato festival.",
-        why: "Naming the best, the tastiest, the cheapest -- the superlative -- is how anyone brags about food, and the corpus never explains it. Learn “el más … de” and “-ísimo” and you can crown a favourite anywhere."
+        why: "Naming the best, the tastiest, the cheapest -- the superlative -- is how anyone brags about food, and the corpus never explains it. Learn “el más … de” and “-ísimo” and you can crown a favorite anywhere."
       },
       address: {
         form: "tú",
         who: "Beto and Kate use tú. On the coast a proud local and a curious visitor slide into tú almost immediately, with warm tags like “ajá” and “¿oíste?”.",
-        why: "The Caribbean coast prefers tú where the Andean interior might use usted. Between a friendly vendor and a young traveller it sounds warm and normal; usted would feel stiff here.",
+        why: "The Caribbean coast prefers tú where the Andean interior might use usted. Between a friendly vendor and a young traveler it sounds warm and normal; usted would feel stiff here.",
         ifYouSwitch:
           "If Kate replied in careful usted, Beto would follow her fine, but it would cool the banter a touch -- more polite, more distant than the easy tú of a festival food stall."
       },
@@ -1367,7 +1367,7 @@ lessons.push(
           avoidWhen:
             "You mean the top of a named group -- that is “el más … de”, the relative superlative.",
           register: "friendly informal",
-          region: "Universal Spanish; everywhere in speech, and a favourite on the coast.",
+          region: "Universal Spanish; everywhere in speech, and a favorite on the coast.",
           related: ["el más … de", "muy", "re-", "súper-"],
           example: {
             target: "Este sancocho está riquísimo.",
@@ -1445,7 +1445,7 @@ lessons.push(
         {
           term: "de una",
           explanation:
-            "A coastal favourite meaning right away, for sure, or hands down. It signals total, no-hesitation agreement, and often crowns a superlative: “la mejor, de una”, the best, hands down.",
+            "A coastal favorite meaning right away, for sure, or hands down. It signals total, no-hesitation agreement, and often crowns a superlative: “la mejor, de una”, the best, hands down.",
           literal: "at once / for sure",
           useWhen:
             "Snappy, wholehearted agreement: “¿Vamos? De una.”, “La mejor, de una.”.",

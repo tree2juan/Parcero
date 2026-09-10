@@ -1,5 +1,5 @@
 /*
- * Language you need to recognise and should almost never produce.
+ * Language you need to recognize and should almost never produce.
  *
  * This file exists because comprehension and production are not the same skill,
  * and pretending otherwise leaves learners defenceless. A textbook that omits
@@ -34,7 +34,7 @@
  */
 const matureItems = [
   /* The original five, order preserved for existing review anchors. */
-  ["grosero/a", "rude / impolite", "Low", "Describes behavior; use it to set a boundary rather than label a person in anger.", "es", "Name the behaviour, not the person: “Eso que dijiste fue grosero.”"],
+  ["grosero/a", "rude / impolite", "Low", "Describes behavior; use it to set a boundary rather than label a person in anger.", "es", "Name the behavior, not the person: “Eso que dijiste fue grosero.”"],
   ["malparido/a", "strong insult", "High", "Colombian use varies by relationship and tone. Do not direct it at people; step away or ask for help if language feels threatening.", "es", "Do not answer it. Leave, or ask for a third person to join the conversation."],
   ["hijueputa", "strong insult / exclamation", "High", "A common Colombian profanity with highly context-dependent force. Recognition only; not workplace-safe.", "es", "If it is aimed at an object or a situation, it is venting. If it is aimed at you, end the conversation."],
   ["go to hell", "vete al carajo", "High", "Hostile dismissal. Do not escalate; use a boundary such as “I’m ending this conversation.”", "en", "“I’m going to stop here.” Then actually stop."],
@@ -51,13 +51,13 @@ const matureItems = [
   ["creído/a", "full of themselves", "Low", "Accusation of arrogance.", "es", "Usually gossip rather than confrontation."],
   ["lambón/a", "bootlicker, suck-up", "Medium", "Workplace and school insult. Stings more than it sounds.", "es", "Do not use it at work, even as a joke."],
   ["sapo/a", "snitch", "Medium", "A serious accusation in some settings, with real consequences attached to it historically. Never a light word.", "es", "If you are called this, correct the facts calmly and involve someone senior."],
-  ["ñero/a", "lowlife", "Medium", "Carries an explicit class sneer.", "es", "Recognise the contempt. Do not repeat the word."],
+  ["ñero/a", "lowlife", "Medium", "Carries an explicit class sneer.", "es", "Recognize the contempt. Do not repeat the word."],
   ["gomelo/a", "rich snob", "Low", "Mocking, about privilege. Rarely wounding.", "es", "Usually teasing."],
   ["tacaño/a", "stingy", "Low", "Common complaint about someone who will not pay their share.", "es", "No response needed."],
-  ["montañero/a", "country bumpkin", "Medium", "Mocks someone as rural and unsophisticated. More cutting than it looks.", "es", "Recognise it as a class jab."],
-  ["patán", "boor, lout", "Medium", "Someone with no manners, usually a man behaving badly.", "es", "A description of behaviour; can be used to set a boundary."],
+  ["montañero/a", "country bumpkin", "Medium", "Mocks someone as rural and unsophisticated. More cutting than it looks.", "es", "Recognize it as a class jab."],
+  ["patán", "boor, lout", "Medium", "Someone with no manners, usually a man behaving badly.", "es", "A description of behavior; can be used to set a boundary."],
   ["chismoso/a", "gossip", "Low", "Very common, half-joking.", "es", "No response needed."],
-  ["cara de barro", "shameless, brazen", "Low", "Someone with no embarrassment about their own behaviour.", "es", "Mild reproach."],
+  ["cara de barro", "shameless, brazen", "Low", "Someone with no embarrassment about their own behavior.", "es", "Mild reproach."],
   ["descarado/a", "shameless", "Low", "Stronger than “cara de barro” but still mild.", "es", "Mild reproach."],
 
   /* Colombian Spanish - genuinely strong. Recognition only. */
@@ -70,14 +70,14 @@ const matureItems = [
   ["puta", "whore; also an intensifier", "High", "As an intensifier (“de puta madre”) it is Spanish rather than Colombian and still crude. Aimed at a person it is a severe slur.", "es", "Disengage."],
   ["cabrón/a", "bastard; regionally variable", "High", "Much harsher in Colombia than in Mexico, where it can be friendly. Do not import the Mexican usage.", "es", "Do not use it in Colombia at all."],
   ["chimba (despectivo)", "crude dismissal", "Medium", "The same root as the enthusiastic “¡qué chimba!”. Anatomical in origin, so it is never workplace-safe in any sense.", "es", "Understand both directions of the word; produce neither at work."],
-  ["mondá", "coastal profanity", "High", "Caribbean coast. Extremely common there and extremely crude.", "es", "Recognise it as coastal register. Do not produce it."],
+  ["mondá", "coastal profanity", "High", "Caribbean coast. Extremely common there and extremely crude.", "es", "Recognize it as coastal register. Do not produce it."],
   ["jueputa / juemadre", "softened hijueputa", "Medium", "Deliberately clipped to take the edge off, the way English does with “sugar”. Still not polite.", "es", "Read it as venting rather than an attack."],
   ["mierda", "shit", "Medium", "Frustration far more often than an insult.", "es", "Usually about the situation, not about you."],
   ["carajo", "damn, hell", "Low", "Mild by Colombian standards. “¡Al carajo!” is exasperation.", "es", "Ordinary venting."],
   ["joder", "to mess with; damn", "Medium", "More Peninsular than Colombian, but understood everywhere.", "es", "Usually venting."],
   ["verga", "crude exclamation", "High", "Anatomical. Common on the coast, coarse everywhere.", "es", "Recognition only."],
   ["culicagado/a", "brat, snotty kid", "Medium", "Crude in origin, often said with real affection about children.", "es", "Context decides. Usually not hostile."],
-  ["care… (cara de …)", "insult construction", "Medium", "A productive pattern: “cara de” plus almost anything abusive. Recognising the frame matters more than any single example.", "es", "Recognise the construction and judge by the second word."],
+  ["care… (cara de …)", "insult construction", "Medium", "A productive pattern: “cara de” plus almost anything abusive. Recognising the frame matters more than any single example.", "es", "Recognize the construction and judge by the second word."],
   ["hijo de …", "insult construction", "High", "Another productive frame. If someone begins it, the conversation is already over.", "es", "Leave the conversation."],
 
   /* Threats and coercion - the category where getting it wrong is dangerous. */
@@ -108,19 +108,19 @@ const matureItems = [
   ["with all due respect", "con todo respeto", "Low", "In English this phrase almost always precedes disrespect. Learners take it at face value.", "en", "Listen to what follows, not to the phrase."],
   ["no offense, but", "sin ofender, pero", "Low", "Reliably precedes something offensive.", "en", "Judge what follows."],
   ["bless your heart", "pobrecito (irónico)", "Low", "American Southern English. Sounds kind, frequently means the speaker thinks you are a fool.", "en", "Read the tone, not the words."],
-  ["that's rich", "mira quién habla", "Low", "Sarcastic accusation of hypocrisy.", "en", "Recognise the sarcasm."],
+  ["that's rich", "mira quién habla", "Low", "Sarcastic accusation of hypocrisy.", "en", "Recognize the sarcasm."],
   ["I'm not going to repeat myself", "no lo voy a repetir", "Medium", "A dominance move, not information.", "en", "“I heard you. I disagree.”"],
   ["do you understand me?", "¿me entendiste?", "Medium", "Asked flatly by an angry speaker this is a challenge, not a comprehension check.", "en", "“I understand. I don’t agree.”"],
 
   /* Sexual and adult content - flagged so learners know what they are hearing. */
-  ["contenido sexual explícito", "explicit sexual content", "High", "Colombian Spanish uses heavy innuendo in music, comedy and street talk. Reggaetón lyrics in particular are far more explicit than their radio-friendliness suggests.", "es", "Recognise the register. Do not repeat lyrics you have not had translated."],
+  ["contenido sexual explícito", "explicit sexual content", "High", "Colombian Spanish uses heavy innuendo in music, comedy and street talk. Reggaetón lyrics in particular are far more explicit than their radio-friendliness suggests.", "es", "Recognize the register. Do not repeat lyrics you have not had translated."],
   ["piropo", "unsolicited street comment", "Medium", "Ranges from a harmless compliment to harassment. Frequently defended as tradition; increasingly rejected in Colombian cities.", "es", "You are not obliged to respond. Keep walking."],
   ["acoso", "harassment", "High", "The word to use when reporting. Knowing it matters more than knowing any insult in this file.", "es", "“Esto es acoso y quiero reportarlo.”"],
-  ["morbo", "prurient interest, leering", "Medium", "Describes an attitude rather than an act.", "es", "Useful for naming behaviour precisely."],
+  ["morbo", "prurient interest, leering", "Medium", "Describes an attitude rather than an act.", "es", "Useful for naming behavior precisely."],
   ["doble sentido", "double meaning, innuendo", "Low", "A whole comic register, especially on the coast. Innocuous words carrying a second reading.", "es", "If a room laughs at something plain, this is usually why."],
   ["albur / indirecta", "veiled dig or innuendo", "Medium", "A pointed remark disguised as a general one.", "es", "Ask directly whether it was aimed at you."],
-  ["hook up", "acostarse con alguien", "Medium", "Deliberately vague in English, which is the point of the phrase.", "en", "Recognise the ambiguity rather than assuming."],
-  ["creepy", "escalofriante / incómodo", "Medium", "Names unwanted attention. Useful vocabulary for describing a situation.", "en", "A legitimate word to use about behaviour."],
+  ["hook up", "acostarse con alguien", "Medium", "Deliberately vague in English, which is the point of the phrase.", "en", "Recognize the ambiguity rather than assuming."],
+  ["creepy", "escalofriante / incómodo", "Medium", "Names unwanted attention. Useful vocabulary for describing a situation.", "en", "A legitimate word to use about behavior."],
   ["harassment", "acoso", "High", "The formal term. Learn it before you need it.", "en", "“I want to report this as harassment.”"],
   ["inappropriate", "inapropiado", "Low", "The standard workplace word for naming a problem without escalating.", "en", "“That was inappropriate.” Neutral, effective, hard to argue with."]
 ];

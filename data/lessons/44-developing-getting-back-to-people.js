@@ -56,7 +56,7 @@ lessons.push(
         who: "Carolina and Nico are friends planning an evening, so tú keeps the exchange direct and relaxed.",
         why: "The annoyance is mild and familiar. A formal pronoun would make a normal messaging complaint sound colder than it is.",
         ifYouSwitch:
-          "Usted would sound like distance or sarcasm between friends here. Vos would pull the scene toward a regional flavour this San Andrés setting does not need."
+          "Usted would sound like distance or sarcasm between friends here. Vos would pull the scene toward a regional flavor this San Andrés setting does not need."
       },
       dialogue: [
         dl44Dialogue("Carolina", "¿Te contestó Lina o todavía nada?", "Did Lina answer you, or still nothing?", "teh kon-tes-TOH LEE-nah oh toh-dah-BEE-ah NAH-dah", "To-you answered Lina or still nothing?", "Contestar is the verb for the simple act of answering a message or call. The question is not asking for a thoughtful essay; it is asking whether contact happened at all."),
@@ -80,8 +80,8 @@ lessons.push(
       culture: [
         dl44Culture("Being left on read is social information", "Me dejó en visto does not only report a technical status. It says the other person saw the message and still stayed silent, which can feel like refusal, delay, or avoidance depending on the relationship."),
         dl44Culture("Phones are answered, not responded to", "Contestar el teléfono is the natural phrase. A learner who says responder el teléfono will be understood, but the line sounds translated and slightly unnatural in everyday Spanish."),
-        dl44Culture("Silence can be a soft answer", "In Colombian social life, not answering immediately may be tact, avoidance, busyness, or a gentle no. The verb contestar lets people discuss the behaviour without forcing a dramatic accusation."),
-        dl44Culture("San Andrés without a costume", "The scene is set in San Andrés to broaden the map, but the Spanish stays general. A believable conversation there is better than invented island colour.")
+        dl44Culture("Silence can be a soft answer", "In Colombian social life, not answering immediately may be tact, avoidance, busyness, or a gentle no. The verb contestar lets people discuss the behavior without forcing a dramatic accusation."),
+        dl44Culture("San Andrés without a costume", "The scene is set in San Andrés to broaden the map, but the Spanish stays general. A believable conversation there is better than invented island color.")
       ],
       pitfalls: [
         dl44Pitfall("Using responder el teléfono as your default", "It is understandable, but contestar el teléfono is the idiomatic everyday phrase. Responder sounds as if the phone presented an argument needing a response.", "Contesta el teléfono."),
@@ -111,14 +111,14 @@ lessons.push(
       ]
     },
     en: {
-      title: "Contestar mensajes en Toronto",
+      title: "Contestar mensajes en Houston",
       situation:
-        "Usted está en Toronto organizando una salida con amigos. Alguien no responde al teléfono, deja mensajes leídos y usted necesita distinguir answer, reply, respond y leave on read sin traducir responder para todo.",
+        "Usted está en Houston organizando una salida con amigos. Alguien no responde al teléfono, deja mensajes leídos y usted necesita distinguir answer, reply, respond y leave on read sin traducir responder para todo.",
       setting: {
         who: "Carolina coordina un plan de amigos y Nico lleva toda la tarde esperando una respuesta.",
         what: "Intentan confirmar si Lina va, mientras separan una llamada no contestada, un mensaje leído y una respuesta pensada.",
         when: "Al final de la tarde, cuando el plan está tan cerca que el silencio ya empieza a parecer una respuesta.",
-        where: "Toronto, afuera de una residencia donde todos organizan planes por mensajes en inglés.",
+        where: "Houston, afuera de una residencia donde todos organizan planes por mensajes en inglés.",
         why: "Porque contestar en español se reparte en inglés entre answer, reply, respond y leave on read. Cada uno marca un tipo distinto de contacto."
       },
       address: {
@@ -220,7 +220,7 @@ lessons.push(
         dl44Vocab("avisar", "To let someone know, give notice, warn, or update. It is a default Colombian coordination verb.", "to notify / tell", "Use it for arrivals, changes of plan, decisions, delays, warnings, and practical updates.", "Avoid hearing every yo te aviso as a firm commitment. Sometimes it politely keeps the decision open.", "neutral", "Extremely useful in Colombian Spanish and understood everywhere.", ["informar", "contar", "advertir", "notificar"], "Yo le aviso cuando llegue.", "I'll let you know when I arrive."),
         dl44Vocab("me avisas", "Let me know. A friendly, flexible way to ask someone to update you later.", "you notify me", "Use it when the other person will know the answer later: arrival time, choice, delay, or change.", "Avoid using it when you need an immediate answer. It invites a later update.", "friendly informal", "General Colombian Spanish; one of the most common planning phrases.", ["me cuentas", "me dices", "me confirmas", "me escribes"], "Me avisas si quieres almorzar.", "Let me know if you want lunch."),
         dl44Vocab("yo te aviso", "I'll let you know. It can be sincere, but it can also be a soft deferral.", "I notify you", "Use it when you genuinely need to check something and report back.", "Avoid assuming it means yes. Without timing or detail, it may mean maybe, later, or probably not.", "neutral conversational", "Very common Colombian Spanish with real pragmatic ambiguity.", ["te cuento", "te confirmo", "miramos a ver", "yo te digo"], "Yo te aviso apenas llegue.", "I'll let you know as soon as I arrive."),
-        dl44Vocab("avíseme", "Let me know, in usted. Warm, practical, and common in families, services, and neighbours.", "notify me", "Use it when speaking with usted: relatives, drivers, older neighbours, clients, or anyone treated respectfully.", "Avoid mixing it with tú forms. If the relationship is tú, say avísame.", "polite warm", "General Colombian Spanish.", ["avísame", "me informa", "me cuenta", "me confirma"], "Avíseme cuando llegue.", "Let me know when you arrive."),
+        dl44Vocab("avíseme", "Let me know, in usted. Warm, practical, and common in families, services, and neighbors.", "notify me", "Use it when speaking with usted: relatives, drivers, older neighbors, clients, or anyone treated respectfully.", "Avoid mixing it with tú forms. If the relationship is tú, say avísame.", "polite warm", "General Colombian Spanish.", ["avísame", "me informa", "me cuenta", "me confirma"], "Avíseme cuando llegue.", "Let me know when you arrive."),
         dl44Vocab("avisar de una vez", "To let someone know right away, without waiting or letting the update drift.", "notify at one time", "Use it when timing matters and the other person should not have to chase you.", "Avoid it if the update is optional or casual; de una vez adds urgency.", "neutral conversational", "General Colombian Spanish.", ["avisar enseguida", "avisar apenas", "avisar ya", "confirmar rápido"], "Avíseme de una vez.", "Let me know right away."),
         dl44Vocab("avisar en serio", "To really let someone know, said when the usual phrase might sound vague.", "notify seriously", "Use it to repair doubt and make yo te aviso sound less like a brush-off.", "Avoid overusing it. If everything is en serio, the phrase stops reassuring anyone.", "friendly informal", "General Spanish.", ["confirmar de verdad", "cumplir", "no dejar esperando", "decir claro"], "Esta vez sí le aviso en serio.", "This time I really will let you know."),
         dl44Vocab("no cuente conmigo", "Do not count on me. A clear way to say the plan should not depend on you.", "do not count with me", "Use it when a vague maybe would waste people's time.", "Avoid it when you only need more time to confirm. It sounds much firmer than yo te aviso.", "neutral direct", "General Spanish.", ["no me espere", "no dependa de mí", "no prometo", "no confirmo"], "No cuente conmigo todavía.", "Don't count on me yet.")
@@ -231,7 +231,7 @@ lessons.push(
         dl44Culture("Me avisas is social glue", "Colombian arrangements often stay flexible until the last practical moment. Me avisas lets people coordinate without pretending every detail is fixed early."),
         dl44Culture("Yo te aviso may not be yes", "A learner can wait all afternoon after hearing yo te aviso because English hears it as a clear future action. In Colombia it can be sincere, but it can also mean I am not ready to commit."),
         dl44Culture("Usted can be affectionate", "Avíseme cuando llegue can be something an aunt says warmly, not a clerk speaking coldly. In many families, usted and affection sit side by side."),
-        dl44Culture("Sincelejo can teach ordinary planning", "The city gives the block a different department without forcing local colour. The phrases here are broadly Colombian and useful far beyond this one setting.")
+        dl44Culture("Sincelejo can teach ordinary planning", "The city gives the block a different department without forcing local color. The phrases here are broadly Colombian and useful far beyond this one setting.")
       ],
       pitfalls: [
         dl44Pitfall("Hearing yo te aviso as a firm yes", "Sometimes it is a real promise to update you. Sometimes it is a polite deferral that keeps the speaker from saying no right now. Listen for timing and detail.", "Yo te aviso apenas llegue is firmer than yo te aviso alone."),
@@ -378,7 +378,7 @@ lessons.push(
       note:
         "Prometer is not hard to conjugate; it is hard to use well. Te lo prometo is strong and personal, le prometo que is formal, and both raise expectations. Colombian speech often chooses softer commitment tools instead: yo miro a ver, si Dios quiere, yo te aviso, or de una when the enthusiasm is real.",
       culture: [
-        dl44Culture("Do not spend promises cheaply", "A promise is social credit. If you use te lo prometo for every small plan, the phrase stops reassuring people and starts sounding like pressure or theatre."),
+        dl44Culture("Do not spend promises cheaply", "A promise is social credit. If you use te lo prometo for every small plan, the phrase stops reassuring people and starts sounding like pressure or theater."),
         dl44Culture("Soft commitments can be honest", "Yo miro a ver and si Dios quiere may frustrate learners who want yes or no, but they often describe reality better than a fake promise. Plans depend on weather, transport, family and time."),
         dl44Culture("De una is not a promise formula", "De una can be enthusiastic agreement, especially among friends. It says the speaker is ready or willing; it does not carry the solemn weight of prometer."),
         dl44Culture("Manizales broadens the map", "A rainy, practical conversation in Manizales lets the lesson use a real place without leaning on risky localisms. The register lesson works anywhere in Colombia.")

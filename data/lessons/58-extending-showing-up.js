@@ -619,7 +619,7 @@ lessons.push(
     id: "asistir-to-the-hearing-in-monteria",
     level: "Extending · Showing up",
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
-    domain: "home-and-neighbourhood",
+    domain: "home-and-neighborhood",
     register: "courteous",
     pathways: ["foundation", "year-12"],
     verb: "asistir",
@@ -629,7 +629,7 @@ lessons.push(
       situation:
         "Estás en Montería, frente a una sala donde habrá una audiencia pública sobre el río y las obras del barrio. Te ofreciste a acompañar a una vecina, pero el funcionario te corrige antes de entrar: “asistir a la audiencia” significa estar presente, no ayudarle a cargar los papeles.",
       setting: {
-        who: "Rafael is a municipal staff member checking names at the door. Dana is accompanying a neighbour who wants to speak, and she has heard “asistir” but is dangerously close to treating it like English “assist.”",
+        who: "Rafael is a municipal staff member checking names at the door. Dana is accompanying a neighbor who wants to speak, and she has heard “asistir” but is dangerously close to treating it like English “assist.”",
         what: "A doorway exchange before a public hearing, centred on the false friend “asistir a” as attend, not help.",
         when: "A humid weekday morning, ten minutes before the hearing starts and everyone is trying to enter at once.",
         where: "Montería, Córdoba, outside a municipal meeting room where residents have come to discuss work near the Sinú River.",
@@ -662,17 +662,17 @@ lessons.push(
         {
           speaker: "Dana",
           target: "Entonces asistí a la reunión pasada, pero no asistí a mi vecina.",
-          translation: "So I attended the last meeting, but I didn't assist my neighbour.",
+          translation: "So I attended the last meeting, but I didn't assist my neighbor.",
           pronunciation: "en-TON-ses a-sees-TEE a la reh-oo-NYON pa-SA-da, PEH-roh no a-sees-TEE a mee beh-SEE-na",
-          literal: "Then I-attended to the meeting past, but not I-attended to my neighbour.",
-          why: "The first half is natural; the second half is the false friend exposed. If she means she did not help her neighbour, she should not use “asistir.”"
+          literal: "Then I-attended to the meeting past, but not I-attended to my neighbor.",
+          why: "The first half is natural; the second half is the false friend exposed. If she means she did not help her neighbor, she should not use “asistir.”"
         },
         {
           speaker: "Rafael",
           target: "Exacto: usted asistió a la reunión y ayudó a su vecina.",
-          translation: "Exactly: you attended the meeting and helped your neighbour.",
+          translation: "Exactly: you attended the meeting and helped your neighbor.",
           pronunciation: "eg-SAK-toh: oos-TED a-sees-TYOH a la reh-oo-NYON ee a-yoo-DOH a soo beh-SEE-na",
-          literal: "Exactly: you attended to the meeting and helped your neighbour.",
+          literal: "Exactly: you attended to the meeting and helped your neighbor.",
           why: "The verbs divide cleanly: “asistió a” for attendance, “ayudó a” for help. Both take a in these sentences, which is why the meaning must come from the verb, not the preposition alone."
         },
         {
@@ -741,7 +741,7 @@ lessons.push(
           related: ["dar una mano", "colaborar", "apoyar", "servir de ayuda"],
           example: {
             target: "Ayudé a mi vecina con los papeles.",
-            translation: "I helped my neighbour with the papers."
+            translation: "I helped my neighbor with the papers."
           }
         },
         {
@@ -814,7 +814,7 @@ lessons.push(
         }
       ],
       note:
-        "“Asistir” deserves suspicion because English has a nearly identical word with a different everyday meaning. In Spanish, “asistir a la audiencia” means attend the hearing. To help your neighbour, use “ayudar.” The preposition does not save you, because both verbs can appear with a person after a. You have to choose the right verb before the sentence leaves your mouth.",
+        "“Asistir” deserves suspicion because English has a nearly identical word with a different everyday meaning. In Spanish, “asistir a la audiencia” means attend the hearing. To help your neighbor, use “ayudar.” The preposition does not save you, because both verbs can appear with a person after a. You have to choose the right verb before the sentence leaves your mouth.",
       culture: [
         {
           label: "Public attendance is often recorded",
@@ -897,7 +897,7 @@ lessons.push(
           tests: "“asistir a” as attend"
         },
         {
-          prompt: "Which sentence says you helped your neighbour?",
+          prompt: "Which sentence says you helped your neighbor?",
           choices: [
             "Asistí a mi vecina con papeles.",
             "Ayudé a mi vecina con papeles.",
@@ -955,15 +955,15 @@ lessons.push(
         },
         {
           speaker: "Daniela",
-          target: "So I attended the last meeting, but I helped my neighbour.",
+          target: "So I attended the last meeting, but I helped my neighbor.",
           translation: "Entonces asistí a la reunión pasada, pero ayudé a mi vecina.",
           pronunciation: "so ai a-TEN-ded da last MI-ting, bot ai jelpt mai NEI-bor",
           literal: "Entonces atendí la reunión pasada, pero ayudé a mi vecina.",
-          why: "La división queda limpia: usted attends an event y helps a person. “Assisted my neighbour” puede existir, pero suena más formal que “helped.”"
+          why: "La división queda limpia: usted attends an event y helps a person. “Assisted my neighbor” puede existir, pero suena más formal que “helped.”"
         },
         {
           speaker: "Ralph",
-          target: "Exactly: you attended the meeting and helped your neighbour.",
+          target: "Exactly: you attended the meeting and helped your neighbor.",
           translation: "Exacto: usted asistió a la reunión y ayudó a su vecina.",
           pronunciation: "eg-ZAKT-li: yu a-TEN-ded da MI-ting and jelpt yor NEI-bor",
           literal: "Exactamente: usted atendió la reunión y ayudó a su vecina.",
@@ -1034,7 +1034,7 @@ lessons.push(
           region: "Inglés universal; el verbo cotidiano.",
           related: ["give a hand", "support", "assist", "help out"],
           example: {
-            target: "I helped my neighbour with the papers.",
+            target: "I helped my neighbor with the papers.",
             translation: "Ayudé a mi vecina con los papeles."
           }
         },
@@ -1108,7 +1108,7 @@ lessons.push(
         }
       ],
       note:
-        "El falso amigo es fuerte porque “attend” y “asistir” se cruzan, pero “assist” no cubre el uso cotidiano de asistir a un evento. En inglés, usted attends the hearing and helps your neighbour. “Assist” existe, claro, pero suena más formal y significa ayudar, no estar presente. Si aprende esa división, evita el error más visible de esta familia.",
+        "El falso amigo es fuerte porque “attend” y “asistir” se cruzan, pero “assist” no cubre el uso cotidiano de asistir a un evento. En inglés, usted attends the hearing and helps your neighbor. “Assist” existe, claro, pero suena más formal y significa ayudar, no estar presente. Si aprende esa división, evita el error más visible de esta familia.",
       culture: [
         {
           label: "Attendance can be a civic fact",
@@ -1160,7 +1160,7 @@ lessons.push(
           whenToUse: "Explicar que no puede asistir a toda la sesión."
         },
         {
-          form: "I helped my neighbour with the papers.",
+          form: "I helped my neighbor with the papers.",
           register: "neutral",
           region: "Inglés universal",
           whenToUse: "Decir que ayudó a alguien, no que asistió a un evento."
@@ -1176,7 +1176,7 @@ lessons.push(
       choices: [
         "She came to be present at the hearing.",
         "She came to assist the staff with papers.",
-        "She came to translate for every neighbour."
+        "She came to translate for every neighbor."
       ],
       answer: 0,
       practiceExtra: [
@@ -1193,9 +1193,9 @@ lessons.push(
         {
           prompt: "¿Cuál frase dice que ayudó a su vecina?",
           choices: [
-            "I attended my neighbour.",
+            "I attended my neighbor.",
             "I assisted the hearing.",
-            "I helped my neighbour."
+            "I helped my neighbor."
           ],
           answer: 2,
           tests: "“help” for ayudar a una persona"
@@ -1227,10 +1227,10 @@ lessons.push(
       situation:
         "Estás en Florencia, en un taller comunitario sobre preparación para crecientes y cortes de servicio. No fuiste sólo a escuchar: te invitaron a participar en un simulacro, hacer preguntas y contar después que tuviste la oportunidad de participar sin sonar como si hubieras dirigido todo el evento.",
       setting: {
-        who: "Juliana facilitates a community workshop with residents from several neighbourhoods. Omar came because his landlord insisted, but he is beginning to see that participation means more than signing the attendance sheet.",
+        who: "Juliana facilitates a community workshop with residents from several neighborhoods. Omar came because his landlord insisted, but he is beginning to see that participation means more than signing the attendance sheet.",
         what: "A workshop exchange about taking part, asking whether one can participate, and using the phrase “tuve la oportunidad de participar.”",
         when: "Saturday morning, after the first explanation and before the group splits into tables.",
-        where: "Florencia, Caquetá, in a neighbourhood community centre where residents are planning for heavy rain and service interruptions.",
+        where: "Florencia, Caquetá, in a neighborhood community center where residents are planning for heavy rain and service interruptions.",
         why: "Participar is the verb for taking part, and the useful structure is “participar en.” It is not the same as attending quietly, leading the event or merely being invited."
       },
       address: {
@@ -1247,7 +1247,7 @@ lessons.push(
           translation: "Omar, you didn't come just to watch; today you're going to take part in the drill.",
           pronunciation: "oh-MAR, no bee-NEES-teh SOH-loh a mee-RAR; oy bas a par-tee-see-PAR en el see-moo-LA-kroh",
           literal: "Omar, not you-came only to watch; today you-go to participate in the drill.",
-          why: "The preposition is “en”: participar en el simulacro. In this sense, “participar de” sounds off to many Colombian ears or changes the flavour toward sharing in something."
+          why: "The preposition is “en”: participar en el simulacro. In this sense, “participar de” sounds off to many Colombian ears or changes the flavor toward sharing in something."
         },
         {
           speaker: "Omar",
@@ -1297,7 +1297,7 @@ lessons.push(
             "To take part in an activity, meeting, workshop, course, drill or process. In this sense, en is the safe preposition.",
           literal: "to participate in",
           useWhen:
-            "You actively join what is happening: speak, ask, write, practise, vote or work with a group.",
+            "You actively join what is happening: speak, ask, write, practice, vote or work with a group.",
           avoidWhen:
             "Saying “participar de” as a default for taking part in an event. It can sound unnatural or mean sharing in something more abstract.",
           register: "neutral",
@@ -1348,7 +1348,7 @@ lessons.push(
             "A drill or simulation, often for emergencies, safety procedures or practice scenarios.",
           literal: "simulation",
           useWhen:
-            "Practising what people should do during a flood, fire, earthquake, outage or evacuation.",
+            "Practicing what people should do during a flood, fire, earthquake, outage or evacuation.",
           avoidWhen:
             "For a casual game with no practice purpose. “Simulacro” implies rehearsal for a real possibility.",
           register: "neutral formal",
@@ -1565,7 +1565,7 @@ lessons.push(
           translation: "Si participo, ¿tengo que hablar delante de todos?",
           pronunciation: "if ai teik part, du ai jav tu spik in front ov EV-ri-wan",
           literal: "Si tomo parte, ¿tengo que hablar enfrente de todos?",
-          why: "La frase mantiene la diferencia entre participar y hablar en público. One can take part by writing, asking, practising or taking notes."
+          why: "La frase mantiene la diferencia entre participar y hablar en público. One can take part by writing, asking, practicing or taking notes."
         },
         {
           speaker: "Julia",

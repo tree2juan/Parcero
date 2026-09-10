@@ -43,7 +43,7 @@ lessons.push(
         who: "Luisa and Alex use tú as friends of the same age talking after a casual visit.",
         why: "The point is personal but not formal. For you, tú keeps the conversation warm while the grammar does the careful work of avoiding a romantic reading.",
         ifYouSwitch:
-          "Usted would add distance between friends here. Vos is not needed for this scene, and inventing local flavour would distract from the phrase you actually need."
+          "Usted would add distance between friends here. Vos is not needed for this scene, and inventing local flavor would distract from the phrase you actually need."
       },
       dialogue: [
         {
@@ -81,10 +81,10 @@ lessons.push(
         {
           speaker: "Luisa",
           target: "Yo caí en cuenta tarde de eso.",
-          translation: "I realised that late.",
+          translation: "I realized that late.",
           pronunciation: "yoh kah-EE en KWEN-tah TAR-deh deh EH-soh",
           literal: "I fell into account late of that.",
-          why: "“Caer en cuenta” means to realise. The accent in caí marks the past tense and keeps it from being confused on the page."
+          why: "“Caer en cuenta” means to realize. The accent in caí marks the past tense and keeps it from being confused on the page."
         },
         {
           speaker: "Alex",
@@ -184,7 +184,7 @@ lessons.push(
         {
           term: "caer en cuenta",
           explanation:
-            "To realise. Literally you fall into account, but the meaning is noticing something clearly.",
+            "To realize. Literally you fall into account, but the meaning is noticing something clearly.",
           literal: "to fall into account",
           useWhen:
             "You suddenly understand, notice, or connect something you had missed.",
@@ -195,7 +195,7 @@ lessons.push(
           related: ["darse cuenta", "notar", "entender", "captar"],
           example: {
             target: "Caí en cuenta tarde.",
-            translation: "I realised late."
+            translation: "I realized late."
           }
         },
         {
@@ -262,7 +262,7 @@ lessons.push(
         {
           mistake: "Hearing “caí en cuenta” as a physical fall",
           whyItFails:
-            "The phrase is idiomatic: it means you realised something. Cuenta here is account or awareness, not the floor.",
+            "The phrase is idiomatic: it means you realized something. Cuenta here is account or awareness, not the floor.",
           sayInstead: "Caí en cuenta tarde."
         }
       ],
@@ -295,7 +295,7 @@ lessons.push(
           form: "Caí en cuenta muy tarde.",
           register: "neutral",
           region: "General Colombian",
-          whenToUse: "You realised something after the moment passed."
+          whenToUse: "You realized something after the moment passed."
         }
       ],
       prompt: "Alex says “me cayó muy bien tu hermano.” What is he saying?",
@@ -327,14 +327,14 @@ lessons.push(
           tests: "me caí with accent for literal falling"
         },
         {
-          prompt: "Which sentence means “I realised late”?",
+          prompt: "Which sentence means “I realized late”?",
           choices: [
             "Me cayó mal muy tarde.",
             "Me caí al piso tarde.",
             "Caí en cuenta muy tarde."
           ],
           answer: 2,
-          tests: "caer en cuenta as realise"
+          tests: "caer en cuenta as realize"
         }
       ]
     },
@@ -391,11 +391,11 @@ lessons.push(
         },
         {
           speaker: "Luisa",
-          target: "I realised that late.",
+          target: "I realized that late.",
           translation: "Caí en cuenta tarde de eso.",
           pronunciation: "ai RI-a-laizd dat leit",
           literal: "Me di cuenta de eso tarde.",
-          why: "Para “caer en cuenta,” el inglés normal usa “realise.” No hay caída física ni cuenta numérica."
+          why: "Para “caer en cuenta,” el inglés normal usa “realize.” No hay caída física ni cuenta numérica."
         },
         {
           speaker: "Alejandra",
@@ -403,7 +403,7 @@ lessons.push(
           translation: "Y casi me caí en la escalera, pero eso sí fue literal.",
           pronunciation: "and ai OL-moust fel on da sters, bat dat uan uaz LI-te-ral",
           literal: "Y casi caí en las escaleras, pero esa sí fue literal.",
-          why: "“Fell” es la caída física. El inglés separa claramente “fall,” “realise,” y “like someone as a person.”"
+          why: "“Fell” es la caída física. El inglés separa claramente “fall,” “realize,” y “like someone as a person.”"
         }
       ],
       vocabulary: [
@@ -493,19 +493,19 @@ lessons.push(
           }
         },
         {
-          term: "realise",
+          term: "realize",
           explanation:
             "Darse cuenta o caer en cuenta. Es entender algo que no había visto.",
           literal: "darse cuenta",
           useWhen:
             "De pronto entiende, nota o conecta algo que se le había pasado.",
           avoidWhen:
-            "Está contando números. Eso es “count,” no “realise.”",
+            "Está contando números. Eso es “count,” no “realize.”",
           register: "neutral",
           region: "Inglés británico; en inglés americano se escribe “realize.”",
           related: ["notice", "figure out", "understand", "see"],
           example: {
-            target: "I realised that late.",
+            target: "I realized that late.",
             translation: "Caí en cuenta tarde."
           }
         },
@@ -528,7 +528,7 @@ lessons.push(
         }
       ],
       note:
-        "El inglés “like” cubre dos zonas que el español separa. “I like my boss” puede ser totalmente profesional, pero en español “me gusta mi jefe” puede sonar a atracción. Para traducir “caer bien,” use contexto: “he seems nice,” “I liked him as a person,” o “we got a good impression.” Para la caída física use “fall/fell,” y para “caer en cuenta” use “realise/realize.”",
+        "El inglés “like” cubre dos zonas que el español separa. “I like my boss” puede ser totalmente profesional, pero en español “me gusta mi jefe” puede sonar a atracción. Para traducir “caer bien,” use contexto: “he seems nice,” “I liked him as a person,” o “we got a good impression.” Para la caída física use “fall/fell,” y para “caer en cuenta” use “realize/realize.”",
       culture: [
         {
           label: "El contexto salva a “like”",
@@ -546,9 +546,9 @@ lessons.push(
             "“Me cae bien” no tiene una traducción única perfecta. A veces será “I like him,” a veces “he seems nice,” y a veces “we get along.” La escena decide."
         },
         {
-          label: "No confunda “realise” con contar",
+          label: "No confunda “realize” con contar",
           body:
-            "“Caer en cuenta” no tiene cuenta numérica en inglés. Es “realise” o “realize.” Si usted dice “I fell in account,” nadie llega al significado social."
+            "“Caer en cuenta” no tiene cuenta numérica en inglés. Es “realize” o “realize.” Si usted dice “I fell in account,” nadie llega al significado social."
         }
       ],
       pitfalls: [
@@ -568,7 +568,7 @@ lessons.push(
           mistake: "“I fell in account late.”",
           whyItFails:
             "Calca “caí en cuenta.” En inglés la idea es darse cuenta, no caer ni hacer una cuenta.",
-          sayInstead: "I realised that late."
+          sayInstead: "I realized that late."
         },
         {
           mistake: "“I liked with the stairs.”",
@@ -603,7 +603,7 @@ lessons.push(
           whenToUse: "Una caída literal o casi caída."
         },
         {
-          form: "I realised it too late.",
+          form: "I realized it too late.",
           register: "neutral",
           region: "Inglés universal",
           whenToUse: "Darse cuenta después de que pasó el momento."
@@ -632,7 +632,7 @@ lessons.push(
           choices: [
             "I almost fell on the stairs.",
             "I liked the stairs as a person.",
-            "I realised the stairs too late."
+            "I realized the stairs too late."
           ],
           answer: 0,
           tests: "fell for literal falling"
@@ -642,10 +642,10 @@ lessons.push(
           choices: [
             "I disliked him at first.",
             "I fell down too late.",
-            "I realised it too late."
+            "I realized it too late."
           ],
           answer: 2,
-          tests: "realise for caer en cuenta"
+          tests: "realize for caer en cuenta"
         }
       ]
     }
@@ -734,7 +734,7 @@ lessons.push(
             "To get along with someone. It describes the quality of a relationship, not movement or carrying.",
           literal: "to carry oneself well with",
           useWhen:
-            "Talking about in-laws, flatmates, coworkers, neighbours, classmates, or a partner's family.",
+            "Talking about in-laws, roommates, coworkers, neighbors, classmates, or a partner's family.",
           avoidWhen:
             "You mean physically carrying or taking something. Then use plain llevar.",
           register: "neutral spoken",
@@ -973,12 +973,12 @@ lessons.push(
     en: {
       title: "Llevarse bien con los suegros",
       situation:
-        "Mariana pasa un fin de semana en Toronto con la familia de su pareja. Después del almuerzo, una tía le pregunta cómo le ha ido con los suegros. Usted necesita distinguir “get along with,” “carry,” y “have been here for.”",
+        "Mariana pasa un fin de semana en Houston con la familia de su pareja. Después del almuerzo, una tía le pregunta cómo le ha ido con los suegros. Usted necesita distinguir “get along with,” “carry,” y “have been here for.”",
       setting: {
         who: "Aunt Mercedes es amable pero directa, y Mariana es la pareja visitante que quiere responder con calidez sin fingir confianza total.",
         what: "Una conversación de patio familiar sobre llevarse bien con los suegros, llevar cosas al cuarto y cuánto tiempo lleva en la relación.",
         when: "Después del almuerzo, cuando las sillas siguen alrededor de la mesa y todos deciden si descansan o salen.",
-        where: "Toronto, en el comedor de una casa familiar, con la sobremesa larga de un fin de semana.",
+        where: "Houston, en el comedor de una casa familiar, con la sobremesa larga de un fin de semana.",
         why: "Porque el inglés separa “get along with” para relaciones, “carry/take” para objetos y “have been” para duración."
       },
       address: {
@@ -1084,7 +1084,7 @@ lessons.push(
             "Usa “take” con un objeto. No diga “take with my in-laws” para esta idea.",
           register: "grammar pattern",
           region: "Inglés universal.",
-          related: ["with my in-laws", "with them", "with my boss", "with the neighbours"],
+          related: ["with my in-laws", "with them", "with my boss", "with the neighbors"],
           example: {
             target: "I get along with them.",
             translation: "Me llevo bien con ellos."
@@ -1244,7 +1244,7 @@ lessons.push(
       prompt: "Mariana says “I get along with my in-laws.” ¿Qué quiere decir?",
       choices: [
         "Que lleva físicamente a sus suegros al cuarto.",
-        "Que lleva dos años viviendo en Toronto.",
+        "Que lleva dos años viviendo en Houston.",
         "Que se lleva bien con sus suegros."
       ],
       answer: 2,
@@ -1307,7 +1307,7 @@ lessons.push(
         who: "Patricia uses affectionate usted with Sam, and Sam uses it back as part of their joking friendship.",
         why: "In Colombia, usted can be close, not just formal. For you, this friendly usted makes “cuénteme” sound warm rather than bureaucratic.",
         ifYouSwitch:
-          "Tú would also be possible between friends, but it would change the flavour. Vos is not needed for this Girardot catch-up."
+          "Tú would also be possible between friends, but it would change the flavor. Vos is not needed for this Girardot catch-up."
       },
       dialogue: [
         {
@@ -1526,7 +1526,7 @@ lessons.push(
         {
           mistake: "Using contar con only for people",
           whyItFails:
-            "It also means a place has or includes something: a flat can count with parking in Spanish, meaning it has it.",
+            "It also means a place has or includes something: an apartment can count with parking in Spanish, meaning it has it.",
           sayInstead: "El apartamento cuenta con parqueadero."
         }
       ],

@@ -124,7 +124,7 @@ lessons.push(
             "The everyday spoken verb many Colombians use for turning left or right while giving directions.",
           literal: "to turn over / turn",
           useWhen:
-            "A taxi driver, neighbour or friend tells you where to turn: “voltee en la esquina”.",
+            "A taxi driver, neighbor or friend tells you where to turn: “voltee en la esquina”.",
           avoidWhen:
             "You are writing formal directions or a sign; girar sounds cleaner there.",
           register: "neutral conversational",
@@ -205,7 +205,7 @@ lessons.push(
         }
       ],
       note:
-        "Girar is the word you read and the word careful directions use: “gire a la derecha”, “gire en la próxima entrada”. In Colombian speech, though, voltear is often what a driver or neighbour says: “voltee a la izquierda”. Teach yourself both registers rather than pretending they are identical. A second, unguessable sense matters too: “me giraron el pago” means they transferred the money, not that anything physically turned.",
+        "Girar is the word you read and the word careful directions use: “gire a la derecha”, “gire en la próxima entrada”. In Colombian speech, though, voltear is often what a driver or neighbor says: “voltee a la izquierda”. Teach yourself both registers rather than pretending they are identical. A second, unguessable sense matters too: “me giraron el pago” means they transferred the money, not that anything physically turned.",
       culture: [
         {
           label: "Signs say girar, people often say voltear",
@@ -308,7 +308,7 @@ lessons.push(
           prompt: "What does “ya me giraron el pago” mean?",
           choices: [
             "They spun the receipt on the table.",
-            "They cancelled the whole payment.",
+            "They canceled the whole payment.",
             "They already transferred the payment."
           ],
           answer: 2,
@@ -327,14 +327,14 @@ lessons.push(
       ]
     },
     en: {
-      title: "Girar, doblar y transferir en Halifax",
+      title: "Girar, doblar y transferir en Corpus Christi",
       situation:
-        "En Halifax, Alejandra va en carro con Claire hacia una visita de trabajo y necesita dar direcciones en inglés. Usted aprende “turn right”, “take the next left” y “miss the turn”, pero también que girar dinero no se traduce como turn money: el pago se “transfers” o se “sends”.",
+        "En Corpus Christi, Alejandra va en carro con Claire hacia una visita de trabajo y necesita dar direcciones en inglés. Usted aprende “turn right”, “take the next left” y “miss the turn”, pero también que girar dinero no se traduce como turn money: el pago se “transfers” o se “sends”.",
       setting: {
         who: "Claire maneja por una zona que no conoce bien, y Alejandra navega desde el teléfono sin sonar como una app mal traducida.",
         what: "Un trayecto con giros, entradas parecidas y una conversación lateral sobre un pago que ya fue transferido.",
         when: "Una mañana fría, antes de una reunión en las afueras de la ciudad.",
-        where: "Halifax, Canadá, saliendo hacia una carretera secundaria.",
+        where: "Corpus Christi, Canadá, saliendo hacia una carretera secundaria.",
         why: "Porque el inglés usa turn para direcciones físicas, pero no para todos los sentidos españoles de girar. Usted necesita separar turn, take a left, miss the turn y transfer money."
       },
       address: {
@@ -529,9 +529,9 @@ lessons.push(
             "El español girar permite hablar de dirección y de dinero; el inglés separa. A car turns. Money is transferred, sent or wired. Si un colombiano dice “me giraron”, la tentación de usar turn es fuerte, pero un angloparlante no lo entenderá como pago. La transferencia necesita su propio verbo."
         },
         {
-          label: "Halifax and practical navigation",
+          label: "Corpus Christi and practical navigation",
           body:
-            "Salir de una ciudad hacia una carretera secundaria exige instrucciones precisas: bridge, hill, driveway, next left. La escena en Halifax no intenta enseñar geografía canadiense profunda; usa un trayecto creíble para que las frases de dirección aparezcan bajo presión real, cuando pasarse del giro sí importa."
+            "Salir de una ciudad hacia una carretera secundaria exige instrucciones precisas: bridge, hill, driveway, next left. La escena en Corpus Christi no intenta enseñar geografía estadounidense profunda; usa un trayecto creíble para que las frases de dirección aparezcan bajo presión real, cuando pasarse del giro sí importa."
         },
         {
           label: "Miss is broader than perder",
@@ -794,7 +794,7 @@ lessons.push(
           avoidWhen:
             "You are talking about a project; figurative pushing uses a different tone.",
           register: "polite public",
-          region: "Universal Spanish; very useful in Colombian public transport and queues.",
+          region: "Universal Spanish; very useful in Colombian public transport and lines.",
           related: ["fila", "gentío", "cuidado", "permiso"],
           example: {
             target: "No empuje a la señora.",
@@ -852,7 +852,7 @@ lessons.push(
         {
           label: "Tumaco as a working doorway",
           body:
-            "Tumaco gives the lesson a busy Pacific setting without turning the dialogue into local colour. People with boxes, market bags and a community kitchen create a real reason to push, pull and manage a line. The Spanish stays general because the verbs are useful everywhere; the place gives them pressure."
+            "Tumaco gives the lesson a busy Pacific setting without turning the dialogue into local color. People with boxes, market bags and a community kitchen create a real reason to push, pull and manage a line. The Spanish stays general because the verbs are useful everywhere; the place gives them pressure."
         },
         {
           label: "Projects need a push",
@@ -903,7 +903,7 @@ lessons.push(
           form: "No empuje, por favor.",
           register: "polite public",
           region: "Universal Spanish",
-          whenToUse: "Crowds, queues and buses."
+          whenToUse: "Crowds, lines and buses."
         },
         {
           form: "Empuje con el hombro.",
@@ -1089,7 +1089,7 @@ lessons.push(
             "Necesita pedir paso con cortesía; “excuse me” puede ser mejor que acusar a alguien.",
           register: "polite public",
           region: "Inglés universal.",
-          related: ["queue", "crowd", "shove", "excuse me"],
+          related: ["line", "crowd", "shove", "excuse me"],
           example: {
             target: "Don't push, please.",
             translation: "No empuje, por favor."
@@ -1161,7 +1161,7 @@ lessons.push(
             "Push es neutral con puertas y botones, pero con personas puede sonar grosero rápidamente. Shove hace explícita la brusquedad. En una entrada llena, “don't push” basta porque el contexto trae la advertencia. Si alguien dice “he shoved me”, no describe un roce inocente sino una fuerza agresiva."
         },
         {
-          label: "Australian queues and personal space",
+          label: "Australian lines and personal space",
           body:
             "En lugares como Australia, la cultura de la fila espera espacio personal y respeto del turno. Una entrada llena igual se tensa, pero un “one moment, please” y “don't push” claros son aceptables. El lenguaje es corto porque las instrucciones de seguridad pública tienen que entenderse rápido."
         },

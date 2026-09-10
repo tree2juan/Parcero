@@ -33,7 +33,7 @@ lessons.push(
       setting: {
         who: "Paola makes handmade notebooks and wants the project to look less improvised. Morgan is helping her turn a family favour into something that can face customers at a small fair.",
         what: "A practical planning conversation about creating a name, a short story for the brand and a first catalogue without pretending the business already exists at a large scale.",
-        when: "A hot Thursday afternoon, two days before a neighbourhood entrepreneurship fair.",
+        when: "A hot Thursday afternoon, two days before a neighborhood entrepreneurship fair.",
         where: "Neiva, in a shaded patio where the fan is losing against the Huila heat and sample notebooks are spread across a plastic table.",
         why: "Because crear is the verb for bringing something into existence: a brand, a plan, a story, a habit or a space that was not there before."
       },
@@ -83,7 +83,7 @@ lessons.push(
           translation: "What if we create three packages for the fair: basic, gift and personalised?",
           pronunciation: "ee see kreh-AH-mos tres pah-KEH-tes PAH-ra la FEH-ryah: BAH-see-koh, rreh-GAH-loh ee per-soh-nah-lee-SAH-doh",
           literal: "And if we-create three packages for the fair: basic, gift and personalised?",
-          why: "Crear can be concrete without being physical. The packages are categories that help customers choose; they are created by naming and organising the offer."
+          why: "Crear can be concrete without being physical. The packages are categories that help customers choose; they are created by naming and organizing the offer."
         },
         {
           speaker: "Morgan",
@@ -101,7 +101,7 @@ lessons.push(
             "To create or bring something into existence: a brand, a plan, a story, a space, a habit or a piece of work.",
           literal: "to create",
           useWhen:
-            "Something did not exist as a recognisable thing before and now you are making it take shape.",
+            "Something did not exist as a recognizable thing before and now you are making it take shape.",
           avoidWhen:
             "You only mean physically building with tools and materials. Construir is stronger when walls, shelves or structures are involved.",
           register: "neutral",
@@ -112,7 +112,7 @@ lessons.push(
         {
           term: "crear una marca",
           explanation:
-            "To create a brand: not only a logo, but a name, tone, story and promise that customers can recognise.",
+            "To create a brand: not only a logo, but a name, tone, story and promise that customers can recognize.",
           literal: "to create a mark",
           useWhen:
             "A small project needs an identity before it faces clients, fairs or social media.",
@@ -159,7 +159,7 @@ lessons.push(
           useWhen:
             "Describing something made at home or with a small-project feel.",
           avoidWhen:
-            "You need to criticise something as badly made. Casero may sound affectionate unless the context is clearly negative.",
+            "You need to criticize something as badly made. Casero may sound affectionate unless the context is clearly negative.",
           register: "neutral",
           region: "General Colombian Spanish.",
           related: ["artesanal", "hecho a mano", "sencillo", "profesional"],
@@ -200,12 +200,12 @@ lessons.push(
         {
           label: "Emprendimiento does not have to sound corporate",
           body:
-            "In Colombia, emprendimiento covers everything from a formal startup to a cousin selling notebooks at a neighbourhood fair. Crear una marca can therefore be modest and practical. It does not mean pretending to be a large company; it means giving a small project enough identity that strangers can understand it."
+            "In Colombia, emprendimiento covers everything from a formal startup to a cousin selling notebooks at a neighborhood fair. Crear una marca can therefore be modest and practical. It does not mean pretending to be a large company; it means giving a small project enough identity that strangers can understand it."
         },
         {
           label: "A name creates a public thing",
           body:
-            "Before the name, Paola has notebooks. After the name, she has something people can ask for, remember and recommend. That is why crear fits even though no new paper object appears in the line. The creation is the recognisable frame around the work."
+            "Before the name, Paola has notebooks. After the name, she has something people can ask for, remember and recommend. That is why crear fits even though no new paper object appears in the line. The creation is the recognizable frame around the work."
         },
         {
           label: "Huila heat changes the work rhythm",
@@ -304,14 +304,14 @@ lessons.push(
       ]
     },
     en: {
-      title: "Crear una marca pequeña en Toronto",
+      title: "Crear una marca pequeña en Houston",
       situation:
-        "Usted está en Toronto ayudando a una amiga que vende libretas hechas a mano. Quiere explicar en inglés que va a crear una marca propia, una historia corta y un primer catálogo.",
+        "Usted está en Houston ayudando a una amiga que vende libretas hechas a mano. Quiere explicar en inglés que va a crear una marca propia, una historia corta y un primer catálogo.",
       setting: {
         who: "Paola hace libretas a mano y quiere que el proyecto se vea menos improvisado. Morgan la ayuda a convertir un favor familiar en algo que pueda mirar un cliente desconocido.",
         what: "Una conversación práctica sobre crear un nombre, una historia breve para la marca y un primer catálogo sin fingir que el negocio ya es grande.",
         when: "Un jueves por la tarde, dos días antes de una feria de pequeños negocios en un centro comunitario.",
-        where: "Toronto, en una mesa compartida de biblioteca pública, con muestras de libretas y etiquetas todavía sin decidir.",
+        where: "Houston, en una mesa compartida de biblioteca pública, con muestras de libretas y etiquetas todavía sin decidir.",
         why: "Porque create no es sólo inventar arte. Sirve para hacer existir una marca, una cuenta, un plan o una historia que antes no estaba organizada."
       },
       address: {
@@ -585,7 +585,7 @@ lessons.push(
     id: "construir-una-huerta-en-tunja",
     level: "Developing · Making things",
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
-    domain: "home-and-neighbourhood",
+    domain: "home-and-neighborhood",
     register: "courteous",
     pathways: ["foundation", "year-12"],
     verb: "construir",
@@ -595,7 +595,7 @@ lessons.push(
       situation:
         "Estás en Tunja con un grupo de vecinos que quiere una huerta elevada para que el frío y los perros no dañen las matas. Tienes que hablar de construirla bien, no sólo poner tablas al azar.",
       setting: {
-        who: "Rosa coordinates the neighbours' courtyard project. Eli has built small things before and is helping turn loose boards into a raised bed that will survive weather and daily use.",
+        who: "Rosa coordinates the neighbors' courtyard project. Eli has built small things before and is helping turn loose boards into a raised bed that will survive weather and daily use.",
         what: "A hands-on planning conversation about building a raised garden bed: measurements, supports, who builds what, and why the structure matters.",
         when: "Saturday morning, cool and bright, before the afternoon rain that often interrupts outdoor work in the highlands.",
         where: "Tunja, in a shared courtyard behind an older house, with timber, soil bags and borrowed tools lined against a wall.",
@@ -603,10 +603,10 @@ lessons.push(
       },
       address: {
         form: "usted",
-        who: "Rosa uses usted with Eli because they are neighbours rather than close friends, and Eli answers the same way.",
-        why: "In Boyacá, usted fits respectful neighbourly cooperation. It does not make the scene cold; it lets people disagree about measurements without sounding pushy.",
+        who: "Rosa uses usted with Eli because they are neighbors rather than close friends, and Eli answers the same way.",
+        why: "In Boyacá, usted fits respectful neighborly cooperation. It does not make the scene cold; it lets people disagree about measurements without sounding pushy.",
         ifYouSwitch:
-          "Tú would not be shocking from a younger neighbour, but it would soften the practical distance. Vos would sound out of place in this Tunja courtyard."
+          "Tú would not be shocking from a younger neighbor, but it would soften the practical distance. Vos would sound out of place in this Tunja courtyard."
       },
       dialogue: [
         {
@@ -644,9 +644,9 @@ lessons.push(
         {
           speaker: "Rosa",
           target: "Los vecinos construyeron una banca así y todavía está firme.",
-          translation: "The neighbours built a bench like this and it's still solid.",
+          translation: "The neighbors built a bench like this and it's still solid.",
           pronunciation: "los beh-SEE-nos kons-troo-YEH-ron OO-na BAN-kah ah-SEE ee toh-dah-BEE-ah es-TAH FEER-meh",
-          literal: "The neighbours built a bench like this and still it is firm.",
+          literal: "The neighbors built a bench like this and still it is firm.",
           why: "Construyeron carries the y into the past plural. It belongs to the same pattern as incluyeron and huyeron."
         },
         {
@@ -707,13 +707,13 @@ lessons.push(
             "They built. The y also appears in this past-tense plural form.",
           literal: "they built",
           useWhen:
-            "Reporting what a group built: neighbours, workers, relatives or volunteers.",
+            "Reporting what a group built: neighbors, workers, relatives or volunteers.",
           avoidWhen:
             "You are speaking about we built. That is construimos in the preterite too, without y.",
           register: "neutral",
           region: "General Spanish.",
           related: ["construí", "construimos", "incluyeron", "huyeron"],
-          example: { target: "Los vecinos construyeron una banca.", translation: "The neighbours built a bench." }
+          example: { target: "Los vecinos construyeron una banca.", translation: "The neighbors built a bench." }
         },
         {
           term: "el marco",
@@ -764,12 +764,12 @@ lessons.push(
         {
           label: "A raised bed is a structure, not decoration",
           body:
-            "In a cool Andean courtyard, a huerta elevada protects plants from dogs, mud and hard ground. It needs a frame and a base that can hold wet soil. That is why construir fits better than a vague hacer: the neighbours are making something that must stay firm after the first rainy week."
+            "In a cool Andean courtyard, a huerta elevada protects plants from dogs, mud and hard ground. It needs a frame and a base that can hold wet soil. That is why construir fits better than a vague hacer: the neighbors are making something that must stay firm after the first rainy week."
         },
         {
           label: "Usted can cooperate warmly",
           body:
-            "Boyacá and the highlands use usted comfortably in neighbourly exchanges. It lets Rosa say practical things about measuring and strength without sounding bossy. English speakers often hear distance where Colombians hear ordinary respect."
+            "Boyacá and the highlands use usted comfortably in neighborly exchanges. It lets Rosa say practical things about measuring and strength without sounding bossy. English speakers often hear distance where Colombians hear ordinary respect."
         },
         {
           label: "The y pattern is shared",
@@ -836,7 +836,7 @@ lessons.push(
           tests: "construyo with y insertion"
         },
         {
-          prompt: "Which sentence correctly says the neighbours built a bench?",
+          prompt: "Which sentence correctly says the neighbors built a bench?",
           choices: [
             "Los vecinos construimos una banca.",
             "Los vecinos construieron una banca.",
@@ -920,7 +920,7 @@ lessons.push(
         },
         {
           speaker: "Rosa",
-          target: "The neighbours built a bench like this, and it's still solid.",
+          target: "The neighbors built a bench like this, and it's still solid.",
           translation: "Los vecinos construyeron una banca así y todavía está firme.",
           pronunciation: "da NEI-borz bilt a bench laik dis, and its stil SO-lid",
           literal: "Los vecinos construyeron una banca así y todavía está sólida.",
@@ -990,7 +990,7 @@ lessons.push(
           register: "neutral",
           region: "Inglés universal.",
           related: ["build", "built by", "rebuilt", "builder"],
-          example: { target: "The neighbours built a bench.", translation: "Los vecinos construyeron una banca." }
+          example: { target: "The neighbors built a bench.", translation: "Los vecinos construyeron una banca." }
         },
         {
           term: "frame",
@@ -1036,7 +1036,7 @@ lessons.push(
         }
       ],
       note:
-        "Build es el verbo físico de este grupo. Create sirve para una marca o idea; build sirve cuando hay madera, base, marco, paredes o una estructura que debe aguantar. La irregularidad del inglés no está en una y como construyo, sino en built: the neighbours built a bench, no builded a bench.",
+        "Build es el verbo físico de este grupo. Create sirve para una marca o idea; build sirve cuando hay madera, base, marco, paredes o una estructura que debe aguantar. La irregularidad del inglés no está en una y como construyo, sino en built: the neighbors built a bench, no builded a bench.",
       culture: [
         {
           label: "Raised planter no es sólo una matera",
@@ -1082,7 +1082,7 @@ lessons.push(
           whenToUse: "Usted toma responsabilidad por una parte estructural del objeto."
         },
         {
-          form: "The neighbours built a bench.",
+          form: "The neighbors built a bench.",
           register: "neutral",
           region: "Inglés universal",
           whenToUse: "Reporta en pasado lo que construyó un grupo."
@@ -1149,7 +1149,7 @@ lessons.push(
     id: "reportar-un-vidrio-roto-en-quibdo",
     level: "Developing · Making things",
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
-    domain: "home-and-neighbourhood",
+    domain: "home-and-neighborhood",
     register: "courteous",
     pathways: ["foundation", "year-12"],
     verb: "romper",

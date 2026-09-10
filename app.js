@@ -102,6 +102,26 @@ function save() {
   localStorage.setItem("parcero-placement", JSON.stringify(state.placement));
   localStorage.setItem("parcero-lesson", state.lessonId);
 }
+
+/*
+ * Practice history.
+ *
+ * Resolved lazily and cached, because index.html loads app.js before
+ * progress.js — reading ParceroProgress at this point in the file would find
+ * nothing. By the time any handler runs, every script has loaded.
+ *
+ * `progressState` is read through on first use rather than at startup so that
+ * a learner who never opens a practice tab pays nothing for it.
+ */
+let progressState = null;
+const progressApi = () => (typeof ParceroProgress === "object" ? ParceroProgress : null);
+function progress() {
+  const api = progressApi();
+  if (!api) return null;
+  if (!progressState) progressState = api.load();
+  return progressState;
+}
+
 function renderPlacement() {
   const questions = placementQuestions[state.direction];
   if (state.placement?.direction === state.direction) {
@@ -380,6 +400,28 @@ function updateProgress() {
   $("#previous-lesson").disabled = index === 0;
   $("#next-lesson").disabled = index === total - 1;
 }
+
+/*
+ * Grade the answer just given and keep it.
+ *
+ * Written so that a missing progress.js costs the record and nothing else —
+ * the practice round still runs, exactly as the deck still runs without
+ * srs.js. Storage is written per answer rather than batched at the end of the
+ * round because a learner who closes the tab mid-lesson has still done the
+ * work, and losing it would reproduce the bug this replaces.
+ */
+function recordPractice(correct) {
+  const api = progressApi();
+  const lesson = currentLesson();
+  if (!api || !lesson) return;
+  progressState = api.record(progress(), {
+    direction: state.direction,
+    lessonId: lesson.id,
+    index: practiceView.index,
+    correct
+  });
+  api.save(progressState);
+}
 document.querySelectorAll("input[name=direction]").forEach((input) => {
   input.checked = input.value === state.direction;
   input.addEventListener("change", () => { state.direction = input.value; state.question = 0; state.responses = []; save(); render(); });
@@ -411,6 +453,10 @@ $("#choices").addEventListener("click", (event) => {
   choice.classList.add(correct ? "correct" : "incorrect");
   if (!correct) document.querySelector(`[data-answer="${question.answer}"]`).classList.add("correct");
   $("#practice-feedback").textContent = correct ? t("practice.correct") : t("practice.incorrect");
+  /* The result is the whole point of asking. Recording it is what lets a
+     missed question come back instead of vanishing the moment the learner
+     clicks Next. */
+  recordPractice(correct);
   $("#practice-next").hidden = practiceView.index >= practiceQuestions().length - 1;
 });
 $("#practice-next").addEventListener("click", () => {
@@ -427,7 +473,7 @@ $("#lesson-list").addEventListener("click", (event) => {
 });
 $("#previous-lesson").addEventListener("click", () => selectLesson(lessons[Math.max(0, lessonIndex() - 1)].id));
 $("#next-lesson").addEventListener("click", () => selectLesson(lessons[Math.min(lessons.length - 1, lessonIndex() + 1)].id));
-$("#reset-progress").addEventListener("click", () => { state.completed.clear(); state.placement = null; state.question = 0; state.responses = []; save(); render(); });
+$("#reset-progress").addEventListener("click", () => { state.completed.clear(); state.placement = null; state.question = 0; state.responses = []; const api = progressApi(); if (api) progressState = api.clear(); save(); render(); });
 $("#listen-dialogue").addEventListener("click", () => {
   if (!("speechSynthesis" in window)) { $("#speech-status").textContent = t("speech.unsupported"); return; }
   speechSynthesis.cancel();

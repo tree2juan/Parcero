@@ -48,7 +48,7 @@ lessons.push(
         who: "Don Hernando and Valeria use usted throughout, reinforced with titles like don and señorita. It is the default courtesy between an archivist and a student.",
         why: "Boyacá's highland cities keep a famously formal, courteous register where much of Colombia would relax into tú. Between a senior archivist and a young researcher, usted is simply respect; tú would sound abrupt.",
         ifYouSwitch:
-          "If Valeria slipped into tú, don Hernando would not take offence, but it would jar against the ceremony of the room, like resting your elbows on a centuries-old manuscript. Usted keeps the distance the place expects."
+          "If Valeria slipped into tú, don Hernando would not take offense, but it would jar against the ceremony of the room, like resting your elbows on a centuries-old manuscript. Usted keeps the distance the place expects."
       },
       dialogue: [
         {
@@ -227,7 +227,7 @@ lessons.push(
         {
           label: "Tunja, a city that kept its usted",
           body:
-            "Tunja sits above 2,800 metres in Boyacá, one of the oldest university cities in Colombia and famously formal. The courtesy is real and daily: titles like “don” and “doctor”, a careful usted with strangers, and a written Spanish that stays close to the page. It is exactly the setting where the heavier relative clauses of this lesson are not showing off but simply the expected register, from a lecture hall to an archive reading room."
+            "Tunja sits above 2,800 meters in Boyacá, one of the oldest university cities in Colombia and famously formal. The courtesy is real and daily: titles like “don” and “doctor”, a careful usted with strangers, and a written Spanish that stays close to the page. It is exactly the setting where the heavier relative clauses of this lesson are not showing off but simply the expected register, from a lecture hall to an archive reading room."
         },
         {
           label: "Why speech drops all this",
@@ -864,7 +864,7 @@ lessons.push(
         {
           label: "Pasto, la frontera y el acento",
           body:
-            "Pasto sits high and cold near the Ecuadorean border, and the pastuso accent is one of the most recognisable in Colombia: a gentler, sing-song rhythm, clear vowels, and an “s” that stays crisp where the coast would drop it. The closeness to Ecuador shows in vocabulary and in the shared Andean, Quechua-tinged culture. None of the conjecture grammar here is local, though -- it is standard Spanish -- but it sounds especially at home in Pasto's careful speech."
+            "Pasto sits high and cold near the Ecuadorean border, and the pastuso accent is one of the most recognizable in Colombia: a gentler, sing-song rhythm, clear vowels, and an “s” that stays crisp where the coast would drop it. The closeness to Ecuador shows in vocabulary and in the shared Andean, Quechua-tinged culture. None of the conjecture grammar here is local, though -- it is standard Spanish -- but it sounds especially at home in Pasto's careful speech."
         },
         {
           label: "Guessing without saying “I think”",
@@ -887,7 +887,7 @@ lessons.push(
         {
           mistake: "Using “deber de” for an obligation",
           whyItFails:
-            "“Debes de llamar a tu mamá” tries to give an order but, by the book, says “you must (probably) be calling your mum”. For a duty you drop the “de”: “debes llamar”. The “de” belongs to guessing, and swapping the two reverses your meaning on paper.",
+            "“Debes de llamar a tu mamá” tries to give an order but, by the book, says “you must (probably) be calling your mom”. For a duty you drop the “de”: “debes llamar”. The “de” belongs to guessing, and swapping the two reverses your meaning on paper.",
           sayInstead: "Debes llamar a tu mamá apenas llegues."
         },
         {
@@ -1304,7 +1304,7 @@ lessons.push(
         who: "Marcela is a visiting student, curious and courteous; don Efrain is an older payanes who has walked these Holy Week processions all his life. Between them the talk stays formal and warm, the way strangers speak in Popayan.",
         what: "A conversation on a packed sidewalk about whether the procession will go out despite the rain, and how the city concedes to the weather without ever giving up its ritual.",
         when: "Holy Week, at dusk, as the rain threatens and the first bearers line up along the route.",
-        where: "Popayan, the white colonial city in Cauca, in the historic centre near the processional route.",
+        where: "Popayan, the white colonial city in Cauca, in the historic center near the processional route.",
         why: "Concession is the heart of courteous, careful speech, and Popayan -- academic, ceremonious, proud of its Semana Santa -- is exactly where the mood contrast on aunque earns its keep."
       },
       address: {
@@ -1610,12 +1610,12 @@ lessons.push(
     en: {
       title: "Even though / even if: conceder en inglés",
       situation:
-        "Imagínese en Vancouver, en la costa oeste de Canadá, bajo una llovizna terca. Usted acompaña a Camilo, un colombiano que lleva poco allá, y a su amigo Liam mientras esperan un desfile. Note que el inglés no cambia el modo del verbo para conceder: usa palabras distintas -- “even though” para un hecho y “even if” para una hipótesis -- justo donde el español salta al subjuntivo.",
+        "Imagínese en Austin, en la costa oeste de Canadá, bajo una llovizna terca. Usted acompaña a Camilo, un colombiano que lleva poco allá, y a su amigo Liam mientras esperan un desfile. Note que el inglés no cambia el modo del verbo para conceder: usa palabras distintas -- “even though” para un hecho y “even if” para una hipótesis -- justo donde el español salta al subjuntivo.",
       setting: {
-        who: "Liam es un canadiense relajado y directo; Camilo es un colombiano recién llegado que aprende a conceder en inglés sin calcar el “aunque... pero” del español.",
+        who: "Liam es un estadounidense relajado y directo; Camilo es un colombiano recién llegado que aprende a conceder en inglés sin calcar el “aunque... pero” del español.",
         what: "Una charla en la acera sobre si el desfile saldrá pese a la lluvia, y sobre cómo el inglés concede con palabras distintas en vez de con el modo del verbo.",
         when: "Una tarde lluviosa de otoño, minutos antes de que arranque el desfile por el centro.",
-        where: "Vancouver, en la costa oeste de Canadá, en una esquina concurrida del centro.",
+        where: "Austin, en la costa oeste de Canadá, en una esquina concurrida del centro.",
         why: "Conceder es parte del habla cortés en cualquier idioma, y en inglés el reto es que la diferencia entre hecho e hipótesis no está en el modo del verbo, sino en elegir “even though” o “even if”."
       },
       address: {

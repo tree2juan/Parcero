@@ -21,7 +21,7 @@ lessons.push(
     id: "receiving-a-delivery-at-the-monteria-porteria",
     level: "Extending · Everyday life",
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
-    domain: "home-and-neighbourhood",
+    domain: "home-and-neighborhood",
     register: "courteous",
     pathways: ["extension"],
     verb: "entregar",
@@ -256,7 +256,7 @@ lessons.push(
       choices: [
         "Because entregar says the package passed responsibly to the right receiver.",
         "Because entregar means the package was opened and checked for damage.",
-        "Because entregar says the delivery was cancelled before it reached Alex."
+        "Because entregar says the delivery was canceled before it reached Alex."
       ],
       answer: 0,
       practiceExtra: [
@@ -295,12 +295,12 @@ lessons.push(
     en: {
       title: "Entregar un paquete sin decir “deliver it in reception”",
       situation:
-        "En Toronto, Alejandra espera un paquete en el edificio donde vive. El mensajero pregunta si puede dejarlo at the front desk, pero el portero necesita que ella baje y firme for it. Alejandra aprende que “deliver” no cubre todo: para papeles se dice “hand in”, para darle algo a una persona “hand over”, para dejar un paquete “drop off”, y para firmar recibido “sign for it”.",
+        "En Houston, Alejandra espera un paquete en el edificio donde vive. El mensajero pregunta si puede dejarlo at the front desk, pero el portero necesita que ella baje y firme for it. Alejandra aprende que “deliver” no cubre todo: para papeles se dice “hand in”, para darle algo a una persona “hand over”, para dejar un paquete “drop off”, y para firmar recibido “sign for it”.",
       setting: {
         who: "El mensajero quiere terminar su ruta, el concierge sigue la política del edificio y Alejandra necesita el paquete sin firmar algo que no entienda.",
         what: "Una entrega en recepción, con las diferencias entre deliver, drop off, hand over, hand in y sign for.",
         when: "Una tarde de invierno, cuando varios residentes están llegando del trabajo y la recepción está ocupada.",
-        where: "Toronto, Canadá, en la recepción de un edificio de apartamentos.",
+        where: "Houston, Canadá, en la recepción de un edificio de apartamentos.",
         why: "Porque el inglés reparte “entregar” entre varios verbos. Un colombiano que usa solo “deliver” puede sonar raro al hablar de tareas, formularios o documentos que se entregan a una oficina."
       },
       address: {
@@ -576,7 +576,7 @@ lessons.push(
         who: "The real-estate agent is careful because a lease can create real legal trouble; Alex wants the room but does not want to sign anything he does not understand.",
         what: "A rental contract appointment, moving through signatures, IDs, service bills, receipts and the notary step that makes a signature formally valid.",
         when: "A rainy weekday morning, with the office trying to finish the lease before the owner leaves town.",
-        where: "Manizales, Caldas, in a small real-estate office near the centre.",
+        where: "Manizales, Caldas, in a small real-estate office near the center.",
         why: "Because Colombian bureaucracy is built around signatures that prove identity and consent. Firmar is regular, but the surrounding paperwork is not optional background; it is the language that keeps a renter from missing a clause or an authentication step."
       },
       address: {
@@ -744,7 +744,7 @@ lessons.push(
         },
         {
           label: "The cédula anchors the paperwork",
-          body: "A Colombian cédula number follows a person through contracts, health care, banking, mobile plans and official forms. Foreigners quickly learn that many systems ask for “cédula” even when the real document is a passport or foreigner ID. If the contract spells a name differently from the ID, the problem may seem tiny until a bank, landlord or clerk refuses to match the records."
+          body: "A Colombian cédula number follows a person through contracts, health care, banking, cell phone plans and official forms. Foreigners quickly learn that many systems ask for “cédula” even when the real document is a passport or foreigner ID. If the contract spells a name differently from the ID, the problem may seem tiny until a bank, landlord or clerk refuses to match the records."
         },
         {
           label: "Receipt or invoice?",
@@ -946,13 +946,13 @@ lessons.push(
         },
         {
           term: "proof of ID",
-          explanation: "Documento o prueba de identidad. Puede ser passport, driver's licence o national ID según el país.",
+          explanation: "Documento o prueba de identidad. Puede ser passport, driver's license o national ID según el país.",
           literal: "prueba de identidad",
           useWhen: "Trámites: “bring proof of ID”, “a copy of your passport”.",
           avoidWhen: "Traducir cédula siempre como “citizenship card”; en inglés práctico se pide ID.",
           register: "polite formal",
           region: "Inglés universal; los documentos concretos cambian por país.",
-          related: ["ID", "passport", "driver's licence", "identification"],
+          related: ["ID", "passport", "driver's license", "identification"],
           example: {
             target: "Please bring proof of ID.",
             translation: "Por favor traiga un documento de identidad."
@@ -1116,10 +1116,10 @@ lessons.push(
         "En Riohacha, el carro alquilado de Alex empezó a sonar raro después de un viaje por la carretera. Entra a un taller y quiere preguntar “¿cuánto cuesta?”, pero el mecánico no está vendiendo un objeto sino cotizando una revisión y una reparación. Aprende que para servicios se pregunta “¿cuánto me cobra?”, que “me cobraron de más” sirve para reclamar un sobrecosto, que “cóbreme” puede cerrar una cuenta y que cobrar también aparece en “cobrar el sueldo”. Este es el verbo que le evita quedarse mudo frente a plomeros, taxistas, modistas y mecánicos.",
       setting: {
         who: "The mechanic runs a small workshop and wants to quote honestly after seeing the car; Alex needs the repair but also needs to know what he is being charged for.",
-        what: "A service quote at a mechanic's shop, moving through labour, parts, diagnostic fees, overcharging and how to ask for an invoice or receipt.",
+        what: "A service quote at a mechanic's shop, moving through labor, parts, diagnostic fees, overcharging and how to ask for an invoice or receipt.",
         when: "Mid-morning, before the heat gets heavier and before Alex has to return the rental car.",
         where: "Riohacha, La Guajira, at a mechanic's workshop near the road out of town.",
-        why: "Because “¿cuánto cuesta?” works for objects but leaves learners stranded with services. The useful Colombian question is “¿cuánto me cobra?”, and it opens the door to negotiating labour, parts, invoices and overcharges politely."
+        why: "Because “¿cuánto cuesta?” works for objects but leaves learners stranded with services. The useful Colombian question is “¿cuánto me cobra?”, and it opens the door to negotiating labor, parts, invoices and overcharges politely."
       },
       address: {
         form: "usted",
@@ -1134,7 +1134,7 @@ lessons.push(
           translation: "Good morning. The car is making a strange noise. How much do you charge me to check it?",
           pronunciation: "BWEH-nos DEE-as. el KA-rroh es-TAH soh-NAN-doh RRA-roh. KWAN-toh meh KOH-brah por rreh-bee-SAR-lo",
           literal: "Good days. The car is sounding strange. How much me you-charge for checking-it?",
-          why: "This is the money phrase: “¿cuánto me cobra por...?” for a service. “¿Cuánto cuesta?” would fit a part on a shelf, but the mechanic charges for labour and diagnosis."
+          why: "This is the money phrase: “¿cuánto me cobra por...?” for a service. “¿Cuánto cuesta?” would fit a part on a shelf, but the mechanic charges for labor and diagnosis."
         },
         {
           speaker: "Mecánico",
@@ -1142,7 +1142,7 @@ lessons.push(
           translation: "For the inspection I charge you thirty thousand; if we have to remove the part, I'll tell you before charging you more.",
           pronunciation: "por la rreh-bee-SYON leh KOH-broh TREIN-tah meel; see TOH-kah des-mon-TAR la PYEH-sah, leh ah-BEE-so AN-tes de koh-BRAR-leh mas",
           literal: "For the inspection to-you I-charge thirty thousand; if it-touches to-remove the part, to-you I-warn before of charging-you more.",
-          why: "The mechanic separates the diagnostic charge from possible extra labour. “Le cobro” is usted, and “antes de cobrarle más” promises not to add costs without warning."
+          why: "The mechanic separates the diagnostic charge from possible extra labor. “Le cobro” is usted, and “antes de cobrarle más” promises not to add costs without warning."
         },
         {
           speaker: "Alex",
@@ -1155,10 +1155,10 @@ lessons.push(
         {
           speaker: "Mecánico",
           target: "Tranquilo. Le explico cada cobro: mano de obra, repuesto y, si usted quiere, factura.",
-          translation: "Don't worry. I'll explain each charge: labour, spare part and, if you want, an invoice.",
+          translation: "Don't worry. I'll explain each charge: labor, spare part and, if you want, an invoice.",
           pronunciation: "tran-KEE-loh. leh eks-PLEE-koh KA-dah KOH-broh: MA-noh deh OH-brah, rreh-PWES-toh ee, see oos-TED KYEH-reh, fak-TOO-rah",
           literal: "Calm. To-you I-explain each charge: hand of work, spare-part and, if you want, invoice.",
-          why: "“Cobro” as a noun is the charge. “Mano de obra” is labour, and “repuesto” is the replacement part. Asking for a factura makes the transaction more formal and traceable."
+          why: "“Cobro” as a noun is the charge. “Mano de obra” is labor, and “repuesto” is the replacement part. Asking for a factura makes the transaction more formal and traceable."
         },
         {
           speaker: "Alex",
@@ -1250,7 +1250,7 @@ lessons.push(
         },
         {
           term: "mano de obra",
-          explanation: "Labour cost, the mechanic's or tradesperson's work apart from parts.",
+          explanation: "Labor cost, the mechanic's or tradesperson's work apart from parts.",
           literal: "hand of work",
           useWhen: "Quotes and repairs: “la mano de obra cuesta...”, “eso no incluye repuestos”.",
           avoidWhen: "You expect it to include materials automatically; ask what is included.",
@@ -1259,7 +1259,7 @@ lessons.push(
           related: ["repuesto", "servicio", "cotización", "arreglo"],
           example: {
             target: "La mano de obra no incluye el repuesto.",
-            translation: "The labour does not include the part."
+            translation: "The labor does not include the part."
           }
         },
         {
@@ -1278,11 +1278,11 @@ lessons.push(
         }
       ],
       note:
-        "Cobrar is the high-value verb in this block. “¿Cuánto cuesta?” asks the price of a thing; “¿cuánto me cobra?” asks what a person charges you for a service. Use it with plumbers, taxis, seamstresses, mechanics, messengers and anyone quoting labour. From there come the phrases you need when money gets messy: “me cobraron de más” for overcharging, “cóbreme” to ask them to ring you up, “el cobro” for a charge on a bill, and “cobrar el sueldo” for collecting your own pay.",
+        "Cobrar is the high-value verb in this block. “¿Cuánto cuesta?” asks the price of a thing; “¿cuánto me cobra?” asks what a person charges you for a service. Use it with plumbers, taxis, seamstresses, mechanics, messengers and anyone quoting labor. From there come the phrases you need when money gets messy: “me cobraron de más” for overcharging, “cóbreme” to ask them to ring you up, “el cobro” for a charge on a bill, and “cobrar el sueldo” for collecting your own pay.",
       culture: [
         {
           label: "Service prices are asked person-to-person",
-          body: "In Colombia, many everyday services are quoted in conversation: a taxi outside an app, a seamstress hemming trousers, a locksmith, a mechanic, a plumber. “¿Cuánto me cobra por...?” respects that the person is pricing labour, time and materials, not pointing to a sticker. It also gives you space to ask what is included before the work starts."
+          body: "In Colombia, many everyday services are quoted in conversation: a taxi outside an app, a seamstress hemming pants, a locksmith, a mechanic, a plumber. “¿Cuánto me cobra por...?” respects that the person is pricing labor, time and materials, not pointing to a sticker. It also gives you space to ask what is included before the work starts."
         },
         {
           label: "Quote before repair",
@@ -1296,7 +1296,7 @@ lessons.push(
       pitfalls: [
         {
           mistake: "Asking a mechanic only “¿cuánto cuesta?”",
-          whyItFails: "The question is not wrong for a part, but it is incomplete for a service. The mechanic charges labour, diagnosis and maybe parts, so “¿cuánto me cobra por...?” is the useful frame.",
+          whyItFails: "The question is not wrong for a part, but it is incomplete for a service. The mechanic charges labor, diagnosis and maybe parts, so “¿cuánto me cobra por...?” is the useful frame.",
           sayInstead: "¿Cuánto me cobra por revisar el carro?"
         },
         {
@@ -1379,10 +1379,10 @@ lessons.push(
     en: {
       title: "Preguntar cuánto cobran sin decir “how much does it cost me?”",
       situation:
-        "En Sydney, Alejandra lleva su bicicleta a un taller porque los frenos quedaron flojos. Quiere preguntar el precio del servicio y duda entre “how much does it cost?” y “how much do you charge?”. El mecánico le explica que “charge” es el verbo para servicios, labour y call-out fees; también aprende “I was overcharged”, “charge me now”, “put it on my bill” y la diferencia entre cobrar un sueldo y cobrarle a un cliente.",
+        "En Sydney, Alejandra lleva su bicicleta a un taller porque los frenos quedaron flojos. Quiere preguntar el precio del servicio y duda entre “how much does it cost?” y “how much do you charge?”. El mecánico le explica que “charge” es el verbo para servicios, labor y call-out fees; también aprende “I was overcharged”, “charge me now”, “put it on my bill” y la diferencia entre cobrar un sueldo y cobrarle a un cliente.",
       setting: {
         who: "El mecánico de bicicletas cotiza arreglos todos los días; Alejandra necesita reparar los frenos, pero quiere entender la mano de obra y los repuestos antes de aceptar.",
-        what: "Una cotización de taller, centrada en charge, overcharge, labour, parts, invoice and get paid.",
+        what: "Una cotización de taller, centrada en charge, overcharge, labor, parts, invoice and get paid.",
         when: "Una mañana de sábado antes de salir a montar cerca del puerto, con el taller ocupado pero sin afán.",
         where: "Sydney, Australia, at a small bicycle repair shop.",
         why: "Porque “charge” es el equivalente práctico de cobrar para servicios. Saber preguntar “how much do you charge?” evita sonar como si el trabajo fuera un objeto con etiqueta."
@@ -1391,7 +1391,7 @@ lessons.push(
         form: "mixed",
         who: "El inglés usa “you” entre Alejandra y el mecánico; la cortesía aparece en preguntas completas y “please”.",
         why: "En un taller no hay pronombre formal, pero sí hay registro de servicio. “Could you tell me...?” y “please” suavizan preguntas directas sobre dinero.",
-        ifYouSwitch: "No puede cambiar a usted. Si quiere sonar firme sin sonar brusca, debe elegir bien charge, fee, labour y invoice."
+        ifYouSwitch: "No puede cambiar a usted. Si quiere sonar firme sin sonar brusca, debe elegir bien charge, fee, labor y invoice."
       },
       dialogue: [
         {
@@ -1420,11 +1420,11 @@ lessons.push(
         },
         {
           speaker: "Mechanic",
-          target: "No problem. I'll explain each charge: labour, brake pads and, if you need it, an invoice.",
+          target: "No problem. I'll explain each charge: labor, brake pads and, if you need it, an invoice.",
           translation: "No hay problema. Le explico cada cobro: mano de obra, pastillas de freno y, si la necesita, factura.",
           pronunciation: "nou PRO-blem. ail eks-PLEIN ich charj: LEI-ber, breik pads and, if yu nid it, an IN-vois",
           literal: "No problema. Explicaré cada cargo: labor, pastillas de freno y, si usted la necesita, una factura.",
-          why: "“Charge” también es sustantivo: cada cobro en la cuenta. “Labour” es la mano de obra; “brake pads” son las pastillas de freno."
+          why: "“Charge” también es sustantivo: cada cobro en la cuenta. “Labor” es la mano de obra; “brake pads” son las pastillas de freno."
         },
         {
           speaker: "Alejandra",
@@ -1515,16 +1515,16 @@ lessons.push(
           }
         },
         {
-          term: "labour and parts",
+          term: "labor and parts",
           explanation: "Mano de obra y repuestos, las dos piezas básicas de muchas cotizaciones.",
           literal: "labor y partes",
-          useWhen: "Reparaciones: “does that include labour and parts?”, “parts are extra”.",
+          useWhen: "Reparaciones: “does that include labor and parts?”, “parts are extra”.",
           avoidWhen: "Asumir que una cotización incluye ambas cosas; pregunte.",
           register: "neutral",
-          region: "Inglés universal; “labor” en EE. UU., “labour” en Reino Unido/Australia.",
-          related: ["labour", "parts", "quote", "repair"],
+          region: "Inglés universal; “labor” en EE. UU., “labor” en Reino Unido/Australia.",
+          related: ["labor", "parts", "quote", "repair"],
           example: {
-            target: "Does the quote include labour and parts?",
+            target: "Does the quote include labor and parts?",
             translation: "¿La cotización incluye mano de obra y repuestos?"
           }
         },
@@ -1548,7 +1548,7 @@ lessons.push(
       culture: [
         {
           label: "Quotes before work",
-          body: "En talleres anglófonos, igual que en Colombia, conviene pedir quote o estimate antes de aceptar. “How much do you charge to check it?” pregunta por la revisión; “does that include labour and parts?” aclara si los repuestos están incluidos. Si no hace esa pregunta, el total puede crecer sin que nadie haya querido engañarlo: simplemente faltaba una parte de la cotización."
+          body: "En talleres anglófonos, igual que en Colombia, conviene pedir quote o estimate antes de aceptar. “How much do you charge to check it?” pregunta por la revisión; “does that include labor and parts?” aclara si los repuestos están incluidos. Si no hace esa pregunta, el total puede crecer sin que nadie haya querido engañarlo: simplemente faltaba una parte de la cotización."
         },
         {
           label: "Charge, fee, bill",

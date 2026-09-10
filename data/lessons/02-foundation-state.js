@@ -19,9 +19,9 @@
 lessons.push(
   {
     id: "waiting-on-the-repair-technician",
-    level: "Starter · Home and neighbourhood",
+    level: "Starter · Home and neighborhood",
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
-    domain: "home-and-neighbourhood",
+    domain: "home-and-neighborhood",
     register: "courteous",
     pathways: ["foundation"],
     verb: "estar",
@@ -31,7 +31,7 @@ lessons.push(
       situation:
         "A Alex se le dañó la lavadora en su apartamento de Bogotá y el técnico quedó de venir en una ventana de dos horas que ya casi se acaba. Lo llama para saber por dónde va. El apartamento está sin agua, Alex tiene un viaje de trabajo en dos días y necesita que la máquina quede lista hoy.",
       setting: {
-        who: "Don Fabio is the repair technician the building administrator recommended. Alex is a Canadian tenant who has been in Bogotá three months and still finds phone calls harder than face-to-face Spanish.",
+        who: "Don Fabio is the repair technician the building administrator recommended. Alex is a American tenant who has been in Bogotá three months and still finds phone calls harder than face-to-face Spanish.",
         what: "A phone call to find out where the technician is and whether he is still coming this morning.",
         when: "A Wednesday mid-morning, with the two-hour window the technician promised almost used up.",
         where: "Bogotá, in Chapinero, a fifth-floor apartment whose washing machine died mid-cycle and left standing water.",
@@ -236,14 +236,14 @@ lessons.push(
         {
           label: "Calling someone “don” or “doña”",
           body:
-            "Alex says “Don Fabio”, not just “Fabio”. Don and doña before a first name are a Colombian mark of respect for someone older, more experienced, or simply providing a service — a plumber, a shopkeeper, a neighbour. It costs nothing, lands as warmth, and is almost never wrong with an adult you do not know well. Dropping it too soon can sound abrupt or overly familiar."
+            "Alex says “Don Fabio”, not just “Fabio”. Don and doña before a first name are a Colombian mark of respect for someone older, more experienced, or simply providing a service — a plumber, a shopkeeper, a neighbor. It costs nothing, lands as warmth, and is almost never wrong with an adult you do not know well. Dropping it too soon can sound abrupt or overly familiar."
         }
       ],
       pitfalls: [
         {
           mistake: "Saying “Soy en el apartamento” for “I'm in the apartment”",
           whyItFails:
-            "Location always takes estar, never ser. “Soy en …” is one of the most recognisable foreigner errors and stops a Colombian for a beat every single time.",
+            "Location always takes estar, never ser. “Soy en …” is one of the most recognizable foreigner errors and stops a Colombian for a beat every single time.",
           sayInstead: "Estoy en el apartamento."
         },
         {
@@ -301,7 +301,7 @@ lessons.push(
       choices: [
         "That the technician has already reached the building and is waiting downstairs at the front desk for him.",
         "That the technician is on his way but could still be a good while, since the phrase is more promise than position.",
-        "That the technician has been delayed and is now cancelling the visit for later in the afternoon instead."
+        "That the technician has been delayed and is now canceling the visit for later in the afternoon instead."
       ],
       answer: 1,
       practiceExtra: [
@@ -320,7 +320,7 @@ lessons.push(
           choices: [
             "Because water shortages are grammatically feminine, and feminine subjects in Spanish always take estar.",
             "Because ser would be far too informal here, and estar is the respectful form to use with a technician.",
-            "Because having no water is a temporary condition of the flat right now, and conditions like that take estar."
+            "Because having no water is a temporary condition of the apartment right now, and conditions like that take estar."
           ],
           answer: 2,
           tests: "estar for a temporary condition"
@@ -329,7 +329,7 @@ lessons.push(
           prompt: "What is the portería, and why does Don Fabio ask about it?",
           choices: [
             "It is the building's rooftop water tank, and he needs to know whether it has been refilled before arriving.",
-            "It is the staffed front desk that controls the entrance, and he needs it open to be let up to the flat.",
+            "It is the staffed front desk that controls the entrance, and he needs it open to be let up to the apartment.",
             "It is the residents' parking garage downstairs, and he wants to be sure there is a free space for his van."
           ],
           answer: 1,
@@ -348,14 +348,14 @@ lessons.push(
       ]
     },
     en: {
-      title: "Esperando al técnico en Toronto",
+      title: "Esperando al técnico en Houston",
       situation:
-        "A Alejandra se le dañó la lavadora en su apartamento de Toronto y el técnico quedó de venir en una ventana de dos horas que ya casi se acaba. Lo llama para saber por dónde va. El agua se salió, tiene un viaje de trabajo en dos días y, entre el acento y las frases hechas, no logra saber si Dave está cerca o todavía lejos.",
+        "A Alejandra se le dañó la lavadora en su apartamento de Houston y el técnico quedó de venir en una ventana de dos horas que ya casi se acaba. Lo llama para saber por dónde va. El agua se salió, tiene un viaje de trabajo en dos días y, entre el acento y las frases hechas, no logra saber si Dave está cerca o todavía lejos.",
       setting: {
-        who: "Dave es el técnico que recomendó la administración del edificio. Alejandra es colombiana, lleva tres meses en Toronto y todavía le cuestan más las llamadas que el inglés cara a cara.",
+        who: "Dave es el técnico que recomendó la administración del edificio. Alejandra es colombiana, lleva tres meses en Houston y todavía le cuestan más las llamadas que el inglés cara a cara.",
         what: "Una llamada para saber dónde está el técnico y si todavía va a venir esta mañana.",
         when: "Un miércoles a media mañana, cuando la ventana de dos horas que prometió el técnico ya casi se acaba.",
-        where: "Toronto, un quinto piso cuya lavadora murió a mitad del ciclo y dejó agua en el piso.",
+        where: "Houston, un quinto piso cuya lavadora murió a mitad del ciclo y dejó agua en el piso.",
         why: "Porque con un alegre “I'm just around the corner”, Alejandra no sabe si Dave está a cinco minutos o a una hora, y necesita la máquina lista antes de viajar."
       },
       address: {
@@ -443,7 +443,7 @@ lessons.push(
           avoidWhen:
             "Cuando necesita la dirección exacta para anotarla; ahí es “what's the address?”.",
           register: "friendly informal",
-          region: "Inglés universal; muy común en el inglés británico y canadiense.",
+          region: "Inglés universal; muy común en el inglés británico y estadounidense.",
           related: ["where are you?", "how far are you?", "are you close?", "how far off are you?"],
           example: {
             target: "Whereabouts are you?",
@@ -542,7 +542,7 @@ lessons.push(
         {
           label: "“Around the corner” tampoco es un dato de GPS",
           body:
-            "Cuando un canadiense dice “I'm around the corner” o “I'm on my way”, tómelo como una promesa cálida, no como una posición exacta. Igual que “estoy llegando”, puede seguir estando a veinte minutos. Insistir con “but where EXACTLY are you?” suena a desconfianza. Si de verdad necesita un número, pregunte “how long until you get here?”, que sí pide un tiempo sin sonar a reclamo."
+            "Cuando un estadounidense dice “I'm around the corner” o “I'm on my way”, tómelo como una promesa cálida, no como una posición exacta. Igual que “estoy llegando”, puede seguir estando a veinte minutos. Insistir con “but where EXACTLY are you?” suena a desconfianza. Si de verdad necesita un número, pregunte “how long until you get here?”, que sí pide un tiempo sin sonar a reclamo."
         },
         {
           label: "El “front desk” y la ventana de cita",
@@ -692,7 +692,7 @@ lessons.push(
       address: {
         form: "vos",
         who: "Don Norbey uses vos with Alex, and after a beat Alex risks vos back.",
-        why: "Paisa Medellín runs on vos between people on friendly terms. A neighbourhood tendero will vos a near-regular almost immediately; it is the sound of being treated as a local rather than a customer kept at arm's length.",
+        why: "Paisa Medellín runs on vos between people on friendly terms. A neighborhood tendero will vos a near-regular almost immediately; it is the sound of being treated as a local rather than a customer kept at arm's length.",
         ifYouSwitch:
           "Usted would still be perfectly correct and a touch more reserved, and Norbey would not blink. Tú, though, sounds oddly neutral in Medellín — a bit like TV Spanish — and paisas notice a foreigner reaching for it instead of vos."
       },
@@ -700,9 +700,9 @@ lessons.push(
         {
           speaker: "Alex",
           target: "Don Norbey, ¿me da estas galletas y una gaseosa? Es que tengo afán.",
-          translation: "Don Norbey, can I get these biscuits and a soda? I'm in a rush.",
+          translation: "Don Norbey, can I get these cookies and a soda? I'm in a rush.",
           pronunciation: "don nor-BEY, me da ES-tas ga-YE-tas ee OO-na ga-seh-OH-sa. es ke TEN-goh a-FAN",
-          literal: "Don Norbey, to-me you-give these biscuits and a soda? Is that I-have rush.",
+          literal: "Don Norbey, to-me you-give these cookies and a soda? Is that I-have rush.",
           why: "“Tener afán” — literally “to have rush” — is how Colombians say they are in a hurry: the state is something you have, not something you are. “Estoy afán” is a classic foreigner slip."
         },
         {
@@ -873,7 +873,7 @@ lessons.push(
         {
           label: "The tienda runs on trust, not just cash",
           body:
-            "A Colombian tienda de barrio is a shop, a bank and a bulletin board at once. “Llevátelas y mañana me pagás” — take it now, pay tomorrow — is fiado, the informal credit a tendero extends to people he trusts. Being offered fiado is a quiet promotion from customer to neighbour. Abusing it, or forgetting to pay, ends the relationship just as quietly; honouring it fast is what builds it."
+            "A Colombian tienda de barrio is a shop, a bank and a bulletin board at once. “Llevátelas y mañana me pagás” — take it now, pay tomorrow — is fiado, the informal credit a tendero extends to people he trusts. Being offered fiado is a quiet promotion from customer to neighbor. Abusing it, or forgetting to pay, ends the relationship just as quietly; honouring it fast is what builds it."
         },
         {
           label: "Nobody ever has change",
@@ -888,7 +888,7 @@ lessons.push(
         {
           label: "“Don” for the shopkeeper",
           body:
-            "Alex says “don Norbey”. Don and doña before a first name honour age, experience or simply the role of serving the neighbourhood, and shopkeepers routinely earn it. It is warmer than a surname and less stiff than señor. Using it with the man who feeds your block on credit is exactly right, and dropping it too early can read as taking the whole relationship for granted."
+            "Alex says “don Norbey”. Don and doña before a first name honor age, experience or simply the role of serving the neighborhood, and shopkeepers routinely earn it. It is warmer than a surname and less stiff than señor. Using it with the man who feeds your block on credit is exactly right, and dropping it too early can read as taking the whole relationship for granted."
         }
       ],
       pitfalls: [
@@ -953,7 +953,7 @@ lessons.push(
       choices: [
         "That Alex pays half of it today in cash and brings him the rest of the money tomorrow when he next passes by.",
         "That Alex takes the things for free this one time, as a little welcome gift for being a brand-new face in the barrio.",
-        "That Alex takes them now and pays tomorrow: fiado, the corner shop's small line of trust-based neighbourhood credit."
+        "That Alex takes them now and pays tomorrow: fiado, the corner shop's small line of trust-based neighborhood credit."
       ],
       answer: 2,
       practiceExtra: [
@@ -981,7 +981,7 @@ lessons.push(
           prompt: "What is the “sencillo” that neither of them has left?",
           choices: [
             "The printed purchase receipt, which the shopkeeper must hand over by law whenever somebody pays with a big note.",
-            "A neighbourhood discount the shopkeeper gives to customers who turn up without the exact price of the product.",
+            "A neighborhood discount the shopkeeper gives to customers who turn up without the exact price of the product.",
             "Small change — little notes and coins — the kind you need to make up the change for a big fifty-thousand note."
           ],
           answer: 2,
@@ -1002,12 +1002,12 @@ lessons.push(
     en: {
       title: "Sin cambio en la tienda de la esquina",
       situation:
-        "Alejandra entra a la tienda de la esquina de Mike en Toronto a comprar algo rápido, pero sólo tiene un billete de cincuenta y anda de afán porque tiene que recoger a su hija. Mike tampoco tiene con qué darle el vuelto, y les toca resolverlo entre los dos en inglés.",
+        "Alejandra entra a la tienda de la esquina de Mike en Houston a comprar algo rápido, pero sólo tiene un billete de cincuenta y anda de afán porque tiene que recoger a su hija. Mike tampoco tiene con qué darle el vuelto, y les toca resolverlo entre los dos en inglés.",
       setting: {
         who: "Mike atiende la caja de la tienda de la esquina desde hace años y ya reconoce a Alejandra. Ella es una clienta casi habitual que todavía se pone nerviosa manejando efectivo con afán.",
         what: "Una compra rápida que se traba porque Alejandra sólo tiene un billete grande y la tienda no tiene cambio.",
         when: "Una tarde entre semana, casi a las tres, con la salida del colegio encima.",
-        where: "Toronto, un barrio tranquilo donde la corner store es punto de encuentro pero casi nadie fía.",
+        where: "Houston, un barrio tranquilo donde la corner store es punto de encuentro pero casi nadie fía.",
         why: "Porque la forma en que Alejandra maneje el quedarse sin cambio — si se enreda o deja que Mike le tenga un poco de confianza — marca si pasa de clienta a vecina conocida."
       },
       address: {
@@ -1078,7 +1078,7 @@ lessons.push(
           avoidWhen:
             "Para la edad, el hambre o el afán, que en inglés van con be, no con have.",
           register: "neutral",
-          region: "“I've got” es más común en el inglés británico y canadiense hablado.",
+          region: "“I've got” es más común en el inglés británico y estadounidense hablado.",
           related: ["have", "own", "carry", "hold"],
           example: {
             target: "I've only got a fifty.",
@@ -1164,7 +1164,7 @@ lessons.push(
             "Contextos formales o escritos, donde se dice “dollars” y no “bucks”.",
           register: "friendly informal",
           region: "Norteamérica; en Canadá conviven “bucks” y “loonies/toonies” para las monedas.",
-          related: ["dollars", "loonie", "toonie", "cash"],
+          related: ["dollars", "dollar coin", "two-dollar bill", "cash"],
           example: {
             target: "That's six bucks.",
             translation: "Son seis dólares."
@@ -1335,16 +1335,16 @@ lessons.push(
       situation:
         "Alex se topa en la calle con Yuranis, su vecina costeña en Barranquilla, bajo un sol tremendo. Entre el calor y las vueltas que él tiene que hacer, la charla se convierte en una invitación: el sábado la familia de ella va a hacer un sancocho en la playa por el cumpleaños de la mamá, y Alex se ofrece a ayudar.",
       setting: {
-        who: "Yuranis is a costeña neighbour who has more or less adopted Alex, folding him into family plans. Alex is settling into coast life and its fast, warm street talk.",
+        who: "Yuranis is a costeña neighbor who has more or less adopted Alex, folding him into family plans. Alex is settling into coast life and its fast, warm street talk.",
         what: "A chance street encounter that turns into an invitation to a family beach sancocho.",
         when: "A blazing Friday around noon, when the heat is the first thing anyone mentions.",
-        where: "Barranquilla, on the Caribbean coast, on the pavement outside their building.",
+        where: "Barranquilla, on the Caribbean coast, on the sidewalk outside their building.",
         why: "Because on the coast plans are not made by text but in exactly these sweaty doorstep conversations, and saying yes well is how an outsider becomes part of the family calendar."
       },
       address: {
         form: "tú",
-        who: "Yuranis and Alex use tú, the coastal default between neighbours on friendly terms.",
-        why: "The Caribbean coast is tú country. Costeños tutear quickly and warmly, and usted between friendly neighbours would feel oddly cold or even annoyed. Tú is the sound of everyday coastal closeness.",
+        who: "Yuranis and Alex use tú, the coastal default between neighbors on friendly terms.",
+        why: "The Caribbean coast is tú country. Costeños tutear quickly and warmly, and usted between friendly neighbors would feel oddly cold or even annoyed. Tú is the sound of everyday coastal closeness.",
         ifYouSwitch:
           "Usted would put distance between them that neither wants; on the coast it can even read as irritation. Vos would sound imported from Medellín or abroad — grammatical, but not the music of Barranquilla, and people would notice."
       },
@@ -1376,9 +1376,9 @@ lessons.push(
         {
           speaker: "Alex",
           target: "Nada fijo todavía. ¿Ustedes qué hacen para el cumpleaños de tu mamá?",
-          translation: "Nothing set yet. What are you all doing for your mum's birthday?",
+          translation: "Nothing set yet. What are you all doing for your mom's birthday?",
           pronunciation: "NA-da FEE-hoh to-da-BEE-a. oos-TE-des ke A-sen PA-ra el koom-ple-AH-nyos de tu ma-MA",
-          literal: "Nothing fixed yet. You-all what you-do for the birthday of your mum?",
+          literal: "Nothing fixed yet. You-all what you-do for the birthday of your mom?",
           why: "On the coast the plural “you” is ustedes even among friends — there is no vosotros. “Qué hacen” is hacer again, this time third-person plural, still meaning plans."
         },
         {
@@ -1507,7 +1507,7 @@ lessons.push(
             "“Love, dear” — from mi hijo/mi hija, an affectionate address with no literal family meaning.",
           literal: "my son / my daughter",
           useWhen:
-            "Warm, familiar talk, especially from older to younger or between close neighbours.",
+            "Warm, familiar talk, especially from older to younger or between close neighbors.",
           avoidWhen:
             "Formal settings or with strangers, where it would sound over-familiar.",
           register: "friendly informal",
@@ -1530,7 +1530,7 @@ lessons.push(
         {
           label: "Weather is the coast's small talk",
           body:
-            "In Barranquilla, Santa Marta and Cartagena the heat is a constant conversational opener, the way weather is in Britain. “¡Qué calor!” and “este solazo” are social glue, not real complaints. Responding in kind — agreeing the heat is brutal — is expected and friendly. It is also a natural, low-stakes place to practise hacer for weather, since you will hear hace calor a dozen times a day on the coast."
+            "In Barranquilla, Santa Marta and Cartagena the heat is a constant conversational opener, the way weather is in Britain. “¡Qué calor!” and “este solazo” are social glue, not real complaints. Responding in kind — agreeing the heat is brutal — is expected and friendly. It is also a natural, low-stakes place to practice hacer for weather, since you will hear hace calor a dozen times a day on the coast."
         },
         {
           label: "Costeño Spanish is fast and clipped",
@@ -1540,7 +1540,7 @@ lessons.push(
         {
           label: "“Mijo” is warmth, not family",
           body:
-            "When Yuranis calls Alex “mijo”, she is not claiming him as a son; the word is a blanket term of affection, especially from women and older speakers. You will hear it from shopkeepers, aunts, neighbours and strangers at a bus stop. Read literally it is baffling; read as tone it simply means the speaker feels warmly toward you, and returning the warmth — not the word itself — is the right response."
+            "When Yuranis calls Alex “mijo”, she is not claiming him as a son; the word is a blanket term of affection, especially from women and older speakers. You will hear it from shopkeepers, aunts, neighbors and strangers at a bus stop. Read literally it is baffling; read as tone it simply means the speaker feels warmly toward you, and returning the warmth — not the word itself — is the right response."
         }
       ],
       pitfalls: [
@@ -1622,7 +1622,7 @@ lessons.push(
         {
           prompt: "Alex says “tengo que hacer unas vueltas.” What does that mean?",
           choices: [
-            "That he has to wander around the neighbourhood on foot for a while to clear his head and cool off from the heat.",
+            "That he has to wander around the neighborhood on foot for a while to clear his head and cool off from the heat.",
             "That he has some errands to run — paying, buying, sorting a few things out — not that he is off for a stroll.",
             "That he has to drive several loops around the block, hunting for somewhere free to park the car near the shop."
           ],
@@ -1633,7 +1633,7 @@ lessons.push(
           prompt: "Yuranis calls Alex “mijo.” What does that word signal here?",
           choices: [
             "Warmth and familiarity — an all-purpose affectionate address — not that Alex is really her son or any relative.",
-            "Formal respect toward someone older, rather like saying “sir”, and it puts a polite distance between the neighbours.",
+            "Formal respect toward someone older, rather like saying “sir”, and it puts a polite distance between the neighbors.",
             "That Alex is a good deal younger than she is, so she talks to him the way a mother would talk to a small child."
           ],
           answer: 0,
@@ -1654,12 +1654,12 @@ lessons.push(
     en: {
       title: "Planeando un guiso para el fin de semana",
       situation:
-        "Alejandra se topa en la calle con Sarah, su vecina en Toronto, en pleno frío. Entre el clima y las vueltas que ella tiene que hacer, la charla se convierte en una invitación: el sábado la familia de Sarah va a hacer un guiso grande por el cumpleaños de la mamá, y Alejandra se ofrece a ayudar, todo en inglés.",
+        "Alejandra se topa en la calle con Sarah, su vecina en Houston, en pleno frío. Entre el clima y las vueltas que ella tiene que hacer, la charla se convierte en una invitación: el sábado la familia de Sarah va a hacer un guiso grande por el cumpleaños de la mamá, y Alejandra se ofrece a ayudar, todo en inglés.",
       setting: {
-        who: "Sarah es una vecina canadiense que ha ido acogiendo a Alejandra en los planes familiares. Alejandra se va acostumbrando a la vida en Toronto y a su charla de calle rápida.",
+        who: "Sarah es una vecina estadounidense que ha ido acogiendo a Alejandra en los planes familiares. Alejandra se va acostumbrando a la vida en Houston y a su charla de calle rápida.",
         what: "Un encuentro casual en la calle que se convierte en invitación a un guiso familiar de fin de semana.",
         when: "Un viernes helado al mediodía, cuando el frío es lo primero que cualquiera menciona.",
-        where: "Toronto, en la acera frente al edificio donde viven las dos.",
+        where: "Houston, en la acera frente al edificio donde viven las dos.",
         why: "Porque también aquí los planes se arman en estas charlas de portal, y saber decir que sí con naturalidad es como una recién llegada entra en el calendario de la familia."
       },
       address: {
@@ -1832,7 +1832,7 @@ lessons.push(
           avoidWhen:
             "Contextos formales o con desconocidos, donde pueden sonar demasiado familiares.",
           register: "friendly informal",
-          region: "Canadá y norte/este de EE. UU.; “bud” es muy canadiense.",
+          region: "Canadá y norte/este de EE. UU.; “bud” es muy estadounidense.",
           related: ["honey", "bud", "buddy", "dear"],
           example: {
             target: "Oh, hon, it's always cold here.",

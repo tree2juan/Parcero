@@ -72,9 +72,9 @@ lessons.push(
         {
           speaker: "Lina",
           target: "Demos una vuelta por aquí; a pie se siente mejor el barrio.",
-          translation: "Let's take a stroll around here; on foot you feel the neighbourhood better.",
+          translation: "Let's take a stroll around here; on foot you feel the neighborhood better.",
           pronunciation: "DEH-mos OO-nah BWEHL-tah por ah-KEE; ah PYEH seh SYEN-teh meh-HOR el BAHR-ryoh",
-          literal: "Let's-give a turn around here; on foot one feels better the neighbourhood.",
+          literal: "Let's-give a turn around here; on foot one feels better the neighborhood.",
           why: "“A pie” describes the mode — on foot — but Lina does not say “vamos a pie” because they are not solving transportation. The point is the experience of walking."
         },
         {
@@ -118,7 +118,7 @@ lessons.push(
             "To take a stroll, have a wander, or make a loose little circuit without a hard destination.",
           literal: "to give a turn",
           useWhen:
-            "The walk is social, scenic, or exploratory: after dinner, around a plaza, through a neighbourhood.",
+            "The walk is social, scenic, or exploratory: after dinner, around a plaza, through a neighborhood.",
           avoidWhen:
             "You are describing a commute or a precise route. Then it sounds too relaxed for what you mean.",
           register: "friendly informal",
@@ -143,7 +143,7 @@ lessons.push(
           related: ["caminando", "sin carro", "a paso lento", "a la vuelta"],
           example: {
             target: "A pie se siente mejor el barrio.",
-            translation: "You feel the neighbourhood better on foot."
+            translation: "You feel the neighborhood better on foot."
           }
         },
         {
@@ -200,7 +200,7 @@ lessons.push(
         {
           term: "seguir caminando",
           explanation:
-            "To keep walking. It is useful when the place tempts you to stop every few metres.",
+            "To keep walking. It is useful when the place tempts you to stop every few meters.",
           literal: "to continue walking",
           useWhen:
             "You want to keep the group moving without sounding like a tour guide herding people.",
@@ -226,7 +226,7 @@ lessons.push(
         {
           label: "Getsemaní is not just a backdrop",
           body:
-            "The neighbourhood is residential, commercial, touristic, and lived-in at the same time. A good invitation to walk there leaves room for the place and for the people who are not performing it for visitors."
+            "The neighborhood is residential, commercial, touristic, and lived-in at the same time. A good invitation to walk there leaves room for the place and for the people who are not performing it for visitors."
         },
         {
           label: "Camine is friendlier than it looks",
@@ -236,7 +236,7 @@ lessons.push(
         {
           label: "A pie is about experience here",
           body:
-            "Saying a neighbourhood is better “a pie” is less about rejecting cars than about saying your body should be at the speed of the street. You notice different things when the plan is slow enough to be interrupted."
+            "Saying a neighborhood is better “a pie” is less about rejecting cars than about saying your body should be at the speed of the street. You notice different things when the plan is slow enough to be interrupted."
         }
       ],
       pitfalls: [
@@ -392,7 +392,7 @@ lessons.push(
         },
         {
           speaker: "Lina",
-          target: "Let's wander around here; you feel the neighbourhood better on foot.",
+          target: "Let's wander around here; you feel the neighborhood better on foot.",
           translation: "Demos una vuelta por aquí; a pie se siente mejor el barrio.",
           pronunciation: "lets UAN-der a-RAUND jir; yu fil da NEI-ber-jud BE-ter on fut",
           literal: "Dejemos vagar alrededor aquí; usted siente el barrio mejor en pie.",
@@ -463,7 +463,7 @@ lessons.push(
           region: "Inglés universal.",
           related: ["walking", "without a car", "by walking", "at walking pace"],
           example: {
-            target: "You feel the neighbourhood better on foot.",
+            target: "You feel the neighborhood better on foot.",
             translation: "A pie se siente mejor el barrio."
           }
         },
@@ -641,7 +641,7 @@ lessons.push(
           choices: [
             "We walked there because required.",
             "We changed transport in silence.",
-            "We wandered around the neighbourhood."
+            "We wandered around the neighborhood."
           ],
           answer: 2,
           tests: "usar “wander around” para una vuelta relajada"
@@ -685,7 +685,7 @@ lessons.push(
       setting: {
         who: "Julián runs before work whenever he can. Maya is trying to build the habit without pretending she has become an athlete overnight.",
         what: "A short morning run that turns into practical talk about pace, lateness and moving a chair out of the way.",
-        when: "Early on a weekday, before the sun makes the pavement feel serious.",
+        when: "Early on a weekday, before the sun makes the sidewalk feel serious.",
         where: "Cali, along the river path near the boulevard, with cyclists, office workers and vendors setting up.",
         why: "Because correr is not only exercise. Colombians also use it for hurrying and for sliding an object over, and both meanings appear before breakfast."
       },
@@ -719,7 +719,7 @@ lessons.push(
           translation: "Relax, we only run twenty minutes and stop for juice.",
           pronunciation: "tran-KEE-lah, SOH-loh koh-RREH-mos BAYN-teh mee-NOO-tos ee pah-RAH-mos por HOO-goh",
           literal: "Calm, only we-run twenty minutes and we-stop for juice.",
-          why: "Present tense again carries a near-future plan. The juice promise matters: the sentence sounds like a manageable outing, not a training programme."
+          why: "Present tense again carries a near-future plan. The juice promise matters: the sentence sounds like a manageable outing, not a training program."
         },
         {
           speaker: "Maya",
@@ -907,7 +907,7 @@ lessons.push(
         {
           mistake: "Using “correr” for running a business",
           whyItFails:
-            "English run stretches into machines, programmes and businesses. Spanish correr does not cover all of that territory.",
+            "English run stretches into machines, programs and businesses. Spanish correr does not cover all of that territory.",
           sayInstead: "Use manejar, dirigir or administrar for a business."
         },
         {
@@ -1605,7 +1605,7 @@ lessons.push(
       choices: [
         "She is claiming skill while adjusting carefully to a different kind of water.",
         "She is refusing to enter any water because she cannot swim at all.",
-        "She is saying rivers and pools require exactly the same behaviour."
+        "She is saying rivers and pools require exactly the same behavior."
       ],
       answer: 0,
       practiceExtra: [

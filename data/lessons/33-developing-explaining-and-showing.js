@@ -949,12 +949,12 @@ lessons.push(
     en: {
       title: "Mostrar una mochila en Pasto",
       situation:
-        "Usted está en una tienda pequeña de Vancouver buscando una mochila resistente. Necesita pedir en inglés que le muestren varios detalles, distinguir show de teach, y no olvidar que el español colombiano usa enseñar para show con mucha naturalidad en tiendas.",
+        "Usted está en una tienda pequeña de Austin buscando una mochila resistente. Necesita pedir en inglés que le muestren varios detalles, distinguir show de teach, y no olvidar que el español colombiano usa enseñar para show con mucha naturalidad en tiendas.",
       setting: {
         who: "Marisol atiende una tienda pequeña de equipo para caminar y sabe cuándo un cliente necesita mirar detalles. Jordan escoge una mochila para viajar y quiere revisar bolsillos, correas y costuras.",
         what: "Una conversación de tienda donde la vendedora muestra productos físicamente y el cliente pide ver detalles concretos.",
         when: "A media tarde, después de que paró la lluvia y la gente vuelve a entrar a las tiendas.",
-        where: "Vancouver, en una tienda modesta de equipo al aire libre, lejos de Colombia porque esta dirección enseña inglés.",
+        where: "Austin, en una tienda modesta de equipo al aire libre, lejos de Colombia porque esta dirección enseña inglés.",
         why: "Porque show cubre mostrar, pero teach no cubre el enseñar colombiano de tienda. En inglés, “can you teach me that backpack?” no funciona para pedir que le muestren un producto."
       },
       address: {

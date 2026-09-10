@@ -576,15 +576,15 @@ lessons.push(
       setting: {
         who: "Doña Marta is Natalia's aunt, proud of feeding guests well. Alex is a visitor trying not to impose, and Natalia is the friend who explains the ritual before he accidentally refuses what he wants.",
         what: "A visit at a family table, focused on accepting food or drink without sounding greedy and without making the host guess forever.",
-        when: "Early evening after a slow walk through Popayán's whitewashed centre.",
-        where: "Popayán, Cauca, in a family living room near the historic centre.",
+        when: "Early evening after a slow walk through Popayán's whitewashed center.",
+        where: "Popayán, Cauca, in a family living room near the historic center.",
         why: "Because accepting is not just saying yes. In Colombia, hospitality often includes a first offer, a polite hesitation, a second offer, and then a grateful acceptance. A learner has to know when “no, gracias” is real and when it is only the first step of the dance."
       },
       address: {
         form: "usted",
         who: "Alex uses usted with Doña Marta because she is older and hosting him in her home. Natalia can use tú with Alex, but the scene's key exchange is with the aunt.",
         why: "Usted keeps the visit respectful without making it cold. In a family home, especially with an older host, it lets Alex accept food warmly while still sounding well brought up.",
-        ifYouSwitch: "Using tú with Doña Marta too soon would feel overfamiliar. The food may be abundant and affectionate, but the address form still recognises age, hosting and the courtesy expected from a guest."
+        ifYouSwitch: "Using tú with Doña Marta too soon would feel overfamiliar. The food may be abundant and affectionate, but the address form still recognizes age, hosting and the courtesy expected from a guest."
       },
       dialogue: [
         {
@@ -741,7 +741,7 @@ lessons.push(
       culture: [
         {
           label: "The first no",
-          body: "Many Colombian families recognise a small ritual around hospitality: offer, polite no, insist, grateful yes. Not everyone performs it the same way, and younger friends may skip it entirely, but with older hosts it is common enough that a literal-minded learner can go hungry. The first no says “I am not demanding”; the later yes says “I receive your kindness.”"
+          body: "Many Colombian families recognize a small ritual around hospitality: offer, polite no, insist, grateful yes. Not everyone performs it the same way, and younger friends may skip it entirely, but with older hosts it is common enough that a literal-minded learner can go hungry. The first no says “I am not demanding”; the later yes says “I receive your kindness.”"
         },
         {
           label: "Popayán feeds guests proudly",
@@ -838,12 +838,12 @@ lessons.push(
     en: {
       title: "Aceptar una oferta sin esperar que insistan",
       situation:
-        "En Toronto, Alejandra visita a la familia de Emily. Le ofrecen té y galletas, y ella dice “no, thank you” por educación, esperando que le insistan como en muchas casas colombianas. Nadie insiste. Emily le explica que en inglés un “no, thanks” suele tomarse como no real, y que si usted quiere aceptar debe decir desde el principio “yes, please”, “I'd love some” o “that would be lovely”.",
+        "En Houston, Alejandra visita a la familia de Emily. Le ofrecen té y galletas, y ella dice “no, thank you” por educación, esperando que le insistan como en muchas casas colombianas. Nadie insiste. Emily le explica que en inglés un “no, thanks” suele tomarse como no real, y que si usted quiere aceptar debe decir desde el principio “yes, please”, “I'd love some” o “that would be lovely”.",
       setting: {
-        who: "Emily es una amiga canadiense que invita a Alejandra a conocer a su familia. Alejandra quiere ser educada, pero trae el ritual colombiano de negar una vez antes de aceptar.",
+        who: "Emily es una amiga estadounidense que invita a Alejandra a conocer a su familia. Alejandra quiere ser educada, pero trae el ritual colombiano de negar una vez antes de aceptar.",
         what: "Una merienda en casa, donde aceptar una taza de té requiere decir sí con claridad en vez de esperar una segunda o tercera oferta.",
         when: "Una tarde fría de domingo, después de entrar de la calle con las manos heladas.",
-        where: "Toronto, Canadá, en la sala de la casa de la familia de Emily.",
+        where: "Houston, Canadá, en la sala de la casa de la familia de Emily.",
         why: "Porque en inglés la cortesía no siempre incluye insistir. Si usted dice “no, thank you”, muchas personas creen que ya cuidaron su comodidad respetando ese no."
       },
       address: {
@@ -1117,7 +1117,7 @@ lessons.push(
       situation:
         "En Ibagué, Lucía invita a Alex a un cumpleaños después de un ensayo de música. Alex no puede ir y, queriendo sonar correcto, dice “rechazo tu invitación”. La frase cae helada. Lucía le enseña que rechazar es un verbo duro y más bien escrito o formal; en conversación se dice “uy, no puedo”, “me queda difícil”, “de pronto la próxima” o incluso “ahí te cuento”, que muchas veces es un no amable, no una promesa real de confirmar.",
       setting: {
-        who: "Lucía is an Ibagué friend organising a birthday gathering after rehearsal. Alex genuinely cannot go and wants to refuse without hurting her feelings.",
+        who: "Lucía is an Ibagué friend organizing a birthday gathering after rehearsal. Alex genuinely cannot go and wants to refuse without hurting her feelings.",
         what: "A birthday invitation and a refusal, focused on the spoken softeners Colombians use instead of the blunt verb rechazar.",
         when: "A weekday evening after a music rehearsal, with everyone packing instruments and making weekend plans.",
         where: "Ibagué, Tolima, outside a small music academy.",
@@ -1284,7 +1284,7 @@ lessons.push(
       culture: [
         {
           label: "The spoken no avoids the hard verb",
-          body: "Friendly refusals in Colombia often work by cushioning the impact. The person thanks you, apologises, gives a reason or says it is difficult, and leaves warmth for next time. The direct verb “rechazar” is not false, but it belongs to documents, applications and formal proposals. Friendship usually chooses softer grammar because the real goal is not only to decline, but to keep the bond intact."
+          body: "Friendly refusals in Colombia often work by cushioning the impact. The person thanks you, apologizes, gives a reason or says it is difficult, and leaves warmth for next time. The direct verb “rechazar” is not false, but it belongs to documents, applications and formal proposals. Friendship usually chooses softer grammar because the real goal is not only to decline, but to keep the bond intact."
         },
         {
           label: "Maybe that means no",
@@ -1292,7 +1292,7 @@ lessons.push(
         },
         {
           label: "Ibagué, music and weekend plans",
-          body: "Ibagué calls itself Colombia's musical city, with conservatories, festivals and neighbourhood academies woven into its identity. A rehearsal turning into birthday plans is ordinary social life there. The language does not need invented Tolima slang to feel local; the Colombian part is the tact around the invitation, the “qué pena” before the no, and the promise that maybe the next plan will work."
+          body: "Ibagué calls itself Colombia's musical city, with conservatories, festivals and neighborhood academies woven into its identity. A rehearsal turning into birthday plans is ordinary social life there. The language does not need invented Tolima slang to feel local; the Colombian part is the tact around the invitation, the “qué pena” before the no, and the promise that maybe the next plan will work."
         }
       ],
       pitfalls: [

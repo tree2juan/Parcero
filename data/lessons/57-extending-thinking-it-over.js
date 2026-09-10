@@ -663,7 +663,7 @@ lessons.push(
         who: "Lina and Alex are friends, so tú keeps the conversation quick, speculative and playful.",
         why: "The core forms are “imagínate” and “imagina”, both natural with a friend. Usted would make the what-if game sound unnecessarily formal.",
         ifYouSwitch:
-          "Switching to usted would change the flavour from friendly speculation to a formal exercise. The grammar would still work, but the social ease of “imagínate” would disappear."
+          "Switching to usted would change the flavor from friendly speculation to a formal exercise. The grammar would still work, but the social ease of “imagínate” would disappear."
       },
       dialogue: [
         {
@@ -1344,7 +1344,7 @@ lessons.push(
           translation: "You're right: I admit the mistake and next time I'll say hi first.",
           pronunciation: "TYE-ne rra-SON: rre-ko-NOS-ko el e-RROR ee la PROK-si-ma sa-LU-do pri-ME-ro",
           literal: "You-have reason: I-recognize the error and the next I-greet first.",
-          why: "“Reconozco el error” is concise, responsible and not melodramatic. It admits the mistake while pointing toward different behaviour next time."
+          why: "“Reconozco el error” is concise, responsible and not melodramatic. It admits the mistake while pointing toward different behavior next time."
         }
       ],
       vocabulary: [
@@ -1591,14 +1591,14 @@ lessons.push(
       ]
     },
     en: {
-      title: "Reconocer una cara y admitir un error en Montreal",
+      title: "Reconocer una cara y admitir un error en San Antonio",
       situation:
-        "En Montreal, Alejandra se cruza con Owen, un conocido de una clase, pero no lo reconoce al principio porque está fuera de contexto. Usted aprende la diferencia entre “recognize” y “know”, y también el sentido adulto de “admit”: “I admit I was wrong”, no sólo reconocer una cara.",
+        "En San Antonio, Alejandra se cruza con Owen, un conocido de una clase, pero no lo reconoce al principio porque está fuera de contexto. Usted aprende la diferencia entre “recognize” y “know”, y también el sentido adulto de “admit”: “I admit I was wrong”, no sólo reconocer una cara.",
       setting: {
         who: "Owen recuerda a Alejandra de una clase corta. Alejandra tarda en ubicarlo y luego decide admitir la incomodidad en vez de fingir.",
         what: "Un encuentro casual que pasa de reconocer una persona a admitir un error con tacto.",
         when: "Una mañana fría de domingo, después de comprar café.",
-        where: "Montreal, Canadá, afuera de una panadería de barrio.",
+        where: "San Antonio, Canadá, afuera de una panadería de barrio.",
         why: "Porque el inglés separa “recognize” para identificar y “admit” para reconocer una verdad incómoda. Traducir reconocer siempre como recognize deja coja la mitad adulta del verbo."
       },
       address: {
@@ -1793,9 +1793,9 @@ lessons.push(
             "“I admit…” no es sólo confesión dramática. Puede ser una manera serena de aceptar un error pequeño o una verdad incómoda. En conversaciones maduras, admitir baja la tensión porque deja de defenderse. Para un colombiano que traduce reconocer como recognize, este es el sentido que más falta hace."
         },
         {
-          label: "Montreal and context",
+          label: "San Antonio and context",
           body:
-            "Encontrar a alguien fuera del contexto donde usted lo conoció puede desubicarlo: otra ropa, otro idioma alrededor, otro barrio. Montreal, con sus capas de francés e inglés, hace creíble ese pequeño desfase sin volverlo exótico. La frase útil sigue siendo general: “I couldn't place you at first”."
+            "Encontrar a alguien fuera del contexto donde usted lo conoció puede desubicarlo: otra ropa, otro idioma alrededor, otro barrio. San Antonio, con sus capas de francés e inglés, hace creíble ese pequeño desfase sin volverlo exótico. La frase útil sigue siendo general: “I couldn't place you at first”."
         },
         {
           label: "Pretend is a false friend",

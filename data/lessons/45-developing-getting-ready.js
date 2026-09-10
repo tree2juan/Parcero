@@ -137,7 +137,7 @@ lessons.push(
             "To taste food or try a dish. This can mean one spoonful, not a whole meal.",
           literal: "to try food",
           useWhen:
-            "Use it when someone offers you soup, fruit, sauce, coffee, or a bite so you can judge the flavour.",
+            "Use it when someone offers you soup, fruit, sauce, coffee, or a bite so you can judge the flavor.",
           avoidWhen:
             "Avoid translating every try as intentar. “Intento el sancocho” sounds as if the soup is a difficult task.",
           register: "neutral",
@@ -223,7 +223,7 @@ lessons.push(
         {
           label: "A taste can be a duty",
           body:
-            "In a family kitchen, being asked to taste is often a tiny honour and a tiny responsibility. You are being folded into the cooking, not just fed. A polite answer can be short, but it should notice the care behind the spoon."
+            "In a family kitchen, being asked to taste is often a tiny honor and a tiny responsibility. You are being folded into the cooking, not just fed. A polite answer can be short, but it should notice the care behind the spoon."
         },
         {
           label: "The fitting-room sentence matters",
@@ -446,7 +446,7 @@ lessons.push(
             "No diga I'll prove it para comida. Prove significa demostrar, no probar de sabor.",
           register: "neutral",
           region: "Inglés universal.",
-          related: ["taste", "flavour", "try it", "sample"],
+          related: ["taste", "flavor", "try it", "sample"],
           example: {
             target: "I'll taste it and tell you.",
             translation: "Lo pruebo y te digo."
@@ -463,7 +463,7 @@ lessons.push(
             "No use taste para ropa, planes o aparatos. Ahí necesita try on, try, or test.",
           register: "neutral",
           region: "Inglés universal.",
-          related: ["try a bite", "sample", "flavour", "smell"],
+          related: ["try a bite", "sample", "flavor", "smell"],
           example: {
             target: "Taste the sancocho before more salt.",
             translation: "Prueba el sancocho antes de más sal."
@@ -1656,12 +1656,12 @@ lessons.push(
     en: {
       title: "Organizar el plan del fin de semana",
       situation:
-        "Usted está en Montreal con amigos colombianos que quieren hacer una salida corta al río. Hay horarios, comida, transporte y plata por aclarar. Necesita usar organize, arrange, set up y sort out sin traducir cuadrar palabra por palabra.",
+        "Usted está en San Antonio con amigos colombianos que quieren hacer una salida corta al río. Hay horarios, comida, transporte y plata por aclarar. Necesita usar organize, arrange, set up y sort out sin traducir cuadrar palabra por palabra.",
       setting: {
         who: "Paula es la amiga que evita que el plan se quede en pura charla. Jamie quiere ayudar, pero necesita los verbos de organización en inglés.",
         what: "Una conversación práctica: quién lleva comida, quién confirma transporte, a qué hora se encuentran y qué falta por arreglar.",
         when: "Viernes por la noche, con tiempo para arreglar el plan pero con todos mandando mensajes de voz.",
-        where: "Montreal, en la mesa de un apartamento, con teléfonos abiertos y un plan de fin de semana todavía a medias.",
+        where: "San Antonio, en la mesa de un apartamento, con teléfonos abiertos y un plan de fin de semana todavía a medias.",
         why: "Porque organizar no siempre es organize en inglés. Para planes casuales, arrange, set up y sort out pueden sonar más naturales."
       },
       address: {

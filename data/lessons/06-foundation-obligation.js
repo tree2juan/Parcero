@@ -18,10 +18,10 @@
  */
 lessons.push(
   {
-    id: "running-into-a-neighbour-before-the-long-weekend",
+    id: "running-into-a-neighbor-before-the-long-weekend",
     level: "Starter · Everyday life",
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
-    domain: "home-and-neighbourhood",
+    domain: "home-and-neighborhood",
     register: "familiar",
     pathways: ["foundation"],
     verb: "pasar",
@@ -34,15 +34,15 @@ lessons.push(
         who: "Andrés has lived on the same floor for twenty years, greets everyone, and treats the stairwell as a social club. Alex is the foreigner from down the hall who is still learning that a thirty-second chat is not optional here.",
         what: "A quick stairwell encounter as both head out, the Friday before a long-weekend Monday holiday.",
         when: "Friday, just before six, with the whole building already talking about the puente.",
-        where: "Medellín, a working apartment block in Envigado where neighbours actually know each other.",
-        why: "Because in Medellín these tiny doorway exchanges are the relationship. Getting the greeting and the invitation right is the difference between being a neighbour and being the foreigner in 402."
+        where: "Medellín, a working apartment block in Envigado where neighbors actually know each other.",
+        why: "Because in Medellín these tiny doorway exchanges are the relationship. Getting the greeting and the invitation right is the difference between being a neighbor and being the foreigner in 402."
       },
       address: {
         form: "vos",
         who: "Andrés uses vos with Alex for the pronoun but flips to usted-form commands like “pásese” and “traiga”.",
-        why: "Paisa Spanish runs on vos between neighbours and friends, yet its commands very often borrow the usted ending. That vos-plus-usted-imperative mix is completely normal in Antioquia and baffles learners taught a tidy two-form system.",
+        why: "Paisa Spanish runs on vos between neighbors and friends, yet its commands very often borrow the usted ending. That vos-plus-usted-imperative mix is completely normal in Antioquia and baffles learners taught a tidy two-form system.",
         ifYouSwitch:
-          "Using tú would not offend, but among paisa neighbours it can sound a little bookish or foreign rather than warmer. Staying on usted the whole time is safe but keeps a touch more distance than an old neighbour is offering you."
+          "Using tú would not offend, but among paisa neighbors it can sound a little bookish or foreign rather than warmer. Staying on usted the whole time is safe but keeps a touch more distance than an old neighbor is offering you."
       },
       dialogue: [
         {
@@ -91,7 +91,7 @@ lessons.push(
           translation: "Sounds good! I'll drop by on Sunday then. Thanks, Andrés.",
           pronunciation: "LEES-to, pwes! ai me PA-so el do-MIN-go. GRA-syas, an-DRES",
           literal: "Ready, then! There myself I-pass the Sunday. Thanks, Andrés.",
-          why: "Reflexive “me paso” is the neighbourly “I'll pop over”. Without the reflexive, “paso el domingo” drifts toward “I spend Sunday”, a subtly different promise about a whole day rather than a visit."
+          why: "Reflexive “me paso” is the neighborly “I'll pop over”. Without the reflexive, “paso el domingo” drifts toward “I spend Sunday”, a subtly different promise about a whole day rather than a visit."
         }
       ],
       vocabulary: [
@@ -101,7 +101,7 @@ lessons.push(
             "In Medellín, a standard hello — roughly “what's up?” — rather than a question expecting news of an event.",
           literal: "what happened?",
           useWhen:
-            "Greeting a friend or neighbour casually, especially anywhere in Antioquia, often stacked with “pues” and “¿bien o qué?”.",
+            "Greeting a friend or neighbor casually, especially anywhere in Antioquia, often stacked with “pues” and “¿bien o qué?”.",
           avoidWhen:
             "Someone has genuinely just had an accident or bad news; there it snaps back to its literal meaning and sounds strange as a greeting.",
           register: "friendly informal",
@@ -152,7 +152,7 @@ lessons.push(
             "A warm, open invitation to drop by someone's home. Reflexive “pasarse” is the everyday “to pop over”.",
           literal: "pass-yourself by the house",
           useWhen:
-            "Inviting a friend or neighbour over informally, usually without pinning down an exact hour.",
+            "Inviting a friend or neighbor over informally, usually without pinning down an exact hour.",
           avoidWhen:
             "A formal or scheduled invitation; there you would give a time and reach for “venir” or “invitar” instead.",
           register: "friendly informal",
@@ -231,12 +231,12 @@ lessons.push(
         {
           label: "Vos, tú and usted in one paisa breath",
           body:
-            "Antioquia is famous for mixing all three second-person forms, sometimes inside a single sentence. A neighbour may address you as vos for the pronoun — “¿y vos?” — yet hand you commands in the usted form: “pásese”, “lleve”, “traiga”. This is not indecision or error; it is the paisa system working normally. Learners taught a neat tú/usted split find it disorienting, but copying it — vos among friends, usted-shaped imperatives — is exactly how you stop sounding studied and start sounding local."
+            "Antioquia is famous for mixing all three second-person forms, sometimes inside a single sentence. A neighbor may address you as vos for the pronoun — “¿y vos?” — yet hand you commands in the usted form: “pásese”, “lleve”, “traiga”. This is not indecision or error; it is the paisa system working normally. Learners taught a neat tú/usted split find it disorienting, but copying it — vos among friends, usted-shaped imperatives — is exactly how you stop sounding studied and start sounding local."
         },
         {
           label: "Dropping by is real, not polite noise",
           body:
-            "“Pásese por la casa” is usually a genuine invitation, not the hollow “we should catch up” of some cultures. In neighbourly Colombia, especially outside the very biggest cities, actually turning up is welcomed and half-expected; food will appear, and declining too often reads as cold. If someone invites you for Sunday sancocho, they generally mean it — bring something small, arrive hungry, and do not over-apologise for the intrusion, because there isn't one."
+            "“Pásese por la casa” is usually a genuine invitation, not the hollow “we should catch up” of some cultures. In neighborly Colombia, especially outside the very biggest cities, actually turning up is welcomed and half-expected; food will appear, and declining too often reads as cold. If someone invites you for Sunday sancocho, they generally mean it — bring something small, arrive hungry, and do not over-apologize for the intrusion, because there isn't one."
         }
       ],
       pitfalls: [
@@ -253,9 +253,9 @@ lessons.push(
           sayInstead: "La voy a pasar suave."
         },
         {
-          mistake: "Reaching for “tú” with a paisa neighbour to sound friendly",
+          mistake: "Reaching for “tú” with a paisa neighbor to sound friendly",
           whyItFails:
-            "Among Medellín neighbours the warm default is vos; tú can come across as bookish or foreign rather than closer, which is the opposite of what you intended.",
+            "Among Medellín neighbors the warm default is vos; tú can come across as bookish or foreign rather than closer, which is the opposite of what you intended.",
           sayInstead: "¿Y vos qué vas a hacer?"
         },
         {
@@ -301,7 +301,7 @@ lessons.push(
       choices: [
         "Asking Alex to explain, in some detail, what event or accident has just taken place nearby.",
         "Simply saying hello — in paisa Spanish this is a casual greeting, not a question about a problem.",
-        "Checking whether something has gone wrong with the building, the lift, or the water supply again."
+        "Checking whether something has gone wrong with the building, the elevator, or the water supply again."
       ],
       answer: 1,
       practiceExtra: [
@@ -310,7 +310,7 @@ lessons.push(
           choices: [
             "Where Alex plans to spend the upcoming three-day holiday weekend and what he'll do.",
             "Which bridge Alex normally crosses to get over to the other side of the city.",
-            "Whether Alex intends to pass by the neighbour's own apartment later that same evening."
+            "Whether Alex intends to pass by the neighbor's own apartment later that same evening."
           ],
           answer: 0,
           tests: "pasar el puente as spending the holiday weekend"
@@ -350,12 +350,12 @@ lessons.push(
     en: {
       title: "Saludar a un vecino antes del fin de semana largo",
       situation:
-        "Es viernes por la tarde y viene un fin de semana largo. Alejandra se cruza en la escalera con Dave, un vecino canadiense conversador que va de salida. Tiene treinta segundos para saludar bien, entender que le preguntan por sus planes y aceptar — o no — una invitación a un asado, sin sonar tan formal ni tan literal como suena un hispanohablante recién llegado.",
+        "Es viernes por la tarde y viene un fin de semana largo. Alejandra se cruza en la escalera con Dave, un vecino estadounidense conversador que va de salida. Tiene treinta segundos para saludar bien, entender que le preguntan por sus planes y aceptar — o no — una invitación a un asado, sin sonar tan formal ni tan literal como suena un hispanohablante recién llegado.",
       setting: {
         who: "Dave lleva veinte años en el mismo piso, saluda a todo el mundo y usa la escalera como club social. Alejandra es la recién llegada del fondo del pasillo, que apenas está aprendiendo que la charla de treinta segundos no es opcional.",
         what: "Un encuentro rápido en la escalera mientras los dos salen, el viernes antes de un lunes festivo.",
         when: "Viernes, casi las seis, con todo el edificio ya hablando del fin de semana largo.",
-        where: "Toronto, un edificio de apartamentos donde los vecinos de verdad se conocen.",
+        where: "Houston, un edificio de apartamentos donde los vecinos de verdad se conocen.",
         why: "Porque estos intercambios diminutos en la puerta son la relación. Saludar bien y responder bien a la invitación es la diferencia entre ser una vecina y ser “la del 402 que no habla”."
       },
       address: {
@@ -547,7 +547,7 @@ lessons.push(
         {
           label: "El fin de semana largo organiza el calendario",
           body:
-            "En Canadá y en Estados Unidos varios lunes festivos crean “long weekends” — Victoria Day, Labour Day, Thanksgiving. Como los puentes colombianos, mueven a la gente: las autopistas se llenan, las cabañas se reservan, las ciudades se vacían. “Any plans for the long weekend?” es charla estándar de viernes. Saber cuáles lunes son festivos es práctico, porque los bancos y las oficinas cierran, y preguntar por los planes de alguien es cortesía normal, no meterse en lo ajeno."
+            "En Canadá y en Estados Unidos varios lunes festivos crean “long weekends” — Memorial Day, Labor Day, Thanksgiving. Como los puentes colombianos, mueven a la gente: las autopistas se llenan, las cabañas se reservan, las ciudades se vacían. “Any plans for the long weekend?” es charla estándar de viernes. Saber cuáles lunes son festivos es práctico, porque los bancos y las oficinas cierran, y preguntar por los planes de alguien es cortesía normal, no meterse en lo ajeno."
         },
         {
           label: "El inglés marca el registro con palabras, no con pronombres",
@@ -671,7 +671,7 @@ lessons.push(
   },
   {
     id: "settling-the-tab-at-the-corner-shop",
-    level: "Starter · Home and neighbourhood",
+    level: "Starter · Home and neighborhood",
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "shopping-and-money",
     register: "courteous",
@@ -686,13 +686,13 @@ lessons.push(
         who: "Don Fabio has run the corner shop for decades and has let Alex buy on credit for a month. Alex is the foreign renter from the building across the street, still learning how a barrio tab works.",
         what: "Paying off a month's fiado — a running credit tab — at the shop counter.",
         when: "The last morning of the month, when regulars come to settle up.",
-        where: "Bogotá, a neighbourhood tienda where people pay when they can and the owner knows them all.",
+        where: "Bogotá, a neighborhood tienda where people pay when they can and the owner knows them all.",
         why: "Because the fiado is built entirely on trust. Paying it well, and talking about the money the Colombian way, is what keeps the shop's door — and its credit — open to him."
       },
       address: {
         form: "usted",
         who: "Don Fabio and Alex both use usted, the Bogotá default even between friendly regulars.",
-        why: "In Bogotá, usted is the neutral, unmarked form for almost everyone — neighbours, shopkeepers, even family. It carries no coldness; it is simply how rolos speak to nearly anybody, and tú at a counter can sound flirtatious or presumptuous.",
+        why: "In Bogotá, usted is the neutral, unmarked form for almost everyone — neighbors, shopkeepers, even family. It carries no coldness; it is simply how rolos speak to nearly anybody, and tú at a counter can sound flirtatious or presumptuous.",
         ifYouSwitch:
           "Tú with Don Fabio might read as too familiar, even a little forward, across a shop counter. Vos isn't used in Bogotá at all, so it would sound imported from Medellín or Cali rather than local."
       },
@@ -806,7 +806,7 @@ lessons.push(
           useWhen:
             "At a corner shop where the owner knows you and lets you settle up at the end of the month.",
           avoidWhen:
-            "A supermarket or anywhere with card terminals; fiado is a neighbourhood-trust arrangement, not a formal one.",
+            "A supermarket or anywhere with card terminals; fiado is a neighborhood-trust arrangement, not a formal one.",
           register: "friendly informal",
           region: "General Colombian, deeply rooted in barrio tienda culture.",
           related: ["fiar", "el cuaderno", "quedar debiendo", "la cuenta"],
@@ -838,7 +838,7 @@ lessons.push(
             "Worn down from “mi hijo/hija”. A warm address to someone younger or familiar, not literal parenthood.",
           literal: "my son / my daughter",
           useWhen:
-            "An older person addressing a younger one warmly — shopkeepers, aunts, neighbours, taxi drivers.",
+            "An older person addressing a younger one warmly — shopkeepers, aunts, neighbors, taxi drivers.",
           avoidWhen:
             "Addressing someone clearly older, or in a formal setting; there it turns over-familiar or patronising.",
           register: "friendly informal",
@@ -873,7 +873,7 @@ lessons.push(
         {
           label: "The fiado runs on a paper cuaderno",
           body:
-            "In barrio tiendas across Colombia, regulars buy on “fiado” — credit tracked in a handwritten notebook, never an app. The tendero jots down what you take and you settle when you can, usually at month's end or on payday. It works because the shopkeeper knows you and knows the block. Honouring it promptly is a matter of reputation; skipping out doesn't only cost money, it closes a door the whole neighbourhood will quietly remember."
+            "In barrio tiendas across Colombia, regulars buy on “fiado” — credit tracked in a handwritten notebook, never an app. The tendero jots down what you take and you settle when you can, usually at month's end or on payday. It works because the shopkeeper knows you and knows the block. Honouring it promptly is a matter of reputation; skipping out doesn't only cost money, it closes a door the whole neighborhood will quietly remember."
         },
         {
           label: "Colombians cushion money talk",
@@ -1004,7 +1004,7 @@ lessons.push(
       situation:
         "Alejandra trabaja en una oficina en Canadá y ayer una compañera, Karen, le prestó plata para el almuerzo. Hoy va a pagarle. Tiene que decir cuánto le debe, entender la diferencia entre “I owe you” (te debo) y “I have to pay” (tengo que pagar), y no calcar del español el clásico “I must to pay”. En inglés estas ideas se reparten entre varios verbos, y ahí es donde a un hispanohablante se le enredan.",
       setting: {
-        who: "Karen es una compañera de oficina canadiense que ayer le cubrió el almuerzo a Alejandra. Alejandra es la recién llegada de Colombia, todavía afinando el inglés cotidiano.",
+        who: "Karen es una compañera de oficina estadounidense que ayer le cubrió el almuerzo a Alejandra. Alejandra es la recién llegada de Colombia, todavía afinando el inglés cotidiano.",
         what: "Devolverle a una compañera la plata que le prestó para el almuerzo.",
         when: "A media mañana, junto a la cafetera de la oficina, antes de la reunión.",
         where: "Una oficina en Canadá, donde las deudas pequeñas entre colegas se pagan rápido y sin drama.",
@@ -1048,7 +1048,7 @@ lessons.push(
           translation: "Cierto, el café. Bueno, entonces catorce justos. Cuando puedas.",
           pronunciation: "rait, de KO-fi. o-KEI, sou FOR-tin I-ven. uén-E-ver uorks for yu",
           literal: "Correcto, el café. Bien, así catorce parejo. Cuando-quiera funcione para ti.",
-          why: "“Whenever works for you” es un “cuando puedas” muy anglo: liviano y sin presión, el modo en que un canadiense quita hierro a una deuda pequeña. “Even” aquí es “justo, sin decimales”."
+          why: "“Whenever works for you” es un “cuando puedas” muy anglo: liviano y sin presión, el modo en que un estadounidense quita hierro a una deuda pequeña. “Even” aquí es “justo, sin decimales”."
         },
         {
           speaker: "Alejandra",
@@ -1194,7 +1194,7 @@ lessons.push(
         {
           label: "Las deudas chiquitas se saldan ya",
           body:
-            "En oficinas canadienses y estadounidenses lo normal es devolver enseguida la plata que un colega te prestó — el almuerzo, el café, la entrada al parqueadero. No se ve como frialdad sino como respeto por el bolsillo ajeno. Alejandra hace bien en pagar al día siguiente: dejar correr una deuda pequeña, aunque en Colombia entre amigos sea normal, en un ambiente laboral anglo puede leerse como descuido o, peor, como que uno se está aprovechando."
+            "En oficinas estadounidenses lo normal es devolver enseguida la plata que un colega te prestó — el almuerzo, el café, la entrada al parqueadero. No se ve como frialdad sino como respeto por el bolsillo ajeno. Alejandra hace bien en pagar al día siguiente: dejar correr una deuda pequeña, aunque en Colombia entre amigos sea normal, en un ambiente laboral anglo puede leerse como descuido o, peor, como que uno se está aprovechando."
         },
         {
           label: "El respeto no va en el pronombre",
@@ -1323,7 +1323,7 @@ lessons.push(
   },
   {
     id: "getting-the-house-ready-for-sunday-lunch",
-    level: "Starter · Home and neighbourhood",
+    level: "Starter · Home and neighborhood",
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "food-and-drink",
     register: "intimate",
@@ -1339,7 +1339,7 @@ lessons.push(
         what: "Getting the house ready for the big Sunday family lunch — clothes, music and the table.",
         when: "Late Sunday morning, the hour before relatives pour in.",
         where: "Barranquilla, on the Caribbean coast, in a lively family home where the radio is never off for long.",
-        why: "Because Sunday lunch is the week's social centre of gravity on the coast, and pitching in — dressed right, music on, sleeves up — is how Alex shows he belongs rather than just boards there."
+        why: "Because Sunday lunch is the week's social center of gravity on the coast, and pitching in — dressed right, music on, sleeves up — is how Alex shows he belongs rather than just boards there."
       },
       address: {
         form: "tú",
@@ -1525,7 +1525,7 @@ lessons.push(
         {
           label: "Sunday lunch is the coast's main event",
           body:
-            "On the Caribbean coast, Sunday lunch pulls the whole extended family into one house — grandparents, cousins, neighbours who might as well be relatives. It runs for hours over sancocho or fried fish, with the radio on and children underfoot. Pitching in to get ready isn't a chore but a way of belonging, so when Tía Nubia hands Alex jobs she is folding him into the family rather than treating him as a guest to be waited on."
+            "On the Caribbean coast, Sunday lunch pulls the whole extended family into one house — grandparents, cousins, neighbors who might as well be relatives. It runs for hours over sancocho or fried fish, with the radio on and children underfoot. Pitching in to get ready isn't a chore but a way of belonging, so when Tía Nubia hands Alex jobs she is folding him into the family rather than treating him as a guest to be waited on."
         },
         {
           label: "Vallenato is coastal identity, not just music",
@@ -1656,7 +1656,7 @@ lessons.push(
       situation:
         "Es fin de semana en Canadá y Alejandra ayuda a su compañera de apartamento, Chloe, a alistar todo para una cena con amigos. Chloe le va diciendo qué hacer: que se ponga algo cómodo, que ponga música, que saque los platos. Lo que en español es siempre “poner/ponerse”, en inglés se reparte entre “put on”, “wear”, “play” y “get”. Ahí es donde Alejandra tiende a calcar y a decir cosas como “I put nervous” o “I put music”.",
       setting: {
-        who: "Chloe es la compañera de apartamento canadiense de Alejandra; esta noche reciben a unos amigos. Alejandra es la colombiana recién llegada, afinando el inglés del día a día.",
+        who: "Chloe es la compañera de apartamento estadounidense de Alejandra; esta noche reciben a unos amigos. Alejandra es la colombiana recién llegada, afinando el inglés del día a día.",
         what: "Dejar el apartamento listo para una cena informal con amigos.",
         when: "El sábado por la tarde, un rato antes de que lleguen los invitados.",
         where: "Un apartamento en Canadá, donde una cena entre amigos es relajada y de poca etiqueta.",

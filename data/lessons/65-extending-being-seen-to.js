@@ -1601,7 +1601,7 @@ lessons.push(
         },
         {
           speaker: "Paola",
-          target: "You're one metre seventy-eight. I'll also measure your waist.",
+          target: "You're one meter seventy-eight. I'll also measure your waist.",
           translation: "Mide un metro setenta y ocho. También le mido la cintura.",
           pronunciation: "yur uan MI-ter SE-ven-ti eit. ail OL-sou ME-zher yor weist",
           literal: "Usted es un metro setenta y ocho. También mediré su cintura.",
@@ -1661,7 +1661,7 @@ lessons.push(
             "Decir “how much do you measure?” Ese calco suena poco natural para altura.",
           register: "neutral",
           region: "Inglés universal.",
-          related: ["height", "one metre seventy-eight", "without shoes", "tall"],
+          related: ["height", "one meter seventy-eight", "without shoes", "tall"],
           example: {
             target: "How tall am I?",
             translation: "¿Cuánto mido?"

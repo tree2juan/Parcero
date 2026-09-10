@@ -91,7 +91,7 @@ lessons.push(
           translation: "Of course. We'll also include a note: transport is not included.",
           pronunciation: "KLAH-roh. tam-BYEN een-kloo-EE-mos OO-nah NOH-tah: el trans-POR-teh no es-TAH een-kloo-EE-doh",
           literal: "Of course. Also we-include a note: the transport is not included.",
-          why: "Incluimos has no y, because the ending begins with i. The final no está incluido is the price truth a traveller needs before agreeing."
+          why: "Incluimos has no y, because the ending begins with i. The final no está incluido is the price truth a traveler needs before agreeing."
         }
       ],
       vocabulary: [
@@ -126,7 +126,7 @@ lessons.push(
         {
           term: "está incluido",
           explanation:
-            "It is included already. This is the phrase travellers need when checking what the price covers.",
+            "It is included already. This is the phrase travelers need when checking what the price covers.",
           literal: "is included",
           useWhen:
             "Breakfast, tax, service, luggage or access belongs inside the quoted price.",
@@ -205,7 +205,7 @@ lessons.push(
         {
           label: "Todo incluido still has edges",
           body:
-            "Todo incluido sounds absolute, but travel packages everywhere have limits: hours, brands, routes, luggage, tips, premium options. A good traveller hears the phrase and still asks what exactly incluye and what se paga aparte."
+            "Todo incluido sounds absolute, but travel packages everywhere have limits: hours, brands, routes, luggage, tips, premium options. A good traveler hears the phrase and still asks what exactly incluye and what se paga aparte."
         },
         {
           label: "The y is a pattern, not decoration",
@@ -304,14 +304,14 @@ lessons.push(
       ]
     },
     en: {
-      title: "Preguntar qué incluye la tarifa en Toronto",
+      title: "Preguntar qué incluye la tarifa en Houston",
       situation:
-        "Usted está en Toronto reservando una habitación sencilla. La tarifa parece buena, pero necesita preguntar en inglés si incluye desayuno, impuestos, aire acondicionado y transporte.",
+        "Usted está en Houston reservando una habitación sencilla. La tarifa parece buena, pero necesita preguntar en inglés si incluye desayuno, impuestos, aire acondicionado y transporte.",
       setting: {
         who: "Sandra atiende la recepción de un hotel pequeño. Oliver llega después de un viaje largo y necesita entender el precio real antes de entregar la tarjeta.",
         what: "Una conversación de recepción sobre qué incluye una tarifa, qué ya está incluido y qué tiene cargo adicional.",
         when: "Al final de la tarde, con cansancio de viaje y poca paciencia para costos sorpresa.",
-        where: "Toronto, en un hotel pequeño cerca de la estación, con una hoja de tarifas impresa sobre el mostrador.",
+        where: "Houston, en un hotel pequeño cerca de la estación, con una hoja de tarifas impresa sobre el mostrador.",
         why: "Porque include es la herramienta básica para preguntar qué cubre un precio. El inglés no tiene la y de incluye, pero sí exige claridad sobre included y extra."
       },
       address: {
@@ -585,7 +585,7 @@ lessons.push(
     id: "excluir-a-alguien-del-chat-en-buenaventura",
     level: "Developing · Belonging",
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
-    domain: "home-and-neighbourhood",
+    domain: "home-and-neighborhood",
     register: "familiar",
     pathways: ["foundation", "year-12"],
     verb: "excluir",
@@ -595,7 +595,7 @@ lessons.push(
       situation:
         "Estás en Buenaventura ayudando a organizar un torneo barrial. Un jugador quedó por fuera del chat del equipo y hay que distinguir entre una regla que excluye y una invitación que simplemente no llegó.",
       setting: {
-        who: "Maira coordinates a neighbourhood football team. Leo helps manage the player list and has to explain why one player missed the group chat without making the situation sound colder than it is.",
+        who: "Maira coordinates a neighborhood soccer team. Leo helps manage the player list and has to explain why one player missed the group chat without making the situation sound colder than it is.",
         what: "A careful conversation about formal exclusions, accidental omissions and the more everyday Colombian ways to say someone was left out.",
         when: "Early evening after practice, while the players are still comparing messages on their phones.",
         where: "Buenaventura, beside a covered court near the port, with rain threatening and the team chat becoming the real noticeboard.",
@@ -695,7 +695,7 @@ lessons.push(
           useWhen:
             "You personally make a formal decision to leave someone or something out.",
           avoidWhen:
-            "You are apologising for forgetting someone. Excluyo sounds too deliberate there.",
+            "You are apologizing for forgetting someone. Excluyo sounds too deliberate there.",
           register: "formal direct",
           region: "General Spanish.",
           related: ["incluyo", "excluí", "excluyendo", "excluyeron"],
@@ -1159,15 +1159,15 @@ lessons.push(
       situation:
         "Estás en Arauca saliendo con un grupo de ciclistas que se reúne los domingos. Quieres saber si ya perteneces al grupo o si simplemente te sientes parte de él aunque todavía no estés inscrito.",
       setting: {
-        who: "Nidia organises a Sunday cycling group. Cam has joined three rides and wants to understand whether membership is formal, emotional or just a matter of being in the chat.",
-        what: "A post-ride conversation about belonging to a group, feeling part of a team, and the formal flavour of pertenecer a.",
+        who: "Nidia organizes a Sunday cycling group. Cam has joined three rides and wants to understand whether membership is formal, emotional or just a matter of being in the chat.",
+        what: "A post-ride conversation about belonging to a group, feeling part of a team, and the formal flavor of pertenecer a.",
         when: "Sunday morning after the ride, when people are drinking water and checking the next route.",
         where: "Arauca, near a riverside meeting point where cyclists gather before heading out on flat roads.",
         why: "Because pertenecer almost always takes a, and its yo form is pertenezco. For feelings, Colombians often prefer sentirse parte de."
       },
       address: {
         form: "usted",
-        who: "Nidia uses usted with Cam because she is the organiser and they do not know each other well yet; Cam mirrors it.",
+        who: "Nidia uses usted with Cam because she is the organizer and they do not know each other well yet; Cam mirrors it.",
         why: "Usted lets the question about membership stay respectful rather than needy. The warmth comes from invitation and explanation.",
         ifYouSwitch:
           "Tú may arrive after a few more rides, but starting with it would presume closeness. Vos would not be a neutral choice for this Arauca scene."
@@ -1184,9 +1184,9 @@ lessons.push(
         {
           speaker: "Nidia",
           target: "Formalmente, el grupo pertenece al club de ciclismo del barrio.",
-          translation: "Formally, the group belongs to the neighbourhood cycling club.",
+          translation: "Formally, the group belongs to the neighborhood cycling club.",
           pronunciation: "for-MAL-men-teh, el GROO-poh per-teh-NEH-seh al kloob deh see-KLEES-moh del BAR-ryoh",
-          literal: "Formally, the group belongs to-the club of cycling of-the neighbourhood.",
+          literal: "Formally, the group belongs to-the club of cycling of-the neighborhood.",
           why: "Pertenecer a leans formal here: an organisation belongs to a club. That is different from feeling socially accepted."
         },
         {
@@ -1460,7 +1460,7 @@ lessons.push(
         },
         {
           speaker: "Nidia",
-          target: "Formally, the group belongs to the neighbourhood cycling club.",
+          target: "Formally, the group belongs to the neighborhood cycling club.",
           translation: "Formalmente, el grupo pertenece al club de ciclismo del barrio.",
           pronunciation: "FOR-mal-li, da grup bi-LONGZ tu da NEI-bor-jud SAI-kling klub",
           literal: "Formalmente, el grupo pertenece al club de ciclismo del barrio.",

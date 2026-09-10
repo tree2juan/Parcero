@@ -294,12 +294,12 @@ lessons.push(
     en: {
       title: "Decir “I love you” sin traducir todo igual",
       situation:
-        "En Vancouver, Alejandra se despide de Maya, una amiga cercana que hizo con ella un proyecto de voluntariado. Maya dice “I love you” con naturalidad de amiga, y Alejandra se queda pensando si eso equivale a “te amo” y si debe responder con una declaración solemne. Maya le explica que en inglés “I love you” puede ser familiar, amistoso o romántico según la relación y el tono; para cosas se usa sin peso raro, pero “I like you” no traduce bien un “te quiero mucho” colombiano.",
+        "En Austin, Alejandra se despide de Maya, una amiga cercana que hizo con ella un proyecto de voluntariado. Maya dice “I love you” con naturalidad de amiga, y Alejandra se queda pensando si eso equivale a “te amo” y si debe responder con una declaración solemne. Maya le explica que en inglés “I love you” puede ser familiar, amistoso o romántico según la relación y el tono; para cosas se usa sin peso raro, pero “I like you” no traduce bien un “te quiero mucho” colombiano.",
       setting: {
-        who: "Maya es una amiga canadiense cercana y expresiva; Alejandra es colombiana y está intentando no traducir automáticamente entre te quiero, te amo, I like you and I love you.",
+        who: "Maya es una amiga estadounidense cercana y expresiva; Alejandra es colombiana y está intentando no traducir automáticamente entre te quiero, te amo, I like you and I love you.",
         what: "Una despedida entre amigas, donde Alejandra aprende que “I love you” no siempre corresponde al peso de “te amo”, y que “I like you” puede quedarse corto.",
         when: "Una tarde al final de un proyecto comunitario, antes de que cada una vuelva a su barrio.",
-        where: "Vancouver, Canadá, frente a un centro comunitario.",
+        where: "Austin, Canadá, frente a un centro comunitario.",
         why: "Porque el inglés reparte el afecto de otra manera. Una colombiana puede oír “I love you” como demasiado solemne, o traducir “te quiero mucho” como “I like you a lot” y bajar demasiado la temperatura emocional."
       },
       address: {
@@ -343,10 +343,10 @@ lessons.push(
         },
         {
           speaker: "Maya",
-          target: "Exactly. And “I love this city” is easy; nobody thinks you're proposing to Vancouver.",
-          translation: "Exacto. Y “I love this city” es fácil; nadie cree que le está proponiendo matrimonio a Vancouver.",
+          target: "Exactly. And “I love this city” is easy; nobody thinks you're proposing to Austin.",
+          translation: "Exacto. Y “I love this city” es fácil; nadie cree que le está proponiendo matrimonio a Austin.",
           pronunciation: "eg-ZAKT-li. and ai lov dis SI-ti iz I-zi; NOU-ba-di thinks yor pro-POU-zing tu van-KU-ver",
-          literal: "Exactamente. Y yo amo esta ciudad es fácil; nadie piensa que usted está proponiendo a Vancouver.",
+          literal: "Exactamente. Y yo amo esta ciudad es fácil; nadie piensa que usted está proponiendo a Austin.",
           why: "El inglés, como el español, usa “love” con libertad para cosas y lugares. El riesgo social aparece sobre todo al decírselo directamente a una persona."
         },
         {
@@ -437,7 +437,7 @@ lessons.push(
           avoidWhen: "Quiere ser moderado; “I really like this city” baja la intensidad.",
           register: "friendly informal",
           region: "Inglés universal.",
-          related: ["love this", "really like", "favourite", "enjoy"],
+          related: ["love this", "really like", "favorite", "enjoy"],
           example: {
             target: "I love this city in the rain.",
             translation: "Amo esta ciudad cuando llueve."
@@ -471,7 +471,7 @@ lessons.push(
         },
         {
           label: "Love for things is normal",
-          body: "El inglés usa “love” con libertad para ciudades, ropa, canciones, comida, clima e ideas. “I love Vancouver” es entusiasmo común, no una propuesta de matrimonio. Si quiere bajar la intensidad, “I really like...” funciona, pero no hace falta evitar “love” con objetos. La zona delicada es decirlo de persona a persona, donde la historia de la relación decide si suena amistoso, familiar o romántico."
+          body: "El inglés usa “love” con libertad para ciudades, ropa, canciones, comida, clima e ideas. “I love Austin” es entusiasmo común, no una propuesta de matrimonio. Si quiere bajar la intensidad, “I really like...” funciona, pero no hace falta evitar “love” con objetos. La zona delicada es decirlo de persona a persona, donde la historia de la relación decide si suena amistoso, familiar o romántico."
         }
       ],
       pitfalls: [
@@ -575,7 +575,7 @@ lessons.push(
         who: "Juliana's family has just fed Alex generously; Juliana is clearing plates, and Alex is trying to describe leftovers without turning the grammar inside out.",
         what: "A family lunch cleanup, where food, time, chairs and phrases like “sobra decir que” show how sobrar works as the mirror image of faltar.",
         when: "Early afternoon after a rainy lunch, with coffee still possible before anyone returns to work.",
-        where: "Florencia, Caquetá, in a family kitchen with the back door open to the damp garden.",
+        where: "Florencia, Caquetá, in a family kitchen with the back door open to the damp yard.",
         why: "Because sobrar is common and grammatically easy to mishandle. The thing left over is the subject, just as the missing thing is the subject with faltar, and one idiom — estar de sobra — can be genuinely hurtful if aimed at a person."
       },
       address: {
@@ -836,12 +836,12 @@ lessons.push(
     en: {
       title: "Hablar de sobras sin decir “the food sobrated”",
       situation:
-        "En Halifax, Alejandra ayuda a recoger la mesa después de un almuerzo familiar. Quedó demasiada comida y ella quiere traducir “sobró arroz” con un verbo inventado, pero Ben le enseña que en inglés se dice “there's rice left over” o “we have rice left over”. También aprende “I have time to spare”, “it goes without saying” y “that's unnecessary”. La frase peligrosa es “you're in the way”: puede doler tanto como decirle a alguien “estás de sobra”.",
+        "En Corpus Christi, Alejandra ayuda a recoger la mesa después de un almuerzo familiar. Quedó demasiada comida y ella quiere traducir “sobró arroz” con un verbo inventado, pero Ben le enseña que en inglés se dice “there's rice left over” o “we have rice left over”. También aprende “I have time to spare”, “it goes without saying” y “that's unnecessary”. La frase peligrosa es “you're in the way”: puede doler tanto como decirle a alguien “estás de sobra”.",
       setting: {
         who: "Ben recoge la mesa con Alejandra después del almuerzo familiar; Alejandra entiende el patrón colombiano con sobrar, pero necesita las frases inglesas para sobras y tiempo de más.",
         what: "Una recogida de mesa después de almuerzo, donde food left over, time to spare and unnecessary comments replace one compact Spanish verb.",
         when: "Una tarde fría después de un almuerzo grande, with containers lined up on the counter.",
-        where: "Halifax, Canadá, in Ben's family kitchen after Sunday lunch.",
+        where: "Corpus Christi, Canadá, in Ben's family kitchen after Sunday lunch.",
         why: "Porque el inglés no tiene un verbo único que funcione como sobrar. Hay que repartir la idea entre left over, to spare, goes without saying and unnecessary."
       },
       address: {

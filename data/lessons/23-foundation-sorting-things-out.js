@@ -32,7 +32,7 @@ lessons.push(
         "Alex camina por una calle del Centro Histórico de Cartagena antes del sol fuerte de la tarde. Quiere un sombrero sencillo, no un recuerdo caro. Entra a una tienda pequeña y tiene que decir qué busca sin sonar como si ya lo hubiera encontrado.",
       setting: {
         who: "Marta runs a narrow shop near the city wall, and Alex is a visitor who knows he needs shade more than a souvenir.",
-        what: "A quick exchange about looking for a plain hat, the kind a traveller can actually wear all day.",
+        what: "A quick exchange about looking for a plain hat, the kind a traveler can actually wear all day.",
         when: "Late morning, just before the heat makes every errand feel twice as long.",
         where: "Cartagena, inside the walled city, a few blocks away from the busiest souvenir stalls.",
         why: "Because the useful sentence is not just the noun. Alex needs buscar without an English-style preposition, and he needs to understand that the shopkeeper's greeting is friendly."
@@ -226,7 +226,7 @@ lessons.push(
         {
           label: "Cartagena heat changes the vocabulary",
           body:
-            "A visitor may think first about colour or price; the shopkeeper may think first about whether the hat is fresco. In the walled city, shade and airflow are not luxuries. They are the reason the purchase makes sense."
+            "A visitor may think first about color or price; the shopkeeper may think first about whether the hat is fresco. In the walled city, shade and airflow are not luxuries. They are the reason the purchase makes sense."
         },
         {
           label: "Looking is not the same as buying",
@@ -1335,10 +1335,10 @@ lessons.push(
       situation:
         "Nico está en una panadería de San Antonio, en Cali, antes de tomar un bus. Sólo tiene un billete grande y necesita monedas. La panadera le habla con vos y él tiene que pedir cambio sin pedir comprar nada todavía.",
       setting: {
-        who: "Lina works the counter at a neighbourhood bakery, and Nico is carrying a large bill that will not help on the bus.",
+        who: "Lina works the counter at a neighborhood bakery, and Nico is carrying a large bill that will not help on the bus.",
         what: "A small money errand: changing a bill, asking about small change, and not confusing that with changing clothes or changing one's mind.",
         when: "Mid-afternoon, after lunch and before the bakery fills again for coffee and bread.",
-        where: "Cali, in San Antonio, a hilly old neighbourhood of cafés, bakeries, and people stopping for one quick thing.",
+        where: "Cali, in San Antonio, a hilly old neighborhood of cafés, bakeries, and people stopping for one quick thing.",
         why: "Because cambiar is a basic verb with several practical branches: change a thing, change clothes with cambiarse, change topic or opinion, and change money."
       },
       address: {
@@ -1530,7 +1530,7 @@ lessons.push(
         {
           label: "Caleño vos is everyday warmth",
           body:
-            "In Cali, vos can be ordinary and friendly in shops, cafés, and neighbourhood conversations. You do not have to use it first, but hearing “tenés” or “necesitás” should not surprise you."
+            "In Cali, vos can be ordinary and friendly in shops, cafés, and neighborhood conversations. You do not have to use it first, but hearing “tenés” or “necesitás” should not surprise you."
         },
         {
           label: "Sencillo is not just simple",
@@ -1540,7 +1540,7 @@ lessons.push(
         {
           label: "Changing money is not necessarily buying",
           body:
-            "Nico has not ordered bread yet. He has asked for help with cash. In a neighbourhood bakery, that can be fine if the tone is polite and the amount is reasonable."
+            "Nico has not ordered bread yet. He has asked for help with cash. In a neighborhood bakery, that can be fine if the tone is polite and the amount is reasonable."
         }
       ],
       pitfalls: [

@@ -181,7 +181,7 @@ lessons.push(
           useWhen:
             "Asking how an event, date or day turned out: “¿cómo te fue en la cita?”",
           avoidWhen:
-            "Calquing English with “¿cómo fuiste?”, which asks how you travelled, not how it went.",
+            "Calquing English with “¿cómo fuiste?”, which asks how you traveled, not how it went.",
           register: "friendly informal",
           region: "General Colombian; a constant conversational reflex.",
           related: ["¿qué tal te fue?", "me fue bien", "me fue fatal", "¿cómo les fue?"],
@@ -271,7 +271,7 @@ lessons.push(
         {
           mistake: "Asking “¿cómo fuiste?” for “how did it go?”",
           whyItFails:
-            "“¿Cómo fuiste?” asks how you went — by what means you travelled. The set phrase for how something turned out uses the indirect object: “¿cómo te fue?”.",
+            "“¿Cómo fuiste?” asks how you went — by what means you traveled. The set phrase for how something turned out uses the indirect object: “¿cómo te fue?”.",
           sayInstead: "¿Cómo te fue?"
         }
       ],
@@ -318,7 +318,7 @@ lessons.push(
         {
           prompt: "Valeria asks “¿sigues saliendo con Laura?” What does “salir con” imply here?",
           choices: [
-            "That Alex regularly leaves the building alongside Laura, the way a neighbour or a flatmate might, with nothing romantic.",
+            "That Alex regularly leaves the building alongside Laura, the way a neighbor or a roommate might, with nothing romantic.",
             "That Alex is dating Laura — with one person's name, “salir con alguien” is the ordinary way to say you are seeing someone.",
             "That Alex goes out to run errands on Laura's behalf, doing her favours around town rather than seeing her socially at all."
           ],
@@ -339,7 +339,7 @@ lessons.push(
           prompt: "Which correctly asks “how did it go?” in Colombian Spanish?",
           choices: [
             "“¿Cómo te fue?”, using the indirect object “te” — the fixed way to ask how something turned out for someone.",
-            "“¿Cómo fuiste?”, which actually asks how you went or travelled somewhere, not how the experience worked out for you.",
+            "“¿Cómo fuiste?”, which actually asks how you went or traveled somewhere, not how the experience worked out for you.",
             "“¿Cómo estuviste?”, which asks how you were or how you behaved, rather than how the event itself went in the end."
           ],
           answer: 0,
@@ -350,12 +350,12 @@ lessons.push(
     en: {
       title: "Cuadrar un plan para salir el sábado",
       situation:
-        "Alejandra y su amiga canadiense Megan cuadran por chat un plan para salir el sábado por la noche en Toronto. Tienen que ponerse de acuerdo en a qué hora sale cada una del trabajo, adónde ir, y de paso se molestan un poco por las citas recientes. Toda la charla gira en torno a “salir”, que en inglés se reparte en varios verbos: go out para divertirse, get off para salir del trabajo, go out with para tener pareja, y turn out para salir caro.",
+        "Alejandra y su amiga estadounidense Megan cuadran por chat un plan para salir el sábado por la noche en Houston. Tienen que ponerse de acuerdo en a qué hora sale cada una del trabajo, adónde ir, y de paso se molestan un poco por las citas recientes. Toda la charla gira en torno a “salir”, que en inglés se reparte en varios verbos: go out para divertirse, get off para salir del trabajo, go out with para tener pareja, y turn out para salir caro.",
       setting: {
-        who: "Megan es una amiga canadiense de Alejandra: relajada, rápida y directa, de las que arman todo el plan en tres mensajes.",
+        who: "Megan es una amiga estadounidense de Alejandra: relajada, rápida y directa, de las que arman todo el plan en tres mensajes.",
         what: "Cierran el sábado: a qué hora sale cada una del trabajo, adónde ir, y unas bromas sobre quién sale con quién.",
         when: "Entre semana, yendo y viniendo sobre el fin de semana que se acerca.",
-        where: "Toronto, donde el inglés reparte en varios verbos lo que el español junta en un solo salir.",
+        where: "Houston, donde el inglés reparte en varios verbos lo que el español junta en un solo salir.",
         why: "Porque “salir” se traduce distinto según el sentido: go out (divertirse), leave o get off (salir de un lugar o del trabajo), go out with (tener una relación) y turn out (resultar, salir caro)."
       },
       address: {
@@ -663,7 +663,7 @@ lessons.push(
     id: "riding-the-cable-car-up-to-a-friends-barrio",
     level: "Starter · Getting around",
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
-    domain: "home-and-neighbourhood",
+    domain: "home-and-neighborhood",
     register: "familiar",
     pathways: ["foundation"],
     verb: "subir",
@@ -690,9 +690,9 @@ lessons.push(
         {
           speaker: "Sebastián",
           target: "Subite, parce, que este cable sube derechito a mi barrio.",
-          translation: "Hop on, man, this cable car goes straight up to my neighbourhood.",
+          translation: "Hop on, man, this cable car goes straight up to my neighborhood.",
           pronunciation: "soo-BEE-te, PAR-se, ke ES-te KA-ble SOO-be de-re-CHEE-to a mi BA-rryo",
-          literal: "Get-yourself-up, buddy, that this cable goes-up straight to my neighbourhood.",
+          literal: "Get-yourself-up, buddy, that this cable goes-up straight to my neighborhood.",
           why: "Two senses at once: “subite” is the vos command of subirse (get on / board), and “sube” is subir as climb (it goes up). The diminutive “derechito” softens “straight”, a very paisa touch."
         },
         {
@@ -706,9 +706,9 @@ lessons.push(
         {
           speaker: "Sebastián",
           target: "Subí el volumen a la canción, ¿querés? Es mi favorita.",
-          translation: "Turn the song up, would you? It's my favourite.",
+          translation: "Turn the song up, would you? It's my favorite.",
           pronunciation: "soo-BEE el bo-LOO-men a la kan-SYON, ke-RES? es mi fa-bo-REE-ta",
-          literal: "Go-up the volume to the song, you-want? It-is my favourite.",
+          literal: "Go-up the volume to the song, you-want? It-is my favorite.",
           why: "“Subir el volumen” is to turn up the volume — subir as raise, not climb. Here “subí” is the vos command of plain subir, stressed on the last syllable, and “querés” is vos too."
         },
         {
@@ -836,13 +836,13 @@ lessons.push(
           related: ["la loma", "la subida", "la cuesta", "empinado"],
           example: {
             target: "El barrio queda loma arriba.",
-            translation: "The neighbourhood is up the hill."
+            translation: "The neighborhood is up the hill."
           }
         },
         {
           term: "el metrocable / la comuna",
           explanation:
-            "Medellín's cable-car lines and the hillside neighbourhoods (comunas) they serve.",
+            "Medellín's cable-car lines and the hillside neighborhoods (comunas) they serve.",
           literal: "the metro-cable / the comuna",
           useWhen:
             "Talking about getting around the hills: “subimos en el metrocable”.",
@@ -863,12 +863,12 @@ lessons.push(
         {
           label: "A city you go up and down",
           body:
-            "Medellín sits in a narrow valley, so life runs uphill and down. Poorer neighbourhoods historically climbed the steepest slopes, the comunas, where buses struggled and walking meant long, punishing “subidas”. “Subir al barrio” is a literal daily act, not a metaphor. The language reflects the terrain: people talk about living “loma arriba”, about which streets are “empinadas”, about the calves you earn from the climb. Understanding subir and bajar in Medellín starts with understanding that the city is vertical, and that going up is often the hard part of the day."
+            "Medellín sits in a narrow valley, so life runs uphill and down. Poorer neighborhoods historically climbed the steepest slopes, the comunas, where buses struggled and walking meant long, punishing “subidas”. “Subir al barrio” is a literal daily act, not a metaphor. The language reflects the terrain: people talk about living “loma arriba”, about which streets are “empinadas”, about the calves you earn from the climb. Understanding subir and bajar in Medellín starts with understanding that the city is vertical, and that going up is often the hard part of the day."
         },
         {
           label: "The metrocable changed the comunas",
           body:
-            "In 2004 Medellín did something few cities had tried: it ran cable cars, the metrocable, as public transit up to the hillside comunas, linking them to the metro below. A trip that once meant an exhausting climb or a slow, crowded bus became a smooth ride over the rooftops. It was social urbanism — bringing investment and dignity to neighbourhoods long cut off — and it reshaped daily life for hundreds of thousands. Tourists now ride it for the view, but for residents it is simply how you subir home. Few guidebooks explain how transformative it was."
+            "In 2004 Medellín did something few cities had tried: it ran cable cars, the metrocable, as public transit up to the hillside comunas, linking them to the metro below. A trip that once meant an exhausting climb or a slow, crowded bus became a smooth ride over the rooftops. It was social urbanism — bringing investment and dignity to neighborhoods long cut off — and it reshaped daily life for hundreds of thousands. Tourists now ride it for the view, but for residents it is simply how you subir home. Few guidebooks explain how transformative it was."
         },
         {
           label: "Subir went digital",
@@ -982,12 +982,12 @@ lessons.push(
     en: {
       title: "Subir en el metrocable hasta el barrio de un amigo",
       situation:
-        "Alejandra sube con su amigo canadiense Chris en una góndola hasta la cima de una montaña cerca de Vancouver, el equivalente del metrocable paisa. Se montan en la cabina, suben sobre el bosque, hablan de la vista, suben el volumen a la música y Alejandra ofrece subir las fotos. Todo gira en torno a “subir”, que en inglés se reparte en varios verbos: get on para montarse, go up para ascender, turn up para el volumen y upload para subir a internet.",
+        "Alejandra sube con su amigo estadounidense Chris en una góndola hasta la cima de una montaña cerca de Austin, el equivalente del metrocable paisa. Se montan en la cabina, suben sobre el bosque, hablan de la vista, suben el volumen a la música y Alejandra ofrece subir las fotos. Todo gira en torno a “subir”, que en inglés se reparte en varios verbos: get on para montarse, go up para ascender, turn up para el volumen y upload para subir a internet.",
       setting: {
-        who: "Chris es un amigo canadiense de Alejandra, relajado, que la lleva a conocer la montaña en góndola.",
+        who: "Chris es un amigo estadounidense de Alejandra, relajado, que la lleva a conocer la montaña en góndola.",
         what: "Suben en la cabina sobre el bosque, hablan de la subida y la vista, suben el volumen a la música y suben las fotos.",
         when: "Una tarde de fin de semana, subiendo a la cima a almorzar.",
-        where: "Vancouver, donde el inglés reparte en varios verbos lo que el español junta en un solo subir.",
+        where: "Austin, donde el inglés reparte en varios verbos lo que el español junta en un solo subir.",
         why: "Porque “subir” se traduce distinto según el sentido: get on (montarse), go up (ascender), turn up (el volumen), upload (a internet) y put on weight (subir de peso)."
       },
       address: {
@@ -1016,7 +1016,7 @@ lessons.push(
         },
         {
           speaker: "Chris",
-          target: "Turn the music up, would you? It's my favourite.",
+          target: "Turn the music up, would you? It's my favorite.",
           translation: "Subí el volumen a la música, ¿querés? Es mi favorita.",
           pronunciation: "tern da MIU-sik ap, uud yu? its mai FEI-vo-rit",
           literal: "Voltea la música arriba, ¿harías tú? Es mi favorita.",
@@ -1357,7 +1357,7 @@ lessons.push(
           translation: "No, that never comes down. But download the SITP app, it'll help you.",
           pronunciation: "no, E-so no BA-ha NOON-ka. PE-ro BA-he-se la ap del SEE-te-pe, le SEER-be",
           literal: "No, that not goes-down never. But download-yourself the app of-the SITP, to-you serves.",
-          why: "Two senses in one line: “no baja” (the price doesn't go down) and “bájese la app” (download the app). The colloquial “se” adds a personal-benefit flavour. SITP is Bogotá's integrated bus system."
+          why: "Two senses in one line: “no baja” (the price doesn't go down) and “bájese la app” (download the app). The colloquial “se” adds a personal-benefit flavor. SITP is Bogotá's integrated bus system."
         },
         {
           speaker: "Alex",
@@ -1614,12 +1614,12 @@ lessons.push(
     en: {
       title: "Bajarse del bus en la parada correcta",
       situation:
-        "Alejandra va en un bus lleno en Toronto y no sabe dónde bajarse. Un pasajero mayor, el señor Brown, la ve perdida y la ayuda: le dice dónde bajarse, comentan si ya bajó el precio del pasaje, y él le recomienda bajar la app del transporte. Todo gira en torno a “bajar”, que en inglés se reparte en varios verbos: get off para bajarse del bus, go down para bajar de precio, turn down para el volumen y download para descargar.",
+        "Alejandra va en un bus lleno en Houston y no sabe dónde bajarse. Un pasajero mayor, el señor Brown, la ve perdida y la ayuda: le dice dónde bajarse, comentan si ya bajó el precio del pasaje, y él le recomienda bajar la app del transporte. Todo gira en torno a “bajar”, que en inglés se reparte en varios verbos: get off para bajarse del bus, go down para bajar de precio, turn down para el volumen y download para descargar.",
       setting: {
         who: "El señor Brown es un pasajero mayor que nota que Alejandra está perdida y la ayuda a encontrar su parada.",
         what: "Alejandra pregunta dónde bajarse; hablan de la próxima parada, del pasaje y de una app del transporte para descargar.",
         when: "Un día entre semana, en un bus lleno que cruza calles que ella no conoce.",
-        where: "Toronto, donde el inglés reparte en varios verbos lo que el español junta en un solo bajar.",
+        where: "Houston, donde el inglés reparte en varios verbos lo que el español junta en un solo bajar.",
         why: "Porque “bajar” se traduce distinto según el sentido: get off (bajarse del transporte), go down (bajar de precio o de escaleras), turn down (el volumen) y download (descargar)."
       },
       address: {

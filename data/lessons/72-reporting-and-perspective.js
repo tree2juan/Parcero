@@ -21,7 +21,7 @@
  * Cauca (salsa and valluno voseo), Buenaventura on the Pacific (the country's
  * main Pacific port, its Afro-Colombian community and its extraordinary rain),
  * and Quibdó in Chocó (a river city famous for its distinct speech, its music
- * and its isolation). The dialect on show is kept general; regional colour is
+ * and its isolation). The dialect on show is kept general; regional color is
  * flagged in the `region` fields rather than invented to decorate a scene.
  */
 lessons.push(
@@ -29,7 +29,7 @@ lessons.push(
     id: "relaying-the-message-at-a-cali-salsa-academy",
     level: "Developing · Reporting and perspective",
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context", "grammar"],
-    domain: "home-and-neighbourhood",
+    domain: "home-and-neighborhood",
     register: "neutral",
     pathways: ["independent", "year-12"],
     structure: "reported-speech",
@@ -42,7 +42,7 @@ lessons.push(
         who: "Andrés and Marcela run the front desk of a salsa academy in Cali; Yolanda is the instructor whose message they are passing around.",
         what: "The instructor has called in sick, so the two of them reorganise the day's classes by relaying what everyone said, asked and requested.",
         when: "A weekday morning, just before the first classes, the phones already ringing.",
-        where: "Cali, Valle del Cauca, the reception desk of a salsa academy in the San Fernando neighbourhood.",
+        where: "Cali, Valle del Cauca, the reception desk of a salsa academy in the San Fernando neighborhood.",
         why: "Reported speech is the everyday glue of a busy front desk: almost nothing said here is first-hand, so you live in dijo que, preguntó si and me pidió que."
       },
       address: {
@@ -239,7 +239,7 @@ lessons.push(
         {
           label: "Dizque: news you won't vouch for",
           body:
-            "Colombian Spanish has a built-in hearsay marker: dizque, worn down from “dice que”. Put it before a claim and you flag it as rumour you are relaying, not asserting — “dizque no viene hoy”. You will also hear a bare que open a relayed line (“que llames a la profe”). Both keep the speaker at arm's length from the claim."
+            "Colombian Spanish has a built-in hearsay marker: dizque, worn down from “dice que”. Put it before a claim and you flag it as rumor you are relaying, not asserting — “dizque no viene hoy”. You will also hear a bare que open a relayed line (“que llames a la profe”). Both keep the speaker at arm's length from the claim."
         },
         {
           label: "Cali habla con vos",
@@ -342,12 +342,12 @@ lessons.push(
     en: {
       title: "Lo que dijo la instructora",
       situation:
-        "En un estudio de baile en Toronto, Kevin y Daniela abren la recepción. La instructora Yolanda no va a llegar y hay que reorganizar el día. Daniela, que es colombiana y está afinando su inglés, tiene que repetir en inglés lo que dijo, preguntó y pidió cada persona: quién no viene, qué clase se mueve y qué hay que avisar.",
+        "En un estudio de baile en Houston, Kevin y Daniela abren la recepción. La instructora Yolanda no va a llegar y hay que reorganizar el día. Daniela, que es colombiana y está afinando su inglés, tiene que repetir en inglés lo que dijo, preguntó y pidió cada persona: quién no viene, qué clase se mueve y qué hay que avisar.",
       setting: {
         who: "Kevin es el encargado del estudio; Daniela, colombiana recién llegada, atiende la recepción y practica su inglés relatando los mensajes.",
         what: "La instructora avisó que no viene, así que entre los dos reorganizan las clases repitiendo en inglés lo que cada quien dijo, preguntó y pidió.",
         when: "Una mañana entre semana, antes de la primera clase, con el teléfono sonando.",
-        where: "Toronto, Canadá, la recepción de un estudio de baile.",
+        where: "Houston, Canadá, la recepción de un estudio de baile.",
         why: "El estilo indirecto es el pan de cada día en una recepción: casi nada es de primera mano, así que se vive en “she said that”, “he asked if” y “she asked me to”."
       },
       address: {
@@ -549,7 +549,7 @@ lessons.push(
         {
           label: "De la razón al voicemail",
           body:
-            "Donde un colombiano deja razón con alguien, en un estudio o una oficina de Toronto se “leaves a message” en la recepción o en el buzón de voz (voicemail). La fórmula fija es leave a message, y también existe leave word. Cuidado con “reason”: en inglés es la causa o el motivo, nunca el recado, así que “leave a reason” no significa lo que uno quiere. Para el mensaje escrito de un chat se usa message o text."
+            "Donde un colombiano deja razón con alguien, en un estudio o una oficina de Houston se “leaves a message” en la recepción o en el buzón de voz (voicemail). La fórmula fija es leave a message, y también existe leave word. Cuidado con “reason”: en inglés es la causa o el motivo, nunca el recado, así que “leave a reason” no significa lo que uno quiere. Para el mensaje escrito de un chat se usa message o text."
         }
       ],
       pitfalls: [
@@ -849,7 +849,7 @@ lessons.push(
         {
           label: "Colombia's Pacific gateway",
           body:
-            "Buenaventura handles the great majority of Colombia's trade across the Pacific — the container ships in the bay are bound for half the world. It is a mostly Afro-Colombian city with deep roots and a culture all its own, and the everyday distance between the port's traffic and the neighbourhoods around it is part of what people here organise around."
+            "Buenaventura handles the great majority of Colombia's trade across the Pacific — the container ships in the bay are bound for half the world. It is a mostly Afro-Colombian city with deep roots and a culture all its own, and the everyday distance between the port's traffic and the neighborhoods around it is part of what people here organize around."
         },
         {
           label: "The rain runs the calendar",
@@ -1133,7 +1133,7 @@ lessons.push(
         {
           term: "whale-watching season",
           explanation:
-            "La temporada de avistamiento de ballenas; en la costa del Pacífico canadiense también es el gran atractivo, como en Buenaventura.",
+            "La temporada de avistamiento de ballenas; en la costa del Pacífico estadounidense también es el gran atractivo, como en Buenaventura.",
           literal: "temporada de avistamiento",
           useWhen:
             "Hablando del atractivo del año: “In whale-watching season the dock fills up.”",
@@ -1269,7 +1269,7 @@ lessons.push(
     id: "what-got-built-in-quibdo",
     level: "Developing · Reporting and perspective",
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context", "grammar"],
-    domain: "home-and-neighbourhood",
+    domain: "home-and-neighborhood",
     register: "courteous",
     pathways: ["independent", "collegiate-academic"],
     structure: "passive-and-impersonal",
@@ -1280,7 +1280,7 @@ lessons.push(
         "Nilson nunca se ha ido de Quibdó; Yeimy volvió después de años en Estados Unidos. Se encuentran cerca del río Atrato y se ponen al día sobre las obras: la vía que por fin arreglaron, el puente nuevo, las casas del barrio. Todo el rato hablan en pasiva y en impersonal: lo que se anuncia, lo que fue construido, lo que uno ve y lo que no.",
       setting: {
         who: "Nilson has never left Quibdó; Yeimy has just come back after years in the United States. They're old friends catching up.",
-        what: "They trade news about local public works — a road, a new bridge, the neighbourhood's wooden houses — and who did or didn't do them.",
+        what: "They trade news about local public works — a road, a new bridge, the neighborhood's wooden houses — and who did or didn't do them.",
         when: "A bright break in the rain, mid-morning by the river.",
         where: "Quibdó, Chocó, on the bank of the Atrato river.",
         why: "Public life is where Spanish leans hardest on the passive and the impersonal: what gets announced, what was built, what one sees and what one doesn't."
@@ -1336,9 +1336,9 @@ lessons.push(
         {
           speaker: "Yeimy",
           target: "Qué bueno. Aquí las casas del barrio están hechas de madera, y eso no se toca: es la herencia del Chocó.",
-          translation: "How nice. Here the neighbourhood's houses are made of wood, and that's untouchable: it's the Chocó's heritage.",
+          translation: "How nice. Here the neighborhood's houses are made of wood, and that's untouchable: it's the Chocó's heritage.",
           pronunciation: "ke BWE-no. a-KEE las KA-sas del BA-rryo es-TAN E-chas de ma-DE-ra, i E-so no se TO-ka: es la e-REN-sya del CHO-ko",
-          literal: "How good. Here the houses of-the neighbourhood are made of wood, and that not itself it-touches: is the heritage of-the Chocó.",
+          literal: "How good. Here the houses of-the neighborhood are made of wood, and that not itself it-touches: is the heritage of-the Chocó.",
           why: "están hechas is another estar + participle state (are made), and no se toca is the impersonal se again — one doesn't touch it. Note how rarely a real agent appears; Spanish keeps public life agentless by default."
         }
       ],
@@ -1474,12 +1474,12 @@ lessons.push(
         {
           label: "The Atrato, a river with rights",
           body:
-            "The Atrato river is Quibdó's artery, its highway and its livelihood. In a landmark ruling Colombia's courts recognised the Atrato itself as a subject of rights, to be protected from mining and pollution. For chocoanos the river is not scenery but kin, and much of public life is organised around its health and its moods."
+            "The Atrato river is Quibdó's artery, its highway and its livelihood. In a landmark ruling Colombia's courts recognized the Atrato itself as a subject of rights, to be protected from mining and pollution. For chocoanos the river is not scenery but kin, and much of public life is organized around its health and its moods."
         },
         {
           label: "San Pacho, heritage of humanity",
           body:
-            "Each September and October Quibdó throws the Fiestas de San Pacho, weeks of processions, verbena and chirimía that UNESCO lists as intangible cultural heritage. It is Afro-Colombian devotion and street party at once, neighbourhood against neighbourhood, and it is the image of Quibdó that people who've left, like Yeimy, carry with them."
+            "Each September and October Quibdó throws the Fiestas de San Pacho, weeks of processions, verbena and chirimía that UNESCO lists as intangible cultural heritage. It is Afro-Colombian devotion and street party at once, neighborhood against neighborhood, and it is the image of Quibdó that people who've left, like Yeimy, carry with them."
         },
         {
           label: "Chirimía, the sound of the Chocó",

@@ -32,7 +32,7 @@ lessons.push(
         who: "Marta uses usted with the child in the affectionate adult-to-child way common in many Colombian families, while she keeps Alex in the same warm register.",
         why: "Usted here is not distance. It can be tender, coaxing and slightly theatrical when an adult is calming a small child.",
         ifYouSwitch:
-          "Tú would also be understood, but it would lose the family flavour of “no llore” said softly to a toddler. Vos would not fit this Sincelejo scene."
+          "Tú would also be understood, but it would lose the family flavor of “no llore” said softly to a toddler. Vos would not fit this Sincelejo scene."
       },
       dialogue: [
         {
@@ -206,7 +206,7 @@ lessons.push(
         }
       ],
       note:
-        "The useful thing about llorar is not only the verb but the frame around it. “No llore” can be tender, “me dio por llorar” makes the feeling sudden, “llorar por cansancio” names a cause, and “llorar de la risa” keeps the tears while changing the emotional colour completely.",
+        "The useful thing about llorar is not only the verb but the frame around it. “No llore” can be tender, “me dio por llorar” makes the feeling sudden, “llorar por cansancio” names a cause, and “llorar de la risa” keeps the tears while changing the emotional color completely.",
       culture: [
         {
           label: "Comfort is not silence",
@@ -338,14 +338,14 @@ lessons.push(
       ]
     },
     en: {
-      title: "Calmar a un niño que llora en Vancouver",
+      title: "Calmar a un niño que llora en Austin",
       situation:
-        "Usted está en un cumpleaños familiar en Vancouver cuando un niño empieza a llorar porque se le cayó el helado. Necesita consolarlo en inglés sin sonar seco, y luego contar que todos terminaron llorando de la risa.",
+        "Usted está en un cumpleaños familiar en Austin cuando un niño empieza a llorar porque se le cayó el helado. Necesita consolarlo en inglés sin sonar seco, y luego contar que todos terminaron llorando de la risa.",
       setting: {
         who: "Marta es la tía que ya ha visto todos los desastres de cumpleaños. Alejandro ayuda con los niños y trata de no empeorar el llanto.",
         what: "Una emergencia emocional pequeña: helado en el piso, un niño cansado, adultos buscando consolar y un chiste que cambia las lágrimas por risa.",
         when: "Domingo al final de la tarde, después de la torta, cuando los niños están pegajosos, cansados y sensibles.",
-        where: "Vancouver, en el patio de una casa familiar donde el cumpleaños se hace en inglés aunque parte de la familia hable español.",
+        where: "Austin, en el patio de una casa familiar donde el cumpleaños se hace en inglés aunque parte de la familia hable español.",
         why: "Porque “cry” cubre el llanto cotidiano de niños, bebés y adultos, pero el inglés separa muy bien “cry,” “feel like crying” y “cry with laughter.”"
       },
       address: {
@@ -675,8 +675,8 @@ lessons.push(
       setting: {
         who: "Paula acted in the amateur performance and is comfortable laughing at her own mistake. Alex is learning how to join the laughter without sounding cruel.",
         what: "A post-show conversation about a joke that landed, the difference between laughing with and laughing at, and the more natural Colombian phrase “me da risa.”",
-        when: "Friday night, outside the theatre, while the group is still repeating the funniest line from the performance.",
-        where: "Ibagué, Tolima, on the sidewalk outside a small cultural venue after a neighbourhood theatre night.",
+        when: "Friday night, outside the theater, while the group is still repeating the funniest line from the performance.",
+        where: "Ibagué, Tolima, on the sidewalk outside a small cultural venue after a neighborhood theater night.",
         why: "Because reír is irregular enough to deserve attention, but the social preposition matters more: “reírse de” can mock, while “reírse con” shares the joke."
       },
       address: {
@@ -684,7 +684,7 @@ lessons.push(
         who: "Paula and Alex use tú because they are friends decompressing after the show.",
         why: "The conversation is warm and careful. Tú lets Alex ask about the social risk without turning the moment into a formal apology.",
         ifYouSwitch:
-          "Usted would make the repair sound larger than the offence. Vos could fit some friendships, but tú keeps the lesson general."
+          "Usted would make the repair sound larger than the offense. Vos could fit some friendships, but tú keeps the lesson general."
       },
       dialogue: [
         {
@@ -1283,7 +1283,7 @@ lessons.push(
           choices: [
             "It gave me a reservation.",
             "It made me laugh.",
-            "It opened the theatre."
+            "It opened the theater."
           ],
           answer: 1,
           tests: "make me laugh for me dio risa"
@@ -1392,7 +1392,7 @@ lessons.push(
         {
           term: "sonreír",
           explanation:
-            "To smile. It shares the accent behaviour of reír in much of the present and in the participle sonreído, while the gerund becomes sonriendo.",
+            "To smile. It shares the accent behavior of reír in much of the present and in the participle sonreído, while the gerund becomes sonriendo.",
           literal: "to smile",
           useWhen:
             "Talking about photos, greeting someone, reacting quietly, or softening a tense moment without laughing out loud.",
@@ -1510,7 +1510,7 @@ lessons.push(
         }
       ],
       note:
-        "Sonreír is small but spelling-heavy. Present forms like “sonrío” and “sonríen” keep the accent, the gerund is “sonriendo,” and the participle is “sonreído.” The photographer's command “sonría / sonrían” is not textbook theatre; it is exactly what you hear before a photo.",
+        "Sonreír is small but spelling-heavy. Present forms like “sonrío” and “sonríen” keep the accent, the gerund is “sonriendo,” and the participle is “sonreído.” The photographer's command “sonría / sonrían” is not textbook theater; it is exactly what you hear before a photo.",
       culture: [
         {
           label: "Photographers really say sonría",

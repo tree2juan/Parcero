@@ -652,7 +652,7 @@ lessons.push(
     id: "joining-a-cleanup-group-in-guatape",
     level: "Extending · Joining and parting",
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
-    domain: "home-and-neighbourhood",
+    domain: "home-and-neighborhood",
     register: "courteous",
     pathways: ["extension"],
     verb: "unir",
@@ -662,15 +662,15 @@ lessons.push(
       situation:
         "Estás en Guatapé y unos vecinos organizan una jornada para limpiar la orilla antes de una actividad del barrio. Quieres unirte al grupo, unir fuerzas sin sonar grandilocuente y entender por qué una familia unida es un cumplido cálido.",
       setting: {
-        who: "Teresa coordinates the neighbourhood group and knows which tasks need people. Alex is new in town for a few weeks and wants to help without acting like he is in charge.",
+        who: "Teresa coordinates the neighborhood group and knows which tasks need people. Alex is new in town for a few weeks and wants to help without acting like he is in charge.",
         what: "A sign-up conversation: joining a group, joining efforts, keeping people together and using unido as a warm adjective.",
-        when: "Thursday evening, two days before the cleanup, while neighbours confirm who is bringing gloves and bags.",
+        when: "Thursday evening, two days before the cleanup, while neighbors confirm who is bringing gloves and bags.",
         where: "Guatapé, Antioquia, near the waterfront but away from Medellín, with a community plan rather than a tourist itinerary.",
         why: "Because unir is more than physically joining two things. “Unirse a” means join a group, “unir fuerzas” means collaborate, and “una familia unida” is a real compliment."
       },
       address: {
         form: "usted",
-        who: "Teresa and Alex use usted because they are neighbours who have not yet become close friends.",
+        who: "Teresa and Alex use usted because they are neighbors who have not yet become close friends.",
         why: "The form lets Alex offer help respectfully without overclaiming belonging. Community warmth and usted can easily coexist.",
         ifYouSwitch:
           "Tú could arrive later after the group works together. Vos might belong to some local friendships, but Alex has not earned that register yet."
@@ -695,9 +695,9 @@ lessons.push(
         {
           speaker: "Alex",
           target: "Me gusta que el barrio se una sin esperar a que venga alguien de afuera.",
-          translation: "I like that the neighbourhood comes together without waiting for someone from outside to come.",
+          translation: "I like that the neighborhood comes together without waiting for someone from outside to come.",
           pronunciation: "meh GOOS-tah keh el BAR-ryoh seh OO-nah seen es-peh-RAR ah keh BEN-gah AL-gyen deh ah-FWEH-rah",
-          literal: "To-me pleases that the neighbourhood itself join without waiting that come someone from outside.",
+          literal: "To-me pleases that the neighborhood itself join without waiting that come someone from outside.",
           why: "“Que el barrio se una” uses subjunctive after “me gusta que.” This is extension-level grammar in a very ordinary sentence."
         },
         {
@@ -766,7 +766,7 @@ lessons.push(
             "To join forces. It means collaborating so separate people or groups can do more together.",
           literal: "to unite strengths",
           useWhen:
-            "Neighbourhoods, schools, families or teams coordinate around one goal.",
+            "Neighborhoods, schools, families or teams coordinate around one goal.",
           avoidWhen:
             "The task is only one person's private errand. The phrase expects more than one force.",
           register: "neutral",
@@ -780,8 +780,8 @@ lessons.push(
         {
           term: "que el barrio se una",
           explanation:
-            "That the neighbourhood come together. The subjunctive “se una” follows an emotion or evaluation: “me gusta que…”",
-          literal: "that the neighbourhood join itself",
+            "That the neighborhood come together. The subjunctive “se una” follows an emotion or evaluation: “me gusta que…”",
+          literal: "that the neighborhood join itself",
           useWhen:
             "You value, want, hope or doubt that people come together.",
           avoidWhen:
@@ -791,7 +791,7 @@ lessons.push(
           related: ["que la gente participe", "que todos ayuden", "que se sumen", "que colaboren"],
           example: {
             target: "Me gusta que el barrio se una.",
-            translation: "I like that the neighbourhood comes together."
+            translation: "I like that the neighborhood comes together."
           }
         },
         {
@@ -862,7 +862,7 @@ lessons.push(
         {
           label: "Community language is practical",
           body:
-            "“Unir fuerzas” can sound lofty in isolation, but in a neighbourhood cleanup it is plain: school, neighbours and families bring different resources to one task."
+            "“Unir fuerzas” can sound lofty in isolation, but in a neighborhood cleanup it is plain: school, neighbors and families bring different resources to one task."
         }
       ],
       pitfalls: [
@@ -953,8 +953,8 @@ lessons.push(
           prompt: "Why is “que el barrio se una” subjunctive?",
           choices: [
             "Because it follows an expression of liking or value.",
-            "Because every neighbourhood is already one object.",
-            "Because the cleanup was cancelled by the school."
+            "Because every neighborhood is already one object.",
+            "Because the cleanup was canceled by the school."
           ],
           answer: 0,
           tests: "subjunctive after me gusta que"
@@ -998,7 +998,7 @@ lessons.push(
         },
         {
           speaker: "Alejandro",
-          target: "I like seeing the neighbourhood come together without waiting for outsiders.",
+          target: "I like seeing the neighborhood come together without waiting for outsiders.",
           translation: "Me gusta ver que el barrio se una sin esperar a que venga alguien de afuera.",
           pronunciation: "ai laik SI-ing da NEI-bor-jud kom tu-GE-der wi-DAUT UEI-ting for aut-SAI-ders",
           literal: "Me gusta ver al barrio venir junto sin esperar a externos.",
@@ -1077,7 +1077,7 @@ lessons.push(
           region: "Inglés universal.",
           related: ["gather", "unite", "pull together", "show up"],
           example: {
-            target: "The neighbourhood came together.",
+            target: "The neighborhood came together.",
             translation: "El barrio se unió."
           }
         },
@@ -1203,7 +1203,7 @@ lessons.push(
           whenToUse: "Dos grupos colaboran hacia una meta."
         },
         {
-          form: "The neighbourhood came together.",
+          form: "The neighborhood came together.",
           register: "neutral conversational",
           region: "Inglés universal",
           whenToUse: "La comunidad actuó como grupo."

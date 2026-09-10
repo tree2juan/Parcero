@@ -2,7 +2,7 @@
  * Lesson block: aspect, regret and hope — three grammar structures the verb
  * list could never anchor. Recent-and-repeated (acabar de, volver a, estar a
  * punto de) carries aspect; counterfactual-past (si hubiera... habría...) is
- * how adults regret and apologise; wishes-and-ojala restores ojalá, a word the
+ * how adults regret and apologize; wishes-and-ojala restores ojalá, a word the
  * corpus never once contained. The Spanish scenes move out to the Llanos and
  * the Amazon: Villavicencio, Yopal and Leticia, not the two usual cities.
  */
@@ -285,7 +285,7 @@ lessons.push(
       answer: 0,
       practiceExtra: [
         {
-          prompt: "A neighbour says “el perro volvió a ladrar.” What happened?",
+          prompt: "A neighbor says “el perro volvió a ladrar.” What happened?",
           choices: [
             "The dog finally stopped barking.",
             "The dog started barking again.",
@@ -635,7 +635,7 @@ lessons.push(
         what: "An honest conversation about a regret, using the unreal past: si plus the pluperfect subjunctive with the conditional perfect, to imagine what one would have done differently.",
         when: "Dusk, after the coleo runs, when the heat drops and the feelings rise.",
         where: "Yopal, Casanare, by the coleo arena.",
-        why: "Because the unreal past is how adults regret and apologise: “si hubiera sabido, no habría dicho eso”. Without this structure you cannot voice a true regret, or offer a sincere repair."
+        why: "Because the unreal past is how adults regret and apologize: “si hubiera sabido, no habría dicho eso”. Without this structure you cannot voice a true regret, or offer a sincere repair."
       },
       address: {
         form: "usted",
@@ -672,7 +672,7 @@ lessons.push(
         {
           speaker: "Andrés",
           target: "Me habría gustado pedirle disculpas ahí mismo, pero me dio rabia.",
-          translation: "I would have liked to apologise to him right then, but I got angry.",
+          translation: "I would have liked to apologize to him right then, but I got angry.",
           pronunciation: "me a-BREE-a goos-TA-do pe-DEER-le dis-KUL-pas a-EE MEES-mo, pe-ro me dyo RRA-bya",
           literal: "Me I-would-have liked to-ask-him pardon there same, but me it-gave anger.",
           why: "“Me habría gustado” is the gentlest way to voice a regret: I wish I had done it. It is courteous and honest at once, ideal for owning a fault without drama."
@@ -735,7 +735,7 @@ lessons.push(
             "The gentlest way to voice a regret: I wish I had done or had it that way.",
           literal: "to me it-would-have pleased",
           useWhen:
-            "Softly owning a missed chance: I would have liked to apologise, to go, to help.",
+            "Softly owning a missed chance: I would have liked to apologize, to go, to help.",
           avoidWhen:
             "You need a blunt admission of fault; this phrase deliberately softens it.",
           register: "neutral to formal",
@@ -783,7 +783,7 @@ lessons.push(
         {
           term: "pedir disculpas",
           explanation:
-            "To apologise, to ask someone to forgive a wrong you have done them.",
+            "To apologize, to ask someone to forgive a wrong you have done them.",
           literal: "to ask pardons",
           useWhen:
             "Offering a real apology, whether right away or, as here, in hindsight.",
@@ -794,7 +794,7 @@ lessons.push(
           related: ["disculparse", "una disculpa", "perdonar", "ofrecer disculpas"],
           example: {
             target: "Le pedí disculpas al otro jinete.",
-            translation: "I apologised to the other rider."
+            translation: "I apologized to the other rider."
           }
         },
         {
@@ -816,12 +816,12 @@ lessons.push(
         }
       ],
       note:
-        "The unreal past pairs two halves: a condition in “si” plus the pluperfect subjunctive (“si hubiera sabido”) and a result in the conditional perfect (“no habría dicho nada”). It is how adults regret and apologise for what can no longer be changed. In Colombian speech listen for “hubiera” quietly replacing “habría” in the result — “no hubiera dicho nada” — a very common, fully natural spoken substitution.",
+        "The unreal past pairs two halves: a condition in “si” plus the pluperfect subjunctive (“si hubiera sabido”) and a result in the conditional perfect (“no habría dicho nada”). It is how adults regret and apologize for what can no longer be changed. In Colombian speech listen for “hubiera” quietly replacing “habría” in the result — “no hubiera dicho nada” — a very common, fully natural spoken substitution.",
       culture: [
         {
           label: "Coleo, the plains sport",
           body:
-            "Coleo, where a rider brings down a bull by its tail at a full gallop, is the signature sport of the plains. In Yopal and across Casanare the runs fill up every weekend. It is a world of honour and friction, fertile ground for a conversation about pride, anger and regret."
+            "Coleo, where a rider brings down a bull by its tail at a full gallop, is the signature sport of the plains. In Yopal and across Casanare the runs fill up every weekend. It is a world of honor and friction, fertile ground for a conversation about pride, anger and regret."
         },
         {
           label: "Hubiera for habría",
@@ -829,7 +829,7 @@ lessons.push(
             "In spoken Colombian Spanish it is utterly ordinary to say “no hubiera dicho nada” instead of “no habría dicho nada”. Textbook grammar wants habría in the result, but the Colombian ear accepts hubiera without a blink. Knowing this keeps you from correcting a native who is actually speaking perfectly."
         },
         {
-          label: "Apologising in the conditional",
+          label: "Apologizing in the conditional",
           body:
             "“Me habría gustado pedir disculpas” is a half, honest apology: it owns the fault without fully exposing you. In a culture where pride weighs heavily, the conditional perfect offers a dignified way to admit you were wrong, which is why you hear it so often in hard conversations."
         }
@@ -929,12 +929,12 @@ lessons.push(
     en: {
       title: "El pasado irreal en inglés: si hubiera sabido",
       situation:
-        "En una reunión de exalumnos en Toronto, Diana se reencuentra con Grant, un viejo compañero, y sale a la luz un malentendido de hace años. Para hablarlo con honestidad, Diana necesita el pasado irreal del inglés: “if I had known, I would have called”. Y descubre la trampa clásica del hispanohablante, decir “if I would have known”, que en inglés se considera un error.",
+        "En una reunión de exalumnos en Houston, Diana se reencuentra con Grant, un viejo compañero, y sale a la luz un malentendido de hace años. Para hablarlo con honestidad, Diana necesita el pasado irreal del inglés: “if I had known, I would have called”. Y descubre la trampa clásica del hispanohablante, decir “if I would have known”, que en inglés se considera un error.",
       setting: {
         who: "Diana viaja por trabajo y coincide con Grant, un excompañero de la universidad, en una reunión de egresados.",
         what: "Una conversación sincera donde Diana usa el pasado irreal inglés: if más pasado perfecto y would have más participio, para lamentar y aclarar un malentendido.",
         when: "De noche, en la recepción de la reunión.",
-        where: "Toronto, Canadá, en el salón de un hotel.",
+        where: "Houston, Canadá, en el salón de un hotel.",
         why: "Porque el inglés arma el arrepentimiento con “if I had known, I would have…”, y el hispanohablante cae siempre en “if I would have known”, que suena mal a los nativos. Vale la pena practicarlo despacio."
       },
       address: {
@@ -1129,9 +1129,9 @@ lessons.push(
             "El inglés no tiene ojalá, así que para un deseo sobre el pasado usa “I wish” con pasado perfecto: “I wish I had known”. El hispanohablante tiende a decir “I wish I know”, en presente, porque traduce ojalá sepa. Alinear “wish” con el pasado es la misma lógica del pasado irreal, y conviene practicarlas juntas."
         },
         {
-          label: "Toronto y el inglés que se oye",
+          label: "Houston y el inglés que se oye",
           body:
-            "Toronto es una de las ciudades más multilingües del mundo, y allí un colombiano oirá inglés de acentos muy distintos. Eso ayuda: no hay un único molde perfecto, pero la estructura “if I had... I would have...” es estándar en todos ellos, así que practicarla sirve para hablar con cualquiera."
+            "Houston es una de las ciudades más multilingües del mundo, y allí un colombiano oirá inglés de acentos muy distintos. Eso ayuda: no hay un único molde perfecto, pero la estructura “if I had... I would have...” es estándar en todos ellos, así que practicarla sirve para hablar con cualquiera."
         }
       ],
       pitfalls: [

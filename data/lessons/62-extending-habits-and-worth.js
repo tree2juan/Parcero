@@ -31,7 +31,7 @@ lessons.push(
       situation:
         "Estás en Ibagué preparando una caminata temprano con una amiga. Ella pregunta por tus rutinas, lo que sueles hacer ahora y lo que solías hacer cuando vivías en una ciudad más fría.",
       setting: {
-        who: "Lina organises weekend walks and knows the heat changes everyone's schedule. Theo has moved recently and is trying to describe both current habits and old routines without overusing simple present.",
+        who: "Lina organizes weekend walks and knows the heat changes everyone's schedule. Theo has moved recently and is trying to describe both current habits and old routines without overusing simple present.",
         what: "A conversation about what someone usually does, what they used to do, and why soler is useful but grammatically limited.",
         when: "Very early Saturday morning, while people are filling bottles before the sun makes the walk harder.",
         where: "Ibagué, near a small meeting point for a morning walk, with the mountains visible and bakery shutters just opening.",
@@ -304,14 +304,14 @@ lessons.push(
       ]
     },
     en: {
-      title: "Hablar de rutinas de madrugada en Vancouver",
+      title: "Hablar de rutinas de madrugada en Austin",
       situation:
-        "Usted está en Vancouver preparando una caminata temprano con una amiga. Quiere decir en inglés lo que suele hacer ahora y lo que solía hacer antes, sin traducir soler como un verbo raro.",
+        "Usted está en Austin preparando una caminata temprano con una amiga. Quiere decir en inglés lo que suele hacer ahora y lo que solía hacer antes, sin traducir soler como un verbo raro.",
       setting: {
         who: "Lina organiza caminatas de fin de semana. Teo se mudó hace poco y necesita explicar rutinas actuales y hábitos antiguos de manera natural.",
         what: "Una conversación sobre lo que alguien usually does, lo que used to do, y por qué el inglés reparte esas ideas sin un verbo equivalente a soler.",
         when: "Muy temprano un sábado, mientras la gente llena botellas antes de que el sendero se llene.",
-        where: "Vancouver, cerca de una entrada de sendero, con café en termos y chaquetas colgadas de las mochilas.",
+        where: "Austin, cerca de una entrada de sendero, con café en termos y chaquetas colgadas de las mochilas.",
         why: "Porque el inglés usa usually para hábito actual y used to para hábito anterior. No hay que inventar un verbo para soler."
       },
       address: {
@@ -690,7 +690,7 @@ lessons.push(
         {
           term: "cabemos",
           explanation:
-            "We fit. Useful for cars, lifts, rooms and shared tables.",
+            "We fit. Useful for cars, elevators, rooms and shared tables.",
           literal: "we fit",
           useWhen:
             "A group is checking whether everyone can fit in one space.",
@@ -746,7 +746,7 @@ lessons.push(
         {
           term: "la maleta",
           explanation:
-            "A suitcase, and in Colombian car talk often the trunk or boot.",
+            "A suitcase, and in Colombian car talk often the trunk.",
           literal: "the suitcase",
           useWhen:
             "Talking about luggage itself or the car space where luggage goes.",
@@ -769,7 +769,7 @@ lessons.push(
         {
           label: "Maleta may be the trunk",
           body:
-            "In Colombian car talk, la maleta can mean the trunk or luggage space. Baúl is also understood. Context usually makes it clear, but a traveller should not be surprised when someone says the chair does not fit en la maleta and points to the back of the car."
+            "In Colombian car talk, la maleta can mean the trunk or luggage space. Baúl is also understood. Context usually makes it clear, but a traveler should not be surprised when someone says the chair does not fit en la maleta and points to the back of the car."
         },
         {
           label: "No cabe duda is formal but useful",
@@ -808,7 +808,7 @@ lessons.push(
           form: "¿Cabemos todos en el ascensor?",
           register: "neutral practical",
           region: "General Spanish",
-          whenToUse: "A group is checking whether everyone fits in a lift or small space."
+          whenToUse: "A group is checking whether everyone fits in an elevator or small space."
         },
         {
           form: "No cabe duda de que falta espacio.",
@@ -1082,7 +1082,7 @@ lessons.push(
           whenToUse: "Su cuerpo no cabe en el asiento o espacio."
         },
         {
-          form: "Do we all fit in the lift?",
+          form: "Do we all fit in the elevator?",
           register: "neutral practical",
           region: "Inglés universal",
           whenToUse: "Un grupo revisa si todos caben en un ascensor o espacio pequeño."

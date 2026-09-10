@@ -21,7 +21,7 @@ lessons.push(
     id: "who-you-are-at-the-building-meeting",
     level: "Starter · Everyday life",
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
-    domain: "home-and-neighbourhood",
+    domain: "home-and-neighborhood",
     register: "courteous",
     pathways: ["foundation"],
     verb: "ser",
@@ -34,7 +34,7 @@ lessons.push(
         who: "Doña Ruth has chaired the residents' meeting for nine years and knows every apartment by number. Alex is the newest resident and has spoken to nobody in the building except the porter.",
         what: "A short round of introductions at the start of the meeting, before the agenda about the water tank.",
         when: "A Tuesday evening, seven o'clock, in the ground-floor common room.",
-        where: "Medellín, a six-storey block in Laureles where most residents have lived for a decade or more.",
+        where: "Medellín, a six-story block in Laureles where most residents have lived for a decade or more.",
         why: "Because Alex will be asking these people for favours — a signature, a parcel taken in, patience about noise — for as long as he lives here. The introduction is the whole relationship in miniature."
       },
       address: {
@@ -48,17 +48,17 @@ lessons.push(
         {
           speaker: "Doña Ruth",
           target: "Bueno, tenemos vecino nuevo. ¿Usted quién es?",
-          translation: "Right, we have a new neighbour. Who are you?",
+          translation: "Right, we have a new neighbor. Who are you?",
           pronunciation: "BWEH-noh, teh-NEH-mos beh-SEE-noh NWEH-boh. oos-TED KYEN es",
-          literal: "Good, we-have neighbour new. You who are?",
+          literal: "Good, we-have neighbor new. You who are?",
           why: "“¿Usted quién es?” is blunt on paper and perfectly warm in the room. Colombian Spanish often puts the pronoun first for emphasis, and dropping it would make the question sound more clinical, not more polite."
         },
         {
           speaker: "Alex",
-          target: "Soy Alex, del 502. Soy canadiense.",
-          translation: "I'm Alex, from 502. I'm Canadian.",
+          target: "Soy Alex, del 502. Soy estadounidense.",
+          translation: "I'm Alex, from 502. I'm American.",
           pronunciation: "soy AH-leks, del SEEN-koh-DOS. soy ka-na-DYEN-seh",
-          literal: "I-am Alex, of-the 502. I-am Canadian.",
+          literal: "I-am Alex, of-the 502. I-am American.",
           why: "Three uses of ser in one breath: name, address, nationality. All three are the kind of fact that does not change by Thursday, which is exactly ser's territory."
         },
         {
@@ -118,7 +118,7 @@ lessons.push(
             "The everyday polite way to ask what someone does for a living, in the usted form.",
           literal: "To what does one dedicate oneself?",
           useWhen:
-            "Meeting an adult you are being formal with — a neighbour, a client, a friend's parent.",
+            "Meeting an adult you are being formal with — a neighbor, a client, a friend's parent.",
           avoidWhen:
             "Talking to someone you are already using tú or vos with. Then it stiffens the conversation; “¿y vos qué hacés?” fits far better.",
           register: "polite formal",
@@ -152,7 +152,7 @@ lessons.push(
             "“That's me.” Used to confirm an identity someone else has just described.",
           literal: "that am I",
           useWhen:
-            "Someone has guessed who you are and you are agreeing, usually with a bit of humour.",
+            "Someone has guessed who you are and you are agreeing, usually with a bit of humor.",
           avoidWhen:
             "Introducing yourself cold. It only works as an answer, never as an opener.",
           register: "friendly informal",
@@ -166,7 +166,7 @@ lessons.push(
         {
           term: "tranquilo",
           explanation:
-            "“No worries” — reassurance that whatever you just apologised for or explained is not a problem.",
+            "“No worries” — reassurance that whatever you just apologized for or explained is not a problem.",
           literal: "calm",
           useWhen:
             "Waving off someone's worry, or being waved off yourself. Extremely frequent in Colombia.",
@@ -200,12 +200,12 @@ lessons.push(
         {
           term: "del 502",
           explanation:
-            "“From 502.” In a Colombian apartment block, your flat number is a normal way to identify yourself.",
+            "“From 502.” In a Colombian apartment block, your apartment number is a normal way to identify yourself.",
           literal: "of-the 502",
           useWhen:
             "Any building context — the meeting, the porter's desk, a parcel, a complaint.",
           avoidWhen:
-            "Outside the building, where the number means nothing and you would give the neighbourhood instead.",
+            "Outside the building, where the number means nothing and you would give the neighborhood instead.",
           register: "neutral",
           region: "General Colombian urban usage.",
           related: ["del quinto piso", "de la 502", "el apartamento 502", "de la torre dos"],
@@ -219,7 +219,7 @@ lessons.push(
         "The single most useful thing in this lesson is the last line of dialogue. “Soy profesor” and “estoy sin trabajo” sit side by side because Spanish makes you choose, every time, between what you are and how things currently stand. English lets you blur it. Spanish does not.",
       culture: [
         {
-          label: "Your flat number is your name",
+          label: "Your apartment number is your name",
           body:
             "In Colombian apartment blocks, residents are routinely known by number long before they are known by name — “el 502”, “la señora del 301”. It is not impersonal; it is how a building of eighty strangers stays navigable. Offering your number when you introduce yourself is genuinely helpful, and leaving it out makes you harder to place."
         },
@@ -231,12 +231,12 @@ lessons.push(
         {
           label: "The introduction is short on purpose",
           body:
-            "Alex gives his name, his flat and his nationality in one line and stops. Colombian introductions in a group setting stay brief; the detail comes later, one-to-one, over coffee. Delivering a paragraph about yourself to the room reads as taking up more than your share of a meeting that has an agenda."
+            "Alex gives his name, his apartment and his nationality in one line and stops. Colombian introductions in a group setting stay brief; the detail comes later, one-to-one, over coffee. Delivering a paragraph about yourself to the room reads as taking up more than your share of a meeting that has an agenda."
         },
         {
           label: "Being asked about the dog is being accepted",
           body:
-            "Doña Ruth's “usted es el del perro” means the building has already noticed him and discussed him. That sounds like surveillance and is closer to welcome — it means he registers as a neighbour rather than a stranger. Bristling at it would be reading a Colombian building the way you would read an anonymous one."
+            "Doña Ruth's “usted es el del perro” means the building has already noticed him and discussed him. That sounds like surveillance and is closer to welcome — it means he registers as a neighbor rather than a stranger. Bristling at it would be reading a Colombian building the way you would read an anonymous one."
         }
       ],
       pitfalls: [
@@ -270,7 +270,7 @@ lessons.push(
           form: "Soy Alex, del 502.",
           register: "neutral",
           region: "General Colombian",
-          whenToUse: "The default. Name plus flat number, nothing else."
+          whenToUse: "The default. Name plus apartment number, nothing else."
         },
         {
           form: "Mucho gusto, Alex, apartamento 502.",
@@ -319,8 +319,8 @@ lessons.push(
           prompt: "Why does Alex answer with “del 502” rather than just his name?",
           choices: [
             "Because Colombians consider first names too informal at a first meeting.",
-            "Because the flat number is required by law at residents' meetings.",
-            "Because in a building the flat number is how people place each other."
+            "Because the apartment number is required by law at residents' meetings.",
+            "Because in a building the apartment number is how people place each other."
           ],
           answer: 2,
           tests: "the apartment number as ordinary self-identification"
@@ -338,8 +338,8 @@ lessons.push(
         {
           prompt: "Which of these would sound wrong in Alex's introduction?",
           choices: [
-            "Soy canadiense.",
-            "Estoy canadiense.",
+            "Soy estadounidense.",
+            "Estoy estadounidense.",
             "Soy profesor."
           ],
           answer: 1,
@@ -350,12 +350,12 @@ lessons.push(
     en: {
       title: "Decir quién es usted en la reunión del edificio",
       situation:
-        "Alejandra acaba de mudarse a un edificio en Toronto y va a la reunión mensual de residentes. Todavía nadie la conoce. Tiene que decir quién es, en qué apartamento vive y a qué se dedica — en unas cuatro frases, ante una sala que sólo está medio escuchando.",
+        "Alejandra acaba de mudarse a un edificio en Houston y va a la reunión mensual de residentes. Todavía nadie la conoce. Tiene que decir quién es, en qué apartamento vive y a qué se dedica — en unas cuatro frases, ante una sala que sólo está medio escuchando.",
       setting: {
         who: "Ruth preside la reunión de residentes desde hace nueve años y conoce cada apartamento por su número. Alejandra es la residente más nueva y no ha hablado con nadie del edificio salvo con el portero.",
         what: "Una ronda breve de presentaciones al comienzo de la reunión, antes del punto sobre el tanque de agua.",
         when: "Un martes por la noche, a las siete, en el salón comunal de la planta baja.",
-        where: "Toronto, un edificio de seis pisos donde la mayoría de los residentes lleva una década o más.",
+        where: "Houston, un edificio de seis pisos donde la mayoría de los residentes lleva una década o más.",
         why: "Porque Alejandra le va a pedir favores a esta gente — una firma, que le reciban un paquete, paciencia con el ruido — durante todo el tiempo que viva ahí. La presentación es la relación entera en miniatura."
       },
       address: {
@@ -368,7 +368,7 @@ lessons.push(
       dialogue: [
         {
           speaker: "Ruth",
-          target: "Okay, we've got a new neighbour. And you are?",
+          target: "Okay, we've got a new neighbor. And you are?",
           translation: "Bueno, tenemos vecina nueva. ¿Usted quién es?",
           pronunciation: "o-KEI, uiv got a niu NEI-bor. and yu AR",
           literal: "Bueno, tenemos una vecina nueva. ¿Y usted es?",
@@ -529,7 +529,7 @@ lessons.push(
             "Fuera del edificio, donde el número no significa nada y uno diría el barrio.",
           register: "neutral",
           region: "Inglés norteamericano; en el inglés británico se dice “flat 502”.",
-          related: ["apartment 502", "flat 502", "the fifth floor", "502"],
+          related: ["apartment 502", "apartment number", "the fifth floor", "502"],
           example: {
             target: "I'm Alejandra, unit 502.",
             translation: "Soy Alejandra, del 502."

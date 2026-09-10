@@ -845,7 +845,7 @@ lessons.push(
             "To click right away with someone. “De una” adds immediacy: the human connection happened fast.",
           literal: "to connect in one",
           useWhen:
-            "Two people get along immediately, understand each other's humour or feel easy together.",
+            "Two people get along immediately, understand each other's humor or feel easy together.",
           avoidWhen:
             "You mean technical connection. For Wi-Fi, “de una” might mean quickly, but the human reading needs a person as the companion.",
           register: "friendly informal",

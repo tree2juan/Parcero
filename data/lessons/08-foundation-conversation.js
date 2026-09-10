@@ -62,7 +62,7 @@ lessons.push(
           translation: "Hi, Vale! It's Alex, from the salsa class.",
           pronunciation: "OH-la, BA-le! AH-bla AH-leks, el del KOOR-so de SAL-sa",
           literal: "Hi, Vale! Speaks Alex, the-one of-the course of salsa.",
-          why: "On the phone you announce yourself with “habla + your name”, the very “speaks” that English drops. “El del curso de salsa” places him the way a flat number would, by association rather than by surname."
+          why: "On the phone you announce yourself with “habla + your name”, the very “speaks” that English drops. “El del curso de salsa” places him the way an apartment number would, by association rather than by surname."
         },
         {
           speaker: "Valentina",
@@ -224,7 +224,7 @@ lessons.push(
         {
           label: "The phone opens with “¿aló?”",
           body:
-            "Colombians answer the phone with “¿aló?”, not “hola” or “diga”. It is so fixed that answering any other way marks you as foreign or as a call centre. The follow-up “¿con quién hablo?” is not rudeness; it is the normal way to find out who dialled, since numbers are not always saved. Learn the pair and you will sound at home on the line from the very first second."
+            "Colombians answer the phone with “¿aló?”, not “hola” or “diga”. It is so fixed that answering any other way marks you as foreign or as a call center. The follow-up “¿con quién hablo?” is not rudeness; it is the normal way to find out who dialled, since numbers are not always saved. Learn the pair and you will sound at home on the line from the very first second."
         },
         {
           label: "“Hablamos” is a goodbye, not a plan",
@@ -343,12 +343,12 @@ lessons.push(
     en: {
       title: "Llamar a una amiga para cuadrar un encuentro",
       situation:
-        "Alejandra está en Toronto y quiere organizar un intercambio de idiomas con Megan, una amiga que conoció en la clase de salsa. En vez de escribirle, la llama por teléfono. Tiene que saludar, decir quién es, proponer el plan y despedirse — todo por una línea en la que no se ven las caras y donde las fórmulas telefónicas del inglés son distintas de las del español.",
+        "Alejandra está en Houston y quiere organizar un intercambio de idiomas con Megan, una amiga que conoció en la clase de salsa. En vez de escribirle, la llama por teléfono. Tiene que saludar, decir quién es, proponer el plan y despedirse — todo por una línea en la que no se ven las caras y donde las fórmulas telefónicas del inglés son distintas de las del español.",
       setting: {
-        who: "Megan es una amiga canadiense que Alejandra conoció en la clase de salsa. Han hablado un par de veces pero nunca han hecho un plan de verdad, y esta es la primera vez que Alejandra la llama.",
+        who: "Megan es una amiga estadounidense que Alejandra conoció en la clase de salsa. Han hablado un par de veces pero nunca han hecho un plan de verdad, y esta es la primera vez que Alejandra la llama.",
         what: "Una llamada corta para fijar un día y un lugar para un café de intercambio de idiomas.",
         when: "Un miércoles por la tarde después del trabajo, cuando llamar a alguien es normal y bienvenido.",
-        where: "Toronto, donde un mensaje de texto es lo habitual y una llamada se siente un poco más personal.",
+        where: "Houston, donde un mensaje de texto es lo habitual y una llamada se siente un poco más personal.",
         why: "Porque la llamada es la prueba de si una conocida de la clase se vuelve una amiga de verdad. Acertar con las fórmulas del teléfono — cómo se contesta, cómo se anuncia uno y cómo se despide — es casi todo."
       },
       address: {
@@ -715,10 +715,10 @@ lessons.push(
         {
           speaker: "Alex",
           target: "Ah, listo. Es que sigo aprendiendo español y quiero seguir practicando aquí en el barrio.",
-          translation: "Ah, got it. The thing is I'm still learning Spanish and I want to keep practising here in the neighbourhood.",
+          translation: "Ah, got it. The thing is I'm still learning Spanish and I want to keep practicing here in the neighborhood.",
           pronunciation: "ah, LEES-to. es ke SEE-go a-pren-DYEN-do es-pa-NYOL",
-          literal: "Ah, ready. Is that I-follow learning Spanish and I-want to-follow practising here in the neighbourhood.",
-          why: "Two more uses in one line: “sigo aprendiendo” (I'm still learning) and “seguir practicando” (to keep practising). Seguir + gerund means to carry on doing something — the everyday backbone of the verb."
+          literal: "Ah, ready. Is that I-follow learning Spanish and I-want to-follow practicing here in the neighborhood.",
+          why: "Two more uses in one line: “sigo aprendiendo” (I'm still learning) and “seguir practicando” (to keep practicing). Seguir + gerund means to carry on doing something — the everyday backbone of the verb."
         },
         {
           speaker: "Don Fabio",
@@ -778,7 +778,7 @@ lessons.push(
           related: ["sigo aprendiendo", "seguir adelante", "continuar + gerundio", "seguir en las mismas"],
           example: {
             target: "Quiero seguir practicando en el barrio.",
-            translation: "I want to keep practising in the neighbourhood."
+            translation: "I want to keep practicing in the neighborhood."
           }
         },
         {
@@ -818,7 +818,7 @@ lessons.push(
         {
           term: "¡hágale pues!",
           explanation:
-            "Paisa encouragement: “go for it / go ahead then.” “Pues” is the Antioquian filler that colours half of Medellín's speech.",
+            "Paisa encouragement: “go for it / go ahead then.” “Pues” is the Antioquian filler that colors half of Medellín's speech.",
           literal: "do-it then!",
           useWhen:
             "Cheering someone on, agreeing to a plan, or closing a chat with energy.",
@@ -975,12 +975,12 @@ lessons.push(
     en: {
       title: "Que lo inviten a entrar a una tienda de barrio paisa",
       situation:
-        "Alejandra anda perdida en un barrio de Toronto buscando el subway y para en una tienda de esquina a comprar agua y pedir indicaciones. Frank, el dueño, la recibe con un “come on in” y le da la dirección con puros imperativos suaves. Alejandra tiene que entender la bienvenida, comprar, pedir la dirección y despedirse — y de paso no calcar el “siga” del español al inglés.",
+        "Alejandra anda perdida en un barrio de Houston buscando el subway y para en una tienda de esquina a comprar agua y pedir indicaciones. Frank, el dueño, la recibe con un “come on in” y le da la dirección con puros imperativos suaves. Alejandra tiene que entender la bienvenida, comprar, pedir la dirección y despedirse — y de paso no calcar el “siga” del español al inglés.",
       setting: {
-        who: "Frank es el dueño canadiense de una pequeña tienda de esquina, de esos que saludan a todo el mundo y se saben el barrio de memoria.",
+        who: "Frank es el dueño estadounidense de una pequeña tienda de esquina, de esos que saludan a todo el mundo y se saben el barrio de memoria.",
         what: "Una parada rápida para comprar agua y preguntar cómo llegar a la estación de subway más cercana.",
         when: "Media mañana, cuando la tienda está tranquila y el dueño tiene tiempo de conversar.",
-        where: "Un barrio residencial de Toronto, donde la corner store también funciona como pequeño punto de encuentro.",
+        where: "Un barrio residencial de Houston, donde la corner store también funciona como pequeño punto de encuentro.",
         why: "Porque el encuentro pone a prueba un calco. Si Alejandra traduce “siga” como “follow”, va a decir algo raro; si usa “come in” y “keep straight”, consigue su agua, su dirección y algo de calidez de barrio."
       },
       address: {
@@ -1025,7 +1025,7 @@ lessons.push(
         },
         {
           speaker: "Alejandra",
-          target: "Ah, got it. The thing is, I'm still learning English and I want to keep practising here.",
+          target: "Ah, got it. The thing is, I'm still learning English and I want to keep practicing here.",
           translation: "Ah, listo. Es que sigo aprendiendo inglés y quiero seguir practicando aquí.",
           pronunciation: "ah, GOT it. da zing iz, aim stil LER-ning ING-lish",
           literal: "Ah, entendido. La cosa es, todavía estoy aprendiendo inglés y quiero seguir practicando aquí.",
@@ -1078,7 +1078,7 @@ lessons.push(
         {
           term: "keep + -ing / still",
           explanation:
-            "El inglés parte el “seguir + gerundio” del español en dos: “keep practising” para continuar por voluntad, y “still learning” para algo que sigue en curso.",
+            "El inglés parte el “seguir + gerundio” del español en dos: “keep practicing” para continuar por voluntad, y “still learning” para algo que sigue en curso.",
           literal: "seguir + -ndo / todavía",
           useWhen:
             "Para decir que una acción continúa: “I keep trying”, “I'm still waiting.”",
@@ -1088,7 +1088,7 @@ lessons.push(
           region: "Inglés universal.",
           related: ["keep on -ing", "carry on -ing", "still + -ing", "go on -ing"],
           example: {
-            target: "I'm still learning, so I want to keep practising.",
+            target: "I'm still learning, so I want to keep practicing.",
             translation: "Todavía estoy aprendiendo, así que quiero seguir practicando."
           }
         },
@@ -1167,7 +1167,7 @@ lessons.push(
         {
           label: "La corner store no es la tienda de barrio",
           body:
-            "La corner store canadiense vende de todo un poco, pero rara vez fía, no vende cigarrillos sueltos ni es el centro de chismes del barrio como la tienda colombiana. Aun así, en barrios residenciales el dueño suele conocer a la clientela y tener tiempo de indicar el camino. Entender esa diferencia evita esperar la misma calidez automática, y a la vez sorprende gratamente cuando alguien como Frank sí se toma el tiempo de conversar."
+            "La corner store estadounidense vende de todo un poco, pero rara vez fía, no vende cigarrillos sueltos ni es el centro de chismes del barrio como la tienda colombiana. Aun así, en barrios residenciales el dueño suele conocer a la clientela y tener tiempo de indicar el camino. Entender esa diferencia evita esperar la misma calidez automática, y a la vez sorprende gratamente cuando alguien como Frank sí se toma el tiempo de conversar."
         },
         {
           label: "“Come in”, no “follow me”",
@@ -1350,7 +1350,7 @@ lessons.push(
           translation: "Think it over, man. Don't be such a scaredy-cat, it's an adventure.",
           pronunciation: "PYEN-se-lo byen, PAR-se. no SE-a tan mye-DO-so",
           literal: "Think-it well, buddy. Not be so fearful, that is an adventure.",
-          why: "“Piénselo” is the usted command of “pensarlo” — think it over. The affectionate usted persists even while pushing back. “No sea miedoso” teases without real offence between friends."
+          why: "“Piénselo” is the usted command of “pensarlo” — think it over. The affectionate usted persists even while pushing back. “No sea miedoso” teases without real offense between friends."
         },
         {
           speaker: "Alex",
@@ -1498,7 +1498,7 @@ lessons.push(
         {
           label: "The road to Villavicencio is no joke",
           body:
-            "To a visitor, “let's drive to Villavicencio” sounds like a casual road trip. Locals hear the mountain highway down to the Llanos — fog, trucks, landslides and a serious descent, especially at night. Part of Alex's reasoning is geographic knowledge a newcomer lacks. It is a reminder that “thinking a plan through” in Colombia often means knowing which roads, neighbourhoods or hours carry real risk, not just weighing the fun of it."
+            "To a visitor, “let's drive to Villavicencio” sounds like a casual road trip. Locals hear the mountain highway down to the Llanos — fog, trucks, landslides and a serious descent, especially at night. Part of Alex's reasoning is geographic knowledge a newcomer lacks. It is a reminder that “thinking a plan through” in Colombia often means knowing which roads, neighborhoods or hours carry real risk, not just weighing the fun of it."
         },
         {
           label: "“Parce” conquered the country",
@@ -1607,12 +1607,12 @@ lessons.push(
     en: {
       title: "Convencerse de no seguir un plan arriesgado",
       situation:
-        "En un café de Toronto, Chris, un amigo cercano, le propone a Alejandra irse ya mismo, a medianoche, a manejar hasta un lago lejano por la autopista “por la aventura”. Alejandra tiene que pensarlo en voz alta, sopesar el riesgo de esa vía de noche y decir que no sin dañar la amistad. Todo gira en torno a “think”: think about, think of, think that, y el rotundo “no way”.",
+        "En un café de Houston, Chris, un amigo cercano, le propone a Alejandra irse ya mismo, a medianoche, a manejar hasta un lago lejano por la autopista “por la aventura”. Alejandra tiene que pensarlo en voz alta, sopesar el riesgo de esa vía de noche y decir que no sin dañar la amistad. Todo gira en torno a “think”: think about, think of, think that, y el rotundo “no way”.",
       setting: {
-        who: "Chris es un amigo canadiense cercano, de los que se emocionan con un plan impulsivo y se tratan de tú a tú con toda confianza.",
+        who: "Chris es un amigo estadounidense cercano, de los que se emocionan con un plan impulsivo y se tratan de tú a tú con toda confianza.",
         what: "Una propuesta de medianoche de manejar ya mismo hasta un lago lejano, y la negativa cuidadosa de Alejandra.",
         when: "Cerca de la medianoche en un café, cuando la idea suena emocionante y la autopista suena peor cuanto más uno lo piensa.",
-        where: "Toronto, con la autopista larga y oscura hacia las afueras como el verdadero tema de fondo.",
+        where: "Houston, con la autopista larga y oscura hacia las afueras como el verdadero tema de fondo.",
         why: "Porque decirle que no a un amigo pide más de una palabra. Alejandra tiene que pensar en voz alta, sopesar el plan y negarse dos veces, y en inglés “think” cambia de preposición en cada paso del razonamiento."
       },
       address: {

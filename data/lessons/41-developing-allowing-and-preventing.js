@@ -36,7 +36,7 @@ lessons.push(
         who: "Rosa works at the front desk, and Alex is a visitor who wants to study without breaking the posted rules.",
         what: "A quick reading of a public sign: food, water, laptops, and where the formal verb permitir belongs.",
         when: "Mid-morning, before the reading room fills with students after class.",
-        where: "Sincelejo, in a public library near the centre, with fans moving warm air over long wooden tables.",
+        where: "Sincelejo, in a public library near the center, with fans moving warm air over long wooden tables.",
         why: "Because permitir is not the everyday “let” between friends. It is the institutional verb of signs, guards, rules, and formal permission."
       },
       address: {
@@ -228,7 +228,7 @@ lessons.push(
         {
           label: "Public warmth and public rules coexist",
           body:
-            "Rosa can be friendly and still point to the sign. Colombian service encounters often mix warmth with firm limits: a greeting, an explanation, and then the rule. Hearing permitir helps you recognise that the conversation has moved into official territory."
+            "Rosa can be friendly and still point to the sign. Colombian service encounters often mix warmth with firm limits: a greeting, an explanation, and then the rule. Hearing permitir helps you recognize that the conversation has moved into official territory."
         },
         {
           label: "Food rules are not personal",
@@ -342,12 +342,12 @@ lessons.push(
     en: {
       title: "Leer el aviso de la biblioteca",
       situation:
-        "Alejandra entra a una biblioteca pública en Toronto con una botella de agua, un portátil y una empanada en la mano. En la puerta hay un aviso con varias reglas. Usted necesita entender cuándo “allow” suena institucional y cuándo “let” suena cotidiano.",
+        "Alejandra entra a una biblioteca pública en Houston con una botella de agua, un portátil y una empanada en la mano. En la puerta hay un aviso con varias reglas. Usted necesita entender cuándo “allow” suena institucional y cuándo “let” suena cotidiano.",
       setting: {
         who: "Rose trabaja en el mostrador de entrada, y Alejandra es una visitante que quiere estudiar sin romper las reglas visibles.",
         what: "Una lectura rápida de un aviso público: comida, agua, portátiles y dónde encaja el registro formal de “allow.”",
         when: "A media mañana, antes de que la sala se llene de estudiantes después de clase.",
-        where: "Toronto, en una biblioteca pública de barrio, con mesas largas, enchufes y avisos cerca de la entrada.",
+        where: "Houston, en una biblioteca pública de barrio, con mesas largas, enchufes y avisos cerca de la entrada.",
         why: "Porque “allow” no siempre traduce el “dejar” cotidiano. En inglés, como en español, las reglas y los amigos no suenan igual."
       },
       address: {
@@ -865,7 +865,7 @@ lessons.push(
         {
           label: "Riohacha detail without invented slang",
           body:
-            "The boardwalk, wind, and beach make the setting local enough. The rule language does not need fake regional colour. A normal public refusal in Riohacha is still Colombian Spanish."
+            "The boardwalk, wind, and beach make the setting local enough. The rule language does not need fake regional color. A normal public refusal in Riohacha is still Colombian Spanish."
         },
         {
           label: "Ask for the route, not the exception",

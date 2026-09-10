@@ -11,7 +11,7 @@
  * strings — navigation, buttons, headings, feedback — which previously did not.
  *
  * The language picker itself is deliberately NOT translated. It is always
- * bilingual, because a Spanish speaker cannot find an English-labelled control
+ * bilingual, because a Spanish speaker cannot find an English-labeled control
  * that switches the interface out of English.
  *
  * Everything below is wrapped in an IIFE. These are classic scripts, so a
@@ -141,10 +141,10 @@ const UI_STRINGS = {
     "deck.topic.lexicon": "Words · {level}",
     "deck.topic.fluency": "Connectors and softeners",
     "deck.topic.slang": "Slang · {level}",
-    "deck.topic.mature": "Words to recognise",
+    "deck.topic.mature": "Words to recognize",
     "deck.topic.signals": "When a conversation turns",
     "deck.theme.family-and-relationships": "Family and relationships",
-    "deck.theme.home-and-neighbourhood": "Home and neighbourhood",
+    "deck.theme.home-and-neighborhood": "Home and neighborhood",
     "deck.theme.food-and-drink": "Food and drink",
     "deck.theme.social-life": "Social life",
     "deck.theme.everyday-life": "Everyday life",
@@ -524,7 +524,7 @@ const UI_STRINGS = {
     "deck.topic.mature": "Palabras para reconocer",
     "deck.topic.signals": "Cuando la conversación cambia",
     "deck.theme.family-and-relationships": "Familia y relaciones",
-    "deck.theme.home-and-neighbourhood": "Casa y barrio",
+    "deck.theme.home-and-neighborhood": "Casa y barrio",
     "deck.theme.food-and-drink": "Comida y bebida",
     "deck.theme.social-life": "Vida social",
     "deck.theme.everyday-life": "Vida diaria",

@@ -46,7 +46,7 @@ lessons.push(
         who: "Maya is riding with a taxi driver who knows the town, and she needs to stop near the riverfront without overshooting the corner.",
         what: "They handle the exact stop, a nonstop phone, standing up to check a sign, and the Colombian idiom parar bolas.",
         when: "Late afternoon, when traffic is moving but the right corner can pass quickly.",
-        where: "Arauca, in a taxi near the riverfront, with plain Colombian Spanish rather than invented regional colour.",
+        where: "Arauca, in a taxi near the riverfront, with plain Colombian Spanish rather than invented regional color.",
         why: "Because parar is the word a learner actually needs in a taxi on day one, and its pronominal and idiomatic uses are easy to misread."
       },
       address: {
@@ -196,7 +196,7 @@ lessons.push(
         who: "Rosa runs a small bakery, and Edwin is the technician checking why the mixer stopped during a busy morning.",
         what: "They identify what caused the breakdown, what problems it caused, and when causar sounds formal compared with me dio.",
         when: "Mid-morning, when bread orders are waiting and the machine has already stopped once.",
-        where: "Florencia, in a neighbourhood bakery, using a less represented Colombian city with general Spanish.",
+        where: "Florencia, in a neighborhood bakery, using a less represented Colombian city with general Spanish.",
         why: "Because causar is regular but formal. It is useful for damage, problems and impressions, while everyday feelings often use me dio."
       },
       address: {
@@ -343,10 +343,10 @@ lessons.push(
       situation:
         "Estás en Tumaco leyendo una nota local sobre una tormenta. La noticia dice qué produjo el aguacero, qué produjeron las obras y por qué produjo y produjeron tienen la raíz irregular -duj- sin tilde ni -jieron.",
       setting: {
-        who: "A local reporter interviews an engineer after a storm disrupted drainage work near a neighbourhood street.",
+        who: "A local reporter interviews an engineer after a storm disrupted drainage work near a neighborhood street.",
         what: "They explain what the storm produced, what the repairs produced, and why the preterite forms produced by producir are irregular.",
         when: "The morning after a heavy storm, when people want causes, effects and next steps rather than rumours.",
-        where: "Tumaco, near a coastal neighbourhood street, with general Colombian Spanish and careful news-style register.",
+        where: "Tumaco, near a coastal neighborhood street, with general Colombian Spanish and careful news-style register.",
         why: "Because producir is formal and useful in reports, but its preterite produjo and produjeron catches learners with the -duj- stem."
       },
       address: {
@@ -359,7 +359,7 @@ lessons.push(
       dialogue: [
         dl60Dialogue("Reportera", "Ingeniera, ¿qué produjo la tormenta de anoche?", "Engineer, what did last night's storm produce?", "een-heh-NYEH-rah, keh proh-DOO-hoh lah tor-MEN-tah deh ah-NOH-cheh", "Engineer, what produced the storm of last-night?", "Produjo is the key irregular form: -duj- stem, no accent, and a j sound. This is the form learners often miss."),
         dl60Dialogue("Ingeniera", "Produjo inundaciones pequeñas y daños en dos rejillas.", "It produced small floods and damage in two grates.", "proh-DOO-hoh een-oon-dah-SYOH-nes peh-KEH-nyahs ee DAH-nyos en dos rreh-HEE-yahs", "It produced floods small and damages in two grates.", "Producir sounds report-like here because it lists effects. In a casual chat, caused or left might be more natural, but news likes producir."),
-        dl60Dialogue("Reportera", "Los vecinos dicen que las obras produjeron más barro que solución.", "Neighbours say the works produced more mud than solution.", "los beh-SEE-nos DEE-sen keh las OH-bras proh-doo-HEH-ron mas BAH-rroh keh soh-loo-SYON", "The neighbours say that the works produced more mud than solution.", "Produjeron is the other high-value trap: not producieron and not produjieron. The ending is -jeron, without i."),
+        dl60Dialogue("Reportera", "Los vecinos dicen que las obras produjeron más barro que solución.", "Neighbors say the works produced more mud than solution.", "los beh-SEE-nos DEE-sen keh las OH-bras proh-doo-HEH-ron mas BAH-rroh keh soh-loo-SYON", "The neighbors say that the works produced more mud than solution.", "Produjeron is the other high-value trap: not producieron and not produjieron. The ending is -jeron, without i."),
         dl60Dialogue("Ingeniera", "Entiendo la queja, pero las bombas produjeron alivio en la parte baja.", "I understand the complaint, but the pumps produced relief in the lower part.", "en-TYEN-doh lah KEH-hah, PEH-roh las BOM-bas proh-doo-HEH-ron ah-LEE-byoh en lah PAR-teh BAH-hah", "I-understand the complaint, but the pumps produced relief in the part low.", "Produced relief is formal but readable. The engineer is balancing complaints with measurable effects."),
         dl60Dialogue("Reportera", "¿Y ese daño produjo el cierre de la vía?", "And did that damage produce the road closure?", "ee EH-seh DAH-nyoh proh-DOO-hoh el SYEH-rreh deh lah BEE-ah", "And that damage produced the closure of the road?", "Produjo el cierre means brought about or led to the closure. It is a cause-effect verb, not only factory production."),
         dl60Dialogue("Ingeniera", "Sí. Mañana producimos un informe completo con fotos y horarios.", "Yes. Tomorrow we'll produce a complete report with photos and times.", "see. mah-NYAH-nah proh-doo-SEE-mos oon een-FOR-meh kom-PLEH-toh kon FOH-tos ee oh-RAH-ryos", "Yes. Tomorrow we-produce a report complete with photos and schedules.", "Producir can also mean to produce a document or material output. The present producimos is regular; the preterite is where the irregularity appears.")
@@ -429,7 +429,7 @@ lessons.push(
       dialogue: [
         dl60Dialogue("Reporter", "Engineer, what did last night's storm produce?", "Ingeniera, ¿qué produjo la tormenta de anoche?", "en-ji-NIR, uat did last naits storm pro-DUS", "Ingeniera, ¿qué produjo la tormenta de anoche?", "“Produce” funciona porque la pregunta tiene registro de informe. En charla común, “cause” también podría sonar más directo."),
         dl60Dialogue("Engineer", "It produced small floods and damage to two drains.", "Produjo inundaciones pequeñas y daños en dos desagües.", "it pro-DUST smol flodz and DA-mich tu tu dreinz", "Produjo pequeñas inundaciones y daño a dos desagües.", "“Produced” lista efectos de forma ordenada. Es más noticioso que decir simplemente there was flooding."),
-        dl60Dialogue("Reporter", "Neighbours say the works produced more mud than solutions.", "Los vecinos dicen que las obras produjeron más barro que soluciones.", "NEI-borz sei da works pro-DUST mor mod dan so-LU-shonz", "Los vecinos dicen que las obras produjeron más barro que soluciones.", "El inglés regular no tiene la trampa de produjo. La dificultad está en elegir si produce suena natural o demasiado formal."),
+        dl60Dialogue("Reporter", "Neighbors say the works produced more mud than solutions.", "Los vecinos dicen que las obras produjeron más barro que soluciones.", "NEI-borz sei da works pro-DUST mor mod dan so-LU-shonz", "Los vecinos dicen que las obras produjeron más barro que soluciones.", "El inglés regular no tiene la trampa de produjo. La dificultad está en elegir si produce suena natural o demasiado formal."),
         dl60Dialogue("Engineer", "I understand, but the pumps produced some relief in the lower area.", "Entiendo, pero las bombas produjeron algo de alivio en la parte baja.", "ai on-der-STAND, bat da pomps pro-DUST som ri-LIF in da LOU-er ER-i-a", "Entiendo, pero las bombas produjeron algo de alivio en la zona baja.", "“Produced relief” es formal, pero funciona en voz de ingeniera. En conversación personal, “helped” podría sonar más natural."),
         dl60Dialogue("Reporter", "Did that damage lead to the road closure?", "¿Ese daño produjo el cierre de la vía?", "did dat DA-mich lid tu da roud KLOU-zher", "¿Ese daño llevó al cierre de la vía?", "“Lead to” suele sonar mejor que produce para cierres y consecuencias administrativas. Conecta causa y resultado sin sonar mecánico."),
         dl60Dialogue("Engineer", "Yes. Tomorrow we'll produce a full report with photos and times.", "Sí. Mañana producimos un informe completo con fotos y horarios.", "yes. tu-MOR-ou uil pro-DUS a ful ri-PORT uid FO-touz and taimz", "Sí. Mañana produciremos un informe completo con fotos y horas.", "Aquí “produce a report” sí es crear un documento. No es sólo causar un efecto; es preparar un producto informativo.")

@@ -225,7 +225,7 @@ lessons.push(
         {
           label: "Puentes fill small towns",
           body:
-            "A long weekend can change a quiet river town into a full one. Reserving early is not nervous tourist behaviour; it is common sense when every family has noticed the same holiday on the calendar."
+            "A long weekend can change a quiet river town into a full one. Reserving early is not nervous tourist behavior; it is common sense when every family has noticed the same holiday on the calendar."
         },
         {
           label: "Formal and warm can coexist",
@@ -680,7 +680,7 @@ lessons.push(
         who: "Mariana is from Pasto and is helping Alex arrange the weekend. Alex wants to be polite with family but relaxed with friends.",
         what: "A planning chat that separates formal visiting, tourist visiting and casual dropping by before the weekend gets too full.",
         when: "Monday night, several days before the trip, while everyone still has time to adjust expectations.",
-        where: "Pasto, Nariño, around a family lunch, the Museo del Carnaval and a friend's apartment near the centre.",
+        where: "Pasto, Nariño, around a family lunch, the Museo del Carnaval and a friend's apartment near the center.",
         why: "Because “visitar” is regular and easy, but register is the lesson. Colombians often say “pasar por,” “caer” or “darse una vuelta” when the visit is informal."
       },
       address: {
@@ -795,7 +795,7 @@ lessons.push(
         {
           term: "pasar por donde alguien",
           explanation:
-            "To stop by someone's place. “Donde Julián” means Julián's place without naming house, apartment or neighbourhood.",
+            "To stop by someone's place. “Donde Julián” means Julián's place without naming house, apartment or neighborhood.",
           literal: "to pass by where someone",
           useWhen:
             "A casual stop on the way, especially if the visit depends on time and availability.",
@@ -872,7 +872,7 @@ lessons.push(
         {
           label: "Museums take visitar naturally",
           body:
-            "With museums, churches, historic centres and towns, “visitar” carries no stiffness. It sounds like a planned cultural stop, which is exactly what it is."
+            "With museums, churches, historic centers and towns, “visitar” carries no stiffness. It sounds like a planned cultural stop, which is exactly what it is."
         },
         {
           label: "Friends get lighter verbs",
@@ -947,7 +947,7 @@ lessons.push(
       choices: [
         "Formal respectful visit versus casual friendly drop-in.",
         "Indoor museum visit versus outdoor mountain walk.",
-        "Morning appointment versus cancelled evening plan."
+        "Morning appointment versus canceled evening plan."
       ],
       answer: 0,
       practiceExtra: [
@@ -986,7 +986,7 @@ lessons.push(
           choices: [
             "It makes the visit sound brief and manageable.",
             "It makes the visit sound legally required.",
-            "It makes the visit sound completely cancelled."
+            "It makes the visit sound completely canceled."
           ],
           answer: 0,
           tests: "ratico as a softening diminutive"
@@ -1529,7 +1529,7 @@ lessons.push(
         {
           label: "Money belongs in the plan",
           body:
-            "Talking about “plata” early can feel blunt, but it prevents the silent collapse of a trip. Colombian friends often soften it with humour, not by pretending price does not exist."
+            "Talking about “plata” early can feel blunt, but it prevents the silent collapse of a trip. Colombian friends often soften it with humor, not by pretending price does not exist."
         },
         {
           label: "Honda is a plan, not a transit scene",

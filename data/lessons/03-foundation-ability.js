@@ -19,9 +19,9 @@
 lessons.push(
   {
     id: "asking-the-portero-for-a-hand",
-    level: "Starter · Home and neighbourhood",
+    level: "Starter · Home and neighborhood",
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
-    domain: "home-and-neighbourhood",
+    domain: "home-and-neighborhood",
     register: "courteous",
     pathways: ["foundation"],
     verb: "poder",
@@ -34,7 +34,7 @@ lessons.push(
         who: "Don Jairo has been the daytime portero for eleven years and knows every pipe and valve in the building. Alex moved in four days ago and has barely unpacked.",
         what: "A quick request for help connecting the gas cylinder, made at the porter's desk on the way past.",
         when: "A weekday morning, just before Alex wants to make lunch and discovers the stove is dead.",
-        where: "Bogotá, a mid-rise block in Chapinero where most flats cook on a refillable gas cylinder rather than piped gas.",
+        where: "Bogotá, a mid-rise block in Chapinero where most apartments cook on a refillable gas cylinder rather than piped gas.",
         why: "Because the portero is the person Alex will rely on for parcels, keys, leaks and small emergencies for years. How he asks for this first favour sets the tone for all of them."
       },
       address: {
@@ -56,9 +56,9 @@ lessons.push(
         {
           speaker: "Don Jairo",
           target: "Claro que sí, vecino. ¿En qué le colaboro?",
-          translation: "Of course, neighbour. What can I help you with?",
+          translation: "Of course, neighbor. What can I help you with?",
           pronunciation: "KLA-roh ke see, beh-SEE-noh. en ke le ko-la-BO-roh",
-          literal: "Clear that yes, neighbour. In what you I-collaborate?",
+          literal: "Clear that yes, neighbor. In what you I-collaborate?",
           why: "He answers the favour-frame with the same verb, colaborar, now in the yo form. Notice he keeps usted — “le colaboro”, not “te colaboro” — because the portero and a resident almost always hold usted in both directions, however friendly the tone."
         },
         {
@@ -118,7 +118,7 @@ lessons.push(
             "The most Colombian way to ask for help or a small favour. “Colaborar” stands in for “ayudar” so the request feels like teamwork instead of a demand on someone's time.",
           literal: "can you collaborate with me?",
           useWhen:
-            "Asking anyone in a service or neighbourly role for a hand — the portero, a shop assistant, a stranger with directions, a clerk behind a counter.",
+            "Asking anyone in a service or neighborly role for a hand — the portero, a shop assistant, a stranger with directions, a clerk behind a counter.",
           avoidWhen:
             "A genuine emergency, where the softness wastes time. Then “¡ayúdeme!” is right and “¿me colabora?” would sound absurdly casual.",
           register: "polite service",
@@ -186,7 +186,7 @@ lessons.push(
             "The refillable cylinder of cooking gas that many Colombian homes use instead of piped gas. Also called “el cilindro”; delivered by truck and swapped when empty.",
           literal: "the cylinder (of gas)",
           useWhen:
-            "Anything to do with domestic cooking gas — ordering a refill, connecting it, reporting a leak, asking a neighbour for help with it.",
+            "Anything to do with domestic cooking gas — ordering a refill, connecting it, reporting a leak, asking a neighbor for help with it.",
           avoidWhen:
             "Homes on piped natural gas (“gas natural”, “gas por tubería”), where there is no cylinder at all and the word would only confuse.",
           register: "neutral",
@@ -221,7 +221,7 @@ lessons.push(
         {
           label: "Colaborar is how Colombia asks",
           body:
-            "Across Colombia, favours are framed as collaboration. A traffic officer, a receptionist and your next-door neighbour will all offer to “colaborarle”, and asking “¿me puede colaborar?” signals that you see the other person as a partner doing you a kindness, not a servant obeying an order. The word carries a quiet equality that “ayudar” lacks. Foreigners who master this one verb sound noticeably more polite almost overnight."
+            "Across Colombia, favours are framed as collaboration. A traffic officer, a receptionist and your next-door neighbor will all offer to “colaborarle”, and asking “¿me puede colaborar?” signals that you see the other person as a partner doing you a kindness, not a servant obeying an order. The word carries a quiet equality that “ayudar” lacks. Foreigners who master this one verb sound noticeably more polite almost overnight."
         },
         {
           label: "The regalar that costs money",
@@ -231,12 +231,12 @@ lessons.push(
         {
           label: "Gas arrives by truck",
           body:
-            "In much of Colombia cooking gas is not piped in but delivered as a “pipeta”, a steel cylinder swapped over when it runs dry. You soon learn the rhythm of the gas truck's recorded jingle crawling through the neighbourhood, and you learn to keep the portero's goodwill — because connecting, bleeding and leak-checking a cylinder is exactly the kind of thing a helpful portero does and a nervous newcomer cannot."
+            "In much of Colombia cooking gas is not piped in but delivered as a “pipeta”, a steel cylinder swapped over when it runs dry. You soon learn the rhythm of the gas truck's recorded jingle crawling through the neighborhood, and you learn to keep the portero's goodwill — because connecting, bleeding and leak-checking a cylinder is exactly the kind of thing a helpful portero does and a nervous newcomer cannot."
         },
         {
           label: "The portero holds the building together",
           body:
-            "A Colombian portero is far more than a doorman. He signs for parcels, waters the plants, knows which flats are feuding, buzzes in the plumber, and quietly decides how smoothly your life in the building runs. Treating him with usted and a warm “vecino” or “don” is not merely good manners; it is the single best investment a new resident can make. He remembers, for years, who was kind to him."
+            "A Colombian portero is far more than a doorman. He signs for parcels, waters the plants, knows which apartments are feuding, buzzes in the plumber, and quietly decides how smoothly your life in the building runs. Treating him with usted and a warm “vecino” or “don” is not merely good manners; it is the single best investment a new resident can make. He remembers, for years, who was kind to him."
         }
       ],
       pitfalls: [
@@ -270,7 +270,7 @@ lessons.push(
           form: "¿Me puede colaborar con una cosita?",
           register: "polite service",
           region: "General Colombian",
-          whenToUse: "The everyday default with a portero, clerk or neighbour. Warm, soft and unmistakably local."
+          whenToUse: "The everyday default with a portero, clerk or neighbor. Warm, soft and unmistakably local."
         },
         {
           form: "¿Sería tan amable de ayudarme con esto?",
@@ -282,7 +282,7 @@ lessons.push(
           form: "Vecino, ¿me da una manito con la pipeta?",
           register: "friendly informal",
           region: "General Colombian",
-          whenToUse: "A relaxed, neighbourly ask once you already know the person a little. “Una manito” is a small hand."
+          whenToUse: "A relaxed, neighborly ask once you already know the person a little. “Una manito” is a small hand."
         },
         {
           form: "¿Me hace el favor y me ayuda a subir esto?",
@@ -350,12 +350,12 @@ lessons.push(
     en: {
       title: "Pedirle una mano al superintendente",
       situation:
-        "Alejandra acaba de mudarse a un apartamento en Toronto y no logra conectar el tanque de propano de la parrilla del balcón. Baja donde Dave, el superintendente del edificio, a pedirle ayuda. Tiene que pedir el favor con cortesía, explicar qué no puede hacer y agradecer — todo en un par de minutos, sin sonar mandona.",
+        "Alejandra acaba de mudarse a un apartamento en Houston y no logra conectar el tanque de propano de la parrilla del balcón. Baja donde Dave, el superintendente del edificio, a pedirle ayuda. Tiene que pedir el favor con cortesía, explicar qué no puede hacer y agradecer — todo en un par de minutos, sin sonar mandona.",
       setting: {
         who: "Dave es el superintendente del edificio desde hace once años y conoce cada tubo y cada válvula. Alejandra se mudó hace cuatro días y apenas ha desempacado.",
         what: "Un pedido rápido de ayuda para conectar el tanque de gas, hecho en la oficina del super al pasar.",
         when: "Una mañana entre semana, justo cuando Alejandra quiere estrenar la parrilla y descubre que no prende.",
-        where: "Toronto, un edificio de mediana altura donde las parrillas de balcón funcionan con un tanque de propano recargable.",
+        where: "Houston, un edificio de mediana altura donde las parrillas de balcón funcionan con un tanque de propano recargable.",
         why: "Porque el super es la persona de la que Alejandra dependerá para paquetes, llaves, fugas y pequeñas emergencias durante años. Cómo pide este primer favor marca el tono de todos los siguientes."
       },
       address: {
@@ -670,10 +670,10 @@ lessons.push(
     }
   },
   {
-    id: "passing-on-what-the-neighbours-said",
+    id: "passing-on-what-the-neighbors-said",
     level: "Starter · Everyday life",
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
-    domain: "home-and-neighbourhood",
+    domain: "home-and-neighborhood",
     register: "familiar",
     pathways: ["foundation"],
     verb: "decir",
@@ -683,16 +683,16 @@ lessons.push(
       situation:
         "Alex está en el pasillo de su edificio en Cali cuando Marcela, una vecina, le cuenta un rumor: dizque van a cortar el agua mañana. Alex tiene que entender de dónde viene la noticia, sacar la conclusión práctica y ofrecer avisarles a otros vecinos — todo relatando lo que unos y otros dijeron.",
       setting: {
-        who: "Marcela has lived on Alex's floor for six years and hears everything first. Alex is still new and depends on neighbours like her to know what is going on.",
-        what: "A quick corridor exchange in which Marcela passes on a rumour about the water being cut, and Alex works out what to do about it.",
-        when: "Late afternoon, as people come home and stop to talk by the lifts.",
+        who: "Marcela has lived on Alex's floor for six years and hears everything first. Alex is still new and depends on neighbors like her to know what is going on.",
+        what: "A quick corridor exchange in which Marcela passes on a rumor about the water being cut, and Alex works out what to do about it.",
+        when: "Late afternoon, as people come home and stop to talk by the elevators.",
         where: "Cali, a warm city where corridor chat is constant and the corner shop is the real news source.",
         why: "Because a water cut means filling bottles tonight, and because relaying the warning accurately — who said what, and how sure they are — is how a building looks after itself."
       },
       address: {
         form: "tú",
-        who: "Marcela and Alex use tú with each other, the usual footing between neighbours of a similar age in Cali.",
-        why: "In the Valle, tú is the everyday register among peers, warmer and less formal than Bogotá's usted but not as marked as the paisa vos. Between two neighbours who chat in the corridor, tú fits naturally.",
+        who: "Marcela and Alex use tú with each other, the usual footing between neighbors of a similar age in Cali.",
+        why: "In the Valle, tú is the everyday register among peers, warmer and less formal than Bogotá's usted but not as marked as the paisa vos. Between two neighbors who chat in the corridor, tú fits naturally.",
         ifYouSwitch:
           "Usted here would put a sudden distance between them, as if Alex were addressing an official. Vos is not a Cali default; using it would sound borrowed from Medellín and slightly performative."
       },
@@ -700,10 +700,10 @@ lessons.push(
         {
           speaker: "Marcela",
           target: "Vecino, dizque van a cortar el agua mañana.",
-          translation: "Neighbour, apparently they're going to cut the water off tomorrow.",
+          translation: "Neighbor, apparently they're going to cut the water off tomorrow.",
           pronunciation: "beh-SEE-noh, DEES-keh ban a kor-TAR el AH-gwa ma-NYA-na",
-          literal: "Neighbour, apparently they-go to cut the water tomorrow.",
-          why: "“Dizque” is one word doing the work of “apparently / supposedly”. It comes from “dice que” (“it says that”) and quietly flags this as hearsay — Marcela is passing on a rumour, not swearing to it."
+          literal: "Neighbor, apparently they-go to cut the water tomorrow.",
+          why: "“Dizque” is one word doing the work of “apparently / supposedly”. It comes from “dice que” (“it says that”) and quietly flags this as hearsay — Marcela is passing on a rumor, not swearing to it."
         },
         {
           speaker: "Alex",
@@ -719,7 +719,7 @@ lessons.push(
           translation: "They told me at the shop that they're fixing a pipe.",
           pronunciation: "me di-HEH-ron en la TYEN-da ke es-TAN a-rre-GLAN-do oon TOO-bo",
           literal: "To-me they-told in the shop that they-are fixing a pipe.",
-          why: "“Me dijeron” — “they told me” — is the standard way to source a rumour without naming anyone; the impersonal “they” carries no blame. It pairs with “que” plus a full clause, the reported-speech pattern this whole lesson turns on."
+          why: "“Me dijeron” — “they told me” — is the standard way to source a rumor without naming anyone; the impersonal “they” carries no blame. It pairs with “que” plus a full clause, the reported-speech pattern this whole lesson turns on."
         },
         {
           speaker: "Alex",
@@ -770,7 +770,7 @@ lessons.push(
             "“Apparently / supposedly.” A compression of “dice que” that flags the next thing as hearsay, and sometimes as doubtful or faintly ironic.",
           literal: "says that",
           useWhen:
-            "Passing on a rumour you don't fully vouch for, or hinting you find a claim dubious: “dizque está enfermo” can gently mean you doubt it.",
+            "Passing on a rumor you don't fully vouch for, or hinting you find a claim dubious: “dizque está enfermo” can gently mean you doubt it.",
           avoidWhen:
             "Formal writing, or any time you want to sound certain. It is chatty and carries a whiff of scepticism that can undercut you.",
           register: "friendly informal",
@@ -868,17 +868,17 @@ lessons.push(
         }
       ],
       note:
-        "The heart of this lesson is that Spanish tells you who was told. Decir drags an indirect-object pronoun along almost everywhere — “me dijeron”, “le digo”, “dile” — and dropping it sounds broken even when you name the person separately. Add the very Colombian “dizque” for rumour and “o sea” for drawing conclusions, and you can relay neighbourhood news exactly the way locals do.",
+        "The heart of this lesson is that Spanish tells you who was told. Decir drags an indirect-object pronoun along almost everywhere — “me dijeron”, “le digo”, “dile” — and dropping it sounds broken even when you name the person separately. Add the very Colombian “dizque” for rumor and “o sea” for drawing conclusions, and you can relay neighborhood news exactly the way locals do.",
       culture: [
         {
-          label: "Dizque: the rumour word",
+          label: "Dizque: the rumor word",
           body:
             "“Dizque” is one of the most Colombian words there is, and it does delicate work. It marks the next statement as secondhand — “dizque se casó” is “word is she got married” — and often adds a raised eyebrow. Politicians and gossips alike get “dizque'd”. Foreigners who pick it up sound instantly more fluent, but should notice the scepticism it can carry, because pinning it to someone's sincere claim can sound like you doubt them."
         },
         {
           label: "The corner shop is the news wire",
           body:
-            "In a Colombian barrio the “tienda” on the corner is an information exchange as much as a shop. The tendero knows whose water is out, which street is dug up, and when the gas truck comes around. “Me dijeron en la tienda” is a genuine, trusted source, not idle chatter. A newcomer who befriends the shopkeeper plugs straight into the neighbourhood's real-time news, its warnings and its mild gossip."
+            "In a Colombian barrio the “tienda” on the corner is an information exchange as much as a shop. The tendero knows whose water is out, which street is dug up, and when the gas truck comes around. “Me dijeron en la tienda” is a genuine, trusted source, not idle chatter. A newcomer who befriends the shopkeeper plugs straight into the neighborhood's real-time news, its warnings and its mild gossip."
         },
         {
           label: "O sea is basically punctuation now",
@@ -888,7 +888,7 @@ lessons.push(
         {
           label: "Everyone stores water",
           body:
-            "Planned water cuts — “cortes de agua” — are a routine part of Colombian city life, announced by the utility, the tienda, or a neighbour like Marcela. Households keep bottles, buckets and often a rooftop tank precisely for these days. Filling containers the night before is not paranoia; it is basic competence, and a neighbour who warns you is doing a real favour. Passing the warning upstairs, as Alex does, is simply how a building looks after its own."
+            "Planned water cuts — “cortes de agua” — are a routine part of Colombian city life, announced by the utility, the tienda, or a neighbor like Marcela. Households keep bottles, buckets and often a rooftop tank precisely for these days. Filling containers the night before is not paranoia; it is basic competence, and a neighbor who warns you is doing a real favour. Passing the warning upstairs, as Alex does, is simply how a building looks after its own."
         }
       ],
       pitfalls: [
@@ -907,7 +907,7 @@ lessons.push(
         {
           mistake: "Using “dizque” for something you're completely sure about",
           whyItFails:
-            "“Dizque” flags hearsay and often doubt. Attaching it to something you witnessed yourself — “dizque llegué tarde” — is contradictory, because you can't hedge your own certain knowledge with a rumour marker.",
+            "“Dizque” flags hearsay and often doubt. Attaching it to something you witnessed yourself — “dizque llegué tarde” — is contradictory, because you can't hedge your own certain knowledge with a rumor marker.",
           sayInstead: "Llegué tarde. (Sin “dizque”.)"
         },
         {
@@ -922,7 +922,7 @@ lessons.push(
           form: "Dizque van a cortar el agua.",
           register: "friendly informal",
           region: "General Colombian",
-          whenToUse: "Passing on a rumour you don't fully back. The default neighbourly hedge."
+          whenToUse: "Passing on a rumor you don't fully back. The default neighborly hedge."
         },
         {
           form: "Me dijeron que van a cortar el agua.",
@@ -951,7 +951,7 @@ lessons.push(
       ],
       prompt: "Marcela says “dizque van a cortar el agua mañana.” What does “dizque” tell you about her statement?",
       choices: [
-        "That she is passing on something she heard — it's a rumour she is not personally guaranteeing to be true.",
+        "That she is passing on something she heard — it's a rumor she is not personally guaranteeing to be true.",
         "That she has official confirmation from the water company and is completely certain the cut happens tomorrow.",
         "That she strongly disapproves of the water being cut and is really complaining to Alex about the decision."
       ],
@@ -960,9 +960,9 @@ lessons.push(
         {
           prompt: "Why does Marcela say “me dijeron en la tienda” rather than naming a specific person?",
           choices: [
-            "Because Colombian grammar actually forbids naming your source when you report a rumour to a neighbour.",
+            "Because Colombian grammar actually forbids naming your source when you report a rumor to a neighbor.",
             "Because she is deliberately hiding who told her, since the information is meant to stay a secret for now.",
-            "Because the vague “they told me” is the normal way to source neighbourhood news without naming anyone."
+            "Because the vague “they told me” is the normal way to source neighborhood news without naming anyone."
           ],
           answer: 2,
           tests: "the impersonal “me dijeron” as an unnamed source"
@@ -982,7 +982,7 @@ lessons.push(
           choices: [
             "It is quoting the shopkeeper's exact words back to Marcela so that she can confirm or deny them.",
             "It is drawing the conclusion — “so, that means” — that follows from the news she has just given him.",
-            "It is expressing his surprise that the water could ever be cut off in a modern neighbourhood at all."
+            "It is expressing his surprise that the water could ever be cut off in a modern neighborhood at all."
           ],
           answer: 1,
           tests: "“o sea” as a conclusion-drawing connector"
@@ -1002,12 +1002,12 @@ lessons.push(
     en: {
       title: "Pasar el chisme del corte de agua",
       situation:
-        "Alejandra está en el pasillo de su edificio en Toronto cuando Karen, una vecina, le cuenta un rumor: dizque van a cortar el agua mañana. Alejandra tiene que entender de dónde viene la noticia, sacar la conclusión práctica y ofrecer avisarles a otros vecinos — todo relatando lo que unos y otros dijeron.",
+        "Alejandra está en el pasillo de su edificio en Houston cuando Karen, una vecina, le cuenta un rumor: dizque van a cortar el agua mañana. Alejandra tiene que entender de dónde viene la noticia, sacar la conclusión práctica y ofrecer avisarles a otros vecinos — todo relatando lo que unos y otros dijeron.",
       setting: {
         who: "Karen lleva seis años en el piso de Alejandra y se entera de todo primero. Alejandra todavía es nueva y depende de vecinas como ella para saber qué pasa.",
         what: "Un cruce rápido en el pasillo en el que Karen pasa un rumor sobre el corte de agua, y Alejandra decide qué hacer al respecto.",
         when: "El final de la tarde, cuando la gente llega a casa y se detiene a hablar junto a los ascensores.",
-        where: "Toronto, un edificio donde las noticias corren por el grupo de chat y por el tablón del vestíbulo.",
+        where: "Houston, un edificio donde las noticias corren por el grupo de chat y por el tablón del vestíbulo.",
         why: "Porque un corte de agua significa llenar botellas esta noche, y porque pasar el aviso con precisión — quién dijo qué, y con cuánta seguridad — es como un edificio se cuida a sí mismo."
       },
       address: {
@@ -1074,7 +1074,7 @@ lessons.push(
             "El inglés parte “decir” en dos. “Tell” lleva siempre a la persona (“tell me”), y “say” lleva las palabras (“say something”), casi nunca la persona directa.",
           literal: "decir (a alguien) / decir (algo)",
           useWhen:
-            "“Tell” cuando nombras a quien recibe el mensaje: “tell her”, “tell the neighbours”. “Say” cuando reportas las palabras: “she said no”.",
+            "“Tell” cuando nombras a quien recibe el mensaje: “tell her”, “tell the neighbors”. “Say” cuando reportas las palabras: “she said no”.",
           avoidWhen:
             "No los mezcles: “say me” y “tell that to nobody” fallan. “He said me” es el error de hispanohablante más típico con estos dos verbos.",
           register: "neutral",
@@ -1189,7 +1189,7 @@ lessons.push(
         }
       ],
       note:
-        "Lo más útil aquí es que el inglés parte “decir” en dos verbos. “Tell” exige a la persona — “tell me”, “tell the neighbours” — y “say” exige las palabras — “say no”, “she said that…”. El error estrella del hispanohablante es “he said me”. Súmale “apparently” para el rumor y “I mean” para concluir, y ya relatas las noticias del edificio como un local.",
+        "Lo más útil aquí es que el inglés parte “decir” en dos verbos. “Tell” exige a la persona — “tell me”, “tell the neighbors” — y “say” exige las palabras — “say no”, “she said that…”. El error estrella del hispanohablante es “he said me”. Súmale “apparently” para el rumor y “I mean” para concluir, y ya relatas las noticias del edificio como un local.",
       culture: [
         {
           label: "“Say” y “tell”: la división que el español no hace",
@@ -1232,10 +1232,10 @@ lessons.push(
           sayInstead: "Can you explain to me what they said?"
         },
         {
-          mistake: "“I'm going to tell to my neighbours.”",
+          mistake: "“I'm going to tell to my neighbors.”",
           whyItFails:
-            "Con “tell” la persona va directa, sin “to”: “tell my neighbours”. El “to” se cuela por analogía con “say to” y con el “decirles a” del español. Sobra, y el oído nativo lo nota enseguida.",
-          sayInstead: "I'm going to tell my neighbours."
+            "Con “tell” la persona va directa, sin “to”: “tell my neighbors”. El “to” se cuela por analogía con “say to” y con el “decirles a” del español. Sobra, y el oído nativo lo nota enseguida.",
+          sayInstead: "I'm going to tell my neighbors."
         }
       ],
       variations: [
@@ -1311,9 +1311,9 @@ lessons.push(
         {
           prompt: "¿Cuál de estas frases dice correctamente “les voy a avisar a mis vecinos”?",
           choices: [
-            "I'm going to tell to my neighbours.",
-            "I'm going to tell my neighbours.",
-            "I'm going to say my neighbours."
+            "I'm going to tell to my neighbors.",
+            "I'm going to tell my neighbors.",
+            "I'm going to say my neighbors."
           ],
           answer: 1,
           tests: "“tell” sin “to” antes de la persona"
@@ -1355,7 +1355,7 @@ lessons.push(
           translation: "Hey, Alex! Saturday we're making sancocho at the house. You coming?",
           pronunciation: "BEN-ga, A-lex! el SA-ba-do a-SE-mos san-KO-cho en la KA-sa. se BYE-ne?",
           literal: "Come, Alex! On Saturday we make sancocho at the house. Do you come yourself?",
-          why: "Paisa “¡venga!” opens the sentence as a warm attention-getter, not a literal order to walk over. “¿Se viene?” pairs venir with a reflexive “se” that adds a friendly, personal “are you joining us?” colour that is very common in Colombia."
+          why: "Paisa “¡venga!” opens the sentence as a warm attention-getter, not a literal order to walk over. “¿Se viene?” pairs venir with a reflexive “se” that adds a friendly, personal “are you joining us?” color that is very common in Colombia."
         },
         {
           speaker: "Alex",
@@ -1655,12 +1655,12 @@ lessons.push(
     en: {
       title: "Una invitación a cenar el sábado",
       situation:
-        "Alejandra lleva poco en Toronto y su amiga Jenny la invita a cenar el sábado en su casa. Es tipo potluck, así que Alejandra tiene que aceptar, entender que en inglés se responde “I'm coming” y no “I'm going” cuando la llaman, ofrecer llevar algo con “bring” y no “take”, y reconocer “come over” como la invitación casual del día a día.",
+        "Alejandra lleva poco en Houston y su amiga Jenny la invita a cenar el sábado en su casa. Es tipo potluck, así que Alejandra tiene que aceptar, entender que en inglés se responde “I'm coming” y no “I'm going” cuando la llaman, ofrecer llevar algo con “bring” y no “take”, y reconocer “come over” como la invitación casual del día a día.",
       setting: {
-        who: "Jenny es una amiga canadiense que Alejandra conoció en el trabajo: cálida y de invitar rápido. Alejandra es la recién llegada, todavía afinando el oído al inglés del día a día.",
+        who: "Jenny es una amiga estadounidense que Alejandra conoció en el trabajo: cálida y de invitar rápido. Alejandra es la recién llegada, todavía afinando el oído al inglés del día a día.",
         what: "Una invitación sencilla y alegre a cenar el sábado, estilo potluck, donde cada quien lleva un plato para compartir.",
         when: "Una tarde entre semana, las dos cruzándose de salida, dejando el plan listo para el sábado.",
-        where: "Toronto, donde “come over” es la invitación informal de siempre y llevar algo a la mesa es casi una regla no escrita.",
+        where: "Houston, donde “come over” es la invitación informal de siempre y llevar algo a la mesa es casi una regla no escrita.",
         why: "Porque aceptar bien una invitación —saber cuándo llegar, qué llevar y cómo decir que ya vas— es como una recién llegada convierte a una compañera de trabajo en una amiga de verdad."
       },
       address: {
@@ -1842,7 +1842,7 @@ lessons.push(
         }
       ],
       note:
-        "Lo clave: el “come” inglés apunta hacia vos o hacia tu oyente, así que cuando te llaman respondés “I'm coming”, no “I'm going” —que suena a que te vas—. Para invitar se usa “come over”; para ofrecer llevar algo hacia donde está el otro, “bring”, no “take”. Y en un potluck cada quien lleva un plato. Con eso, una cena del sábado en Toronto fluye sin tropiezos.",
+        "Lo clave: el “come” inglés apunta hacia vos o hacia tu oyente, así que cuando te llaman respondés “I'm coming”, no “I'm going” —que suena a que te vas—. Para invitar se usa “come over”; para ofrecer llevar algo hacia donde está el otro, “bring”, no “take”. Y en un potluck cada quien lleva un plato. Con eso, una cena del sábado en Houston fluye sin tropiezos.",
       culture: [
         {
           label: "«Come» y «go»: hacia vos, no sólo hacia mí",

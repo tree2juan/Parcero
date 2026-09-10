@@ -82,9 +82,9 @@ lessons.push(
         {
           speaker: "Maya",
           target: "Yo nazco en Canadá, pero mi familia viene de otro lado.",
-          translation: "I am born in Canada, but my family comes from somewhere else.",
+          translation: "I am born in Texas, but my family comes from somewhere else.",
           pronunciation: "yo NAHS-koh en kah-nah-DAH, PEH-roh mee fah-MEE-lyah BYEH-neh deh OH-troh LAH-doh",
-          literal: "I am-born in Canada, but my family comes from another side.",
+          literal: "I am-born in Texas, but my family comes from another side.",
           why: "Nazco is the odd present-tense form: the yo form adds -zc-. Maya's sentence is grammatical, though most adult birthplace stories use nací."
         },
         {
@@ -145,7 +145,7 @@ lessons.push(
           related: ["conozco", "crezco", "aparezco", "nacer"],
           example: {
             target: "Yo nazco en Canadá, pero mi familia viene de otro lado.",
-            translation: "I am born in Canada, but my family comes from somewhere else."
+            translation: "I am born in Texas, but my family comes from somewhere else."
           }
         },
         {
@@ -352,12 +352,12 @@ lessons.push(
     en: {
       title: "Contar dónde nació la abuela",
       situation:
-        "Usted está en Toronto, en el cumpleaños de una abuela colombiana. La familia saca fotos antiguas y un árbol familiar, y usted necesita decir was born, were born y grew up sin traducir nacer como un verbo simple donde el inglés exige be.",
+        "Usted está en Houston, en el cumpleaños de una abuela colombiana. La familia saca fotos antiguas y un árbol familiar, y usted necesita decir was born, were born y grew up sin traducir nacer como un verbo simple donde el inglés exige be.",
       setting: {
         who: "Elvira cumple ochenta años y disfruta corrigiendo la versión familiar de su propia historia. Maya, una amiga de la familia, ayuda a poner etiquetas a las fotos.",
         what: "Una tarde de cumpleaños que se vuelve sesión de historia familiar, con nombres, pueblos, fechas y una abuela que recuerda más que las etiquetas.",
         when: "Al final de la tarde, después de la torta, cuando los primos menores ya se fueron y los adultos siguen en la mesa.",
-        where: "Toronto, en el comedor de una familia colombiana con fotos de Huila extendidas sobre la mesa.",
+        where: "Houston, en el comedor de una familia colombiana con fotos de Huila extendidas sobre la mesa.",
         why: "Porque en inglés nacer se expresa con be born. La gramática parece pasiva, pero es la forma normal para hablar de origen y biografía."
       },
       address: {
@@ -370,10 +370,10 @@ lessons.push(
       dialogue: [
         {
           speaker: "Maya",
-          target: "Elvira, were you born here in Toronto?",
-          translation: "Doña Elvira, ¿usted nació aquí en Toronto?",
+          target: "Elvira, were you born here in Houston?",
+          translation: "Doña Elvira, ¿usted nació aquí en Houston?",
           pronunciation: "el-VI-ra, uer yu born jir in to-RON-to",
-          literal: "Elvira, ¿fue usted nacida aquí en Toronto?",
+          literal: "Elvira, ¿fue usted nacida aquí en Houston?",
           why: "El inglés necesita be born: were you born. No diga did you born, porque born no funciona como verbo principal en esa pregunta."
         },
         {
@@ -402,7 +402,7 @@ lessons.push(
         },
         {
           speaker: "Maya",
-          target: "I was born in Canada, but my family comes from somewhere else.",
+          target: "I was born in Texas, but my family comes from somewhere else.",
           translation: "Nací en Canadá, pero mi familia viene de otro lado.",
           pronunciation: "ai uoz born in CA-na-da, bot mai FA-mi-li comz from SOM-uer els",
           literal: "Yo fui nacida en Canadá, pero mi familia viene de algún otro lugar.",
@@ -431,8 +431,8 @@ lessons.push(
           region: "Inglés universal.",
           related: ["was born", "were born", "born in", "birthplace"],
           example: {
-            target: "Were you born here in Toronto?",
-            translation: "¿Usted nació aquí en Toronto?"
+            target: "Were you born here in Houston?",
+            translation: "¿Usted nació aquí en Houston?"
           }
         },
         {
@@ -602,7 +602,7 @@ lessons.push(
           whenToUse: "Dar su propio lugar de nacimiento con una referencia cercana."
         },
         {
-          form: "My siblings were born in another province.",
+          form: "My siblings were born in another state.",
           register: "neutral",
           region: "Inglés universal",
           whenToUse: "Explicar una mudanza familiar mediante los lugares de nacimiento."
@@ -614,7 +614,7 @@ lessons.push(
           whenToUse: "Usar el presente en narración marcada, no en biografía normal."
         },
         {
-          form: "I was born there, but grew up in Toronto.",
+          form: "I was born there, but grew up in Houston.",
           register: "neutral",
           region: "Inglés universal",
           whenToUse: "Separar nacimiento y crianza."
@@ -661,9 +661,9 @@ lessons.push(
         {
           prompt: "¿Cuál frase suena más natural en una biografía hablada?",
           choices: [
-            "I am born in Toronto as a child.",
-            "I born in Toronto many years ago.",
-            "I was born in Toronto and grew up here."
+            "I am born in Houston as a child.",
+            "I born in Houston many years ago.",
+            "I was born in Houston and grew up here."
           ],
           answer: 2,
           tests: "I was born as the normal biography form"
@@ -686,9 +686,9 @@ lessons.push(
         "Estás en Mompox, en el novenario del papá de una amiga. No vienes a explicar nada ni a llenar el silencio; vienes a saludar, escuchar y decir una frase sencilla de pésame sin convertir el dolor de la familia en una escena.",
       setting: {
         who: "Laura has lost her father after an illness, and Andrés is a close friend who wants to be present without taking over the moment.",
-        what: "A short condolence exchange before the prayers begin, with chairs in the living room and neighbours arriving quietly.",
+        what: "A short condolence exchange before the prayers begin, with chairs in the living room and neighbors arriving quietly.",
         when: "The evening of the novenario, several days after the funeral, when the house is tired and still receiving people.",
-        where: "Mompox, in a family living room near the river, with relatives and neighbours coming in softly.",
+        where: "Mompox, in a family living room near the river, with relatives and neighbors coming in softly.",
         why: "Because morir is a grammar lesson, but condolences are the human need. The learner must know what to say when someone says se murió mi papá."
       },
       address: {
@@ -875,7 +875,7 @@ lessons.push(
         {
           label: "Condolences should not perform",
           body:
-            "A condolence in Colombia does not need to be original. In fact, originality can be a burden. The useful phrases are conventional because they let grief stay in the centre instead of making the mourner react to your wording."
+            "A condolence in Colombia does not need to be original. In fact, originality can be a burden. The useful phrases are conventional because they let grief stay in the center instead of making the mourner react to your wording."
         },
         {
           label: "Se murió carries closeness",

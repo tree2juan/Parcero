@@ -644,7 +644,7 @@ lessons.push(
   },
   {
     id: "second-helpings-at-a-paisa-sunday-lunch",
-    level: "Starter · Home and neighbourhood",
+    level: "Starter · Home and neighborhood",
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "food-and-drink",
     register: "intimate",
@@ -847,7 +847,7 @@ lessons.push(
         {
           label: "Doña plus a name",
           body:
-            "Addressing an older woman as “doña” followed by her first name — Doña Miriam — is the Colombian sweet spot between formal and warm. It carries respect without the stiffness of “señora” alone, and it's how you'd speak to a friend's mother, a neighbour, or the lady who runs the corner shop. The masculine “don” works the same way. Using it well is one of the quickest ways to sound courteous and at home."
+            "Addressing an older woman as “doña” followed by her first name — Doña Miriam — is the Colombian sweet spot between formal and warm. It carries respect without the stiffness of “señora” alone, and it's how you'd speak to a friend's mother, a neighbor, or the lady who runs the corner shop. The masculine “don” works the same way. Using it well is one of the quickest ways to sound courteous and at home."
         }
       ],
       pitfalls: [
@@ -949,7 +949,7 @@ lessons.push(
         {
           prompt: "A Colombian host keeps pressing food on you. The pressure mostly signals…",
           choices: [
-            "Affection and hospitality — overfeeding a guest is a recognised way of showing care.",
+            "Affection and hospitality — overfeeding a guest is a recognized way of showing care.",
             "Impatience that you are eating far too slowly and really should hurry up and finish now.",
             "A subtle hint that food is scarce and that they need you to leave the table quite quickly."
           ],
@@ -1268,7 +1268,7 @@ lessons.push(
   },
   {
     id: "dropping-in-on-a-costeno-aunt",
-    level: "Starter · Home and neighbourhood",
+    level: "Starter · Home and neighborhood",
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "family-and-relationships",
     register: "familiar",
@@ -1469,9 +1469,9 @@ lessons.push(
             "“Sabroso” starts as “tasty” but on the coast it swells to cover anything pleasurable, easy, and good: a breeze can be sabroso, a lazy afternoon, a life well lived — “se vive sabroso”. It captures a costeño ideal of enjoyment and ease that a single English word can't hold. When Alex says food is sabroso, he's brushing against a whole outlook, not just praising the arepa. Learning to feel that stretch of meaning is learning the coast itself."
         },
         {
-          label: "A word to recognise, not use",
+          label: "A word to recognize, not use",
           body:
-            "“Comer” is innocent on food, but in some slang registers it takes on a crude sexual sense, much as English verbs sometimes do. This isn't a reason to fear the word — “¿ya comiste?” is wholesome and constant — but a learner should recognise that a snigger over “comerse a alguien” has nothing to do with dinner. Keep “comer” anchored to food and you'll never trip; just don't be baffled if it raises an eyebrow in the wrong company."
+            "“Comer” is innocent on food, but in some slang registers it takes on a crude sexual sense, much as English verbs sometimes do. This isn't a reason to fear the word — “¿ya comiste?” is wholesome and constant — but a learner should recognize that a snigger over “comerse a alguien” has nothing to do with dinner. Keep “comer” anchored to food and you'll never trip; just don't be baffled if it raises an eyebrow in the wrong company."
         }
       ],
       pitfalls: [
@@ -1571,7 +1571,7 @@ lessons.push(
           tests: "sabroso stretching beyond food on the coast"
         },
         {
-          prompt: "Why should a learner recognise “comer” has a vulgar slang sense in some contexts?",
+          prompt: "Why should a learner recognize “comer” has a vulgar slang sense in some contexts?",
           choices: [
             "So they stop using “comer” for food entirely and only ever say “almorzar” or “cenar” instead.",
             "So they aren't thrown when it raises an eyebrow, while keeping “comer” safely anchored to food.",
@@ -1587,7 +1587,7 @@ lessons.push(
       situation:
         "Usted llega sin avisar a la casa de una amiga en Canadá, justo a la hora de la cena. Lo primero que ella hace es preguntarle si ya comió — pero en inglés “did you eat?” pesa menos que el “¿ya comiste?” colombiano: es más literal y menos ritual. Aquí verá comer en inglés: “did you eat?” como gesto de cariño más sobrio, el útil “eat up”, y un aviso sobre un sentido de “eat” que conviene reconocer.",
       setting: {
-        who: "Alejandra, que cae sin avisar donde una amiga, y Emily, una amiga canadiense que la recibe con cariño.",
+        who: "Alejandra, que cae sin avisar donde una amiga, y Emily, una amiga estadounidense que la recibe con cariño.",
         what: "Una visita sin anunciar que, en cuestión de segundos, se convierte en quedarse a comer algo de verdad.",
         when: "Una tarde entre semana, a la hora de la cena, en el frío.",
         where: "En una casa de Canadá, en la cocina.",

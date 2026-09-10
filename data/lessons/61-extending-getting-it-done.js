@@ -352,12 +352,12 @@ lessons.push(
     en: {
       title: "Lograr una cita en una oficina",
       situation:
-        "Usted está en Toronto acompañando a una amiga colombiana a sacar una cita para un trámite familiar. La página se cae, el teléfono no contesta y por fin alguien ayuda. Necesita decir managed to, couldn't manage to y got them to sin perder la idea de esfuerzo.",
+        "Usted está en Houston acompañando a una amiga colombiana a sacar una cita para un trámite familiar. La página se cae, el teléfono no contesta y por fin alguien ayuda. Necesita decir managed to, couldn't manage to y got them to sin perder la idea de esfuerzo.",
       setting: {
         who: "Adriana intenta conseguir una cita para un documento familiar, y Owen la ayuda a seguir qué funcionó por fin.",
         what: "Una historia pequeña de burocracia: llamadas fallidas, una página confusa, una funcionaria útil y el alivio de salir con una cita.",
         when: "Media mañana entre semana, después de una hora intentando por internet y por teléfono.",
-        where: "Toronto, en una oficina de servicios con turnos numerados y una página lenta en los celulares de todos.",
+        where: "Houston, en una oficina de servicios con turnos numerados y una página lenta en los celulares de todos.",
         why: "Porque managed to expresa logro con esfuerzo. Could pudo hacerlo, pero managed to deja oír el obstáculo."
       },
       address: {
@@ -685,10 +685,10 @@ lessons.push(
       situation:
         "Estás en Buenaventura ayudando a preparar una reunión de vecinos sobre un proyecto cultural. Hay que reunir firmas, reunir a las personas indicadas y reunirse con la coordinadora. También aparece la frase reunir los requisitos.",
       setting: {
-        who: "Diana is coordinating neighbours for a cultural project, and Lina is helping gather names, signatures, and the right people for a short meeting.",
+        who: "Diana is coordinating neighbors for a cultural project, and Lina is helping gather names, signatures, and the right people for a short meeting.",
         what: "A practical afternoon of gathering documents, confirming attendance, and setting a meeting with the person who can approve the space.",
         when: "Tuesday afternoon, before the community room closes and before people scatter for the evening.",
-        where: "Buenaventura, in a neighbourhood cultural house near the port, with chairs stacked against the wall.",
+        where: "Buenaventura, in a neighborhood cultural house near the port, with chairs stacked against the wall.",
         why: "Because reunir can gather people or things, reunirse con is the everyday meeting form, and reunir los requisitos is essential for official approvals."
       },
       address: {
@@ -696,15 +696,15 @@ lessons.push(
         who: "Diana and Lina use vos as close friends working quickly together.",
         why: "Voseo is heard in Valle del Cauca, including the Pacific side. Here it marks friendship and momentum, not a special performance.",
         ifYouSwitch:
-          "Tú would be understood and neutral. Usted would make the teamwork sound more distant unless they were speaking to an older neighbour or official."
+          "Tú would be understood and neutral. Usted would make the teamwork sound more distant unless they were speaking to an older neighbor or official."
       },
       dialogue: [
         {
           speaker: "Diana",
           target: "Lina, ¿vos reunís las firmas mientras yo llamo a los vecinos?",
-          translation: "Lina, will you gather the signatures while I call the neighbours?",
+          translation: "Lina, will you gather the signatures while I call the neighbors?",
           pronunciation: "LEE-nah, bos rreh-oo-NEES las FEER-mahs MYEN-tras yo YAH-moh ah los beh-SEE-nos",
-          literal: "Lina, you gather the signatures while I call the neighbours?",
+          literal: "Lina, you gather the signatures while I call the neighbors?",
           why: "Reunís is the vos form here. The accent in the spelling and the stress in speech keep the two vowels clear."
         },
         {
@@ -718,9 +718,9 @@ lessons.push(
         {
           speaker: "Diana",
           target: "También necesitamos reunir a los líderes del barrio.",
-          translation: "We also need to gather the neighbourhood leaders.",
+          translation: "We also need to gather the neighborhood leaders.",
           pronunciation: "tam-BYEN neh-seh-see-TAH-mos rreh-oo-NEER ah los LEE-deh-res del BAR-ryoh",
-          literal: "Also we-need to gather personal-a the leaders of-the neighbourhood.",
+          literal: "Also we-need to gather personal-a the leaders of-the neighborhood.",
           why: "When reunir gathers people as direct objects, the personal marker appears. The people are being gathered, not met with."
         },
         {
@@ -789,7 +789,7 @@ lessons.push(
             "To gather people. The personal marker appears before the people being gathered.",
           literal: "to gather personal-a",
           useWhen:
-            "Use it when the direct object is a person or group of people: leaders, neighbours, parents, volunteers.",
+            "Use it when the direct object is a person or group of people: leaders, neighbors, parents, volunteers.",
           avoidWhen:
             "Avoid dropping the personal marker with people. It may sound as if you are treating them like objects.",
           register: "neutral",
@@ -806,7 +806,7 @@ lessons.push(
             "To meet with someone. This is the everyday pronominal form for appointments and planned conversations.",
           literal: "to gather oneself with",
           useWhen:
-            "Use it for meeting with a coordinator, friend, teacher, team, client, or neighbour.",
+            "Use it for meeting with a coordinator, friend, teacher, team, client, or neighbor.",
           avoidWhen:
             "Avoid plain reunir con for a normal meeting. The reflexive form is the natural one.",
           register: "neutral",
@@ -842,7 +842,7 @@ lessons.push(
           useWhen:
             "Use it for a planned meeting, community gathering, work session, or appointment with a group.",
           avoidWhen:
-            "Avoid assuming every reunión is formal. A neighbourhood meeting may be practical and informal.",
+            "Avoid assuming every reunión is formal. A neighborhood meeting may be practical and informal.",
           register: "neutral",
           region: "General Colombian and universal Spanish.",
           related: ["reunirse", "cita", "encuentro", "grupo"],
@@ -875,7 +875,7 @@ lessons.push(
         {
           label: "Community work is gathering work",
           body:
-            "Small projects often depend on someone gathering signatures, documents, neighbours, and a person with authority to approve the next step. Reunir is useful because it covers that practical social labour."
+            "Small projects often depend on someone gathering signatures, documents, neighbors, and a person with authority to approve the next step. Reunir is useful because it covers that practical social labor."
         },
         {
           label: "The meeting form is reflexive",
@@ -1022,7 +1022,7 @@ lessons.push(
       dialogue: [
         {
           speaker: "Diana",
-          target: "Lina, can you gather the signatures while I call the neighbours?",
+          target: "Lina, can you gather the signatures while I call the neighbors?",
           translation: "Lina, ¿vos reunís las firmas mientras yo llamo a los vecinos?",
           pronunciation: "LI-na, can yu GA-der de SIG-na-chers wail ai kol de NEI-bors",
           literal: "Lina, ¿puede juntar las firmas mientras llamo a los vecinos?",
@@ -1038,7 +1038,7 @@ lessons.push(
         },
         {
           speaker: "Diana",
-          target: "We also need to bring the neighbourhood leaders together.",
+          target: "We also need to bring the neighborhood leaders together.",
           translation: "También necesitamos reunir a los líderes del barrio.",
           pronunciation: "ui OL-so nid tu bring de NEI-bor-jud LI-ders tu-GE-der",
           literal: "También necesitamos traer juntos a los líderes del barrio.",
@@ -1248,7 +1248,7 @@ lessons.push(
           whenToUse: "Usted junta firmas o documentos."
         },
         {
-          form: "We need to bring the neighbours together.",
+          form: "We need to bring the neighbors together.",
           register: "neutral",
           region: "Inglés universal",
           whenToUse: "Reunir personas para una acción compartida."
@@ -1305,7 +1305,7 @@ lessons.push(
           choices: [
             "A carpet for documents.",
             "A folder for documents.",
-            "A flavour for documents."
+            "A flavor for documents."
           ],
           answer: 1,
           tests: "folder, not carpet"
@@ -1313,9 +1313,9 @@ lessons.push(
         {
           prompt: "¿Cuál frase junta personas para una acción?",
           choices: [
-            "Bring the neighbours together.",
-            "Taste the neighbours together.",
-            "File the neighbours together."
+            "Bring the neighbors together.",
+            "Taste the neighbors together.",
+            "File the neighbors together."
           ],
           answer: 0,
           tests: "bring people together"
@@ -1441,7 +1441,7 @@ lessons.push(
             "To treat a person in a certain way. The personal marker appears before a named person.",
           literal: "to treat personal-a",
           useWhen:
-            "Use it when saying someone treated a guest, child, customer, patient, or neighbour well or badly.",
+            "Use it when saying someone treated a guest, child, customer, patient, or neighbor well or badly.",
           avoidWhen:
             "Avoid confusing it with tratar de. “Tratar de llamar” is an attempt; “tratar a Laura bien” is treatment.",
           register: "neutral",

@@ -161,7 +161,7 @@ lessons.push(
           related: ["escribirle", "mandarle", "decirle", "avisarle"],
           example: {
             target: "Le escribo a mi mamá todos los días.",
-            translation: "I message my mum every day."
+            translation: "I message my mom every day."
           }
         },
         {
@@ -353,10 +353,10 @@ lessons.push(
       situation:
         "Usted acaba de conocer a alguien con quien se sintió a gusto y quiere seguir en contacto. En inglés “message me” o “text me” es lo normal para pedir un mensaje; ojo, que “write me a letter” sí es una carta de papel. Va a intercambiar números y a quedar en escribirse por mensaje, aprendiendo cómo suena natural en inglés.",
       setting: {
-        who: "Dylan es un compañero canadiense, cordial y relajado, que pasó la tarde conversando con Alejandra y le cayó muy bien.",
+        who: "Dylan es un compañero estadounidense, cordial y relajado, que pasó la tarde conversando con Alejandra y le cayó muy bien.",
         what: "Intercambiar números para seguir en contacto por mensaje, el gesto con el que suele arrancar una amistad nueva.",
         when: "Al final de la tarde, cuando la reunión se va acabando y la gente empieza a despedirse.",
-        where: "Toronto, en el patio de una casa, en un inglés relajado y cotidiano entre gente joven.",
+        where: "Houston, en el patio de una casa, en un inglés relajado y cotidiano entre gente joven.",
         why: "Porque un número sin un primer mensaje no sirve de nada; la promesa de escribir es lo que de verdad mantiene el contacto."
       },
       address: {
@@ -481,7 +481,7 @@ lessons.push(
           region: "Inglés británico cuidado; en EE. UU. a veces se omite el “to”.",
           related: ["to write to", "to email", "to message", "to reach out to"],
           example: {
-            target: "I write to my mum every day.",
+            target: "I write to my mom every day.",
             translation: "Le escribo a mi mamá todos los días."
           }
         },
@@ -687,7 +687,7 @@ lessons.push(
         who: "Don Aníbal runs a second-hand book stall and is the kind of vendor who has read everything he sells. Alex is a regular now, back for another recommendation.",
         what: "Trading impressions of a book and picking up the next one — the easy literary chat of a used-book stall.",
         when: "A slow weekday morning, the perfect time for the vendor to actually stop and talk books.",
-        where: "A pavement book stall in downtown Medellín, paisa country, where the vendor addresses everyone with vos.",
+        where: "A sidewalk book stall in downtown Medellín, paisa country, where the vendor addresses everyone with vos.",
         why: "Because a good stall is half about the books and half about the vendor's take; the conversation is where the real recommendation happens."
       },
       address: {
@@ -902,7 +902,7 @@ lessons.push(
         {
           mistake: "Skipping the reflexive in “me leí el libro”",
           whyItFails:
-            "Plain “leí el libro” is fine, but Colombians add the “me” to stress finishing the whole thing; without it you lose that completive flavour.",
+            "Plain “leí el libro” is fine, but Colombians add the “me” to stress finishing the whole thing; without it you lose that completive flavor.",
           sayInstead: "Me leí el libro completo."
         },
         {
@@ -1008,7 +1008,7 @@ lessons.push(
         who: "Marcus atiende una librería de usados y es de esos que se han leído todo lo que venden. Alejandra ya es clienta habitual y vuelve por otra recomendación.",
         what: "Intercambiar impresiones sobre un libro y llevarse el siguiente — la charla literaria fácil de una librería de usados.",
         when: "Una mañana tranquila entre semana, el momento ideal para que el librero se ponga a hablar de libros.",
-        where: "Toronto, una librería de usados, en un inglés cotidiano y relajado entre lectores.",
+        where: "Houston, una librería de usados, en un inglés cotidiano y relajado entre lectores.",
         why: "Porque una buena librería es mitad libros y mitad el criterio del librero; la conversación es donde ocurre la verdadera recomendación."
       },
       address: {
@@ -1336,7 +1336,7 @@ lessons.push(
       situation:
         "Te llegó una factura con un cobro que no reconoces y vas a la oficina de servicios en Bogotá a reclamar. La asesora es amable pero formal: te dice que comprende tu situación y que va a revisarla. Aquí vas a oír “comprender”, el primo formal de “entender” — el de las oficinas, los trámites y la empatía.",
       setting: {
-        who: "Marcela is a customer-service agent in her thirties, courteous and careful with her words. Alex is a foreigner disputing a charge he doesn't recognise on his bill.",
+        who: "Marcela is a customer-service agent in her thirties, courteous and careful with her words. Alex is a foreigner disputing a charge he doesn't recognize on his bill.",
         what: "Sorting out a billing error at a service counter, in the measured, formal register that officialdom runs on.",
         when: "Mid-morning on a weekday, the office quiet enough to actually talk it through.",
         where: "Bogotá, the customer-service desk of a utility company, where usted and formal courtesy are simply the norm.",
@@ -1531,7 +1531,7 @@ lessons.push(
         {
           label: "Empathy has a formula",
           body:
-            "“Comprendo su situación” is almost a fixed phrase in Colombian customer service — the verbal equivalent of a sympathetic nod. It signals that the agent has registered your problem as a human one, not just a ticket in a queue. Learners who can deploy it at the right moment sound markedly more fluent and more courteous. It's one of those set pieces that quietly does more social work than its literal meaning ever suggests."
+            "“Comprendo su situación” is almost a fixed phrase in Colombian customer service — the verbal equivalent of a sympathetic nod. It signals that the agent has registered your problem as a human one, not just a ticket in a line. Learners who can deploy it at the right moment sound markedly more fluent and more courteous. It's one of those set pieces that quietly does more social work than its literal meaning ever suggests."
         },
         {
           label: "Usted is the office default",

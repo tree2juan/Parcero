@@ -14,8 +14,8 @@
  *   "Say it freely"       - ordinary informal Colombian; no one will blink.
  *   "Say it with friends" - fine among people who already like you, wrong with
  *                           a stranger, a client, or anyone's mother.
- *   "Understand only"     - recognise it, do not produce it. Either it is crude,
- *                           or it carries an in-group licence a learner has not
+ *   "Understand only"     - recognize it, do not produce it. Either it is crude,
+ *                           or it carries an in-group license a learner has not
  *                           earned yet, and getting it wrong is not a small
  *                           mistake.
  *
@@ -36,10 +36,10 @@ const slangItems = [
   ["mijo / mija", "kid, dear, love", "casual", "Nationwide", "Say it freely", "Contraction of 'mi hijo'. Affectionate from someone older, or between friends. From a stranger your own age it can sound patronising."],
   ["pelado / pelada", "kid, young person", "casual", "Nationwide", "Say it freely", "Anyone from a child to someone in their twenties. Neutral, occasionally dismissive if the person is an adult."],
   ["chino / china", "kid, child", "casual", "Bogotá (rolo/cachaco) and the interior", "Say it freely", "Nothing to do with China; from a Chibcha word. Bogotá's equivalent of 'pelado'."],
-  ["cucho / cucha", "old man / old woman; parent", "casual", "Nationwide", "Say it with friends", "'Mi cucha' is an affectionate way to say 'my mum'. Said about a stranger it is rude."],
+  ["cucho / cucha", "old man / old woman; parent", "casual", "Nationwide", "Say it with friends", "'Mi cucha' is an affectionate way to say 'my mom'. Said about a stranger it is rude."],
   ["mono / mona", "blond or light-haired person", "casual", "Nationwide", "Say it freely", "Descriptive, not an insult, and used freely to address someone whose name you do not know. Surprises learners who read it as 'monkey'."],
   ["gomelo / gomela", "rich, preppy, snobbish kid", "casual", "Bogotá (rolo/cachaco); understood nationwide", "Say it with friends", "Mocking but rarely vicious. Points at money plus attitude, not money alone."],
-  ["ñero / ñera", "lowlife, rough type", "very casual", "Nationwide", "Understand only", "From 'compañero'. Carries a real class sneer. Recognise it; do not apply it to anyone."],
+  ["ñero / ñera", "lowlife, rough type", "very casual", "Nationwide", "Understand only", "From 'compañero'. Carries a real class sneer. Recognize it; do not apply it to anyone."],
   ["man", "guy, dude", "casual", "Nationwide", "Say it freely", "Borrowed from English but fully Colombian, and it takes Spanish articles: 'el man', 'los manes'."],
   ["vieja", "woman, girl", "casual", "Nationwide", "Say it with friends", "Literally 'old woman' but used for any woman. Ordinary among friends, dismissive from a stranger."],
   ["sardino / sardina", "teenager, very young person", "casual", "Nationwide; slightly dated", "Say it freely", "Gently teasing. More common from older speakers."],
@@ -130,8 +130,8 @@ const slangItems = [
   ["perico (café)", "coffee with a little milk", "casual", "Bogotá (rolo/cachaco)", "Say it freely", "In Bogotá cafés this is a drink order. The word has other, illegal meanings elsewhere - context matters."],
   ["algo", "a light snack, afternoon tea", "casual", "Nationwide", "Say it freely", "'Tomar algo' between lunch and dinner. Literally 'something'."],
   ["onces", "mid-afternoon snack", "casual", "Bogotá (rolo/cachaco) and the interior", "Say it freely", "The interior's name for the same ritual."],
-  ["mecato", "snacks, nibbles", "casual", "Nationwide", "Say it freely", "Crisps, sweets, anything eaten between meals."],
-  ["guaro", "aguardiente", "casual", "Nationwide", "Say it freely", "The anise spirit at the centre of most Colombian celebrations."],
+  ["mecato", "snacks, nibbles", "casual", "Nationwide", "Say it freely", "Chips, sweets, anything eaten between meals."],
+  ["guaro", "aguardiente", "casual", "Nationwide", "Say it freely", "The anise spirit at the center of most Colombian celebrations."],
   ["fritanga", "platter of fried meats", "casual", "Nationwide", "Say it freely", "Shared, enormous, and a social occasion in itself."],
   ["aguapanela", "hot drink of raw cane sugar", "neutral", "Nationwide", "Say it freely", "Everyday drink and the standard home remedy for a cold, often with lime or cheese."],
   ["changua", "milk and egg soup", "neutral", "Bogotá (rolo/cachaco)", "Say it freely", "A Bogotá breakfast and hangover cure."],
@@ -155,8 +155,8 @@ const slangItems = [
   ["caer", "to hit on someone", "casual", "Nationwide", "Say it with friends", "'Le está cayendo' - he's making a move on her."],
   ["tragado / tragada", "smitten, badly in love", "casual", "Nationwide", "Say it freely", "Literally 'swallowed'. Affectionately mocking."],
   ["cuadrar", "to arrange; to start dating", "casual", "Nationwide", "Say it freely", "'Cuadrar la hora' arranges a time; 'cuadrarse con alguien' means becoming a couple."],
-  ["dar calabazas", "to turn someone down", "casual", "Nationwide", "Say it freely", "Rejection, said with humour."],
-  ["moza / mozo", "lover on the side", "very casual", "Nationwide", "Understand only", "Accusatory. Recognise it in gossip; do not deploy it."],
+  ["dar calabazas", "to turn someone down", "casual", "Nationwide", "Say it freely", "Rejection, said with humor."],
+  ["moza / mozo", "lover on the side", "very casual", "Nationwide", "Understand only", "Accusatory. Recognize it in gossip; do not deploy it."],
   ["amañado / amañada", "settled in and happy somewhere", "casual", "Nationwide", "Say it freely", "A genuinely useful word English lacks. '¿Está amañado en Medellín?'"],
   ["chocho / chocha", "delighted, chuffed", "casual", "Nationwide", "Say it freely", "'Está chocha con el trabajo nuevo' - she's thrilled with the new job."],
   ["berrinche", "a tantrum", "casual", "Nationwide", "Say it freely", "Usually a child's, occasionally an adult's."],
@@ -165,12 +165,12 @@ const slangItems = [
   /* Transport and the city. */
   ["trancón", "traffic jam", "casual", "Nationwide", "Say it freely", "Daily reality in Bogotá and Medellín."],
   ["buseta", "small city bus", "casual", "Nationwide", "Say it freely", "Older, smaller and faster than the big transit buses."],
-  ["chiva", "colourful rural bus", "neutral", "Rural nationwide; also party buses in cities", "Say it freely", "A cultural icon as much as a vehicle."],
-  ["pico y placa", "licence-plate driving restriction", "neutral", "Bogotá, Medellín, Cali and others", "Say it freely", "Which days you may drive, by plate number. Affects daily plans."],
+  ["chiva", "colorful rural bus", "neutral", "Rural nationwide; also party buses in cities", "Say it freely", "A cultural icon as much as a vehicle."],
+  ["pico y placa", "license-plate driving restriction", "neutral", "Bogotá, Medellín, Cali and others", "Say it freely", "Which days you may drive, by plate number. Affects daily plans."],
   ["¡Dele!", "Go on, drive on", "casual", "Nationwide", "Say it freely", "Said to a driver, and generally as 'go ahead'."],
   ["chuzo", "small hole-in-the-wall shop or eatery", "casual", "Nationwide", "Say it freely", "Cheap and unglamorous, sometimes affectionately so."],
-  ["tienda", "corner shop", "neutral", "Nationwide", "Say it freely", "The neighbourhood social hub as much as a shop."],
-  ["barrio", "neighbourhood", "neutral", "Nationwide", "Say it freely", "Neutral in Colombia, unlike some English uses."],
+  ["tienda", "corner shop", "neutral", "Nationwide", "Say it freely", "The neighborhood social hub as much as a shop."],
+  ["barrio", "neighborhood", "neutral", "Nationwide", "Say it freely", "Neutral in Colombia, unlike some English uses."],
   ["estrato", "socioeconomic tier (1-6)", "neutral", "Nationwide", "Say it freely", "An official utility-pricing band that became everyday shorthand for class. Sensitive; use descriptively."],
 
   /* Time, and Colombian vagueness about it. */
@@ -201,7 +201,7 @@ const slangItems = [
   /* Warnings, caution, conflict avoidance. */
   ["¡Ojo!", "Watch out! / Careful!", "casual", "Nationwide", "Say it freely", "Literally 'eye'. The most common spoken warning in the country."],
   ["¡Pilas!", "Heads up! / Stay sharp!", "casual", "Nationwide", "Say it freely", "Interchangeable with '¡ojo!' and slightly more energetic."],
-  ["sapo / sapa", "snitch, tattletale", "very casual", "Nationwide", "Understand only", "A serious accusation in some contexts. Recognise it and do not use it."],
+  ["sapo / sapa", "snitch, tattletale", "very casual", "Nationwide", "Understand only", "A serious accusation in some contexts. Recognize it and do not use it."],
   ["cámara", "careful, watch it", "casual", "Nationwide", "Say it with friends", "Quiet warning between friends."],
   ["hacerse el loco", "to play dumb", "casual", "Nationwide", "Say it freely", "Deliberately not noticing something inconvenient."],
   ["comer cuento", "to fall for a story", "casual", "Nationwide", "Say it freely", "'No coma cuento' - don't be taken in."],

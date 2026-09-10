@@ -12,7 +12,7 @@
  * through an ordinary Colombian day — tomar (to take, and to drink), sentir
  * (to feel) and vivir (to live) — and builds one situation around each: making
  * a plan to go out for a drink, telling a friend you feel unwell, and meeting a
- * neighbour and explaining where you live.
+ * neighbor and explaining where you live.
  *
  * The two directions are mirrors: same number of dialogue turns, same number of
  * vocabulary entries, same number of culture notes, pitfalls, variations and
@@ -349,12 +349,12 @@ lessons.push(
     en: {
       title: "Hacer un plan para salir a tomar algo",
       situation:
-        "Es viernes por la tarde y Megan, una amiga canadiense, invita a Alejandra a salir a tomar algo después del trabajo. En pocos minutos tienen que decidir cómo llegar, si van a tomar trago o no, y por dónde coger. En inglés, ese único verbo “tomar” se reparte entre varios: take para el taxi y la avenida, have o grab para el trago, y make para las decisiones.",
+        "Es viernes por la tarde y Megan, una amiga estadounidense, invita a Alejandra a salir a tomar algo después del trabajo. En pocos minutos tienen que decidir cómo llegar, si van a tomar trago o no, y por dónde coger. En inglés, ese único verbo “tomar” se reparte entre varios: take para el taxi y la avenida, have o grab para el trago, y make para las decisiones.",
       setting: {
-        who: "Megan es una amiga canadiense de la oficina de Alejandra, con la confianza suficiente para hacer planes de fin de semana, pero no una amiga de toda la vida.",
+        who: "Megan es una amiga estadounidense de la oficina de Alejandra, con la confianza suficiente para hacer planes de fin de semana, pero no una amiga de toda la vida.",
         what: "Un intercambio rápido para ponerse de acuerdo en salir a tomar algo: cómo llegar, si habrá alcohol y por dónde irse.",
         when: "Un viernes por la tarde, justo cuando termina la jornada y el plan después del trabajo empieza a tomar forma.",
-        where: "Toronto, donde una salida arranca con un taxi o una app y el inglés reparte el verbo “tomar” en varios distintos.",
+        where: "Houston, donde una salida arranca con un taxi o una app y el inglés reparte el verbo “tomar” en varios distintos.",
         why: "Porque donde el español usa un solo verbo, el inglés usa cuatro. Alejandra tiene que oír cuándo es take, cuándo have o grab, y cuándo make, y responder cada uno bien sin trabarse."
       },
       address: {
@@ -556,7 +556,7 @@ lessons.push(
         {
           label: "Taxis, apps y seguridad de noche",
           body:
-            "En Toronto uno “takes a cab” o, cada vez más, pide un carro por app, que muchos prefieren de noche porque quedan registrados el conductor y la ruta. Parar un taxi en la calle de madrugada se hace, pero es común que a los recién llegados se les recomiende la app. Por eso el plan de Megan se va por el taxi apenas oscurece, en vez del bus. Es un consejo práctico metido en una frase casual, y conviene tomarlo tal cual."
+            "En Houston uno “takes a cab” o, cada vez más, pide un carro por app, que muchos prefieren de noche porque quedan registrados el conductor y la ruta. Parar un taxi en la calle de madrugada se hace, pero es común que a los recién llegados se les recomiende la app. Por eso el plan de Megan se va por el taxi apenas oscurece, en vez del bus. Es un consejo práctico metido en una frase casual, y conviene tomarlo tal cual."
         }
       ],
       pitfalls: [
@@ -675,7 +675,7 @@ lessons.push(
         who: "Sebastián is a paisa friend from Alex's building, the kind who checks on you and switches into caretaker mode fast.",
         what: "A short, worried exchange about Alex feeling ill: what hurts, since when, and whether to go to the pharmacy.",
         when: "A weekday morning, when Alex clearly looks off and Sebastián notices right away.",
-        where: "Medellín, where the local vos and warm diminutives colour every caring question.",
+        where: "Medellín, where the local vos and warm diminutives color every caring question.",
         why: "Because feeling states are where sentir splits three ways — sentirse for how you are, sentir for a sensation, and lo siento for regret. Alex has to keep them apart while also not confusing sentir with sentar, which share the form 'me siento'."
       },
       address: {
@@ -793,7 +793,7 @@ lessons.push(
             "“I'm sorry” — an apology or condolence, not a literal statement about feeling something.",
           literal: "it I-feel",
           useWhen:
-            "Offering sympathy or apologising for something that genuinely matters.",
+            "Offering sympathy or apologizing for something that genuinely matters.",
           avoidWhen:
             "Small bumps and interruptions, where Colombians say “perdón” or “qué pena”, not the weightier “lo siento”.",
           register: "neutral",
@@ -810,7 +810,7 @@ lessons.push(
             "“I'm sorry to / I feel bad about” doing something — regret attached to an action.",
           literal: "I-feel + to-do",
           useWhen:
-            "Apologising for the thing you are doing: “siento molestarte”, “siento llegar tarde”.",
+            "Apologizing for the thing you are doing: “siento molestarte”, “siento llegar tarde”.",
           avoidWhen:
             "For a physical feeling; this pattern is regret, not sensation.",
           register: "neutral",
@@ -981,12 +981,12 @@ lessons.push(
     en: {
       title: "Decirle a un amigo paisa que uno se siente mal",
       situation:
-        "Alejandra amaneció maluca en Toronto y su amigo Jordan se da cuenta y le pregunta cómo está. Alejandra tiene que explicar qué siente, desde cuándo y qué tan mal, y Jordan le ofrece ayuda. Toda la conversación gira en torno a “sentir”, que en inglés es “feel” — pero sin el reflexivo del español, y sin confundir “I'm sorry” con un “lo siento” calcado.",
+        "Alejandra amaneció maluca en Houston y su amigo Jordan se da cuenta y le pregunta cómo está. Alejandra tiene que explicar qué siente, desde cuándo y qué tan mal, y Jordan le ofrece ayuda. Toda la conversación gira en torno a “sentir”, que en inglés es “feel” — pero sin el reflexivo del español, y sin confundir “I'm sorry” con un “lo siento” calcado.",
       setting: {
-        who: "Jordan es un amigo canadiense del edificio de Alejandra, de los que se dan cuenta cuando uno está mal y se ponen en modo cuidador enseguida.",
+        who: "Jordan es un amigo estadounidense del edificio de Alejandra, de los que se dan cuenta cuando uno está mal y se ponen en modo cuidador enseguida.",
         what: "Un intercambio corto y preocupado sobre Alejandra sintiéndose mal: qué le duele, desde cuándo y si conviene ir a la farmacia.",
         when: "Una mañana entre semana, cuando Alejandra claramente se ve maluca y Jordan lo nota de una.",
-        where: "Toronto, donde el inglés dice “feel” sin el reflexivo y marca la simpatía con “I'm sorry”.",
+        where: "Houston, donde el inglés dice “feel” sin el reflexivo y marca la simpatía con “I'm sorry”.",
         why: "Porque el inglés dice “feel” sin el “se” del español, y porque “I'm sorry” hace el trabajo de “lo siento” pero también el de “perdón”. Alejandra tiene que no calcar el reflexivo ni traducir “lo siento” palabra por palabra."
       },
       address: {
@@ -1109,7 +1109,7 @@ lessons.push(
             "Para un roce mínimo; ahí basta un “sorry” suelto, sin el “I'm” enfático.",
           register: "neutral",
           region: "Inglés universal; “sorry” a secas es más ligero que “I'm sorry”.",
-          related: ["sorry", "I'm so sorry", "my condolences", "I do apologise"],
+          related: ["sorry", "I'm so sorry", "my condolences", "I do apologize"],
           example: {
             target: "I'm sorry, that's terrible news.",
             translation: "Lo siento, es una noticia terrible."
@@ -1291,10 +1291,10 @@ lessons.push(
     }
   },
   {
-    id: "explaining-to-a-new-neighbour-where-you-live",
-    level: "Starter · Home and neighbourhood",
+    id: "explaining-to-a-new-neighbor-where-you-live",
+    level: "Starter · Home and neighborhood",
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
-    domain: "home-and-neighbourhood",
+    domain: "home-and-neighborhood",
     register: "courteous",
     pathways: ["foundation"],
     verb: "vivir",
@@ -1307,24 +1307,24 @@ lessons.push(
         who: "Doña Rosa is the building's administradora — part manager, part unofficial mayor — who lives on the ground floor and knows everyone.",
         what: "A first-meeting chat in the lobby about where Alex lives, where he came from, and how long Rosa has been there.",
         when: "The afternoon Alex moves in, boxes still in the hall, running into Rosa at the portería.",
-        where: "Bogotá, in an apartment building where usted is the default and neighbours address each other as “vecino”.",
+        where: "Bogotá, in an apartment building where usted is the default and neighbors address each other as “vecino”.",
         why: "Because vivir carries prepositions English speakers get wrong: “vivir en el 402”, “vivir sobre la Quinta”, “vivir hace dos años”, plus “vivir de” for making a living and “vivir para” for devotion."
       },
       address: {
         form: "usted",
-        who: "Doña Rosa and Alex use usted with each other, the standard between neighbours who have just met in Bogotá.",
+        who: "Doña Rosa and Alex use usted with each other, the standard between neighbors who have just met in Bogotá.",
         why: "In Bogotá usted is the safe, respectful default with strangers, elders and figures of some authority like an administradora. It signals courtesy without coldness, and switching to tú too soon with someone like Doña Rosa could read as overfamiliar.",
         ifYouSwitch:
-          "If Alex slid into tú right away, Doña Rosa might find it forward, though she would not say so. Over months of daily hellos the usted may soften, but a new neighbour holds it, and “vecino” does the warming that a pronoun change would."
+          "If Alex slid into tú right away, Doña Rosa might find it forward, though she would not say so. Over months of daily hellos the usted may soften, but a new neighbor holds it, and “vecino” does the warming that a pronoun change would."
       },
       dialogue: [
         {
           speaker: "Doña Rosa",
           target: "Buenas, vecino. ¿Usted vive aquí en el edificio o está de visita?",
-          translation: "Hello, neighbour. Do you live here in the building, or are you visiting?",
+          translation: "Hello, neighbor. Do you live here in the building, or are you visiting?",
           pronunciation: "BWE-nas, be-SEE-no. oo-STED BEE-be a-KEE en el e-dee-FEE-syo o es-TA de bee-SEE-ta",
-          literal: "Good, neighbour. You lives here in the building or is of visit?",
-          why: "“Vive” is the usted form, matching the polite register. “Vivir en” covers living in a place, from a country to a building. “Vecino” as a term of address is standard between neighbours, and “buenas” is the all-purpose Colombian greeting."
+          literal: "Good, neighbor. You lives here in the building or is of visit?",
+          why: "“Vive” is the usted form, matching the polite register. “Vivir en” covers living in a place, from a country to a building. “Vecino” as a term of address is standard between neighbors, and “buenas” is the all-purpose Colombian greeting."
         },
         {
           speaker: "Alex",
@@ -1361,9 +1361,9 @@ lessons.push(
         {
           speaker: "Alex",
           target: "Qué bueno. La verdad, uno vive para el trabajo, pero se agradece un buen vecindario.",
-          translation: "That's great. Honestly, you live for your work, but a good neighbourhood is welcome.",
+          translation: "That's great. Honestly, you live for your work, but a good neighborhood is welcome.",
           pronunciation: "ke BWE-no. la ber-DAD, OO-no BEE-be PA-ra el tra-BA-jo, PE-ro se a-gra-DE-se oon bwen be-seen-DA-ryo",
-          literal: "What good. The truth, one lives for the work, but oneself appreciates a good neighbourhood.",
+          literal: "What good. The truth, one lives for the work, but oneself appreciates a good neighborhood.",
           why: "“Vivir para” is to live *for* something — devotion or purpose — as opposed to “vivir de”, to live *from* it (income). Impersonal “uno vive” is “one lives / you live” in general, a common way to generalise about life without naming yourself."
         }
       ],
@@ -1371,7 +1371,7 @@ lessons.push(
         {
           term: "¿Usted dónde vive?",
           explanation:
-            "The polite, usted way to ask where someone lives — the everyday opener with a new neighbour.",
+            "The polite, usted way to ask where someone lives — the everyday opener with a new neighbor.",
           literal: "You where lives?",
           useWhen:
             "Asking a stranger or someone you address with usted where they live.",
@@ -1382,13 +1382,13 @@ lessons.push(
           related: ["¿dónde vive?", "¿dónde vivís?", "¿dónde vives?", "¿por dónde vive?"],
           example: {
             target: "¿Usted dónde vive, vecino?",
-            translation: "Where do you live, neighbour?"
+            translation: "Where do you live, neighbor?"
           }
         },
         {
           term: "vivir en",
           explanation:
-            "The default preposition for living somewhere — a country, city, neighbourhood, building or apartment number.",
+            "The default preposition for living somewhere — a country, city, neighborhood, building or apartment number.",
           literal: "to-live in",
           useWhen:
             "Almost anywhere you live: “vivo en Bogotá”, “vivo en el 402”, “vivo en el norte”.",
@@ -1456,7 +1456,7 @@ lessons.push(
         {
           term: "vivir para",
           explanation:
-            "To live *for* something — devotion, purpose, what you organise your life around.",
+            "To live *for* something — devotion, purpose, what you organize your life around.",
           literal: "to-live for",
           useWhen:
             "Expressing what someone is devoted to: “vive para sus hijos”, “vive para el trabajo”.",
@@ -1484,12 +1484,12 @@ lessons.push(
           related: ["trastearse", "mudarse a", "mudarse de", "cambiar de casa"],
           example: {
             target: "Me acabo de mudar a este barrio.",
-            translation: "I just moved to this neighbourhood."
+            translation: "I just moved to this neighborhood."
           }
         }
       ],
       note:
-        "Vivir is easy until the prepositions arrive. Use “en” for almost every place — city, neighbourhood, even the apartment number (“en el 402”) — but switch to “sobre” or “por” for a street. For duration say “hace dos años” or “llevo dos años viviendo”, never the calqued “por dos años”. And keep “vivir de” (your income) apart from “vivir para” (your devotion): “vivo de la música” pays the rent, “vivo para la música” is a calling. Asking someone “¿de qué vive?” is ordinary and polite in Colombia.",
+        "Vivir is easy until the prepositions arrive. Use “en” for almost every place — city, neighborhood, even the apartment number (“en el 402”) — but switch to “sobre” or “por” for a street. For duration say “hace dos años” or “llevo dos años viviendo”, never the calqued “por dos años”. And keep “vivir de” (your income) apart from “vivir para” (your devotion): “vivo de la música” pays the rent, “vivo para la música” is a calling. Asking someone “¿de qué vive?” is ordinary and polite in Colombia.",
       culture: [
         {
           label: "“En” for places, “sobre” for streets",
@@ -1499,7 +1499,7 @@ lessons.push(
         {
           label: "The administradora knows everything",
           body:
-            "Colombian apartment buildings run on a small ecosystem: the portería (front desk), the portero or celador who watches the door, and the administrador or administradora who manages the building and its cuotas. Rosa living off renting apartments and knowing everyone is completely typical — the administradora is the neighbourhood's memory. Buildings are also ranked by estrato, a socioeconomic tier from one to six that affects utility rates. Mentioning your estrato is normal and unloaded; it is logistics, not bragging, though outsiders often misread it."
+            "Colombian apartment buildings run on a small ecosystem: the portería (front desk), the portero or celador who watches the door, and the administrador or administradora who manages the building and its cuotas. Rosa living off renting apartments and knowing everyone is completely typical — the administradora is the neighborhood's memory. Buildings are also ranked by estrato, a socioeconomic tier from one to six that affects utility rates. Mentioning your estrato is normal and unloaded; it is logistics, not bragging, though outsiders often misread it."
         },
         {
           label: "“¿De qué vive?” is not rude",
@@ -1507,9 +1507,9 @@ lessons.push(
             "Asking directly what someone lives off — “¿de qué vive?”, “¿en qué trabaja?” — is normal small talk in Colombia, not the money taboo it can be in English-speaking cultures. “Vivir de” frames work as how you sustain yourself, matter-of-factly. There is even the wry “vivir del cuento”, to get by on charm or scams rather than honest work. So when Rosa volunteers that she lives off renting, she is making ordinary conversation, and a similar question back to her would be perfectly polite."
         },
         {
-          label: "Usted and “vecino” between neighbours",
+          label: "Usted and “vecino” between neighbors",
           body:
-            "In Bogotá, neighbours who have just met default to usted and to the address “vecino” or “vecina”, which works like a friendly title — you can greet someone for years as “vecino” without ever using their name. It is warm and a little formal at once, the register of shared hallways and the portería. The usted may relax into tú over time, but the safe opening move with a new neighbour, especially the administradora, is usted plus “buenas, vecino”."
+            "In Bogotá, neighbors who have just met default to usted and to the address “vecino” or “vecina”, which works like a friendly title — you can greet someone for years as “vecino” without ever using their name. It is warm and a little formal at once, the register of shared hallways and the portería. The usted may relax into tú over time, but the safe opening move with a new neighbor, especially the administradora, is usted plus “buenas, vecino”."
         }
       ],
       pitfalls: [
@@ -1543,7 +1543,7 @@ lessons.push(
           form: "¿Usted dónde vive?",
           register: "polite formal",
           region: "Bogotá / general Colombian",
-          whenToUse: "Asking with usted — a stranger, a neighbour, an elder."
+          whenToUse: "Asking with usted — a stranger, a neighbor, an elder."
         },
         {
           form: "¿Vos dónde vivís?",
@@ -1613,12 +1613,12 @@ lessons.push(
     en: {
       title: "Contarle a una vecina nueva dónde vive uno",
       situation:
-        "Alejandra se acaba de mudar a un edificio en Toronto y se encuentra en el lobby con Mrs. Klein, una vecina mayor que vive ahí hace años. Ella la saluda y le pregunta si vive en el edificio o está de visita. Alejandra tiene que decir dónde vive, de dónde se mudó y desde cuándo, mientras hablan de barrios. Todo gira en torno a “live”, con sus preposiciones traicioneras — in, on, at — y con “make a living” y “live for”.",
+        "Alejandra se acaba de mudar a un edificio en Houston y se encuentra en el lobby con Mrs. Klein, una vecina mayor que vive ahí hace años. Ella la saluda y le pregunta si vive en el edificio o está de visita. Alejandra tiene que decir dónde vive, de dónde se mudó y desde cuándo, mientras hablan de barrios. Todo gira en torno a “live”, con sus preposiciones traicioneras — in, on, at — y con “make a living” y “live for”.",
       setting: {
-        who: "Mrs. Klein es una vecina canadiense mayor que vive en el edificio hace años y conoce a todo el mundo del piso.",
+        who: "Mrs. Klein es una vecina estadounidense mayor que vive en el edificio hace años y conoce a todo el mundo del piso.",
         what: "Una charla de primer encuentro en el lobby sobre dónde vive Alejandra, de dónde llegó y cuánto lleva ahí Mrs. Klein.",
         when: "La tarde en que Alejandra se muda, con cajas todavía en el pasillo, cuando se cruza con Mrs. Klein.",
-        where: "Toronto, en un edificio de apartamentos donde el inglés marca la ubicación con in, on y at según el caso.",
+        where: "Houston, en un edificio de apartamentos donde el inglés marca la ubicación con in, on y at según el caso.",
         why: "Porque “live” arrastra preposiciones que el hispanohablante confunde: “live in” la ciudad, “live on” la calle, “live at” la dirección, más “make a living” para vivir de algo y “live for” para vivir para algo."
       },
       address: {
@@ -1631,26 +1631,26 @@ lessons.push(
       dialogue: [
         {
           speaker: "Mrs. Klein",
-          target: "Hi there, neighbour. Do you live here in the building, or are you visiting?",
+          target: "Hi there, neighbor. Do you live here in the building, or are you visiting?",
           translation: "Buenas, vecina. ¿Vive aquí en el edificio o está de visita?",
           pronunciation: "jai der, NEI-bor. du yu liv jir in da BIL-ding, or ar yu VI-zi-ting",
           literal: "Hola ahí, vecina. ¿Vives aquí en el edificio, o estás visitando?",
-          why: "“Do you live...?” arma la pregunta con el auxiliar “do”, que el español omite. “Live in the building” usa “in” para un espacio cerrado. “Neighbour” funciona como saludo, igual que “vecina” en Bogotá."
+          why: "“Do you live...?” arma la pregunta con el auxiliar “do”, que el español omite. “Live in the building” usa “in” para un espacio cerrado. “Neighbor” funciona como saludo, igual que “vecina” en Bogotá."
         },
         {
           speaker: "Alejandra",
-          target: "I live here, in 402. I just moved from Vancouver.",
-          translation: "Vivo aquí, en el 402. Me acabo de mudar de Vancouver.",
+          target: "I live here, in 402. I just moved from Austin.",
+          translation: "Vivo aquí, en el 402. Me acabo de mudar de Austin.",
           pronunciation: "ai liv jir, in for-ou-TU. ai yast muvd from van-KU-ver",
-          literal: "Vivo aquí, en 402. Yo justo me mudé de Vancouver.",
+          literal: "Vivo aquí, en 402. Yo justo me mudé de Austin.",
           why: "Para un número de apartamento el inglés dice “in 402”, sin artículo — nada de “in the 402”. “I just moved” con “just” + pasado simple es el “me acabo de mudar”. “Move from” es mudarse de un lugar."
         },
         {
           speaker: "Mrs. Klein",
-          target: "Welcome! And where did you live in Vancouver?",
-          translation: "¡Bienvenida! ¿Y en qué parte de Vancouver vivía?",
+          target: "Welcome! And where did you live in Austin?",
+          translation: "¡Bienvenida! ¿Y en qué parte de Austin vivía?",
           pronunciation: "UEL-kam! and uer did yu liv in van-KU-ver",
-          literal: "¡Bienvenida! ¿Y dónde viviste en Vancouver?",
+          literal: "¡Bienvenida! ¿Y dónde viviste en Austin?",
           why: "“Where did you live?” usa “did” + infinitivo para el pasado; el inglés no tiene un imperfecto aparte como “vivía”. La preposición “in” vuelve para la ciudad. El auxiliar “did” es obligatorio en la pregunta."
         },
         {
@@ -1671,7 +1671,7 @@ lessons.push(
         },
         {
           speaker: "Alejandra",
-          target: "That's great. Honestly, you live for your work, but a good neighbourhood helps.",
+          target: "That's great. Honestly, you live for your work, but a good neighborhood helps.",
           translation: "Qué bueno. La verdad, uno vive para el trabajo, pero un buen vecindario ayuda.",
           pronunciation: "dats greit. ON-est-li, yu liv for yor uerk, bat a gud NEI-bor-jud jelps",
           literal: "Eso es genial. Honestamente, tú vives para tu trabajo, pero un buen vecindario ayuda.",
@@ -1702,12 +1702,12 @@ lessons.push(
             "La preposición por defecto para un lugar cerrado o amplio: una ciudad, un barrio, un edificio.",
           literal: "vivir en",
           useWhen:
-            "Para ciudades, países, barrios y edificios: “I live in Toronto”, “in the building”.",
+            "Para ciudades, países, barrios y edificios: “I live in Houston”, “in the building”.",
           avoidWhen:
             "Para una calle, donde el inglés usa “on”, no “in”.",
           register: "neutral",
           region: "Inglés universal.",
-          related: ["live in the city", "live in the suburbs", "live in a flat", "live in the country"],
+          related: ["live in the city", "live in the suburbs", "live in an apartment", "live in the country"],
           example: {
             target: "I live in a small apartment.",
             translation: "Vivo en un apartamento pequeño."
@@ -1787,7 +1787,7 @@ lessons.push(
             "“Mudarse”: “move from” de un lugar, “move to” a otro, “move in / out” entrar o salir.",
           literal: "moverse (de casa)",
           useWhen:
-            "Al hablar de cambiar de domicilio: “I just moved from Vancouver”.",
+            "Al hablar de cambiar de domicilio: “I just moved from Austin”.",
           avoidWhen:
             "Para mover un objeto; ahí basta “move”, sin el sentido de cambiar de casa.",
           register: "neutral",
@@ -1805,7 +1805,7 @@ lessons.push(
         {
           label: "In, on, at: tres preposiciones para vivir",
           body:
-            "Donde el español estira “en” para casi todo, el inglés reparte tres preposiciones. “In” es el contenedor: una ciudad, un barrio, un edificio (“I live in Toronto”, “in the building”). “On” es para la calle (“on Fifth Avenue”). “At” es para la dirección puntual con número (“at 402”). El hispanohablante calca “en” y dice “in Fifth Avenue”, que suena raro. Memorizar la escala — in ciudad, on calle, at número — ordena de una vez casi todo lo que uno necesita decir sobre dónde vive."
+            "Donde el español estira “en” para casi todo, el inglés reparte tres preposiciones. “In” es el contenedor: una ciudad, un barrio, un edificio (“I live in Houston”, “in the building”). “On” es para la calle (“on Fifth Avenue”). “At” es para la dirección puntual con número (“at 402”). El hispanohablante calca “en” y dice “in Fifth Avenue”, que suena raro. Memorizar la escala — in ciudad, on calle, at número — ordena de una vez casi todo lo que uno necesita decir sobre dónde vive."
         },
         {
           label: "“Make a living”, no “live from”",
@@ -1869,7 +1869,7 @@ lessons.push(
           whenToUse: "Al ubicarte cerca de una calle conocida."
         },
         {
-          form: "I've lived in Toronto for two years.",
+          form: "I've lived in Houston for two years.",
           register: "neutral",
           region: "Inglés universal",
           whenToUse: "Al decir cuánto llevas viviendo en un lugar."

@@ -44,7 +44,7 @@ lessons.push(
         who: "Mariana and Andrés are siblings, and Lucía is a child, so tú is the natural family form here.",
         why: "The closeness matters. Cuidar is most believable when the relationship already carries trust, habit, and small instructions.",
         ifYouSwitch:
-          "Usted would not be impossible in some Colombian families, but here it would make the handoff sound colder and less sibling-like. Vos would pull the scene toward a different regional flavour."
+          "Usted would not be impossible in some Colombian families, but here it would make the handoff sound colder and less sibling-like. Vos would pull the scene toward a different regional flavor."
       },
       dialogue: [
         {
@@ -120,7 +120,7 @@ lessons.push(
             "The form for looking after a person. The personal a is not optional when the cared-for person is specific.",
           literal: "to care for to",
           useWhen:
-            "The object is a named child, a parent, a neighbour, or any specific person.",
+            "The object is a named child, a parent, a neighbor, or any specific person.",
           avoidWhen:
             "The object is a thing or place. You say cuido la casa, not cuido a la casa.",
           register: "neutral",
@@ -672,10 +672,10 @@ lessons.push(
     }
   },
   {
-    id: "keeping-neighbours-safe-in-quibdo",
+    id: "keeping-neighbors-safe-in-quibdo",
     level: "Developing · Keeping people safe",
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
-    domain: "home-and-neighbourhood",
+    domain: "home-and-neighborhood",
     register: "courteous",
     pathways: ["year-12-local-mastery"],
     verb: "proteger",
@@ -685,15 +685,15 @@ lessons.push(
       situation:
         "Estás en Quibdó durante un aguacero fuerte y organizas con vecinos cómo proteger a niños y adultos mayores sin crear pánico. También practicas protejo y proteja, donde la g cambia a j.",
       setting: {
-        who: "Diana coordinates a neighbourhood response, and Óscar helps move children and older neighbours away from a flooded corner.",
+        who: "Diana coordinates a neighborhood response, and Óscar helps move children and older neighbors away from a flooded corner.",
         what: "They decide who watches the doorway, who walks with the children, and how to speak about protection without sounding theatrical.",
         when: "A rainy afternoon, after water has started gathering near the lower end of the street.",
-        where: "Quibdó, in a neighbourhood street during a heavy downpour, using a city almost absent from the catalogue.",
+        where: "Quibdó, in a neighborhood street during a heavy downpour, using a city almost absent from the catalogue.",
         why: "Because proteger is stronger than cuidar: it names risk, safety, and prevention. It also forces the protejo and proteja spelling change."
       },
       address: {
         form: "usted",
-        who: "Diana and Óscar are neighbours working together, so usted keeps the coordination respectful and clear.",
+        who: "Diana and Óscar are neighbors working together, so usted keeps the coordination respectful and clear.",
         why: "In a practical safety moment, usted can sound calm rather than distant. The priority is clarity, not intimacy.",
         ifYouSwitch:
           "Tú would not destroy the exchange, but it would make the coordination feel more personal. Vos would distract from the general Colombian register this scene needs."
@@ -806,7 +806,7 @@ lessons.push(
             "The form for protecting a person or specific living being, with personal a.",
           literal: "to protect to",
           useWhen:
-            "Children, older neighbours, a named person, or a pet is the one being protected.",
+            "Children, older neighbors, a named person, or a pet is the one being protected.",
           avoidWhen:
             "The object is a thing: proteger la entrada, proteger los documentos, proteger la comida.",
           register: "neutral",
@@ -875,7 +875,7 @@ lessons.push(
         {
           label: "Protection does not need panic",
           body:
-            "In a neighbourhood emergency, calm language matters. Proteger can be serious without being theatrical. Diana's line, proteger no asustar, captures a useful Colombian public tone: practical, direct, and face-saving."
+            "In a neighborhood emergency, calm language matters. Proteger can be serious without being theatrical. Diana's line, proteger no asustar, captures a useful Colombian public tone: practical, direct, and face-saving."
         },
         {
           label: "Quibdó deserves ordinary scenes too",
@@ -954,7 +954,7 @@ lessons.push(
       prompt: "Óscar says “yo protejo” and “usted proteja.” What is the spelling lesson?",
       choices: [
         "Proteger changes g to j before o or a to keep the soft sound.",
-        "Proteger drops the final r whenever a neighbour gives an order.",
+        "Proteger drops the final r whenever a neighbor gives an order.",
         "Proteger becomes cuidar whenever the object is a child or elder."
       ],
       answer: 0,
@@ -1327,7 +1327,7 @@ lessons.push(
     id: "standing-by-a-friend-in-pasto",
     level: "Developing · Standing by someone",
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
-    domain: "home-and-neighbourhood",
+    domain: "home-and-neighborhood",
     register: "neutral",
     pathways: ["year-12-local-mastery"],
     verb: "apoyar",
@@ -1337,9 +1337,9 @@ lessons.push(
       situation:
         "Estás en Pasto con una amiga que va a denunciar un problema en la junta del barrio. Quieres apoyarla sin prometer pagarle los gastos, y también distingues el apoyo moral del apoyo físico de una pared o una mesa.",
       setting: {
-        who: "Sofía is nervous before speaking at a neighbourhood meeting, and Julián is a close friend who knows the story.",
+        who: "Sofía is nervous before speaking at a neighborhood meeting, and Julián is a close friend who knows the story.",
         what: "They talk through moral support, public backing, expenses, and the literal meaning of leaning something against a wall.",
-        when: "Late afternoon, before a community meeting where Sofía will speak in front of neighbours.",
+        when: "Late afternoon, before a community meeting where Sofía will speak in front of neighbors.",
         where: "Pasto, near a small community hall, bringing Nariño into the lesson without inventing local slang.",
         why: "Because apoyar is a false friend. It can mean moral or political support, but paying someone's rent is mantener or ayudar con los gastos."
       },
@@ -1424,7 +1424,7 @@ lessons.push(
             "The form for supporting a person, group, campaign, or cause. With specific people, personal a appears.",
           literal: "to support to",
           useWhen:
-            "A friend, neighbour, candidate, team, or movement needs backing.",
+            "A friend, neighbor, candidate, team, or movement needs backing.",
           avoidWhen:
             "The support is purely financial and ongoing. Then the better verb may be mantener.",
           register: "neutral",

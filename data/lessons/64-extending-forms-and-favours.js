@@ -14,7 +14,7 @@
  * The verbs here — rellenar, guardar and prestar — sit in ordinary Colombian
  * errands and favours: a counter where forms must be filled in honestly, a
  * public place where someone saves a seat and puts belongings away, and a
- * neighbourly loan where prestar points in the opposite direction English
+ * neighborly loan where prestar points in the opposite direction English
  * speakers often expect.
  */
 lessons.push(
@@ -184,7 +184,7 @@ lessons.push(
           explanation: "Blank, with nothing written in it.",
           literal: "in white",
           useWhen: "Forms and documents: “dejar en blanco”, “firma en blanco”, “espacio en blanco”.",
-          avoidWhen: "You are talking about the colour white rather than missing information.",
+          avoidWhen: "You are talking about the color white rather than missing information.",
           register: "neutral",
           region: "Universal Spanish.",
           related: ["vacío", "sin llenar", "casilla", "formulario"],
@@ -296,12 +296,12 @@ lessons.push(
     en: {
       title: "Llenar un formulario sin decir “refill the form”",
       situation:
-        "En Calgary, Marisol está en una oficina municipal llenando un formulario para una tarjeta de residente. En español colombiano diría “llene este formulario”, pero en inglés la empleada dice “fill out this form” o “fill in these boxes”. Marisol aprende que “refill” sirve para volver a llenar un vaso o una botella, no para formularios, y que “stuffed” traduce bien la idea de comida rellena.",
+        "En El Paso, Marisol está en una oficina municipal llenando un formulario para una tarjeta de residente. En español colombiano diría “llene este formulario”, pero en inglés la empleada dice “fill out this form” o “fill in these boxes”. Marisol aprende que “refill” sirve para volver a llenar un vaso o una botella, no para formularios, y que “stuffed” traduce bien la idea de comida rellena.",
       setting: {
-        who: "Marisol es colombiana y ya maneja trámites en español; la empleada canadiense habla despacio pero usa frases fijas de oficina que no se traducen palabra por palabra.",
+        who: "Marisol es colombiana y ya maneja trámites en español; la empleada estadounidense habla despacio pero usa frases fijas de oficina que no se traducen palabra por palabra.",
         what: "Un formulario municipal, unas casillas obligatorias y una botella de agua que permite separar “fill out”, “fill in”, “refill” y “stuffed”.",
         when: "Una mañana fría, antes de una cita con hora exacta en la oficina municipal.",
-        where: "Calgary, Canadá, en una oficina de servicios municipales.",
+        where: "El Paso, Canadá, en una oficina de servicios municipales.",
         why: "Porque un colombiano puede intentar traducir llenar y rellenar como si el inglés usara una sola familia de palabras. Para formularios, el inglés pide “fill out” o “fill in”; “refill” es otra cosa."
       },
       address: {
@@ -472,7 +472,7 @@ lessons.push(
           body: "“Refill” tiene la imagen de volver a llenar algo que quedó vacío o se está acabando: water bottle, coffee cup, prescription. Por eso “refill the form” suena raro: el formulario no se vació como un vaso. En una oficina anglófona, ese error se entiende, pero marca un calco fuerte del español."
         },
         {
-          label: "Blank is not blanco as a colour",
+          label: "Blank is not blanco as a color",
           body: "“Leave it blank” no habla del color del papel, sino de no escribir nada. En formularios, “blank” convive con “required”, “optional”, “N/A” y “field”. Aprender esos bloques ayuda más que traducir palabra por palabra. Una casilla en blanco puede estar bien si es opcional; puede frenar el trámite si es obligatoria."
         }
       ],
@@ -519,7 +519,7 @@ lessons.push(
           whenToUse: "Describir una arepa rellena."
         }
       ],
-      prompt: "In the Calgary office, which phrase is natural for a whole form?",
+      prompt: "In the El Paso office, which phrase is natural for a whole form?",
       choices: [
         "Please refill this form.",
         "Please stuff this form.",
@@ -1103,10 +1103,10 @@ lessons.push(
     }
   },
   {
-    id: "borrowing-a-neighbours-charger-in-arauca",
-    level: "Extending · Neighbourly favours",
+    id: "borrowing-a-neighbors-charger-in-arauca",
+    level: "Extending · Neighborly favours",
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
-    domain: "home-and-neighbourhood",
+    domain: "home-and-neighborhood",
     register: "familiar",
     pathways: ["extension"],
     verb: "prestar",
@@ -1116,7 +1116,7 @@ lessons.push(
       situation:
         "En Arauca, Alex llega donde su vecina Diana porque se quedó sin batería y necesita cargar el celular antes de llamar un taxi. Quiere decir que necesita “prestar” un cargador, pero Diana le muestra la dirección correcta: ella se lo presta, él lo pide prestado. También aparece prestar atención, porque ella le explica que su cargador no es de carga rápida, y la frase colombiana prestar el baño, que no significa llevarse el baño prestado sino permitir usarlo.",
       setting: {
-        who: "Diana is a neighbour who is generous but careful with her things; Alex is trying to ask for help without sounding entitled or reversing who lends what.",
+        who: "Diana is a neighbor who is generous but careful with her things; Alex is trying to ask for help without sounding entitled or reversing who lends what.",
         what: "A phone charger borrowed for a short time, with a promise to return it and a side explanation of prestar atención and prestar el baño.",
         when: "Early night, after a power cut has ended and Alex needs enough battery to order transport.",
         where: "Arauca, Arauca, in the hallway of a small apartment building.",
@@ -1124,9 +1124,9 @@ lessons.push(
       },
       address: {
         form: "tú",
-        who: "Diana and Alex use tú because they are neighbours who know each other, but they still use polite wording around a favour.",
-        why: "Tú keeps the request neighbourly. The courtesy comes from “¿me prestas...?”, “te lo devuelvo” and respecting the object.",
-        ifYouSwitch: "Usted would also be possible with an older neighbour or a less familiar one. Here tú matches the friendly hallway relationship without removing the obligation to return what was lent."
+        who: "Diana and Alex use tú because they are neighbors who know each other, but they still use polite wording around a favour.",
+        why: "Tú keeps the request neighborly. The courtesy comes from “¿me prestas...?”, “te lo devuelvo” and respecting the object.",
+        ifYouSwitch: "Usted would also be possible with an older neighbor or a less familiar one. Here tú matches the friendly hallway relationship without removing the obligation to return what was lent."
       },
       dialogue: [
         {
@@ -1283,11 +1283,11 @@ lessons.push(
       culture: [
         {
           label: "The request points at the lender",
-          body: "In English, the borrower says “can I borrow your charger?” In Colombian Spanish, the same social move is usually “¿me prestas tu cargador?” That question points grammatically at the person who will lend. Learners who say “¿puedo prestar tu cargador?” may accidentally sound as if they want to lend the neighbour's charger to someone else. The fix is not hard, but it has to become automatic."
+          body: "In English, the borrower says “can I borrow your charger?” In Colombian Spanish, the same social move is usually “¿me prestas tu cargador?” That question points grammatically at the person who will lend. Learners who say “¿puedo prestar tu cargador?” may accidentally sound as if they want to lend the neighbor's charger to someone else. The fix is not hard, but it has to become automatic."
         },
         {
           label: "Loans carry trust",
-          body: "Prestar can be casual, but it is never socially empty. A charger, umbrella, drill or small amount of money comes with an expectation: use it carefully and return it when promised. “Te lo devuelvo ahorita” may reassure the owner, but only if you actually do it. In neighbourly Colombia, favours build reputation quickly, and so do lost borrowed objects."
+          body: "Prestar can be casual, but it is never socially empty. A charger, umbrella, drill or small amount of money comes with an expectation: use it carefully and return it when promised. “Te lo devuelvo ahorita” may reassure the owner, but only if you actually do it. In neighborly Colombia, favours build reputation quickly, and so do lost borrowed objects."
         },
         {
           label: "The borrowed bathroom",

@@ -35,7 +35,7 @@ lessons.push(
       setting: {
         who: "Diana is Alex's cousin and stayed close to the family house; Alex left years ago and is arriving with a suitcase and a nervous smile.",
         what: "A first conversation on the doorstep about coming back to a hometown, not just returning an object or doing something again.",
-        when: "Late afternoon, when neighbours are outside and the street is loud enough to make the arrival public.",
+        when: "Late afternoon, when neighbors are outside and the street is loud enough to make the arrival public.",
         where: "Ibagué, on a residential street below the hills, outside the family house Alex has not entered in years.",
         why: "Because regresar carries a little more weight than the everyday volver. It fits a real return after absence, while quick speech often says “ya vuelvo” or “volví ayer.”"
       },
@@ -69,7 +69,7 @@ lessons.push(
           translation: "The block changed, but the door remains the same.",
           pronunciation: "lah KWAH-drah kam-BYOH, PEH-roh lah PWER-tah per-mah-NEH-seh ee-GWAL",
           literal: "The block changed, but the door remains same.",
-          why: "This line lets regresar sit beside permanecer without making permanecer the lesson. The contrast is emotional: the place changed and also stayed recognisable."
+          why: "This line lets regresar sit beside permanecer without making permanecer the lesson. The contrast is emotional: the place changed and also stayed recognizable."
         },
         {
           speaker: "Alex",
@@ -168,12 +168,12 @@ lessons.push(
         {
           term: "a lo mío",
           explanation:
-            "Back to what is mine or what belongs to my life. It gives the return an emotional centre.",
+            "Back to what is mine or what belongs to my life. It gives the return an emotional center.",
           literal: "to the mine",
           useWhen:
             "You mean your people, place, work, or life, not just a physical destination.",
           avoidWhen:
-            "The place is purely practical, like returning to a counter or a queue.",
+            "The place is purely practical, like returning to a counter or a line.",
           register: "friendly informal",
           region: "General Colombian.",
           related: ["mi gente", "mi casa", "lo de uno", "mis raíces"],
@@ -205,7 +205,7 @@ lessons.push(
             "Remains the same. A formal-sounding phrase that marks continuity against change.",
           literal: "remains equal",
           useWhen:
-            "Contrasting what changed with what stayed recognisable.",
+            "Contrasting what changed with what stayed recognizable.",
           avoidWhen:
             "Casual speech where quedarse igual would sound more natural.",
           register: "formal neutral",
@@ -223,10 +223,10 @@ lessons.push(
         {
           label: "Returning can be public",
           body:
-            "In a residential street, coming back after years may not be private. A cousin, an aunt, a neighbour and a shopkeeper may all notice. Regresar can carry that social weight better than a quick “pasé por aquí.”"
+            "In a residential street, coming back after years may not be private. A cousin, an aunt, a neighbor and a shopkeeper may all notice. Regresar can carry that social weight better than a quick “pasé por aquí.”"
         },
         {
-          label: "Ibagué without invented colour",
+          label: "Ibagué without invented color",
           body:
             "The scene does not need a fake local phrase to be local. A family house, hills in the background, and a cousin at the door are enough. The Spanish stays general because the grammar is the point."
         },
@@ -238,7 +238,7 @@ lessons.push(
         {
           label: "A hometown can make you a visitor",
           body:
-            "The emotional problem is not the route. It is whether a familiar place still recognises you. That is why the preterite regresé can sound heavier than a simple arrival."
+            "The emotional problem is not the route. It is whether a familiar place still recognizes you. That is why the preterite regresé can sound heavier than a simple arrival."
         }
       ],
       pitfalls: [
@@ -328,7 +328,7 @@ lessons.push(
           tests: "volver as the everyday spoken verb"
         },
         {
-          prompt: "Alex is still travelling back. Which phrase fits?",
+          prompt: "Alex is still traveling back. Which phrase fits?",
           choices: [
             "Estoy convertido en casa.",
             "Voy de regreso a casa.",
@@ -342,12 +342,12 @@ lessons.push(
     en: {
       title: "Regresar a casa después de años fuera",
       situation:
-        "Alejandra vuelve a Toronto después de vivir varios años lejos. Una prima la espera frente a la casa de la familia y nota que ella reconoce unas cosas y otras no. Usted necesita separar “come back,” “return,” y el registro emocional de cada uno.",
+        "Alejandra vuelve a Houston después de vivir varios años lejos. Una prima la espera frente a la casa de la familia y nota que ella reconoce unas cosas y otras no. Usted necesita separar “come back,” “return,” y el registro emocional de cada uno.",
       setting: {
         who: "Diana es la prima de Alejandra y se quedó cerca de la casa familiar; Alejandra se fue hace años y llega con una maleta y una sonrisa nerviosa.",
         what: "Una primera conversación en la puerta sobre volver a una ciudad y una casa, no sobre repetir una acción.",
         when: "Al final de la tarde, cuando los vecinos están afuera y la llegada se vuelve un poco pública.",
-        where: "Toronto, en una calle residencial frente a la casa familiar que Alejandra no pisa desde hace años.",
+        where: "Houston, en una calle residencial frente a la casa familiar que Alejandra no pisa desde hace años.",
         why: "Porque “come back” suena cotidiano y hablado, mientras “return” puede sonar más formal, escrito o emocionalmente pesado."
       },
       address: {
@@ -368,10 +368,10 @@ lessons.push(
         },
         {
           speaker: "Alejandra",
-          target: "Yes, I returned to Toronto yesterday and came straight here today.",
-          translation: "Sí, regresé ayer a Toronto y hoy vine derecho para acá.",
+          target: "Yes, I returned to Houston yesterday and came straight here today.",
+          translation: "Sí, regresé ayer a Houston y hoy vine derecho para acá.",
           pronunciation: "yes, ai ri-TERND tu to-RON-to yes-ter-dei and keim streit jir tu-DEI",
-          literal: "Sí, retorné a Toronto ayer y vine directo aquí hoy.",
+          literal: "Sí, retorné a Houston ayer y vine directo aquí hoy.",
           why: "“Returned” sirve porque la frase resume un regreso completo y serio. Es más formal que “came back,” pero no incorrecto."
         },
         {
@@ -421,8 +421,8 @@ lessons.push(
           region: "Inglés universal.",
           related: ["come back", "go back", "be back", "return home"],
           example: {
-            target: "I returned to Toronto yesterday.",
-            translation: "Regresé ayer a Toronto."
+            target: "I returned to Houston yesterday.",
+            translation: "Regresé ayer a Houston."
           }
         },
         {
@@ -580,7 +580,7 @@ lessons.push(
       ],
       variations: [
         {
-          form: "I returned to Toronto yesterday.",
+          form: "I returned to Houston yesterday.",
           register: "neutral formal",
           region: "Inglés universal",
           whenToUse: "Un regreso completado, dicho con peso o formalidad."
@@ -621,7 +621,7 @@ lessons.push(
         {
           prompt: "¿Cuál frase sirve para un regreso emocional después de años?",
           choices: [
-            "I returned to Toronto after years.",
+            "I returned to Houston after years.",
             "I returned to call again tomorrow.",
             "I returned the chair to the kitchen."
           ],
@@ -693,7 +693,7 @@ lessons.push(
           translation: "Do I stay here with the backpack under the seat?",
           pronunciation: "per-mah-NEHS-koh ah-KEE kon lah moh-CHEE-lah deh-BAH-hoh del ah-SYEN-toh",
           literal: "I-remain here with the backpack under the seat?",
-          why: "The yo form has -zc-: permanezco. It is useful to recognise, even if you would often say me quedo in conversation."
+          why: "The yo form has -zc-: permanezco. It is useful to recognize, even if you would often say me quedo in conversation."
         },
         {
           speaker: "Encargado",
@@ -769,7 +769,7 @@ lessons.push(
             "The yo form: I remain. The spelling changes to -zc-, as in conozco and agradezco.",
           literal: "I remain",
           useWhen:
-            "You need to recognise or use the formal first-person form.",
+            "You need to recognize or use the formal first-person form.",
           avoidWhen:
             "You are speaking casually. Me quedo will usually sound more natural.",
           register: "grammar pattern",
@@ -974,12 +974,12 @@ lessons.push(
     en: {
       title: "Permanecer sentado durante el cruce",
       situation:
-        "Marcela cruza un río en un ferry pequeño en Vancouver. Antes de salir, el encargado da una instrucción formal por seguridad. Usted necesita reconocer “remain” en avisos e instrucciones, pero también saber que “stay” es la palabra diaria.",
+        "Marcela cruza un río en un ferry pequeño en Austin. Antes de salir, el encargado da una instrucción formal por seguridad. Usted necesita reconocer “remain” en avisos e instrucciones, pero también saber que “stay” es la palabra diaria.",
       setting: {
         who: "Un encargado del ferry da instrucciones de seguridad, y Marcela es una pasajera sentada cerca del frente con una mochila debajo del asiento.",
         what: "Un anuncio público breve sobre permanecer sentada, dejar la mochila en su lugar y esperar hasta que el ferry se detenga.",
         when: "Al comienzo de la noche, cuando varias personas cruzan antes de volver a casa.",
-        where: "Vancouver, en un ferry pequeño que se mueve apenas antes de salir del muelle.",
+        where: "Austin, en un ferry pequeño que se mueve apenas antes de salir del muelle.",
         why: "Porque “remain” es formal e institucional. Aparece en avisos y anuncios, mientras “stay” hace la mayor parte del trabajo cotidiano."
       },
       address: {
@@ -1287,7 +1287,7 @@ lessons.push(
     id: "warehouse-becoming-a-workshop-in-arauca",
     level: "Developing · Coming back and becoming",
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
-    domain: "home-and-neighbourhood",
+    domain: "home-and-neighborhood",
     register: "courteous",
     pathways: ["independent"],
     verb: "convertirse",
@@ -1297,10 +1297,10 @@ lessons.push(
       situation:
         "Sam visita Arauca y una vecina le muestra una bodega vieja que ahora funciona como taller comunitario. El edificio no sólo cambió de color: se transformó en otra cosa. Tú necesitas entender por qué convertirse en es la pieza difícil de la familia de “become”.",
       setting: {
-        who: "Nidia helped organise the neighbourhood project, and Sam is visiting with a notebook because he wants to understand what changed.",
+        who: "Nidia helped organize the neighborhood project, and Sam is visiting with a notebook because he wants to understand what changed.",
         what: "A walk through a former storage building that became a community workshop, with examples of different kinds of becoming.",
         when: "Saturday morning, while people are setting up tables before a repair class.",
-        where: "Arauca, in a neighbourhood building near a wide street, with doors open to let air through.",
+        where: "Arauca, in a neighborhood building near a wide street, with doors open to let air through.",
         why: "Because English “become” looks simple, but Spanish splits the change by how it happens: transformation, passing state, effort, gradual shift, or achievement."
       },
       address: {
@@ -1369,7 +1369,7 @@ lessons.push(
           useWhen:
             "A warehouse becomes a workshop, a problem becomes an opportunity, or a person becomes a public figure through a major transformation.",
           avoidWhen:
-            "The change is only a passing mood, colour, or condition. Then ponerse often fits better.",
+            "The change is only a passing mood, color, or condition. Then ponerse often fits better.",
           register: "neutral formal",
           region: "Universal Spanish; very useful in careful speech.",
           related: ["ponerse", "hacerse", "volverse", "llegar a ser"],
@@ -1487,7 +1487,7 @@ lessons.push(
         {
           label: "A building can change social role",
           body:
-            "When a storage building becomes a workshop, the change is not only paint or furniture. It changes who enters, what happens there, and what the neighbours expect from the place. That is why convertirse en fits."
+            "When a storage building becomes a workshop, the change is not only paint or furniture. It changes who enters, what happens there, and what the neighbors expect from the place. That is why convertirse en fits."
         },
         {
           label: "Community projects need precise verbs",
@@ -1497,7 +1497,7 @@ lessons.push(
         {
           label: "Arauca detail without costume",
           body:
-            "A warm street, open doors, and a neighbourhood project are enough to place the scene. The grammar does not need invented local sayings. Clear general Colombian Spanish is safer and more useful."
+            "A warm street, open doors, and a neighborhood project are enough to place the scene. The grammar does not need invented local sayings. Clear general Colombian Spanish is safer and more useful."
         },
         {
           label: "Becoming can be chosen or accidental",
@@ -1509,7 +1509,7 @@ lessons.push(
         {
           mistake: "Using convertirse for every English “become”",
           whyItFails:
-            "Spanish asks how the change happened. A passing colour or mood usually takes ponerse, not convertirse en.",
+            "Spanish asks how the change happened. A passing color or mood usually takes ponerse, not convertirse en.",
           sayInstead: "Se puso rojo."
         },
         {
@@ -1565,7 +1565,7 @@ lessons.push(
       ],
       prompt: "Nidia says “la bodega se convirtió en taller.” What kind of becoming is this?",
       choices: [
-        "A passing mood or colour that will disappear in a minute.",
+        "A passing mood or color that will disappear in a minute.",
         "A real transformation into a different kind of place.",
         "A quick return to the same building after an errand."
       ],
@@ -1868,7 +1868,7 @@ lessons.push(
           whenToUse: "Un cambio gradual de personalidad."
         },
         {
-          form: "She came to be a neighbourhood leader.",
+          form: "She came to be a neighborhood leader.",
           register: "neutral formal",
           region: "Inglés universal",
           whenToUse: "Un logro o papel alcanzado con el tiempo."
@@ -1906,7 +1906,7 @@ lessons.push(
           prompt: "¿Cuál frase presenta un papel alcanzado con el tiempo?",
           choices: [
             "She remained leader in a minute.",
-            "She came to be a neighbourhood leader.",
+            "She came to be a neighborhood leader.",
             "She returned into a leader."
           ],
           answer: 1,

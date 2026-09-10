@@ -147,7 +147,7 @@ lessons.push(
           related: ["fíjate", "fíjese", "darse cuenta", "notar"],
           example: {
             target: "Fíjate en el color.",
-            translation: "Notice the colour."
+            translation: "Notice the color."
           }
         },
         {
@@ -329,7 +329,7 @@ lessons.push(
         who: "Sarah es una guía de la galería, tranquila y didáctica. Alejandra es la visitante colombiana, encantada de que la lleven despacio por las salas.",
         what: "Un recorrido guiado por una galería de arte, aprendiendo a mirar las obras a propósito y a repartir “mirar” entre look at, see y watch.",
         when: "Una mañana tranquila entre semana, con las salas casi vacías y tiempo para detenerse en cada obra.",
-        where: "Una galería de arte en Canadá, del estilo del AGO en Toronto o la Galería Nacional en Ottawa.",
+        where: "Una galería de arte en Canadá, del estilo del AGO en Houston o la Galería Nacional en Dallas.",
         why: "Porque un museo es donde ver se convierte en mirar. Alejandra quiere estudiar de verdad las obras y no pasar de largo, y ese cambio es justo lo que Sarah le enseña sin convertirlo en una clase de gramática."
       },
       address: {
@@ -469,7 +469,7 @@ lessons.push(
           region: "Inglés general.",
           related: ["notice", "pay attention to", "spot", "realize"],
           example: {
-            target: "Notice the colours.",
+            target: "Notice the colors.",
             translation: "Fíjate en los colores."
           }
         },
@@ -619,7 +619,7 @@ lessons.push(
   },
   {
     id: "hearing-over-the-sound-system-in-cartagena",
-    level: "Starter · Home and neighbourhood",
+    level: "Starter · Home and neighborhood",
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "social-life",
     register: "familiar",
@@ -926,7 +926,7 @@ lessons.push(
       situation:
         "Alejandra está en Canadá y una amiga la llama desde una fiesta con la música a todo volumen. Entre la mala señal y el ruido, Alejandra practica la frontera del inglés entre “hear” (percibir el sonido, el verbo del teléfono: “can you hear me?”) y “listen to” (escuchar con intención, casi siempre con “to”), y aprende que su error estrella es olvidar ese “to”: “listen to me”, nunca “listen me”. Usted, como corresponde al trato con alguien en un país nuevo.",
       setting: {
-        who: "Megan es una amiga canadiense que llama desde una fiesta ruidosa. Alejandra, colombiana recién llegada, forcejea para entender algo por el teléfono.",
+        who: "Megan es una amiga estadounidense que llama desde una fiesta ruidosa. Alejandra, colombiana recién llegada, forcejea para entender algo por el teléfono.",
         what: "Una llamada peleando contra la música a todo volumen, que va y viene entre “hear” para oír y “listen” para escuchar con atención.",
         when: "Un viernes por la noche, la fiesta encendida y la música más fuerte que el teléfono.",
         where: "En Canadá, con Alejandra en su casa y Megan en plena rumba al otro lado de la ciudad.",
@@ -1296,7 +1296,7 @@ lessons.push(
       vocabulary: [
         {
           term: "oír",
-          explanation: "To hear — to perceive sound, often without trying. Its imperative gives Colombia its favourite attention-getters.",
+          explanation: "To hear — to perceive sound, often without trying. Its imperative gives Colombia its favorite attention-getters.",
           literal: "to hear",
           useWhen: "For catching a sound: la oí, no había oído eso.",
           avoidWhen: "For sustained, deliberate listening, where escuchar fits better.",
@@ -1526,7 +1526,7 @@ lessons.push(
       situation:
         "Alejandra está en una noche de salsa en Canadá con Chris, un amigo melómano que le va mostrando la música. Practica que en inglés el sonido se percibe con “hear” (“did you hear that?”), pero que el llamado de atención NO es “hear!”: es “hey” entre amigos, “excuse me” con desconocidos y “listen!” para pedir atención. Y que las frases se cierran con “you know?/right?”, no con un “you hear?” calcado del “¿oíste?”. Usted, por el trato con alguien en un país nuevo.",
       setting: {
-        who: "Chris es un amigo canadiense, buen conocedor de salsa, que le va nombrando los temas. Alejandra, colombiana, sigue la música y el inglés a la vez.",
+        who: "Chris es un amigo estadounidense, buen conocedor de salsa, que le va nombrando los temas. Alejandra, colombiana, sigue la música y el inglés a la vez.",
         what: "Una noche de salsa donde se separan “hear” (percibir el sonido) y los llamados de atención del inglés, que nunca usan “hear”.",
         when: "Un sábado por la noche, la pista llena y un clásico entrando en la consola.",
         where: "En Canadá, en un club con noche latina, lejos de Cali pero con la misma salsa.",

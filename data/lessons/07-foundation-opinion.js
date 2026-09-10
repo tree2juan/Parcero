@@ -21,7 +21,7 @@
 lessons.push(
   {
     id: "arranging-the-paint-job-with-the-maestro",
-    level: "Starter · Home and neighbourhood",
+    level: "Starter · Home and neighborhood",
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "work-and-employment",
     register: "courteous",
@@ -34,7 +34,7 @@ lessons.push(
         "Alex quiere que le repinten el apartamento y un pintor, don Fabio, vino a darle el presupuesto. Tienen que ponerse de acuerdo en el día, el color y el precio. Alex casi no conoce a don Fabio, así que todo se negocia con cuidado: cada propuesta se ofrece, no se impone.",
       setting: {
         who: "Don Fabio has spent thirty years painting apartments in Bogotá and works alone, with his own ladder. Alex is a foreigner who has never hired anyone for a job like this and isn't sure what it should cost.",
-        what: "A short visit to settle the day, the colour and the price for painting the living room and one bedroom.",
+        what: "A short visit to settle the day, the color and the price for painting the living room and one bedroom.",
         when: "A Thursday morning, with the tradesman standing in the living room sizing it up by eye.",
         where: "Bogotá, a small apartment in Chapinero, on a fourth floor with good light.",
         why: "Because how this conversation goes decides the final price, and whether don Fabio will want to come back next time. Asking for a lower price without sounding rude is exactly what Alex is still learning to do in Spanish."
@@ -66,17 +66,17 @@ lessons.push(
         {
           speaker: "Alex",
           target: "Y este gris para la sala, ¿cómo le parece?",
-          translation: "And this grey for the living room — what do you reckon?",
+          translation: "And this gray for the living room — what do you reckon?",
           pronunciation: "ee ES-te grees PA-ra la SA-la, KO-mo le pa-REH-se",
-          literal: "And this grey for the living-room, how to-you it-seems?",
+          literal: "And this gray for the living-room, how to-you it-seems?",
           why: "“¿Cómo le parece?” asks for an opinion, not a fact — you are inviting judgement. Bogotanos use it constantly to consult the person they are hiring, which flatters the maestro's expertise and keeps the job collaborative."
         },
         {
           speaker: "Don Fabio",
           target: "Al parecer usted quiere algo sobrio; ese gris se le va a ver elegante.",
-          translation: "By the looks of it you want something understated; that grey is going to look smart in here.",
+          translation: "By the looks of it you want something understated; that gray is going to look smart in here.",
           pronunciation: "al pa-reh-SER oos-TED KYEH-re AL-go SO-bryoh; ES-te grees se le va a ver eh-le-GAN-te",
-          literal: "To-the seeming you want something sober; that grey itself to-you goes to look elegant.",
+          literal: "To-the seeming you want something sober; that gray itself to-you goes to look elegant.",
           why: "“Al parecer” means “apparently / by the looks of it” — a read of the situation, not a promise. It is a fixed phrase whose article never changes; hearing it as a firm commitment (“so it's decided”) is a classic misread."
         },
         {
@@ -188,7 +188,7 @@ lessons.push(
             "The reflexive twin of parecer — to resemble or look like someone or something. The little “se” is what flips “seem” into “resemble”.",
           literal: "to seem oneself to",
           useWhen:
-            "Saying that two people or things look alike or take after each other, as when a child resembles a parent or one paint colour resembles another.",
+            "Saying that two people or things look alike or take after each other, as when a child resembles a parent or one paint color resembles another.",
           avoidWhen:
             "Giving an opinion. “Me parezco” is “I resemble”; the opinion word is plain “me parece”, with no reflexive at all.",
           register: "neutral",
@@ -196,7 +196,7 @@ lessons.push(
           related: ["parecido", "se parecen", "igualito a", "sacó a"],
           example: {
             target: "Ese gris se parece al del vecino.",
-            translation: "That grey looks like the neighbour's one."
+            translation: "That gray looks like the neighbor's one."
           }
         },
         {
@@ -228,7 +228,7 @@ lessons.push(
         {
           label: "The maestro is an expert, not a pair of hands",
           body:
-            "Calling your painter or builder “maestro” is not empty flattery; it reflects real respect for people who work with their hands and know things you do not. Asking “¿cómo le parece?” about the colour treats him as the specialist he is. Foreigners who bark instructions and never consult the maestro tend to get worse work and colder relations. The honorific and the consulting travel together, and locals notice when one is missing."
+            "Calling your painter or builder “maestro” is not empty flattery; it reflects real respect for people who work with their hands and know things you do not. Asking “¿cómo le parece?” about the color treats him as the specialist he is. Foreigners who bark instructions and never consult the maestro tend to get worse work and colder relations. The honorific and the consulting travel together, and locals notice when one is missing."
         },
         {
           label: "Haggling is a conversation, not a fight",
@@ -310,7 +310,7 @@ lessons.push(
         {
           prompt: "Don Fabio says “Al parecer usted quiere algo sobrio.” What is he doing with “al parecer”?",
           choices: [
-            "Promising firmly that he will paint the living room in the understated colour exactly the way Alex wants it done.",
+            "Promising firmly that he will paint the living room in the understated color exactly the way Alex wants it done.",
             "Reading the situation out loud — “by the looks of it” — and offering an inference rather than a settled fact.",
             "Asking Alex to confirm whether he truly prefers something understated or would in fact rather go a lot bolder."
           ],
@@ -328,7 +328,7 @@ lessons.push(
           tests: "¿le parece? as proposal versus command"
         },
         {
-          prompt: "Alex wants to say “I think it looks like the neighbour's grey.” Which is right?",
+          prompt: "Alex wants to say “I think it looks like the neighbor's gray.” Which is right?",
           choices: [
             "Me parece que se parece al gris del vecino.",
             "Me parezco que parece al gris del vecino, ¿sí?",
@@ -350,14 +350,14 @@ lessons.push(
       ]
     },
     en: {
-      title: "Acordar la pintada del apartamento en Toronto",
+      title: "Acordar la pintada del apartamento en Houston",
       situation:
         "Alejandra quiere que le pinten el apartamento y un pintor, el señor Reid, vino a darle el presupuesto. Tienen que ponerse de acuerdo en el día, el color y el precio, todo en inglés — un idioma donde “me parece” se dice de mil maneras distintas y ninguna se parece de verdad al español.",
       setting: {
-        who: "El señor Reid lleva veinte años pintando apartamentos en Toronto y trabaja solo. Alejandra acaba de llegar de Cali y es la primera vez que contrata a alguien para un trabajo así en inglés.",
+        who: "El señor Reid lleva veinte años pintando apartamentos en Houston y trabaja solo. Alejandra acaba de llegar de Cali y es la primera vez que contrata a alguien para un trabajo así en inglés.",
         what: "Una visita corta para cerrar el día, el color y el precio de pintar la sala y un cuarto.",
         when: "Un jueves por la mañana, con el pintor de pie en la sala tomando medidas.",
-        where: "Toronto, un apartamento pequeño en un tercer piso sin ascensor.",
+        where: "Houston, un apartamento pequeño en un tercer piso sin ascensor.",
         why: "Porque de cómo suene esta conversación depende el precio final y también que el señor Reid quiera volver. Pedir un descuento en inglés sin sonar grosera es justo lo que Alejandra todavía no sabe hacer."
       },
       address: {
@@ -386,7 +386,7 @@ lessons.push(
         },
         {
           speaker: "Alejandra",
-          target: "And this grey for the living room — what do you think?",
+          target: "And this gray for the living room — what do you think?",
           translation: "Y este gris para la sala, ¿cómo le parece?",
           pronunciation: "and dis grei for da LI-ving rum — uat du yu ZINK",
           literal: "Y este gris para la sala — ¿qué piensa usted?",
@@ -394,7 +394,7 @@ lessons.push(
         },
         {
           speaker: "Mr. Reid",
-          target: "Looks like you want something understated. That grey will look great in here.",
+          target: "Looks like you want something understated. That gray will look great in here.",
           translation: "Al parecer quiere algo sobrio. Ese gris se va a ver muy bien acá.",
           pronunciation: "luks laik yu uant SAM-zing an-der-STEI-ted. dat grei uil luk greit in JIR",
           literal: "Parece como usted quiere algo discreto. Ese gris va a ver genial aquí.",
@@ -554,12 +554,12 @@ lessons.push(
         {
           label: "“Please” y “would” hacen de cortesía",
           body:
-            "El hispanohablante suele sonar brusco en inglés sin querer, porque traduce imperativos directos. “Paint the room white” es correcto pero seco; “could you paint the room white?” es lo que espera un canadiense. La cortesía en inglés vive en los condicionales — would, could — y en un “please” que en español muchas veces se omite porque el tono ya lo lleva. En inglés hay que ponerlo casi siempre."
+            "El hispanohablante suele sonar brusco en inglés sin querer, porque traduce imperativos directos. “Paint the room white” es correcto pero seco; “could you paint the room white?” es lo que espera un estadounidense. La cortesía en inglés vive en los condicionales — would, could — y en un “please” que en español muchas veces se omite porque el tono ya lo lleva. En inglés hay que ponerlo casi siempre."
         },
         {
           label: "La charla pequeña engrasa el trato",
           body:
-            "Antes de hablar de precios, un canadiense suele cruzar un par de frases sobre el clima o el tráfico. Ese “small talk” no es pérdida de tiempo: es la manera de mostrar que uno es una persona agradable con quien trabajar. Ir directo al grano, como sería normal y hasta eficiente en muchos contextos colombianos, puede leerse como frialdad. Dos minutos de charla liviana valen mucho más de lo que parece."
+            "Antes de hablar de precios, un estadounidense suele cruzar un par de frases sobre el clima o el tráfico. Ese “small talk” no es pérdida de tiempo: es la manera de mostrar que uno es una persona agradable con quien trabajar. Ir directo al grano, como sería normal y hasta eficiente en muchos contextos colombianos, puede leerse como frialdad. Dos minutos de charla liviana valen mucho más de lo que parece."
         }
       ],
       pitfalls: [
@@ -602,7 +602,7 @@ lessons.push(
           whenToUse: "La misma oferta en tono relajado, con alguien de confianza."
         },
         {
-          form: "What do you think of the grey?",
+          form: "What do you think of the gray?",
           register: "neutral",
           region: "Inglés universal",
           whenToUse: "Para consultar el juicio del otro sobre una elección."
@@ -610,7 +610,7 @@ lessons.push(
         {
           form: "Would Saturday suit you?",
           register: "polite formal",
-          region: "Inglés británico y canadiense",
+          region: "Inglés británico y estadounidense",
           whenToUse: "Un registro más formal; “suit you” suena algo más pulido que “work for you”."
         },
         {
@@ -687,7 +687,7 @@ lessons.push(
       setting: {
         who: "Yésica runs a clothing stall in El Hueco and sells by talking non-stop, with the paisa gift for making anyone feel like one of the family. Alex is a foreigner who still gets lost among so many stalls and so many offers.",
         what: "Trying on a jacket, hearing the price, and arranging to come back for it if it fits.",
-        when: "A Saturday at midday, with the city centre packed with people and vendors calling out.",
+        when: "A Saturday at midday, with the city center packed with people and vendors calling out.",
         where: "Medellín, El Hueco, a narrow arcade of small stalls where everything is cheaper and haggling is done with warmth.",
         why: "Because in El Hueco the exchange is quick and personal: if Alex hesitates he loses the discount, and if he arranges to come back and doesn't, he lets down someone who already treated him like a friend."
       },
@@ -823,7 +823,7 @@ lessons.push(
             "“To let someone down / to look bad.” Failing to keep your word to a person who was counting on you.",
           literal: "to stay badly",
           useWhen:
-            "Warning about, or apologising for, breaking a commitment: no le quiero quedar mal, quedé mal con ellos.",
+            "Warning about, or apologizing for, breaking a commitment: no le quiero quedar mal, quedé mal con ellos.",
           avoidWhen:
             "Feeling physically unwell — that is sentirse mal, an entirely different thing from quedar mal.",
           register: "neutral",
@@ -880,7 +880,7 @@ lessons.push(
         {
           label: "Quedar mal is a real social wound",
           body:
-            "“Quedarle mal a alguien” carries far more weight than the light English “to let down”. Not turning up, not paying when you said, not delivering the favour — these damage your name in a way Colombians take seriously. Reliability is a form of respect, and “no le quiero quedar mal” is said with genuine feeling. Treating a casual “I'll come back” lightly, and then not returning, can cost you a relationship you did not realise you had."
+            "“Quedarle mal a alguien” carries far more weight than the light English “to let down”. Not turning up, not paying when you said, not delivering the favour — these damage your name in a way Colombians take seriously. Reliability is a form of respect, and “no le quiero quedar mal” is said with genuine feeling. Treating a casual “I'll come back” lightly, and then not returning, can cost you a relationship you did not realize you had."
         },
         {
           label: "El Hueco runs on warmth and haggling",
@@ -1004,12 +1004,12 @@ lessons.push(
     en: {
       title: "Medirse una chaqueta en una tienda de Canadá",
       situation:
-        "Alejandra anda buscando una chaqueta en un centro comercial de Toronto. Una vendedora, Megan, la anima a medirse una. En cinco frases se juega la talla, dónde queda la otra tienda y si vuelve o no por ella — todo en un inglés donde “quedar” se dice de cinco maneras distintas.",
+        "Alejandra anda buscando una chaqueta en un centro comercial de Houston. Una vendedora, Megan, la anima a medirse una. En cinco frases se juega la talla, dónde queda la otra tienda y si vuelve o no por ella — todo en un inglés donde “quedar” se dice de cinco maneras distintas.",
       setting: {
         who: "Megan atiende una tienda de ropa en un centro comercial y saluda con el “hi, how are you?” de rigor. Alejandra todavía traduce “me queda bien” palabra por palabra y le sale raro.",
         what: "Medirse una chaqueta, oír el precio y quedar de volver por ella si le sirve.",
         when: "Un sábado por la tarde, con el centro comercial lleno pero tranquilo.",
-        where: "Toronto, una tienda de una cadena grande, con probadores al fondo y un letrero de devoluciones en la caja.",
+        where: "Houston, una tienda de una cadena grande, con probadores al fondo y un letrero de devoluciones en la caja.",
         why: "Porque Alejandra quiere sonar natural y no calcar el español. Decir “it stays me good” o “where stays the store” la delata enseguida, y ella preferiría que no."
       },
       address: {
@@ -1114,7 +1114,7 @@ lessons.push(
           avoidWhen:
             "Con el calco “where stays”: no existe. La ubicación en inglés va siempre con “be”.",
           register: "neutral",
-          region: "Inglés universal; “whereabouts is it?” es más británico y canadiense.",
+          region: "Inglés universal; “whereabouts is it?” es más británico y estadounidense.",
           related: ["whereabouts is it?", "where is it?", "how do I get there?", "which way is it?"],
           example: {
             target: "Where's the other store?",
@@ -1196,7 +1196,7 @@ lessons.push(
         {
           label: "El precio con etiqueta no se regatea",
           body:
-            "En una tienda de cadena canadiense, el precio de la etiqueta es el precio, y ponerse a regatear como en El Hueco desconcierta al vendedor. El descuento existe, pero llega por rebajas, cupones o temporadas de “sale”, no por pedirlo de frente. Preguntar “is there any discount?” no ofende, pero tampoco abre el tira y afloje cálido del comercio popular colombiano. Aquí el margen está en esperar la promoción, no en negociar en la caja."
+            "En una tienda de cadena estadounidense, el precio de la etiqueta es el precio, y ponerse a regatear como en El Hueco desconcierta al vendedor. El descuento existe, pero llega por rebajas, cupones o temporadas de “sale”, no por pedirlo de frente. Preguntar “is there any discount?” no ofende, pero tampoco abre el tira y afloje cálido del comercio popular colombiano. Aquí el margen está en esperar la promoción, no en negociar en la caja."
         },
         {
           label: "“Just looking” es su escudo",
@@ -1324,7 +1324,7 @@ lessons.push(
     }
   },
   {
-    id: "wondering-if-the-parade-is-cancelled",
+    id: "wondering-if-the-parade-is-canceled",
     level: "Starter · Everyday life",
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "plans-and-time",
@@ -1462,7 +1462,7 @@ lessons.push(
           avoidWhen:
             "As a full formal question; for that you would expand it to ¿tú crees que sí? or, with usted, ¿usted cree?",
           register: "friendly informal",
-          region: "Coastal favourite with tú; the interior might say ¿usted cree? or ¿sí?",
+          region: "Coastal favorite with tú; the interior might say ¿usted cree? or ¿sí?",
           related: ["¿sí?", "¿de verdad?", "¿en serio?", "¿usted cree?"],
           example: {
             target: "¿Tú crees? A mí no me parece.",
@@ -1527,7 +1527,7 @@ lessons.push(
         {
           label: "Carnival doesn't stop",
           body:
-            "The Barranquilla Carnival, a UNESCO Masterpiece of Humanity, is a force that doesn't halt for a downpour. The saying “Quien lo vive es quien lo goza” — you only enjoy it if you live it — captures the attitude: people take to the street come what may. Coastal rain tends to be heavy and short, so folks wait under an awning, have a beer and carry on. For a visitor, grasping that the plan isn't cancelled by the weather is grasping the city itself."
+            "The Barranquilla Carnival, a UNESCO Masterpiece of Humanity, is a force that doesn't halt for a downpour. The saying “Quien lo vive es quien lo goza” — you only enjoy it if you live it — captures the attitude: people take to the street come what may. Coastal rain tends to be heavy and short, so folks wait under an awning, have a beer and carry on. For a visitor, grasping that the plan isn't canceled by the weather is grasping the city itself."
         },
         {
           label: "The coast's tú",
@@ -1614,7 +1614,7 @@ lessons.push(
         {
           prompt: "Alex asks “¿No van a cancelar?” and Kelly answers “¡No creo!” What does she mean?",
           choices: [
-            "That nobody has told her anything either way, so she honestly has no idea whether the parade is cancelled or not.",
+            "That nobody has told her anything either way, so she honestly has no idea whether the parade is canceled or not.",
             "That she does in fact expect them to call it off and is gently bracing Alex for the disappointing news.",
             "That she strongly doubts it — here “¡No creo!” is a confident “no way”, reassurance rather than a careful hedge."
           ],
@@ -1656,12 +1656,12 @@ lessons.push(
     en: {
       title: "Preguntarse si se cancela el festival",
       situation:
-        "Alejandra está en un festival de música al aire libre en Toronto con su amigo canadiense Dylan, esperando el acto principal. El cielo se pone negro y ella está segura de que van a cancelar el show. Dylan, que ha ido a muchos de estos, no cree que sea para tanto. Todo se juega entre lo que uno cree y lo que el otro duda — en inglés, sin el subjuntivo en el que apoyarse.",
+        "Alejandra está en un festival de música al aire libre en Houston con su amigo estadounidense Dylan, esperando el acto principal. El cielo se pone negro y ella está segura de que van a cancelar el show. Dylan, que ha ido a muchos de estos, no cree que sea para tanto. Todo se juega entre lo que uno cree y lo que el otro duda — en inglés, sin el subjuntivo en el que apoyarse.",
       setting: {
-        who: "Dylan creció en Toronto y ha aguantado más de un festival pasado por agua; para él la lluvia es parte del día. Alejandra es su amiga colombiana, recién llegada, sin saber si quedarse quieta o correr a resguardarse.",
+        who: "Dylan creció en Houston y ha aguantado más de un festival pasado por agua; para él la lluvia es parte del día. Alejandra es su amiga colombiana, recién llegada, sin saber si quedarse quieta o correr a resguardarse.",
         what: "Una charla al borde de la cancha mientras esperan al artista principal y amenaza un aguacero.",
         when: "Un sábado de verano, a media tarde, bochornoso y gris con nubes de tormenta acercándose.",
-        where: "Toronto, en el recinto del festival, entre food trucks, ponchos y gente mirando la app del clima.",
+        where: "Houston, en el recinto del festival, entre food trucks, ponchos y gente mirando la app del clima.",
         why: "Porque Alejandra todavía no sabe leer el clima local ni el ánimo de la multitud, y Dylan sí. Confiar en su lectura — y decirlo en inglés natural — es parte de aprender cómo funciona la ciudad."
       },
       address: {
@@ -1783,7 +1783,7 @@ lessons.push(
           avoidWhen:
             "Como pregunta formal completa; para eso sería “do you think so?”, con el auxiliar.",
           register: "friendly informal",
-          region: "Inglés universal; “you reckon?” es más británico y canadiense.",
+          region: "Inglés universal; “you reckon?” es más británico y estadounidense.",
           related: ["you reckon?", "really?", "do you think so?", "are you sure?"],
           example: {
             target: "You think? It always blows over.",

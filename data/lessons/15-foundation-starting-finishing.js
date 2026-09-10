@@ -36,7 +36,7 @@ lessons.push(
         who: "Marcela has taught salsa in Cali for fifteen years and can spot a nervous beginner from across the room. Alex is a foreigner with two left feet who has always wanted to dance but never dared to start.",
         what: "A first salsa lesson: sizing up the student, agreeing where to begin, and getting the basic step going.",
         when: "A Tuesday evening, the academy's mirrored studio warming up as the music comes on.",
-        where: "Cali, the self-declared world capital of salsa, in a dance academy in the San Fernando neighbourhood.",
+        where: "Cali, the self-declared world capital of salsa, in a dance academy in the San Fernando neighborhood.",
         why: "Because the hardest part of learning to dance is simply beginning, and how Marcela eases Alex into it — when they start, what they start with — sets the tone for whether he keeps coming back."
       },
       address: {
@@ -233,7 +233,7 @@ lessons.push(
         {
           label: "Empezar versus comenzar",
           body:
-            "The two verbs mean the same thing, and Colombians use both, but they live in slightly different rooms. Empezar is the spoken default — you empiezas your class, your meal, your day. Comenzar leans formal: it is the verb of programmes, ceremonies and the evening news, “el evento comienza a las ocho”. Neither is wrong in the other's place, but reaching for comenzar in casual chat can make you sound as if you were reading an announcement aloud."
+            "The two verbs mean the same thing, and Colombians use both, but they live in slightly different rooms. Empezar is the spoken default — you empiezas your class, your meal, your day. Comenzar leans formal: it is the verb of programs, ceremonies and the evening news, “el evento comienza a las ocho”. Neither is wrong in the other's place, but reaching for comenzar in casual chat can make you sound as if you were reading an announcement aloud."
         },
         {
           label: "The counting is in the body",
@@ -350,14 +350,14 @@ lessons.push(
       ]
     },
     en: {
-      title: "Empezar la clase de baile en Toronto",
+      title: "Empezar la clase de baile en Houston",
       situation:
-        "Alejandra llega a su primera clase de baile en una academia de Toronto. La profesora, Kayla, la recibe, le pregunta si ha bailado antes y arrancan con los pasos básicos — todo en inglés, un idioma que empieza las cosas con “start”, “begin” y “get going”, y casi nunca con algo que se parezca a “empezar”.",
+        "Alejandra llega a su primera clase de baile en una academia de Houston. La profesora, Kayla, la recibe, le pregunta si ha bailado antes y arrancan con los pasos básicos — todo en inglés, un idioma que empieza las cosas con “start”, “begin” y “get going”, y casi nunca con algo que se parezca a “empezar”.",
       setting: {
-        who: "Kayla lleva años dando clases de baile en Toronto y reconoce a un principiante nervioso al instante. Alejandra es caleña, baila salsa desde niña, pero nunca ha tomado una clase en inglés y le da pena no entender las instrucciones.",
+        who: "Kayla lleva años dando clases de baile en Houston y reconoce a un principiante nervioso al instante. Alejandra es caleña, baila salsa desde niña, pero nunca ha tomado una clase en inglés y le da pena no entender las instrucciones.",
         what: "Una primera clase de baile: la profesora tantea el nivel, acuerdan por dónde empezar y arrancan con lo básico.",
         when: "Un martes por la noche, con el salón de espejos entrando en calor mientras suena la música.",
-        where: "Toronto, una academia de baile en el centro, un martes de invierno.",
+        where: "Houston, una academia de baile en el centro, un martes de invierno.",
         why: "Porque lo más difícil de una clase en otro idioma no es bailar sino entender cuándo y con qué se empieza, y de cómo Kayla la vaya guiando depende que Alejandra se anime a volver."
       },
       address: {
@@ -544,7 +544,7 @@ lessons.push(
         {
           label: "En inglés casi todo “empieza” con start",
           body:
-            "El hispanohablante aprende “begin” en el colegio y lo usa para todo, pero en el inglés cotidiano el verbo rey es “start”. La clase “starts”, el carro “starts”, la película “starts”. “Begin” existe y suena bien, solo que un poco más formal, como “comenzar” en español. Si Alejandra quiere sonar natural en la academia de Toronto, le conviene soltar “start” y guardar “begin” para lo escrito o lo ceremonioso."
+            "El hispanohablante aprende “begin” en el colegio y lo usa para todo, pero en el inglés cotidiano el verbo rey es “start”. La clase “starts”, el carro “starts”, la película “starts”. “Begin” existe y suena bien, solo que un poco más formal, como “comenzar” en español. Si Alejandra quiere sonar natural en la academia de Houston, le conviene soltar “start” y guardar “begin” para lo escrito o lo ceremonioso."
         },
         {
           label: "Get started, kick off: el arranque con energía",
@@ -696,7 +696,7 @@ lessons.push(
         who: "Andrés and Alex vosean each other freely, the default between two young paisas who know each other.",
         why: "In Medellín, vos is the warm everyday pronoun among friends and equals: “¿vos ya terminaste?”, “¿querés?”. Using it back marks Alex as someone at home in the city, not a tourist clinging to tú.",
         ifYouSwitch:
-          "Switching to usted with Andrés mid-joke would put a sudden coolness between them, as if Alex had taken offence. Among paisa friends vos is the sound of trust; retreating to usted is what you do when you are annoyed or being pointedly formal."
+          "Switching to usted with Andrés mid-joke would put a sudden coolness between them, as if Alex had taken offense. Among paisa friends vos is the sound of trust; retreating to usted is what you do when you are annoyed or being pointedly formal."
       },
       dialogue: [
         {
@@ -875,7 +875,7 @@ lessons.push(
         {
           label: "The barbershop is a paisa parliament",
           body:
-            "A Medellín barbershop is less a service than a social club. The haircut is half the point; the other half is the talk — football, women, work, the neighbourhood's news. A good barber runs the conversation as skilfully as the clippers, and a regular is expected to play along. Alex joking about the brother's break-up is not nosy; it is exactly the kind of easy banter that marks him as one of the shop's own."
+            "A Medellín barbershop is less a service than a social club. The haircut is half the point; the other half is the talk — soccer, women, work, the neighborhood's news. A good barber runs the conversation as skilfully as the clippers, and a regular is expected to play along. Alex joking about the brother's break-up is not nosy; it is exactly the kind of easy banter that marks him as one of the shop's own."
         },
         {
           label: "Vos is the sound of trust",
@@ -1004,12 +1004,12 @@ lessons.push(
     en: {
       title: "Terminar el corte en la peluquería",
       situation:
-        "Alejandra está en una peluquería de Toronto rematando su corte. Mientras la estilista, Chloe, termina de secarle el pelo, se arma la típica charla de peluquería en inglés: que si ya casi acaba, que si una amiga terminó con el novio, que si vuelve el otro mes.",
+        "Alejandra está en una peluquería de Houston rematando su corte. Mientras la estilista, Chloe, termina de secarle el pelo, se arma la típica charla de peluquería en inglés: que si ya casi acaba, que si una amiga terminó con el novio, que si vuelve el otro mes.",
       setting: {
-        who: "Chloe corta pelo en un salón del centro de Toronto y conversa sin parar mientras trabaja. Alejandra ya es clienta habitual y se anima a bromear, aunque todavía se le escapa el slang rápido en inglés.",
+        who: "Chloe corta pelo en un salón del centro de Houston y conversa sin parar mientras trabaja. Alejandra ya es clienta habitual y se anima a bromear, aunque todavía se le escapa el slang rápido en inglés.",
         what: "Los últimos minutos de un corte: terminar el secado, pagar y agendar la próxima cita.",
         when: "Un viernes por la tarde, con el salón lleno de gente arreglándose para el fin de semana.",
-        where: "Toronto, una peluquería en el centro, secadores prendidos y música pop de fondo.",
+        where: "Houston, una peluquería en el centro, secadores prendidos y música pop de fondo.",
         why: "Porque el final de un corte es pura charla, y seguir el hilo en inglés — quién terminó qué, quién cortó con quién — es donde de verdad se le prueba el idioma a Alejandra."
       },
       address: {
@@ -1458,7 +1458,7 @@ lessons.push(
             "An idiom for not grasping something — an idea that “won't go in”. Figurative use of entrar.",
           literal: "it doesn't enter me",
           useWhen:
-            "Admitting you cannot understand or memorise something: no me entra la fórmula, no me entra cómo funciona.",
+            "Admitting you cannot understand or memorize something: no me entra la fórmula, no me entra cómo funciona.",
           avoidWhen:
             "A physical object that will not fit — that is also “no me entra” (the shoe won't go on), so context decides.",
           register: "friendly informal",
@@ -1537,7 +1537,7 @@ lessons.push(
         {
           label: "When ideas won't go in",
           body:
-            "Spanish treats understanding as something physical entering the mind. “No me entra” — it won't go in — is how Colombians admit they cannot grasp or memorise something, and “ya me entró” is the click of finally getting it. The image is bodily and unpretentious, with no shame attached: an idea simply has not gone in yet. It is gentler than “no entiendo”, which can sound like a flat wall; “no me entra” suggests the door is still open."
+            "Spanish treats understanding as something physical entering the mind. “No me entra” — it won't go in — is how Colombians admit they cannot grasp or memorize something, and “ya me entró” is the click of finally getting it. The image is bodily and unpretentious, with no shame attached: an idea simply has not gone in yet. It is gentler than “no entiendo”, which can sound like a flat wall; “no me entra” suggests the door is still open."
         },
         {
           label: "Usted at the office door",
@@ -1656,17 +1656,17 @@ lessons.push(
     en: {
       title: "Entrar el primer día al trabajo",
       situation:
-        "Es el primer día de Alejandra en un trabajo nuevo en Toronto. En la recepción, Ryan, de recursos humanos, la hace seguir, le explica a qué hora entra, cómo registrar su ingreso y por dónde se entra al edificio. Alejandra, nerviosa, pide que le repitan lo que no le entra del todo.",
+        "Es el primer día de Alejandra en un trabajo nuevo en Houston. En la recepción, Ryan, de recursos humanos, la hace seguir, le explica a qué hora entra, cómo registrar su ingreso y por dónde se entra al edificio. Alejandra, nerviosa, pide que le repitan lo que no le entra del todo.",
       setting: {
         who: "Ryan trabaja en recursos humanos y ha guiado a decenas de personas en su primera mañana. Alejandra empieza su primer trabajo de oficina en Canadá y está nerviosa por hacer todo bien.",
         what: "Una inducción de primer día: que la hagan seguir, aprender la hora de entrada, el registro y a dónde ir.",
         when: "Un lunes, diez para las ocho de la mañana, la oficina llenándose a medida que llega la gente.",
-        where: "Toronto, la recepción de una oficina en el centro de la ciudad.",
+        where: "Houston, la recepción de una oficina en el centro de la ciudad.",
         why: "Porque la primera impresión en un trabajo nuevo importa, y entender exactamente a qué hora llegar, cómo registrarse y por dónde entrar es lo que evita que Alejandra se sienta perdida el primer día."
       },
       address: {
         form: "mixed",
-        who: "Ryan y Alejandra se tratan por el nombre de pila desde el minuto uno, como es normal en una oficina canadiense.",
+        who: "Ryan y Alejandra se tratan por el nombre de pila desde el minuto uno, como es normal en una oficina estadounidense.",
         why: "El inglés no tiene usted ni tú; la cortesía no vive en el pronombre sino en el verbo y los suavizadores — “could you”, “would you mind”, “please” — y en el tono. El nombre de pila no es informalidad, es lo normal.",
         ifYouSwitch:
           "Si Alejandra buscara un pronombre formal como el usted del español, no lo encontraría: en inglés no existe. La formalidad se marca con frases corteses y con el tono, no cambiando la palabra “you”."
@@ -1863,7 +1863,7 @@ lessons.push(
         {
           label: "El nombre de pila no es informalidad",
           body:
-            "En una oficina canadiense, Ryan y Alejandra se llaman por el nombre desde el minuto uno, y eso no es falta de respeto. El inglés no tiene usted; la formalidad vive en las frases corteses — “could you”, “would you mind”, “thanks so much” — y en el tono, no en el pronombre ni en el apellido. Buscar un “usted” en inglés es buscar algo que no existe. La cortesía está en cómo se pide, no en cómo se nombra a la persona."
+            "En una oficina estadounidense, Ryan y Alejandra se llaman por el nombre desde el minuto uno, y eso no es falta de respeto. El inglés no tiene usted; la formalidad vive en las frases corteses — “could you”, “would you mind”, “thanks so much” — y en el tono, no en el pronombre ni en el apellido. Buscar un “usted” en inglés es buscar algo que no existe. La cortesía está en cómo se pide, no en cómo se nombra a la persona."
         }
       ],
       pitfalls: [

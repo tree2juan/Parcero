@@ -1,5 +1,5 @@
 /*
- * Lesson block: foundation / calendar, colour and feeling (grammar, not verbs).
+ * Lesson block: foundation / calendar, color and feeling (grammar, not verbs).
  *
  * Block files push onto the `lessons` array declared in data/lessons.js. They
  * are plain scripts, not modules -- `lessons` is already in scope by the time
@@ -12,9 +12,9 @@
  * actually taught rather than merely listed, exactly as test/shape.test.js and
  * scripts/check-lesson-block.js require.
  *
- * The three structures here -- dates-and-calendar, colour-and-description and
+ * The three structures here -- dates-and-calendar, color-and-description and
  * feelings-and-states -- close measured holes in the corpus: only 3 month names
- * and no full dates, 18 colour words, and 6 emotion words across 208 lessons.
+ * and no full dates, 18 color words, and 6 emotion words across 208 lessons.
  * The Spanish scenes sit on the coffee axis -- Pereira, Manizales and Armenia --
  * so the texture is paisa-adjacent but regionally its own: fincas, wool ruanas,
  * the Cocora valley and Quindío tourism, not Bogotá or Medellín. The two
@@ -26,7 +26,7 @@ lessons.push(
     id: "dates-and-the-calendar-in-pereira",
     level: "Starter · Everyday life",
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context", "grammar"],
-    domain: "home-and-neighbourhood",
+    domain: "home-and-neighborhood",
     register: "courteous",
     pathways: ["foundation", "year-12"],
     structure: "dates-and-calendar",
@@ -260,7 +260,7 @@ lessons.push(
         {
           mistake: "Reading the year as “diecinueve noventa”",
           whyItFails:
-            "That copies the English habit of splitting a year into two halves. Spanish reads the whole figure: “mil novecientos noventa”. The split version is not a recognised year and forces the listener to reassemble it.",
+            "That copies the English habit of splitting a year into two halves. Spanish reads the whole figure: “mil novecientos noventa”. The split version is not a recognized year and forces the listener to reassemble it.",
           sayInstead: "La finca es de mil novecientos noventa."
         },
         {
@@ -643,24 +643,24 @@ lessons.push(
     }
   },
   {
-    id: "colours-and-describing-things-in-manizales",
+    id: "colors-and-describing-things-in-manizales",
     level: "Starter · Shopping",
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context", "grammar"],
     domain: "food-and-drink",
     register: "neutral",
     pathways: ["foundation", "year-12"],
-    structure: "colour-and-description",
+    structure: "color-and-description",
     review: "pending",
     es: {
       title: "Comprando una ruana en Manizales",
       situation:
         "Laura entra a un almacén de tejidos en Manizales buscando ropa para el frío de la montaña. Con don Jorge, el vendedor, va nombrando colores, materiales y estampados: una ruana azul o verde, una bufanda de rayas, guantes de lana. Cuando no sabe la palabra exacta, describe por el patrón o el material, que es justo lo que hace un hablante real.",
       setting: {
-        who: "Don Jorge is a Manizales shopkeeper who sells wool and leather goods and knows his stock by colour and material. Laura is a foreign student kitting herself out for the cold of the coffee highlands.",
-        what: "A shopping chat built on description: colour and its agreement, the invariable colours, brown as café rather than marrón, and describing by pattern and material when the exact word won't come.",
+        who: "Don Jorge is a Manizales shopkeeper who sells wool and leather goods and knows his stock by color and material. Laura is a foreign student kitting herself out for the cold of the coffee highlands.",
+        what: "A shopping chat built on description: color and its agreement, the invariable colors, brown as café rather than marrón, and describing by pattern and material when the exact word won't come.",
         when: "A cool, misty afternoon in the high city, with the shop full of ruanas and scarves.",
         where: "Manizales, high in the Caldas coffee country, in a family textile shop.",
-        why: "Colour and description are everywhere in real talk, yet the corpus holds only eighteen colour words. Make an adjective agree, reach for café over marrón, and say de rayas or de cuero, and you can describe almost anything you point at."
+        why: "Color and description are everywhere in real talk, yet the corpus holds only eighteen color words. Make an adjective agree, reach for café over marrón, and say de rayas or de cuero, and you can describe almost anything you point at."
       },
       address: {
         form: "mixed",
@@ -676,7 +676,7 @@ lessons.push(
           translation: "Don Jorge, I'm looking for a blue or green ruana, not too dark, for the weather here.",
           pronunciation: "don HOR-he, BUS-ko U-na RWA-na a-SUL o VER-de, no muy os-KU-ra, PA-ra el KLI-ma de a-KÍ",
           literal: "Don Jorge, I-search a ruana blue or green, not very dark, for the climate of here.",
-          why: "The colour follows the noun and agrees with it: “una ruana azul”, feminine. “Azul” ends in a consonant, so it looks the same for masculine or feminine; only the plural will change it. “Oscura” agrees fully, feminine singular."
+          why: "The color follows the noun and agrees with it: “una ruana azul”, feminine. “Azul” ends in a consonant, so it looks the same for masculine or feminine; only the plural will change it. “Oscura” agrees fully, feminine singular."
         },
         {
           speaker: "Jorge",
@@ -692,7 +692,7 @@ lessons.push(
           translation: "I like the brown one. And do you have red scarves or that striped orange one I saw?",
           pronunciation: "me GUS-ta la ka-FÉ. i TYE-ne bu-FAN-das RRO-jas o E-sa na-RAN-ja de RA-yas ke vi",
           literal: "To-me it-pleases the coffee. And you-have scarves red or that orange of stripes that I-saw?",
-          why: "“Rojas” shows full agreement -- feminine plural to match “bufandas”. But “naranja” does not change: it is an invariable colour, so “esa bufanda naranja” stays the same in any gender or number. “De rayas” means striped."
+          why: "“Rojas” shows full agreement -- feminine plural to match “bufandas”. But “naranja” does not change: it is an invariable color, so “esa bufanda naranja” stays the same in any gender or number. “De rayas” means striped."
         },
         {
           speaker: "Jorge",
@@ -705,30 +705,30 @@ lessons.push(
         {
           speaker: "Laura",
           target: "Perfecto. ¿La mochila gris es de cuero? Y esa cartera rosada, ¿es del mismo material?",
-          translation: "Perfect. Is the grey backpack leather? And that pink purse, is it the same material?",
+          translation: "Perfect. Is the gray backpack leather? And that pink purse, is it the same material?",
           pronunciation: "per-FEK-to. la mo-CHI-la gris es de KWE-ro? i E-sa kar-TE-ra rro-SA-da, es del MIS-mo ma-te-RYAL?",
-          literal: "Perfect. The backpack grey is of leather? And that purse pink, is of-the same material?",
+          literal: "Perfect. The backpack gray is of leather? And that purse pink, is of-the same material?",
           why: "“Gris” ends in a consonant, so it does not mark gender: “la mochila gris”. “Rosada” does agree -- feminine singular. “De cuero” is the material frame, leather; you name what a thing is made of with “de” plus the material."
         },
         {
           speaker: "Jorge",
           target: "La gris es de cuero; la rosada es de tela. Todo hecho aquí en Manizales, bien paisa.",
-          translation: "The grey one is leather; the pink one is fabric. All made here in Manizales, properly paisa.",
+          translation: "The gray one is leather; the pink one is fabric. All made here in Manizales, properly paisa.",
           pronunciation: "la gris es de KWE-ro; la rro-SA-da es de TE-la. TO-do E-cho a-KÍ en ma-ni-SA-les, byen pai-SA",
-          literal: "The grey is of leather; the pink is of fabric. All made here in Manizales, well paisa.",
-          why: "The colour alone can stand for the thing: “la gris”, “la rosada”, the grey one, the pink one, with the noun dropped because it is understood. Materials keep the “de” frame: “de cuero”, “de tela”, of leather, of fabric."
+          literal: "The gray is of leather; the pink is of fabric. All made here in Manizales, well paisa.",
+          why: "The color alone can stand for the thing: “la gris”, “la rosada”, the gray one, the pink one, with the noun dropped because it is understood. Materials keep the “de” frame: “de cuero”, “de tela”, of leather, of fabric."
         }
       ],
       vocabulary: [
         {
           term: "la concordancia del color",
           explanation:
-            "Most colours agree with the noun in gender and number, and sit after it: “un carro rojo”, “una casa roja”, “unas casas rojas”. The ending moves with the noun, not with you.",
-          literal: "the agreement of the colour",
+            "Most colors agree with the noun in gender and number, and sit after it: “un carro rojo”, “una casa roja”, “unas casas rojas”. The ending moves with the noun, not with you.",
+          literal: "the agreement of the color",
           useWhen:
-            "Using colours that end in -o, which show all four forms: rojo, roja, rojos, rojas.",
+            "Using colors that end in -o, which show all four forms: rojo, roja, rojos, rojas.",
           avoidWhen:
-            "The colour is one of the invariable ones -- naranja, rosa -- which never change shape.",
+            "The color is one of the invariable ones -- naranja, rosa -- which never change shape.",
           register: "neutral",
           region: "Universal Spanish.",
           related: ["rojo", "amarilla", "negros", "blanca"],
@@ -757,8 +757,8 @@ lessons.push(
         {
           term: "los colores invariables",
           explanation:
-            "A few colours never change: naranja, rosa, violeta, beige. “Una falda naranja”, “unos zapatos rosa” -- no feminine, no plural on the colour itself. Many come from a fruit or thing.",
-          literal: "the invariable colours",
+            "A few colors never change: naranja, rosa, violeta, beige. “Una falda naranja”, “unos zapatos rosa” -- no feminine, no plural on the color itself. Many come from a fruit or thing.",
+          literal: "the invariable colors",
           useWhen:
             "Using naranja, rosa, violeta or beige, which keep one single form.",
           avoidWhen:
@@ -774,10 +774,10 @@ lessons.push(
         {
           term: "azul / verde / gris",
           explanation:
-            "Colours ending in a consonant or in -e have one form for both genders and only add a plural: “azul / azules”, “verde / verdes”, “gris / grises”. They mark number, never gender.",
-          literal: "blue / green / grey",
+            "Colors ending in a consonant or in -e have one form for both genders and only add a plural: “azul / azules”, “verde / verdes”, “gris / grises”. They mark number, never gender.",
+          literal: "blue / green / gray",
           useWhen:
-            "Describing masculine or feminine nouns with these colours -- the singular looks identical.",
+            "Describing masculine or feminine nouns with these colors -- the singular looks identical.",
           avoidWhen:
             "You try to make a feminine like “azula” or “verda” -- those forms do not exist.",
           register: "neutral",
@@ -785,13 +785,13 @@ lessons.push(
           related: ["azul", "verde", "gris", "azules"],
           example: {
             target: "La mochila gris y el saco gris hacen juego.",
-            translation: "The grey backpack and the grey jumper match."
+            translation: "The gray backpack and the gray sweater match."
           }
         },
         {
           term: "de rayas / a cuadros",
           explanation:
-            "Patterns ride on small phrases: “de rayas” striped, “a cuadros” checked, “de flores” flowery, “de lunares” spotted. They come after the noun, like a colour: “una camisa de rayas”.",
+            "Patterns ride on small phrases: “de rayas” striped, “a cuadros” checked, “de flores” flowery, “de lunares” spotted. They come after the noun, like a color: “una camisa de rayas”.",
           literal: "of stripes / to squares",
           useWhen:
             "Describing the pattern of a fabric when the single word won't come to you.",
@@ -813,7 +813,7 @@ lessons.push(
           useWhen:
             "Saying what something is made of, especially when describing to buy.",
           avoidWhen:
-            "You mean the colour or pattern -- material is a separate layer of description.",
+            "You mean the color or pattern -- material is a separate layer of description.",
           register: "neutral",
           region: "Universal Spanish.",
           related: ["de tela", "de algodón", "de cuero", "el material"],
@@ -825,7 +825,7 @@ lessons.push(
         {
           term: "claro / oscuro",
           explanation:
-            "To shade a colour, add “claro” light or “oscuro” dark after it: “azul claro”, “verde oscuro”. In this pairing the colour and the shade word stay masculine, unchanged by the noun.",
+            "To shade a color, add “claro” light or “oscuro” dark after it: “azul claro”, “verde oscuro”. In this pairing the color and the shade word stay masculine, unchanged by the noun.",
           literal: "light / dark",
           useWhen:
             "Pinning down a shade: light blue, dark green, and everything between.",
@@ -841,22 +841,22 @@ lessons.push(
         }
       ],
       note:
-        "Describing a thing in Spanish stacks three layers after the noun: colour, pattern, material. Most colours agree in gender and number -- “una ruana roja”, “unos guantes rojos” -- but a handful never move: naranja, rosa, violeta and beige keep one form, and colours ending in a consonant or -e (azul, verde, gris) mark only plural, never gender. Brown in Colombia is “café”, not the Spanish “marrón”. When the exact word won't come, describe by pattern or material with little “de” and “a” phrases: “de rayas” striped, “a cuadros” checked, “de cuero” leather, “de lana” wool. Those frames let you describe almost anything you can point at.",
+        "Describing a thing in Spanish stacks three layers after the noun: color, pattern, material. Most colors agree in gender and number -- “una ruana roja”, “unos guantes rojos” -- but a handful never move: naranja, rosa, violeta and beige keep one form, and colors ending in a consonant or -e (azul, verde, gris) mark only plural, never gender. Brown in Colombia is “café”, not the Spanish “marrón”. When the exact word won't come, describe by pattern or material with little “de” and “a” phrases: “de rayas” striped, “a cuadros” checked, “de cuero” leather, “de lana” wool. Those frames let you describe almost anything you can point at.",
       culture: [
         {
-          label: "Colours agree, and come after",
+          label: "Colors agree, and come after",
           body:
-            "Spanish puts the colour after the noun and, for most colours, makes it agree: “un carro rojo”, “una casa roja”, “unas flores rojas”. English does neither -- the colour comes first and never changes. So the learner has two habits to flip at once: move the colour behind the noun, and let its ending follow the noun's gender and number. Get both and a phrase like “las bufandas rojas” stops feeling back-to-front."
+            "Spanish puts the color after the noun and, for most colors, makes it agree: “un carro rojo”, “una casa roja”, “unas flores rojas”. English does neither -- the color comes first and never changes. So the learner has two habits to flip at once: move the color behind the noun, and let its ending follow the noun's gender and number. Get both and a phrase like “las bufandas rojas” stops feeling back-to-front."
         },
         {
           label: "Brown is café, not marrón",
           body:
-            "Across Colombia brown is “café”, the same word as the drink: brown eyes are “ojos cafés”, a brown jacket is “una chaqueta café”. The “marrón” of Spain is understood but marks you as speaking a different Spanish. In the coffee highlands around Manizales the overlap is almost a joke -- the colour, the crop and the cup all share one word -- and reaching for “café” instead of “marrón” is one of the quickest ways to sound local."
+            "Across Colombia brown is “café”, the same word as the drink: brown eyes are “ojos cafés”, a brown jacket is “una chaqueta café”. The “marrón” of Spain is understood but marks you as speaking a different Spanish. In the coffee highlands around Manizales the overlap is almost a joke -- the color, the crop and the cup all share one word -- and reaching for “café” instead of “marrón” is one of the quickest ways to sound local."
         },
         {
-          label: "The colours that never move",
+          label: "The colors that never move",
           body:
-            "A small set of colours refuses to agree: naranja, rosa, violeta and beige stay in one form whatever the noun -- “una falda naranja”, “unos zapatos rosa”. Most trace back to a thing of that colour, an orange or a rose, and behave like a shortening of “colour of an orange”. Learners tidy them into “naranjas” or “rosos” to match the noun, but that over-correction is exactly the giveaway; the invariable ones are meant to sit still."
+            "A small set of colors refuses to agree: naranja, rosa, violeta and beige stay in one form whatever the noun -- “una falda naranja”, “unos zapatos rosa”. Most trace back to a thing of that color, an orange or a rose, and behave like a shortening of “color of an orange”. Learners tidy them into “naranjas” or “rosos” to match the noun, but that over-correction is exactly the giveaway; the invariable ones are meant to sit still."
         },
         {
           label: "Describe by pattern and material",
@@ -874,13 +874,13 @@ lessons.push(
         {
           mistake: "Inventing a feminine: “una ruana azula”",
           whyItFails:
-            "Colours ending in a consonant, like “azul”, have one form for both genders. “Azula” does not exist; the word only changes for plural, into “azules”.",
+            "Colors ending in a consonant, like “azul”, have one form for both genders. “Azula” does not exist; the word only changes for plural, into “azules”.",
           sayInstead: "Quiero una ruana azul."
         },
         {
           mistake: "Making “naranja” agree: “zapatos naranjos”",
           whyItFails:
-            "“Naranja” is invariable -- it never takes a masculine or plural ending. “Naranjos” sounds like the orange trees, not the colour, so it lands as a clear over-correction.",
+            "“Naranja” is invariable -- it never takes a masculine or plural ending. “Naranjos” sounds like the orange trees, not the color, so it lands as a clear over-correction.",
           sayInstead: "Me gustan los zapatos naranja."
         },
         {
@@ -895,13 +895,13 @@ lessons.push(
           form: "¿Tiene algo en azul claro?",
           register: "neutral",
           region: "Universal Spanish",
-          whenToUse: "Asking for a lighter shade of a colour while you shop."
+          whenToUse: "Asking for a lighter shade of a color while you shop."
         },
         {
           form: "Me la llevo, la café de rayas.",
           register: "friendly informal",
           region: "Colombia",
-          whenToUse: "Naming an item by its colour and pattern, with the noun dropped."
+          whenToUse: "Naming an item by its color and pattern, with the noun dropped."
         },
         {
           form: "¿Esto es de cuero o de tela?",
@@ -925,17 +925,17 @@ lessons.push(
       answer: 2,
       practiceExtra: [
         {
-          prompt: "Which sentence makes each colour agree with its noun in gender and number?",
+          prompt: "Which sentence makes each color agree with its noun in gender and number?",
           choices: [
             "Quiero las bufandas roja y los guantes negro para el frío.",
             "Quiero las bufandas rojas y los guantes negros para el frío.",
             "Quiero las bufandas rojo y los guantes negros para el frío."
           ],
           answer: 1,
-          tests: "Colours in -o agree fully: feminine plural “rojas” for “bufandas”, masculine plural “negros” for “guantes”."
+          tests: "Colors in -o agree fully: feminine plural “rojas” for “bufandas”, masculine plural “negros” for “guantes”."
         },
         {
-          prompt: "Orange is an invariable colour. Which sentence keeps it in one form?",
+          prompt: "Orange is an invariable color. Which sentence keeps it in one form?",
           choices: [
             "Me llevo la bufanda naranja y la falda naranja, hacen juego.",
             "Me llevo la bufanda naranja y la falda naranjada, hacen juego.",
@@ -957,14 +957,14 @@ lessons.push(
       ]
     },
     en: {
-      title: "Comprando una ruana en Toronto",
+      title: "Comprando una ruana en Houston",
       situation:
-        "Laura, colombiana instalada en Canadá, entra a una tienda en Toronto a comprar ropa de invierno y describe en inglés lo que busca: una ruana azul o verde, una bufanda de rayas, guantes de lana. Con Mike, el vendedor, practica el orden inglés del adjetivo, la falta de concordancia y las trampas de material y color que el hispanohablante siempre pisa.",
+        "Laura, colombiana instalada en Canadá, entra a una tienda en Houston a comprar ropa de invierno y describe en inglés lo que busca: una ruana azul o verde, una bufanda de rayas, guantes de lana. Con Mike, el vendedor, practica el orden inglés del adjetivo, la falta de concordancia y las trampas de material y color que el hispanohablante siempre pisa.",
       setting: {
-        who: "Mike atiende una tienda de ropa en Toronto y describe su mercancía por color y material. Laura es colombiana, lleva poco en Canadá y se abriga para su primer invierno de verdad.",
+        who: "Mike atiende una tienda de ropa en Houston y describe su mercancía por color y material. Laura es colombiana, lleva poco en Canadá y se abriga para su primer invierno de verdad.",
         what: "Una charla de compras sobre descripción: el adjetivo antes del sustantivo y sin concordancia, “brown” y no “coffee”, y el patrón y el material en inglés.",
         when: "Una tarde fría de otoño, con la tienda llena de abrigos y bufandas.",
-        where: "Toronto, en Canadá, en una tienda de ropa del centro.",
+        where: "Houston, en Canadá, en una tienda de ropa del centro.",
         why: "Describir en inglés invierte las costumbres del español: el color va antes del sustantivo y no cambia nunca, “brown” no es “coffee”, y el patrón y el material se dicen con palabras propias -- “striped”, “leather”, “wool” -- no con el marco “de”."
       },
       address: {
@@ -1009,24 +1009,24 @@ lessons.push(
         },
         {
           speaker: "Laura",
-          target: "Great. Is the grey backpack leather? And that pink purse, is it the same material?",
+          target: "Great. Is the gray backpack leather? And that pink purse, is it the same material?",
           translation: "Genial. ¿La mochila gris es de cuero? Y esa cartera rosada, ¿es del mismo material?",
           pronunciation: "greit. is dhe grei BAK-pak LE-dher? and dhat pink pers, is it dhe seim ma-TÍ-rial?",
           literal: "Genial. ¿Es la gris mochila cuero? Y esa rosa cartera, ¿es el mismo material?",
-          why: "El material aparece como sustantivo puesto de adjetivo, sin “de”: “a leather backpack”, “a wool jumper”. Y de nuevo el color va delante y no cambia: “the grey backpack”, “that pink purse”."
+          why: "El material aparece como sustantivo puesto de adjetivo, sin “de”: “a leather backpack”, “a wool sweater”. Y de nuevo el color va delante y no cambia: “the gray backpack”, “that pink purse”."
         },
         {
           speaker: "Mike",
-          target: "The grey one's leather; the pink one's fabric. All made here in Toronto.",
-          translation: "La gris es de cuero; la rosada es de tela. Todo hecho aquí en Toronto.",
+          target: "The gray one's leather; the pink one's fabric. All made here in Houston.",
+          translation: "La gris es de cuero; la rosada es de tela. Todo hecho aquí en Houston.",
           pronunciation: "dhe grei uans LE-dher; dhe pink uans FA-brik. ol meid hir in to-RON-to",
-          literal: "La gris una-es cuero; la rosa una-es tela. Todo hecho aquí en Toronto.",
-          why: "“The grey one”, “the pink one” dejan caer el sustantivo con “one”, como el español deja “la gris”, “la rosada”. El material va otra vez sin “de”: “leather”, “fabric”, puestos como si fueran el color."
+          literal: "La gris una-es cuero; la rosa una-es tela. Todo hecho aquí en Houston.",
+          why: "“The gray one”, “the pink one” dejan caer el sustantivo con “one”, como el español deja “la gris”, “la rosada”. El material va otra vez sin “de”: “leather”, “fabric”, puestos como si fueran el color."
         }
       ],
       vocabulary: [
         {
-          term: "the colour before the noun",
+          term: "the color before the noun",
           explanation:
             "Al revés del español, el color va ANTES del sustantivo: “a blue ruana”, “red scarves”. Nunca detrás. Es el primer reflejo que hay que invertir al describir en inglés.",
           literal: "el color antes del sustantivo",
@@ -1070,9 +1070,9 @@ lessons.push(
             "Traduces “café” como “coffee” pensando en el color.",
           register: "neutral",
           region: "Inglés universal.",
-          related: ["brown", "beige", "dark brown", "colour"],
+          related: ["brown", "beige", "dark brown", "color"],
           example: {
-            target: "I like the brown backpack, not the grey one.",
+            target: "I like the brown backpack, not the gray one.",
             translation: "Me gusta la mochila café, no la gris."
           }
         },
@@ -1096,7 +1096,7 @@ lessons.push(
         {
           term: "leather / wool (material)",
           explanation:
-            "El material se pone como adjetivo, sin “de”: “a leather bag” de cuero, “a wool jumper” de lana, “a cotton shirt” de algodón. También vale “made of leather”.",
+            "El material se pone como adjetivo, sin “de”: “a leather bag” de cuero, “a wool sweater” de lana, “a cotton shirt” de algodón. También vale “made of leather”.",
           literal: "cuero / lana (material)",
           useWhen:
             "Al decir de qué está hecho algo en inglés.",
@@ -1140,7 +1140,7 @@ lessons.push(
           region: "Inglés universal.",
           related: ["one", "ones", "this one", "that one"],
           example: {
-            target: "I'll take the brown one, not the grey one.",
+            target: "I'll take the brown one, not the gray one.",
             translation: "Me llevo la café, no la gris."
           }
         }
@@ -1166,7 +1166,7 @@ lessons.push(
         {
           label: "“One” y “ones” para no repetir",
           body:
-            "El español deja caer el sustantivo y se queda con el artículo y el color: “la azul”, “las rojas”. El inglés necesita un apoyo, la palabra “one” en singular y “ones” en plural: “the blue one”, “the red ones”. Sin ella, “I want the blue” queda cojo para un oído inglés. En una tienda de Toronto, señalar y decir “the brown one, please” es exactamente lo mismo que el “la café, por favor” de Manizales, con esa muletilla de más."
+            "El español deja caer el sustantivo y se queda con el artículo y el color: “la azul”, “las rojas”. El inglés necesita un apoyo, la palabra “one” en singular y “ones” en plural: “the blue one”, “the red ones”. Sin ella, “I want the blue” queda cojo para un oído inglés. En una tienda de Houston, señalar y decir “the brown one, please” es exactamente lo mismo que el “la café, por favor” de Manizales, con esa muletilla de más."
         }
       ],
       pitfalls: [
@@ -1221,7 +1221,7 @@ lessons.push(
           whenToUse: "Al elegir entre dos estampados con “one”, poniendo cada patrón delante como una sola palabra en vez del marco español con “de”."
         }
       ],
-      prompt: "Laura wants a blue ruana. Which line puts the colour where English needs it?",
+      prompt: "Laura wants a blue ruana. Which line puts the color where English needs it?",
       choices: [
         "I'm after a blue ruana, nothing too dark for the weather.",
         "I'm after a ruana blue, nothing too dark for the weather.",
@@ -1242,9 +1242,9 @@ lessons.push(
         {
           prompt: "Laura describe una mochila café en inglés. ¿Cuál evita el falso amigo con la bebida?",
           choices: [
-            "I like the coffee backpack better than the grey leather one.",
-            "I like the brown backpack better than the grey leather one.",
-            "I like the brownish backpack better than the grey leather one."
+            "I like the coffee backpack better than the gray leather one.",
+            "I like the brown backpack better than the gray leather one.",
+            "I like the brownish backpack better than the gray leather one."
           ],
           answer: 1,
           tests: "El color café es “brown”; “coffee” es la bebida y “brownish” queda vago, así que la precisa es “brown”."
@@ -1278,7 +1278,7 @@ lessons.push(
       setting: {
         who: "Cami and Dani are close friends in Armenia. She is restless and coaxing; he turns up in a mood and thaws over the plan. They talk the way old friends do, blunt and warm at once.",
         what: "A Sunday plan that turns into a tour of feelings: estar plus an adjective for mood, the meaning shift with ser, and tener plus a noun for states like fear, cold and being in a rush.",
-        when: "A grey Sunday afternoon in coffee country, the kind that makes you want to get out of the house.",
+        when: "A gray Sunday afternoon in coffee country, the kind that makes you want to get out of the house.",
         where: "Armenia, in the Quindío, with the Cocora valley and its wax palms a short drive away.",
         why: "Feelings run through every real conversation, yet the corpus holds only six emotion words. Master estar for mood, the estar/ser flip, and tener for states, and you can say how you feel without falling into the classic traps."
       },
@@ -1431,7 +1431,7 @@ lessons.push(
             "In Colombia “pena” is embarrassment, not pity: “me da pena” means I'm embarrassed, or I feel bad asking. “Qué pena” is a soft sorry, used to excuse yourself.",
           literal: "to-give embarrassment",
           useWhen:
-            "Owning up to shyness or apologising lightly: asking a favour, squeezing past.",
+            "Owning up to shyness or apologizing lightly: asking a favour, squeezing past.",
           avoidWhen:
             "You mean pity -- that is “lástima”; “me da lástima” is I feel sorry for.",
           register: "friendly informal",
@@ -1448,7 +1448,7 @@ lessons.push(
             "“Con” plus a noun paints the state you're in: “con rabia”, angrily, “con afán”, in a rush, “con miedo”, fearfully. It describes how you arrive or act, not what you are.",
           literal: "with rage / with hurry",
           useWhen:
-            "Colouring an action with the mood behind it: I came angry, I left in a rush.",
+            "Coloring an action with the mood behind it: I came angry, I left in a rush.",
           avoidWhen:
             "The feeling is the whole point, not the manner -- then use tener or estar.",
           register: "friendly informal",
@@ -1884,4 +1884,4 @@ lessons.push(
   }
 );
 
-markSource(lessons, "data/lessons/70-calendar-colour-and-feeling.js");
+markSource(lessons, "data/lessons/70-calendar-color-and-feeling.js");

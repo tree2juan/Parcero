@@ -34,8 +34,8 @@ lessons.push(
         "Alex necesita dos tornillos y un bombillo, y un amigo le juró que la ferretería quedaba en esta esquina. No queda. Lleva media hora dando vueltas a la manzana con el mapa del celular, que insiste en que el sitio está justo donde él está parado, y ahí claramente no hay nada. No encuentra la tienda por ningún lado, así que se rinde y le pregunta al señor que barre la entrada del local de al lado.",
       setting: {
         who: "Don Fabio has run the corner stationery shop for twenty years and knows every business that has come and gone on the block. Alex is a newcomer who trusts his phone more than the street, which is exactly the wrong way round here.",
-        what: "A short exchange on the pavement: one lost foreigner, one shopkeeper who has given these directions a hundred times.",
-        when: "Late morning on a grey Tuesday, the quiet hour before lunch when there is time to help a stranger.",
+        what: "A short exchange on the sidewalk: one lost foreigner, one shopkeeper who has given these directions a hundred times.",
+        when: "Late morning on a gray Tuesday, the quiet hour before lunch when there is time to help a stranger.",
         where: "Bogotá, a working commercial block in Chapinero where shops move premises but keep their names and their regulars.",
         why: "Because Alex will be back on this block for screws, paint and keys for years, and the man he asks today is the man he asks every time after. Getting the tone right is worth more than the two bolts."
       },
@@ -82,9 +82,9 @@ lessons.push(
         {
           speaker: "Alex",
           target: "Ah, de una. Y eso que esta mañana me encontré con el vecino y me quiso explicar, pero no le entendí.",
-          translation: "Ah, got it. And to think this morning I ran into my neighbour and he tried to explain, but I didn't catch it.",
+          translation: "Ah, got it. And to think this morning I ran into my neighbor and he tried to explain, but I didn't catch it.",
           pronunciation: "ah, de OO-na. ee EH-soh ke ES-ta ma-NYA-na me en-kon-TREH kon el be-SEE-noh ee me KEE-soh eks-pli-KAR, PEH-roh no le en-ten-DEE",
-          literal: "Ah, of one. And that this morning me I-found with the neighbour and me he-wanted explain, but not to-him I-understood.",
+          literal: "Ah, of one. And that this morning me I-found with the neighbor and me he-wanted explain, but not to-him I-understood.",
           why: "“Me encontré con” in the preterite is running into a person by chance. The “con” is not optional here: drop it and “encontré al vecino” quietly says you went out looking for him and succeeded."
         },
         {
@@ -179,7 +179,7 @@ lessons.push(
           related: ["me topé con", "me crucé con", "quedé con", "nos vimos"],
           example: {
             target: "Esta mañana me encontré con el vecino.",
-            translation: "This morning I ran into my neighbour."
+            translation: "This morning I ran into my neighbor."
           }
         },
         {
@@ -238,7 +238,7 @@ lessons.push(
         {
           label: "A stranger would rather guess than fail you",
           body:
-            "Colombian helpfulness has a famous side effect: rather than admit they do not know, some people will give you confident, invented directions, because leaving you empty-handed feels ruder than being wrong. It comes from warmth, not malice. The defence is to ask two or three people and trust the version they agree on, and to treat a landmark you can verify — a bakery, a bank — as worth more than a precise-sounding street number."
+            "Colombian helpfulness has a famous side effect: rather than admit they do not know, some people will give you confident, invented directions, because leaving you empty-handed feels ruder than being wrong. It comes from warmth, not malice. The defense is to ask two or three people and trust the version they agree on, and to treat a landmark you can verify — a bakery, a bank — as worth more than a precise-sounding street number."
         }
       ],
       pitfalls: [
@@ -301,9 +301,9 @@ lessons.push(
       ],
       prompt: "Alex says “esta mañana me encontré con el vecino.” What actually happened?",
       choices: [
-        "He set out deliberately to track his neighbour down and eventually managed to find him at home.",
-        "He ran into his neighbour by chance this morning, with neither of them having planned the meeting.",
-        "He arranged the night before to meet his neighbour and the two of them sat down together to talk."
+        "He set out deliberately to track his neighbor down and eventually managed to find him at home.",
+        "He ran into his neighbor by chance this morning, with neither of them having planned the meeting.",
+        "He arranged the night before to meet his neighbor and the two of them sat down together to talk."
       ],
       answer: 1,
       practiceExtra: [
@@ -357,7 +357,7 @@ lessons.push(
         who: "Frank lleva veinte años con la papelería de la esquina y conoce cada negocio que ha pasado por la cuadra. Alejandra es recién llegada y le cree más al celular que a la calle, que es justo al revés de como funciona.",
         what: "Un intercambio corto en la acera: una extranjera perdida y un tendero que ya ha dado estas indicaciones cien veces.",
         when: "A media mañana de un martes gris, la hora tranquila antes del almuerzo en que hay tiempo para ayudar a alguien.",
-        where: "Toronto, una cuadra comercial de trabajo donde las tiendas cambian de local pero conservan el nombre y la clientela.",
+        where: "Houston, una cuadra comercial de trabajo donde las tiendas cambian de local pero conservan el nombre y la clientela.",
         why: "Porque Alejandra va a volver a esta cuadra por tornillos, pintura y llaves durante años, y el señor al que le pregunta hoy es el mismo al que le preguntará siempre. Acertar con el tono vale más que los dos tornillos."
       },
       address: {
@@ -365,7 +365,7 @@ lessons.push(
         who: "Frank y Alejandra se tratan por el nombre de pila y comparten el mismo “you” desde la primera palabra.",
         why: "El inglés tiene una sola segunda persona, así que el registro lo carga el vocabulario: “excuse me” y “no worries” marcan la cortesía y la cercanía que en español harían usted y tú. El respeto está en las palabras escogidas, no en el pronombre.",
         ifYouSwitch:
-          "Decirle “sir” a Frank no ofendería, pero lo envejecería y pondría un mostrador entre los dos. En inglés canadiense corriente, entre desconocidos amables, el nombre de pila y un “thanks” bastan."
+          "Decirle “sir” a Frank no ofendería, pero lo envejecería y pondría un mostrador entre los dos. En inglés estadounidense corriente, entre desconocidos amables, el nombre de pila y un “thanks” bastan."
       },
       dialogue: [
         {
@@ -402,7 +402,7 @@ lessons.push(
         },
         {
           speaker: "Alejandra",
-          target: "Ah, got it. This morning I actually ran into my neighbour and he tried to explain, but I didn't catch it.",
+          target: "Ah, got it. This morning I actually ran into my neighbor and he tried to explain, but I didn't catch it.",
           translation: "Ah, ya. Esta mañana de hecho me encontré con el vecino y trató de explicarme, pero no le entendí.",
           pronunciation: "ah, GA-rit. dis MOR-ning ai AK-chu-a-li ran IN-tu mai NEI-bor and ji traid tu eks-PLEIN, bat ai DID-ent kach it",
           literal: "Ah, ya. Esta mañana yo de-hecho corrí adentro-a mi vecino y él trató de explicar, pero yo no atrapé eso.",
@@ -499,7 +499,7 @@ lessons.push(
           region: "Inglés general.",
           related: ["I bumped into", "I came across", "I met up with", "we ran into each other"],
           example: {
-            target: "This morning I ran into my neighbour.",
+            target: "This morning I ran into my neighbor.",
             translation: "Esta mañana me encontré con el vecino."
           }
         },
@@ -549,7 +549,7 @@ lessons.push(
         {
           label: "“I don't know” es una respuesta honesta, no una grosería",
           body:
-            "Donde un desconocido colombiano quizá se invente la dirección con tal de no defraudarlo a uno, un canadiense es más propenso a encoger los hombros y decir “sorry, I'm not from around here”. Puede sonar seco si uno espera calidez, pero se dice con buena intención: prefieren no mandarlo por el camino equivocado. Tómelo tal cual, dé las gracias y pregúntele al siguiente. Nadie está siendo frío; están siendo cuidadosos."
+            "Donde un desconocido colombiano quizá se invente la dirección con tal de no defraudarlo a uno, un estadounidense es más propenso a encoger los hombros y decir “sorry, I'm not from around here”. Puede sonar seco si uno espera calidez, pero se dice con buena intención: prefieren no mandarlo por el camino equivocado. Tómelo tal cual, dé las gracias y pregúntele al siguiente. Nadie está siendo frío; están siendo cuidadosos."
         },
         {
           label: "Un solo phrasal verb carga con mucho",
@@ -559,7 +559,7 @@ lessons.push(
         {
           label: "Preguntar por una dirección es rápido y práctico",
           body:
-            "Parar a un desconocido en una ciudad canadiense es una transacción breve y de bajo perfil: una pregunta corta, una respuesta corta, un gracias, y cada quien sigue su camino. Hay poco de la charla que en Colombia envolvería el mismo intercambio. No es antipatía: es otra idea de cuánto tiempo de un desconocido le corresponde a uno. Si lo mantiene corto, quedará como educado y no como brusco."
+            "Parar a un desconocido en una ciudad estadounidense es una transacción breve y de bajo perfil: una pregunta corta, una respuesta corta, un gracias, y cada quien sigue su camino. Hay poco de la charla que en Colombia envolvería el mismo intercambio. No es antipatía: es otra idea de cuánto tiempo de un desconocido le corresponde a uno. Si lo mantiene corto, quedará como educado y no como brusco."
         }
       ],
       pitfalls: [
@@ -570,10 +570,10 @@ lessons.push(
           sayInstead: "I can't find it."
         },
         {
-          mistake: "Saying “I ran with my neighbour” for “me encontré con”",
+          mistake: "Saying “I ran with my neighbor” for “me encontré con”",
           whyItFails:
             "“Run with” da a entender que salieron a trotar juntos. El phrasal del encuentro casual es “run into”; la preposición cambia todo el significado.",
-          sayInstead: "I ran into my neighbour."
+          sayInstead: "I ran into my neighbor."
         },
         {
           mistake: "Using “actually” to mean “right now” (actualmente)",
@@ -616,11 +616,11 @@ lessons.push(
         {
           form: "Whereabouts is the hardware store?",
           register: "friendly informal",
-          region: "Inglés británico y canadiense",
+          region: "Inglés británico y estadounidense",
           whenToUse: "Una manera relajada y coloquial de preguntar más o menos dónde queda algo."
         }
       ],
-      prompt: "Alejandra dice “this morning I actually ran into my neighbour.” ¿Qué nos dice “ran into”?",
+      prompt: "Alejandra dice “this morning I actually ran into my neighbor.” ¿Qué nos dice “ran into”?",
       choices: [
         "Que salió a trotar al lado de su vecino tempranito en la mañana y los dos terminaron haciendo ejercicio juntos.",
         "Que por poco se estrella con su vecino en el andén y le tocó frenar en seco para pedirle disculpas por el golpe.",
@@ -663,7 +663,7 @@ lessons.push(
           choices: [
             "I'm actually looking for the hardware store, not for the bakery that sits right next door to it.",
             "I actually live in this city now, and by that I mean only at this present moment in time today.",
-            "I work actually as a teacher and also right now during this very grey and rainy Tuesday morning."
+            "I work actually as a teacher and also right now during this very gray and rainy Tuesday morning."
           ],
           answer: 0,
           tests: "“actually” como “de hecho”, no el falso amigo “actualmente”"
@@ -673,9 +673,9 @@ lessons.push(
   },
   {
     id: "getting-the-technician-called-out",
-    level: "Starter · Home and neighbourhood",
+    level: "Starter · Home and neighborhood",
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
-    domain: "home-and-neighbourhood",
+    domain: "home-and-neighborhood",
     register: "familiar",
     pathways: ["foundation"],
     verb: "llamar",
@@ -686,17 +686,17 @@ lessons.push(
         "El internet de Alex se cayó al anochecer y las luces del router están todas raras. No tiene el número del técnico y no le hace ninguna gracia pasar la noche entera sin conexión. Pilla a su vecino Dubán en el pasillo —el que parece saber quién arregla qué en el edificio— y le pide el número para llamar a alguien antes de que se haga tarde.",
       setting: {
         who: "Dubán is a chatty paisa in his thirties who has lived in the block for years and has every useful number saved. Alex is the foreigner two doors down who still does not know who to ring when something breaks.",
-        what: "A quick doorway favour: one neighbour handing another a phone number and offering to smooth the call.",
+        what: "A quick doorway favour: one neighbor handing another a phone number and offering to smooth the call.",
         when: "A weekday evening, after work, when the technician might still answer if you catch him fast.",
-        where: "Medellín, a mid-rise block in Belén where neighbours on the same floor know each other by name.",
-        why: "Because in a building, the neighbour with the numbers is worth more than any hotline, and tonight Dubán is that neighbour. How Alex asks decides whether he stays that neighbour."
+        where: "Medellín, a mid-rise block in Belén where neighbors on the same floor know each other by name.",
+        why: "Because in a building, the neighbor with the numbers is worth more than any hotline, and tonight Dubán is that neighbor. How Alex asks decides whether he stays that neighbor."
       },
       address: {
         form: "vos",
-        who: "Dubán and Alex use vos with each other, the easy paisa form between neighbours who get on.",
-        why: "In Medellín vos is the warm everyday form among people on friendly terms. Usted also circulates, and older paisas use it constantly, but vos between two neighbours around the same age signals that things are relaxed between them.",
+        who: "Dubán and Alex use vos with each other, the easy paisa form between neighbors who get on.",
+        why: "In Medellín vos is the warm everyday form among people on friendly terms. Usted also circulates, and older paisas use it constantly, but vos between two neighbors around the same age signals that things are relaxed between them.",
         ifYouSwitch:
-          "Usted would suddenly sound like Alex had gone stiff or slightly annoyed. Tú would sound imported — paisas hear it as telenovela Spanish, not something a neighbour on the landing would actually say."
+          "Usted would suddenly sound like Alex had gone stiff or slightly annoyed. Tú would sound imported — paisas hear it as telenovela Spanish, not something a neighbor on the landing would actually say."
       },
       dialogue: [
         {
@@ -880,7 +880,7 @@ lessons.push(
         {
           label: "Paisa vos, and how it mixes with usted",
           body:
-            "Antioquia runs on vos and usted, often from the same mouth to the same person, sliding between them by mood rather than by rule. A paisa mother might vos her son when she is relaxed and usted him when she is stern, or the other way round. Tú, the form textbooks drill, sounds faintly foreign in Medellín — imported from television. If a neighbour voseas you, take it as a small sign the door has opened."
+            "Antioquia runs on vos and usted, often from the same mouth to the same person, sliding between them by mood rather than by rule. A paisa mother might vos her son when she is relaxed and usted him when she is stern, or the other way round. Tú, the form textbooks drill, sounds faintly foreign in Medellín — imported from television. If a neighbor voseas you, take it as a small sign the door has opened."
         },
         {
           label: "Answering the phone has its own words",
@@ -895,9 +895,9 @@ lessons.push(
       ],
       pitfalls: [
         {
-          mistake: "Saying “Me llamo a mi mamá” for “I call my mum”",
+          mistake: "Saying “Me llamo a mi mamá” for “I call my mom”",
           whyItFails:
-            "The reflexive “me llamo” means “I am named”. Bolting a person onto it collides two verbs; you have accidentally said something like “I name myself to my mum”.",
+            "The reflexive “me llamo” means “I am named”. Bolting a person onto it collides two verbs; you have accidentally said something like “I name myself to my mom”.",
           sayInstead: "Llamo a mi mamá."
         },
         {
@@ -947,13 +947,13 @@ lessons.push(
         {
           form: "Hacéme una perdida.",
           register: "friendly informal",
-          region: "Colombia, paisa flavour",
+          region: "Colombia, paisa flavor",
           whenToUse: "Ask someone to ring once so you have their number or their signal."
         }
       ],
       prompt: "Dubán says “yo le timbro y le digo que suba.” What is he offering to do?",
       choices: [
-        "To go down and knock on the technician's own door so as to fetch the man up to the flat in person.",
+        "To go down and knock on the technician's own door so as to fetch the man up to the apartment in person.",
         "To give the technician a quick ring and tell him to come up to the apartment.",
         "To send the technician a long written message setting out the whole internet problem in detail."
       ],
@@ -983,7 +983,7 @@ lessons.push(
           prompt: "Alex says he doesn't want to “llamar la atención” knocking on doors late. He means:",
           choices: [
             "That he'd rather not make a scene and have the whole floor notice him at this late hour.",
-            "That he is hoping to be noticed by as many of the neighbours as he possibly can tonight.",
+            "That he is hoping to be noticed by as many of the neighbors as he possibly can tonight.",
             "That he intends to report the broken internet formally to the building's administrator tomorrow."
           ],
           answer: 0,
@@ -1009,7 +1009,7 @@ lessons.push(
         who: "Dave es un vecino conversador de unos treinta y tantos que lleva años en el edificio y tiene guardado todo número útil. Alejandra es la recién llegada de dos puertas más allá que todavía no sabe a quién llamar cuando algo se daña.",
         what: "Un favor rápido en la puerta: un vecino le pasa a otra un número y se ofrece a suavizar la llamada.",
         when: "Una tarde entre semana, después del trabajo, cuando el técnico quizá todavía conteste si lo pillas rápido.",
-        where: "Toronto, un edificio de altura media donde los vecinos del mismo piso se conocen por el nombre.",
+        where: "Houston, un edificio de altura media donde los vecinos del mismo piso se conocen por el nombre.",
         why: "Porque en un edificio, el vecino que tiene los números vale más que cualquier línea de atención, y esta noche ese vecino es Dave. Cómo lo pida decide si sigue siendo ese vecino."
       },
       address: {
@@ -1017,7 +1017,7 @@ lessons.push(
         who: "Dave y Alejandra se tratan por el nombre de pila y comparten el mismo “you” desde la primera palabra.",
         why: "El inglés tiene una sola segunda persona, así que el registro lo cargan las palabras: “hey”, “no worries” y el nombre de pila marcan la cercanía que en español harían el vos o el tú, y un “could you” o un “sir” marcarían la distancia.",
         ifYouSwitch:
-          "Decirle “sir” a Dave no ofendería, pero lo envejecería y enfriaría el tono. En el inglés canadiense de todos los días, entre vecinos que se llevan bien, el nombre de pila y un “thanks” bastan."
+          "Decirle “sir” a Dave no ofendería, pero lo envejecería y enfriaría el tono. En el inglés estadounidense de todos los días, entre vecinos que se llevan bien, el nombre de pila y un “thanks” bastan."
       },
       dialogue: [
         {
@@ -1093,7 +1093,7 @@ lessons.push(
             "El inglés pega la persona al verbo sin nada en medio: “call him”, “call the plumber”. No hay ninguna “a” personal que recordar.",
           literal: "llamar a (alguien)",
           useWhen:
-            "Siempre que el objeto de “call” sea una persona — “I'll call Oscar”, “call your mum”.",
+            "Siempre que el objeto de “call” sea una persona — “I'll call Oscar”, “call your mom”.",
           avoidWhen:
             "Cuando dan ganas de meter una palabrita de enlace antes de la persona; hay que resistirse, porque el inglés no la tiene.",
           register: "neutral",
@@ -1131,7 +1131,7 @@ lessons.push(
           avoidWhen:
             "En un contexto formal o escrito, donde “I'll call you” o “I'll phone you” quedan mejor.",
           register: "friendly informal",
-          region: "Inglés general; “buzz” es casual y “ring” tira un poco más a lo británico-canadiense.",
+          region: "Inglés general; “buzz” es casual y “ring” tira un poco más a lo británico-estadounidense.",
           related: ["give a call", "give a ring", "buzz someone", "ping someone"],
           example: {
             target: "I'll give him a buzz.",
@@ -1196,7 +1196,7 @@ lessons.push(
         {
           label: "El buzón y los mensajes le ganan a la llamada perdida",
           body:
-            "La “perdida” colombiana casi no existe en Canadá. Si uno deja timbrar el teléfono una vez y cuelga, lo más seguro es que piensen que se marcó sin querer desde el bolsillo, no que ahí va un mensaje. Aquí la gente o deja un mensaje de voz o, mucho más seguido, manda un texto. Si uno quiere que un canadiense sepa que lo llamó a propósito, hay que decirlo en un mensaje — la perdida silenciosa no carga el sentido que carga en casa."
+            "La “perdida” colombiana casi no existe en Canadá. Si uno deja timbrar el teléfono una vez y cuelga, lo más seguro es que piensen que se marcó sin querer desde el bolsillo, no que ahí va un mensaje. Aquí la gente o deja un mensaje de voz o, mucho más seguido, manda un texto. Si uno quiere que un estadounidense sepa que lo llamó a propósito, hay que decirlo en un mensaje — la perdida silenciosa no carga el sentido que carga en casa."
         },
         {
           label: "Un solo “you”, así que la calidez vive en las palabras",
@@ -1211,7 +1211,7 @@ lessons.push(
         {
           label: "Los phrasal verbs manejan todo el teléfono",
           body:
-            "El inglés maneja el teléfono casi por completo con phrasal verbs cortitos, no con verbos grandes de raíz latina. Uno hace “pick up”, “hang up”, “call back”, “get through”, “give someone a buzz”, y se corta (“cut out”) cuando cae la señal. El hispanohablante tira por instinto a “respond”, “communicate”, “realise a call”, y todo suena raramente formal. Fiarse de los verbitos de dos palabras es buena parte de sonar como un local al teléfono."
+            "El inglés maneja el teléfono casi por completo con phrasal verbs cortitos, no con verbos grandes de raíz latina. Uno hace “pick up”, “hang up”, “call back”, “get through”, “give someone a buzz”, y se corta (“cut out”) cuando cae la señal. El hispanohablante tira por instinto a “respond”, “communicate”, “realize a call”, y todo suena raramente formal. Fiarse de los verbitos de dos palabras es buena parte de sonar como un local al teléfono."
         }
       ],
       pitfalls: [
@@ -1311,7 +1311,7 @@ lessons.push(
           tests: "“make a scene” como armar un alboroto, no buscar que la noten"
         },
         {
-          prompt: "Quieres decirle a un amigo canadiense que lo llamarás luego. ¿Cuál suena más natural?",
+          prompt: "Quieres decirle a un amigo estadounidense que lo llamarás luego. ¿Cuál suena más natural?",
           choices: [
             "I shall proceed to place a telephone call to your number the instant a stable signal appears.",
             "I will be performing a telephone call directed toward your number as soon as it is possible.",
@@ -1339,8 +1339,8 @@ lessons.push(
       setting: {
         who: "Doña Marta cooks and serves a single set lunch a day from a cramped kitchen she has run for fifteen years. Alex is a foreigner who came once, loved it, and has already come back — the surest compliment a corrientazo can get.",
         what: "A returning customer's second visit, greeted like a small event, with the usual banter over what is on today.",
-        when: "Lunchtime the day after his first visit, in the busy stretch when the neighbourhood comes in to eat.",
-        where: "Cali, a family-run lunch spot in the San Fernando neighbourhood where regulars are greeted by sight.",
+        when: "Lunchtime the day after his first visit, in the busy stretch when the neighborhood comes in to eat.",
+        where: "Cali, a family-run lunch spot in the San Fernando neighborhood where regulars are greeted by sight.",
         why: "Because a corrientazo lives on people coming back, and Alex coming back on day two is exactly the loyalty Doña Marta cooks for. The warmth she returns is an investment as much as a welcome."
       },
       address: {
@@ -1386,9 +1386,9 @@ lessons.push(
         {
           speaker: "Alex",
           target: "Sí, se me volvió el sitio favorito. La próxima vuelvo con la familia.",
-          translation: "Yes, it's become my favourite spot. Next time I'll come back with the family.",
+          translation: "Yes, it's become my favorite spot. Next time I'll come back with the family.",
           pronunciation: "see, se me bol-BYOH el SEE-tyoh fa-boh-REE-toh. la PROK-see-ma BWEL-boh kon la fa-MEE-lya",
-          literal: "Yes, itself to-me became the place favourite. The next I-return with the family.",
+          literal: "Yes, itself to-me became the place favorite. The next I-return with the family.",
           why: "“Se me volvió” repeats volverse for a change that happened to him, not one he chose. Then plain “vuelvo” carries a future meaning — the present tense doing the work of “I'll come back”, which Spanish does freely."
         },
         {
@@ -1527,7 +1527,7 @@ lessons.push(
         {
           label: "The corrientazo is an institution",
           body:
-            "Across Colombia, the weekday lunch is the corrientazo: one set menu, cooked that morning, sold cheap to workers, students and anyone nearby. You do not choose much — you get today's soup, today's main, a fresh juice — and that is the point. Places live or die on regulars, and a cook remembers who came back. Sitting down to a corrientazo is one of the fastest ways to feel part of a neighbourhood rather than a visitor passing through."
+            "Across Colombia, the weekday lunch is the corrientazo: one set menu, cooked that morning, sold cheap to workers, students and anyone nearby. You do not choose much — you get today's soup, today's main, a fresh juice — and that is the point. Places live or die on regulars, and a cook remembers who came back. Sitting down to a corrientazo is one of the fastest ways to feel part of a neighborhood rather than a visitor passing through."
         },
         {
           label: "Volver a + infinitive is grammar English envies",
@@ -1706,7 +1706,7 @@ lessons.push(
         },
         {
           speaker: "Alex",
-          target: "Yes, it's become my favourite spot. Next time I'll come back with the family.",
+          target: "Yes, it's become my favorite spot. Next time I'll come back with the family.",
           translation: "Sí, se me volvió el sitio favorito. La próxima vuelvo con la familia.",
           pronunciation: "yes, its bi-KAM mai FEI-vrit spot. nekst taim ail kam BAK uid da FA-mi-li",
           literal: "Sí, ello ha-vuelto mi favorito sitio. Próxima vez yo-vendré atrás con la familia.",
@@ -1769,7 +1769,7 @@ lessons.push(
           region: "Inglés general.",
           related: ["to turn into", "to get", "to grow", "to end up"],
           example: {
-            target: "It's become my favourite spot.",
+            target: "It's become my favorite spot.",
             translation: "Se me volvió el sitio favorito."
           }
         },
@@ -1874,10 +1874,10 @@ lessons.push(
           sayInstead: "I'll come back soon."
         },
         {
-          mistake: "Saying “It converted into my favourite place” for “se volvió”",
+          mistake: "Saying “It converted into my favorite place” for “se volvió”",
           whyItFails:
             "“Convert into” es un calco de volverse/convertirse y suena mecánico. El inglés dice “become” o “turn into” para esta clase de cambio.",
-          sayInstead: "It's become my favourite spot."
+          sayInstead: "It's become my favorite spot."
         },
         {
           mistake: "Saying “I'll order it again another time” when you mean simply “again”",
@@ -1920,7 +1920,7 @@ lessons.push(
         {
           form: "I'll pop back in.",
           register: "friendly informal",
-          region: "Inglés británico y canadiense",
+          region: "Inglés británico y estadounidense",
           whenToUse: "Una promesa casual de pasar otra vez un ratico."
         }
       ],
@@ -1956,14 +1956,14 @@ lessons.push(
           prompt: "Alex quiere mandar un plato de vuelta a la cocina. ¿Cuál usa el inglés de verdad?",
           choices: [
             "“Come back”, porque cubre lo de regresar, así que seguro también debe servir para devolver un plato.",
-            "“Go back”, porque dentro de un restaurante canadiense “go back” es la única frase que usa la gente.",
+            "“Go back”, porque dentro de un restaurante estadounidense “go back” es la única frase que usa la gente.",
             "“Send back”, porque devolver un plato a la cocina es “to send it back”, una frase hecha aparte."
           ],
           answer: 2,
           tests: "“send back” para un plato devuelto, no “come/go back”"
         },
         {
-          prompt: "¿Qué despedida te lanzaría un mesero amable de Toronto al salir?",
+          prompt: "¿Qué despedida te lanzaría un mesero amable de Houston al salir?",
           choices: [
             "I hereby respectfully request that you give due consideration to patronising our establishment again.",
             "Don't you dare show your face around here again unless you actually order something the next time.",

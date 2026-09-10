@@ -40,7 +40,7 @@ lessons.push(
         who: "Daniela and Alex use tú because they are friends close enough for soup, teasing and concern.",
         why: "This is not a clinic or a form. Tú lets Daniela be warm without sounding parental, and it lets Alex answer honestly.",
         ifYouSwitch:
-          "Usted would fit a doctor or an older neighbour, especially in “que se mejore.” Here it would add distance to a friendship that is clearly personal."
+          "Usted would fit a doctor or an older neighbor, especially in “que se mejore.” Here it would add distance to a friendship that is clearly personal."
       },
       dialogue: [
         {
@@ -89,7 +89,7 @@ lessons.push(
           translation: "I'm going to write to Doña Marta: hope she gets better too, because she's still sick.",
           pronunciation: "leh boy ah es-kree-BEER ah DOH-nyah MAR-tah: keh seh meh-HOH-reh tam-BYEN, POR-keh EH-yah SEE-geh en-FER-mah",
           literal: "To-her I-go to write to Doña Marta: that herself improves also, because she continues sick.",
-          why: "The usted or third-person version is “que se mejore.” It is what you say to an older neighbour, a patient, or anyone you address more formally."
+          why: "The usted or third-person version is “que se mejore.” It is what you say to an older neighbor, a patient, or anyone you address more formally."
         }
       ],
       vocabulary: [
@@ -167,7 +167,7 @@ lessons.push(
             "The usted or third-person version of the get-well wish.",
           literal: "that you/he/she improve yourself/himself/herself",
           useWhen:
-            "Speaking to an older person, a patient, a neighbour you address with usted, or about someone else.",
+            "Speaking to an older person, a patient, a neighbor you address with usted, or about someone else.",
           avoidWhen:
             "Using it with a close friend you call tú unless you want a more formal or distant tone.",
           register: "polite warm",
@@ -263,7 +263,7 @@ lessons.push(
           form: "Que se mejore, doña Marta.",
           register: "polite warm",
           region: "General Colombian",
-          whenToUse: "The usted version for an older person, neighbour or patient."
+          whenToUse: "The usted version for an older person, neighbor or patient."
         },
         {
           form: "¿Ya estás mejor que ayer?",
@@ -637,7 +637,7 @@ lessons.push(
     id: "aumentar-el-arriendo-en-manizales",
     level: "Developing · More, less and better",
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
-    domain: "home-and-neighbourhood",
+    domain: "home-and-neighborhood",
     register: "courteous",
     pathways: ["foundation", "year-12"],
     verb: "aumentar",
@@ -837,7 +837,7 @@ lessons.push(
         {
           label: "Prices usually suben in conversation",
           body:
-            "If a neighbour in Colombia complains about food, bus fare or bills, the verb you will hear most is subir. “Todo subió” is ordinary speech. Aumentar is not wrong, but it sounds more like a report, receipt or policy."
+            "If a neighbor in Colombia complains about food, bus fare or bills, the verb you will hear most is subir. “Todo subió” is ordinary speech. Aumentar is not wrong, but it sounds more like a report, receipt or policy."
         },
         {
           label: "Rent needs exact language",
@@ -949,12 +949,12 @@ lessons.push(
     en: {
       title: "Aumentar el arriendo en Manizales",
       situation:
-        "Usted vive en Halifax y la administradora le avisa que el arriendo va a subir el próximo mes. En inglés necesita manejar increase para avisos, porcentajes y presupuestos, pero también entender que go up es la frase cotidiana para quejarse de precios.",
+        "Usted vive en Corpus Christi y la administradora le avisa que el arriendo va a subir el próximo mes. En inglés necesita manejar increase para avisos, porcentajes y presupuestos, pero también entender que go up es la frase cotidiana para quejarse de precios.",
       setting: {
         who: "Patricia administra un edificio pequeño y necesita explicar el aumento sin sonar arbitraria. Alex arrienda un apartamento y necesita fecha, monto y razón.",
         what: "Una conversación práctica sobre un aumento de arriendo, el porcentaje y la diferencia entre increase y go up.",
         when: "La última semana del mes, justo antes de que los inquilinos organicen el presupuesto siguiente.",
-        where: "Halifax, en la oficina del edificio, con lluvia en las ventanas y papeles sobre el escritorio.",
+        where: "Corpus Christi, en la oficina del edificio, con lluvia en las ventanas y papeles sobre el escritorio.",
         why: "Porque increase es el verbo formal y medido para rent, salaries, rates y statistics. En quejas cotidianas, go up suena más natural."
       },
       address: {

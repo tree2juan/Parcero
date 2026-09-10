@@ -8,7 +8,7 @@
  * lesson carries a single id and tells the SAME situation twice: the es
  * direction follows Alex, an English speaker learning Colombian Spanish in
  * Colombia, and the en direction follows Alejandra, a Colombian learning
- * English in Canada. The explanation is always in the language the reader
+ * English in Texas. The explanation is always in the language the reader
  * already has — English in es, Spanish in en — while title and situation stay
  * Spanish in both, because they name the lesson in the picker.
  *
@@ -32,7 +32,7 @@ lessons.push(
       situation:
         "Llegas a un café de barrio en Bogotá para trabajar un par de horas y necesitas lo básico: una mesa, el wifi, un enchufe para el portátil y, en algún momento, el baño. La barista te atiende de usted y te explica las reglas de la casa mientras te acomodas.",
       setting: {
-        who: "Alex, a newcomer settling into remote work in Bogotá, and Daniela, the barista running the counter at a small neighbourhood café.",
+        who: "Alex, a newcomer settling into remote work in Bogotá, and Daniela, the barista running the counter at a small neighborhood café.",
         what: "Alex asks to use the café's wifi, a power outlet and the bathroom while he sets up to work for a couple of hours.",
         when: "A weekday mid-morning, the quiet stretch after the breakfast rush when the tables start filling with laptops.",
         where: "A café in a residential barrio of Bogotá, the kind of place that quietly doubles as an office for freelancers.",
@@ -149,7 +149,7 @@ lessons.push(
           register: "friendly informal",
           region: "Widespread across Colombia; especially natural in homes and small family businesses.",
           related: ["¿me facilita el baño?", "¿puedo pasar al baño?", "¿dónde queda el baño?", "¿me deja usar el baño?"],
-          example: { target: "Vecina, ¿me presta el baño un momentico?", translation: "Neighbour, can I use your bathroom for a sec?" }
+          example: { target: "Vecina, ¿me presta el baño un momentico?", translation: "Neighbor, can I use your bathroom for a sec?" }
         },
         {
           term: "el computador",
@@ -301,12 +301,12 @@ lessons.push(
     en: {
       title: "Instalándose a trabajar en la cafetería",
       situation:
-        "Usted llega a una cafetería de barrio en Toronto para trabajar un par de horas y necesita lo básico: una mesa, el wifi, un enchufe para el portátil y, en algún momento, el baño. La barista lo atiende y le explica las reglas de la casa mientras usted se acomoda.",
+        "Usted llega a una cafetería de barrio en Houston para trabajar un par de horas y necesita lo básico: una mesa, el wifi, un enchufe para el portátil y, en algún momento, el baño. La barista lo atiende y le explica las reglas de la casa mientras usted se acomoda.",
       setting: {
-        who: "Alejandra, recién llegada a Toronto y adaptándose al trabajo remoto, y Megan, la barista que atiende la caja de una pequeña cafetería de barrio.",
+        who: "Alejandra, recién llegada a Houston y adaptándose al trabajo remoto, y Megan, la barista que atiende la caja de una pequeña cafetería de barrio.",
         what: "Alejandra pide usar el wifi de la cafetería, un enchufe y el baño mientras se instala a trabajar un par de horas.",
         when: "Un día entre semana a media mañana, esa calma después del desayuno cuando las mesas se llenan de portátiles.",
-        where: "Una cafetería en un barrio residencial de Toronto, de esas que funcionan como oficina para freelancers.",
+        where: "Una cafetería en un barrio residencial de Houston, de esas que funcionan como oficina para freelancers.",
         why: "Saber pedir las cosas con cortesía en inglés — donde la amabilidad va en el verbo y no en el pronombre — es lo que la vuelve una clienta habitual en vez de una extraña."
       },
       address: {
@@ -391,7 +391,7 @@ lessons.push(
         },
         {
           term: "washroom",
-          explanation: "La palabra canadiense para el baño público. En Estados Unidos se oye más “restroom”; “bathroom” sirve en ambos países.",
+          explanation: "La palabra estadounidense para el baño público. En Estados Unidos se oye más “restroom”; “bathroom” sirve en ambos países.",
           literal: "cuarto de aseo / baño",
           useWhen: "Preguntar por el baño en un lugar público en Canadá sin sonar demasiado directo.",
           avoidWhen: "En una casa, donde “bathroom” es lo normal; “washroom” suena a local comercial.",
@@ -458,7 +458,7 @@ lessons.push(
         },
         {
           label: "El café como oficina también allá",
-          body: "En las ciudades canadienses, igual que en Colombia, los cafés funcionan como oficina de freelancers y estudiantes. Pedir algo — un café, un pan — te da derecho a la mesa, al wifi y, sin decirlo, al baño por el tiempo que quieras; nadie te apura. El trato tácito es el mismo: consume algo y el lugar es tuyo. Pedir permiso antes de usar un enchufe o el baño te mantiene del lado amable de ese acuerdo."
+          body: "En las ciudades estadounidenses, igual que en Colombia, los cafés funcionan como oficina de freelancers y estudiantes. Pedir algo — un café, un pan — te da derecho a la mesa, al wifi y, sin decirlo, al baño por el tiempo que quieras; nadie te apura. El trato tácito es el mismo: consume algo y el lugar es tuyo. Pedir permiso antes de usar un enchufe o el baño te mantiene del lado amable de ese acuerdo."
         },
         {
           label: "“Washroom”, “restroom”, “toilet”",
@@ -552,10 +552,10 @@ lessons.push(
           choices: [
             "Un cuarto para lavar la ropa, ya que “wash” se relaciona con lavar prendas y sábanas.",
             "Un lavamanos suelto para enjuagarse las manos rápido antes de volver a la mesa a trabajar.",
-            "El baño público; “washroom” es la palabra canadiense, frente a “restroom” en Estados Unidos."
+            "El baño público; “washroom” es la palabra estadounidense, frente a “restroom” en Estados Unidos."
           ],
           answer: 2,
-          tests: "“washroom” = baño en inglés canadiense"
+          tests: "“washroom” = baño en inglés estadounidense"
         },
         {
           prompt: "¿Por qué en inglés se repite “use” sin buscar un verbo más específico?",
@@ -584,7 +584,7 @@ lessons.push(
       situation:
         "Entras a una sucursal en Medellín para abrir tu primera cuenta de ahorros. El asesor es paisa, te trata de vos con toda la calidez del caso y te explica qué necesitas, cuánto se demora y a qué hora abren, por si te toca volver.",
       setting: {
-        who: "Alex, opening his first Colombian bank account, and Óscar, a friendly paisa account adviser at a neighbourhood branch.",
+        who: "Alex, opening his first Colombian bank account, and Óscar, a friendly paisa account adviser at a neighborhood branch.",
         what: "Alex opens a savings account, learns which documents he needs, and asks about the branch's opening hours.",
         when: "A weekday afternoon, comfortably before the branch's four o'clock close.",
         where: "A small bank branch in Medellín, where the advisers are chatty and the paisa vos is the house default.",
@@ -853,12 +853,12 @@ lessons.push(
     en: {
       title: "Abriendo una cuenta bancaria",
       situation:
-        "Usted entra a una sucursal en Toronto para abrir su primera cuenta de ahorros. El asesor es cordial y directo, le explica qué documentos necesita, cuánto se demora y a qué hora abren, por si le toca volver otro día.",
+        "Usted entra a una sucursal en Houston para abrir su primera cuenta de ahorros. El asesor es cordial y directo, le explica qué documentos necesita, cuánto se demora y a qué hora abren, por si le toca volver otro día.",
       setting: {
         who: "Alejandra, abriendo su primera cuenta bancaria en Canadá, y Brian, un asesor cordial de una sucursal de barrio.",
         what: "Alejandra abre una cuenta de ahorros, se entera de qué documentos necesita y pregunta a qué hora abre la sucursal.",
         when: "Una tarde entre semana, con tiempo de sobra antes de que el banco cierre a las cinco.",
-        where: "Una pequeña sucursal bancaria en Toronto, donde el trato es amable pero más breve que en Medellín.",
+        where: "Una pequeña sucursal bancaria en Houston, donde el trato es amable pero más breve que en Medellín.",
         why: "Abrir una cuenta es uno de los primeros trámites de adulto que hace un recién llegado, y en inglés “open” carga con casi toda la escena."
       },
       address: {
@@ -960,7 +960,7 @@ lessons.push(
           avoidWhen: "Si necesitas específicamente el pasaporte para viajar; ahí di “passport”.",
           register: "neutral",
           region: "Inglés universal; “ID” es universal.",
-          related: ["passport", "driver's licence", "piece of ID", "identification"],
+          related: ["passport", "driver's license", "piece of ID", "identification"],
           example: { target: "Do you have a piece of photo ID?", translation: "¿Tiene un documento con foto?" }
         },
         {
@@ -1006,7 +1006,7 @@ lessons.push(
         },
         {
           label: "“Chequing” y “savings”",
-          body: "En Canadá hay dos cuentas básicas: la “chequing account”, para el día a día y la tarjeta de débito, y la “savings account”, para guardar y ganar algo de interés. En el Reino Unido la del día a día se llama “current account”. Al abrir cuenta te preguntarán cuál quieres, así que conviene tener claras las palabras. Y ojo con la ortografía canadiense: “chequing” con q, distinta del “checking” estadounidense."
+          body: "En Canadá hay dos cuentas básicas: la “chequing account”, para el día a día y la tarjeta de débito, y la “savings account”, para guardar y ganar algo de interés. En el Reino Unido la del día a día se llama “current account”. Al abrir cuenta te preguntarán cuál quieres, así que conviene tener claras las palabras. Y ojo con la ortografía estadounidense: “chequing” con q, distinta del “checking” estadounidense."
         },
         {
           label: "“Photo ID” y el papeleo",
@@ -1036,7 +1036,7 @@ lessons.push(
         {
           mistake: "“Can you open the water?”",
           whyItFails: "En español se “abre la llave”, pero en inglés el agua y la luz se “turn on”, no se “open”. “Open the water” no se dice.",
-          sayInstead: "“Can you turn on the tap?”"
+          sayInstead: "“Can you turn on the faucet?”"
         }
       ],
       variations: [
@@ -1124,7 +1124,7 @@ lessons.push(
   },
   {
     id: "catching-the-shop-before-it-closes",
-    level: "Starter · Home and neighbourhood",
+    level: "Starter · Home and neighborhood",
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "shopping-and-money",
     register: "familiar",
@@ -1180,7 +1180,7 @@ lessons.push(
           translation: "No, still open. They closed the road today for a parade, that's why it looks so empty. Take the sodas.",
           pronunciation: "no, to-da-VEE-a a-BYER-to. oi se-RRA-ron la BEE-a por un des-FEE-le, por E-so se ve tan SO-lo. YE-va-te las ga-SEH-o-sas.",
           literal: "No, still open. Today they-closed the road for a parade, for that itself sees so alone. Take-yourself the sodas.",
-          why: "“Cerraron la vía” uses the bare third-person plural — “they closed the road,” with no named subject — the standard way Colombians report a closure. “Llévate” is a tú command with a reflexive flavour: take them for yourself."
+          why: "“Cerraron la vía” uses the bare third-person plural — “they closed the road,” with no named subject — the standard way Colombians report a closure. “Llévate” is a tú command with a reflexive flavor: take them for yourself."
         },
         {
           speaker: "Alex",
@@ -1268,7 +1268,7 @@ lessons.push(
         },
         {
           term: "bajar la reja",
-          explanation: "To “lower the grille” — the metal shutter over a shopfront — meaning to close up for the day. The reja is the corner shop's face, and pulling it down is the ritual end of trading.",
+          explanation: "To “lower the grille” — the metal shutter over a storefront — meaning to close up for the day. The reja is the corner shop's face, and pulling it down is the ritual end of trading.",
           literal: "to-lower the grille",
           useWhen: "Closing a shop physically at the end of the day: “ya voy a bajar la reja.”",
           avoidWhen: "A place with glass doors rather than a metal grille; there you would just “cerrar” or “echar llave.”",

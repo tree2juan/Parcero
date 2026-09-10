@@ -289,6 +289,13 @@ test("lesson tags come from the closed vocabularies", () => {
     for (const skill of Array.isArray(lesson.skills) ? lesson.skills : []) {
       if (!taxonomy.skills.includes(skill)) offenders.push(`${lesson.id}: skills "${skill}"`);
     }
+    /* `pathways` was omitted from this loop until it was not, and the field
+       drifted in exactly the way the comment above predicts: six values were
+       in use that data/taxonomy.js had never heard of. Closed lists only stay
+       closed if every one of them is checked. */
+    for (const pathway of Array.isArray(lesson.pathways) ? lesson.pathways : []) {
+      if (!taxonomy.pathways.includes(pathway)) offenders.push(`${lesson.id}: pathways "${pathway}"`);
+    }
   }
   assert.deepStrictEqual(offenders, [], "these values are not in data/taxonomy.js");
 });
@@ -310,14 +317,22 @@ test("curriculum tags come from the closed vocabularies", () => {
  * a category that exists on paper, and it will quietly mislead anyone who
  * builds a filter from the list and gets an empty screen.
  */
-test("every domain and register in the taxonomy is actually used", () => {
-  const used = (field) => new Set(lessons.map((lesson) => lesson[field]).filter(Boolean));
+test("every domain, register and pathway in the taxonomy is actually used", () => {
+  const scalar = (field) => new Set(lessons.map((lesson) => lesson[field]).filter(Boolean));
   for (const field of ["domain", "register"]) {
-    const seen = used(field);
+    const seen = scalar(field);
     const unused = taxonomy[field].filter((value) => !seen.has(value));
     /* Array.from for the same vm-realm reason as the structure test above. */
     assert.deepStrictEqual(Array.from(unused), [], `these ${field} values are declared but no lesson uses them`);
   }
+
+  /* Pathways is a list field, so it needs flattening rather than the scalar
+     read above. Three values — "professional", "travel" and "heritage" — were
+     declared here for a long time with no lesson behind any of them, which is
+     precisely the empty-filter screen this test exists to prevent. */
+  const seenPathways = new Set(lessons.flatMap((lesson) => Array.isArray(lesson.pathways) ? lesson.pathways : []));
+  const unusedPathways = taxonomy.pathways.filter((value) => !seenPathways.has(value));
+  assert.deepStrictEqual(Array.from(unusedPathways), [], "these pathways values are declared but no lesson uses them");
 });
 
 /*

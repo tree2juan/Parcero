@@ -31,7 +31,7 @@ lessons.push(
       situation:
         "Estás en la terminal de Armenia, con una mochila, un tinto a medio tomar y la idea ambiciosa de llegar a Santa Marta sin pagar un vuelo. Necesitas comprar el tiquete, escoger un puesto que no te destruya la espalda y entender si el bus sale de verdad a la hora que promete la pantalla.",
       setting: {
-        who: "Mariana works the counter for an intercity bus company and has already answered the same five questions all morning. Sam is travelling north after a week in the Eje Cafetero and needs practical answers, not a tour brochure.",
+        who: "Mariana works the counter for an intercity bus company and has already answered the same five questions all morning. Sam is traveling north after a week in the Eje Cafetero and needs practical answers, not a tour brochure.",
         what: "A ticket-counter exchange about buying a long-distance bus ticket, choosing a seat and estimating the real travel time.",
         when: "Late morning on a Friday, with the lunch crowd beginning to move through the terminal.",
         where: "Armenia's terminal de transporte, on the edge of the Eje Cafetero, with buses leaving toward Ibagué, Bogotá, Cali and the Caribbean coast.",
@@ -67,7 +67,7 @@ lessons.push(
           translation: "What time does it leave, and roughly how long does it take?",
           pronunciation: "a keh OH-ra SA-leh, ee KWAN-toh seh deh-MOH-ra mas oh MEH-nos",
           literal: "At what hour does-it-leave, and how-much itself delays more or less?",
-          why: "“¿Cuánto se demora?” is the Colombian traveller's question. “¿Cuánto tiempo toma?” is understandable, but it sounds translated and less local at a bus window."
+          why: "“¿Cuánto se demora?” is the Colombian traveler's question. “¿Cuánto tiempo toma?” is understandable, but it sounds translated and less local at a bus window."
         },
         {
           speaker: "Mariana",
@@ -105,7 +105,7 @@ lessons.push(
           avoidWhen:
             "You only mean stepping out or moving a short distance. “Voy a la tienda” is normal; “viajo a la tienda” sounds comic unless the store is absurdly far away.",
           register: "neutral",
-          region: "General Spanish, fully natural in Colombia for intercity travel and holiday plans.",
+          region: "General Spanish, fully natural in Colombia for intercity travel and vacation plans.",
           related: ["irse de viaje", "hacer un viaje", "salir de viaje", "trayecto"],
           example: {
             target: "Quiero viajar a Santa Marta esta noche.",
@@ -115,7 +115,7 @@ lessons.push(
         {
           term: "irse de viaje",
           explanation:
-            "A more personal phrase: to go away on a trip. It puts the person leaving home at the centre, not the transport system.",
+            "A more personal phrase: to go away on a trip. It puts the person leaving home at the center, not the transport system.",
           literal: "to go oneself of trip",
           useWhen:
             "Telling friends you are heading away for a few days, or explaining why you will not be around.",
@@ -226,12 +226,12 @@ lessons.push(
         {
           label: "The Eje Cafetero is connected, but not flat",
           body:
-            "A route from Armenia toward the coast is shaped by mountain roads before it ever feels Caribbean. Distance on the map will not tell you the whole story. Curves, landslides, trucks and holiday traffic can matter more than kilometres, which is why “¿cuánto se demora?” is a better question than a neat translation of “how long does it take?”"
+            "A route from Armenia toward the coast is shaped by mountain roads before it ever feels Caribbean. Distance on the map will not tell you the whole story. Curves, landslides, trucks and vacation traffic can matter more than kilometers, which is why “¿cuánto se demora?” is a better question than a neat translation of “how long does it take?”"
         },
         {
           label: "A window seat is not a small preference",
           body:
-            "On a sixteen-hour bus, the puesto is part of the trip. Window means leaning, sleeping and seeing the road; aisle means easier movement and more elbows. Colombian travellers often ask directly for the kind of seat they want, and clerks answer just as directly. That directness is practical, not fussy."
+            "On a sixteen-hour bus, the puesto is part of the trip. Window means leaning, sleeping and seeing the road; aisle means easier movement and more elbows. Colombian travelers often ask directly for the kind of seat they want, and clerks answer just as directly. That directness is practical, not fussy."
         }
       ],
       pitfalls: [
@@ -335,7 +335,7 @@ lessons.push(
           choices: [
             "Spanish requires every route to mention the driver by name.",
             "Spanish avoids saying that passengers travel on buses.",
-            "Spanish can make the bus the subject of the travelling."
+            "Spanish can make the bus the subject of the traveling."
           ],
           answer: 2,
           tests: "transport itself can be the subject of “viajar”"
@@ -345,12 +345,12 @@ lessons.push(
     en: {
       title: "Viajar de Armenia a Santa Marta sin perder el hilo",
       situation:
-        "Usted está en una terminal de autobuses en Ontario, con una maleta, un café a medio tomar y la idea ambiciosa de llegar a Halifax sin tomar un avión. Necesita comprar el boleto, escoger un asiento que no le destruya la espalda y entender si el bus sale de verdad a la hora que promete la pantalla.",
+        "Usted está en una terminal de autobuses en Texas, con una maleta, un café a medio tomar y la idea ambiciosa de llegar a Corpus Christi sin tomar un avión. Necesita comprar el boleto, escoger un asiento que no le destruya la espalda y entender si el bus sale de verdad a la hora que promete la pantalla.",
       setting: {
-        who: "Maya trabaja en el mostrador de una compañía de buses y ya contestó las mismas cinco preguntas toda la mañana. Sandra viaja hacia el Atlántico después de una semana en Toronto y necesita respuestas prácticas, no un folleto turístico.",
+        who: "Maya trabaja en el mostrador de una compañía de buses y ya contestó las mismas cinco preguntas toda la mañana. Sandra viaja hacia el Atlántico después de una semana en Houston y necesita respuestas prácticas, no un folleto turístico.",
         what: "Una conversación de mostrador sobre comprar un boleto de larga distancia, escoger un asiento y calcular el tiempo real del viaje.",
         when: "Un viernes al final de la mañana, cuando empieza a moverse la gente que viaja después del almuerzo.",
-        where: "Una terminal de buses en Ontario, con rutas hacia Ottawa, Montreal, Quebec y la costa atlántica.",
+        where: "Una terminal de buses en Texas, con rutas hacia Dallas, San Antonio, The Rio Grande Valley y la costa atlántica.",
         why: "Los viajes largos se organizan alrededor de salidas, asientos y retrasos, no sólo de destinos. Si Sandra sabe preguntar bien aquí, el resto del viaje se vuelve manejable."
       },
       address: {
@@ -363,10 +363,10 @@ lessons.push(
       dialogue: [
         {
           speaker: "Sandra",
-          target: "Good morning. I want to travel to Halifax tonight.",
-          translation: "Buenos días. Quiero viajar a Halifax esta noche.",
+          target: "Good morning. I want to travel to Corpus Christi tonight.",
+          translation: "Buenos días. Quiero viajar a Corpus Christi esta noche.",
           pronunciation: "gud MOR-ning. ai want tu TRA-vol tu JA-li-faks tu-NAIT",
-          literal: "Buenos días. Yo quiero viajar a Halifax esta noche.",
+          literal: "Buenos días. Yo quiero viajar a Corpus Christi esta noche.",
           why: "En inglés, “travel to” abre el marco del viaje completo. No dice solamente que usted va para allá; sugiere ruta, boleto, equipaje y horas de carretera."
         },
         {
@@ -424,8 +424,8 @@ lessons.push(
           region: "Inglés universal; en Norteamérica se usa mucho para viajes entre ciudades y planes de vacaciones.",
           related: ["go on a trip", "take a trip", "head out", "journey"],
           example: {
-            target: "I want to travel to Halifax tonight.",
-            translation: "Quiero viajar a Halifax esta noche."
+            target: "I want to travel to Corpus Christi tonight.",
+            translation: "Quiero viajar a Corpus Christi esta noche."
           }
         },
         {
@@ -453,7 +453,7 @@ lessons.push(
           useWhen:
             "Para describir un viaje pasado, un viaje de trabajo o una ruta que exige esfuerzo.",
           avoidWhen:
-            "Cuando sólo necesita decir el destino en un mostrador. “I want to travel to Halifax” suena más directo que “I want to take a trip to Halifax.”",
+            "Cuando sólo necesita decir el destino en un mostrador. “I want to travel to Corpus Christi” suena más directo que “I want to take a trip to Corpus Christi.”",
           register: "neutral",
           region: "Inglés universal; natural para viajes largos o intencionales.",
           related: ["travel", "road trip", "business trip", "make a stop"],
@@ -475,8 +475,8 @@ lessons.push(
           region: "Inglés universal; “fare” habla más del precio que del documento.",
           related: ["fare", "reservation", "booking", "boarding pass"],
           example: {
-            target: "Could I get a ticket to Halifax?",
-            translation: "¿Me vendes un tiquete a Halifax?"
+            target: "Could I get a ticket to Corpus Christi?",
+            translation: "¿Me vendes un tiquete a Corpus Christi?"
           }
         },
         {
@@ -578,7 +578,7 @@ lessons.push(
       ],
       variations: [
         {
-          form: "I want to travel to Halifax tonight.",
+          form: "I want to travel to Corpus Christi tonight.",
           register: "neutral",
           region: "Inglés universal",
           whenToUse: "La apertura por defecto en un mostrador: destino más hora, sin historia adicional."
@@ -608,7 +608,7 @@ lessons.push(
           whenToUse: "Unir la compra del boleto y la preferencia de asiento en una sola frase amable."
         }
       ],
-      prompt: "Sandra dice “I want to travel to Halifax tonight.” ¿Cuál es la razón más fuerte para usar “travel” aquí?",
+      prompt: "Sandra dice “I want to travel to Corpus Christi tonight.” ¿Cuál es la razón más fuerte para usar “travel” aquí?",
       choices: [
         "Abre el marco del viaje completo, no sólo el hecho de ir hacia el norte.",
         "Demuestra que el viaje es de vacaciones y no de trabajo ni familia.",
@@ -619,9 +619,9 @@ lessons.push(
         {
           prompt: "En el mostrador, ¿cuál pregunta suena natural para la duración real?",
           choices: [
-            "How long does it take to Halifax?",
-            "How much time it takes to Halifax?",
-            "How many hours consumes to Halifax?"
+            "How long does it take to Corpus Christi?",
+            "How much time it takes to Corpus Christi?",
+            "How many hours consumes to Corpus Christi?"
           ],
           answer: 0,
           tests: "la estructura inglesa “how long does it take” para preguntar duración"
@@ -681,7 +681,7 @@ lessons.push(
       },
       address: {
         form: "usted",
-        who: "Paola uses usted because she is handling a contract and a driver's licence. Jordan mirrors it because the exchange is friendly but official.",
+        who: "Paola uses usted because she is handling a contract and a driver's license. Jordan mirrors it because the exchange is friendly but official.",
         why: "Rental counters, police stops and insurance conversations lean formal. Usted keeps the tone respectful while Paola explains rules that can cost money.",
         ifYouSwitch:
           "Tú would not be shocking with a young clerk, but it would soften a conversation that is still about responsibility. Vos would feel out of place unless both speakers clearly shared that regional register."
@@ -693,7 +693,7 @@ lessons.push(
           translation: "Mr Jordan, are you going to drive to Cúcuta today?",
           pronunciation: "seh-NYOR JOR-dan, oos-TED ba a kon-doo-SEER AS-ta KOO-koo-ta oy",
           literal: "Mister Jordan, you go to drive until Cúcuta today?",
-          why: "“Conducir” fits the official frame: licence, rental contract, liability. It is not wrong Colombian Spanish; it is just the word you expect from institutions, forms and serious warnings."
+          why: "“Conducir” fits the official frame: license, rental contract, liability. It is not wrong Colombian Spanish; it is just the word you expect from institutions, forms and serious warnings."
         },
         {
           speaker: "Jordan",
@@ -706,17 +706,17 @@ lessons.push(
         {
           speaker: "Paola",
           target: "En la calle decimos manejar; en la licencia dice conducción.",
-          translation: "On the street we say manejar; on the licence it says conducción.",
+          translation: "On the street we say manejar; on the license it says conducción.",
           pronunciation: "en la KA-yeh deh-SEE-mos ma-neh-HAR; en la lee-SEN-sya DEE-seh kon-dook-SYON",
-          literal: "In the street we-say manejar; on the licence it-says driving.",
-          why: "“Conducción” names the official category: “licencia de conducción,” driving licence. The noun belongs to the same formal family as “conducir.”"
+          literal: "In the street we-say manejar; on the license it-says driving.",
+          why: "“Conducción” names the official category: “licencia de conducción,” driving license. The noun belongs to the same formal family as “conducir.”"
         },
         {
           speaker: "Jordan",
           target: "Entonces conduzco con la licencia, pero manejo en la conversación.",
-          translation: "So I drive with the licence, but I say manejar in conversation.",
+          translation: "So I drive with the license, but I say manejar in conversation.",
           pronunciation: "en-TON-ses kon-DOOS-koh kon la lee-SEN-sya, PEH-roh ma-NEH-hoh en la kon-ber-sa-SYON",
-          literal: "Then I-drive with the licence, but I-handle in the conversation.",
+          literal: "Then I-drive with the license, but I-handle in the conversation.",
           why: "“Conduzco” is the irregular yo form. Jordan's joke is also accurate: the formal verb lives on paper, while “manejo” is what people say when talking normally."
         },
         {
@@ -724,8 +724,8 @@ lessons.push(
           target: "Exacto. Y ojo: por pico y placa no puede salir por el centro antes de las nueve.",
           translation: "Exactly. And careful: because of pico y placa you cannot leave through downtown before nine.",
           pronunciation: "eg-SAK-toh. ee OH-hoh: por PEE-koh ee PLA-ka no PWEH-deh sa-LEER por el SEN-troh AN-tes deh las NWEH-beh",
-          literal: "Exactly. And eye: because-of peak and plate not you-can leave through the centre before the nine.",
-          why: "“Pico y placa” is the restriction based on licence-plate numbers and peak hours. Do not translate it; learn it as a Colombian traffic phrase."
+          literal: "Exactly. And eye: because-of peak and plate not you-can leave through the center before the nine.",
+          why: "“Pico y placa” is the restriction based on license-plate numbers and peak hours. Do not translate it; learn it as a Colombian traffic phrase."
         },
         {
           speaker: "Jordan",
@@ -762,7 +762,7 @@ lessons.push(
           useWhen:
             "Asking whether someone can drive, saying who drove, or giving casual road advice.",
           avoidWhen:
-            "Quoting a licence category or formal regulation. Those contexts usually choose “conducir” or “conducción.”",
+            "Quoting a license category or formal regulation. Those contexts usually choose “conducir” or “conducción.”",
           register: "everyday conversational",
           region: "The normal spoken choice in Colombia and much of Latin America.",
           related: ["conducir", "chofer", "volante", "carretera"],
@@ -774,8 +774,8 @@ lessons.push(
         {
           term: "licencia de conducción",
           explanation:
-            "The official Colombian phrase for a driver's licence. It is built from “conducción,” not from “manejar.”",
-          literal: "licence of driving",
+            "The official Colombian phrase for a driver's license. It is built from “conducción,” not from “manejar.”",
+          literal: "license of driving",
           useWhen:
             "Renting a car, dealing with police, filling forms or checking what category you are allowed to drive.",
           avoidWhen:
@@ -785,13 +785,13 @@ lessons.push(
           related: ["pase", "documentos", "categoría", "tránsito"],
           example: {
             target: "En la licencia dice conducción.",
-            translation: "On the licence it says conducción."
+            translation: "On the license it says conducción."
           }
         },
         {
           term: "pico y placa",
           explanation:
-            "A traffic restriction that limits when vehicles can circulate based on the last digit of the licence plate, usually during busy hours.",
+            "A traffic restriction that limits when vehicles can circulate based on the last digit of the license plate, usually during busy hours.",
           literal: "peak and plate",
           useWhen:
             "Checking whether your car can enter, leave or move through a city at a certain time.",
@@ -808,18 +808,18 @@ lessons.push(
         {
           term: "placa",
           explanation:
-            "The licence plate. In traffic rules, the relevant detail is often the final digit.",
+            "The license plate. In traffic rules, the relevant detail is often the final digit.",
           literal: "plate",
           useWhen:
             "Reading restrictions, giving vehicle details, reporting a car or checking rental paperwork.",
           avoidWhen:
-            "Confusing it with “plato,” the dish you eat from. They are close enough to embarrass a tired traveller.",
+            "Confusing it with “plato,” the dish you eat from. They are close enough to embarrass a tired traveler.",
           register: "neutral",
           region: "General Colombian; “placa” is the traffic word you will see on signs and forms.",
           related: ["número de placa", "último dígito", "matrícula", "vehículo"],
           example: {
             target: "Miro la placa antes de salir.",
-            translation: "I check the licence plate before leaving."
+            translation: "I check the license plate before leaving."
           }
         },
         {
@@ -830,7 +830,7 @@ lessons.push(
           useWhen:
             "Talking about intercity roads, closures, traffic, curves or where a route becomes difficult.",
           avoidWhen:
-            "Asking for a street inside a neighbourhood. There “calle,” “carrera” or “avenida” may be more specific.",
+            "Asking for a street inside a neighborhood. There “calle,” “carrera” or “avenida” may be more specific.",
           register: "neutral",
           region: "Very common in Colombian travel and traffic reporting.",
           related: ["carretera", "ruta", "peaje", "curvas"],
@@ -858,7 +858,7 @@ lessons.push(
         }
       ],
       note:
-        "This lesson is deliberately honest about register. A Colombian friend is far more likely to ask “¿sabes manejar?” than “¿sabes conducir?” But the rental contract, the licence category and a police notice belong to the “conducir” family. If you learn only the everyday word, official Spanish becomes harder. If you learn only the official word, you sound oddly institutional in normal conversation.",
+        "This lesson is deliberately honest about register. A Colombian friend is far more likely to ask “¿sabes manejar?” than “¿sabes conducir?” But the rental contract, the license category and a police notice belong to the “conducir” family. If you learn only the everyday word, official Spanish becomes harder. If you learn only the official word, you sound oddly institutional in normal conversation.",
       culture: [
         {
           label: "Bucaramanga to Cúcuta is not a casual city errand",
@@ -987,12 +987,12 @@ lessons.push(
     en: {
       title: "Conducir por la vía Bucaramanga-Cúcuta con pico y placa",
       situation:
-        "Usted llega a Calgary con un carro alquilado y la intención de cruzar hacia Banff temprano. En el mostrador, la asesora revisa su licencia, mira la placa y le advierte que en inglés “drive” cubre tanto la conversación cotidiana como buena parte del lenguaje oficial, pero que las restricciones locales igual hay que preguntarlas.",
+        "Usted llega a El Paso con un carro alquilado y la intención de cruzar hacia Big Bend temprano. En el mostrador, la asesora revisa su licencia, mira la placa y le advierte que en inglés “drive” cubre tanto la conversación cotidiana como buena parte del lenguaje oficial, pero que las restricciones locales igual hay que preguntarlas.",
       setting: {
-        who: "Paula trabaja en una agencia de alquiler cerca de la salida hacia las montañas. Jorge ya manejó en varios países, pero no en carreteras canadienses ni bajo reglas locales de estacionamiento y circulación.",
-        what: "Una entrega de carro alquilado donde Jorge aprende a usar “drive,” “driver's licence,” “plate” y una advertencia de tráfico sin traducir desde el español.",
+        who: "Paula trabaja en una agencia de alquiler cerca de la salida hacia las montañas. Jorge ya manejó en varios países, pero no en carreteras estadounidenses ni bajo reglas locales de estacionamiento y circulación.",
+        what: "Una entrega de carro alquilado donde Jorge aprende a usar “drive,” “driver's license,” “plate” y una advertencia de tráfico sin traducir desde el español.",
         when: "Temprano un día laboral, antes de que la vía hacia el parque se llene de carros y buses turísticos.",
-        where: "Calgary, con la carretera hacia Banff por delante y reglas de ciudad todavía relevantes antes de salir.",
+        where: "El Paso, con la carretera hacia Big Bend por delante y reglas de ciudad todavía relevantes antes de salir.",
         why: "Un visitante que traduce “conducir” y “manejar” como si siempre hubiera dos registros en inglés puede complicar frases sencillas. Jorge necesita sonar natural y entender las palabras de los documentos."
       },
       address: {
@@ -1005,10 +1005,10 @@ lessons.push(
       dialogue: [
         {
           speaker: "Paula",
-          target: "Jorge, are you driving to Banff today?",
-          translation: "Jorge, ¿usted va a conducir hasta Banff hoy?",
+          target: "Jorge, are you driving to Big Bend today?",
+          translation: "Jorge, ¿usted va a conducir hasta Big Bend hoy?",
           pronunciation: "YOR-ye, ar yu DRAI-ving tu banf tu-DEI",
-          literal: "Jorge, ¿está usted manejando a Banff hoy?",
+          literal: "Jorge, ¿está usted manejando a Big Bend hoy?",
           why: "“Drive” cubre aquí lo que en español colombiano puede dividirse entre “conducir” y “manejar.” En inglés corriente no necesita dos verbos para separar el mostrador de la conversación."
         },
         {
@@ -1021,11 +1021,11 @@ lessons.push(
         },
         {
           speaker: "Paula",
-          target: "Say drive. Your driver's licence also uses the same word family.",
+          target: "Say drive. Your driver's license also uses the same word family.",
           translation: "Diga drive. Su licencia de conducción también usa la misma familia de palabras.",
           pronunciation: "sei draiv. yor DRAI-vers LAI-sens OL-so YU-zes da seim word FA-mi-li",
           literal: "Diga maneje. Su licencia de conductor también usa la misma familia de palabra.",
-          why: "“Driver's licence” se forma con “driver,” la persona que maneja. No intente calcar “licencia de conducción” como “licence of conduction.”"
+          why: "“Driver's license” se forma con “driver,” la persona que maneja. No intente calcar “licencia de conducción” como “license of conduction.”"
         },
         {
           speaker: "Jorge",
@@ -1033,7 +1033,7 @@ lessons.push(
           translation: "Entonces manejo el carro, y soy el conductor en el contrato.",
           pronunciation: "so ai draiv da car, and aim da DRAI-ver on da KON-tract",
           literal: "Entonces yo manejo el carro, y soy el conductor en el contrato.",
-          why: "La familia es transparente: “drive,” “driver,” “driver's licence.” Para un hispanohablante, esa repetición ayuda a no inventar una palabra formal falsa."
+          why: "La familia es transparente: “drive,” “driver,” “driver's license.” Para un hispanohablante, esa repetición ayuda a no inventar una palabra formal falsa."
         },
         {
           speaker: "Paula",
@@ -1045,10 +1045,10 @@ lessons.push(
         },
         {
           speaker: "Jorge",
-          target: "Got it. I'll wait here, then drive carefully on the road to Banff.",
-          translation: "Listo. Espero aquí y luego conduzco con cuidado por la vía a Banff.",
+          target: "Got it. I'll wait here, then drive carefully on the road to Big Bend.",
+          translation: "Listo. Espero aquí y luego conduzco con cuidado por la vía a Big Bend.",
           pronunciation: "got it. ail weit jir, den draiv KER-ful-li on da roud tu banf",
-          literal: "Lo tengo. Esperaré aquí, después manejaré cuidadosamente en la carretera a Banff.",
+          literal: "Lo tengo. Esperaré aquí, después manejaré cuidadosamente en la carretera a Big Bend.",
           why: "“Drive carefully” es la advertencia natural. No necesita decir “with calm”; el adverbio hace el trabajo sin sonar traducido."
         }
       ],
@@ -1064,10 +1064,10 @@ lessons.push(
             "Cuando “drive” es sustantivo y significa paseo o impulso. “A long drive” es un trayecto; “drive” no siempre es verbo.",
           register: "neutral",
           region: "Inglés universal; no tiene la misma división cotidiana entre “manejar” y “conducir.”",
-          related: ["driver", "driver's licence", "driving", "road"],
+          related: ["driver", "driver's license", "driving", "road"],
           example: {
-            target: "Are you driving to Banff today?",
-            translation: "¿Usted va a conducir hasta Banff hoy?"
+            target: "Are you driving to Big Bend today?",
+            translation: "¿Usted va a conducir hasta Big Bend hoy?"
           }
         },
         {
@@ -1088,19 +1088,19 @@ lessons.push(
           }
         },
         {
-          term: "driver's licence",
+          term: "driver's license",
           explanation:
             "La licencia que prueba que usted puede manejar legalmente. En Norteamérica se escribe con “driver,” no como traducción literal de “conducción.”",
           literal: "licencia de conductor",
           useWhen:
             "Al alquilar un carro, hablar con la policía, llenar formularios o confirmar identidad.",
           avoidWhen:
-            "Decir “licence of conduction.” Eso suena como física o electricidad, no como tránsito.",
+            "Decir “license of conduction.” Eso suena como física o electricidad, no como tránsito.",
           register: "official practical",
-          region: "Inglés norteamericano; en inglés británico suele escribirse “driving licence.”",
+          region: "Inglés norteamericano; en inglés británico suele escribirse “driving license.”",
           related: ["ID", "permit", "rental contract", "driver"],
           example: {
-            target: "Can I see your driver's licence?",
+            target: "Can I see your driver's license?",
             translation: "¿Puedo ver su licencia de conducción?"
           }
         },
@@ -1115,14 +1115,14 @@ lessons.push(
             "Creer que es el nombre fijo de un programa como pico y placa. Es una descripción útil, no necesariamente el título oficial.",
           register: "neutral practical",
           region: "Comprensible en inglés, aunque las reglas dependen de cada ciudad o provincia.",
-          related: ["licence plate", "restriction", "downtown rules", "parking rules"],
+          related: ["license plate", "restriction", "downtown rules", "parking rules"],
           example: {
             target: "Check the plate rules before you leave downtown.",
             translation: "Revise las reglas de placa antes de salir del centro."
           }
         },
         {
-          term: "licence plate",
+          term: "license plate",
           explanation:
             "La placa del vehículo. En inglés norteamericano también se escribe “license plate” en Estados Unidos.",
           literal: "placa de licencia",
@@ -1131,18 +1131,18 @@ lessons.push(
           avoidWhen:
             "Reducirlo a “plate” cuando el contexto no es de carros. “Plate” solo también puede ser un plato.",
           register: "neutral",
-          region: "“Licence plate” es común en Canadá; “license plate” es la ortografía estadounidense.",
+          region: "“License plate” es común en Canadá; “license plate” es la ortografía estadounidense.",
           related: ["plate number", "last digit", "vehicle", "registration"],
           example: {
-            target: "The licence plate ends in eight.",
+            target: "The license plate ends in eight.",
             translation: "La placa termina en ocho."
           }
         },
         {
-          term: "the road to Banff",
+          term: "the road to Big Bend",
           explanation:
-            "La carretera hacia Banff. “Road to” es una forma sencilla y natural de ubicar una ruta.",
-          literal: "la vía a Banff",
+            "La carretera hacia Big Bend. “Road to” es una forma sencilla y natural de ubicar una ruta.",
+          literal: "la vía a Big Bend",
           useWhen:
             "Al hablar de carreteras entre ciudades, cierres, tráfico, curvas o clima en una ruta.",
           avoidWhen:
@@ -1151,8 +1151,8 @@ lessons.push(
           region: "Inglés universal; en señales puede aparecer “highway” con número.",
           related: ["highway", "route", "exit", "traffic"],
           example: {
-            target: "Drive carefully on the road to Banff.",
-            translation: "Conduzca con cuidado por la vía a Banff."
+            target: "Drive carefully on the road to Big Bend.",
+            translation: "Conduzca con cuidado por la vía a Big Bend."
           }
         },
         {
@@ -1174,12 +1174,12 @@ lessons.push(
         }
       ],
       note:
-        "Esta lección evita una trampa de traducción: el español colombiano reparte el registro entre “manejar” y “conducir,” pero el inglés no necesita dos verbos equivalentes. “Drive” funciona en la conversación y también aparece en la familia oficial de “driver” y “driver's licence.” La precisión está en no inventar “handle the car” ni “licence of conduction” por seguir demasiado de cerca el español.",
+        "Esta lección evita una trampa de traducción: el español colombiano reparte el registro entre “manejar” y “conducir,” pero el inglés no necesita dos verbos equivalentes. “Drive” funciona en la conversación y también aparece en la familia oficial de “driver” y “driver's license.” La precisión está en no inventar “handle the car” ni “license of conduction” por seguir demasiado de cerca el español.",
       culture: [
         {
-          label: "La carretera a Banff exige atención real",
+          label: "La carretera a Big Bend exige atención real",
           body:
-            "La ruta desde Calgary hacia las montañas puede parecer sencilla en el mapa, pero el clima, los animales, los turistas y los cambios rápidos de visibilidad importan. Cuando alguien le dice “drive carefully,” no está adornando la despedida. Está metiendo conocimiento local en una frase corta antes de entregarle las llaves."
+            "La ruta desde El Paso hacia las montañas puede parecer sencilla en el mapa, pero el clima, los animales, los turistas y los cambios rápidos de visibilidad importan. Cuando alguien le dice “drive carefully,” no está adornando la despedida. Está metiendo conocimiento local en una frase corta antes de entregarle las llaves."
         },
         {
           label: "Las reglas locales también afectan al visitante",
@@ -1189,7 +1189,7 @@ lessons.push(
         {
           label: "El inglés no siempre duplica los registros del español",
           body:
-            "Un colombiano puede sentir que falta una palabra porque “drive” cubre manejar y conducir. No falta. El inglés marca la situación con otros recursos: “driver's licence” en documentos, “Can you drive?” entre amigos, “drive carefully” como advertencia. El mismo verbo cambia de entorno sin volverse incorrecto."
+            "Un colombiano puede sentir que falta una palabra porque “drive” cubre manejar y conducir. No falta. El inglés marca la situación con otros recursos: “driver's license” en documentos, “Can you drive?” entre amigos, “drive carefully” como advertencia. El mismo verbo cambia de entorno sin volverse incorrecto."
         }
       ],
       pitfalls: [
@@ -1200,10 +1200,10 @@ lessons.push(
           sayInstead: "I drive the car."
         },
         {
-          mistake: "“Licence of conduction.”",
+          mistake: "“License of conduction.”",
           whyItFails:
             "Es un calco de “licencia de conducción.” En inglés “conduction” suena a física, calor o electricidad.",
-          sayInstead: "Driver's licence."
+          sayInstead: "Driver's license."
         },
         {
           mistake: "“I am driver today.”",
@@ -1220,7 +1220,7 @@ lessons.push(
       ],
       variations: [
         {
-          form: "Are you driving to Banff today?",
+          form: "Are you driving to Big Bend today?",
           register: "neutral practical",
           region: "Inglés universal",
           whenToUse: "En un mostrador, con un amigo o al confirmar la ruta de alguien."
@@ -1232,7 +1232,7 @@ lessons.push(
           whenToUse: "Preguntar por habilidad real sin inventar un segundo verbo para manejar."
         },
         {
-          form: "Can I see your driver's licence?",
+          form: "Can I see your driver's license?",
           register: "official practical",
           region: "Inglés norteamericano",
           whenToUse: "Alquilar un carro, identificarse o hablar con una autoridad."
@@ -1271,12 +1271,12 @@ lessons.push(
         {
           prompt: "¿Cuál frase pertenece naturalmente a un mostrador de alquiler?",
           choices: [
-            "your licence of conduction",
-            "your driver's licence",
+            "your license of conduction",
+            "your driver's license",
             "your handling permission"
           ],
           answer: 1,
-          tests: "“driver's licence” en vez de un calco de “licencia de conducción”"
+          tests: "“driver's license” en vez de un calco de “licencia de conducción”"
         },
         {
           prompt: "Jorge dice “I'm the driver today.” ¿Qué debe notar?",
@@ -1416,7 +1416,7 @@ lessons.push(
         {
           term: "chiva",
           explanation:
-            "A colourful rural bus or truck-bus associated with mountain roads, towns and group outings.",
+            "A colorful rural bus or truck-bus associated with mountain roads, towns and group outings.",
           literal: "goat",
           useWhen:
             "Referring to the vehicle, not just the party-bus stereotype foreigners may have seen in photos.",
@@ -1453,7 +1453,7 @@ lessons.push(
             "To stage or put on a play, exhibition or production. Again, the verb is about assembling something that works in public.",
           literal: "to mount a work",
           useWhen:
-            "Talking about theatre, school events, performances or cultural programming.",
+            "Talking about theater, school events, performances or cultural programming.",
           avoidWhen:
             "Using it for simply writing the play. “Montar” is the production getting on its feet.",
           register: "neutral",
@@ -1500,17 +1500,17 @@ lessons.push(
         }
       ],
       note:
-        "The trap with “montar” is trying to reduce it to one English verb. Sometimes it is get on, sometimes ride, sometimes set up, sometimes stage, and sometimes give someone a hard time. The object tells you which meaning is alive. “Montar en chiva,” “montar un negocio,” and “te la tienen montada” are not random; they are the same verb travelling through different frames.",
+        "The trap with “montar” is trying to reduce it to one English verb. Sometimes it is get on, sometimes ride, sometimes set up, sometimes stage, and sometimes give someone a hard time. The object tells you which meaning is alive. “Montar en chiva,” “montar un negocio,” and “te la tienen montada” are not random; they are the same verb traveling through different frames.",
       culture: [
         {
           label: "A chiva is more than a postcard",
           body:
-            "Foreigners often meet chivas as colourful party vehicles, but the rural image comes from practical transport on difficult roads. Around mountain towns, the vehicle can carry tourists, sacks, neighbours and errands in the same afternoon. Treating it only as decoration misses why the verb “montar” feels so physical here."
+            "Foreigners often meet chivas as colorful party vehicles, but the rural image comes from practical transport on difficult roads. Around mountain towns, the vehicle can carry tourists, sacks, neighbors and errands in the same afternoon. Treating it only as decoration misses why the verb “montar” feels so physical here."
         },
         {
           label: "Salento gives you mountain Spanish, not a neutral classroom",
           body:
-            "In the Eje Cafetero you may hear vos forms like “montá” and “agarrate.” You do not have to adopt them instantly, but you do need to recognize them. A traveller who expects only textbook tú can understand the route and still miss the instruction that keeps them from wobbling on the curve."
+            "In the Eje Cafetero you may hear vos forms like “montá” and “agarrate.” You do not have to adopt them instantly, but you do need to recognize them. A traveler who expects only textbook tú can understand the route and still miss the instruction that keeps them from wobbling on the curve."
         },
         {
           label: "Transport verbs stretch into daily life",
@@ -1739,8 +1739,8 @@ lessons.push(
           avoidWhen:
             "Suponer que traduce siempre “chiva.” Una chiva colombiana tiene historia y forma propia; “truck” sólo resuelve esta escena en inglés.",
           register: "neutral",
-          region: "Inglés norteamericano; en inglés británico “lorry” puede aparecer para camión.",
-          related: ["pickup", "lorry", "farm vehicle", "open truck"],
+          region: "Inglés norteamericano; en inglés británico “truck” puede aparecer para camión.",
+          related: ["pickup", "truck", "farm vehicle", "open truck"],
           example: {
             target: "Get on the truck in the back.",
             translation: "Súbase al camión por atrás."
