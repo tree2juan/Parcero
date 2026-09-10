@@ -233,6 +233,46 @@ main, footer { max-width: var(--wrap); margin: auto; padding-inline: 1.5rem; }
 .progress-track { height: .55rem; background: var(--surface); border-radius: 1rem; overflow: hidden; }
 #progress-bar { height: 100%; width: 0; background: linear-gradient(90deg, var(--green), var(--lime)); transition: width .35s ease; }
 
+/* ---------- Level (CEFR) ---------- */
+/* The band a lesson teaches, and the ladder of what the learner has shown. */
+.level-panel {
+  display: grid; gap: .9rem;
+  padding: 1.25rem 1.4rem;
+  margin-bottom: 1.5rem;
+  background: var(--mist);
+  border-radius: var(--radius);
+}
+.level-head { display: grid; gap: .2rem; }
+.level-head strong { font-size: 1.6rem; line-height: 1.1; }
+.level-note { margin: 0; font-size: .88rem; color: var(--muted); }
+.level-ladder { display: grid; gap: .45rem; margin: 0; padding: 0; list-style: none; }
+.level-step {
+  display: grid;
+  grid-template-columns: 2.4rem 1fr auto;
+  align-items: center;
+  gap: .6rem;
+  font-size: .85rem;
+}
+.level-step-band { font-weight: 700; letter-spacing: .04em; }
+.level-step-bar { height: .4rem; background: var(--surface); border-radius: 1rem; overflow: hidden; }
+.level-step-fill { display: block; height: 100%; width: 0; background: var(--green); transition: width .35s ease; }
+.level-step-count { color: var(--muted); font-variant-numeric: tabular-nums; }
+.level-step.is-met .level-step-band { color: var(--green); }
+.level-step.is-met .level-step-fill { background: linear-gradient(90deg, var(--green), var(--lime)); }
+/* A band the course does not teach is not a failure, and must not read as an
+   empty bar the learner could have filled. */
+.level-step.is-untaught { opacity: .55; grid-template-columns: 2.4rem 1fr; }
+.level-step.is-untaught .level-step-count { grid-column: 2; }
+.band-badge {
+  justify-self: start;
+  margin: 0 0 .35rem;
+  padding: .18rem .55rem;
+  border: 1px solid var(--line);
+  border-radius: 1rem;
+  font-size: .78rem;
+  color: var(--muted);
+}
+
 /* ---------- Lesson list ---------- */
 
 .lesson-list {

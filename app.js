@@ -365,6 +365,7 @@ function render() {
   const lesson = currentLesson();
   if (window.ParceroI18n) window.ParceroI18n.applyI18n(state.direction);
   $("#lesson-level").textContent = lesson.level;
+  renderBand(lesson);
   $("#lesson-title").textContent = current.title;
   $("#lesson-situation").textContent = current.situation;
   $("#lesson-review").hidden = lesson.review !== "pending";
@@ -387,6 +388,64 @@ function render() {
   updateProgress();
   renderPlacement();
 }
+/*
+ * The level a lesson teaches, and the level the learner has shown.
+ *
+ * Both are derived — see cefr.js. Nothing here decides what B1 means; it only
+ * asks and renders the answer, so a rewritten lesson moves its own badge.
+ */
+const cefrApi = () => (typeof ParceroCEFR === "object" ? ParceroCEFR : null);
+
+function renderBand(lesson) {
+  const badge = $("#lesson-band");
+  const api = cefrApi();
+  if (!badge) return;
+  if (!api) {
+    badge.hidden = true;
+    return;
+  }
+  const result = api.lessonBand(lesson, state.direction);
+  /* A floored A1 has no structure to name, so it says what it is instead of
+     pointing at a feature it cannot evidence. */
+  const top = result.features
+    .filter((feature) => feature.band === result.band)
+    .map((feature) => feature.name)[0];
+  badge.textContent = top
+    ? t("level.lessonBand", { band: result.band, feature: top })
+    : t("level.lessonBasic", { band: result.band });
+  badge.hidden = false;
+}
+
+function renderLevel() {
+  const panel = $("#level-panel");
+  const api = cefrApi();
+  const progressApiRef = progressApi();
+  if (!panel || !api) return;
+
+  const scoreOf = (lesson) => {
+    if (!progressApiRef) return null;
+    const score = progressApiRef.lessonScore(progress(), state.direction, lesson.id);
+    return score ? score.accuracy : null;
+  };
+  const result = api.attainment(lessons, state.direction, scoreOf);
+
+  $("#level-reached").textContent = result.reached || t("level.none");
+  const next = result.bands.find((band) => band.taught && !band.met);
+  $("#level-note").textContent = next
+    ? t("level.next", { band: next.band, strong: next.strong, needed: next.needed })
+    : t("level.top");
+
+  $("#level-ladder").innerHTML = result.bands
+    .map((band) => {
+      if (!band.taught) {
+        return `<li class="level-step is-untaught"><span class="level-step-band">${esc(band.band)}</span><span class="level-step-count">${t("level.notTaught")}</span></li>`;
+      }
+      const width = band.needed ? Math.min(100, Math.round((band.strong / band.needed) * 100)) : 0;
+      return `<li class="level-step${band.met ? " is-met" : ""}"><span class="level-step-band">${esc(band.band)}</span><span class="level-step-bar"><span class="level-step-fill" style="width:${width}%"></span></span><span class="level-step-count">${t("level.ofNeeded", { strong: band.strong, needed: band.needed })}</span></li>`;
+    })
+    .join("");
+}
+
 function updateProgress() {
   const lesson = currentLesson();
   const index = lessonIndex();
@@ -399,6 +458,7 @@ function updateProgress() {
   $("#lesson-position").textContent = t("pager.position", { index: index + 1, total });
   $("#previous-lesson").disabled = index === 0;
   $("#next-lesson").disabled = index === total - 1;
+  renderLevel();
 }
 
 /*

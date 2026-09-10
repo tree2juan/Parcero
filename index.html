@@ -104,6 +104,15 @@
           <div class="progress-track" aria-hidden="true"><div id="progress-bar"></div></div>
         </div>
 
+        <div class="level-panel" id="level-panel">
+          <div class="level-head">
+            <p class="eyebrow" data-i18n="level.eyebrow">Your level</p>
+            <strong id="level-reached">—</strong>
+            <p id="level-note" class="level-note"></p>
+          </div>
+          <ol id="level-ladder" class="level-ladder"></ol>
+        </div>
+
         <label class="search-label" for="lesson-search"><span data-i18n="lessons.search">Search lessons</span> <input id="lesson-search" type="search" data-i18n-placeholder="lessons.searchPlaceholder" placeholder="e.g., pedir, market, or starter" autocomplete="off"></label>
         <p id="lesson-count" class="assistive-text"></p>
         <ol id="lesson-list" class="lesson-list"></ol>
@@ -112,6 +121,7 @@
         <section id="lesson" class="lesson" aria-live="polite">
           <div class="lesson-heading" id="lesson-heading">
             <p id="lesson-level" class="eyebrow"></p>
+            <p id="lesson-band" class="band-badge" hidden></p>
             <h2 id="lesson-title"></h2>
             <p id="lesson-situation"></p>
             <p id="lesson-review" class="review-badge" hidden>
@@ -503,9 +513,11 @@
     <script src="data/mature.js"></script>
     <script src="data/modules.js"></script>
     <script src="data/study-guide.js"></script>
+        <script src="data/cefr.js"></script>
     <script src="i18n.js"></script>
     <script src="data/flashcards.js"></script>
-    <script src="app.js"></script>
+        <script src="cefr.js"></script>
+        <script src="app.js"></script>
     <script src="srs.js"></script>
     <script src="progress.js"></script>
     <script src="workbook.js"></script>
