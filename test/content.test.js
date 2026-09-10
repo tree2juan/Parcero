@@ -7,6 +7,7 @@ const vm = require("node:vm");
 const root = path.join(__dirname, "..");
 const read = (file) => fs.readFileSync(path.join(root, file), "utf8");
 const { dataSource } = require("./data-source.js");
+const { wrongLanguage } = require("../scripts/prose-language.js");
 
 const bundle = `${dataSource()}\n({ lessons, curriculum, fluencyItems, matureItems, matureSignals, slangItems, schema: ParceroLessonSchema });`;
 const { lessons, curriculum, fluencyItems, matureItems, matureSignals, slangItems, schema } = vm.runInNewContext(bundle, {}, { filename: "parcero-data-bundle.js" });
@@ -634,4 +635,30 @@ test("practiceExtra questions hold the same shape guarantees as the main one", (
   assert.deepStrictEqual(outOfRange, [], "choices and answer are a pair; answer indexes into choices");
   assert.deepStrictEqual(towering, [], "lengthen the distractors rather than trimming the answer");
   assert.deepStrictEqual(filler, [], "a distractor nobody could pick is not a distractor");
+});
+
+/*
+ * Every explanatory field is written in the language its reader actually reads.
+ *
+ * This is the one content rule a reviewer cannot spot by reading a diff in the
+ * direction they speak. The `en` direction teaches English to a Colombian, so
+ * its explanations are Spanish and only the English being taught is English;
+ * `es` is the mirror. Eight blocks were authored against a prose description of
+ * that rule and six of them got some part of it wrong, so the rule is checked
+ * by machine here rather than restated in a review checklist.
+ *
+ * `scripts/check-lesson-block.js` runs the same check on a single file so an
+ * author gets the answer before delivering. This test is what stops a later
+ * edit from quietly undoing it.
+ */
+test("explanatory prose is written in the language its reader reads", () => {
+  const wrong = [];
+  for (const lesson of lessons) {
+    for (const direction of directions) {
+      for (const problem of wrongLanguage(lesson[direction], direction)) {
+        wrong.push(`${lesson.id} ${direction}.${problem.trail}: must be ${problem.want}, reads as ${problem.got} - ${JSON.stringify(problem.text.slice(0, 80))}`);
+      }
+    }
+  }
+  assert.deepStrictEqual(wrong, [], "rewrite the field in the language named, rather than relaxing the check");
 });

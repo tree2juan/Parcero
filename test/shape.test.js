@@ -228,6 +228,28 @@ test("every lesson names a curriculum verb it is built on", () => {
   }
 });
 
+/*
+ * A lesson's level label has to agree with the curriculum tier of the verb it
+ * teaches. `level` is a free-form display string, so nothing stopped a lesson
+ * for an `independent` verb from calling itself "Starter"; with one lesson per
+ * verb across three tiers that would quietly turn the level system into
+ * decoration. The eight original lessons declare no verb and are exempt.
+ */
+test("a lesson's level agrees with the curriculum tier of its verb", () => {
+  const label = { foundation: "Starter", independent: "Developing", extension: "Extending" };
+  const tierOf = new Map(curriculum.map((entry) => [entry.spanish, entry.level]));
+  const wrong = [];
+  for (const lesson of lessons) {
+    if (!lesson.verb) continue;
+    const want = label[tierOf.get(lesson.verb)];
+    const got = String(lesson.level || "").split("·")[0].trim();
+    if (want && got !== want) {
+      wrong.push(`${lesson.id}: "${lesson.verb}" is ${tierOf.get(lesson.verb)}, so level must start "${want} · ", not ${JSON.stringify(lesson.level)}`);
+    }
+  }
+  assert.deepStrictEqual(wrong, [], "relabel the lesson rather than loosening the tiers");
+});
+
 test("no two lessons claim the same verb", () => {
   const seen = new Map();
   for (const lesson of lessons) {
@@ -241,6 +263,29 @@ test("no two lessons claim the same verb", () => {
   }
 });
 
+/*
+ * Verbs whose real stems cannot be derived from the infinitive by rule. Colombian
+ * dialogue reaches for the strong preterite constantly -- "dijo", "hizo", "tuve",
+ * "puse" -- so a lesson can teach "decir" thoroughly without any form that starts
+ * "dec". Listing them beats exempting them, which would switch the check off.
+ */
+const STRONG_STEMS = {
+  decir: ["dij", "dic", "dig"],
+  hacer: ["hic", "hiz", "hag"],
+  tener: ["tuv", "tien", "teng"],
+  poder: ["pud", "pued"],
+  poner: ["pus", "pon", "pong"],
+  saber: ["sup", "sep"],
+  querer: ["quis", "quier"],
+  venir: ["vin", "vien", "veng"],
+  traer: ["traj", "traig"],
+  conducir: ["conduj", "conduzc"],
+  conocer: ["conozc", "conoc"],
+  seguir: ["sig", "sigu"],
+  oír: ["oig", "oy"],
+  jugar: ["jueg", "jug"],
+};
+
 test("a lesson's declared verb is actually spoken in its dialogue", () => {
   /*
    * Declaring the verb is cheap; teaching it is not. A lesson could name
@@ -249,18 +294,38 @@ test("a lesson's declared verb is actually spoken in its dialogue", () => {
    * because the dialogue will nearly always carry a conjugated form -- "soy",
    * "conduzco" -- not the infinitive.
    */
-  const stem = (verb) => verb.replace(/se$/, "").replace(/[aeiouáéíóú]?[rn]$/, "").slice(0, 4).toLowerCase();
+  /*
+   * Colombian speech is full of stem-changing verbs, and the changed stem is
+   * usually the only one a dialogue ever says: "poder" shows up as "puede",
+   * never as "pod". Matching the infinitive's root alone would fail every
+   * o->ue, e->ie, e->i and u->ue verb in the curriculum, so accept the
+   * diphthongised stems too.
+   */
+  const stems = (verb) => {
+    const root = verb.replace(/se$/, "").replace(/[aeiouáéíóú]?[rn]$/, "").toLowerCase();
+    if (!root) return [];
+    const variants = new Set([root, ...(STRONG_STEMS[verb] || [])]);
+    const swap = (from, to) => {
+      const at = root.lastIndexOf(from);
+      if (at !== -1) variants.add(root.slice(0, at) + to + root.slice(at + from.length));
+    };
+    swap("o", "ue");
+    swap("e", "ie");
+    swap("e", "i");
+    swap("u", "ue");
+    return [...variants].map((variant) => variant.slice(0, 4));
+  };
   for (const lesson of lessons) {
     if (!lesson.verb) continue;
     const spoken = (lesson.es?.dialogue || [])
       .map((line) => (typeof line === "string" ? line : line.target || ""))
       .join(" ")
       .toLowerCase();
-    const root = stem(lesson.verb);
+    const roots = stems(lesson.verb);
     const irregular = /^(ser|ir|estar|haber|ver|dar)$/.test(lesson.verb);
     assert.ok(
-      irregular || (root && spoken.includes(root)),
-      `lesson ${lesson.id} claims "${lesson.verb}" but no dialogue line contains "${root}"`);
+      irregular || roots.some((root) => spoken.includes(root)),
+      `lesson ${lesson.id} claims "${lesson.verb}" but no dialogue line contains any of ${roots.join(", ")}`);
   }
 });
 

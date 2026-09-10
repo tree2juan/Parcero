@@ -138,10 +138,21 @@ function completePlacement() {
   renderPlacement();
 }
 function renderLessonList() {
+  /*
+   * The meta line carries the verb as well as the level. The curriculum is
+   * anchored one lesson per verb, so the verb is the thing a learner looks a
+   * lesson up by -- and four lessons are legitimately titled after a different
+   * verb than they teach, because the title describes the situation and the
+   * situation belongs to whoever is speaking. "Aprender a hacer ajiaco" is the
+   * enseñar lesson: the reader is the one being taught. Without the verb shown,
+   * that title sits in the list looking like the aprender lesson, which has its
+   * own entry.
+   */
   $("#lesson-list").innerHTML = lessons.map((item, index) => {
     const done = state.completed.has(item.id);
     const active = item.id === state.lessonId;
-    return `<li><button class="lesson-link${active ? " active" : ""}" type="button" data-lesson="${item.id}" aria-current="${active ? "true" : "false"}"><span class="lesson-link-index">${index + 1}</span><span class="lesson-link-body"><strong>${item[state.direction].title}</strong><span class="lesson-link-meta">${item.level}</span></span><span class="lesson-link-state">${done ? t("lesson.explored") : ""}</span></button></li>`;
+    const meta = item.verb ? `${item.level} · ${item.verb}` : item.level;
+    return `<li><button class="lesson-link${active ? " active" : ""}" type="button" data-lesson="${item.id}" aria-current="${active ? "true" : "false"}"><span class="lesson-link-index">${index + 1}</span><span class="lesson-link-body"><strong>${item[state.direction].title}</strong><span class="lesson-link-meta">${meta}</span></span><span class="lesson-link-state">${done ? t("lesson.explored") : ""}</span></button></li>`;
   }).join("");
 }
 function selectLesson(id) {

@@ -48,7 +48,17 @@ try {
 
 const { lessons, curriculum, schema } = loaded;
 const known = new Set(curriculum.map((entry) => entry.spanish));
+const tierOf = new Map(curriculum.map((entry) => [entry.spanish, entry.level]));
 const directions = ["es", "en"];
+
+/*
+ * A lesson's level label has to agree with the curriculum tier of the verb it
+ * teaches. `level` is a free-form display string, so nothing stopped a lesson
+ * for an `independent` verb from calling itself "Starter"; with one lesson per
+ * verb across three tiers, that would quietly turn the whole level system into
+ * decoration. The eight original lessons declare no verb and are unaffected.
+ */
+const TIER_LABEL = { foundation: "Starter", independent: "Developing", extension: "Extending" };
 
 /*
  * The stamp that tells the review tooling which file to send a native speaker
@@ -92,6 +102,13 @@ for (const lesson of lessons) {
   }
   if (lesson.verb && !known.has(lesson.verb)) {
     fail(`${at}: the verb "${lesson.verb}" is not in data/curriculum.js`);
+  }
+  if (lesson.verb && known.has(lesson.verb)) {
+    const want = TIER_LABEL[tierOf.get(lesson.verb)];
+    const got = String(lesson.level || "").split("·")[0].trim();
+    if (want && got !== want) {
+      fail(`${at}: "${lesson.verb}" is a ${tierOf.get(lesson.verb)} verb, so level must start with "${want} · ", not ${JSON.stringify(lesson.level)}`);
+    }
   }
 
   for (const direction of directions) {
@@ -154,11 +171,30 @@ for (const lesson of lessons) {
         continue;
       }
       answerSpread.set(question.answer, (answerSpread.get(question.answer) || 0) + 1);
+      /*
+       * Length has to be checked in both directions. An answer that towers over
+       * its distractors is guessable, but so is one that is conspicuously
+       * shorter -- which is what happens when the distractors carry the
+       * explanation of why they are wrong ("Veo el cuadro, que en realidad
+       * significa...") and the right answer is left as a bare form. Choices
+       * must be the same kind of thing as each other: all bare forms, or all
+       * explanations. The teaching point belongs in `tests`, which the page
+       * renders next to the question.
+       */
       const lengths = choices.map((choice) => choice.length);
-      const rival = Math.max(...lengths.filter((_, index) => index !== question.answer));
-      if (lengths[question.answer] > rival * 1.5) {
-        fail(`${question.at}: the correct choice is ${lengths[question.answer]} characters against a `
-          + `longest distractor of ${rival}. Lengthen the distractors rather than trimming the answer.`);
+      const others = lengths.filter((_, index) => index !== question.answer);
+      const answerLength = lengths[question.answer];
+      const longest = Math.max(...others);
+      const shortest = Math.min(...others);
+      if (answerLength > longest * 1.5) {
+        fail(`${question.at}: the correct choice is ${answerLength} characters against a `
+          + `longest distractor of ${longest}. Make the choices comparable in length and kind.`);
+      }
+      if (answerLength * 1.5 < shortest) {
+        fail(`${question.at}: the correct choice is only ${answerLength} characters against a `
+          + `shortest distractor of ${shortest}, so it can be picked out by shape alone. Do not `
+          + `pad the distractors with the reason they are wrong -- strip them back to bare `
+          + `alternatives and put the teaching point in "tests".`);
       }
     }
 
