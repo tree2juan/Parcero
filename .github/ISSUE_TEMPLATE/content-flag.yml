@@ -13,9 +13,6 @@ body:
         lesson, pick what is wrong, then **Open a GitHub issue with these**. Everything below
         is filled in for you, including the machine-readable block at the end.
 
-        Reviewing a whole lesson and signing it off instead? Use the
-        [Lesson review](https://github.com/tree2juan/Parcero/issues/new?template=lesson-review.yml) form.
-
   - type: dropdown
     id: role
     attributes:

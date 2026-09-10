@@ -1,11 +1,14 @@
 // GENERATED FILE — do not hand-edit.
 //
-// Which lesson fields hold machine translation awaiting a native speaker.
-// Written by the same run that applies a translation, so the record cannot
-// drift from the content. `review: "pending"` is per-lesson and already on
-// for every lesson, so it cannot say which *fields* are unverified.
+// Which lesson fields hold machine translation. Written by the same run that
+// applies a translation, so the record cannot drift from the content.
+//
+// This is no longer loaded by the page. It is kept as build-time metadata: the
+// coverage check in test/provenance.test.js walks every string a lesson renders
+// and requires each one to be either recorded here or argued out by slot, which
+// is what caught `title` and `situation` shipping untranslated.
 const provenance = {
-  "status": "machine-translated, pending native review",
+  "status": "machine-translated",
   "fields": {
     "greeting-at-the-cafe": {
       "en": [

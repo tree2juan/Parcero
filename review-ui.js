@@ -508,7 +508,6 @@
   });
 
   $("#lesson-review-start").addEventListener("click", openReportTab);
-  $("#lesson-provenance-start").addEventListener("click", openReportTab);
   $("#footer-report-link").addEventListener("click", (event) => {
     event.preventDefault();
     openReportTab();
