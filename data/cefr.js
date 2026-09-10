@@ -548,25 +548,48 @@ const CEFR_FEATURES = {
       id: "es-concession-subjunctive",
       band: "B2",
       name: "Conceding a point",
-      /* The plural forms were missing until a lesson wrote "aunque hayan
-         pasado dos semanas" and the probe did not see it. A concession is no
-         less a concession for having a plural subject, so every form here is
-         paired with its own plural, and the `no` list now includes the
-         indicative plurals that must keep failing: "aunque están" and "aunque
-         son" are not concessions, and an accent is the only thing separating
-         them from "estén" and "sean". */
-      probe: "\\baunque\\s+(sea|sean|est[ée]|est[ée]n|tenga|tengan|pueda|puedan|haya|hayan|venga|vengan|quiera|quieran|fuera|fueran|tuviera|tuvieran)\\b",
+      /* This probe has been wrong in both directions, so it is worth saying
+         what it is now doing.
+
+         It missed things. The plural forms were absent until a lesson wrote
+         "aunque hayan pasado dos semanas". Negated concessions ("aunque no
+         sea") were absent entirely, though they are as common as the plain
+         kind. And the verb list was nine verbs long, so "aunque llueva",
+         "aunque vaya", "aunque haga frio" were all invisible.
+
+         It also claimed things it should not have. "est[ée]" matched the
+         demonstrative in "aunque este mes fue duro" -- although THIS MONTH was
+         hard -- which is not a subjunctive at all. Estar is therefore spelled
+         out below with its accent required and a person ending demanded, so
+         bare "este" can no longer get in.
+
+         The verb list is still a list, and that is a real limit: Spanish marks
+         the subjunctive by swapping the -ar and -er/-ir endings, so no regex
+         can tell "aunque trabaje" from "aunque trabaja" without knowing which
+         conjugation the verb belongs to. What the list covers is the irregular
+         and stem-changing verbs, where the subjunctive form is not a valid
+         indicative of anything and can be matched safely. Impossible forms
+         like "puedamos" are allowed through by the shared person endings; they
+         cost nothing, because no corpus will ever contain them. */
+      probe: "\\baunque\\s+(?:no\\s+)?(?:(?:sea|tenga|pueda|poda|haya|venga|quiera|quera|vaya|haga|diga|sepa|salga|ponga|traiga|vea|oiga|valga|caiga|sirva|pida|siga|consiga|parezca|conozca|merezca|quepa|llueva|cueste|vuelva|pierda|entienda|encuentre|recuerde|duerma|muera|d[ée])(?:s|n|mos)?|est[ée](?:s|n|mos)|est\u00e9\\b|(?:fue|tuvie|hubie|pudie|dije|hicie|vinie|estuvie|supie|quisie|pusie|traje|die|vie)(?:ra|ran|ramos|se|sen|semos)|\\w{3,}(?:ara|aran|\u00e1ramos|iera|ieran|i\u00e9ramos|ase|asen|iese|iesen))\\b",
       yes: [
         "Aunque sea difícil, lo haré.",
         "Aunque tenga razón, no me gusta.",
         "Aunque hayan pasado dos semanas, sigue igual.",
-        "Aunque estén cerrados, vale la pena ir."
+        "Aunque estén cerrados, vale la pena ir.",
+        "Aunque no sea difícil, lo reviso igual.",
+        "Aunque hayamos salido tarde, alcanzamos.",
+        "Aunque llueva, salimos.",
+        "Aunque haga frío, vamos.",
+        "Aunque llegara tarde, la esperamos."
       ],
       no: [
         "Aunque llueve, salgo.",
         "Aunque es difícil, lo haré.",
         "Aunque están cerrados, vale la pena ir.",
-        "Aunque son difíciles, los hago."
+        "Aunque son difíciles, los hago.",
+        "Aunque este mes fue duro, seguimos.",
+        "Aunque para mí no cambia nada, lo entiendo."
       ]
     },
 
@@ -1002,9 +1025,20 @@ const CEFR_FEATURES = {
       band: "B1",
       name: "Las coletillas interrogativas",
       /* Spanish has one invariable tag, "¿no?"; English rebuilds it from the
-         auxiliary and the subject every time. One line in the whole corpus. */
-      probe: ",\\s*(is|are|was|were|do|does|did|can|could|will|would|have|has|isn't|aren't|wasn't|weren't|don't|doesn't|didn't|can't|couldn't|won't|wouldn't|haven't|hasn't)\\s+(i|you|he|she|it|we|they)\\s*\\?",
-      yes: ["You're coming, aren't you?", "It's hot, isn't it?", "Turn the music up, would you?"],
+         auxiliary and the subject every time. That is exactly why the
+         auxiliary list has to be complete: it started with the primary
+         auxiliaries only, so every modal tag -- "shouldn't we?", "mustn't
+         you?", "shall we?" -- was invisible, which is the half of the feature
+         a Spanish speaker finds hardest to build. */
+      probe: ",\\s*(is|are|am|was|were|do|does|did|can|could|will|would|shall|should|must|might|may|have|has|had|need|ought|used|isn't|aren't|wasn't|weren't|don't|doesn't|didn't|can't|couldn't|won't|wouldn't|shan't|shouldn't|mustn't|mightn't|haven't|hasn't|hadn't|needn't|oughtn't|ain't)\\s+(i|you|he|she|it|we|they)\\s*\\?",
+      yes: [
+        "You're coming, aren't you?",
+        "It's hot, isn't it?",
+        "Turn the music up, would you?",
+        "We should call first, shouldn't we?",
+        "Let's go, shall we?",
+        "You've met him, haven't you?"
+      ],
       no: ["Are you coming?", "It's hot, right?"]
     },
 
@@ -1065,12 +1099,45 @@ const CEFR_FEATURES = {
       id: "en-result-degree",
       band: "B2",
       name: "Tan, demasiado y suficiente",
-      /* Three lines in the corpus. The trap for a Spanish speaker is that
-         "tan ... que" becomes "so ... that" but "tanto" splits into so/such,
-         and "demasiado para" becomes "too ... to", not "too ... for". */
-      probe: "\\bso\\s+\\w+\\s+that\\b|\\bsuch\\s+(?:a|an)?\\s*\\w+\\s+that\\b|\\btoo\\s+\\w+\\s+to\\s+\\w+\\b|\\b\\w+\\s+enough\\s+to\\s+\\w+\\b",
-      yes: ["It was so hot that we left.", "It's too far to walk.", "The sample isn't broad enough to support that."],
-      no: ["It's too hot.", "That's enough."]
+      /* The trap for a Spanish speaker is that "tan ... que" becomes "so ...
+         that" but "tanto" splits into so/such, and "demasiado para" becomes
+         "too ... to", not "too ... for".
+
+         The quantifier branch is the one that was missing: "so many people
+         that we left" puts two words between "so" and "that", so the plain
+         "so + word + that" branch stepped over it -- and that is precisely the
+         "tanto" half the feature exists to teach.
+
+         It is not simply "so + two words + that", because that swallows the
+         discourse marker in "so we agreed that" and "so I told him that",
+         which are not degree at all. Requiring one of the four quantifiers
+         does most of the work, and the two exclusions handle what it lets
+         through: "so much for that" is a set phrase, "I know so much about
+         that topic" is a quantity with a preposition, and "so much better than
+         that" is a comparison. None of the three states a result. */
+      probe: "\\bso\\s+\\w+\\s+that\\b|\\bso\\s+(?:many|much|few|little)\\s+(?!for\\b|about\\b)\\w+(?:\\s+(?!than\\b)\\w+)?\\s+that\\b|\\bsuch\\s+(?:a|an)?\\s*\\w+\\s+that\\b|\\btoo\\s+\\w+\\s+to\\s+\\w+\\b|\\b\\w+\\s+enough\\s+to\\s+\\w+\\b",
+      yes: [
+        "It was so crowded that we left.",
+        "There were so many people that we left.",
+        "So many people came that we left.",
+        "There was so much noise that I left.",
+        "There is so much to do that I can't start.",
+        "It was too crowded to move.",
+        "It's too far to walk.",
+        "The sample isn't broad enough to support that.",
+        "It is early enough to catch it."
+      ],
+      no: [
+        "It was so crowded.",
+        "It was very crowded that day.",
+        "So we agreed that it was fine.",
+        "So I told him that already.",
+        "So much for that.",
+        "I know so much about that topic.",
+        "It's so much better than that.",
+        "It's too hot.",
+        "That's enough."
+      ]
     },
     {
       id: "en-wish",

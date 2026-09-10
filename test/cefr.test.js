@@ -315,8 +315,19 @@ test("opening every lesson proves nothing", () => {
 });
 
 test("answering the whole course well reaches the top band the course teaches", () => {
+  /* B2, not C1. The course teaches all nine B2 features to the floor and none
+     of the three C1 ones, so C1 is not a band a learner can be awarded here --
+     even though two Spanish lessons happen to band C1 on an incidental future
+     perfect. Attainment asks coverage that question now, which is what stops
+     the two measures in cefr.js from contradicting each other. */
   const result = cefr.attainment(lessons, "es", () => 1);
-  assert.strictEqual(result.reached, "C1", "C2 is not taught, so it cannot be reached");
+  assert.strictEqual(result.reached, "B2", "C1 is not taught, so it cannot be reached");
+
+  const c1 = result.bands.find((b) => b.band === "C1");
+  assert.ok(c1.lessons > 0, "the fixture for this test is that C1 has lessons but is not taught");
+  assert.strictEqual(c1.taught, false, "a band the course does not teach must say so");
+  assert.strictEqual(c1.met, false, "a band that is not taught cannot be met");
+
   const c2 = result.bands.find((b) => b.band === "C2");
   assert.strictEqual(c2.taught, false, "a band the course does not teach must say so");
   assert.strictEqual(c2.met, false);
@@ -346,6 +357,36 @@ test("a band needs most of its lessons, not one", () => {
   const scoreOf = () => (given++ < 3 ? 1 : 0);
   const result = cefr.attainment(made, "es", scoreOf, { minimum: 3 });
   assert.strictEqual(result.reached, null, "three right answers is not a band");
+
+  /* Assert the threshold itself, not just the null. Ten copies of one sentence
+     also fail the taught check -- they teach one A1 feature out of fourteen --
+     so `reached` would now be null even if the count were wrong. `needed` is
+     computed either way, and it is the number this test is really about. */
+  const a1 = result.bands.find((b) => b.band === "A1");
+  assert.strictEqual(a1.lessons, 10);
+  assert.strictEqual(a1.strong, 3, "three lessons were answered well");
+  assert.strictEqual(a1.needed, 8, "three quarters of ten, not the minimum of three");
+});
+
+test("a band the course does not teach cannot be awarded", () => {
+  /* Ten lessons, all in C1, all answered perfectly -- and C1 is still not
+     awarded, because they demonstrate one of the three C1 features and coverage
+     reports the other two as untaught. This is the rule that stopped the two
+     measures in cefr.js from contradicting each other in public: the real
+     corpus had exactly this shape at C1, with two lessons carrying an
+     incidental future perfect, and attainment handed out the band anyway. */
+  const corpus = [];
+  for (let i = 0; i < 10; i += 1) {
+    corpus.push(lessonWith("es", ["Habrá terminado para el viernes."]));
+  }
+  assert.strictEqual(cefr.lessonBand(corpus[0], "es").band, "C1", "the fixture must sit in C1");
+
+  const result = cefr.attainment(corpus, "es", () => 1);
+  const c1 = result.bands.find((b) => b.band === "C1");
+  assert.strictEqual(c1.lessons, 10, "the lessons are there");
+  assert.strictEqual(c1.strong, 10, "and every one of them was answered well");
+  assert.strictEqual(c1.taught, false, "one feature out of three is not a band");
+  assert.strictEqual(c1.met, false, "so it cannot be met, however well it was answered");
 });
 
 test("the report explains itself for every band", () => {

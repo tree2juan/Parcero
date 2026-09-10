@@ -304,6 +304,28 @@
   }
 
   /*
+   * Same reasoning as bandCache, one level up. attainment is recomputed on
+   * every render and every practice answer, and it now needs a coverage report
+   * to know which bands the course teaches. Coverage runs every probe over
+   * every lesson, so recomputing it per keystroke is the kind of cost the
+   * band cache was added to avoid. Keyed on the array itself, so there is
+   * nothing to invalidate.
+   */
+  const coverageCache = new WeakMap();
+
+  function coverageFor(lessons, direction, floor) {
+    if (!lessons || typeof lessons !== "object") return coverage(lessons, direction, { floor });
+    let entry = coverageCache.get(lessons);
+    if (!entry) {
+      entry = {};
+      coverageCache.set(lessons, entry);
+    }
+    const key = (direction === "en" ? "en" : "es") + ":" + floor;
+    if (!entry[key]) entry[key] = coverage(lessons, direction, { floor });
+    return entry[key];
+  }
+
+  /*
    * The band a learner has evidence for.
    *
    * Coverage is not attainment: opening every B1 lesson proves nothing. A band
@@ -311,12 +333,30 @@
    * enough, which is why this takes a scorer rather than a list of visited
    * ids. Bands are also cumulative — B1 with A2 unproven is not B1 — so the
    * walk stops at the first band that fails.
+   *
+   * A band also has to be one the course teaches. This used to ask only
+   * whether any lesson had landed in the band, and that let the two measures
+   * in this file contradict each other: coverage reported Spanish C1 as 0 of 3
+   * features taught, while attainment handed a perfect learner C1 anyway,
+   * because two lessons happened to contain a future perfect and a past
+   * si-clause. Two incidental sentences are not a C1 syllabus, and telling
+   * somebody they have reached C1 on that evidence is the exact overstatement
+   * this file exists to prevent. `taught` now asks coverage instead.
    */
   function attainment(lessons, direction, scoreOf, options) {
     const opts = options || {};
     const pass = typeof opts.pass === "number" ? opts.pass : 0.8;
     const share = typeof opts.share === "number" ? opts.share : 0.75;
     const minimum = typeof opts.minimum === "number" ? opts.minimum : 3;
+    const floor = typeof opts.floor === "number" ? opts.floor : 5;
+
+    const covered = coverageFor(lessons, direction, floor);
+    /* Most of a band's features, not one of them: English C1 would otherwise
+       count as taught on the strength of cleft sentences alone. */
+    const teaches = (band) => {
+      const group = covered.bands[band];
+      return Boolean(group) && group.total > 0 && group.met * 2 >= group.total;
+    };
 
     const byBand = {};
     for (const band of BANDS) byBand[band] = [];
@@ -338,7 +378,10 @@
          with a perfect score — a threshold nobody could ever cross, which is
          the same defect as a guard that can never fire. */
       const needed = Math.max(Math.min(minimum, group.length), Math.ceil(group.length * share));
-      const met = group.length > 0 && strong >= needed;
+      /* A band nobody can reach because the course does not teach it is not
+         a failure by the learner, and must not be reported as one. */
+      const taught = group.length > 0 && teaches(band);
+      const met = taught && strong >= needed;
 
       report.push({
         band,
@@ -347,9 +390,7 @@
         strong,
         needed,
         met,
-        /* A band nobody can reach because the course does not teach it is not
-           a failure by the learner, and must not be reported as one. */
-        taught: group.length > 0
+        taught
       });
 
       if (!stopped && met) reached = band;
