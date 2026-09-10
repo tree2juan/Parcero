@@ -540,6 +540,15 @@ main, footer { max-width: var(--wrap); margin: auto; padding-inline: 1.5rem; }
 .deck-footer { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem; }
 .deck-help { max-width: 34rem; margin: 0; color: var(--ink-soft); font-size: .88rem; }
 
+.deck-guide {
+  margin-top: 1.5rem; padding: 1.15rem 1.35rem;
+  border: 1px solid var(--line); border-radius: var(--radius);
+  background: var(--mist);
+}
+.deck-guide-title { margin: 0 0 .55rem; font-size: .95rem; }
+.deck-guide-steps { margin: 0; padding-left: 1.2rem; display: grid; gap: .4rem; }
+.deck-guide-steps li { color: var(--ink-soft); font-size: .88rem; line-height: 1.5; }
+
 /* ---------- Placement ---------- */
 
 .assessment-card {

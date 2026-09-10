@@ -291,9 +291,18 @@ function flashcardsFromLesson(lesson, direction) {
 }
 
 /*
- * Verbs are drilled productively: you are shown the language you already have
- * and asked for the one you are building, which is the harder direction and
- * the one that actually shows up in conversation.
+ * The card opens in the language the toggle says you are learning, and the
+ * answer is what it means in the language you already have.
+ *
+ * This used to run the other way for verbs and fluency phrases -- known on the
+ * front, target on the back -- on the reasoning that producing the new language
+ * is the harder direction. The problem was that nothing else in the deck agreed:
+ * every card built from a lesson (vocabulary, dialogue, pronunciation, example,
+ * region) already opened on the target. So picking "I want to learn Colombian
+ * Spanish" gave a Spanish prompt for a lesson word and an English one for a
+ * verb, in the same set, with no way to tell which was coming. The toggle now
+ * decides the opening side for every card, which is the thing a learner can
+ * actually predict.
  */
 function flashcardFromVerb(verb, direction) {
   const { target, support } = flashcardLanguages(direction);
@@ -304,10 +313,10 @@ function flashcardFromVerb(verb, direction) {
     id: `${verb.id}/${direction}`,
     kind: "verb",
     askKey: "deck.ask.verb",
-    front: known,
-    frontLang: support,
-    back: learning,
-    backLang: target,
+    front: learning,
+    frontLang: target,
+    back: known,
+    backLang: support,
     note: target === "es" && forms.presentYo
       ? `yo ${forms.presentYo} · ayer ${forms.preteriteYo} · ${forms.participle}`
       : null
@@ -321,10 +330,10 @@ function flashcardFromFluency(item, index, direction) {
     id: `fluency/${index}/${direction}`,
     kind: "fluency",
     askKey: "deck.ask.fluency",
-    front: target === "es" ? english : spanish,
-    frontLang: support,
-    back: target === "es" ? spanish : english,
-    backLang: target,
+    front: target === "es" ? spanish : english,
+    frontLang: target,
+    back: target === "es" ? english : spanish,
+    backLang: support,
     note: `${note} (${type} · ${region})`
   };
 }

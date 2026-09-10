@@ -183,11 +183,104 @@ test("the direction decides which language is asked for and which is recalled", 
     const verbs = flashcardTopics(direction, sources).find((topic) => topic.groupKey === "deck.group.verbs");
     const [card] = verbs.cards;
     const verb = curriculum[0];
-    assert.strictEqual(card.back, direction === "es" ? verb.spanish : verb.english);
-    assert.strictEqual(card.front, direction === "es" ? verb.english : verb.spanish);
-    assert.strictEqual(card.backLang, direction);
-    assert.strictEqual(card.frontLang, other);
+    assert.strictEqual(card.front, direction === "es" ? verb.spanish : verb.english);
+    assert.strictEqual(card.back, direction === "es" ? verb.english : verb.spanish);
+    assert.strictEqual(card.frontLang, direction);
+    assert.strictEqual(card.backLang, other);
   }
+});
+
+/*
+ * The toggle at the top of the page says which language you are learning, so
+ * that is the language every card has to open in. The deck did not used to do
+ * this: cards built from a lesson opened on the language being learned, while
+ * verb and fluency cards opened on the language the learner already had. Both
+ * turn up in the same sitting, so the opening side changed depending on where
+ * the card happened to come from -- which the learner has no way to see coming.
+ *
+ * The first version of this check only looked at cards that tag both sides, and
+ * that silently skipped more than half the deck: vocabulary, pronunciation and
+ * region tag only the front, pitfall and variation only the back. It is written
+ * against every tagged side now.
+ */
+test("every card opens in the language being learned", () => {
+  // The context card is the one deliberate exception. It shows a scene and then
+  // a note about it, both written in the language the learner already has, so
+  // there is no version of it that could open in the language being learned.
+  const opensInSupport = new Set(["context"]);
+  const kinds = new Set();
+  let checked = 0;
+  for (const direction of directions) {
+    const support = direction === "es" ? "en" : "es";
+    for (const topic of flashcardTopics(direction, sources)) {
+      for (const card of topic.cards) {
+        if (!card.frontLang) continue;
+        const expected = opensInSupport.has(card.kind) ? support : direction;
+        assert.strictEqual(
+          card.frontLang,
+          expected,
+          `a ${card.kind} card opens in ${card.frontLang} when the learner asked to learn ${direction}: "${card.front}"`
+        );
+        kinds.add(card.kind);
+        checked += 1;
+      }
+    }
+  }
+  assert.ok(checked > 1000, `only ${checked} cards declared a front language, so this guard is not seeing the deck`);
+  assert.deepStrictEqual(
+    [...kinds].sort(),
+    ["context", "example", "fluency", "meaning", "pronunciation", "region", "verb", "vocabulary"],
+    "a card kind started or stopped declaring a front language -- confirm it opens in the language being learned"
+  );
+});
+
+/*
+ * Which language sits on each side of each card kind, held as a table so that
+ * changing any of it has to be deliberate. Read it as: when you are learning
+ * `direction`, a card of this kind is tagged this way. `none` means the side is
+ * prose in the language the learner already has and carries no lang attribute.
+ */
+test("the language on each side of each card kind is what it was signed off as", () => {
+  const actual = [];
+  const seen = new Set();
+  for (const direction of directions) {
+    for (const topic of flashcardTopics(direction, sources)) {
+      for (const card of topic.cards) {
+        const row = `learning ${direction}: ${card.kind} = ${card.frontLang || "none"} / ${card.backLang || "none"}`;
+        if (seen.has(row)) continue;
+        seen.add(row);
+        actual.push(row);
+      }
+    }
+  }
+  assert.deepStrictEqual(actual.sort(), [
+    "learning en: address = none / none",
+    "learning en: context = es / none",
+    "learning en: culture = none / none",
+    "learning en: example = en / es",
+    "learning en: fluency = en / es",
+    "learning en: meaning = en / es",
+    "learning en: pitfall = none / en",
+    "learning en: practice = none / none",
+    "learning en: pronunciation = en / none",
+    "learning en: region = en / none",
+    "learning en: variation = none / en",
+    "learning en: verb = en / es",
+    "learning en: vocabulary = en / none",
+    "learning es: address = none / none",
+    "learning es: context = en / none",
+    "learning es: culture = none / none",
+    "learning es: example = es / en",
+    "learning es: fluency = es / en",
+    "learning es: meaning = es / en",
+    "learning es: pitfall = none / es",
+    "learning es: practice = none / none",
+    "learning es: pronunciation = es / none",
+    "learning es: region = es / none",
+    "learning es: variation = none / es",
+    "learning es: verb = es / en",
+    "learning es: vocabulary = es / none"
+  ]);
 });
 
 /*
@@ -533,7 +626,7 @@ test("the English fallback says the same thing as the table it stands in for", (
 test("the flashcards section is marked up for translation", () => {
   const html = read("index.html");
   const section = html.slice(html.indexOf('id="flashcards"'), html.indexOf('id="placement"'));
-  const untranslated = [...section.matchAll(/<(h2|h3|p|span|button|strong)\b([^>]*)>([^<]+)</g)]
+  const untranslated = [...section.matchAll(/<(h2|h3|h4|p|span|button|strong|li)\b([^>]*)>([^<]+)</g)]
     .filter(([, , attrs, text]) => text.trim() && !attrs.includes("data-i18n"))
     .map(([, tag, , text]) => `<${tag}> ${text.trim()}`);
   assert.deepStrictEqual(untranslated, [], "authored text in the flashcards section needs a data-i18n key");
