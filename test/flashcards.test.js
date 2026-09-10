@@ -935,3 +935,44 @@ test("every derived card carries a stable, unique id", () => {
     }
   }
 });
+
+test("no two decks in a group present themselves with the same name", () => {
+  /*
+   * A topic that splits into several decks distinguishes them with a level -
+   * "Verbs · Foundation", "Slang · Understand only". The level reaches the
+   * label only if the title string has a {level} placeholder to put it in.
+   * Forget that and the picker shows three entries all called "Slang", which is
+   * not a cosmetic problem: the reader cannot tell which deck they are choosing,
+   * and for slang the thing they cannot tell apart is how risky it is to say.
+   */
+  const { UI_STRINGS } = require(path.join(root, "i18n.js"));
+  for (const language of ["en", "es"]) {
+    for (const direction of directions) {
+      const topics = flashcardTopics(direction, openSources);
+      const rendered = topics.map((topic) => {
+        if (!topic.titleKey) return topic.title;
+        const template = UI_STRINGS[language][topic.titleKey];
+        const level = (topic.levelKey && UI_STRINGS[language][topic.levelKey]) || topic.level || "";
+        return String(template).replace("{level}", level);
+      });
+      assert.deepStrictEqual(
+        duplicates(rendered), [],
+        `${language}/${direction}: two decks are labelled identically`);
+    }
+  }
+});
+
+test("a deck that carries a level uses it in its name", () => {
+  const { UI_STRINGS } = require(path.join(root, "i18n.js"));
+  for (const topic of flashcardTopics("es", openSources)) {
+    if (!topic.levelKey) continue;
+    for (const language of ["en", "es"]) {
+      assert.match(
+        String(UI_STRINGS[language][topic.titleKey]), /\{level\}/,
+        `${language}: ${topic.titleKey} takes a level but never shows it`);
+      assert.ok(
+        UI_STRINGS[language][topic.levelKey],
+        `${language}: ${topic.levelKey} is missing, so the deck would name itself in English`);
+    }
+  }
+});
