@@ -34,51 +34,61 @@
         </span>
       </a>
       <nav class="site-nav" data-i18n-aria="nav.sections" aria-label="Sections">
-        <a href="#lessons" data-i18n="nav.lessons">Lessons</a>
-        <a href="#flashcards" data-i18n="nav.flashcards">Flashcards</a>
-        <a href="#placement" data-i18n="nav.placement">Placement</a>
-        <a href="#library" data-i18n="nav.library">Library</a>
-        <a href="#workbook" data-i18n="nav.workbook">Workbook</a>
-        <a class="nav-repo" href="https://github.com/tree2juan/Parcero" data-i18n="nav.github">GitHub</a>
+        <div class="site-nav-links">
+          <a href="#lessons" data-i18n="nav.lessons">Lessons</a>
+          <a href="#flashcards" data-i18n="nav.flashcards">Flashcards</a>
+          <a href="#placement" data-i18n="nav.placement">Placement</a>
+          <a href="#library" data-i18n="nav.library">Library</a>
+          <a href="#workbook" data-i18n="nav.workbook">Workbook</a>
+          <a href="#after-dark" data-i18n="nav.afterDark">After Dark</a>
+        </div>
+        <div class="nav-modules">
+          <button id="modules-button" class="nav-modules-button" type="button" aria-expanded="false" aria-haspopup="true" aria-controls="modules-menu">
+            <span data-i18n="nav.modules">Modules</span><span class="nav-caret" aria-hidden="true"></span>
+          </button>
+          <div id="modules-menu" class="nav-modules-menu" role="menu" hidden>
+            <div class="modules-search">
+              <input id="modules-filter" type="search" autocomplete="off" spellcheck="false"
+                     data-i18n-placeholder="nav.modulesFilter" placeholder="Filter lessons"
+                     data-i18n-aria="nav.modulesFilter" aria-label="Filter lessons">
+            </div>
+            <div id="modules-list" class="modules-list"></div>
+          </div>
+        </div>
       </nav>
-      <button id="reset-progress" class="text-button" type="button" data-i18n="action.reset">Reset progress</button>
+      <fieldset class="direction-picker">
+        <legend>
+          <span lang="en">I want to learn</span>
+          <span lang="es">Quiero aprender</span>
+        </legend>
+        <label>
+          <input type="radio" name="direction" value="es" checked>
+          <span class="direction-option">
+            <strong lang="en">Colombian Spanish</strong>
+            <small lang="es">Español colombiano</small>
+          </span>
+        </label>
+        <label>
+          <input type="radio" name="direction" value="en">
+          <span class="direction-option">
+            <strong lang="es">Inglés</strong>
+            <small lang="en">English</small>
+          </span>
+        </label>
+      </fieldset>
     </header>
 
     <main id="top">
+      <div class="view" id="view-home">
       <section class="hero" aria-labelledby="hero-title">
         <div class="hero-copy">
           <p class="eyebrow" data-i18n="hero.eyebrow">Learn how people actually speak</p>
           <h2 id="hero-title" data-i18n="hero.title">Language belongs in a conversation.</h2>
-          <fieldset class="direction-picker">
-            <legend>
-              <span lang="en">I want to learn</span>
-              <span lang="es">Quiero aprender</span>
-            </legend>
-            <label>
-              <input type="radio" name="direction" value="es" checked>
-              <span class="direction-option">
-                <strong lang="en">Colombian Spanish</strong>
-                <small lang="es">Español colombiano</small>
-              </span>
-            </label>
-            <label>
-              <input type="radio" name="direction" value="en">
-              <span class="direction-option">
-                <strong lang="es">Inglés</strong>
-                <small lang="en">English</small>
-              </span>
-            </label>
-          </fieldset>
           <p class="hero-lead" data-i18n="hero.lead">Explore Colombian Spanish and practical English from either point of view — with context, culture, sound, and practice. Nothing to install, nothing to sign up for, and your progress never leaves this device.</p>
           <div class="hero-actions">
             <a class="primary-button" href="#lessons" data-i18n="hero.start">Start the first lesson</a>
             <a class="ghost-button" href="#placement" data-i18n="hero.placement">Find my level first</a>
           </div>
-          <dl class="hero-stats">
-            <div><dt data-i18n="stats.lessons">Lessons</dt><dd id="stat-lessons">8</dd></div>
-            <div><dt data-i18n="stats.verbs">Verbs</dt><dd id="stat-verbs">200</dd></div>
-            <div><dt data-i18n="stats.cost">Cost</dt><dd data-i18n="stats.free">Free</dd></div>
-          </dl>
         </div>
         <aside class="hero-preview" data-i18n-aria="preview.aria" aria-label="Example of a lesson line">
           <p class="preview-label" data-i18n="preview.label">A line from lesson one</p>
@@ -89,6 +99,36 @@
         </aside>
       </section>
 
+      <nav class="module-hub" data-i18n-aria="hub.aria" aria-label="Modules">
+        <a href="#lessons">
+          <strong data-i18n="hub.lessons.title">Lessons</strong>
+          <span data-i18n="hub.lessons.blurb">Eight guided modules: dialogue, culture, pitfalls and practice.</span>
+          <span class="module-hub-go" data-i18n="hub.open">Open</span>
+        </a>
+        <a href="#flashcards">
+          <strong data-i18n="hub.flashcards.title">Flashcards</strong>
+          <span data-i18n="hub.flashcards.blurb">Drill what you have met, in the language you are learning.</span>
+          <span class="module-hub-go" data-i18n="hub.open">Open</span>
+        </a>
+        <a href="#placement">
+          <strong data-i18n="hub.placement.title">Placement</strong>
+          <span data-i18n="hub.placement.blurb">Not sure where to start? Answer a few questions.</span>
+          <span class="module-hub-go" data-i18n="hub.open">Open</span>
+        </a>
+        <a href="#library">
+          <strong data-i18n="hub.library.title">Library</strong>
+          <span data-i18n="hub.library.blurb">200 verbs and a fluency reference you can look things up in.</span>
+          <span class="module-hub-go" data-i18n="hub.open">Open</span>
+        </a>
+        <a href="#after-dark">
+          <strong data-i18n="hub.afterDark.title">After Dark</strong>
+          <span data-i18n="hub.afterDark.blurb">Strong language, city by city, so you can understand what you hear.</span>
+          <span class="module-hub-go" data-i18n="hub.open">Open</span>
+        </a>
+      </nav>
+      </div>
+
+      <div class="view" id="view-lessons" hidden>
       <section id="lessons" class="lessons-section" aria-labelledby="lesson-nav-title">
         <div class="section-head">
           <p class="eyebrow" data-i18n="lessons.eyebrow">Lessons</p>
@@ -124,14 +164,9 @@
             <p id="lesson-band" class="band-badge" hidden></p>
             <h2 id="lesson-title"></h2>
             <p id="lesson-situation"></p>
-            <p id="lesson-review" class="review-badge" hidden>
-              <span data-i18n="review.pendingLesson">No Colombian native speaker has signed this lesson off yet, so the regional wording may still change.</span>
+            <p id="lesson-review" class="review-badge">
+              <span data-i18n="review.lessonInvite">Does anything here not match how you hear it in Colombia?</span>
               <button id="lesson-review-start" class="text-button" type="button" data-i18n="review.helpCheck">Help check this lesson</button>
-            </p>
-            <p id="lesson-provenance" class="review-badge provenance-badge" hidden>
-              <span data-i18n="provenance.machine">The Spanish explanations in this lesson were written by machine and have not yet been checked by a native speaker.</span>
-              <span id="lesson-provenance-count" class="provenance-count"></span>
-              <button id="lesson-provenance-start" class="text-button" type="button" data-i18n="provenance.helpCheck">Help check the translation</button>
             </p>
           </div>
 
@@ -260,7 +295,9 @@
           </div>
         </section>
       </section>
+      </div>
 
+      <div class="view" id="view-flashcards" hidden>
       <section id="flashcards" class="flashcards" aria-labelledby="flashcards-title">
         <div class="section-head">
           <p class="eyebrow" data-i18n="deck.eyebrow">Flashcards</p>
@@ -322,9 +359,20 @@
           <p id="deck-help" class="deck-help" data-i18n="deck.help">Tap the card to show the answer. Swipe left if you knew it, right to send it back for review. Keyboard: space flips, ← and → answer.</p>
           <button id="deck-reset" class="ghost-button" type="button" data-i18n="deck.reset">Reset this set</button>
         </div>
+        <div class="deck-guide">
+          <h3 class="deck-guide-title" data-i18n="deck.howTitle">How to use these</h3>
+          <ol class="deck-guide-steps">
+            <li data-i18n="deck.how1">Every card opens in the language you chose to learn. Change that choice at the top of the page and the cards turn around with it.</li>
+            <li data-i18n="deck.how2">Answer out loud before you flip it. Pulling it out of memory is what makes it stick — recognizing it once you see it does not.</li>
+            <li data-i18n="deck.how3">Say you did not know it when you did not. Those cards come back later in the set; the ones you wave through do not.</li>
+            <li data-i18n="deck.how4">Short and often beats long and once. A set is meant to be finished in one sitting.</li>
+          </ol>
+        </div>
         <p id="deck-live" class="assistive-text" aria-live="polite"></p>
       </section>
+      </div>
 
+      <div class="view" id="view-placement" hidden>
       <section id="placement" class="placement" aria-labelledby="placement-title">
         <div class="section-head">
           <p class="eyebrow" data-i18n="placement.eyebrow">Optional</p>
@@ -345,7 +393,9 @@
         <img class="flow-image" src="assets/learning-flow.svg" alt="Learning flow from placement through contextual foundations and Year 12 local mastery, continuing to academic and professional pathways.">
         <div id="pathways" class="pathways"></div>
       </section>
+      </div>
 
+      <div class="view" id="view-library" hidden>
       <section id="library" class="library" aria-labelledby="library-title">
         <div class="section-head">
           <p class="eyebrow" data-i18n="library.eyebrow">Reference library</p>
@@ -356,14 +406,13 @@
           <button class="library-tab active" type="button" role="tab" aria-selected="true" data-library="verbs" data-i18n="library.tab.verbs">200 verbs</button>
           <button class="library-tab" type="button" role="tab" aria-selected="false" data-library="fluency" data-i18n="library.tab.fluency">Fluency</button>
           <button class="library-tab" type="button" role="tab" aria-selected="false" data-library="slang" data-i18n="library.tab.slang">Colombian slang</button>
-          <button class="library-tab" type="button" role="tab" aria-selected="false" data-library="mature" data-i18n="library.tab.mature">Mature language</button>
         </div>
         <section id="verbs-library" class="library-panel">
           <label class="search-label" for="verb-search"><span data-i18n="library.search">Search English or Spanish verb</span> <input id="verb-search" type="search" data-i18n-placeholder="library.searchPlaceholder" placeholder="e.g., hablar or speak" autocomplete="off"></label>
           <p id="verb-count" class="assistive-text"></p>
           <div id="verb-results" class="reference-grid"></div>
           <button id="verb-more" class="ghost-button" type="button" hidden data-i18n="library.more">Show more verbs</button>
-          <p class="source-note"><span data-i18n="library.sourceNote.before">Frequency starting list: </span><a href="https://www.wordfrequency.info/" data-i18n="library.sourceNote.link">SUBTLEX-ESP and SUBTLEX-US frequency resources</a><span data-i18n="library.sourceNote.after">; the level shown comes from it. Register and regionality labels stay hidden until a Colombian speaker has checked them — none have been yet, and the Report an error tab is where that starts.</span></p>
+          <p class="source-note"><span data-i18n="library.sourceNote.before">Frequency starting list: </span><a href="https://www.wordfrequency.info/" data-i18n="library.sourceNote.link">SUBTLEX-ESP and SUBTLEX-US frequency resources</a><span data-i18n="library.sourceNote.after">; the level shown comes from it. The register label is a general guide — if one looks wrong, the Report an error tab is where corrections start.</span></p>
         </section>
         <section id="fluency-library" class="library-panel" hidden>
           <p data-i18n="library.fluencyIntro">These phrases connect ideas and keep conversation moving. They are context notes—not universal replacements.</p>
@@ -376,24 +425,10 @@
           <p id="slang-count" class="assistive-text"></p>
           <div id="slang-results" class="reference-grid"></div>
         </section>
-        <section id="mature-library" class="library-panel" hidden>
-          <div id="mature-gate" class="mature-gate">
-            <h3 data-i18n="mature.title">Recognition and safety reference</h3>
-            <p data-i18n="mature.warning">This optional reference includes adult or insulting language for comprehension, boundaries, and de-escalation. It is not for directing abuse at people. Confirm that you are of age under the rules where you live.</p>
-            <label><input id="mature-confirm" type="checkbox"> <span data-i18n="mature.confirm">I am eligible to view mature educational content.</span></label>
-            <button id="mature-open" class="primary-button" type="button" disabled data-i18n="mature.open">View reference</button>
-          </div>
-          <div id="mature-shown" hidden>
-            <p class="review-badge" data-i18n="mature.unverified">No Colombian native speaker has checked these entries yet. How strong a word lands varies by region, company and tone, so treat the severity labels as a rough guide rather than a measurement.</p>
-            <h3 data-i18n="mature.wordsTitle">Words and phrases</h3>
-            <div id="mature-results" class="reference-grid"></div>
-            <h3 data-i18n="mature.signalsTitle">When a conversation turns</h3>
-            <p data-i18n="mature.signalsIntro">These are not words you can look up. A conversation can turn hostile while every word in it stays polite — these are the signals that carry it.</p>
-            <div id="mature-signals" class="reference-grid"></div>
-          </div>
-        </section>
       </section>
+      </div>
 
+      <div class="view" id="view-workbook" hidden>
       <section id="workbook" class="workbook" aria-labelledby="workbook-title">
         <div class="section-head">
           <p class="eyebrow" data-i18n="workbook.eyebrow">Printable student workbook</p>
@@ -410,6 +445,31 @@
         <p class="assistive-text" data-i18n="workbook.printHint">Printing gives you the workbook only — the site navigation is left off the page.</p>
         <div id="workbook-output" class="workbook-output"></div>
       </section>
+      </div>
+
+      <div class="view" id="view-after-dark" hidden>
+      <section id="after-dark" class="after-dark" aria-labelledby="after-dark-title">
+        <div class="section-head">
+          <p class="eyebrow" data-i18n="afterDark.eyebrow">After Dark</p>
+          <h2 id="after-dark-title" data-i18n="afterDark.title">The language nobody teaches you.</h2>
+          <p class="section-lead" data-i18n="afterDark.lead">Strong language you will hear in bars, taxis, stadiums and films. This is here so you can understand it and judge a room — never so you can aim it at anyone.</p>
+        </div>
+        <div id="after-dark-body">
+          <div class="tabs" role="tablist" data-i18n-aria="afterDark.aria" aria-label="Cities">
+            <button class="city-tab active" type="button" role="tab" aria-selected="true" data-city="bogota" data-i18n="afterDark.city.bogota">Bogotá</button>
+            <button class="city-tab" type="button" role="tab" aria-selected="false" data-city="medellin" data-i18n="afterDark.city.medellin">Medellín</button>
+            <button class="city-tab" type="button" role="tab" aria-selected="false" data-city="barranquilla" data-i18n="afterDark.city.barranquilla">Barranquilla</button>
+          </div>
+          <p id="city-note" class="section-lead"></p>
+          <p class="after-dark-caution" data-i18n="afterDark.caution">Severity is about the risk of repeating a phrase, not how rude it sounds. The same word can be a joke among friends and a fight between strangers, so when in doubt assume the harsher reading.</p>
+          <div id="mature-results" class="reference-grid"></div>
+
+          <h3 id="signals-title" data-i18n="mature.signalsTitle">When a conversation turns</h3>
+          <p data-i18n="mature.signalsIntro">These are not words you can look up. A conversation can turn hostile while every word in it stays polite — these are the signals that carry it.</p>
+          <div id="mature-signals" class="reference-grid"></div>
+        </div>
+      </section>
+      </div>
     </main>
 
     <footer>
@@ -417,10 +477,10 @@
       <p class="footer-links">
         <a href="https://github.com/tree2juan/Parcero" data-i18n="footer.source">Source on GitHub</a>
         <a id="footer-report-link" href="#lessons" data-i18n="footer.flagLine">Report something that is wrong</a>
-        <a href="https://github.com/tree2juan/Parcero/issues/new?template=lesson-review.yml" data-i18n="footer.signOff">Sign off a whole lesson</a>
         <a href="https://github.com/tree2juan/Parcero/issues/new" data-i18n="footer.report">Report a problem</a>
+        <button id="reset-progress" class="text-button" type="button" data-i18n="action.reset">Reset progress</button>
       </p>
-      <p class="footer-note" data-i18n="footer.note">Lessons no native speaker has signed off yet say so in place. Regional usage varies across Colombia; treat every note as a starting point for listening, not a rule — and if something reads wrong to you, flag it where you found it.</p>
+      <p class="footer-note" data-i18n="footer.note">Regional usage varies across Colombia; treat every note as a starting point for listening, not a rule — and if something reads wrong to you, flag it where you found it.</p>
     </footer>
 
     <script src="data/lesson-schema.js"></script>
@@ -502,8 +562,8 @@
     <script src="data/lessons/75-obligation-and-belonging.js"></script>
     <script src="data/lessons/76-habits-and-checking.js"></script>
     <script src="data/lessons/77-delegation-degree-and-doubt.js"></script>
-    <script src="data/provenance.js"></script>
     <script src="data/curriculum.js"></script>
+    <script src="data/after-dark.js"></script>
     <script src="data/structures.js"></script>
     <script src="data/taxonomy.js"></script>
     <script src="data/lexicon.js"></script>
@@ -516,11 +576,11 @@
     <script src="data/mature.js"></script>
     <script src="data/modules.js"></script>
     <script src="data/study-guide.js"></script>
-        <script src="data/cefr.js"></script>
+    <script src="data/cefr.js"></script>
     <script src="i18n.js"></script>
     <script src="data/flashcards.js"></script>
-        <script src="cefr.js"></script>
-        <script src="app.js"></script>
+    <script src="cefr.js"></script>
+    <script src="app.js"></script>
     <script src="srs.js"></script>
     <script src="progress.js"></script>
     <script src="workbook.js"></script>

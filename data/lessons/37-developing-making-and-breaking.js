@@ -381,7 +381,7 @@ lessons.push(
             "Algo no existía como cosa reconocible y ahora usted lo está formando.",
           avoidWhen:
             "Habla de levantar una estructura con materiales. Para eso build suele ser más concreto.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["make", "invent", "design", "build"],
           example: { target: "I want to create a brand.", translation: "Quiero crear una marca." }
@@ -395,7 +395,7 @@ lessons.push(
             "Un proyecto pequeño necesita identidad antes de mostrarse a clientes, ferias o redes.",
           avoidWhen:
             "Sólo cambió un dibujo. A brand es más amplio que el logo.",
-          register: "neutral business",
+          register: "neutro de negocios",
           region: "Inglés universal.",
           related: ["logo", "name", "small business", "image"],
           example: { target: "We're creating a simple brand.", translation: "Estamos creando una marca sencilla." }
@@ -409,7 +409,7 @@ lessons.push(
             "Quiere invitar a otra persona a construir una idea, lista, nombre o plan con usted.",
           avoidWhen:
             "La otra persona no participa. Entonces diga I will create o you should create.",
-          register: "collaborative",
+          register: "colaborativo",
           region: "Inglés universal.",
           related: ["let's make", "let's design", "let's draft", "let's plan"],
           example: { target: "Let's create the name first.", translation: "Creemos primero el nombre." }
@@ -423,7 +423,7 @@ lessons.push(
             "Habla de algo que hizo antes: last night, yesterday, this morning, earlier.",
           avoidWhen:
             "La creación está ocurriendo ahora. Ahí necesita am creating o are creating.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["create", "creating", "made", "designed"],
           example: { target: "I created the logo last night.", translation: "Creé el logo anoche." }
@@ -437,7 +437,7 @@ lessons.push(
             "Describe comida, objetos o proyectos con una sensación artesanal o doméstica.",
           avoidWhen:
             "Quiere criticar baja calidad. Homemade puede ser elogio si el contexto no dice lo contrario.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["handmade", "homegrown", "simple", "professional"],
           example: { target: "It still looks homemade.", translation: "Todavía se ve casero." }
@@ -451,7 +451,7 @@ lessons.push(
             "Agrupa productos o servicios en niveles para que el cliente escoja.",
           avoidWhen:
             "El tema es correo o envío. Package también puede ser paquete físico, pero aquí es una oferta.",
-          register: "neutral business",
+          register: "neutro de negocios",
           region: "Inglés universal.",
           related: ["bundle", "plan", "option", "catalogue"],
           example: { target: "Let's create three packages.", translation: "Creemos tres paquetes." }
@@ -465,7 +465,7 @@ lessons.push(
             "Quiere decir que un paso hecho hoy evita presión mañana.",
           avoidWhen:
             "Habla de una carrera literal. Ahí rushing no es la palabra central.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["calmly", "with time", "not in a rush", "step by step"],
           example: { target: "We can create it without rushing.", translation: "Podemos crearlo sin correr." }
@@ -513,19 +513,19 @@ lessons.push(
       variations: [
         {
           form: "I want to create something of my own.",
-          register: "friendly practical",
+          register: "amistoso práctico",
           region: "Inglés universal",
           whenToUse: "Usted habla de iniciar un proyecto propio, no sólo hacer una tarea para otra persona."
         },
         {
           form: "Let's create a short story for the brand.",
-          register: "collaborative",
+          register: "colaborativo",
           region: "Inglés universal",
           whenToUse: "Quiere proponer el siguiente paso creativo con otra persona."
         },
         {
           form: "I created a simple version last night.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Ya terminó una primera versión y quiere reportarla sin exagerar."
         }
@@ -945,7 +945,7 @@ lessons.push(
             "Hay materiales, soportes y una forma final: casa, banca, marco, pared, estante o jardinera.",
           avoidWhen:
             "Quiere hablar de una idea, una marca o una cuenta. Create suele ser mejor cuando no hay estructura física.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["construct", "make", "assemble", "create"],
           example: { target: "We're going to build a raised planter.", translation: "Vamos a construir una huerta elevada." }
@@ -959,7 +959,7 @@ lessons.push(
             "Usted toma responsabilidad por una parte del trabajo: I'll build the frame, I'll build the shelf.",
           avoidWhen:
             "Habla de una rutina profesional. Para eso use I build houses, sin will.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["I build", "I'm building", "we'll build", "I can build"],
           example: { target: "I'll build the frame.", translation: "Yo construyo el marco." }
@@ -973,7 +973,7 @@ lessons.push(
             "Habla de lo que otra persona construye como oficio, costumbre o capacidad.",
           avoidWhen:
             "El sujeto es I, you, we o they. Ahí la forma es build, sin -s.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["build", "built", "builder", "building"],
           example: { target: "My brother builds houses.", translation: "Mi hermano construye casas." }
@@ -987,7 +987,7 @@ lessons.push(
             "Reporta algo construido antes, o describe algo already built.",
           avoidWhen:
             "Usar builded. Esa forma no es el pasado normal del inglés estándar.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["build", "built by", "rebuilt", "builder"],
           example: { target: "The neighbors built a bench.", translation: "Los vecinos construyeron una banca." }
@@ -1001,7 +1001,7 @@ lessons.push(
             "Habla de puertas, camas, ventanas, estantes, jardineras o cualquier objeto con contorno de soporte.",
           avoidWhen:
             "Sólo habla de decoración visual. Frame puede ser marco de foto, pero aquí es estructura.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["base", "board", "support", "structure"],
           example: { target: "I'll build the frame first.", translation: "Construyo el marco primero." }
@@ -1015,7 +1015,7 @@ lessons.push(
             "Explica qué debe quedar fuerte antes de agregar peso, tierra, repisas o una capa superior.",
           avoidWhen:
             "El objeto no sostiene peso. Base puede sonar demasiado estructural para una simple idea.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["foundation", "support", "bottom", "structure"],
           example: { target: "We build the base strong.", translation: "Construimos la base fuerte." }
@@ -1029,7 +1029,7 @@ lessons.push(
             "Revisa si una banca, repisa, poste o marco aguanta y no se mueve.",
           avoidWhen:
             "Quiere decir duro como textura. Solid puede hacerlo, pero en esta escena habla de estabilidad.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["stable", "sturdy", "firm", "wobbly"],
           example: { target: "It's still solid.", translation: "Todavía está firme." }
@@ -1077,19 +1077,19 @@ lessons.push(
       variations: [
         {
           form: "I'll build the frame.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Usted toma responsabilidad por una parte estructural del objeto."
         },
         {
           form: "The neighbors built a bench.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Reporta en pasado lo que construyó un grupo."
         },
         {
           form: "If we build it carefully, it should last.",
-          register: "collaborative practical",
+          register: "colaborativo práctico",
           region: "Inglés universal",
           whenToUse: "Le importa la calidad y duración de la estructura terminada."
         }
@@ -1515,7 +1515,7 @@ lessons.push(
             "Algo se quiebra, rasga, parte o queda visiblemente dañado.",
           avoidWhen:
             "Un aparato sólo dejó de funcionar. Entonces stopped working o isn't working suele ser más preciso.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["break down", "damage", "crack", "tear"],
           example: { target: "A window pane broke.", translation: "Se rompió un vidrio de la ventana." }
@@ -1529,7 +1529,7 @@ lessons.push(
             "La ruptura física es el punto central y no necesita una explicación larga.",
           avoidWhen:
             "Quiere suavizar la culpa como se me rompió. En inglés puede agregar on me, pero muchas veces basta explicar el accidente.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["it cracked", "it snapped", "it shattered", "it broke on me"],
           example: { target: "It broke in the wind.", translation: "Se rompió con el viento." }
@@ -1543,7 +1543,7 @@ lessons.push(
             "Describe vidrio, platos, huesos, cierres o piezas dañadas físicamente.",
           avoidWhen:
             "Sólo quiere decir que una máquina no funciona. Broken se entiende, pero not working puede ser más exacto.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["cracked", "torn", "damaged", "not working"],
           example: { target: "The glass is broken.", translation: "El vidrio está roto." }
@@ -1557,7 +1557,7 @@ lessons.push(
             "Quiere explicar cómo quedó vidrio, plástico, madera o cerámica después de romperse.",
           avoidWhen:
             "Nada está partido. Entonces la frase exagera el daño.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["split", "cracked", "shattered", "snapped"],
           example: { target: "It's broken in two pieces.", translation: "Está roto en dos pedazos." }
@@ -1571,7 +1571,7 @@ lessons.push(
             "Un teléfono, ventilador, cargador, nevera o máquina falla y el problema es funcional.",
           avoidWhen:
             "El objeto está claramente quebrado en partes. Ahí broken o cracked puede ser más directo.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["isn't working", "broke down", "malfunctioned", "won't turn on"],
           example: { target: "The fan stopped working.", translation: "El ventilador se dañó." }
@@ -1585,7 +1585,7 @@ lessons.push(
             "Lo importante es que el objeto no cumple su función.",
           avoidWhen:
             "Un reporte necesita describir daño visible para seguro, inventario o seguridad.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["doesn't work", "out of order", "faulty", "broken"],
           example: { target: "The fan is not working.", translation: "El ventilador no sirve." }
@@ -1599,7 +1599,7 @@ lessons.push(
             "Reporta un vidrio de ventana roto, suelto o rajado.",
           avoidWhen:
             "Habla de un vaso. A glass es un vaso; a window pane es parte de la ventana.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["glass", "frame", "window", "pane"],
           example: { target: "A window pane broke.", translation: "Se rompió un vidrio de la ventana." }
@@ -1647,25 +1647,25 @@ lessons.push(
       variations: [
         {
           form: "A window pane broke.",
-          register: "careful practical",
+          register: "cuidadoso práctico",
           region: "Inglés universal",
           whenToUse: "Un vidrio de ventana realmente se rompió y necesita reportarlo con precisión."
         },
         {
           form: "The fan stopped working.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Un aparato dejó de funcionar sin daño físico visible."
         },
         {
           form: "It's broken in two pieces.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Debe describir una ruptura física visible y el resultado importa."
         },
         {
           form: "We had the pane replaced, and the frame was repaired at the same time.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Para reportar un arreglo que usted encargó. Note que el inglés no nombra al que hizo el trabajo, igual que el español con la pasiva."
         }

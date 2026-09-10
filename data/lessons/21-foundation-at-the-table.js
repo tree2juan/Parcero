@@ -410,7 +410,7 @@ lessons.push(
           literal: "pedir",
           useWhen: "Pedir un objeto, un plato o la cuenta.",
           avoidWhen: "Hacer una pregunta de información; eso es “to ask”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["to order", "to request", "to ask (a question)", "to get"],
           example: {
@@ -425,7 +425,7 @@ lessons.push(
           literal: "¿podría yo obtener...?",
           useWhen: "Pedir comida, bebida o casi cualquier cosa en un mostrador o restaurante.",
           avoidWhen: "Escritura muy formal, donde va mejor “I would like”.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés norteamericano; “could I have...?” es más común en el Reino Unido.",
           related: ["can I get...?", "could I have...?", "I'll have...", "I'd like..."],
           example: {
@@ -440,7 +440,7 @@ lessons.push(
           literal: "¿le importaría...?",
           useWhen: "Pedir un favor pequeño con cortesía extra.",
           avoidWhen: "Un pedido rápido y directo, donde “could I get” basta.",
-          register: "polite",
+          register: "cortés",
           region: "Inglés universal.",
           related: ["could you...?", "would you be able to...?", "do you mind...?", "if you don't mind"],
           example: {
@@ -470,7 +470,7 @@ lessons.push(
           literal: "tener ganas de",
           useWhen: "Hablar de un antojo o de qué le apetece.",
           avoidWhen: "Cuidado: “feel like” también es “sentirse como”; el contexto decide.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal.",
           related: ["to be in the mood for", "to fancy", "to crave", "to want"],
           example: {
@@ -485,7 +485,7 @@ lessons.push(
           literal: "pedir prestado",
           useWhen: "Recibir algo prestado de alguien.",
           avoidWhen: "Cuando usted es quien presta; ahí es “to lend”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["to lend", "to loan", "to give back", "to return"],
           example: {
@@ -500,7 +500,7 @@ lessons.push(
           literal: "la cuenta",
           useWhen: "Pedir para pagar al final de la comida.",
           avoidWhen: "Una tienda donde se paga por adelantado en la caja.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés norteamericano; “the bill” en el Reino Unido.",
           related: ["the bill", "the tab", "the receipt", "the tip"],
           example: {
@@ -562,19 +562,19 @@ lessons.push(
       variations: [
         {
           form: "Could I get a coffee, please?",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés norteamericano",
           whenToUse: "La opción por defecto para pedir casi cualquier cosa."
         },
         {
           form: "Could I have a coffee, please?",
-          register: "polite",
+          register: "cortés",
           region: "Inglés británico y universal",
           whenToUse: "Igual de segura, algo más común en el Reino Unido."
         },
         {
           form: "I'll have the coffee.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Al decidir del menú, firme y natural."
         },
@@ -586,7 +586,7 @@ lessons.push(
         },
         {
           form: "Would you mind bringing a coffee?",
-          register: "polite formal",
+          register: "cortés formal",
           region: "Inglés universal",
           whenToUse: "Un favor pedido con cortesía extra."
         }
@@ -1034,7 +1034,7 @@ lessons.push(
           literal: "servir (comida)",
           useWhen: "Repartir comida o atender a un cliente o invitado.",
           avoidWhen: "Querer decir que algo funciona o es útil; eso es “to work”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["to dish out", "to serve up", "to help (someone) to", "to wait on"],
           example: {
@@ -1049,7 +1049,7 @@ lessons.push(
           literal: "funcionar / servir (ser útil)",
           useWhen: "Decir que un aparato, plan o herramienta funciona o no.",
           avoidWhen: "Hablar de servir comida; ahí es “to serve”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["to function", "to run", "to be any good", "to do the trick"],
           example: {
@@ -1064,7 +1064,7 @@ lessons.push(
           literal: "¿quieres un poco más?",
           useWhen: "Ofrecer otra porción a un invitado con confianza.",
           avoidWhen: "Un contexto muy formal, donde va mejor “would you like some more?”.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal.",
           related: ["would you like some more?", "seconds?", "a bit more?", "help yourself"],
           example: {
@@ -1079,7 +1079,7 @@ lessons.push(
           literal: "servirse (uno mismo)",
           useWhen: "Invitar a alguien a que se sirva a su gusto.",
           avoidWhen: "Pedirle a alguien que le sirva a usted; ahí no encaja.",
-          register: "polite",
+          register: "cortés",
           region: "Inglés universal.",
           related: ["help yourself", "dig in", "go ahead", "take as much as you like"],
           example: {
@@ -1094,7 +1094,7 @@ lessons.push(
           literal: "consentir / malcriar",
           useWhen: "Nombrar el consentir cariñoso de un anfitrión o a un niño.",
           avoidWhen: "Con comida, “spoil” pasa a ser “echarse a perder”; cuidado con el contexto.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal.",
           related: ["to pamper", "to indulge", "to treat", "to go easy on"],
           example: {
@@ -1109,7 +1109,7 @@ lessons.push(
           literal: "estar lleno",
           useWhen: "Declinar otra porción con cortesía.",
           avoidWhen: "Nada; “I'm full” es seguro. “I'm stuffed” es más coloquial.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal.",
           related: ["I'm stuffed", "I've had plenty", "I couldn't eat another bite", "I'm good"],
           example: {
@@ -1124,7 +1124,7 @@ lessons.push(
           literal: "pavo",
           useWhen: "Hablar del plato principal de una cena grande.",
           avoidWhen: "Un almuerzo ligero o rápido; el pavo es comida de reunión.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal; central en Thanksgiving en EE. UU..",
           related: ["roast", "stuffing", "gravy", "ham"],
           example: {
@@ -1186,25 +1186,25 @@ lessons.push(
       variations: [
         {
           form: "Want some more?",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal",
           whenToUse: "Ofrecer repetir con confianza."
         },
         {
           form: "Would you like some more?",
-          register: "polite",
+          register: "cortés",
           region: "Inglés universal",
           whenToUse: "La misma oferta, más cortés."
         },
         {
           form: "Help yourself.",
-          register: "polite",
+          register: "cortés",
           region: "Inglés universal",
           whenToUse: "Invitar a alguien a servirse a su gusto."
         },
         {
           form: "It doesn't work.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Decir que algo no sirve o no funciona."
         },
@@ -1658,7 +1658,7 @@ lessons.push(
           literal: "comer",
           useWhen: "Cualquier conversación sobre comidas o alimentarse.",
           avoidWhen: "En cierta jerga “eat” tiene un sentido vulgar; sobre comida es totalmente inocente.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["to have dinner", "to have lunch", "to eat up", "to grab a bite"],
           example: {
@@ -1673,7 +1673,7 @@ lessons.push(
           literal: "¿comiste?",
           useWhen: "Saludar con cariño y averiguar de paso si la persona ha comido.",
           avoidWhen: "Esperar la misma insistencia colombiana; en inglés se acepta el “sí” a la primera.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal; “did you eat yet?” en EE. UU.",
           related: ["have you eaten?", "did you eat yet?", "are you hungry?", "have you had dinner?"],
           example: {
@@ -1688,7 +1688,7 @@ lessons.push(
           literal: "comerse (del todo)",
           useWhen: "Comerse algo entero y con gusto, o animar a alguien a que acabe.",
           avoidWhen: "Comer en general, sin la idea de acabárselo; ahí basta “eat”.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal.",
           related: ["to finish", "to polish off", "to wolf down", "to gobble up"],
           example: {
@@ -1718,7 +1718,7 @@ lessons.push(
           literal: "sobras",
           useWhen: "Hablar de comida que quedó de una comida anterior.",
           avoidWhen: "Comida recién hecha; eso no son “leftovers”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["leftovers", "seconds", "a plate", "food to go"],
           example: {
@@ -1733,7 +1733,7 @@ lessons.push(
           literal: "haz a ti mismo en casa",
           useWhen: "Recibir a alguien y decirle que se relaje y esté cómodo.",
           avoidWhen: "Describir literalmente dónde vive alguien; esto es el sentido hospitalario.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal.",
           related: ["make yourself comfortable", "have a seat", "help yourself", "come on in"],
           example: {
@@ -1748,7 +1748,7 @@ lessons.push(
           literal: "comer bien",
           useWhen: "Elogiar la comida de una casa o de un lugar.",
           avoidWhen: "Hablar solo de dieta sana; el sentido aquí es de disfrute y abundancia.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal.",
           related: ["to eat well", "to eat like a king", "good home cooking", "a good spread"],
           example: {
@@ -1810,19 +1810,19 @@ lessons.push(
       variations: [
         {
           form: "Did you eat?",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal",
           whenToUse: "El saludo-pregunta cálido y cotidiano."
         },
         {
           form: "Have you eaten?",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "La misma pregunta, un punto más pulida."
         },
         {
           form: "Are you hungry?",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal",
           whenToUse: "Ir directo al grano de ofrecer comida."
         },
@@ -1834,7 +1834,7 @@ lessons.push(
         },
         {
           form: "Help yourself.",
-          register: "polite",
+          register: "cortés",
           region: "Inglés universal",
           whenToUse: "Invitar a servirse a gusto."
         }

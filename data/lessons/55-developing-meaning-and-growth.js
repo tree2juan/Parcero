@@ -427,7 +427,7 @@ lessons.push(
             "Pregunta o explica el sentido de una palabra, señal, gesto o frase: “what does it mean?”, “it means…”.",
           avoidWhen:
             "Quiere sonar técnico o simbólico; “signify” existe, pero en conversación diaria “mean” casi siempre gana.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["signify", "meaning", "I mean", "context"],
           example: {
@@ -444,7 +444,7 @@ lessons.push(
             "Una palabra, abreviatura, señal o chiste se le escapa y necesita el sentido.",
           avoidWhen:
             "Olvidar el auxiliar. “What means this word?” suena a calco del español.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["what do you mean", "meaning", "does it mean", "context"],
           example: {
@@ -461,7 +461,7 @@ lessons.push(
             "Pasa de una señal o dato a lo que implica: “it means that we have time.”",
           avoidWhen:
             "Está corrigiendo lo que usted mismo quiso decir. Entonces use “I mean.”",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["that means", "so", "implies", "therefore"],
           example: {
@@ -478,7 +478,7 @@ lessons.push(
             "Reformula, se corrige o suaviza algo: “I mean, not the band, the instrument.”",
           avoidWhen:
             "Está definiendo una palabra ajena. Ahí “it means” es la estructura.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal.",
           related: ["what I mean is", "that is", "so", "let me rephrase"],
           example: {
@@ -512,7 +512,7 @@ lessons.push(
             "Habla del significado como cosa: “I don't know the meaning,” “the meaning changes.”",
           avoidWhen:
             "La frase pide verbo. “What is the meaning of…?” es correcto, pero más pesado que “what does … mean?”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["mean", "definition", "sense", "context"],
           example: {
@@ -529,7 +529,7 @@ lessons.push(
             "El sentido cambia por región, situación, tono o persona que habla.",
           avoidWhen:
             "El significado es fijo y simple. Añadir contexto puede sonar evasivo.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["context", "it depends", "situation", "usage"],
           example: {
@@ -591,31 +591,31 @@ lessons.push(
       variations: [
         {
           form: "What does that word mean?",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "La pregunta esencial cuando una palabra es nueva."
         },
         {
           form: "That means the show starts later.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Explicar la implicación de un dato o señal."
         },
         {
           form: "I mean, I didn't understand.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal",
           whenToUse: "Aclarar lo que usted quiso decir."
         },
         {
           form: "It means the instrument, not the band.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Definir una palabra y descartar una lectura incorrecta."
         },
         {
           form: "It depends on the context.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "El sentido cambia según la situación."
         }
@@ -1079,7 +1079,7 @@ lessons.push(
             "Un proyecto necesita estructura, una habilidad mejora con práctica o una idea se vuelve más completa.",
           avoidWhen:
             "Quiere decir que una persona se crió en un lugar. Para eso el inglés usa “grow up.”",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["grow", "grow up", "unfold", "take shape"],
           example: {
@@ -1096,7 +1096,7 @@ lessons.push(
             "Planea trabajo comunitario, proyectos escolares, ideas de negocio, talleres o programas.",
           avoidWhen:
             "Sólo habla de un arreglo rápido. Develop sugiere un proceso con etapas.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["plan", "build out", "organize", "process"],
           example: {
@@ -1113,7 +1113,7 @@ lessons.push(
             "Alguien construye criterio, técnica, confianza, idioma o capacidad profesional.",
           avoidWhen:
             "El cambio es crecimiento físico o crianza. Ahí “grow” o “grow up” suele ser mejor.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["practice", "build skills", "improve", "capacity"],
           example: {
@@ -1130,7 +1130,7 @@ lessons.push(
             "Un evento, historia, plan o situación avanza por etapas.",
           avoidWhen:
             "Está hablando de desarrollar habilidades o materiales. Ahí develop es más directo.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["develop", "play out", "take shape", "progress"],
           example: {
@@ -1147,7 +1147,7 @@ lessons.push(
             "Niños, plantas, ciudades, cifras, problemas o preocupaciones aumentan.",
           avoidWhen:
             "Necesita el sentido de preparar un proyecto con estructura. Ahí develop suena mejor.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["develop", "increase", "mature", "expand"],
           example: {
@@ -1164,7 +1164,7 @@ lessons.push(
             "Dice dónde o con quién alguien pasó la niñez: “I grew up in Manchester.”",
           avoidWhen:
             "Habla de un proyecto o habilidad. Projects develop; people grow up.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["be raised", "childhood", "develop", "grow"],
           example: {
@@ -1181,7 +1181,7 @@ lessons.push(
             "Una idea, taller, ruta o acuerdo se aclara pero todavía no está terminado.",
           avoidWhen:
             "Necesita el verbo formal de proceso. Develop puede ser más preciso en planes o informes.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["develop", "come together", "unfold", "progress"],
           example: {
@@ -1243,31 +1243,31 @@ lessons.push(
       variations: [
         {
           form: "We need to develop the workshop.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Un proyecto necesita materiales, secuencia y estructura."
         },
         {
           form: "The students develop skills.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "La práctica construye capacidad con el tiempo."
         },
         {
           form: "The plan unfolds in three stages.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Un proceso transcurre por etapas."
         },
         {
           form: "She grew up in Manchester.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Una persona se crió en un lugar."
         },
         {
           form: "The plan is taking shape.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Una idea se está volviendo más clara."
         }
@@ -1731,7 +1731,7 @@ lessons.push(
             "Algo llega físicamente a un lugar o una persona toca algo: reach the door, reach the shelf.",
           avoidWhen:
             "Traduce “no me alcanza la plata” o “no alcancé a llamar.” Ahí use enough o manage to.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["enough", "manage to", "last", "run out"],
           example: {
@@ -1748,7 +1748,7 @@ lessons.push(
             "La plata no alcanza para la compra, el mes, el pasaje, la factura o el plan.",
           avoidWhen:
             "Está hablando de tocar algo físicamente. Ahí sí puede ser reach.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["not enough", "short on money", "budget", "until payday"],
           example: {
@@ -1765,7 +1765,7 @@ lessons.push(
             "La ventana de tiempo se cerró antes de que pudiera terminar o empezar.",
           avoidWhen:
             "Simplemente se le olvidó. Esta frase habla de tiempo insuficiente, no de memoria.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["ran out of time", "not enough time", "before they closed", "too late"],
           example: {
@@ -1782,7 +1782,7 @@ lessons.push(
             "La oportunidad se podía cerrar y usted alcanzó o no alcanzó a hacer la acción.",
           avoidWhen:
             "Habla de capacidad general. “I can swim” no es lo mismo que “I managed to swim across before dark.”",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["managed to", "didn't manage to", "in time", "get to"],
           example: {
@@ -1799,7 +1799,7 @@ lessons.push(
             "Reporta que alguien alcanzó a hacer algo antes de que fuera tarde.",
           avoidWhen:
             "Quiere decir administrar un negocio. Manage también significa manejar o gestionar, pero no es esta escena.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["did manage", "didn't manage", "got to", "in time"],
           example: {
@@ -1816,7 +1816,7 @@ lessons.push(
             "Está calculando un presupuesto o plan de manera práctica.",
           avoidWhen:
             "Necesita contabilidad formal. Esto es cálculo cotidiano.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal.",
           related: ["work out the budget", "calculate", "budget", "make it last"],
           example: {
@@ -1833,7 +1833,7 @@ lessons.push(
             "Quiere estirar un recurso hasta una fecha o necesidad.",
           avoidWhen:
             "Se trata de llegar físicamente a un lugar. Ahí use reach or get to.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["last until", "stretch", "budget", "enough"],
           example: {
@@ -1895,31 +1895,31 @@ lessons.push(
       variations: [
         {
           form: "I don't have enough money.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "La plata no alcanza para la necesidad."
         },
         {
           form: "We don't have enough for everything.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "El presupuesto del grupo no cubre todo."
         },
         {
           form: "I didn't have enough time.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "El tiempo disponible no bastó."
         },
         {
           form: "I didn't manage to call you.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "No alcanzó a llamar antes de que pasara la oportunidad."
         },
         {
           form: "Let's do the numbers so it lasts.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal",
           whenToUse: "Calcular para que un recurso alcance."
         }

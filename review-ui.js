@@ -107,21 +107,59 @@
    * So: reference lexically inside a thunk, catch the ReferenceError for a name
    * that genuinely never loaded, and require Array.isArray for everything else.
    */
+  const EMPTY = Object.freeze([]);
   const arrayFrom = (read) => {
     let value;
     try {
       value = read();
     } catch {
-      return [];
+      return EMPTY;
     }
-    return Array.isArray(value) ? value : [];
+    return Array.isArray(value) ? value : EMPTY;
   };
-  const data = () => ({
-    lessons: arrayFrom(() => lessons),
-    curriculum: arrayFrom(() => curriculum),
-    fluencyItems: arrayFrom(() => fluencyItems),
-    matureItems: arrayFrom(() => matureItems)
-  });
+  /*
+   * The identity of this object matters as much as its contents. review.js
+   * memoizes its anchor index in a WeakMap keyed on exactly the object it is
+   * handed, so returning a fresh literal every call left that cache unable to
+   * ever hit: the index was rebuilt from the entire corpus once per lookup,
+   * and renderItems does one lookup per item in the picker. With 233 lessons
+   * loaded that made opening the report tab -- which also happens on startup,
+   * on every lesson change and on every direction change -- cost about seven
+   * and a half seconds of blocked main thread.
+   *
+   * The sources are module-level arrays that are never reassigned at runtime,
+   * so their identity is a sound cache key. If one ever is replaced, the
+   * comparison misses and the snapshot is rebuilt, so this cannot go stale.
+   * EMPTY is shared and frozen for the same reason: a fresh [] for a missing
+   * source would defeat the comparison on every call.
+   *
+   * Every key review.js reads has to be present. It resolves a reference kind
+   * through REFERENCE_SOURCES, so a kind whose array is missing here does not
+   * error -- it simply contributes no anchors, and the scope the picker offers
+   * comes up empty. That is how the slang and signal scopes were selectable
+   * and unreportable: slangItems and matureSignals were never in this
+   * snapshot, so choosing either gave the reviewer an empty list with no
+   * indication anything was wrong.
+   */
+  const SOURCES = [
+    ["lessons", () => lessons],
+    ["curriculum", () => curriculum],
+    ["fluencyItems", () => fluencyItems],
+    ["matureItems", () => matureItems],
+    ["slangItems", () => slangItems],
+    ["matureSignals", () => matureSignals]
+  ];
+  let snapshot = null;
+  const data = () => {
+    const fresh = {};
+    let same = snapshot !== null;
+    for (const [key, read] of SOURCES) {
+      fresh[key] = arrayFrom(read);
+      if (same && snapshot[key] !== fresh[key]) same = false;
+    }
+    if (!same) snapshot = fresh;
+    return snapshot;
+  };
 
   const escapeHtml = (value) => String(value == null ? "" : value)
     .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
@@ -202,7 +240,10 @@
   function itemLabel(anchor) {
     const parts = ParceroReview.partsForAnchor(anchor, data());
     if (parts.length === 0) return anchor;
-    if (anchor.startsWith("verb:") && parts.length > 1) {
+    /* Two slots are needed to tell these rows apart: a verb's infinitive alone
+       is ambiguous without its meaning, and an After Dark phrase is listed
+       once per city with a different reading each time. */
+    if ((anchor.startsWith("verb:") || anchor.startsWith("mature:")) && parts.length > 1) {
       return `${preview(parts[0].text, 28)} — ${preview(parts[1].text, 40)}`;
     }
     return preview(parts[0].text);
@@ -510,7 +551,6 @@
   });
 
   $("#lesson-review-start").addEventListener("click", openReportTab);
-  $("#lesson-provenance-start").addEventListener("click", openReportTab);
   $("#footer-report-link").addEventListener("click", (event) => {
     event.preventDefault();
     openReportTab();

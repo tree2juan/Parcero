@@ -427,7 +427,7 @@ lessons.push(
             "Úselo para try this, try an option, or try to call, pero revise si taste o try on serían más claros.",
           avoidWhen:
             "No lo deje solo si la ropa debe ir puesta. Para eso necesita try on.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["taste", "try on", "test", "attempt"],
           example: {
@@ -444,7 +444,7 @@ lessons.push(
             "Úsela cuando alguien le ofrece sopa, salsa, café, fruta o un bocado para revisar el sabor.",
           avoidWhen:
             "No diga I'll prove it para comida. Prove significa demostrar, no probar de sabor.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["taste", "flavor", "try it", "sample"],
           example: {
@@ -461,7 +461,7 @@ lessons.push(
             "Úselo cuando el punto es el sabor de una sopa, salsa, fruta, bebida o plato.",
           avoidWhen:
             "No use taste para ropa, planes o aparatos. Ahí necesita try on, try, or test.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["try a bite", "sample", "flavor", "smell"],
           example: {
@@ -478,7 +478,7 @@ lessons.push(
             "Úselo en tiendas, vestieres, ropa prestada, zapatos, sombreros y trajes para eventos.",
           avoidWhen:
             "No lo use para comida. La expresión “try on” siempre indica que el objeto va puesto en el cuerpo.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["fitting room", "size", "fit", "wear"],
           example: {
@@ -495,7 +495,7 @@ lessons.push(
             "Úsela con el vendedor antes de llevar la prenda al fitting room.",
           avoidWhen:
             "No diga can I prove it on. Prove no tiene ese uso con ropa.",
-          register: "polite neutral",
+          register: "cortés neutro",
           region: "Inglés universal.",
           related: ["try this on", "fitting room", "does it fit", "size"],
           example: {
@@ -512,7 +512,7 @@ lessons.push(
             "Úselo para un cargador, micrófono, receta, plan, conexión o sistema que necesita verificación.",
           avoidWhen:
             "No lo use para ropa en un vestier. La ropa se tries on.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["check", "prove", "works", "try it"],
           example: {
@@ -529,7 +529,7 @@ lessons.push(
             "Úsela cuando la acción puede fallar o requiere esfuerzo.",
           avoidWhen:
             "No la use para objetos solos. Try to the shirt no existe; try the shirt on sí.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["attempt", "manage to", "try doing", "try on"],
           example: {
@@ -591,31 +591,31 @@ lessons.push(
       variations: [
         {
           form: "Taste the sancocho.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal",
           whenToUse: "Ofrecer a alguien probar comida."
         },
         {
           form: "I'll taste it and tell you.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Responder que va a probar el sabor."
         },
         {
           form: "Can I try it on?",
-          register: "polite neutral",
+          register: "cortés neutro",
           region: "Inglés universal",
           whenToUse: "Pedir permiso para medirse una prenda."
         },
         {
           form: "I try the shirt on in the fitting room.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Decir que se prueba ropa en el vestier."
         },
         {
           form: "We need to test that it works.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Revisar un aparato, plan o sistema."
         }
@@ -1079,7 +1079,7 @@ lessons.push(
             "Úselo para documentos, ingredientes, una presentación, una clase, una reunión o algo que requiere alistamiento deliberado.",
           avoidWhen:
             "No lo use automáticamente para todo. En una cocina, make coffee o get the bag ready puede sonar más natural.",
-          register: "neutral to slightly formal",
+          register: "neutro a algo formal",
           region: "Inglés universal.",
           related: ["get ready", "ready", "prepared", "make"],
           example: {
@@ -1096,7 +1096,7 @@ lessons.push(
             "Úselo antes de salir, cambiarse, empacar, arreglarse o prepararse mentalmente.",
           avoidWhen:
             "No lo confunda con prepare an object. Una persona gets ready; una mochila can be gotten ready or prepared.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["prepare", "be ready", "get dressed", "leave"],
           example: {
@@ -1113,7 +1113,7 @@ lessons.push(
             "Úselo para preguntar si una persona, cosa o plan ya está listo.",
           avoidWhen:
             "Si necesita sonar más formal o técnico, prepared puede servir mejor.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["prepared", "set", "done", "all ready"],
           example: {
@@ -1130,7 +1130,7 @@ lessons.push(
             "Úsela cuando alguien pregunta por qué aún no está listo para salir.",
           avoidWhen:
             "No diga I am preparing myself en una mañana común; suena rígido o demasiado literal.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["I'm almost ready", "getting dressed", "packing", "leaving"],
           example: {
@@ -1147,7 +1147,7 @@ lessons.push(
             "Úsela en cocinas, oficinas, mañanas familiares y ofertas sencillas de café.",
           avoidWhen:
             "Prepare coffee es correcto, pero puede sonar más formal que make coffee en casa.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["coffee", "freshly made", "brew coffee", "have coffee"],
           example: {
@@ -1164,7 +1164,7 @@ lessons.push(
             "Úselo cuando quiere decir que algo acaba de hacerse y está fresco.",
           avoidWhen:
             "No diga recently done para café. Freshly made es la frase natural.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["made", "fresh", "hot", "just made"],
           example: {
@@ -1181,7 +1181,7 @@ lessons.push(
             "Úselo para una salida, plan, equipo o grupo que está quedando listo.",
           avoidWhen:
             "No lo use como traducción automática de alistarse en toda frase. Get ready es más general.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal.",
           related: ["all set", "ready", "set up", "prepared"],
           example: {
@@ -1243,31 +1243,31 @@ lessons.push(
       variations: [
         {
           form: "I'll get the bag ready.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Alistar un objeto con lo que necesita."
         },
         {
           form: "I'm getting ready to leave.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Decir que usted se está alistando."
         },
         {
           form: "Everything is ready.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Confirmar que todo quedó preparado."
         },
         {
           form: "I'll make coffee.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal",
           whenToUse: "La forma casera de decir que va a preparar café."
         },
         {
           form: "The coffee is freshly made.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Ofrecer o describir café recién hecho."
         }
@@ -1731,7 +1731,7 @@ lessons.push(
             "Úselo cuando habla de ordenar información, crear una estructura o coordinar un evento con detalles claros.",
           avoidWhen:
             "No lo use automáticamente para todo cuadrar. En planes casuales, arrange, set up or sort out puede sonar mejor.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["organized", "arrange", "set up", "sort out"],
           example: {
@@ -1748,7 +1748,7 @@ lessons.push(
             "Úselo para decir qué lista, evento, documento o parte del plan organizó usted.",
           avoidWhen:
             "No diga I organiced. El pasado se escribe organized.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["organized", "planned", "arranged", "handled"],
           example: {
@@ -1765,7 +1765,7 @@ lessons.push(
             "Úselo para horarios, citas, reuniones, transporte o detalles que deben acordarse.",
           avoidWhen:
             "No lo confunda con ordenar una habitación. Para eso organize or tidy puede ser mejor.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["set up", "schedule", "organize", "plan"],
           example: {
@@ -1782,7 +1782,7 @@ lessons.push(
             "Úselo para una lista clara, un evento armado, un plan con detalles o una persona ordenada.",
           avoidWhen:
             "No lo use si el plan todavía es sólo una idea vaga. Organized promete detalles.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["ready", "planned", "in order", "prepared"],
           example: {
@@ -1799,7 +1799,7 @@ lessons.push(
             "Úselo con amigos para planes, problemas prácticos, pagos, transporte o detalles pendientes.",
           avoidWhen:
             "No lo use en escritura muy formal si arrange or organize sería más claro.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal.",
           related: ["figure it out", "arrange", "set up", "handle"],
           example: {
@@ -1816,7 +1816,7 @@ lessons.push(
             "Úselo para viajes, paseos, vuelos, buses, carros compartidos y encuentros.",
           avoidWhen:
             "No diga leaving hour como traducción literal. Departure time es la frase natural.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["meeting point", "ride", "schedule", "arrival time"],
           example: {
@@ -1833,7 +1833,7 @@ lessons.push(
             "Úselo para contrastar hablar de un plan con resolverlo realmente.",
           avoidWhen:
             "No lo use en un correo formal si seriously or actually sería más apropiado.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal.",
           related: ["actually", "seriously", "really", "details"],
           example: {
@@ -1895,31 +1895,31 @@ lessons.push(
       variations: [
         {
           form: "We need to organize the trip.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Poner estructura a una salida compartida."
         },
         {
           form: "I organized the list.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Decir qué organizó usted en el pasado."
         },
         {
           form: "I'll arrange the departure time.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Encargarse de una hora o cita específica."
         },
         {
           form: "We'll sort something out in the group.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal",
           whenToUse: "Traducir cuadramos algo con amigos."
         },
         {
           form: "The trip is already organized.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Confirmar que el plan ya tiene detalles."
         }

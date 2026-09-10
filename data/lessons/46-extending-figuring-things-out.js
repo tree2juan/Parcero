@@ -428,7 +428,7 @@ lessons.push(
             "Habla de descubrir una historia, una razón, una verdad escondida o algo que cambia la lectura de un lugar.",
           avoidWhen:
             "Sólo quiere decir enterarse de un dato cotidiano. Ahí “find out” suele sonar más conversacional.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["find out", "realize", "learn", "uncover"],
           example: {
@@ -445,7 +445,7 @@ lessons.push(
             "Dice que alguien descubrió algo o que algo ha sido descubierto: “I discovered,” “had discovered.”",
           avoidWhen:
             "Quiere el presente: “I discover” o, más natural para noticias recientes, “I found out.”",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["had discovered", "have discovered", "found out", "uncovered"],
           example: {
@@ -462,7 +462,7 @@ lessons.push(
             "Una noticia o dato acaba de llegar y usted todavía lo está procesando.",
           avoidWhen:
             "Quiere sonar más literario, investigativo o solemne. Entonces “discovered” puede tener más peso.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal.",
           related: ["learned that", "heard that", "just discovered", "realized"],
           example: {
@@ -479,7 +479,7 @@ lessons.push(
             "Quiere darle peso al momento en que algo se volvió claro.",
           avoidWhen:
             "Sólo cuenta una noticia casual. “I found out that…” puede sonar menos grandilocuente.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["found out that", "realized that", "uncovered that", "learned that"],
           example: {
@@ -496,7 +496,7 @@ lessons.push(
             "La historia necesita mostrar que una revelación ya había ocurrido antes de una decisión o comentario.",
           avoidWhen:
             "Todo pasó en una secuencia simple. Entonces “discovered” puede bastar.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["had found out", "had learned", "before then", "by that time"],
           example: {
@@ -513,7 +513,7 @@ lessons.push(
             "Quiere decir que alguien se enteró, averiguó o descubrió un dato práctico.",
           avoidWhen:
             "El objeto es una cosa física que apareció. Para eso use “find”: “they found the letters.”",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["discover", "learn", "hear", "figure out"],
           example: {
@@ -530,7 +530,7 @@ lessons.push(
             "La información no llega servida; usted ata cabos y entiende el motivo o el patrón.",
           avoidWhen:
             "Sólo recibió una noticia de otra persona. Ahí “find out” es más exacto.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal.",
           related: ["work out", "realize", "understand", "solve"],
           example: {
@@ -592,31 +592,31 @@ lessons.push(
       variations: [
         {
           form: "I just found out it has another name.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal",
           whenToUse: "Información nueva acaba de llegar en conversación."
         },
         {
           form: "I discovered the story by listening.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "La comprensión llegó por una historia, no por un letrero."
         },
         {
           form: "You still haven't discovered the reason.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Usar el participio regular después de have."
         },
         {
           form: "They had discovered old letters.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Un descubrimiento ocurrió antes de otro momento pasado."
         },
         {
           form: "I found out from her, then figured out why.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal",
           whenToUse: "Separar recibir información de entender el motivo."
         }
@@ -1080,7 +1080,7 @@ lessons.push(
             "Habla de un caso, cargo, disputa, queja o asunto que necesita una decisión.",
           avoidWhen:
             "El problema es físico y concreto. Para un medidor dañado, “fix” suele ser más natural.",
-          register: "neutral to formal",
+          register: "neutro a formal",
           region: "Inglés universal.",
           related: ["solve", "fix", "resolved", "case"],
           example: {
@@ -1097,7 +1097,7 @@ lessons.push(
             "Dice que un asunto ya quedó cerrado: “it was resolved,” “nothing has been resolved.”",
           avoidWhen:
             "Quiere hablar de una reparación física. Algo puede estar fixed sin que el caso esté resolved.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["has been resolved", "was resolved", "solved", "closed"],
           example: {
@@ -1114,7 +1114,7 @@ lessons.push(
             "Promete cerrar un asunto bajo una condición clara.",
           avoidWhen:
             "No tiene autoridad para cerrar el caso. Entonces diga “I can check” o “I can escalate it.”",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["we can resolve", "I can solve", "I can fix", "if"],
           example: {
@@ -1131,7 +1131,7 @@ lessons.push(
             "Hay notas, llamadas o promesas, pero el problema sigue abierto.",
           avoidWhen:
             "El asunto ya quedó cerrado. Esta frase expresa falta de avance real.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["still pending", "no outcome", "unresolved", "the case"],
           example: {
@@ -1148,7 +1148,7 @@ lessons.push(
             "Habla del problema mismo: solve the issue, solve the problem, solve the billing error.",
           avoidWhen:
             "Se trata de cerrar formalmente una disputa o caso. Entonces resolve puede encajar mejor.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["resolve", "fix", "work out", "solution"],
           example: {
@@ -1165,7 +1165,7 @@ lessons.push(
             "Un medidor, tubo, carro, teléfono o aparato necesita reparación.",
           avoidWhen:
             "El asunto es una disputa administrativa. Puede fix the problem, pero resolve the case suena más preciso.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["repair", "solve", "resolve", "technician"],
           example: {
@@ -1244,31 +1244,31 @@ lessons.push(
       variations: [
         {
           form: "I need to resolve this charge.",
-          register: "polite service",
+          register: "cortés de servicio",
           region: "Inglés universal",
           whenToUse: "Abrir una queja como asunto que requiere resultado."
         },
         {
           form: "The case is already resolved.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "El asunto ya quedó cerrado."
         },
         {
           form: "Nothing has been resolved in the system.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Hay movimiento, pero no solución real."
         },
         {
           form: "I can resolve it if there's an error.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Prometer cierre sólo bajo una condición clara."
         },
         {
           form: "A technician has to fix it.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "La solución práctica requiere reparar algo concreto."
         }
@@ -1732,7 +1732,7 @@ lessons.push(
             "Aceite, presión, recibos, datos, horarios, luces del tablero o cualquier detalle que pueda fallar.",
           avoidWhen:
             "Necesita una revisión formal de un documento largo. Entonces “review” puede sonar mejor.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["review", "inspect", "look over", "correct"],
           example: {
@@ -1749,7 +1749,7 @@ lessons.push(
             "Quiere que alguien mire el nivel o estado del aceite antes de seguir en carretera.",
           avoidWhen:
             "Está pidiendo una reparación completa del motor. Check no promete arreglar.",
-          register: "polite service",
+          register: "cortés de servicio",
           region: "Inglés universal.",
           related: ["oil level", "engine", "dipstick", "service station"],
           example: {
@@ -1766,7 +1766,7 @@ lessons.push(
             "Alguien mide una presión real con un instrumento.",
           avoidWhen:
             "Sólo mira sin medir. Pressure implica una lectura.",
-          register: "polite service",
+          register: "cortés de servicio",
           region: "Inglés universal.",
           related: ["tire pressure", "blood pressure", "measure", "reading"],
           example: {
@@ -1783,7 +1783,7 @@ lessons.push(
             "Miró lo obvio pero no hizo diagnóstico profundo.",
           avoidWhen:
             "Necesita afirmar una revisión completa. Quickly baja la certeza.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["look over quickly", "inspect", "thoroughly", "at a glance"],
           example: {
@@ -1800,7 +1800,7 @@ lessons.push(
             "Mira un documento antes de firmar o tomar una decisión.",
           avoidWhen:
             "Quiere decir reescribir el texto. Review puede encontrar problemas; revise o edit los cambia.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["look over", "check", "read carefully", "terms"],
           example: {
@@ -1817,7 +1817,7 @@ lessons.push(
             "Un número de placa, una falta de ortografía, una cláusula o un recibo impreso tiene un error.",
           avoidWhen:
             "Sólo está verificando si el error existe. Ese primer paso es check o review.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["fix", "edit", "review", "correction"],
           example: {
@@ -1834,7 +1834,7 @@ lessons.push(
             "Va a cambiar un escrito, o en inglés británico, estudiar de nuevo para un examen.",
           avoidWhen:
             "Aceite, presión, recibos sencillos o luces del tablero. Ahí use check, inspect o review.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal; el uso de estudiar es especialmente británico.",
           related: ["edit", "rewrite", "study", "review"],
           example: {
@@ -1896,31 +1896,31 @@ lessons.push(
       variations: [
         {
           form: "Could you check the oil?",
-          register: "polite service",
+          register: "cortés de servicio",
           region: "Inglés universal",
           whenToUse: "Pedir una revisión práctica en una estación de servicio."
         },
         {
           form: "I'll check the pressure.",
-          register: "polite service",
+          register: "cortés de servicio",
           region: "Inglés universal",
           whenToUse: "Ofrecer medir presión de llantas o presión arterial."
         },
         {
           form: "I checked it quickly.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Admitir que la revisión no fue exhaustiva."
         },
         {
           form: "I reviewed the contract before signing.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Mirar un documento con cuidado antes de decidir."
         },
         {
           form: "If it's wrong, we'll correct it.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Separar revisar de corregir."
         }

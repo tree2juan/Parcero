@@ -416,7 +416,7 @@ lessons.push(
             "Quiere decir que una persona le parece agradable, fácil, honesta o buena gente.",
           avoidWhen:
             "Quiere declarar atracción romántica. Ahí “I like him” sin aclaración puede servir.",
-          register: "neutral spoken",
+          register: "neutro hablado",
           region: "Inglés universal.",
           related: ["he seems nice", "get a good impression", "like him", "as a person"],
           example: {
@@ -433,7 +433,7 @@ lessons.push(
             "Alguien no parece agradable al comienzo, aunque quizá cambie después.",
           avoidWhen:
             "Quiere decir que odia a la persona. Esta frase puede ser más suave que eso.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["rub people the wrong way", "seem off", "come across badly", "bad vibe"],
           example: {
@@ -450,7 +450,7 @@ lessons.push(
             "Acaba de conocer a alguien y quiere dar una opinión social cuidadosa.",
           avoidWhen:
             "Ya conoce profundamente a la persona y necesita una afirmación más fuerte.",
-          register: "neutral spoken",
+          register: "neutro hablado",
           region: "Inglés universal.",
           related: ["he seems calm", "she seems friendly", "nice guy", "good impression"],
           example: {
@@ -467,7 +467,7 @@ lessons.push(
             "El contexto deja claro si habla de amistad, respeto, gusto social o atracción.",
           avoidWhen:
             "Hay riesgo de malentendido romántico. Entonces añada “as a person” o use “he seems nice.”",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["I like her", "I liked them", "as a person", "have a crush"],
           example: {
@@ -484,7 +484,7 @@ lessons.push(
             "Alguien se tropieza, resbala, cae de una silla o casi cae en una escalera.",
           avoidWhen:
             "Habla de darse cuenta o de que alguien le cae bien. Esas ideas usan otras frases en inglés.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["trip", "slip", "fall down", "fall over"],
           example: {
@@ -501,7 +501,7 @@ lessons.push(
             "De pronto entiende, nota o conecta algo que se le había pasado.",
           avoidWhen:
             "Está contando números. Eso es “count,” no “realize.”",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés británico; en inglés americano se escribe “realize.”",
           related: ["notice", "figure out", "understand", "see"],
           example: {
@@ -518,7 +518,7 @@ lessons.push(
             "Habla de la primera reacción antes de conocer bien a alguien.",
           avoidWhen:
             "La impresión llegó después de meses. Entonces “over time” encaja mejor.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["right away", "initially", "first impression", "from the start"],
           example: {
@@ -580,31 +580,31 @@ lessons.push(
       variations: [
         {
           form: "I liked your brother as a person.",
-          register: "neutral spoken",
+          register: "neutro hablado",
           region: "Inglés universal",
           whenToUse: "Decir que alguien le cayó bien sin implicar atracción."
         },
         {
           form: "That guy rubs me the wrong way.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal",
           whenToUse: "Una manera informal de decir que alguien le cae mal."
         },
         {
           form: "Your friends seem nice.",
-          register: "neutral spoken",
+          register: "neutro hablado",
           region: "Inglés universal",
           whenToUse: "Varias personas dieron buena impresión."
         },
         {
           form: "I almost fell on the stairs.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Una caída literal o casi caída."
         },
         {
           form: "I realized it too late.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Darse cuenta después de que pasó el momento."
         }
@@ -1048,7 +1048,7 @@ lessons.push(
             "Habla de suegros, compañeros de apartamento, colegas, vecinos, compañeros de clase o familia política.",
           avoidWhen:
             "Habla de cargar o llevar un objeto. Ahí use “carry” o “take.”",
-          register: "neutral spoken",
+          register: "neutro hablado",
           region: "Inglés universal.",
           related: ["get on with", "be on good terms with", "like each other", "relationship"],
           example: {
@@ -1065,7 +1065,7 @@ lessons.push(
             "Hay choques repetidos, incomodidad o mala convivencia.",
           avoidWhen:
             "Sólo habla de una primera impresión. Ahí “he rubbed me the wrong way” puede ser más preciso.",
-          register: "neutral spoken",
+          register: "neutro hablado",
           region: "Inglés universal; “get on with” es muy británico.",
           related: ["not get on with", "clash with", "have issues with", "rub the wrong way"],
           example: {
@@ -1082,7 +1082,7 @@ lessons.push(
             "Nombra la persona o grupo con quien funciona la relación.",
           avoidWhen:
             "Usa “take” con un objeto. No diga “take with my in-laws” para esta idea.",
-          register: "grammar pattern",
+          register: "de gramática patrón",
           region: "Inglés universal.",
           related: ["with my in-laws", "with them", "with my boss", "with the neighbors"],
           example: {
@@ -1099,7 +1099,7 @@ lessons.push(
             "Dice cuánto lleva viviendo, trabajando, esperando, estudiando o en una relación.",
           avoidWhen:
             "Sólo habla de dónde está ahora. Esta estructura mide duración hasta el presente.",
-          register: "grammar pattern",
+          register: "de gramática patrón",
           region: "Inglés universal.",
           related: ["for two years", "since March", "I've been living", "I've been waiting"],
           example: {
@@ -1116,7 +1116,7 @@ lessons.push(
             "Mueve una mochila, bolsa, documento o cosa de un lugar a otro.",
           avoidWhen:
             "Habla de la relación con una persona. Ahí use “get along with.”",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["bring", "carry", "take upstairs", "move"],
           example: {
@@ -1133,7 +1133,7 @@ lessons.push(
             "Habla de los padres o familiares de su pareja o cónyuge.",
           avoidWhen:
             "Quiere nombrar sólo a la suegra o sólo al suegro. Use mother-in-law o father-in-law.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["mother-in-law", "father-in-law", "partner's family", "relatives"],
           example: {
@@ -1150,7 +1150,7 @@ lessons.push(
             "Usted se siente nueva, cohibida o cuidadosa en una familia o grupo.",
           avoidWhen:
             "Quiere decir que siente lástima. “Pena” no se traduce aquí como pity.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["I feel awkward", "I'm nervous", "I'm still getting used to it", "I'm quiet"],
           example: {
@@ -1212,31 +1212,31 @@ lessons.push(
       variations: [
         {
           form: "I get along with my in-laws.",
-          register: "neutral spoken",
+          register: "neutro hablado",
           region: "Inglés universal",
           whenToUse: "La relación con los suegros funciona bien."
         },
         {
           form: "I don't get along badly with anyone.",
-          register: "neutral spoken",
+          register: "neutro hablado",
           region: "Inglés universal",
           whenToUse: "Suavizar que no hay conflicto serio."
         },
         {
           form: "I've been living here for two years.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Una duración que empezó antes y sigue vigente."
         },
         {
           form: "Take the backpack to the room.",
-          register: "polite neutral",
+          register: "cortés neutro",
           region: "Inglés universal",
           whenToUse: "Llevar o cargar un objeto físico."
         },
         {
           form: "We've got along since the first lunch.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés británico",
           whenToUse: "La relación ha funcionado desde el principio."
         }
@@ -1686,7 +1686,7 @@ lessons.push(
             "Relata qué pasó, pone al día a alguien, cuenta un chiste o da información.",
           avoidWhen:
             "Está contando números. Ahí use “count.”",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["say", "explain", "describe", "tell a story"],
           example: {
@@ -1703,7 +1703,7 @@ lessons.push(
             "Se pone al día con alguien después de tiempo sin hablar o invita a explicar lo ocurrido.",
           avoidWhen:
             "Necesita números. Entonces pida “count them” o “count how many.”",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal.",
           related: ["tell me what happened", "catch me up", "what's new", "go on"],
           example: {
@@ -1720,7 +1720,7 @@ lessons.push(
             "Cuenta personas, plata, turnos, segundos o cualquier cosa numerable.",
           avoidWhen:
             "Relata una historia. Ahí “tell” es el verbo.",
-          register: "grammar pattern",
+          register: "de gramática patrón",
           region: "Inglés universal.",
           related: ["counted", "counting", "counts", "count them"],
           example: {
@@ -1737,7 +1737,7 @@ lessons.push(
             "Números, calma, juegos, turnos o instrucciones.",
           avoidWhen:
             "Alguien dice “tell me everything.” Esa frase pide historia, no números.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["count down", "count how many", "numbers", "add up"],
           example: {
@@ -1754,7 +1754,7 @@ lessons.push(
             "Relata un viaje, un chisme, un accidente, un cuento o lo que pasó.",
           avoidWhen:
             "Suma números o personas. Entonces “count” es correcto.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["tell a joke", "tell the truth", "tell me why", "explain"],
           example: {
@@ -1771,7 +1771,7 @@ lessons.push(
             "Usted depende de una persona para una tarea, apoyo o promesa.",
           avoidWhen:
             "Sólo cuenta números. Ahí no necesita on.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["rely on", "depend on", "trust", "have support"],
           example: {
@@ -1788,7 +1788,7 @@ lessons.push(
             "Quiere que alguien sepa que puede confiar en usted para un plan o favor.",
           avoidWhen:
             "No puede cumplir. En inglés también suena como compromiso.",
-          register: "friendly polite",
+          register: "amistoso cortés",
           region: "Inglés universal.",
           related: ["I've got you", "I'll help", "rely on me", "I'm here"],
           example: {
@@ -1850,37 +1850,37 @@ lessons.push(
       variations: [
         {
           form: "Tell me everything.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal",
           whenToUse: "Invitar a alguien a contar toda la historia."
         },
         {
           form: "I'll tell you quickly what happened.",
-          register: "friendly neutral",
+          register: "amistoso neutro",
           region: "Inglés universal",
           whenToUse: "Va a resumir un evento."
         },
         {
           form: "Let's count how many are coming.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Contar personas, cosas o números literalmente."
         },
         {
           form: "I'm counting on you for booking.",
-          register: "friendly polite",
+          register: "amistoso cortés",
           region: "Inglés universal",
           whenToUse: "Depender de alguien para una tarea."
         },
         {
           form: "The apartment has parking.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Traducir “cuenta con” como tener una característica."
         },
         {
           form: "He told me he would meet us here, and we used to swim at this bend.",
-          register: "courteous",
+          register: "cortés",
           region: "Inglés universal",
           whenToUse: "Para juntar un recado con un recuerdo. “Told me he would” es estilo indirecto; “used to swim” es la costumbre de antes."
         }

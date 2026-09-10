@@ -424,7 +424,7 @@ lessons.push(
             "Al proponer una salida nocturna o un trago después del trabajo.",
           avoidWhen:
             "Si de verdad quiere decir agua o café; entonces dígalo: “grab a coffee”, “get some water”.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal; “go for a drink” y “grab a drink” son variantes.",
           related: ["grab a drink", "go for a pint", "get a round in", "go out drinking"],
           example: {
@@ -441,7 +441,7 @@ lessons.push(
             "Al preguntar si alguien consume alcohol y cuánto.",
           avoidWhen:
             "Para una gaseosa o un jugo; ahí se dice “have a soda”, no “drink”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["do you drink alcohol?", "are you a big drinker?", "I don't drink", "I'm the designated driver"],
           example: {
@@ -458,7 +458,7 @@ lessons.push(
             "Al decir cómo va a llegar a algún lado en taxi o bus.",
           avoidWhen:
             "Para reservar por app; ahí el inglés dice “grab” o “book”, no “take the app”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal; “cab” y “taxi” son intercambiables.",
           related: ["grab a cab", "catch the bus", "hop on the bus", "book a ride"],
           example: {
@@ -475,7 +475,7 @@ lessons.push(
             "Al hablar de decidir algo de peso — un trabajo, una mudanza, un plan.",
           avoidWhen:
             "Con “take” en inglés norteamericano, donde “make a decision” es lo natural.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal; “take a decision” existe en el británico formal, pero “make” es lo seguro.",
           related: ["decide", "reach a decision", "make up your mind", "come to a decision"],
           example: {
@@ -492,7 +492,7 @@ lessons.push(
             "Al dar o acordar una ruta nombrando la calle o avenida que hay que seguir.",
           avoidWhen:
             "Para una persona; a alguien se le “takes home”, pero una vía se “takes” en el sentido de recorrer.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal; en Norteamérica las vías se nombran así: “take the 401”.",
           related: ["take Main Street", "get on the highway", "head down 7th", "take a left on 7th"],
           example: {
@@ -509,7 +509,7 @@ lessons.push(
             "Al ofrecerse a pagar el trago, la comida o el café de alguien.",
           avoidWhen:
             "Cuando de verdad va a invitar a alguien a un evento; ahí sí es “invite you to”.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal; “it's on me” y “my treat” son intercambiables.",
           related: ["it's on me", "I've got this", "this one's on me", "let me get this"],
           example: {
@@ -526,7 +526,7 @@ lessons.push(
             "Al proponer o tomarse un café, con o sin trabajo de por medio.",
           avoidWhen:
             "Con “take a coffee”, que suena a español traducido; se dice “have” o “grab”.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal; “grab” resalta lo rápido e informal.",
           related: ["have a coffee", "get a coffee", "go for a coffee", "grab a bite"],
           example: {
@@ -588,31 +588,31 @@ lessons.push(
       variations: [
         {
           form: "Want to go out for a drink?",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal",
           whenToUse: "La invitación neutra y de siempre para ir a tomar algo."
         },
         {
           form: "Fancy grabbing a few beers?",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Británico / general",
           whenToUse: "Al proponer casualmente unas cervezas entre amigos."
         },
         {
           form: "Could I tempt you with a drink?",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Una oferta más coqueta y suave de un trago."
         },
         {
           form: "Let's grab a quick one and head off.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal",
           whenToUse: "Al sugerir un trago rápido antes de irse."
         },
         {
           form: "Coffee and a catch-up?",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Al proponer un café, no alcohol — tomar en registro de trabajo."
         }
@@ -1056,7 +1056,7 @@ lessons.push(
             "Al preguntarle a alguien por su estado de salud o de ánimo.",
           avoidWhen:
             "Con “feel yourself”, que suena raro o ambiguo; “feel” va solo.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["how do you feel?", "you feeling okay?", "how are you doing?", "you alright?"],
           example: {
@@ -1073,7 +1073,7 @@ lessons.push(
             "Al describir tu estado: “I feel tired”, “I feel great”.",
           avoidWhen:
             "Agregando un reflexivo: “I feel me sick” es un calco incorrecto del español.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["feel sick", "feel better", "feel dizzy", "feel off"],
           example: {
@@ -1090,7 +1090,7 @@ lessons.push(
             "Al expresar un presentimiento: “I feel like it's going to rain”.",
           avoidWhen:
             "Ojo: “feel like” + sustantivo también significa “tener ganas de” (“I feel like a coffee”).",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["I feel like", "I have a feeling", "something tells me", "I sense that"],
           example: {
@@ -1107,7 +1107,7 @@ lessons.push(
             "Al dar el pésame o disculparse por algo que de verdad importa.",
           avoidWhen:
             "Para un roce mínimo; ahí basta un “sorry” suelto, sin el “I'm” enfático.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal; “sorry” a secas es más ligero que “I'm sorry”.",
           related: ["sorry", "I'm so sorry", "my condolences", "I do apologize"],
           example: {
@@ -1124,7 +1124,7 @@ lessons.push(
             "Al pedir disculpas por la acción que estás haciendo.",
           avoidWhen:
             "Con “I feel to bother you”, que no existe; el inglés usa “sorry to”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["sorry to bother you", "sorry to interrupt", "sorry to trouble you", "apologies for"],
           example: {
@@ -1141,7 +1141,7 @@ lessons.push(
             "Al decir que te sientes algo enfermo, sin ser grave.",
           avoidWhen:
             "En un parte médico formal, donde conviene nombrar el síntoma.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal; muy común y coloquial.",
           related: ["feeling off", "a bit rough", "not myself", "run down"],
           example: {
@@ -1158,7 +1158,7 @@ lessons.push(
             "Al pedirle a alguien que tome asiento: “sit down”, “have a seat”.",
           avoidWhen:
             "Confundiéndolo con “feel”; en inglés son dos verbos sin forma compartida.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal; “have a seat” es un poco más cortés.",
           related: ["have a seat", "take a seat", "sit tight", "grab a seat"],
           example: {
@@ -1220,31 +1220,31 @@ lessons.push(
       variations: [
         {
           form: "How are you feeling?",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Al preguntarle a alguien cómo se siente, en general."
         },
         {
           form: "How do you feel?",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Una variante casi igual, un punto más puntual."
         },
         {
           form: "I feel awful.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal",
           whenToUse: "Al reportar que uno se siente bastante mal."
         },
         {
           form: "I'm not feeling great.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Una forma suave de decir que uno está maluco."
         },
         {
           form: "I feel much better now.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Al decir que uno ya va mejorando."
         }
@@ -1688,7 +1688,7 @@ lessons.push(
             "Al preguntarle a alguien dónde vive, en cualquier registro.",
           avoidWhen:
             "Omitiendo el “do”: “where you live?” suena a inglés incompleto.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["whereabouts do you live?", "where are you based?", "where's home?", "which area do you live in?"],
           example: {
@@ -1705,7 +1705,7 @@ lessons.push(
             "Para ciudades, países, barrios y edificios: “I live in Houston”, “in the building”.",
           avoidWhen:
             "Para una calle, donde el inglés usa “on”, no “in”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["live in the city", "live in the suburbs", "live in an apartment", "live in the country"],
           example: {
@@ -1722,7 +1722,7 @@ lessons.push(
             "Al ubicarte por el nombre de la calle: “I live on Fifth”.",
           avoidWhen:
             "Con “in Fifth Avenue”, un calco del “en” español que suena mal.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal; en EE. UU. muy frecuente.",
           related: ["on Fifth Avenue", "on King Street", "just off Main", "around the corner"],
           example: {
@@ -1739,7 +1739,7 @@ lessons.push(
             "Al dar la dirección puntual con número de puerta.",
           avoidWhen:
             "Para una ciudad o barrio, donde va “in”, no “at”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["at number 402", "at 15 King Street", "at this address", "at my place"],
           example: {
@@ -1756,7 +1756,7 @@ lessons.push(
             "Al decir de qué vive alguien: “she makes a living from art”.",
           avoidWhen:
             "Diciendo “live from”, que no es idiomático; usa “make a living” o “live off”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal; “live off” es una alternativa más informal.",
           related: ["make a living from", "live off", "earn a living", "make ends meet"],
           example: {
@@ -1773,7 +1773,7 @@ lessons.push(
             "Al expresar devoción: “she lives for her kids”, “I live for the weekend”.",
           avoidWhen:
             "Cuando hablas de ingresos; eso es “make a living”, no “live for”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["live for the weekend", "live for her kids", "live for music", "live and breathe"],
           example: {
@@ -1790,7 +1790,7 @@ lessons.push(
             "Al hablar de cambiar de domicilio: “I just moved from Austin”.",
           avoidWhen:
             "Para mover un objeto; ahí basta “move”, sin el sentido de cambiar de casa.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["move in", "move out", "move to", "relocate"],
           example: {
@@ -1852,31 +1852,31 @@ lessons.push(
       variations: [
         {
           form: "Where do you live?",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "La forma estándar de preguntar dónde vive alguien."
         },
         {
           form: "Do you live around here?",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal",
           whenToUse: "Al preguntar si alguien vive por la zona."
         },
         {
           form: "I live just off Fifth.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Al ubicarte cerca de una calle conocida."
         },
         {
           form: "I've lived in Houston for two years.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Al decir cuánto llevas viviendo en un lugar."
         },
         {
           form: "I live over on the east side.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Norteamérica",
           whenToUse: "Al señalar tu zona de la ciudad de forma relajada."
         }

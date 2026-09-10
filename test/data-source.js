@@ -70,6 +70,7 @@ function dataSource({ schema = true, flashcards = false } = {}) {
   parts.push(read("data/lexicon.js"));
   for (const file of lexiconBlockFiles()) parts.push(read(file));
   parts.push(read("data/slang.js"));
+  parts.push(read("data/after-dark.js"));
   parts.push(read("data/mature.js"));
   if (flashcards) parts.push(read("data/flashcards.js"));
   return parts.join("\n");

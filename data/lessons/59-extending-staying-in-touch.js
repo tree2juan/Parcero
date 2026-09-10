@@ -421,7 +421,7 @@ lessons.push(
             "Ha intentado contactar a una persona, por fin la ubicó o necesita mantenerse en contacto.",
           avoidWhen:
             "Una institución le dio una noticia formal. Ahí “inform” o “notify” pueden sonar mejor.",
-          register: "neutral conversational",
+          register: "neutro conversacional",
           region: "Inglés universal.",
           related: ["contact", "reach", "call", "message"],
           example: {
@@ -438,7 +438,7 @@ lessons.push(
             "Alguien conecta su llamada con la persona o extensión que usted pidió.",
           avoidWhen:
             "Usted simplemente manda un mensaje. “Put through” pertenece a llamadas conectadas.",
-          register: "polite service",
+          register: "cortés de servicio",
           region: "Inglés universal.",
           related: ["transfer your call", "connect you", "hold please", "extension"],
           example: {
@@ -455,7 +455,7 @@ lessons.push(
             "Un hotel, escuela, empresa u organizador comunica un cambio, regla, resultado o decisión.",
           avoidWhen:
             "Un amigo le contó algo casual. “Someone told us” suena más humano.",
-          register: "formal neutral",
+          register: "formal neutro",
           region: "Inglés universal.",
           related: ["we were notified", "they told us", "we heard that", "officially informed"],
           example: {
@@ -472,7 +472,7 @@ lessons.push(
             "Hubo llamadas perdidas, mala señal, mensajes sin respuesta o incertidumbre antes del contacto.",
           avoidWhen:
             "El contacto fue fácil y normal. Entonces “talked to” o “spoke with” basta.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["finally reached", "got hold of", "managed to call", "heard back"],
           example: {
@@ -489,7 +489,7 @@ lessons.push(
             "Horarios, nombres, direcciones o precios pueden confundirse si quedan sólo en llamada.",
           avoidWhen:
             "El problema ya ocurrió. Entonces diga “there was a mix-up” y explique el error.",
-          register: "neutral conversational",
+          register: "neutro conversacional",
           region: "Inglés universal.",
           related: ["avoid confusion", "make it clear", "confirm in writing", "no misunderstanding"],
           example: {
@@ -506,7 +506,7 @@ lessons.push(
             "Llega tarde a responder, interrumpe, corrige un detalle o reconoce una molestia menor.",
           avoidWhen:
             "El daño es serio. Entonces necesita una disculpa completa y reparación, no sólo “sorry.”",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["I'm sorry", "apologies", "excuse me", "my bad"],
           example: {
@@ -523,7 +523,7 @@ lessons.push(
             "La señal, cobertura o red impide que la llamada conecte.",
           avoidWhen:
             "La llamada sí sonó y nadie contestó. Entonces diga “they didn't answer.”",
-          register: "neutral conversational",
+          register: "neutro conversacional",
           region: "Inglés universal.",
           related: ["bad signal", "dropped call", "no service", "didn't answer"],
           example: {
@@ -585,37 +585,37 @@ lessons.push(
       variations: [
         {
           form: "I haven't been able to get in touch with her.",
-          register: "neutral conversational",
+          register: "neutro conversacional",
           region: "Inglés universal",
           whenToUse: "No ha logrado comunicarse con alguien por ningún canal."
         },
         {
           form: "Hold for a moment; I'll put you through.",
-          register: "polite service",
+          register: "cortés de servicio",
           region: "Inglés universal",
           whenToUse: "Recepción conecta una llamada con otra persona."
         },
         {
           form: "We were informed that the schedule changed.",
-          register: "formal neutral",
+          register: "formal neutro",
           region: "Inglés universal",
           whenToUse: "Una organización comunicó una noticia o cambio."
         },
         {
           form: "We finally managed to get in touch.",
-          register: "neutral conversational",
+          register: "neutro conversacional",
           region: "Inglés universal",
           whenToUse: "El contacto llegó después de varios intentos."
         },
         {
           form: "If the call doesn't go through, text me.",
-          register: "neutral conversational",
+          register: "neutro conversacional",
           region: "Inglés universal",
           whenToUse: "Necesita un canal alterno si falla la llamada."
         },
         {
           form: "The call must have dropped again, didn't it?",
-          register: "courteous",
+          register: "cortés",
           region: "Inglés universal",
           whenToUse: "Para explicar una llamada caída sin culpar a nadie. “Must have dropped” deduce, y la coletilla busca acuerdo."
         }
@@ -1079,7 +1079,7 @@ lessons.push(
             "Un aparato entra a una red, un cable queda enchufado, una llamada logra entrar o dos personas hacen buena conexión.",
           avoidWhen:
             "Quiere decir que el internet simplemente no funciona. Muchas veces “isn't working” suena más natural.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["be connected", "go through", "log in", "link"],
           example: {
@@ -1096,7 +1096,7 @@ lessons.push(
             "La red no carga, no conecta o no deja entrar a la reunión.",
           avoidWhen:
             "Necesita decir específicamente que el aparato no se unió a la red. Entonces “won't connect” es más preciso.",
-          register: "neutral conversational",
+          register: "neutro conversacional",
           region: "Inglés universal.",
           related: ["won't connect", "bad signal", "no service", "internet is down"],
           example: {
@@ -1113,7 +1113,7 @@ lessons.push(
             "Usted ya aparece dentro de la reunión, red o plataforma.",
           avoidWhen:
             "Está dando la orden de enchufar un cable. Ahí use “connect the cable.”",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["online", "logged in", "in the meeting", "connected to Wi-Fi"],
           example: {
@@ -1130,7 +1130,7 @@ lessons.push(
             "Una llamada se congela, la red desaparece o la reunión entra y sale.",
           avoidWhen:
             "Usted colgó voluntariamente. Entonces diga “I hung up.”",
-          register: "neutral conversational",
+          register: "neutro conversacional",
           region: "Inglés universal.",
           related: ["the call dropped", "lost signal", "bad connection", "cut out"],
           example: {
@@ -1147,7 +1147,7 @@ lessons.push(
             "Internet, una aplicación, un enlace o una función no responde como debería.",
           avoidWhen:
             "Quiere acusar a una persona de no contestar. Esta frase habla de sistemas, no de voluntad.",
-          register: "neutral conversational",
+          register: "neutro conversacional",
           region: "Inglés universal.",
           related: ["doesn't work here", "won't load", "no service", "can't connect"],
           example: {
@@ -1164,7 +1164,7 @@ lessons.push(
             "Está esperando que una llamada, reunión o red funcione para seguir.",
           avoidWhen:
             "Habla de un hábito. Entonces el presente también se traduce, pero ya no hay incertidumbre futura.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["once we're connected", "when it works", "after we connect", "if it connects"],
           example: {
@@ -1181,7 +1181,7 @@ lessons.push(
             "Dos personas se entienden rápido, comparten humor o se sienten cómodas desde el comienzo.",
           avoidWhen:
             "Habla de internet o cables. Ahí “click” sólo sería apretar con el mouse.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal.",
           related: ["hit it off", "get along", "connect with someone", "have chemistry"],
           example: {
@@ -1243,31 +1243,31 @@ lessons.push(
       variations: [
         {
           form: "Connect the cable first.",
-          register: "neutral practical",
+          register: "neutro práctico",
           region: "Inglés universal",
           whenToUse: "Dar una instrucción técnica directa."
         },
         {
           form: "The Wi-Fi isn't working for me.",
-          register: "neutral conversational",
+          register: "neutro conversacional",
           region: "Inglés universal",
           whenToUse: "La red falla y no necesita diagnosticar por qué."
         },
         {
           form: "I still don't show as connected.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "No aparece en línea o dentro de la reunión."
         },
         {
           form: "My signal dropped again.",
-          register: "neutral conversational",
+          register: "neutro conversacional",
           region: "Inglés universal",
           whenToUse: "La señal o llamada se cayó de repente."
         },
         {
           form: "We clicked right away.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal",
           whenToUse: "Dos personas conectaron de una."
         }
@@ -1731,7 +1731,7 @@ lessons.push(
             "Una reunión, llamada, proceso o lista sigue después de una interrupción.",
           avoidWhen:
             "Quiere sonar muy cotidiano. En muchos contextos, “keep going” o “carry on” suena más natural.",
-          register: "neutral to formal",
+          register: "neutro a formal",
           region: "Inglés universal.",
           related: ["carry on", "keep going", "resume", "go on"],
           example: {
@@ -1748,7 +1748,7 @@ lessons.push(
             "Necesita describir una acción que sigue o una situación que no se detiene.",
           avoidWhen:
             "La frase es casual y oral. “Keep going” puede sonar menos rígido.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["continues", "continued", "continuing", "keep going"],
           example: {
@@ -1765,7 +1765,7 @@ lessons.push(
             "La llamada o reunión se interrumpió y usted quiere retomarla con cierto cuidado.",
           avoidWhen:
             "La escena es muy relajada. “Let's keep going” puede sentirse más conversacional.",
-          register: "polite neutral",
+          register: "cortés neutro",
           region: "Inglés universal.",
           related: ["let's keep going", "let's carry on", "let's resume", "go ahead"],
           example: {
@@ -1782,7 +1782,7 @@ lessons.push(
             "Quiere seguir por mensajes, seguir hablando o continuar después de una interrupción.",
           avoidWhen:
             "Un documento formal o una instrucción institucional exige precisión. “Continue” puede ser más neutro.",
-          register: "neutral conversational",
+          register: "neutro conversacional",
           region: "Inglés universal; muy común en inglés británico y ampliamente entendido.",
           related: ["keep going", "go on", "continue", "press on"],
           example: {
@@ -1799,7 +1799,7 @@ lessons.push(
             "La continuación depende de señal, batería, tiempo o permiso que puede acabarse.",
           avoidWhen:
             "La condición no es frágil sino una verdad general. Entonces la frase puede sonar demasiado dramática.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["as long as we have signal", "before it drops", "while it works", "until it cuts out"],
           example: {
@@ -1816,7 +1816,7 @@ lessons.push(
             "Interrupciones hacen que la gente olvide el punto o la secuencia de lo que hablaba.",
           avoidWhen:
             "Habla de hilo físico de costura. Ahí no es modismo.",
-          register: "neutral conversational",
+          register: "neutro conversacional",
           region: "Inglés universal.",
           related: ["pick up where we left off", "keep track", "follow the point", "get back to it"],
           example: {
@@ -1833,7 +1833,7 @@ lessons.push(
             "La llamada se cayó, alguien está ocupado o conviene retomar por teléfono más tarde.",
           avoidWhen:
             "Va a responder por mensaje. Entonces use “text you back” o “reply by text.”",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["phone you back", "text you back", "return your call", "try again"],
           example: {
@@ -1895,31 +1895,31 @@ lessons.push(
       variations: [
         {
           form: "Should we continue here?",
-          register: "polite practical",
+          register: "cortés práctico",
           region: "Inglés universal",
           whenToUse: "Preguntar si siguen por el mismo canal."
         },
         {
           form: "I'll continue with the list.",
-          register: "neutral careful",
+          register: "neutro cuidadoso",
           region: "Inglés universal",
           whenToUse: "Seguir una tarea con tono claro y cuidado."
         },
         {
           form: "We'll carry on by text.",
-          register: "neutral conversational",
+          register: "neutro conversacional",
           region: "Inglés universal",
           whenToUse: "La llamada falla y siguen por mensajes."
         },
         {
           form: "Let's keep going while we have signal.",
-          register: "neutral conversational",
+          register: "neutro conversacional",
           region: "Inglés universal",
           whenToUse: "Seguir de manera más hablada mientras la condición aguanta."
         },
         {
           form: "Let's pick up where we left off.",
-          register: "neutral conversational",
+          register: "neutro conversacional",
           region: "Inglés universal",
           whenToUse: "Retomar una conversación sin repetir todo."
         }

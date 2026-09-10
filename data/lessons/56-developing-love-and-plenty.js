@@ -365,7 +365,7 @@ lessons.push(
           literal: "amar / querer",
           useWhen: "Afecto fuerte o entusiasmo: “I love my family”, “I love this song”, “love you”.",
           avoidWhen: "Quiere sonar apenas interesado; “love” puede ser intenso si la relación no lo permite.",
-          register: "neutral to intimate",
+          register: "neutro a íntimo",
           region: "Inglés universal; el uso con amigos y familia varía por persona y cultura.",
           related: ["I love you", "love you", "I love this", "care about"],
           example: {
@@ -379,7 +379,7 @@ lessons.push(
           literal: "te amo / te quiero",
           useWhen: "Pareja, familia o amistad cercana donde esa forma ya cabe.",
           avoidWhen: "Una relación nueva o ambigua; puede sonar demasiado intensa.",
-          register: "intimate",
+          register: "íntimo",
           region: "Inglés universal; el peso varía mucho por familia y generación.",
           related: ["love you", "I care about you", "I adore you", "affection"],
           example: {
@@ -393,7 +393,7 @@ lessons.push(
           literal: "te quiero / te quiero mucho",
           useWhen: "Cerrar una llamada o despedida cálida: “bye, love you”.",
           avoidWhen: "Quiere una declaración romántica solemne; entonces la forma completa y el contexto pesan más.",
-          register: "friendly intimate",
+          register: "amistoso íntimo",
           region: "Común en muchas familias y grupos de amigos anglófonos, pero no universal.",
           related: ["I love you", "bye", "miss you", "take care"],
           example: {
@@ -407,7 +407,7 @@ lessons.push(
           literal: "me gustas / me caes bien",
           useWhen: "Early dating interest or simple liking: “I like you, but...”.",
           avoidWhen: "Traduce un “te quiero mucho” profundo a familiares o amigos cercanos; puede sonar demasiado débil.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["like", "have feelings for", "care about", "love"],
           example: {
@@ -421,7 +421,7 @@ lessons.push(
           literal: "me importas / me preocupo por ti",
           useWhen: "Afecto serio sin declarar amor romántico: “I care about you a lot”.",
           avoidWhen: "Quiere devolver un “I love you” ya establecido; puede sonar como bajar la intensidad.",
-          register: "polite intimate",
+          register: "cortés íntimo",
           region: "Inglés universal.",
           related: ["care", "mean a lot to me", "friendship", "affection"],
           example: {
@@ -435,7 +435,7 @@ lessons.push(
           literal: "amo esta ciudad",
           useWhen: "Entusiasmo por lugares, comida, música o planes: “I love this place”.",
           avoidWhen: "Quiere ser moderado; “I really like this city” baja la intensidad.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal.",
           related: ["love this", "really like", "favorite", "enjoy"],
           example: {
@@ -449,7 +449,7 @@ lessons.push(
           literal: "poner el pie en eso",
           useWhen: "Reconocer una embarrada social: “I really put my foot in it”.",
           avoidWhen: "Un daño grave o intencional; suele ser torpeza más que maldad.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal.",
           related: ["awkward", "say the wrong thing", "embarrassing", "mistake"],
           example: {
@@ -494,25 +494,25 @@ lessons.push(
       variations: [
         {
           form: "Love you.",
-          register: "friendly intimate",
+          register: "amistoso íntimo",
           region: "Inglés universal; depende del grupo",
           whenToUse: "Una despedida cálida con familia o amigos cercanos."
         },
         {
           form: "I love you too.",
-          register: "intimate",
+          register: "íntimo",
           region: "Inglés universal",
           whenToUse: "Responder cuando el vínculo ya permite esa frase."
         },
         {
           form: "I care about you a lot.",
-          register: "polite intimate",
+          register: "cortés íntimo",
           region: "Inglés universal",
           whenToUse: "Expresar afecto serio sin forzar una lectura romántica."
         },
         {
           form: "I love this city.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal",
           whenToUse: "Decir que ama o le encanta un lugar."
         }
@@ -907,7 +907,7 @@ lessons.push(
           literal: "dejado de sobra",
           useWhen: "Comida y cantidades: “there's food left over”, “we have rice left over”.",
           avoidWhen: "Inventar un verbo como “to sobr”; el inglés arma la idea con be/have + left over.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["leftovers", "have left over", "remaining", "extra"],
           example: {
@@ -921,7 +921,7 @@ lessons.push(
           literal: "tengo tiempo para sobrar",
           useWhen: "Cantidad extra útil: “time to spare”, “money to spare”, “room to spare”.",
           avoidWhen: "Sobras de comida; ahí “left over” suele sonar más natural.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["to spare", "extra time", "plenty of time", "room to spare"],
           example: {
@@ -935,7 +935,7 @@ lessons.push(
           literal: "hay comida dejada de sobra",
           useWhen: "Anunciar sobras después de una comida: “there are leftovers”, “there's rice left over”.",
           avoidWhen: "Quiere decir que una persona guardó comida deliberadamente; entonces use “saved”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["there is", "leftovers", "saved food", "remaining"],
           example: {
@@ -949,7 +949,7 @@ lessons.push(
           literal: "sobras",
           useWhen: "Comida guardada: “eat leftovers”, “pack up the leftovers”.",
           avoidWhen: "Una persona que sobra; para personas esta palabra suena deshumanizante y rara.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["left over", "pack up", "reheat", "containers"],
           example: {
@@ -963,7 +963,7 @@ lessons.push(
           literal: "va sin decir",
           useWhen: "Puntos obvios: “it goes without saying that we're grateful”.",
           avoidWhen: "Traducirlo con leftovers; no tiene relación con comida.",
-          register: "polite formal",
+          register: "cortés formal",
           region: "Inglés universal.",
           related: ["obviously", "needless to say", "of course", "no need to say"],
           example: {
@@ -977,7 +977,7 @@ lessons.push(
           literal: "innecesario / en el camino",
           useWhen: "Objetos o comentarios: “that's unnecessary”; espacio físico: “the chair is in the way”.",
           avoidWhen: "Decir “you're in the way” a una persona si no quiere sonar hiriente.",
-          register: "neutral but sensitive",
+          register: "neutro pero sensitive",
           region: "Inglés universal.",
           related: ["unneeded", "extra", "in the way", "not needed"],
           example: {
@@ -991,7 +991,7 @@ lessons.push(
           literal: "corto de / para sobrar",
           useWhen: "Contrastar escasez y abundancia: “we're short on plates but have glasses to spare”.",
           avoidWhen: "Tratarla como una estructura fija para todo; comida sobrante suele preferir “left over”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["short on", "spare", "enough", "extra"],
           example: {
@@ -1036,25 +1036,25 @@ lessons.push(
       variations: [
         {
           form: "There's food left over.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Decir que sobró comida."
         },
         {
           form: "I have time to spare.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Decir que le sobra tiempo."
         },
         {
           form: "It goes without saying.",
-          register: "polite formal",
+          register: "cortés formal",
           region: "Inglés universal",
           whenToUse: "Traducir “sobra decir que”."
         },
         {
           form: "That comment was unnecessary.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Decir que un comentario estuvo de sobra."
         }

@@ -398,7 +398,7 @@ lessons.push(
             "Habla de sacar efectivo de un banco, cajero o cuenta.",
           avoidWhen:
             "Para copias, citas, pasaportes o notas. El inglés cambia de verbo según el objeto.",
-          register: "neutral formal",
+          register: "neutro formal",
           region: "Inglés universal; en conversación también se oye “take out cash.”",
           related: ["cash", "ATM", "take out", "bank account"],
           example: {
@@ -415,7 +415,7 @@ lessons.push(
             "Una oficina no recibe tarjeta, una tienda exige billetes o usted necesita pagar algo pequeño.",
           avoidWhen:
             "Confundirlo con money en general. Cash es dinero físico, no saldo bancario abstracto.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["money", "notes", "coins", "ATM"],
           example: {
@@ -432,7 +432,7 @@ lessons.push(
             "En una papelería, oficina, universidad o trámite que exige duplicados.",
           avoidWhen:
             "Decir “take out copies” como calco de sacar copias. Suena como sacarlas de una caja.",
-          register: "neutral conversational",
+          register: "neutro conversacional",
           region: "Inglés universal.",
           related: ["photocopy", "print", "copy shop", "document"],
           example: {
@@ -449,7 +449,7 @@ lessons.push(
             "Clínicas, oficinas, trámites, peluquerías o entrevistas exigen una cita previa.",
           avoidWhen:
             "Usarlo para el turno del día en una fila. Ahí normalmente “take a number.”",
-          register: "neutral practical",
+          register: "neutro práctico",
           region: "Inglés universal; “make an appointment” también es común.",
           related: ["make an appointment", "slot", "booking", "schedule"],
           example: {
@@ -466,7 +466,7 @@ lessons.push(
             "Quiere dejar claro que habla del trámite de expedición del documento.",
           avoidWhen:
             "Una conversación casual donde “get a passport” es suficiente y menos pesado.",
-          register: "formal practical",
+          register: "formal práctico",
           region: "Inglés universal.",
           related: ["get a passport", "apply for", "issue", "document"],
           example: {
@@ -483,7 +483,7 @@ lessons.push(
             "Un banco, clínica, oficina o mostrador atiende por turnos numerados.",
           avoidWhen:
             "Confundirlo con reservar una cita futura. “Take a number” suele ser para esperar hoy.",
-          register: "neutral practical",
+          register: "neutro práctico",
           region: "Inglés universal.",
           related: ["line", "ticket number", "desk", "wait"],
           example: {
@@ -500,7 +500,7 @@ lessons.push(
             "Habla de resultados en cursos, exámenes, trabajos o una broma sobre desempeño.",
           avoidWhen:
             "Estados Unidos prefiere “grades” para notas escolares. “Marks” se entiende, pero suena más británico.",
-          register: "neutral conversational",
+          register: "neutro conversacional",
           region: "Inglés británico y común en otros lugares; “get good grades” es más internacional.",
           related: ["grades", "score", "results", "exam"],
           example: {
@@ -551,25 +551,25 @@ lessons.push(
       variations: [
         {
           form: "I need to withdraw cash.",
-          register: "neutral practical",
+          register: "neutro práctico",
           region: "Inglés universal",
           whenToUse: "Sacar plata de una cuenta o cajero."
         },
         {
           form: "I need to make copies.",
-          register: "neutral conversational",
+          register: "neutro conversacional",
           region: "Inglés universal",
           whenToUse: "Sacar fotocopias para un trámite."
         },
         {
           form: "I booked the appointment online.",
-          register: "neutral practical",
+          register: "neutro práctico",
           region: "Inglés universal",
           whenToUse: "Decir que ya sacó la cita por internet."
         },
         {
           form: "Take a number at the desk.",
-          register: "neutral practical",
+          register: "neutro práctico",
           region: "Inglés universal",
           whenToUse: "Sacar turno en un sistema con números."
         }
@@ -1002,7 +1002,7 @@ lessons.push(
             "Un cuerpo salta, una persona brinca o algo se mueve de golpe.",
           avoidWhen:
             "Para filas, semáforos y pasos de un proceso, donde el inglés suele escoger otro verbo.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal; “jump the queue” sí existe en inglés británico.",
           related: ["leap", "hop", "skip", "jump the queue"],
           example: {
@@ -1019,7 +1019,7 @@ lessons.push(
             "Alguien se mete delante de personas que ya estaban esperando.",
           avoidWhen:
             "El personal invitó a alguien a pasar. Eso no es cut in line.",
-          register: "neutral conversational",
+          register: "neutro conversacional",
           region: "Inglés norteamericano; en Reino Unido se oye “jump the queue.”",
           related: ["jump the queue", "line", "turn", "wait your turn"],
           example: {
@@ -1036,7 +1036,7 @@ lessons.push(
             "Registro, formularios, recetas, instrucciones o controles de seguridad tienen una secuencia.",
           avoidWhen:
             "No hay un orden requerido. Si no hay paso obligatorio, no hay step que saltar.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["skip registration", "miss a step", "process", "instructions"],
           example: {
@@ -1053,7 +1053,7 @@ lessons.push(
             "Un conductor ignora la señal roja y sigue.",
           avoidWhen:
             "La luz ya cambió y cruzó legalmente. Ahí no ran a red light.",
-          register: "neutral conversational",
+          register: "neutro conversacional",
           region: "Inglés universal.",
           related: ["traffic light", "red light", "ticket", "violation"],
           example: {
@@ -1070,7 +1070,7 @@ lessons.push(
             "Un estudiante falta por decisión propia o por irresponsabilidad.",
           avoidWhen:
             "La clase fue cancelada o había excusa oficial. Eso no es skip class.",
-          register: "neutral conversational",
+          register: "neutro conversacional",
           region: "Inglés universal.",
           related: ["miss class", "attendance", "absence", "excuse"],
           example: {
@@ -1087,7 +1087,7 @@ lessons.push(
             "Un error, mentira, contraste o acto injusto se nota de inmediato.",
           avoidWhen:
             "Un detalle está escondido y requiere investigar. Entonces no sticks out.",
-          register: "neutral conversational",
+          register: "neutro conversacional",
           region: "Inglés universal; “stand out” es otra opción común.",
           related: ["stand out", "be obvious", "be clear", "notice"],
           example: {
@@ -1104,7 +1104,7 @@ lessons.push(
             "Una regla se mantiene aunque alguien tenga una excusa razonable.",
           avoidWhen:
             "Quiere decir simplemente porque tienen afán. “Even if” marca concesión, no causa.",
-          register: "neutral conversational",
+          register: "neutro conversacional",
           region: "Inglés universal.",
           related: ["even though", "although", "in a rush", "in a hurry"],
           example: {
@@ -1155,25 +1155,25 @@ lessons.push(
       variations: [
         {
           form: "That man is cutting in line.",
-          register: "neutral conversational",
+          register: "neutro conversacional",
           region: "Inglés norteamericano",
           whenToUse: "Alguien se está saltando la fila."
         },
         {
           form: "Don't skip that step.",
-          register: "neutral practical",
+          register: "neutro práctico",
           region: "Inglés universal",
           whenToUse: "Un proceso tiene un paso obligatorio."
         },
         {
           form: "He ran a red light.",
-          register: "neutral conversational",
+          register: "neutro conversacional",
           region: "Inglés universal",
           whenToUse: "Alguien se saltó un semáforo en rojo."
         },
         {
           form: "The mistake sticks out.",
-          register: "neutral conversational",
+          register: "neutro conversacional",
           region: "Inglés universal",
           whenToUse: "El error salta a la vista."
         },
@@ -1606,7 +1606,7 @@ lessons.push(
             "Da indicaciones, habla de moverse al otro lado o describe una ruta.",
           avoidWhen:
             "Quiere decir cruzarse con una persona por casualidad. Para eso el inglés dice “run into.”",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["go across", "crossing", "bridge", "corner"],
           example: {
@@ -1623,7 +1623,7 @@ lessons.push(
             "Da instrucciones para cruzar una calle, avenida, puente o zona de tráfico.",
           avoidWhen:
             "Convertirlo en una frase larga si la persona necesita actuar ya. Lo corto funciona.",
-          register: "neutral practical",
+          register: "neutro práctico",
           region: "Inglés universal.",
           related: ["look both ways", "traffic light", "crosswalk", "corner"],
           example: {
@@ -1640,7 +1640,7 @@ lessons.push(
             "Cuenta que ya cruzó una calle, frontera, puente o tramo difícil.",
           avoidWhen:
             "Añadir una vocal al final al pronunciar. No es “cross-ed” con dos sílabas en este uso común.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["cross", "went across", "crossing", "got across"],
           example: {
@@ -1657,7 +1657,7 @@ lessons.push(
             "Espera un resultado, una respuesta, un puente abierto o una entrevista sin problemas.",
           avoidWhen:
             "Usarlo como instrucción física en todos los casos. Normalmente es un modismo de esperanza.",
-          register: "neutral conversational",
+          register: "neutro conversacional",
           region: "Inglés universal.",
           related: ["hope", "good luck", "fingers crossed", "wish"],
           example: {
@@ -1674,7 +1674,7 @@ lessons.push(
             "Se encuentra inesperadamente con una amiga, colega, vecina o conocida en la calle.",
           avoidWhen:
             "La reunión fue planeada. Entonces “meet” o “meet up with” es más claro.",
-          register: "neutral conversational",
+          register: "neutro conversacional",
           region: "Inglés universal.",
           related: ["bump into", "come across", "meet by chance", "see"],
           example: {
@@ -1691,7 +1691,7 @@ lessons.push(
             "Da indicaciones sobre dónde cruzar, girar, esperar o encontrarse.",
           avoidWhen:
             "Pensar que toda esquina es segura. La frase ubica; no garantiza.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["corner", "crosswalk", "traffic light", "block"],
           example: {
@@ -1708,7 +1708,7 @@ lessons.push(
             "Acaba de dar una ruta y quiere que la otra persona llegue bien.",
           avoidWhen:
             "Un registro muy formal o una instrucción escrita. Suena personal y conversacional.",
-          register: "friendly conversational",
+          register: "amistoso conversacional",
           region: "Inglés universal, con tono coloquial.",
           related: ["get there safely", "let me know", "take care", "go on"],
           example: {
@@ -1759,25 +1759,25 @@ lessons.push(
       variations: [
         {
           form: "Cross carefully at the corner.",
-          register: "neutral practical",
+          register: "neutro práctico",
           region: "Inglés universal",
           whenToUse: "Dar una indicación segura para cruzar la calle."
         },
         {
           form: "Yesterday I crossed the avenue.",
-          register: "neutral conversational",
+          register: "neutro conversacional",
           region: "Inglés universal",
           whenToUse: "Contar que ya cruzó una avenida o calle."
         },
         {
           form: "Cross your fingers for me.",
-          register: "neutral conversational",
+          register: "neutro conversacional",
           region: "Inglés universal",
           whenToUse: "Pedir que alguien espere que algo salga bien."
         },
         {
           form: "I ran into a colleague downtown.",
-          register: "neutral conversational",
+          register: "neutro conversacional",
           region: "Inglés universal",
           whenToUse: "Se encontró con alguien por casualidad."
         }

@@ -367,7 +367,7 @@ lessons.push(
           literal: "invitar / convocar",
           useWhen: "Para eventos: “invite her to the party”, “we invited them over”.",
           avoidWhen: "Quiere decir “yo pago”; ahí van “it's on me”, “I'll buy you...” o “treat”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["invitation", "invite someone to", "invite over", "guest"],
           example: {
@@ -381,7 +381,7 @@ lessons.push(
           literal: "está sobre mí",
           useWhen: "Cubrir una cuenta pequeña o una ronda: “don't worry, it's on me”.",
           avoidWhen: "Está invitando a un evento; ahí sí es “invite”.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal.",
           related: ["on me", "my treat", "I'll get this", "my round"],
           example: {
@@ -395,7 +395,7 @@ lessons.push(
           literal: "te compraré un café",
           useWhen: "Ofrecer una bebida o comida concreta: “I'll buy you lunch”, “can I buy you a drink?”.",
           avoidWhen: "Habla de una invitación a asistir a un evento, porque “buy” pone el foco en pagar.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal.",
           related: ["buy you", "get you", "a coffee", "lunch is on me"],
           example: {
@@ -409,7 +409,7 @@ lessons.push(
           literal: "darle un gusto a alguien con algo",
           useWhen: "Pagar una comida, postre o salida como gesto: “she treated us to dinner”.",
           avoidWhen: "Quiere sonar muy casual; “I'll get this” suele ser más cotidiano.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["my treat", "treat you to", "buy you", "on me"],
           example: {
@@ -423,7 +423,7 @@ lessons.push(
           literal: "yo consigo esto",
           useWhen: "Al llegar la cuenta: “I'll get this”, “you get the next one”.",
           avoidWhen: "Fuera de contexto de cuentas, “get” vuelve a significar conseguir o entender.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal.",
           related: ["get the bill", "you get next time", "on me", "cover it"],
           example: {
@@ -437,7 +437,7 @@ lessons.push(
           literal: "mi regalo / mi gusto",
           useWhen: "Después de una duda o una negativa suave: “no, really, my treat”.",
           avoidWhen: "Necesita un registro muy formal; en una factura de empresa sería mejor “I'll cover it”.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal.",
           related: ["treat", "it's on me", "don't worry", "my pleasure"],
           example: {
@@ -451,7 +451,7 @@ lessons.push(
           literal: "invitar a alguien hacia acá",
           useWhen: "Hablar de recibir a alguien en casa: “we invited them over for coffee”.",
           avoidWhen: "Quiere decir que paga el café; “invite over” solo habla de venir.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal.",
           related: ["come over", "invite to", "have guests", "host"],
           example: {
@@ -496,25 +496,25 @@ lessons.push(
       variations: [
         {
           form: "It's on me.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal",
           whenToUse: "Decir “yo invito” al cubrir una cuenta."
         },
         {
           form: "Let me buy you a coffee.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal",
           whenToUse: "Ofrecer comprarle un café a alguien."
         },
         {
           form: "My treat.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal",
           whenToUse: "Insistir con calidez en que usted paga."
         },
         {
           form: "I invited her to dinner.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Convocar a alguien a cenar, sin aclarar quién paga."
         }
@@ -909,7 +909,7 @@ lessons.push(
           literal: "aceptar",
           useWhen: "Invitaciones y asuntos explícitos: “accept an invitation”, “accept the offer”.",
           avoidWhen: "Le ofrecen té o una galleta; “yes, please” suena más natural que “I accept”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["accept an invitation", "accept an offer", "acceptance", "accepted"],
           example: {
@@ -923,7 +923,7 @@ lessons.push(
           literal: "sí, por favor",
           useWhen: "Responder a “would you like...?”: “yes, please”.",
           avoidWhen: "Quiere aceptar una invitación formal; ahí puede usar “I'd love to” o “I accept”.",
-          register: "polite neutral",
+          register: "cortés neutro",
           region: "Inglés universal.",
           related: ["please", "thank you", "I'd love some", "sure"],
           example: {
@@ -937,7 +937,7 @@ lessons.push(
           literal: "me encantaría / me encantaría un poco",
           useWhen: "Aceptar planes o algo servido: “I'd love to come”, “I'd love some tea”.",
           avoidWhen: "No está de verdad interesado; suena entusiasta.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal.",
           related: ["I'd be happy to", "that would be lovely", "yes please", "love"],
           example: {
@@ -951,7 +951,7 @@ lessons.push(
           literal: "eso sería genial / encantador",
           useWhen: "Aceptar ayuda, comida o un plan: “that would be great, thanks”.",
           avoidWhen: "Necesita responder a una regla formal; puede sonar demasiado casual.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal; “lovely” es muy común en Reino Unido y Estados Unidos.",
           related: ["great", "lovely", "thanks", "I'd love that"],
           example: {
@@ -965,7 +965,7 @@ lessons.push(
           literal: "no, gracias",
           useWhen: "Rechazar comida, bebida o ayuda de manera amable.",
           avoidWhen: "Sí quiere aceptar; en muchas casas anglófonas no habrá segundo empujón.",
-          register: "polite neutral",
+          register: "cortés neutro",
           region: "Inglés universal.",
           related: ["no thanks", "I'm okay", "I'm fine", "maybe later"],
           example: {
@@ -979,7 +979,7 @@ lessons.push(
           literal: "¿está seguro?",
           useWhen: "Confirmar que una negativa es real: “are you sure? there's plenty”.",
           avoidWhen: "Insistir demasiado; en inglés puede sonar como presión.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["sure", "there's plenty", "no pressure", "really"],
           example: {
@@ -993,7 +993,7 @@ lessons.push(
           literal: "no quiero ser una molestia",
           useWhen: "Mostrar consideración cuando una oferta parece costosa o incómoda.",
           avoidWhen: "Es solo una cortesía automática y sí quiere aceptar; puede hacer que el otro retire la oferta.",
-          register: "polite neutral",
+          register: "cortés neutro",
           region: "Inglés universal.",
           related: ["impose", "bother", "no trouble", "it's no bother"],
           example: {
@@ -1039,25 +1039,25 @@ lessons.push(
       variations: [
         {
           form: "Yes, please.",
-          register: "polite neutral",
+          register: "cortés neutro",
           region: "Inglés universal",
           whenToUse: "Aceptar comida, bebida o ayuda pequeña."
         },
         {
           form: "I'd love some, thank you.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal",
           whenToUse: "Aceptar algo servido con entusiasmo."
         },
         {
           form: "That would be lovely.",
-          register: "polite warm",
+          register: "cortés cálido",
           region: "Estados Unidos y Reino Unido; también entendido en otros lugares",
           whenToUse: "Aceptar una oferta con calidez."
         },
         {
           form: "No, thank you.",
-          register: "polite neutral",
+          register: "cortés neutro",
           region: "Inglés universal",
           whenToUse: "Rechazar de manera amable y clara."
         }
@@ -1458,7 +1458,7 @@ lessons.push(
           literal: "rechazar",
           useWhen: "Solicitudes, propuestas, hipótesis: “they rejected my application”.",
           avoidWhen: "Quiere decir que no puede ir a un plan; suena frío o personal.",
-          register: "neutral to formal",
+          register: "neutro a formal",
           region: "Inglés universal.",
           related: ["rejection", "reject an application", "reject an idea", "refuse"],
           example: {
@@ -1472,7 +1472,7 @@ lessons.push(
           literal: "no puedo lograrlo / hacerlo",
           useWhen: "Rechazar una invitación por disponibilidad: “sorry, I can't make it tonight”.",
           avoidWhen: "Quiere decir que no puede fabricar algo; este “make it” es asistir o llegar.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal.",
           related: ["make it", "can't come", "not able to", "sorry"],
           example: {
@@ -1486,7 +1486,7 @@ lessons.push(
           literal: "girar hacia abajo",
           useWhen: "Hablar del rechazo sin dureza: “I had to turn down the invitation”.",
           avoidWhen: "Necesita un registro muy formal; “decline” puede quedar mejor.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["turn down an offer", "decline", "say no", "pass on"],
           example: {
@@ -1500,7 +1500,7 @@ lessons.push(
           literal: "declinar",
           useWhen: "Invitaciones, ofertas y contextos profesionales: “I must decline”.",
           avoidWhen: "Conversación muy casual con amigos; puede sonar escrito.",
-          register: "polite formal",
+          register: "cortés formal",
           region: "Inglés universal.",
           related: ["politely decline", "turn down", "refuse", "declined"],
           example: {
@@ -1514,7 +1514,7 @@ lessons.push(
           literal: "me temo que no puedo",
           useWhen: "Decir no con tacto: “I'm afraid I can't join you”.",
           avoidWhen: "Entre amigos muy cercanos, donde puede sonar demasiado ceremonioso.",
-          register: "polite neutral",
+          register: "cortés neutro",
           region: "Inglés universal, especialmente común en Reino Unido.",
           related: ["sorry", "can't make it", "unfortunately", "I'm afraid"],
           example: {
@@ -1528,7 +1528,7 @@ lessons.push(
           literal: "tal vez la próxima vez",
           useWhen: "Rechazar este plan pero mantener abierta otra ocasión.",
           avoidWhen: "No tiene ninguna intención futura; usado siempre puede sonar evasivo.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal.",
           related: ["next time", "rain check", "another time", "some other time"],
           example: {
@@ -1542,7 +1542,7 @@ lessons.push(
           literal: "te dejaré saber",
           useWhen: "De verdad necesita revisar antes de confirmar: “I'll let you know tomorrow”.",
           avoidWhen: "Lo usa como no educado con alguien que necesita planear; puede dejarlo esperando.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["let you know", "confirm", "get back to you", "tomorrow"],
           example: {
@@ -1588,25 +1588,25 @@ lessons.push(
       variations: [
         {
           form: "Sorry, I can't make it.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal",
           whenToUse: "Rechazar una invitación cotidiana."
         },
         {
           form: "I'm afraid I can't come.",
-          register: "polite neutral",
+          register: "cortés neutro",
           region: "Reino Unido y uso general",
           whenToUse: "Decir no con un tono más cortés."
         },
         {
           form: "I have to turn it down.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Decir que debe rechazar una oferta o invitación."
         },
         {
           form: "Maybe next time.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal",
           whenToUse: "Mantener buena voluntad después de un no."
         },

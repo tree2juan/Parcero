@@ -425,7 +425,7 @@ lessons.push(
             "Para decir que uno es o no es capaz de algo, para pedir permiso, o para hacer una petición cortés con “could you…?”.",
           avoidWhen:
             "Para una destreza aprendida en general, donde el inglés a menudo prefiere “know how to”: “I know how to drive”, y no sólo “I can drive”, cuando se quiere subrayar que se aprendió.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal; “could you…?” es la petición cortés por defecto en Estados Unidos.",
           related: ["could", "be able to", "know how to", "manage to"],
           example: {
@@ -442,7 +442,7 @@ lessons.push(
             "Al pedirle a cualquiera un favor concreto y breve — el super, un compañero, un vecino con una caja pesada.",
           avoidWhen:
             "En una emergencia real, donde se dice “help!” directo. El modismo suena demasiado tranquilo para algo urgente.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal; muy frecuente en el habla cotidiana de Estados Unidos.",
           related: ["help me out", "lend a hand", "help with", "pitch in"],
           example: {
@@ -459,7 +459,7 @@ lessons.push(
             "Al pedir un objeto o un dato menor en una tienda, una oficina o la calle: un número, una bolsa, un minuto.",
           avoidWhen:
             "Con “gift”, que en inglés sólo es un regalo de verdad. “Gift me the number” no existe como cortesía y sonaría rarísimo.",
-          register: "polite service",
+          register: "cortés de servicio",
           region: "Inglés universal; “can I get…?” es la variante más informal y muy norteamericana.",
           related: ["can I get…?", "would you mind giving me…?", "may I have…?", "could I get…?"],
           example: {
@@ -476,7 +476,7 @@ lessons.push(
             "Para hablar de habilidades adquiridas: cocinar, manejar, nadar, arreglar cosas.",
           avoidWhen:
             "Para una posibilidad puntual o un permiso; eso es “can”. “Do you know how to come tomorrow?” es un error: se dice “can you come tomorrow?”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal; el matiz frente a “can” es de los primeros que un hispanohablante debe afinar.",
           related: ["can", "be able to", "learn how to", "have a knack for"],
           example: {
@@ -493,7 +493,7 @@ lessons.push(
             "Al admitir que un peso físico o un lío lo desborda ahora mismo — las cajas, el calor, el papeleo.",
           avoidWhen:
             "Para decir que falta una destreza; eso es “I don't know how”. “Manage” es sobre poder con la carga, no sobre haberla aprendido.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal; “I can't handle it” es un primo muy cercano y de uso diario.",
           related: ["I can't handle it", "it's too much for me", "I'm swamped", "I can't cope"],
           example: {
@@ -510,7 +510,7 @@ lessons.push(
             "Para todo lo relacionado con el gas de la parrilla — rellenarlo, conectarlo, cambiarlo, revisar si hay una fuga.",
           avoidWhen:
             "Para la estufa de la cocina, que en la mayoría de los edificios va por gas natural entubado o es eléctrica, sin tanque alguno.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés norteamericano; cambiar el tanque vacío por uno lleno en la tienda o la gasolinera es lo normal para la barbacoa.",
           related: ["propane", "gas cylinder", "BBQ", "refill"],
           example: {
@@ -527,7 +527,7 @@ lessons.push(
             "Para suavizar cualquier demora corta — pedir que esperen, o prometer que uno será rápido.",
           avoidWhen:
             "En un registro escrito o formal, donde “in a moment” o “shortly” encajan mejor y “sec” se vería demasiado coloquial.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal en el habla; “sec”, “a minute” y “a bit” compiten según la persona y la región.",
           related: ["in a second", "in a minute", "hang on", "one moment"],
           example: {
@@ -589,31 +589,31 @@ lessons.push(
       variations: [
         {
           form: "Could you give me a hand with something?",
-          register: "polite service",
+          register: "cortés de servicio",
           region: "Inglés universal",
           whenToUse: "La opción por defecto con el super, un empleado o un vecino. Cálida y suave a la vez."
         },
         {
           form: "Would you mind helping me with this?",
-          register: "polite formal",
+          register: "cortés formal",
           region: "Inglés universal",
           whenToUse: "Un mostrador más formal o un desconocido mayor, cuando se busca algo más de deferencia."
         },
         {
           form: "Hey, can you help me out with the tank?",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés norteamericano",
           whenToUse: "Un pedido relajado y vecinal cuando ya se conoce un poco a la persona."
         },
         {
           form: "Do you think you could help me carry this up?",
-          register: "polite service",
+          register: "cortés de servicio",
           region: "Inglés universal",
           whenToUse: "Cuando el favor es un poco más grande y se quiere reconocer la molestia."
         },
         {
           form: "Gimme a hand with these boxes, would ya?",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés norteamericano coloquial",
           whenToUse: "Entre pares y con mucha confianza, donde “gimme” y “would ya” marcan cercanía."
         }
@@ -1077,7 +1077,7 @@ lessons.push(
             "“Tell” cuando nombras a quien recibe el mensaje: “tell her”, “tell the neighbors”. “Say” cuando reportas las palabras: “she said no”.",
           avoidWhen:
             "No los mezcles: “say me” y “tell that to nobody” fallan. “He said me” es el error de hispanohablante más típico con estos dos verbos.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal; la distinción no cambia de un dialecto a otro.",
           related: ["say", "tell", "speak", "talk"],
           example: {
@@ -1094,7 +1094,7 @@ lessons.push(
             "Al pasar un rumor que no respaldas del todo: “apparently they're moving out”.",
           avoidWhen:
             "En un informe formal donde debes sonar seguro; ahí resta certeza igual que “dizque”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal; va al inicio de la frase, no pegado al verbo como “dizque”.",
           related: ["supposedly", "I heard", "it seems", "reportedly"],
           example: {
@@ -1111,7 +1111,7 @@ lessons.push(
             "Al reportar algo oído cuando la fuente es vaga o no importa: “they told me it's closed”.",
           avoidWhen:
             "Cuando deberías ser concreto y responsable; ahí un “they told me” suena evasivo.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal; el “they” impersonal funciona igual que en español.",
           related: ["I heard", "someone said", "word is", "I was told"],
           example: {
@@ -1128,7 +1128,7 @@ lessons.push(
             "Al reencuadrar o precisar: “I mean, it's fine, but…”; o al concluir: “so I mean, we should go”.",
           avoidWhen:
             "Repetido sin parar, donde se vuelve una muletilla, igual que el “o sea” abusado.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal; muy frecuente en el habla, casi como una coma hablada.",
           related: ["you know", "like", "that is", "in other words"],
           example: {
@@ -1145,7 +1145,7 @@ lessons.push(
             "Al preguntar por la fuente de algo que alguien acaba de reportar.",
           avoidWhen:
             "Con “say”: “who said you?” está mal. Si usas “say”, la persona va con “to”: “who said that to you?”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["who said that?", "where did you hear that?", "says who?", "who let you know?"],
           example: {
@@ -1162,7 +1162,7 @@ lessons.push(
             "Al hablar de servicios que se interrumpen: “the water's shut off”, “they cut off the power”.",
           avoidWhen:
             "Para cortar cosas físicas con cuchillo (“cut”), donde quitar la partícula “off” cambia el sentido.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal; “shut off” abunda en Norteamérica, y “cut off” se oye en todas partes.",
           related: ["turn off", "shut down", "disconnect", "outage"],
           example: {
@@ -1179,7 +1179,7 @@ lessons.push(
             "Al explicar una precaución: llenar botellas, llevar paraguas, guardar una copia.",
           avoidWhen:
             "Nada especial que evitar; es neutro. Sólo que “just to be safe” es un pelín más coloquial.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["just to be safe", "to be on the safe side", "in case", "better safe than sorry"],
           example: {
@@ -1241,31 +1241,31 @@ lessons.push(
       variations: [
         {
           form: "Apparently they're shutting the water off.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Pasar un rumor sin respaldarlo del todo. El aviso vecinal por defecto."
         },
         {
           form: "They told me they're shutting the water off.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Dar la fuente con un “they” vago, sin apostar tu propia certeza."
         },
         {
           form: "I heard the water's getting shut off tomorrow.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal",
           whenToUse: "Un aviso casual entre vecinos, con “I heard” como abreboca."
         },
         {
           form: "Just so you know, the water's off tomorrow.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés norteamericano",
           whenToUse: "Avisar de frente y rápido, sin rodeos, a alguien de confianza."
         },
         {
           form: "The building notice says the water will be off.",
-          register: "polite formal",
+          register: "cortés formal",
           region: "Inglés universal",
           whenToUse: "Citar una fuente escrita y oficial, más formal para un mensaje o un correo."
         }
@@ -1730,7 +1730,7 @@ lessons.push(
             "“Come” hacia la persona con quien hablás o hacia su lugar; “go” hacia un tercer sitio distinto.",
           avoidWhen:
             "No respondas a un llamado con “I'm going” — suena a que te vas, no a que ya vas hacia quien te llama.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal; la lógica difiere del español, que usa “ir” donde el inglés usa “come”.",
           related: ["come", "go", "come over", "head over"],
           example: {
@@ -1747,7 +1747,7 @@ lessons.push(
             "Al invitar a alguien a tu casa de manera relajada: “Come over for dinner”.",
           avoidWhen:
             "En invitaciones formales por escrito, donde encaja mejor “join us” o “we'd like to invite you”.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés norteamericano cotidiano; entendido en todas partes.",
           related: ["come by", "stop by", "swing by", "head over"],
           example: {
@@ -1764,7 +1764,7 @@ lessons.push(
             "Para pedir que alguien se acerque ya mismo: “Come here, look at this”.",
           avoidWhen:
             "Para una invitación a cenar el sábado — ahí “come here” suena a orden, no a invitación.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["come over", "over here", "come closer", "get over here"],
           example: {
@@ -1781,7 +1781,7 @@ lessons.push(
             "Al ofrecer llevar algo a casa de alguien: “I'll bring wine”.",
           avoidWhen:
             "No uses “take” hacia el lugar del oyente: “I'll take wine to your place” suena al revés.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["bring", "take", "bring along", "pick up"],
           example: {
@@ -1798,7 +1798,7 @@ lessons.push(
             "Al aceptar con ganas: “Are you coming?” “For sure!”.",
           avoidWhen:
             "En contextos muy formales, donde “certainly” o “of course” quedan mejor.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés norteamericano; muy común en el habla diaria.",
           related: ["definitely", "absolutely", "of course", "for real"],
           example: {
@@ -1815,7 +1815,7 @@ lessons.push(
             "Al organizar o aceptar una comida colectiva: “It's a potluck, bring a dish”.",
           avoidWhen:
             "Si el anfitrión pone toda la comida — entonces no es potluck y no hace falta llevar plato.",
-          register: "neutral",
+          register: "neutro",
           region: "Norteamérica; el concepto existe en Colombia como “traído” o “cada uno lleva algo”.",
           related: ["bring a dish", "potluck dinner", "share a meal", "host"],
           example: {
@@ -1832,7 +1832,7 @@ lessons.push(
             "Para avisar que ya vas: “I'm on my way, five minutes”.",
           avoidWhen:
             "Si todavía no salís; decirlo sin moverte suena a excusa.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal; al escribir se abrevia mucho como “omw”.",
           related: ["on my way", "almost there", "I'm coming", "be right there"],
           example: {
@@ -1894,31 +1894,31 @@ lessons.push(
       variations: [
         {
           form: "Wanna come over Saturday?",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés norteamericano informal",
           whenToUse: "Invitación súper casual entre amigos; “wanna” es “want to” hablado."
         },
         {
           form: "Do you want to come on Saturday?",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "La invitación estándar, clara y sin adornos, para casi cualquier persona."
         },
         {
           form: "You should come by on Saturday.",
-          register: "friendly",
+          register: "amistoso",
           region: "Inglés norteamericano",
           whenToUse: "Una sugerencia relajada; “come by” es “darse una vuelta” sin compromiso."
         },
         {
           form: "Feel free to come over whenever.",
-          register: "friendly",
+          register: "amistoso",
           region: "Inglés universal",
           whenToUse: "Una invitación abierta y flexible, sin una hora fija."
         },
         {
           form: "We'd love to have you over on Saturday.",
-          register: "polite",
+          register: "cortés",
           region: "Inglés universal",
           whenToUse: "Cálida y un punto más formal; buena para parejas o gente que conocés menos."
         }

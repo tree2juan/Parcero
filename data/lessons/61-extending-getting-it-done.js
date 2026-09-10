@@ -433,7 +433,7 @@ lessons.push(
             "Úsela cuando consiguió una cita, entendió algo difícil, terminó un trámite o resolvió algo con esfuerzo.",
           avoidWhen:
             "No la use para una habilidad general sin obstáculo. Can puede bastar si no hubo dificultad.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["managed to", "couldn't manage to", "get something done", "pull off"],
           example: {
@@ -450,7 +450,7 @@ lessons.push(
             "Úsela para logros prácticos: llamadas, citas, arreglos, explicaciones o tareas terminadas.",
           avoidWhen:
             "No la traduzca como I achieved to. En inglés la estructura natural es managed to.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["I got to", "I was able to", "I pulled off", "I handled"],
           example: {
@@ -467,7 +467,7 @@ lessons.push(
             "Úsela cuando no consiguió entender, llamar, arreglar o terminar algo pese al esfuerzo.",
           avoidWhen:
             "No la use si nunca intentó. La frase presupone un intento real.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["couldn't", "failed to", "tried to", "wasn't able to"],
           example: {
@@ -484,7 +484,7 @@ lessons.push(
             "Úsela cuando logra que una oficina, persona o grupo haga la acción necesaria.",
           avoidWhen:
             "No omita el objeto them, him, her or someone. Get to do no cuenta quién hace la acción.",
-          register: "neutral conversational",
+          register: "neutro conversacional",
           region: "Inglés universal.",
           related: ["managed to get them to", "got her to", "got him to", "helped us"],
           example: {
@@ -501,7 +501,7 @@ lessons.push(
             "Úsela para atención práctica en una ventanilla, mostrador, llamada o servicio.",
           avoidWhen:
             "No diga attend us en esta escena. Attend suele significar asistir a un evento o atender formalmente otra cosa.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["clerk", "service desk", "helped me", "assistance"],
           example: {
@@ -518,7 +518,7 @@ lessons.push(
             "Úsela cuando un documento fue recibido oficialmente y queda registro.",
           avoidWhen:
             "No suponga que filed significa aprobado. Sólo dice que fue presentado o recibido.",
-          register: "official practical",
+          register: "oficial práctico",
           region: "Inglés universal.",
           related: ["submitted", "received", "reference number", "paperwork"],
           example: {
@@ -535,7 +535,7 @@ lessons.push(
             "Úsela cuando un trámite o tarea tuvo éxito parcial, pero todavía queda algo pendiente.",
           avoidWhen:
             "No la use si todo quedó resuelto; entonces puede decir everything is done.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["the rest", "priority", "urgent", "handled"],
           example: {
@@ -597,31 +597,31 @@ lessons.push(
       variations: [
         {
           form: "I managed to get an appointment.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Contar que consiguió una cita después de esfuerzo."
         },
         {
           form: "I couldn't manage to understand him.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Decir que intentó entender y no pudo."
         },
         {
           form: "I got them to help us.",
-          register: "neutral conversational",
+          register: "neutro conversacional",
           region: "Inglés universal",
           whenToUse: "Usted logró que otra persona o una oficina ayudara."
         },
         {
           form: "I couldn't get them to correct it.",
-          register: "neutral conversational",
+          register: "neutro conversacional",
           region: "Inglés universal",
           whenToUse: "No logró que otra persona hiciera la corrección."
         },
         {
           form: "We handled the urgent part.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "El grupo resolvió lo esencial, aunque falte trabajo."
         },
@@ -1091,7 +1091,7 @@ lessons.push(
             "Úselo cuando elementos dispersos deben quedar juntos en una carpeta, lista, grupo o sala.",
           avoidWhen:
             "No lo use para una cita normal con alguien. Para eso diga meet with.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["collect", "bring together", "meet with", "requirements"],
           example: {
@@ -1108,7 +1108,7 @@ lessons.push(
             "Úsela cuando usted se encarga de firmas, documentos, nombres o evidencia.",
           avoidWhen:
             "No la confunda con I'll meet. Gather junta cosas; meet es reunirse o conocer.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["collect", "put together", "folder", "documents"],
           example: {
@@ -1125,7 +1125,7 @@ lessons.push(
             "Úsela para líderes, vecinos, familias, voluntarios o equipos que deben encontrarse.",
           avoidWhen:
             "No la use para documentos. Los papeles se gather or collect.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["gather people", "invite", "group", "community"],
           example: {
@@ -1142,7 +1142,7 @@ lessons.push(
             "Úsela para coordinadores, clientes, amigos, profesores, vecinos o equipos.",
           avoidWhen:
             "No diga gather with para una reunión normal. Suena raro o demasiado literal.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["meeting", "appointment", "talk with", "see"],
           example: {
@@ -1159,7 +1159,7 @@ lessons.push(
             "Úsela cuando una persona, solicitud o proyecto cumple las condiciones exigidas.",
           avoidWhen:
             "No la traduzca como gather the requirements si habla de cumplir condiciones, no de recoger papeles.",
-          register: "official neutral",
+          register: "oficial neutro",
           region: "Inglés universal.",
           related: ["qualify", "requirements", "conditions", "eligible"],
           example: {
@@ -1176,7 +1176,7 @@ lessons.push(
             "Úsela para una cita grupal con hora, tema o persona que coordina.",
           avoidWhen:
             "No la confunda con meet como verbo. The meeting is the event; meet is the action.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["meet with", "appointment", "gathering", "session"],
           example: {
@@ -1193,7 +1193,7 @@ lessons.push(
             "Úsela para papeles, archivos, certificados, formularios o imágenes organizadas.",
           avoidWhen:
             "No diga carpet para carpeta de documentos; carpet es alfombra.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["file", "documents", "paperwork", "forms"],
           example: {
@@ -1255,31 +1255,31 @@ lessons.push(
       variations: [
         {
           form: "I'll gather the signatures.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Usted junta firmas o documentos."
         },
         {
           form: "We need to bring the neighbors together.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Reunir personas para una acción compartida."
         },
         {
           form: "We're meeting with the coordinator.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Reunirse con una persona específica."
         },
         {
           form: "The project meets the requirements.",
-          register: "official neutral",
+          register: "oficial neutro",
           region: "Inglés universal",
           whenToUse: "Decir que una solicitud cumple condiciones."
         },
         {
           form: "The meeting is at five.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Dar la hora de la reunión."
         }
@@ -1743,7 +1743,7 @@ lessons.push(
             "Úselo para acciones que usted intenta: call, explain, arrive, fix, understand.",
           avoidWhen:
             "No lo use para tratar a una persona. That is treat someone.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["attempt to", "tried to", "manage to", "try"],
           example: {
@@ -1760,7 +1760,7 @@ lessons.push(
             "Úselo para decir que alguien fue tratado well, badly, fairly, kindly, or rudely.",
           avoidWhen:
             "No lo confunda con try to. “I treated to call” no existe.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["treated me", "treatment", "well", "badly"],
           example: {
@@ -1777,7 +1777,7 @@ lessons.push(
             "Úselo cuando pregunta o explica el tema central de algo.",
           avoidWhen:
             "No diga treat of en conversación normal. Suena raro o demasiado antiguo.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["about", "topic", "subject", "purpose"],
           example: {
@@ -1794,7 +1794,7 @@ lessons.push(
             "Úsela con talleres, películas, mensajes, reuniones, problemas o historias.",
           avoidWhen:
             "No la use para preguntar cómo trataron a una persona. Ahí necesita how did they treat you?",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["what's the topic", "what's the point", "about", "purpose"],
           example: {
@@ -1811,7 +1811,7 @@ lessons.push(
             "Úselo después de una visita, oficina, taller, cita, tienda o invitación.",
           avoidWhen:
             "No lo use para decir que intentó algo. Treated needs a person receiving treatment.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["treated me badly", "treatment", "service", "kindly"],
           example: {
@@ -1828,7 +1828,7 @@ lessons.push(
             "Úselo para evaluar servicio, atención médica, bienvenida o manera de tratar a alguien.",
           avoidWhen:
             "En medicina también significa tratamiento. El contexto decide si es trato o terapia.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["service", "care", "treated", "respect"],
           example: {
@@ -1845,7 +1845,7 @@ lessons.push(
             "Úselo cuando una llamada conecta, un pago entra o una solicitud se procesa.",
           avoidWhen:
             "No lo traduzca palabra por palabra en todos los contextos. Aquí describe que la llamada sí pasó.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["call", "connect", "process", "work"],
           example: {
@@ -1907,31 +1907,31 @@ lessons.push(
       variations: [
         {
           form: "I tried to call you.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Usted intentó llamar a alguien."
         },
         {
           form: "They treated me very well.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Contar que recibió buen trato."
         },
         {
           form: "They treated my mother very well.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Nombrar a la persona que recibió el trato."
         },
         {
           form: "What is it about?",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Preguntar de qué se trata algo."
         },
         {
           form: "It's about a workshop for visitors.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Explicar el tema o propósito de algo."
         }

@@ -414,7 +414,7 @@ lessons.push(
             "Al comparar dos cosas donde una tiene más de una cualidad: cheaper than, more expensive than.",
           avoidWhen:
             "El adjetivo es good, bad o far -- esos son irregulares: better, worse, further.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal; la base del comparativo en todas partes.",
           related: ["less … than", "better", "as … as", "the most …"],
           example: {
@@ -431,7 +431,7 @@ lessons.push(
             "Para bajar en una comparación: less expensive than, less noisy than.",
           avoidWhen:
             "Quieres decir que dos cosas son iguales -- eso es “as … as”, no “less … than”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["more … than", "worse", "as … as", "not as … as"],
           example: {
@@ -448,7 +448,7 @@ lessons.push(
             "Decir que algo es mejor: better than the other, much better, the best of all.",
           avoidWhen:
             "Nunca lo combines con “more”: “more better” es un error clásico, como “más mejor”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal; “more good” delata a un principiante.",
           related: ["worse", "good", "much better", "the best"],
           example: {
@@ -465,7 +465,7 @@ lessons.push(
             "Decir que algo es peor: worse than the other, worse and worse, the worst.",
           avoidWhen:
             "No inventes “worser”; no existe, aunque suene lógico por la regla del “-er”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["better", "bad", "worse and worse", "the worst"],
           example: {
@@ -482,7 +482,7 @@ lessons.push(
             "Edad de personas: my older brother, she's younger than me.",
           avoidWhen:
             "Para “el mayor / el menor” de un grupo usa el superlativo: the oldest, the youngest.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal; “elder” existe pero es formal y limitado.",
           related: ["elder", "younger", "the oldest", "the youngest"],
           example: {
@@ -499,7 +499,7 @@ lessons.push(
             "Cualquier cantidad con cifra: more than twenty dollars, less than ten minutes.",
           avoidWhen:
             "No digas “more of twenty” ni “more that twenty”; siempre “more than”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["less than", "over", "almost", "about"],
           example: {
@@ -516,7 +516,7 @@ lessons.push(
             "Marcar la opción sin lujos: the basic model, a cheaply made fan.",
           avoidWhen:
             "Quieres decir “de marca” -- eso es brand-name o name brand, lo contrario de basic.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal; “basic” también es jerga para algo poco original.",
           related: ["cheap", "brand-name", "low-end", "generic"],
           example: {
@@ -578,25 +578,25 @@ lessons.push(
       variations: [
         {
           form: "It's cheaper than that one.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "La comparación simple de precio entre dos cosas."
         },
         {
           form: "It's better than the other one.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Calidad, con el irregular “better” en vez de “more good”."
         },
         {
           form: "It costs more than twenty dollars.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Una cantidad con número, donde se mantiene “more than”."
         },
         {
           form: "My brother is older than me.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "La edad de una persona, con “older/younger”."
         }
@@ -1034,7 +1034,7 @@ lessons.push(
             "Para decir que dos cosas comparten una cualidad: “as big as”, “as cheap as”, “as fast as”.",
           avoidWhen:
             "Estás comparando cantidades de un sustantivo -- eso es “as much/many … as”, no “as … as”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal; el molde básico de igualdad.",
           related: ["as much as", "just as", "not as … as", "the same as"],
           example: {
@@ -1051,7 +1051,7 @@ lessons.push(
             "Comparar cantidades: “as much food as”, “as many people as”, “as much noise as”.",
           avoidWhen:
             "Lo que igualas es un adjetivo, no un sustantivo -- entonces es “as … as”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["as … as", "as much as", "just as", "the same amount"],
           example: {
@@ -1068,7 +1068,7 @@ lessons.push(
             "Igualdad enfática y coloquial: “just as good”, “just as close”, “just as expensive”.",
           avoidWhen:
             "En un registro muy formal, donde “as … as” a secas suena más neutro que “just as”.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal; muy usado en el habla diaria.",
           related: ["as … as", "equally", "every bit as", "the same"],
           example: {
@@ -1085,7 +1085,7 @@ lessons.push(
             "Negar que dos cosas sean iguales: “not as big as”, “not as good as”.",
           avoidWhen:
             "Quieres afirmar la igualdad -- entonces quita el “not”: “as big as”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal; “not so … as” existe pero es más formal y antiguo.",
           related: ["as … as", "less … than", "not so … as", "nowhere near as"],
           example: {
@@ -1102,7 +1102,7 @@ lessons.push(
             "Igualar cuánto ocurre una acción: “work as much as”, “eat as much as”, “cost as much as”.",
           avoidWhen:
             "Hay un sustantivo contable en medio -- entonces es “as many … as”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["as many as", "as … as", "as much … as", "the same"],
           example: {
@@ -1119,7 +1119,7 @@ lessons.push(
             "Zanjar entre dos opciones equivalentes: “either way, we win”, “either way is fine”.",
           avoidWhen:
             "Hay tres o más opciones -- ahí encaja mejor “any way” o “whichever”.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal.",
           related: ["whichever", "anyway", "regardless", "both work"],
           example: {
@@ -1136,7 +1136,7 @@ lessons.push(
             "Dejar que el otro elija porque te da lo mismo: “I don't mind either”, “it's all the same to me”.",
           avoidWhen:
             "Sí tienes preferencia -- entonces dila, no uses “I don't mind”.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal; “I don't mind” es muy británico y encaja perfecto en Mánchester.",
           related: ["it's all the same", "whatever works", "up to you", "either is fine"],
           example: {
@@ -1198,25 +1198,25 @@ lessons.push(
       variations: [
         {
           form: "This café is as good as that one.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "La igualdad simple de una cualidad, con “as … as”."
         },
         {
           form: "They give you as much food as the other.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Igualdad de cantidad con un incontable, “as much … as”."
         },
         {
           form: "It's just as close as the station.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal",
           whenToUse: "La versión enfática y coloquial, “just as”."
         },
         {
           form: "This one isn't as busy as the other.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "La igualdad en negativo, “not as … as”."
         }
@@ -1654,7 +1654,7 @@ lessons.push(
             "Cima de un grupo con adjetivos cortos: “the biggest”, “the fastest”, “the tastiest”.",
           avoidWhen:
             "El adjetivo es largo, de tres o más sílabas -- ahí es “the most”, no “-est”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal; el molde del superlativo corto.",
           related: ["the most …", "the best", "-er than", "the least"],
           example: {
@@ -1671,7 +1671,7 @@ lessons.push(
             "Cima de un grupo con adjetivos largos: “the most beautiful”, “the most difficult”.",
           avoidWhen:
             "El adjetivo es corto -- entonces “-est”: “the biggest”, no “the most big”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["the …-est", "the least", "more … than", "the best"],
           example: {
@@ -1688,7 +1688,7 @@ lessons.push(
             "Adjetivos cortos que doblan consonante, terminan en -y o en -e: big, hot, happy, easy, nice, large.",
           avoidWhen:
             "El adjetivo no tiene esas terminaciones -- entonces solo añades “-est”: “tall” → “tallest”.",
-          register: "neutral",
+          register: "neutro",
           region: "Regla de ortografía del inglés.",
           related: ["the …-est", "big", "happy", "nice"],
           example: {
@@ -1705,7 +1705,7 @@ lessons.push(
             "Cima o fondo de un grupo por calidad: “the best of all”, “the worst day”.",
           avoidWhen:
             "Una cualidad neutra sin ranking -- ahí “good/bad” se quedan como están.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal; “the goodest” delata a un principiante.",
           related: ["good", "bad", "the …-est", "better"],
           example: {
@@ -1722,7 +1722,7 @@ lessons.push(
             "Énfasis casual sin grupo: “super cheap”, “really tasty”, “so big”.",
           avoidWhen:
             "Quieres marcar la cima de un grupo -- ahí es el superlativo relativo, “the …-est … in”.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal; “super” es muy común en el habla joven.",
           related: ["very", "so", "totally", "extremely"],
           example: {
@@ -1739,7 +1739,7 @@ lessons.push(
             "Enfatizar una cima clara: “by far the best”, “way cheaper”, “way more fun”.",
           avoidWhen:
             "En registro muy formal, donde “by far” encaja pero “way” suena demasiado coloquial.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal; “way” es más informal que “by far”.",
           related: ["by a mile", "easily", "much", "far and away"],
           example: {
@@ -1756,7 +1756,7 @@ lessons.push(
             "Acuerdo rotundo: “for sure”, “definitely”, “no doubt”.",
           avoidWhen:
             "Estás dudando -- “for sure” no admite titubeos.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal; “for sure” es cotidiano en Australia y en todas partes.",
           related: ["definitely", "no doubt", "absolutely", "hands down"],
           example: {
@@ -1818,25 +1818,25 @@ lessons.push(
       variations: [
         {
           form: "This is the tastiest food in the market.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "El superlativo corto con “-est” y el grupo con “in”."
         },
         {
           form: "It's the most popular stall here.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "El superlativo largo con “the most”."
         },
         {
           form: "It's the biggest and the best.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Un corto irregular, “best”, junto a uno con “-est”."
         },
         {
           form: "It's the cheapest by far.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal",
           whenToUse: "Reforzar el superlativo con “by far”."
         }

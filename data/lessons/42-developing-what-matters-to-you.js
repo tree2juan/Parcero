@@ -381,7 +381,7 @@ lessons.push(
             "Un curso, tema, trabajo, plan u oferta capta su atención.",
           avoidWhen:
             "Traducir me interesa como the course interests me en cada caso. Es gramatical, pero menos normal en habla cotidiana.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["interest", "matter", "grab me", "take an interest"],
           example: { target: "I'm interested in the course.", translation: "Me interesa el curso." }
@@ -395,7 +395,7 @@ lessons.push(
             "Usted habla de su propio interés en una cosa o varias cosas.",
           avoidWhen:
             "Olvidar in. I'm interested the course suena incompleto.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["I'm curious about", "I care about", "I like", "I want to know"],
           example: { target: "I'm interested in the interviews.", translation: "Me interesan las entrevistas." }
@@ -409,7 +409,7 @@ lessons.push(
             "Quiere preguntar o decir cuál de dos partes le llama más la atención.",
           avoidWhen:
             "Comparar importancia moral. Ahí matter may be more natural.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["less interested in", "prefer", "rather", "care more about"],
           example: { target: "Are you more interested in interviews?", translation: "¿Le interesan más las entrevistas?" }
@@ -423,7 +423,7 @@ lessons.push(
             "Describe curiosidad activa o participación creciente en un tema.",
           avoidWhen:
             "Sólo está diciendo que algo le interesa de forma sencilla. I'm interested in es más común.",
-          register: "neutral slightly formal",
+          register: "neutro algo formal",
           region: "Inglés universal.",
           related: ["be interested in", "get into", "care about", "look into"],
           example: { target: "Many people take an interest in the stories.", translation: "Mucha gente se interesa por las historias." }
@@ -437,7 +437,7 @@ lessons.push(
             "Quiere decir que algo no le atrae sin insultarlo.",
           avoidWhen:
             "Una carta formal o una evaluación profesional. Ahí not relevant to me puede sonar mejor.",
-          register: "friendly conversational",
+          register: "amistoso conversacional",
           region: "Inglés universal.",
           related: ["doesn't interest me", "not my thing", "doesn't appeal to me", "not for me"],
           example: { target: "The software doesn't really grab me.", translation: "El software no me llama mucho la atención." }
@@ -451,7 +451,7 @@ lessons.push(
             "Habla de trabajo, experiencia, cursos y certificados para una solicitud.",
           avoidWhen:
             "Quiere contar la historia de su vida. Résumé es el documento laboral.",
-          register: "neutral",
+          register: "neutro",
           region: "Common in North American English.",
           related: ["CV", "experience", "certificate", "profile"],
           example: { target: "It helps my résumé.", translation: "Sirve para mi hoja de vida." }
@@ -465,7 +465,7 @@ lessons.push(
             "El documento pesa para trabajo, estudio o una decisión concreta.",
           avoidWhen:
             "Sólo quiere decir que el tema le da curiosidad. Ahí interested in sigue siendo más directo.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["matter to me", "count", "help", "be important"],
           example: { target: "Certificates matter to me.", translation: "Me interesan los certificados." }
@@ -513,19 +513,19 @@ lessons.push(
       variations: [
         {
           form: "I'm interested in the course.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Un curso, oferta o tema le llama la atención."
         },
         {
           form: "The software doesn't really grab me.",
-          register: "friendly conversational",
+          register: "amistoso conversacional",
           region: "Inglés universal",
           whenToUse: "Quiere decir que algo no le interesa sin sonar brusco."
         },
         {
           form: "I'm interested in whether it helps my résumé.",
-          register: "neutral practical",
+          register: "neutro práctico",
           region: "Inglés norteamericano",
           whenToUse: "La pregunta es práctica: si el curso sirve para trabajo o estudio."
         }
@@ -945,7 +945,7 @@ lessons.push(
             "Algo pesa en una decisión, una emoción o una molestia práctica.",
           avoidWhen:
             "Quiere pedir permiso con cortesía. Para eso do you mind if...? suele ser la forma viva.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["mind", "care", "be important", "count"],
           example: { target: "My passports matter to me.", translation: "Me importan los pasaportes." }
@@ -959,7 +959,7 @@ lessons.push(
             "Quiere tranquilizar a alguien por una demora, error pequeño o cambio sin importancia.",
           avoidWhen:
             "El asunto sí importa. Entonces la frase puede sonar como si estuviera minimizando a la otra persona.",
-          register: "neutral conversational",
+          register: "neutro conversacional",
           region: "Inglés universal.",
           related: ["never mind", "no problem", "that's okay", "it's fine"],
           example: { target: "The chair doesn't matter.", translation: "La silla no importa." }
@@ -973,7 +973,7 @@ lessons.push(
             "Quiere mover algo, sentarse, abrir una ventana o dejar un objeto en espacio compartido.",
           avoidWhen:
             "Va a responder yes para dar permiso. Yes, I do significa que sí le molesta.",
-          register: "polite conversational",
+          register: "cortés conversacional",
           region: "Inglés universal.",
           related: ["Is it okay if...?", "Would you mind if...?", "Can I...?", "go ahead"],
           example: { target: "Do you mind if I move this chair?", translation: "¿Te importa si muevo esta silla?" }
@@ -987,7 +987,7 @@ lessons.push(
             "Alguien pregunta si una acción le molesta y usted quiere permitirla.",
           avoidWhen:
             "Sí le molesta. Entonces diga I do mind o I'd rather you didn't.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["not at all", "go ahead", "that's fine", "no problem"],
           example: { target: "No, I don't mind.", translation: "No, no me importa." }
@@ -1001,7 +1001,7 @@ lessons.push(
             "Necesita decir que la acción propuesta sí le incomoda.",
           avoidWhen:
             "Quiere decir hágale. Entonces diga no, I don't mind o go ahead.",
-          register: "direct",
+          register: "directo",
           region: "Inglés universal.",
           related: ["I'd rather you didn't", "please don't", "that bothers me", "I care"],
           example: { target: "Yes, I do mind.", translation: "Sí me importa." }
@@ -1015,7 +1015,7 @@ lessons.push(
             "Quiere decir que algo tiene peso personal o práctico para usted.",
           avoidWhen:
             "Está hablando de gusto o curiosidad. Interested in puede ser más preciso.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["important to me", "care about", "count for me", "mean a lot"],
           example: { target: "Those documents matter to me.", translation: "Me importan esos documentos." }
@@ -1029,7 +1029,7 @@ lessons.push(
             "Quiere autorizar una acción pequeña sin una explicación larga.",
           avoidWhen:
             "Quiere poner límites. Go ahead abre la puerta a que la persona actúe.",
-          register: "neutral conversational",
+          register: "neutro conversacional",
           region: "Inglés universal.",
           related: ["feel free", "sure", "that's fine", "no problem"],
           example: { target: "Go ahead and move it.", translation: "Muévala con confianza." }
@@ -1077,19 +1077,19 @@ lessons.push(
       variations: [
         {
           form: "It doesn't matter; leave it there.",
-          register: "neutral conversational",
+          register: "neutro conversacional",
           region: "Inglés universal",
           whenToUse: "Un detalle pequeño no importa y quiere tranquilizar a alguien."
         },
         {
           form: "Do you mind if I sit here?",
-          register: "polite conversational",
+          register: "cortés conversacional",
           region: "Inglés universal",
           whenToUse: "Pide permiso para ocupar espacio cerca de otra persona."
         },
         {
           form: "Yes, I do mind; please don't.",
-          register: "direct polite",
+          register: "directo cortés",
           region: "Inglés universal",
           whenToUse: "Sí le molesta y necesita decir que no claramente."
         }
@@ -1509,7 +1509,7 @@ lessons.push(
             "Falta una firma, una persona, un documento o una pieza.",
           avoidWhen:
             "Habla de tiempo restante. Para eso use to go, no missing.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["lack", "need", "be absent", "be short of"],
           example: { target: "We're missing one signature.", translation: "Nos falta una firma." }
@@ -1523,7 +1523,7 @@ lessons.push(
             "Queda pendiente revisar, firmar, pagar, llamar o terminar algo.",
           avoidWhen:
             "Sólo cuenta objetos que no están. We're missing may be shorter there.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["need", "have left", "must still", "be missing"],
           example: { target: "I still need to check the forms.", translation: "Me falta revisar los permisos." }
@@ -1537,7 +1537,7 @@ lessons.push(
             "El equipo o grupo no tiene todavía un objeto requerido.",
           avoidWhen:
             "Quiere decir que ustedes están perdidos. Missing puede tener varios sentidos, así que el objeto aclara.",
-          register: "neutral practical",
+          register: "neutro práctico",
           region: "Inglés universal.",
           related: ["we still need", "we lack", "we don't have", "we're short"],
           example: { target: "We're missing two life jackets.", translation: "Nos faltan dos chalecos." }
@@ -1551,7 +1551,7 @@ lessons.push(
             "Una persona o grupo debe completar una acción antes de seguir.",
           avoidWhen:
             "Quiere conservar el foco en el objeto que falta. Entonces missing puede sonar más concreto.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["have to", "must", "be required to", "still need"],
           example: { target: "Everyone needs to sign.", translation: "Hace falta que todos firmen." }
@@ -1565,7 +1565,7 @@ lessons.push(
             "Cuenta el tiempo que queda antes de salir, cerrar, empezar o terminar.",
           avoidWhen:
             "De verdad perdió cinco minutos por una demora. Entonces explique the delay cost us five minutes.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["five minutes left", "almost time", "not long now", "until departure"],
           example: { target: "Five minutes to go.", translation: "Faltan cinco minutos." }
@@ -1579,7 +1579,7 @@ lessons.push(
             "Una persona no asistió a trabajo, clase, reunión o cita.",
           avoidWhen:
             "Habla de extrañar a alguien. Miss también significa extrañar; el contexto decide.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["miss class", "be absent", "skip", "not show up"],
           example: { target: "Camilo missed work yesterday.", translation: "Camilo faltó al trabajo ayer." }
@@ -1593,7 +1593,7 @@ lessons.push(
             "Responde a gracias o a una disculpa pequeña de forma cálida.",
           avoidWhen:
             "Está haciendo un conteo literal de cosas faltantes. Ahí use nothing else is missing.",
-          register: "polite warm",
+          register: "cortés cálido",
           region: "Inglés universal.",
           related: ["of course", "you're welcome", "my pleasure", "no problem"],
           example: { target: "Not at all, happy to help.", translation: "¡No faltaba más, con gusto!" }
@@ -1641,19 +1641,19 @@ lessons.push(
       variations: [
         {
           form: "We're missing one signature.",
-          register: "neutral practical",
+          register: "neutro práctico",
           region: "Inglés universal",
           whenToUse: "Un objeto o dato requerido todavía falta en la lista."
         },
         {
           form: "Five minutes to go.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Cuenta el tiempo que queda antes de salir o empezar."
         },
         {
           form: "Not at all, happy to help.",
-          register: "polite warm",
+          register: "cortés cálido",
           region: "Inglés universal",
           whenToUse: "Responde a gracias con la función de no faltaba más."
         }

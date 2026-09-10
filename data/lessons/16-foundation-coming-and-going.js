@@ -425,7 +425,7 @@ lessons.push(
             "Al proponer o describir una salida nocturna: “want to go out?”, “we went out dancing”.",
           avoidWhen:
             "Para salir de un sitio o del trabajo, donde el inglés usa “leave” o “get off”.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal; “head out” es una variante más relajada.",
           related: ["go out tonight", "go out for drinks", "go out dancing", "head out"],
           example: {
@@ -442,7 +442,7 @@ lessons.push(
             "Al decir a qué hora terminas de trabajar: “I get off at six”.",
           avoidWhen:
             "Con “go out from work”, un calco que no se dice en inglés.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal; “clock out” es marcar la salida en el reloj.",
           related: ["get off work", "leave work", "finish work", "clock out"],
           example: {
@@ -459,7 +459,7 @@ lessons.push(
             "Al hablar de quién está saliendo con quién: “she's going out with David”.",
           avoidWhen:
             "Para salir con un grupo de amigos, donde se nombra al grupo: “go out with friends”.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal; “see someone” y “date” son alternativas.",
           related: ["go out with", "see someone", "date someone", "be seeing"],
           example: {
@@ -476,7 +476,7 @@ lessons.push(
             "Al comentar cómo resultó algo: “it turned out great”, “it turned out expensive”.",
           avoidWhen:
             "Con “go out expensive”, que mezcla el sentido de divertirse con el de resultar.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal; “end up” funciona casi igual.",
           related: ["turn out", "turn out well", "end up", "work out"],
           example: {
@@ -493,7 +493,7 @@ lessons.push(
             "Al preguntar cómo resultó un evento, una cita o un día: “how did the date go?”.",
           avoidWhen:
             "Con “how did you go?”, que en inglés norteamericano suena raro y parece preguntar cómo viajaste.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal; reflejo constante en la conversación.",
           related: ["how did it go?", "how'd it go?", "how was it?", "did it go well?"],
           example: {
@@ -510,7 +510,7 @@ lessons.push(
             "Al apuntarte de una a un plan que te gusta: “want to go out? — for sure!”.",
           avoidWhen:
             "En registros muy formales, donde “certainly” o “of course” encaja mejor.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal, en especial en Norteamérica.",
           related: ["for sure", "definitely", "absolutely", "sounds good"],
           example: {
@@ -527,7 +527,7 @@ lessons.push(
             "Al organizar algo: “let's make plans for the weekend”.",
           avoidWhen:
             "Con “do plans”, un error común; el verbo correcto es “make”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["make plans", "sort something out", "figure out plans", "set something up"],
           example: {
@@ -589,31 +589,31 @@ lessons.push(
       variations: [
         {
           form: "Want to go out Saturday?",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal",
           whenToUse: "Al proponerle a alguien una salida."
         },
         {
           form: "Should we make a plan for the weekend?",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Al organizar algo con más antelación."
         },
         {
           form: "What time do you get off?",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Al preguntar a qué hora sale alguien del trabajo."
         },
         {
           form: "I left right at six.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Al decir a qué hora saliste."
         },
         {
           form: "It turned out really expensive.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal",
           whenToUse: "Al comentar que algo salió caro."
         }
@@ -1057,7 +1057,7 @@ lessons.push(
             "Al abordar un bus, tren o cabina: “get on the bus”, “hop on”.",
           avoidWhen:
             "Con “go up to the bus”, un calco de “subirse” que no se dice.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal; “hop on” es más coloquial.",
           related: ["hop on", "get on the bus", "get on the train", "hop in"],
           example: {
@@ -1074,7 +1074,7 @@ lessons.push(
             "Al describir que algo sube o que uno asciende: “we're climbing”, “go up the stairs”.",
           avoidWhen:
             "Añadiendo “up” a “climb up the stairs” no está mal, pero “go up up” sí sobra.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["go up", "climb", "head up", "go uphill"],
           example: {
@@ -1091,7 +1091,7 @@ lessons.push(
             "Al pedir más volumen: “turn it up”, “crank it up”.",
           avoidWhen:
             "Con “put up the volume”, un calco; el phrasal correcto es “turn up”.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal; “crank it up” es subirlo a tope.",
           related: ["turn up", "turn it up", "crank it up", "raise the volume"],
           example: {
@@ -1108,7 +1108,7 @@ lessons.push(
             "Al subir un archivo o una foto: “upload the video”, “post the photos”.",
           avoidWhen:
             "Con “raise a photo”, un calco de “subir”; para internet es “upload” o “post”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["upload", "post", "upload to the cloud", "put up"],
           example: {
@@ -1125,7 +1125,7 @@ lessons.push(
             "Al comentar que algo sube de precio: “prices keep going up”.",
           avoidWhen:
             "Con “prices climb”, poco natural aquí; “go up” o “rise” encajan mejor.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["prices go up", "go up", "rise", "increase"],
           example: {
@@ -1142,7 +1142,7 @@ lessons.push(
             "Al hablar de engordar: “I put on a few pounds”.",
           avoidWhen:
             "Con “go up in weight” o “gain up”, calcos que el inglés no usa.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal; “put on” es más británico, “gain” más norteamericano.",
           related: ["put on weight", "gain weight", "put on a few pounds", "gain a few pounds"],
           example: {
@@ -1159,7 +1159,7 @@ lessons.push(
             "Al referirte al transporte por cable: “we took the gondola up”.",
           avoidWhen:
             "Con “the lift”, que en inglés británico es el ascensor, no el teleférico.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal; “aerial tram” es común en Norteamérica.",
           related: ["gondola", "aerial tram", "the cable car", "chairlift"],
           example: {
@@ -1221,31 +1221,31 @@ lessons.push(
       variations: [
         {
           form: "Hop on!",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal",
           whenToUse: "Al invitar a alguien a montarse, de forma relajada."
         },
         {
           form: "Let's head up to the top.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal",
           whenToUse: "Al proponer subir a la cima."
         },
         {
           form: "Can you turn the music up?",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal",
           whenToUse: "Al pedir subir el volumen."
         },
         {
           form: "I just uploaded the photos.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Al decir que ya subiste las fotos."
         },
         {
           form: "Prices keep going up.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Al comentar que los precios suben."
         }
@@ -1689,7 +1689,7 @@ lessons.push(
             "Al bajarse de un bus, tren o metro: “get off at the next stop”.",
           avoidWhen:
             "Con “get down from the bus”, un calco de “bajarse” que no se usa así.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal; “hop off” es más coloquial.",
           related: ["get off the bus", "get off at the next stop", "hop off", "get off here"],
           example: {
@@ -1706,7 +1706,7 @@ lessons.push(
             "Al describir que algo o alguien baja: “go down the stairs”.",
           avoidWhen:
             "Añadiendo “down” de más: “go down downstairs” sobra.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["go down", "come down", "go downstairs", "head down"],
           example: {
@@ -1723,7 +1723,7 @@ lessons.push(
             "Al comentar que algo baja de precio: “prices went down”.",
           avoidWhen:
             "Con “lower” intransitivo; para un precio que baja solo se usa “go down” o “drop”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["prices go down", "come down in price", "drop", "fall"],
           example: {
@@ -1740,7 +1740,7 @@ lessons.push(
             "Al bajar una app o un archivo: “download the app”, “download a file”.",
           avoidWhen:
             "Con “lower the app” o “bring down the app”, calcos que no significan descargar.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["download", "download the app", "download a file", "save"],
           example: {
@@ -1757,7 +1757,7 @@ lessons.push(
             "Al pedir menos volumen: “turn the music down”.",
           avoidWhen:
             "Con “lower down”, redundante; se dice “turn down” o “lower” a secas.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal.",
           related: ["turn down", "turn it down", "lower the volume", "keep it down"],
           example: {
@@ -1774,7 +1774,7 @@ lessons.push(
             "Al pedir que alguien baje el ruido o le baje a algo: “keep it down”.",
           avoidWhen:
             "Con “lower it” a secas para el ruido; suena incompleto sin “down”.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal.",
           related: ["keep it down", "tone it down", "take it easy", "calm down"],
           example: {
@@ -1791,7 +1791,7 @@ lessons.push(
             "Al hablar de dónde bajarse y cuánto se paga: “the next stop”, “the fare”.",
           avoidWhen:
             "Con “station” para una simple parada de la calle; eso es para el metro o terminales.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal; “fare” es el pasaje o la tarifa.",
           related: ["the stop", "the bus stop", "the fare", "the next stop"],
           example: {
@@ -1853,31 +1853,31 @@ lessons.push(
       variations: [
         {
           form: "Where do you get off?",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Al preguntar dónde se baja alguien."
         },
         {
           form: "Get off at the next stop.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Al indicar dónde bajarse."
         },
         {
           form: "Hop off here.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal",
           whenToUse: "Al decirle a alguien que se baje aquí, de forma relajada."
         },
         {
           form: "Prices have come down.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Al notar que bajó el precio."
         },
         {
           form: "Can you turn the volume down?",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal",
           whenToUse: "Al pedir bajar el volumen."
         }

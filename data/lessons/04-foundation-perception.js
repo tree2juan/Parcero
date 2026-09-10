@@ -393,7 +393,7 @@ lessons.push(
           literal: "ver",
           useWhen: "Cuando percibes algo, te das cuenta de algo, o mencionas que viste una película o un partido como hecho puntual.",
           avoidWhen: "Cuando hablas de pasar un rato mirando la tele o siguiendo un partido con atención; ahí el inglés prefiere “watch”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés general; en Estados Unidos la diferencia entre “see” y “watch” se mantiene firme en el habla diaria.",
           related: ["watch", "look at", "notice", "realize"],
           example: {
@@ -407,7 +407,7 @@ lessons.push(
           literal: "ver / mirar (sostenido)",
           useWhen: "Para la televisión, las películas, los partidos, y para cuidar o vigilar a alguien: “watch the kids”.",
           avoidWhen: "Para la mera capacidad de percibir (“I can see it”) o para el hecho puntual de haberlo visto una sola vez.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés general; es el verbo por defecto para pantallas en todo el inglés norteamericano.",
           related: ["see", "look at", "keep an eye on", "stream"],
           example: {
@@ -421,7 +421,7 @@ lessons.push(
           literal: "mirar (a)",
           useWhen: "Cuando señalas algo para que otro fije la vista: “look at that goal”, “look at the map”.",
           avoidWhen: "Para la tele o los partidos, que piden “watch”, no “look at”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés general; la preposición “at” es obligatoria en todas las variedades.",
           related: ["watch", "see", "stare at", "glance at"],
           example: {
@@ -435,7 +435,7 @@ lessons.push(
           literal: "¿sabes? / ¿si ve?",
           useWhen: "Al suavizar una opinión o comprobar que el otro te sigue, en medio o al final de una idea.",
           avoidWhen: "En un registro formal o escrito, donde suena demasiado coloquial; y nunca la respondas como si fuera una pregunta real.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés norteamericano coloquial; “right?” y “see what I mean?” cumplen la misma función.",
           related: ["right?", "you know what I mean?", "see?", "yeah?"],
           example: {
@@ -449,7 +449,7 @@ lessons.push(
           literal: "ya veo / entiendo",
           useWhen: "Para señalar que una explicación acaba de cuajar en tu cabeza.",
           avoidWhen: "Cuando de verdad quieres decir que percibes algo con los ojos; ahí dirías “I can see it”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés general; “I get it” y “gotcha” son variantes más coloquiales.",
           related: ["I get it", "I understand", "that makes sense", "gotcha"],
           example: {
@@ -463,7 +463,7 @@ lessons.push(
           literal: "nos vemos",
           useWhen: "Al despedirte de alguien con quien esperas, o dices esperar, volver a cruzarte.",
           avoidWhen: "En una despedida de verdad definitiva, donde “goodbye” o “take care” cargan el peso.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés general; “see you around” y “see you later” son variantes aún más sueltas.",
           related: ["see you later", "see you around", "take care", "bye"],
           example: {
@@ -477,7 +477,7 @@ lessons.push(
           literal: "estar de afán",
           useWhen: "Al despedirte con prisa o explicar que no puedes quedarte porque vas corto de tiempo.",
           avoidWhen: "Cuando quieres decir entusiasmo o ganas; “rush” es presión de tiempo, no deseo.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés general; “I'm in a hurry” y “I'm running late” son equivalentes cercanos.",
           related: ["in a hurry", "running late", "pressed for time", "gotta run"],
           example: {
@@ -531,31 +531,31 @@ lessons.push(
       variations: [
         {
           form: "Did you see the game last night?",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "General",
           whenToUse: "La forma por defecto para preguntarle a cualquiera por un partido reciente."
         },
         {
           form: "Did you catch the game?",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "General",
           whenToUse: "Más coloquial; “catch” da la idea de haber alcanzado a verlo."
         },
         {
           form: "Are you going to watch the game?",
-          register: "neutral",
+          register: "neutro",
           region: "General",
           whenToUse: "Para preguntar por un partido que aún no ha ocurrido."
         },
         {
           form: "See you.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "General",
           whenToUse: "Despedida corta con alguien que esperas volver a ver pronto."
         },
         {
           form: "See you around.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "General",
           whenToUse: "Un adiós aún más suelto, sin fijar cuándo será el próximo encuentro."
         }
@@ -985,7 +985,7 @@ lessons.push(
           literal: "hacerte un blanco",
           useWhen: "Al advertir a alguien que no se exponga ni se descuide en un lugar concurrido.",
           avoidWhen: "En contextos donde “target” suene militar o comercial; ahí es más claro decir “don't take unnecessary risks”.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés general; en Estados Unidos se entiende sin problema en el habla cotidiana.",
           related: ["easy target", "don't take risks", "stay alert", "watch your stuff"],
           example: {
@@ -999,7 +999,7 @@ lessons.push(
           literal: "poner lejos / guardar",
           useWhen: "Al pedir que guarden algo, sobre todo el teléfono o el dinero en la calle.",
           avoidWhen: "Cuando quieres decir tirar a la basura; eso es “throw away”, no “put away”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés general; el orden del pronombre es igual en todas las variedades.",
           related: ["put it away", "tuck away", "keep out of sight", "hide"],
           example: {
@@ -1013,7 +1013,7 @@ lessons.push(
           literal: "sentirse avergonzado",
           useWhen: "Al admitir que te da pena o te sientes incómodo por algo.",
           avoidWhen: "Para decir que estás embarazada; ese es el falso amigo más famoso y significa esperar un bebé.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés general; la confusión con “embarazada” es típica de hispanohablantes.",
           related: ["embarrassing", "ashamed", "awkward", "pregnant"],
           example: {
@@ -1027,7 +1027,7 @@ lessons.push(
           literal: "ir por una caminada",
           useWhen: "Al proponer un paseo tranquilo o un cambio de aire con alguien.",
           avoidWhen: "Cuando quieres decir girar o darle la vuelta a algo; eso es “turn around”.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés general; “go for a stroll” es una variante un poco más pausada.",
           related: ["go for a stroll", "take a walk", "wander around", "get some air"],
           example: {
@@ -1041,7 +1041,7 @@ lessons.push(
           literal: "dame",
           useWhen: "Al pedir que te pasen algo, o con “let me” para pedir un momento.",
           avoidWhen: "Con desconocidos en tono formal, donde “could you give me…?” suena más cortés.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés general; añadir “please” es lo que marca la cortesía.",
           related: ["let me", "can you give me", "hand me", "pass me"],
           example: {
@@ -1055,7 +1055,7 @@ lessons.push(
           literal: "ser robado",
           useWhen: "Al contar que a ti o a alguien lo asaltaron o le quitaron algo.",
           avoidWhen: "Para el objeto en sí; el celular “was stolen”, la persona “got robbed”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés general; la distinción rob/steal existe en todas las variedades.",
           related: ["get mugged", "be robbed", "get stolen", "be a victim"],
           example: {
@@ -1069,7 +1069,7 @@ lessons.push(
           literal: "cabeza afuera / salir",
           useWhen: "Al anunciar que ya te vas o que el grupo se pone en marcha.",
           avoidWhen: "Para una salida lenta o dudosa; “head out” sugiere un arranque decidido.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés general norteamericano para ponerse en marcha.",
           related: ["take off", "get going", "leave", "hit the road"],
           example: {
@@ -1123,31 +1123,31 @@ lessons.push(
       variations: [
         {
           form: "Put your phone away.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "General",
           whenToUse: "El aviso cotidiano para que alguien guarde el teléfono en un sitio concurrido."
         },
         {
           form: "Don't make yourself a target.",
-          register: "neutral",
+          register: "neutro",
           region: "General",
           whenToUse: "La versión más cercana a “no dar papaya” cuando adviertes de un riesgo."
         },
         {
           form: "Let's go for a walk.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "General",
           whenToUse: "Al proponer un paseo tranquilo, el equivalente de “damos una vuelta”."
         },
         {
           form: "I got robbed.",
-          register: "neutral",
+          register: "neutro",
           region: "General",
           whenToUse: "Para contar desde la víctima que sufriste un asalto o un hurto."
         },
         {
           form: "Let's head out.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "General",
           whenToUse: "Al anunciar que ya se van o que el grupo se pone en marcha."
         }
@@ -1577,7 +1577,7 @@ lessons.push(
           literal: "saber / conocer",
           useWhen: "Para hechos, información, habilidades y también para personas o lugares conocidos.",
           avoidWhen: "Con comida por su sabor (ahí va “taste like”) o al conocer a alguien por primera vez (ahí va “meet”).",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés general; el único “know” contrasta con el doble verbo del español.",
           related: ["know how", "know about", "be familiar with", "meet"],
           example: {
@@ -1591,7 +1591,7 @@ lessons.push(
           literal: "saber a / tener sabor a",
           useWhen: "Al describir a qué sabe algo: una fruta, un plato, un jugo.",
           avoidWhen: "Usando “know” para el sabor; ese es un calco del español que no funciona en inglés.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés general; “taste of” es una variante un poco más literaria.",
           related: ["taste of", "flavor", "tastes good", "have a taste"],
           example: {
@@ -1605,7 +1605,7 @@ lessons.push(
           literal: "saber cómo (hacer)",
           useWhen: "Al hablar de una destreza que tienes o te falta: cocinar, manejar, nadar.",
           avoidWhen: "Quitando el “how”; en inglés la habilidad siempre lo lleva, no es opcional.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés general; el “how” es obligatorio en todas las variedades.",
           related: ["know how", "be able to", "can", "learn how to"],
           example: {
@@ -1619,7 +1619,7 @@ lessons.push(
           literal: "¿has probado…?",
           useWhen: "Al ofrecer una comida o bebida nueva, o preguntar si alguien la ha probado.",
           avoidWhen: "Con “know” para la comida, que suena a familiaridad y no a haberla probado.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés general; muy usual al presentar platos o frutas locales.",
           related: ["have you had", "do you want to try", "ever tried", "taste"],
           example: {
@@ -1633,7 +1633,7 @@ lessons.push(
           literal: "hasta donde sé",
           useWhen: "Al suavizar una respuesta de la que no estás totalmente seguro.",
           avoidWhen: "Cuando sí estás seguro; ahí una afirmación directa es más clara y firme.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés general; “as far as I'm aware” es una variante más formal.",
           related: ["as far as I'm aware", "I believe", "I'm not sure but", "who knows"],
           example: {
@@ -1647,7 +1647,7 @@ lessons.push(
           literal: "quién sabe",
           useWhen: "Al reaccionar ante algo genuinamente incierto o imposible de saber.",
           avoidWhen: "Cuando alguien necesita una respuesta real; puede sonar despreocupado si esperaba ayuda.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés general; universalmente entendido en el habla cotidiana.",
           related: ["who knows", "no idea", "hard to say", "your guess is as good as mine"],
           example: {
@@ -1661,7 +1661,7 @@ lessons.push(
           literal: "no tener ni una pista",
           useWhen: "Al admitir con humor que no sabes absolutamente nada de algo.",
           avoidWhen: "En contextos formales, donde “I have no idea” resulta más neutro.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés general; “haven't got a clue” es la variante británica.",
           related: ["have no idea", "no clue", "clueless", "beats me"],
           example: {
@@ -1715,31 +1715,31 @@ lessons.push(
       variations: [
         {
           form: "Do you know if they're open?",
-          register: "neutral",
+          register: "neutro",
           region: "General",
           whenToUse: "Al preguntar por un dato, igual que “¿sabes si…?”."
         },
         {
           form: "Do you know how to cook it?",
-          register: "neutral",
+          register: "neutro",
           region: "General",
           whenToUse: "Al preguntar por una habilidad, con el “how” obligatorio."
         },
         {
           form: "Have you tried it?",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "General",
           whenToUse: "Al ofrecer comida o bebida, en vez de preguntar si la “know”."
         },
         {
           form: "As far as I know.",
-          register: "neutral",
+          register: "neutro",
           region: "General",
           whenToUse: "Al matizar una respuesta de la que no estás seguro, como “que yo sepa”."
         },
         {
           form: "Who knows.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "General",
           whenToUse: "Al encogerte de hombros ante algo incierto, como “quién sabe”."
         }

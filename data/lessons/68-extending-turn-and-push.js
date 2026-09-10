@@ -404,7 +404,7 @@ lessons.push(
             "Dar o seguir instrucciones de ruta: “turn right at the light”, “turn left after the bridge”.",
           avoidWhen:
             "Habla de transferir dinero; ahí turn no sirve.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["turn here", "corner", "intersection", "directions"],
           example: {
@@ -421,7 +421,7 @@ lessons.push(
             "La entrada correcta está cerca pero todavía no ha llegado.",
           avoidWhen:
             "Ya pasó el punto; entonces necesita “turn around” or “go back”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["wait", "not yet", "keep going", "next one"],
           example: {
@@ -438,7 +438,7 @@ lessons.push(
             "Dar direcciones naturales dentro de un carro o caminando.",
           avoidWhen:
             "Una instrucción técnica o señal formal puede preferir “turn left”.",
-          register: "neutral conversational",
+          register: "neutro conversacional",
           region: "Inglés universal.",
           related: ["take a right", "turn left", "next street", "corner"],
           example: {
@@ -455,7 +455,7 @@ lessons.push(
             "El carro siguió derecho cuando debía girar.",
           avoidWhen:
             "Perdió un objeto físico; miss here is about failing to take the route.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["overshoot", "go past", "turn around", "wrong road"],
           example: {
@@ -472,7 +472,7 @@ lessons.push(
             "Ya se pasó o va por la ruta equivocada: “we need to turn around”.",
           avoidWhen:
             "Un simple giro a izquierda o derecha; turn around implies reversing direction.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["go back", "U-turn", "wrong way", "reverse"],
           example: {
@@ -489,7 +489,7 @@ lessons.push(
             "Un pago llega electrónicamente: “they transferred the payment”.",
           avoidWhen:
             "No diga “turn money”; turn sólo sirve para el movimiento físico o cambios de dirección.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["send money", "wire transfer", "payment", "bank"],
           example: {
@@ -506,7 +506,7 @@ lessons.push(
             "Distinguir una entrada privada de una vía o acceso más público.",
           avoidWhen:
             "Traducir toda entrada como entrance; en carretera, driveway may be the exact word.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["road", "turnoff", "gate", "lane"],
           example: {
@@ -568,31 +568,31 @@ lessons.push(
       variations: [
         {
           form: "Turn right at the next entrance.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Dar una instrucción de giro."
         },
         {
           form: "Don't turn yet.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Evitar un giro antes de tiempo."
         },
         {
           form: "Take the next left.",
-          register: "neutral conversational",
+          register: "neutro conversacional",
           region: "Inglés universal",
           whenToUse: "Dar una dirección hablada y natural."
         },
         {
           form: "I missed the turn.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Se pasó del cruce."
         },
         {
           form: "They transferred the payment.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Traducir “giraron el pago”."
         }
@@ -1036,7 +1036,7 @@ lessons.push(
             "Puertas, botones, objetos trabados, multitudes o proyectos: “push the door”, “push the project forward”.",
           avoidWhen:
             "La señal dice pull; push y pull son opuestos.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["pull", "shove", "press", "push forward"],
           example: {
@@ -1053,7 +1053,7 @@ lessons.push(
             "Puertas, manijas, cuerdas o cajas que vienen hacia usted: “pull the handle”.",
           avoidWhen:
             "No lo traduzca como throw; eso es tirar/lanzar en otro sentido.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["push", "handle", "toward you", "door sign"],
           example: {
@@ -1070,7 +1070,7 @@ lessons.push(
             "Leer puertas de tiendas, oficinas, buses, cocinas comunitarias o edificios públicos.",
           avoidWhen:
             "Inventar una traducción con throw; en inglés de puertas throw no funciona.",
-          register: "public sign",
+          register: "público sign",
           region: "Inglés universal.",
           related: ["sign", "entrance", "handle", "door"],
           example: {
@@ -1087,7 +1087,7 @@ lessons.push(
             "Una fila, bus, entrada o multitud está apretada.",
           avoidWhen:
             "Necesita pedir paso con cortesía; “excuse me” puede ser mejor que acusar a alguien.",
-          register: "polite public",
+          register: "cortés público",
           region: "Inglés universal.",
           related: ["line", "crowd", "shove", "excuse me"],
           example: {
@@ -1104,7 +1104,7 @@ lessons.push(
             "Quiere dejar claro que el empujón fue rude or forceful.",
           avoidWhen:
             "Una puerta o botón normal; push is neutral there.",
-          register: "neutral negative",
+          register: "neutro negative",
           region: "Inglés universal.",
           related: ["push hard", "rough", "crowd", "elbow"],
           example: {
@@ -1121,7 +1121,7 @@ lessons.push(
             "Un plan necesita seguimiento, presión, llamadas y decisiones.",
           avoidWhen:
             "Sólo habla de mover una caja; this is figurative work language.",
-          register: "neutral professional",
+          register: "neutro profesional",
           region: "Inglés universal.",
           related: ["move forward", "drive", "follow up", "momentum"],
           example: {
@@ -1138,7 +1138,7 @@ lessons.push(
             "Una puerta, carro, plan o proceso deja de moverse.",
           avoidWhen:
             "Algo está simplemente cerrado con llave; stuck means jammed or unable to move.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["jammed", "blocked", "stalled", "won't open"],
           example: {
@@ -1200,31 +1200,31 @@ lessons.push(
       variations: [
         {
           form: "Push the door.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "La puerta debe alejarse de usted."
         },
         {
           form: "Pull the handle.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "La puerta o manija viene hacia usted."
         },
         {
           form: "Don't push, please.",
-          register: "polite public",
+          register: "cortés público",
           region: "Inglés universal",
           whenToUse: "Una fila o entrada está apretada."
         },
         {
           form: "He shoved me.",
-          register: "neutral negative",
+          register: "neutro negative",
           region: "Inglés universal",
           whenToUse: "El empujón fue brusco o agresivo."
         },
         {
           form: "Push the project forward.",
-          register: "neutral professional",
+          register: "neutro profesional",
           region: "Inglés universal",
           whenToUse: "Darle impulso a un plan."
         }

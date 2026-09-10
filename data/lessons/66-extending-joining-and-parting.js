@@ -409,7 +409,7 @@ lessons.push(
             "Pregunta por kilos, libras, maletas, bebés, comida o cualquier objeto medible.",
           avoidWhen:
             "Quiere traducir “a pesar de” o “me pesa.” Ahí el inglés cambia de estructura.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["weight", "scale", "weigh myself", "heavy"],
           example: {
@@ -426,7 +426,7 @@ lessons.push(
             "Necesita saber peso antes de pagar, cocinar, empacar o cargar algo.",
           avoidWhen:
             "Está preguntando cuánto cuesta. Entonces diga “how much is it?”",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["how heavy is it", "pounds", "kilos", "weigh it"],
           example: {
@@ -443,7 +443,7 @@ lessons.push(
             "Habla de peso corporal, hábitos de la mañana o chequeos médicos.",
           avoidWhen:
             "Pesa un objeto. Entonces diga “weigh it” o “it weighs.”",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["weigh yourself", "scale", "body weight", "weighed myself"],
           example: {
@@ -460,7 +460,7 @@ lessons.push(
             "Lluvia, cansancio, costo o distancia no impidieron el resultado.",
           avoidWhen:
             "Está dando la causa normal de algo. “In spite of” marca resistencia, no motivo.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["despite", "even though", "although", "regardless of"],
           example: {
@@ -477,7 +477,7 @@ lessons.push(
             "Una decisión, silencio, demora o oportunidad perdida ahora le pesa moralmente.",
           avoidWhen:
             "Habla de peso físico. Un pescado weighs; una decisión may be regretted.",
-          register: "neutral careful",
+          register: "neutro cuidadoso",
           region: "Inglés universal.",
           related: ["feel bad about", "be sorry about", "wish I had", "weigh on me"],
           example: {
@@ -494,7 +494,7 @@ lessons.push(
             "Quiere decir que una preocupación o arrepentimiento sigue molestando.",
           avoidWhen:
             "Sólo necesita una disculpa simple. “I regret it” o “I'm sorry” puede ser más natural.",
-          register: "neutral reflective",
+          register: "neutro reflexivo",
           region: "Inglés universal.",
           related: ["weigh on my mind", "bother me", "feel heavy", "carry guilt"],
           example: {
@@ -511,7 +511,7 @@ lessons.push(
             "Mercados, cocina, maletas, clínicas o peso corporal.",
           avoidWhen:
             "Quiere decir escala de tamaño o importancia; ese es otro uso de “scale.”",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["weigh", "weight", "measure", "pounds"],
           example: {
@@ -568,31 +568,31 @@ lessons.push(
       variations: [
         {
           form: "How much does that fish weigh?",
-          register: "neutral practical",
+          register: "neutro práctico",
           region: "Inglés universal",
           whenToUse: "Preguntar por peso literal en mercado, cocina o equipaje."
         },
         {
           form: "I weigh myself every morning.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Hablar del peso corporal como hábito."
         },
         {
           form: "In spite of the rain, we went out.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Un obstáculo no impidió la acción."
         },
         {
           form: "I regret not confirming yesterday.",
-          register: "neutral careful",
+          register: "neutro cuidadoso",
           region: "Inglés universal",
           whenToUse: "Traducir “me pesa” como arrepentimiento directo."
         },
         {
           form: "So it doesn't weigh on you later.",
-          register: "reflective",
+          register: "reflexivo",
           region: "Inglés universal",
           whenToUse: "Quiere conservar la metáfora de carga emocional."
         }
@@ -1039,7 +1039,7 @@ lessons.push(
             "Usted entra a un grupo, equipo, jornada, clase, llamada o causa.",
           avoidWhen:
             "Quiere describir una familia cercana. Ahí “close-knit” suele sonar mejor que “united.”",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["join in", "join forces", "come together", "take part"],
           example: {
@@ -1056,7 +1056,7 @@ lessons.push(
             "Escuela, vecinos, familia o equipos trabajan por una meta común.",
           avoidWhen:
             "Sólo una persona hace una tarea privada. La frase espera cooperación.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["work together", "team up", "combine efforts", "collaborate"],
           example: {
@@ -1073,7 +1073,7 @@ lessons.push(
             "Personas dispersas actúan como grupo por una causa o momento compartido.",
           avoidWhen:
             "Necesita inscribirse formalmente a una actividad. Entonces “join” es más directo.",
-          register: "neutral conversational",
+          register: "neutro conversacional",
           region: "Inglés universal.",
           related: ["gather", "unite", "pull together", "show up"],
           example: {
@@ -1090,7 +1090,7 @@ lessons.push(
             "Elogia una familia, barrio, equipo o grupo que se cuida aunque discuta.",
           avoidWhen:
             "Habla de unir objetos físicos. Ahí use “joined,” “connected” o el verbo concreto.",
-          register: "warm neutral",
+          register: "cálido neutro",
           region: "Inglés universal.",
           related: ["close", "supportive", "tight-knit", "united"],
           example: {
@@ -1107,7 +1107,7 @@ lessons.push(
             "Personas mantienen relación o cooperación aunque tengan opiniones distintas.",
           avoidWhen:
             "La diferencia ya se volvió pelea abierta. Entonces “argue” puede ser más exacto.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["argue", "see it differently", "not agree", "debate"],
           example: {
@@ -1124,7 +1124,7 @@ lessons.push(
             "Alguien pidió sumarse y usted le confirma el cupo de manera informal.",
           avoidWhen:
             "Un documento formal. Ahí escriba “you are registered” o “your place is confirmed.”",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal.",
           related: ["you're included", "your spot is confirmed", "welcome aboard", "count you in"],
           example: {
@@ -1141,7 +1141,7 @@ lessons.push(
             "La acción colectiva ya tiene ritmo: cantar, limpiar, jugar, conversar, trabajar.",
           avoidWhen:
             "Habla de hacerse miembro formal de una organización. “Join” solo puede bastar.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal.",
           related: ["take part", "pitch in", "participate", "get involved"],
           example: {
@@ -1192,25 +1192,25 @@ lessons.push(
       variations: [
         {
           form: "Can I still join the cleanup?",
-          register: "polite practical",
+          register: "cortés práctico",
           region: "Inglés universal",
           whenToUse: "Pedir entrada a una actividad ya organizada."
         },
         {
           form: "Let's join forces with the school.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Dos grupos colaboran hacia una meta."
         },
         {
           form: "The neighborhood came together.",
-          register: "neutral conversational",
+          register: "neutro conversacional",
           region: "Inglés universal",
           whenToUse: "La comunidad actuó como grupo."
         },
         {
           form: "My family is close-knit.",
-          register: "warm neutral",
+          register: "cálido neutro",
           region: "Inglés universal",
           whenToUse: "Elogiar una familia muy unida."
         }
@@ -1657,7 +1657,7 @@ lessons.push(
             "Dos personas, grupos u objetos necesitan distancia o división.",
           avoidWhen:
             "Quiere decir apartar puestos o citas. En inglés use “save,” “reserve” o “book,” según el caso.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["split up", "save", "reserve", "keep apart"],
           example: {
@@ -1674,7 +1674,7 @@ lessons.push(
             "Quiere que unas sillas o puestos queden disponibles para personas que llegan después.",
           avoidWhen:
             "Está separando sillas físicamente. Entonces “move the chairs apart” es más claro.",
-          register: "neutral conversational",
+          register: "neutro conversacional",
           region: "Inglés universal.",
           related: ["reserve seats", "hold seats", "keep spots", "save a place"],
           example: {
@@ -1691,7 +1691,7 @@ lessons.push(
             "Hay pelea, ruido o necesidad de distancia real.",
           avoidWhen:
             "Habla de reservarles puestos. Ahí “save seats for the kids” cambia el sentido.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["keep them apart", "move them apart", "give them space", "break it up"],
           example: {
@@ -1708,7 +1708,7 @@ lessons.push(
             "Una pareja dejó de estar junta, haya o no divorcio legal.",
           avoidWhen:
             "Necesita hablar específicamente del trámite legal. Entonces use “divorce.”",
-          register: "neutral careful",
+          register: "neutro cuidadoso",
           region: "Inglés universal.",
           related: ["separate", "break up", "divorce", "live apart"],
           example: {
@@ -1725,7 +1725,7 @@ lessons.push(
             "Agenda una hora con clínica, peluquería, oficina o servicio.",
           avoidWhen:
             "Está dividiendo una cita en partes. Eso sería un contexto muy distinto.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["make an appointment", "schedule an appointment", "reserve a slot", "hold a spot"],
           example: {
@@ -1742,7 +1742,7 @@ lessons.push(
             "Dos personas quedan sentadas demasiado cerca para la situación.",
           avoidWhen:
             "Quiere decir unidos emocionalmente. Entonces use “close” o “close-knit.”",
-          register: "neutral conversational",
+          register: "neutro conversacional",
           region: "Inglés universal.",
           related: ["side by side", "together", "apart", "with space"],
           example: {
@@ -1759,7 +1759,7 @@ lessons.push(
             "Una conversación, tarde, mesa o situación puede tensarse.",
           avoidWhen:
             "Habla de rareza positiva o curiosa. “Awkward” casi siempre trae incomodidad social.",
-          register: "neutral conversational",
+          register: "neutro conversacional",
           region: "Inglés universal.",
           related: ["feel tense", "be uncomfortable", "make it weird", "avoid drama"],
           example: {
@@ -1810,25 +1810,25 @@ lessons.push(
       variations: [
         {
           form: "Save three seats for the cousins.",
-          register: "neutral conversational",
+          register: "neutro conversacional",
           region: "Inglés universal",
           whenToUse: "Separar puestos en el sentido colombiano de reservarlos."
         },
         {
           form: "Separate the kids if they start fighting.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Poner distancia física entre personas."
         },
         {
           form: "Ana and Luis split up last year.",
-          register: "neutral careful",
+          register: "neutro cuidadoso",
           region: "Inglés universal",
           whenToUse: "Hablar con suavidad de una pareja que se separó."
         },
         {
           form: "I need to book an appointment.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Traducir separar una cita sin falso amigo."
         }

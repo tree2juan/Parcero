@@ -387,7 +387,7 @@ lessons.push(
             "Una tarifa cubre desayuno, un plan cubre transporte o una lista contiene una persona.",
           avoidWhen:
             "Habla de pertenecer emocionalmente a un grupo. Ahí belong or feel part of puede ser más natural.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["cover", "contain", "add", "exclude"],
           example: { target: "Does the rate include breakfast?", translation: "¿La tarifa incluye desayuno?" }
@@ -401,7 +401,7 @@ lessons.push(
             "Quiere confirmar si un servicio, impuesto, comida o envío está dentro de lo acordado.",
           avoidWhen:
             "Ya sabe que es extra. Entonces pregunte how much extra is it?",
-          register: "polite practical",
+          register: "cortés práctico",
           region: "Inglés universal.",
           related: ["is that included", "does it cover", "is it extra", "what's included"],
           example: { target: "Does that include air conditioning?", translation: "¿Eso incluye aire acondicionado?" }
@@ -415,7 +415,7 @@ lessons.push(
             "Para decir que desayuno, impuestos o servicio ya están dentro del precio.",
           avoidWhen:
             "El servicio cuesta más. Entonces diga not included or extra.",
-          register: "neutral service",
+          register: "neutro de servicio",
           region: "Inglés universal.",
           related: ["all-inclusive", "covered", "part of the price", "extra"],
           example: { target: "Breakfast is included.", translation: "El desayuno está incluido." }
@@ -429,7 +429,7 @@ lessons.push(
             "Un paquete cubre comidas, servicios o actividades principales.",
           avoidWhen:
             "Necesita los límites exactos. All-inclusive no siempre elimina todos los extras.",
-          register: "travel / service",
+          register: "de viaje / de servicio",
           region: "Inglés universal.",
           related: ["package", "rate", "included", "surcharge"],
           example: { target: "The plan is not all-inclusive.", translation: "El plan no es todo incluido." }
@@ -443,7 +443,7 @@ lessons.push(
             "Desayuno, transporte, equipaje o parqueadero cuesta más.",
           avoidWhen:
             "El precio ya lo cubre. Entonces included es la palabra correcta.",
-          register: "neutral service",
+          register: "neutro de servicio",
           region: "Inglés universal.",
           related: ["not included", "separate charge", "surcharge", "additional"],
           example: { target: "Transport is extra.", translation: "El transporte se paga aparte." }
@@ -457,7 +457,7 @@ lessons.push(
             "Usted agrega una nota, una persona, una condición o un detalle.",
           avoidWhen:
             "Ya lo agregó en el pasado. Entonces diga I included.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["I include", "I included", "we'll include", "add"],
           example: { target: "I'll include that note.", translation: "Yo incluyo esa nota." }
@@ -471,7 +471,7 @@ lessons.push(
             "Un servicio cuesta más por hora, distancia, peso o condición.",
           avoidWhen:
             "Sólo habla del precio normal. Surcharge siempre sugiere un extra añadido.",
-          register: "neutral service",
+          register: "neutro de servicio",
           region: "Inglés universal.",
           related: ["extra charge", "fee", "rate", "tax"],
           example: { target: "After that there's a surcharge.", translation: "Después hay recargo." }
@@ -519,25 +519,25 @@ lessons.push(
       variations: [
         {
           form: "Does that include delivery?",
-          register: "polite practical",
+          register: "cortés práctico",
           region: "Inglés universal",
           whenToUse: "Quiere saber si el domicilio está cubierto por el precio."
         },
         {
           form: "Breakfast is included.",
-          register: "neutral service",
+          register: "neutro de servicio",
           region: "Inglés universal",
           whenToUse: "El desayuno ya está dentro de la tarifa."
         },
         {
           form: "I'll include that note on the receipt.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Usted agrega un detalle para que los términos queden claros."
         },
         {
           form: "Breakfast is included by default; however, the delivery fee is charged separately.",
-          register: "courteous",
+          register: "cortés",
           region: "Inglés universal",
           whenToUse: "Para separar lo incluido de lo que se cobra aparte. “However” marca el giro, y la pasiva evita señalar a quién cobra."
         }
@@ -971,7 +971,7 @@ lessons.push(
             "Una regla, precio, política o condición singular deja algo por fuera.",
           avoidWhen:
             "El sujeto es plural. The rules exclude, sin -s adicional.",
-          register: "formal practical",
+          register: "formal práctico",
           region: "Inglés universal.",
           related: ["exclude", "excluded", "including", "includes"],
           example: { target: "The rule excludes late players.", translation: "La regla excluye a jugadores tarde." }
@@ -985,7 +985,7 @@ lessons.push(
             "Usted toma una decisión formal de dejar a alguien o algo afuera.",
           avoidWhen:
             "Se trata de un olvido. I left him out by mistake suena más honesto.",
-          register: "formal direct",
+          register: "formal directo",
           region: "Inglés universal.",
           related: ["I include", "I excluded", "I leave out", "I remove"],
           example: { target: "I only exclude someone for a serious reason.", translation: "Sólo excluyo a alguien por una razón seria." }
@@ -1013,7 +1013,7 @@ lessons.push(
             "Alguien no quedó en un chat, lista, invitación o explicación.",
           avoidWhen:
             "Hay una regla formal de exclusión. Entonces exclude puede ser más preciso.",
-          register: "neutral conversational",
+          register: "neutro conversacional",
           region: "Inglés universal.",
           related: ["exclude", "forget", "not invite", "omit"],
           example: { target: "We left him out by mistake.", translation: "Lo dejamos por fuera por error." }
@@ -1027,7 +1027,7 @@ lessons.push(
             "Un plan, fiesta, chat o salida ocurrió sin que lo llamaran.",
           avoidWhen:
             "Habla de una regla escrita. Entonces didn't invite me suena demasiado personal.",
-          register: "neutral conversational",
+          register: "neutro conversacional",
           region: "Inglés universal.",
           related: ["left me out", "forgot me", "didn't tell me", "excluded me"],
           example: { target: "They didn't invite me to the chat.", translation: "No me invitaron al chat." }
@@ -1041,7 +1041,7 @@ lessons.push(
             "Una palabra técnicamente posible suena demasiado fuerte para el caso.",
           avoidWhen:
             "Sí hubo una sanción real. Entonces el tono fuerte puede ser exacto.",
-          register: "neutral conversational",
+          register: "neutro conversacional",
           region: "Inglés universal.",
           related: ["sounds harsh", "sounds cold", "sounds formal", "sounds unfair"],
           example: { target: "Excluded sounds like punishment.", translation: "Excluido suena a castigo." }
@@ -1089,19 +1089,19 @@ lessons.push(
       variations: [
         {
           form: "The rule excludes players who haven't paid.",
-          register: "formal practical",
+          register: "formal práctico",
           region: "Inglés universal",
           whenToUse: "Una regla o condición deja gente oficialmente por fuera."
         },
         {
           form: "I was left out of the chat.",
-          register: "neutral conversational",
+          register: "neutro conversacional",
           region: "Inglés universal",
           whenToUse: "Usted quedó por fuera socialmente sin sonar legalista."
         },
         {
           form: "They didn't invite me to the plan.",
-          register: "neutral conversational",
+          register: "neutro conversacional",
           region: "Inglés universal",
           whenToUse: "El hecho social simple es que nadie lo invitó."
         }
@@ -1521,7 +1521,7 @@ lessons.push(
             "Habla de membresía, propiedad, lugar adecuado o sensación de encajar.",
           avoidWhen:
             "Quiere decir que un precio incluye algo. Para eso use include, no belong.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["belong to", "belong in", "feel part of", "fit in"],
           example: { target: "I belong to the group.", translation: "Pertenezco al grupo." }
@@ -1535,7 +1535,7 @@ lessons.push(
             "Usted afirma que encaja o que es miembro de un grupo.",
           avoidWhen:
             "Necesita nombrar el grupo formalmente y olvida to. I belong the club está mal.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["I belong to", "I fit in", "I'm part of", "I feel included"],
           example: { target: "I officially belong.", translation: "Pertenezco oficialmente." }
@@ -1549,7 +1549,7 @@ lessons.push(
             "Nombra el grupo, organización, dueño o categoría después del verbo.",
           avoidWhen:
             "Habla de estar en el lugar correcto. Entonces belong in or belong on may be better.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["belong in", "belong on", "be part of", "member of"],
           example: { target: "The group belongs to the club.", translation: "El grupo pertenece al club." }
@@ -1563,7 +1563,7 @@ lessons.push(
             "Un grupo, objeto o persona singular pertenece a algo.",
           avoidWhen:
             "El sujeto es plural. My details belong, sin -s.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["belong", "belonged", "belongs to", "belongs in"],
           example: { target: "The group belongs to the club.", translation: "El grupo pertenece al club." }
@@ -1577,7 +1577,7 @@ lessons.push(
             "Un dato, nombre, archivo o cosa debe estar en una lista o superficie.",
           avoidWhen:
             "Habla de membresía en un club. Then belong to is safer.",
-          register: "neutral practical",
+          register: "neutro práctico",
           region: "Inglés universal.",
           related: ["belong to", "go on", "be listed on", "fit on"],
           example: { target: "My details belong on the list.", translation: "Mis datos pertenecen a la lista." }
@@ -1591,7 +1591,7 @@ lessons.push(
             "Habla de aceptación, comodidad, equipo o identidad compartida.",
           avoidWhen:
             "Necesita decir membresía legal o propiedad. Belong to may be more exact.",
-          register: "neutral conversational",
+          register: "neutro conversacional",
           region: "Inglés universal.",
           related: ["belong", "fit in", "feel included", "be part of"],
           example: { target: "I feel part of the team.", translation: "Me siento parte del equipo." }
@@ -1605,7 +1605,7 @@ lessons.push(
             "Quiere hablar de participación en un grupo, equipo o proceso sin sonar formal.",
           avoidWhen:
             "La pregunta es de propiedad. This bike is part of me no significa que le pertenece.",
-          register: "neutral conversational",
+          register: "neutro conversacional",
           region: "Inglés universal.",
           related: ["belong to", "feel part of", "join", "take part in"],
           example: { target: "I'm part of the route group.", translation: "Hago parte del grupo de rutas." }
@@ -1653,19 +1653,19 @@ lessons.push(
       variations: [
         {
           form: "I belong to the cycling group.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Usted afirma membresía clara u oficial."
         },
         {
           form: "I feel part of the team.",
-          register: "neutral conversational",
+          register: "neutro conversacional",
           region: "Inglés universal",
           whenToUse: "Habla de pertenencia emocional, no de una lista formal."
         },
         {
           form: "My details belong on the list.",
-          register: "formal practical",
+          register: "formal práctico",
           region: "Inglés universal",
           whenToUse: "Varios datos deben estar en una lista o documento."
         }

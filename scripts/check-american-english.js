@@ -255,18 +255,43 @@ function scanArticles(text) {
   return out;
 }
 
+/*
+ * The one place a British spelling is the correct thing to write.
+ *
+ * A lesson that teaches "downtown" has to be able to say what the British
+ * alternative is, and it cannot do that without spelling it. Excusing the word
+ * everywhere would gut the guard, so each excuse is the exact sentence it
+ * appears in, and an excuse that no longer matches anything is itself an
+ * error — otherwise a stale entry quietly widens the hole it was cut for.
+ */
+const QUOTED_CONTRASTS = [
+  "el inglés británico suele preferir “the city centre”"
+];
+
 /* Returns [{ term, file, context }] for every banned word found. */
 function findViolations() {
   const out = [];
+  const used = new Set();
   for (const rel of targetFiles()) {
-    const text = fs.readFileSync(path.join(ROOT, rel), "utf8");
+    let text = fs.readFileSync(path.join(ROOT, rel), "utf8");
+    for (const phrase of QUOTED_CONTRASTS) {
+      if (!text.includes(phrase)) continue;
+      used.add(phrase);
+      /* Blanked, not deleted, so every other hit keeps its offset and context. */
+      text = text.split(phrase).join(" ".repeat(phrase.length));
+    }
     for (const hit of scanText(text)) out.push({ term: hit.term, file: rel, context: hit.context });
     for (const hit of scanArticles(text)) out.push({ term: hit.term, file: rel, context: hit.context });
+  }
+  for (const phrase of QUOTED_CONTRASTS) {
+    if (!used.has(phrase)) {
+      out.push({ term: "stale exemption", file: "scripts/check-american-english.js", context: phrase });
+    }
   }
   return out;
 }
 
-module.exports = { BRITISH, CANADIAN, findViolations, targetFiles, scanText, scanArticles };
+module.exports = { BRITISH, CANADIAN, QUOTED_CONTRASTS, findViolations, targetFiles, scanText, scanArticles };
 
 if (require.main === module) {
   const bad = findViolations();

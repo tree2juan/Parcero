@@ -189,18 +189,194 @@ test("the direction decides which language is asked for and which is recalled", 
     const verbs = flashcardTopics(direction, sources).find((topic) => topic.groupKey === "deck.group.verbs");
     const [card] = verbs.cards;
     const verb = curriculum[0];
-    assert.strictEqual(card.back, direction === "es" ? verb.spanish : verb.english);
-    assert.strictEqual(card.front, direction === "es" ? verb.english : verb.spanish);
-    assert.strictEqual(card.backLang, direction);
-    assert.strictEqual(card.frontLang, other);
+    assert.strictEqual(card.front, direction === "es" ? verb.spanish : verb.english);
+    assert.strictEqual(card.back, direction === "es" ? verb.english : verb.spanish);
+    assert.strictEqual(card.frontLang, direction);
+    assert.strictEqual(card.backLang, other);
   }
+});
+
+/*
+ * The toggle at the top of the page says which language you are learning, so
+ * that is the language every card has to open in. The deck did not used to do
+ * this: cards built from a lesson opened on the language being learned, while
+ * verb and fluency cards opened on the language the learner already had. Both
+ * turn up in the same sitting, so the opening side changed depending on where
+ * the card happened to come from -- which the learner has no way to see coming.
+ *
+ * The first version of this check only looked at cards that tag both sides, and
+ * that silently skipped more than half the deck: vocabulary, pronunciation and
+ * region tag only the front, pitfall and variation only the back. It is written
+ * against every tagged side now.
+ */
+test("every card opens in the language being learned", () => {
+  // The context card is the one deliberate exception. It shows a scene and then
+  // a note about it, both written in the language the learner already has, so
+  // there is no version of it that could open in the language being learned.
+  //
+  // The lexicon card is the second, for the opposite reason: it is a production
+  // drill. The prompt is the word the learner already has and the answer is the
+  // one they are building, so opening it in the language being learned would be
+  // printing the answer on the front.
+  const opensInSupport = new Set(["context", "lexicon"]);
+  // The slang card is the third, and it is neither of the above: it does not
+  // pivot on direction at all. Every row of the slang list is a Colombian
+  // phrase glossed into English -- the list is written once, from one side, the
+  // way a glossary is. So the card reads the same way for both learners:
+  // the Colombian phrase is the prompt and the English gloss is the answer.
+  // An English speaker is recognizing the phrase; a Colombian speaker is
+  // recalling how to say their own phrase in English. Neither one is served by
+  // flipping it, so this kind is pinned to Spanish rather than to a direction.
+  const opensInSpanish = new Set(["slang"]);
+  const kinds = new Set();
+  let checked = 0;
+  for (const direction of directions) {
+    const support = direction === "es" ? "en" : "es";
+    for (const topic of flashcardTopics(direction, sources)) {
+      for (const card of topic.cards) {
+        if (!card.frontLang) continue;
+        let expected = opensInSupport.has(card.kind) ? support : direction;
+        if (opensInSpanish.has(card.kind)) expected = "es";
+        assert.strictEqual(
+          card.frontLang,
+          expected,
+          `a ${card.kind} card opens in ${card.frontLang} when the learner asked to learn ${direction}: "${card.front}"`
+        );
+        kinds.add(card.kind);
+        checked += 1;
+      }
+    }
+  }
+  assert.ok(checked > 1000, `only ${checked} cards declared a front language, so this guard is not seeing the deck`);
+  assert.deepStrictEqual(
+    [...kinds].sort(),
+    ["context", "example", "fluency", "lexicon", "meaning", "pronunciation", "region", "slang", "verb", "vocabulary"],
+    "a card kind started or stopped declaring a front language -- confirm it opens in the language being learned"
+  );
+});
+
+/*
+ * Which language sits on each side of each card kind, held as a table so that
+ * changing any of it has to be deliberate. Read it as: when you are learning
+ * `direction`, a card of this kind is tagged this way. `none` means the side is
+ * prose in the language the learner already has and carries no lang attribute.
+ *
+ * The two slang rows are identical across directions on purpose, and that is
+ * the one thing here that is not a mirror: the slang list is a glossary written
+ * from the Colombian side, so the phrase is always the prompt and the English
+ * gloss is always the answer. If those two rows ever diverge, someone has made
+ * the slang deck pivot on direction, which the list has no second side to
+ * support.
+ */
+test("the language on each side of each card kind is what it was signed off as", () => {
+  const actual = [];
+  const seen = new Set();
+  for (const direction of directions) {
+    for (const topic of flashcardTopics(direction, sources)) {
+      for (const card of topic.cards) {
+        const row = `learning ${direction}: ${card.kind} = ${card.frontLang || "none"} / ${card.backLang || "none"}`;
+        if (seen.has(row)) continue;
+        seen.add(row);
+        actual.push(row);
+      }
+    }
+  }
+  assert.deepStrictEqual(actual.sort(), [
+    "learning en: address = none / none",
+    "learning en: context = es / none",
+    "learning en: culture = none / none",
+    "learning en: example = en / es",
+    "learning en: fluency = en / es",
+    "learning en: lexicon = es / en",
+    "learning en: meaning = en / es",
+    "learning en: pitfall = none / en",
+    "learning en: practice = none / none",
+    "learning en: pronunciation = en / none",
+    "learning en: region = en / none",
+    "learning en: slang = es / en",
+    "learning en: variation = none / en",
+    "learning en: verb = en / es",
+    "learning en: vocabulary = en / none",
+    "learning es: address = none / none",
+    "learning es: context = en / none",
+    "learning es: culture = none / none",
+    "learning es: example = es / en",
+    "learning es: fluency = es / en",
+    "learning es: lexicon = en / es",
+    "learning es: meaning = es / en",
+    "learning es: pitfall = none / es",
+    "learning es: practice = none / none",
+    "learning es: pronunciation = es / none",
+    "learning es: region = es / none",
+    "learning es: slang = es / en",
+    "learning es: variation = none / es",
+    "learning es: verb = es / en",
+    "learning es: vocabulary = es / none"
+  ]);
+});
+
+/*
+ * The test above proves the mechanism picks a language for each side. It does
+ * not prove the text in that side is actually in that language, and the two
+ * came apart: fluencyItems is documented as [spanish, english, ...], but two
+ * entries held the English in the Spanish slot, so the deck put the answer on
+ * the front and the prompt on the back -- in BOTH directions, since the builder
+ * just swaps the same two slots. Separately the context card tagged the scene
+ * with `target` when the scene is written in the language the learner already
+ * reads, so Spanish scene-setting was announced as English.
+ *
+ * Nothing structural catches either one; the cards were well-formed and the
+ * ids were unique. Only the words were in the wrong place. So this reads the
+ * words.
+ *
+ * Closed-class Spanish only, and deliberately not diacritics: "Bogotá" and
+ * "Medellín" are correctly spelled inside English sentences. Words that are
+ * also ordinary English are left out on purpose -- con, no, son, lo, ya, a, o
+ * and me would all fire on real English glosses. Verified against every string
+ * the deck tags as English in both directions.
+ */
+const SPANISH_FUNCTION_WORDS = new Set([
+  "el", "la", "los", "las", "un", "una", "unos", "unas", "del", "al",
+  "que", "qué", "y", "en", "por", "para", "su", "sus", "tu", "tus",
+  "te", "se", "es", "está", "están", "estás", "esto", "eso",
+  "como", "más", "menos", "muy", "pues", "bien", "todo", "toda",
+  "sea", "bueno", "hecho", "pa", "voy", "vas", "usted", "ustedes",
+  "pero", "porque", "cuando", "donde", "quiere", "quieres"
+]);
+
+test("text the deck labels English is not actually Spanish", () => {
+  const offenders = [];
+  for (const direction of directions) {
+    for (const set of flashcardSets(direction, sources)) {
+      for (const card of set.cards) {
+        for (const side of ["front", "back"]) {
+          if (card[`${side}Lang`] !== "en") continue;
+          const spanish = String(card[side])
+            .toLowerCase()
+            .split(/[^a-záéíóúñü]+/)
+            .filter(Boolean)
+            .filter((word) => SPANISH_FUNCTION_WORDS.has(word));
+          if (!spanish.length) continue;
+          offenders.push(
+            `[${direction}] ${set.topicId} ${card.kind}.${side} is tagged lang="en" but reads as Spanish ` +
+            `(${spanish.join(", ")}): ${JSON.stringify(card[side])}`
+          );
+        }
+      }
+    }
+  }
+  assert.deepStrictEqual(
+    offenders,
+    [],
+    `a learner is shown this text with the wrong language on it, which is the wrong ` +
+    `side of the card or the wrong lang for a screen reader to speak:\n  ${offenders.join("\n  ")}`
+  );
 });
 
 test("set ids survive a change of direction, so switching keeps your place", () => {
   const [spanish, english] = directions.map((direction) => flashcardSets(direction, sources).map((set) => set.id));
   assert.deepStrictEqual(spanish, english);
 });
-
 test("new content flows into the decks with no edit here", () => {
   const before = flashcardSets("es", sources);
   const extraLesson = JSON.parse(JSON.stringify(lessons[0]));
@@ -482,7 +658,7 @@ test("the English fallback says the same thing as the table it stands in for", (
 test("the flashcards section is marked up for translation", () => {
   const html = read("index.html");
   const section = html.slice(html.indexOf('id="flashcards"'), html.indexOf('id="placement"'));
-  const untranslated = [...section.matchAll(/<(h2|h3|p|span|button|strong)\b([^>]*)>([^<]+)</g)]
+  const untranslated = [...section.matchAll(/<(h2|h3|h4|p|span|button|strong|li)\b([^>]*)>([^<]+)</g)]
     .filter(([, , attrs, text]) => text.trim() && !attrs.includes("data-i18n"))
     .map(([, tag, , text]) => `<${tag}> ${text.trim()}`);
   assert.deepStrictEqual(untranslated, [], "authored text in the flashcards section needs a data-i18n key");
@@ -860,19 +1036,26 @@ test("opening the gate actually produces the decks it promises", () => {
 
 test("a mature card only ever drills the language the learner is meeting", () => {
   /*
-   * matureItems mixes directions in one list. A Spanish learner drilling
-   * "asshole -> imbécil" is being taught nothing they came for, so each deck
-   * takes only its own side.
+   * After Dark rows are Colombian phrases glossed into English, so the same row
+   * serves both decks -- but not the same way round. A learner of Spanish is
+   * meeting the Colombian phrase, and a learner of English is meeting the
+   * English gloss, so the front has to follow the direction. Getting this
+   * backwards would put the answer on the front of every card.
    */
   for (const direction of directions) {
-    const ids = flashcardTopics(direction, openSources)
+    const cards = flashcardTopics(direction, openSources)
       .filter((topic) => topic.id === "mature")
-      .flatMap((topic) => topic.cards)
-      .map((card) => Number(card.id.split("/")[1]));
-    assert.ok(ids.length > 0, `${direction}: no mature cards to check`);
-    for (const index of ids) {
-      assert.equal(matureItems[index][4], direction,
-        `${direction} deck contains mature entry "${matureItems[index][0]}", which is ${matureItems[index][4]}`);
+      .flatMap((topic) => topic.cards);
+    assert.ok(cards.length > 0, `${direction}: no mature cards to check`);
+    for (const card of cards) {
+      const source = matureItems[Number(card.id.split("/")[1])];
+      const expected = direction === "es" ? source.phrase : source.equivalent;
+      assert.equal(card.front, expected,
+        `${direction} deck fronts "${card.front}", but this learner is meeting "${expected}"`);
+      assert.equal(card.back, direction === "es" ? source.equivalent : source.phrase,
+        `${direction} deck backs "${card.back}", which is not the other side of "${expected}"`);
+      assert.ok(card.note.includes(source.city),
+        "the city decides how hard the phrase lands, so it belongs on the card");
     }
   }
 });

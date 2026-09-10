@@ -425,7 +425,7 @@ lessons.push(
             "En cualquier transacción: “can I pay here?”, “I already paid”, “I'll pay by card”. Sirve para tiendas, taxis, arriendo y deudas.",
           avoidWhen:
             "No meta un “for” cuando nombra lo que paga como cuenta o deuda: es “pay the bill”, no “pay for the bill”. El “for” cambia el sentido, como se ve abajo.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal; primero fije el objeto directo sin preposición.",
           related: ["pay for", "pay by card", "pay in cash", "pay off"],
           example: {
@@ -442,7 +442,7 @@ lessons.push(
             "Al decir qué compró o cuánto gastó: “I paid forty dollars for it”, “how much did you pay for that?”.",
           avoidWhen:
             "No use “for” cuando el objeto es la cuenta, la tarifa o la deuda; esos van directos. Ahí el “for” es justo el calco que delata al hispanohablante al revés.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal; el reparto entre “pay” y “pay for” es idéntico al de “pagar / pagar por”.",
           related: ["pay the bill", "pay off", "pay back", "cover"],
           example: {
@@ -459,7 +459,7 @@ lessons.push(
             "Antes de romper un billete grande, o cuando le piden lo mismo: “do you have anything smaller?”, “I don't have anything smaller”.",
           avoidWhen:
             "No lo confunda con el vuelto que le devuelven: eso también es “change”, pero “anything smaller” es el efectivo pequeño en sí, lo tenga quien lo tenga.",
-          register: "polite neutral",
+          register: "cortés neutro",
           region: "Universal en inglés; “change” cubre a la vez el sencillo y el vuelto.",
           related: ["small change", "coins", "smaller bills", "spare change"],
           example: {
@@ -476,7 +476,7 @@ lessons.push(
             "Al pagar un taxi o un domicilio y dejar propina: “keep the change”, “that's for you”.",
           avoidWhen:
             "No sirve para pedir su propio vuelto; para eso se pregunta “can I get my change?”. “Keep the change” es regalarlo, no reclamarlo.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Universal; la propina en Norteamérica hace que se use bastante.",
           related: ["change", "the rest", "the difference", "tip"],
           example: {
@@ -493,7 +493,7 @@ lessons.push(
             "Al elegir o preguntar por el medio de pago: “cash or card?”, “cash only”, “do you take cash?”.",
           avoidWhen:
             "No traduzca “efectivo” por “effective”: es un falso amigo clásico. El dinero en billetes siempre es “cash”.",
-          register: "neutral",
+          register: "neutro",
           region: "Universal; algunos locales ponen “cash only” cuando el datáfono está caído.",
           related: ["debit", "credit", "Venmo", "bills"],
           example: {
@@ -510,7 +510,7 @@ lessons.push(
             "Al comprar algo caro: “can I pay in installments?”, “do you offer monthly payments?”, “interest-free installments”.",
           avoidWhen:
             "No diga “quotas”: “quota” es un cupo o límite, no una cuota de pago. La palabra es “installments” o “payments”.",
-          register: "neutral service",
+          register: "neutro de servicio",
           region: "Menos habitual que en Colombia; casi nunca lo pregunta el datáfono.",
           related: ["monthly payments", "financing", "layaway", "down payment"],
           example: {
@@ -589,25 +589,25 @@ lessons.push(
       variations: [
         {
           form: "Will you be paying cash or card?",
-          register: "neutral service",
+          register: "neutro de servicio",
           region: "Norteamérica",
           whenToUse: "La pregunta típica de la caja; puede contestar con una sola palabra, “cash” o “card”."
         },
         {
           form: "Do you have anything smaller?",
-          register: "polite neutral",
+          register: "cortés neutro",
           region: "Universal en inglés",
           whenToUse: "Cuando le piden billetes más pequeños, o cuando usted mismo necesita monedas o sencillo."
         },
         {
           form: "I'll just tap.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Estados Unidos / pago sin contacto",
           whenToUse: "Para pagar acercando la tarjeta o el teléfono, sin insertar ni firmar nada."
         },
         {
           form: "You're all set.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Norteamérica",
           whenToUse: "Lo dice el cajero al terminar; significa que ya quedó todo, no que falte algo."
         },
@@ -1077,7 +1077,7 @@ lessons.push(
             "En cualquier compra: “I'd like to buy the lamp”, “where did you buy it?”, “I'll buy it from her”.",
           avoidWhen:
             "No lo confunda con “pay for”: uno compra la cosa (“buy the lamp”) y paga por ella (“pay for the lamp”). No son intercambiables.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal; “buy from” marca al vendedor, como el “te compro” del español.",
           related: ["buy from", "pick up", "get", "purchase"],
           example: {
@@ -1094,7 +1094,7 @@ lessons.push(
             "En ventas de segunda o Marketplace: “how much are you asking?”, “what's your asking price?”.",
           avoidWhen:
             "En una tienda de precio fijo no aplica; ahí se dice “how much is it?” y punto, porque no hay nada que negociar.",
-          register: "neutral",
+          register: "neutro",
           region: "Universal en inglés; muy usada en ventas particulares.",
           related: ["asking price", "how much is it?", "what's the price?", "how much do you want?"],
           example: {
@@ -1111,7 +1111,7 @@ lessons.push(
             "Al ofrecer menos: “would you take ten?”, “would you do fifteen?”.",
           avoidWhen:
             "No la reemplace por un “give me a discount”: suena brusco y allá enfría el trato de inmediato.",
-          register: "polite haggle",
+          register: "cortés de regateo",
           region: "Norteamérica; el regateo se hace con rodeos como este.",
           related: ["would you take", "could you do", "is there wiggle room?", "any lower?"],
           example: {
@@ -1128,7 +1128,7 @@ lessons.push(
             "Al decidirse en una tienda o venta: “I'll take it”, “I'll take two”, “I'll go for it”.",
           avoidWhen:
             "Evite el presente “I take it” para la compra del momento: suena a costumbre, no a la decisión que acaba de tomar.",
-          register: "neutral",
+          register: "neutro",
           region: "Universal en inglés.",
           related: ["I'll take it", "I'll go for it", "it's a deal", "sold"],
           example: {
@@ -1179,7 +1179,7 @@ lessons.push(
             "Al hablar del mercado semanal: “I do the grocery shopping on Saturdays”, “I need to get groceries”.",
           avoidWhen:
             "No es comprar una sola cosa: para un artículo suelto se dice “pick something up”, no “do the grocery shopping”.",
-          register: "neutral",
+          register: "neutro",
           region: "Universal; “run errands” cubre las diligencias en general.",
           related: ["grocery shopping", "run errands", "pick up groceries", "go shopping"],
           example: {
@@ -1241,31 +1241,31 @@ lessons.push(
       variations: [
         {
           form: "How much are you asking?",
-          register: "neutral",
+          register: "neutro",
           region: "Ventas de segunda, Marketplace",
           whenToUse: "Para preguntar el precio cuando se entiende que se puede negociar."
         },
         {
           form: "Would you take fifteen?",
-          register: "polite haggle",
+          register: "cortés de regateo",
           region: "Norteamérica, informal",
           whenToUse: "Para proponer un precio más bajo sin sonar exigente ni brusco."
         },
         {
           form: "Is there any wiggle room on the price?",
-          register: "polite",
+          register: "cortés",
           region: "Universal en inglés",
           whenToUse: "Para tantear con mucha cortesía si hay algún margen de rebaja."
         },
         {
           form: "What's your best price?",
-          register: "neutral",
+          register: "neutro",
           region: "Mercados de pulgas",
           whenToUse: "Para pedir el precio más bajo del vendedor antes de decidirse."
         },
         {
           form: "I'll take it.",
-          register: "neutral",
+          register: "neutro",
           region: "Universal",
           whenToUse: "Para cerrar y decir que se lo lleva, una vez conforme con el precio."
         }
@@ -1729,7 +1729,7 @@ lessons.push(
             "En cualquier venta: “I'm selling my bike”, “I sold it yesterday”, “I'll sell it to you for…”.",
           avoidWhen:
             "No diga “sell it in three hundred”: el precio nunca va con “in”. Es “for”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal; el precio con “for” es el patrón que hay que fijar.",
           related: ["sell for", "sell off", "put up for sale", "list"],
           example: {
@@ -1746,7 +1746,7 @@ lessons.push(
             "Al marcar algo como disponible: “the bike is for sale”, “is this for sale?”, “up for sale”.",
           avoidWhen:
             "No la use para hablar de un descuento: eso es “on sale”. “For sale” solo dice que se puede comprar.",
-          register: "neutral",
+          register: "neutro",
           region: "Universal en inglés; el letrero típico es “For Sale”.",
           related: ["for sale", "up for sale", "listed", "available"],
           example: {
@@ -1763,7 +1763,7 @@ lessons.push(
             "Al hablar de descuentos: “these shoes are on sale”, “it's on sale this week”, “50% off”.",
           avoidWhen:
             "No la use para decir que algo se puede comprar; para eso es “for sale”. Confundirlas cambia el sentido por completo.",
-          register: "neutral",
+          register: "neutro",
           region: "Universal; “on sale” en EE.UU. y Estados Unidos es descuento.",
           related: ["on sale", "on clearance", "marked down", "discounted"],
           example: {
@@ -1814,7 +1814,7 @@ lessons.push(
             "Al cerrar la puerta al regateo: “the price is firm”, “sorry, it's firm”, “$300 firm”.",
           avoidWhen:
             "No lo confunda con “strong”; “firm” aquí es inamovible, no fuerte. Es lo contrario de negociable.",
-          register: "neutral",
+          register: "neutro",
           region: "Anuncios de venta en inglés.",
           related: ["price is firm", "non-negotiable", "as listed", "no lowballers"],
           example: {
@@ -1893,25 +1893,25 @@ lessons.push(
       variations: [
         {
           form: "How much are you asking?",
-          register: "neutral",
+          register: "neutro",
           region: "Ventas de segunda",
           whenToUse: "Para preguntar el precio pedido de algo usado, entendiendo que se puede negociar."
         },
         {
           form: "I'm selling it for three hundred.",
-          register: "neutral",
+          register: "neutro",
           region: "Universal en inglés",
           whenToUse: "Para poner precio como vendedor — ojo, el precio va con “for”."
         },
         {
           form: "I can come down to two-fifty.",
-          register: "friendly sale",
+          register: "amistoso de venta",
           region: "Norteamérica",
           whenToUse: "Para bajar el precio un poco y cerrar, como el “le hago precio” colombiano."
         },
         {
           form: "The price is firm.",
-          register: "neutral",
+          register: "neutro",
           region: "Anuncios de venta",
           whenToUse: "Para avisar que no hay rebaja; suele verse escrito como “$300 firm”."
         },

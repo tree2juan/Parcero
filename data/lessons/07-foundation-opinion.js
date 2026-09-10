@@ -427,7 +427,7 @@ lessons.push(
             "Al proponer una hora, un plan o un precio que quiere ofrecer y no imponer.",
           avoidWhen:
             "Al dar una orden que en realidad no está abriendo a discusión; ahí “does that work for you?” suena a falsa modestia.",
-          register: "polite service",
+          register: "cortés de servicio",
           region: "Inglés universal; muy usado en el trato de servicio en Estados Unidos.",
           related: ["is that okay with you?", "would that work?", "how does that sound?", "does that suit you?"],
           example: {
@@ -444,7 +444,7 @@ lessons.push(
             "Al aceptar un plan, una hora o un arreglo que acaban de proponerle.",
           avoidWhen:
             "Cuando en realidad tiene reparos: el otro tomará “works for me” como un sí de verdad y seguirá adelante.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal; muy frecuente en Norteamérica.",
           related: ["sounds good", "that's fine by me", "I'm good with that", "that works"],
           example: {
@@ -461,7 +461,7 @@ lessons.push(
             "Al señalar que algo le parece caro sin acusar a nadie de estar cobrando de más.",
           avoidWhen:
             "En una tienda de precio fijo con etiquetas; ahí regatear queda fuera de lugar y “steep” suena a queja vacía.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal; muy común en Estados Unidos.",
           related: ["pricey", "expensive", "a bit much", "on the high side"],
           example: {
@@ -478,7 +478,7 @@ lessons.push(
             "Al reportar algo que dedujo pero no puede jurar: “looks like it's going to rain”.",
           avoidWhen:
             "Sobre algo que sabe de primera mano; ahí “looks like” lo hace sonar dudoso de sus propios planes.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal; en registro coloquial se dice “looks like” sin el “it”.",
           related: ["by the looks of it", "apparently", "it seems", "from what I can tell"],
           example: {
@@ -495,7 +495,7 @@ lessons.push(
             "Al consultar el juicio de alguien sobre una elección — un color, un plan, una idea.",
           avoidWhen:
             "Cuando quiere un hecho y no una opinión; para eso preguntaría “is it…?” o “does it…?”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["how does that sound?", "what's your take?", "what do you reckon?", "any thoughts?"],
           example: {
@@ -512,7 +512,7 @@ lessons.push(
             "Al suavizar una opinión o reportar una impresión: “it seems fine”, “you seem tired”.",
           avoidWhen:
             "Con “-ing”. “Seem” es un verbo de estado y “it is seeming” es un error clásico del hispanohablante; se dice “it seems”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["appear", "look", "sound", "feel"],
           example: {
@@ -529,7 +529,7 @@ lessons.push(
             "Al referirse a quien pinta, arregla o instala cosas menores en su casa.",
           avoidWhen:
             "Para un oficio especializado con licencia — un “electrician” o un “plumber” se nombran por su oficio, no como “handyman”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal; en Norteamérica “contractor” es el que dirige una obra mayor.",
           related: ["contractor", "painter", "tradesperson", "repairman"],
           example: {
@@ -591,31 +591,31 @@ lessons.push(
       variations: [
         {
           form: "Does Saturday work for you?",
-          register: "polite service",
+          register: "cortés de servicio",
           region: "Inglés universal",
           whenToUse: "La propuesta cortés por defecto en un trato de servicio."
         },
         {
           form: "Is Saturday okay?",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal",
           whenToUse: "La misma oferta en tono relajado, con alguien de confianza."
         },
         {
           form: "What do you think of the gray?",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Para consultar el juicio del otro sobre una elección."
         },
         {
           form: "Would Saturday suit you?",
-          register: "polite formal",
+          register: "cortés formal",
           region: "Inglés británico y estadounidense",
           whenToUse: "Un registro más formal; “suit you” suena algo más pulido que “work for you”."
         },
         {
           form: "Are you free Saturday?",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Cuando lo que pregunta es la disponibilidad más que el agrado."
         }
@@ -1079,7 +1079,7 @@ lessons.push(
             "Al hablar de ropa: “it fits” si es la talla, “it suits you” si te ve bien.",
           avoidWhen:
             "Para ubicaciones. El “quedar” de lugar no es “fit” ni “suit”; eso es “to be” o “to be located”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["fit", "suit", "look good on", "go with"],
           example: {
@@ -1096,7 +1096,7 @@ lessons.push(
             "Al elogiar cómo se le ve una prenda a alguien.",
           avoidWhen:
             "Cuando solo quiere decir que es de la talla correcta; para eso es “it fits”.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal.",
           related: ["it looks good on you", "it fits you", "that's a good look", "it flatters you"],
           example: {
@@ -1113,7 +1113,7 @@ lessons.push(
             "Al preguntar dónde está una tienda, un baño, una calle.",
           avoidWhen:
             "Con el calco “where stays”: no existe. La ubicación en inglés va siempre con “be”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal; “whereabouts is it?” es más británico y estadounidense.",
           related: ["whereabouts is it?", "where is it?", "how do I get there?", "which way is it?"],
           example: {
@@ -1130,7 +1130,7 @@ lessons.push(
             "Al cerrar un plan o proponer una hora sin ceremonia.",
           avoidWhen:
             "Para un compromiso formal por escrito; ahí sería “we agree that…”.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal.",
           related: ["let's make it", "we agreed on", "we said", "how about"],
           example: {
@@ -1147,7 +1147,7 @@ lessons.push(
             "Cuando no cumple algo que prometió y decepciona a otro.",
           avoidWhen:
             "Para sentirse enfermo; eso es “to feel unwell / sick”, algo completamente distinto.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal; “to flake” es una versión más coloquial.",
           related: ["to flake", "to bail on", "to disappoint", "to leave someone hanging"],
           example: {
@@ -1164,7 +1164,7 @@ lessons.push(
             "Al recordar un compromiso: “I'm supposed to be back at five”.",
           avoidWhen:
             "Para una obligación fuerte y sin margen; ahí es “I have to”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["I'm meant to", "I said I would", "I'm expected to", "I have to"],
           example: {
@@ -1181,7 +1181,7 @@ lessons.push(
             "Al ponerse ropa en la tienda para ver cómo queda.",
           avoidWhen:
             "Sin el “on”: “try the jacket” suena a probar suerte con ella, no a medírsela.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal; “the fitting room” es el probador.",
           related: ["fitting room", "changing room", "give it a try", "slip it on"],
           example: {
@@ -1243,31 +1243,31 @@ lessons.push(
       variations: [
         {
           form: "That jacket suits you.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Para elogiar cómo se le ve la prenda a alguien."
         },
         {
           form: "It fits perfectly.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Para decir que la talla es exacta, al margen del estilo."
         },
         {
           form: "Where's the other store?",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Para preguntar por la ubicación de un lugar fijo."
         },
         {
           form: "Let's say five, then.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal",
           whenToUse: "Para cerrar sin ceremonia la hora de un plan."
         },
         {
           form: "Don't let me down.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal",
           whenToUse: "Para pedirle a alguien, medio en broma, que no le falle."
         }
@@ -1731,7 +1731,7 @@ lessons.push(
             "“Think” para opiniones y suposiciones; “believe” para convicción, fe o dar por verdad lo que alguien dice.",
           avoidWhen:
             "En presente continuo. Son verbos de estado: “I am thinking that…” o “I am believing you” suenan mal; van en presente simple.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["think", "believe", "reckon", "guess"],
           example: {
@@ -1748,7 +1748,7 @@ lessons.push(
             "Al responder que uno cree que sí sin total certeza: “Is it still on?” — “I think so.”",
           avoidWhen:
             "Con “that yes”. Y para negar, el inglés dice “I don't think so”, no “I think not”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["I don't think so", "I guess so", "I believe so", "probably"],
           example: {
@@ -1765,7 +1765,7 @@ lessons.push(
             "Al expresar duda sobre algo futuro: “I don't think it'll rain”, “I don't think they'll cancel”.",
           avoidWhen:
             "Negando el segundo verbo. El inglés prefiere “I don't think it will” a “I think it won't”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["I doubt", "I don't reckon", "I don't believe", "I don't think so"],
           example: {
@@ -1782,7 +1782,7 @@ lessons.push(
             "Al reaccionar con duda ante lo que otro afirma: predice un desastre y uno suelta “you think?”.",
           avoidWhen:
             "Como pregunta formal completa; para eso sería “do you think so?”, con el auxiliar.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal; “you reckon?” es más británico y estadounidense.",
           related: ["you reckon?", "really?", "do you think so?", "are you sure?"],
           example: {
@@ -1799,7 +1799,7 @@ lessons.push(
             "Al descartar algo con fuerza, medio en broma: “Cancel it? No way!”",
           avoidWhen:
             "Cuando de verdad no está seguro; ahí van “I doubt it” o “probably not”, más suaves.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal.",
           related: ["I doubt it", "not a chance", "as if", "no chance"],
           example: {
@@ -1816,7 +1816,7 @@ lessons.push(
             "Al reforzar una promesa o un pronóstico: “It won't rain, trust me”.",
           avoidWhen:
             "Con desconocidos en asuntos serios, donde puede sonar a vendedor y lograr lo contrario de la confianza.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal; “believe me” es un poco más marcado.",
           related: ["believe me", "take my word for it", "I promise", "you'll see"],
           example: {
@@ -1833,7 +1833,7 @@ lessons.push(
             "Al expresar convicción o apoyo: “I believe in this festival”, “I believe in you”.",
           avoidWhen:
             "Para una simple opinión sobre un hecho; eso es “I think”, sin el “in”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["have faith in", "believe in yourself", "count on", "back"],
           example: {
@@ -1895,31 +1895,31 @@ lessons.push(
       variations: [
         {
           form: "I think so.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Para afirmar algo con reserva; el negativo es “I don't think so”."
         },
         {
           form: "I don't think it'll rain.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Para expresar duda sobre el futuro, con “will” y sin subjuntivo."
         },
         {
           form: "You think?",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal",
           whenToUse: "Para reaccionar con escepticismo amable, sin el auxiliar “do”."
         },
         {
           form: "No way!",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal",
           whenToUse: "Para descartar algo con fuerza y confianza."
         },
         {
           form: "Trust me.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal",
           whenToUse: "Para sellar una promesa o una predicción con tu palabra."
         }

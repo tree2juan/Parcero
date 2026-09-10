@@ -406,7 +406,7 @@ lessons.push(
             "Usted está en una clínica, hospital o consulta y espera que un profesional lo atienda.",
           avoidWhen:
             "Traducirlo como ser visto por casualidad. En este contexto, seen significa atendido.",
-          register: "clinical practical",
+          register: "clínico práctico",
           region: "Inglés universal.",
           related: ["see a doctor", "be treated", "get help", "be called in"],
           example: {
@@ -423,7 +423,7 @@ lessons.push(
             "Un empleado maneja papeles, pagos, turnos o preguntas prácticas.",
           avoidWhen:
             "Una consulta médica real. Ahí el médico usually sees you rather than helps you at the counter.",
-          register: "neutral service",
+          register: "neutro de servicio",
           region: "Inglés universal.",
           related: ["serve", "assist", "deal with", "take care of"],
           example: {
@@ -440,7 +440,7 @@ lessons.push(
             "Habla de médicos, enfermeras o especialistas que atienden consultas.",
           avoidWhen:
             "Decir “attend patients” como calco. Puede existir en registros específicos, pero no es la frase cotidiana.",
-          register: "clinical neutral",
+          register: "clínico neutro",
           region: "Inglés universal.",
           related: ["treat patients", "examine patients", "call patients in", "be seen"],
           example: {
@@ -457,7 +457,7 @@ lessons.push(
             "Quiere elogiar una clínica, tienda, oficina o servicio por la manera en que lo manejaron.",
           avoidWhen:
             "Pensar sólo en tratamiento médico. Treat también habla de trato humano.",
-          register: "warm appreciative",
+          register: "cálido apreciativo",
           region: "Inglés universal.",
           related: ["good service", "looked after me", "were kind", "helped me well"],
           example: {
@@ -474,7 +474,7 @@ lessons.push(
             "Usted estuvo presente en algo: attended a meeting, attended class, attended an appointment.",
           avoidWhen:
             "Quiere decir que alguien lo atendió en un mostrador o consulta. Use see, help, serve o treat.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["go to", "be present", "show up for", "take part in"],
           example: {
@@ -491,7 +491,7 @@ lessons.push(
             "Un servicio reconoce que una persona lleva esperando.",
           avoidWhen:
             "Culpar al paciente o cliente. Sorry for the delay acepta el tiempo perdido.",
-          register: "polite service",
+          register: "cortés de servicio",
           region: "Inglés universal.",
           related: ["wait", "running late", "hold-up", "behind schedule"],
           example: {
@@ -508,7 +508,7 @@ lessons.push(
             "Usted necesita aclarar que su turno o atención no ha llegado.",
           avoidWhen:
             "Sonar acusatorio si sólo está preguntando. El tono y “not yet” ayudan.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["not yet", "waiting to be seen", "checked in", "called in"],
           example: {
@@ -559,25 +559,25 @@ lessons.push(
       variations: [
         {
           form: "Have you been seen yet?",
-          register: "clinical practical",
+          register: "clínico práctico",
           region: "Inglés universal",
           whenToUse: "Preguntar si alguien en una sala médica ya fue atendido."
         },
         {
           form: "I'll help you with the paperwork.",
-          register: "polite service",
+          register: "cortés de servicio",
           region: "Inglés universal",
           whenToUse: "Una recepción o mostrador atiende la parte administrativa."
         },
         {
           form: "The doctor sees patients with fever first.",
-          register: "clinical practical",
+          register: "clínico práctico",
           region: "Inglés universal",
           whenToUse: "Explicar el orden en que atienden pacientes."
         },
         {
           form: "They treated me really well.",
-          register: "warm appreciative",
+          register: "cálido apreciativo",
           region: "Inglés universal",
           whenToUse: "Elogiar cómo lo atendieron en una clínica, tienda u oficina."
         }
@@ -1024,7 +1024,7 @@ lessons.push(
             "Médicos hacen cirugía, una máquina funciona, o una empresa opera en un lugar.",
           avoidWhen:
             "Quiere decir sólo atender sin cirugía. A doctor can see a patient without operating on them.",
-          register: "neutral medical",
+          register: "neutro médico",
           region: "Inglés universal.",
           related: ["have surgery", "operate on", "run", "function"],
           example: {
@@ -1041,7 +1041,7 @@ lessons.push(
             "Quiere decir quién recibió la cirugía.",
           avoidWhen:
             "Calcar operar de con of. “Operated him of the appendix” no es el patrón natural.",
-          register: "medical practical",
+          register: "médico práctico",
           region: "Inglés universal.",
           related: ["have surgery for", "was operated on", "surgeon", "procedure"],
           example: {
@@ -1058,7 +1058,7 @@ lessons.push(
             "Cuenta a la familia que la cirugía ya pasó o pregunta si alguien fue operado.",
           avoidWhen:
             "Necesita nombrar al equipo quirúrgico. Entonces use they operated on him o he was operated on.",
-          register: "medical neutral",
+          register: "médico neutro",
           region: "Inglés universal.",
           related: ["underwent surgery", "was operated on", "operation", "procedure"],
           example: {
@@ -1075,7 +1075,7 @@ lessons.push(
             "Habla del procedimiento, de cómo salió o de cuándo empieza.",
           avoidWhen:
             "Usar operation para todo si surgery suena más claro y humano en contexto médico.",
-          register: "medical neutral",
+          register: "médico neutro",
           region: "Inglés universal.",
           related: ["procedure", "operating room", "recovery", "anaesthetic"],
           example: {
@@ -1092,7 +1092,7 @@ lessons.push(
             "El hospital explica dónde está un paciente o qué servicio sigue activo.",
           avoidWhen:
             "Confundirlo con the clinic. Es el cuarto quirúrgico específico, no todo el centro médico.",
-          register: "medical",
+          register: "médico",
           region: "Inglés universal.",
           related: ["OR", "recovery room", "hospital", "surgical team"],
           example: {
@@ -1109,7 +1109,7 @@ lessons.push(
             "El paciente salió de cirugía y está siendo observado antes de ver a la familia.",
           avoidWhen:
             "Pensar que significa curación completa. Being in recovery is only the next stage.",
-          register: "medical neutral",
+          register: "médico neutro",
           region: "Inglés universal.",
           related: ["stable", "monitoring", "post-op", "recovery room"],
           example: {
@@ -1126,7 +1126,7 @@ lessons.push(
             "El estado del paciente no empeora ni está crítico en este momento.",
           avoidWhen:
             "Traducirlo como healthy. Stable no significa completamente sano.",
-          register: "medical neutral",
+          register: "médico neutro",
           region: "Inglés universal.",
           related: ["recovering", "being monitored", "out of danger", "doing okay"],
           example: {
@@ -1177,25 +1177,25 @@ lessons.push(
       variations: [
         {
           form: "He had appendix surgery.",
-          register: "medical practical",
+          register: "médico práctico",
           region: "Inglés universal",
           whenToUse: "Informar de qué fue la cirugía sin una frase pesada."
         },
         {
           form: "The surgery went well.",
-          register: "medical reassuring",
+          register: "médico tranquilizador",
           region: "Inglés universal",
           whenToUse: "Dar el resultado del procedimiento con claridad."
         },
         {
           form: "They're still going to operate on him.",
-          register: "medical practical",
+          register: "médico práctico",
           region: "Inglés universal",
           whenToUse: "Decir que la cirugía todavía está pendiente."
         },
         {
           form: "The operating room is still running.",
-          register: "medical operational",
+          register: "médico operational",
           region: "Inglés universal",
           whenToUse: "Hablar de una sala o servicio que sigue funcionando."
         }
@@ -1642,7 +1642,7 @@ lessons.push(
             "Hay una cifra, talla, distancia o dimensión que alguien necesita saber.",
           avoidWhen:
             "Pregunta por estatura en conversación. Use how tall, not how much do you measure.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["weigh", "calculate", "take measurements", "compare"],
           example: {
@@ -1659,7 +1659,7 @@ lessons.push(
             "Pregunta la estatura de una persona en lenguaje normal.",
           avoidWhen:
             "Decir “how much do you measure?” Ese calco suena poco natural para altura.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["height", "one meter seventy-eight", "without shoes", "tall"],
           example: {
@@ -1676,7 +1676,7 @@ lessons.push(
             "Una medición ya ocurrió: measured yesterday, measured well, was measured.",
           avoidWhen:
             "Buscar una forma irregular como midió. La dificultad irregular está en español, no en inglés.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["took measurements", "checked", "recorded", "measuring"],
           example: {
@@ -1693,7 +1693,7 @@ lessons.push(
             "Un sastre, instalador o técnico mide varias dimensiones.",
           avoidWhen:
             "Traducirlo como take measures si habla de tallas. Take measures suele significar tomar medidas de acción.",
-          register: "neutral practical",
+          register: "neutro práctico",
           region: "Inglés universal.",
           related: ["measure", "tape measure", "tailor", "fit"],
           example: {
@@ -1710,7 +1710,7 @@ lessons.push(
             "Un examen, uniforme, pantalón o ajuste requiere esa dimensión.",
           avoidWhen:
             "Confundirlo con belt. Belt es el cinturón; waist es la parte del cuerpo.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["height", "weight", "hip", "chest"],
           example: {
@@ -1727,7 +1727,7 @@ lessons.push(
             "Debe ser honesto sin sonar agresivo, descuidado u ofensivo.",
           avoidWhen:
             "Traducir siempre como measure your words. Existe, pero puede sonar literario o menos común.",
-          register: "reflective conversational",
+          register: "reflexivo conversacional",
           region: "Inglés universal.",
           related: ["be careful what you say", "watch your wording", "mind your tone", "speak carefully"],
           example: {
@@ -1744,7 +1744,7 @@ lessons.push(
             "Una clínica necesita guardar una cifra o información de salud.",
           avoidWhen:
             "Confundir record con récord deportivo. Aquí es registro, no marca.",
-          register: "clinical neutral",
+          register: "clínico neutro",
           region: "Inglés universal.",
           related: ["form", "height", "weight", "file"],
           example: {
@@ -1795,25 +1795,25 @@ lessons.push(
       variations: [
         {
           form: "How tall are you?",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Preguntar estatura sin calcar medir."
         },
         {
           form: "I'll measure your waist.",
-          register: "clinical practical",
+          register: "clínico práctico",
           region: "Inglés universal",
           whenToUse: "Una enfermera o persona de ajustes mide una dimensión específica."
         },
         {
           form: "They took my measurements for the uniform.",
-          register: "practical",
+          register: "práctico",
           region: "Inglés universal",
           whenToUse: "Hablar de varias medidas para ropa."
         },
         {
           form: "I'll choose my words carefully.",
-          register: "reflective conversational",
+          register: "reflexivo conversacional",
           region: "Inglés universal",
           whenToUse: "Prepararse para hablar con cuidado."
         }

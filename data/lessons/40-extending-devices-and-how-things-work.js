@@ -398,7 +398,7 @@ lessons.push(
             "Cuando una persona activa algo: un ventilador, una lámpara, un celular, un horno o el internet.",
           avoidWhen:
             "Separarla mal con pronombres. Se dice “turn it on,” no “turn on it.”",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal; es la opción segura para casi cualquier aparato.",
           related: ["switch on", "come on", "power on", "turn off"],
           example: {
@@ -415,7 +415,7 @@ lessons.push(
             "Al hablar de luces, interruptores de pared, tableros y aparatos con palanca o switch.",
           avoidWhen:
             "Para un botón que se oprime en un aparato. Ahí puede ser más natural “press the button.”",
-          register: "neutral practical",
+          register: "neutro práctico",
           region: "Inglés universal; algo más común en inglés británico y australiano que en Estados Unidos.",
           related: ["turn on", "flip the switch", "wall switch", "switch off"],
           example: {
@@ -432,7 +432,7 @@ lessons.push(
             "La luz, pantalla, router o ventilador empieza a funcionar después de recibir energía.",
           avoidWhen:
             "Usarlo como si una persona “comes on” un aparato. La persona turns it on; el aparato comes on.",
-          register: "neutral conversational",
+          register: "neutro conversacional",
           region: "Inglés universal; también tiene otros sentidos, así que el contexto manda.",
           related: ["turn on", "start up", "light up", "power up"],
           example: {
@@ -449,7 +449,7 @@ lessons.push(
             "Necesita distinguir el switch de la pared del botón que está en el aparato.",
           avoidWhen:
             "Llamar “wall switch” a cualquier botón. Si está en el aparato, suele ser “button.”",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal; “light switch” es común cuando sólo controla una luz.",
           related: ["light switch", "button", "breaker", "outlet"],
           example: {
@@ -466,7 +466,7 @@ lessons.push(
             "El control se presiona, no se mueve como un interruptor de pared.",
           avoidWhen:
             "Decir “turn on the button” si quiere decir oprimirlo. Lo natural es “press the button.”",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["press", "switch", "control", "panel"],
           example: {
@@ -483,7 +483,7 @@ lessons.push(
             "Se acaba un apagón o regresa el suministro eléctrico en una casa o barrio.",
           avoidWhen:
             "Traducir “luz” como “light” si habla del servicio eléctrico completo. “The light is back” puede sonar a una sola lámpara.",
-          register: "neutral conversational",
+          register: "neutro conversacional",
           region: "Inglés universal; “power” es electricidad en este contexto.",
           related: ["power cut", "blackout", "outage", "electricity"],
           example: {
@@ -500,7 +500,7 @@ lessons.push(
             "Un aparato falla justo después de que la electricidad parpadea sin irse por completo.",
           avoidWhen:
             "Usarlo como diagnóstico seguro de daño. Nombra el evento eléctrico, no necesariamente la causa final.",
-          register: "neutral practical",
+          register: "neutro práctico",
           region: "Inglés universal; “voltage drop” suena más técnico.",
           related: ["voltage drop", "outage", "surge", "reset"],
           example: {
@@ -551,25 +551,25 @@ lessons.push(
       variations: [
         {
           form: "Turn on the fan, please.",
-          register: "neutral polite",
+          register: "neutro cortés",
           region: "Inglés universal",
           whenToUse: "La petición general y segura para prender un aparato."
         },
         {
           form: "Switch on the wall switch first.",
-          register: "neutral practical",
+          register: "neutro práctico",
           region: "Inglés universal",
           whenToUse: "Cuando el control es un interruptor físico, sobre todo de pared."
         },
         {
           form: "The router won't come on yet.",
-          register: "neutral conversational",
+          register: "neutro conversacional",
           region: "Inglés universal",
           whenToUse: "Describir un aparato que no arranca después de recibir energía."
         },
         {
           form: "Turn it on again after a minute.",
-          register: "neutral practical",
+          register: "neutro práctico",
           region: "Inglés universal",
           whenToUse: "Practicar el pronombre entre “turn” y “on.”"
         }
@@ -996,7 +996,7 @@ lessons.push(
             "Una persona corta la energía, detiene una función o deja un aparato apagado.",
           avoidWhen:
             "El aparato se apagó solo. Ahí puede ser “go off,” “shut down” o, para un celular sin batería, “die.”",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal; es la opción segura para apagar aparatos.",
           related: ["switch off", "shut off", "go off", "turn on"],
           example: {
@@ -1013,7 +1013,7 @@ lessons.push(
             "Quiere dejar claro que usted hizo la acción: apagó el breaker, el horno o el celular.",
           avoidWhen:
             "El celular murió solo. “I turned it off” suena como decisión suya.",
-          register: "neutral conversational",
+          register: "neutro conversacional",
           region: "Inglés universal.",
           related: ["turn it off", "switch it off", "shut it off", "turned off"],
           example: {
@@ -1030,7 +1030,7 @@ lessons.push(
             "El celular se queda sin batería, se apaga solo o deja de responder.",
           avoidWhen:
             "Usted lo apagó a propósito. Entonces diga “I turned my phone off.”",
-          register: "neutral conversational",
+          register: "neutro conversacional",
           region: "Inglés universal; muy común para batería agotada.",
           related: ["dead battery", "ran out of battery", "shut down", "powered off"],
           example: {
@@ -1047,7 +1047,7 @@ lessons.push(
             "Habla del tablero eléctrico y de qué circuito debe apagarse antes de tocar un aparato.",
           avoidWhen:
             "Confundirlo con un switch normal de pared. El breaker protege un circuito.",
-          register: "neutral practical",
+          register: "neutro práctico",
           region: "Inglés universal; “circuit breaker” es la forma completa.",
           related: ["circuit breaker", "breaker box", "fuse", "panel"],
           example: {
@@ -1064,7 +1064,7 @@ lessons.push(
             "Necesita referirse a todo el panel, no a un solo breaker.",
           avoidWhen:
             "Quiere nombrar un circuito específico. Entonces diga “the kitchen breaker” o “the fridge breaker.”",
-          register: "neutral practical",
+          register: "neutro práctico",
           region: "Inglés universal; también se oye “electrical panel.”",
           related: ["electrical panel", "circuit", "fuse box", "main switch"],
           example: {
@@ -1081,7 +1081,7 @@ lessons.push(
             "Un aparato se queda sin conexión por ubicación, servicio o electricidad.",
           avoidWhen:
             "Quiere hablar del aparato roto. Perder signal describe conexión, no reparación.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["connection", "wifi", "data", "reception"],
           example: {
@@ -1098,7 +1098,7 @@ lessons.push(
             "Computadores, sistemas, teléfonos o personas dejan de responder o necesitan parar.",
           avoidWhen:
             "Sólo quiere apagar una luz. Para eso, “turn off the light” es más natural.",
-          register: "neutral conversational",
+          register: "neutro conversacional",
           region: "Inglés universal; común con tecnología y cansancio.",
           related: ["power down", "turn off", "freeze", "switch off"],
           example: {
@@ -1149,25 +1149,25 @@ lessons.push(
       variations: [
         {
           form: "Turn off the kitchen breaker.",
-          register: "neutral practical",
+          register: "neutro práctico",
           region: "Inglés universal",
           whenToUse: "Dar una instrucción directa para cortar la energía de un circuito."
         },
         {
           form: "I turned it off already.",
-          register: "neutral conversational",
+          register: "neutro conversacional",
           region: "Inglés universal",
           whenToUse: "Informar que usted apagó algo deliberadamente."
         },
         {
           form: "My phone died.",
-          register: "neutral conversational",
+          register: "neutro conversacional",
           region: "Inglés universal",
           whenToUse: "El celular se quedó sin batería o se apagó solo."
         },
         {
           form: "In this heat, I shut down.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal",
           whenToUse: "Decir que el calor o el cansancio lo apaga mentalmente."
         }
@@ -1600,7 +1600,7 @@ lessons.push(
             "Para decir que algo sirve, no sirve, opera bien o falla en el momento.",
           avoidWhen:
             "Confundirlo con trabajo humano. En tecnología, “work” no siempre significa empleo; significa funcionar.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal; la palabra cotidiana para aparatos y sistemas.",
           related: ["not working", "broken", "operate", "function"],
           example: {
@@ -1617,7 +1617,7 @@ lessons.push(
             "Un router, cargador, tarjeta, aplicación o máquina falla y usted necesita reportarlo.",
           avoidWhen:
             "Ya sabe que el aparato está roto. Entonces “broken” o “out of order” puede ser más preciso.",
-          register: "neutral conversational",
+          register: "neutro conversacional",
           region: "Inglés universal; muy útil en mostradores y llamadas de soporte.",
           related: ["isn't working", "doesn't work", "broken", "down"],
           example: {
@@ -1634,7 +1634,7 @@ lessons.push(
             "Cree que el aparato, medidor, enchufe o sistema tiene daño.",
           avoidWhen:
             "Sólo sabe que algo no funciona ahora. Puede estar apagado, sin saldo o esperando reinicio.",
-          register: "neutral conversational",
+          register: "neutro conversacional",
           region: "Inglés universal; para máquinas fuera de servicio también aparece “out of order.”",
           related: ["damaged", "out of order", "faulty", "not working"],
           example: {
@@ -1651,7 +1651,7 @@ lessons.push(
             "Quiere entender un medidor, aplicación, regla, máquina o método nuevo.",
           avoidWhen:
             "Sólo quiere reportar que algo falla. Para eso diga “it's not working.”",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal; clave para pedir explicación sin sonar acusatorio.",
           related: ["how to use it", "the steps", "the system", "instructions"],
           example: {
@@ -1668,7 +1668,7 @@ lessons.push(
             "Habla de consumo, crédito prepago, lecturas o el aparato que controla un servicio.",
           avoidWhen:
             "Confundirlo con la cuenta o factura. El meter mide; la bill cobra.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal; “smart meter” es medidor inteligente.",
           related: ["smart meter", "reading", "utility", "bill"],
           example: {
@@ -1685,7 +1685,7 @@ lessons.push(
             "Pregunta si un medidor, plan telefónico, tarjeta o cuenta tiene saldo suficiente.",
           avoidWhen:
             "Quiere decir dinero físico en el bolsillo. Aquí es saldo dentro de un sistema.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal; “balance” muestra cuánto queda.",
           related: ["top-up", "prepaid", "account", "runs out"],
           example: {
@@ -1702,7 +1702,7 @@ lessons.push(
             "Un router, teléfono, radio o televisor está prendido pero no conecta.",
           avoidWhen:
             "Suponer que no tiene energía. Puede estar on y aun así give no signal.",
-          register: "neutral practical",
+          register: "neutro práctico",
           region: "Inglés universal; también se dice “there's no signal.”",
           related: ["no signal", "connection", "wifi", "reception"],
           example: {
@@ -1753,31 +1753,31 @@ lessons.push(
       variations: [
         {
           form: "The wifi isn't working.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Reportar una falla sin diagnosticar todavía la causa."
         },
         {
           form: "The charger is not working.",
-          register: "neutral conversational",
+          register: "neutro conversacional",
           region: "Inglés universal",
           whenToUse: "La queja cotidiana equivalente a que algo no sirve."
         },
         {
           form: "The meter is broken.",
-          register: "neutral conversational",
+          register: "neutro conversacional",
           region: "Inglés universal",
           whenToUse: "Usted cree que hay daño o falla real en el aparato."
         },
         {
           form: "Could you explain how it works?",
-          register: "polite practical",
+          register: "cortés práctico",
           region: "Inglés universal",
           whenToUse: "Pedir los pasos o la lógica de un sistema desconocido."
         },
         {
           form: "I'll get the meter checked tomorrow; the router was replaced already.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Para separar lo que va a encargar de lo que ya se hizo. “Get the meter checked” es lo pendiente; “was replaced” es lo resuelto."
         }

@@ -15,7 +15,7 @@
   ·
   <a href="#add-a-lesson">Add a lesson</a>
   ·
-  <a href="#native-speaker-review">Review a lesson</a>
+  <a href="#native-speaker-review">Report an error</a>
 </p>
 
 <p align="center">
@@ -62,7 +62,7 @@ Each lesson has five tabs, in the order a real conversation demands them:
 | **Dialogue** | A short exchange with the target language, a natural translation, and a plain-English pronunciation respelling. Lines that hide something carry a literal gloss and a note on why it is phrased that way. A "Listen" button reads it aloud with your browser's speech engine. |
 | **Understand** | The vocabulary *as used in this exchange* — with a literal reading, when to reach for it, when not to, what region it belongs to, and an example — then what is going on underneath the exchange, what learners get wrong here and what to say instead, and the same thing said differently across registers and regions. |
 | **Practice** | Several retrieval questions that check meaning-in-context rather than translation, each naming what it is testing. |
-| **Report an error** | Tell a maintainer that something is wrong, without leaving the lesson. See [Native-speaker review](#native-speaker-review). |
+| **Report an error** | Tell a maintainer that something is wrong, without leaving the lesson. See [Reporting an error](#native-speaker-review). |
 
 ### Three-minute study segments
 
@@ -91,11 +91,17 @@ They are packed to be **even rather than full**. Filling each segment to a word 
 
 The verb lessons follow the curriculum's own tiers — 70 foundation, 80 independent, 50 extension — and live in `data/lessons/NN-*.js`, roughly three lessons to a file. `node scripts/verb-coverage.js` prints what is taught and what is left; it is the quickest way to see the shape of the course.
 
-Alongside the lessons there is a reference **library**: 200 high-frequency verbs with their most useful forms, a fluency list of connectors and softeners, a **Colombian slang** reference, and an age-gated recognition reference for insulting or adult language — included so learners can *understand* it and de-escalate, never to direct it at anyone.
+Alongside the lessons there is a reference **library**: 200 high-frequency verbs with their most useful forms, a fluency list of connectors and softeners, and a **Colombian slang** reference.
 
 The slang reference carries a field the others do not: **how safe each phrase is for a learner to actually say**. Meaning alone is not enough, because the gap between understanding `parcero` and understanding `gonorrea` is not a gap in translation — it is a gap in what happens to you if you use it. Every entry is marked *Say it freely*, *Say it with friends*, or *Understand only*, and the label is shown before the meaning rather than after it.
 
-The verb list was seeded from published frequency data, so the **level** on each card is real. The **register** and **regionality** fields are not: every entry still carries the same placeholder text, because no Colombian speaker has been over them. Those two labels are therefore **not displayed**. Showing them would have stated the same unverified claim two hundred times in the app's own voice. They stay in `data/curriculum.js`, they remain reportable through the Report an error tab, and each one appears on its card as soon as a real value replaces the placeholder and `reviewStatus` is dropped from that verb.
+**After Dark** is its own area, in its own midnight theme: 150 entries of strong Colombian language, 50 each for Bogotá, Medellín and Barranquilla. Most Colombian profanity is national, but its *force* is not — the same word can be affectionate filler among paisa friends and a fighting word between strangers in Bogotá. That is why shared terms repeat per city with the reading that city gives them; the overlap is the point. Each entry carries a severity that rates the risk of *repeating* the phrase rather than how rude it sounds. It is there so learners can **understand** what they hear and judge a room — never to direct it at anyone.
+
+The verb list was seeded from published frequency data, so the **level** on each card is real. **Register** is published as a general guide; the Report an error tab is where corrections start, and it accepts a report against that field on any verb.
+
+Each verb also carries a `regionality` field, but it is not rendered: it holds the identical string on all 200 verbs, so as a per-verb tag it looked like verb-specific data while telling a learner nothing. The field is kept in the data, and `app.js` and `VERB_SLOTS` in `review.js` are where it would come back if it ever earns per-verb values.
+
+The withholding mechanism stays in place: adding `reviewStatus` back to a verb hides its register again until the flag is dropped, so a batch of unchecked content can still be held back deliberately.
 
 <a id="flashcards"></a>
 
@@ -234,7 +240,7 @@ Every field below except `title`, `situation`, `dialogue`, `vocabulary`, `note`,
   domain: "civic life",
   register: "formal polite",
   pathways: ["year-12-local-mastery"],
-  review: "pending",              // "pending" until a native speaker signs off
+  review: "pending",              // legacy field; not shown to readers
   es: {
     title: "...",
     situation: "...",
@@ -330,7 +336,7 @@ Cross-script API is therefore marked by name, with the `Parcero*` prefix, and da
 
 <a id="native-speaker-review"></a>
 
-## Native-speaker review
+## Reporting an error
 
 Regional usage is the part most easily got wrong, so the app is honest about it: every lesson carries a `review` field, and while it is `"pending"` the lesson invites a native speaker to check it. Nothing unverified is presented as settled.
 
@@ -349,19 +355,13 @@ Review happens at two grains, and both need a reviewer who knows the language, n
 
 The fastest correction is the one made while looking at the mistake. Every lesson has a **Report an error** tab, next to Dialogue, Understand and Practice. Nothing is added to the lesson itself: no controls hang off individual lines, so a learner reading a lesson never has to see review furniture.
 
-The tab asks two questions to find the string: **what are you reporting on** — the lesson you are reading, a verb, a fluency phrase, a slang phrase, a mature-language entry, or a warning signal — and **which one**, listed by its own words rather than by position. Everything a lesson holds is reachable: each line of the situation, the address-form note, every dialogue line, vocabulary entry, context note, pitfall, variation and practice question. It then narrows to the exact part: the Spanish line, the translation, the pronunciation respelling, the speaker's name, and so on. The text you picked is quoted back to you before you say anything about it.
+The tab asks two questions to find the string: **what are you reporting on** — the lesson you are reading, a verb, a fluency phrase, an After Dark entry, a conversation signal, a slang phrase, a mature-language entry, or a warning signal — and **which one**, listed by its own words rather than by position. Everything a lesson holds is reachable: each line of the situation, the address-form note, every dialogue line, vocabulary entry, context note, pitfall, variation and practice question. It then narrows to the exact part: the Spanish line, the translation, the pronunciation respelling, the speaker's name, and so on. The text you picked is quoted back to you before you say anything about it.
 
 From there it asks what is wrong (not natural, wrong region, wrong register, mistranslation, misleading pronunciation, spelling, culture, risky, dated), how much it matters, and — the field that does the real work — **how you would say it instead**. Reports collect in your browser, so you can read a whole lesson and report as you go, and any saved report can be reopened and edited. A half-written report keeps hold of the line it is about: paging to the next lesson or switching language will not quietly re-point it at something else. **Open a GitHub issue with these** then opens a prefilled issue containing both a readable report and a machine-readable payload. Copy-to-clipboard and download-JSON are offered as fallbacks, including when a batch is too large for a URL.
 
 Nothing is sent anywhere until you press submit. Reports live only in your browser, under their own storage key, so *Reset progress* never destroys them.
 
 Because regional usage is the thing this project most needs help with, the form also asks where you speak from. Ten Colombian regions are offered as suggestions, but the field is open — type wherever you are from and it is recorded in your own words. Where what you typed matches a suggestion, the report also carries a stable region code, so that a year of reports can be counted by region without anyone having to guess that "Medellin" and "Medellín and Antioquia (paisa)" meant the same place. `node scripts/review-flags.js` prints that tally. Reports filed through the issue form instead of the page arrive without a code, because that form is plain text with no JavaScript behind it, so the tool canonicalises those itself — in either interface language, so a region written in Spanish is counted alongside the same region written in English. Anything it does not recognise keeps the reviewer's own words and is counted under them rather than discarded.
-
-### Sign off a whole lesson
-
-For a considered pass over a complete lesson, open **[Issues → New issue → Lesson review](https://github.com/tree2juan/Parcero/issues/new?template=lesson-review.yml)**, pick a lesson, and answer a short form covering naturalness, regional framing, register, and pronunciation. A maintainer applies the wording and flips that lesson to `"reviewed"`.
-
-Aim for two sign-offs per lesson: a native Colombian Spanish speaker for the `es` side, and a native or expert English speaker for the `en` side.
 
 ### Triaging flags as a maintainer
 
@@ -381,9 +381,9 @@ For each flag it prints the file, the field, the current wording, and the sugges
 
 You do not have to run it yourself. When a flag is filed from the page, the **Triage native-speaker flags** workflow runs this same tool against the content as it stands right now and posts the result on the issue, labelling it `triage-ready`, `triage-needs-human`, or `triage-manual`. Editing the issue re-runs it and updates the same comment rather than adding another. A flag filed by hand, without the machine-readable block, is labelled `triage-manual` and left for a person — it is still a valid flag, it simply cannot be resolved automatically. The workflow reads the issue body through the environment rather than interpolating it into a shell command, and asks for no write access beyond the issue it is commenting on.
 
-Once a lesson's flags are applied and both sides are signed off, set its `review` field to `"reviewed"`.
+Once a lesson's flags are applied, close the issue. Nothing about review status is shown to readers.
 
-The mature-language reference needs the same care from qualified reviewers — severity labels, local usage, and de-escalation guidance. Content that encourages harassment does not belong here.
+The After Dark reference needs the most care of anything here — severity labels, per-city usage, and de-escalation notes are exactly where an outsider's confident guess does damage. Report anything that reads wrong. Content that encourages harassment does not belong.
 
 ## Project structure
 
@@ -400,7 +400,8 @@ data/lessons/       Lesson blocks, one file per theme, pushing onto that array
 data/lesson-schema.js  The lesson shape: defaults, normalisation, legacy tuples, study segments
 data/curriculum.js  200 verbs and the fluency connectors
 data/slang.js       Colombian slang, each entry marked with how safe it is to say
-data/mature.js      Age-gated recognition reference: insults, adult language, warning signals
+data/after-dark.js  Strong-language reference, 50 entries per city
+data/mature.js      The conversation signals that tell you a room has turned
 data/flashcards.js  Derives flashcard topics and sets from the content above
 data/provenance.js  Generated: which fields hold Spanish no native speaker has read
 scripts/            Maintainer tools: triage flags, check a single lesson block,

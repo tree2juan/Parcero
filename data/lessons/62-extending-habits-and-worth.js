@@ -381,7 +381,7 @@ lessons.push(
             "Describe lo que pasa normalmente ahora: horarios, rutinas, costumbres y tendencias.",
           avoidWhen:
             "Habla de un hábito terminado del pasado. Para eso use used to.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["normally", "generally", "tend to", "used to"],
           example: { target: "I usually go out early.", translation: "Suelo salir temprano." }
@@ -395,7 +395,7 @@ lessons.push(
             "Usted describe su propia rutina actual.",
           avoidWhen:
             "Ponerlo después del verbo sin razón. I go usually out suena torpe.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["you usually", "we usually", "I tend to", "I normally"],
           example: { target: "I usually get up early.", translation: "Suelo levantarme temprano." }
@@ -409,7 +409,7 @@ lessons.push(
             "Quiere saber si algo forma parte de la rutina normal de alguien.",
           avoidWhen:
             "Pregunta por un hábito antiguo. Entonces did you use to...? encaja mejor.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["Do you normally...?", "Do you tend to...?", "Did you use to...?", "Are you used to...?"],
           example: { target: "Do you usually get up early?", translation: "¿Sueles levantarte temprano?" }
@@ -423,7 +423,7 @@ lessons.push(
             "Antes vivía, caminaba, trabajaba o hacía algo de manera habitual.",
           avoidWhen:
             "Habla de una acción única terminada. Used to no es sólo pasado simple.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["would", "before", "back then", "no longer"],
           example: { target: "I used to walk in the afternoon.", translation: "Solía caminar por la tarde." }
@@ -437,7 +437,7 @@ lessons.push(
             "Una familia, grupo, ciudad o equipo hace algo normalmente.",
           avoidWhen:
             "Quiere prometer algo para el futuro. Use we will usually only if the future pattern is already clear.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["we tend to", "we normally", "people usually", "we used to"],
           example: { target: "We usually adjust plans to the weather.", translation: "Solemos ajustar los planes al clima." }
@@ -451,7 +451,7 @@ lessons.push(
             "El plan empieza antes de la rutina normal del día.",
           avoidWhen:
             "Quiere hablar de acostarse temprano. Get up es levantarse, no dormirse.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["wake up early", "sleep in", "stay up late", "early morning"],
           example: { target: "I usually get up early.", translation: "Suelo madrugar." }
@@ -465,7 +465,7 @@ lessons.push(
             "Un plan puede hacerse con calma y sin presión.",
           avoidWhen:
             "Hay una fecha límite real. No rush puede sonar demasiado relajado.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal.",
           related: ["take your time", "slowly", "calmly", "not urgent"],
           example: { target: "I used to walk with no rush.", translation: "Solía caminar sin afán." }
@@ -513,19 +513,19 @@ lessons.push(
       variations: [
         {
           form: "I usually get up early.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Describe su rutina actual."
         },
         {
           form: "I used to live near downtown.",
-          register: "neutral reflective",
+          register: "neutro reflexivo",
           region: "Inglés universal",
           whenToUse: "Describe un estado o hábito anterior con la fuerza de solía."
         },
         {
           form: "We usually change the plan if it's hot.",
-          register: "neutral conversational",
+          register: "neutro conversacional",
           region: "Inglés universal",
           whenToUse: "Un grupo normalmente hace algo bajo una condición repetida."
         }
@@ -945,7 +945,7 @@ lessons.push(
             "Personas, maletas, muebles o ideas caben en un espacio, horario o situación.",
           avoidWhen:
             "Habla de valor o precio. Para valer use cost, be worth o be valid según el caso.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["fit in", "fit into", "squeeze in", "space"],
           example: { target: "We all fit in this car.", translation: "Cabemos todos en este carro." }
@@ -959,7 +959,7 @@ lessons.push(
             "Usted dice si su propio cuerpo cabe en un asiento o espacio.",
           avoidWhen:
             "Habla de ropa que le queda bien. That shirt fits me es correcto, pero el español suele usar quedar.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["I don't fit", "we fit", "it fits", "they fit"],
           example: { target: "I don't fit comfortably.", translation: "No quepo cómodo." }
@@ -973,7 +973,7 @@ lessons.push(
             "Un grupo revisa si todos pueden entrar en un carro, ascensor, cuarto o mesa.",
           avoidWhen:
             "Quiere decir que el plan conviene. Work puede ser mejor: that works for us.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["we all fit", "can fit", "fit together", "fit in"],
           example: { target: "Do we all fit here?", translation: "¿Cabemos todos aquí?" }
@@ -987,7 +987,7 @@ lessons.push(
             "Una silla, maleta, persona o pieza no entra en el espacio.",
           avoidWhen:
             "El sujeto es plural. Then use don't fit.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["don't fit", "won't fit", "too big", "not enough room"],
           example: { target: "The chair doesn't fit in the trunk.", translation: "La silla no cabe en la maleta." }
@@ -1001,7 +1001,7 @@ lessons.push(
             "Dice que algo cupo en una ocasión pasada.",
           avoidWhen:
             "Habla de instalar o ajustar una pieza. Fitted puede aparecer ahí, pero no es la forma principal para caber.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal; también se oye fitted en algunas variedades, pero fit es seguro aquí.",
           related: ["fitted", "could fit", "managed to fit", "squeezed in"],
           example: { target: "Yesterday everything fit.", translation: "Ayer cupo todo." }
@@ -1015,7 +1015,7 @@ lessons.push(
             "Quiere afirmar certeza de forma clara o un poco enfática.",
           avoidWhen:
             "Está hablando de objetos que caben. Entonces fit es la palabra literal.",
-          register: "neutral polished",
+          register: "neutro pulido",
           region: "Inglés universal.",
           related: ["no doubt", "clearly", "without a doubt", "certainly"],
           example: { target: "There is no doubt we need a taxi.", translation: "No cabe duda de que necesitamos taxi." }
@@ -1029,7 +1029,7 @@ lessons.push(
             "Habla del espacio para equipaje detrás del carro.",
           avoidWhen:
             "Está en inglés británico o irlandés muy local. Boot será común allí, pero trunk se entiende ampliamente.",
-          register: "neutral",
+          register: "neutro",
           region: "Común en inglés norteamericano; boot es común en Irlanda y Gran Bretaña.",
           related: ["boot", "back seat", "luggage", "car"],
           example: { target: "It doesn't fit in the trunk.", translation: "No cabe en la maleta." }
@@ -1077,19 +1077,19 @@ lessons.push(
       variations: [
         {
           form: "I don't fit in the back.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Su cuerpo no cabe en el asiento o espacio."
         },
         {
           form: "Do we all fit in the elevator?",
-          register: "neutral practical",
+          register: "neutro práctico",
           region: "Inglés universal",
           whenToUse: "Un grupo revisa si todos caben en un ascensor o espacio pequeño."
         },
         {
           form: "There is no doubt we need more space.",
-          register: "neutral polished",
+          register: "neutro pulido",
           region: "Inglés universal",
           whenToUse: "Quiere el idiom no cabe duda, no una frase literal de espacio."
         }
@@ -1509,7 +1509,7 @@ lessons.push(
             "Habla del precio de tiquetes, productos, servicios o planes.",
           avoidWhen:
             "Juzga si algo vale la pena. Entonces use be worth it.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["price", "be worth", "charge", "pay"],
           example: { target: "How much does the ride cost?", translation: "¿Cuánto vale el paseo?" }
@@ -1523,7 +1523,7 @@ lessons.push(
             "Está en un puesto, tienda o taquilla y el objeto ya está claro.",
           avoidWhen:
             "Necesita sonar más específico. Then ask how much does it cost?",
-          register: "neutral transactional",
+          register: "neutro transactional",
           region: "Inglés universal.",
           related: ["how much does it cost?", "what's the price?", "is it extra?", "charge"],
           example: { target: "How much is this ticket?", translation: "¿Cuánto vale esta entrada?" }
@@ -1537,7 +1537,7 @@ lessons.push(
             "Dice cuánto vale algo o qué valor tiene.",
           avoidWhen:
             "Quiere decir okay. En inglés use okay; en Colombia use listo.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["costs", "is valued at", "is worth it", "value"],
           example: { target: "It's worth thirty dollars.", translation: "Vale treinta dólares." }
@@ -1551,7 +1551,7 @@ lessons.push(
             "Pregunta o afirma si una espera, compra, caminata o estudio compensa.",
           avoidWhen:
             "Sólo pide el precio. How much is it? es más directo.",
-          register: "neutral conversational",
+          register: "neutro conversacional",
           region: "Inglés universal.",
           related: ["worth the wait", "worth the money", "pay off", "not worth it"],
           example: { target: "It's really worth it.", translation: "De verdad vale la pena." }
@@ -1565,7 +1565,7 @@ lessons.push(
             "Quiere avisar que conviene hacer algo porque hay consecuencias.",
           avoidWhen:
             "Sólo quiere sugerir suavemente. Maybe you should suena menos fuerte.",
-          register: "firm conversational",
+          register: "firme conversacional",
           region: "Inglés universal.",
           related: ["you should", "make sure you", "better not", "be careful to"],
           example: { target: "You'd better arrive early.", translation: "Más vale que llegue temprano." }
@@ -1579,7 +1579,7 @@ lessons.push(
             "Habla de valor personal, utilidad o cuánto aporta alguien en broma o en serio.",
           avoidWhen:
             "Pide un precio de objeto. Entonces use “how much is it?” o “what does it cost?”",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["it's worth", "be valuable", "value", "worthless"],
           example: { target: "I'm not worth much as a negotiator.", translation: "Valgo poco como negociador." }
@@ -1593,7 +1593,7 @@ lessons.push(
             "Acepta una propuesta, confirma un plan o muestra que entendió.",
           avoidWhen:
             "Está hablando español colombiano y quiere sonar local. Entonces listo or de una may sound better than vale.",
-          register: "neutral conversational",
+          register: "neutro conversacional",
           region: "Inglés universal.",
           related: ["sounds good", "all right", "sure", "good"],
           example: { target: "Okay, I'll arrive before one.", translation: "Listo, llego antes de la una." }
@@ -1641,19 +1641,19 @@ lessons.push(
       variations: [
         {
           form: "How much is this ticket?",
-          register: "neutral transactional",
+          register: "neutro transactional",
           region: "Inglés universal",
           whenToUse: "Pregunta precio en una tienda, puesto o taquilla."
         },
         {
           form: "It's worth the wait.",
-          register: "neutral conversational",
+          register: "neutro conversacional",
           region: "Inglés universal",
           whenToUse: "El beneficio justifica esperar."
         },
         {
           form: "You'd better arrive early.",
-          register: "firm conversational",
+          register: "firme conversacional",
           region: "Inglés universal",
           whenToUse: "Quiere dar una advertencia con la fuerza de más vale que."
         }

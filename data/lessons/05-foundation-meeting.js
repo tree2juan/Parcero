@@ -387,7 +387,7 @@ lessons.push(
           literal: "conocer / encontrarse",
           useWhen: "Hablas de la primera vez que ves a una persona, o de quedar con alguien.",
           avoidWhen: "Quieres decir que ya conoces bien a alguien; eso es “to know,” no “to meet.”",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés general; igual en Estados Unidos y el Reino Unido.",
           related: ["to know", "to meet up", "to get to know", "nice to meet you"],
           example: {
@@ -401,7 +401,7 @@ lessons.push(
           literal: "agradable conocerte",
           useWhen: "Justo cuando te presentan a alguien, en cualquier nivel de formalidad.",
           avoidWhen: "Saludas a alguien que ya conoces; ahí basta con “hi” o “hey.”",
-          register: "neutral",
+          register: "neutro",
           region: "Universal en inglés; muy usada en Estados Unidos con un apretón de manos.",
           related: ["pleased to meet you", "nice meeting you", "likewise", "hello"],
           example: {
@@ -415,7 +415,7 @@ lessons.push(
           literal: "esto es…",
           useWhen: "Presentas a una persona a otra en una reunión o fiesta.",
           avoidWhen: "Quieres presentarte a ti mismo; ahí dices “I'm…” o “my name is….”",
-          register: "neutral",
+          register: "neutro",
           region: "Universal en inglés.",
           related: ["I'd like you to meet", "meet my friend", "have you met", "this is my friend"],
           example: {
@@ -429,7 +429,7 @@ lessons.push(
           literal: "igualmente",
           useWhen: "Alguien dice “nice to meet you” y quieres devolvérselo en una sola palabra.",
           avoidWhen: "Se espera una respuesta más larga o la respuesta a una pregunta concreta; “likewise” solo refleja.",
-          register: "polite",
+          register: "cortés",
           region: "Universal; suena un poco más pulido que “you too.”",
           related: ["you too", "same here", "nice to meet you too", "the pleasure's mine"],
           example: {
@@ -443,7 +443,7 @@ lessons.push(
           literal: "¿cómo conoces a…?",
           useWhen: "Acabas de enterarte de que dos personas ya se conocen y quieres la historia.",
           avoidWhen: "Quieres preguntar si se conocen o no; eso es “do you two know each other?”",
-          register: "neutral",
+          register: "neutro",
           region: "Universal en inglés.",
           related: ["how do you two know each other", "where do you know it from", "do you know", "we go way back"],
           example: {
@@ -457,7 +457,7 @@ lessons.push(
           literal: "saber / conocer",
           useWhen: "Ya conoces a alguien, o sabes un hecho: I know her, I know the answer.",
           avoidWhen: "Es la primera vez que ves a la persona; ese primer encuentro es “to meet.”",
-          register: "neutral",
+          register: "neutro",
           region: "Universal en inglés.",
           related: ["to meet", "to know of", "I know", "well-known"],
           example: {
@@ -471,7 +471,7 @@ lessons.push(
           literal: "conocer de / por el nombre",
           useWhen: "Has oído hablar de una persona pero jamás la has tratado.",
           avoidWhen: "Ya trataste a la persona cara a cara; entonces no lo rebajas a “of name.”",
-          register: "neutral",
+          register: "neutro",
           region: "Universal en inglés.",
           related: ["to know of", "by name", "I've heard of", "by reputation"],
           example: {
@@ -524,19 +524,19 @@ lessons.push(
       variations: [
         {
           form: "Nice to meet you.",
-          register: "neutral",
+          register: "neutro",
           region: "Universal",
           whenToUse: "El saludo por defecto para casi cualquier primer encuentro."
         },
         {
           form: "It's a pleasure to meet you.",
-          register: "polite",
+          register: "cortés",
           region: "Universal",
           whenToUse: "Cuando quieres sonar más cálido o un poco más formal con alguien."
         },
         {
           form: "Pleased to meet you.",
-          register: "polite",
+          register: "cortés",
           region: "Universal",
           whenToUse: "Un saludo algo más formal y clásico, común al conocer a alguien mayor."
         },
@@ -975,7 +975,7 @@ lessons.push(
           literal: "querer",
           useWhen: "Expresas un deseo o hablas de lo que alguien quiere: I want, do you want.",
           avoidWhen: "Pides algo a la persona del mostrador y quieres sonar cortés; ahí es mejor “I'd like.”",
-          register: "neutral",
+          register: "neutro",
           region: "Universal en inglés.",
           related: ["I'd like", "would like", "to feel like", "to wish"],
           example: {
@@ -989,7 +989,7 @@ lessons.push(
           literal: "me gustaría / quisiera",
           useWhen: "Pides algo en una tienda, café o restaurante con educación.",
           avoidWhen: "Hablas muy informalmente con un amigo; ahí “I want” o “can I get” suenan más naturales.",
-          register: "polite",
+          register: "cortés",
           region: "Universal en inglés.",
           related: ["I would like", "can I get", "could I have", "I'll have"],
           example: {
@@ -1059,7 +1059,7 @@ lessons.push(
           literal: "querer (hacer)",
           useWhen: "Quieres hacer una acción: I want to try, I want to go.",
           avoidWhen: "Quieres una cosa, no una acción; ahí want lleva un sustantivo: I want a coffee.",
-          register: "neutral",
+          register: "neutro",
           region: "Universal en inglés.",
           related: ["want to try", "would like to", "I want you to", "feel like -ing"],
           example: {
@@ -1112,7 +1112,7 @@ lessons.push(
       variations: [
         {
           form: "I'd like a coffee, please.",
-          register: "polite",
+          register: "cortés",
           region: "Universal",
           whenToUse: "La forma cortés y segura para pedir en cualquier café."
         },
@@ -1124,13 +1124,13 @@ lessons.push(
         },
         {
           form: "Could I have a coffee, please?",
-          register: "polite",
+          register: "cortés",
           region: "Universal",
           whenToUse: "Un punto más formal, útil con desconocidos o en sitios elegantes."
         },
         {
           form: "I'll have a coffee.",
-          register: "neutral",
+          register: "neutro",
           region: "Universal",
           whenToUse: "Directa y práctica al pedir de un menú o en la barra."
         },
@@ -1563,7 +1563,7 @@ lessons.push(
           literal: "llegar",
           useWhen: "Hablas de alcanzar un lugar: I'll get there soon, when I arrive.",
           avoidWhen: "Quieres decir que ya estás en un sitio; eso es “to be here,” no llegar.",
-          register: "neutral",
+          register: "neutro",
           region: "Universal en inglés.",
           related: ["to get here", "to get there", "to show up", "arrival"],
           example: {
@@ -1605,7 +1605,7 @@ lessons.push(
           literal: "estar tarde / yendo tarde",
           useWhen: "Avisas que vas o llegarás después de la hora.",
           avoidWhen: "Nada: es la forma natural, y a diferencia del español el inglés sí usa el verbo be aquí.",
-          register: "neutral",
+          register: "neutro",
           region: "Universal en inglés.",
           related: ["I'm late", "running behind", "late", "behind schedule"],
           example: {
@@ -1619,7 +1619,7 @@ lessons.push(
           literal: "retrasado / demorado",
           useWhen: "Un bus, tren o vuelo se atrasa.",
           avoidWhen: "Quieres decir que tú tardaste por gusto; “delayed” suele ser algo que te pasó, no que hiciste.",
-          register: "neutral",
+          register: "neutro",
           region: "Universal en inglés.",
           related: ["held up", "running behind", "late", "stuck"],
           example: {
@@ -1633,7 +1633,7 @@ lessons.push(
           literal: "cuando llegas aquí",
           useWhen: "Hablas de algo que pasará al momento de llegar.",
           avoidWhen: "Quieres usar futuro tras when; el inglés lo rechaza y pide presente.",
-          register: "neutral",
+          register: "neutro",
           region: "Universal en inglés.",
           related: ["when you arrive", "once you're here", "as soon as you get in", "when you're here"],
           example: {
@@ -1647,7 +1647,7 @@ lessons.push(
           literal: "en punto / a tiempo",
           useWhen: "Das una hora exacta o hablas de puntualidad.",
           avoidWhen: "Quieres decir a tiempo con la estructura del español “en tiempo,” que en inglés no existe.",
-          register: "neutral",
+          register: "neutro",
           region: "Universal en inglés.",
           related: ["on the dot", "punctual", "at seven sharp", "right on time"],
           example: {
@@ -1712,7 +1712,7 @@ lessons.push(
         },
         {
           form: "I'm running a bit late.",
-          register: "neutral",
+          register: "neutro",
           region: "Universal",
           whenToUse: "Para avisar con cortesía que llegarás algo tarde."
         },
@@ -1724,7 +1724,7 @@ lessons.push(
         },
         {
           form: "I'm on my way now, sorry to keep you.",
-          register: "polite",
+          register: "cortés",
           region: "Universal",
           whenToUse: "Un aviso más considerado, con disculpa incluida."
         }

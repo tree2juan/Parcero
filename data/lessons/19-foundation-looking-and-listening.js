@@ -395,7 +395,7 @@ lessons.push(
           literal: "mirar a",
           useWhen: "Cuando miras algo con intención: “look at this painting”, “look at the map”.",
           avoidWhen: "No omitas “at” con un objeto: “look the painting” está mal; es “look at the painting”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés general.",
           related: ["look at this", "have a look", "gaze at", "stare at"],
           example: {
@@ -409,7 +409,7 @@ lessons.push(
           literal: "ver (percibir)",
           useWhen: "Para lo que percibes sin esfuerzo: “I can't see well”, “I saw him leave”.",
           avoidWhen: "No lo uses para mirar algo a propósito ni para la tele; ahí van “look at” o “watch”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés general.",
           related: ["I see", "can't see", "see you", "I saw"],
           example: {
@@ -423,7 +423,7 @@ lessons.push(
           literal: "mirar (con atención, en el tiempo)",
           useWhen: "Para pantallas y cosas que pasan: “watch TV”, “watch a movie”, “watch the game”.",
           avoidWhen: "No lo uses para una foto o un cuadro quietos; eso es “look at”, no “watch”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés general.",
           related: ["watch TV", "watch a movie", "watch out", "watch the game"],
           example: {
@@ -437,7 +437,7 @@ lessons.push(
           literal: "mira (marcador)",
           useWhen: "Para introducir tu punto o suavizarlo: “look, it's like this”.",
           avoidWhen: "En tono seco puede sonar impaciente; cuida la entonación.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés general.",
           related: ["look", "see", "the thing is", "here's the thing"],
           example: {
@@ -451,7 +451,7 @@ lessons.push(
           literal: "tener / tomar una mirada",
           useWhen: "Para una mirada rápida: “have a look at this”, “take a look”.",
           avoidWhen: "Cuando quieres una mirada larga y atenta; ahí es “look closely”.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés general (“have a look” es más británico).",
           related: ["take a look", "check it out", "glance at", "look over"],
           example: {
@@ -465,7 +465,7 @@ lessons.push(
           literal: "notar / fijarse",
           useWhen: "Al señalar un detalle: “notice the hands”, “did you notice…?”.",
           avoidWhen: "Para una mirada casual; “notice” implica caer en la cuenta.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés general.",
           related: ["notice", "pay attention to", "spot", "realize"],
           example: {
@@ -479,7 +479,7 @@ lessons.push(
           literal: "mirar fijamente / de cerca",
           useWhen: "Para una mirada intensa: “look closely”, “don't stare”.",
           avoidWhen: "“Stare” de más puede ser grosero; no es un simple “mirar”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés general.",
           related: ["stare at", "look closely", "gaze", "peer at"],
           example: {
@@ -537,31 +537,31 @@ lessons.push(
       variations: [
         {
           form: "Look at this",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés general",
           whenToUse: "La forma normal de dirigir la mirada de alguien hacia algo."
         },
         {
           form: "Watch this",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés general",
           whenToUse: "Para algo que va a pasar o a moverse, o para una pantalla."
         },
         {
           form: "Have a look",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés general (más británico)",
           whenToUse: "Para invitar a echar un vistazo rápido."
         },
         {
           form: "Look, ...",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés general",
           whenToUse: "Como marcador para abrir tu punto, igual que “mira, …”."
         },
         {
           form: "Take a look at this",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés general",
           whenToUse: "Neutro y muy común para pedir que alguien mire algo."
         }
@@ -995,7 +995,7 @@ lessons.push(
           literal: "oír",
           useWhen: "Para el sonido que te llega: “I can hear you”, “I heard a noise”.",
           avoidWhen: "Para la escucha deliberada y enfocada, donde va “listen (to)”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["hear you", "hear a noise", "overhear", "can't hear"],
           example: {
@@ -1009,7 +1009,7 @@ lessons.push(
           literal: "escuchar a",
           useWhen: "Para la escucha deliberada: “listen to music”, “listen to me”.",
           avoidWhen: "No lo uses para el sonido que llega sin querer; ahí va “hear”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["listen to music", "listen to me", "listen up", "pay attention"],
           example: {
@@ -1023,7 +1023,7 @@ lessons.push(
           literal: "¿Puedes oírme?",
           useWhen: "En una llamada con mala señal o mucho ruido.",
           avoidWhen: "No digas “can you listen me?”: es doble error, verbo equivocado y falta de “to”.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Universal.",
           related: ["you're breaking up", "can you hear me now", "I lost you", "bad signal"],
           example: {
@@ -1037,7 +1037,7 @@ lessons.push(
           literal: "escúchame (a mí)",
           useWhen: "Para señalar algo importante: “listen to me for a second”.",
           avoidWhen: "Dicho con brusquedad suena mandón; cuida el tono.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Universal.",
           related: ["listen up", "hear me out", "pay attention", "look"],
           example: {
@@ -1051,7 +1051,7 @@ lessons.push(
           literal: "ruido",
           useWhen: "Para el sonido de fondo: “there's a lot of noise”.",
           avoidWhen: "Cuando quieres decir sonido agradable; eso es “sound”, no “noise”.",
-          register: "neutral",
+          register: "neutro",
           region: "Universal.",
           related: ["racket", "din", "loud", "background noise"],
           example: {
@@ -1065,7 +1065,7 @@ lessons.push(
           literal: "encendido y apagado",
           useWhen: "Para algo intermitente: “I can hear you on and off”.",
           avoidWhen: "Para algo constante; “on and off” implica que se interrumpe.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Universal.",
           related: ["off and on", "every now and then", "intermittently", "in and out"],
           example: {
@@ -1079,7 +1079,7 @@ lessons.push(
           literal: "te estás rompiendo",
           useWhen: "Cuando la señal falla y la voz se pierde a pedazos.",
           avoidWhen: "Fuera del teléfono no tiene este sentido.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Universal.",
           related: ["you're cutting out", "bad connection", "I lost you", "can you hear me"],
           example: {
@@ -1137,31 +1137,31 @@ lessons.push(
       variations: [
         {
           form: "Can you hear me?",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Universal",
           whenToUse: "El chequeo típico de la llamada, “¿me escuchas?”."
         },
         {
           form: "Are you there?",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Universal",
           whenToUse: "Cuando el otro se queda callado y no sabes si sigue en la línea."
         },
         {
           form: "You're breaking up.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Universal",
           whenToUse: "Para avisar que la voz llega entrecortada."
         },
         {
           form: "Listen to me.",
-          register: "neutral",
+          register: "neutro",
           region: "Universal",
           whenToUse: "Para pedir atención sobre algo importante."
         },
         {
           form: "Could you speak up?",
-          register: "polite neutral",
+          register: "cortés neutro",
           region: "Universal",
           whenToUse: "Para pedir con cortesía que hable más fuerte."
         }
@@ -1595,7 +1595,7 @@ lessons.push(
           literal: "oír",
           useWhen: "Para el sonido que te llega: “I heard a song”, “did you hear that?”.",
           avoidWhen: "Para la escucha deliberada, donde va “listen (to)”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["heard", "hear that", "overhear", "can't hear"],
           example: {
@@ -1609,7 +1609,7 @@ lessons.push(
           literal: "oye / eh",
           useWhen: "Para llamar a alguien de confianza: “hey, come here!”.",
           avoidWhen: "Con desconocidos o en lo formal, donde va “excuse me”.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Universal.",
           related: ["hey there", "excuse me", "listen", "psst"],
           example: {
@@ -1623,7 +1623,7 @@ lessons.push(
           literal: "escuchar a",
           useWhen: "Para la escucha deliberada: “listen to the trumpet”.",
           avoidWhen: "Para el sonido que solo te llega; ahí va “hear”.",
-          register: "neutral",
+          register: "neutro",
           region: "Universal.",
           related: ["listen to me", "listen up", "pay attention", "listen to this"],
           example: {
@@ -1637,7 +1637,7 @@ lessons.push(
           literal: "discúlpeme",
           useWhen: "Para dirigirte a alguien que no conoces: “excuse me, do you have the time?”.",
           avoidWhen: "Entre amigos suena algo tieso; ahí basta “hey”.",
-          register: "polite neutral",
+          register: "cortés neutro",
           region: "Universal.",
           related: ["sorry", "pardon me", "excuse me, sir", "hey"],
           example: {
@@ -1651,7 +1651,7 @@ lessons.push(
           literal: "¿tú sabes?",
           useWhen: "Para buscar acuerdo al final: “it's the best part, you know?”.",
           avoidWhen: "Repetida en exceso suena a muletilla; dosifícala.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Universal.",
           related: ["right?", "you know what I mean?", "isn't it?", "yeah?"],
           example: {
@@ -1665,7 +1665,7 @@ lessons.push(
           literal: "¿correcto?",
           useWhen: "Para confirmar algo que crees compartido: “you're coming, right?”.",
           avoidWhen: "Cuando de verdad no tienes ni idea; ahí es una pregunta abierta, no una coletilla.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Universal.",
           related: ["isn't it?", "yeah?", "correct?", "you know?"],
           example: {
@@ -1679,7 +1679,7 @@ lessons.push(
           literal: "oído / oí",
           useWhen: "Para algo ya percibido: “I heard you”, mensaje recibido.",
           avoidWhen: "No digas “I listened you”: recibir un mensaje se dice con hear.",
-          register: "neutral",
+          register: "neutro",
           region: "Universal.",
           related: ["I heard you", "I've heard", "heard of", "unheard"],
           example: {
@@ -1737,31 +1737,31 @@ lessons.push(
       variations: [
         {
           form: "Hey!",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Universal",
           whenToUse: "El llamado de atención entre amigos, como “¡oís!”."
         },
         {
           form: "Excuse me.",
-          register: "polite neutral",
+          register: "cortés neutro",
           region: "Universal",
           whenToUse: "El llamado cortés a un desconocido, como un “oiga” respetuoso."
         },
         {
           form: "Listen!",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Universal",
           whenToUse: "Para pedir atención antes de algo importante."
         },
         {
           form: "You know?",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Universal",
           whenToUse: "Coletilla para buscar acuerdo al cerrar la frase."
         },
         {
           form: "Did you hear that?",
-          register: "neutral",
+          register: "neutro",
           region: "Universal",
           whenToUse: "Pregunta real por si el otro percibió un sonido."
         }

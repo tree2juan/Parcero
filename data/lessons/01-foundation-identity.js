@@ -425,7 +425,7 @@ lessons.push(
             "Siempre. No hay que elegir, y esa es la buena noticia; la mala es que la distinción tiene que cargarla otra palabra.",
           avoidWhen:
             "Al describir una acción en curso sin la forma -ing. “I am work” es el error clásico del hispanohablante cuando quiere decir “I am working” o “I work”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["become", "seem", "feel", "get"],
           example: {
@@ -442,7 +442,7 @@ lessons.push(
             "Al conocer a cualquiera en una situación social. Funciona en casi todos los registros del inglés.",
           avoidWhen:
             "Cuando quiere saber qué está haciendo alguien en este momento. Ahí tiene que ser “what are you doing?”, y la diferencia entre las dos es total.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal; “what do you do for a living?” es un poco más completo.",
           related: ["What's your job?", "What line of work are you in?", "Where do you work?", "What do you do for a living?"],
           example: {
@@ -459,7 +459,7 @@ lessons.push(
             "Para precisar de quién habla cuando el grupo ya lo ubica a medias — el del carro rojo, la del quinto piso.",
           avoidWhen:
             "Al presentar a alguien formalmente. Identifica pero no dignifica, y dicho en la cara sobre un tema sensible puede doler.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal.",
           related: ["the one on the fifth floor", "the one with the bike", "the guy from 502", "the woman with the stroller"],
           example: {
@@ -476,7 +476,7 @@ lessons.push(
             "Cuando alguien adivinó quién es usted y usted se lo confirma, casi siempre con algo de humor.",
           avoidWhen:
             "Al presentarse en frío. Sólo funciona como respuesta, nunca para abrir.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal.",
           related: ["that would be me", "guilty", "yep, that's me", "the very same"],
           example: {
@@ -493,7 +493,7 @@ lessons.push(
             "Para quitarle peso a la preocupación del otro, o cuando se lo quitan a usted. Muy frecuente en Estados Unidos y Australia.",
           avoidWhen:
             "Cuando la otra persona está genuinamente molesta por algo que usted hizo. Ahí suena a que la está despachando, no a amabilidad.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal; “no worries” abunda en Estados Unidos y Australia, y “no problem” en Estados Unidos.",
           related: ["no problem", "don't worry about it", "it's fine", "all good"],
           example: {
@@ -510,7 +510,7 @@ lessons.push(
             "Para ser honesto sobre una situación inestable sin perder la dignidad.",
           avoidWhen:
             "En una solicitud formal. Ahí escribiría “seeking employment” o nombraría el contrato que tiene.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["freelancing", "in between things", "looking for work", "self-employed"],
           example: {
@@ -527,7 +527,7 @@ lessons.push(
             "En cualquier asunto del edificio — la reunión, la recepción, un paquete, un reclamo.",
           avoidWhen:
             "Fuera del edificio, donde el número no significa nada y uno diría el barrio.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés norteamericano; en el inglés británico se dice “flat 502”.",
           related: ["apartment 502", "apartment number", "the fifth floor", "502"],
           example: {
@@ -589,31 +589,31 @@ lessons.push(
       variations: [
         {
           form: "I'm Alejandra, unit 502.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés norteamericano",
           whenToUse: "La opción por defecto. Nombre y número de apartamento, nada más."
         },
         {
           form: "Hi, I'm Alejandra — I'm in 502.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal",
           whenToUse: "Una sala relajada donde la gente se pisa las frases de todos modos."
         },
         {
           form: "Good evening, my name is Alejandra and I live in unit 502.",
-          register: "polite formal",
+          register: "cortés formal",
           region: "Inglés universal",
           whenToUse: "Una reunión de junta, o presentarse ante el administrador del edificio."
         },
         {
           form: "Alejandra, 502. Just moved in.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal",
           whenToUse: "Cuando la ronda de presentaciones va rápido y nadie quiere una frase entera."
         },
         {
           form: "I'm the one in 502 — the one with the dog.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal",
           whenToUse: "Cuando ya sabe que el edificio tiene un apodo para usted y decide aprovecharlo."
         }

@@ -425,7 +425,7 @@ lessons.push(
             "Úselo cuando el acto importa: agua, alcohol, medicina líquida, hábitos, reglas o sed verdadera.",
           avoidWhen:
             "Evítelo como única traducción de tomar café con alguien. En un plan social, have suele sonar mejor.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["have", "pour", "sip", "drink alcohol"],
           example: {
@@ -442,7 +442,7 @@ lessons.push(
             "Úsela cuando alguien llega con calor, cansancio o sed y usted quiere ofrecer una bebida.",
           avoidWhen:
             "No diga “take something cold”. Esa traducción literal de tomar no funciona como invitación corriente.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["something to drink", "a cold drink", "some water", "anything to drink"],
           example: {
@@ -459,7 +459,7 @@ lessons.push(
             "Úselo con gente que conoce Colombia, o cuando la bebida exacta importa más que una traducción aproximada.",
           avoidWhen:
             "No espere que cualquier angloparlante entienda panela sin contexto.",
-          register: "neutral",
+          register: "neutro",
           region: "Préstamo colombiano dentro de una conversación en inglés.",
           related: ["panela drink", "lime", "sugar cane", "cold drink"],
           example: {
@@ -476,7 +476,7 @@ lessons.push(
             "Úsela cuando en Colombia diría tinto, pero su oyente necesita saber que se trata de café negro.",
           avoidWhen:
             "No diga “a tinto” sin explicar. En inglés no es una palabra normal para café.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["black coffee", "have coffee", "a cup of coffee", "wine"],
           example: {
@@ -493,7 +493,7 @@ lessons.push(
             "Úselo para una regla, una decisión personal, una pregunta médica o una noche de tragos.",
           avoidWhen:
             "No lo confunda con have something to drink, que puede ser agua o jugo.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["have a drink", "go out drinking", "beer", "liquor"],
           example: {
@@ -510,7 +510,7 @@ lessons.push(
             "Úselo en una casa, cocina o mesa cuando una persona llena el vaso de otra.",
           avoidWhen:
             "No lo use para el acto de beber. Pour y drink son acciones distintas.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["serve", "bring", "get you", "fill your glass"],
           example: {
@@ -527,7 +527,7 @@ lessons.push(
             "Úsela cuando la sed, el descanso, la comida o la ayuda son necesidades sinceras.",
           avoidWhen:
             "Evítela en una frase muy formal donde el énfasis emocional sobra.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["need to", "badly need to", "could use", "for real"],
           example: {
@@ -589,19 +589,19 @@ lessons.push(
       variations: [
         {
           form: "Do you want something cold to drink?",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal",
           whenToUse: "La oferta natural cuando alguien llega con calor o sed."
         },
         {
           form: "I really need to drink water.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Cuando importa la necesidad física de beber agua."
         },
         {
           form: "Let's have coffee later.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal",
           whenToUse: "Una invitación corriente para tomar café juntos."
         },
@@ -613,7 +613,7 @@ lessons.push(
         },
         {
           form: "I'm not drinking alcohol today.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal",
           whenToUse: "Para decir claramente que hoy no va a tomar trago."
         }
@@ -1077,7 +1077,7 @@ lessons.push(
             "Úselo para cocinar arroz, cocinar para alguien, saber cocinar o trabajar con calor en la cocina.",
           avoidWhen:
             "Evítelo como única solución cuando make, put on o sauté son más naturales.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["make", "prepare", "sauté", "boil"],
           example: {
@@ -1094,7 +1094,7 @@ lessons.push(
             "Úselo cuando habla de preparar la comida del mediodía en casa.",
           avoidWhen:
             "No traduzca todo como cook lunch si quiere una frase amplia y natural.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["make dinner", "prepare lunch", "cook lunch", "fix lunch"],
           example: {
@@ -1111,7 +1111,7 @@ lessons.push(
             "Úselo cuando quiere nombrar el plato colombiano exacto y no reducirlo a soup or stew.",
           avoidWhen:
             "No espere que todos sepan qué lleva o qué tan importante puede ser en una comida familiar.",
-          register: "neutral",
+          register: "neutro",
           region: "Préstamo colombiano dentro del inglés de la conversación.",
           related: ["stew", "soup", "cassava", "plantain"],
           example: {
@@ -1128,7 +1128,7 @@ lessons.push(
             "Úselo con cebolla, tomate, ajo, condimentos o una base de sabor en poco aceite.",
           avoidWhen:
             "No lo use para fritura profunda. Eso es deep-fry.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal de cocina.",
           related: ["fry", "deep-fry", "seasoning base", "oil"],
           example: {
@@ -1145,7 +1145,7 @@ lessons.push(
             "Úselo cuando el guiso no es el plato entero, sino el sabor que se prepara al comienzo.",
           avoidWhen:
             "No traduzca siempre guiso como stew; aquí confundiría la parte con el plato completo.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal, aunque cada cocina nombra sus bases de otra manera.",
           related: ["sofrito", "sauce base", "onion", "tomato"],
           example: {
@@ -1162,7 +1162,7 @@ lessons.push(
             "Úselo al iniciar arroz, agua, sopa o algo que queda en la estufa un rato.",
           avoidWhen:
             "Si quiere agregar un ingrediente a una olla ya empezada, use put it in.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal.",
           related: ["put the pot on", "put it in", "start the rice", "leave it cooking"],
           example: {
@@ -1179,7 +1179,7 @@ lessons.push(
             "Úselo cuando importa que el alimento quede totalmente cocido, no sólo caliente por fuera.",
           avoidWhen:
             "No lo use para decir que usted sabe cocinar en general. Ahí diga know how to cook.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["boil", "soften", "done", "undercooked"],
           example: {
@@ -1241,31 +1241,31 @@ lessons.push(
       variations: [
         {
           form: "Do you actually know how to cook?",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal",
           whenToUse: "Una pregunta juguetona sobre si alguien de verdad cocina."
         },
         {
           form: "I know how to cook rice.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Una frase sencilla sobre una habilidad concreta."
         },
         {
           form: "I'm going to make lunch.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "La forma casera de decir que va a preparar el almuerzo."
         },
         {
           form: "Put the cassava in.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal",
           whenToUse: "Una instrucción directa para agregar la yuca a la olla."
         },
         {
           form: "The cassava has to cook through.",
-          register: "technical neutral",
+          register: "técnico neutro",
           region: "Inglés universal",
           whenToUse: "Cuando importa que la yuca quede totalmente cocida."
         }
@@ -1729,7 +1729,7 @@ lessons.push(
             "Úselo al preguntar a qué hora alguien se despierta o cuando una alarma despierta a una persona.",
           avoidWhen:
             "Evítelo para madrugar con esfuerzo y empezar el día temprano. Ahí suele servir mejor get up early.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["get up", "wake someone up", "oversleep", "alarm"],
           example: {
@@ -1746,7 +1746,7 @@ lessons.push(
             "Úselo cuando una alarma, un ruido, un niño o una persona despierta a otra.",
           avoidWhen:
             "Evítelo si usted habla de despertarse solo. Diga I wake up, no I wake me up.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["wake up", "alarm", "get up", "sleep through"],
           example: {
@@ -1763,7 +1763,7 @@ lessons.push(
             "Úselo para trabajo, viajes, estudio, diligencias o cualquier plan que obliga a arrancar temprano.",
           avoidWhen:
             "Evítelo si sólo quiere decir que abrió los ojos temprano pero siguió en la cama. Eso es wake up early.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["be up early", "wake up early", "early start", "stay up late"],
           example: {
@@ -1780,7 +1780,7 @@ lessons.push(
             "Úselo para trabajo, fiesta, estudio, celular o conversación que le roba sueño.",
           avoidWhen:
             "Evítelo para acostarse sólo un poco más tarde. Stay up late suele sonar intencional o notorio.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["pull an all-nighter", "go to bed late", "be tired", "get up early"],
           example: {
@@ -1797,7 +1797,7 @@ lessons.push(
             "Úselo para programarla, oírla, apagarla, ignorarla o culparla por levantarse tarde.",
           avoidWhen:
             "No diga the wake-up-er. Esa traducción literal de despertador no existe como palabra normal.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["set the alarm", "alarm clock", "phone alarm", "snooze"],
           example: {
@@ -1814,7 +1814,7 @@ lessons.push(
             "Úselo para obligaciones diarias, planes inevitables, horarios y cosas que no dependen de las ganas.",
           avoidWhen:
             "Evítelo si quiere sonar muy formal; must puede aparecer, pero have to es más común en conversación.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["need to", "must", "got to", "be supposed to"],
           example: {
@@ -1831,7 +1831,7 @@ lessons.push(
             "Úselo al salir con tiempo, cargar efectivo, poner otra alarma o hacer un plan B.",
           avoidWhen:
             "Evítelo como razón principal. Just in case es margen de seguridad, no causa central.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["in case", "to be safe", "as a backup", "just to be sure"],
           example: {
@@ -1893,31 +1893,31 @@ lessons.push(
       variations: [
         {
           form: "Tomorrow we have to get up early.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal",
           whenToUse: "La traducción práctica de toca madrugar."
         },
         {
           form: "What time do I have to wake up?",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Preguntar a qué hora usted se despierta."
         },
         {
           form: "The alarm wakes everyone up.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Cuando la alarma despierta a otras personas."
         },
         {
           form: "I won't stay up late tonight.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal",
           whenToUse: "Prometer que no va a trasnochar antes de una salida temprana."
         },
         {
           form: "Set the alarm just in case.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Programar una alarma como margen de seguridad."
         }

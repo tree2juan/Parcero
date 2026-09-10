@@ -1,12 +1,16 @@
 /*
- * Machine-translated prose has to be distinguishable from prose a human wrote.
+ * Which lesson prose was machine-translated, recorded so that it can be checked.
  *
- * `review: "pending"` is per-lesson and is already "pending" for all eight, so
- * it cannot say which *fields* no human has ever read. Without something finer,
- * unreviewed machine Spanish is indistinguishable from authored Spanish that is
- * merely awaiting sign-off, inside a feature whose whole visible promise is that
- * regional wording gets settled by native speakers. That is worse than not
- * having the translation at all, so the record below is load-bearing.
+ * This used to drive a badge on the page telling readers a lesson had not been
+ * checked by a native speaker. That disclosure is gone -- errors are reported
+ * through the in-app reporting feature instead of being pre-announced -- and
+ * data/provenance.js is no longer loaded by the page at all.
+ *
+ * The record is kept because the coverage check at the bottom of this file is
+ * load-bearing on its own: it walks every string a lesson renders and requires
+ * each one to be either recorded as translated or argued out by slot. That is
+ * what caught `title` and `situation` shipping untranslated, and it works the
+ * same whether or not anything is displayed to a reader.
  */
 const test = require("node:test");
 const assert = require("node:assert");
@@ -89,34 +93,17 @@ test("the provenance record is not empty while machine translation is shipped", 
     "every lesson carrying machine-translated prose must appear in the record");
 });
 
-test("the marker is rendered, and rendered in the reader's own language", () => {
-  const html = read("index.html");
-  const app = read("app.js");
-  const i18n = read("i18n.js");
-
-  assert.ok(html.includes('id="lesson-provenance"'), "the page must carry the marker element");
-  assert.ok(html.includes('data-i18n="provenance.machine"'), "the marker text must go through i18n");
-  assert.match(app, /\$\("#lesson-provenance"\)\.hidden = /, "app.js must decide whether to show the marker");
-  assert.match(app, /renderProvenance\(lesson\)/, "render() must call it for the current lesson");
-
+test("the record is not loaded by the page", () => {
   /*
-   * The direction that shows this marker is "en" -- a Spanish speaker learning
-   * English -- and that interface is in Spanish. A marker that appeared only in
-   * English would be the same defect one layer up: an English string on a
-   * Spanish page, telling the one person who can act on it, in the one language
-   * they did not choose.
+   * The badge this record used to feed is gone, so the file must not be shipped
+   * to readers either -- leaving the script tag in place would keep sending a
+   * translation-status record to every visitor for nothing.
    */
-  for (const key of ["provenance.machine", "provenance.count", "provenance.helpCheck"]) {
-    const occurrences = i18n.split(`"${key}":`).length - 1;
-    assert.strictEqual(occurrences, 2, `${key} must be defined in both language blocks, found ${occurrences}`);
-  }
-  assert.match(i18n, /"provenance\.machine": "Las explicaciones/, "the Spanish interface needs the Spanish wording");
-});
-
-test("a reader can act on the marker", () => {
-  const ui = read("review-ui.js");
-  assert.match(ui, /\$\("#lesson-provenance-start"\)\.addEventListener/,
-    "saying the text is unverified is only useful if the reader can then report it");
+  const html = read("index.html");
+  assert.ok(!html.includes("data/provenance.js"), "the page must not load the provenance record any more");
+  assert.ok(!html.includes("lesson-provenance"), "the provenance badge markup must be gone from the page");
+  assert.ok(!read("app.js").includes("renderProvenance"), "app.js must not still render the badge");
+  assert.ok(!read("i18n.js").includes('"provenance.'), "the provenance interface strings must be gone");
 });
 
 /*

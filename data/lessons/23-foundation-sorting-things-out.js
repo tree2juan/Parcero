@@ -425,7 +425,7 @@ lessons.push(
             "No tiene la cosa todavía y está tratando de ubicarla, escogerla o preguntar si la tienda la tiene.",
           avoidWhen:
             "Quiere decir que la búsqueda tuvo éxito. Ahí necesita “find”, no “look for”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["find", "search for", "try on", "choose"],
           example: {
@@ -442,7 +442,7 @@ lessons.push(
             "Un empleado quiere invitar al cliente a decir qué necesita sin hacer una presentación larga.",
           avoidWhen:
             "Quiere sonar muy formal. Entonces “How can I help you?” puede servir mejor.",
-          register: "friendly neutral",
+          register: "amistoso neutro",
           region: "Inglés universal; muy común en tiendas.",
           related: ["Can I help you?", "What can I help you find?", "What are you after?", "Need a hand?"],
           example: {
@@ -459,7 +459,7 @@ lessons.push(
             "Dice “look for” más el objeto que quiere encontrar.",
           avoidWhen:
             "Usa “look at” para mirar algo visible, o “look around” para curiosear sin objeto concreto.",
-          register: "grammar note",
+          register: "de gramática nota",
           region: "Inglés universal.",
           related: ["look for a hotel", "look for work", "look for the exit", "look for my keys"],
           example: {
@@ -476,7 +476,7 @@ lessons.push(
             "Compra ropa, un sombrero, una bebida o busca un lugar para sentarse en una ciudad caliente.",
           avoidWhen:
             "Quiere decir que algo está de moda. “Cool” puede significar eso, pero aquí el contexto manda.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["light", "comfortable", "for the heat", "not too hot"],
           example: {
@@ -493,7 +493,7 @@ lessons.push(
             "Quiere algo más sencillo o menos de recuerdo sin insultar la tienda.",
           avoidWhen:
             "Habla del gusto de otra persona. Ahí puede sonar presumido.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal.",
           related: ["simpler", "less flashy", "more everyday", "without the logo"],
           example: {
@@ -510,7 +510,7 @@ lessons.push(
             "Alguien ofrece una opción y quiere saber si le soluciona el problema a usted.",
           avoidWhen:
             "Sólo quiere hablar de gusto emocional. Entonces “if you like it” puede ser más claro.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["if it fits", "if you like it", "if that's okay", "if that helps"],
           example: {
@@ -527,7 +527,7 @@ lessons.push(
             "La cosa apareció o quedó escogida después de una búsqueda.",
           avoidWhen:
             "La persona todavía está buscando. Entonces siga con “look for.”",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["I found it", "there it is", "that's the one", "here it is"],
           example: {
@@ -589,31 +589,31 @@ lessons.push(
       variations: [
         {
           form: "I'm looking for a simple hat.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "La petición por defecto: “look for” más el objeto."
         },
         {
           form: "I'm looking for a hat for the sun.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Cuando quiere explicar para qué lo necesita."
         },
         {
           form: "Do you have a cooler hat?",
-          register: "friendly neutral",
+          register: "amistoso neutro",
           region: "Inglés universal",
           whenToUse: "Cuando ya está mirando opciones y pregunta por inventario."
         },
         {
           form: "I was looking for something less touristy.",
-          register: "careful informal",
+          register: "cuidadoso informal",
           region: "Inglés universal",
           whenToUse: "Cuando quiere suavizar una petición exigente."
         },
         {
           form: "I'm just looking, thanks.",
-          register: "friendly neutral",
+          register: "amistoso neutro",
           region: "Inglés universal",
           whenToUse: "Cuando sólo está mirando y todavía no quiere ayuda."
         }
@@ -1077,7 +1077,7 @@ lessons.push(
             "Quiere hacer un intento, probar un objeto, probarse ropa o probar comida.",
           avoidWhen:
             "Necesita ser muy preciso en un contexto técnico. Entonces “test,” “attempt,” o “taste” pueden evitar ambigüedad.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["attempt", "test", "taste", "try on"],
           example: {
@@ -1094,7 +1094,7 @@ lessons.push(
             "El foco está en hacer una acción que quizá salga o quizá no.",
           avoidWhen:
             "El objeto concreto va directo después de try: try the paddle, try the soup.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["try to leave", "try to speak", "try to start", "try to sleep"],
           example: {
@@ -1111,7 +1111,7 @@ lessons.push(
             "Usted prueba una cosa concreta o una manera concreta antes de decidir.",
           avoidWhen:
             "Quiere nombrar la acción completa. Entonces use “try to” más verbo.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["test it", "taste it", "try it on", "give it a try"],
           example: {
@@ -1128,7 +1128,7 @@ lessons.push(
             "Alguien duda y usted quiere animarlo sin discurso largo.",
           avoidWhen:
             "La persona ya dijo que no. Entonces puede sonar a presión.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal.",
           related: ["give it a try", "go ahead", "you can do it", "have a go"],
           example: {
@@ -1145,7 +1145,7 @@ lessons.push(
             "Admite miedo leve o ansiedad antes de hacer algo.",
           avoidWhen:
             "Habla de una condición médica o ansiedad permanente. Ahí necesita una frase más específica.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["I'm scared", "I'm worried", "I'm anxious", "I'm not sure"],
           example: {
@@ -1162,7 +1162,7 @@ lessons.push(
             "Quiere probar una actividad sin comprometerse con el plan completo.",
           avoidWhen:
             "Habla de doblar en una esquina. “Lap” aquí es recorrido, no giro.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["a short ride", "a quick loop", "just a little way", "a short run"],
           example: {
@@ -1179,7 +1179,7 @@ lessons.push(
             "Prueba un movimiento o un objeto antes de comprometerse con la acción grande.",
           avoidWhen:
             "El contexto no tiene movimiento hacia afuera. Entonces “without leaving” puede ser más claro.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["near shore", "right here", "without leaving", "before going out"],
           example: {
@@ -1241,25 +1241,25 @@ lessons.push(
       variations: [
         {
           form: "I want to try.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "La manera más simple de decir que quiere hacer el intento."
         },
         {
           form: "I'll try to do it slowly.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Cuando el intento lleva otra acción después de “try to.”"
         },
         {
           form: "First, I'll try the paddle.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Probar una cosa concreta antes del intento grande."
         },
         {
           form: "Go for it. Let's try one short lap.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal",
           whenToUse: "Animar a alguien a un intento pequeño y compartido."
         },
@@ -1729,7 +1729,7 @@ lessons.push(
             "Habla de dinero, ropa, planes, opinión, tema o cualquier cosa que se vuelve distinta.",
           avoidWhen:
             "Quiere decir intercambiar turnos o mensajes de manera más específica. Entonces “swap” o “exchange” pueden ser mejores.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["exchange", "swap", "coins", "small change"],
           example: {
@@ -1746,7 +1746,7 @@ lessons.push(
             "Habla de cambiarse una prenda o ponerse ropa distinta.",
           avoidWhen:
             "Habla de dinero. Ahí el objeto será “bill,” “money,” o “coins.”",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["change clothes", "get changed", "put on a clean shirt", "switch shirts"],
           example: {
@@ -1763,7 +1763,7 @@ lessons.push(
             "Pregunta si alguien puede devolver vueltas, dar monedas o romper un billete.",
           avoidWhen:
             "El contexto no es dinero. Entonces “change” puede significar modificación, no monedas.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["small change", "coins", "cash", "the rest"],
           example: {
@@ -1780,7 +1780,7 @@ lessons.push(
             "Necesita plata fácil de usar para transporte, propinas o compras pequeñas.",
           avoidWhen:
             "Habla de una modificación pequeña en un plan. Ahí “a small change” significa otra cosa.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["coins", "singles", "smaller bills", "cash"],
           example: {
@@ -1797,7 +1797,7 @@ lessons.push(
             "Habla de papel moneda, especialmente al pedir que lo cambien por valores más pequeños.",
           avoidWhen:
             "Está en un restaurante hablando de la cuenta; ahí “bill” no es un billete físico.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés norteamericano; en inglés británico suele decirse “note.”",
           related: ["note", "cash", "a fifty", "paper money"],
           example: {
@@ -1814,7 +1814,7 @@ lessons.push(
             "Necesita plata menuda para transporte, propina o una compra muy pequeña.",
           avoidWhen:
             "El lugar sólo acepta tarjeta o pagos digitales. Las monedas no arreglan ese problema.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["small change", "cash", "the rest", "quarters"],
           example: {
@@ -1831,7 +1831,7 @@ lessons.push(
             "Su decisión cambia o decide otra cosa.",
           avoidWhen:
             "Sólo cambia de tema. Entonces diga “change the subject.”",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["change the subject", "decide differently", "think again", "back out"],
           example: {
@@ -1893,31 +1893,31 @@ lessons.push(
       variations: [
         {
           form: "Can you change this bill for me?",
-          register: "friendly neutral",
+          register: "amistoso neutro",
           region: "Inglés universal",
           whenToUse: "La petición normal para cambiar un billete por plata más pequeña."
         },
         {
           form: "Could you change this bill, please?",
-          register: "polite formal",
+          register: "cortés formal",
           region: "Inglés universal",
           whenToUse: "Una versión más cortés para cualquier tienda."
         },
         {
           form: "I don't have change.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Explicar que no tiene monedas o billetes pequeños."
         },
         {
           form: "Do you have small change for the bus?",
-          register: "friendly neutral",
+          register: "amistoso neutro",
           region: "Inglés universal",
           whenToUse: "Pedir sencillo útil para transporte."
         },
         {
           form: "I'll change my shirt and go out.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Cambiarse de ropa, no cambiar dinero."
         }

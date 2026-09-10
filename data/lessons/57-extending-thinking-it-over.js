@@ -404,7 +404,7 @@ lessons.push(
             "Ofertas, propuestas, riesgos o posibilidades serias: “I'll consider it”, “consider the options”.",
           avoidWhen:
             "Una opinión cotidiana suena más natural con “think”: “I think it's worth it”.",
-          register: "neutral to formal",
+          register: "neutro a formal",
           region: "Inglés universal.",
           related: ["think about", "weigh", "review", "evaluate"],
           example: {
@@ -421,7 +421,7 @@ lessons.push(
             "Usted no quiere aceptar ni rechazar todavía una oferta, precio o propuesta.",
           avoidWhen:
             "Ya sabe que no; usarla para alargar una negativa puede sonar evasivo.",
-          register: "polite neutral",
+          register: "cortés neutro",
           region: "Inglés universal.",
           related: ["think it over", "let me see", "I'll review it", "I'll get back to you"],
           example: {
@@ -438,7 +438,7 @@ lessons.push(
             "La opción es una acción: “consider moving”, “consider taking the job”.",
           avoidWhen:
             "No use “consider to move”; ese calco suena incorrecto.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["gerund", "option", "proposal", "consider doing"],
           example: {
@@ -455,7 +455,7 @@ lessons.push(
             "Necesita tiempo antes de responder: “let me think it over”.",
           avoidWhen:
             "Una evaluación formal por escrito puede pedir “review” o “consider”.",
-          register: "neutral conversational",
+          register: "neutro conversacional",
           region: "Inglés universal.",
           related: ["sleep on it", "think about it", "decide later", "weigh it"],
           example: {
@@ -472,7 +472,7 @@ lessons.push(
             "Costos, esfuerzo, tiempo o sacrificios: “the work is worth it”.",
           avoidWhen:
             "No traduzca palabra por palabra “worth the pain” salvo que quiera sonar raro.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["worthwhile", "pay off", "value", "effort"],
           example: {
@@ -489,7 +489,7 @@ lessons.push(
             "Necesita procesar pros y contras con otra persona.",
           avoidWhen:
             "Sólo quiere avisar algo rápidamente; talk it through implica una conversación real.",
-          register: "neutral conversational",
+          register: "neutro conversacional",
           region: "Inglés universal.",
           related: ["discuss", "work through", "ask advice", "process"],
           example: {
@@ -506,7 +506,7 @@ lessons.push(
             "Prometer una respuesta futura: “I'll let you know tomorrow”.",
           avoidWhen:
             "No lo deje sin fecha si la otra persona necesita planear; agregue tomorrow, later o this week.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["get back to you", "reply", "answer", "update"],
           example: {
@@ -568,31 +568,31 @@ lessons.push(
       variations: [
         {
           form: "I'll consider it.",
-          register: "polite neutral",
+          register: "cortés neutro",
           region: "Inglés universal",
           whenToUse: "Pedir tiempo sin comprometerse."
         },
         {
           form: "I'm considering moving.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Considerar una acción con gerundio."
         },
         {
           form: "Let me think it over.",
-          register: "neutral conversational",
+          register: "neutro conversacional",
           region: "Inglés universal",
           whenToUse: "Pedir tiempo de manera natural."
         },
         {
           form: "I think it's worth it.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Dar una opinión común."
         },
         {
           form: "I'll let you know tomorrow.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Prometer una respuesta futura clara."
         }
@@ -1036,7 +1036,7 @@ lessons.push(
             "Pide a alguien que piense en un escenario: “imagine if…”, “imagine that…”.",
           avoidWhen:
             "Quiere recordar algo real; imagine crea una posibilidad, no recupera una memoria.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["picture", "suppose", "what if", "visualize"],
           example: {
@@ -1053,7 +1053,7 @@ lessons.push(
             "Algo sorprende, preocupa o parece increíble.",
           avoidWhen:
             "Una instrucción formal; ahí “please imagine” puede sonar más claro pero menos conversacional.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal.",
           related: ["can you imagine", "get this", "picture this", "unbelievable"],
           example: {
@@ -1070,7 +1070,7 @@ lessons.push(
             "Quiere que alguien vea la escena en la mente: “picture it for a second”.",
           avoidWhen:
             "Una idea abstracta sin imagen; imagine o suppose puede ser más amplio.",
-          register: "neutral conversational",
+          register: "neutro conversacional",
           region: "Inglés universal.",
           related: ["visualize", "see it", "imagine it", "picture this"],
           example: {
@@ -1087,7 +1087,7 @@ lessons.push(
             "Cree que sí, pero no quiere sonar totalmente seguro.",
           avoidWhen:
             "Necesita confirmar algo con certeza; entonces use “yes” o “I'm sure”.",
-          register: "neutral conversational",
+          register: "neutro conversacional",
           region: "Inglés universal.",
           related: ["I suppose so", "probably", "I think so", "maybe"],
           example: {
@@ -1104,7 +1104,7 @@ lessons.push(
             "Imaginar una llegada, visita o problema posible pero no real.",
           avoidWhen:
             "Él realmente llegó; entonces diga “he showed up” como hecho, sin imagine if.",
-          register: "neutral conversational",
+          register: "neutro conversacional",
           region: "Inglés universal.",
           related: ["what if", "suppose", "hypothetical", "show up"],
           example: {
@@ -1121,7 +1121,7 @@ lessons.push(
             "Hablar de arrepentimientos, alivios o versiones alternativas del pasado.",
           avoidWhen:
             "La situación todavía puede pasar; esta forma mira hacia un pasado irreal.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["hadn't", "would have", "counterfactual", "regret"],
           example: {
@@ -1138,7 +1138,7 @@ lessons.push(
             "Después de un if irreal: “I would have gone”, “she would have said yes”.",
           avoidWhen:
             "Un futuro real; “would have” mira hacia una posibilidad pasada, no hacia mañana.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["could have", "might have", "hadn't", "past conditional"],
           example: {
@@ -1200,31 +1200,31 @@ lessons.push(
       variations: [
         {
           form: "Just imagine!",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal",
           whenToUse: "Reaccionar con “¡imagínese!”"
         },
         {
           form: "Imagine if he showed up.",
-          register: "neutral conversational",
+          register: "neutro conversacional",
           region: "Inglés universal",
           whenToUse: "Plantear una hipótesis."
         },
         {
           form: "I guess so.",
-          register: "neutral conversational",
+          register: "neutro conversacional",
           region: "Inglés universal",
           whenToUse: "Dar un sí con reserva."
         },
         {
           form: "If it hadn't happened...",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Abrir un pasado irreal."
         },
         {
           form: "I would have been ready.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Nombrar la consecuencia de un pasado alternativo."
         }
@@ -1674,7 +1674,7 @@ lessons.push(
             "Usted ya conocía algo o a alguien y lo identifica: “I recognized her voice”.",
           avoidWhen:
             "Quiere decir admitir un error; ahí use admit o acknowledge.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["know", "identify", "place", "familiar"],
           example: {
@@ -1691,7 +1691,7 @@ lessons.push(
             "Hablar de conocimiento previo: “I know Owen”, “I know the answer”.",
           avoidWhen:
             "Usted conocía a la persona pero no la ubicó al verla; ahí es “recognize”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["meet", "recognize", "know about", "be familiar with"],
           example: {
@@ -1708,7 +1708,7 @@ lessons.push(
             "La cara suena conocida, pero falta el contexto: “I can't place you”.",
           avoidWhen:
             "No conoce a la persona en absoluto; entonces no hay nada que ubicar.",
-          register: "neutral conversational",
+          register: "neutro conversacional",
           region: "Inglés universal.",
           related: ["recognize", "familiar", "remember", "from where"],
           example: {
@@ -1725,7 +1725,7 @@ lessons.push(
             "Errores, sentimientos o verdades difíciles: “I admit I was wrong”.",
           avoidWhen:
             "Identificar una cara o lugar; ahí use recognize.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["acknowledge", "own up", "accept", "confess"],
           example: {
@@ -1742,7 +1742,7 @@ lessons.push(
             "Quiere sonar más sereno o formal: “acknowledge the mistake”, “acknowledge the problem”.",
           avoidWhen:
             "Una disculpa casual muy pequeña; admit o sorry puede bastar.",
-          register: "neutral to formal",
+          register: "neutro a formal",
           region: "Inglés universal.",
           related: ["admit", "recognize", "accept", "take responsibility"],
           example: {
@@ -1759,7 +1759,7 @@ lessons.push(
             "Una cara o lugar le suena: “you look familiar”.",
           avoidWhen:
             "Ya identificó a la persona claramente; entonces diga “I recognize you”.",
-          register: "neutral conversational",
+          register: "neutro conversacional",
           region: "Inglés universal.",
           related: ["familiar", "place", "recognize", "ring a bell"],
           example: {
@@ -1776,7 +1776,7 @@ lessons.push(
             "Alguien actúa como si algo fuera cierto: “pretend you know”.",
           avoidWhen:
             "Quiere decir intentar conseguir algo; use try, intend or aim depending on the case.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["fake", "act like", "claim", "make believe"],
           example: {
@@ -1838,31 +1838,31 @@ lessons.push(
       variations: [
         {
           form: "I didn't recognize you.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "No identificó a alguien que ya conocía."
         },
         {
           form: "I couldn't place you.",
-          register: "neutral conversational",
+          register: "neutro conversacional",
           region: "Inglés universal",
           whenToUse: "La cara sonaba conocida, pero faltaba el contexto."
         },
         {
           form: "You look familiar.",
-          register: "neutral conversational",
+          register: "neutro conversacional",
           region: "Inglés universal",
           whenToUse: "Alguien se le hace familiar."
         },
         {
           form: "I admit I was wrong.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Reconocer que se equivocó."
         },
         {
           form: "I acknowledge the mistake.",
-          register: "neutral to formal",
+          register: "neutro a formal",
           region: "Inglés universal",
           whenToUse: "Reconocer un error con más calma o formalidad."
         },

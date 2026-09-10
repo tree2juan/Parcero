@@ -83,8 +83,9 @@ h3 { line-height: 1.25; }
 
 .site-header {
   position: sticky; top: 0; z-index: 10;
-  display: flex; align-items: center; gap: 1.25rem;
-  max-width: var(--wrap); margin: auto;
+  display: flex; align-items: center; gap: .75rem;
+  flex-wrap: wrap; row-gap: .5rem;
+  max-width: 1220px; margin: auto;
   padding: .7rem 1.5rem;
   background: color-mix(in srgb, var(--paper) 88%, transparent);
   backdrop-filter: blur(10px);
@@ -103,14 +104,79 @@ h3 { line-height: 1.25; }
 .brand-text strong { font-size: 1.05rem; letter-spacing: -.01em; }
 .brand-text span { color: var(--ink-soft); font-size: .74rem; }
 
-.site-nav { display: flex; gap: .35rem; margin-left: auto; flex-wrap: wrap; }
+.site-nav { display: flex; gap: .4rem; margin-left: auto; align-items: center; min-width: 0; }
+.site-nav-links { display: flex; gap: .15rem; align-items: center; flex-wrap: wrap; min-width: 0; }
 .site-nav a {
-  padding: .45rem .7rem; border-radius: .5rem;
+  padding: .45rem .55rem; border-radius: .5rem;
   color: var(--ink); text-decoration: none;
-  font-size: .92rem; font-weight: 650;
+  font-size: .88rem; font-weight: 650;
 }
 .site-nav a:hover { background: var(--mist); color: var(--green-deep); }
-.nav-repo { color: var(--ink-soft) !important; }
+.site-nav a.active { color: var(--green-deep); box-shadow: inset 0 -2px 0 var(--green); }
+
+/* ---------- Modules menu ---------- */
+
+.nav-modules { position: relative; }
+.nav-modules-button {
+  display: inline-flex; align-items: center; gap: .35rem;
+  padding: .4rem .7rem; border: 1px solid var(--line); border-radius: 999px;
+  background: var(--surface); color: var(--green-deep);
+  font: inherit; font-size: .88rem; font-weight: 650; cursor: pointer; white-space: nowrap;
+}
+.nav-modules-button:hover, .nav-modules.is-open .nav-modules-button { background: var(--mist); }
+.nav-caret {
+  width: .4rem; height: .4rem;
+  border-right: 2px solid currentColor; border-bottom: 2px solid currentColor;
+  transform: translateY(-2px) rotate(45deg); transition: transform .18s ease;
+}
+.nav-modules.is-open .nav-caret { transform: translateY(1px) rotate(-135deg); }
+.nav-modules-menu {
+  position: absolute; top: calc(100% + .4rem); right: 0; z-index: 60;
+  width: min(24rem, calc(100vw - 2rem)); max-height: min(70vh, 32rem);
+  display: flex; flex-direction: column; padding: .35rem;
+  background: var(--surface); border: 1px solid var(--line);
+  border-radius: var(--radius); box-shadow: var(--shadow-lift);
+}
+.nav-modules-menu[hidden] { display: none; }
+.modules-search { flex: none; padding: .15rem .15rem .4rem; }
+.modules-search input {
+  width: 100%; padding: .45rem .6rem;
+  border: 1px solid var(--line); border-radius: .55rem;
+  background: var(--bg); color: var(--ink); font: inherit; font-size: .88rem;
+}
+.modules-search input:focus-visible { outline: 2px solid var(--green); outline-offset: 1px; }
+.modules-list {
+  flex: 1 1 auto; min-height: 0; overflow-y: auto;
+  display: flex; flex-direction: column; gap: .1rem;
+  overscroll-behavior: contain; -webkit-overflow-scrolling: touch;
+}
+.modules-group + .modules-group { margin-top: .3rem; }
+.modules-group-title {
+  position: sticky; top: 0; z-index: 1; margin: 0;
+  padding: .3rem .55rem; background: var(--surface);
+  color: var(--ink-soft); font-size: .72rem; font-weight: 700;
+  text-transform: uppercase; letter-spacing: .04em;
+}
+.modules-empty { margin: 0; padding: .9rem .55rem; color: var(--ink-soft); font-size: .88rem; }
+.nav-modules-menu button {
+  display: flex; align-items: center; gap: .65rem; width: 100%;
+  padding: .5rem .55rem; border: 0; border-radius: .55rem;
+  background: none; color: var(--ink); font: inherit; text-align: left; cursor: pointer;
+}
+.nav-modules-menu button:hover { background: var(--mist); }
+.modules-index {
+  flex: none; width: 1.5rem; height: 1.5rem; border-radius: 50%;
+  display: grid; place-items: center;
+  background: var(--green); color: #fff; font-size: .78rem; font-weight: 700;
+}
+.modules-body { display: flex; flex-direction: column; line-height: 1.25; }
+.modules-body strong { font-size: .9rem; font-weight: 650; }
+.modules-body small { color: var(--ink-soft); font-size: .76rem; }
+
+/* ---------- Views ----------
+   One module on screen at a time; the nav switches between them. */
+
+.view[hidden] { display: none; }
 
 /* ---------- Layout ---------- */
 
@@ -128,48 +194,55 @@ main, footer { max-width: var(--wrap); margin: auto; padding-inline: 1.5rem; }
 .hero-copy { max-width: 34rem; }
 .hero-lead { font-size: 1.15rem; color: var(--ink-soft); }
 
+/* The direction toggle lives in the header because it drives every view, not
+   just the landing one. It is a compact segmented control there. */
 .direction-picker {
-  display: flex; gap: .6rem; flex-wrap: wrap; align-items: stretch;
-  border: 0; margin: 1.5rem 0 .25rem; padding: 1rem 1.1rem 1.1rem;
+  display: inline-flex; align-items: center; gap: .15rem; flex-wrap: nowrap;
+  margin: 0; padding: .2rem;
   background: var(--surface);
-  border: 1px solid var(--line); border-radius: 18px;
+  border: 1px solid var(--line); border-radius: 999px;
 }
 .direction-picker legend {
-  padding: 0 .45rem; margin-left: -.45rem;
-  font-weight: 800; font-size: .9rem;
-  display: flex; flex-wrap: wrap; gap: .1rem .5rem; align-items: baseline;
+  position: absolute; width: 1px; height: 1px;
+  margin: -1px; padding: 0; overflow: hidden;
+  clip-path: inset(50%); white-space: nowrap;
 }
-.direction-picker legend span + span { font-weight: 650; color: var(--ink-soft); }
-.direction-picker legend span + span::before { content: "/"; margin-right: .5rem; color: var(--line); }
-.direction-picker label {
-  flex: 1 1 12rem;
-  display: inline-flex; align-items: center; gap: .6rem;
-  padding: .7rem 1rem;
-  background: var(--paper);
-  border: 1px solid var(--line); border-radius: 14px;
-  font-weight: 650; cursor: pointer;
-  transition: border-color .15s, background .15s, box-shadow .15s;
+.direction-picker label { margin: 0; padding: 0; border: 0; cursor: pointer; }
+.direction-picker input { position: absolute; opacity: 0; pointer-events: none; }
+.direction-option {
+  display: block; padding: .35rem .8rem; border-radius: 999px;
+  color: var(--ink-soft); font-size: .82rem; font-weight: 650; line-height: 1.2;
+  white-space: nowrap;
 }
-.direction-option { display: flex; flex-direction: column; line-height: 1.25; }
-.direction-option strong { font-size: 1rem; font-weight: 800; }
-.direction-option small { font-size: .82rem; font-weight: 600; color: var(--ink-soft); }
-.direction-picker label:hover { border-color: var(--green); }
-.direction-picker label:has(:checked) {
-  background: var(--mist);
-  border-color: var(--green);
-  box-shadow: inset 0 0 0 1px var(--green);
-}
-.direction-picker label:has(:focus-visible) { outline: 3px solid var(--green); outline-offset: 2px; }
+.direction-option strong { font-size: .82rem; font-weight: 650; }
+.direction-option small { display: none; }
+.direction-picker label:hover .direction-option { color: var(--ink); }
+.direction-picker label:has(:checked) .direction-option { background: var(--green); color: #fff; }
+.direction-picker label:has(:focus-visible) .direction-option { outline: 3px solid var(--green); outline-offset: 2px; }
 
 .hero-actions { display: flex; flex-wrap: wrap; gap: .7rem; padding-top: 1.5rem; }
 
-.hero-stats {
-  display: flex; gap: 2.25rem; flex-wrap: wrap;
-  margin: 2.5rem 0 0; padding-top: 1.5rem;
+/* ---------- Module hub (home) ---------- */
+
+.module-hub {
+  display: grid; gap: .9rem;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  margin: 0 0 4rem; padding-top: 1.75rem;
   border-top: 1px solid var(--line);
 }
-.hero-stats dt { color: var(--ink-soft); font-size: .78rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
-.hero-stats dd { margin: .15rem 0 0; font-size: 1.6rem; font-weight: 800; letter-spacing: -.02em; }
+.module-hub a {
+  display: flex; flex-direction: column; gap: .3rem;
+  padding: 1.1rem 1.15rem;
+  background: var(--surface);
+  border: 1px solid var(--line); border-radius: var(--radius);
+  color: var(--ink); text-decoration: none;
+  transition: border-color .15s ease, transform .15s ease, box-shadow .15s ease;
+}
+.module-hub a:hover { border-color: var(--green); transform: translateY(-2px); box-shadow: var(--shadow); }
+.module-hub strong { font-size: 1rem; font-weight: 700; }
+.module-hub span { color: var(--ink-soft); font-size: .86rem; line-height: 1.45; }
+.module-hub-go { color: var(--green-deep); font-size: .82rem; font-weight: 700; }
+.module-hub-go::after { content: " \2192"; }
 
 .hero-preview {
   position: relative;
@@ -321,10 +394,6 @@ main, footer { max-width: var(--wrap); margin: auto; padding-inline: 1.5rem; }
   font-size: .9rem; font-weight: 650;
 }
 .review-badge span { flex: 1 1 18rem; }
-/* A different stripe from .review-badge: "nobody has signed this off" and
-   "nobody has ever read this" are different claims and should not look alike. */
-.provenance-badge { border-left-color: var(--ink); }
-.provenance-count { flex: 0 0 auto !important; font-weight: 500; opacity: .75; white-space: nowrap; }
 .review-badge .text-button { padding: .35rem .7rem; color: var(--green-deep); text-decoration: underline; }
 
 .tabs { display: flex; gap: .2rem; padding-top: 1.25rem; border-bottom: 1px solid var(--line); flex-wrap: wrap; }
@@ -610,6 +679,15 @@ main, footer { max-width: var(--wrap); margin: auto; padding-inline: 1.5rem; }
 .deck-footer { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem; }
 .deck-help { max-width: 34rem; margin: 0; color: var(--ink-soft); font-size: .88rem; }
 
+.deck-guide {
+  margin-top: 1.5rem; padding: 1.15rem 1.35rem;
+  border: 1px solid var(--line); border-radius: var(--radius);
+  background: var(--mist);
+}
+.deck-guide-title { margin: 0 0 .55rem; font-size: .95rem; }
+.deck-guide-steps { margin: 0; padding-left: 1.2rem; display: grid; gap: .4rem; }
+.deck-guide-steps li { color: var(--ink-soft); font-size: .88rem; line-height: 1.5; }
+
 /* ---------- Placement ---------- */
 
 .assessment-card {
@@ -673,13 +751,46 @@ input[type="search"] {
 .source-note { margin-top: 1.5rem; color: var(--ink-soft); font-size: .88rem; }
 .assistive-text { min-height: 1.5rem; color: var(--ink-soft); font-size: .9rem; }
 
-.mature-gate {
-  max-width: 42rem; padding: 1.6rem;
-  background: var(--warm); border-left: .35rem solid var(--clay);
-  border-radius: 0 var(--radius) var(--radius) 0;
+
+/* ---------- After Dark ----------
+   Its own view and its own palette. The midnight theme is applied by
+   overriding the design tokens on the root rather than by restyling each
+   component, so every existing element inside the view follows along and
+   nothing outside it changes. */
+
+html.midnight {
+  --ink: #e8ecf2;
+  --ink-soft: #9aa7b8;
+  --paper: #0b0f16;
+  --surface: #141b26;
+  --green: #6f8fd6;
+  --green-deep: #a8bff0;
+  --mist: #1d2736;
+  --warm: #2a1c22;
+  --clay: #e0745a;
+  --clay-ink: #ffb59c;
+  --line: #2b3648;
+  --shadow: 0 1px 2px rgba(0, 0, 0, .5), 0 8px 24px -12px rgba(0, 0, 0, .8);
+  --shadow-lift: 0 2px 4px rgba(0, 0, 0, .55), 0 16px 40px -16px rgba(0, 0, 0, .9);
 }
-.mature-gate h3 { margin-top: 0; }
-.mature-gate label { display: block; margin-block: 1rem; font-weight: 700; }
+html.midnight body { background: var(--paper); color: var(--ink); }
+
+.after-dark-caution {
+  max-width: 46rem; margin: 0 0 1.5rem;
+  padding: .85rem 1.1rem;
+  background: var(--warm); border-left: .3rem solid var(--clay);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  color: var(--ink); font-size: .9rem;
+}
+#city-note { margin-bottom: .75rem; }
+.city-tab[aria-selected="true"] { font-weight: 800; }
+
+/* Severity is the one thing a reader must be able to see at a glance, so it
+   is carried by a color bar as well as by the label text. */
+.reference-card.severity-low { border-left: .3rem solid var(--green); }
+.reference-card.severity-medium { border-left: .3rem solid var(--sun); }
+.reference-card.severity-high { border-left: .3rem solid var(--clay); }
+.severity-high .tag-severity { background: var(--warm); color: var(--clay-ink); }
 
 /* ---------- Footer ---------- */
 
@@ -688,7 +799,15 @@ footer {
   color: var(--ink-soft); font-size: .92rem;
   border-top: 1px solid var(--line);
 }
-.footer-links { display: flex; flex-wrap: wrap; gap: 1.25rem; }
+.footer-links { display: flex; flex-wrap: wrap; gap: 1.25rem; align-items: baseline; }
+/* Reset moved out of the sticky header: it is destructive and rarely wanted,
+   so it should not outrank a lesson link on a phone. It reads as a footer
+   link here, so it needs the padding and hover of the header button removed. */
+.footer-links .text-button {
+  padding: 0; border-radius: 0; font: inherit; font-weight: inherit;
+  color: inherit; text-decoration: underline; cursor: pointer;
+}
+.footer-links .text-button:hover:not([disabled]) { background: none; color: var(--green-deep); }
 .footer-note { max-width: 44rem; font-size: .85rem; }
 
 /* ---------- Reporting tab ---------- */
@@ -746,13 +865,43 @@ footer {
 }
 
 @media (max-width: 680px) {
-  .site-header { flex-wrap: wrap; gap: .5rem .75rem; padding-inline: 1rem; }
-  .site-nav { order: 3; width: 100%; margin-left: 0; }
-  .site-nav a { padding: .4rem .55rem; font-size: .88rem; }
+  .site-header { flex-wrap: wrap; gap: .4rem .6rem; padding: .55rem 1rem; }
+  .site-nav { order: 3; width: 100%; margin-left: 0; gap: .5rem; }
+  /*
+   * The links scroll sideways instead of wrapping. Wrapping cost a second and
+   * third row, and the header is sticky, so those rows were charged against
+   * every screen of every page -- 194px of a 375px-wide phone before any
+   * lesson text appeared.
+   *
+   * Only the links scroll. The Modules dropdown is a sibling of the strip, not
+   * inside it, because an absolutely positioned menu inside an overflow
+   * container gets clipped to that container -- which would have hidden all
+   * 233 lessons behind a 40px-tall window.
+   */
+  .site-nav-links {
+    flex: 1 1 auto; flex-wrap: nowrap; min-width: 0;
+    overflow-x: auto; overscroll-behavior-inline: contain;
+    scrollbar-width: none; -ms-overflow-style: none;
+    scroll-snap-type: x proximity;
+  }
+  .site-nav-links::-webkit-scrollbar { display: none; }
+  .site-nav a { flex: none; padding: .6rem .65rem; white-space: nowrap; scroll-snap-align: start; }
+  .nav-modules { flex: none; position: static; }
+  /*
+   * Anchored to the header, not to the button. Hanging a 24rem panel off the
+   * right edge of a button that already sits near the right edge pushed it
+   * past the left edge of the screen. `.site-header` is sticky, so it is a
+   * positioned ancestor and can hold the menu itself: inset by the header's
+   * own padding, the panel lines up with the page instead of with a button.
+   */
+  .nav-modules-menu {
+    left: 1rem; right: 1rem; width: auto;
+    top: calc(100% + .35rem); max-height: min(70vh, 26rem);
+  }
+  .direction-picker { margin-left: auto; }
   .brand-text span { display: none; }
   main, footer { padding-inline: 1rem; }
   .lesson { padding: 1.25rem; }
-  .hero-stats { gap: 1.5rem; }
   .lesson-pager { flex-wrap: wrap; justify-content: center; }
   .deck-picker { grid-template-columns: 1fr; }
   .deck-actions { grid-template-columns: 1fr 1fr; }
@@ -878,6 +1027,25 @@ footer {
   .wb-setting-row { grid-template-columns: 1fr; }
   .wb-step-time { margin-left: 0; }
   .wb-map th[scope="row"] { width: auto; }
+  /*
+   * Each writing rule carries an inline `min-width` in ch, sized so a sheet
+   * printed on letter paper leaves room to actually write the answer. On a
+   * phone that same rule is wider than the screen, and because min-width wins
+   * over max-width it could not shrink -- so the workbook pushed the whole
+   * document sideways and the sticky header scrolled off with it. Here the
+   * rule takes the width it is given and wraps to its own line, which is what
+   * you want on a phone anyway. !important is required to beat the inline
+   * attribute; the print rules below still get the measured widths.
+   */
+  .wb-write { min-width: 0 !important; width: 100%; }
+  .wb-match-left .wb-write { width: 4ch; }
+  /*
+   * A conjugation or vocabulary table has a floor width its columns cannot go
+   * under, so on a phone it is the table that decides how wide the document
+   * is. Letting it scroll inside its own box keeps that decision local
+   * instead of dragging the sticky header sideways with it.
+   */
+  .wb-table { display: block; width: 100%; overflow-x: auto; }
 }
 
 /*

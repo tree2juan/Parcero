@@ -376,7 +376,7 @@ lessons.push(
           literal: "tener a",
           useWhen: "Casi siempre: “I have to work tomorrow”, “She has to sign it”. En pasado y futuro es la única opción natural: “I had to wait”, “You'll have to wait”.",
           avoidWhen: "Quiere sonar a norma escrita o a prohibición; ahí “must” es más fuerte.",
-          register: "neutral",
+          register: "neutro",
           region: "Todo el mundo angloparlante.",
           related: ["must", "have got to", "need to", "be supposed to"],
           example: {
@@ -390,7 +390,7 @@ lessons.push(
           literal: "deber",
           useWhen: "Reglas y avisos — “Passengers must show ID” — o una resolución propia: “I must call her back”.",
           avoidWhen: "Una obligación cotidiana entre iguales. “You must come to the meeting” suena a orden; “you have to come” es lo normal.",
-          register: "courteous",
+          register: "cortés",
           region: "Universal; más frecuente en textos que en conversación estadounidense.",
           related: ["have to", "should", "be required to", "shall"],
           example: {
@@ -432,7 +432,7 @@ lessons.push(
           literal: "estar supuesto a",
           useWhen: "Lo acordado o lo esperado: “We're supposed to be there at eight”, “You were supposed to call me”.",
           avoidWhen: "Una obligación firme e ineludible; ahí suena demasiado flojo.",
-          register: "neutral",
+          register: "neutro",
           region: "Universal en inglés estadounidense.",
           related: ["should", "have to", "be meant to", "ought to"],
           example: {
@@ -446,7 +446,7 @@ lessons.push(
           literal: "conseguir arriba temprano",
           useWhen: "Cualquier madrugada: “I have to get up early tomorrow”.",
           avoidWhen: "Quiere decir trasnochar o quedarse despierto; eso es “stay up late”, que no es lo mismo.",
-          register: "neutral",
+          register: "neutro",
           region: "Universal.",
           related: ["wake up", "stay up late", "early riser", "sleep in"],
           example: {
@@ -509,7 +509,7 @@ lessons.push(
       variations: [
         {
           form: "Everything has to be ready before eight.",
-          register: "neutral",
+          register: "neutro",
           region: "Universal",
           whenToUse: "La opción por defecto para enunciar un requisito sin señalar a nadie. Sirve en cualquier registro."
         },
@@ -521,7 +521,7 @@ lessons.push(
         },
         {
           form: "You have to have everything ready before eight.",
-          register: "neutral",
+          register: "neutro",
           region: "Universal",
           whenToUse: "Cuando sí quiere decir que le corresponde a esa persona y no hay razón para ser indirecto."
         },
@@ -533,7 +533,7 @@ lessons.push(
         },
         {
           form: "We're supposed to have everything ready before eight.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés estadounidense corriente",
           whenToUse: "Cuando la obligación viene de un acuerdo previo y usted deja abierta la posibilidad de que no se cumpla."
         }
@@ -936,7 +936,7 @@ lessons.push(
           literal: "el mío / la mía / los míos",
           useWhen: "El sustantivo ya se mencionó: “Mine has the red lid”, “That one's mine”.",
           avoidWhen: "El sustantivo aparece en la frase. Con sustantivo se usa “my”: “my container”, nunca “mine container”.",
-          register: "neutral",
+          register: "neutro",
           region: "Universal.",
           related: ["my", "yours", "ours", "belong to me"],
           example: {
@@ -950,7 +950,7 @@ lessons.push(
           literal: "el tuyo / el suyo / el de ustedes",
           useWhen: "Preguntar o afirmar pertenencia: “Is this yours?”, “That seat is yours”.",
           avoidWhen: "Quiere marcar respeto o distancia. El inglés no puede hacerlo con el posesivo; hay que cambiar el tono o la frase entera.",
-          register: "neutral",
+          register: "neutro",
           region: "Universal.",
           related: ["your", "mine", "y'all's", "belong to you"],
           example: {
@@ -964,7 +964,7 @@ lessons.push(
           literal: "el de él / el de ella",
           useWhen: "Cuando el dueño es una sola persona conocida: “The keys are hers”, “That desk is his”.",
           avoidWhen: "No sabe el género de la persona; entonces se usa “theirs”, que en inglés estadounidense actual sirve también para el singular.",
-          register: "neutral",
+          register: "neutro",
           region: "Universal.",
           related: ["theirs", "his", "her", "hers"],
           example: {
@@ -978,7 +978,7 @@ lessons.push(
           literal: "el nuestro / el de ellos",
           useWhen: "Distinguir lo del grupo propio de lo del ajeno: “Ours are hanging on the door”.",
           avoidWhen: "Todavía no ha quedado claro quiénes son “we” o “they”; la forma no lo dice.",
-          register: "neutral",
+          register: "neutro",
           region: "Universal.",
           related: ["our", "their", "mine", "yours"],
           example: {
@@ -992,7 +992,7 @@ lessons.push(
           literal: "de Andrés / de mi mamá",
           useWhen: "El dueño tiene nombre: “Is it Andrew's?”, “That's my mom's”.",
           avoidWhen: "Se trata de un objeto y no de una persona; ahí el inglés prefiere “of”: “the lid of the container”.",
-          register: "neutral",
+          register: "neutro",
           region: "Universal.",
           related: ["of", "his", "belong to", "possessive s"],
           example: {
@@ -1006,7 +1006,7 @@ lessons.push(
           literal: "pertenecer a",
           useWhen: "Contextos oficiales o énfasis: “This bag belongs to my sister”, “Who does this belong to?”.",
           avoidWhen: "Una conversación familiar rápida; ahí suena rebuscado frente a un simple “that's hers”.",
-          register: "courteous",
+          register: "cortés",
           region: "Universal.",
           related: ["mine", "own", "possess", "whose"],
           example: {
@@ -1020,7 +1020,7 @@ lessons.push(
           literal: "el recipiente / la tapa",
           useWhen: "Sobras y comida guardada: “Bring the container back”.",
           avoidWhen: "Se refiere a un vaso o a una botella; esos tienen sus propias palabras.",
-          register: "neutral",
+          register: "neutro",
           region: "Estados Unidos; “Tupperware” como nombre genérico es muy común.",
           related: ["Tupperware", "lid", "leftovers", "dish"],
           example: {
@@ -1075,19 +1075,19 @@ lessons.push(
         },
         {
           form: "That's not mine.",
-          register: "neutral",
+          register: "neutro",
           region: "Universal",
           whenToUse: "Negar la pertenencia sin comparar con nada. Es la forma más corta y sirve en cualquier registro."
         },
         {
           form: "That doesn't belong to me.",
-          register: "courteous",
+          register: "cortés",
           region: "Universal",
           whenToUse: "Contextos oficiales o cuando quiere dejarlo por escrito: un formulario, un reclamo, una oficina."
         },
         {
           form: "That's hers, not mine.",
-          register: "neutral",
+          register: "neutro",
           region: "Universal",
           whenToUse: "Cuando necesita nombrar a la dueña real y no basta con descartarse a usted misma."
         },

@@ -433,7 +433,7 @@ lessons.push(
             "Hablar del sueño como estado o lapso: “I slept eight hours”, “I didn't sleep well”.",
           avoidWhen:
             "Se refiere al instante de quedarse dormido — eso es “to fall asleep”, otra idea.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal; el verbo de todos los días.",
           related: ["fall asleep", "get some sleep", "be asleep", "sleep in"],
           example: {
@@ -450,7 +450,7 @@ lessons.push(
             "Marcar el instante en que llega el sueño: “I fell asleep on the bus”, “she fell asleep watching TV”.",
           avoidWhen:
             "Se refiere a toda la noche de sueño — ahí es “to sleep”, no “fall asleep”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal; ojo, no existe “I slept myself”.",
           related: ["doze off", "nod off", "drop off", "crash"],
           example: {
@@ -467,7 +467,7 @@ lessons.push(
             "Explicar una alarma perdida: “sorry, I overslept”, “I overslept and missed the bus”.",
           avoidWhen:
             "Durmió hasta tarde a propósito — eso es “to sleep in”, no “oversleep”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal; la excusa por excelencia.",
           related: ["sleep in", "sleep through the alarm", "miss the alarm", "be late"],
           example: {
@@ -484,7 +484,7 @@ lessons.push(
             "Asumir una noche larga: “I stayed up late”, “I pulled an all-nighter to finish it”.",
           avoidWhen:
             "Salió y volvió a una hora normal — eso es solo “I went out”, no trasnochar.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal; “all-nighter” es muy común entre estudiantes.",
           related: ["stay up", "all-nighter", "burn the midnight oil", "be up late"],
           example: {
@@ -501,7 +501,7 @@ lessons.push(
             "Contar que la noche llegó hasta el amanecer: “we were up till dawn”, “I was up until sunrise”.",
           avoidWhen:
             "Se acostó a una hora sensata; esta frase afirma que uno vio salir el sol.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal; se dice con frase, no con un solo verbo como “amanecer”.",
           related: ["up till dawn", "up all night", "until sunrise", "watch the sunrise"],
           example: {
@@ -518,7 +518,7 @@ lessons.push(
             "Presumir o admitir sueño pesado: “I slept like a log”, “the baby slept like a log”.",
           avoidWhen:
             "No calque “like a dormouse”; en inglés el animal no aparece, es el tronco.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal; modismo fijo.",
           related: ["sleep like a baby", "out like a light", "dead to the world", "sleep soundly"],
           example: {
@@ -535,7 +535,7 @@ lessons.push(
             "Proponer o hacer un descanso diurno: “take a nap”, “I need a quick nap”, o el verbo “to nap”.",
           avoidWhen:
             "Se refiere al sueño de la noche; “nap” es específicamente el de día.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal; “power nap” para una siesta corta.",
           related: ["nap", "power nap", "catnap", "doze"],
           example: {
@@ -597,31 +597,31 @@ lessons.push(
       variations: [
         {
           form: "I overslept.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "La excusa cotidiana por llegar tarde."
         },
         {
           form: "I stayed up really late.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal",
           whenToUse: "Asumir que uno trasnochó."
         },
         {
           form: "We were up till dawn.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal",
           whenToUse: "La noche llegó hasta el amanecer."
         },
         {
           form: "I'm going to take a nap.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Anunciar una siesta de día."
         },
         {
           form: "I slept like a log.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal; modismo",
           whenToUse: "Contar un sueño profundo y pesado."
         }
@@ -1085,7 +1085,7 @@ lessons.push(
             "Juegos y deportes: “I play soccer”, “do you want to play?”, “the kids are playing”.",
           avoidWhen:
             "Con instrumentos lleva artículo (“play the guitar”); con un deporte, no (“play soccer”).",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal; sin la “a” de “jugar a”.",
           related: ["play a game", "go play", "player", "play against"],
           example: {
@@ -1102,7 +1102,7 @@ lessons.push(
             "Hablar de música: “I play the guitar”, “she plays the piano”, “play in a band”.",
           avoidWhen:
             "No use “touch” para la música; “touch” es solo el contacto físico con algo.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal; cuidado con el falso amigo “touch”.",
           related: ["play the piano", "play in a band", "musician", "play a song"],
           example: {
@@ -1119,7 +1119,7 @@ lessons.push(
             "Contacto físico: “don't touch that”, “he touched my arm”, “a touch screen”.",
           avoidWhen:
             "Instrumentos o música — ahí es “play”, nunca “touch”. Es el error estrella del hispanohablante.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal; falso amigo clásico de “tocar”.",
           related: ["don't touch", "touch screen", "get in touch", "a touch of"],
           example: {
@@ -1136,7 +1136,7 @@ lessons.push(
             "Elogiar o acusar una conducta: “play fair”, “they play dirty”, “that's not fair play”.",
           avoidWhen:
             "No diga “play clean”; el opuesto de “play dirty” es “play fair”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal; el uso figurado es igual de común.",
           related: ["fair play", "play by the rules", "cheat", "foul play"],
           example: {
@@ -1153,7 +1153,7 @@ lessons.push(
             "Asumir un riesgo: “I took a chance”, “let's go for it”, “take a risk”.",
           avoidWhen:
             "No lo traduzca como “play it”; “play” no transmite el riesgo de “jugársela”.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal.",
           related: ["take a risk", "go for it", "gamble", "go all in"],
           example: {
@@ -1170,7 +1170,7 @@ lessons.push(
             "Presentar el juego a un angloparlante: “let's play tejo”, “tejo is a Colombian game”.",
           avoidWhen:
             "No hay traducción exacta; conviene explicarlo, no buscarle una palabra inglesa.",
-          register: "neutral",
+          register: "neutro",
           region: "Palabra colombiana; se usa tal cual en inglés.",
           related: ["a Colombian game", "throwing game", "gunpowder", "the target"],
           example: {
@@ -1187,7 +1187,7 @@ lessons.push(
             "Apostar la ronda: “loser buys”, “the beers are on me”, “it's my round”.",
           avoidWhen:
             "No diga “I invite the beers”; para invitar la ronda es “the beers are on me”.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal; “it's on me” para invitar.",
           related: ["it's on me", "my round", "a round of beers", "grab a beer"],
           example: {
@@ -1249,31 +1249,31 @@ lessons.push(
       variations: [
         {
           form: "Want to play a round?",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal",
           whenToUse: "Proponer un juego de manera casual."
         },
         {
           form: "It's your turn.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Avisarle a alguien que le toca."
         },
         {
           form: "They're playing dirty.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Acusar de juego sucio, literal o figurado."
         },
         {
           form: "I'm taking a chance on you.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal",
           whenToUse: "Decir que uno se arriesga por alguien."
         },
         {
           form: "Let's go play tejo.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal; préstamo",
           whenToUse: "Proponer ir a jugar tejo."
         }
@@ -1737,7 +1737,7 @@ lessons.push(
             "Al ofrecer o pedir ayuda: “can you help me?”, “thanks for helping”, “she helped me”.",
           avoidWhen:
             "Casi nunca sobra; solo cuida la preposición y el segundo verbo sin “to”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal; el verbo de todos los días.",
           related: ["help out", "help with", "give a hand", "assist"],
           example: {
@@ -1754,7 +1754,7 @@ lessons.push(
             "Al ayudar con una acción: “help me find it”, “I helped her move”.",
           avoidWhen:
             "Te dan ganas de meter “to” siempre; “help me to find” existe pero suena más rígido que “help me find”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal; el infinitivo sin “to” es lo más natural.",
           related: ["help me find", "help me carry", "help out", "assist"],
           example: {
@@ -1771,7 +1771,7 @@ lessons.push(
             "Al pedir u ofrecer un favor: “can you help me out?”, “thanks for helping me out”.",
           avoidWhen:
             "Cuando de verdad quieres decir “collaborate” (trabajar juntos en un proyecto), que es otra cosa.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal; “help out” es más cálido que un “help” pelado.",
           related: ["help", "do a favor", "give a hand", "lend a hand"],
           example: {
@@ -1788,7 +1788,7 @@ lessons.push(
             "Al pedir algo con cortesía: “could I have the bill?”, “could you pass me a napkin?”.",
           avoidWhen:
             "No traduzcas “regalar” con “gift” ni con un “give me” pelado, que suena brusco.",
-          register: "polite neutral",
+          register: "cortés neutro",
           region: "Inglés universal; “Can I get…?” es la variante común en Estados Unidos.",
           related: ["Can I get…?", "Could you pass…?", "I'll have…", "Would you mind…?"],
           example: {
@@ -1805,7 +1805,7 @@ lessons.push(
             "Al reconocer una solicitud de dinero en la calle: “can you spare some change?”.",
           avoidWhen:
             "No lo uses tú para pedir un favor práctico; suena a que estás pidiendo monedas.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal; “spare change” es la frase típica de la calle.",
           related: ["spare change", "a little help", "a handout", "lend a hand"],
           example: {
@@ -1822,7 +1822,7 @@ lessons.push(
             "Al pedir algo: “could you do me a favor?”, “do me a favor and wait here”.",
           avoidWhen:
             "No calques “hágame el favor de + verbo” como “do me the favor to…”.",
-          register: "polite neutral",
+          register: "cortés neutro",
           region: "Inglés universal; en EE. UU. se escribe “favor” y en Estados Unidos “favor”.",
           related: ["do me a favor", "could you", "would you mind", "help out"],
           example: {
@@ -1839,7 +1839,7 @@ lessons.push(
             "Al ofrecer o pedir ayuda concreta: “can you give me a hand?”, “I'll give you a hand”.",
           avoidWhen:
             "En contextos muy formales, donde “help” o “assist” quedan mejor.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal; “lend a hand” es la variante un poco más formal.",
           related: ["lend a hand", "help out", "help", "pitch in"],
           example: {
@@ -1901,31 +1901,31 @@ lessons.push(
       variations: [
         {
           form: "Could you help me out?",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal",
           whenToUse: "El “¿me ayudas?” suave de todos los días."
         },
         {
           form: "Can you help me carry this?",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Pedir ayuda con una acción concreta."
         },
         {
           form: "Could you do me a favor?",
-          register: "polite neutral",
+          register: "cortés neutro",
           region: "Inglés universal",
           whenToUse: "Un pedido cortés y un poco más formal."
         },
         {
           form: "Give me a second.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal",
           whenToUse: "Pedir con suavidad que alguien espere un momento."
         },
         {
           form: "Can you give me a hand?",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal",
           whenToUse: "Pedirle a un amigo que eche una mano."
         }

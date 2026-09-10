@@ -418,7 +418,7 @@ lessons.push(
             "Al contestar una llamada de un número desconocido, o cuando alguien pregunta por otra persona.",
           avoidWhen:
             "Cara a cara no tiene sentido; pertenece solo al teléfono y al citófono.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal; “may I ask who's calling?” es la versión más formal, típica de una oficina.",
           related: ["who's this?", "may I ask who's calling?", "who am I speaking to?", "who's speaking?"],
           example: {
@@ -435,7 +435,7 @@ lessons.push(
             "Al anunciarse en una llamada o al tocar la puerta: “Hi, it's Alejandra.”",
           avoidWhen:
             "En un registro muy formal de oficina, donde se dice “this is Alejandra speaking.”",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal; “this is [nombre]” es intercambiable y un punto más formal.",
           related: ["this is Alejandra", "it's me", "this is she", "Alejandra speaking"],
           example: {
@@ -452,7 +452,7 @@ lessons.push(
             "Para cualquier conversación normal: “I need to talk to my boss”, “I talked with her yesterday.”",
           avoidWhen:
             "Cuidado con “talk at someone”, que significa hablarle sin dejarlo responder; casi siempre es una crítica.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal; “talk with” es un poco más frecuente en Norteamérica.",
           related: ["speak to", "speak with", "have a word with", "talk at (someone)"],
           example: {
@@ -469,7 +469,7 @@ lessons.push(
             "Para despedirse de alguien con quien va a seguir en contacto.",
           avoidWhen:
             "En una despedida muy formal, donde encaja mejor “I look forward to speaking with you.”",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal; “talk soon” y “catch you later” son variantes.",
           related: ["talk soon", "catch you later", "talk to you Thursday", "we'll be in touch"],
           example: {
@@ -486,7 +486,7 @@ lessons.push(
             "Al preguntarle a alguien, de manera informal, si maneja un idioma.",
           avoidWhen:
             "Si quiere sonar más suave, use “do you happen to speak Spanish?”, que resulta menos directo.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["do you speak Spanish?", "can you speak English?", "any English?", "do you happen to speak…?"],
           example: {
@@ -503,7 +503,7 @@ lessons.push(
             "Para pasar a un tema relacionado: “speaking of food, did you eat?”.",
           avoidWhen:
             "Cuando no hay ninguna relación con lo anterior; en frío suena a salto raro.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal; “speaking of which” es una variante muy común.",
           related: ["speaking of which", "that reminds me", "by the way", "on that note"],
           example: {
@@ -520,7 +520,7 @@ lessons.push(
             "Al pedir una pausa breve, por teléfono o en persona.",
           avoidWhen:
             "En un registro formal, donde se dice “one moment, please.”",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal; “hang on” y “give me a second” son equivalentes.",
           related: ["hang on", "give me a sec", "just a moment", "one second"],
           example: {
@@ -582,31 +582,31 @@ lessons.push(
       variations: [
         {
           form: "Alright, talk to you Thursday.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal",
           whenToUse: "El cierre amistoso por defecto cuando ya hay un día fijo."
         },
         {
           form: "We'll talk if anything comes up, okay?",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal",
           whenToUse: "Cuando lo deja abierto, sin una hora fija."
         },
         {
           form: "So we're on for Thursday?",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Para confirmar el plan como pregunta antes de colgar."
         },
         {
           form: "See you Thursday — talk soon.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal",
           whenToUse: "Cuando de verdad se van a ver en persona, no solo llamar."
         },
         {
           form: "Take care, we'll be in touch.",
-          register: "polite formal",
+          register: "cortés formal",
           region: "Inglés universal",
           whenToUse: "Un cierre cálido pero cortés con alguien con quien aún no hay confianza."
         }
@@ -1050,7 +1050,7 @@ lessons.push(
             "Al abrirle la puerta a alguien, hacerlo pasar a una tienda o una casa.",
           avoidWhen:
             "Traducirlo como “follow me”, que mandaría a la persona a caminar detrás de usted en vez de entrar.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal; “come on in” es más cálido que el simple “come in”.",
           related: ["come in", "step inside", "make yourself at home", "have a seat"],
           example: {
@@ -1067,7 +1067,7 @@ lessons.push(
             "Al dar o seguir indicaciones a pie por una calle.",
           avoidWhen:
             "Cuando de verdad quiere decir gire a la derecha; eso es “turn right”, otra palabra.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal; “go straight” y “head straight” son variantes.",
           related: ["go straight", "straight ahead", "turn right", "head down this street"],
           example: {
@@ -1084,7 +1084,7 @@ lessons.push(
             "Para decir que una acción continúa: “I keep trying”, “I'm still waiting.”",
           avoidWhen:
             "Para empezar una acción; “keep” y “still” sirven para continuarla, no para iniciarla.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["keep on -ing", "carry on -ing", "still + -ing", "go on -ing"],
           example: {
@@ -1101,7 +1101,7 @@ lessons.push(
             "Al despedirse con calidez, dando a entender que la persona es bienvenida de vuelta.",
           avoidWhen:
             "Como dato literal de ubicación; se trata de continuidad, no de coordenadas.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal; la despedida clásica del tendero.",
           related: ["we're not going anywhere", "come back anytime", "stop by whenever", "we're here for you"],
           example: {
@@ -1118,7 +1118,7 @@ lessons.push(
             "Un trato cálido, un poco protector, típico de tiendas, cafeterías y vecinos.",
           avoidWhen:
             "Un entorno formal o profesional, donde puede sonar condescendiente.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés informal; “hon” es más de Norteamérica, “love” y “dear” del Reino Unido.",
           related: ["honey", "sweetie", "love", "pal"],
           example: {
@@ -1135,7 +1135,7 @@ lessons.push(
             "Al aceptar un pedido o un plan con energía y buena disposición.",
           avoidWhen:
             "Un registro muy formal, donde encaja mejor “certainly” o “of course.”",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal, muy norteamericano.",
           related: ["you bet", "sure thing", "no problem", "coming right up"],
           example: {
@@ -1152,7 +1152,7 @@ lessons.push(
             "Al pedir un producto en una tienda o un café.",
           avoidWhen:
             "Con “can I get” en un contexto muy formal, donde “may I have” es más pulido.",
-          register: "polite friendly",
+          register: "cortés amistoso",
           region: "Inglés universal; “can I get” es más informal, “may I have” más formal.",
           related: ["can I get…?", "may I have…?", "I'll take…", "could I have…?"],
           example: {
@@ -1214,31 +1214,31 @@ lessons.push(
       variations: [
         {
           form: "Come on in, make yourself at home.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal",
           whenToUse: "Al recibir a alguien con calidez en una puerta."
         },
         {
           form: "Keep straight until the lights.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Al dar indicaciones sencillas a pie."
         },
         {
           form: "Let's keep moving, it's getting late.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal",
           whenToUse: "Al apurar a un grupo para seguir andando."
         },
         {
           form: "Same as always, nothing's changed.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal",
           whenToUse: "Al decir que la situación sigue igual."
         },
         {
           form: "Do stop by again whenever you like.",
-          register: "polite formal",
+          register: "cortés formal",
           region: "Inglés universal",
           whenToUse: "Una invitación cortés y abierta a volver."
         }
@@ -1682,7 +1682,7 @@ lessons.push(
             "Al decir en qué anda uno pensando: “I'm thinking about the trip.”",
           avoidWhen:
             "Como calco de “pensar en” con “in”; en inglés es siempre “about”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["think of", "have on your mind", "mull over", "dwell on"],
           example: {
@@ -1699,7 +1699,7 @@ lessons.push(
             "Al pedir o dar una opinión: “what do you think of the movie?”",
           avoidWhen:
             "Para lo que meramente ocupa la mente; eso es “think about”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal; “think about” también sirve para pedir opinión.",
           related: ["think about", "what's your take on", "how do you feel about", "your opinion of"],
           example: {
@@ -1716,7 +1716,7 @@ lessons.push(
             "Al enunciar una opinión en una frase: “I think that it's dangerous.”",
           avoidWhen:
             "Cuando hace falta preposición + sustantivo; ahí van “think about” o “think of”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal; el “that” a menudo se omite: “I think it's dangerous.”",
           related: ["believe that", "feel that", "reckon", "I'd say"],
           example: {
@@ -1733,7 +1733,7 @@ lessons.push(
             "Al pedir que alguien reflexione, o al ganar tiempo: “let me think it over.”",
           avoidWhen:
             "Cuando la decisión ya está tomada; ahí encaja “I've thought it over.”",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal; “think it through” resalta el razonamiento completo.",
           related: ["think it through", "sleep on it", "mull it over", "give it some thought"],
           example: {
@@ -1750,7 +1750,7 @@ lessons.push(
             "Al rechazar algo de plano entre amigos.",
           avoidWhen:
             "Una negativa formal, donde va “no, thank you” o “I'd rather not.”",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal; “no chance” y “not a chance” son primos cercanos.",
           related: ["no chance", "not a chance", "forget it", "absolutely not"],
           example: {
@@ -1767,7 +1767,7 @@ lessons.push(
             "Al dirigirse a un amigo o par con confianza.",
           avoidWhen:
             "Con un jefe, un mayor o un desconocido a quien se debe respeto.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "“Buddy” y “man” en Norteamérica; “mate” en el Reino Unido y Australia.",
           related: ["man", "dude", "pal", "bro"],
           example: {
@@ -1784,7 +1784,7 @@ lessons.push(
             "Al decir si uno se anima o no: “I'm not up for that.”",
           avoidWhen:
             "En registro muy formal, donde va “I'd rather not” o “I'm not inclined to.”",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal.",
           related: ["in the mood for", "keen on", "down for it", "not feeling it"],
           example: {
@@ -1846,31 +1846,31 @@ lessons.push(
       variations: [
         {
           form: "Let me think about it.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Al ganar tiempo antes de comprometerse."
         },
         {
           form: "I'll think it over, okay?",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal",
           whenToUse: "Al aplazar la decisión con suavidad."
         },
         {
           form: "I've thought about it, and no.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal",
           whenToUse: "Al cerrar una decisión tomada, con firmeza y amabilidad."
         },
         {
           form: "No, buddy, no way.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal",
           whenToUse: "Una negativa rotunda y juguetona entre amigos."
         },
         {
           form: "I'd rather think it through, maybe another day.",
-          register: "polite formal",
+          register: "cortés formal",
           region: "Inglés universal",
           whenToUse: "Al declinar con cortesía dejando la puerta abierta."
         }

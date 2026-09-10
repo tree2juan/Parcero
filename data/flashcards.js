@@ -187,7 +187,13 @@ function flashcardsFromLesson(lesson, direction) {
       kind: "context",
       askKey: "deck.ask.context",
       front: content.situation,
-      frontLang: target,
+      // The scene and the note orient the learner, so both are written in the
+      // language they already read, not the one they are building. The lesson
+      // page has always taken this for granted -- #lesson-situation carries no
+      // lang of its own and inherits the interface language, which is the
+      // support language. Tagging the card with `target` contradicted that and
+      // announced Spanish scene-setting as English to a screen reader.
+      frontLang: support,
       back: content.note,
       backLang: null,
       note: null
@@ -285,9 +291,18 @@ function flashcardsFromLesson(lesson, direction) {
 }
 
 /*
- * Verbs are drilled productively: you are shown the language you already have
- * and asked for the one you are building, which is the harder direction and
- * the one that actually shows up in conversation.
+ * The card opens in the language the toggle says you are learning, and the
+ * answer is what it means in the language you already have.
+ *
+ * This used to run the other way for verbs and fluency phrases -- known on the
+ * front, target on the back -- on the reasoning that producing the new language
+ * is the harder direction. The problem was that nothing else in the deck agreed:
+ * every card built from a lesson (vocabulary, dialogue, pronunciation, example,
+ * region) already opened on the target. So picking "I want to learn Colombian
+ * Spanish" gave a Spanish prompt for a lesson word and an English one for a
+ * verb, in the same set, with no way to tell which was coming. The toggle now
+ * decides the opening side for every card, which is the thing a learner can
+ * actually predict.
  */
 function flashcardFromVerb(verb, direction) {
   const { target, support } = flashcardLanguages(direction);
@@ -298,10 +313,10 @@ function flashcardFromVerb(verb, direction) {
     id: `${verb.id}/${direction}`,
     kind: "verb",
     askKey: "deck.ask.verb",
-    front: known,
-    frontLang: support,
-    back: learning,
-    backLang: target,
+    front: learning,
+    frontLang: target,
+    back: known,
+    backLang: support,
     note: target === "es" && forms.presentYo
       ? `yo ${forms.presentYo} · ayer ${forms.preteriteYo} · ${forms.participle}`
       : null
@@ -315,10 +330,10 @@ function flashcardFromFluency(item, index, direction) {
     id: `fluency/${index}/${direction}`,
     kind: "fluency",
     askKey: "deck.ask.fluency",
-    front: target === "es" ? english : spanish,
-    frontLang: support,
-    back: target === "es" ? spanish : english,
-    backLang: target,
+    front: target === "es" ? spanish : english,
+    frontLang: target,
+    back: target === "es" ? english : spanish,
+    backLang: support,
     note: `${note} (${type} · ${region})`
   };
 }
@@ -351,18 +366,24 @@ function flashcardFromSlang(item, index, direction) {
 /*
  * Mature cards ask only for recognition, never production. There is no version
  * of this deck that prompts a learner to produce an insult.
+ *
+ * After Dark rows are objects keyed by city, not the tuples the other reference
+ * lists use, and the same term appears once per city with the reading that city
+ * gives it. The city therefore belongs on the card: without it the back of two
+ * cards with the same front would disagree about how bad the phrase is, which
+ * is the one thing this deck exists to get right.
  */
 function flashcardFromMature(item, index, direction) {
-  const [phrase, equivalent, severity, note, , respond] = item;
+  const { city, phrase, equivalent, severity, note } = item;
   return {
     id: `mature/${index}/${direction}`,
     kind: "mature",
     askKey: "deck.ask.mature",
-    front: phrase,
+    front: direction === "es" ? phrase : equivalent,
     frontLang: direction === "es" ? "es" : "en",
-    back: equivalent,
+    back: direction === "es" ? equivalent : phrase,
     backLang: direction === "es" ? "en" : "es",
-    note: `${severity}. ${note} → ${respond}`
+    note: `${severity} · ${city}. ${note}`
   };
 }
 
@@ -372,6 +393,13 @@ function flashcardFromMature(item, index, direction) {
  * the goal. The gender travels *with* the noun on the back — "portero" learned
  * without "el" is half a word, and the half that is missing is the half that
  * governs every adjective and article that follows it.
+ *
+ * Being a production drill, the front is always the word the learner already
+ * has and the back is always the one they are building. The language tags used
+ * to be written out per branch and the `en` branch had them backwards: it put
+ * the Spanish term on the front and labeled it English, which is what a screen
+ * reader would then have announced it as. They are named off `support` and
+ * `target` now, so the tag cannot disagree with the side it is on.
  */
 function flashcardFromLexicon(item, index, direction) {
   const [term, english, wordClass, gender, , level, seen, note] = item;
@@ -381,9 +409,9 @@ function flashcardFromLexicon(item, index, direction) {
     kind: "lexicon",
     askKey: "deck.ask.lexicon",
     front: target === "es" ? english : term,
-    frontLang: target === "es" ? support : target,
+    frontLang: support,
     back: target === "es" ? term : english,
-    backLang: target === "es" ? target : support,
+    backLang: target,
     note: [gender ? `${wordClass} · ${gender}` : wordClass, note].filter(Boolean).join(". ")
   };
 }
@@ -525,10 +553,11 @@ function flashcardTopics(direction, sources) {
    * should stay shut.
    */
   if (matureEnabled === true) {
+    /* Every After Dark row is a Colombian phrase glossed into English, so both
+       directions have something to recognize. There is no per-row language flag
+       to filter on the way the tuple lists have. */
     const mature = matureItems
-      .map((item, index) => ({ item, index }))
-      .filter(({ item }) => item[4] === direction)
-      .map(({ item, index }) => flashcardFromMature(item, index, direction));
+      .map((item, index) => flashcardFromMature(item, index, direction));
     if (mature.length) {
       topics.push({
         id: "mature",

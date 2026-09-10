@@ -427,7 +427,7 @@ lessons.push(
             "Úselo para proyectos, ideas, documentos, decisiones, problemas y temas que se van a conversar.",
           avoidWhen:
             "No lo traduzca automáticamente como pelear. Si hay conflicto real, use argue.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["talk about", "review", "address", "argue"],
           example: {
@@ -444,7 +444,7 @@ lessons.push(
             "Úselo cuando hay tensión, desacuerdo fuerte, voces subidas o gente que no cede.",
           avoidWhen:
             "No lo use para una revisión tranquila. Ahí discuss, talk about or review son mejores.",
-          register: "neutral conflict",
+          register: "neutro conflict",
           region: "Inglés universal.",
           related: ["fight", "row", "disagreement", "give way"],
           example: {
@@ -461,7 +461,7 @@ lessons.push(
             "Úselo cuando no necesita sonar formal y sólo quiere nombrar el tema de la conversación.",
           avoidWhen:
             "Si necesita sonar más profesional, discuss or address may fit better.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["discuss", "speak about", "bring up", "conversation"],
           example: {
@@ -478,7 +478,7 @@ lessons.push(
             "Úselo cuando va a leer, mirar o comprobar algo para corregirlo o aprobarlo.",
           avoidWhen:
             "No lo confunda con review como reseña pública si el contexto es de trabajo interno.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["check", "look over", "revise", "draft"],
           example: {
@@ -495,7 +495,7 @@ lessons.push(
             "Úselo para reuniones, agenda, problemas delicados o puntos que necesitan atención clara.",
           avoidWhen:
             "No lo entienda como escribir una dirección. Address también significa ocuparse de un asunto.",
-          register: "neutral to formal",
+          register: "neutro a formal",
           region: "Inglés universal.",
           related: ["deal with", "cover", "discuss", "topic"],
           example: {
@@ -512,7 +512,7 @@ lessons.push(
             "Úselo cuando personas se enfrentan por una decisión, objeto, responsabilidad o idea.",
           avoidWhen:
             "No lo use para desacuerdos suaves o revisiones normales.",
-          register: "direct informal",
+          register: "directo informal",
           region: "Inglés universal.",
           related: ["argue about", "fight about", "dispute", "conflict"],
           example: {
@@ -529,7 +529,7 @@ lessons.push(
             "Úselo cuando alguien acepta moverse, negociar, ceder espacio o abandonar una posición dura.",
           avoidWhen:
             "No lo confunda con give away, que significa regalar o revelar.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["yield", "compromise", "back down", "position"],
           example: {
@@ -591,31 +591,31 @@ lessons.push(
       variations: [
         {
           form: "I want to discuss the project.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Pedir una conversación tranquila sobre un proyecto."
         },
         {
           form: "Can we review the poster?",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Revisar un borrador, diseño o documento."
         },
         {
           form: "Let's talk about the topic.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "La opción sencilla para hablar de algo."
         },
         {
           form: "Yesterday we argued about the time.",
-          register: "neutral conflict",
+          register: "neutro conflict",
           region: "Inglés universal",
           whenToUse: "Contar que sí hubo una discusión fuerte."
         },
         {
           form: "Let's address that point calmly.",
-          register: "neutral formal",
+          register: "neutro formal",
           region: "Inglés universal",
           whenToUse: "Tratar un punto de agenda sin sonar combativo."
         }
@@ -1079,7 +1079,7 @@ lessons.push(
             "Úselo para planes, precios, rutas, colegios, apartamentos, celulares, servicios y decisiones con opciones.",
           avoidWhen:
             "No lo use si sólo está eligiendo sin mirar criterios. Compare implica poner elementos lado a lado.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["compare with", "compared with", "comparison", "value"],
           example: {
@@ -1096,7 +1096,7 @@ lessons.push(
             "Úselo para este plan con el otro, esta ruta con esa, o un precio con otro.",
           avoidWhen:
             "No se preocupe demasiado por compare to aquí; with suena natural para esta comparación práctica.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["compare to", "against", "next to", "comparison"],
           example: {
@@ -1113,7 +1113,7 @@ lessons.push(
             "Úselo cuando usted se ofrece a pesar criterios o revisar opciones.",
           avoidWhen:
             "No añada una s después de will. La forma es will compare, no will compares.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["compare", "check", "look at", "weigh"],
           example: {
@@ -1130,7 +1130,7 @@ lessons.push(
             "Úselo antes de decir una diferencia: compared with the cheap one, compared with last month.",
           avoidWhen:
             "No diga compared against en cada caso; puede sonar más competitivo de lo necesario.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["compared to", "in comparison with", "next to", "than"],
           example: {
@@ -1147,7 +1147,7 @@ lessons.push(
             "Úselo cuando la diferencia es obvia por cobertura, calidad, tiempo, comodidad o valor.",
           avoidWhen:
             "No lo use para una diferencia pequeña. La frase es fuerte.",
-          register: "neutral emphatic",
+          register: "neutro emphatic",
           region: "Inglés universal.",
           related: ["no contest", "clearly better", "much better", "comparison"],
           example: {
@@ -1164,7 +1164,7 @@ lessons.push(
             "Úselo para planes de celular, seguros, servicios, medios o zonas donde algo debe funcionar.",
           avoidWhen:
             "No compare sólo el monthly price si coverage es la verdadera necesidad.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["signal", "data", "phone plan", "service area"],
           example: {
@@ -1181,7 +1181,7 @@ lessons.push(
             "Úselo después de que todos saben cuál opción cuesta menos.",
           avoidWhen:
             "No lo use antes de presentar las opciones; puede sonar vago o despectivo.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal.",
           related: ["the expensive one", "the other one", "option", "plan"],
           example: {
@@ -1243,31 +1243,31 @@ lessons.push(
       variations: [
         {
           form: "Compare this plan with the other one.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Poner dos opciones claras lado a lado."
         },
         {
           form: "I'll compare price, data, and coverage.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Nombrar los criterios que va a pesar."
         },
         {
           form: "Compared with the cheap one, this has more data.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Presentar una diferencia frente a otra opción."
         },
         {
           form: "For the road, there is no comparison.",
-          register: "neutral emphatic",
+          register: "neutro emphatic",
           region: "Inglés universal",
           whenToUse: "Una opción gana claramente para esa necesidad."
         },
         {
           form: "Compare the signal with the price.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Pesar valor y no sólo costo."
         }
@@ -1737,7 +1737,7 @@ lessons.push(
             "Úselo cuando una decisión, resultado, precio, ruta o plan se apoya en una condición.",
           avoidWhen:
             "No olvide on antes de la condición. En inglés no se dice depend the rain.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["depends", "depend on", "it depends", "condition"],
           example: {
@@ -1754,7 +1754,7 @@ lessons.push(
             "Úselo cuando la respuesta honesta necesita condiciones antes de decidir.",
           avoidWhen:
             "No añada on si la frase termina ahí. It depends on necesita un objeto después.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["depends", "it depends on", "maybe", "not always"],
           example: {
@@ -1771,7 +1771,7 @@ lessons.push(
             "Úselo con lluvia, precio, tiempo, persona, ruta, dinero o cualquier factor que controla el resultado.",
           avoidWhen:
             "No diga depend of por calco de depender de. En inglés es depend on.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["depends on what", "depend on whether", "depend on how", "depends"],
           example: {
@@ -1788,7 +1788,7 @@ lessons.push(
             "Úselo cuando alguien pide una respuesta simple y usted necesita matizar.",
           avoidWhen:
             "No lo use para esquivar todas las decisiones. Añada el factor cuando importa.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal.",
           related: ["it depends", "well", "maybe", "on the one hand"],
           example: {
@@ -1805,7 +1805,7 @@ lessons.push(
             "Úselo cuando precio, rapidez, comodidad o seguridad pueden cambiar la respuesta.",
           avoidWhen:
             "No lo use cuando hay un dato claro y ninguna perspectiva real que comparar.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["depends on how", "point of view", "criteria", "perspective"],
           example: {
@@ -1822,7 +1822,7 @@ lessons.push(
             "Úselo para planes de grupo que dependen del clima, transporte, dinero, tiempo o una persona.",
           avoidWhen:
             "No lo deje sin objeto si quiere explicar la condición. We depend on necesita algo después.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["I depend on", "they depend on", "rely on", "count on"],
           example: {
@@ -1839,7 +1839,7 @@ lessons.push(
             "Úselo cuando la presión de tiempo cambia la ruta, el plan o la respuesta.",
           avoidWhen:
             "No lo traduzca como eagerness en esta escena. Aquí no es entusiasmo, es falta de tiempo.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["in a hurry", "rush", "time pressure", "urgent"],
           example: {
@@ -1901,37 +1901,37 @@ lessons.push(
       variations: [
         {
           form: "It depends.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "La respuesta completa cuando la decisión tiene condiciones."
         },
         {
           form: "Well, it depends.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal",
           whenToUse: "Suavizar la respuesta mientras piensa."
         },
         {
           form: "It depends on the rain.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Nombrar la condición que controla el plan."
         },
         {
           form: "It depends how you look at it.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "La respuesta cambia según el criterio."
         },
         {
           form: "We depend on the paved route.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "El grupo se apoya en una condición o recurso."
         },
         {
           form: "They must have closed the shortcut, didn't they?",
-          register: "courteous",
+          register: "cortés",
           region: "Inglés universal",
           whenToUse: "Para deducir algo y pedir confirmación a la vez. “Must have closed” es la deducción; la coletilla invita al otro a corregirla."
         }

@@ -423,7 +423,7 @@ lessons.push(
             "Una biblioteca, guardia, escuela, oficina o regla dice qué se puede hacer.",
           avoidWhen:
             "Habla con un amigo de un favor inmediato. Ahí “let” suele sonar mucho más natural.",
-          register: "formal neutral",
+          register: "formal neutro",
           region: "Inglés universal; “permit” es aún más formal.",
           related: ["let", "permit", "be allowed to", "rule"],
           example: {
@@ -440,7 +440,7 @@ lessons.push(
             "Lee o explica reglas en lugares públicos: bibliotecas, buses, edificios, museos, piscinas.",
           avoidWhen:
             "Quiere hablar de una persona que no lo deja pasar. Entonces “won't let me” puede ser más directo.",
-          register: "formal public",
+          register: "formal público",
           region: "Inglés universal.",
           related: ["not permitted", "against the rules", "not allowed", "prohibited"],
           example: {
@@ -457,7 +457,7 @@ lessons.push(
             "Pregunta por permiso formal: “are we allowed to bring water?”, “am I allowed to use this?”",
           avoidWhen:
             "La relación es íntima o la acción es un favor cotidiano. Entonces “can I” o “will you let me” puede sonar mejor.",
-          register: "grammar pattern",
+          register: "de gramática patrón",
           region: "Inglés universal.",
           related: ["allowed to enter", "allowed to use", "allowed to take photos", "allowed to leave"],
           example: {
@@ -474,7 +474,7 @@ lessons.push(
             "Quiere nombrar a quién se le permite la acción: people, students, visitors, children.",
           avoidWhen:
             "La regla es impersonal. Entonces “is allowed” puede ser más limpio.",
-          register: "grammar pattern",
+          register: "de gramática patrón",
           region: "Inglés universal.",
           related: ["allow visitors to enter", "allow students to use", "allow children to stay", "let people in"],
           example: {
@@ -491,7 +491,7 @@ lessons.push(
             "Pregunta por botellas, vasos, termos y recipientes que podrían derramarse.",
           avoidWhen:
             "El límite es comida, ruido o entrada. Ahí “lid” no resuelve la regla.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["bottle", "cup", "container", "spill"],
           example: {
@@ -508,7 +508,7 @@ lessons.push(
             "Una biblioteca, clínica, sala o reunión necesita silencio.",
           avoidWhen:
             "Sólo quiere decir que alguien habla con dureza emocional. Ahí “harshly” sería otra cosa.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["keep quiet", "noise", "speak softly", "quiet room"],
           example: {
@@ -525,7 +525,7 @@ lessons.push(
             "Habla con un amigo o con alguien en una multitud sobre pasar físicamente.",
           avoidWhen:
             "Un aviso o una política formal es el centro. Ahí “allow” encaja mejor.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal.",
           related: ["let me pass", "move over", "excuse me", "let me in"],
           example: {
@@ -587,31 +587,31 @@ lessons.push(
       variations: [
         {
           form: "Food isn't allowed in the room.",
-          register: "formal public",
+          register: "formal público",
           region: "Inglés universal",
           whenToUse: "Una regla pública explicada de forma impersonal."
         },
         {
           form: "Am I allowed to use my laptop?",
-          register: "formal polite",
+          register: "formal cortés",
           region: "Inglés universal",
           whenToUse: "Preguntar si una regla le permite hacer algo."
         },
         {
           form: "Photos are allowed without flash.",
-          register: "formal public",
+          register: "formal público",
           region: "Inglés universal",
           whenToUse: "Un aviso que permite una acción con límite."
         },
         {
           form: "We don't allow loud talking here.",
-          register: "formal polite",
+          register: "formal cortés",
           region: "Inglés universal",
           whenToUse: "Personal de un lugar explicando una regla."
         },
         {
           form: "Let me through for a second.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal",
           whenToUse: "La alternativa cotidiana entre amigos o en una multitud."
         },
@@ -1067,7 +1067,7 @@ lessons.push(
             "Una regla, barrera, cierre, enfermedad, retraso o documento bloquea una acción.",
           avoidWhen:
             "Está hablando casualmente de alguien que no lo deja pasar. Entonces “won't let me” suena más natural.",
-          register: "formal neutral",
+          register: "formal neutro",
           region: "Inglés universal.",
           related: ["stop", "block", "keep from", "not let"],
           example: {
@@ -1084,7 +1084,7 @@ lessons.push(
             "Quiere decir que un obstáculo o una regla bloquea una acción.",
           avoidWhen:
             "Quiere sonar más conversacional. “Stops” o “won't let” pueden ser mejores.",
-          register: "grammar pattern",
+          register: "de gramática patrón",
           region: "Inglés universal.",
           related: ["preventing", "prevented", "stops", "blocked"],
           example: {
@@ -1101,7 +1101,7 @@ lessons.push(
             "Una cosa o persona le bloquea una acción concreta: stop me from leaving, stop us from entering.",
           avoidWhen:
             "Después de from no ponga el verbo base. En inglés va la forma en -ing.",
-          register: "neutral spoken",
+          register: "neutro hablado",
           region: "Inglés universal.",
           related: ["prevent me from", "keep me from", "won't let me", "block me from"],
           example: {
@@ -1118,7 +1118,7 @@ lessons.push(
             "Nombra a las personas bloqueadas y la acción que no pueden hacer.",
           avoidWhen:
             "Quiere una frase corta de conversación. Entonces “won't let me” suele funcionar mejor.",
-          register: "grammar pattern",
+          register: "de gramática patrón",
           region: "Inglés universal.",
           related: ["prevent people from entering", "prevent us from leaving", "keep them from going", "stop her from calling"],
           example: {
@@ -1135,7 +1135,7 @@ lessons.push(
             "Una persona de seguridad, una fila, una puerta o un grupo no le permite avanzar.",
           avoidWhen:
             "Un informe o aviso necesita tono formal. Ahí “prevent access” puede ser más adecuado.",
-          register: "neutral spoken",
+          register: "neutro hablado",
           region: "Inglés universal.",
           related: ["won't let me in", "can't get through", "blocked", "not allowed through"],
           example: {
@@ -1152,7 +1152,7 @@ lessons.push(
             "Una parte de un andén, sala, camino o edificio está temporalmente cerrada por reparación.",
           avoidWhen:
             "La zona es peligrosa de verdad. Entonces puede necesitar “danger area” o “restricted area.”",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["repair", "maintenance", "closure", "restricted area"],
           example: {
@@ -1169,7 +1169,7 @@ lessons.push(
             "Toma otra calle, pasillo o ruta para evitar una sección cerrada.",
           avoidWhen:
             "Quiere quitar el obstáculo. “Go around” acepta que sigue ahí.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["take another route", "walk around", "detour", "go the other way"],
           example: {
@@ -1231,31 +1231,31 @@ lessons.push(
       variations: [
         {
           form: "The tape prevents access on this side.",
-          register: "formal polite",
+          register: "formal cortés",
           region: "Inglés universal",
           whenToUse: "Una explicación formal de una barrera física."
         },
         {
           form: "The closure prevented people from coming through.",
-          register: "formal neutral",
+          register: "formal neutro",
           region: "Inglés universal",
           whenToUse: "Una frase de reporte sobre lo que impidió el cierre."
         },
         {
           form: "They won't let me through here.",
-          register: "neutral spoken",
+          register: "neutro hablado",
           region: "Inglés universal",
           whenToUse: "La versión cotidiana en el momento."
         },
         {
           form: "You can't get through because of the work.",
-          register: "neutral public",
+          register: "neutro público",
           region: "Inglés universal",
           whenToUse: "Una explicación simple sin el verbo formal “prevent.”"
         },
         {
           form: "The rain prevented us from leaving early.",
-          register: "formal neutral",
+          register: "formal neutro",
           region: "Inglés universal",
           whenToUse: "Explicar con cuidado por qué una acción no ocurrió."
         },
@@ -1711,7 +1711,7 @@ lessons.push(
             "Usted decide esquivar algo antes de que le cueste tiempo, riesgo o incomodidad.",
           avoidWhen:
             "Una regla o barrera impide la acción. Entonces “prevent,” “stop,” o “not allowed” pueden ser más precisos.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["keep away from", "stay clear of", "prevent", "steer clear"],
           example: {
@@ -1728,7 +1728,7 @@ lessons.push(
             "Puede nombrar directamente el problema.",
           avoidWhen:
             "La acción viene después. Entonces use avoid más -ing.",
-          register: "grammar pattern",
+          register: "de gramática patrón",
           region: "Inglés universal.",
           related: ["avoid traffic", "avoid crowds", "avoid trouble", "avoid delays"],
           example: {
@@ -1745,7 +1745,7 @@ lessons.push(
             "La persona evita realizar una acción.",
           avoidWhen:
             "No use “avoid to” con verbo base. Ese es el calco que más se oye.",
-          register: "grammar pattern",
+          register: "de gramática patrón",
           region: "Inglés universal.",
           related: ["avoid going", "avoid leaving", "avoid saying", "avoid spending"],
           example: {
@@ -1762,7 +1762,7 @@ lessons.push(
             "Una acción previene un resultado: keep you from being late, keep it from getting wet.",
           avoidWhen:
             "Puede decirlo más simple con avoid más objeto. No complique una frase corta.",
-          register: "grammar pattern",
+          register: "de gramática patrón",
           region: "Inglés universal.",
           related: ["prevent someone from", "stop someone from", "keep it from", "avoid being"],
           example: {
@@ -1779,7 +1779,7 @@ lessons.push(
             "Da consejo de seguridad, tráfico, horarios o conveniencia.",
           avoidWhen:
             "Hay una regla real. Entonces diga “you can't,” “it's not allowed,” o “it's prohibited.”",
-          register: "polite advice",
+          register: "cortés de consejo",
           region: "Inglés universal.",
           related: ["I'd stay away from", "better not", "I wouldn't", "you may want to avoid"],
           example: {
@@ -1796,7 +1796,7 @@ lessons.push(
             "Los carros y buses hacen lenta o difícil una ruta.",
           avoidWhen:
             "La calle es larga pero fluida. “Traffic” habla de vehículos, no de distancia.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["traffic jam", "congestion", "rush hour", "delay"],
           example: {
@@ -1813,7 +1813,7 @@ lessons.push(
             "Alguien aconseja evitar algo, pero no está diciendo que sea ilegal o imposible.",
           avoidWhen:
             "La regla sí prohíbe la acción. Entonces no la suavice de más.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["advice", "warning", "rule", "prohibited"],
           example: {
@@ -1875,37 +1875,37 @@ lessons.push(
       variations: [
         {
           form: "Avoid the main road.",
-          register: "polite advice",
+          register: "cortés de consejo",
           region: "Inglés universal",
           whenToUse: "Recomendar otra ruta para no meterse en un problema."
         },
         {
           form: "I want to avoid the traffic.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Nombrar directamente el problema que quiere evitar."
         },
         {
           form: "I'd avoid going down that street at night.",
-          register: "polite advice",
+          register: "cortés de consejo",
           region: "Inglés universal",
           whenToUse: "Advertencia suave de seguridad o conveniencia."
         },
         {
           form: "That should keep you from being late.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Explicar que una decisión evita un problema posterior."
         },
         {
           form: "You can't go through that street.",
-          register: "neutral public",
+          register: "neutro público",
           region: "Inglés universal",
           whenToUse: "Cuando el límite es un cierre real, no sólo consejo."
         },
         {
           form: "You must plan ahead on Saturdays, because the plaza gets too crowded to park anywhere near.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Para dar un consejo con peso. “Must” aquí no es una orden sino una advertencia fuerte, y “too crowded to park” la justifica."
         }

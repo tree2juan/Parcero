@@ -425,7 +425,7 @@ lessons.push(
             "Al saludar a un amigo o vecino de manera informal; muchas veces encadenado, como en “hey, what's up, you good?”.",
           avoidWhen:
             "En un contexto formal, o al conocer a alguien en un trámite oficial; ahí un simple “hello/hi” resulta más seguro.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés norteamericano general.",
           related: ["what's going on?", "how's it going?", "you good?", "how are you?"],
           example: {
@@ -442,7 +442,7 @@ lessons.push(
             "Al hablar de planes para un festivo que cae pegado al fin de semana — viajar, ver familia, una escapada.",
           avoidWhen:
             "Un fin de semana normal sin festivo; eso es solo “the weekend”, sin nada de largo de por medio.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés general; en EE. UU. se asocia a feriados como Labor Day o Thanksgiving.",
           related: ["long weekend", "public holiday", "the holiday Monday", "a three-day weekend"],
           example: {
@@ -459,7 +459,7 @@ lessons.push(
             "Al describir un plan tranquilo, o como despedida amistosa deseándole calma a alguien.",
           avoidWhen:
             "Cuando en realidad vas a estar ocupado o productivo; la frase pinta justo la imagen contraria.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés general.",
           related: ["relax", "chill out", "kick back", "rest up"],
           example: {
@@ -476,7 +476,7 @@ lessons.push(
             "Al invitar a un amigo o vecino sin fijar una hora exacta de llegada.",
           avoidWhen:
             "Una invitación formal con hora; ahí se dice “come over at seven” o “join us for dinner”.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés general; “come by”, “drop by” y “swing by” son intercambiables.",
           related: ["swing by", "stop by", "pop over", "come round"],
           example: {
@@ -493,7 +493,7 @@ lessons.push(
             "Al quitarle importancia a un favor, a una duda, o al ver que alguien teme molestar.",
           avoidWhen:
             "Cuando algo de verdad grave salió mal; ahí suena a que lo estás minimizando.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés general.",
           related: ["no worries", "no problem", "don't mention it", "it's all good"],
           example: {
@@ -510,7 +510,7 @@ lessons.push(
             "Al abrir una frase casual o cambiar de tema en una conversación relajada.",
           avoidWhen:
             "En escritura formal, donde recargan la frase y no aportan nada.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés general.",
           related: ["so", "well", "anyway", "you know"],
           example: {
@@ -527,7 +527,7 @@ lessons.push(
             "Al hablar de un encuentro relajado donde se asa carne o cada quien lleva un plato.",
           avoidWhen:
             "Una cena formal con menú fijo; eso es un “dinner party”, no un barbecue de patio.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés norteamericano general; “BBQ” en verano, “potluck” cuando cada quien lleva algo.",
           related: ["BBQ", "cookout", "potluck", "get-together"],
           example: {
@@ -589,31 +589,31 @@ lessons.push(
       variations: [
         {
           form: "What's up?",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés norteamericano general",
           whenToUse: "Un saludo casual entre amigos; espera lo mismo de vuelta, no un informe real."
         },
         {
           form: "How's it going?",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés general",
           whenToUse: "Saludo casual intercambiable, un punto más suave que “what's up?”."
         },
         {
           form: "How are you?",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés general",
           whenToUse: "Seguro en casi cualquier registro; con desconocidos es un saludo ligero de verdad."
         },
         {
           form: "You good?",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés norteamericano",
           whenToUse: "Muy casual, casi siempre añadido — “hey, you good?” — buscando un rápido “yeah, you?”."
         },
         {
           form: "How've you been?",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés general",
           whenToUse: "Para alguien que no ves hace rato; invita a una actualización corta y no literal."
         }
@@ -1077,7 +1077,7 @@ lessons.push(
             "Al reconocer una deuda: “I owe you”, “I owe you one”, “how much do I owe you?”.",
           avoidWhen:
             "Quieres decir una obligación de hacer algo; eso es “have to” o “must”, otro verbo distinto.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés general.",
           related: ["I owe you", "owe you one", "pay back", "debt"],
           example: {
@@ -1094,7 +1094,7 @@ lessons.push(
             "Para casi toda obligación cotidiana: “I have to pay”, “I have to go”, “do I have to?”.",
           avoidWhen:
             "Estás suponiendo, no obligando; ahí va “must be”. Y ojo: nunca “must to”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés general; más frecuente que “must” en el habla.",
           related: ["must", "need to", "got to", "gotta"],
           example: {
@@ -1111,7 +1111,7 @@ lessons.push(
             "Al deducir algo por lógica: “it must be late”, “you must be tired”, “that must be expensive”.",
           avoidWhen:
             "Quieres una obligación; entonces “have to”. Y jamás le pongas “to” a must.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés general.",
           related: ["must be", "has to be", "probably", "I bet"],
           example: {
@@ -1128,7 +1128,7 @@ lessons.push(
             "Al saldar plata prestada: “I'll pay you back”, “let me pay you back for lunch”.",
           avoidWhen:
             "Es una compra normal a un vendedor; ahí es solo “pay”, sin “back”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés general.",
           related: ["pay you back", "owe", "settle up", "reimburse"],
           example: {
@@ -1145,7 +1145,7 @@ lessons.push(
             "Para tranquilizar a alguien: “there's no rush”, “no worries”, “whenever works”.",
           avoidWhen:
             "Algo es urgente de verdad; entonces engaña y regala una demora que no puedes dar.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés general.",
           related: ["no worries", "no hurry", "take your time", "whenever"],
           example: {
@@ -1162,7 +1162,7 @@ lessons.push(
             "Al pasar dinero, un plato, un objeto: “here you go”, “here you are”.",
           avoidWhen:
             "Intentas traducirla palabra por palabra; pierde el sentido y suena raro.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés general.",
           related: ["here you are", "there you go", "take it", "all yours"],
           example: {
@@ -1179,7 +1179,7 @@ lessons.push(
             "Al restar importancia a un favor tras un “thank you”: “anytime”, “don't mention it”.",
           avoidWhen:
             "En un registro muy formal; ahí “you're welcome” encaja mejor que “anytime”.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés general, muy común en Norteamérica.",
           related: ["don't mention it", "no problem", "you're welcome", "no worries"],
           example: {
@@ -1241,31 +1241,31 @@ lessons.push(
       variations: [
         {
           form: "How much do I owe you?",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés general",
           whenToUse: "La forma estándar de preguntar cuánto debes, a un colega o en una tienda."
         },
         {
           form: "What do I owe you?",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés general",
           whenToUse: "Un poco más ligera y cercana; común cuando ya hay confianza."
         },
         {
           form: "Let me pay you back.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés general",
           whenToUse: "Al ofrecer devolver plata que alguien te prestó o adelantó."
         },
         {
           form: "I still owe you for that.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés general",
           whenToUse: "Para reconocer una deuda pendiente que todavía no has saldado."
         },
         {
           form: "What's the damage?",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés general, tono jocoso",
           whenToUse: "Manera coloquial y bromista de preguntar el total; entre amigos, no en lo formal."
         }
@@ -1729,7 +1729,7 @@ lessons.push(
             "Al vestirse en el momento: “put on a jacket”, “I put on my shoes”.",
           avoidWhen:
             "Quieres el estado de llevar puesto algo; eso es “wear”, no “put on”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés general.",
           related: ["put on", "take off", "get dressed", "throw on"],
           example: {
@@ -1746,7 +1746,7 @@ lessons.push(
             "Al describir lo que alguien lleva: “she's wearing a red dress”, “I always wear black”.",
           avoidWhen:
             "Hablas de la acción de ponérselo en el momento; ahí es “put on”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés general.",
           related: ["have on", "put on", "dressed in", "in (black)"],
           example: {
@@ -1763,7 +1763,7 @@ lessons.push(
             "Al poner música grabada: “play some music”, “play a song”, “put on music”.",
           avoidWhen:
             "Quieres decir tocar un instrumento; eso también es “play”, pero con el instrumento (“play the guitar”).",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés general.",
           related: ["put on music", "play a song", "turn on", "stream"],
           example: {
@@ -1780,7 +1780,7 @@ lessons.push(
             "Al marcar un cambio: “get nervous”, “it gets fun”, “I get tired”.",
           avoidWhen:
             "Calcas “ponerse” como “put”; “put nervous” no existe en inglés, es “get nervous”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés general.",
           related: ["become", "turn", "go", "get tired"],
           example: {
@@ -1797,7 +1797,7 @@ lessons.push(
             "Al comprometerte a empezar ya: “I'll get on it”, “let's get on it”.",
           avoidWhen:
             "Un registro muy formal; ahí encaja mejor “I'll take care of it”.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés general.",
           related: ["get to it", "get going", "get cracking", "get started"],
           example: {
@@ -1814,7 +1814,7 @@ lessons.push(
             "Al pedir más volumen: “turn it up”, “can you turn the music up?”.",
           avoidWhen:
             "Quieres apagarlo o bajarlo; eso es “turn off” o “turn down”.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés general.",
           related: ["turn down", "turn off", "crank it up", "volume"],
           example: {
@@ -1831,7 +1831,7 @@ lessons.push(
             "Al hablar de gente que llega: “people are about to show up”, “nobody showed up”.",
           avoidWhen:
             "Un contexto formal de asistencia; ahí “attend” o “arrive” suenan mejor.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés general.",
           related: ["turn up", "arrive", "come over", "get here"],
           example: {
@@ -1893,31 +1893,31 @@ lessons.push(
       variations: [
         {
           form: "Get on it.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés general",
           whenToUse: "Al comprometerte a empezar una tarea de inmediato — “me pongo con eso ya”."
         },
         {
           form: "Get to it.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés general",
           whenToUse: "Muy parecido, con un matiz de por fin ponerse a hacer algo pendiente."
         },
         {
           form: "Let's get going.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés general",
           whenToUse: "Para arrancar entre varios — “pongámonos pilas”, “arranquemos”."
         },
         {
           form: "Get cracking.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés general, algo más británico",
           whenToUse: "Coloquial y enérgico, para empezar con ganas una tarea."
         },
         {
           form: "I'm on it.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés general",
           whenToUse: "Para decir que ya te encargas de algo — “yo me encargo”, “ya voy”."
         }

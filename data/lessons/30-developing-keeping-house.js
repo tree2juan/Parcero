@@ -332,7 +332,7 @@ lessons.push(
           literal: "limpiar / hacer aseo",
           useWhen: "Al hablar de ventanas, sillas, baños, paredes, mesas o de una habitación completa antes de una visita.",
           avoidWhen: "Usted quiere decir lavar con agua y jabón una prenda, unos platos o las manos. Ahí wash suele ser más preciso.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal; el contexto decide si traduce limpiar o hacer aseo.",
           related: ["wipe", "mop", "dust", "tidy"],
           example: { target: "I'll clean the windows.", translation: "Voy a limpiar los vidrios." }
@@ -343,7 +343,7 @@ lessons.push(
           literal: "limpiemos",
           useWhen: "Al organizar una limpieza compartida antes de visitas o después de que una casa quedó desordenada.",
           avoidWhen: "Usted está contratando a alguien. Ahí necesita una petición o un servicio, no una invitación con let's.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal.",
           related: ["let's tidy up", "let's mop", "let's wipe everything down", "let's get this place clean"],
           example: { target: "Let's clean the living room.", translation: "Hagamos aseo en la sala." }
@@ -354,7 +354,7 @@ lessons.push(
           literal: "ventanas / vidrios",
           useWhen: "Al hablar de paneles que dan a la calle, al patio o al mar.",
           avoidWhen: "Se refiere a vasos de beber. Para eso use glasses sólo si el contexto ya es la mesa, no la limpieza de la casa.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["panes", "glass doors", "screens", "frames"],
           example: { target: "The windows got sprayed with salt.", translation: "Los vidrios quedaron salpicados de sal." }
@@ -365,7 +365,7 @@ lessons.push(
           literal: "trapear / trapero",
           useWhen: "Cuando el piso necesita agua o humedad, no sólo barrer polvo seco.",
           avoidWhen: "Sólo va a barrer. Sweep y mop son oficios distintos, tal como barrer y trapear.",
-          register: "neutral domestic",
+          register: "neutro doméstico",
           region: "Inglés universal.",
           related: ["sweep", "wipe", "bucket", "floor"],
           example: { target: "I'll mop the terrace.", translation: "Voy a pasar el trapero en la terraza." }
@@ -376,7 +376,7 @@ lessons.push(
           literal: "quitar la arena",
           useWhen: "La pregunta es si basta con retirar lo visible de unas sillas, toallas o del piso.",
           avoidWhen: "Hay grasa, manchas o humedad pegajosa. En ese caso clean comunica mejor la tarea completa.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal.",
           related: ["wipe it off", "brush it off", "shake it out", "rinse it off"],
           example: { target: "Should I just get the sand off?", translation: "¿Sólo le quito la arena?" }
@@ -387,7 +387,7 @@ lessons.push(
           literal: "limpiarlos / limpiarlas",
           useWhen: "Ya se sabe que habla de las sillas, las ventanas o las paredes.",
           avoidWhen: "Todavía no nombró el objeto. Entonces them suena vacío y obliga al oyente a preguntar qué cosa.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["clean it", "wipe them", "wash them", "tidy them"],
           example: { target: "Clean them properly.", translation: "Límpialas bien." }
@@ -398,7 +398,7 @@ lessons.push(
           literal: "no hay problema",
           useWhen: "Al aceptar una petición doméstica sin hacerla sonar pesada.",
           avoidWhen: "Quiere prometer una fecha formal o asumir una responsabilidad grande. Ahí hace falta una frase más completa.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal.",
           related: ["sure", "of course", "I'm on it", "all right"],
           example: { target: "No problem, I'll clean the wall too.", translation: "De una, limpio también la pared." }
@@ -438,9 +438,9 @@ lessons.push(
         }
       ],
       variations: [
-        { form: "I'll clean the windows.", register: "neutral", region: "Inglés universal", whenToUse: "Usted ofrece una tarea concreta y útil, sin una explicación larga." },
-        { form: "Let's clean before everyone gets here.", register: "friendly informal", region: "Inglés universal", whenToUse: "Quiere proponer el aseo general sin traducir hacer aseo palabra por palabra." },
-        { form: "Should I clean these properly or just get the sand off?", register: "friendly informal", region: "Inglés universal", whenToUse: "Necesita aclarar si basta quitar lo visible o si esperan una limpieza completa." }
+        { form: "I'll clean the windows.", register: "neutro", region: "Inglés universal", whenToUse: "Usted ofrece una tarea concreta y útil, sin una explicación larga." },
+        { form: "Let's clean before everyone gets here.", register: "amistoso informal", region: "Inglés universal", whenToUse: "Quiere proponer el aseo general sin traducir hacer aseo palabra por palabra." },
+        { form: "Should I clean these properly or just get the sand off?", register: "amistoso informal", region: "Inglés universal", whenToUse: "Necesita aclarar si basta quitar lo visible o si esperan una limpieza completa." }
       ],
       prompt: "Marce says “let's clean the living room and the terrace.” ¿Qué está proponiendo?",
       choices: [
@@ -614,13 +614,13 @@ lessons.push(
         { speaker: "Clerk", target: "That happens. We wash sneakers too, but they take longer.", translation: "Eso pasa. También lavamos tenis, pero demoran más.", pronunciation: "dat JA-pens. ui uash SNI-kers tu, bat dei teik LON-ger", literal: "Eso pasa. Lavamos tenis también, pero toman más largo.", why: "Sneakers es una palabra segura para tenis en Norteamérica. Trainers funciona en el Reino Unido, pero en una lavandería americana sneakers será más inmediato." }
       ],
       vocabulary: [
-        { term: "wash", explanation: "Lavar con agua, jabón o máquina. Sirve para ropa, manos, platos, tenis y muchas superficies mojadas.", literal: "lavar", useWhen: "El proceso incluye agua o jabón, o se habla de lavandería, baño, loza o higiene personal.", avoidWhen: "Sólo quiere decir ordenar, sacudir polvo o dejar una sala presentable. Para eso clean o tidy suele ser mejor.", register: "neutral", region: "Inglés universal.", related: ["rinse", "dry", "launder", "clean"], example: { target: "Can you wash these clothes?", translation: "¿Me pueden lavar esta ropa?" } },
-        { term: "wash my hands", explanation: "La forma inglesa normal con posesivo. A diferencia del español, el cuerpo se presenta como my hands, my face, my hair.", literal: "lavar mis manos", useWhen: "Habla de su propio cuerpo y quiere decir de quién son las manos o la cara.", avoidWhen: "Traducir desde el español como the hands. Esa frase necesita un contexto muy raro para sonar natural.", register: "neutral", region: "Inglés universal.", related: ["wash my face", "brush my teeth", "comb my hair", "take a shower"], example: { target: "I just washed my hands.", translation: "Acabo de lavarme las manos." } },
-        { term: "we'll wash them", explanation: "Promesa sencilla de servicio: nosotros lavaremos esas prendas por usted.", literal: "las lavaremos", useWhen: "Una lavandería, un hotel o alguien en casa confirma que se encarga de la ropa.", avoidWhen: "No se ha dicho todavía qué es them. El pronombre necesita un plural claro antes.", register: "polite practical", region: "Inglés universal.", related: ["we'll dry them", "we'll have them ready", "we can wash it", "we can do them"], example: { target: "We'll wash them by tomorrow.", translation: "Se la lavamos para mañana." } },
-        { term: "separately", explanation: "Por separado, especialmente para no mezclar colores o prendas delicadas.", literal: "separadamente", useWhen: "Pide que una camisa blanca, unos jeans oscuros o una prenda delicada no entren juntos a la lavadora.", avoidWhen: "No importa mezclar las cosas. Entonces separately suena como una instrucción innecesaria.", register: "neutral", region: "Inglés universal.", related: ["apart", "together", "mixed", "separate load"], example: { target: "That gets washed separately.", translation: "Eso se lava por separado." } },
-        { term: "the color runs", explanation: "La manera natural de decir que una prenda destiñe y suelta color en el lavado.", literal: "el color corre", useWhen: "Advierte que jeans oscuros, toallas nuevas o camisetas fuertes pueden manchar otra ropa.", avoidWhen: "Habla de una mancha específica ya existente. Ahí necesita stain, no run.", register: "neutral", region: "Inglés universal; en Estados Unidos verá color sin u.", related: ["bleed", "fade", "stain", "dye"], example: { target: "So the color doesn't run.", translation: "Para que no destiña." } },
-        { term: "wash the dishes", explanation: "Lavar la loza o lavar los platos. El inglés no tiene una palabra doméstica equivalente a loza que sea tan común en todas partes.", literal: "lavar los platos", useWhen: "Habla de platos, vasos y cubiertos después de comer en casa.", avoidWhen: "Está en una lavandería hablando de ropa. Dishes cambia por completo el objeto del lavado.", register: "neutral domestic", region: "Inglés universal.", related: ["do the dishes", "dry the dishes", "load the dishwasher", "rinse the plates"], example: { target: "I have to wash the dishes tonight.", translation: "Me toca lavar la loza esta noche." } },
-        { term: "sneakers", explanation: "Tenis de uso diario o deportivo. No depende de jugar tenis.", literal: "tenis", useWhen: "Pregunta si una lavandería o una persona puede lavar zapatos deportivos de tela.", avoidWhen: "Habla de zapatos formales. Dress shoes no se tratan como sneakers en una lavandería normal.", register: "neutral", region: "Muy común en Norteamérica; trainers es común en el Reino Unido.", related: ["trainers", "running shoes", "laces", "insoles"], example: { target: "We wash sneakers too.", translation: "También lavamos tenis." } }
+        { term: "wash", explanation: "Lavar con agua, jabón o máquina. Sirve para ropa, manos, platos, tenis y muchas superficies mojadas.", literal: "lavar", useWhen: "El proceso incluye agua o jabón, o se habla de lavandería, baño, loza o higiene personal.", avoidWhen: "Sólo quiere decir ordenar, sacudir polvo o dejar una sala presentable. Para eso clean o tidy suele ser mejor.", register: "neutro", region: "Inglés universal.", related: ["rinse", "dry", "launder", "clean"], example: { target: "Can you wash these clothes?", translation: "¿Me pueden lavar esta ropa?" } },
+        { term: "wash my hands", explanation: "La forma inglesa normal con posesivo. A diferencia del español, el cuerpo se presenta como my hands, my face, my hair.", literal: "lavar mis manos", useWhen: "Habla de su propio cuerpo y quiere decir de quién son las manos o la cara.", avoidWhen: "Traducir desde el español como the hands. Esa frase necesita un contexto muy raro para sonar natural.", register: "neutro", region: "Inglés universal.", related: ["wash my face", "brush my teeth", "comb my hair", "take a shower"], example: { target: "I just washed my hands.", translation: "Acabo de lavarme las manos." } },
+        { term: "we'll wash them", explanation: "Promesa sencilla de servicio: nosotros lavaremos esas prendas por usted.", literal: "las lavaremos", useWhen: "Una lavandería, un hotel o alguien en casa confirma que se encarga de la ropa.", avoidWhen: "No se ha dicho todavía qué es them. El pronombre necesita un plural claro antes.", register: "cortés práctico", region: "Inglés universal.", related: ["we'll dry them", "we'll have them ready", "we can wash it", "we can do them"], example: { target: "We'll wash them by tomorrow.", translation: "Se la lavamos para mañana." } },
+        { term: "separately", explanation: "Por separado, especialmente para no mezclar colores o prendas delicadas.", literal: "separadamente", useWhen: "Pide que una camisa blanca, unos jeans oscuros o una prenda delicada no entren juntos a la lavadora.", avoidWhen: "No importa mezclar las cosas. Entonces separately suena como una instrucción innecesaria.", register: "neutro", region: "Inglés universal.", related: ["apart", "together", "mixed", "separate load"], example: { target: "That gets washed separately.", translation: "Eso se lava por separado." } },
+        { term: "the color runs", explanation: "La manera natural de decir que una prenda destiñe y suelta color en el lavado.", literal: "el color corre", useWhen: "Advierte que jeans oscuros, toallas nuevas o camisetas fuertes pueden manchar otra ropa.", avoidWhen: "Habla de una mancha específica ya existente. Ahí necesita stain, no run.", register: "neutro", region: "Inglés universal; en Estados Unidos verá color sin u.", related: ["bleed", "fade", "stain", "dye"], example: { target: "So the color doesn't run.", translation: "Para que no destiña." } },
+        { term: "wash the dishes", explanation: "Lavar la loza o lavar los platos. El inglés no tiene una palabra doméstica equivalente a loza que sea tan común en todas partes.", literal: "lavar los platos", useWhen: "Habla de platos, vasos y cubiertos después de comer en casa.", avoidWhen: "Está en una lavandería hablando de ropa. Dishes cambia por completo el objeto del lavado.", register: "neutro doméstico", region: "Inglés universal.", related: ["do the dishes", "dry the dishes", "load the dishwasher", "rinse the plates"], example: { target: "I have to wash the dishes tonight.", translation: "Me toca lavar la loza esta noche." } },
+        { term: "sneakers", explanation: "Tenis de uso diario o deportivo. No depende de jugar tenis.", literal: "tenis", useWhen: "Pregunta si una lavandería o una persona puede lavar zapatos deportivos de tela.", avoidWhen: "Habla de zapatos formales. Dress shoes no se tratan como sneakers en una lavandería normal.", register: "neutro", region: "Muy común en Norteamérica; trainers es común en el Reino Unido.", related: ["trainers", "running shoes", "laces", "insoles"], example: { target: "We wash sneakers too.", translation: "También lavamos tenis." } }
       ],
       note: "Para un hispanohablante, el salto raro es doble. Primero, wash se reserva más para agua, jabón y máquina que para ordenar una casa. Segundo, las partes del cuerpo llevan posesivo: my hands, my face, my hair. Decir the hands por traducir me lavo las manos borra una información que el inglés espera oír.",
       culture: [
@@ -634,9 +634,9 @@ lessons.push(
         { mistake: "“The shirt destains.”", whyItFails: "Destain no es el verbo cotidiano para una prenda que suelta color. La imagen natural es que el color runs o bleeds.", sayInstead: "The color runs." }
       ],
       variations: [
-        { form: "Can you wash these clothes by tomorrow?", register: "polite practical", region: "Inglés universal", whenToUse: "La pregunta normal en una lavandería cuando necesita fecha de entrega." },
-        { form: "Please wash this separately.", register: "polite practical", region: "Inglés universal", whenToUse: "Quiere proteger una prenda sin dar una explicación larga." },
-        { form: "I just washed my hands.", register: "neutral", region: "Inglés universal", whenToUse: "Habla de higiene personal y el inglés exige el posesivo my." }
+        { form: "Can you wash these clothes by tomorrow?", register: "cortés práctico", region: "Inglés universal", whenToUse: "La pregunta normal en una lavandería cuando necesita fecha de entrega." },
+        { form: "Please wash this separately.", register: "cortés práctico", region: "Inglés universal", whenToUse: "Quiere proteger una prenda sin dar una explicación larga." },
+        { form: "I just washed my hands.", register: "neutro", region: "Inglés universal", whenToUse: "Habla de higiene personal y el inglés exige el posesivo my." }
       ],
       prompt: "Daniela asks “can you wash these clothes?” ¿Qué está pidiendo?",
       choices: ["Que doblen la ropa sin agua ni jabón esta tarde.", "Que la ropa pase por el proceso normal de lavandería.", "Que reemplacen la ropa por prendas completamente nuevas."],
@@ -750,13 +750,13 @@ lessons.push(
         { speaker: "John", target: "Come by at five-thirty; I'll fix the door for you first.", translation: "Venga a las cinco y media; yo le arreglo la puerta primero.", pronunciation: "kam bai at faiv THER-ti; ail fiks da dor for yu ferst", literal: "Pase a las cinco y media; arreglaré la puerta para usted primero.", why: "Come by es pasar por un lugar, no caer literalmente. I'll fix the door for you recupera el sentido concreto de reparación después de cuadrar precio y horario." }
       ],
       vocabulary: [
-        { term: "fix", explanation: "Reparar o arreglar algo dañado. Es fuerte con objetos, máquinas, puertas, bisagras y problemas concretos.", literal: "arreglar / reparar", useWhen: "Una cosa no funciona y alguien la deja funcionando de nuevo.", avoidWhen: "Quiere decir alistarse para salir. I am fixing myself suena cómico o inquietante; necesita get ready.", register: "neutral", region: "Inglés universal.", related: ["repair", "mend", "sort out", "replace"], example: { target: "Do you fix closet hinges?", translation: "¿Usted arregla bisagras de clóset?" } },
-        { term: "that can be fixed", explanation: "Eso se puede arreglar. Frase de tranquilidad antes de explicar método, precio o demora.", literal: "eso puede ser arreglado", useWhen: "Quiere decir que un objeto o problema tiene solución.", avoidWhen: "No está seguro de que sea posible. Una promesa prematura puede meterlo en un compromiso.", register: "neutral reassuring", region: "Inglés universal.", related: ["it's fixable", "we can sort it out", "it can be repaired", "no big deal"], example: { target: "Don't worry, that can be fixed.", translation: "Tranquila, eso se arregla." } },
-        { term: "how much would you charge to fix it?", explanation: "La pregunta natural por el precio de un arreglo. Charge introduce lo que cobra el taller.", literal: "¿cuánto cobraría para arreglarlo?", useWhen: "Pregunta el costo de reparar una cosa específica en un taller o servicio.", avoidWhen: "Quiere saber la duración. Para tiempo, pregunte how long will it take o when will it be ready.", register: "polite practical", region: "Inglés universal.", related: ["how much is it", "what would it cost", "how long will it take", "can you quote me"], example: { target: "How much would you charge to fix it?", translation: "¿En cuánto me lo arregla?" } },
-        { term: "for you", explanation: "La manera inglesa de expresar el beneficio que en español suele ir en le o te dentro del verbo.", literal: "para usted / por usted", useWhen: "Al ofrecer hacer una reparación, reserva o gestión en favor de la otra persona.", avoidWhen: "El beneficio ya es obvio y la frase queda pesada. I can fix it today muchas veces basta.", register: "neutral", region: "Inglés universal.", related: ["for me", "for us", "on your behalf", "help you with it"], example: { target: "I'll fix the door for you first.", translation: "Le arreglo la puerta primero." } },
-        { term: "get ready", explanation: "Alistarse o arreglarse antes de salir: bañarse, vestirse, peinarse o quedar presentable.", literal: "ponerse listo", useWhen: "Necesita prepararse para salir, recibir gente o llegar a una cita.", avoidWhen: "Una cosa está dañada. A door gets fixed; a person gets ready.", register: "neutral", region: "Inglés universal.", related: ["dress up", "get dressed", "do my hair", "freshen up"], example: { target: "I need to get ready before seven.", translation: "Necesito arreglarme antes de las siete." } },
-        { term: "sort that out", explanation: "Resolver o cuadrar eso. Sirve para situaciones, planes, pagos y problemas no necesariamente físicos.", literal: "ordenar eso afuera", useWhen: "Quiere pasar del problema a la solución sin hablar de una herramienta concreta.", avoidWhen: "El objeto físico es el centro y se está reparando con herramientas. Ahí fix es más directo.", register: "friendly practical", region: "Inglés universal, muy común en habla cotidiana.", related: ["work it out", "settle it", "deal with it", "straighten it out"], example: { target: "Let's sort that out.", translation: "Arreglemos eso." } },
-        { term: "come by", explanation: "Pasar por un lugar, normalmente por poco tiempo o para una diligencia concreta.", literal: "venir por", useWhen: "Un taller, vecino o amigo le dice que se acerque a cierta hora.", avoidWhen: "Quiere decir llegar a vivir o quedarse. Come by implica visita o parada breve.", register: "friendly informal", region: "Inglés universal.", related: ["drop by", "stop by", "come over", "swing by"], example: { target: "Come by at five-thirty.", translation: "Venga a las cinco y media." } }
+        { term: "fix", explanation: "Reparar o arreglar algo dañado. Es fuerte con objetos, máquinas, puertas, bisagras y problemas concretos.", literal: "arreglar / reparar", useWhen: "Una cosa no funciona y alguien la deja funcionando de nuevo.", avoidWhen: "Quiere decir alistarse para salir. I am fixing myself suena cómico o inquietante; necesita get ready.", register: "neutro", region: "Inglés universal.", related: ["repair", "mend", "sort out", "replace"], example: { target: "Do you fix closet hinges?", translation: "¿Usted arregla bisagras de clóset?" } },
+        { term: "that can be fixed", explanation: "Eso se puede arreglar. Frase de tranquilidad antes de explicar método, precio o demora.", literal: "eso puede ser arreglado", useWhen: "Quiere decir que un objeto o problema tiene solución.", avoidWhen: "No está seguro de que sea posible. Una promesa prematura puede meterlo en un compromiso.", register: "neutro tranquilizador", region: "Inglés universal.", related: ["it's fixable", "we can sort it out", "it can be repaired", "no big deal"], example: { target: "Don't worry, that can be fixed.", translation: "Tranquila, eso se arregla." } },
+        { term: "how much would you charge to fix it?", explanation: "La pregunta natural por el precio de un arreglo. Charge introduce lo que cobra el taller.", literal: "¿cuánto cobraría para arreglarlo?", useWhen: "Pregunta el costo de reparar una cosa específica en un taller o servicio.", avoidWhen: "Quiere saber la duración. Para tiempo, pregunte how long will it take o when will it be ready.", register: "cortés práctico", region: "Inglés universal.", related: ["how much is it", "what would it cost", "how long will it take", "can you quote me"], example: { target: "How much would you charge to fix it?", translation: "¿En cuánto me lo arregla?" } },
+        { term: "for you", explanation: "La manera inglesa de expresar el beneficio que en español suele ir en le o te dentro del verbo.", literal: "para usted / por usted", useWhen: "Al ofrecer hacer una reparación, reserva o gestión en favor de la otra persona.", avoidWhen: "El beneficio ya es obvio y la frase queda pesada. I can fix it today muchas veces basta.", register: "neutro", region: "Inglés universal.", related: ["for me", "for us", "on your behalf", "help you with it"], example: { target: "I'll fix the door for you first.", translation: "Le arreglo la puerta primero." } },
+        { term: "get ready", explanation: "Alistarse o arreglarse antes de salir: bañarse, vestirse, peinarse o quedar presentable.", literal: "ponerse listo", useWhen: "Necesita prepararse para salir, recibir gente o llegar a una cita.", avoidWhen: "Una cosa está dañada. A door gets fixed; a person gets ready.", register: "neutro", region: "Inglés universal.", related: ["dress up", "get dressed", "do my hair", "freshen up"], example: { target: "I need to get ready before seven.", translation: "Necesito arreglarme antes de las siete." } },
+        { term: "sort that out", explanation: "Resolver o cuadrar eso. Sirve para situaciones, planes, pagos y problemas no necesariamente físicos.", literal: "ordenar eso afuera", useWhen: "Quiere pasar del problema a la solución sin hablar de una herramienta concreta.", avoidWhen: "El objeto físico es el centro y se está reparando con herramientas. Ahí fix es más directo.", register: "amistoso práctico", region: "Inglés universal, muy común en habla cotidiana.", related: ["work it out", "settle it", "deal with it", "straighten it out"], example: { target: "Let's sort that out.", translation: "Arreglemos eso." } },
+        { term: "come by", explanation: "Pasar por un lugar, normalmente por poco tiempo o para una diligencia concreta.", literal: "venir por", useWhen: "Un taller, vecino o amigo le dice que se acerque a cierta hora.", avoidWhen: "Quiere decir llegar a vivir o quedarse. Come by implica visita o parada breve.", register: "amistoso informal", region: "Inglés universal.", related: ["drop by", "stop by", "come over", "swing by"], example: { target: "Come by at five-thirty.", translation: "Venga a las cinco y media." } }
       ],
       note: "El error natural es querer que fix haga todo lo que hace arreglar. A veces sí: fix the hinge, fix the door. Pero arreglar un asunto suele ser sort out, arreglar un precio puede ser settle, y arreglarse casi siempre es get ready. Aprender el abanico evita frases como I am fixing myself before the party.",
       culture: [
@@ -770,12 +770,12 @@ lessons.push(
         { mistake: "“Can you change the hinge?” cuando quiere repararla", whyItFails: "Change o replace sugiere cambiar la pieza por otra. Si la misma bisagra se puede dejar funcionando, fix es el verbo correcto.", sayInstead: "Can you fix the hinge?" }
       ],
       variations: [
-        { form: "That can be fixed.", register: "neutral reassuring", region: "Inglés universal", whenToUse: "Quiere tranquilizar a alguien diciendo que el problema tiene solución." },
-        { form: "How much would you charge to fix it?", register: "polite practical", region: "Inglés universal", whenToUse: "Pregunta el precio de un arreglo específico en un taller." },
-        { form: "I'm getting ready; I'll leave soon.", register: "friendly informal", region: "Inglés universal", whenToUse: "Usted se está arreglando para salir, no reparando un objeto." },
+        { form: "That can be fixed.", register: "neutro tranquilizador", region: "Inglés universal", whenToUse: "Quiere tranquilizar a alguien diciendo que el problema tiene solución." },
+        { form: "How much would you charge to fix it?", register: "cortés práctico", region: "Inglés universal", whenToUse: "Pregunta el precio de un arreglo específico en un taller." },
+        { form: "I'm getting ready; I'll leave soon.", register: "amistoso informal", region: "Inglés universal", whenToUse: "Usted se está arreglando para salir, no reparando un objeto." },
         {
           form: "We had the hinge fixed last week, and the whole door was replaced later.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Cuando mandó a arreglar algo en vez de arreglarlo usted mismo. “Had the hinge fixed” no dice quién lo hizo, y “was replaced” deja el resultado en primer plano."
         }

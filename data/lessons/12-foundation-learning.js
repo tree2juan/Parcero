@@ -425,7 +425,7 @@ lessons.push(
             "Al hablar de adquirir una habilidad: “learn to drive”, “learn how to cook”.",
           avoidWhen:
             "Cuando aprendes un dato o una materia, no una destreza; ahí “learn” va solo, sin “to”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés general.",
           related: ["learn how to", "learn to swim", "teach to", "pick up"],
           example: {
@@ -442,7 +442,7 @@ lessons.push(
             "Al memorizar una canción, un poema o unas líneas: “learn it by heart”.",
           avoidWhen:
             "Si solo entiendes algo en general y no lo memorizas; ahí “learn” basta.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés general.",
           related: ["memorize", "by heart", "know by heart", "recite"],
           example: {
@@ -459,7 +459,7 @@ lessons.push(
             "Al hablar de ir dominando una destreza: “you're getting the hang of it”.",
           avoidWhen:
             "En registro muy formal o escrito; es claramente coloquial.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés general.",
           related: ["pick it up", "catch on", "get it", "figure out"],
           example: {
@@ -476,7 +476,7 @@ lessons.push(
             "Al enunciar verdades generales: “you learn by doing”, “you never know”.",
           avoidWhen:
             "Cuando de verdad te diriges a una persona concreta; ahí el contexto lo distingue.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés general.",
           related: ["one", "people", "they", "in general"],
           example: {
@@ -493,7 +493,7 @@ lessons.push(
             "Al hablar de lo que dice una canción: “I love the lyrics”, “I forgot the words”.",
           avoidWhen:
             "No digas “the letters”: eso son letras del abecedario o cartas que se envían.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés general.",
           related: ["the words", "the song", "the chorus", "the verse"],
           example: {
@@ -510,7 +510,7 @@ lessons.push(
             "Al alentar: “come on, you can do it”, “come on, let's go”.",
           avoidWhen:
             "Con tono seco puede sonar a reproche (“¡ya, por favor!”); cuida la entonación.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés general.",
           related: ["let's go", "you got this", "go for it", "keep going"],
           example: {
@@ -527,7 +527,7 @@ lessons.push(
             "Al decir que ya dominas algo: “I've got it down”, “you'll have it down soon”.",
           avoidWhen:
             "No es “anotarlo”: “write it down” es apuntar, una cosa distinta.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés general.",
           related: ["nail it", "master it", "got it down", "know it cold"],
           example: {
@@ -589,31 +589,31 @@ lessons.push(
       variations: [
         {
           form: "learn to dance",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés general",
           whenToUse: "La forma estándar y segura de decir que aprendes una habilidad."
         },
         {
           form: "learn how to dance",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés general",
           whenToUse: "Igual de común; el “how” resalta el método o la técnica."
         },
         {
           form: "get the hang of it",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés general",
           whenToUse: "Coloquial, para irle cogiendo el tiro a algo con la práctica."
         },
         {
           form: "pick it up",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés general",
           whenToUse: "Para aprender algo rápido y casi sin esfuerzo: “you'll pick it up”."
         },
         {
           form: "have it down",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés general",
           whenToUse: "Cuando ya lo dominas del todo después de practicar."
         }
@@ -1047,7 +1047,7 @@ lessons.push(
           literal: "enseñar a (hacer)",
           useWhen: "Al impartir una habilidad: “teach me to cook”, “she taught me to drive”.",
           avoidWhen: "No la uses para “mostrar”: para enseñar una foto o un lugar es “show”, no “teach”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés general.",
           related: ["teach me to", "learn to", "show how to", "train"],
           example: {
@@ -1061,7 +1061,7 @@ lessons.push(
           literal: "mostrar",
           useWhen: "Para dejar ver algo: “show me the photo”, “I'll show you the house”.",
           avoidWhen: "No lo cambies por “teach” aunque en español los dos sean “enseñar”; en inglés son verbos distintos.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés general.",
           related: ["show me", "let me see", "point out", "demonstrate"],
           example: {
@@ -1075,7 +1075,7 @@ lessons.push(
           literal: "enséñame (impartir) / muéstrame (dejar ver)",
           useWhen: "Al pedir que te enseñen o te muestren algo, escogiendo el verbo según la intención.",
           avoidWhen: "No digas “teach me the photo”; para una foto es siempre “show me”.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés general.",
           related: ["teach me", "show me", "help me", "walk me through"],
           example: {
@@ -1089,7 +1089,7 @@ lessons.push(
           literal: "pagar atención",
           useWhen: "Al pedir concentración: “pay attention”, “pay close attention”.",
           avoidWhen: "Nunca digas “put attention”: es un calco de “poner atención” que en inglés no existe.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés general.",
           related: ["pay attention", "focus", "concentrate", "watch closely"],
           example: {
@@ -1103,7 +1103,7 @@ lessons.push(
           literal: "cielo / cariño",
           useWhen: "Cuando alguien mayor te trata con cariño; muy común en cocinas y cafeterías.",
           avoidWhen: "Hacia alguien mayor o un desconocido de tu edad puede sonar condescendiente.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés general; “hon” es más del sur de Estados Unidos.",
           related: ["sweetie", "honey", "hon", "dear"],
           example: {
@@ -1117,7 +1117,7 @@ lessons.push(
           literal: "con prisa / apurado",
           useWhen: "Al decir que algo va apurado: “I'm in a hurry”, “don't rush it”.",
           avoidWhen: "No traduzcas “afán” como “eagerness”: aquí “afán” es prisa, no entusiasmo.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés general.",
           related: ["in a hurry", "rushed", "in a rush", "take your time"],
           example: {
@@ -1131,7 +1131,7 @@ lessons.push(
           literal: "pastel de nueces pecanas",
           useWhen: "Al hablar de repostería típica estadounidense.",
           avoidWhen: "Fuera de ese postre; es un plato concreto, no vocabulario general.",
-          register: "neutral",
+          register: "neutro",
           region: "Estados Unidos, sobre todo el sur y Texas.",
           related: ["pastry", "filling", "pecan", "dessert"],
           example: {
@@ -1189,31 +1189,31 @@ lessons.push(
       variations: [
         {
           form: "teach me to...",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés general",
           whenToUse: "La forma estándar de pedir que te enseñen una habilidad."
         },
         {
           form: "show me...",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés general",
           whenToUse: "Cuando quieres que te dejen ver algo, no que te lo enseñen a hacer."
         },
         {
           form: "can you show me how to...?",
-          register: "polite neutral",
+          register: "cortés neutro",
           region: "Inglés general",
           whenToUse: "Une las dos ideas: te muestran algo mientras aprendes a hacerlo."
         },
         {
           form: "walk me through it",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés general",
           whenToUse: "Coloquial: pedir que te guíen paso a paso por algo."
         },
         {
           form: "pay attention",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés general",
           whenToUse: "Para pedir concentración; nunca “put attention”."
         }
@@ -1647,7 +1647,7 @@ lessons.push(
           literal: "estudiar",
           useWhen: "Al hincar codos: “study for the exam”, “study English”.",
           avoidWhen: "No lo estires a “aprender / dominar”: eso es “learn”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés general.",
           related: ["study for", "review", "learn", "do homework"],
           example: {
@@ -1661,7 +1661,7 @@ lessons.push(
           literal: "hacer un título / especializarse en",
           useWhen: "Al decir qué estudias: “I'm doing a degree in law”, “I major in biology”.",
           avoidWhen: "No digas “study a career”: “career” es la vida profesional, no el título universitario.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés general; “major in” es norteamericano.",
           related: ["do a degree", "major in", "study law", "graduate in"],
           example: {
@@ -1675,7 +1675,7 @@ lessons.push(
           literal: "título / grado",
           useWhen: "Al referirte a la carrera como programa: “a medicine degree”, “finish my degree”.",
           avoidWhen: "No lo confundas con “career” (la trayectoria laboral) ni con “race” (carrera de correr).",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés general.",
           related: ["undergraduate", "bachelor's", "major", "graduate"],
           example: {
@@ -1689,7 +1689,7 @@ lessons.push(
           literal: "trayectoria profesional",
           useWhen: "Al hablar del recorrido laboral: “a long career in medicine”.",
           avoidWhen: "No lo uses para el programa universitario; ahí es “degree” o “major”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés general.",
           related: ["job", "profession", "path", "field"],
           example: {
@@ -1703,7 +1703,7 @@ lessons.push(
           literal: "exámenes de mitad",
           useWhen: "Al hablar de época de exámenes: “I have midterms this week”.",
           avoidWhen: "No los confundas con “finals”, que son los exámenes finales del curso.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés general (Norteamérica).",
           related: ["finals", "exam", "quiz", "grade"],
           example: {
@@ -1717,7 +1717,7 @@ lessons.push(
           literal: "año (de carrera)",
           useWhen: "Al decir en qué vas: “I'm a first-year”, “she's a sophomore”.",
           avoidWhen: "No cuentes por semestres al hablar en inglés casual; suena raro allá.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Estados Unidos.",
           related: ["freshman", "sophomore", "junior", "senior"],
           example: {
@@ -1731,7 +1731,7 @@ lessons.push(
           literal: "una tonelada",
           useWhen: "Al enfatizar cantidad: “I studied a ton”, “thanks a ton”.",
           avoidWhen: "En registro formal o escrito; es claramente coloquial.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés general.",
           related: ["a lot", "tons of", "loads", "heaps"],
           example: {
@@ -1789,31 +1789,31 @@ lessons.push(
       variations: [
         {
           form: "What are you studying?",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés general",
           whenToUse: "La forma normal de preguntar por la carrera de alguien."
         },
         {
           form: "What's your major?",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Estados Unidos",
           whenToUse: "Muy norteamericana; pregunta directamente por la especialidad."
         },
         {
           form: "I'm doing a degree in...",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés general",
           whenToUse: "Para decir qué carrera haces, sin caer en el falso amigo “career”."
         },
         {
           form: "I major in...",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Estados Unidos",
           whenToUse: "El equivalente coloquial norteamericano de “estudio la carrera de...”."
         },
         {
           form: "What do you do?",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés general",
           whenToUse: "Pregunta amplia por estudios o trabajo al conocer a alguien."
         }

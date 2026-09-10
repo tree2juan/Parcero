@@ -427,7 +427,7 @@ lessons.push(
             "En casi todo: “the class starts at seven”, “let's start”, “I started yesterday”.",
           avoidWhen:
             "Cuando quieres un tono más solemne o escrito; ahí “begin” suena un punto más elegante.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["begin", "get started", "kick off", "start up"],
           example: {
@@ -444,7 +444,7 @@ lessons.push(
             "Al invitar a un grupo a arrancar: “let's get started”, “ready to get started?”.",
           avoidWhen:
             "En textos formales; es una expresión hablada, como el “arrancamos” colombiano.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal; muy frecuente en el habla cotidiana.",
           related: ["let's get started", "get going", "get moving", "kick off"],
           example: {
@@ -461,7 +461,7 @@ lessons.push(
             "En avisos, ceremonias y lenguaje escrito: “the show begins at eight”.",
           avoidWhen:
             "En una charla muy relajada, donde “start” fluye mejor y “begin” puede sonar acartonado.",
-          register: "polite neutral",
+          register: "cortés neutro",
           region: "Inglés universal.",
           related: ["start", "commence", "begin with", "the beginning"],
           example: {
@@ -478,7 +478,7 @@ lessons.push(
             "Cuando una acción se pone en marcha: “it started raining”, “I'm starting to understand”.",
           avoidWhen:
             "No hay caso prohibido, pero con verbos de percepción (feel, understand) el infinitivo suena más natural que el gerundio.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["start raining", "start to understand", "begin to", "get to"],
           example: {
@@ -495,7 +495,7 @@ lessons.push(
             "Al hablar de que algo arranca con ganas: “the festival kicks off tonight”.",
           avoidWhen:
             "En registros muy formales o escritos serios; es de tono desenfadado.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal; muy común en Norteamérica y en el deporte.",
           related: ["get going", "get underway", "start off", "kick things off"],
           example: {
@@ -512,7 +512,7 @@ lessons.push(
             "Al decir que empiezas sin base: “I'm learning from scratch”.",
           avoidWhen:
             "Cuando en realidad ya tienes algo hecho o sabido; “from scratch” reclama partir de la nada.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal.",
           related: ["from zero", "from the ground up", "starting out", "brand new"],
           example: {
@@ -529,7 +529,7 @@ lessons.push(
             "Al encadenar pasos: “let's start with this and go from there”.",
           avoidWhen:
             "Si señalas un lugar físico; aquí es secuencia en el tiempo, no ubicación.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal; muy usado en el habla.",
           related: ["take it from there", "and then", "from there on", "go on"],
           example: {
@@ -591,31 +591,31 @@ lessons.push(
       variations: [
         {
           form: "Let's start.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "El “empecemos” más simple y seguro, válido en cualquier parte."
         },
         {
           form: "Let's get started.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal; muy común en Norteamérica",
           whenToUse: "La misma invitación con más calidez y ánimo, como “arrancamos”."
         },
         {
           form: "Shall we begin?",
-          register: "polite formal",
+          register: "cortés formal",
           region: "Inglés británico sobre todo; formal en todas partes",
           whenToUse: "Un “¿comenzamos?” cortés, para una reunión o un acto."
         },
         {
           form: "Let's kick things off.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal; frecuente en eventos y deportes",
           whenToUse: "Para arrancar algo con energía y un toque desenfadado."
         },
         {
           form: "Ready when you are.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal",
           whenToUse: "Ceder el arranque al otro: “cuando quieras empezamos”."
         }
@@ -1079,7 +1079,7 @@ lessons.push(
             "En casi cualquier final: “I finished”, “are you finished?”, “finish + gerundio”.",
           avoidWhen:
             "Para “acabar de + infinitivo” (recién hacer algo), donde el inglés usa “just” + pasado, no “finish”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["be done", "end", "wrap up", "complete"],
           example: {
@@ -1096,7 +1096,7 @@ lessons.push(
             "Al anunciar que terminaste: “I'm done”, “almost done”, “are you done?”.",
           avoidWhen:
             "En un escrito muy formal; “be done” es hablado, aunque muy extendido.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal; dominante en Norteamérica.",
           related: ["be finished", "all done", "that's it", "wrapped up"],
           example: {
@@ -1113,7 +1113,7 @@ lessons.push(
             "Cuando una acción se completa: “finish eating”, “finish cleaning up”.",
           avoidWhen:
             "Nunca pongas “to” después de “finish” (no “finish to eat”); ese es el error estrella del hispanohablante.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["finish eating", "finish up", "get through", "be done -ing"],
           example: {
@@ -1130,7 +1130,7 @@ lessons.push(
             "Al hablar del fin de una pareja: “they broke up”, “she broke up with him”.",
           avoidWhen:
             "Para terminar una tarea; ahí es “finish”, no “break up”, que solo sirve para relaciones.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal.",
           related: ["split up", "call it off", "dump someone", "be over"],
           example: {
@@ -1147,7 +1147,7 @@ lessons.push(
             "Al describir el desenlace: “it didn't end badly”, “the movie ends late”.",
           avoidWhen:
             "Para la persona que termina la acción; “I end the job” suena raro — ahí va “finish”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["end up", "come to an end", "finish", "wrap up"],
           example: {
@@ -1164,7 +1164,7 @@ lessons.push(
             "Al cerrar una tarea o reunión: “let's wrap up”, “I'm wrapping up a job”.",
           avoidWhen:
             "En contextos muy formales o solemnes; es expresión de tono práctico y desenfadado.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal; muy usado en el trabajo.",
           related: ["finish up", "round off", "tie up", "close out"],
           example: {
@@ -1181,7 +1181,7 @@ lessons.push(
             "Al mencionar una entrada extra: “I do a few side jobs”.",
           avoidWhen:
             "Para tu empleo formal de tiempo completo; “side job” implica algo menor y secundario.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal; “side gig” es la variante de moda.",
           related: ["side gig", "side hustle", "odd job", "extra work"],
           example: {
@@ -1243,31 +1243,31 @@ lessons.push(
       variations: [
         {
           form: "I'm almost done.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal; dominante en Norteamérica",
           whenToUse: "Avisar que estás a punto de terminar, ahora mismo."
         },
         {
           form: "I'm just finishing up.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal",
           whenToUse: "Estás en los últimos toques de algo."
         },
         {
           form: "I'll wrap it up in a minute.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal; frecuente en el trabajo",
           whenToUse: "Cerrar algo enseguida, con aire resolutivo."
         },
         {
           form: "Are you finished?",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Preguntar cortésmente si alguien ya terminó."
         },
         {
           form: "That's a wrap.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal; nacido del cine",
           whenToUse: "Declarar algo oficialmente terminado, con gracia."
         }
@@ -1731,7 +1731,7 @@ lessons.push(
             "Cualquier entrada del día a día: come in, go in, come on in.",
           avoidWhen:
             "En registro muy formal o escrito, donde “enter” encaja mejor.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal; “come on in” es un saludo cálido en Norteamérica.",
           related: ["come on in", "go in", "step in", "head in"],
           example: {
@@ -1748,7 +1748,7 @@ lessons.push(
             "Preguntar por la entrada: “Is this the way in?”, “Where's the way in?”.",
           avoidWhen:
             "En letreros formales, que suelen decir “Entrance” en vez de “the way in”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal; “entrance” es la variante formal de los letreros.",
           related: ["entrance", "the entrance", "way in", "front door"],
           example: {
@@ -1765,7 +1765,7 @@ lessons.push(
             "Hablar de la hora de entrada: I start at eight, what time do you start?",
           avoidWhen:
             "No calque “enter to work”: en inglés no existe, es “start work”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["start at eight", "start work", "clock in", "begin the shift"],
           example: {
@@ -1782,7 +1782,7 @@ lessons.push(
             "Admitir que no entiende algo: I don't get how this works.",
           avoidWhen:
             "En registro muy formal, donde “I don't quite understand” suena mejor.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal; muy común en el habla diaria.",
           related: ["I don't get it", "I don't follow", "it doesn't click", "now I get it"],
           example: {
@@ -1799,7 +1799,7 @@ lessons.push(
             "Cederle el paso a alguien o invitarlo a pasar: Go ahead. After you.",
           avoidWhen:
             "No significa “sígame”: es una invitación a pasar primero, no a ir detrás.",
-          register: "polite neutral",
+          register: "cortés neutro",
           region: "Inglés universal; “after you” es especialmente cortés.",
           related: ["go ahead", "after you", "come on in", "go first"],
           example: {
@@ -1816,7 +1816,7 @@ lessons.push(
             "Marcar el ingreso: “sign in at the front desk”, “log in to the system”.",
           avoidWhen:
             "No los confunda: “log in” es a una cuenta; “sign in” sirve también en persona.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal; en oficinas y seguridad.",
           related: ["sign in", "log in", "check in", "clock in"],
           example: {
@@ -1833,7 +1833,7 @@ lessons.push(
             "Registros formales: “Enter your PIN”, “do not enter”, “authorized personnel may enter”.",
           avoidWhen:
             "La conversación casual, donde “come in” o “go in” suenan mucho más naturales.",
-          register: "polite formal",
+          register: "cortés formal",
           region: "Inglés universal; el equivalente formal de “come in / go in”.",
           related: ["enter", "gain entry", "access", "proceed"],
           example: {
@@ -1895,31 +1895,31 @@ lessons.push(
       variations: [
         {
           form: "Is this the way in?",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Preguntar por dónde se entra, de forma sencilla."
         },
         {
           form: "Can I come in?",
-          register: "polite neutral",
+          register: "cortés neutro",
           region: "Inglés universal",
           whenToUse: "Pedir permiso para pasar a un cuarto u oficina."
         },
         {
           form: "What time do I start?",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Preguntar la hora de entrada a un trabajo."
         },
         {
           form: "Go ahead, come on in.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Norteamérica",
           whenToUse: "Invitar cálidamente a alguien a pasar."
         },
         {
           form: "Please enter through the main door.",
-          register: "polite formal",
+          register: "cortés formal",
           region: "Inglés universal; letreros y seguridad",
           whenToUse: "Un “entre por la puerta principal” formal, escrito o hablado."
         }

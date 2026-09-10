@@ -373,7 +373,7 @@ lessons.push(
           literal: "¿Podría yo usar…?",
           useWhen: "Casi cualquier pedido de permiso educado: el baño, un enchufe, el wifi, un cargador prestado.",
           avoidWhen: "Entre amigos muy cercanos, donde “can I use…?” o directamente “mind if I…?” suena más natural.",
-          register: "polite neutral",
+          register: "cortés neutro",
           region: "Inglés universal; vale en Estados Unidos y el Reino Unido por igual.",
           related: ["Can I use…?", "May I use…?", "Do you mind if I use…?", "Is it okay to use…?"],
           example: { target: "Could I use your charger for a minute?", translation: "¿Podría usar tu cargador un momento?" }
@@ -384,7 +384,7 @@ lessons.push(
           literal: "toma / enchufe",
           useWhen: "Buscar dónde cargar el celular o el portátil en Estados Unidos.",
           avoidWhen: "Con un británico o un australiano, que entienden mejor “socket”; ojo, “outlet” también nombra una tienda de descuentos.",
-          register: "neutral",
+          register: "neutro",
           region: "Norteamérica; contrasta con el “socket” británico.",
           related: ["socket", "plug", "power point", "charging port"],
           example: { target: "Is there an outlet near this table?", translation: "¿Hay un enchufe cerca de esta mesa?" }
@@ -395,7 +395,7 @@ lessons.push(
           literal: "cuarto de descanso / baño",
           useWhen: "Preguntar por el baño en un lugar público en Estados Unidos sin sonar demasiado directo.",
           avoidWhen: "En una casa, donde “bathroom” es lo normal; “restroom” suena a local comercial.",
-          register: "polite neutral",
+          register: "cortés neutro",
           region: "Estados Unidos sobre todo; “toilet” en el Reino Unido.",
           related: ["bathroom", "toilet", "the facilities", "men's room"],
           example: { target: "Excuse me, where's the restroom?", translation: "Disculpe, ¿dónde está el baño?" }
@@ -406,7 +406,7 @@ lessons.push(
           literal: "contraseña / clave",
           useWhen: "Pedir la clave del wifi: “what's the wifi password?”.",
           avoidWhen: "Hablando de la clave del cajero o del datáfono, que es el “PIN”, no el “password”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal; sin variación regional relevante.",
           related: ["passcode", "wifi code", "PIN", "login"],
           example: { target: "What's the wifi password?", translation: "¿Cuál es la clave del wifi?" }
@@ -417,7 +417,7 @@ lessons.push(
           literal: "Tenga un asiento",
           useWhen: "Cuando alguien te ofrece sentarte al recibirte, en un café, una oficina o una casa.",
           avoidWhen: "Cuando quieres pedirlo tú; ahí dirías “could I sit here?”, no “have a seat”, que es para ofrecer.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal; muy común en Norteamérica.",
           related: ["Take a seat", "Sit down", "Grab a chair", "Make yourself comfortable"],
           example: { target: "Come in, have a seat.", translation: "Pase, siéntese." }
@@ -428,7 +428,7 @@ lessons.push(
           literal: "portátil",
           useWhen: "Referirte al portátil que llevas al café: “I need to charge my laptop.”",
           avoidWhen: "Si quieres decir el de escritorio; ese es “desktop”, no “laptop”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["computer", "desktop", "notebook", "machine"],
           example: { target: "My laptop's about to die.", translation: "El portátil se me va a apagar." }
@@ -439,7 +439,7 @@ lessons.push(
           literal: "ve adelante",
           useWhen: "Autorizar a alguien a hacer algo: usar el baño, pasar, empezar a hablar.",
           avoidWhen: "Cuando necesitas ser más formal por escrito; ahí “please proceed” encaja mejor que “go ahead”.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal.",
           related: ["Sure, go for it", "Please proceed", "By all means", "Feel free"],
           example: { target: "The restroom? Sure, go ahead.", translation: "¿El baño? Claro, siga." }
@@ -490,31 +490,31 @@ lessons.push(
       variations: [
         {
           form: "Could I use…?",
-          register: "polite neutral",
+          register: "cortés neutro",
           region: "Inglés universal",
           whenToUse: "La opción segura y cortés para pedir permiso de usar algo."
         },
         {
           form: "Can I use…?",
-          register: "neutral",
+          register: "neutro",
           region: "Universal, muy común en Norteamérica",
           whenToUse: "Un pedido directo y relajado entre gente de confianza."
         },
         {
           form: "Do you mind if I use…?",
-          register: "polite neutral",
+          register: "cortés neutro",
           region: "Universal",
           whenToUse: "Cuando quieres ser especialmente considerado; ojo, un “no” aquí significa que sí puedes."
         },
         {
           form: "Mind if I use…?",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Universal, conversacional",
           whenToUse: "La versión corta y casual de lo anterior, entre amigos o compañeros."
         },
         {
           form: "Is it okay to use…?",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Universal",
           whenToUse: "Preguntar si algo está permitido cuando no sabes la regla del lugar."
         }
@@ -925,7 +925,7 @@ lessons.push(
           literal: "abrir una cuenta",
           useWhen: "Cualquier trámite bancario: cuenta de ahorros, cuenta corriente, un plazo fijo.",
           avoidWhen: "Para meter dinero a una cuenta que ya tienes; eso es “deposit”, no “open”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["open a savings account", "open a chequing account", "close an account", "set up an account"],
           example: { target: "I'd like to open a savings account.", translation: "Quisiera abrir una cuenta de ahorros." }
@@ -936,7 +936,7 @@ lessons.push(
           literal: "¿Qué hora abres tú?",
           useWhen: "Preguntar a una tienda, banco u oficina a qué hora abre.",
           avoidWhen: "Para el inicio de un evento puntual; ahí es “what time does it start?”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["What time do you close?", "What are your hours?", "Are you open?", "When do you open?"],
           example: { target: "What time do you open on Saturdays?", translation: "¿A qué hora abren los sábados?" }
@@ -947,7 +947,7 @@ lessons.push(
           literal: "cuenta de ahorros",
           useWhen: "Nombrar el tipo de cuenta que abres para guardar dinero.",
           avoidWhen: "Para la cuenta del día a día con tarjeta de débito; en Estados Unidos esa es “chequing account”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés norteamericano; en el Reino Unido “current account” por “chequing”.",
           related: ["chequing account", "current account", "joint account", "term deposit"],
           example: { target: "Is this a savings or a chequing account?", translation: "¿Esta es cuenta de ahorros o corriente?" }
@@ -958,7 +958,7 @@ lessons.push(
           literal: "identificación con foto",
           useWhen: "Cuando te piden identificarte en un banco, un trámite o un control.",
           avoidWhen: "Si necesitas específicamente el pasaporte para viajar; ahí di “passport”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal; “ID” es universal.",
           related: ["passport", "driver's license", "piece of ID", "identification"],
           example: { target: "Do you have a piece of photo ID?", translation: "¿Tiene un documento con foto?" }
@@ -969,7 +969,7 @@ lessons.push(
           literal: "prueba de domicilio",
           useWhen: "Trámites que piden demostrar tu dirección: banco, arriendo, servicios.",
           avoidWhen: "Si te piden la dirección hablada y no el documento; eso es solo “your address”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["a utility bill", "bank statement", "lease", "piece of mail"],
           example: { target: "Bring proof of address, like a utility bill.", translation: "Trae un comprobante de domicilio, como un recibo." }
@@ -980,7 +980,7 @@ lessons.push(
           literal: "estás todo listo",
           useWhen: "Cuando terminas un trámite y el empleado te avisa que ya acabaste.",
           avoidWhen: "Como pregunta; para eso es “are you all set?” con la entonación hacia arriba.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés norteamericano sobre todo.",
           related: ["you're good to go", "all done", "that's everything", "you're ready"],
           example: { target: "That's it — you're all set.", translation: "Eso es todo; ya quedó listo." }
@@ -991,7 +991,7 @@ lessons.push(
           literal: "descargar",
           useWhen: "Instalar una app o bajar un archivo: “download the app”.",
           avoidWhen: "Para subir algo a la nube; eso es “upload”, lo contrario.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["upload", "install", "get the app", "the app"],
           example: { target: "Download the app to activate your account.", translation: "Descarga la app para activar la cuenta." }
@@ -1042,31 +1042,31 @@ lessons.push(
       variations: [
         {
           form: "What time do you open?",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Preguntar el horario de apertura de un negocio."
         },
         {
           form: "Are you open on Sundays?",
-          register: "neutral",
+          register: "neutro",
           region: "Universal",
           whenToUse: "Confirmar si abren un día concreto."
         },
         {
           form: "I'd like to open an account.",
-          register: "polite neutral",
+          register: "cortés neutro",
           region: "Universal",
           whenToUse: "Decir tu trámite con cortesía en la ventanilla."
         },
         {
           form: "I'm here to open an account.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Norteamérica",
           whenToUse: "Presentar tu trámite de forma directa y relajada."
         },
         {
           form: "Could I open a savings account, please?",
-          register: "polite formal",
+          register: "cortés formal",
           region: "Universal",
           whenToUse: "Un pedido más formal y cuidado al asesor."
         }
@@ -1473,7 +1473,7 @@ lessons.push(
           literal: "cerrar",
           useWhen: "Cualquier cierre: “the shop closes at eight,” “close the door,” “to close a deal.”",
           avoidWhen: "Quiere decir apagar el agua o la luz; en inglés eso es “turn off,” nunca “close.”",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal; el doble sonido de “close” confunde a muchos hispanohablantes.",
           related: ["to close up", "to shut", "closing time", "closed"],
           example: { target: "The shop closes at eight.", translation: "La tienda cierra a las ocho." }
@@ -1484,7 +1484,7 @@ lessons.push(
           literal: "¿qué hora haces tú cerrar?",
           useWhen: "Para preguntar a cualquier negocio a qué hora cierra ese día.",
           avoidWhen: "Solo quiere saber si está abierto ahora; entonces pregunte “are you open?”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal; “When do you close?” es una alternativa igual de común.",
           related: ["What time do you open?", "How late are you open?", "When do you close?", "Are you open?"],
           example: { target: "What time do you close on Sundays?", translation: "¿A qué hora cierran los domingos?" }
@@ -1495,7 +1495,7 @@ lessons.push(
           literal: "cerrado",
           useWhen: "Para informar de una condición actual: “sorry, we're closed,” “the bank is closed today.”",
           avoidWhen: "Quiere decir la hora habitual de cierre; para eso va el verbo, “it closes at eight.”",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal; el letrero de la puerta dice “OPEN” o “CLOSED.”",
           related: ["open", "we're closed", "closed for lunch", "sold out"],
           example: { target: "Sorry, we're closed.", translation: "Lo siento, ya cerramos." }
@@ -1506,7 +1506,7 @@ lessons.push(
           literal: "es un trato",
           useWhen: "Al terminar una negociación o aceptar un precio propuesto.",
           avoidWhen: "Habla de una oferta o promoción de tienda; eso también es “a deal,” pero no cierra nada.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal; muy común en Estados Unidos.",
           related: ["to close a deal", "to seal the deal", "we have a deal", "deal!"],
           example: { target: "Okay, it's a deal.", translation: "Listo, cerramos el trato." }
@@ -1517,7 +1517,7 @@ lessons.push(
           literal: "cerrar arriba",
           useWhen: "Para el cierre físico del negocio al final del día: “we're closing up now.”",
           avoidWhen: "Habla del horario habitual; ahí basta “we close at eight,” sin la partícula “up.”",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal; “to lock up” pone el énfasis en echar llave.",
           related: ["to close up shop", "to lock up", "closing time", "last call"],
           example: { target: "We're closing up now.", translation: "Ya vamos a cerrar." }
@@ -1529,7 +1529,7 @@ lessons.push(
           useWhen: "Para explicar tráfico o un desvío: “they closed the road for a parade.”",
           avoidWhen: "Sabe exactamente quién lo cerró y quiere nombrarlo; entonces diga ese sujeto.",
           region: "Inglés universal; “road closure” es el sustantivo que verá en los avisos.",
-          register: "neutral",
+          register: "neutro",
           related: ["the road is closed", "a road closure", "to block off the street", "a detour"],
           example: { target: "They closed the road for a parade.", translation: "Cerraron la vía por un desfile." }
         },
@@ -1539,7 +1539,7 @@ lessons.push(
           literal: "estar a punto de",
           useWhen: "Para avisar que algo pasará en segundos: “I'm about to leave,” “we're about to close.”",
           avoidWhen: "Habla de un plan lejano; para eso va “going to” o un futuro, no “about to.”",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal; “just about to” refuerza aún más lo inminente.",
           related: ["to be about to", "just about to", "on the verge of", "any minute now"],
           example: { target: "We're about to close.", translation: "Estamos a punto de cerrar." }
@@ -1590,31 +1590,31 @@ lessons.push(
       variations: [
         {
           form: "What time do you close?",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Para preguntar a cualquier negocio a qué hora cierra."
         },
         {
           form: "We're about to close.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal",
           whenToUse: "Para avisar a un cliente que el cierre es inminente."
         },
         {
           form: "Sorry, we're closed.",
-          register: "polite neutral",
+          register: "cortés neutro",
           region: "Inglés universal",
           whenToUse: "Para informar de que el lugar ya está cerrado."
         },
         {
           form: "Okay, it's a deal.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal; muy usado en Estados Unidos",
           whenToUse: "Para cerrar un trato o aceptar una oferta."
         },
         {
           form: "They closed the road.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Para explicar un cierre de vía detrás de un trancón o un desvío."
         }

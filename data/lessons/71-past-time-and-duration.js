@@ -405,7 +405,7 @@ lessons.push(
             "Para experiencias hasta ahora: ‘I have tried’, ‘she has gone’.",
           avoidWhen:
             "Con un momento pasado concreto como ‘yesterday’, donde el inglés pide pasado simple.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["have", "has", "had", "haven't"],
           example: {
@@ -422,7 +422,7 @@ lessons.push(
             "Algo esperado que aún no pasa: ‘I haven't eaten yet’.",
           avoidWhen:
             "En afirmaciones simples; ahí se usa ‘already’, no ‘yet’.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["already", "still", "so far", "up to now"],
           example: {
@@ -439,7 +439,7 @@ lessons.push(
             "Afirmaciones: ‘I have already eaten’.",
           avoidWhen:
             "Calcar el español ‘ya comí’ como ‘I already ate’; el perfecto es más seguro.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["yet", "just", "by now", "so far"],
           example: {
@@ -456,7 +456,7 @@ lessons.push(
             "Preguntar por la vida entera: ‘Have you ever…?’, ‘I have never…’.",
           avoidWhen:
             "Un evento con fecha; entonces el inglés usa pasado simple.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["always", "before", "in my life", "so far"],
           example: {
@@ -473,7 +473,7 @@ lessons.push(
             "El verbo es irregular: ‘I have seen’, ‘she has done’.",
           avoidWhen:
             "Ponerle ‘-ed’ a un irregular: ‘I have seed’ no existe, es ‘seen’.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["seen", "been", "done", "eaten"],
           example: {
@@ -490,7 +490,7 @@ lessons.push(
             "Un momento pasado concreto: ‘I ate at one’, ‘I went yesterday’.",
           avoidWhen:
             "Con ‘yet’, ‘already’ o ‘ever’; ahí el inglés prefiere el perfecto.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["ate", "went", "saw", "yesterday"],
           example: {
@@ -507,7 +507,7 @@ lessons.push(
             "Preguntar por experiencia de viaje: ‘Have you been to Houston?’.",
           avoidWhen:
             "Usar ‘in’ en vez de ‘to’; ‘have you been in Houston?’ cambia el sentido.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["been to", "gone to", "visited", "traveled to"],
           example: {
@@ -569,31 +569,31 @@ lessons.push(
       variations: [
         {
           form: "Have you tried it yet?",
-          register: "warm conversational",
+          register: "cálido conversacional",
           region: "Inglés universal",
           whenToUse: "Preguntar por una experiencia hasta ahora, con ‘yet’."
         },
         {
           form: "I haven't eaten yet.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Algo esperado que todavía no pasa."
         },
         {
           form: "Have you ever been to Texas?",
-          register: "warm conversational",
+          register: "cálido conversacional",
           region: "Inglés universal",
           whenToUse: "La pregunta clásica de experiencia, con ‘ever’."
         },
         {
           form: "I have already eaten.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Afirmar que algo ya ocurrió, con ‘already’."
         },
         {
           form: "I've never seen that.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Decir que nunca se ha hecho algo, con ‘never’."
         }
@@ -1037,7 +1037,7 @@ lessons.push(
             "Un hecho pasado ocurrió antes de otro: ‘when I arrived, they had closed’.",
           avoidWhen:
             "Hay un solo hecho pasado; ahí basta el pasado simple.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["had", "hadn't", "he'd", "they'd"],
           example: {
@@ -1054,7 +1054,7 @@ lessons.push(
             "Marcar algo cumplido antes de otro punto pasado: ‘had already closed’.",
           avoidWhen:
             "Quiere decir ‘todavía’ o ‘todavía no’; use ‘still’ o ‘not yet’.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["yet", "by then", "before", "when"],
           example: {
@@ -1071,7 +1071,7 @@ lessons.push(
             "Algo estaba pendiente en el pasado: ‘he hadn't answered yet’.",
           avoidWhen:
             "El hecho ya estaba cumplido; entonces use ‘had already’.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["had already", "still hadn't", "by then", "when"],
           example: {
@@ -1088,7 +1088,7 @@ lessons.push(
             "Fijar el momento de referencia: ‘by the time I arrived, they had closed’.",
           avoidWhen:
             "Quiere decir ‘mientras’; eso es ‘while’.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["when", "before", "after", "once"],
           example: {
@@ -1105,7 +1105,7 @@ lessons.push(
             "Habla natural en pasado perfecto: ‘he'd already done it’.",
           avoidWhen:
             "Con un verbo base sin participio suele ser ‘would’, no ‘had’: ‘he'd go’ es ‘would’.",
-          register: "warm conversational",
+          register: "cálido conversacional",
           region: "Inglés universal.",
           related: ["I'd", "she'd", "we'd", "you'd"],
           example: {
@@ -1122,7 +1122,7 @@ lessons.push(
             "El verbo es irregular: ‘had left’, ‘had gone’, ‘had done’.",
           avoidWhen:
             "Ponerles ‘-ed’: ‘had goed’ o ‘had doed’ no existen.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["left", "gone", "done", "seen"],
           example: {
@@ -1139,7 +1139,7 @@ lessons.push(
             "Enviar un mensaje: ‘I texted him’, ‘she texted back’.",
           avoidWhen:
             "Contextos muy formales; ahí ‘message’ o ‘write to’.",
-          register: "warm conversational",
+          register: "cálido conversacional",
           region: "Inglés universal.",
           related: ["message", "write", "call", "reach"],
           example: {
@@ -1201,31 +1201,31 @@ lessons.push(
       variations: [
         {
           form: "By the time I arrived, they had already closed.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "El patrón central: pasado simple más pasado perfecto con ‘already’."
         },
         {
           form: "He hadn't answered yet.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Algo todavía no ocurría en un momento pasado."
         },
         {
           form: "By then he had already left.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Marcar algo cumplido antes de un momento pasado dado."
         },
         {
           form: "He'd already done it alone.",
-          register: "warm conversational",
+          register: "cálido conversacional",
           region: "Inglés universal",
           whenToUse: "Habla natural con la contracción ‘he'd’ por ‘had’."
         },
         {
           form: "I had never seen that before.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Una primera vez vista desde un momento pasado."
         }
@@ -1669,7 +1669,7 @@ lessons.push(
             "Dar la extensión de un tramo: ‘I've lived here for three years’.",
           avoidWhen:
             "Nombrar el punto de inicio; eso es ‘since’.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["since", "for years", "for a while", "for ages"],
           example: {
@@ -1686,7 +1686,7 @@ lessons.push(
             "Nombrar dónde empezó el tramo: ‘since you arrived’, ‘since Monday’.",
           avoidWhen:
             "Quiere la duración; use ‘for’.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["for", "since then", "ever since", "from"],
           example: {
@@ -1703,7 +1703,7 @@ lessons.push(
             "Un momento concreto ya cumplido: ‘I moved here thirty years ago’.",
           avoidWhen:
             "Un tramo que sigue hasta ahora; use ‘for’ con presente perfecto.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["before", "back then", "earlier", "in the past"],
           example: {
@@ -1720,7 +1720,7 @@ lessons.push(
             "Una acción que sigue: ‘I've been living here for three years’.",
           avoidWhen:
             "Un estado permanente puede ir con presente perfecto simple: ‘I've known him for years’.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["have been", "has been", "been doing", "been going"],
           example: {
@@ -1737,7 +1737,7 @@ lessons.push(
             "Preguntar por el tiempo transcurrido: ‘How long have you lived here?’.",
           avoidWhen:
             "Quiere una hora del reloj; eso es ‘what time?’.",
-          register: "warm conversational",
+          register: "cálido conversacional",
           region: "Inglés universal.",
           related: ["how long", "since when", "for how long", "how many years"],
           example: {
@@ -1754,7 +1754,7 @@ lessons.push(
             "Elegir entre duración e inicio: ‘for years’ o ‘since Monday’.",
           avoidWhen:
             "Mezclarlos: ‘since three years’ es un error clásico.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["for", "since", "ago", "how long"],
           example: {
@@ -1771,7 +1771,7 @@ lessons.push(
             "Un desenlace inesperado: ‘they end up staying’.",
           avoidWhen:
             "Un plan deliberado; ahí ‘decide to’ o ‘plan to’.",
-          register: "warm conversational",
+          register: "cálido conversacional",
           region: "Inglés universal.",
           related: ["end up", "wind up", "turn out", "eventually"],
           example: {
@@ -1833,31 +1833,31 @@ lessons.push(
       variations: [
         {
           form: "I moved here thirty years ago.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Un punto terminado en el pasado: ‘ago’."
         },
         {
           form: "I've been fixing bikes for twenty years.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Una actividad en curso, con presente perfecto continuo."
         },
         {
           form: "I've lived here since 2010.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Un tramo hasta ahora nombrando su inicio, con ‘since’."
         },
         {
           form: "I haven't stopped since then.",
-          register: "warm conversational",
+          register: "cálido conversacional",
           region: "Inglés universal",
           whenToUse: "Continuidad desde un momento pasado con ‘since’."
         },
         {
           form: "How long have you lived here?",
-          register: "warm conversational",
+          register: "cálido conversacional",
           region: "Inglés universal",
           whenToUse: "Preguntar por la duración hasta ahora."
         }

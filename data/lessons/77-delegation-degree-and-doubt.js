@@ -372,7 +372,7 @@ lessons.push(
           literal: "tener algo hecho",
           useWhen: "Cualquier trabajo que usted encargó: “I had the roof repaired”.",
           avoidWhen: "Usted mismo hizo el trabajo; ahí va el verbo normal: “I repaired the roof”.",
-          register: "neutral",
+          register: "neutro",
           region: "Universal.",
           related: ["get something done", "have someone do it", "get someone to do it", "hire"],
           example: {
@@ -400,7 +400,7 @@ lessons.push(
           literal: "tener a alguien hacer algo",
           useWhen: "Se menciona al trabajador: “Have him check it before it rains”.",
           avoidWhen: "No importa quién lo haga; entonces se usa el participio: “have it checked”.",
-          register: "neutral",
+          register: "neutro",
           region: "Universal.",
           related: ["get someone to do something", "have something done", "make someone do it", "let someone do it"],
           example: {
@@ -428,7 +428,7 @@ lessons.push(
           literal: "ellos me cobraron",
           useWhen: "Contar un precio sin nombrar el negocio: “They charged me a fortune”.",
           avoidWhen: "Quiere responsabilizar a alguien concreto; ahí conviene nombrarlo.",
-          register: "neutral",
+          register: "neutro",
           region: "Universal.",
           related: ["it cost me", "I got charged", "they wanted", "they quoted me"],
           example: {
@@ -442,7 +442,7 @@ lessons.push(
           literal: "las canales",
           useWhen: "Todo lo relacionado con el agua de lluvia en un techo: “I had the gutters checked”.",
           avoidWhen: "Se refiere a un canal de televisión o a un canal de agua; esos son “channel” y “canal”.",
-          register: "neutral",
+          register: "neutro",
           region: "Universal.",
           related: ["the roof", "downspout", "leak", "shingles"],
           example: {
@@ -456,7 +456,7 @@ lessons.push(
           literal: "yo sobrepagué",
           useWhen: "Reconocer que el precio fue excesivo: “Ugh, then I overpaid”.",
           avoidWhen: "Todavía no ha pagado; “overpaid” describe un hecho consumado.",
-          register: "neutral",
+          register: "neutro",
           region: "Universal.",
           related: ["got ripped off", "it cost a fortune", "pricey", "a rip-off"],
           example: {
@@ -505,7 +505,7 @@ lessons.push(
       variations: [
         {
           form: "I had the roof repaired.",
-          register: "neutral",
+          register: "neutro",
           region: "Universal",
           whenToUse: "La forma estándar, buena tanto hablada como escrita."
         },
@@ -932,7 +932,7 @@ lessons.push(
           literal: "tan + adjetivo + que",
           useWhen: "Una cualidad causó algo: “The bar was so packed that we couldn't get in”.",
           avoidWhen: "Lo que sigue es un sustantivo; ahí hace falta “such”.",
-          register: "neutral",
+          register: "neutro",
           region: "Universal.",
           related: ["such ... that", "too ... to", "enough to", "so much that"],
           example: {
@@ -946,7 +946,7 @@ lessons.push(
           literal: "tal (un) + sustantivo + que",
           useWhen: "Una cantidad o un tipo causó algo: “There was such a crowd that it wasn't worth looking”.",
           avoidWhen: "Lo que sigue es un adjetivo solo; ahí va “so”.",
-          register: "neutral",
+          register: "neutro",
           region: "Universal.",
           related: ["so ... that", "so many ... that", "so much ... that", "quite a"],
           example: {
@@ -960,7 +960,7 @@ lessons.push(
           literal: "tantos / tanto + sustantivo + que",
           useWhen: "Contar: “There were so many people that we left”.",
           avoidWhen: "Quiere describir el carácter de la cosa y no cuántas hay; ahí “such” funciona mejor.",
-          register: "neutral",
+          register: "neutro",
           region: "Universal.",
           related: ["such ... that", "so ... that", "a lot of", "too many"],
           example: {
@@ -974,7 +974,7 @@ lessons.push(
           literal: "demasiado + adjetivo + para + verbo",
           useWhen: "Un exceso impidió algo: “Too far to walk”.",
           avoidWhen: "El resultado sí ocurrió; entonces va “so … that”.",
-          register: "neutral",
+          register: "neutro",
           region: "Universal.",
           related: ["so ... that", "enough to", "not ... enough", "way too"],
           example: {
@@ -988,7 +988,7 @@ lessons.push(
           literal: "suficientemente + adjetivo + para",
           useWhen: "El grado bastó: “The hotel was close enough to walk”.",
           avoidWhen: "Va delante de un sustantivo; ahí “enough” se antepone: “enough money”.",
-          register: "neutral",
+          register: "neutro",
           region: "Universal.",
           related: ["too ... to", "so ... that", "sufficient", "barely"],
           example: {
@@ -1016,7 +1016,7 @@ lessons.push(
           literal: "tú habrías estado mejor fuera",
           useWhen: "Evaluar una decisión pasada: “You'd have been better off staying home”.",
           avoidWhen: "Compara dos objetos; ahí basta “better”.",
-          register: "neutral",
+          register: "neutro",
           region: "Universal.",
           related: ["worse off", "should have", "might as well", "it would have been better"],
           example: {
@@ -1065,7 +1065,7 @@ lessons.push(
       variations: [
         {
           form: "The bar was so packed that we couldn't get in.",
-          register: "neutral",
+          register: "neutro",
           region: "Universal",
           whenToUse: "La forma estándar, buena hablada y escrita."
         },
@@ -1077,7 +1077,7 @@ lessons.push(
         },
         {
           form: "There was such a crowd that we gave up.",
-          register: "neutral",
+          register: "neutro",
           region: "Universal",
           whenToUse: "Cuando lo que causó el resultado es un sustantivo y no un adjetivo."
         },
@@ -1492,7 +1492,7 @@ lessons.push(
           literal: "puede haber + participio",
           useWhen: "Especular sobre el pasado: “It may have sat in the warehouse”.",
           avoidWhen: "Está seguro de lo que pasó; ahí va el pasado simple.",
-          register: "neutral",
+          register: "neutro",
           region: "Universal.",
           related: ["could have", "must have", "probably", "I doubt"],
           example: {
@@ -1506,7 +1506,7 @@ lessons.push(
           literal: "yo no pienso + pasado",
           useWhen: "Expresar duda sobre algo terminado: “I don't think it went out Friday”.",
           avoidWhen: "Quiere sonar tajante; entonces “it didn't go out” sin cobertura.",
-          register: "neutral",
+          register: "neutro",
           region: "Universal.",
           related: ["I doubt", "I'm not sure", "as far as I know", "I don't believe"],
           example: {
@@ -1520,7 +1520,7 @@ lessons.push(
           literal: "ha llegado",
           useWhen: "Algo terminado cuyo resultado importa hoy: “The order has already arrived”.",
           avoidWhen: "Hay una hora o fecha concreta; entonces el inglés exige pasado simple: “it arrived on Friday”.",
-          register: "neutral",
+          register: "neutro",
           region: "Universal.",
           related: ["already", "yet", "just", "since"],
           example: {
@@ -1534,7 +1534,7 @@ lessons.push(
           literal: "para ser honesto contigo",
           useWhen: "Antes de una respuesta incómoda: “I don't think it went out, to be honest with you”.",
           avoidWhen: "La noticia es buena o neutra; ahí sobra y suena a que oculta algo.",
-          register: "neutral",
+          register: "neutro",
           region: "Universal.",
           related: ["frankly", "I'll be straight with you", "honestly", "look"],
           example: {
@@ -1548,7 +1548,7 @@ lessons.push(
           literal: "tan pronto como + presente",
           useWhen: "Prometer una acción futura: “As soon as I confirm, I'll let you know”.",
           avoidWhen: "Está tentado a poner “will” después de “as soon as”; nunca va.",
-          register: "neutral",
+          register: "neutro",
           region: "Universal.",
           related: ["once", "when", "the minute", "the moment"],
           example: {
@@ -1562,7 +1562,7 @@ lessons.push(
           literal: "aun si",
           useWhen: "El caso no está confirmado: “Even if it went out late, it'll get there Tuesday”.",
           avoidWhen: "El hecho es seguro; ahí va “even though it went out late”.",
-          register: "neutral",
+          register: "neutro",
           region: "Universal.",
           related: ["even though", "although", "regardless", "whether or not"],
           example: {
@@ -1576,7 +1576,7 @@ lessons.push(
           literal: "despachar",
           useWhen: "Mercancía que sale de una bodega: “They shipped it Saturday”.",
           avoidWhen: "Se refiere a un mensaje o un correo; eso es “send”.",
-          register: "neutral",
+          register: "neutro",
           region: "Universal.",
           related: ["dispatch", "the warehouse", "tracking number", "the order"],
           example: {
@@ -1625,7 +1625,7 @@ lessons.push(
       variations: [
         {
           form: "I'm hoping the order has already arrived.",
-          register: "courteous",
+          register: "cortés",
           region: "Universal",
           whenToUse: "El registro estándar de trabajo: cortés, cubierto y natural por teléfono."
         },
@@ -1637,7 +1637,7 @@ lessons.push(
         },
         {
           form: "Do you know if the order arrived?",
-          register: "neutral",
+          register: "neutro",
           region: "Universal",
           whenToUse: "Cuando quiere información directa en vez de expresar una esperanza."
         },

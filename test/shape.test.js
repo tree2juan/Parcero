@@ -339,7 +339,7 @@ test("curriculum tags come from the closed vocabularies", () => {
     for (const field of ["domain", "register"]) {
       const value = entry[field];
       if (value === undefined) continue;
-      if (!taxonomy[field].includes(value)) offenders.push(`${entry.verb || entry.key}: ${field} "${value}"`);
+      if (!taxonomy[field].includes(value)) offenders.push(`${entry.id || entry.spanish}: ${field} "${value}"`);
     }
   }
   assert.deepStrictEqual(offenders, [], "these values are not in data/taxonomy.js");

@@ -415,7 +415,7 @@ lessons.push(
             "Hay lágrimas, sollozos o llanto audible, desde un helado caído hasta una canción que conmueve.",
           avoidWhen:
             "Quiere decir quejarse sin lágrimas. “Cry” puede usarse de forma burlona para quejarse, pero puede sonar cruel.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["tears", "sob", "weep", "crying"],
           example: {
@@ -432,7 +432,7 @@ lessons.push(
             "Usted acompaña la frase con ternura, explicación y una solución pequeña.",
           avoidWhen:
             "Alguien vive dolor serio. Sin cuidado, “don't cry” parece pedirle que apague la emoción.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["it's okay", "come here", "take a breath", "sweetheart"],
           example: {
@@ -449,7 +449,7 @@ lessons.push(
             "Quiere expresar impulso o ganas, no una decisión formal.",
           avoidWhen:
             "Ya está llorando con lágrimas visibles; entonces “I'm crying” es más directo.",
-          register: "neutral conversational",
+          register: "neutro conversacional",
           region: "Inglés universal.",
           related: ["want to cry", "tear up", "get emotional", "break down"],
           example: {
@@ -466,7 +466,7 @@ lessons.push(
             "Usted nombra la causa de las lágrimas: cansancio, rabia, dolor, emoción o risa.",
           avoidWhen:
             "La causa ya es obvia y repetirla suena a interrogatorio.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["cry from", "cry over", "because of", "tears from"],
           example: {
@@ -483,7 +483,7 @@ lessons.push(
             "La emoción pasa de posibilidad a acción visible.",
           avoidWhen:
             "Habla de un llanto que ya lleva rato. Entonces “keep crying” o “is crying” puede ser mejor.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["begin crying", "burst into tears", "break down", "tear up"],
           example: {
@@ -500,7 +500,7 @@ lessons.push(
             "Un chiste, recuerdo o absurdo hace que la risa se vuelva física.",
           avoidWhen:
             "Las lágrimas vienen de tristeza o dolor. Ahí esta frase cambia demasiado el sentido.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal.",
           related: ["laugh until you cry", "tears of laughter", "crack up", "laugh hard"],
           example: {
@@ -517,7 +517,7 @@ lessons.push(
             "Quiere describir ojos aguados, lágrimas de risa o emoción visible sin insistir en el verbo.",
           avoidWhen:
             "Necesita decir que alguien está llorando. “Tears” no siempre significa llanto completo.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["crying", "eyes watering", "tear up", "wipe tears"],
           example: {
@@ -579,31 +579,31 @@ lessons.push(
       variations: [
         {
           form: "Don't cry, sweetheart.",
-          register: "warm informal",
+          register: "cálido informal",
           region: "Inglés universal",
           whenToUse: "Consolar a un niño con una frase breve y suave."
         },
         {
           form: "I felt like crying.",
-          register: "neutral conversational",
+          register: "neutro conversacional",
           region: "Inglés universal",
           whenToUse: "Contar que llegaron ganas de llorar sin decidirlo."
         },
         {
           form: "He's crying because he's tired.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Explicar la causa real detrás del llanto."
         },
         {
           form: "Before we all start crying, take a breath.",
-          register: "warm practical",
+          register: "cálido práctico",
           region: "Inglés universal",
           whenToUse: "Bajar la emoción antes de que escale."
         },
         {
           form: "We ended up crying with laughter.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal",
           whenToUse: "La risa fue tan fuerte que hubo lágrimas."
         }
@@ -1067,7 +1067,7 @@ lessons.push(
             "Habla de risa, de lo que hizo reír a alguien o de si la risa fue compartida o burlona.",
           avoidWhen:
             "Quiere decir sonreír sin sonido. Para eso use “smile,” no “laugh.”",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["laugh at", "laugh with", "laughter", "crack up"],
           example: {
@@ -1084,7 +1084,7 @@ lessons.push(
             "Una frase, historia, gesto o recuerdo causa la reacción.",
           avoidWhen:
             "Usted se ríe de alguien como burla. Ahí la estructura es “laugh at,” no “make me laugh.”",
-          register: "neutral conversational",
+          register: "neutro conversacional",
           region: "Inglés universal.",
           related: ["it made me laugh", "funny", "crack me up", "make us laugh"],
           example: {
@@ -1101,7 +1101,7 @@ lessons.push(
             "Realmente habla de burlarse, o de aclarar que no quería burlarse.",
           avoidWhen:
             "La risa fue compartida. Entonces use “laugh with.”",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["mock", "make fun of", "ridicule", "tease"],
           example: {
@@ -1118,7 +1118,7 @@ lessons.push(
             "La otra persona también se ríe o invitó al grupo a compartir el chiste.",
           avoidWhen:
             "La persona está incómoda o callada. Decir “with” no arregla una burla real.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["share the joke", "laugh together", "join in", "be in on it"],
           example: {
@@ -1135,7 +1135,7 @@ lessons.push(
             "Describe lo que pasaba en ese momento o durante una escena.",
           avoidWhen:
             "Habla de una reacción puntual ya terminada; ahí puede bastar “laughed.”",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["was laughing", "kept laughing", "started laughing", "laughing hard"],
           example: {
@@ -1152,7 +1152,7 @@ lessons.push(
             "Cuenta una risa terminada: “she laughed,” “they laughed,” “we laughed.”",
           avoidWhen:
             "La risa seguía en progreso. Entonces “was laughing” pinta mejor la escena.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["laugh", "was laughing", "had laughed", "laughed with"],
           example: {
@@ -1169,7 +1169,7 @@ lessons.push(
             "Un chiste o escena lo hizo reír muchísimo y quiere contarlo con energía.",
           avoidWhen:
             "Hay muerte o peligro real en la conversación. Entonces la exageración puede sonar insensible.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal.",
           related: ["cracking up", "laughing so hard", "in stitches", "burst out laughing"],
           example: {
@@ -1231,31 +1231,31 @@ lessons.push(
       variations: [
         {
           form: "It made me laugh.",
-          register: "neutral conversational",
+          register: "neutro conversacional",
           region: "Inglés universal",
           whenToUse: "Reaccionar naturalmente a algo que da risa."
         },
         {
           form: "I didn't want to laugh at you.",
-          register: "careful friendly",
+          register: "cuidadoso amistoso",
           region: "Inglés universal",
           whenToUse: "Aclarar que no quería burlarse."
         },
         {
           form: "We were laughing with you.",
-          register: "warm corrective",
+          register: "cálido correctivo",
           region: "Inglés universal",
           whenToUse: "Incluir a la persona en el chiste, no señalarla."
         },
         {
           form: "I was laughing from the first line.",
-          register: "neutral conversational",
+          register: "neutro conversacional",
           region: "Inglés universal",
           whenToUse: "Describir una risa que ya estaba en progreso."
         },
         {
           form: "I was dying laughing.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal",
           whenToUse: "El chiste fue mucho más fuerte que un simple “it was funny.”"
         }
@@ -1719,7 +1719,7 @@ lessons.push(
             "Habla de fotos, saludos, gestos amables o reacciones silenciosas que no llegan a risa.",
           avoidWhen:
             "Hay carcajada o sonido. Entonces use “laugh,” no “smile.”",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["smiling", "smiled", "smile for the camera", "grin"],
           example: {
@@ -1736,7 +1736,7 @@ lessons.push(
             "Un fotógrafo o amigo pide la expresión para una foto.",
           avoidWhen:
             "La persona está triste o incómoda. Pedir “smile” puede sonar como ordenar felicidad.",
-          register: "friendly practical",
+          register: "amistoso práctico",
           region: "Inglés universal.",
           related: ["say cheese", "look here", "one more", "hold still"],
           example: {
@@ -1753,7 +1753,7 @@ lessons.push(
             "Habla de hábito, reacción normal o verdad general.",
           avoidWhen:
             "La sonrisa está ocurriendo ahora mismo en una foto. Entonces “is smiling” pinta mejor el momento.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["he smiles", "smile back", "usually smile", "never smile"],
           example: {
@@ -1770,7 +1770,7 @@ lessons.push(
             "Alguien sigue sonriendo, sale sonriendo o aparece sonriendo en una foto.",
           avoidWhen:
             "La sonrisa fue un hecho puntual ya terminado. Entonces use “smiled.”",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["keeps smiling", "is smiling", "was smiling", "smiling softly"],
           example: {
@@ -1787,7 +1787,7 @@ lessons.push(
             "Narra una sonrisa terminada: “she smiled,” “they smiled,” “I smiled late.”",
           avoidWhen:
             "Necesita un pasado hipotético con “had.” Entonces use “had smiled.”",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["had smiled", "smiled back", "smiled late", "came out smiling"],
           example: {
@@ -1804,7 +1804,7 @@ lessons.push(
             "La foto casual quedó seria, rígida o con cara de trámite.",
           avoidWhen:
             "Realmente necesita una foto oficial. Ahí no es insulto; es el formato esperado.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal.",
           related: ["passport photo", "stiff smile", "forced smile", "photo ID"],
           example: {
@@ -1821,7 +1821,7 @@ lessons.push(
             "Evalúa cómo quedó una foto: natural, blurry, dark, awkward, beautiful.",
           avoidWhen:
             "Habla de salir físicamente de un lugar. Ese es otro uso de “come out.”",
-          register: "neutral conversational",
+          register: "neutro conversacional",
           region: "Inglés universal.",
           related: ["come out blurry", "look natural", "turn out well", "look good"],
           example: {
@@ -1883,31 +1883,31 @@ lessons.push(
       variations: [
         {
           form: "Smile, please.",
-          register: "polite practical",
+          register: "cortés práctico",
           region: "Inglés universal",
           whenToUse: "Un fotógrafo o amigo pide la expresión para una foto."
         },
         {
           form: "Look this way and smile.",
-          register: "friendly practical",
+          register: "amistoso práctico",
           region: "Inglés universal",
           whenToUse: "Dirigir a un grupo sin una frase larga."
         },
         {
           form: "I smile weirdly in photos.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal",
           whenToUse: "Bromear sobre su propia cara forzada."
         },
         {
           form: "He came out smiling without noticing.",
-          register: "neutral conversational",
+          register: "neutro conversacional",
           region: "Inglés universal",
           whenToUse: "La foto capturó una sonrisa natural."
         },
         {
           form: "Alejandro smiled late, but it came out natural.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal",
           whenToUse: "Una sonrisa tarde todavía funcionó en la foto."
         }

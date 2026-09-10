@@ -395,7 +395,7 @@ lessons.push(
           literal: "llevar",
           useWhen: "Cuando llevas algo a otro sitio: “take it to the office”, “take the kids to school”.",
           avoidWhen: "Cuando el movimiento es hacia quien habla o hacia la persona con quien hablas; ahí el inglés suele preferir “bring”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés general; la lógica de “aquí para allá” es la misma en todo Estados Unidos.",
           related: ["to bring", "to carry", "to grab", "to drop off"],
           example: {
@@ -409,7 +409,7 @@ lessons.push(
           literal: "traer (y a veces “llevar”)",
           useWhen: "Hacia el hablante o hacia el destino compartido: “bring me the file”, “what should I bring to the party?”.",
           avoidWhen: "Para un traslado que se aleja de todos hacia un tercer lugar neutro; ahí encaja mejor “take”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés general; el inglés norteamericano usa “bring” con la fiesta a la que uno va mucho más que el español.",
           related: ["to take", "to bring along", "to bring over", "to grab"],
           example: {
@@ -423,7 +423,7 @@ lessons.push(
           literal: "llevar puesto / usar (ropa)",
           useWhen: "Al describir lo que alguien trae puesto: “she's wearing a jacket”, “what should I wear?”.",
           avoidWhen: "Para cargar la prenda sin ponértela; eso sería “bring” o “carry”, no “wear”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés general; “have on” es una variante coloquial equivalente.",
           related: ["to put on", "to have on", "to dress", "to try on"],
           example: {
@@ -437,7 +437,7 @@ lessons.push(
           literal: "he estado (por)",
           useWhen: "Para decir cuánto llevas en un sitio o haciendo algo: “I've been waiting for an hour”.",
           avoidWhen: "No uses “since” con una duración: “since three months” es error; “since” pide una fecha o un punto de inicio.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés general; la distinción “for” (duración) frente a “since” (inicio) es firme en todas partes.",
           related: ["for", "since", "it's been", "ago"],
           example: {
@@ -451,7 +451,7 @@ lessons.push(
           literal: "llevarse bien (con)",
           useWhen: "Al hablar de una relación: “I get along with my roommate”, “they don't get along”.",
           avoidWhen: "Cuando quieres decir que quedaron bien tras una pelea puntual; eso es “we're good now”, otra idea.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés general; “get on with” es más británico y “hit it off” es para el primer encuentro.",
           related: ["to hit it off", "to click", "to get on", "to gel"],
           example: {
@@ -465,7 +465,7 @@ lessons.push(
           literal: "de una / seguro",
           useWhen: "Al aceptar sin dudar: “Wanna come? — For sure!”.",
           avoidWhen: "En un registro formal o escrito, donde “certainly” o “of course” suenan mejor.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés norteamericano coloquial; “you bet” tiene un sabor muy estadounidense.",
           related: ["sure thing", "definitely", "you bet", "absolutely"],
           example: {
@@ -479,7 +479,7 @@ lessons.push(
           literal: "¿qué hay? / ¿qué más?",
           useWhen: "Al saludar a alguien de confianza, en persona o por mensaje: “Hey, what's up?”.",
           avoidWhen: "En un primer contacto formal, donde “hello” y “nice to meet you” marcan mejor el tono.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés norteamericano coloquial; “how's it going?” cumple la misma función y es aún más común en Estados Unidos.",
           related: ["how's it going?", "what's new?", "how are you?", "how've you been?"],
           example: {
@@ -533,31 +533,31 @@ lessons.push(
       variations: [
         {
           form: "What should I bring to the barbecue?",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés norteamericano",
           whenToUse: "La forma estándar para preguntar qué llevar a un asado o a una fiesta."
         },
         {
           form: "Should I bring anything?",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés general",
           whenToUse: "Versión corta cuando ya sabes que vas y solo lo confirmas."
         },
         {
           form: "Want me to bring something?",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés general",
           whenToUse: "Ofreciéndote tú misma a llevar algo, de forma más proactiva."
         },
         {
           form: "I'll bring a side.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés norteamericano",
           whenToUse: "En un potluck, al comprometerte con un acompañamiento; “a side” es un plato de acompañar."
         },
         {
           form: "What can I bring?",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés general",
           whenToUse: "Un poco más cortés y neutro, útil con gente que no conoces tanto."
         }
@@ -987,7 +987,7 @@ lessons.push(
           literal: "traer",
           useWhen: "Cuando algo viene hacia donde estás: “bring me the menu”, “bring the bill”, “bring some water”.",
           avoidWhen: "Cuando el objeto se aleja de ti hacia otro sitio; para llevárselo se usa “take”, no “bring”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés general; la misma lógica hacia-el-hablante que en español, con “bring” un poco más flexible.",
           related: ["to take", "to bring over", "to get", "to grab"],
           example: {
@@ -1001,7 +1001,7 @@ lessons.push(
           literal: "¿podrías traerme...?",
           useWhen: "Al pedir cualquier cosa en la mesa: “could you bring me a fork?”, “could you bring the check?”.",
           avoidWhen: "Como orden pelada tipo “bring me a fork”, que sin “could” ni “please” suena brusca.",
-          register: "polite neutral",
+          register: "cortés neutro",
           region: "Inglés general; “can you bring me…?” es la variante un poco más informal.",
           related: ["Can you bring me...?", "Could I get...?", "Would you bring...?", "May I have...?"],
           example: {
@@ -1015,7 +1015,7 @@ lessons.push(
           literal: "¿te importaría...?",
           useWhen: "Para una petición especialmente delicada o formal: “would you mind bringing some napkins?”.",
           avoidWhen: "Entre amigos o para algo trivial, donde tanto rodeo puede sonar excesivo; basta con “could you…?”.",
-          register: "polite formal",
+          register: "cortés formal",
           region: "Inglés general; ojo: responder “no” a un “would you mind…?” significa que sí, que con gusto.",
           related: ["Could you please...?", "If it's not too much trouble...", "When you get a chance...", "Sorry to bother you, but..."],
           example: {
@@ -1029,7 +1029,7 @@ lessons.push(
           literal: "¿podría yo obtener...?",
           useWhen: "Al pedir comida o bebida: “could I get a coffee?”, “can I get the special?”.",
           avoidWhen: "En inglés muy formal o británico, donde “could I have…?” suena algo más pulido que “get”.",
-          register: "polite neutral",
+          register: "cortés neutro",
           region: "Inglés norteamericano; “can I get…?” domina en las cafeterías de Estados Unidos.",
           related: ["Can I get...?", "Could I have...?", "I'll have...", "I'll take..."],
           example: {
@@ -1043,7 +1043,7 @@ lessons.push(
           literal: "café negro",
           useWhen: "Al pedir café solo: “a black coffee, please”, “I'll take it black”.",
           avoidWhen: "No digas “a tinto”: la palabra no existe en inglés. Y “an espresso” es otra cosa, más corto y concentrado.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés general; el “drip coffee” de Estados Unidos es más aguado y grande que el tinto colombiano.",
           related: ["coffee, black", "a dark roast", "an Americano", "a house coffee"],
           example: {
@@ -1057,7 +1057,7 @@ lessons.push(
           literal: "la cuenta",
           useWhen: "Al terminar de comer: “could we get the bill?”, “just the check, please”.",
           avoidWhen: "No calques “the account” (eso es una cuenta bancaria) ni pidas “the note”; la palabra es “bill” o “check”.",
-          register: "neutral",
+          register: "neutro",
           region: "“Check” es más estadounidense; “bill”, más británico y estadounidense. Ambas se entienden en todas partes.",
           related: ["the check", "the tab", "the receipt", "the total"],
           example: {
@@ -1071,7 +1071,7 @@ lessons.push(
           literal: "aquí va / aquí tiene",
           useWhen: "Al recibir o entregar algo en el mostrador o la mesa: “here you go, one black coffee”.",
           avoidWhen: "Para un regalo de verdad, donde “here, this is for you” suena mejor; “here you go” es de servicio cotidiano.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés general; “there you go” y “here you are” son variantes casi idénticas.",
           related: ["here you are", "there you go", "you're welcome", "my pleasure"],
           example: {
@@ -1125,31 +1125,31 @@ lessons.push(
       variations: [
         {
           form: "Could I get the bill, please?",
-          register: "polite neutral",
+          register: "cortés neutro",
           region: "Inglés norteamericano",
           whenToUse: "La forma estándar y segura para pedir la cuenta."
         },
         {
           form: "Could you bring us the check when you get a chance?",
-          register: "polite neutral",
+          register: "cortés neutro",
           region: "Inglés norteamericano",
           whenToUse: "Para una mesa de varios, sin prisa, con “when you get a chance”."
         },
         {
           form: "Would you mind bringing the bill?",
-          register: "polite formal",
+          register: "cortés formal",
           region: "Inglés general",
           whenToUse: "Extra-cortés, cuando quieres pedir con mucho tacto."
         },
         {
           form: "Can we get the check?",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés norteamericano",
           whenToUse: "Más suelto, entre amigos o en un sitio informal."
         },
         {
           form: "Just the bill, thanks.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés general",
           whenToUse: "Corto y cortés cuando el mesero pasa y hay que ser rápido."
         }
@@ -1579,7 +1579,7 @@ lessons.push(
           literal: "dejar (algo)",
           useWhen: "Al dejar un objeto en algún lado: «I left my keys on the table», «leave it there», «I left my jacket in your room».",
           avoidWhen: "No lo uses para dejar de fumar («quit») ni, sin lugar, para dejar a alguien, que se lee como una ruptura.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés general; el pasado «left» sirve tanto para objetos como para salir de un lugar («I left the house»).",
           related: ["to leave behind", "to leave it there", "I left my keys", "leave it here"],
           example: {
@@ -1593,7 +1593,7 @@ lessons.push(
           literal: "abandonar (haciendo)",
           useWhen: "Al hablar de dejar un vicio o una costumbre: «I quit smoking», «I gave up coffee», «I stopped drinking».",
           avoidWhen: "No uses «to leave» para esto — «I left smoking» está mal — ni pongas infinitivo: «quit to smoke» no existe.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés general; «quit» es algo más coloquial y «give up» un poco más suave, pero ambos son universales.",
           related: ["to quit smoking", "to give up", "to stop doing", "to cut out"],
           example: {
@@ -1607,7 +1607,7 @@ lessons.push(
           literal: "dejar / permitir (dejame...)",
           useWhen: "Al ofrecer o pedir el turno: «let me help you», «let me tell you how I did it», «let me explain».",
           avoidWhen: "Nunca metas «to» después de «let»: «let me to help» está mal. Y no lo confundas con «to leave» (dejar un objeto).",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés general; «let me» es tan común que a menudo se contrae en el habla rápida a «lemme».",
           related: ["let me see", "let me help", "let me tell you", "let me explain"],
           example: {
@@ -1621,7 +1621,7 @@ lessons.push(
           literal: "dejar a alguien",
           useWhen: "Al hablar de una ruptura: «she left him», «they broke up». O de un «dropoff», pero con lugar: «I dropped her off at home».",
           avoidWhen: "No digas «I left my girlfriend» si la dejaste en algún sitio; sin lugar suena a que rompiste con ella.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés general; para el «dropoff» lo natural es el phrasal verb «to drop someone off».",
           related: ["to break up with", "to dump someone", "to split up", "to end things"],
           example: {
@@ -1635,7 +1635,7 @@ lessons.push(
           literal: "no importa / suéltalo",
           useWhen: "Para restarle importancia a algo o cerrar un tema: «oh, never mind», «let's just drop it for now».",
           avoidWhen: "No lo calques como «leave it so», que en inglés no significa nada natural; y «drop» aquí no es dejar caer algo.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés general; «never mind» es más suave y «drop it» puede sonar más tajante según el tono.",
           related: ["forget it", "drop it", "don't worry about it", "let it go"],
           example: {
@@ -1649,7 +1649,7 @@ lessons.push(
           literal: "dejar (a alguien) en paz",
           useWhen: "Al pedir espacio o parar el fastidio: «leave me alone», «leave the dog alone», «leave it alone».",
           avoidWhen: "Es más firme que «never mind»; «leave me alone» puede sonar cortante, así que úsalo cuando de verdad lo sientas.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés general; el tono y el contexto deciden si suena a súplica o a orden seca.",
           related: ["leave me alone", "leave it alone", "back off", "give me space"],
           example: {
@@ -1663,7 +1663,7 @@ lessons.push(
           literal: "adelante / siéntete libre",
           useWhen: "Al conceder permiso con calidez: «Can I come in? — Go ahead», «feel free to grab a coffee».",
           avoidWhen: "En un contexto muy rígido, un «of course» o «certainly» suena más formal; «go ahead» es cotidiano y cercano.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés general; «feel free» suele ir seguido de «to + verbo»: «feel free to sit down».",
           related: ["feel free", "be my guest", "help yourself", "sure, go for it"],
           example: {
@@ -1717,31 +1717,31 @@ lessons.push(
       variations: [
         {
           form: "Leave it there, I've got it.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés general",
           whenToUse: "Decirle a alguien que deje una tarea; relajado."
         },
         {
           form: "Don't worry about the dishes, I'll get them later.",
-          register: "polite neutral",
+          register: "cortés neutro",
           region: "Inglés general",
           whenToUse: "Rechazar la ayuda con cortesía, como anfitrión."
         },
         {
           form: "Let me give you a hand with that.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés general",
           whenToUse: "Ofrecer ayuda; el sentido «dejame…»."
         },
         {
           form: "Let's just leave it for now.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés general",
           whenToUse: "Cerrar un tema por hoy, «dejemos así»."
         },
         {
           form: "Never mind, it's not a big deal.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés general",
           whenToUse: "Restarle importancia a algo, «deje así»."
         }

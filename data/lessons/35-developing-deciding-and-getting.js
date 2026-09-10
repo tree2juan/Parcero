@@ -405,7 +405,7 @@ lessons.push(
             "Al resolver algo: “we decided to go”, “who decides?”, “decide quickly”.",
           avoidWhen:
             "Quiere decir “no me decido”; ahí lo natural es “make up my mind”, no “I don't decide”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["decision", "decide on", "choose", "settle"],
           example: {
@@ -422,7 +422,7 @@ lessons.push(
             "Alguien duda entre opciones: “make up your mind”, “I can't make up my mind”.",
           avoidWhen:
             "Una decisión formal o institucional, donde “decide” suena más serio y limpio.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal.",
           related: ["decide", "choose", "stop hesitating", "be unsure"],
           example: {
@@ -439,7 +439,7 @@ lessons.push(
             "Nombrar la opción elegida: “we decided on the museum”, “she decided on blue”.",
           avoidWhen:
             "No calque el “por” español como “decide for” cuando habla de una opción.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["settle on", "go with", "choose", "pick"],
           example: {
@@ -456,7 +456,7 @@ lessons.push(
             "Decir que la voluntad está firme: “I'm determined to finish”, “she's determined to go”.",
           avoidWhen:
             "No diga “I'm decided to”; eso suena calcado y poco natural.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["be set on", "be sure", "stick with it", "firm"],
           example: {
@@ -473,7 +473,7 @@ lessons.push(
             "Hablar del acto de decidir: “make a decision today”, “that was a hard decision”.",
           avoidWhen:
             "“Take a decision” existe en algunos usos británicos, pero para sonar seguro use “make a decision”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal; “make” es la opción más segura.",
           related: ["decision", "decide", "make up your mind", "choice"],
           example: {
@@ -490,7 +490,7 @@ lessons.push(
             "Alguien reconsidera: “I changed my mind”, “don't change your mind now”.",
           avoidWhen:
             "No lo traduzca como “change opinion” en conversación normal; falta el posesivo “your/my”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["mind", "reconsider", "back out", "think again"],
           example: {
@@ -507,7 +507,7 @@ lessons.push(
             "Defender una elección ya hecha: “I chose this plan and I'm sticking with it”.",
           avoidWhen:
             "La decisión aún no está tomada; primero decide, después se puede stick with it.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal.",
           related: ["stay with it", "keep to the plan", "commit", "follow through"],
           example: {
@@ -569,31 +569,31 @@ lessons.push(
       variations: [
         {
           form: "I can't make up my mind.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal",
           whenToUse: "Decir que no se decide."
         },
         {
           form: "We decided on the museum.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Nombrar la opción escogida."
         },
         {
           form: "I'm determined to go.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Expresar firmeza después de decidir."
         },
         {
           form: "I made a decision.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Hablar del acto de tomar una decisión."
         },
         {
           form: "Don't change your mind.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal",
           whenToUse: "Pedir que alguien no reabra la decisión."
         }
@@ -1037,7 +1037,7 @@ lessons.push(
             "Preguntar por disponibilidad: “where can I get a charger?”, “I got one”.",
           avoidWhen:
             "Quiere decir sólo buscar o encontrar; “get” apunta al resultado, no al proceso de mirar.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal; muy frecuente.",
           related: ["get one", "buy", "receive", "pick up"],
           example: {
@@ -1054,7 +1054,7 @@ lessons.push(
             "Algo cuesta conseguir: “I need to get hold of a charger”, “get hold of tickets”.",
           avoidWhen:
             "Una compra simple y visible; “get” basta si no hay dificultad.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["track down", "manage to get", "find", "source"],
           example: {
@@ -1071,7 +1071,7 @@ lessons.push(
             "La búsqueda está en curso: “I'm looking for a charger”, “look for the store”.",
           avoidWhen:
             "Ya obtuvo el objeto; entonces “I got it” o “I managed to get it”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["search for", "try to find", "hunt for", "check"],
           example: {
@@ -1088,7 +1088,7 @@ lessons.push(
             "Ubica algo: “I found the store”, “I found my cable”.",
           avoidWhen:
             "El foco es conseguir el objeto como resultado de una gestión; ahí use “get”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["found", "locate", "come across", "discover"],
           example: {
@@ -1105,7 +1105,7 @@ lessons.push(
             "Hubo esfuerzo, urgencia o suerte: “I managed to get tickets”.",
           avoidWhen:
             "Una obtención normal sin dificultad; “I got it” suena más natural.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["succeed in getting", "finally get", "pull off", "get hold of"],
           example: {
@@ -1122,7 +1122,7 @@ lessons.push(
             "Ofrecer traer u obtener algo: “I'll get you a chair”, “I'll get you one”.",
           avoidWhen:
             "Meter siempre “for” después de get; “I'll get for you a chair” suena torpe.",
-          register: "polite service",
+          register: "cortés de servicio",
           region: "Inglés universal.",
           related: ["bring you", "grab you", "get one for you", "help you"],
           example: {
@@ -1139,7 +1139,7 @@ lessons.push(
             "Algo requiere averiguar o perseguir pistas: “track down a spare part”.",
           avoidWhen:
             "Una compra común; suena demasiado detectivesco para algo que está en el mostrador.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal.",
           related: ["hunt down", "get hold of", "find", "source"],
           example: {
@@ -1201,31 +1201,31 @@ lessons.push(
       variations: [
         {
           form: "Where can I get a charger?",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Preguntar dónde se consigue algo."
         },
         {
           form: "I'm looking for a charger.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Decir que está buscando algo."
         },
         {
           form: "I couldn't find one.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "No dio con el objeto."
         },
         {
           form: "I managed to get one.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Logró conseguirlo con esfuerzo."
         },
         {
           form: "I'll get you one.",
-          register: "polite service",
+          register: "cortés de servicio",
           region: "Inglés universal",
           whenToUse: "Ofrecer conseguir o traer algo para alguien."
         }
@@ -1669,7 +1669,7 @@ lessons.push(
             "Ofrecer un objeto o servicio: “offer you my seat”, “offer help”, “offer a choice”.",
           avoidWhen:
             "Una oferta cotidiana puede sonar más natural con “would you like…?” o “can I help…?”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["offer you", "offer help", "provide", "give"],
           example: {
@@ -1686,7 +1686,7 @@ lessons.push(
             "La persona y la cosa están claras: “offer you tea”, “offer her a seat”.",
           avoidWhen:
             "Poner “to” entre offer y la persona en este orden; “offer to you my seat” suena torpe.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["give you", "bring you", "offer a seat", "offer help"],
           example: {
@@ -1703,7 +1703,7 @@ lessons.push(
             "Ofertas suaves: “would you like a hand?”, “would you like some water?”.",
           avoidWhen:
             "La situación exige una acción urgente; ahí “Can I help?” puede ser más directo.",
-          register: "polite neutral",
+          register: "cortés neutro",
           region: "Inglés universal.",
           related: ["do you want", "can I get you", "would you care for", "please"],
           example: {
@@ -1720,7 +1720,7 @@ lessons.push(
             "Bolsas, puertas, cajas o tareas pequeñas: “can I give you a hand?”.",
           avoidWhen:
             "Contextos muy formales, donde “assist” o “help” pueden sonar más profesionales.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal.",
           related: ["help with", "lend a hand", "help out", "carry"],
           example: {
@@ -1737,7 +1737,7 @@ lessons.push(
             "Alguien se ofrece para una tarea: “I volunteered to help”.",
           avoidWhen:
             "No diga “I offered myself to help”; suena calcado y demasiado literal.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["offer to", "sign up", "help", "step forward"],
           example: {
@@ -1754,7 +1754,7 @@ lessons.push(
             "Servicios y opciones: “life jackets are offered”, “discounts are offered”.",
           avoidWhen:
             "Una persona hace una oferta directa; entonces active voice sounds warmer.",
-          register: "neutral to formal",
+          register: "neutro a formal",
           region: "Inglés universal.",
           related: ["available", "provided", "included", "service"],
           example: {
@@ -1771,7 +1771,7 @@ lessons.push(
             "La ayuda concreta está a la vista: “can I help with the bags?”.",
           avoidWhen:
             "Quiere ofrecer una opción abstracta o formal; ahí “offer” puede ser más exacto.",
-          register: "polite neutral",
+          register: "cortés neutro",
           region: "Inglés universal.",
           related: ["help with", "give a hand", "carry", "hold"],
           example: {
@@ -1833,31 +1833,31 @@ lessons.push(
       variations: [
         {
           form: "Can I offer you my seat?",
-          register: "polite neutral",
+          register: "cortés neutro",
           region: "Inglés universal",
           whenToUse: "Ofrecer un asiento de manera respetuosa."
         },
         {
           form: "Would you like a hand?",
-          register: "polite neutral",
+          register: "cortés neutro",
           region: "Inglés universal",
           whenToUse: "Ofrecer ayuda práctica sin sonar brusco."
         },
         {
           form: "I volunteered to help.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Decir que usted se ofreció a ayudar."
         },
         {
           form: "Life jackets are offered.",
-          register: "neutral to formal",
+          register: "neutro a formal",
           region: "Inglés universal",
           whenToUse: "Anunciar que un servicio u objeto está disponible."
         },
         {
           form: "Can I help with the bags?",
-          register: "polite neutral",
+          register: "cortés neutro",
           region: "Inglés universal",
           whenToUse: "Nombrar la ayuda concreta que ofrece."
         }

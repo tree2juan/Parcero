@@ -41,13 +41,16 @@ function matchingVerbs() {
   return search ? curriculum.filter((verb) => `${verb.spanish} ${verb.english}`.toLowerCase().includes(search)) : curriculum;
 }
 function verbTags(verb) {
-  /* level is real, differentiated data. register and regionality are still the
-     seeded placeholder on every verb, so showing them would state as fact
-     something no Colombian speaker has checked. They stay in the data — the
-     report tab can still target them — but they are not published until a
-     review has actually happened. */
+  /* level comes from the frequency data. register publishes by default; a verb
+     carrying reviewStatus has it held back until the flag is dropped.
+     Corrections come in through the Report an error tab.
+
+     regionality is deliberately not rendered. It carries the identical string
+     on all 200 verbs, so as a per-verb tag it looked like verb-specific data
+     while telling a learner nothing. The field stays in the data; if it ever
+     earns per-verb values it can come back here and in VERB_SLOTS together. */
   const tags = [verb.level];
-  if (!verb.reviewStatus) tags.push(verb.register, verb.regionality);
+  if (!verb.reviewStatus) tags.push(verb.register);
   return tags.filter(Boolean).map((tag) => `<span class="tag">${tag}</span>`).join("");
 }
 function renderVerbs() {
@@ -65,8 +68,23 @@ function renderVerbs() {
 function renderFluency() {
   $("#fluency-results").innerHTML = fluencyItems.map(([spanish, english, type, region, note], index) => `<article class="reference-card" data-anchor="fluency:${index}"><h3>${spanish}</h3><p><strong>${english}</strong></p><p>${note}</p><span class="tag">${type}</span><span class="tag">${region}</span></article>`).join("");
 }
+/* After Dark rows are objects keyed by city. The list is filtered rather than
+   paged: a learner reads one city's set, because the whole point is that the
+   same word carries a different charge in each. */
+const afterDarkView = { city: "bogota" };
 function renderMature() {
-  $("#mature-results").innerHTML = matureItems.map(([phrase, equivalent, severity, note, direction, respond], index) => `<article class="reference-card" data-anchor="mature:${index}"><h3>${esc(phrase)}</h3><p><strong>${esc(equivalent)}</strong></p><p>${esc(note)}</p><p class="detail"><strong>${t("mature.respond")}</strong> ${esc(respond)}</p><span class="tag">${t("mature.severity")}: ${esc(severity)}</span><span class="tag">${esc(direction === "es" ? "Español" : "English")}</span><span class="tag">${t("mature.tag")}</span></article>`).join("");
+  const rows = matureItems
+    .map((item, index) => ({ item, index }))
+    .filter((entry) => entry.item.city === afterDarkView.city);
+  $("#mature-results").innerHTML = rows.map(({ item, index }) => {
+    const level = String(item.severity || "").toLowerCase();
+    return `<article class="reference-card severity-${esc(level)}" data-anchor="mature:${index}"><h3 lang="es">${esc(item.phrase)}</h3><p><strong>${esc(item.equivalent)}</strong></p><p>${esc(item.note)}</p><span class="tag tag-severity">${t("mature.severity")}: ${esc(item.severity)}</span><span class="tag">${t("mature.tag")}</span></article>`;
+  }).join("");
+  $("#city-note").textContent = t(`afterDark.note.${afterDarkView.city}`);
+}
+/* Signals are national, not per-city, so they render once and stay put while
+   the city tabs swap the word list above them. */
+function renderSignals() {
   $("#mature-signals").innerHTML = matureSignals.map(([signal, looksLike, means, direction, respond], index) => `<article class="reference-card" data-anchor="signal:${index}"><h3>${esc(signal)}</h3><p><em>${esc(looksLike)}</em></p><p>${esc(means)}</p><p class="detail"><strong>${t("mature.respond")}</strong> ${esc(respond)}</p><span class="tag">${esc(direction === "es" ? "Español" : "English")}</span></article>`).join("");
 }
 /*
@@ -318,29 +336,6 @@ function renderVariations(current) {
   $("#variations").innerHTML = html;
   $("#variations-section").hidden = !html;
 }
-function renderProvenance(lesson) {
-  /*
-   * Say which fields are machine-translated, for the direction that shows them.
-   * lesson.review is per-lesson and "pending" for every lesson, so it cannot
-   * distinguish prose a human wrote and nobody has signed off from prose no
-   * human has ever read. Unflagged is otherwise indistinguishable from unread.
-   *
-   * Read through a thunk for the same reason review-ui.js does: element ids
-   * become globals, so a typeof probe on a data name can never fail.
-   */
-  let record;
-  try {
-    record = provenance;
-  } catch {
-    record = null;
-  }
-  const paths = record && record.fields && record.fields[lesson.id]
-    ? record.fields[lesson.id][state.direction]
-    : null;
-  const count = Array.isArray(paths) ? paths.length : 0;
-  $("#lesson-provenance").hidden = count === 0;
-  $("#lesson-provenance-count").textContent = count === 0 ? "" : t("provenance.count").replace("{count}", count);
-}
 function renderPractice() {
   const questions = practiceQuestions();
   const question = questions[practiceView.index];
@@ -368,8 +363,6 @@ function render() {
   renderBand(lesson);
   $("#lesson-title").textContent = current.title;
   $("#lesson-situation").textContent = current.situation;
-  $("#lesson-review").hidden = lesson.review !== "pending";
-  renderProvenance(lesson);
   renderSetting(current);
   renderAddress(current);
   renderDialogue(current);
@@ -560,26 +553,137 @@ document.querySelectorAll(".library-tab").forEach((tab) => tab.addEventListener(
     $(`#${item.dataset.library}-library`).hidden = !active;
   });
 }));
-$("#mature-confirm").addEventListener("change", (event) => { $("#mature-open").disabled = !event.target.checked; });
-$("#mature-open").addEventListener("click", () => {
-  localStorage.setItem("parcero-mature-enabled", "true");
-  $("#mature-gate").hidden = true;
-  $("#mature-shown").hidden = false;
+document.querySelectorAll(".city-tab").forEach((tab) => tab.addEventListener("click", () => {
+  afterDarkView.city = tab.dataset.city;
+  document.querySelectorAll(".city-tab").forEach((item) => {
+    const active = item === tab;
+    item.classList.toggle("active", active);
+    item.setAttribute("aria-selected", active);
+  });
   renderMature();
-  /* The deck list changes the moment the gate opens, so rebuild it now
-     rather than waiting for the next reload. */
-  if (typeof ParceroFlashcards === "object" && ParceroFlashcards && typeof ParceroFlashcards.refresh === "function") ParceroFlashcards.refresh();
-});
-if (localStorage.getItem("parcero-mature-enabled") === "true") {
-  $("#mature-gate").hidden = true;
-  $("#mature-shown").hidden = false;
-  renderMature();
-}
-$("#stat-lessons").textContent = lessons.length;
-$("#stat-verbs").textContent = curriculum.length;
+}));
 renderVerbs();
 renderFluency();
+renderMature();
+renderSignals();
 renderSlang();
 $("#slang-search").addEventListener("input", renderSlang);
 $("#lesson-search").addEventListener("input", renderLessonList);
 render();
+
+/* ---------- module navigation ----------
+   Each module is a view, so only one is on screen at a time. Routing runs off
+   the hash the nav already used, which keeps every existing in-page link, the
+   back button and any bookmark working without a second link scheme. */
+const VIEWS = ["home", "lessons", "flashcards", "placement", "library", "workbook", "after-dark"];
+const ROUTE_FOR_HASH = {
+  "": "home", "#top": "home",
+  "#lessons": "lessons", "#lesson": "lessons",
+  "#flashcards": "flashcards",
+  "#placement": "placement", "#roadmap": "placement",
+  "#library": "library",
+  "#workbook": "workbook",
+  "#after-dark": "after-dark"
+};
+function showView(name, options) {
+  const target = VIEWS.includes(name) ? name : "home";
+  for (const view of VIEWS) $(`#view-${view}`).hidden = view !== target;
+  document.querySelectorAll(".site-nav a[href^='#']").forEach((link) => {
+    const active = ROUTE_FOR_HASH[link.getAttribute("href")] === target;
+    link.classList.toggle("active", active);
+    if (active) link.setAttribute("aria-current", "page");
+    else link.removeAttribute("aria-current");
+  });
+  /* The midnight palette belongs to After Dark alone, so it is a flag on the
+     root element rather than a theme the rest of the app has to opt out of. */
+  document.documentElement.classList.toggle("midnight", target === "after-dark");
+  if (!options || options.scroll !== false) window.scrollTo({ top: 0 });
+}
+const viewForHash = () => ROUTE_FOR_HASH[location.hash] || "home";
+window.addEventListener("hashchange", () => showView(viewForHash()));
+showView(viewForHash(), { scroll: false });
+
+/* ---------- modules menu ---------- */
+const modulesButton = $("#modules-button");
+const modulesMenu = $("#modules-menu");
+const modulesList = $("#modules-list");
+const modulesFilter = $("#modules-filter");
+
+/*
+ * The menu is named "Modules" but used to be a flat list of every lesson. At
+ * eight lessons that was a menu; at 233 it is a wall, and on a phone it is a
+ * wall you scroll blind. So the list is grouped under the module each lesson
+ * belongs to, and filtered from the box at the top.
+ *
+ * Grouping is derived from `sourceFile`, the same key the workbook uses, so a
+ * lesson lands in the right module by construction. COURSE_MODULES supplies
+ * only the human title. A block with no title still renders, under its own
+ * file name, because a lesson you cannot reach is worse than an ugly heading.
+ */
+function fillModulesMenu(query) {
+  const needle = String(query == null ? modulesFilter.value : query).trim().toLowerCase();
+  const titles = new Map(COURSE_MODULES.map((module) => [module.block, module.title[state.direction]]));
+  const groups = new Map();
+  lessons.map((lesson, index) => ({
+    id: lesson.id,
+    number: index + 1,
+    heading: titles.get(lesson.sourceFile) || lesson.sourceFile,
+    title: lesson[state.direction].title,
+    level: lesson.level
+  })).forEach((entry) => {
+    const hit = !needle ||
+      entry.title.toLowerCase().includes(needle) ||
+      entry.level.toLowerCase().includes(needle) ||
+      entry.heading.toLowerCase().includes(needle);
+    if (!hit) return;
+    if (!groups.has(entry.heading)) groups.set(entry.heading, []);
+    groups.get(entry.heading).push(entry);
+  });
+
+  if (!groups.size) {
+    modulesList.innerHTML = `<p class="modules-empty">${esc(t("nav.modulesEmpty"))}</p>`;
+    return;
+  }
+  modulesList.innerHTML = [...groups].map(([heading, entries]) =>
+    `<div class="modules-group" role="group" aria-label="${esc(heading)}">` +
+    `<p class="modules-group-title">${esc(heading)}</p>` +
+    entries.map((entry) =>
+      `<button type="button" role="menuitem" data-goto="${esc(entry.id)}">` +
+      `<span class="modules-index">${entry.number}</span>` +
+      `<span class="modules-body"><strong>${esc(entry.title)}</strong>` +
+      `<small>${esc(entry.level)}</small></span></button>`).join("") +
+    `</div>`).join("");
+}
+function setModulesOpen(open) {
+  if (open) {
+    modulesFilter.value = "";
+    fillModulesMenu("");
+  }
+  modulesMenu.hidden = !open;
+  modulesButton.setAttribute("aria-expanded", String(open));
+  modulesButton.parentElement.classList.toggle("is-open", open);
+  if (open) modulesFilter.focus();
+}
+modulesFilter.addEventListener("input", () => fillModulesMenu());
+modulesButton.addEventListener("click", (event) => {
+  event.stopPropagation();
+  setModulesOpen(modulesMenu.hidden);
+});
+modulesMenu.addEventListener("click", (event) => {
+  const item = event.target.closest("[data-goto]");
+  if (!item) return;
+  setModulesOpen(false);
+  if (location.hash !== "#lessons") location.hash = "#lessons";
+  else showView("lessons");
+  /* hashchange is queued, not synchronous, so its scroll-to-top would land
+     after a direct call and undo the jump to the chosen lesson. */
+  setTimeout(() => selectLesson(item.dataset.goto), 0);
+});
+document.addEventListener("click", (event) => {
+  if (!modulesButton.parentElement.contains(event.target)) setModulesOpen(false);
+});
+document.addEventListener("keydown", (event) => {
+  if (event.key !== "Escape" || modulesMenu.hidden) return;
+  setModulesOpen(false);
+  modulesButton.focus();
+});

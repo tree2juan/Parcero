@@ -36,16 +36,18 @@ const NOT_TRANSLATED = [
   ["address.form", "an enum rendered through t() -- app.js:166 maps it to address.form.* keys"],
 
   /*
-   * `register` is a different case and the reason matters: it is NOT routed
-   * through t(). app.js:209 and app.js:228 print it raw inside a tag, so a
-   * Spanish reader sees "polite neutral" in English. That is a live defect, not
-   * an acceptable exclusion -- but it belongs to the i18n migration of
-   * register/regionality/level already in flight, and translating the strings
-   * here would mean migrating the same fields twice, with two chances for the
-   * data and the labels to drift apart. Excused as out of scope, not as fine.
+   * `register` used to sit here as an admitted live defect: app.js prints it raw
+   * inside a tag rather than routing it through t(), so a Spanish reader saw
+   * "polite neutral" in English. It is now authored in Spanish on this side,
+   * like `region` beside it, which is the same fix the rest of the support prose
+   * already had -- the value describes the tone of an English expression *to a
+   * Spanish reader*, so it belongs in their language. Rendering it raw is fine
+   * once the data is per-side; there is nothing left for t() to do. Guarded by
+   * "the tone labels on the English side are in Spanish" in test/content.test.js,
+   * so it cannot quietly revert.
    */
-  ["vocabulary[].register", "rendered raw in English (app.js:209); belongs to the in-flight register i18n migration"],
-  ["variations[].register", "rendered raw in English (app.js:228); same migration"],
+  ["vocabulary[].register", "already Spanish: authored per side, like region"],
+  ["variations[].register", "already Spanish: authored per side, like region"],
 
   /*
    * Options belonging to a question that asks which English utterance fits.

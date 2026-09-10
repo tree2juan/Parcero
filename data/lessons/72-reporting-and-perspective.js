@@ -417,7 +417,7 @@ lessons.push(
             "Reportando lo que alguien afirmó: “She said (that) she was coming.”",
           avoidWhen:
             "Cuando nombras a quién le hablan; ahí toca “tell”: “She told me…”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés general.",
           related: ["to tell", "to mention", "to claim", "according to"],
           example: {
@@ -434,7 +434,7 @@ lessons.push(
             "Pregunta cerrada relatada: “He asked if I was coming.”",
           avoidWhen:
             "Si la pregunta era abierta (what, when), conservas esa palabra: “asked when it started”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés general; “whether” es un punto más formal.",
           related: ["whether", "to wonder if", "to want to know if", "if"],
           example: {
@@ -451,7 +451,7 @@ lessons.push(
             "Relatando lo que pidieron: “She asked me to wait.”",
           avoidWhen:
             "Si pides una cosa u objeto, es “ask for”: “ask for the key”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés general.",
           related: ["to tell someone to", "to ask for", "to request", "to get someone to"],
           example: {
@@ -468,7 +468,7 @@ lessons.push(
             "Noticia casual: “He mentioned he had the playlist.”",
           avoidWhen:
             "Si es una declaración firme y oficial, “say” o “state” pesan más.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés general.",
           related: ["to bring up", "to note", "to say", "to point out"],
           example: {
@@ -485,7 +485,7 @@ lessons.push(
             "Un aviso: “She asked me to let everyone know.”",
           avoidWhen:
             "Para una advertencia formal y grave, va “to warn”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés general; muy coloquial y cortés.",
           related: ["to notify", "to fill someone in", "to give a heads-up", "to warn"],
           example: {
@@ -502,7 +502,7 @@ lessons.push(
             "Cuando la persona no está: “Did she leave a message?”",
           avoidWhen:
             "“Reason” en inglés es la causa, no el recado; no lo uses para el mensaje.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés general; también “leave word”.",
           related: ["to leave word", "to pass on a message", "a voicemail", "a note"],
           example: {
@@ -519,7 +519,7 @@ lessons.push(
             "Reporte diferido: “She said she'd come the next day.”",
           avoidWhen:
             "Si de verdad hablas del mañana real, sí va “tomorrow”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés general.",
           related: ["that day", "the day before", "that week", "tomorrow"],
           example: {
@@ -581,25 +581,25 @@ lessons.push(
       variations: [
         {
           form: "She said she wasn't coming in today.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés general",
           whenToUse: "Reporte llano y con backshift de una afirmación."
         },
         {
           form: "Word is she's not coming.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés general, coloquial",
           whenToUse: "Para marcar que es rumor, como el dizque colombiano."
         },
         {
           form: "She asked me to wait for her.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés general",
           whenToUse: "Una petición relatada con “ask… to”."
         },
         {
           form: "She asked if there was a class.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés general",
           whenToUse: "Pregunta de sí o no reportada, sin inversión."
         }
@@ -1037,7 +1037,7 @@ lessons.push(
             "Imaginando algo contrario a los hechos: “if I had time…”.",
           avoidWhen:
             "Si de verdad puede pasar; ahí va el primer condicional (if + presente).",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés general.",
           related: ["if I had", "if I were", "if I could", "second conditional"],
           example: {
@@ -1054,7 +1054,7 @@ lessons.push(
             "Diciendo qué pasaría: “I would buy a boat.”",
           avoidWhen:
             "Dentro del “if”: el “if” no lleva “would” (jamás “if I would have”).",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés general; se contrae a “'d”.",
           related: ["I'd", "would go", "wouldn't", "'d rather"],
           example: {
@@ -1071,7 +1071,7 @@ lessons.push(
             "Dando un consejo: “If I were you, I'd wait.”",
           avoidWhen:
             "En el habla muy suelta se oye “if I was you”, pero “were” es lo cuidado.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés general.",
           related: ["if I were", "in your shoes", "were you to", "if I was (coloquial)"],
           example: {
@@ -1088,7 +1088,7 @@ lessons.push(
             "Marcando una preferencia que no decides tú: “If it were up to me, we'd start now.”",
           avoidWhen:
             "Si la decisión sí es tuya, di directo qué harás.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés general.",
           related: ["up to me", "if it were up to you", "my call", "if I had my way"],
           example: {
@@ -1105,7 +1105,7 @@ lessons.push(
             "Condición viva y posible: “If the grant comes through, we'll start.”",
           avoidWhen:
             "Si es contrario a los hechos, pasa al segundo condicional (if + pasado, would).",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés general.",
           related: ["if it comes", "we'll", "as long as", "first conditional"],
           example: {
@@ -1122,7 +1122,7 @@ lessons.push(
             "Comparación irreal: “He spends as if he were rich.”",
           avoidWhen:
             "Comparación real y directa; ahí “like” a secas.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés general; “like” es más coloquial.",
           related: ["as if", "as though", "like", "were"],
           example: {
@@ -1139,7 +1139,7 @@ lessons.push(
             "Hablando del atractivo del año: “In dolphin-watching season the dock fills up.”",
           avoidWhen:
             "Fuera de temporada alta; los paseos no salen todo el año.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés general (turismo).",
           related: ["bottlenose dolphins", "dolphin-watching", "the bay", "peak season"],
           example: {
@@ -1201,25 +1201,25 @@ lessons.push(
       variations: [
         {
           form: "If I had the money, I'd buy the boat.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés general",
           whenToUse: "El condicional irreal básico, con el “if” primero."
         },
         {
           form: "I'd buy the boat if I had the money.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés general",
           whenToUse: "Lo mismo, con el resultado primero y sin coma."
         },
         {
           form: "If I were you, I wouldn't rush it.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés general",
           whenToUse: "Consejo suavizado: yo que usted…"
         },
         {
           form: "If it were up to me, we'd start today.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés general",
           whenToUse: "Para marcar que la decisión no es tuya."
         }
@@ -1657,7 +1657,7 @@ lessons.push(
             "Diciendo qué se hace sin decir quién: “English is spoken here.”",
           avoidWhen:
             "Si nombras al que actúa y quieres naturalidad, a veces la voz activa va mejor.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés general.",
           related: ["is spoken", "was sold", "be built", "past participle"],
           example: {
@@ -1674,7 +1674,7 @@ lessons.push(
             "Generalizando: “You get used to the rain.”",
           avoidWhen:
             "Si hablas de una persona concreta; ahí “you/they” apunta a alguien real.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés general.",
           related: ["you never know", "they say", "people say", "one"],
           example: {
@@ -1708,7 +1708,7 @@ lessons.push(
             "Habla informal: “The road got fixed at last.”",
           avoidWhen:
             "Textos formales o de noticias, donde se prefiere “was + participio”.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés general, muy de EE. UU.",
           related: ["got sold", "got fired", "get done", "be + participio"],
           example: {
@@ -1725,7 +1725,7 @@ lessons.push(
             "Cuando sí importa nombrar al autor: “written by her”.",
           avoidWhen:
             "Si el autor no importa; entonces se omite el “by”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés general.",
           related: ["built by", "written by", "made by", "the passive"],
           example: {
@@ -1742,7 +1742,7 @@ lessons.push(
             "Describiendo cómo está algo ahora: “The road is paved now.”",
           avoidWhen:
             "Si describes la acción de hacerlo; ahí “was made” o “got made”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés general.",
           related: ["is made of", "is closed", "are built", "be + participio"],
           example: {
@@ -1759,7 +1759,7 @@ lessons.push(
             "Formando cualquier pasiva: “was sold”, “was built”, “is spoken”.",
           avoidWhen:
             "No inventes “-ed” en los irregulares: es “sold”, no “selled”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés general.",
           related: ["sold", "built", "spoken", "written"],
           example: {
@@ -1821,25 +1821,25 @@ lessons.push(
       variations: [
         {
           form: "The house was sold in a week.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés general",
           whenToUse: "La pasiva normal, sin nombrar al autor."
         },
         {
           form: "The house was sold by the developer.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés general",
           whenToUse: "La pasiva con “by” cuando importa quién."
         },
         {
           form: "The house got sold really fast.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés general",
           whenToUse: "La get-passive, más coloquial."
         },
         {
           form: "The house is already sold.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés general",
           whenToUse: "Estado resultante con “be”, como estar + participio."
         }

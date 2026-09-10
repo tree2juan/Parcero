@@ -421,7 +421,7 @@ lessons.push(
             "Para unir un poseedor con lo poseído: “the author whose book”, “the file whose author”, “the house whose windows”.",
           avoidWhen:
             "Está preguntando. “¿De quién es esto?” es “Whose is this?”, con otro orden; y no lo confunda con “who's” (= who is).",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal; igual en el habla y en la escritura, sin las cuatro formas del español.",
           related: ["who", "which", "of which", "whom"],
           example: {
@@ -456,7 +456,7 @@ lessons.push(
           avoidWhen:
             "Define cuál cosa es (cláusula especificativa): ahí va sin coma y con “that”, no “, which”.",
           region: "Inglés universal; la coma marca la diferencia entre comentar y definir.",
-          register: "neutral",
+          register: "neutro",
           related: ["lo cual", "that", "which", "and this"],
           example: {
             target: "The pages are illegible, which complicates everything.",
@@ -472,7 +472,7 @@ lessons.push(
             "Para nombrar una idea sin sustantivo: “what I need”, “what he said”, “I didn't hear what happened”.",
           avoidWhen:
             "Hay un sustantivo concreto detrás: ahí es “that” o “which”, no “what”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal; plenamente vivo en el habla, como su gemelo “lo que”.",
           related: ["which", "the thing that", "that", "whatever"],
           example: {
@@ -489,7 +489,7 @@ lessons.push(
             "Para singularizar: “the one who signed”, “the one that faded”, “the one I showed you”.",
           avoidWhen:
             "Necesita la idea neutra “lo que” sin sustantivo detrás: ahí es “what”, no “the one that”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal; el caballo de batalla del habla frente al más formal “which”.",
           related: ["the ones that", "who", "that", "what"],
           example: {
@@ -506,7 +506,7 @@ lessons.push(
             "Personas: “the author, who signed in 1789”, “the people with whom I spoke”.",
           avoidWhen:
             "El antecedente es una cosa: ahí es “which” o “that”, nunca “who”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal; “whom” es formal y en conversación suele volverse “who”.",
           related: ["whose", "that", "with whom", "which"],
           example: {
@@ -523,7 +523,7 @@ lessons.push(
             "Para definir cuál es: “the letters that faded”, “the source that has the date”.",
           avoidWhen:
             "Comenta toda la idea o va entre comas: ahí es “, which”, no “that”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal; el relativo más frecuente del habla, y muchas veces se calla.",
           related: ["which", "who", "the one that", "zero relative"],
           example: {
@@ -585,7 +585,7 @@ lessons.push(
       variations: [
         {
           form: "The file whose author signed it in 1789.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "“Whose” invariable para unir el poseedor con lo poseído, aquí una cosa."
         },
@@ -597,19 +597,19 @@ lessons.push(
         },
         {
           form: "The document the research was based on.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés hablado",
           whenToUse: "Conversación, donde la preposición queda al final."
         },
         {
           form: "The pages are illegible, which slows everything.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "“, which” con coma para comentar toda la idea anterior."
         },
         {
           form: "That's what I need for the footnote.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "“What” = lo que, sin artículo delante."
         }
@@ -1053,7 +1053,7 @@ lessons.push(
             "Deducir algo del momento: “He must be home”, “It must be cold outside”, “You must be joking”.",
           avoidWhen:
             "La conjetura es sobre el pasado: ahí hace falta “must have + participio”, no “must” a secas.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal; la forma normal de deducir en el presente.",
           related: ["must have", "have to", "can't", "probably"],
           example: {
@@ -1070,7 +1070,7 @@ lessons.push(
             "Adivinar que algo ya pasó: “She must have left”, “They must have forgotten”, “It must have been the wind”.",
           avoidWhen:
             "Se le olvida el “have”: “he must arrived” no es inglés; siempre “must have arrived”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal; el sustituto exacto de “ya habrá llegado”.",
           related: ["must", "might have", "can't have", "should have"],
           example: {
@@ -1087,7 +1087,7 @@ lessons.push(
             "Suposición casual, sobre todo con ruidos y llegadas: “That'll be him”, “It'll be about five”.",
           avoidWhen:
             "Quiere sonar neutro o formal: ahí “must be” es más claro y no se confunde con una predicción.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal, muy británico; en registro cuidado gana “must”.",
           related: ["must", "that'll be", "probably", "I expect"],
           example: {
@@ -1104,7 +1104,7 @@ lessons.push(
             "Adivinar con dudas: “He might be late”, “It could be the battery”, “She may have forgotten”.",
           avoidWhen:
             "Está casi seguro: ahí es “must”. Y para una posibilidad puntual, prefiera “could/might” sobre “can”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal; el escalón de menor certeza frente a “must”.",
           related: ["must", "maybe", "perhaps", "could have"],
           example: {
@@ -1121,7 +1121,7 @@ lessons.push(
             "Suavizar una afirmación: “He's probably home”, “I bet he missed it”, “I reckon it's five”.",
           avoidWhen:
             "En un texto muy formal, donde “I bet / I reckon” suenan demasiado coloquiales.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal; “I reckon” es marcadamente británico y del norte.",
           related: ["maybe", "must", "I expect", "I suppose"],
           example: {
@@ -1138,7 +1138,7 @@ lessons.push(
             "Empezar una suposición: “Maybe he's asleep”, “Perhaps she'll call later”.",
           avoidWhen:
             "Intenta poner el verbo en subjuntivo por costumbre del español: el inglés no lo tiene aquí.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal; “maybe” es más de habla, “perhaps” más de escritura.",
           related: ["might", "probably", "possibly", "I guess"],
           example: {
@@ -1155,7 +1155,7 @@ lessons.push(
             "Una obligación o regla: “You have to sign here”, “He's got to call”, “We have to leave”.",
           avoidWhen:
             "Quiere adivinar, no obligar: para la deducción es “must (have)”, no “have to”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal; “have got to” es más británico y coloquial.",
           related: ["must", "need to", "should", "have got to"],
           example: {
@@ -1217,31 +1217,31 @@ lessons.push(
       variations: [
         {
           form: "He must be on his way.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "“Must” para deducir el presente, como “debe de estar”."
         },
         {
           form: "He must have missed the bus.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "“Must have + participio” para adivinar el pasado reciente."
         },
         {
           form: "It'll be about five.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés británico",
           whenToUse: "El “'ll” informal para adivinar la hora, como “serán las cinco”."
         },
         {
           form: "He might already be here.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "“Might” para la conjetura tentativa, como “puede que esté”."
         },
         {
           form: "He probably won't call.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "“Probably” como hedge de palabra suelta, sin tocar el verbo."
         }
@@ -1685,7 +1685,7 @@ lessons.push(
             "Conceder algo real y sabido: “Although it's expensive, it's worth it”, “Even though he was late, he got in”.",
           avoidWhen:
             "Lo que concede es solo una posibilidad futura: ahí se usa “even if”, no “even though”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal; “even though” es un poco más enfático que “although”.",
           related: ["even if", "though", "in spite of", "whereas"],
           example: {
@@ -1702,7 +1702,7 @@ lessons.push(
             "Conceder lo aún no real: “Even if it costs more, I'll buy it”, “Even if it's hard, we'll try”.",
           avoidWhen:
             "El hecho ya ocurrió y se da por cierto: ahí es “even though” o “although”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal; la distinción con “even though” es constante.",
           related: ["even though", "no matter if", "whether or not", "should it"],
           example: {
@@ -1719,7 +1719,7 @@ lessons.push(
             "Conceder frente a un sustantivo: “despite the crowd”, “in spite of the cold”, “despite being tired”.",
           avoidWhen:
             "Quiere meter una cláusula con verbo conjugado: ahí use “although”, no “despite that...”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal; “despite” es algo más frecuente en lo escrito.",
           related: ["although", "regardless of", "notwithstanding", "for all"],
           example: {
@@ -1736,7 +1736,7 @@ lessons.push(
             "Conceder cualquier grado o circunstancia: “no matter how hard it rains”, “no matter what they say”.",
           avoidWhen:
             "Calca el español con “by more that” o “for more than”: eso no es inglés.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal; “however much / however hard” es un equivalente más formal.",
           related: ["however much", "regardless", "whatever", "no matter if"],
           example: {
@@ -1753,7 +1753,7 @@ lessons.push(
             "Enlazar dos frases: conceder la primera y afirmar lo que pasa a pesar de ella.",
           avoidWhen:
             "Necesita subordinar una cláusula con sujeto y verbo: para eso está “even though”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal; muy común como conector de discurso.",
           related: ["anyway", "still", "nevertheless", "all the same"],
           example: {
@@ -1770,7 +1770,7 @@ lessons.push(
             "Señalar que lo que sigue se sostiene pase lo que pase, o cerrar un tema.",
           avoidWhen:
             "Quiere abrir una cláusula concesiva concreta: eso lo hace “even though”, no “anyway”.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal; “anyway” es más de habla, “in any case” más neutro.",
           related: ["even so", "in any case", "at any rate", "regardless"],
           example: {
@@ -1787,7 +1787,7 @@ lessons.push(
             "Rematar una frase con una objeción suave: “It's pricey. It's good, though.”",
           avoidWhen:
             "En un texto muy formal, donde “however” al inicio queda mejor que un “though” final.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal, muy conversacional; rarísimo en registro solemne.",
           related: ["however", "even so", "mind you", "then again"],
           example: {
@@ -1849,31 +1849,31 @@ lessons.push(
       variations: [
         {
           form: "Even though it rained, the parade went ahead.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Concede un hecho real, como “aunque” con indicativo."
         },
         {
           form: "Even if it rains, the parade will go ahead.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Concede una hipótesis, como “aunque” con subjuntivo."
         },
         {
           form: "Despite the rain, the parade went ahead.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "“Despite” + sustantivo, sin cláusula “that...”."
         },
         {
           form: "No matter how hard it rains, they still march.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "“No matter how” para “por más que”, con un esfuerzo o grado."
         },
         {
           form: "It was pouring. We went, though.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés conversacional",
           whenToUse: "El “though” final como remate suave, muy hablado."
         }

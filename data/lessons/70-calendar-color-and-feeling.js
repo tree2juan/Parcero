@@ -414,7 +414,7 @@ lessons.push(
             "Al preguntar o dar el día del calendario: una reserva, un formulario, una cita.",
           avoidWhen:
             "Te refieres a la hora del reloj -- eso es “the time”, otra pregunta.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["what's the date?", "today", "the day", "the month"],
           example: {
@@ -431,7 +431,7 @@ lessons.push(
             "Al decir una fecha concreta, en voz alta o por escrito.",
           avoidWhen:
             "Dices “the five of May”: falta el ordinal “fifth” y el artículo.",
-          register: "neutral",
+          register: "neutro",
           region: "El orden día/mes es británico; en Estados Unidos va el mes primero.",
           related: ["the first", "the thirtieth", "of", "May the fifth"],
           example: {
@@ -448,7 +448,7 @@ lessons.push(
             "Siempre que escribas un día o un mes en inglés.",
           avoidWhen:
             "Los escribes en minúscula por costumbre del español.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["Monday", "Sunday", "May", "December"],
           example: {
@@ -465,7 +465,7 @@ lessons.push(
             "Al leer cualquier día del mes en inglés.",
           avoidWhen:
             "Usas el cardinal, “the five”, como se haría en español.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["first", "fifth", "thirtieth", "-th"],
           example: {
@@ -482,7 +482,7 @@ lessons.push(
             "Al situar algo en un día concreto o en un día habitual.",
           avoidWhen:
             "Omites “on” o metes “in” con un día de la semana.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["on Monday", "on Sundays", "on weekdays", "at the weekend"],
           example: {
@@ -499,7 +499,7 @@ lessons.push(
             "Al decir un año anterior a 2000, léelo en dos mitades.",
           avoidWhen:
             "Lo lees entero, “one thousand nine hundred ninety”, calcando el español.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["two thousand", "the century", "the year", "the date"],
           example: {
@@ -516,7 +516,7 @@ lessons.push(
             "Al decir la edad de alguien.",
           avoidWhen:
             "Usas “have”, “I have thirty years”, traduciendo “tengo”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["to be", "years old", "how old are you?", "age"],
           example: {
@@ -578,25 +578,25 @@ lessons.push(
       variations: [
         {
           form: "What's the date today?",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal",
           whenToUse: "La forma corriente y natural de preguntar la fecha de hoy en cualquier conversación; ojo, la respuesta vuelve siempre con ordinal, como “the fifth of May”."
         },
         {
           form: "See you on Monday the fifth of May.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés británico",
           whenToUse: "Al fijar un día concreto, uniendo el día de la semana con la fecha completa; es lo que se dice al cerrar una cita, una reserva o un plan con alguien."
         },
         {
           form: "The house dates from nineteen ninety.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Al dar un año anterior al 2000, leído siempre en dos mitades y nunca entero, como cuando se cuenta en qué año se fundó, se construyó o se abrió algo."
         },
         {
           form: "We're closed from the fifth to the thirtieth of December.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés británico",
           whenToUse: "Un rango de fechas con la fórmula “from … to …”, nombrando el mes una sola vez al final; sirve para vacaciones, cierres de temporada o períodos completos."
         }
@@ -1034,7 +1034,7 @@ lessons.push(
             "Siempre que describas algo con un color en inglés.",
           avoidWhen:
             "Pones el color detrás, “a ruana blue”, calcando el orden español.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["a blue ruana", "red scarves", "a black bag", "word order"],
           example: {
@@ -1051,7 +1051,7 @@ lessons.push(
             "Con cualquier color y con cualquier sustantivo, singular o plural.",
           avoidWhen:
             "Pluralizas el color, “reds scarves”, arrastrando la concordancia del español.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["red scarves", "black gloves", "no plural", "no gender"],
           example: {
@@ -1068,7 +1068,7 @@ lessons.push(
             "Al nombrar cualquier cosa de color café en inglés: ojos, cuero, ropa.",
           avoidWhen:
             "Traduces “café” como “coffee” pensando en el color.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["brown", "beige", "dark brown", "color"],
           example: {
@@ -1085,7 +1085,7 @@ lessons.push(
             "Al describir el estampado de una tela en inglés.",
           avoidWhen:
             "Calcas “de líneas” como “of lines”; el inglés dice “striped”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["striped", "checked", "floral", "spotted"],
           example: {
@@ -1102,7 +1102,7 @@ lessons.push(
             "Al decir de qué está hecho algo en inglés.",
           avoidWhen:
             "Metes “of” de más, “a bag of leather”, calcando el “de” español.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["leather", "wool", "cotton", "fabric"],
           example: {
@@ -1119,7 +1119,7 @@ lessons.push(
             "Al precisar el tono de un color en inglés.",
           avoidWhen:
             "Pones el matiz detrás, “blue light”, siguiendo el orden español.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["light blue", "dark green", "pale", "bright"],
           example: {
@@ -1136,7 +1136,7 @@ lessons.push(
             "Al referirte a algo ya nombrado sin repetir la palabra.",
           avoidWhen:
             "Omites “one” del todo, “I want the blue”, que en inglés suena incompleto.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["one", "ones", "this one", "that one"],
           example: {
@@ -1198,25 +1198,25 @@ lessons.push(
       variations: [
         {
           form: "Do you have this in light blue?",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Al pedir un tono más claro de un color mientras compras; el matiz siempre va delante del color, como en “light blue”."
         },
         {
           form: "I'll take the striped brown one.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal",
           whenToUse: "Al nombrar algo por su patrón y color con “one”, dejando caer el sustantivo tal como el español deja “la de rayas”."
         },
         {
           form: "Is this leather or fabric?",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Al preguntar de qué material está hecho algo antes de comprarlo; el material va como sustantivo, sin “of” ni “de”."
         },
         {
           form: "I prefer the checked one to the floral one.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal",
           whenToUse: "Al elegir entre dos estampados con “one”, poniendo cada patrón delante como una sola palabra en vez del marco español con “de”."
         }
@@ -1654,7 +1654,7 @@ lessons.push(
             "Al decir cómo se siente alguien en inglés.",
           avoidWhen:
             "Calcas el “tener” del español, “I have fear”, en vez de “I'm scared”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["I'm happy", "I'm tired", "I'm scared", "to be"],
           example: {
@@ -1671,7 +1671,7 @@ lessons.push(
             "Al separar la emoción de la cosa que la provoca: “bored/boring”, “tired/tiring”, “excited/exciting”.",
           avoidWhen:
             "Dices “I'm boring” queriendo decir que estás aburrido -- eso dice que TÚ aburres.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["bored", "boring", "excited", "tiring"],
           example: {
@@ -1688,7 +1688,7 @@ lessons.push(
             "Al decir que sientes pena o vergüenza en inglés.",
           avoidWhen:
             "Traduces “embarazada” como “embarrassed” -- dirías que estás avergonzada, no encinta.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["embarrassed", "pregnant", "ashamed", "shy"],
           example: {
@@ -1705,7 +1705,7 @@ lessons.push(
             "Al hablar de tu temperatura: tienes calor o frío.",
           avoidWhen:
             "Usas “have”, calcando “tengo calor” como “I have hot”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["I'm hot", "I'm cold", "I'm hungry", "I'm thirsty"],
           example: {
@@ -1722,7 +1722,7 @@ lessons.push(
             "Al nombrar el enojo en inglés, propio o de otro.",
           avoidWhen:
             "Calcas “con rabia” como “with anger”, que no es lo natural.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "“Mad” por enojado es más común en inglés americano y australiano.",
           related: ["angry", "mad", "cross", "annoyed"],
           example: {
@@ -1739,7 +1739,7 @@ lessons.push(
             "Al decir que alguien tiene miedo de algo en inglés.",
           avoidWhen:
             "Dices “I have fear”, traduciendo “tengo miedo” palabra por palabra.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["scared", "afraid", "frightened", "scared of"],
           example: {
@@ -1756,7 +1756,7 @@ lessons.push(
             "Al decir que llevas prisa o que hay que apurarse.",
           avoidWhen:
             "Calcas “tengo afán” como “I have hurry”, que no existe.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["in a hurry", "to hurry", "rushed", "quick"],
           example: {
@@ -1818,25 +1818,25 @@ lessons.push(
       variations: [
         {
           form: "I'm getting bored, let's do something.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal",
           whenToUse: "Al empujar una tarde aburrida hacia un plan, usando “to be” con la emoción en “-ed”, nunca “I'm boring”, que diría que tú aburres."
         },
         {
           form: "Don't be angry, it was a joke.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal",
           whenToUse: "Al calmar a alguien que se está enojando; el enojo va con “to be” y con “angry” o el coloquial “mad”, no con “with anger”."
         },
         {
           form: "I'm embarrassed, but I'm in a hurry.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal",
           whenToUse: "Al excusarse con cortesía, juntando la pena y el afán, ambos con “to be” y sin calcar el “tener” del español."
         },
         {
           form: "I'm really excited about the walk.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal",
           whenToUse: "Al compartir emoción con “excited” en “-ed”; si dijeras “I'm exciting” estarías diciendo que tú emocionas a los demás."
         }

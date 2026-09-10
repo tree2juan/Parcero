@@ -417,7 +417,7 @@ lessons.push(
             "Una persona mueve algo hacia arriba o lo recoge del piso.",
           avoidWhen:
             "Habla de levantarse de la cama. Para eso el inglés usa “get up.”",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["raise", "pick up", "carry", "move"],
           example: {
@@ -434,7 +434,7 @@ lessons.push(
             "Rutinas de mañana, levantarse de una silla o decir que alguien ya está de pie.",
           avoidWhen:
             "Hay una cosa física que usted levanta con las manos. Ahí diga “lift.”",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal y básico en rutinas diarias.",
           related: ["stand up", "be up", "wake up", "get out of bed"],
           example: {
@@ -451,7 +451,7 @@ lessons.push(
             "Necesita que alguien lo vea en clase, en una reunión o en una parada.",
           avoidWhen:
             "Habla de una maleta pesada. Para objetos de ese tipo, “lift” suele sonar mejor.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["put your hand up", "signal", "wave", "get attention"],
           example: {
@@ -468,7 +468,7 @@ lessons.push(
             "Quiere decir que ya salió de la cama, aunque todavía tenga sueño.",
           avoidWhen:
             "Sólo abrió los ojos pero sigue acostado. Ahí puede decir “I'm awake.”",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal.",
           related: ["I'm awake", "I'm out of bed", "I'm ready", "I'm moving"],
           example: {
@@ -485,7 +485,7 @@ lessons.push(
             "Alguien se apura, se disculpa o va a levantar algo incómodo.",
           avoidWhen:
             "El horario sí es urgente. Entonces puede sonar como si no entendiera el problema.",
-          register: "friendly neutral",
+          register: "amistoso neutro",
           region: "Inglés universal.",
           related: ["take your time", "slowly", "no hurry", "careful"],
           example: {
@@ -502,7 +502,7 @@ lessons.push(
             "Usted ya está en pie, pero sigue lento, callado o confundido.",
           avoidWhen:
             "Está completamente dormido. “Half asleep” es el punto intermedio.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal.",
           related: ["sleepy", "groggy", "not awake yet", "still waking up"],
           example: {
@@ -519,7 +519,7 @@ lessons.push(
             "Habla del punto donde espera transporte público.",
           avoidWhen:
             "Habla de una esquina sin parada marcada; ahí “on the corner” puede ser más claro.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["bus stop", "on the corner", "the route", "signal"],
           example: {
@@ -581,31 +581,31 @@ lessons.push(
       variations: [
         {
           form: "I get up at five.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Una rutina de mañana: la persona sale de la cama."
         },
         {
           form: "Lift the suitcase together.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Levantar un objeto pesado entre dos personas."
         },
         {
           form: "Raise your hand when the bus comes.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Hacer una señal visible con la mano."
         },
         {
           form: "I'm up already, don't worry.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal",
           whenToUse: "Responder a alguien que cree que usted sigue en la cama."
         },
         {
           form: "Please stand up slowly.",
-          register: "polite formal",
+          register: "cortés formal",
           region: "Inglés universal",
           whenToUse: "Pedirle a alguien que se ponga de pie con cuidado."
         }
@@ -1049,7 +1049,7 @@ lessons.push(
             "Un anfitrión, organizador o empleado ubica a una persona en una silla o mesa.",
           avoidWhen:
             "Usted mismo se sienta. Ahí use “sit” o “sit down.”",
-          register: "polite formal",
+          register: "cortés formal",
           region: "Inglés universal.",
           related: ["sit", "sit down", "seated", "show someone to a seat"],
           example: {
@@ -1066,7 +1066,7 @@ lessons.push(
             "Alguien pasa de estar de pie a estar sentado.",
           avoidWhen:
             "Usted ubica a otra persona como anfitrión. Ahí “seat” puede servir.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["sit", "take a seat", "be seated", "stand up"],
           example: {
@@ -1083,7 +1083,7 @@ lessons.push(
             "Invita a alguien a usar una silla específica.",
           avoidWhen:
             "Necesita muchísima formalidad. Entonces “please take a seat” puede sonar más pulido.",
-          register: "polite neutral",
+          register: "cortés neutro",
           region: "Inglés universal.",
           related: ["take a seat", "have a seat", "sit over here", "this seat is free"],
           example: {
@@ -1100,7 +1100,7 @@ lessons.push(
             "Usted decide dónde poner su propio cuerpo.",
           avoidWhen:
             "Habla de emociones o sensaciones. Eso es “I feel.”",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["I'll take this seat", "I'll sit down", "I'll be here", "I'll stay here"],
           example: {
@@ -1117,7 +1117,7 @@ lessons.push(
             "Alguien recibe a un grupo, atiende a una persona o maneja una sala.",
           avoidWhen:
             "Una charla muy casual donde “sit here” suena más natural.",
-          register: "polite formal",
+          register: "cortés formal",
           region: "Inglés universal.",
           related: ["have a seat", "be seated", "please sit", "find a seat"],
           example: {
@@ -1134,7 +1134,7 @@ lessons.push(
             "Escoge una silla junto a otra persona.",
           avoidWhen:
             "Quiere decir al otro lado de la sala. Entonces “near you” o “over there” puede servir.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["next to you", "by you", "near you", "at your side"],
           example: {
@@ -1151,7 +1151,7 @@ lessons.push(
             "Alguien se disculpa, se afana o trata de arreglar algo menor por usted.",
           avoidWhen:
             "El problema es serio y requiere acción. Ahí la frase sola puede sonar evasiva.",
-          register: "friendly neutral",
+          register: "amistoso neutro",
           region: "Inglés universal.",
           related: ["no problem", "it's okay", "that's fine", "never mind"],
           example: {
@@ -1213,31 +1213,31 @@ lessons.push(
       variations: [
         {
           form: "Please sit here.",
-          register: "polite neutral",
+          register: "cortés neutro",
           region: "Inglés universal",
           whenToUse: "Invitar a alguien a sentarse en una silla específica."
         },
         {
           form: "I'll sit beside you.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Elegir una silla junto a otra persona."
         },
         {
           form: "Can I seat the older lady first?",
-          register: "polite formal",
+          register: "cortés formal",
           region: "Inglés universal",
           whenToUse: "Ofrecer sentar o ubicar a otra persona primero."
         },
         {
           form: "Once everyone is seated, we'll begin.",
-          register: "polite formal",
+          register: "cortés formal",
           region: "Inglés universal",
           whenToUse: "Un organizador espera a que todo el grupo esté sentado."
         },
         {
           form: "Please take a seat.",
-          register: "polite formal",
+          register: "cortés formal",
           region: "Inglés universal",
           whenToUse: "Una invitación más pulida a tomar asiento."
         }
@@ -1681,7 +1681,7 @@ lessons.push(
             "Una persona viste a un bebé, a un paciente, a un actor o a alguien que necesita ayuda.",
           avoidWhen:
             "Usted habla de la ropa que ya tiene puesta. Ahí use “wear.”",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["get dressed", "wear", "put on", "look good on"],
           example: {
@@ -1698,7 +1698,7 @@ lessons.push(
             "Rutinas de mañana, alistarse para salir o ponerse ropa después de cambiarse.",
           avoidWhen:
             "Sólo describe lo que lleva puesto. Entonces diga “wear.”",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["put clothes on", "get ready", "change clothes", "dress yourself"],
           example: {
@@ -1715,7 +1715,7 @@ lessons.push(
             "Pregunta si una camisa, color o chaqueta le favorece.",
           avoidWhen:
             "Sólo pregunta por la talla. Entonces “fit me” puede ser más preciso.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["fit me", "suit me", "flatter me", "look right"],
           example: {
@@ -1732,7 +1732,7 @@ lessons.push(
             "Habla de ropa, zapatos, gafas, perfume o accesorios que alguien tiene puestos.",
           avoidWhen:
             "Se enfoca en ponérselos. Para la acción inicial, “put on” puede ser mejor.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["have on", "put on", "be wearing", "dress in"],
           example: {
@@ -1749,7 +1749,7 @@ lessons.push(
             "Escoge ropa para calor, caminar, bailar o un evento al aire libre.",
           avoidWhen:
             "Quiere decir de color claro. Entonces diga “light-colored.”",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["light fabric", "short sleeves", "cotton shirt", "summer clothes"],
           example: {
@@ -1766,7 +1766,7 @@ lessons.push(
             "Habla de si una prenda es fresca, pesada, suave, formal o práctica.",
           avoidWhen:
             "Quiere nombrar la prenda. Entonces diga shirt, blouse, pants, dress.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["cotton", "linen", "material", "cloth"],
           example: {
@@ -1783,7 +1783,7 @@ lessons.push(
             "Va a caminar, hacer fila, bailar o estar de pie bastante tiempo.",
           avoidWhen:
             "El evento exige zapatos formales. Entonces cómodo puede no bastar.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["sneakers", "sandals", "walking shoes", "stand all night"],
           example: {
@@ -1845,31 +1845,31 @@ lessons.push(
       variations: [
         {
           form: "I'll get dressed fast and leave.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Vestirse uno mismo antes de salir."
         },
         {
           form: "I'll dress the baby.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Vestir a otra persona, especialmente un bebé."
         },
         {
           form: "This shirt looks good on you.",
-          register: "friendly neutral",
+          register: "amistoso neutro",
           region: "Inglés universal",
           whenToUse: "Decir que una prenda le favorece a alguien."
         },
         {
           form: "Wear comfortable shoes.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Recomendar qué llevar puesto."
         },
         {
           form: "Are you dressed yet?",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal",
           whenToUse: "Preguntar si alguien ya está vestido y listo."
         }

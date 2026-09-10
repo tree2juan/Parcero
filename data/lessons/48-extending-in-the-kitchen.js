@@ -404,7 +404,7 @@ lessons.push(
             "Al dar instrucciones de cocina: “cut it into strips”, “cut the onions into rings”.",
           avoidWhen:
             "No hay forma específica final; entonces “cut it up” o “chop it” puede bastar.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["slice", "chop", "dice", "cut up"],
           example: {
@@ -421,7 +421,7 @@ lessons.push(
             "La acción física es clara: comida, papel, cuerda, tela.",
           avoidWhen:
             "Servicios, llamadas o leche que se cortan en español; el inglés suele usar otras frases.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["cut this", "trim it", "slice it", "chop it"],
           example: {
@@ -438,7 +438,7 @@ lessons.push(
             "La electricidad deja de funcionar en una casa, edificio o barrio.",
           avoidWhen:
             "No diga “the light cut” para esta situación; suena a calco del español.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal; “power cut” es común en inglés británico.",
           related: ["power outage", "blackout", "lights went out", "power cut"],
           example: {
@@ -455,7 +455,7 @@ lessons.push(
             "Una empresa o una falla dejó el servicio suspendido.",
           avoidWhen:
             "Para algo cotidiano y neutral, “the water went out” también se entiende; no traduzca mecánicamente todo con cut.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["water outage", "no running water", "shut off", "service"],
           example: {
@@ -472,7 +472,7 @@ lessons.push(
             "Se perdió la comunicación sin que usted colgara.",
           avoidWhen:
             "Usted terminó la llamada; ahí diga “I hung up”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["bad signal", "hang up", "lose connection", "drop out"],
           example: {
@@ -489,7 +489,7 @@ lessons.push(
             "Una salsa se daña por calor, ácido o mala mezcla: “the sauce split”.",
           avoidWhen:
             "La comida simplemente se pudrió; ahí use “spoiled” o “went bad”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["sauce split", "milk curdled", "separate", "go bad"],
           example: {
@@ -506,7 +506,7 @@ lessons.push(
             "Pescado, galletas, queso o masas se rompen en pedazos pequeños.",
           avoidWhen:
             "Algo se derrite o se quema; crumble habla de romperse, no de calor directo.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["fall apart", "break up", "flakes", "pieces"],
           example: {
@@ -568,31 +568,31 @@ lessons.push(
       variations: [
         {
           form: "Cut it into strips.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Dar una instrucción física de cocina."
         },
         {
           form: "The power went out.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Se fue o se cortó la luz."
         },
         {
           form: "The call dropped.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Se cortó la llamada por señal."
         },
         {
           form: "The coconut milk split.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "La leche o salsa se cortó."
         },
         {
           form: "The fish will crumble.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Algo frágil se va a desbaratar."
         }
@@ -1036,7 +1036,7 @@ lessons.push(
             "Ingredientes, colores, bebidas o ideas: “mix it slowly”, “mix the dry ingredients”.",
           avoidWhen:
             "Sólo mueve algo con cuchara para que no se pegue; ahí “stir” puede ser mejor.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["combine", "stir", "blend", "mixture"],
           example: {
@@ -1053,7 +1053,7 @@ lessons.push(
             "Recetas, seguridad o química doméstica: “don't mix it with bleach”.",
           avoidWhen:
             "No ponga el pronombre antes del verbo como en español; el inglés dice “don't mix it”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["yet", "with", "warning", "combine"],
           example: {
@@ -1070,7 +1070,7 @@ lessons.push(
             "Hablar de textura o estado: “the mixture is smooth”, “a thick mixture”.",
           avoidWhen:
             "Usted habla del acto de mezclar; ahí use el verbo “mix”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["texture", "batter", "dough", "consistency"],
           example: {
@@ -1087,7 +1087,7 @@ lessons.push(
             "Evitar que se pegue, repartir calor o mover una bebida: “stir the soup”.",
           avoidWhen:
             "Quiere enfatizar que ingredientes separados se vuelven una sola mezcla; ahí “mix” es más claro.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["stir in", "spoon", "pot", "keep moving"],
           example: {
@@ -1104,7 +1104,7 @@ lessons.push(
             "Salsas, smoothies o una mezcla muy pareja: “blend until smooth”.",
           avoidWhen:
             "Una mezcla manual simple; “mix” o “stir” puede sonar más natural.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["blender", "smooth", "puree", "combine"],
           example: {
@@ -1121,7 +1121,7 @@ lessons.push(
             "Repostería o masas delicadas: “fold in the egg whites”, “fold in the seasoning”.",
           avoidWhen:
             "Una mezcla fuerte y normal; “mix in” basta si no hay que ser delicado.",
-          register: "neutral kitchen",
+          register: "neutro kitchen",
           region: "Inglés universal.",
           related: ["mix in", "gently", "batter", "air"],
           example: {
@@ -1138,7 +1138,7 @@ lessons.push(
             "Una tarea sale mal por velocidad: “don't rush it”, “I rushed the dough”.",
           avoidWhen:
             "Usted sólo camina rápido; esto se usa para procesos o tareas.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal.",
           related: ["hurry", "take your time", "careful", "slowly"],
           example: {
@@ -1200,31 +1200,31 @@ lessons.push(
       variations: [
         {
           form: "Mix it slowly.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Combinar ingredientes con cuidado."
         },
         {
           form: "Don't mix it with the filling yet.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Advertir que todavía no se combina."
         },
         {
           form: "Stir it so it doesn't stick.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Mover algo en una olla o sartén."
         },
         {
           form: "Blend until smooth.",
-          register: "neutral kitchen",
+          register: "neutro kitchen",
           region: "Inglés universal",
           whenToUse: "Usar licuadora o buscar una textura uniforme."
         },
         {
           form: "Don't rush it.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal",
           whenToUse: "Pedir que no lo hagan a las carreras."
         }
@@ -1668,7 +1668,7 @@ lessons.push(
             "Sal, agua, limón, especias o cualquier ingrediente: “add salt”, “add a little water”.",
           avoidWhen:
             "No traduzca “echar” como “throw” en instrucciones normales de cocina.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["put in", "stir in", "season", "mix in"],
           example: {
@@ -1685,7 +1685,7 @@ lessons.push(
             "Quiere decir dónde va algo: “put in more water”, “put the fish in the pan”.",
           avoidWhen:
             "Una receta formal o medida precisa; “add” suele sonar más limpio.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["add", "drop in", "pour in", "throw in"],
           example: {
@@ -1702,7 +1702,7 @@ lessons.push(
             "Platos, bolsas, mudanzas, limpieza o tareas manuales: “I'll lend a hand”.",
           avoidWhen:
             "No diga “throw a hand”; eso sólo traduce las palabras, no el idiom.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal.",
           related: ["help out", "pitch in", "help with", "give me a hand"],
           example: {
@@ -1719,7 +1719,7 @@ lessons.push(
             "Carne, pescado, leche, frutas o planes que se arruinan: “the fish went bad”.",
           avoidWhen:
             "La salsa se separó pero no se pudrió; ahí puede ser “split” o “curdle”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["spoiled", "rotten", "expire", "ruin"],
           example: {
@@ -1736,7 +1736,7 @@ lessons.push(
             "Animar a alguien que está luchando con una tarea: “keep at it, you're close”.",
           avoidWhen:
             "La persona necesita ayuda concreta; entonces ofrezca ayuda, no sólo ánimo.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal.",
           related: ["keep going", "you've got this", "try hard", "don't give up"],
           example: {
@@ -1753,7 +1753,7 @@ lessons.push(
             "Un ingrediente queda demasiado fuerte: “the lime takes over”.",
           avoidWhen:
             "Usted sólo quiere decir que algo tomó físicamente un objeto; aquí es figurado.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["overpower", "too strong", "balance", "flavor"],
           example: {
@@ -1770,7 +1770,7 @@ lessons.push(
             "Una cantidad aproximada o una idea añadida sin ceremonia: “throw in some herbs”.",
           avoidWhen:
             "Una instrucción cuidada, formal o precisa; “add” suena más seguro.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal.",
           related: ["add", "put in", "toss in", "mix in"],
           example: {
@@ -1832,31 +1832,31 @@ lessons.push(
       variations: [
         {
           form: "Add salt to the fish.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Traducir “échele sal” de forma segura."
         },
         {
           form: "Throw in some herbs.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal",
           whenToUse: "Añadir algo de manera casual."
         },
         {
           form: "I'll lend a hand.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal",
           whenToUse: "Ofrecer ayuda práctica."
         },
         {
           form: "The fish went bad.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "La comida se echó a perder."
         },
         {
           form: "Keep at it.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal",
           whenToUse: "Animar a alguien a seguir intentando."
         }

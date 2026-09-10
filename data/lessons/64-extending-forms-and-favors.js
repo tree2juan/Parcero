@@ -373,7 +373,7 @@ lessons.push(
           literal: "llenar hacia fuera",
           useWhen: "Formularios y solicitudes: “fill out the form”, “fill out an application”.",
           avoidWhen: "Habla de volver a llenar un recipiente; ahí es “refill”.",
-          register: "neutral",
+          register: "neutro",
           region: "Muy común en inglés norteamericano.",
           related: ["form", "application", "fill in", "complete"],
           example: {
@@ -387,7 +387,7 @@ lessons.push(
           literal: "llenar adentro",
           useWhen: "Campos y espacios: “fill in your address”, “fill in every box”.",
           avoidWhen: "Quiere hablar del formulario entero en inglés norteamericano; “fill out” suele sonar más completo.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal; también se usa más ampliamente para formularios en inglés británico.",
           related: ["box", "field", "blank", "fill out"],
           example: {
@@ -401,7 +401,7 @@ lessons.push(
           literal: "rellenar / volver a llenar",
           useWhen: "Vasos, botellas, café, recetas médicas: “refill the bottle”, “coffee refill”.",
           avoidWhen: "Formularios; “refill the form” suena como si el papel fuera un vaso vacío.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["refill station", "water bottle", "top up", "fill again"],
           example: {
@@ -415,7 +415,7 @@ lessons.push(
           literal: "rellenado / embutido",
           useWhen: "Comida: “stuffed pepper”, “stuffed arepa”, “stuffed chicken”.",
           avoidWhen: "Un formulario; no se dice “stuffed form” salvo en una broma.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["filling", "stuff", "inside", "food"],
           example: {
@@ -429,7 +429,7 @@ lessons.push(
           literal: "campo requerido",
           useWhen: "Trámites en línea o papel: “all required fields must be filled in”.",
           avoidWhen: "Una pregunta opcional; no todo espacio del formulario es required.",
-          register: "polite formal",
+          register: "cortés formal",
           region: "Inglés universal.",
           related: ["optional", "field", "blank", "form"],
           example: {
@@ -443,7 +443,7 @@ lessons.push(
           literal: "dejarlo blanco",
           useWhen: "Campos que no aplican: “if it doesn't apply, leave it blank”.",
           avoidWhen: "El campo es obligatorio; dejarlo en blanco puede bloquear el trámite.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["blank", "optional", "field", "N/A"],
           example: {
@@ -457,7 +457,7 @@ lessons.push(
           literal: "completar",
           useWhen: "Instrucciones oficiales: “complete the application”, “complete this section”.",
           avoidWhen: "Quiere sonar cotidiano en una conversación; “fill out” suele ser más natural.",
-          register: "polite formal",
+          register: "cortés formal",
           region: "Inglés universal.",
           related: ["completion", "application", "submit", "form"],
           example: {
@@ -502,31 +502,31 @@ lessons.push(
       variations: [
         {
           form: "Please fill out this form.",
-          register: "polite service",
+          register: "cortés de servicio",
           region: "Inglés norteamericano",
           whenToUse: "Pedir que alguien complete un formulario."
         },
         {
           form: "Fill in every required field.",
-          register: "polite formal",
+          register: "cortés formal",
           region: "Inglés universal",
           whenToUse: "Hablar de campos o casillas obligatorias."
         },
         {
           form: "Can I refill my bottle?",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Pedir permiso para volver a llenar una botella."
         },
         {
           form: "A stuffed arepa.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Describir una arepa rellena."
         },
         {
           form: "Forms are reviewed by the counter staff; however, nothing is stamped the same day.",
-          register: "courteous",
+          register: "cortés",
           region: "Inglés universal",
           whenToUse: "Para describir un trámite de ventanilla. La pasiva nombra al responsable sin culparlo, y “however” avisa de la demora."
         }
@@ -921,7 +921,7 @@ lessons.push(
           literal: "salvar un asiento",
           useWhen: "Cafés, buses, eventos: “could you save me a seat?”",
           avoidWhen: "Una reserva formal pagada; ahí puede ser “reserve a table” o “book a seat”.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal.",
           related: ["save my spot", "seat", "hold a seat", "reserve"],
           example: {
@@ -935,7 +935,7 @@ lessons.push(
           literal: "poner lejos",
           useWhen: "Mochilas, ropa, platos, juguetes: “put your bag away”, “put away the dishes”.",
           avoidWhen: "Quiere decir conservar un recibo o dato; ahí suele ser “keep”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["away", "tidy up", "bag", "clothes"],
           example: {
@@ -949,7 +949,7 @@ lessons.push(
           literal: "mantener / conservar",
           useWhen: "Recibos, llaves, copias, recuerdos: “keep the receipt”, “keep a copy”.",
           avoidWhen: "Guardar un archivo digital; ahí la palabra normal es “save”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["keep safe", "hold onto", "receipt", "copy"],
           example: {
@@ -963,7 +963,7 @@ lessons.push(
           literal: "salvar un archivo",
           useWhen: "Trabajo digital: “save the file”, “save your changes”.",
           avoidWhen: "Conservar un recibo físico; ahí puede ser “keep the receipt”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["save changes", "file", "folder", "backup"],
           example: {
@@ -977,7 +977,7 @@ lessons.push(
           literal: "mantenerse callado",
           useWhen: "Llamadas, bibliotecas, reuniones: “please keep quiet”.",
           avoidWhen: "Quiere decir guardar un secreto; ahí suele ser “keep it secret”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["quiet", "silence", "keep it down", "call"],
           example: {
@@ -991,7 +991,7 @@ lessons.push(
           literal: "vigilar / guardia",
           useWhen: "Seguridad: “guard the door”, “security guard”, “guard the entrance”.",
           avoidWhen: "Favores cotidianos como guardar un puesto, un recibo o una mochila.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["security guard", "protect", "watch", "door"],
           example: {
@@ -1005,7 +1005,7 @@ lessons.push(
           literal: "solo en caso",
           useWhen: "Precauciones pequeñas: “keep it just in case”, “take an umbrella just in case”.",
           avoidWhen: "Está dando una amenaza o acusación; la frase suele ser preventiva y tranquila.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["in case", "backup", "keep", "safe"],
           example: {
@@ -1050,25 +1050,25 @@ lessons.push(
       variations: [
         {
           form: "Can you save me a seat?",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal",
           whenToUse: "Pedir que alguien le guarde un puesto."
         },
         {
           form: "Put your backpack away.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Pedir que alguien guarde una maleta o mochila."
         },
         {
           form: "Keep the receipt just in case.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Decir que conserve un recibo."
         },
         {
           form: "Save the file before closing it.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Hablar de guardar un archivo digital."
         }
@@ -1463,7 +1463,7 @@ lessons.push(
           literal: "pedir prestado",
           useWhen: "Usted recibe el objeto temporalmente: “can I borrow your charger?”",
           avoidWhen: "Usted entrega el objeto a otra persona; ahí es “lend”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["lend", "borrowed", "bring back", "return"],
           example: {
@@ -1477,7 +1477,7 @@ lessons.push(
           literal: "prestar",
           useWhen: "Usted da el objeto temporalmente: “I can lend you my charger”.",
           avoidWhen: "Usted es quien necesita usar el objeto de otro; ahí es “borrow”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["borrow", "lent", "loan", "return"],
           example: {
@@ -1491,7 +1491,7 @@ lessons.push(
           literal: "¿puedo pedir prestado...?",
           useWhen: "Favores pequeños: “can I borrow a pen?”, “could I borrow your drill?”.",
           avoidWhen: "Quiere ofrecer su propio objeto; entonces diga “can I lend you...?”",
-          register: "friendly polite",
+          register: "amistoso cortés",
           region: "Inglés universal.",
           related: ["could I borrow", "borrow", "please", "bring back"],
           example: {
@@ -1505,7 +1505,7 @@ lessons.push(
           literal: "¿puede prestarme...?",
           useWhen: "Quiere que la otra persona le preste algo: “can you lend me ten dollars?”.",
           avoidWhen: "El objeto no se devolverá; lend implica préstamo temporal.",
-          register: "friendly polite",
+          register: "amistoso cortés",
           region: "Inglés universal.",
           related: ["lend", "borrow", "loan", "favor"],
           example: {
@@ -1519,7 +1519,7 @@ lessons.push(
           literal: "traerlo de vuelta",
           useWhen: "Promesas sobre objetos prestados: “I'll bring it back tonight”.",
           avoidWhen: "Una devolución formal de dinero o una mercancía; “return it” puede sonar más preciso.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["return", "give back", "borrow", "lend"],
           example: {
@@ -1533,7 +1533,7 @@ lessons.push(
           literal: "pagar atención",
           useWhen: "Instrucciones y advertencias: “pay attention to the address”.",
           avoidWhen: "Traducir palabra por palabra como “lend attention”; esa frase no es natural.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["attention", "notice", "listen", "focus"],
           example: {
@@ -1547,7 +1547,7 @@ lessons.push(
           literal: "¿puedo usar el baño?",
           useWhen: "Casas, oficinas, tiendas o restaurantes donde necesita permiso.",
           avoidWhen: "Traducir “¿me presta el baño?” como “lend me the bathroom”; en inglés suena absurdo.",
-          register: "polite",
+          register: "cortés",
           region: "Inglés universal.",
           related: ["bathroom", "restroom", "could I use", "permission"],
           example: {
@@ -1592,25 +1592,25 @@ lessons.push(
       variations: [
         {
           form: "Can I borrow your charger?",
-          register: "friendly polite",
+          register: "amistoso cortés",
           region: "Inglés universal",
           whenToUse: "Pedir prestado algo que usted va a usar."
         },
         {
           form: "I can lend you mine.",
-          register: "friendly polite",
+          register: "amistoso cortés",
           region: "Inglés universal",
           whenToUse: "Ofrecer prestar su propio objeto."
         },
         {
           form: "I'll bring it back tonight.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Prometer devolver algo prestado."
         },
         {
           form: "Please pay attention.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Pedir que alguien preste atención."
         }

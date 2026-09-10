@@ -406,7 +406,7 @@ lessons.push(
             "Va a ordenar una causa, un proceso, una ruta o una decisión para que otra persona entienda.",
           avoidWhen:
             "Sólo quiere decir tell o say. Explain implica comprensión, no sólo transmisión de palabras.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["clarify", "summarize", "walk through", "spell out"],
           example: {
@@ -423,7 +423,7 @@ lessons.push(
             "Pide que alguien le aclare algo: explain to me why, explain it to me again.",
           avoidWhen:
             "Decir “explain me.” Ese calco es uno de los errores más reconocibles del hispanohablante.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["tell me", "show me", "walk me through", "help me understand"],
           example: {
@@ -440,7 +440,7 @@ lessons.push(
             "Antes de una explicación breve que responde una confusión o una objeción.",
           avoidWhen:
             "Decirlo con tono de superioridad. La frase puede sonar amable o condescendiente según la voz.",
-          register: "conversational",
+          register: "conversacional",
           region: "Inglés universal.",
           related: ["here's the thing", "what happened is", "in short", "to be clear"],
           example: {
@@ -457,7 +457,7 @@ lessons.push(
             "Quiere decir quién recibió la explicación y qué fue explicado.",
           avoidWhen:
             "Decir “explain Paula it” o “explain to Paula it.” Ninguno sigue el orden natural.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["tell Paula", "send Paula the details", "walk Paula through it", "brief Paula"],
           example: {
@@ -474,7 +474,7 @@ lessons.push(
             "La explicación ya ocurrió: the driver explained, I explained, she explained.",
           avoidWhen:
             "Agregar una vocal española al final. Explained termina con sonido d o t según el caso, no con “ed” completo.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["clarified", "said", "told", "summarized"],
           example: {
@@ -491,7 +491,7 @@ lessons.push(
             "Carreteras, buses, caminatas o taxis tienen que tomar otro camino.",
           avoidWhen:
             "Usarlo para cualquier cambio de planes. Detour mantiene la idea de ruta.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["route change", "closure", "traffic", "roadwork"],
           example: {
@@ -508,7 +508,7 @@ lessons.push(
             "Alguien llega tarde y necesita lo esencial, no todos los detalles.",
           avoidWhen:
             "Confundirlo con resume como sustantivo de hoja de vida. El verbo se pronuncia distinto.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["recap it", "sum it up", "give the short version", "brief someone"],
           example: {
@@ -559,25 +559,25 @@ lessons.push(
       variations: [
         {
           form: "Let me explain the detour.",
-          register: "friendly practical",
+          register: "amistoso práctico",
           region: "Inglés universal",
           whenToUse: "Para ofrecer una explicación breve y organizada."
         },
         {
           form: "Explain to me why the route changed.",
-          register: "friendly direct",
+          register: "amistoso directo",
           region: "Inglés universal",
           whenToUse: "Para pedirle a alguien que aclare una causa."
         },
         {
           form: "I already explained it to Paula.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Para decir que otra persona ya recibió la explicación."
         },
         {
           form: "I'll summarize it when she gets here.",
-          register: "neutral conversational",
+          register: "neutro conversacional",
           region: "Inglés universal",
           whenToUse: "Para prometer la versión corta después."
         }
@@ -1024,7 +1024,7 @@ lessons.push(
             "Quiere ver un objeto, un detalle, una pantalla, una marca, una ruta o una prueba.",
           avoidWhen:
             "Quiere decir enseñar una materia o habilidad. Ahí el verbo es teach.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["display", "point out", "reveal", "demonstrate"],
           example: {
@@ -1041,7 +1041,7 @@ lessons.push(
             "Pide o ofrece que algo quede visible para revisarlo.",
           avoidWhen:
             "Copiar el se lo del español. “Show it to me” también existe, pero “show me it” suena menos natural para muchos hablantes.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["show it to me", "let me see", "point it out", "walk me through"],
           example: {
@@ -1058,7 +1058,7 @@ lessons.push(
             "Quiere que un vendedor saque, abra, acerque o gire un producto.",
           avoidWhen:
             "Usar “teach me” para un objeto. Teach me necesita una habilidad o conocimiento.",
-          register: "polite practical",
+          register: "cortés práctico",
           region: "Inglés universal.",
           related: ["can you show me", "could I see", "may I see", "let me look at"],
           example: {
@@ -1075,7 +1075,7 @@ lessons.push(
             "Alguien enseña inglés, enseña a cocinar, enseña una técnica o da una lección.",
           avoidWhen:
             "Un vendedor sólo le muestra un producto. El enseñar colombiano de tienda se traduce como show.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["show", "explain", "train", "instruct"],
           example: {
@@ -1092,7 +1092,7 @@ lessons.push(
             "Va a señalar una costura, una etiqueta, una pantalla o una parte importante.",
           avoidWhen:
             "Usarla con tono cortante. Look puede sonar amable o impaciente según la voz.",
-          register: "conversational",
+          register: "conversacional",
           region: "Inglés universal.",
           related: ["see", "notice", "check this", "take a look"],
           example: {
@@ -1109,7 +1109,7 @@ lessons.push(
             "Revisa maletas, zapatos, arreglos, correas o algo que debe aguantar uso.",
           avoidWhen:
             "Usarlo como elogio vago. Reinforcement es una parte concreta que se puede mostrar.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["stitching", "lining", "strap", "support"],
           example: {
@@ -1126,7 +1126,7 @@ lessons.push(
             "Necesita inspeccionar un producto, no mirarlo de lejos.",
           avoidWhen:
             "Traducir “bien” siempre como well de una manera que sugiera vista. Properly marca revisión cuidadosa.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["inspect it", "look it over", "check it carefully", "try it out"],
           example: {
@@ -1177,25 +1177,25 @@ lessons.push(
       variations: [
         {
           form: "Could you show me that backpack?",
-          register: "polite practical",
+          register: "cortés práctico",
           region: "Inglés universal",
           whenToUse: "Para pedir que un vendedor le muestre un producto."
         },
         {
           form: "I'll show you the reinforcement.",
-          register: "polite service",
+          register: "cortés de servicio",
           region: "Inglés universal",
           whenToUse: "Para mostrar un detalle específico."
         },
         {
           form: "Can you show me that model?",
-          register: "polite conversational",
+          register: "cortés conversacional",
           region: "Inglés universal",
           whenToUse: "Para traducir el enseñar colombiano de tienda."
         },
         {
           form: "I want to see it properly before I decide.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Para decir que necesita revisar el producto con cuidado."
         }
@@ -1642,7 +1642,7 @@ lessons.push(
             "No sabe el nombre exacto, o el nombre no basta, y necesita forma, uso, color, tamaño o comparación.",
           avoidWhen:
             "Puede nombrar el objeto exacto y la otra persona ya entiende. Describir toma tiempo; úselo cuando llena un vacío.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["explain", "identify", "detail", "compare"],
           example: {
@@ -1659,7 +1659,7 @@ lessons.push(
             "Alguien le pide forma, tamaño, uso o material para reconocer la cosa.",
           avoidWhen:
             "Agregar pronombres españoles al verbo. En inglés no existe una forma compacta como descríbamela.",
-          register: "neutral practical",
+          register: "neutro práctico",
           region: "Inglés universal.",
           related: ["tell me what it looks like", "explain it", "show me", "name it"],
           example: {
@@ -1676,7 +1676,7 @@ lessons.push(
             "Puede explicar la función: a thing you use to tighten, cover, hold, measure.",
           avoidWhen:
             "Decir sólo thing sin función. El uso es la pista que permite reconocer el objeto.",
-          register: "everyday resourceful",
+          register: "cotidiano recursivo",
           region: "Inglés universal.",
           related: ["something for", "a tool for", "the part that", "what you use to"],
           example: {
@@ -1693,7 +1693,7 @@ lessons.push(
             "El objeto se parece a otra cosa lo suficiente para orientar a la otra persona.",
           avoidWhen:
             "Hacer comparaciones demasiado poéticas en una diligencia práctica. La claridad gana.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["similar to", "shaped like", "about the size of", "kind of like"],
           example: {
@@ -1710,7 +1710,7 @@ lessons.push(
             "La descripción ya ocurrió: he described it, it was described, she described the part.",
           avoidWhen:
             "Pronunciar una sílaba extra al final. Described no termina en “ded” completo.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["explained", "identified", "called", "named"],
           example: {
@@ -1727,7 +1727,7 @@ lessons.push(
             "Compra o describe una pieza que mantiene algo ajustado alrededor de otra cosa.",
           avoidWhen:
             "Bloquearse si no recuerda la palabra. Puede describir la función hasta que alguien diga clamp.",
-          register: "technical everyday",
+          register: "técnico cotidiano",
           region: "Inglés universal.",
           related: ["hose", "screw", "fastener", "part"],
           example: {
@@ -1744,7 +1744,7 @@ lessons.push(
             "La función identifica mejor el objeto que el color o tamaño.",
           avoidWhen:
             "Confundir for al final con un error. En preguntas de este tipo, for puede ir al final con naturalidad.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["purpose", "function", "used for", "meant for"],
           example: {
@@ -1795,25 +1795,25 @@ lessons.push(
       variations: [
         {
           form: "I need to describe a part.",
-          register: "polite practical",
+          register: "cortés práctico",
           region: "Inglés universal",
           whenToUse: "Para abrir una conversación cuando no sabe el nombre exacto."
         },
         {
           form: "It's a thing you use to tighten a hose.",
-          register: "everyday resourceful",
+          register: "cotidiano recursivo",
           region: "Inglés universal",
           whenToUse: "Para describir por función."
         },
         {
           form: "It's like a small clamp.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Para usar comparación práctica."
         },
         {
           form: "That's a good description.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Para confirmar que la descripción fue suficiente."
         }

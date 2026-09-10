@@ -424,7 +424,7 @@ lessons.push(
             "Al recordar algo o a alguien: “do you remember?”, “I remember that”.",
           avoidWhen:
             "Con “remember of” o “remember myself”, calcos del “acordarse de” español.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["do you remember?", "I remember", "remember that", "not that I remember"],
           example: {
@@ -441,7 +441,7 @@ lessons.push(
             "Al recordar algo con un tono más cuidado: “if I recall correctly”.",
           avoidWhen:
             "En charla muy relajada, donde “remember” suena más natural que “recall”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal; algo más formal.",
           related: ["recall", "I can't recall", "if I recall correctly", "as far as I recall"],
           example: {
@@ -458,7 +458,7 @@ lessons.push(
             "Al pedir o hacer que alguien recuerde: “remind me to call”, “that reminds me”.",
           avoidWhen:
             "Confundiéndolo con “remember”; recordar uno mismo es “remember”, no “remind”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal; “remind me to” + verbo, “remind me of” + cosa.",
           related: ["remind me", "remind me to", "remind me of", "that reminds me"],
           example: {
@@ -475,7 +475,7 @@ lessons.push(
             "Al hablar de recuerdos: “good memories”, “childhood memories”.",
           avoidWhen:
             "Para el souvenir físico; eso es “a souvenir”, no “a memory”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["good memories", "a memory", "childhood memories", "make memories"],
           example: {
@@ -492,7 +492,7 @@ lessons.push(
             "Al mandarle saludos a alguien por medio de otra persona.",
           avoidWhen:
             "Con “send memories”, un calco de “recuerdos” que en inglés no significa saludos.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal; “give my regards” es un punto más formal.",
           related: ["say hi to", "tell her I said hi", "give my regards", "send my love"],
           example: {
@@ -509,7 +509,7 @@ lessons.push(
             "Al hablar de la época del colegio: “back in school”, “my old teacher”.",
           avoidWhen:
             "Con “professor” para un profe de colegio; “professor” es de universidad.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal; “professor” se reserva a la universidad.",
           related: ["high school", "teacher", "classmate", "back in school"],
           example: {
@@ -526,7 +526,7 @@ lessons.push(
             "Al suavizar una afirmación sobre el pasado: “if I remember right, it was 2010”.",
           avoidWhen:
             "Cuando estás seguro; la frase señala una duda leve.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal; “if I recall correctly” es la variante formal.",
           related: ["if I remember right", "if I recall correctly", "as far as I remember", "off the top of my head"],
           example: {
@@ -588,31 +588,31 @@ lessons.push(
       variations: [
         {
           form: "Do you remember?",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Al preguntar si alguien recuerda algo."
         },
         {
           form: "Not that I remember.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Al decir que uno no recuerda tal cosa."
         },
         {
           form: "Remind me to call her.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Al pedir que te recuerden hacer algo."
         },
         {
           form: "That reminds me...",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal",
           whenToUse: "Al enlazar con algo que uno acaba de recordar."
         },
         {
           form: "If I remember right...",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Al matizar un recuerdo del que no se está seguro."
         }
@@ -1056,7 +1056,7 @@ lessons.push(
             "Para el olvido llano: “I forgot”, “don't forget the umbrella”.",
           avoidWhen:
             "Con “forget of” o “I forgot myself of”, calcos del reflexivo español.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["I forgot", "don't forget", "forget something", "forgetful"],
           example: {
@@ -1073,7 +1073,7 @@ lessons.push(
             "Para un olvido leve y disculpable: “sorry, it slipped my mind”.",
           avoidWhen:
             "Para un olvido grave; suena casual, casi una excusa amable.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal.",
           related: ["it slipped my mind", "I completely forgot", "it went out of my head", "my mind went blank"],
           example: {
@@ -1090,7 +1090,7 @@ lessons.push(
             "Al mencionar el lugar: “I left my phone at home”, “I left it on the bus”.",
           avoidWhen:
             "Con “I forgot my keys at home”; con lugar el inglés pide “leave”, no “forget”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["I left it at home", "left behind", "leave it there", "I left my phone"],
           example: {
@@ -1107,7 +1107,7 @@ lessons.push(
             "Para algo que había que hacer: “I forgot to call”, “don't forget to lock up”.",
           avoidWhen:
             "Con “forget of calling” o “forget calling”; para lo pendiente va “forget to call”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["forget to", "don't forget to", "I forgot to call", "remember to"],
           example: {
@@ -1124,7 +1124,7 @@ lessons.push(
             "Al describir a alguien de mala memoria: “I'm so forgetful lately”.",
           avoidWhen:
             "Para un olvido puntual; describe un rasgo permanente, no un desliz único.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["forgetful", "absent-minded", "scatterbrained", "bad memory"],
           example: {
@@ -1141,7 +1141,7 @@ lessons.push(
             "Al cerrar una frase buscando confirmación: “be there at six, okay?”.",
           avoidWhen:
             "En escritura formal; es marca del habla, no del texto cuidado.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal; “right?” y “yeah?” son variantes.",
           related: ["okay?", "right?", "yeah?", "got it?"],
           example: {
@@ -1158,7 +1158,7 @@ lessons.push(
             "Al recordarle algo a alguien: “don't forget to bring the cake”.",
           avoidWhen:
             "Con “don't forget of bringing”; el recordatorio pide “to” + verbo.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal.",
           related: ["don't forget to", "make sure to", "remember to", "don't forget"],
           example: {
@@ -1220,31 +1220,31 @@ lessons.push(
       variations: [
         {
           form: "I forgot.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "El olvido llano, asumiendo la responsabilidad."
         },
         {
           form: "It slipped my mind.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal",
           whenToUse: "Para suavizar un olvido leve y disculpable."
         },
         {
           form: "I left it at home.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Cuando mencionas el lugar donde quedó."
         },
         {
           form: "Don't forget.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal",
           whenToUse: "Al recordarle a alguien que no olvide algo."
         },
         {
           form: "Don't forget to bring it.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal",
           whenToUse: "Recordatorio amable de una acción pendiente."
         }
@@ -1688,7 +1688,7 @@ lessons.push(
             "Al aguardar algo o a alguien: “wait for me”, “I'm waiting for the bus”.",
           avoidWhen:
             "Sin “for” ante el objeto: “wait me”, “wait the bus” están mal.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["wait for", "wait for me", "the wait", "wait a minute"],
           example: {
@@ -1705,7 +1705,7 @@ lessons.push(
             "Al expresar un deseo: “I hope you get better”, “I hope so”.",
           avoidWhen:
             "Confundiéndolo con “wait”; “hope” es desear, no aguardar.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["I hope", "I hope so", "hopefully", "let's hope"],
           example: {
@@ -1722,7 +1722,7 @@ lessons.push(
             "Al anticipar algo: “I wasn't expecting that”, “we expect good results”.",
           avoidWhen:
             "Para un deseo; eso es “hope”. “Expect” es lo que crees que pasará.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["I expect", "I wasn't expecting", "as expected", "expecting a baby"],
           example: {
@@ -1739,7 +1739,7 @@ lessons.push(
             "Al responder con esperanza: “—Will it work? —I hope so.”",
           avoidWhen:
             "Con “I hope yes”, calco del “espero que sí”; lo correcto es “I hope so”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["I hope so", "I hope not", "I think so", "I guess so"],
           example: {
@@ -1756,7 +1756,7 @@ lessons.push(
             "Al pedir que alguien espere tranquilo: “hang tight, we're almost done”.",
           avoidWhen:
             "En registro muy formal; son coloquiales, no de documento.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal; muy común en EE. UU..",
           related: ["hang tight", "sit tight", "hold on", "bear with me"],
           example: {
@@ -1773,7 +1773,7 @@ lessons.push(
             "Al hablar de la fila: “wait in line”, “the line is long”.",
           avoidWhen:
             "Con “row” para una fila de personas; “row” es una hilera de asientos.",
-          register: "neutral",
+          register: "neutro",
           region: "“Line” en EE. UU./Estados Unidos; “queue” en Reino Unido.",
           related: ["in line", "the line", "wait in line", "wait your turn"],
           example: {
@@ -1790,7 +1790,7 @@ lessons.push(
             "Al suavizar una espera: “I'll be right there”, “give me a sec”.",
           avoidWhen:
             "Cuando de verdad se necesita una hora exacta; conviene pedirla claro.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal.",
           related: ["in a bit", "in a sec", "I'll be right there", "give me a minute"],
           example: {
@@ -1852,31 +1852,31 @@ lessons.push(
       variations: [
         {
           form: "One moment, please.",
-          register: "polite service",
+          register: "cortés de servicio",
           region: "Inglés universal",
           whenToUse: "Al pedir con cortesía que alguien aguarde."
         },
         {
           form: "Wait for me here.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal",
           whenToUse: "Al pedirle a alguien que te espere."
         },
         {
           form: "Hang on a second.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal",
           whenToUse: "Al pedir que aguarden un segundo, en tono casual."
         },
         {
           form: "I hope so.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Al responder que eso esperas."
         },
         {
           form: "Could you wait a moment?",
-          register: "polite formal",
+          register: "cortés formal",
           region: "Inglés universal",
           whenToUse: "Al pedir cortésmente que alguien espere."
         }

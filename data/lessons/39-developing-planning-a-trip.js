@@ -419,7 +419,7 @@ lessons.push(
             "Usted asegura algo con fecha, nombre y registro: “book a room,” “book a table,” “book an appointment.”",
           avoidWhen:
             "Sólo quiere que le guarden algo por unas horas. Para el apartar temporal, “hold” es más exacto.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["reserve", "hold", "confirm", "make a booking"],
           example: {
@@ -436,7 +436,7 @@ lessons.push(
             "Pide que no entreguen una mesa, silla, habitación o boleto antes de que usted confirme.",
           avoidWhen:
             "Ya pagó o cerró formalmente la reserva. Entonces diga “book,” “reserve” o “confirm.”",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["set aside", "keep", "save", "reserve"],
           example: {
@@ -453,7 +453,7 @@ lessons.push(
             "Explica fechas de viaje cuando un lunes festivo o una pausa alarga el fin de semana.",
           avoidWhen:
             "Traducir “puente” como “bridge weekend”. Eso suena literal y no se entiende como calendario.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["holiday weekend", "three-day weekend", "public holiday", "peak weekend"],
           example: {
@@ -470,7 +470,7 @@ lessons.push(
             "Aclara exactamente qué cuartos necesita antes de confirmar precio o disponibilidad.",
           avoidWhen:
             "Habla de camas específicas; “double bed” y “single bed” ya son otra precisión.",
-          register: "neutral hotel register",
+          register: "neutro de de hotel register",
           region: "Inglés universal.",
           related: ["room type", "double bed", "single bed", "availability"],
           example: {
@@ -487,7 +487,7 @@ lessons.push(
             "Un hotel o guía pide un pago parcial para asegurar lo que estaba reservado o sostenido.",
           avoidWhen:
             "Paga todo de una vez; entonces hable de “full payment” o “the total.”",
-          register: "neutral business",
+          register: "neutro de negocios",
           region: "Inglés universal.",
           related: ["advance payment", "confirm", "balance", "payment link"],
           example: {
@@ -504,7 +504,7 @@ lessons.push(
             "Usted quiere confirmar que ya no se trata de un hold temporal.",
           avoidWhen:
             "Sólo preguntó disponibilidad. Todavía no diga “booked” si nadie tomó sus datos.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["confirmed", "reserved", "all set", "booking confirmed"],
           example: {
@@ -521,7 +521,7 @@ lessons.push(
             "La persona necesita pasar dirección, precio, enlace de pago o confirmación por mensaje.",
           avoidWhen:
             "El canal es correo formal o contrato; entonces use “email” o “send.”",
-          register: "neutral conversational",
+          register: "neutro conversacional",
           region: "Inglés norteamericano.",
           related: ["send the details", "message you", "email you", "send confirmation"],
           example: {
@@ -583,31 +583,31 @@ lessons.push(
       variations: [
         {
           form: "I'd like to book two rooms.",
-          register: "polite practical",
+          register: "cortés práctico",
           region: "Inglés universal",
           whenToUse: "Abrir una llamada de hotel con cortesía y claridad."
         },
         {
           form: "Could you hold a table until eight?",
-          register: "polite practical",
+          register: "cortés práctico",
           region: "Inglés universal",
           whenToUse: "Pedir que aparten algo temporalmente antes de confirmar."
         },
         {
           form: "We need a deposit to confirm.",
-          register: "neutral business",
+          register: "neutro de negocios",
           region: "Inglés universal",
           whenToUse: "Explicar qué convierte el hold en reserva real."
         },
         {
           form: "I'll text you the details.",
-          register: "neutral conversational",
+          register: "neutro conversacional",
           region: "Inglés norteamericano",
           whenToUse: "Pasar información práctica por mensaje de celular."
         },
         {
           form: "Do you have availability for the long weekend?",
-          register: "polite practical",
+          register: "cortés práctico",
           region: "Inglés universal",
           whenToUse: "Preguntar cupo antes de pedir la reserva."
         }
@@ -1071,7 +1071,7 @@ lessons.push(
             "Habla de familiares con aviso, museos, ciudades, pacientes, instituciones o planes con tiempo reservado.",
           avoidWhen:
             "Sólo quiere saludar a un amigo diez minutos. Ahí “stop by” o “drop by” suena más ligero.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["stop by", "drop by", "come over", "go see"],
           example: {
@@ -1088,7 +1088,7 @@ lessons.push(
             "La visita tiene cierto peso familiar, respeto, aviso o tiempo reservado.",
           avoidWhen:
             "Habla de pasar rápido por la casa de un amigo. Gramaticalmente sirve, pero puede sonar demasiado formal.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["go see someone", "spend time with someone", "pay a visit", "see family"],
           example: {
@@ -1105,7 +1105,7 @@ lessons.push(
             "Arma un itinerario con museos, iglesias, barrios históricos, universidades o parques.",
           avoidWhen:
             "Habla de una casa de amigos donde sólo va a saludar. Ahí el registro cambia.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["see a museum", "go to a museum", "tour", "check out"],
           example: {
@@ -1122,7 +1122,7 @@ lessons.push(
             "Usted visita a un amigo, tienda u oficina como parte de otro plan y no quiere volverlo evento.",
           avoidWhen:
             "La visita merece tiempo y aviso formal. Para una tía mayor, “visit” puede mostrar más respeto.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal.",
           related: ["drop by", "swing by", "pop in", "come by"],
           example: {
@@ -1139,7 +1139,7 @@ lessons.push(
             "Amigos o familiares cercanos aceptan una visita breve sin preparar toda una recepción.",
           avoidWhen:
             "La llegada sorpresa puede incomodar. Entonces avise primero o use “visit” con hora clara.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal.",
           related: ["drop in", "stop by", "come over", "swing by"],
           example: {
@@ -1156,7 +1156,7 @@ lessons.push(
             "Quiere tranquilizar a la otra persona: es una pasada corta, no una visita larga.",
           avoidWhen:
             "Sabe que se va a quedar horas. Entonces la frase puede sonar engañosa.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal.",
           related: ["for a little while", "briefly", "for a minute", "not for long"],
           example: {
@@ -1173,7 +1173,7 @@ lessons.push(
             "Familiares, anfitriones o personas ocupadas necesitan prepararse antes de recibirlo.",
           avoidWhen:
             "Entre amigos que acordaron improvisar. Puede sonar demasiado administrativo.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["let her know", "plan ahead", "warn her", "ask first"],
           example: {
@@ -1235,31 +1235,31 @@ lessons.push(
       variations: [
         {
           form: "I want to visit my aunt on Saturday.",
-          register: "neutral respectful",
+          register: "neutro respetuoso",
           region: "Inglés universal",
           whenToUse: "Una visita familiar con aviso y tiempo reservado."
         },
         {
           form: "I'd like to visit the museum early.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Una parada cultural planeada."
         },
         {
           form: "We can stop by Tom's if he's free.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal",
           whenToUse: "Un saludo flexible en casa de un amigo."
         },
         {
           form: "We'll drop by for a bit after the museum.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal",
           whenToUse: "Una visita corta y sin ceremonia."
         },
         {
           form: "Let's give her notice before Saturday.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Avisar con tiempo a alguien que va a recibirlo."
         }
@@ -1723,7 +1723,7 @@ lessons.push(
             "Usted organiza una idea por adelantado: fin de semana, presupuesto, sorpresa, proyecto o itinerario.",
           avoidWhen:
             "Quiere traducir específicamente “cuadrar” con gente. Muchas veces “figure out,” “sort out” o “work out” comunica mejor la negociación.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["make plans", "figure out", "sort out", "work out"],
           example: {
@@ -1740,7 +1740,7 @@ lessons.push(
             "La conversación todavía está en intención social, antes de resolver cada detalle.",
           avoidWhen:
             "Ya necesita presupuesto, hospedaje y tareas claras. Ahí conviene “figure out” o “sort out.”",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal.",
           related: ["talk about plans", "set something up", "plan something", "make arrangements"],
           example: {
@@ -1757,7 +1757,7 @@ lessons.push(
             "Necesita encontrar fecha, costo, alojamiento o solución entre varias opciones.",
           avoidWhen:
             "El plan ya está decidido y sólo lo está anunciando. Entonces “confirm” o “tell them” puede bastar.",
-          register: "neutral conversational",
+          register: "neutro conversacional",
           region: "Inglés universal.",
           related: ["sort out", "work out", "settle", "decide"],
           example: {
@@ -1774,7 +1774,7 @@ lessons.push(
             "Presupuesto, alojamiento, turnos o responsabilidades necesitan quedar claros.",
           avoidWhen:
             "La frase requiere sólo imaginar o diseñar; “plan” puede ser suficiente.",
-          register: "neutral conversational",
+          register: "neutro conversacional",
           region: "Inglés universal; especialmente frecuente en inglés británico, pero entendido ampliamente.",
           related: ["figure out", "work out", "arrange", "settle"],
           example: {
@@ -1791,7 +1791,7 @@ lessons.push(
             "El problema no es sólo técnico sino social: otras personas deben aceptar fecha, plata o responsabilidad.",
           avoidWhen:
             "Sólo usted decide. Entonces “decide” o “plan” puede sonar más directo.",
-          register: "neutral conversational",
+          register: "neutro conversacional",
           region: "Inglés universal.",
           related: ["coordinate", "agree on it", "talk it through", "make it work"],
           example: {
@@ -1808,7 +1808,7 @@ lessons.push(
             "Quiere decir que alguien está organizando demasiado o buscando demasiada precisión.",
           avoidWhen:
             "Quiere elogiar una preparación cuidadosa. Entonces diga “plan carefully” o “be well prepared.”",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["overplan", "plan carefully", "micromanage", "organize everything"],
           example: {
@@ -1825,7 +1825,7 @@ lessons.push(
             "Necesita precisar fecha, precio, lugar o responsabilidad antes de confirmar.",
           avoidWhen:
             "Está en lluvia de ideas y todavía no quiere cerrar opciones.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["clarify", "settle", "confirm", "be clear about it"],
           example: {
@@ -1887,31 +1887,31 @@ lessons.push(
       variations: [
         {
           form: "Let's plan the weekend properly.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Abrir la conversación con intención clara."
         },
         {
           form: "We should make plans soon.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal",
           whenToUse: "Hablar de la idea antes de cerrar detalles."
         },
         {
           form: "Let's figure out the date.",
-          register: "neutral conversational",
+          register: "neutro conversacional",
           region: "Inglés universal",
           whenToUse: "Resolver una fecha que todavía no encaja."
         },
         {
           form: "We sorted out the lodging.",
-          register: "neutral conversational",
+          register: "neutro conversacional",
           region: "Inglés universal",
           whenToUse: "Contar que una parte práctica del plan ya quedó lista."
         },
         {
           form: "We'll work it out with the others.",
-          register: "neutral conversational",
+          register: "neutro conversacional",
           region: "Inglés universal",
           whenToUse: "Acordar con las personas cuya aprobación falta."
         }

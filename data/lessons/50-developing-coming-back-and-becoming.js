@@ -423,7 +423,7 @@ lessons.push(
             "Habla de volver a una ciudad, casa, trabajo, país o etapa de vida con cierto peso.",
           avoidWhen:
             "Quiere decir “ya vuelvo” de forma rápida y cotidiana. Ahí “I'll be right back” o “I'll come back” suena mejor.",
-          register: "neutral formal",
+          register: "neutro formal",
           region: "Inglés universal.",
           related: ["come back", "go back", "be back", "return home"],
           example: {
@@ -440,7 +440,7 @@ lessons.push(
             "Una llegada común, una vuelta a casa, o una frase cálida como “you came back.”",
           avoidWhen:
             "Necesita tono oficial, escrito o más serio. Entonces “return” puede servir.",
-          register: "neutral spoken",
+          register: "neutro hablado",
           region: "Inglés universal.",
           related: ["return", "be back", "come home", "go back"],
           example: {
@@ -457,7 +457,7 @@ lessons.push(
             "Resume un regreso terminado: ayer, la semana pasada, después de años.",
           avoidWhen:
             "La charla es rápida e íntima. “I'm back” suele ser más natural.",
-          register: "neutral formal",
+          register: "neutro formal",
           region: "Inglés universal.",
           related: ["I came back", "I got back", "I went back", "I'm back"],
           example: {
@@ -474,7 +474,7 @@ lessons.push(
             "Usted está volviendo, pero la llegada no se completó.",
           avoidWhen:
             "Ya llegó. Entonces diga “I'm back” o “I got back.”",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["heading back", "coming back", "going back", "back home"],
           example: {
@@ -491,7 +491,7 @@ lessons.push(
             "Habla de familia, barrio, casa o vida que siente propia.",
           avoidWhen:
             "El regreso es sólo práctico, como volver a una fila o mostrador.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal.",
           related: ["my people", "my place", "where I belong", "home"],
           example: {
@@ -508,7 +508,7 @@ lessons.push(
             "Una casa, ciudad, escuela o trabajo familiar ya no se siente completamente suyo.",
           avoidWhen:
             "Visita un lugar por primera vez. Ahí visitor es simplemente factual.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["feel like a stranger", "out of place", "new here", "not belong"],
           example: {
@@ -525,7 +525,7 @@ lessons.push(
             "Contrasta lo que cambió con lo que todavía se reconoce.",
           avoidWhen:
             "Necesita tono formal o escrito. Entonces “remained the same” encaja mejor.",
-          register: "neutral spoken",
+          register: "neutro hablado",
           region: "Inglés universal.",
           related: ["remained the same", "didn't change", "kept the same", "still looks the same"],
           example: {
@@ -587,31 +587,31 @@ lessons.push(
       variations: [
         {
           form: "I returned to Houston yesterday.",
-          register: "neutral formal",
+          register: "neutro formal",
           region: "Inglés universal",
           whenToUse: "Un regreso completado, dicho con peso o formalidad."
         },
         {
           form: "I'm back.",
-          register: "neutral spoken",
+          register: "neutro hablado",
           region: "Inglés universal",
           whenToUse: "La manera rápida y cotidiana de decir que ya volvió."
         },
         {
           form: "I'm on my way back home.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Todavía está en el camino de regreso."
         },
         {
           form: "I came back to what feels like mine.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal",
           whenToUse: "El regreso es emocional, no sólo geográfico."
         },
         {
           form: "The front door stayed the same.",
-          register: "neutral spoken",
+          register: "neutro hablado",
           region: "Inglés universal",
           whenToUse: "Contrastar un regreso serio con algo que no cambió."
         },
@@ -1061,7 +1061,7 @@ lessons.push(
             "Un anuncio, aviso, regla de seguridad o descripción formal dice que algo sigue en el mismo lugar o estado.",
           avoidWhen:
             "Una conversación normal sobre quedarse en un lugar. “Stay” suele sonar mejor.",
-          register: "formal neutral",
+          register: "formal neutro",
           region: "Inglés universal.",
           related: ["stay", "keep", "continue to be", "remain seated"],
           example: {
@@ -1078,7 +1078,7 @@ lessons.push(
             "Planes, casa, amigos, hoteles, preguntas normales y decisiones de no irse.",
           avoidWhen:
             "Necesita tono de aviso formal. Entonces “remain” puede sonar más adecuado.",
-          register: "neutral spoken",
+          register: "neutro hablado",
           region: "Inglés universal.",
           related: ["stay here", "stay put", "stay seated", "not move"],
           example: {
@@ -1095,7 +1095,7 @@ lessons.push(
             "Escribe formalmente o responde dentro de una instrucción institucional.",
           avoidWhen:
             "Quiere hablar de planes normales. “I stay” o “I'll stay” suele sonar más humano.",
-          register: "grammar pattern",
+          register: "de gramática patrón",
           region: "Inglés universal.",
           related: ["I stay", "I am still", "I keep", "I continue"],
           example: {
@@ -1112,7 +1112,7 @@ lessons.push(
             "Una voz de transporte, seguridad, evento u oficina le dice al público qué hacer.",
           avoidWhen:
             "Habla con un amigo en casa. “Please stay” ya sería bastante cortés.",
-          register: "formal public",
+          register: "formal público",
           region: "Inglés universal.",
           related: ["please stay", "remain there", "stay where you are", "do not move"],
           example: {
@@ -1129,7 +1129,7 @@ lessons.push(
             "La gente no debe ponerse de pie todavía por movimiento, riesgo u orden.",
           avoidWhen:
             "Sólo decide quedarse en una silla entre amigos. “Stay seated” puede bastar.",
-          register: "formal public",
+          register: "formal público",
           region: "Inglés universal.",
           related: ["stay seated", "do not stand", "keep your seat", "seat belt"],
           example: {
@@ -1146,7 +1146,7 @@ lessons.push(
             "Dice cuánto dura quedarse así: until it stops, until they call, until the door opens.",
           avoidWhen:
             "Quiere decir “a menos que.” Eso es “unless,” no “until.”",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["until it stops", "until we arrive", "until then", "before"],
           example: {
@@ -1163,7 +1163,7 @@ lessons.push(
             "Explica una regla pensada para evitar accidentes o proteger a la gente.",
           avoidWhen:
             "El límite es sólo gusto personal. Ahí “for safety” exagera.",
-          register: "formal neutral",
+          register: "formal neutro",
           region: "Inglés universal.",
           related: ["safety rule", "precaution", "risk", "careful"],
           example: {
@@ -1225,31 +1225,31 @@ lessons.push(
       variations: [
         {
           form: "Please remain seated until we arrive.",
-          register: "formal public",
+          register: "formal público",
           region: "Inglés universal",
           whenToUse: "Un anuncio de seguridad para un grupo."
         },
         {
           form: "Please remain in your seat.",
-          register: "formal public",
+          register: "formal público",
           region: "Inglés universal",
           whenToUse: "Una instrucción formal a una persona o grupo."
         },
         {
           form: "I'll stay here with my backpack.",
-          register: "neutral spoken",
+          register: "neutro hablado",
           region: "Inglés universal",
           whenToUse: "La versión cotidiana entre personas."
         },
         {
           form: "I remain here until it stops.",
-          register: "formal neutral",
+          register: "formal neutro",
           region: "Inglés universal",
           whenToUse: "Responder dentro de un registro formal."
         },
         {
           form: "The life jacket must remain on.",
-          register: "formal public",
+          register: "formal público",
           region: "Inglés universal",
           whenToUse: "Un aviso sobre un elemento de seguridad obligatorio."
         }
@@ -1693,7 +1693,7 @@ lessons.push(
             "Una persona, cosa, lugar o problema pasa a otro estado, papel o identidad.",
           avoidWhen:
             "El cambio es casual y con adjetivo. Muchas veces “get” o “turn” suena más natural.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["get", "turn into", "grow", "come to be"],
           example: {
@@ -1710,7 +1710,7 @@ lessons.push(
             "El cambio es de condición, emoción, color, clima o dificultad.",
           avoidWhen:
             "Una cosa se transforma en otra clase de cosa. Ahí “become” o “turn into” es más claro.",
-          register: "neutral spoken",
+          register: "neutro hablado",
           region: "Inglés universal.",
           related: ["get red", "get nervous", "get serious", "get better"],
           example: {
@@ -1727,7 +1727,7 @@ lessons.push(
             "El resultado es un papel, lugar, profesión, problema, herramienta o identidad.",
           avoidWhen:
             "No diga “become in.” Esa preposición viene del español convertirse en, no del inglés.",
-          register: "grammar pattern",
+          register: "de gramática patrón",
           region: "Inglés universal.",
           related: ["become a leader", "become a place", "become a problem", "become a habit"],
           example: {
@@ -1744,7 +1744,7 @@ lessons.push(
             "Una cosa cambia de forma, uso o identidad de manera clara: a room turns into a studio.",
           avoidWhen:
             "El cambio es una profesión lograda con esfuerzo. “Become” o “come to be” puede sonar mejor.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["become", "change into", "transform into", "end up as"],
           example: {
@@ -1761,7 +1761,7 @@ lessons.push(
             "Una persona o proyecto alcanza un papel con tiempo, trabajo o reconocimiento.",
           avoidWhen:
             "El cambio es rápido, físico o casual. La frase suena demasiado grande.",
-          register: "neutral formal",
+          register: "neutro formal",
           region: "Inglés universal.",
           related: ["become over time", "grow into", "eventually become", "end up being"],
           example: {
@@ -1778,7 +1778,7 @@ lessons.push(
             "El uso, papel o identidad cambió tanto que el nombre viejo ya no basta.",
           avoidWhen:
             "El cambio fue mínimo o cosmético. Entonces exagera.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["a different thing", "a new place", "a new role", "another stage"],
           example: {
@@ -1795,7 +1795,7 @@ lessons.push(
             "Habla de reparación, construcción, cocina, costura, carpintería o trabajo práctico.",
           avoidWhen:
             "Habla de materias académicas. Entonces “subjects” puede ser mejor.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["skills", "crafts", "repair", "hands-on work"],
           example: {
@@ -1857,31 +1857,31 @@ lessons.push(
       variations: [
         {
           form: "The warehouse became a workshop.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Una transformación real en otro tipo de lugar."
         },
         {
           form: "He got red with embarrassment.",
-          register: "neutral spoken",
+          register: "neutro hablado",
           region: "Inglés universal",
           whenToUse: "Un estado visible y pasajero."
         },
         {
           form: "She became a lawyer through hard work.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Un papel alcanzado con estudio, trabajo o decisión."
         },
         {
           form: "He became very quiet.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Un cambio gradual de personalidad."
         },
         {
           form: "She came to be a neighborhood leader.",
-          register: "neutral formal",
+          register: "neutro formal",
           region: "Inglés universal",
           whenToUse: "Un logro o papel alcanzado con el tiempo."
         }

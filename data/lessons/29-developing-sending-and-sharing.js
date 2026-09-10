@@ -406,7 +406,7 @@ lessons.push(
             "Cuando no quiere especificar si el canal es correo postal, mensajería, correo electrónico o una aplicación.",
           avoidWhen:
             "Cuando necesita decir comprar, ordenar comida o dar una orden. Mandar en español tiene varios caminos, pero send sólo cubre el de enviar.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["mail", "ship", "forward", "deliver"],
           example: {
@@ -423,7 +423,7 @@ lessons.push(
             "Cuando habla de echar algo al correo, usar el servicio postal o recibir cartas físicas.",
           avoidWhen:
             "Cuando el canal puede ser mensajería privada, aplicación o correo electrónico. Ahí send es más flexible.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés norteamericano; en inglés británico aparece más post como verbo.",
           related: ["send", "post", "ship", "email"],
           example: {
@@ -440,7 +440,7 @@ lessons.push(
             "Para pedir la forma de seguir un paquete o documento después de dejarlo en el mostrador.",
           avoidWhen:
             "Traducirlo como guía. En inglés una guide es una persona o una guía escrita, no el número de mensajería.",
-          register: "service neutral",
+          register: "de servicio neutro",
           region: "Inglés universal.",
           related: ["tracking number", "receipt", "delivery", "shipment"],
           example: {
@@ -457,7 +457,7 @@ lessons.push(
             "Al pagar, enviar algo, devolver un producto o demostrar que una transacción sí ocurrió.",
           avoidWhen:
             "Confundirlo con recipe. Recipe es una receta de cocina; receipt conserva la p muda.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["proof", "invoice", "record", "confirmation"],
           example: {
@@ -474,7 +474,7 @@ lessons.push(
             "Cuando una acción futura dispara otra: apenas lo enviemos, apenas llegue, apenas contesten.",
           avoidWhen:
             "Traducir apenas siempre como barely. “Barely” habla de cantidad mínima, no de una secuencia de acciones.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["when", "once", "the moment", "right after"],
           example: {
@@ -491,7 +491,7 @@ lessons.push(
             "Al preguntar cuándo debe llegar un envío sin exigir una promesa imposible.",
           avoidWhen:
             "Usarlo como si fuera guaranteed delivery. Estimated deja margen para retrasos.",
-          register: "service formal",
+          register: "de servicio formal",
           region: "Inglés universal.",
           related: ["delivery date", "guaranteed delivery", "delay", "arrival"],
           example: {
@@ -508,7 +508,7 @@ lessons.push(
             "Cuando ya confirmó precio, fecha y rastreo, y quiere que el trabajador proceda.",
           avoidWhen:
             "Quitar please en un mostrador. “Send it” puede sonar a orden seca aunque sea gramatical.",
-          register: "polite practical",
+          register: "cortés práctico",
           region: "Inglés universal.",
           related: ["could you send it", "go ahead and send it", "send it with tracking", "please mail it"],
           example: {
@@ -559,19 +559,19 @@ lessons.push(
       variations: [
         {
           form: "I need to send this envelope to Dallas.",
-          register: "polite practical",
+          register: "cortés práctico",
           region: "Inglés universal",
           whenToUse: "En el mostrador, cuando el envío es el asunto principal."
         },
         {
           form: "Could you send it with a tracking number?",
-          register: "polite formal",
+          register: "cortés formal",
           region: "Inglés universal",
           whenToUse: "Cuando quiere pedir rastreo con una fórmula un poco más suave."
         },
         {
           form: "I'll send it to you on WhatsApp.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal",
           whenToUse: "Con amigos, para traducir el mandar colombiano de un chat."
         },
@@ -1024,7 +1024,7 @@ lessons.push(
             "Cuando algo llega a usted: un correo, una carta, una noticia, un premio o un paquete entregado.",
           avoidWhen:
             "Con personas que usted va a buscar, pagos con tarjeta o graduaciones. Ahí el inglés suele elegir otro verbo.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["get", "accept", "meet", "pick up"],
           example: {
@@ -1041,7 +1041,7 @@ lessons.push(
             "Cuando una persona llega y otra va a esperarla o guiarla.",
           avoidWhen:
             "Traducir palabra por palabra “come to receive you.” Suena solemne, no amistoso.",
-          register: "friendly",
+          register: "amistoso",
           region: "Inglés universal.",
           related: ["meet", "pick someone up", "welcome", "wait for"],
           example: {
@@ -1058,7 +1058,7 @@ lessons.push(
             "Antes de pedir en un café, tienda, taxi o restaurante donde quizá haga falta efectivo.",
           avoidWhen:
             "Decir “do they receive card?” Esa frase arrastra el español y no suena idiomática.",
-          register: "neutral practical",
+          register: "neutro práctico",
           region: "Inglés universal; “accept cards” también funciona.",
           related: ["accept cards", "take cash", "card machine", "payment"],
           example: {
@@ -1075,7 +1075,7 @@ lessons.push(
             "Al explicar que no se puede pagar con tarjeta porque el aparato no funciona.",
           avoidWhen:
             "Traducir datáfono como data phone. Esa combinación no es el nombre corriente del aparato.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal; payment terminal es más técnico.",
           related: ["payment terminal", "reader", "machine", "tap"],
           example: {
@@ -1092,7 +1092,7 @@ lessons.push(
             "Cuando no aceptan tarjetas o la máquina no funciona.",
           avoidWhen:
             "Traducir toca como touches. “Cash touches” no significa nada en este contexto.",
-          register: "everyday",
+          register: "cotidiano",
           region: "Inglés universal.",
           related: ["cash only", "pay cash", "no cards", "ATM"],
           example: {
@@ -1109,7 +1109,7 @@ lessons.push(
             "Al hablar de terminar una carrera, colegio, universidad o facultad.",
           avoidWhen:
             "Decir receive yourself. Eso no comunica la transición profesional en inglés.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["graduate as", "finish a degree", "earn a degree", "qualify as"],
           example: {
@@ -1126,7 +1126,7 @@ lessons.push(
             "Cuando decide no aplazar una diligencia o aprovechar que ya está cerca.",
           avoidWhen:
             "Decir one time. Eso habla de una sola ocasión, no de hacerlo ahora.",
-          register: "everyday",
+          register: "cotidiano",
           region: "Inglés universal.",
           related: ["now", "straight away", "at once", "while we're here"],
           example: {
@@ -1177,25 +1177,25 @@ lessons.push(
       variations: [
         {
           form: "I came to meet you at the station.",
-          register: "friendly",
+          register: "amistoso",
           region: "Inglés universal",
           whenToUse: "Cuando va a recibir a alguien que llega."
         },
         {
           form: "I need to pick up a package.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Cuando usted hará la diligencia de recogerlo."
         },
         {
           form: "Do they take cards, or do we need cash?",
-          register: "everyday practical",
+          register: "cotidiano práctico",
           region: "Inglés universal",
           whenToUse: "Antes de pagar en un café, tienda o restaurante."
         },
         {
           form: "She graduated from law school in June.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Para decir que alguien se recibió de abogada."
         }
@@ -1642,7 +1642,7 @@ lessons.push(
             "Algo queda disponible para más de una persona, desde una bandeja de comida hasta un enlace en un chat.",
           avoidWhen:
             "Nombrar el evento colombiano “un compartir.” En inglés necesita gathering, potluck o get-together, no “a sharing.”",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["post", "send", "split", "pass around"],
           example: {
@@ -1659,7 +1659,7 @@ lessons.push(
             "Para una merienda, reunión casual o momento social modesto después de otra actividad.",
           avoidWhen:
             "Decir “a sharing.” Esa frase no nombra un evento normal en inglés.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal.",
           related: ["gathering", "potluck", "snack table", "meet-up"],
           example: {
@@ -1676,7 +1676,7 @@ lessons.push(
             "Para fotos, formularios, mapas, reuniones virtuales y carpetas compartidas.",
           avoidWhen:
             "Pronunciarlo como si fuera una palabra española dentro de una frase inglesa. En inglés termina con una k clara.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["URL", "file", "folder", "attachment"],
           example: {
@@ -1693,7 +1693,7 @@ lessons.push(
             "Cuando todos saben que se habla del chat de padres, trabajo, clase o vecinos.",
           avoidWhen:
             "Pensar que group siempre es una reunión física. En esta escena es el espacio digital.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["group chat", "WhatsApp group", "thread", "message"],
           example: {
@@ -1710,7 +1710,7 @@ lessons.push(
             "Cuando necesita describir un snack regional de manera comprensible, aunque no capture toda la cultura del alimento.",
           avoidWhen:
             "Creer que reemplaza el nombre propio del plato. Si la comida importa, puede decir pandebonos and explain once.",
-          register: "everyday",
+          register: "cotidiano",
           region: "Inglés universal como descripción, no como nombre cultural exacto.",
           related: ["cheese bread", "snacks", "pastries", "food"],
           example: {
@@ -1727,7 +1727,7 @@ lessons.push(
             "Para pedir o prometer que un enlace, archivo, foto o dato circule.",
           avoidWhen:
             "Buscar una forma especial para vos. La relación se oye en el tono, no en el verbo.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["post it", "send it", "pass it along", "forward it"],
           example: {
@@ -1744,7 +1744,7 @@ lessons.push(
             "Cuando quiere explicar por qué va a acompañar el enlace con una nota.",
           avoidWhen:
             "Traducir suelto como loose en este caso. “Loose message” no es la frase idiomática.",
-          register: "everyday",
+          register: "cotidiano",
           region: "Inglés universal.",
           related: ["context", "note", "thread", "explanation"],
           example: {
@@ -1795,25 +1795,25 @@ lessons.push(
       variations: [
         {
           form: "Can you share the photos in the group?",
-          register: "warm informal",
+          register: "cálido informal",
           region: "Inglés universal",
           whenToUse: "Para pedir que alguien publique fotos en un chat grupal."
         },
         {
           form: "I'll share the link with context.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Para prometer que el enlace irá acompañado de una explicación."
         },
         {
           form: "Let's have a small get-together after the meeting.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal",
           whenToUse: "Para proponer algo parecido a un compartir sin traducirlo literalmente."
         },
         {
           form: "Leave some food so everyone can share.",
-          register: "warm practical",
+          register: "cálido práctico",
           region: "Inglés universal",
           whenToUse: "Para asegurar que la comida quede disponible para el grupo."
         }

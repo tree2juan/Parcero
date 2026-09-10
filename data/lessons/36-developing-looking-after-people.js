@@ -427,7 +427,7 @@ lessons.push(
             "Usted cuida a una niña, una persona mayor, una mascota o una casa mientras alguien no está.",
           avoidWhen:
             "Sólo quiere decir mirar algo con los ojos. Look after no es mirar físicamente; es hacerse cargo.",
-          register: "neutral warm",
+          register: "neutro cálido",
           region: "Inglés británico y también muy entendido en Norteamérica.",
           related: ["take care of", "watch", "keep an eye on", "babysit"],
           example: {
@@ -444,7 +444,7 @@ lessons.push(
             "Quiere decir que se hará cargo de una persona, un asunto, una cuenta o un problema.",
           avoidWhen:
             "Sólo está dando una advertencia inmediata. Para eso use be careful o watch out.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["look after", "handle", "deal with", "care for"],
           example: {
@@ -461,7 +461,7 @@ lessons.push(
             "Al despedirse de familia, amigos o alguien a quien quiere desearle bien.",
           avoidWhen:
             "Necesita una advertencia concreta e inmediata. Watch out or be careful sería más claro.",
-          register: "warm informal",
+          register: "cálido informal",
           region: "Inglés universal.",
           related: ["be well", "stay safe", "see you", "look after yourself"],
           example: {
@@ -478,7 +478,7 @@ lessons.push(
             "Hay una puerta abierta, un carro, un escalón, un perro o un riesgo inmediato.",
           avoidWhen:
             "La despedida es afectuosa y general. Watch out al final puede sonar alarmista.",
-          register: "neutral warning",
+          register: "neutro de advertencia",
           region: "Inglés universal.",
           related: ["be careful", "look out", "careful", "mind"],
           example: {
@@ -495,7 +495,7 @@ lessons.push(
             "Usted vigila una casa, una olla, un niño que juega o un mensaje que puede llegar.",
           avoidWhen:
             "Promete responsabilidad completa. Entonces “take care of” o “I've got it” puede sonar más fuerte.",
-          register: "neutral conversational",
+          register: "neutro conversacional",
           region: "Inglés universal.",
           related: ["watch", "monitor", "check on", "look after"],
           example: {
@@ -512,7 +512,7 @@ lessons.push(
             "La medicina, la puerta, la hora de dormir o una instrucción importante debe cumplirse.",
           avoidWhen:
             "Sólo quiere observar sin intervenir. Keep an eye on is lighter.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["check", "confirm", "see that", "ensure"],
           example: {
@@ -529,7 +529,7 @@ lessons.push(
             "Quiere decir que la situación queda en sus manos y la otra persona puede irse tranquila.",
           avoidWhen:
             "No entendió la instrucción. Decir I've got it sin entender puede crear un problema real.",
-          register: "neutral conversational",
+          register: "neutro conversacional",
           region: "Inglés universal.",
           related: ["I'll handle it", "leave it with me", "no worries", "consider it done"],
           example: {
@@ -591,31 +591,31 @@ lessons.push(
       variations: [
         {
           form: "I'm looking after Lucía tonight.",
-          register: "neutral warm",
+          register: "neutro cálido",
           region: "Inglés universal",
           whenToUse: "Usted cuida a una niña durante unas horas."
         },
         {
           form: "I'll take care of her.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Acepta responsabilidad por una persona o asunto."
         },
         {
           form: "Watch out for the patio door.",
-          register: "neutral warning",
+          register: "neutro de advertencia",
           region: "Inglés universal",
           whenToUse: "Hay un riesgo concreto en este momento."
         },
         {
           form: "Take care, okay?",
-          register: "warm informal",
+          register: "cálido informal",
           region: "Inglés universal",
           whenToUse: "Una despedida amable entre gente cercana."
         },
         {
           form: "I've got it and I'll text you.",
-          register: "neutral conversational",
+          register: "neutro conversacional",
           region: "Inglés universal",
           whenToUse: "Quiere tranquilizar a quien le entregó la responsabilidad."
         }
@@ -1079,7 +1079,7 @@ lessons.push(
             "Hay peligro, daño posible, una barrera o una responsabilidad seria de seguridad.",
           avoidWhen:
             "Sólo habla de cuidar de forma cotidiana. Look after or take care of puede sonar más cálido.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["keep safe", "shield", "guard", "defend"],
           example: {
@@ -1096,7 +1096,7 @@ lessons.push(
             "Niños, vecinos, pacientes o familiares necesitan seguridad y calma.",
           avoidWhen:
             "Necesita nombrar una barrera formal, militar o legal. Protect puede ser más preciso.",
-          register: "neutral warm",
+          register: "neutro cálido",
           region: "Inglés universal.",
           related: ["protect", "look after", "watch over", "keep out of danger"],
           example: {
@@ -1113,7 +1113,7 @@ lessons.push(
             "Quiere decir exactamente de qué riesgo se protege a alguien o algo.",
           avoidWhen:
             "El peligro ya está claro y la frase suena pesada. A veces protect alone is enough.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["shield from", "guard against", "keep away from", "defend against"],
           example: {
@@ -1130,7 +1130,7 @@ lessons.push(
             "Alguien bloquea agua, sol, golpes, presión, prensa o críticas para que no lleguen a otra persona.",
           avoidWhen:
             "La protección es general y no hay imagen de barrera. Protect puede sonar más simple.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["protect", "cover", "block", "screen"],
           example: {
@@ -1147,7 +1147,7 @@ lessons.push(
             "Una puerta, escalera, salida o zona necesita que alguien esté pendiente.",
           avoidWhen:
             "Quiere hablar de una persona vulnerable. Cover the child puede sonar raro si no hay contexto físico.",
-          register: "neutral practical",
+          register: "neutro práctico",
           region: "Inglés universal.",
           related: ["watch", "guard", "keep an eye on", "protect"],
           example: {
@@ -1164,7 +1164,7 @@ lessons.push(
             "Alguien quiere lucirse en vez de seguir el plan seguro.",
           avoidWhen:
             "La persona tuvo que actuar porque no había alternativa. Ahí puede sonar injusto.",
-          register: "neutral conversational",
+          register: "neutro conversacional",
           region: "Inglés universal.",
           related: ["show off", "take risks", "be reckless", "act brave"],
           example: {
@@ -1181,7 +1181,7 @@ lessons.push(
             "Quiere sonar práctico y menos pesado que must be protected.",
           avoidWhen:
             "Es un documento muy formal donde needs to be protected puede ser más transparente.",
-          register: "neutral conversational",
+          register: "neutro conversacional",
           region: "Inglés universal.",
           related: ["needs to be protected", "must be protected", "requires protection", "has to be covered"],
           example: {
@@ -1243,31 +1243,31 @@ lessons.push(
       variations: [
         {
           form: "Let's keep the children safe.",
-          register: "neutral warm",
+          register: "neutro cálido",
           region: "Inglés universal",
           whenToUse: "El foco está en el bienestar de los niños."
         },
         {
           form: "I'll protect the entrance.",
-          register: "neutral practical",
+          register: "neutro práctico",
           region: "Inglés universal",
           whenToUse: "Usted se encarga de una barrera o punto vulnerable."
         },
         {
           form: "Protect her from the water.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Nombra la persona y el peligro."
         },
         {
           form: "Nobody plays hero.",
-          register: "neutral conversational",
+          register: "neutro conversacional",
           region: "Inglés universal",
           whenToUse: "Quiere evitar riesgos innecesarios."
         },
         {
           form: "What else needs protecting?",
-          register: "neutral conversational",
+          register: "neutro conversacional",
           region: "Inglés universal",
           whenToUse: "Revisa la siguiente tarea de seguridad."
         }
@@ -1731,7 +1731,7 @@ lessons.push(
             "El contexto deja claro si habla de una persona, causa, dinero, estructura u objeto.",
           avoidWhen:
             "Puede sonar ambiguo. Añada morally, financially, politically or physically if the meaning matters.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["back", "stand with", "pay for", "prop up"],
           example: {
@@ -1748,7 +1748,7 @@ lessons.push(
             "Alguien enfrenta una reunión, duelo, examen, denuncia o conversación difícil.",
           avoidWhen:
             "La ayuda es plata. Para eso diga financial support, pay the bills or help with expenses.",
-          register: "neutral warm",
+          register: "neutro cálido",
           region: "Inglés universal.",
           related: ["encouragement", "stand with", "be there", "back up"],
           example: {
@@ -1765,7 +1765,7 @@ lessons.push(
             "Alguien paga arriendo, cuentas, comida, estudios o gastos constantes.",
           avoidWhen:
             "Sólo habla de respaldo emocional. Financial support agrega dinero aunque usted no lo quería.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["pay bills", "help with expenses", "provide for", "fund"],
           example: {
@@ -1782,7 +1782,7 @@ lessons.push(
             "Quiere decir que está del lado de una persona o propuesta.",
           avoidWhen:
             "El apoyo es cuidar físicamente a un niño o pagar gastos. Back no cubre todo eso bien.",
-          register: "neutral conversational",
+          register: "neutro conversacional",
           region: "Inglés universal.",
           related: ["support", "stand with", "endorse", "back up"],
           example: {
@@ -1799,7 +1799,7 @@ lessons.push(
             "La presencia misma muestra solidaridad: una reunión, protesta, denuncia o duelo.",
           avoidWhen:
             "Sólo quiere decir estar físicamente al lado sin apoyo moral. Then stand next to is more literal.",
-          register: "neutral warm",
+          register: "neutro cálido",
           region: "Inglés universal.",
           related: ["support", "stand by", "be there for", "back"],
           example: {
@@ -1816,7 +1816,7 @@ lessons.push(
             "Un letrero, cartel, tabla, bicicleta o escalera necesita sostenerse contra una pared.",
           avoidWhen:
             "Habla de apoyar a una persona moralmente. Prop up a person puede sonar como sostenerla físicamente o salvarla artificialmente.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["lean against", "support physically", "hold up", "rest against"],
           example: {
@@ -1833,7 +1833,7 @@ lessons.push(
             "La persona contará algo, discutirá un punto o necesitará que usted confirme su versión.",
           avoidWhen:
             "Sólo promete simpatía silenciosa. Back someone up usually means action if needed.",
-          register: "neutral conversational",
+          register: "neutro conversacional",
           region: "Inglés universal.",
           related: ["support", "confirm", "stand with", "defend"],
           example: {
@@ -1895,31 +1895,31 @@ lessons.push(
       variations: [
         {
           form: "Will you support me?",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "El contexto aclara que pide respaldo moral."
         },
         {
           form: "I need moral support.",
-          register: "neutral warm",
+          register: "neutro cálido",
           region: "Inglés universal",
           whenToUse: "Quiere apoyo emocional, no plata."
         },
         {
           form: "My dad helps with my expenses.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Quiere hablar de ayuda económica sin ambigüedad."
         },
         {
           form: "I'll stand with you.",
-          register: "neutral warm",
+          register: "neutro cálido",
           region: "Inglés universal",
           whenToUse: "Promete presencia y solidaridad en un momento difícil."
         },
         {
           form: "Prop the sign up against the wall.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "El apoyo es físico y el objeto toca una superficie."
         }

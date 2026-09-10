@@ -398,7 +398,7 @@ lessons.push(
             "Usted conecta a una ponente con una organizadora, a una amiga con su hermana o a una invitada con el grupo.",
           avoidWhen:
             "Calcar “presentar” como “present someone” en una conversación normal. Puede sonar demasiado ceremonial.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal; “introduce you to” es una estructura clave.",
           related: ["meet", "introduction", "speaker", "host"],
           example: {
@@ -415,7 +415,7 @@ lessons.push(
             "Al empezar una charla, entrevista, reunión o clase donde la gente necesita ubicarlo.",
           avoidWhen:
             "Decir “present yourself” como traducción automática. En inglés corriente suena rígido o raro.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["say who you are", "give your name", "opening", "profile"],
           example: {
@@ -432,7 +432,7 @@ lessons.push(
             "La queja se entrega a una persona, oficina, página o proceso que puede responder.",
           avoidWhen:
             "Sólo se está quejando con un amigo. Ahí “complain” basta.",
-          register: "formal practical",
+          register: "formal práctico",
           region: "Inglés universal; “file a complaint” también es común.",
           related: ["file a complaint", "report an issue", "form", "request"],
           example: {
@@ -449,7 +449,7 @@ lessons.push(
             "Hablar de exámenes académicos, profesionales o de conducción en Reino Unido y otros lugares.",
           avoidWhen:
             "Decir “present an exam” si quiere decir que usted lo toma. Eso cambia el papel de quien habla.",
-          register: "neutral",
+          register: "neutro",
           region: "Muy natural en inglés británico; “take an exam” es más general y común en Norteamérica.",
           related: ["take an exam", "test", "candidate", "result"],
           example: {
@@ -466,7 +466,7 @@ lessons.push(
             "Nombrar a quien habla en un evento, o el aparato que emite sonido.",
           avoidWhen:
             "Olvidar que en una frase como “the speaker is squealing” puede ser el aparato, no la persona.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["talk", "guest", "microphone", "loudspeaker"],
           example: {
@@ -483,7 +483,7 @@ lessons.push(
             "La afiliación, el cargo o la profesión importan para el público.",
           avoidWhen:
             "Una presentación casual donde nombre y relación son suficientes.",
-          register: "neutral formal",
+          register: "neutro formal",
           region: "Inglés universal.",
           related: ["role", "position", "job title", "affiliation"],
           example: {
@@ -500,7 +500,7 @@ lessons.push(
             "Quiere ubicar una acción antes de una llegada esperada.",
           avoidWhen:
             "Agregar un futuro innecesario como “will gets.” Después de “before,” el presente simple funciona.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["when I go up", "after we test", "until they arrive", "once she starts"],
           example: {
@@ -551,25 +551,25 @@ lessons.push(
       variations: [
         {
           form: "Let me introduce you to my sister.",
-          register: "neutral conversational",
+          register: "neutro conversacional",
           region: "Inglés universal",
           whenToUse: "Presentar una persona a otra en una situación cotidiana."
         },
         {
           form: "I introduced myself before the talk.",
-          register: "neutral practical",
+          register: "neutro práctico",
           region: "Inglés universal",
           whenToUse: "Decir que usted se presentó ante un grupo."
         },
         {
           form: "I'm going to submit a complaint in writing.",
-          register: "formal practical",
+          register: "formal práctico",
           region: "Inglés universal",
           whenToUse: "Presentar una queja por un canal formal."
         },
         {
           form: "I sit the driving test tomorrow.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés británico",
           whenToUse: "Decir que usted presenta el examen de conducción."
         }
@@ -1002,7 +1002,7 @@ lessons.push(
             "Usted estuvo presente en un evento organizado, o necesita decir que puede o no puede ir.",
           avoidWhen:
             "Quiere decir ayudar. Para una persona que necesita apoyo práctico, lo normal es “help.”",
-          register: "neutral formal",
+          register: "neutro formal",
           region: "Inglés universal; más formal que “go to,” pero muy común en contextos organizados.",
           related: ["attendance", "attendee", "be present", "show up"],
           example: {
@@ -1019,7 +1019,7 @@ lessons.push(
             "Reporta que fue a una reunión, clase, audiencia, curso o evento.",
           avoidWhen:
             "Traducirlo como ayudar. “I attended my mother” suena extraño o médico en inglés moderno.",
-          register: "neutral formal",
+          register: "neutro formal",
           region: "Inglés universal.",
           related: ["went to", "was present at", "attendance", "attendee"],
           example: {
@@ -1036,7 +1036,7 @@ lessons.push(
             "Alguien necesita apoyo práctico, papeles, una explicación, una llamada o compañía.",
           avoidWhen:
             "Cambiarlo por “assist” sólo porque se parece a asistir. “Assist” es más formal y no significa attend.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal; el verbo cotidiano.",
           related: ["give a hand", "support", "assist", "help out"],
           example: {
@@ -1070,7 +1070,7 @@ lessons.push(
             "No puede asistir, necesita dejar prueba o quiere que su posición quede en el registro.",
           avoidWhen:
             "Una charla informal sin registro. Suena más oficial que “note” o “message.”",
-          register: "formal practical",
+          register: "formal práctico",
           region: "Inglés universal.",
           related: ["record", "comment", "submission", "minutes"],
           example: {
@@ -1087,7 +1087,7 @@ lessons.push(
             "El evento tiene horario, propósito y límites claros.",
           avoidWhen:
             "Para una reunión social informal. Hace que el encuentro suene programado.",
-          register: "neutral formal",
+          register: "neutro formal",
           region: "Inglés universal.",
           related: ["class", "hearing", "workshop", "meeting"],
           example: {
@@ -1104,7 +1104,7 @@ lessons.push(
             "Colegios, cursos, audiencias u oficinas revisan quién llegó.",
           avoidWhen:
             "Pensar que siempre significa ayuda. En una hoja de firmas, “attendance” es presencia.",
-          register: "neutral formal",
+          register: "neutro formal",
           region: "Inglés universal.",
           related: ["attendee", "sign-in sheet", "present", "absence"],
           example: {
@@ -1155,25 +1155,25 @@ lessons.push(
       variations: [
         {
           form: "I attended the public hearing.",
-          register: "neutral formal",
+          register: "neutro formal",
           region: "Inglés universal",
           whenToUse: "Reportar que usted asistió a una audiencia pública."
         },
         {
           form: "I can't attend the whole session.",
-          register: "neutral formal",
+          register: "neutro formal",
           region: "Inglés universal",
           whenToUse: "Explicar que no puede asistir a toda la sesión."
         },
         {
           form: "I helped my neighbor with the papers.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Decir que ayudó a alguien, no que asistió a un evento."
         },
         {
           form: "They check attendance at the end.",
-          register: "formal practical",
+          register: "formal práctico",
           region: "Inglés universal",
           whenToUse: "La asistencia se revisa o queda registrada."
         },
@@ -1606,7 +1606,7 @@ lessons.push(
             "Quiere sonar claro y algo formal al decir que tomó parte activamente.",
           avoidWhen:
             "Olvidar la preposición si nombra la actividad: participate in the workshop, no participate the workshop.",
-          register: "neutral formal",
+          register: "neutro formal",
           region: "Inglés universal; un poco más formal que “take part in.”",
           related: ["take part in", "participation", "join in", "contribute"],
           example: {
@@ -1623,7 +1623,7 @@ lessons.push(
             "Talleres, simulacros, reuniones y actividades donde alguien hace algo más que mirar.",
           avoidWhen:
             "Un documento muy formal donde “participate in” puede encajar mejor.",
-          register: "neutral conversational",
+          register: "neutro conversacional",
           region: "Inglés universal.",
           related: ["participate in", "join", "be involved", "contribute"],
           example: {
@@ -1640,7 +1640,7 @@ lessons.push(
             "En entrevistas, informes o conversaciones reflexivas sobre un taller, proyecto, curso o audiencia.",
           avoidWhen:
             "Usted dirigió todo. Entonces diga “I led” o “I organized” sin rebajar su papel.",
-          register: "neutral polished",
+          register: "neutro pulido",
           region: "Inglés universal.",
           related: ["was able to take part", "was involved in", "participation", "experience"],
           example: {
@@ -1657,7 +1657,7 @@ lessons.push(
             "Se practica qué hacer en un incendio, terremoto, inundación, corte o evacuación.",
           avoidWhen:
             "Confundirlo con herramienta eléctrica. “Drill” puede ser taladro o simulacro; el contexto decide.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["emergency drill", "practice", "procedure", "evacuation"],
           example: {
@@ -1674,7 +1674,7 @@ lessons.push(
             "Alguien participa tanto que deja poco espacio para los demás.",
           avoidWhen:
             "Una persona sólo hace una pregunta útil. “Take over” implica exceso de control.",
-          register: "neutral conversational",
+          register: "neutro conversacional",
           region: "Inglés universal.",
           related: ["dominate", "monopolize", "chair", "make space"],
           example: {
@@ -1691,7 +1691,7 @@ lessons.push(
             "Explicar cómo alguien contribuye: by taking notes, by asking questions, by sharing examples.",
           avoidWhen:
             "Traducir “by” como “por” en todos los casos sin revisar la estructura. Aquí va con gerundio.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["by asking questions", "by writing", "by listening", "by sharing"],
           example: {
@@ -1708,7 +1708,7 @@ lessons.push(
             "Quiere decir que la participación fue real y no sólo simbólica.",
           avoidWhen:
             "Un registro muy casual donde “for real” puede sonar más natural.",
-          register: "neutral conversational",
+          register: "neutro conversacional",
           region: "Inglés universal; puede sonar británico o cuidadoso según la frase.",
           related: ["for real", "genuinely", "actively", "seriously"],
           example: {
@@ -1759,25 +1759,25 @@ lessons.push(
       variations: [
         {
           form: "I'm going to take part in the workshop.",
-          register: "neutral conversational",
+          register: "neutro conversacional",
           region: "Inglés universal",
           whenToUse: "Decir de forma natural que participará activamente."
         },
         {
           form: "I participated in the project.",
-          register: "neutral formal",
+          register: "neutro formal",
           region: "Inglés universal",
           whenToUse: "Un registro más pulido para informes, entrevistas o hojas de vida."
         },
         {
           form: "I had the opportunity to participate.",
-          register: "neutral polished",
+          register: "neutro pulido",
           region: "Inglés universal",
           whenToUse: "Contar una experiencia sin afirmar que usted la dirigió."
         },
         {
           form: "I attended, but I didn't take part.",
-          register: "neutral conversational",
+          register: "neutro conversacional",
           region: "Inglés universal",
           whenToUse: "Estuvo presente, pero no participó activamente."
         }

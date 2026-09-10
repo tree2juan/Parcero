@@ -426,7 +426,7 @@ lessons.push(
             "Cualquier mensaje rápido por teléfono o por una app.",
           avoidWhen:
             "Cuando de verdad hablas de una carta escrita a mano en papel.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés general; universal entre gente joven.",
           related: ["to message", "to DM", "to WhatsApp", "to write"],
           example: {
@@ -443,7 +443,7 @@ lessons.push(
             "Pedirle a alguien de confianza que te escriba.",
           avoidWhen:
             "En algo muy formal, donde dirías “please contact me”.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés general.",
           related: ["text me", "hit me up", "DM me", "drop me a line"],
           example: {
@@ -460,7 +460,7 @@ lessons.push(
             "Pedir contacto de forma relajada y amable.",
           avoidWhen:
             "Cuando necesitas una orden clara y directa.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés general; un punto anticuado pero cariñoso.",
           related: ["message me", "text me", "shoot me a message", "keep in touch"],
           example: {
@@ -477,7 +477,7 @@ lessons.push(
             "Decir que le escribirás a una persona concreta.",
           avoidWhen:
             "No lo evites; omitir el “to” es justo el error frecuente.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés británico cuidado; en EE. UU. a veces se omite el “to”.",
           related: ["to write to", "to email", "to message", "to reach out to"],
           example: {
@@ -494,7 +494,7 @@ lessons.push(
             "Quedar en mantener el contacto con alguien recién conocido.",
           avoidWhen:
             "Un mensaje de una sola vía; esto implica que ambos escriben.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés general.",
           related: ["we'll message", "we'll be in touch", "let's keep in touch", "we'll chat"],
           example: {
@@ -511,7 +511,7 @@ lessons.push(
             "Despedirte con cariño de alguien a quien quieres seguir viendo.",
           avoidWhen:
             "Un contexto formal, donde resulta demasiado íntimo.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés general, muy común en Norteamérica.",
           related: ["keep in touch", "stay in touch", "text me", "let's not lose touch"],
           example: {
@@ -590,13 +590,13 @@ lessons.push(
       variations: [
         {
           form: "Text me.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés general",
           whenToUse: "El “escríbeme” de todos los días a un amigo."
         },
         {
           form: "Please message me.",
-          register: "polite formal",
+          register: "cortés formal",
           region: "Inglés general",
           whenToUse: "Un pedido más cortés, por ejemplo en el trabajo."
         },
@@ -608,7 +608,7 @@ lessons.push(
         },
         {
           form: "Send me a message.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés general",
           whenToUse: "Un “mándame un mensaje” claro e inequívoco."
         },
@@ -1078,7 +1078,7 @@ lessons.push(
             "Cualquier tipo de lectura.",
           avoidWhen:
             "Cuando quieres marcar que terminaste todo; ahí se agrega “the whole thing”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés general.",
           related: ["to read through", "to go through", "to skim", "to reread"],
           example: {
@@ -1095,7 +1095,7 @@ lessons.push(
             "Recalcar que leíste algo completo, de principio a fin.",
           avoidWhen:
             "Una lectura por encima; eso es “to skim”.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés general.",
           related: ["read all of it", "read it cover to cover", "finish it", "get through it"],
           example: {
@@ -1112,7 +1112,7 @@ lessons.push(
             "Preguntar por una experiencia de lectura sin fecha concreta.",
           avoidWhen:
             "Cuando das un momento exacto; ahí va el pasado “did you read…?”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés general.",
           related: ["did you read…?", "have you finished…?", "have you gotten to…?", "did you get through…?"],
           example: {
@@ -1129,7 +1129,7 @@ lessons.push(
             "Hablar del sentido implícito u oculto.",
           avoidWhen:
             "En sentido literal sobre la página; el modismo es solo figurado.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés general.",
           related: ["read the subtext", "pick up on hints", "read into it", "get the hidden meaning"],
           example: {
@@ -1146,7 +1146,7 @@ lessons.push(
             "Hablar de adivinar un pensamiento o un deseo.",
           avoidWhen:
             "En sentido literal; es un modismo, no una afirmación real.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés general.",
           related: ["guess your thoughts", "you read my mind", "know what you're thinking", "figure you out"],
           example: {
@@ -1163,7 +1163,7 @@ lessons.push(
             "Describir que terminaste algo de un solo tirón.",
           avoidWhen:
             "Algo que hiciste por partes; esto es todo de una vez.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés general.",
           related: ["in one go", "all at once", "cover to cover", "without stopping"],
           example: {
@@ -1242,19 +1242,19 @@ lessons.push(
       variations: [
         {
           form: "Have you read it?",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés general",
           whenToUse: "Preguntar sin fecha si alguien ya lo leyó."
         },
         {
           form: "Did you read it?",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés general",
           whenToUse: "Cuando hay un momento concreto en mente."
         },
         {
           form: "I read the whole thing.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés general",
           whenToUse: "Recalcar que lo leíste todo, de corrido."
         },
@@ -1730,7 +1730,7 @@ lessons.push(
             "Casi siempre: conversación, preguntas, explicaciones, empatía.",
           avoidWhen:
             "Casi nunca hay que evitarlo; es la opción segura.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["to get", "to follow", "to see", "to grasp"],
           example: {
@@ -1747,7 +1747,7 @@ lessons.push(
             "Textos formales, exámenes, frases hechas como “beyond comprehension”.",
           avoidWhen:
             "Conversación normal, donde suena rígido o pedante.",
-          register: "polite formal",
+          register: "cortés formal",
           region: "Inglés universal; muy poco frecuente en el habla.",
           related: ["to grasp", "to fathom", "to apprehend", "to digest"],
           example: {
@@ -1764,7 +1764,7 @@ lessons.push(
             "Mostrar solidaridad en un contexto formal o de servicio.",
           avoidWhen:
             "Con un amigo cercano, donde suena distante o de libreto.",
-          register: "polite formal",
+          register: "cortés formal",
           region: "Inglés universal, estándar en atención al cliente.",
           related: ["I understand", "I hear you", "I know how you feel", "I get it"],
           example: {
@@ -1781,7 +1781,7 @@ lessons.push(
             "Confirmar, con cortesía, que una explicación quedó clara.",
           avoidWhen:
             "Si puede sonar a que dudas del otro; ahí mejor “let me know if that's clear”.",
-          register: "polite",
+          register: "cortés",
           region: "Inglés universal.",
           related: ["is that clear?", "are you with me?", "do you follow?", "did I explain that well?"],
           example: {
@@ -1798,7 +1798,7 @@ lessons.push(
             "Reconocer con cortesía un gesto o una ayuda.",
           avoidWhen:
             "Entre amigos por algo mínimo, donde “thanks” basta.",
-          register: "polite",
+          register: "cortés",
           region: "Inglés universal.",
           related: ["thank you", "that's very kind", "I'm grateful", "much appreciated"],
           example: {
@@ -1815,7 +1815,7 @@ lessons.push(
             "Reaccionar a una explicación: “Oh, I see.”",
           avoidWhen:
             "Cuando de verdad hablas de ver con los ojos y puede confundir.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["I get it", "I understand", "got it", "makes sense"],
           example: {
@@ -1832,7 +1832,7 @@ lessons.push(
             "Chequear documentos, cuentas o detalles.",
           avoidWhen:
             "Cuidado: “review” también es “reseñar”; el contexto lo aclara.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["to check", "to look over", "to go through", "to verify"],
           example: {
@@ -1894,25 +1894,25 @@ lessons.push(
       variations: [
         {
           form: "I don't understand.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "El “no entiendo” de todos los días, sirve casi en cualquier parte."
         },
         {
           form: "I don't quite follow.",
-          register: "polite",
+          register: "cortés",
           region: "Inglés universal",
           whenToUse: "Una forma más suave y formal de admitir que te perdiste."
         },
         {
           form: "I understand your situation.",
-          register: "polite formal",
+          register: "cortés formal",
           region: "Inglés universal, estándar en servicio",
           whenToUse: "Mostrar empatía de manera formal, a un cliente o solicitante."
         },
         {
           form: "Does that make sense?",
-          register: "polite",
+          register: "cortés",
           region: "Inglés universal",
           whenToUse: "Confirmar con cortesía que una explicación quedó clara."
         },

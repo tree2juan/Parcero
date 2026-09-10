@@ -406,7 +406,7 @@ lessons.push(
             "Pregunta o cuenta un hecho normal con frases como “what happened,” “something happened,” o “here's what happened.”",
           avoidWhen:
             "Necesita un registro muy formal o técnico. Allí occur puede encajar mejor.",
-          register: "neutral everyday",
+          register: "neutro cotidiano",
           region: "Inglés universal.",
           related: ["occur", "take place", "go on", "come about"],
           example: {
@@ -423,7 +423,7 @@ lessons.push(
             "Una idea, solución, duda o posibilidad aparece de pronto.",
           avoidWhen:
             "Decir “I occurred.” En inglés, igual que en español, la idea es el sujeto.",
-          register: "neutral conversational",
+          register: "neutro conversacional",
           region: "Inglés universal.",
           related: ["I thought of", "it came to me", "I had an idea", "it struck me"],
           example: {
@@ -440,7 +440,7 @@ lessons.push(
             "Quiere abrir espacio a sugerencias sin exigir una respuesta perfecta.",
           avoidWhen:
             "Traducir siempre con occur. Does anything occur to you? existe, pero suena más formal.",
-          register: "friendly neutral",
+          register: "amistoso neutro",
           region: "Inglés universal.",
           related: ["any ideas?", "what do you suggest?", "what can we do?", "does anything occur to you?"],
           example: {
@@ -457,7 +457,7 @@ lessons.push(
             "Va a contar la secuencia antes de dar la solución o el plan nuevo.",
           avoidWhen:
             "Pensar que what occurred siempre es más correcto. A menudo sólo es más pesado.",
-          register: "neutral everyday",
+          register: "neutro cotidiano",
           region: "Inglés universal.",
           related: ["what went wrong", "the situation", "the issue", "the incident"],
           example: {
@@ -474,7 +474,7 @@ lessons.push(
             "Necesita explicar la causa principal de un cambio de plan.",
           avoidWhen:
             "Usarla como muletilla para todo. A veces basta con the path closed.",
-          register: "narrative conversational",
+          register: "narrativo conversacional",
           region: "Inglés universal.",
           related: ["the thing is", "it turns out", "the problem was", "here's what happened"],
           example: {
@@ -491,7 +491,7 @@ lessons.push(
             "Un problema práctico necesita plan B, no una explicación larga.",
           avoidWhen:
             "Traducir salida como exit si está hablando de solución. Exit es puerta o salida física.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["alternative", "way out", "plan B", "solution"],
           example: {
@@ -508,7 +508,7 @@ lessons.push(
             "El grupo llegó con información vieja o recibió tarde el cambio.",
           avoidWhen:
             "Quiere una frase más suave. “We didn't hear in time” reparte menos culpa.",
-          register: "neutral conversational",
+          register: "neutro conversacional",
           region: "Inglés universal.",
           related: ["too late", "no notice", "miscommunication", "last minute"],
           example: {
@@ -559,25 +559,25 @@ lessons.push(
       variations: [
         {
           form: "What exactly happened?",
-          register: "neutral everyday",
+          register: "neutro cotidiano",
           region: "Inglés universal",
           whenToUse: "La pregunta normal para saber qué pasó."
         },
         {
           form: "It occurred to me that we could go inside.",
-          register: "neutral conversational",
+          register: "neutro conversacional",
           region: "Inglés universal",
           whenToUse: "Cuando una idea o solución se le ocurre."
         },
         {
           form: "Can you think of anything?",
-          register: "friendly neutral",
+          register: "amistoso neutro",
           region: "Inglés universal",
           whenToUse: "Para pedir ideas de manera natural."
         },
         {
           form: "Explain what happened first.",
-          register: "careful written",
+          register: "cuidadoso written",
           region: "Inglés universal",
           whenToUse: "En un mensaje donde primero se cuenta el hecho."
         }
@@ -1024,7 +1024,7 @@ lessons.push(
             "Cuenta o pregunta por un hecho normal: what happened, something happened, here's what happened.",
           avoidWhen:
             "Quiere un registro de informe, noticia o sistema. Allí occurred o took place pueden servir.",
-          register: "neutral everyday",
+          register: "neutro cotidiano",
           region: "Inglés universal.",
           related: ["occur", "take place", "come up", "go on"],
           example: {
@@ -1041,7 +1041,7 @@ lessons.push(
             "Necesita contar una secuencia sin sonar demasiado oficial.",
           avoidWhen:
             "Creer que what occurred siempre es más educado. A veces sólo suena más pesado.",
-          register: "careful everyday",
+          register: "cuidadoso cotidiano",
           region: "Inglés universal.",
           related: ["what took place", "what occurred", "the facts", "the story"],
           example: {
@@ -1058,7 +1058,7 @@ lessons.push(
             "Introduce eventos o condiciones con frases como “there was a tie,” “there was a problem,” o “there was confusion.”",
           avoidWhen:
             "Traducir todo con happened. English often prefers there was for the existence of an event.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["there were", "happened", "started", "came up"],
           example: {
@@ -1075,7 +1075,7 @@ lessons.push(
             "Va a dar el dato que cambia la interpretación de lo ocurrido.",
           avoidWhen:
             "Un documento formal. Allí the issue is o the reason is puede sonar más cuidado.",
-          register: "careful conversational",
+          register: "cuidadoso conversacional",
           region: "Inglés universal.",
           related: ["the issue is", "the problem is", "it turns out", "what happened is"],
           example: {
@@ -1092,7 +1092,7 @@ lessons.push(
             "Redacta un recuento justo y quiere evitar exageración.",
           avoidWhen:
             "Una historia personal cálida. The facts suena deliberadamente objetivo.",
-          register: "formal neutral",
+          register: "formal neutro",
           region: "Inglés universal.",
           related: ["the account", "the record", "the review", "the evidence"],
           example: {
@@ -1109,7 +1109,7 @@ lessons.push(
             "Un sorteo, compra, servicio o proceso público genera inconformidad.",
           avoidWhen:
             "Pensar que siempre es agresivo. A complaint puede ser formal, tranquilo o justificado.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["claim", "objection", "concern", "review"],
           example: {
@@ -1126,7 +1126,7 @@ lessons.push(
             "Quiere contar lo ocurrido y aceptar que falta verificar más.",
           avoidWhen:
             "Una historia ya cerrada. La frase implica que todavía hay revisión pendiente.",
-          register: "careful formal",
+          register: "cuidadoso formal",
           region: "Inglés universal.",
           related: ["review it", "keep checking", "verify it", "leave it open"],
           example: {
@@ -1177,25 +1177,25 @@ lessons.push(
       variations: [
         {
           form: "This is what happened.",
-          register: "careful everyday",
+          register: "cuidadoso cotidiano",
           region: "Inglés universal",
           whenToUse: "Abrir o cerrar un recuento claro de los hechos."
         },
         {
           form: "The thing is, the old list was still there.",
-          register: "careful conversational",
+          register: "cuidadoso conversacional",
           region: "Inglés universal",
           whenToUse: "Introducir el dato que explica el problema."
         },
         {
           form: "What happened with the raffle?",
-          register: "everyday",
+          register: "cotidiano",
           region: "Inglés universal",
           whenToUse: "La pregunta hablada normal para saber qué pasó."
         },
         {
           form: "First there was a tie, and then the complaint started.",
-          register: "narrative careful",
+          register: "narrativo cuidadoso",
           region: "Inglés universal",
           whenToUse: "Ordenar eventos en un relato cuidadoso."
         }
@@ -1642,7 +1642,7 @@ lessons.push(
             "Un plan, persona, diligencia o situación revela su resultado real.",
           avoidWhen:
             "Sólo quiere decir happen. Turn out mira el desenlace, no el evento desnudo.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["end up", "prove to be", "work out", "come out"],
           example: {
@@ -1659,7 +1659,7 @@ lessons.push(
             "El final o la información descubierta no era lo que se esperaba.",
           avoidWhen:
             "No hay sorpresa ni giro. Entonces puede usar because, the thing is, o simplemente decir el dato.",
-          register: "neutral conversational",
+          register: "neutro conversacional",
           region: "Inglés universal.",
           related: ["as it turned out", "the thing is", "what happened was", "it happened that"],
           example: {
@@ -1676,7 +1676,7 @@ lessons.push(
             "Una persona, problema, objeto o lugar termina siendo algo inesperado.",
           avoidWhen:
             "Duplicar be por traducir ser dos veces. “Turned out to be” ya trae toda la estructura.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["proved to be", "ended up being", "was actually", "came out as"],
           example: {
@@ -1693,7 +1693,7 @@ lessons.push(
             "Algo le parece difícil, raro, útil o incómodo desde su punto de vista.",
           avoidWhen:
             "Decir “it results me difficult.” Ese calco no funciona en inglés.",
-          register: "neutral reflective",
+          register: "neutro reflexivo",
           region: "Inglés universal.",
           related: ["I found it difficult", "it's hard for me", "I struggle with it", "I find it strange"],
           example: {
@@ -1710,7 +1710,7 @@ lessons.push(
             "Un dato no cuadra con lo que usted sabe, pero no quiere acusar todavía.",
           avoidWhen:
             "Traducir como “that results strange.” No es una frase natural.",
-          register: "neutral conversational",
+          register: "neutro conversacional",
           region: "Inglés universal.",
           related: ["that's odd", "that seems strange", "that doesn't add up", "that's weird"],
           example: {
@@ -1727,7 +1727,7 @@ lessons.push(
             "Después de una diligencia, problema o sorpresa, alguien queda con un resultado u objeto.",
           avoidWhen:
             "Un documento formal. It resulted in puede ser más formal si habla de consecuencias.",
-          register: "conversational",
+          register: "conversacional",
           region: "Inglés universal.",
           related: ["get", "come away with", "walk away with", "result in"],
           example: {
@@ -1744,7 +1744,7 @@ lessons.push(
             "Habla de ir a una oficina, comprar algo, recoger un papel o resolver una gestión.",
           avoidWhen:
             "Trámite muy formal y largo. Procedure o paperwork pueden servir mejor.",
-          register: "everyday",
+          register: "cotidiano",
           region: "Inglés universal.",
           related: ["paperwork", "task", "appointment", "runaround"],
           example: {
@@ -1795,25 +1795,25 @@ lessons.push(
       variations: [
         {
           form: "How did the errand turn out?",
-          register: "reflective conversational",
+          register: "reflexivo conversacional",
           region: "Inglés universal",
           whenToUse: "Preguntar cómo terminó una diligencia o plan."
         },
         {
           form: "It turned out that there was no appointment.",
-          register: "neutral conversational",
+          register: "neutro conversacional",
           region: "Inglés universal",
           whenToUse: "Revelar el dato que cambió la historia."
         },
         {
           form: "I found it difficult to complain.",
-          register: "neutral reflective",
+          register: "neutro reflexivo",
           region: "Inglés universal",
           whenToUse: "Traducir me resultó difícil sin calco."
         },
         {
           form: "The error turned out to be in the system.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Decir qué resultó ser el problema."
         }

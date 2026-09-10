@@ -427,7 +427,7 @@ lessons.push(
             "Habla de gustos, preferencias suaves y atracción: “I like it,” “do you like her?”, “she likes winter.”",
           avoidWhen:
             "Calcar el español y poner la cosa como sujeto: “the music likes me” significa que la música siente gusto por mí.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["love", "be into", "think someone is nice", "dislike"],
           example: {
@@ -444,7 +444,7 @@ lessons.push(
             "Responde sobre una cosa o varias: “I like it,” “I like them,” “I like both.”",
           avoidWhen:
             "Intentar crear un plural en el verbo. “I likes them” sólo existe si el sujeto fuera he, she o it, y aun así no con I.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["you like it", "she likes them", "I love them", "I prefer them"],
           example: {
@@ -461,7 +461,7 @@ lessons.push(
             "Pregunta por comida, música, planes, lugares o personas: “do you like this?”, “do you like him?”.",
           avoidWhen:
             "Olvidar el auxiliar. “You like the music?” existe con tono de sorpresa, pero como pregunta neutra conviene “Do you like…?”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["what do you like", "do you love", "are you into", "would you rather"],
           example: {
@@ -478,7 +478,7 @@ lessons.push(
             "Quiere expresar gusto fuerte por comida, planes, ropa, ciudades o pequeñas sorpresas.",
           avoidWhen:
             "Quiere sonar tibio o reservado. “Love” sube la temperatura emocional de la frase.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal.",
           related: ["really like", "be crazy about", "enjoy", "adore"],
           example: {
@@ -495,7 +495,7 @@ lessons.push(
             "Quiere expresar simpatía por una persona, no atracción.",
           avoidWhen:
             "Sí quiere confesar atracción. En ese caso “I like him” o “I have a crush on him” son más claros.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["like him", "get along with him", "he seems nice", "have a crush"],
           example: {
@@ -512,7 +512,7 @@ lessons.push(
             "El contexto ya deja claro si habla de simpatía general o de interés romántico.",
           avoidWhen:
             "Necesita evitar el doble sentido. Para simpatía, diga “I think he's nice”; para atracción, diga “I like him that way.”",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal.",
           related: ["I like her", "I have a crush", "he's nice", "that way"],
           example: {
@@ -529,7 +529,7 @@ lessons.push(
             "Alguien interpreta un “like” como atracción y usted quiere corregir con suavidad.",
           avoidWhen:
             "Quiere decir que alguien le cae mal. Esta frase sólo niega el interés romántico.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal.",
           related: ["just as a friend", "not romantically", "he's nice", "no crush"],
           example: {
@@ -591,31 +591,31 @@ lessons.push(
       variations: [
         {
           form: "I like the music.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Una cosa o categoría singular le gusta."
         },
         {
           form: "I like the ice sculptures.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Varias cosas le gustan; el verbo no cambia por eso."
         },
         {
           form: "Do you like this festival?",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Pregunta directa y normal por gusto."
         },
         {
           form: "I love the hot chocolate.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal",
           whenToUse: "Entusiasmo natural, como “me encanta.”"
         },
         {
           form: "I think he's nice, but not that way.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal",
           whenToUse: "Separar simpatía de interés romántico."
         }
@@ -1079,7 +1079,7 @@ lessons.push(
             "Compara opciones: shade or sun, early or late, close seats or quiet seats.",
           avoidWhen:
             "Sólo quiere decir que algo le gusta. Prefer implica una alternativa, dicha o entendida.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["would prefer", "would rather", "like better", "choose"],
           example: {
@@ -1096,7 +1096,7 @@ lessons.push(
             "Dice su propia preferencia con claridad: “I prefer this,” “I prefer to wait,” “I prefer not to.”",
           avoidWhen:
             "Quiere sonar especialmente suave. Ahí “I'd prefer” puede cuidar más el tono.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["you prefer", "she prefers", "we prefer", "I'd prefer"],
           example: {
@@ -1113,7 +1113,7 @@ lessons.push(
             "Habla de la preferencia de otra persona en presente.",
           avoidWhen:
             "El sujeto es I, you, we o they. Ahí no va la -s: “they prefer.”",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["she prefers", "he prefers", "I prefer", "they prefer"],
           example: {
@@ -1130,7 +1130,7 @@ lessons.push(
             "Reporta una preferencia pasada o una elección que alguien ya hizo.",
           avoidWhen:
             "Habla de una preferencia actual. Ahí use prefer o prefers.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["I preferred", "she preferred", "has preferred", "chose"],
           example: {
@@ -1147,7 +1147,7 @@ lessons.push(
             "Escoge una acción: “prefer to wait,” “prefers to see,” “prefer to sit.”",
           avoidWhen:
             "Lo combina con would rather. Ahí no va “to”: “I'd rather sit.”",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["prefer not to", "would prefer to", "rather", "infinitive"],
           example: {
@@ -1164,7 +1164,7 @@ lessons.push(
             "Expresa una preferencia dejando espacio para el grupo, el anfitrión o las circunstancias.",
           avoidWhen:
             "Una decisión rápida y casual basta. Si todo es simple, “I prefer” funciona.",
-          register: "polite neutral",
+          register: "cortés neutro",
           region: "Inglés universal.",
           related: ["I prefer", "if that's okay", "would rather", "I'd like"],
           example: {
@@ -1181,7 +1181,7 @@ lessons.push(
             "Compara acciones de manera natural: “I'd rather sit,” “I'd rather wait,” “I'd rather not.”",
           avoidWhen:
             "Meter “to” después. “I'd rather to sit” es el calco que hay que evitar.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal.",
           related: ["would prefer", "rather not", "prefer to", "instead"],
           example: {
@@ -1243,31 +1243,31 @@ lessons.push(
       variations: [
         {
           form: "I prefer the shade.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Decir su elección entre dos sitios o planes."
         },
         {
           form: "What do you prefer?",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal",
           whenToUse: "Invitar a la otra persona a comparar opciones."
         },
         {
           form: "She preferred to sit in the back.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Reportar una elección pasada ya tomada."
         },
         {
           form: "I'd prefer to stay here, if that's okay.",
-          register: "polite neutral",
+          register: "cortés neutro",
           region: "Inglés universal",
           whenToUse: "Dar una preferencia suave cuando decide el grupo."
         },
         {
           form: "I'd rather not sit in the sun.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Poner un límite calmado alrededor de una opción."
         }
@@ -1731,7 +1731,7 @@ lessons.push(
             "El rechazo es intenso y usted está dispuesto a sonar intenso: daño serio, crueldad, algo que de verdad no soporta.",
           avoidWhen:
             "Quiere expresar molestia leve, falta de interés o una persona que simplemente le cae mal.",
-          register: "strong",
+          register: "fuerte",
           region: "Inglés universal.",
           related: ["really don't like", "can't stand", "dislike", "rub the wrong way"],
           example: {
@@ -1748,7 +1748,7 @@ lessons.push(
             "Algo le molesta bastante: volumen, olor, hábito, plan o sabor.",
           avoidWhen:
             "Necesita nombrar odio real o un límite muy duro. Ahí puede hacer falta una frase más fuerte.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["don't like", "can't stand", "hate", "it bothers me"],
           example: {
@@ -1765,7 +1765,7 @@ lessons.push(
             "Toma distancia de planes, estilos, multitudes, ruido o actividades sin condenarlas.",
           avoidWhen:
             "El problema es serio o peligroso. Esta frase puede sonar demasiado suave.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal.",
           related: ["not my thing", "doesn't appeal to me", "I'd rather not", "I'm not a fan"],
           example: {
@@ -1782,7 +1782,7 @@ lessons.push(
             "La manera de ser, el comportamiento o la presencia de alguien le molesta.",
           avoidWhen:
             "Sólo está en desacuerdo con una acción aislada. La frase sugiere una reacción más general a la persona.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal.",
           related: ["don't like him", "get on my nerves", "he bothers me", "hate him"],
           example: {
@@ -1799,7 +1799,7 @@ lessons.push(
             "La reacción es desinterés moderado, no enojo ni rechazo fuerte.",
           avoidWhen:
             "Está furioso o necesita marcar un límite serio. Esta frase baja deliberadamente la temperatura.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["not interested", "not really into", "not my thing", "doesn't grab me"],
           example: {
@@ -1816,7 +1816,7 @@ lessons.push(
             "Un sonido, hábito, calor, olor o comportamiento le saca la paciencia una y otra vez.",
           avoidWhen:
             "Quiere ser muy diplomático. Aunque no sea hate, sigue siendo una queja fuerte.",
-          register: "strong informal",
+          register: "fuerte informal",
           region: "Inglés universal.",
           related: ["really don't like", "hate", "get on my nerves", "can't bear"],
           example: {
@@ -1833,7 +1833,7 @@ lessons.push(
             "Algo sucede de inmediato: decir algo, aceptar un plan, reaccionar sin pausa.",
           avoidWhen:
             "Necesita un registro más formal. “Immediately” o “at once” pueden sonar más cuidados.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["immediately", "at once", "straight away", "without thinking"],
           example: {
@@ -1895,31 +1895,31 @@ lessons.push(
       variations: [
         {
           form: "I don't hate the music.",
-          register: "strong careful",
+          register: "fuerte cuidadoso",
           region: "Inglés universal",
           whenToUse: "Negar que el rechazo llegue al nivel de odio."
         },
         {
           form: "I really don't like this volume.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Rechazar una cosa con claridad sin usar hate."
         },
         {
           form: "I'm not really into loud rehearsals.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal",
           whenToUse: "Hacer que el rechazo suene a gusto personal."
         },
         {
           form: "That neighbor rubs me the wrong way.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal",
           whenToUse: "Decir que una persona le cae mal sin declarar odio."
         },
         {
           form: "That plan doesn't appeal to me.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Expresar desinterés moderado, no rechazo fuerte."
         }

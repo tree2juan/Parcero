@@ -425,7 +425,7 @@ lessons.push(
             "Siempre que en español dudaría entre ser y estar. En inglés no hay que elegir: “I am here”, “I am a teacher”, “I am tired”.",
           avoidWhen:
             "Para decir que algo carece de una cosa. “No hay agua” es “there is no water” o “it has no water”, nunca “it is no water”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["is", "are", "am", "there is"],
           example: {
@@ -442,7 +442,7 @@ lessons.push(
             "Cuando persigue a alguien que viene en camino y quiere saber qué tan cerca está de verdad.",
           avoidWhen:
             "Cuando necesita la dirección exacta para anotarla; ahí es “what's the address?”.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal; muy común en el inglés británico y estadounidense.",
           related: ["where are you?", "how far are you?", "are you close?", "how far off are you?"],
           example: {
@@ -459,7 +459,7 @@ lessons.push(
             "Para tranquilizar a alguien diciéndole que ya casi llega, esté cerca o no tanto.",
           avoidWhen:
             "Cuando de verdad quiere que le crean un tiempo exacto; como en español, todos saben que la frase es elástica.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal.",
           related: ["on my way", "almost there", "just a minute away", "nearly there"],
           example: {
@@ -476,7 +476,7 @@ lessons.push(
             "Para avisar que un aparato falló: “the washing machine is broken”, “the elevator is broken”.",
           avoidWhen:
             "Con comida dañada; ahí se dice “spoiled” o “gone bad”, no “broken”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal; “out of order” se usa para máquinas de uso público.",
           related: ["out of order", "not working", "it broke", "it stopped working"],
           example: {
@@ -493,7 +493,7 @@ lessons.push(
             "Todo lo relacionado con la entrada, los visitantes o las encomiendas en un edificio norteamericano.",
           avoidWhen:
             "Una casa sin recepción; ahí simplemente es “the door”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés norteamericano; en edificios de lujo se dice “concierge”.",
           related: ["the doorman", "reception", "the concierge", "the lobby"],
           example: {
@@ -510,7 +510,7 @@ lessons.push(
             "Para pedir un tiempo estimado: “how long until you get here?”, “how long until it's ready?”.",
           avoidWhen:
             "No omita el “until” ni el auxiliar. “How much time you arrive” es el calco hispano que hay que evitar.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["how long till…?", "when will you…?", "how much longer…?", "what time will you…?"],
           example: {
@@ -527,7 +527,7 @@ lessons.push(
             "Para calmar a un cliente o ser calmado por uno; el mismo imperativo vale para cualquier registro.",
           avoidWhen:
             "Nunca cambia por respeto; la formalidad la pone el tono, o un “sir/ma'am”, no el verbo.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal; “no worries” es la variante más relajada.",
           related: ["no worries", "it's fine", "no problem", "not to worry"],
           example: {
@@ -589,31 +589,31 @@ lessons.push(
       variations: [
         {
           form: "Whereabouts are you?",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal",
           whenToUse: "Perseguir a alguien que viene en camino; pide una posición aproximada."
         },
         {
           form: "How long until you get here?",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Cuando de verdad necesita un tiempo y “around the corner” no bastó."
         },
         {
           form: "Are you on your way?",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Un empujoncito más suave que sólo pregunta si ya salió."
         },
         {
           form: "Any idea what time you'll make it?",
-          register: "polite service",
+          register: "cortés de servicio",
           region: "Inglés universal",
           whenToUse: "Pedir una hora con rodeo cortés, sin sonar a reclamo."
         },
         {
           form: "You still coming, or what?",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés norteamericano coloquial",
           whenToUse: "Con un técnico con el que ya hay confianza y algo de humor impaciente."
         }
@@ -1077,7 +1077,7 @@ lessons.push(
             "Posesión y disponibilidad: I've got a fifty, do you have change, I don't have any cash.",
           avoidWhen:
             "Para la edad, el hambre o el afán, que en inglés van con be, no con have.",
-          register: "neutral",
+          register: "neutro",
           region: "“I've got” es más común en el inglés británico y estadounidense hablado.",
           related: ["have", "own", "carry", "hold"],
           example: {
@@ -1094,7 +1094,7 @@ lessons.push(
             "Cualquier obligación que uno tiene — “I have to go”, “we have to pay” —, algo que hay que hacer sí o sí.",
           avoidWhen:
             "Poniendo -ing después: “have to picking” es error. Tras have to va el verbo en forma base.",
-          register: "neutral",
+          register: "neutro",
           region: "Universal.",
           related: ["must", "need to", "got to", "should"],
           example: {
@@ -1111,7 +1111,7 @@ lessons.push(
             "Cuando andas corto de tiempo: I'm in a rush, sorry, I'm in a hurry.",
           avoidWhen:
             "Diciendo “I have rush” o “I have hurry”; ninguna de las dos existe en inglés.",
-          register: "neutral",
+          register: "neutro",
           region: "Universal.",
           related: ["in a hurry", "rushed", "pressed for time", "running late"],
           example: {
@@ -1128,7 +1128,7 @@ lessons.push(
             "Preguntar la edad de cualquier persona — “how old are you?”, “how old is your daughter?” — siempre con el verbo be.",
           avoidWhen:
             "Traduciendo “¿cuántos años tiene?” como “how many years does she have?”, calco directo del español.",
-          register: "neutral",
+          register: "neutro",
           region: "Universal.",
           related: ["how old is she", "age", "years old", "turn (an age)"],
           example: {
@@ -1145,7 +1145,7 @@ lessons.push(
             "Hablando de la plata menuda — “do you have change?”, “keep the change” — para pagar justo o dar el vuelto.",
           avoidWhen:
             "Confundiéndolo con “change” de cambiar/transformar; el contexto de plata lo aclara.",
-          register: "neutral",
+          register: "neutro",
           region: "Universal; “keep the change” es la frase fija para “quédese con el vuelto”.",
           related: ["coins", "small bills", "keep the change", "break a bill"],
           example: {
@@ -1162,7 +1162,7 @@ lessons.push(
             "Conversación relajada sobre plata: it's ten bucks, I only have five bucks.",
           avoidWhen:
             "Contextos formales o escritos, donde se dice “dollars” y no “bucks”.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Norteamérica; en Estados Unidos conviven “bucks” y “quarters/dimes” para las monedas.",
           related: ["dollars", "dollar coin", "two-dollar bill", "cash"],
           example: {
@@ -1179,7 +1179,7 @@ lessons.push(
             "Trato cálido y relajado, típico de tenderos, meseras y gente de servicio con clientes.",
           avoidWhen:
             "Contextos formales o con desconocidos que podrían leerlo como demasiado íntimo o condescendiente.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Muy usado en Estados Unidos y el norte/este de EE. UU. en tiendas y cafeterías.",
           related: ["honey", "dear", "sweetie", "bud"],
           example: {
@@ -1241,31 +1241,31 @@ lessons.push(
       variations: [
         {
           form: "Got anything smaller?",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "General norteamericano",
           whenToUse: "Preguntar de forma relajada si tienen algo más pequeño para pagar."
         },
         {
           form: "Do you have change for a fifty?",
-          register: "neutral",
+          register: "neutro",
           region: "Universal",
           whenToUse: "Preguntar directamente si pueden dar cambio de un billete de cincuenta."
         },
         {
           form: "Do you have anything smaller?",
-          register: "polite service",
+          register: "cortés de servicio",
           region: "Universal",
           whenToUse: "La versión completa y un poco más cortés de “got anything smaller?”."
         },
         {
           form: "Can you break a fifty?",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "General norteamericano",
           whenToUse: "Pedir que le cambien un billete grande en billetes más pequeños."
         },
         {
           form: "Sorry, I've only got a big bill.",
-          register: "polite service",
+          register: "cortés de servicio",
           region: "Universal",
           whenToUse: "Disculparse por pagar sólo con un billete grande."
         }
@@ -1729,7 +1729,7 @@ lessons.push(
             "Para tareas y cosas que se producen — “do the shopping”, “make a stew”, “make a decision” — según el caso.",
           avoidWhen:
             "Mezclándolos: “make the shopping” o “do a cake” suenan mal a oído nativo.",
-          register: "neutral",
+          register: "neutro",
           region: "Universal.",
           related: ["do", "make", "get done", "prepare"],
           example: {
@@ -1746,7 +1746,7 @@ lessons.push(
             "Saludar y preguntar por la actividad o los planes: what are you doing here, what are you doing Saturday.",
           avoidWhen:
             "Diciendo “what do you do?”, que pregunta por la profesión, no por el momento.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Universal.",
           related: ["what are you up to?", "what's up?", "what are you doing?", "how's it going?"],
           example: {
@@ -1763,7 +1763,7 @@ lessons.push(
             "Hablar de los mandados — “I have to run some errands”, “I'm out running errands” — las vueltas del día.",
           avoidWhen:
             "Diciendo “make errands” o “make some turns”, ambos calcos del español.",
-          register: "neutral",
+          register: "neutro",
           region: "Universal.",
           related: ["errands", "chores", "get things done", "run to the store"],
           example: {
@@ -1780,7 +1780,7 @@ lessons.push(
             "Describir el clima: it's cold, it's hot, it's sunny, it's windy.",
           avoidWhen:
             "Diciendo “it makes cold”, calco directo de “hace frío” que no existe en inglés.",
-          register: "neutral",
+          register: "neutro",
           region: "Universal; “freezing” para exagerar el frío es muy común en Estados Unidos.",
           related: ["it's hot", "it's freezing", "it's chilly", "it's sunny"],
           example: {
@@ -1797,7 +1797,7 @@ lessons.push(
             "Decir cuánto hace que no pasa algo: I haven't seen him in years, we haven't made one in years.",
           avoidWhen:
             "Armándolo como el español “it makes years that…”, que en inglés no funciona.",
-          register: "neutral",
+          register: "neutro",
           region: "Universal.",
           related: ["in ages", "for years", "in a long time", "haven't … since"],
           example: {
@@ -1814,7 +1814,7 @@ lessons.push(
             "Cocinar o planear el plato comunal para una reunión o cumpleaños.",
           avoidWhen:
             "Usando “do a stew”; los platos que se cocinan van con make, no con do.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Universal; el guiso/stew como plato de reunión familiar.",
           related: ["make dinner", "make soup", "cook a meal", "potluck"],
           example: {
@@ -1831,7 +1831,7 @@ lessons.push(
             "Trato cálido y relajado entre vecinos, en tiendas y cafeterías.",
           avoidWhen:
             "Contextos formales o con desconocidos, donde pueden sonar demasiado familiares.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Estados Unidos y norte/este de EE. UU.; “bud” es muy estadounidense.",
           related: ["honey", "bud", "buddy", "dear"],
           example: {
@@ -1893,31 +1893,31 @@ lessons.push(
       variations: [
         {
           form: "What are you up to?",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "General norteamericano",
           whenToUse: "Preguntar de forma relajada qué hace o planea alguien."
         },
         {
           form: "What are you doing?",
-          register: "neutral",
+          register: "neutro",
           region: "Universal",
           whenToUse: "La pregunta directa por la actividad de alguien ahora."
         },
         {
           form: "What are you doing later?",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Universal",
           whenToUse: "Tantear los planes de alguien para más tarde."
         },
         {
           form: "What have you been up to?",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Universal",
           whenToUse: "Preguntar qué ha hecho alguien últimamente, tras un tiempo sin verse."
         },
         {
           form: "How's it going?",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Universal",
           whenToUse: "Un saludo abierto que también invita a contar qué hace uno."
         }

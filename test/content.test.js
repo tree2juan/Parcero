@@ -276,6 +276,143 @@ test("the verb curriculum is complete and uniquely identified", () => {
   }
 });
 
+test("verb spelling follows the rules that have one right answer", () => {
+  /*
+   * Two families of Spanish form are fully decidable from the infinitive, so a
+   * wrong one is an error rather than a regional preference and needs no native
+   * speaker to adjudicate.
+   *
+   * Both were wrong in the seed data. Thirteen verbs appended the preterite
+   * ending instead of replacing the final consonant ("lleggué" for llegué,
+   * "buscqué" for busqué), and two regularised an irregular participle
+   * ("abrido" for abierto, "rompido" for roto). They rendered on the verb list
+   * and in the flashcard decks, so learners were being taught them.
+   *
+   * The irregular participles are pinned in a table because they cannot be
+   * derived. A new verb belonging to one of those families is covered the
+   * moment it is added; a new irregular has to be added to the table, and the
+   * regular rule will flag it loudly until someone does.
+   */
+  const irregularParticiples = {
+    abrir: "abierto", cubrir: "cubierto", descubrir: "descubierto", decir: "dicho",
+    escribir: "escrito", describir: "descrito", hacer: "hecho", satisfacer: "satisfecho",
+    morir: "muerto", poner: "puesto", componer: "compuesto", proponer: "propuesto",
+    suponer: "supuesto", resolver: "resuelto", romper: "roto", ver: "visto",
+    prever: "previsto", volver: "vuelto", devolver: "devuelto", envolver: "envuelto",
+    imprimir: "impreso", "freír": "frito"
+  };
+
+  // A reflexive infinitive and a reflexive form both carry the pronoun; the
+  // spelling rules apply to what is left once it is set aside.
+  const bare = (infinitive) => (infinitive.endsWith("se") ? infinitive.slice(0, -2) : infinitive);
+  const withoutPronoun = (form) => form.replace(/^(me|te|se|nos) /, "");
+
+  const expectedParticiple = (infinitive) => {
+    const verb = bare(infinitive);
+    if (irregularParticiples[verb]) return irregularParticiples[verb];
+    const stem = verb.slice(0, -2);
+    if (verb.endsWith("ar")) return `${stem}ado`;
+    // A stem ending in a strong vowel takes the accent: leer -> leído. A stem
+    // ending in u does not, because ui is not a hiatus: construir -> construido.
+    if (verb.endsWith("er") || verb.endsWith("ir")) return /[aeo]$/.test(stem) ? `${stem}ído` : `${stem}ido`;
+    return null;
+  };
+
+  // Preterite yo keeps the sound of the infinitive, so the spelling has to move:
+  // -gar -> -gué, -car -> -qué, -zar -> -cé.
+  const expectedPreteriteYo = (infinitive) => {
+    const verb = bare(infinitive);
+    if (verb.endsWith("gar")) return `${verb.slice(0, -3)}gué`;
+    if (verb.endsWith("car")) return `${verb.slice(0, -3)}qué`;
+    if (verb.endsWith("zar")) return `${verb.slice(0, -3)}cé`;
+    return null;
+  };
+
+  // A handful of -iar and -uar verbs break the diphthong in the yo form and
+  // carry a written accent; most do not. It is lexical, not derivable, so the
+  // ones that do are pinned and every other verb in those two families is
+  // asserted to be plain. "envio" and "continuo" were both stored without the
+  // accent, which makes the first a misspelling and the second a different
+  // word — continuo is the adjective "continuous".
+  const accentedYo = { enviar: "envío", continuar: "continúo" };
+
+  const wrong = [];
+  let checkedParticiples = 0;
+  let checkedPreterites = 0;
+  let checkedAccents = 0;
+  for (const verb of curriculum) {
+    const participle = expectedParticiple(verb.spanish);
+    if (participle) {
+      checkedParticiples += 1;
+      const got = withoutPronoun(verb.forms.participle);
+      if (got !== participle) wrong.push(`${verb.id} ${verb.spanish} participle: "${got}" should be "${participle}"`);
+    }
+    const preterite = expectedPreteriteYo(verb.spanish);
+    if (preterite) {
+      checkedPreterites += 1;
+      const got = withoutPronoun(verb.forms.preteriteYo);
+      if (got !== preterite) wrong.push(`${verb.id} ${verb.spanish} preteriteYo: "${got}" should be "${preterite}"`);
+    }
+    const stem = bare(verb.spanish);
+    if (stem.endsWith("iar") || stem.endsWith("uar")) {
+      checkedAccents += 1;
+      const got = withoutPronoun(verb.forms.presentYo);
+      const want = accentedYo[stem] || `${stem.slice(0, -2)}o`;
+      if (got !== want) wrong.push(`${verb.id} ${verb.spanish} presentYo: "${got}" should be "${want}"`);
+    }
+  }
+
+  assert.ok(checkedParticiples > 0, "no participles were checked, so this verifies nothing");
+  assert.ok(checkedPreterites > 0, "no -gar/-car/-zar verbs were checked, so this verifies nothing");
+  assert.ok(checkedAccents > 0, "no -iar/-uar verbs were checked, so this verifies nothing");
+  assert.deepStrictEqual(wrong, [], `the app would teach these forms:\n${wrong.join("\n")}`);
+});
+
+test("both directions of a lesson teach the same amount", () => {
+  /*
+   * A lesson's es and en sides are not translations of each other. Each is
+   * independent material for one learning direction: the es side teaches
+   * Colombian Spanish, the en side teaches English, and their words are
+   * supposed to differ.
+   *
+   * What they cannot differ on is depth. Four lessons offered four related
+   * expressions on one side and three on the other, so whichever direction a
+   * learner picked silently decided how much they were taught. That is
+   * invisible from either side alone, because nothing looks missing when you
+   * only ever see one.
+   *
+   * Compares structure and array lengths, never text, so the two sides stay
+   * free to say entirely different things.
+   */
+  const shapeOf = (node, trail, out) => {
+    if (Array.isArray(node)) {
+      out.push(`${trail}[] = ${node.length}`);
+      node.forEach((item, index) => shapeOf(item, `${trail}[${index}]`, out));
+      return out;
+    }
+    if (node && typeof node === "object") {
+      for (const key of Object.keys(node).sort()) shapeOf(node[key], trail ? `${trail}.${key}` : key, out);
+      return out;
+    }
+    out.push(`${trail} : ${typeof node}`);
+    return out;
+  };
+
+  const gaps = [];
+  for (const lesson of lessons) {
+    for (const direction of directions) {
+      assert.ok(lesson[direction], `${lesson.id}: missing the ${direction} side entirely`);
+    }
+    const es = shapeOf(lesson.es, "", []);
+    const en = shapeOf(lesson.en, "", []);
+    const inEn = new Set(en);
+    const inEs = new Set(es);
+    es.filter((entry) => !inEn.has(entry)).forEach((entry) => gaps.push(`${lesson.id} es only: ${entry}`));
+    en.filter((entry) => !inEs.has(entry)).forEach((entry) => gaps.push(`${lesson.id} en only: ${entry}`));
+  }
+  assert.deepStrictEqual(gaps, [], `one direction is taught less than the other:\n${gaps.join("\n")}`);
+});
+
 test("reference lists match the shape the renderers expect", () => {
   assert.ok(fluencyItems.length > 0);
   for (const item of fluencyItems) {
@@ -283,9 +420,18 @@ test("reference lists match the shape the renderers expect", () => {
     item.forEach((cell) => assert.ok(isText(cell)));
   }
   assert.ok(matureItems.length > 0);
+  /* After Dark rows moved from tuples to named objects when the set grew to
+     three cities: a 5-slot tuple with two labels at the end is unreadable, and
+     the city has to be addressable by name for the view to filter on it. */
+  const CITIES = new Set(["bogota", "medellin", "barranquilla"]);
+  const SEVERITIES = new Set(["Low", "Medium", "High"]);
   for (const item of matureItems) {
-    assert.strictEqual(item.length, 6, "expected [phrase, equivalent, severity, note, direction, respond]");
-    item.forEach((cell) => assert.ok(isText(cell)));
+    assert.ok(!Array.isArray(item), "After Dark rows are objects, not tuples");
+    for (const slot of ["city", "phrase", "equivalent", "severity", "note"]) {
+      assert.ok(isText(item[slot]), `an After Dark row is missing "${slot}"`);
+    }
+    assert.ok(CITIES.has(item.city), `unknown city "${item.city}" — the view filters on this and would drop the row`);
+    assert.ok(SEVERITIES.has(item.severity), `unknown severity "${item.severity}" — the card colour keys off this`);
   }
   assert.ok(slangItems.length > 0);
   for (const item of slangItems) {
@@ -301,20 +447,26 @@ test("reference lists match the shape the renderers expect", () => {
 
 test("the reference lists say which language they belong to", () => {
   /*
-   * matureItems has always mixed directions in one list - Spanish insults a
-   * learner will hear in Bogotá alongside English ones a Spanish speaker will
-   * hear abroad. That was invisible while the renderer showed all of them to
-   * everybody. Once these become flashcards it stops being invisible, because a
-   * card drilling "asshole -> imbécil" is useless in a Spanish deck.
+   * A signal row is a piece of advice about a conversation, and which language
+   * that conversation is in decides who it is for: "Sudden switch to usted" is
+   * nothing to a Spanish speaker learning English. That was invisible while the
+   * renderer showed all of them to everybody. Once these become flashcards it
+   * stops being invisible, because a card drilling an English cue is useless in
+   * a Spanish deck.
+   *
+   * After Dark is deliberately not checked here. Its rows carry a city instead
+   * of a direction, because every one of them is a Colombian phrase glossed
+   * into English -- both directions have something to recognize in the same
+   * row, so there is no language to assign. "After Dark covers every city the
+   * page offers, evenly" is what guards that list.
    */
-  for (const item of matureItems) {
-    assert.ok(["es", "en"].includes(item[4]), `mature entry "${item[0]}" has no valid direction`);
-  }
   for (const item of matureSignals) {
     assert.ok(["es", "en"].includes(item[3]), `mature signal "${item[0]}" has no valid direction`);
   }
+  for (const item of slangItems) {
+    assert.ok(isText(item[0]) && isText(item[1]), `slang entry "${item[0]}" is missing a phrase or meaning`);
+  }
   for (const direction of ["es", "en"]) {
-    assert.ok(matureItems.some((item) => item[4] === direction), `no mature entries for ${direction}`);
     assert.ok(matureSignals.some((item) => item[3] === direction), `no mature signals for ${direction}`);
   }
 });
@@ -517,6 +669,44 @@ test("English glosses are English", () => {
   }
 });
 
+test("no two verb cards ask the same question", () => {
+  /*
+   * A verb card shows the language you have and asks for the one you are
+   * building, then reveals a single answer. Two verbs sharing an English gloss
+   * therefore produce two cards with an identical prompt and different answers,
+   * and the learner who gives the other right answer is shown they were wrong.
+   *
+   * Four pairs shipped that way: leave (dejar / salir), return (volver /
+   * regresar), answer (responder / contestar) and happen (ocurrir / suceder).
+   * The first is the worst — dejar and salir are not synonyms, so the card was
+   * teaching a false equivalence rather than merely repeating itself.
+   *
+   * Checked on the built cards rather than on the gloss column, because the
+   * prompt is what a learner actually sees.
+   */
+  const sources = vm.runInNewContext(
+    `${read("data/lessons.js")}\n${read("data/curriculum.js")}\n${read("data/flashcards.js")}\n({ lessons, curriculum, fluencyItems, flashcardTopics })`,
+    {}, { filename: "parcero-card-prompts.js" });
+
+  const clashes = [];
+  for (const direction of directions) {
+    const cards = sources.flashcardTopics(direction, sources)
+      .flatMap((topic) => topic.cards)
+      .filter((card) => card.kind === "verb");
+    assert.ok(cards.length > 0, `no verb cards were built for ${direction}`);
+
+    const answersByPrompt = new Map();
+    for (const card of cards) {
+      if (!answersByPrompt.has(card.front)) answersByPrompt.set(card.front, new Set());
+      answersByPrompt.get(card.front).add(card.back);
+    }
+    for (const [prompt, answers] of answersByPrompt) {
+      if (answers.size > 1) clashes.push(`${direction}: "${prompt}" accepts ${[...answers].join(" or ")} but reveals one`);
+    }
+  }
+  assert.deepStrictEqual(clashes, [], `ambiguous cards:\n${clashes.join("\n")}`);
+});
+
 test("first-person forms are plausible Spanish", () => {
   // "oo" was published as the yo form of oír for as long as the list existed.
   for (const verb of curriculum) {
@@ -529,61 +719,137 @@ test("first-person forms are plausible Spanish", () => {
   }
 });
 
-test("labels nobody has reviewed are not rendered as fact", () => {
-  const unreviewed = curriculum.filter((verb) => verb.reviewStatus);
-  assert.ok(unreviewed.length > 0, "this test is meaningless once every verb is reviewed — delete it then");
+test("the yo form of an experiencer verb is a settled question", () => {
+  /*
+   * SETTLED — this is a recorded decision, not an open finding. An audit that
+   * rediscovers the shape below should stop here rather than raise it again.
+   *
+   * A verb card renders `yo <presentYo>`. For gustar that reads "yo gusto"
+   * against the gloss "like", and nobody says "yo gusto" to mean "I like" --
+   * the idiom is "me gusta", where the thing liked is the subject. Six other
+   * verbs in the list have the same shape. Every form stored is grammatically
+   * real, so none of them is a spelling error; what is arguably wrong is the
+   * decision to show a yo column for this class at all.
+   *
+   * Changing that means designing how a dative-experiencer verb is represented
+   * everywhere it appears -- the reference card, the flashcard note and the
+   * report picker's verb slots -- rather than editing seven strings. That
+   * redesign is deliberately not being done, and the current state is accepted.
+   *
+   * What this test protects is the boundary of that acceptance. The decision
+   * covers exactly the seven verbs below. If an eighth is added, it is a new
+   * instance nobody has ruled on and the acceptance must not silently stretch
+   * to cover it, so the wider vocabulary is checked too and this fails with
+   * instructions. It also fails if an accepted verb leaves the list, so the
+   * exemption cannot outlive the thing it exempts.
+   */
+  const accepted = ["gustar", "interesar", "importar", "faltar", "sobrar", "ocurrir", "suceder"];
 
-  // Every unreviewed verb still carries the seeded placeholder, identical
-  // across the list. Rendering it would tell 200 different lies in one voice.
-  const registers = new Set(unreviewed.map((verb) => verb.register));
-  const regions = new Set(unreviewed.map((verb) => verb.regionality));
-  assert.equal(registers.size, 1, "unreviewed verbs should still share one placeholder register");
-  assert.equal(regions.size, 1, "unreviewed verbs should still share one placeholder regionality");
+  // Verbs that take a dative experiencer or are used impersonally. Excludes
+  // parecer, quedar, tocar, costar and pasar, which are in the list already and
+  // have ordinary first-person uses ("yo paso", "yo toco"), so their yo column
+  // is not misleading and they are not part of this question.
+  const experiencerVocabulary = new Set([
+    ...accepted,
+    "encantar", "doler", "apetecer", "molestar", "fascinar", "bastar", "convenir",
+    "disgustar", "agradar", "entusiasmar", "aburrir", "emocionar", "picar", "urgir"
+  ]);
 
+  const present = new Set(curriculum.map((verb) => verb.spanish));
+
+  const departed = accepted.filter((verb) => !present.has(verb));
+  assert.deepStrictEqual(departed, [],
+    `these verbs are exempted but no longer in the list, so drop them from the exemption: ${departed.join(", ")}`);
+
+  // Spread back into this realm: curriculum comes from vm.runInNewContext, so
+  // its map/filter return arrays with a foreign Array.prototype and
+  // deepStrictEqual compares prototypes. The duplicates() helper above sidesteps
+  // the same trap the same way.
+  const undecided = [...curriculum
+    .map((verb) => verb.spanish)
+    .filter((verb) => experiencerVocabulary.has(verb) && !accepted.includes(verb))];
+  assert.deepStrictEqual(undecided, [],
+    `${undecided.join(", ")} is a dative-experiencer verb whose yo form will render as "yo <form>" and read wrongly. `
+    + "The existing acceptance does not cover it. Either decide how this class is represented and change it "
+    + "everywhere, or add the verb to `accepted` above to extend the same decision to it deliberately.");
+});
+
+test("the withholding mechanism still works, even though nothing is flagged now", () => {
+  /*
+   * Every verb was approved on 2026-09-09, so this no longer has live
+   * unreviewed data to guard. The mechanism is the thing worth keeping: the
+   * next batch of unchecked content must be withheld automatically rather
+   * than published because nobody remembered the rule.
+   *
+   * The old version asserted `unreviewed.length > 0` and would simply have
+   * been deleted here. Instead it now runs verbTags() against a synthetic
+   * flagged verb, so the protection is tested by behaviour and cannot rot
+   * just because the real list happens to be fully approved today.
+   */
   const app = read("app.js");
   const tags = app.match(/function verbTags\(verb\)[\s\S]*?\n\}/);
   assert.ok(tags, "app.js must build verb tags through verbTags()");
-  assert.match(tags[0], /if \(!verb\.reviewStatus\)/,
-    "register and regionality must be withheld while the verb is unreviewed");
-  assert.ok(!/\$\{verb\.register\}/.test(app.replace(tags[0], "")),
-    "nothing outside verbTags may render the unreviewed register");
-  assert.ok(!/\$\{verb\.regionality\}/.test(app.replace(tags[0], "")),
-    "nothing outside verbTags may render the unreviewed regionality");
 
-  // app.js is no longer the only surface reading this data. The flashcard
-  // decks derive their cards from the same curriculum, so a guard that scans
-  // app.js alone would not notice the placeholder reaching learners through a
-  // deck instead of a card. Checked behaviourally, against the cards actually
-  // built, rather than by grepping a second file.
-  //
-  // Scoped to the verb cards on purpose: the placeholder register is the word
-  // "neutral", which lesson vocabulary uses as a genuine, authored value. A
-  // blanket search would fail on correct content.
+  const verbTags = vm.runInNewContext(`${tags[0]}\nverbTags`, {}, { filename: "parcero-verb-tags.js" });
+  const sample = { level: "foundation", register: "REGISTER_VALUE", regionality: "REGION_VALUE" };
+
+  const approved = verbTags(sample);
+  assert.ok(approved.includes("REGISTER_VALUE"),
+    "an approved verb should publish its register");
+  assert.ok(approved.includes("foundation"), "level should always publish");
+  assert.ok(!approved.includes("REGION_VALUE"),
+    "regionality is the same string on all 200 verbs, so it must not render as a per-verb tag");
+
+  const flagged = verbTags({ ...sample, reviewStatus: "needs review" });
+  assert.ok(!flagged.includes("REGISTER_VALUE"),
+    "a flagged verb must not publish its register");
+  assert.ok(flagged.includes("foundation"),
+    "level is real data and should publish even while the verb is flagged");
+
+  // The register may only reach the page through the guard; the regionality
+  // may not reach it at all.
+  assert.ok(!/\$\{verb\.register\}/.test(app.replace(tags[0], "")),
+    "nothing outside verbTags may render the register");
+  assert.ok(!/verb\.regionality/.test(app),
+    "nothing in app.js may render the regionality");
+
+  // The flashcard decks read the same curriculum, so a flagged verb must not
+  // reach a learner through a deck either. Verified against cards actually
+  // built from a flagged copy of the data rather than by grepping.
   const sources = vm.runInNewContext(
     `${dataSource({ schema: false, flashcards: true })}\n({ lessons, curriculum, fluencyItems, flashcardTopics })`,
     {}, { filename: "parcero-flashcard-surface.js" });
-  const placeholders = [[...registers][0], [...regions][0]];
+  const flaggedCurriculum = sources.curriculum.map((verb) => ({
+    ...verb, register: "REGISTER_VALUE", regionality: "REGION_VALUE", reviewStatus: "needs review"
+  }));
   const verbCards = directions.flatMap((direction) =>
-    sources.flashcardTopics(direction, sources).flatMap((topic) => topic.cards.filter((card) => card.kind === "verb")));
+    sources.flashcardTopics(direction, { ...sources, curriculum: flaggedCurriculum })
+      .flatMap((topic) => topic.cards.filter((card) => card.kind === "verb")));
   assert.ok(verbCards.length > 0, "no verb flashcards were built, so this check verifies nothing");
   for (const card of verbCards) {
     const printed = JSON.stringify(card);
-    for (const placeholder of placeholders) {
-      assert.ok(!printed.includes(placeholder),
-        `flashcard ${card.id} publishes the unreviewed label ${JSON.stringify(placeholder)}`);
+    for (const secret of ["REGISTER_VALUE", "REGION_VALUE"]) {
+      assert.ok(!printed.includes(secret),
+        `flashcard ${card.id} publishes a withheld label`);
     }
   }
 });
 
-test("the page does not promise a review it has not done", () => {
-  // The note used to say labels are reviewed "before publication" while 200
-  // unreviewed labels were on screen.
+test("the source note matches what the page actually shows", () => {
+  // The note has to track the page. It once promised review "before
+  // publication" while unreviewed labels were on screen; the opposite error is
+  // now possible -- saying the labels are hidden when they are published.
   const { UI_STRINGS } = require("../i18n.js");
+  const publishing = curriculum.some((verb) => !verb.reviewStatus);
   for (const language of Object.keys(UI_STRINGS)) {
     const note = UI_STRINGS[language]["library.sourceNote.after"];
     assert.ok(isText(note), `${language} is missing the source note`);
     assert.ok(!/before publication|antes de publicarse/.test(note),
-      `${language} still claims labels are reviewed before publication`);
+      `${language} claims labels are reviewed before publication`);
+    if (publishing) {
+      assert.ok(!/stay hidden|quedan ocultas/.test(note),
+        `${language} still says the labels are hidden while the page publishes them`);
+    }
   }
 });
 
@@ -661,4 +927,208 @@ test("explanatory prose is written in the language its reader reads", () => {
     }
   }
   assert.deepStrictEqual(wrong, [], "rewrite the field in the language named, rather than relaxing the check");
+});
+
+/*
+ * The tone label beside a vocabulary entry or a variation describes how an
+ * expression sounds. On the `en` side that description is being read by a
+ * Spanish speaker, so it belongs in Spanish, exactly like the `region` note
+ * next to it.
+ *
+ * It did not used to be. app.js prints these raw inside a tag rather than
+ * routing them through t(), and the values were authored in English on both
+ * sides, so a Spanish reader got "polite neutral" and "professional hedged"
+ * in a page that was otherwise entirely in their language.
+ *
+ * The check is a word list rather than a snapshot of the 45 current values,
+ * so that adding a new tone label is not blocked, only doing it in English.
+ * Cognates that are spelled the same in both languages -- casual, formal,
+ * informal, natural, neutral -- are deliberately absent: they are correct
+ * Spanish and flagging them would make the guard cry wolf.
+ */
+const ENGLISH_ONLY_REGISTER_WORDS = [
+  "academic", "bargaining", "clear", "clinical", "concrete", "conversational",
+  "dated", "direct", "efficient", "enthusiastic", "friendly", "hedged",
+  "indirect", "market", "polite", "practical", "professional", "sales",
+  "seminar", "service", "soft", "softened", "specific", "warm"
+];
+
+test("the tone labels on the English side are in Spanish", () => {
+  const pattern = new RegExp(`\\b(${ENGLISH_ONLY_REGISTER_WORDS.join("|")})\\b`, "i");
+  const english = [];
+  let checked = 0;
+  for (const lesson of lessons) {
+    const side = lesson.en;
+    if (!side) continue;
+    const rows = [
+      ...(side.vocabulary || []).map((word) => ["vocabulary", word.term, word.register]),
+      ...(side.variations || []).map((row) => ["variations", row.form, row.register])
+    ];
+    for (const [slot, subject, register] of rows) {
+      if (!register) continue;
+      checked += 1;
+      const hit = register.match(pattern);
+      if (hit) english.push(`${lesson.id} ${slot} "${subject}": register "${register}" is English ("${hit[1]}")`);
+    }
+  }
+  assert.ok(checked > 90, `only ${checked} tone labels were checked, so this guard is not seeing the data`);
+  assert.deepStrictEqual([...english], [],
+    "a Spanish reader should not be told an English expression is 'polite neutral' in English");
+});
+
+/*
+ * The converse, so the guard above cannot be satisfied by translating the
+ * `es` side too. Those labels are read by an English speaker learning Spanish,
+ * so English is what they should be in.
+ */
+test("the tone labels on the Spanish side stay in English", () => {
+  const spanish = [];
+  for (const lesson of lessons) {
+    const side = lesson.es;
+    if (!side) continue;
+    const all = [...(side.vocabulary || []), ...(side.variations || [])];
+    for (const row of all) {
+      if (!row.register) continue;
+      if (/\b(neutro|cortés|amistoso|profesional|académico|clínico|cálido|práctico|matizado|suavizado|regateo)\b/i.test(row.register)) {
+        spanish.push(`${lesson.id}: register "${row.register}" is Spanish`);
+      }
+    }
+  }
+  assert.deepStrictEqual([...spanish], [],
+    "the Spanish side is read by an English speaker; its tone labels belong in English");
+});
+
+/* ---------- module navigation ---------- */
+
+test("every module the nav offers is a view that exists", () => {
+  /*
+   * The page stopped being one long scroll: each module is a view and the nav
+   * switches between them. Two lists have to agree for that to work -- the
+   * VIEWS list in app.js and the #view-* containers in index.html -- and they
+   * live in different files, so nothing but this stops them drifting.
+   */
+  const app = read("app.js");
+  const html = read("index.html");
+
+  const views = app.match(/const VIEWS = \[([^\]]*)\]/);
+  assert.ok(views, "app.js must declare the view list");
+  const names = [...views[1].matchAll(/"([^"]+)"/g)].map((match) => match[1]);
+  assert.ok(names.length > 1, "expected several views; with one this checks nothing");
+
+  for (const name of names) {
+    assert.ok(html.includes(`id="view-${name}"`), `index.html has no #view-${name}, so that view can never show`);
+  }
+  const containers = [...html.matchAll(/id="view-([\w-]+)"/g)].map((match) => match[1]);
+  for (const container of containers) {
+    assert.ok(names.includes(container), `#view-${container} exists but app.js never shows it, so it is unreachable`);
+  }
+
+  // Every nav destination must be routable, or the link silently does nothing.
+  const routes = app.match(/const ROUTE_FOR_HASH = \{([\s\S]*?)\};/);
+  assert.ok(routes, "app.js must declare the hash routes");
+  for (const href of [...html.matchAll(/<a href="(#[\w-]+)"[^>]*data-i18n="nav\./g)].map((match) => match[1])) {
+    assert.ok(routes[1].includes(`"${href}"`), `the nav links to ${href}, which no route maps to a view`);
+  }
+});
+
+test("exactly one view is visible before any script runs", () => {
+  /*
+   * The views are hidden in the markup, not by script, so the page cannot
+   * flash every module at once on a slow load. Home is the one left open.
+   */
+  const html = read("index.html");
+  const open = [...html.matchAll(/<div class="view" id="view-([\w-]+)"([^>]*)>/g)]
+    .filter((match) => !/\bhidden\b/.test(match[2]))
+    .map((match) => match[1]);
+  assert.deepStrictEqual(open, ["home"],
+    "exactly one view may start visible in the markup, and it should be home");
+});
+
+test("the modules menu is built from the lesson list, never hard-coded", () => {
+  const app = read("app.js");
+  /*
+   * The signature is matched loosely on purpose. This check cares that the menu
+   * is derived, not what arguments it takes -- pinning it to `()` meant that
+   * adding a filter argument failed the test with "must build the menu in
+   * fillModulesMenu()" while the function was sitting right there, which sends
+   * you looking for the wrong bug.
+   */
+  const fill = app.match(/function fillModulesMenu\([^)]*\)[\s\S]*?\n\}/);
+  assert.ok(fill, "app.js must build the modules menu in fillModulesMenu()");
+  assert.match(fill[0], /lessons\.map\(/,
+    "the menu must map over the lesson list, or it goes stale the moment a lesson is added");
+  assert.match(fill[0], /state\.direction/,
+    "menu titles must follow the direction toggle, or they stay in one language");
+  assert.match(fill[0], /COURSE_MODULES/,
+    "lessons must be grouped under their module, or the menu is a flat wall of 200-plus entries");
+});
+
+test("the language toggle is reachable from every view", () => {
+  /*
+   * It used to live inside the hero. Once the hero became a view you can
+   * navigate away from, a toggle left there would be unreachable from
+   * Flashcards, Library or After Dark.
+   */
+  const html = read("index.html");
+  const header = html.match(/<header class="site-header">[\s\S]*?<\/header>/);
+  assert.ok(header, "index.html must have a site header");
+  assert.match(header[0], /name="direction"/,
+    "the direction toggle must live in the header, which every view shares");
+
+  const views = html.match(/<div class="view"[\s\S]*<\/main>/);
+  assert.ok(views, "expected the view containers");
+  assert.doesNotMatch(views[0], /name="direction"/,
+    "a second copy of the toggle inside a view would drift out of sync with the header one");
+});
+
+/* ---------- After Dark ---------- */
+
+test("After Dark covers every city the page offers, evenly", () => {
+  const html = read("index.html");
+  const tabs = [...html.matchAll(/class="city-tab[^"]*"[^>]*data-city="([\w-]+)"/g)].map((match) => match[1]);
+  assert.ok(tabs.length > 0, "index.html must offer city tabs");
+
+  const counts = new Map();
+  for (const item of matureItems) counts.set(item.city, (counts.get(item.city) || 0) + 1);
+
+  assert.deepStrictEqual([...counts.keys()].sort(), [...tabs].sort(),
+    "the cities in the data and the tabs on the page must be the same set, or a tab renders an empty list");
+  for (const city of tabs) {
+    assert.strictEqual(counts.get(city), 50,
+      `${city} has ${counts.get(city)} entries; each city is meant to carry 50`);
+  }
+});
+
+test("no After Dark phrase is stranded without its city note", () => {
+  const { UI_STRINGS } = require("../i18n.js");
+  /*
+   * The note is looked up as afterDark.note.<city> from a template string, so
+   * the i18n sweep over index.html cannot see it. A missing key would render
+   * the raw key name under the tabs.
+   */
+  for (const city of new Set(matureItems.map((item) => item.city))) {
+    for (const language of Object.keys(UI_STRINGS)) {
+      assert.ok(isText(UI_STRINGS[language][`afterDark.note.${city}`]),
+        `afterDark.note.${city} is missing in "${language}", so the city note would print as a raw key`);
+      assert.ok(isText(UI_STRINGS[language][`afterDark.city.${city}`]),
+        `afterDark.city.${city} is missing in "${language}"`);
+    }
+  }
+});
+
+test("the midnight theme belongs to After Dark and nothing else", () => {
+  const app = read("app.js");
+  const css = read("styles.css");
+  assert.match(app, /classList\.toggle\("midnight", target === "after-dark"\)/,
+    "the midnight class must be tied to the After Dark view, so it cannot leak into other modules");
+
+  const rules = [...css.replace(/\/\*[\s\S]*?\*\//g, "").matchAll(/([^{}]+)\{/g)]
+    .map((match) => match[1].trim())
+    .filter(Boolean);
+  const midnight = rules.filter((selector) => selector.includes("midnight"));
+  assert.ok(midnight.length > 0, "expected midnight rules; without any this checks nothing");
+  for (const selector of midnight) {
+    assert.ok(/^html\.midnight\b/.test(selector),
+      `"${selector}" styles midnight from outside html.midnight, which can apply when After Dark is closed`);
+  }
 });

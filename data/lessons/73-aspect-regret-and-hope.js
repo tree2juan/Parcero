@@ -394,7 +394,7 @@ lessons.push(
             "Cuando algo acaba de ocurrir hace muy poco: llegar, llamar, terminar.",
           avoidWhen:
             "Cuando la acción fue hace mucho; ahí basta el pasado simple sin “just”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal; en Estados Unidos, con pasado simple.",
           related: ["recently", "a moment ago", "already", "so far"],
           example: {
@@ -411,7 +411,7 @@ lessons.push(
             "Algo vuelve a pasar: suena otra vez, lo intentas otra vez, vuelve a llamar.",
           avoidWhen:
             "Quieres ponerlo antes del verbo como en español; en inglés suena forzado.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["once more", "over and over", "yet again", "keep -ing"],
           example: {
@@ -428,7 +428,7 @@ lessons.push(
             "Lo inminente, a la vista: a punto de salir, de empezar, de caerse.",
           avoidWhen:
             "El plan es para más tarde; ahí encaja mejor “going to”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["on the verge of", "any second now", "just about to", "ready to"],
           example: {
@@ -445,7 +445,7 @@ lessons.push(
             "Anunciar lo siguiente o un plan: voy a manejar, vamos a contar.",
           avoidWhen:
             "Necesitas el sentido de ya mismo al borde; ahí “about to” es más filoso.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["gonna", "plan to", "later", "soon"],
           example: {
@@ -462,7 +462,7 @@ lessons.push(
             "No alcanzas algo a tiempo: pierdes el bus, te pasas del giro.",
           avoidWhen:
             "Quieres decir extrañar a alguien; ahí “miss” cambia de sentido.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["catch", "make it", "run late", "just missed"],
           example: {
@@ -479,7 +479,7 @@ lessons.push(
             "Marcar urgencia: pasa ahora mismo, hazlo de una vez, salimos ya.",
           avoidWhen:
             "Hablas de una rutina general; ahí no aporta urgencia y sobra.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["at once", "immediately", "this second", "straight away"],
           example: {
@@ -496,7 +496,7 @@ lessons.push(
             "Registro cuidado o británico: “I have just arrived”, “she has just left”.",
           avoidWhen:
             "Hablas en inglés estadounidense informal; ahí basta “just” con pasado simple.",
-          register: "neutral to formal",
+          register: "neutro a formal",
           region: "Inglés universal; más frecuente en el británico.",
           related: ["just now", "recently", "already", "so far"],
           example: {
@@ -553,25 +553,25 @@ lessons.push(
       variations: [
         {
           form: "I just got here.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés estadounidense",
           whenToUse: "Para decir que llegaste hace un instante."
         },
         {
           form: "It's ringing again.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Algo que vuelve a pasar."
         },
         {
           form: "We're about to leave.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Algo inminente, en segundos."
         },
         {
           form: "I have just arrived.",
-          register: "neutral to formal",
+          register: "neutro a formal",
           region: "Inglés británico",
           whenToUse: "Registro más formal para lo recién hecho."
         }
@@ -1004,7 +1004,7 @@ lessons.push(
             "Cuando planteas un pasado que no ocurrió, como en “if I had known”.",
           avoidWhen:
             "Metes “would have” después de “if”; ese es justo el error a evitar.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["had known", "had told", "the past", "the condition"],
           example: {
@@ -1021,7 +1021,7 @@ lessons.push(
             "Cuando dices la consecuencia de esa condición irreal, como en “I would have called”.",
           avoidWhen:
             "Lo pones tras “if”; el “would have” vive en el resultado, no en la condición.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["would have gone", "the result", "the outcome", "'d have"],
           example: {
@@ -1038,7 +1038,7 @@ lessons.push(
             "Lo mencionas para reconocerlo y evitarlo; nunca para imitarlo.",
           avoidWhen:
             "Lo usas en serio en registro cuidado; ahí se oye como un error de gramática.",
-          register: "neutral",
+          register: "neutro",
           region: "Error frecuente; el inglés estándar lo rechaza.",
           related: ["common mistake", "false friend", "correction", "the rule"],
           example: {
@@ -1055,7 +1055,7 @@ lessons.push(
             "Expresas un deseo sobre lo que ya pasó: I wish I had known.",
           avoidWhen:
             "Usas presente tras “wish” para el pasado; “I wish I know” es un error.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["I wish I had", "if only", "regret", "hindsight"],
           example: {
@@ -1072,7 +1072,7 @@ lessons.push(
             "Alguien pudo contactar y no lo hizo: you should have reached out.",
           avoidWhen:
             "Hablas de alcanzar un objeto físico; ahí es simplemente reach.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal; muy usado en Norteamérica.",
           related: ["get in touch", "contact", "check in", "call someone"],
           example: {
@@ -1089,7 +1089,7 @@ lessons.push(
             "Cuando marcas prontitud en el resultado, como en “I would have come right away”.",
           avoidWhen:
             "Quieres decir en el lado correcto; ahí “right” cambia de sentido.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["immediately", "at once", "straight away", "right now"],
           example: {
@@ -1106,7 +1106,7 @@ lessons.push(
             "Cuando alguien decide soltar el enojo, como en “I should have let it go”.",
           avoidWhen:
             "Hablas de soltar un objeto de la mano; ahí es literal, release.",
-          register: "colloquial",
+          register: "coloquial",
           region: "Inglés universal.",
           related: ["move on", "forgive", "drop it", "get over it"],
           example: {
@@ -1163,19 +1163,19 @@ lessons.push(
       variations: [
         {
           form: "If I had known, I would have called.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "El pasado irreal completo y estándar."
         },
         {
           form: "I wish I had known.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Un arrepentimiento formulado con “wish”."
         },
         {
           form: "I would have helped if you had asked.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "El resultado primero, la condición después."
         },
@@ -1614,7 +1614,7 @@ lessons.push(
             "Crees que puede pasar: I hope it goes well, I hope you come.",
           avoidWhen:
             "El deseo es imposible hoy; ahí se usa “I wish” con pasado.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["hopefully", "I hope that", "fingers crossed", "let's hope"],
           example: {
@@ -1631,7 +1631,7 @@ lessons.push(
             "Un deseo general y ligero: hopefully we'll have time, hopefully so.",
           avoidWhen:
             "Un registro muy formal o escrito, donde algunos prefieren “I hope that”.",
-          register: "colloquial",
+          register: "coloquial",
           region: "Inglés universal; muy usado en el habla.",
           related: ["I hope", "with luck", "hopefully so", "all being well"],
           example: {
@@ -1648,7 +1648,7 @@ lessons.push(
             "Quieres algo fuera de alcance ahora: I wish I could, I wish I had time.",
           avoidWhen:
             "Usas presente tras wish; “I wish I can” es el error a evitar.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["I wish I could", "if only", "I'd love to", "ojalá pudiera"],
           example: {
@@ -1665,7 +1665,7 @@ lessons.push(
             "Lamentas algo ya ocurrido: I wish I had known, I wish I had gone.",
           avoidWhen:
             "El deseo es sobre el presente o el futuro; ahí basta el pasado simple.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["if only I had", "I regret", "in hindsight", "ojalá hubiera"],
           example: {
@@ -1682,7 +1682,7 @@ lessons.push(
             "Cierras con cariño, como con “que te vaya bien”: take care, all the best.",
           avoidWhen:
             "Buscas un que suelto literal; el inglés no lo tiene y usa estos bloques.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["look after yourself", "so long", "see you", "cheers"],
           example: {
@@ -1699,7 +1699,7 @@ lessons.push(
             "Alguien sale de viaje: safe travels, have a safe trip.",
           avoidWhen:
             "No hay viaje de por medio; ahí encaja mejor take care.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["have a good trip", "get home safe", "bon voyage", "travel well"],
           example: {
@@ -1716,7 +1716,7 @@ lessons.push(
             "Tú eres quien actúa: I hope to see you, I hope to come back.",
           avoidWhen:
             "El otro es quien actúa; ahí se usa “I hope (that) you…”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["hope to see you", "plan to", "aim to", "look forward to"],
           example: {
@@ -1773,25 +1773,25 @@ lessons.push(
       variations: [
         {
           form: "I hope it goes well.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Una esperanza viva y posible."
         },
         {
           form: "Hopefully so.",
-          register: "colloquial",
+          register: "coloquial",
           region: "Inglés universal",
           whenToUse: "Una esperanza breve y ligera al responder."
         },
         {
           form: "I wish I could stay.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Un deseo que hoy no puede cumplirse."
         },
         {
           form: "Take care, safe travels.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Una despedida cálida, sin “que” literal."
         }

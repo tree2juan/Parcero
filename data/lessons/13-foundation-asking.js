@@ -425,7 +425,7 @@ lessons.push(
             "Cuando buscas información: “Can I ask a question?”, “She asked me the time”, “ask me anything”.",
           avoidWhen:
             "Cuando pides una cosa o un favor; eso es “ask for”, no “ask” a secas.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["ask", "have a question", "wonder", "question"],
           example: {
@@ -442,7 +442,7 @@ lessons.push(
             "Al pedir el menú, la cuenta o ayuda: “ask for the bill”, “ask for help”, “he asked for a refund”.",
           avoidWhen:
             "Cuando sólo buscas información; ahí va “ask a question”, sin “for”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["ask", "request", "order", "ask for help"],
           example: {
@@ -459,7 +459,7 @@ lessons.push(
             "“He asked about the job”, “she asked after your mom”, “they asked about the price”.",
           avoidWhen:
             "Para pedir la presencia de alguien en una recepción; eso es “ask for someone”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal; “ask after” es algo más británico, pero se entiende en todas partes.",
           related: ["ask about", "ask after", "inquire", "check on"],
           example: {
@@ -476,7 +476,7 @@ lessons.push(
             "Al llegar a un edificio o llamar: “Ask for Maria at the desk”, “I'm here to see Dr. Lee — who do I ask for?”.",
           avoidWhen:
             "Si sólo te interesa su salud o su vida; eso es “ask after someone”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["ask for", "at the desk", "ask to speak to", "request"],
           example: {
@@ -493,7 +493,7 @@ lessons.push(
             "Con desconocidos o en trato formal: “Could I ask you something?”, “Could I ask a quick question?”.",
           avoidWhen:
             "Entre amigos, donde suena algo rígido; mejor un “hey, can I ask you…?”.",
-          register: "polite",
+          register: "cortés",
           region: "Inglés universal.",
           related: ["can I ask", "may I ask", "do you mind if I ask", "quick question"],
           example: {
@@ -510,7 +510,7 @@ lessons.push(
             "Para señalar que viene una pregunta: “Quick question — where's the exit?”, “I have one question”.",
           avoidWhen:
             "“I have a doubt” suena a que desconfías de algo o de alguien, no a que quieres preguntar algo.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["quick question", "I was wondering", "one question", "I'd like to ask"],
           example: {
@@ -527,7 +527,7 @@ lessons.push(
             "Para invitar a alguien a preguntar: “Sure, ask away!”, “Go ahead, I'm listening”.",
           avoidWhen:
             "En registros muy formales por escrito, donde resultan demasiado coloquiales.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés norteamericano; se entiende en todas partes.",
           related: ["go ahead", "ask away", "shoot", "fire away"],
           example: {
@@ -589,31 +589,31 @@ lessons.push(
       variations: [
         {
           form: "Could I ask you something?",
-          register: "polite",
+          register: "cortés",
           region: "Inglés universal",
           whenToUse: "El abridor seguro y cortés con un desconocido."
         },
         {
           form: "Can I ask you something?",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Versión un punto más relajada, sirve para casi cualquiera."
         },
         {
           form: "Quick question —",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés norteamericano",
           whenToUse: "Para lanzar una pregunta corta sin rodeos, en tono casual."
         },
         {
           form: "Do you mind if I ask you something?",
-          register: "polite",
+          register: "cortés",
           region: "Inglés universal",
           whenToUse: "Extra cuidadoso, cuando la pregunta puede ser algo delicada."
         },
         {
           form: "Sorry to bother you, could you tell me…?",
-          register: "polite",
+          register: "cortés",
           region: "Inglés universal",
           whenToUse: "Al abordar a alguien ocupado o en plena calle, pidiendo información."
         }
@@ -1077,7 +1077,7 @@ lessons.push(
             "Casi siempre: “answer the phone”, “answer the question”, “answer the door”.",
           avoidWhen:
             "Para responder a un mensaje escrito, donde suele quedar mejor “reply”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["reply", "respond", "pick up", "get the door"],
           example: {
@@ -1094,7 +1094,7 @@ lessons.push(
             "Al responder cualquier pregunta: “answer my question”, “please answer honestly”.",
           avoidWhen:
             "No metas “to”: “answer to the question” está mal para el sentido de responder.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["answer", "address", "respond to", "reply to"],
           example: {
@@ -1111,7 +1111,7 @@ lessons.push(
             "Para mensajes y correos: “reply to my text”, “she hasn't replied yet”.",
           avoidWhen:
             "Para el teléfono o la puerta, donde va “answer” o el coloquial “get”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["answer", "respond", "write back", "get back to"],
           example: {
@@ -1128,7 +1128,7 @@ lessons.push(
             "Al asumir responsabilidad: “I'll answer for him”, “you'll answer for this”.",
           avoidWhen:
             "No lo confundas con “answer to”, que es rendir cuentas ANTE alguien.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["vouch for", "be responsible for", "account for", "stand up for"],
           example: {
@@ -1145,7 +1145,7 @@ lessons.push(
             "Cuando suena o tocan: “Can you get the door?”, “nobody answered the phone”.",
           avoidWhen:
             "Con mensajes escritos, donde va “reply” en lugar de “answer”.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal; el uso de “get” es más coloquial.",
           related: ["get the door", "pick up", "buzz in", "answer"],
           example: {
@@ -1162,7 +1162,7 @@ lessons.push(
             "En tono formal: “please respond by Friday”, “respond to the complaint”.",
           avoidWhen:
             "En charla muy casual, donde suena algo formal y basta con “answer” o “reply”.",
-          register: "polite",
+          register: "cortés",
           region: "Inglés universal.",
           related: ["answer", "reply", "get back to", "address"],
           example: {
@@ -1179,7 +1179,7 @@ lessons.push(
             "Al contestar una llamada para alguien más: “May I ask who's calling?”.",
           avoidWhen:
             "En llamadas casuales entre amigos, donde sobra la fórmula.",
-          register: "polite",
+          register: "cortés",
           region: "Inglés universal.",
           related: ["May I ask who's calling?", "Who's this?", "Can I take a message?", "Hold on"],
           example: {
@@ -1241,31 +1241,31 @@ lessons.push(
       variations: [
         {
           form: "Can you answer the phone?",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Pedir que alguien atienda una llamada."
         },
         {
           form: "Can you get the door?",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés norteamericano",
           whenToUse: "Pedir de manera coloquial que alguien atienda la puerta."
         },
         {
           form: "Could you reply to my email?",
-          register: "polite",
+          register: "cortés",
           region: "Inglés universal",
           whenToUse: "Pedir cortésmente una respuesta a un correo."
         },
         {
           form: "Please respond by Friday.",
-          register: "polite",
+          register: "cortés",
           region: "Inglés universal",
           whenToUse: "En tono formal o escrito, marcando una fecha límite."
         },
         {
           form: "I'll answer for it.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Asumir la responsabilidad de algo — responder por ello."
         }
@@ -1729,7 +1729,7 @@ lessons.push(
             "Para expresar una necesidad: “I need help”, “what do you need?”.",
           avoidWhen:
             "Como orden pelada a una persona; suávizalo con un “could you…?” por delante.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["require", "could use", "have to", "want"],
           example: {
@@ -1746,7 +1746,7 @@ lessons.push(
             "Para tus propias acciones: “I need to leave”, “I need to buy a drill”.",
           avoidWhen:
             "Cuando la acción es de OTRA persona; ahí va “I need you to…”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["have to", "got to", "need to go", "must"],
           example: {
@@ -1763,7 +1763,7 @@ lessons.push(
             "Cuando la acción depende de otra persona: “I need you to come”, “she needs him to sign”.",
           avoidWhen:
             "No digas “I need that you help”; ese “that” es un calco directo del español.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["I need you to", "I'd like you to", "can you", "I want you to"],
           example: {
@@ -1780,7 +1780,7 @@ lessons.push(
             "Cuando TÚ recibes lo prestado: “Can I borrow your drill?”, “I borrowed a pen”.",
           avoidWhen:
             "No es prestar (dar): eso es “lend”. Y no digas “borrow me”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["lend", "can I borrow", "give back", "return"],
           example: {
@@ -1797,7 +1797,7 @@ lessons.push(
             "Cuando TÚ das lo prestado, o pides que te presten: “Can you lend me your drill?”.",
           avoidWhen:
             "No lo confundas con “borrow”; “borrow me your drill” está mal.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["borrow", "lend me", "loan", "give back"],
           example: {
@@ -1814,7 +1814,7 @@ lessons.push(
             "Para abrir un pedido: “Could you do me a favor?”.",
           avoidWhen:
             "En peticiones muy formales, donde va un “Would you be so kind as to…?”.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal.",
           related: ["could you help me out", "give me a hand", "would you mind", "a quick favor"],
           example: {
@@ -1831,7 +1831,7 @@ lessons.push(
             "Al restarle importancia a un favor entre vecinos: “Anytime — that's what neighbors are for.”.",
           avoidWhen:
             "En contextos formales o de negocios, donde suena demasiado casero.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal; el sentimiento es idéntico al colombiano.",
           related: ["anytime", "happy to help", "no problem", "don't mention it"],
           example: {
@@ -1893,31 +1893,31 @@ lessons.push(
       variations: [
         {
           form: "Could I borrow your drill?",
-          register: "polite",
+          register: "cortés",
           region: "Inglés universal",
           whenToUse: "La forma segura y cortés de pedir algo prestado."
         },
         {
           form: "Could you lend me your drill?",
-          register: "polite",
+          register: "cortés",
           region: "Inglés universal",
           whenToUse: "Lo mismo desde el lado de quien presta; igual de cortés."
         },
         {
           form: "Do you happen to have a drill I could borrow?",
-          register: "polite",
+          register: "cortés",
           region: "Inglés universal",
           whenToUse: "Extra suave cuando no sabes si el otro tiene la cosa."
         },
         {
           form: "Any chance I could borrow your drill?",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés norteamericano",
           whenToUse: "Relajado y cercano, entre vecinos que ya se conocen."
         },
         {
           form: "I need you to give me a hand with this.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Cuando la acción depende del otro; directo pero claro."
         }

@@ -366,7 +366,7 @@ lessons.push(
           literal: "entregar / repartir",
           useWhen: "Logística y servicios: “they delivered the package”, “we deliver groceries”.",
           avoidWhen: "Habla de tareas o formularios que usted entrega a una oficina; ahí suele ser “hand in”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["delivery", "deliver a package", "courier", "drop off"],
           example: {
@@ -380,7 +380,7 @@ lessons.push(
           literal: "dejar / soltar en un lugar",
           useWhen: "Entregas prácticas: “drop it off at the front desk”, “drop me off here”.",
           avoidWhen: "Necesita destacar una entrega formal a una persona responsable; “hand over” puede ser mejor.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal.",
           related: ["drop-off", "pick up", "front desk", "leave"],
           example: {
@@ -394,7 +394,7 @@ lessons.push(
           literal: "pasar a la mano / entregar",
           useWhen: "Documentos, llaves, identificación: “hand over your keys”, “hand it over to security”.",
           avoidWhen: "Una tarea escolar o formulario que se entrega a una institución; ahí es “hand in”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["hand over the keys", "give", "transfer", "hand to"],
           example: {
@@ -408,7 +408,7 @@ lessons.push(
           literal: "pasar adentro / entregar",
           useWhen: "Papeles: “hand in the form”, “hand in your homework”, “hand in the application”.",
           avoidWhen: "Un mensajero deja un paquete en recepción; eso es “drop off” o “deliver”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["submit", "turn in", "forms", "application"],
           example: {
@@ -422,7 +422,7 @@ lessons.push(
           literal: "firmar por ello",
           useWhen: "Paquetes y correo certificado: “you need to sign for the package”.",
           avoidWhen: "Está firmando un contrato; ahí simplemente “sign the contract”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["signature", "receipt", "proof of delivery", "received"],
           example: {
@@ -436,7 +436,7 @@ lessons.push(
           literal: "entrega / domicilio",
           useWhen: "Pedidos: “food delivery”, “delivery address”, “proof of delivery”.",
           avoidWhen: "Traducir todo domicilio como residence; en pedidos, domicilio suele ser delivery.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["delivery address", "proof of delivery", "courier", "order"],
           example: {
@@ -450,7 +450,7 @@ lessons.push(
           literal: "presentar / radicar / entregar",
           useWhen: "Trámites y formularios en línea: “submit the application”, “submit your documents”.",
           avoidWhen: "Una entrega física casual; “submit” suena más administrativo que “hand in”.",
-          register: "polite formal",
+          register: "cortés formal",
           region: "Inglés universal.",
           related: ["submission", "application", "hand in", "file"],
           example: {
@@ -495,25 +495,25 @@ lessons.push(
       variations: [
         {
           form: "Can I drop it off at the front desk?",
-          register: "polite service",
+          register: "cortés de servicio",
           region: "Inglés universal",
           whenToUse: "Preguntar si puede dejar un paquete en recepción."
         },
         {
           form: "I handed in the forms.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Decir que entregó formularios o tareas."
         },
         {
           form: "Please sign for the package.",
-          register: "polite service",
+          register: "cortés de servicio",
           region: "Inglés universal",
           whenToUse: "Pedir firma como constancia de recibido."
         },
         {
           form: "Submit the application online.",
-          register: "polite formal",
+          register: "cortés formal",
           region: "Inglés universal",
           whenToUse: "Dar una instrucción formal sobre una solicitud."
         }
@@ -908,7 +908,7 @@ lessons.push(
           literal: "firmar",
           useWhen: "Documentos: “sign the contract”, “sign here”, “sign for the package”.",
           avoidWhen: "Quiere decir una firma como sustantivo; ahí es “signature”, no “sign”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["signature", "sign here", "signed", "sign for"],
           example: {
@@ -922,7 +922,7 @@ lessons.push(
           literal: "firma",
           useWhen: "Papeles: “your signature is missing”, “the signature doesn't match”.",
           avoidWhen: "Usarla como verbo; no se dice “signature the contract”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["sign", "signature line", "digital signature", "witnessed signature"],
           example: {
@@ -936,7 +936,7 @@ lessons.push(
           literal: "por favor firme aquí",
           useWhen: "Mostradores, contratos y entregas: “please sign here and date it”.",
           avoidWhen: "Cree que necesita una forma de usted; el “please” y el tono hacen la cortesía.",
-          register: "polite service",
+          register: "cortés de servicio",
           region: "Inglés universal.",
           related: ["sign here", "date it", "signature line", "initial here"],
           example: {
@@ -950,7 +950,7 @@ lessons.push(
           literal: "prueba de identidad",
           useWhen: "Trámites: “bring proof of ID”, “a copy of your passport”.",
           avoidWhen: "Traducir cédula siempre como “citizenship card”; en inglés práctico se pide ID.",
-          register: "polite formal",
+          register: "cortés formal",
           region: "Inglés universal; los documentos concretos cambian por país.",
           related: ["ID", "passport", "driver's license", "identification"],
           example: {
@@ -964,7 +964,7 @@ lessons.push(
           literal: "factura de servicios públicos",
           useWhen: "Probar dirección: “a recent utility bill”, “gas or electricity bill”.",
           avoidWhen: "Cualquier recibo de compra; utility bill es específicamente de servicios.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["proof of address", "electricity bill", "gas bill", "council tax bill"],
           example: {
@@ -978,7 +978,7 @@ lessons.push(
           literal: "factura / recibo / cuenta",
           useWhen: "Servicios y compras: “send an invoice”, “keep the receipt”, “pay the bill”.",
           avoidWhen: "Tratarlas como sinónimos perfectos; el trámite puede pedir una en particular.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["invoice", "receipt", "bill", "payment"],
           example: {
@@ -992,7 +992,7 @@ lessons.push(
           literal: "hacer atestiguar una firma",
           useWhen: "Contratos y formularios que piden un testigo: “have your signature witnessed”.",
           avoidWhen: "El documento exige notary específicamente; entonces sí use “notarise”.",
-          register: "polite formal",
+          register: "cortés formal",
           region: "Inglés universal, frecuente en Reino Unido y países de common law.",
           related: ["witness", "notarise", "certify", "guarantor"],
           example: {
@@ -1037,25 +1037,25 @@ lessons.push(
       variations: [
         {
           form: "Please sign here.",
-          register: "polite service",
+          register: "cortés de servicio",
           region: "Inglés universal",
           whenToUse: "Pedir una firma en un mostrador o contrato."
         },
         {
           form: "The signature must be witnessed.",
-          register: "polite formal",
+          register: "cortés formal",
           region: "Inglés universal",
           whenToUse: "Decir que la firma necesita testigo."
         },
         {
           form: "Please bring proof of ID.",
-          register: "polite formal",
+          register: "cortés formal",
           region: "Inglés universal",
           whenToUse: "Pedir documento de identidad."
         },
         {
           form: "Could you send me an invoice?",
-          register: "polite formal",
+          register: "cortés formal",
           region: "Inglés universal",
           whenToUse: "Pedir una factura formal."
         }
@@ -1456,7 +1456,7 @@ lessons.push(
           literal: "cobrar / cobro",
           useWhen: "Servicios: “how much do you charge?”, “they charged me extra”, “a service charge”.",
           avoidWhen: "Quiere decir cobrar el sueldo propio; ahí lo natural es “get paid”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["charge for", "service charge", "overcharge", "fee"],
           example: {
@@ -1470,7 +1470,7 @@ lessons.push(
           literal: "¿cuánto cobra usted?",
           useWhen: "Talleres, plomeros, costureras, clases, taxis: “how much do you charge to fix this?”.",
           avoidWhen: "Pregunta por el precio de un objeto con etiqueta; “how much is it?” puede bastar.",
-          register: "polite service",
+          register: "cortés de servicio",
           region: "Inglés universal.",
           related: ["charge to", "charge for", "quote", "rate"],
           example: {
@@ -1484,7 +1484,7 @@ lessons.push(
           literal: "fui sobrecobrada",
           useWhen: "Reclamos: “I think I was overcharged”, “they overcharged me for delivery”.",
           avoidWhen: "El precio subió con aviso y usted aceptó; overcharged sugiere error o abuso.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["overcharge", "charged too much", "refund", "complaint"],
           example: {
@@ -1498,7 +1498,7 @@ lessons.push(
           literal: "cóbreme ahora",
           useWhen: "Pagos inmediatos: “charge me now”, “charge my card now”.",
           avoidWhen: "Quiere añadir algo a una cuenta de hotel o restaurante; ahí puede ser “put it on my bill”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["charge my card", "pay now", "ring me up", "put it on my bill"],
           example: {
@@ -1512,7 +1512,7 @@ lessons.push(
           literal: "póngalo en mi cuenta",
           useWhen: "Cuentas abiertas: “put it on my room bill”, “put the drinks on my tab”.",
           avoidWhen: "No hay cuenta abierta; entonces diga “charge me” o “I'll pay now”.",
-          register: "polite service",
+          register: "cortés de servicio",
           region: "Inglés universal.",
           related: ["bill", "tab", "room charge", "account"],
           example: {
@@ -1526,7 +1526,7 @@ lessons.push(
           literal: "labor y partes",
           useWhen: "Reparaciones: “does that include labor and parts?”, “parts are extra”.",
           avoidWhen: "Asumir que una cotización incluye ambas cosas; pregunte.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal; “labor” en EE. UU., “labor” en Reino Unido/Australia.",
           related: ["labor", "parts", "quote", "repair"],
           example: {
@@ -1540,7 +1540,7 @@ lessons.push(
           literal: "recibir pago",
           useWhen: "Día de pago: “I get paid on Friday”, “when do you get paid?”.",
           avoidWhen: "Usted cobra a un cliente; ahí sí es “charge the customer”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["payday", "salary", "wages", "paid"],
           example: {
@@ -1585,31 +1585,31 @@ lessons.push(
       variations: [
         {
           form: "How much do you charge to check it?",
-          register: "polite service",
+          register: "cortés de servicio",
           region: "Inglés universal",
           whenToUse: "Pedir precio por revisar o diagnosticar algo."
         },
         {
           form: "I think I was overcharged.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Reclamar un posible cobro de más."
         },
         {
           form: "Please charge me now.",
-          register: "polite service",
+          register: "cortés de servicio",
           region: "Inglés universal",
           whenToUse: "Pedir que le cobren de una vez."
         },
         {
           form: "I get paid on Friday.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Decir cuándo cobra el sueldo."
         },
         {
           form: "I need to get the brakes checked, and the tires were replaced last month.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Para encargar un trabajo y, de paso, contar lo que ya se hizo. “Get the brakes checked” encarga; “were replaced” informa sin decir quién."
         }

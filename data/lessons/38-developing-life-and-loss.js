@@ -433,7 +433,7 @@ lessons.push(
             "Úsela para lugar de nacimiento, fecha de nacimiento, biografías, árboles familiares y recuerdos de origen.",
           avoidWhen:
             "No use born solo como verbo principal. “I born in Neiva” es uno de los errores más visibles.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["was born", "were born", "born in", "birthplace"],
           example: {
@@ -450,7 +450,7 @@ lessons.push(
             "Úsela cuando dice dónde o cuándo nació usted.",
           avoidWhen:
             "No diga I am born para contar su nacimiento en el pasado. Eso suena como presente extraño o traducción literal.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["born in", "born on", "birthplace", "grew up"],
           example: {
@@ -467,7 +467,7 @@ lessons.push(
             "Úsela sólo en estilo narrativo especial, por ejemplo al contar una historia en presente.",
           avoidWhen:
             "Evítela para decir dónde nació usted. En conversación normal, diga I was born.",
-          register: "literary or marked",
+          register: "literario o marcado",
           region: "Inglés universal.",
           related: ["I was born", "present tense", "storytelling", "narration"],
           example: {
@@ -484,7 +484,7 @@ lessons.push(
             "Úsela para una abuela, un hijo, una hija, una idea o cualquier sujeto singular.",
           avoidWhen:
             "No la use con varios hijos o varias personas. Ahí necesita were born.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["were born", "born there", "born here", "birth"],
           example: {
@@ -501,7 +501,7 @@ lessons.push(
             "Úsela con hijos, hermanos, generaciones, we, they o preguntas con you.",
           avoidWhen:
             "No la cambie por was cuando el sujeto es plural. El error se oye de inmediato.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["was born", "children", "siblings", "ancestors"],
           example: {
@@ -518,7 +518,7 @@ lessons.push(
             "Úsela al hablar de fotos, abuelos, ramas de la familia o investigación familiar.",
           avoidWhen:
             "No espere que family tree incluya automáticamente toda la historia oral. Sólo nombra el esquema.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["relatives", "grandparents", "children", "ancestors"],
           example: {
@@ -535,7 +535,7 @@ lessons.push(
             "Úsela para decir dónde pasó alguien la infancia o dónde se formó.",
           avoidWhen:
             "No la confunda con was born. Una persona puede be born en un lugar y grow up en otro.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["raised", "childhood", "hometown", "from"],
           example: {
@@ -597,19 +597,19 @@ lessons.push(
       variations: [
         {
           form: "Were you born here?",
-          register: "polite neutral",
+          register: "cortés neutro",
           region: "Inglés universal",
           whenToUse: "Preguntar con respeto por el lugar de nacimiento."
         },
         {
           form: "I was born in a town near Garzón.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Dar su propio lugar de nacimiento con una referencia cercana."
         },
         {
           form: "My siblings were born in another state.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Explicar una mudanza familiar mediante los lugares de nacimiento."
         },
@@ -621,13 +621,13 @@ lessons.push(
         },
         {
           form: "I was born there, but grew up in Houston.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Separar nacimiento y crianza."
         },
         {
           form: "My grandmother told me she was born in a small town, and she used to walk to school.",
-          register: "courteous",
+          register: "cortés",
           region: "Inglés universal",
           whenToUse: "Para transmitir historia familiar. “Told me she was born” repite lo que ella dijo; “used to walk” describe la rutina de entonces."
         }
@@ -1091,7 +1091,7 @@ lessons.push(
             "Úselo para personas, animales, plantas, baterías, motores o cualquier cosa que deja de vivir o funcionar.",
           avoidWhen:
             "Si quiere suavizar una condolencia, considere passed away. Pero no tema died cuando la frase es sencilla y respetuosa.",
-          register: "neutral but direct",
+          register: "neutro pero directo",
           region: "Inglés universal.",
           related: ["died", "dead", "passed away", "death"],
           example: {
@@ -1108,7 +1108,7 @@ lessons.push(
             "Úsela para decir cuándo murió alguien o para un reporte claro y breve.",
           avoidWhen:
             "No añada did en una afirmación. “He did died” es doble pasado.",
-          register: "neutral but direct",
+          register: "neutro pero directo",
           region: "Inglés universal.",
           related: ["die", "passed away", "dead", "died peacefully"],
           example: {
@@ -1125,7 +1125,7 @@ lessons.push(
             "Úsela en condolencias, obituarios o conversaciones donde quiera sonar delicado.",
           avoidWhen:
             "No la use para baterías o plantas normales. Ahí died es suficiente.",
-          register: "gentle respectful",
+          register: "suave respetuoso",
           region: "Inglés universal.",
           related: ["died", "loss", "condolences", "peacefully"],
           example: {
@@ -1142,7 +1142,7 @@ lessons.push(
             "Úsela inmediatamente cuando alguien le cuenta una pérdida.",
           avoidWhen:
             "No la alargue con explicaciones sobre usted. La frase debe sostener a la otra persona, no hablar de su incomodidad.",
-          register: "gentle neutral",
+          register: "suave neutro",
           region: "Inglés universal.",
           related: ["I'm sorry for your loss", "my condolences", "I'm here", "a hug"],
           example: {
@@ -1159,7 +1159,7 @@ lessons.push(
             "Úselo para hechos claros, animales, plantas, baterías o contextos donde no necesita suavizar.",
           avoidWhen:
             "Evítelo como primera frase de condolencia. “Your father is dead” suena frío y duro.",
-          register: "direct",
+          register: "directo",
           region: "Inglés universal.",
           related: ["died", "death", "alive", "passed away"],
           example: {
@@ -1176,7 +1176,7 @@ lessons.push(
             "Úsela en mensajes, velorios, notas formales o con alguien que no conoce muy bien.",
           avoidWhen:
             "Con una amiga cercana puede sonar un poco de tarjeta; I'm so sorry puede ser más humano.",
-          register: "formal respectful",
+          register: "formal respetuoso",
           region: "Inglés universal.",
           related: ["my condolences", "I'm sorry for your loss", "sympathy", "loss"],
           example: {
@@ -1193,7 +1193,7 @@ lessons.push(
             "Úsela al hablar respetuosamente de la persona que murió.",
           avoidWhen:
             "No la dirija a la persona doliente. Se refiere a quien murió, no a quien recibe el pésame.",
-          register: "respectful",
+          register: "respetuoso",
           region: "Inglés universal.",
           related: ["rest in peace", "R.I.P.", "passed away", "condolences"],
           example: {
@@ -1255,31 +1255,31 @@ lessons.push(
       variations: [
         {
           form: "I'm so sorry.",
-          register: "gentle neutral",
+          register: "suave neutro",
           region: "Inglés universal",
           whenToUse: "La condolencia breve más segura al oír una pérdida."
         },
         {
           form: "I'm sorry for your loss.",
-          register: "respectful neutral",
+          register: "respetuoso neutro",
           region: "Inglés universal",
           whenToUse: "Una frase clara para velorios, mensajes o conocidos."
         },
         {
           form: "My deepest condolences.",
-          register: "formal respectful",
+          register: "formal respetuoso",
           region: "Inglés universal",
           whenToUse: "Un mensaje formal o una familia que usted no conoce bien."
         },
         {
           form: "May he rest in peace.",
-          register: "respectful",
+          register: "respetuoso",
           region: "Inglés universal",
           whenToUse: "Hablar con respeto del hombre que murió."
         },
         {
           form: "My dad passed away on Monday.",
-          register: "gentle personal",
+          register: "suave personal",
           region: "Inglés universal",
           whenToUse: "Contar una pérdida personal con una forma más suave que died."
         }
@@ -1743,7 +1743,7 @@ lessons.push(
             "Úselo figuradamente sólo cuando el contexto es claramente seguro: hambre, demora, chistes, trabajo o cansancio.",
           avoidWhen:
             "No lo use como chiste cerca de una pérdida real, una enfermedad grave o una situación peligrosa.",
-          register: "informal when figurative",
+          register: "informal cuando figurado",
           region: "Inglés universal.",
           related: ["killing me", "killed me", "dead", "literal"],
           example: {
@@ -1760,7 +1760,7 @@ lessons.push(
             "Úsela con amigos o familia cuando quiere sonar hambriento y juguetón.",
           avoidWhen:
             "Evítela en contextos serios donde la exageración puede sonar infantil o insensible.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal.",
           related: ["I'm starving", "I'm hungry", "let's eat", "food"],
           example: {
@@ -1777,7 +1777,7 @@ lessons.push(
             "Úsela cuando alguien lo hace esperar, reír, preocuparse o trabajar demasiado en una situación no literal.",
           avoidWhen:
             "No la use si la otra persona puede oír una acusación seria en vez de una broma.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal.",
           related: ["killing me", "too much", "come on", "I can't"],
           example: {
@@ -1794,7 +1794,7 @@ lessons.push(
             "Úsela después de un chiste, comentario, historia o video que le dio mucha risa.",
           avoidWhen:
             "No la use en un contexto de duelo. El mismo verbo chocaría con el momento.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal.",
           related: ["made me laugh", "cracked me up", "funny", "with laughter"],
           example: {
@@ -1811,7 +1811,7 @@ lessons.push(
             "Úsela para cuartos, procesos, filas, correos o planes que están muy desorganizados.",
           avoidWhen:
             "No traduzca matadero literalmente como slaughterhouse si sólo quiere decir caos doméstico.",
-          register: "informal neutral",
+          register: "informal neutro",
           region: "Inglés universal.",
           related: ["chaos", "messy", "disaster", "disorganized"],
           example: {
@@ -1828,7 +1828,7 @@ lessons.push(
             "Úsela cuando el sujeto singular causa el efecto literal o figurado.",
           avoidWhen:
             "No añada una s si el sujeto es plural o si usa modal: hunger kills, but delays kill and hunger can kill.",
-          register: "neutral grammar",
+          register: "neutro de gramática",
           region: "Inglés universal.",
           related: ["kill", "killed", "killing", "killer"],
           example: {
@@ -1845,7 +1845,7 @@ lessons.push(
             "Úsela cuando necesita aclarar si una palabra fuerte se usa en serio o en broma.",
           avoidWhen:
             "No la use como relleno constante. Aquí importa porque kill tiene un sentido literal serio.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["figuratively", "exactly", "seriously", "exaggerating"],
           example: {
@@ -1907,25 +1907,25 @@ lessons.push(
       variations: [
         {
           form: "Hunger is killing me.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal",
           whenToUse: "Decir de forma juguetona que tiene muchísima hambre."
         },
         {
           form: "You're killing me with this delay.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal",
           whenToUse: "Bromear que la demora o el suspenso ya es demasiado."
         },
         {
           form: "That comment killed me.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal",
           whenToUse: "Decir que un comentario le dio mucha risa."
         },
         {
           form: "This room is a total mess.",
-          register: "informal neutral",
+          register: "informal neutro",
           region: "Inglés universal",
           whenToUse: "Traducir matadero figurado sin una imagen demasiado fuerte."
         },

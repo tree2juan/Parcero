@@ -427,7 +427,7 @@ lessons.push(
             "Cuando se cuenta si una búsqueda dio resultado — “I found it”, “I can't find it”, “did you find the shop?”.",
           avoidWhen:
             "Cuando se quiere decir que algo parece de cierta manera. El inglés admite “I find it hard”, pero al principio es más seguro “it seems hard to me” hasta afianzar ese molde.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés general.",
           related: ["to locate", "to look for", "to come across", "to spot"],
           example: {
@@ -444,7 +444,7 @@ lessons.push(
             "La búsqueda está en curso y no aparece nada — “I can't find my keys”, “I can't find the address”.",
           avoidWhen:
             "Cuando se quiere el pasado ya cerrado. Ahí es “I couldn't find it” o “I didn't find it”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés general.",
           related: ["I can't see it", "I can't locate it", "it's not here", "I've lost it"],
           example: {
@@ -461,7 +461,7 @@ lessons.push(
             "Cuando se quiere recalcar lo rotundo del fracaso de la búsqueda — “I looked everywhere and couldn't find a thing”.",
           avoidWhen:
             "En escritura formal, donde el sobrio “I found nothing” queda mejor que el énfasis coloquial.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés general; el enfático “a thing” es del habla cotidiana.",
           related: ["not a thing", "nothing at all", "not a single one", "zilch"],
           example: {
@@ -478,7 +478,7 @@ lessons.push(
             "Un punto de referencia aparece en el camino, o uno se topa con alguien sin planearlo — “you'll run into a bank”, “I ran into an old friend”.",
           avoidWhen:
             "Cuando el encuentro estaba pactado. Una cita acordada es “to meet up with”, no “to run into”.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés general.",
           related: ["to come across", "to bump into", "to stumble on", "to run across"],
           example: {
@@ -495,7 +495,7 @@ lessons.push(
             "Al contarle a alguien un encuentro fortuito — “I ran into Sofía at the supermarket yesterday”.",
           avoidWhen:
             "Cuando se conoció a alguien por primera vez; eso es “I met”. Una cita pactada es “I met up with”.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés general.",
           related: ["I bumped into", "I came across", "I met up with", "we ran into each other"],
           example: {
@@ -512,7 +512,7 @@ lessons.push(
             "Al preguntar por una tienda, una calle o un edificio — “where is Dwyer's?”, “where's the nearest bank?”.",
           avoidWhen:
             "Cuando se busca el “¿para dónde queda?” más suelto; ahí “which way is it?” o “how do I get there?” suenan más naturales.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés general; “whereabouts is it?” es una variante más coloquial.",
           related: ["where is it?", "whereabouts is it?", "how do I get there?", "where's it located?"],
           example: {
@@ -529,7 +529,7 @@ lessons.push(
             "Para describir estar perdido o, en sentido figurado, darle vueltas al mismo problema sin avanzar.",
           avoidWhen:
             "Cuando se trata de un solo giro físico; eso es “to turn around” o “to make a U-turn”, una acción puntual.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés general.",
           related: ["going in circles", "walking in circles", "getting nowhere", "lost my bearings"],
           example: {
@@ -591,31 +591,31 @@ lessons.push(
       variations: [
         {
           form: "I can't find it.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés general",
           whenToUse: "El estándar llano, válido en cualquier compañía y registro."
         },
         {
           form: "I can't find it anywhere.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés general",
           whenToUse: "Enfático: uno ha buscado en varios sitios y no ha dado con ello."
         },
         {
           form: "I can't seem to find it.",
-          register: "polite formal",
+          register: "cortés formal",
           region: "Inglés general",
           whenToUse: "Más suave y como disculpándose, útil al pedirle ayuda a alguien ocupado."
         },
         {
           form: "Do you know where Dwyer's is, by any chance?",
-          register: "polite formal",
+          register: "cortés formal",
           region: "Inglés general",
           whenToUse: "Para abrir la pregunta con cortesía a un desconocido en la calle."
         },
         {
           form: "Whereabouts is the hardware store?",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés británico y estadounidense",
           whenToUse: "Una manera relajada y coloquial de preguntar más o menos dónde queda algo."
         }
@@ -1079,7 +1079,7 @@ lessons.push(
             "Cuando se telefonea o se manda llamar — “I need to call the doctor”, “call the dog”.",
           avoidWhen:
             "Cuando se quiere decir “llamarse”. El inglés no usa “call” de forma reflexiva para eso; usa “to be called” o “name”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés general.",
           related: ["to phone", "to dial", "to ring", "to contact"],
           example: {
@@ -1096,7 +1096,7 @@ lessons.push(
             "Siempre que el objeto de “call” sea una persona — “I'll call Oscar”, “call your mom”.",
           avoidWhen:
             "Cuando dan ganas de meter una palabrita de enlace antes de la persona; hay que resistirse, porque el inglés no la tiene.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés general.",
           related: ["to see someone", "to visit someone", "to meet someone", "to help someone"],
           example: {
@@ -1113,7 +1113,7 @@ lessons.push(
             "Al dar o pedir un nombre — “what's your name?”, “his name is Oscar”.",
           avoidWhen:
             "Cuando uno recurre a “he calls himself”; eso da a entender un apodo que la persona se puso, no el nombre de pila.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés general.",
           related: ["what's your name?", "my name is", "he's called", "to go by"],
           example: {
@@ -1130,7 +1130,7 @@ lessons.push(
             "Al ofrecer una llamada ligera y rápida entre amigos — “I'll give you a buzz later”.",
           avoidWhen:
             "En un contexto formal o escrito, donde “I'll call you” o “I'll phone you” quedan mejor.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés general; “buzz” es casual y “ring” tira un poco más a lo británico-estadounidense.",
           related: ["give a call", "give a ring", "buzz someone", "ping someone"],
           example: {
@@ -1147,7 +1147,7 @@ lessons.push(
             "Al describir el acto de digitar el número — “dial this number”, “dial nine for an outside line”.",
           avoidWhen:
             "Cuando se trata de todo el acto de contactar; ahí “call” o “ring” suenan más naturales que “dial”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés general.",
           related: ["to punch in", "to key in", "to call", "to ring"],
           example: {
@@ -1164,7 +1164,7 @@ lessons.push(
             "Al hablar de un escándalo en público — “please don't make a scene”, “he made a scene at the counter”.",
           avoidWhen:
             "Cuando se trata del halagador “destacar”; ahí se dice “to draw attention” o “to turn heads”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés general.",
           related: ["to draw attention", "to cause a fuss", "to stand out", "to tell off"],
           example: {
@@ -1181,7 +1181,7 @@ lessons.push(
             "Al hablar de alguien que contesta una llamada — “nobody picked up”, “pick up, pick up!”.",
           avoidWhen:
             "Cuando se trata de abrir una puerta o responder una pregunta; una puerta se “answer” o se “get”, una pregunta se “answer”.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés general.",
           related: ["to answer", "to get the phone", "to take a call", "to pick up the phone"],
           example: {
@@ -1243,31 +1243,31 @@ lessons.push(
       variations: [
         {
           form: "I'll call you.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés general",
           whenToUse: "El estándar llano, correcto ante cualquier persona."
         },
         {
           form: "I'll give you a call.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés general",
           whenToUse: "Un pelín más cálido que “I'll call you”, e igual de seguro."
         },
         {
           form: "I'll give you a buzz.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés general",
           whenToUse: "Ligero y casual entre amigos — un timbrazo rápido más que una llamada larga."
         },
         {
           form: "I'll call you back.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés general",
           whenToUse: "Cuando no los alcanzaste o toca llamar luego; el cotidiano “devolver la llamada”."
         },
         {
           form: "Just text me.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés norteamericano",
           whenToUse: "Cuando un mensaje sería más fácil que una llamada, que en Estados Unidos es a menudo."
         }
@@ -1731,7 +1731,7 @@ lessons.push(
             "Al hablar de regresar físicamente — “I'll come back later”, “come back soon”.",
           avoidWhen:
             "Cuando se trata de devolver un objeto; eso es “give back” o “return”, no “come back”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés general.",
           related: ["to go back", "to get back", "to return", "to be back"],
           example: {
@@ -1748,7 +1748,7 @@ lessons.push(
             "Al marcar que una acción se repite — “I'll order it again”, “don't do that again”.",
           avoidWhen:
             "Cuando se trata de regresar a un lugar; ahí es “come back”, no “again”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés general.",
           related: ["once more", "one more time", "over again", "to redo"],
           example: {
@@ -1765,7 +1765,7 @@ lessons.push(
             "Un cambio de estado o de naturaleza — “it's become a habit”, “she became a doctor”.",
           avoidWhen:
             "Un estado rápido y pasajero le queda mejor a “get” — “I got tired”, no “I became tired”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés general.",
           related: ["to turn into", "to get", "to grow", "to end up"],
           example: {
@@ -1782,7 +1782,7 @@ lessons.push(
             "Al despedir a alguien que uno espera que regrese — “thanks, come back soon!”.",
           avoidWhen:
             "Una despedida neutra entre iguales; ahí “see you” o “take it easy” es más liviano.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés general.",
           related: ["see you soon", "come again", "hope to see you again", "take care"],
           example: {
@@ -1799,7 +1799,7 @@ lessons.push(
             "Al devolverse — “I forgot my wallet and had to go back”, “let's head back”.",
           avoidWhen:
             "Cuando uno le entrega un objeto a alguien; eso es “give it back”, no “go back”.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés general.",
           related: ["to double back", "to turn back", "to head back", "to go back for"],
           example: {
@@ -1816,7 +1816,7 @@ lessons.push(
             "Cualquier acción repetida dicha de forma sencilla — “let's try again”, “say it once more”.",
           avoidWhen:
             "Cuando ya se metió la repetición en el fraseo; duplicarla suena redundante.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés general.",
           related: ["one more time", "over again", "yet again", "afresh"],
           example: {
@@ -1833,7 +1833,7 @@ lessons.push(
             "Al preguntar por el almuerzo fijo — “what's the special today?”, “I'll have the lunch special”.",
           avoidWhen:
             "Cuando se trata de cualquier cosa de la carta completa; el especial es específicamente el plato fijo que va cambiando.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés general; “blue-plate special” es un término norteamericano más antiguo.",
           related: ["today's special", "the lunch special", "the set menu", "the special of the day"],
           example: {
@@ -1895,31 +1895,31 @@ lessons.push(
       variations: [
         {
           form: "I'll be right back.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés general",
           whenToUse: "Al apartarse un momento prometiendo un regreso rápido."
         },
         {
           form: "I'll come back later.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés general",
           whenToUse: "Al regresar tras un rato más largo, no de una vez."
         },
         {
           form: "Come back soon!",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés general",
           whenToUse: "La despedida cálida a un invitado o cliente que uno espera que vuelva."
         },
         {
           form: "See you next time!",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés general",
           whenToUse: "Un adiós alegre a un cliente de siempre, dando por hecho que habrá próxima vez."
         },
         {
           form: "I'll pop back in.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés británico y estadounidense",
           whenToUse: "Una promesa casual de pasar otra vez un ratico."
         }

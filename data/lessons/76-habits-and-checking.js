@@ -372,7 +372,7 @@ lessons.push(
           literal: "solía / antes ... -ía",
           useWhen: "Costumbres pasadas y estados terminados: “I used to live in Houston”, “She used to smoke”.",
           avoidWhen: "Habla del presente. No existe “I use to go” con ese sentido; para hábitos actuales se usa el presente simple más un adverbio: “I usually go”.",
-          register: "neutral",
+          register: "neutro",
           region: "Universal.",
           related: ["would", "no longer", "back then", "not anymore"],
           example: {
@@ -386,7 +386,7 @@ lessons.push(
           literal: "¿solías ...?",
           useWhen: "Preguntar por costumbres pasadas: “Did you use to work there?”, “I didn't use to like it”.",
           avoidWhen: "En afirmaciones, donde sí va la de: “I used to work there”.",
-          register: "neutral",
+          register: "neutro",
           region: "Universal.",
           related: ["used to", "didn't use to", "would", "back then"],
           example: {
@@ -400,7 +400,7 @@ lessons.push(
           literal: "solía / -ía",
           useWhen: "Narrar una rutina, sobre todo encadenando acciones: “I'd come down at six, buy the bread, and stay a while”.",
           avoidWhen: "El verbo describe un estado — vivir, tener, ser, gustar. Ahí solo funciona “used to”.",
-          register: "neutral",
+          register: "neutro",
           region: "Universal; muy frecuente en relatos orales.",
           related: ["used to", "I'd", "back then", "every day"],
           example: {
@@ -414,7 +414,7 @@ lessons.push(
           literal: "ya no",
           useWhen: "Marcar que algo terminó: “Not anymore”, “I don't go there anymore”.",
           avoidWhen: "Quiere decir “todavía no”; eso es “not yet”, que apunta al futuro y no al pasado.",
-          register: "neutral",
+          register: "neutro",
           region: "Universal; también se escribe “any more” en inglés británico.",
           related: ["no longer", "not yet", "used to", "these days"],
           example: {
@@ -428,7 +428,7 @@ lessons.push(
           literal: "hacer un vivir",
           useWhen: "Hablar de cómo se sostiene alguien económicamente: “He makes a living off the block”.",
           avoidWhen: "Habla del salario concreto; eso es “earn” más la cifra: “She earns forty thousand a year”.",
-          register: "neutral",
+          register: "neutro",
           region: "Universal.",
           related: ["earn", "get by", "livelihood", "support yourself"],
           example: {
@@ -442,7 +442,7 @@ lessons.push(
           literal: "levantar la renta",
           useWhen: "Cuando alguien concreto sube un precio: “They raised the rent”.",
           avoidWhen: "El precio sube solo, sin agente: ahí es “rents rose” o “the rent went up”.",
-          register: "neutral",
+          register: "neutro",
           region: "Universal; “rent” en Estados Unidos cubre tanto vivienda como local.",
           related: ["rent", "go up", "rise", "landlord"],
           example: {
@@ -456,7 +456,7 @@ lessons.push(
           literal: "la cuadra",
           useWhen: "Referirse al entorno inmediato: “I've lived on this block since 1979”.",
           avoidWhen: "Habla de una zona amplia de la ciudad; ahí es “neighborhood” o “area”.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés estadounidense.",
           related: ["neighborhood", "street", "around the corner", "down the road"],
           example: {
@@ -505,7 +505,7 @@ lessons.push(
       variations: [
         {
           form: "That bakery used to open at five.",
-          register: "neutral",
+          register: "neutro",
           region: "Universal",
           whenToUse: "La opción por defecto y la más segura. Sirve para acciones y para estados."
         },
@@ -517,13 +517,13 @@ lessons.push(
         },
         {
           form: "That bakery opened at five in those days.",
-          register: "neutral",
+          register: "neutro",
           region: "Universal",
           whenToUse: "Cuando una expresión de tiempo como “in those days” ya deja claro que se trata de una costumbre."
         },
         {
           form: "That bakery no longer opens at five.",
-          register: "courteous",
+          register: "cortés",
           region: "Universal",
           whenToUse: "En escritura o en registro cuidado, para decir que la costumbre terminó."
         },
@@ -932,7 +932,7 @@ lessons.push(
           literal: "¿cierto? / ¿no?",
           useWhen: "Confirmar algo que usted ya cree: “You're coming, aren't you?”",
           avoidWhen: "No tiene ni idea de la respuesta; ahí se usa una pregunta normal.",
-          register: "neutral",
+          register: "neutro",
           region: "Universal.",
           related: ["right?", "isn't it?", "don't you think?", "huh?"],
           example: {
@@ -960,7 +960,7 @@ lessons.push(
           literal: "positivo pide negativo",
           useWhen: "Siempre que construya una coletilla estándar; no hay excepciones en el uso corriente.",
           avoidWhen: "Quiere sonar sorprendido o sarcástico: repetir la misma polaridad (“So you're coming, are you?”) cambia el tono por completo.",
-          register: "neutral",
+          register: "neutro",
           region: "Universal.",
           related: ["auxiliary", "negative", "tag", "confirm"],
           example: {
@@ -974,7 +974,7 @@ lessons.push(
           literal: "¿no crees? / ¿o no?",
           useWhen: "Proponer algo y querer una reacción real: “We should take something, don't you think?”",
           avoidWhen: "Quiere confirmación y no debate; suena a que está abriendo el tema otra vez.",
-          register: "neutral",
+          register: "neutro",
           region: "Universal.",
           related: ["shouldn't we?", "right?", "how about", "what do you think"],
           example: {
@@ -1016,7 +1016,7 @@ lessons.push(
           literal: "la cabaña",
           useWhen: "Alojamiento de fin de semana en el campo o cerca de un lago: “I'm paying for the cabin”.",
           avoidWhen: "Se refiere a un hotel o a un apartamento; esos tienen sus propias palabras.",
-          register: "neutral",
+          register: "neutro",
           region: "Universal; muy usado en Estados Unidos.",
           related: ["cottage", "lake house", "rental", "getaway"],
           example: {
@@ -1065,7 +1065,7 @@ lessons.push(
       variations: [
         {
           form: "We're leaving at six, aren't we?",
-          register: "neutral",
+          register: "neutro",
           region: "Universal",
           whenToUse: "La coletilla completa y estándar. Es lo que se espera por escrito y en registro cuidado."
         },
@@ -1077,7 +1077,7 @@ lessons.push(
         },
         {
           form: "We're leaving at six, correct?",
-          register: "courteous",
+          register: "cortés",
           region: "Universal",
           whenToUse: "En trabajo o al confirmar datos por escrito, cuando quiere sonar preciso sin sonar seco."
         },

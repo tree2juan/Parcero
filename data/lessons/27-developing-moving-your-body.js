@@ -425,7 +425,7 @@ lessons.push(
             "Quiere hablar del acto de caminar, sobre todo cuando caminar es parte del plan y no sólo la manera de llegar a otro medio de transporte.",
           avoidWhen:
             "Quiere decir simplemente “ir.” En inglés también existen “go,” “head,” “leave” y “come,” y “walk” puede sonar demasiado literal si el movimiento no importa.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["wander", "go on foot", "take a walk", "stroll"],
           example: {
@@ -442,7 +442,7 @@ lessons.push(
             "El paseo es social, visual o exploratorio: después de cenar, alrededor de una plaza, por un barrio.",
           avoidWhen:
             "Está describiendo una ruta precisa o una diligencia. Ahí “wander around” suena demasiado suelto.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal.",
           related: ["take a walk", "walk around", "stroll", "look around"],
           example: {
@@ -459,7 +459,7 @@ lessons.push(
             "Quiere decir que un lugar se vive mejor caminando, o que alguien no fue en vehículo.",
           avoidWhen:
             "El sentimiento es el paseo mismo. “Take a walk” o “wander around” suena más cálido que un simple “go on foot.”",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["walking", "without a car", "by walking", "at walking pace"],
           example: {
@@ -476,7 +476,7 @@ lessons.push(
             "Alguien quiere que usted se acerque a una mesa, una tienda, una casa o una conversación.",
           avoidWhen:
             "La persona no se va a mover hacia usted. Para animar sin movimiento, “come on” solo puede bastar.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal.",
           related: ["come on", "step this way", "come here", "take a look"],
           example: {
@@ -493,7 +493,7 @@ lessons.push(
             "Quiere hablar de andar por una zona, repartir algo o pasar por varios lugares.",
           avoidWhen:
             "Necesita decir claramente que la persona camina. Ahí “walk” es más preciso.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["walk around", "get around", "move around", "wander"],
           example: {
@@ -510,7 +510,7 @@ lessons.push(
             "Propone un paseo modesto después de comer, antes de un café o mientras la conversación sigue buena.",
           avoidWhen:
             "Necesita decir una distancia exacta. “For a bit” es intencionalmente vago.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal.",
           related: ["for a while", "a little longer", "take a short walk", "keep going"],
           example: {
@@ -527,7 +527,7 @@ lessons.push(
             "Quiere que el grupo siga moviéndose sin sonar como guía de excursión.",
           avoidWhen:
             "Quiere decir que alguien debe salir de un sitio por una razón seria. Ahí use algo más directo como “leave” o “keep going.”",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["keep going", "don't stop", "walk on", "continue"],
           example: {
@@ -589,31 +589,31 @@ lessons.push(
       variations: [
         {
           form: "Shall we walk for a bit?",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal",
           whenToUse: "Una invitación ligera cuando el paseo es corto, social y fácil de aceptar."
         },
         {
           form: "Let's wander around here.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal",
           whenToUse: "Cuando la ruta es suelta a propósito y el punto es caminar juntos."
         },
         {
           form: "Come on over and eat with us.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal",
           whenToUse: "Cuando traduce un “camine” de invitación y no una orden literal de caminar."
         },
         {
           form: "I'd rather do it on foot.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Cuando está contrastando caminar con ir en vehículo o con otro modo."
         },
         {
           form: "Let's keep walking, no rush.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Cuando el grupo ya está en movimiento y usted quiere mantener el ritmo relajado."
         }
@@ -1077,7 +1077,7 @@ lessons.push(
             "Habla de trotar, correr detrás de alguien, competir o hacer que el cuerpo vaya más rápido que caminando.",
           avoidWhen:
             "Quiere traducir “correr una silla.” En inglés una silla no se “run” para moverla: se “move over” o se “slide over.”",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["jog", "hurry up", "move over", "race"],
           example: {
@@ -1094,7 +1094,7 @@ lessons.push(
             "Acepta hacer ejercicio, pero quiere dejar claro que el ritmo no va a castigar a nadie.",
           avoidWhen:
             "Está hablando de una carrera fuerte o un entrenamiento exigente. Ahí “easy” contradice la intención.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal, muy común entre corredores.",
           related: ["jog", "take it easy", "slow down", "warm up"],
           example: {
@@ -1111,7 +1111,7 @@ lessons.push(
             "Alguien debe moverse más rápido porque se acaba el tiempo, llega una cita o el día se viene encima.",
           avoidWhen:
             "La otra persona ya está estresada. Puede sonar mandón si la relación y el tono no lo suavizan.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal.",
           related: ["come on", "quick", "we're late", "get moving"],
           example: {
@@ -1128,7 +1128,7 @@ lessons.push(
             "Una silla, mesa, maleta o cortina está atravesada y hay que desplazarla un poco.",
           avoidWhen:
             "Quiere decir llevar algo lejos. “Move over” suele sugerir un cambio corto de posición.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["slide over", "shift", "make room", "clear the way"],
           example: {
@@ -1145,7 +1145,7 @@ lessons.push(
             "Describe ejercicio a ritmo constante, recreativo y no demasiado intenso.",
           avoidWhen:
             "La persona está esprintando, compitiendo o apurándose por llegar tarde. Ahí “run” o “hurry up” encajan mejor.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["run", "go for a run", "work out", "warm up"],
           example: {
@@ -1162,7 +1162,7 @@ lessons.push(
             "El horario ya se está cerrando y quiere explicar por qué hay que apurarse.",
           avoidWhen:
             "Quiere hablar de que la noche está avanzada. Ahí se dice “it's late,” no “we are late.”",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["running late", "on time", "too late", "hurry up"],
           example: {
@@ -1179,7 +1179,7 @@ lessons.push(
             "Una silla, caja, persona o bicicleta impide pasar cómodamente.",
           avoidWhen:
             "Habla de bloquear emocionalmente a alguien o frenar un plan. Esta frase es física y espacial.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["be in the way", "clear the way", "make room", "move over"],
           example: {
@@ -1241,31 +1241,31 @@ lessons.push(
       variations: [
         {
           form: "Let's run easy to the bridge.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal",
           whenToUse: "Para fijar un plan de ejercicio suave con una meta cercana."
         },
         {
           form: "I'll run, but slowly.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Para aceptar correr sin entregar el control del ritmo."
         },
         {
           form: "Hurry up, we're going to be late.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal",
           whenToUse: "Para traducir un “corra” cuando la presión real es el horario."
         },
         {
           form: "Move the chair over a little.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Para traducir “correr” un objeto que estorba en el paso."
         },
         {
           form: "We went jogging early.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Para describir trotar por ejercicio sin hacerlo sonar como una carrera."
         }
@@ -1729,7 +1729,7 @@ lessons.push(
             "Habla de nadar en piscina, río, mar, lago o cualquier lugar donde el cuerpo se mueve por el agua.",
           avoidWhen:
             "Sólo quiere decir que alguien entró al agua. “Get in the water” puede pasar antes de que alguien nade.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["float", "get in the water", "bathe", "drown"],
           example: {
@@ -1746,7 +1746,7 @@ lessons.push(
             "Traduce un charco natural usado para bañarse o nadar durante una salida de río.",
           avoidWhen:
             "Habla de una piscina construida. Ahí diga “pool.”",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal; suena especialmente natural para ríos y quebradas.",
           related: ["river spot", "pool", "creek", "watering hole"],
           example: {
@@ -1763,7 +1763,7 @@ lessons.push(
             "Alguien pisa una piscina, un río o el mar, especialmente antes de empezar a nadar.",
           avoidWhen:
             "Necesita decir que la persona nadó una distancia. Ahí use “swim.”",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["go in", "step in", "get wet", "wade in"],
           example: {
@@ -1780,7 +1780,7 @@ lessons.push(
             "Deja que el agua sostenga el cuerpo, revisa la corriente, descansa o le enseña a alguien a no entrar en pánico.",
           avoidWhen:
             "Quiere decir nadar con brazadas hacia un lugar. Flotar puede no avanzar casi nada.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["swim", "breathe", "kick", "relax"],
           example: {
@@ -1797,7 +1797,7 @@ lessons.push(
             "Advierte sobre peligro en el agua, corrientes, profundidad o alguien que no sabe nadar.",
           avoidWhen:
             "Quiere decir que alguien se está atragantando con comida. Eso es “choke,” no “drown.”",
-          register: "serious",
+          register: "serio",
           region: "Inglés universal.",
           related: ["be careful", "current", "deep", "call for help"],
           example: {
@@ -1814,7 +1814,7 @@ lessons.push(
             "Quiere saber si una piscina, orilla de río o zona de playa es segura para alguien que no quiere agua profunda.",
           avoidWhen:
             "Habla de tocar fondo emocionalmente. Esa metáfora existe, pero no es la escena del río.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["shallow", "deep", "stand up", "the bank"],
           example: {
@@ -1831,7 +1831,7 @@ lessons.push(
             "Habla de si el agua es segura, fuerte, tranquila, engañosa o cambiante.",
           avoidWhen:
             "Quiere decir actual como adjetivo. “Current” también significa actual, pero el contexto decide.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["pull", "river", "undertow", "bank"],
           example: {
@@ -1893,31 +1893,31 @@ lessons.push(
       variations: [
         {
           form: "I swim well in a pool.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Para afirmar la habilidad y dejar espacio para que el agua abierta sea distinta."
         },
         {
           form: "Can you swim well?",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Para comprobar la capacidad real antes de entrar a un río o agua profunda."
         },
         {
           form: "Get in the water on this side.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Para guiar a alguien hacia la entrada más segura antes de nadar."
         },
         {
           form: "First I'll float for a moment.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Para tomar un primer paso prudente en agua desconocida."
         },
         {
           form: "Don't get overconfident with the current.",
-          register: "serious",
+          register: "serio",
           region: "Inglés universal",
           whenToUse: "Para advertirle a alguien que no subestime el agua en movimiento."
         }

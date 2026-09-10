@@ -406,7 +406,7 @@ lessons.push(
             "Habla de resultados, procesos, calidad o desempeño que suben de nivel.",
           avoidWhen:
             "Una persona está enferma y usted quiere sonar humano. Use get better, feel better o get well.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["get better", "feel better", "recover", "make progress"],
           example: {
@@ -423,7 +423,7 @@ lessons.push(
             "Alguien se recupera, una situación empieza a mejorar o una habilidad progresa.",
           avoidWhen:
             "Necesita sonar técnico o estadístico. Ahí improve puede ser más preciso.",
-          register: "warm neutral",
+          register: "cálido neutro",
           region: "Inglés universal.",
           related: ["feel better", "get well", "recover", "be better"],
           example: {
@@ -440,7 +440,7 @@ lessons.push(
             "Al despedirse de alguien enfermo o escribirle un mensaje de recuperación.",
           avoidWhen:
             "Traducir palabra por palabra “that you improve yourself.” Eso no es inglés natural.",
-          register: "warm familiar",
+          register: "cálido familiar",
           region: "Inglés universal.",
           related: ["feel better soon", "hope you recover soon", "take care", "rest up"],
           example: {
@@ -457,7 +457,7 @@ lessons.push(
             "Pregunta por el estado actual de alguien después de enfermedad, dolor o una mala noche.",
           avoidWhen:
             "Usarla para mejorar moral o rendimiento. Ahí puede necesitar “are you getting better at it?”",
-          register: "warm neutral",
+          register: "cálido neutro",
           region: "Inglés universal.",
           related: ["Are you better?", "How are you feeling?", "Do you feel better?", "How are you now?"],
           example: {
@@ -474,7 +474,7 @@ lessons.push(
             "Quiere sonar amable con alguien enfermo, sin importar si en español usaría tú o usted.",
           avoidWhen:
             "Meter may o that si no sabe manejarlos. La frase corta ya suena natural.",
-          register: "polite warm",
+          register: "cortés cálido",
           region: "Inglés universal.",
           related: ["get well soon", "hope you feel better", "wishing you a quick recovery", "take care"],
           example: {
@@ -491,7 +491,7 @@ lessons.push(
             "La persona todavía no está bien del todo, pero ya hay progreso.",
           avoidWhen:
             "Quiere decir que alguien mejoró una cosa específica. Entonces diga “you improved the plan” o “the plan improved.”",
-          register: "neutral conversational",
+          register: "neutro conversacional",
           region: "Inglés universal.",
           related: ["making progress", "improving", "recovering", "doing better"],
           example: {
@@ -508,7 +508,7 @@ lessons.push(
             "Describe cansancio fuerte de manera conversacional.",
           avoidWhen:
             "En documentos médicos o situaciones formales. Allí diga exhausted o very weak.",
-          register: "friendly informal",
+          register: "amistoso informal",
           region: "Inglés universal.",
           related: ["exhausted", "drained", "weak", "worn out"],
           example: {
@@ -559,25 +559,25 @@ lessons.push(
       variations: [
         {
           form: "Hope you get well soon.",
-          register: "warm familiar",
+          register: "cálido familiar",
           region: "Inglés universal",
           whenToUse: "Para desear recuperación en un mensaje o despedida."
         },
         {
           form: "Hope you feel better soon, Mrs. Martin.",
-          register: "polite warm",
+          register: "cortés cálido",
           region: "Inglés universal",
           whenToUse: "Una versión amable que sirve aunque en español usaría usted."
         },
         {
           form: "Are you feeling better than yesterday?",
-          register: "warm neutral",
+          register: "cálido neutro",
           region: "Inglés universal",
           whenToUse: "Para preguntar por el estado actual de salud."
         },
         {
           form: "You're getting better little by little.",
-          register: "neutral conversational",
+          register: "neutro conversacional",
           region: "Inglés universal",
           whenToUse: "Para hablar de recuperación gradual."
         }
@@ -1024,7 +1024,7 @@ lessons.push(
             "Habla de porcentajes, avisos formales, estadísticas, arriendos, salarios o cambios oficiales.",
           avoidWhen:
             "Se está quejando de precios en conversación normal. Everything went up suena más natural.",
-          register: "formal neutral",
+          register: "formal neutro",
           region: "Inglés universal.",
           related: ["go up", "rise", "raise", "grow"],
           example: {
@@ -1041,7 +1041,7 @@ lessons.push(
             "Pregunta o explica un cambio actual: rent is increasing, costs are increasing.",
           avoidWhen:
             "Quiere una verdad general sin proceso visible. Entonces use increases o goes up.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["increases", "increased", "has increased", "keeps increasing"],
           example: {
@@ -1058,7 +1058,7 @@ lessons.push(
             "Se queja o comenta que food, rent, gas or bills are more expensive.",
           avoidWhen:
             "Necesita sonar formal en un aviso, informe o contrato. Increase puede encajar mejor.",
-          register: "everyday",
+          register: "cotidiano",
           region: "Inglés universal.",
           related: ["increase", "rise", "cost more", "get higher"],
           example: {
@@ -1075,7 +1075,7 @@ lessons.push(
             "Habla de vivienda, contratos, inquilinos y pagos mensuales.",
           avoidWhen:
             "Confundirlo con income. Rent es lo que paga el inquilino, no el ingreso en general.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["lease", "tenant", "landlord", "monthly payment"],
           example: {
@@ -1092,7 +1092,7 @@ lessons.push(
             "Da la magnitud exacta de un increase: by five dollars, by ten percent, by a little.",
           avoidWhen:
             "Decir “in eight percent.” Con increase, el tamaño del cambio va con by.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["percentage", "amount", "rate", "adjustment"],
           example: {
@@ -1126,7 +1126,7 @@ lessons.push(
             "Habla de arriendo, mercado, transporte, cuentas o ahorro mensual.",
           avoidWhen:
             "Pronunciarlo como “bu-yet” a la española. En inglés suena más como budget.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["expenses", "income", "savings", "bills"],
           example: {
@@ -1177,25 +1177,25 @@ lessons.push(
       variations: [
         {
           form: "The rent will increase next month.",
-          register: "formal practical",
+          register: "formal práctico",
           region: "Inglés universal",
           whenToUse: "En un aviso o conversación formal sobre arriendo."
         },
         {
           form: "It's increasing by eight percent.",
-          register: "formal neutral",
+          register: "formal neutro",
           region: "Inglés universal",
           whenToUse: "Cuando la magnitud del aumento está medida."
         },
         {
           form: "Everything went up at the store.",
-          register: "everyday",
+          register: "cotidiano",
           region: "Inglés universal",
           whenToUse: "Queja cotidiana sobre precios."
         },
         {
           form: "If my salary doesn't increase, I'll adjust my budget.",
-          register: "neutral practical",
+          register: "neutro práctico",
           region: "Inglés universal",
           whenToUse: "Para conectar ingresos y presupuesto."
         }
@@ -1642,7 +1642,7 @@ lessons.push(
             "Habla de un plan deliberado de salud, presupuesto, trabajo, riesgo o desperdicio.",
           avoidWhen:
             "Conversación muy casual. Cut back on suele sonar más natural para hábitos cotidianos.",
-          register: "formal practical",
+          register: "formal práctico",
           region: "Inglés universal.",
           related: ["cut back", "lower", "decrease", "limit"],
           example: {
@@ -1659,7 +1659,7 @@ lessons.push(
             "Usted describe su propio plan: I reduce sugar, I reduce expenses, I reduce hours.",
           avoidWhen:
             "Agregar formas españolas como “I reduzco.” En inglés reduce no cambia así.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["I cut back", "I lower", "I decrease", "I limit"],
           example: {
@@ -1676,7 +1676,7 @@ lessons.push(
             "Cuenta una reducción terminada en el pasado: gastos, azúcar, horas o porciones.",
           avoidWhen:
             "Buscar una irregularidad como reduje. En inglés no hay cambio de c a j.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal.",
           related: ["cut back", "lowered", "decreased", "limited"],
           example: {
@@ -1693,7 +1693,7 @@ lessons.push(
             "Habla de azúcar, café, gastos, horas, pantalla o cualquier hábito que quiere hacer menos frecuente.",
           avoidWhen:
             "Necesita una frase formal para informe o plan médico escrito. Reduce puede sonar más profesional.",
-          register: "everyday",
+          register: "cotidiano",
           region: "Inglés universal.",
           related: ["reduce", "have less", "limit", "scale back"],
           example: {
@@ -1710,7 +1710,7 @@ lessons.push(
             "Advierte que un cambio demasiado rápido puede fracasar.",
           avoidWhen:
             "Quiere hablar de progreso gradual. Entonces little by little encaja mejor.",
-          register: "neutral conversational",
+          register: "neutro conversacional",
           region: "Inglés universal.",
           related: ["all at once", "suddenly", "little by little", "gradually"],
           example: {
@@ -1727,7 +1727,7 @@ lessons.push(
             "Describe cambios sostenibles de salud, dinero o hábitos.",
           avoidWhen:
             "Un informe técnico que necesita gradually. Little by little es más conversacional.",
-          register: "warm conversational",
+          register: "cálido conversacional",
           region: "Inglés universal.",
           related: ["gradually", "step by step", "slowly", "over time"],
           example: {
@@ -1744,7 +1744,7 @@ lessons.push(
             "Un profesional o amigo cuidadoso sugiere una acción práctica.",
           avoidWhen:
             "Necesita una obligación fuerte. Entonces use have to o need to.",
-          register: "neutral practical",
+          register: "neutro práctico",
           region: "Inglés universal.",
           related: ["advisable to", "worth trying", "it would help to", "you may want to"],
           example: {
@@ -1795,25 +1795,25 @@ lessons.push(
       variations: [
         {
           form: "It's a good idea to reduce sugar.",
-          register: "professional practical",
+          register: "profesional práctico",
           region: "Inglés universal",
           whenToUse: "Consejo de salud planteado como plan deliberado."
         },
         {
           form: "I reduce soda during the week.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Describir su propio plan de reducción."
         },
         {
           form: "I reduced spending little by little.",
-          register: "neutral conversational",
+          register: "neutro conversacional",
           region: "Inglés universal",
           whenToUse: "Contar una reducción terminada en el pasado."
         },
         {
           form: "I've cut back on sugar this week.",
-          register: "everyday",
+          register: "cotidiano",
           region: "Inglés universal",
           whenToUse: "La versión conversacional de bajarle al azúcar."
         }

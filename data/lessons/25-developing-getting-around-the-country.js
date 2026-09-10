@@ -420,7 +420,7 @@ lessons.push(
             "Para hablar de ir entre ciudades, planear una ruta, preguntar cómo funciona un servicio de bus o describir un viaje que usted hizo.",
           avoidWhen:
             "Si sólo habla de salir o moverse una distancia corta. “I travel to the bakery” suena cómico, salvo que la panadería quede absurdamente lejos.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal; en Norteamérica se usa mucho para viajes entre ciudades y planes de vacaciones.",
           related: ["go on a trip", "take a trip", "head out", "journey"],
           example: {
@@ -437,7 +437,7 @@ lessons.push(
             "Para contarle a alguien que usted va a estar fuera unos días, o explicar por qué no estará disponible.",
           avoidWhen:
             "En un mostrador, cuando necesita que le resuelvan la logística. Ahí “travel to” o “I need a ticket to” es más limpio.",
-          register: "neutral conversational",
+          register: "neutro conversacional",
           region: "Inglés universal; muy común cuando el viaje suena como pausa de la rutina.",
           related: ["travel", "take a trip", "be away", "head out of town"],
           example: {
@@ -454,7 +454,7 @@ lessons.push(
             "Para describir un viaje pasado, un viaje de trabajo o una ruta que exige esfuerzo.",
           avoidWhen:
             "Cuando sólo necesita decir el destino en un mostrador. “I want to travel to Corpus Christi” suena más directo que “I want to take a trip to Corpus Christi.”",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal; natural para viajes largos o intencionales.",
           related: ["travel", "road trip", "business trip", "make a stop"],
           example: {
@@ -471,7 +471,7 @@ lessons.push(
             "Al comprar transporte, confirmar una reserva o preguntar qué incluye la tarifa.",
           avoidWhen:
             "Confundirlo con el asiento. El ticket prueba el pago; el seat es donde usted se sienta.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal; “fare” habla más del precio que del documento.",
           related: ["fare", "reservation", "booking", "boarding pass"],
           example: {
@@ -488,7 +488,7 @@ lessons.push(
             "Para pedir ventana, pasillo, adelante, atrás o confirmar qué número le asignaron.",
           avoidWhen:
             "Usarlo como si fuera el boleto. “I bought a seat” puede funcionar, pero en un mostrador normalmente compra un ticket and chooses a seat.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal; “window seat” y “aisle seat” son las combinaciones clave.",
           related: ["window seat", "aisle seat", "row", "seat number"],
           example: {
@@ -505,7 +505,7 @@ lessons.push(
             "Para confirmar una salida antes de comprar, abordar o hacer conexión.",
           avoidWhen:
             "Preguntar por la hora en que usted debe salir de la casa. Ahí cambia el sujeto: “what time should I leave?”",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal; en pantallas se ve formato de veinticuatro horas, pero la gente suele responder con doce horas.",
           related: ["departure time", "schedule", "boarding time", "itinerary"],
           example: {
@@ -522,7 +522,7 @@ lessons.push(
             "Al preguntar por viajes, trámites, reparaciones, filas y entregas: cualquier cosa donde el tiempo real importa.",
           avoidWhen:
             "Traducir palabra por palabra desde el español y decir “how much time it takes.” Falta el auxiliar y el orden de pregunta.",
-          register: "neutral conversational",
+          register: "neutro conversacional",
           region: "Inglés universal; “roughly” o “about” suavizan la pregunta cuando sabe que el tiempo no es exacto.",
           related: ["how long", "take about", "roughly", "duration"],
           example: {
@@ -579,31 +579,31 @@ lessons.push(
       variations: [
         {
           form: "I want to travel to Corpus Christi tonight.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "La apertura por defecto en un mostrador: destino más hora, sin historia adicional."
         },
         {
           form: "I'm going on a trip on Friday.",
-          register: "neutral conversational",
+          register: "neutro conversacional",
           region: "Inglés universal",
           whenToUse: "Contarle a alguien que usted estará fuera, no resolver la mecánica del transporte."
         },
         {
           form: "I'm taking a long road trip.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Presentar el viaje como una empresa larga, especialmente por carretera."
         },
         {
           form: "How long does the bus take?",
-          register: "neutral conversational",
+          register: "neutro conversacional",
           region: "Inglés universal",
           whenToUse: "Preguntar por la duración real, no sólo por la hora oficial de salida."
         },
         {
           form: "Could I get a ticket with a window seat?",
-          register: "neutral practical",
+          register: "neutro práctico",
           region: "Inglés universal",
           whenToUse: "Unir la compra del boleto y la preferencia de asiento en una sola frase amable."
         }
@@ -1062,7 +1062,7 @@ lessons.push(
             "Para decir quién maneja, preguntar si alguien sabe manejar, hablar de una ruta o dar una advertencia de carretera.",
           avoidWhen:
             "Cuando “drive” es sustantivo y significa paseo o impulso. “A long drive” es un trayecto; “drive” no siempre es verbo.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal; no tiene la misma división cotidiana entre “manejar” y “conducir.”",
           related: ["driver", "driver's license", "driving", "road"],
           example: {
@@ -1079,7 +1079,7 @@ lessons.push(
             "Al hablar de manejar presión, clientes, un problema o una máquina difícil de controlar.",
           avoidWhen:
             "Como traducción automática de manejar un carro. “I handle the car” suena raro si sólo quiere decir que usted conduce.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal; útil, pero no para reemplazar “drive” en transporte cotidiano.",
           related: ["manage", "deal with", "control", "take care of"],
           example: {
@@ -1096,7 +1096,7 @@ lessons.push(
             "Al alquilar un carro, hablar con la policía, llenar formularios o confirmar identidad.",
           avoidWhen:
             "Decir “license of conduction.” Eso suena como física o electricidad, no como tránsito.",
-          register: "official practical",
+          register: "oficial práctico",
           region: "Inglés norteamericano; en inglés británico suele escribirse “driving license.”",
           related: ["ID", "permit", "rental contract", "driver"],
           example: {
@@ -1113,7 +1113,7 @@ lessons.push(
             "Cuando necesita preguntar si su placa tiene restricciones para circular, entrar, parquear o salir de una zona.",
           avoidWhen:
             "Creer que es el nombre fijo de un programa como pico y placa. Es una descripción útil, no necesariamente el título oficial.",
-          register: "neutral practical",
+          register: "neutro práctico",
           region: "Comprensible en inglés, aunque las reglas dependen de cada ciudad o estado.",
           related: ["license plate", "restriction", "downtown rules", "parking rules"],
           example: {
@@ -1130,7 +1130,7 @@ lessons.push(
             "Para dar datos del carro, leer restricciones, reportar un vehículo o revisar papeles de alquiler.",
           avoidWhen:
             "Reducirlo a “plate” cuando el contexto no es de carros. “Plate” solo también puede ser un plato.",
-          register: "neutral",
+          register: "neutro",
           region: "“License plate” es común en Estados Unidos; “license plate” es la ortografía estadounidense.",
           related: ["plate number", "last digit", "vehicle", "registration"],
           example: {
@@ -1147,7 +1147,7 @@ lessons.push(
             "Al hablar de carreteras entre ciudades, cierres, tráfico, curvas o clima en una ruta.",
           avoidWhen:
             "Para calles específicas dentro de una ciudad, donde “street,” “avenue” o el nombre propio serán más precisos.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal; en señales puede aparecer “highway” con número.",
           related: ["highway", "route", "exit", "traffic"],
           example: {
@@ -1164,7 +1164,7 @@ lessons.push(
             "Para pedirle a alguien que maneje, lea, firme, cruce o decida sin descuidarse.",
           avoidWhen:
             "Traducir siempre “con calma” como “with calm.” En avisos de conducción, “carefully” suele sonar más natural.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal; frecuente en instrucciones y advertencias.",
           related: ["slowly", "safely", "take care", "watch out"],
           example: {
@@ -1221,31 +1221,31 @@ lessons.push(
       variations: [
         {
           form: "Are you driving to Big Bend today?",
-          register: "neutral practical",
+          register: "neutro práctico",
           region: "Inglés universal",
           whenToUse: "En un mostrador, con un amigo o al confirmar la ruta de alguien."
         },
         {
           form: "Can you drive on mountain roads?",
-          register: "neutral conversational",
+          register: "neutro conversacional",
           region: "Inglés universal",
           whenToUse: "Preguntar por habilidad real sin inventar un segundo verbo para manejar."
         },
         {
           form: "Can I see your driver's license?",
-          register: "official practical",
+          register: "oficial práctico",
           region: "Inglés norteamericano",
           whenToUse: "Alquilar un carro, identificarse o hablar con una autoridad."
         },
         {
           form: "Check the plate rules before you leave.",
-          register: "neutral practical",
+          register: "neutro práctico",
           region: "Inglés universal",
           whenToUse: "Hablar de restricciones ligadas a la placa sin prometer que ese sea el nombre oficial."
         },
         {
           form: "Drive carefully on that road.",
-          register: "neutral advice",
+          register: "neutro de consejo",
           region: "Inglés universal",
           whenToUse: "Dar una advertencia clara de seguridad sin sonar traducido."
         }
@@ -1704,7 +1704,7 @@ lessons.push(
             "Cuando la acción de subirse importa: a un bus, tren, camión, caballo, bicicleta o escenario.",
           avoidWhen:
             "Para describir todo el trayecto. Una vez va en movimiento, “ride” suele ser mejor.",
-          register: "neutral conversational",
+          register: "neutro conversacional",
           region: "Inglés universal; también existe “get in” para carros y taxis cerrados.",
           related: ["board", "climb on", "hop on", "get in"],
           example: {
@@ -1721,7 +1721,7 @@ lessons.push(
             "Para hablar de la experiencia de ir en un vehículo, o de montar bici, moto o caballo.",
           avoidWhen:
             "Si usted es quien conduce un carro. Ahí el verbo normal es “drive,” no “ride.”",
-          register: "neutral conversational",
+          register: "neutro conversacional",
           region: "Inglés universal; “ride” también puede ser sustantivo: un paseo o un aventón.",
           related: ["rider", "take a ride", "passenger", "drive"],
           example: {
@@ -1738,7 +1738,7 @@ lessons.push(
             "Para nombrar un vehículo de carga o un vehículo rural adaptado al transporte.",
           avoidWhen:
             "Suponer que traduce siempre “chiva.” Una chiva colombiana tiene historia y forma propia; “truck” sólo resuelve esta escena en inglés.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés norteamericano; en inglés británico “truck” puede aparecer para camión.",
           related: ["pickup", "truck", "farm vehicle", "open truck"],
           example: {
@@ -1755,7 +1755,7 @@ lessons.push(
             "Para hablar de abrir una tienda, café, empresa, puesto o taller.",
           avoidWhen:
             "Usar “mount a business” en conversación normal. Suena técnico o extraño, no como inglés cotidiano.",
-          register: "neutral conversational",
+          register: "neutro conversacional",
           region: "Inglés universal; “start a business” también es muy común.",
           related: ["start a business", "open a shop", "launch", "organize"],
           example: {
@@ -1772,7 +1772,7 @@ lessons.push(
             "Al hablar de teatro escolar, eventos culturales, presentaciones o producciones comunitarias.",
           avoidWhen:
             "Traducir “montar una obra” como “mount a work” en conversación común. No suena natural para una obra escolar o comunitaria.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal; en contextos artísticos también se ve “stage a play.”",
           related: ["stage a play", "perform", "produce", "rehearse"],
           example: {
@@ -1806,7 +1806,7 @@ lessons.push(
             "Antes de una curva, un frenazo, una subida o cualquier momento en que alguien puede perder el equilibrio.",
           avoidWhen:
             "Traducir palabra por palabra como “hold yourself well.” Eso puede entenderse, pero no es la frase natural.",
-          register: "neutral conversational",
+          register: "neutro conversacional",
           region: "Inglés universal; también significa esperar un momento en llamadas o conversaciones.",
           related: ["hang on", "grab on", "be careful", "don't let go"],
           example: {
@@ -1863,25 +1863,25 @@ lessons.push(
       variations: [
         {
           form: "Can I get on the truck?",
-          register: "neutral conversational",
+          register: "neutro conversacional",
           region: "Inglés universal",
           whenToUse: "Preguntar si puede subirse o abordar el vehículo."
         },
         {
           form: "I ride to the farm in the back.",
-          register: "neutral conversational",
+          register: "neutro conversacional",
           region: "Inglés universal",
           whenToUse: "Describir el trayecto como pasajera, no como conductora."
         },
         {
           form: "She set up a coffee business.",
-          register: "neutral conversational",
+          register: "neutro conversacional",
           region: "Inglés universal",
           whenToUse: "Hablar de montar un negocio sin usar un calco de “montar.”"
         },
         {
           form: "The school put on a play.",
-          register: "neutral",
+          register: "neutro",
           region: "Inglés universal",
           whenToUse: "Decir que una escuela montó o presentó una obra."
         },
