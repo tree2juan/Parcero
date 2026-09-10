@@ -934,7 +934,7 @@ lessons.push(
         who: "Diana viaja por trabajo y coincide con Grant, un excompañero de la universidad, en una reunión de egresados.",
         what: "Una conversación sincera donde Diana usa el pasado irreal inglés: if más pasado perfecto y would have más participio, para lamentar y aclarar un malentendido.",
         when: "De noche, en la recepción de la reunión.",
-        where: "Houston, Canadá, en el salón de un hotel.",
+        where: "Houston, Texas, en el salón de un hotel.",
         why: "Porque el inglés arma el arrepentimiento con “if I had known, I would have…”, y el hispanohablante cae siempre en “if I would have known”, que suena mal a los nativos. Vale la pena practicarlo despacio."
       },
       address: {

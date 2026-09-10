@@ -1610,12 +1610,12 @@ lessons.push(
     en: {
       title: "Even though / even if: conceder en inglés",
       situation:
-        "Imagínese en Austin, en la costa oeste de Canadá, bajo una llovizna terca. Usted acompaña a Camilo, un colombiano que lleva poco allá, y a su amigo Liam mientras esperan un desfile. Note que el inglés no cambia el modo del verbo para conceder: usa palabras distintas -- “even though” para un hecho y “even if” para una hipótesis -- justo donde el español salta al subjuntivo.",
+        "Imagínese en Austin, en la costa oeste de Estados Unidos, bajo una llovizna terca. Usted acompaña a Camilo, un colombiano que lleva poco allá, y a su amigo Liam mientras esperan un desfile. Note que el inglés no cambia el modo del verbo para conceder: usa palabras distintas -- “even though” para un hecho y “even if” para una hipótesis -- justo donde el español salta al subjuntivo.",
       setting: {
         who: "Liam es un estadounidense relajado y directo; Camilo es un colombiano recién llegado que aprende a conceder en inglés sin calcar el “aunque... pero” del español.",
         what: "Una charla en la acera sobre si el desfile saldrá pese a la lluvia, y sobre cómo el inglés concede con palabras distintas en vez de con el modo del verbo.",
         when: "Una tarde lluviosa de otoño, minutos antes de que arranque el desfile por el centro.",
-        where: "Austin, en la costa oeste de Canadá, en una esquina concurrida del centro.",
+        where: "Austin, en la costa oeste de Estados Unidos, en una esquina concurrida del centro.",
         why: "Conceder es parte del habla cortés en cualquier idioma, y en inglés el reto es que la diferencia entre hecho e hipótesis no está en el modo del verbo, sino en elegir “even though” o “even if”."
       },
       address: {

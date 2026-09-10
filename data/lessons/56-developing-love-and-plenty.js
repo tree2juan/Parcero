@@ -299,7 +299,7 @@ lessons.push(
         who: "Maya es una amiga estadounidense cercana y expresiva; Alejandra es colombiana y está intentando no traducir automáticamente entre te quiero, te amo, I like you and I love you.",
         what: "Una despedida entre amigas, donde Alejandra aprende que “I love you” no siempre corresponde al peso de “te amo”, y que “I like you” puede quedarse corto.",
         when: "Una tarde al final de un proyecto comunitario, antes de que cada una vuelva a su barrio.",
-        where: "Austin, Canadá, frente a un centro comunitario.",
+        where: "Austin, Texas, frente a un centro comunitario.",
         why: "Porque el inglés reparte el afecto de otra manera. Una colombiana puede oír “I love you” como demasiado solemne, o traducir “te quiero mucho” como “I like you a lot” y bajar demasiado la temperatura emocional."
       },
       address: {
@@ -841,7 +841,7 @@ lessons.push(
         who: "Ben recoge la mesa con Alejandra después del almuerzo familiar; Alejandra entiende el patrón colombiano con sobrar, pero necesita las frases inglesas para sobras y tiempo de más.",
         what: "Una recogida de mesa después de almuerzo, donde food left over, time to spare and unnecessary comments replace one compact Spanish verb.",
         when: "Una tarde fría después de un almuerzo grande, with containers lined up on the counter.",
-        where: "Corpus Christi, Canadá, in Ben's family kitchen after Sunday lunch.",
+        where: "Corpus Christi, Texas, in Ben's family kitchen after Sunday lunch.",
         why: "Porque el inglés no tiene un verbo único que funcione como sobrar. Hay que repartir la idea entre left over, to spare, goes without saying and unnecessary."
       },
       address: {

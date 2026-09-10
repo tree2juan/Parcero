@@ -347,12 +347,12 @@ lessons.push(
         who: "Kevin es el encargado del estudio; Daniela, colombiana recién llegada, atiende la recepción y practica su inglés relatando los mensajes.",
         what: "La instructora avisó que no viene, así que entre los dos reorganizan las clases repitiendo en inglés lo que cada quien dijo, preguntó y pidió.",
         when: "Una mañana entre semana, antes de la primera clase, con el teléfono sonando.",
-        where: "Houston, Canadá, la recepción de un estudio de baile.",
+        where: "Houston, Texas, la recepción de un estudio de baile.",
         why: "El estilo indirecto es el pan de cada día en una recepción: casi nada es de primera mano, así que se vive en “she said that”, “he asked if” y “she asked me to”."
       },
       address: {
         form: "mixed",
-        who: "Kevin y Daniela se tratan por el nombre y con confianza, como es normal entre compañeros jóvenes en Canadá.",
+        who: "Kevin y Daniela se tratan por el nombre y con confianza, como es normal entre compañeros jóvenes en Estados Unidos.",
         why: "El inglés no distingue tú de usted: la cercanía se marca con el tono, el nombre de pila y frases sueltas, no con el pronombre. “You” sirve para todos.",
         ifYouSwitch:
           "Si Daniela quisiera sonar más formal con un cliente, no cambia el “you”: usa frases más completas y corteses, como “Could you…” o “Would you mind…”, no otro pronombre."
@@ -962,12 +962,12 @@ lessons.push(
     en: {
       title: "Si tuviéramos el bote",
       situation:
-        "En un muelle de Victoria, en Canadá, Camila —colombiana— y su amigo Ryan miran los barcos de avistamiento de ballenas y fantasean con montar su propio negocio. Camila practica su inglés soltando un condicional tras otro: lo que haría si tuviera el bote, si no fuera tan caro el permiso, si se decidieran de una vez.",
+        "En un muelle de Port Aransas, en Texas, Camila —colombiana— y su amigo Ryan miran los barcos de avistamiento de delfines y fantasean con montar su propio negocio. Camila practica su inglés soltando un condicional tras otro: lo que haría si tuviera el bote, si no fuera tan caro el permiso, si se decidieran de una vez.",
       setting: {
         who: "Camila, colombiana que afina su inglés, y Ryan, su amigo local, sopesan si montar un pequeño negocio de paseos en bote.",
         what: "Frente al muelle sueñan en voz alta y repasan todo lo que harían si el dinero, el clima y los permisos cuadraran.",
-        when: "Una tarde de otoño, al final de la temporada de ballenas.",
-        where: "Victoria, Canadá, un muelle sobre el Pacífico.",
+        when: "Una tarde de otoño, al final de la temporada alta de turismo.",
+        where: "Port Aransas, Texas, un muelle sobre el Golfo.",
         why: "Los planes son el terreno del segundo condicional: “if I had the boat, I would…” es como se habla de un futuro que uno imagina pero aún no tiene."
       },
       address: {
@@ -980,10 +980,10 @@ lessons.push(
       dialogue: [
         {
           speaker: "Camila",
-          target: "If I had the cash, I'd buy a boat and run whale-watching trips out to the strait.",
-          translation: "Si tuviera la plata, compraría un bote y montaría paseos de avistamiento hasta el estrecho.",
-          pronunciation: "if ai jad de kash, aid bai a bout and ran UEIL-uo-ching trips aut tu de streit",
-          literal: "Si yo tuviera el efectivo, yo-compraría un bote y correría viajes de mirar-ballenas afuera al estrecho.",
+          target: "If I had the cash, I'd buy a boat and run dolphin-watching trips out to the bay.",
+          translation: "Si tuviera la plata, compraría un bote y montaría paseos de avistamiento hasta la bahía.",
+          pronunciation: "if ai jad de kash, aid bai a bout and ran DOL-fin-uo-ching trips aut tu de bei",
+          literal: "Si yo tuviera el efectivo, yo-compraría un bote y correría viajes de mirar-delfines afuera a la bahía.",
           why: "El condicional irreal en una frase: el “if” lleva pasado (had) y el resultado lleva “would”, aquí contraído en “I'd”. Es el mismo molde de “si tuviera…, compraría…”."
         },
         {
@@ -1131,20 +1131,20 @@ lessons.push(
           }
         },
         {
-          term: "whale-watching season",
+          term: "dolphin-watching season",
           explanation:
-            "La temporada de avistamiento de ballenas; en la costa del Pacífico estadounidense también es el gran atractivo, como en Buenaventura.",
+            "La temporada de avistamiento de delfines; en la costa del Golfo también es el gran atractivo, como el de ballenas en Buenaventura.",
           literal: "temporada de avistamiento",
           useWhen:
-            "Hablando del atractivo del año: “In whale-watching season the dock fills up.”",
+            "Hablando del atractivo del año: “In dolphin-watching season the dock fills up.”",
           avoidWhen:
-            "Fuera de temporada; las ballenas no están todo el año.",
+            "Fuera de temporada alta; los paseos no salen todo el año.",
           register: "neutral",
           region: "Inglés general (turismo).",
-          related: ["humpback whales", "whale-watching", "the strait", "peak season"],
+          related: ["bottlenose dolphins", "dolphin-watching", "the bay", "peak season"],
           example: {
-            target: "In whale-watching season, the boat fills up.",
-            translation: "En temporada de ballenas, el bote se llena."
+            target: "In dolphin-watching season, the boat fills up.",
+            translation: "En temporada de delfines, el bote se llena."
           }
         }
       ],
@@ -1226,9 +1226,9 @@ lessons.push(
       ],
       prompt: "Camila no tiene el bote ahora; solo lo sueña. ¿Cuál es el segundo condicional correcto?",
       choices: [
-        "If I had the cash, I would buy a boat and run whale-watching trips.",
-        "If I would have the cash, I would buy a boat and run whale-watching trips.",
-        "If I have the cash, I will buy a boat and run whale-watching trips."
+        "If I had the cash, I would buy a boat and run dolphin-watching trips.",
+        "If I would have the cash, I would buy a boat and run dolphin-watching trips.",
+        "If I have the cash, I will buy a boat and run dolphin-watching trips."
       ],
       answer: 0,
       practiceExtra: [

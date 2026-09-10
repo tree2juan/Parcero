@@ -396,7 +396,7 @@ lessons.push(
           useWhen: "Cuando llevas algo a otro sitio: “take it to the office”, “take the kids to school”.",
           avoidWhen: "Cuando el movimiento es hacia quien habla o hacia la persona con quien hablas; ahí el inglés suele preferir “bring”.",
           register: "neutral",
-          region: "Inglés general; la lógica de “aquí para allá” es la misma en Canadá y en Estados Unidos.",
+          region: "Inglés general; la lógica de “aquí para allá” es la misma en todo Estados Unidos.",
           related: ["to bring", "to carry", "to grab", "to drop off"],
           example: {
             target: "I'm taking the dessert to the party.",
@@ -480,7 +480,7 @@ lessons.push(
           useWhen: "Al saludar a alguien de confianza, en persona o por mensaje: “Hey, what's up?”.",
           avoidWhen: "En un primer contacto formal, donde “hello” y “nice to meet you” marcan mejor el tono.",
           register: "friendly informal",
-          region: "Inglés norteamericano coloquial; “how's it going?” cumple la misma función y es aún más común en Canadá.",
+          region: "Inglés norteamericano coloquial; “how's it going?” cumple la misma función y es aún más común en Estados Unidos.",
           related: ["how's it going?", "what's new?", "how are you?", "how've you been?"],
           example: {
             target: "Hey, what's up?",
@@ -496,8 +496,8 @@ lessons.push(
           body: "El inglés también distingue entre alejar (“take”) y acercar (“bring”), pero ata “bring” tanto al hablante como a la persona con quien habla y al destino al que van. Por eso a una fiesta a la que vas dices “I'll bring wine”, aunque tú no seas el destino: el grupo al que te diriges cuenta como centro. El español, en cambio, exige “llevar” porque el vino sale de donde tú estás. Es el mismo mapa mental con reglas un poco distintas."
         },
         {
-          label: "Nunca con las manos vacías, tampoco en Canadá",
-          body: "Llegar a un asado o a una cena en Canadá sin nada tampoco cae del todo bien, aunque el anfitrión diga que no hacía falta. La costumbre del “potluck” — cada quien lleva un plato — está muy arraigada, y preguntar “what should I bring?” es lo más normal del mundo. Una botella de vino, una bolsa de hielo, un postre o unas cervezas bastan. Como en Colombia, importa más el gesto que el precio de lo que lleves."
+          label: "Nunca con las manos vacías, tampoco en Estados Unidos",
+          body: "Llegar a un asado o a una cena en Estados Unidos sin nada tampoco cae del todo bien, aunque el anfitrión diga que no hacía falta. La costumbre del “potluck” — cada quien lleva un plato — está muy arraigada, y preguntar “what should I bring?” es lo más normal del mundo. Una botella de vino, una bolsa de hielo, un postre o unas cervezas bastan. Como en Colombia, importa más el gesto que el precio de lo que lleves."
         },
         {
           label: "El asado estadounidense: el “barbecue”",
@@ -977,7 +977,7 @@ lessons.push(
           translation: "Muchas gracias. Ah, ¿y me trae la cuenta con la comida? Es que llevo algo de afán.",
           pronunciation: "zanks so moch. ou, and kud yu bring de bil uid de fuud? aim in a bit of a rosh",
           literal: "Gracias tanto. Oh, y podrías tú traer la cuenta con la comida? Yo-estoy en un poco de prisa.",
-          why: "“Could you bring the bill?” es el titular: la cuenta va hacia ti, así que “bring”. En Canadá se dice “the bill” tanto como “the check”. “I'm in a bit of a rush” es el modo natural de decir que llevas afán."
+          why: "“Could you bring the bill?” es el titular: la cuenta va hacia ti, así que “bring”. En Estados Unidos se dice “the bill” tanto como “the check”. “I'm in a bit of a rush” es el modo natural de decir que llevas afán."
         }
       ],
       vocabulary: [
@@ -1030,7 +1030,7 @@ lessons.push(
           useWhen: "Al pedir comida o bebida: “could I get a coffee?”, “can I get the special?”.",
           avoidWhen: "En inglés muy formal o británico, donde “could I have…?” suena algo más pulido que “get”.",
           register: "polite neutral",
-          region: "Inglés norteamericano; “can I get…?” domina en las cafeterías de Canadá y Estados Unidos.",
+          region: "Inglés norteamericano; “can I get…?” domina en las cafeterías de Estados Unidos.",
           related: ["Can I get...?", "Could I have...?", "I'll have...", "I'll take..."],
           example: {
             target: "Could I get a coffee, please?",
@@ -1044,7 +1044,7 @@ lessons.push(
           useWhen: "Al pedir café solo: “a black coffee, please”, “I'll take it black”.",
           avoidWhen: "No digas “a tinto”: la palabra no existe en inglés. Y “an espresso” es otra cosa, más corto y concentrado.",
           register: "neutral",
-          region: "Inglés general; el “drip coffee” de Canadá y Estados Unidos es más aguado y grande que el tinto colombiano.",
+          region: "Inglés general; el “drip coffee” de Estados Unidos es más aguado y grande que el tinto colombiano.",
           related: ["coffee, black", "a dark roast", "an Americano", "a house coffee"],
           example: {
             target: "A black coffee, please.",
@@ -1053,7 +1053,7 @@ lessons.push(
         },
         {
           term: "the bill / the check",
-          explanation: "La cuenta. En Canadá se oye “the bill” tanto como “the check”; en Estados Unidos domina “the check”. Se pide con “could I get the bill?” o “could you bring the check?”.",
+          explanation: "La cuenta. En Estados Unidos se oye “the bill” tanto como “the check”; en Estados Unidos domina “the check”. Se pide con “could I get the bill?” o “could you bring the check?”.",
           literal: "la cuenta",
           useWhen: "Al terminar de comer: “could we get the bill?”, “just the check, please”.",
           avoidWhen: "No calques “the account” (eso es una cuenta bancaria) ni pidas “the note”; la palabra es “bill” o “check”.",
@@ -1085,7 +1085,7 @@ lessons.push(
       culture: [
         {
           label: "La cortesía va en el verbo, no en el pronombre",
-          body: "El inglés no tiene usted, así que toda la formalidad que en Bogotá recae en el pronombre, en Canadá se reparte en el verbo y en los suavizadores. “Could I get…?”, “would you mind…?”, “please”, “when you get a chance” hacen el trabajo que haría el usted. Por eso un mismo “you” sirve para el mesero y para tu mejor amigo: lo que cambia es el envoltorio de la frase, no la palabra con que lo llamas."
+          body: "El inglés no tiene usted, así que toda la formalidad que en Bogotá recae en el pronombre, en Estados Unidos se reparte en el verbo y en los suavizadores. “Could I get…?”, “would you mind…?”, “please”, “when you get a chance” hacen el trabajo que haría el usted. Por eso un mismo “you” sirve para el mesero y para tu mejor amigo: lo que cambia es el envoltorio de la frase, no la palabra con que lo llamas."
         },
         {
           label: "“Could I get…?”: pedir sin exigir",
@@ -1093,11 +1093,11 @@ lessons.push(
         },
         {
           label: "El café del norte no es el tinto",
-          body: "Pedir café en Canadá reserva sorpresas para quien viene del tinto. El “drip coffee” llega en vasos grandes, más aguado, y por defecto se le añade crema y azúcar, así que hay que pedir “black” si lo quieres solo. No existe “a tinto”. Y está la cultura del café para llevar: cadenas como Shipley Do-Nuts son casi una institución, y encargar “a double-double” — dos de crema, dos de azúcar — es todo un código local."
+          body: "Pedir café en Estados Unidos reserva sorpresas para quien viene del tinto. El “drip coffee” llega en vasos grandes, más aguado, y por defecto se le añade crema y azúcar, así que hay que pedir “black” si lo quieres solo. No existe “a tinto”. Y está la cultura del café para llevar: cadenas como Shipley Do-Nuts son casi una institución, y encargar “a large coffee with room” — grande, con espacio para la crema — es todo un código local."
         },
         {
           label: "La propina no es opcional",
-          body: "A diferencia de Colombia, donde el 10% suele venir incluido y se pregunta “¿está incluido el servicio?”, en Canadá y Estados Unidos la propina la calcula y la deja el cliente, y ronda el 15–20%. No dejarla se lee como una queja seria. Al pedir “the bill”, prepárate para que la máquina o la cuenta te ofrezca opciones de propina. Es una diferencia cultural que conviene tener clara antes de sentarte a comer."
+          body: "A diferencia de Colombia, donde el 10% suele venir incluido y se pregunta “¿está incluido el servicio?”, en Estados Unidos la propina la calcula y la deja el cliente, y ronda el 15–20%. No dejarla se lee como una queja seria. Al pedir “the bill”, prepárate para que la máquina o la cuenta te ofrezca opciones de propina. Es una diferencia cultural que conviene tener clara antes de sentarte a comer."
         }
       ],
       pitfalls: [
@@ -1508,12 +1508,12 @@ lessons.push(
     en: {
       title: "La despedida en la casa de una amiga",
       situation:
-        "Alejandra está de visita en casa de una amiga en Canadá y ya se va a ir. Entre el «leave that there» para que no lave los platos, el «let me tell you» de una historia, la chaqueta que dejó en el cuarto y el «let's drop it» final, el verbo inglés se reparte en varias palabras distintas donde el español solo usaría «dejar». Todo con la cortesía en el verbo, no en el pronombre.",
+        "Alejandra está de visita en casa de una amiga en Estados Unidos y ya se va a ir. Entre el «leave that there» para que no lave los platos, el «let me tell you» de una historia, la chaqueta que dejó en el cuarto y el «let's drop it» final, el verbo inglés se reparte en varias palabras distintas donde el español solo usaría «dejar». Todo con la cortesía en el verbo, no en el pronombre.",
       setting: {
         who: "Alejandra, una hispanohablante que pasó la tarde en casa de una amiga estadounidense, y Kayla, la anfitriona, que habla el inglés relajado y cordial del día a día. Son amigas, así que todo es informal.",
         what: "Despedirse al final de una visita: ofrecer ayuda para recoger, ponerse al día sobre que Kayla dejó de fumar, recuperar una chaqueta olvidada y leer bien el «let's drop it».",
         when: "Ya tarde, entre semana, en ese momento de la noche en que el invitado empieza a hacer gestos de irse pero nadie tiene afán de verdad.",
-        where: "Un apartamento en Canadá, donde el inglés no marca el respeto con el pronombre y la calidez se dice con el tono y con fórmulas como «go ahead» o «feel free».",
+        where: "Un apartamento en Estados Unidos, donde el inglés no marca el respeto con el pronombre y la calidez se dice con el tono y con fórmulas como «go ahead» o «feel free».",
         why: "Porque «dejar» en español es en realidad varios verbos en uno — leave, quit, let, break up, drop it — y el inglés los separa. Una despedida en casa de una amiga los junta casi todos en cinco minutos, y leer bien «let's drop it» es la diferencia entre relajarse y quedarse en blanco."
       },
       address: {

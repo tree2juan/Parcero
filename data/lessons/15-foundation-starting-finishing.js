@@ -1658,7 +1658,7 @@ lessons.push(
       situation:
         "Es el primer día de Alejandra en un trabajo nuevo en Houston. En la recepción, Ryan, de recursos humanos, la hace seguir, le explica a qué hora entra, cómo registrar su ingreso y por dónde se entra al edificio. Alejandra, nerviosa, pide que le repitan lo que no le entra del todo.",
       setting: {
-        who: "Ryan trabaja en recursos humanos y ha guiado a decenas de personas en su primera mañana. Alejandra empieza su primer trabajo de oficina en Canadá y está nerviosa por hacer todo bien.",
+        who: "Ryan trabaja en recursos humanos y ha guiado a decenas de personas en su primera mañana. Alejandra empieza su primer trabajo de oficina en Estados Unidos y está nerviosa por hacer todo bien.",
         what: "Una inducción de primer día: que la hagan seguir, aprender la hora de entrada, el registro y a dónde ir.",
         when: "Un lunes, diez para las ocho de la mañana, la oficina llenándose a medida que llega la gente.",
         where: "Houston, la recepción de una oficina en el centro de la ciudad.",

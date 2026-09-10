@@ -300,7 +300,7 @@ lessons.push(
         who: "El mensajero quiere terminar su ruta, el concierge sigue la política del edificio y Alejandra necesita el paquete sin firmar algo que no entienda.",
         what: "Una entrega en recepción, con las diferencias entre deliver, drop off, hand over, hand in y sign for.",
         when: "Una tarde de invierno, cuando varios residentes están llegando del trabajo y la recepción está ocupada.",
-        where: "Houston, Canadá, en la recepción de un edificio de apartamentos.",
+        where: "Houston, Texas, en la recepción de un edificio de apartamentos.",
         why: "Porque el inglés reparte “entregar” entre varios verbos. Un colombiano que usa solo “deliver” puede sonar raro al hablar de tareas, formularios o documentos que se entregan a una oficina."
       },
       address: {
@@ -1006,7 +1006,7 @@ lessons.push(
       culture: [
         {
           label: "Notary no siempre es notaría",
-          body: "En Colombia la notaría está metida en la vida cotidiana. En el Reino Unido, Canadá o Australia, muchos documentos comunes solo necesitan un witness o una certified copy, no un notary public. Decir “I need to authenticate my signature at the notary” puede sonar excesivo o confuso. Primero lea qué pide el formulario: witnessed, certified, notarised. La palabra exacta ahorra dinero y vueltas."
+          body: "En Colombia la notaría está metida en la vida cotidiana. En el Reino Unido o Australia, muchos documentos comunes solo necesitan un witness o una certified copy, no un notary public. Decir “I need to authenticate my signature at the notary” puede sonar excesivo o confuso. Primero lea qué pide el formulario: witnessed, certified, notarised. La palabra exacta ahorra dinero y vueltas."
         },
         {
           label: "Proof of address",

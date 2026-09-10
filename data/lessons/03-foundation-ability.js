@@ -426,7 +426,7 @@ lessons.push(
           avoidWhen:
             "Para una destreza aprendida en general, donde el inglés a menudo prefiere “know how to”: “I know how to drive”, y no sólo “I can drive”, cuando se quiere subrayar que se aprendió.",
           register: "neutral",
-          region: "Inglés universal; “could you…?” es la petición cortés por defecto en Canadá y en Estados Unidos.",
+          region: "Inglés universal; “could you…?” es la petición cortés por defecto en Estados Unidos.",
           related: ["could", "be able to", "know how to", "manage to"],
           example: {
             target: "I can't connect the propane tank.",
@@ -443,7 +443,7 @@ lessons.push(
           avoidWhen:
             "En una emergencia real, donde se dice “help!” directo. El modismo suena demasiado tranquilo para algo urgente.",
           register: "friendly informal",
-          region: "Inglés universal; muy frecuente en el habla cotidiana de Canadá y de Estados Unidos.",
+          region: "Inglés universal; muy frecuente en el habla cotidiana de Estados Unidos.",
           related: ["help me out", "lend a hand", "help with", "pitch in"],
           example: {
             target: "Could you give me a hand with something?",
@@ -1693,7 +1693,7 @@ lessons.push(
           translation: "Llegá tipo seis — pero sin afán, es sencillo.",
           pronunciation: "kam OU-ver a-RAUND siks — bat nou rash, its KA-shu-al",
           literal: "Vení como a las seis — pero sin prisa, es informal.",
-          why: "Otra vez “come over” para la invitación. “No rush” y “casual” avisan que la hora es flexible; aun así, en Canadá “around six” suele significar seis y pico, no las siete y media."
+          why: "Otra vez “come over” para la invitación. “No rush” y “casual” avisan que la hora es flexible; aun así, en Estados Unidos “around six” suele significar seis y pico, no las siete y media."
         },
         {
           speaker: "Alejandra",
@@ -1809,7 +1809,7 @@ lessons.push(
         {
           term: "potluck",
           explanation:
-            "Una comida donde cada invitado lleva un plato para compartir. Muy común en Canadá y Estados Unidos para reuniones informales.",
+            "Una comida donde cada invitado lleva un plato para compartir. Muy común en Estados Unidos para reuniones informales.",
           literal: "olla de la suerte",
           useWhen:
             "Al organizar o aceptar una comida colectiva: “It's a potluck, bring a dish”.",
@@ -1852,7 +1852,7 @@ lessons.push(
         {
           label: "El potluck: aquí cada quien lleva un plato",
           body:
-            "En Canadá y Estados Unidos, muchas reuniones informales son potluck: el anfitrión pone la casa y quizá el plato principal, y cada invitado lleva algo para compartir —una ensalada, un postre, una bebida—. Preguntar “What should I bring?” no es indiscreto; es lo esperado. En Colombia el anfitrión suele poner todo, así que la costumbre puede sorprender. Llevar algo, aunque sea pequeño, siempre cae bien."
+            "En Estados Unidos, muchas reuniones informales son potluck: el anfitrión pone la casa y quizá el plato principal, y cada invitado lleva algo para compartir —una ensalada, un postre, una bebida—. Preguntar “What should I bring?” no es indiscreto; es lo esperado. En Colombia el anfitrión suele poner todo, así que la costumbre puede sorprender. Llevar algo, aunque sea pequeño, siempre cae bien."
         },
         {
           label: "«Come over»: la invitación de todos los días",
@@ -1862,7 +1862,7 @@ lessons.push(
         {
           label: "Llegar a la hora… o casi",
           body:
-            "En Canadá, si te dicen “around six”, se espera que llegues cerca de las seis: seis y diez está bien, las siete no. La “hora colombiana” —llegar cómodamente tarde— puede leerse como descuido. Para una cena, apuntá a la hora dicha o cinco a diez minutos después; si vas a demorarte, un mensaje de “running late” se agradece. Puntualidad sin rigidez es la norma más segura."
+            "En Estados Unidos, si te dicen “around six”, se espera que llegues cerca de las seis: seis y diez está bien, las siete no. La “hora colombiana” —llegar cómodamente tarde— puede leerse como descuido. Para una cena, apuntá a la hora dicha o cinco a diez minutos después; si vas a demorarte, un mensaje de “running late” se agradece. Puntualidad sin rigidez es la norma más segura."
         }
       ],
       pitfalls: [

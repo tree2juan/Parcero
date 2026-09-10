@@ -13,7 +13,7 @@
  */
 const test = require("node:test");
 const assert = require("node:assert");
-const { findViolations, targetFiles } = require("../scripts/check-american-english.js");
+const { findViolations, targetFiles, scanText, BRITISH, CANADIAN } = require("../scripts/check-american-english.js");
 
 function summarise(violations) {
   const byTerm = new Map();
@@ -54,4 +54,60 @@ test("the check actually reads the corpus", () => {
   assert.ok(files.length > 70, `expected the corpus, got ${files.length} files`);
   assert.ok(files.some((f) => f.startsWith("data/lessons/")), "lesson blocks must be scanned");
   assert.ok(files.some((f) => f.startsWith("data/lexicon/")), "lexicon blocks must be scanned");
+  assert.ok(files.includes("data/lessons.js"), "the aggregated corpus must be scanned");
+  assert.ok(files.includes("app.js"), "UI strings must be scanned");
+});
+
+/*
+ * Counting scanned files proves the guard opened the corpus. It does NOT prove
+ * the matcher works, and that distinction cost us a whole migration.
+ *
+ * The original matcher wrapped every term in \b...\b. \b is defined against
+ * ASCII [A-Za-z0-9_], so between "á" and a space there is no boundary at all
+ * and /\bCanadá\b/ can never match. 173 occurrences of "Canadá" sat in the
+ * corpus while the guard reported it clean, because the identical bug was
+ * written into both the migration script and the guard that was supposed to
+ * catch it. Two copies of one defect cannot check each other.
+ *
+ * So: assert against known-bad strings, including accented ones.
+ */
+test("the matcher actually detects the terms it bans", () => {
+  const cases = [
+    ["Barb está en Canadá horneando.", "canadá", "an accented term — the bug that started this"],
+    ["Vive en Canadá.", "canadá", "accented term before a period"],
+    ["¿Canadá o Texas?", "canadá", "accented term after punctuation"],
+    ["She makes butter tarts.", "butter tarts", "a multi-word term"],
+    ["He ordered a double-double.", "double-double", "a hyphenated term"],
+    ["The neighbour waved.", "neighbour", "a plain British spelling"],
+    ["It was cancelled.", "cancelled", "a doubled-consonant British spelling"],
+    ["A labelled diagram.", "labelled", "the spelling that hid in app.js"]
+  ];
+  for (const [text, expected, why] of cases) {
+    const hits = scanText(text, [...BRITISH, ...CANADIAN]).map((h) => h.term.toLowerCase());
+    assert.ok(
+      hits.includes(expected),
+      `missed "${expected}" in ${JSON.stringify(text)} — ${why}. Got: [${hits.join(", ")}]`
+    );
+  }
+});
+
+/*
+ * The mirror image: a matcher that flags everything is just as useless, because
+ * the first false positive teaches everyone to ignore the guard. "continuity"
+ * contains "inuit" and "withstands" contains "hst" — both were caught being
+ * reported as Canadian markers by an unbounded matcher.
+ */
+test("the matcher does not fire on innocent words", () => {
+  const innocent = [
+    ["There is continuity between the two lessons.", "'inuit' inside 'continuity'"],
+    ["The argument withstands scrutiny.", "'hst' inside 'withstands'"],
+    ["The takeaway is that pasar bends to context.", "'takeaway' meaning 'the key point'"]
+  ];
+  for (const [text, why] of innocent) {
+    const hits = scanText(text, [...BRITISH, ...CANADIAN]).map((h) => h.term);
+    assert.strictEqual(
+      hits.length, 0,
+      `false positive on ${JSON.stringify(text)} (${why}). Flagged: [${hits.join(", ")}]`
+    );
+  }
 });

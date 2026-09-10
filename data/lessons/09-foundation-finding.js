@@ -544,7 +544,7 @@ lessons.push(
         {
           label: "Aquí las direcciones se toman al pie de la letra",
           body:
-            "En Canadá la gente se orienta por nombre y número de calle y, cada vez más, por el puntico azul del celular. Si uno pide indicaciones, es mucho más probable oír “it's on King, just past Bathurst” que una panadería y una pared amarilla. Para alguien criado con las direcciones colombianas por puntos de referencia esto resulta raro y abstracto, pero es fiable: los números sí van en orden, y un desconocido nombrará la calle que cruza antes que una fachada."
+            "En Estados Unidos la gente se orienta por nombre y número de calle y, cada vez más, por el puntico azul del celular. Si uno pide indicaciones, es mucho más probable oír “it's on King, just past Bathurst” que una panadería y una pared amarilla. Para alguien criado con las direcciones colombianas por puntos de referencia esto resulta raro y abstracto, pero es fiable: los números sí van en orden, y un desconocido nombrará la calle que cruza antes que una fachada."
         },
         {
           label: "“I don't know” es una respuesta honesta, no una grosería",
@@ -1196,7 +1196,7 @@ lessons.push(
         {
           label: "El buzón y los mensajes le ganan a la llamada perdida",
           body:
-            "La “perdida” colombiana casi no existe en Canadá. Si uno deja timbrar el teléfono una vez y cuelga, lo más seguro es que piensen que se marcó sin querer desde el bolsillo, no que ahí va un mensaje. Aquí la gente o deja un mensaje de voz o, mucho más seguido, manda un texto. Si uno quiere que un estadounidense sepa que lo llamó a propósito, hay que decirlo en un mensaje — la perdida silenciosa no carga el sentido que carga en casa."
+            "La “perdida” colombiana casi no existe en Estados Unidos. Si uno deja timbrar el teléfono una vez y cuelga, lo más seguro es que piensen que se marcó sin querer desde el bolsillo, no que ahí va un mensaje. Aquí la gente o deja un mensaje de voz o, mucho más seguido, manda un texto. Si uno quiere que un estadounidense sepa que lo llamó a propósito, hay que decirlo en un mensaje — la perdida silenciosa no carga el sentido que carga en casa."
         },
         {
           label: "Un solo “you”, así que la calidez vive en las palabras",
@@ -1206,7 +1206,7 @@ lessons.push(
         {
           label: "Uno contesta con “Hello?”, no con su nombre",
           body:
-            "Al contestar una llamada personal en Canadá, lo normal es un “Hello?” con entonación que sube, no el nombre propio ni un “yes?”. Anunciar el nombre de uno al contestar, común en partes de Europa y formal en Latinoamérica, puede sonar tieso o de oficina. Las empresas son la excepción: un negocio contesta con su nombre y a menudo un “how can I help you?”. Para las llamadas corrientes, el simple “Hello?” es lo que suena normal y amable."
+            "Al contestar una llamada personal en Estados Unidos, lo normal es un “Hello?” con entonación que sube, no el nombre propio ni un “yes?”. Anunciar el nombre de uno al contestar, común en partes de Europa y formal en Latinoamérica, puede sonar tieso o de oficina. Las empresas son la excepción: un negocio contesta con su nombre y a menudo un “how can I help you?”. Para las llamadas corrientes, el simple “Hello?” es lo que suena normal y amable."
         },
         {
           label: "Los phrasal verbs manejan todo el teléfono",
@@ -1269,7 +1269,7 @@ lessons.push(
           form: "Just text me.",
           register: "friendly informal",
           region: "Inglés norteamericano",
-          whenToUse: "Cuando un mensaje sería más fácil que una llamada, que en Canadá es a menudo."
+          whenToUse: "Cuando un mensaje sería más fácil que una llamada, que en Estados Unidos es a menudo."
         }
       ],
       prompt: "Dave dice “I'll give him a buzz and tell him to come up.” ¿Qué se ofrece a hacer Dave?",

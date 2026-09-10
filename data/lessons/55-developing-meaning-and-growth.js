@@ -357,7 +357,7 @@ lessons.push(
         who: "Paula estudia música en Houston y explica referencias sin convertirlas en clase. Bernardo ya conversa con soltura, pero todavía se detiene cuando una palabra tiene más cultura que diccionario.",
         what: "Un estudiante pregunta qué significa una palabra desconocida y aprende a separar “mean” para definiciones de “I mean” para aclararse.",
         when: "Una tarde de sábado, entre dos presentaciones breves, mientras la gente se mueve por la plaza.",
-        where: "Houston, Canadá, cerca de un escenario pequeño al aire libre.",
+        where: "Houston, Texas, cerca de un escenario pequeño al aire libre.",
         why: "Porque “What does … mean?” es una pregunta esencial, y porque “signify” no reemplaza a “mean” en la mayoría de conversaciones."
       },
       address: {

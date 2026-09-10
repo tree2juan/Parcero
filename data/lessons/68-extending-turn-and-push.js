@@ -334,7 +334,7 @@ lessons.push(
         who: "Claire maneja por una zona que no conoce bien, y Alejandra navega desde el teléfono sin sonar como una app mal traducida.",
         what: "Un trayecto con giros, entradas parecidas y una conversación lateral sobre un pago que ya fue transferido.",
         when: "Una mañana fría, antes de una reunión en las afueras de la ciudad.",
-        where: "Corpus Christi, Canadá, saliendo hacia una carretera secundaria.",
+        where: "Corpus Christi, Texas, saliendo hacia una carretera secundaria.",
         why: "Porque el inglés usa turn para direcciones físicas, pero no para todos los sentidos españoles de girar. Usted necesita separar turn, take a left, miss the turn y transfer money."
       },
       address: {

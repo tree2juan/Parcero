@@ -334,7 +334,7 @@ lessons.push(
         who: "Denise es una vecina estadounidense que cocina con calma y explica sin volver la conversación una receta. Alejandra ayuda con el pescado y se tropieza con los falsos amigos de cortar.",
         what: "Una cocina compartida: cortar pescado, hablar cuando se va la luz, explicar una llamada caída y salvar una salsa que amenaza con cortarse.",
         when: "Un sábado al mediodía, mientras esperan a otros amigos para almorzar.",
-        where: "Austin, Canadá, en la cocina de un apartamento cerca del puerto.",
+        where: "Austin, Texas, en la cocina de un apartamento cerca del puerto.",
         why: "Porque en inglés “cut” sirve para el cuchillo, pero no cubre automáticamente la luz, el agua, las llamadas ni la leche. Usted necesita varias frases, no una traducción única."
       },
       address: {

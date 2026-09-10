@@ -1861,7 +1861,7 @@ lessons.push(
         {
           label: "Pedir prestado entre vecinos",
           body:
-            "La economía de tazas de azúcar y taladros prestados existe igual en Canadá, sólo que con otras palabras. Se abre con “Could you do me a favour?” o “Do you happen to have…?”, se pide con “Could I borrow…?”, y se cierra con “That's what neighbors are for” o “Anytime”. Devolver a tiempo y con un “thanks so much for lending me this” mantiene la buena vecindad. La calidez es la misma; lo que cambia son las fórmulas fijas, y aprenderte tres o cuatro te integra rápido."
+            "La economía de tazas de azúcar y taladros prestados existe igual en Estados Unidos, sólo que con otras palabras. Se abre con “Could you do me a favour?” o “Do you happen to have…?”, se pide con “Could I borrow…?”, y se cierra con “That's what neighbors are for” o “Anytime”. Devolver a tiempo y con un “thanks so much for lending me this” mantiene la buena vecindad. La calidez es la misma; lo que cambia son las fórmulas fijas, y aprenderte tres o cuatro te integra rápido."
         }
       ],
       pitfalls: [

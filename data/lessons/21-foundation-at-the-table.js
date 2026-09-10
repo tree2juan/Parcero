@@ -337,12 +337,12 @@ lessons.push(
     en: {
       title: "Pedir el almuerzo del día en un diner",
       situation:
-        "Es mediodía y usted entra a un diner cerca del trabajo en Canadá. Pide el especial del almuerzo — sopa o ensalada y un plato principal — y descubre que el inglés no tiene un “¿me regala?”: la cortesía va en el verbo, en “could I get...?” y en “please”. Aquí no se dice “I want” a secas, se suaviza.",
+        "Es mediodía y usted entra a un diner cerca del trabajo en Estados Unidos. Pide el especial del almuerzo — sopa o ensalada y un plato principal — y descubre que el inglés no tiene un “¿me regala?”: la cortesía va en el verbo, en “could I get...?” y en “please”. Aquí no se dice “I want” a secas, se suaviza.",
       setting: {
         who: "Alejandra, colombiana en su hora de almuerzo, y Marcus, un mesero atareado en un diner que tiene que rotar rápido cada mesa.",
         what: "Pedir el especial del almuerzo — sopa o ensalada y un plato principal — y aprender a suavizar el pedido a la manera inglesa.",
         when: "Un día entre semana, doce y media, la hora pico del almuerzo.",
-        where: "En una ciudad de Canadá, un diner sencillo lleno de oficinistas.",
+        where: "En una ciudad de Estados Unidos, un diner sencillo lleno de oficinistas.",
         why: "Porque pedir comida es el pedido que más va a hacer, y en inglés casi nunca se dice “I want” a secas: se envuelve en “could I” y “please”, y saber hacerlo es la diferencia entre sonar brusca y sonar natural."
       },
       address: {
@@ -525,7 +525,7 @@ lessons.push(
         {
           label: "La propina no es opcional",
           body:
-            "En Colombia la propina suele ser un 10% sugerido que aparece en la cuenta y uno puede quitar. En Estados Unidos y Canadá la propina es prácticamente obligatoria y va del 15 al 20%, y no dejarla se lee como un insulto al mesero, cuyo salario depende de ella. No aparece incluida: usted la calcula y la suma. Es uno de los choques culturales más caros de no entender a tiempo."
+            "En Colombia la propina suele ser un 10% sugerido que aparece en la cuenta y uno puede quitar. En Estados Unidos la propina es prácticamente obligatoria y va del 15 al 20%, y no dejarla se lee como un insulto al mesero, cuyo salario depende de ella. No aparece incluida: usted la calcula y la suma. Es uno de los choques culturales más caros de no entender a tiempo."
         },
         {
           label: "“For here or to go”",
@@ -1125,7 +1125,7 @@ lessons.push(
           useWhen: "Hablar del plato principal de una cena grande.",
           avoidWhen: "Un almuerzo ligero o rápido; el pavo es comida de reunión.",
           register: "neutral",
-          region: "Inglés universal; central en Thanksgiving en EE. UU. y Canadá.",
+          region: "Inglés universal; central en Thanksgiving en EE. UU..",
           related: ["roast", "stuffing", "gravy", "ham"],
           example: {
             target: "We're having turkey on Sunday.",
@@ -1585,12 +1585,12 @@ lessons.push(
     en: {
       title: "Caer donde una amiga a la hora de la cena",
       situation:
-        "Usted llega sin avisar a la casa de una amiga en Canadá, justo a la hora de la cena. Lo primero que ella hace es preguntarle si ya comió — pero en inglés “did you eat?” pesa menos que el “¿ya comiste?” colombiano: es más literal y menos ritual. Aquí verá comer en inglés: “did you eat?” como gesto de cariño más sobrio, el útil “eat up”, y un aviso sobre un sentido de “eat” que conviene reconocer.",
+        "Usted llega sin avisar a la casa de una amiga en Estados Unidos, justo a la hora de la cena. Lo primero que ella hace es preguntarle si ya comió — pero en inglés “did you eat?” pesa menos que el “¿ya comiste?” colombiano: es más literal y menos ritual. Aquí verá comer en inglés: “did you eat?” como gesto de cariño más sobrio, el útil “eat up”, y un aviso sobre un sentido de “eat” que conviene reconocer.",
       setting: {
         who: "Alejandra, que cae sin avisar donde una amiga, y Emily, una amiga estadounidense que la recibe con cariño.",
         what: "Una visita sin anunciar que, en cuestión de segundos, se convierte en quedarse a comer algo de verdad.",
         when: "Una tarde entre semana, a la hora de la cena, en el frío.",
-        where: "En una casa de Canadá, en la cocina.",
+        where: "En una casa de Estados Unidos, en la cocina.",
         why: "Porque “did you eat?” es de las primeras cosas que oirá en una casa, y entender que en inglés pesa menos y es más literal que el “¿ya comiste?” colombiano es media lección; la otra media es el reflexivo inglés “eat up”."
       },
       address: {

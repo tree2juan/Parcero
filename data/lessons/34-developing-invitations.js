@@ -473,7 +473,7 @@ lessons.push(
         },
         {
           label: "Rondas y reciprocidad",
-          body: "En muchos bares de Estados Unidos, Canadá y el Reino Unido, la reciprocidad se maneja por rondas: “I'll get this one, you get the next.” No se divide cada centavo en el momento, pero tampoco se supone que una sola persona paga siempre. Esa lógica se parece al colombiano “la próxima invito yo”, aunque las palabras sean distintas."
+          body: "En muchos bares de Estados Unidos y el Reino Unido, la reciprocidad se maneja por rondas: “I'll get this one, you get the next.” No se divide cada centavo en el momento, pero tampoco se supone que una sola persona paga siempre. Esa lógica se parece al colombiano “la próxima invito yo”, aunque las palabras sean distintas."
         }
       ],
       pitfalls: [
@@ -843,7 +843,7 @@ lessons.push(
         who: "Emily es una amiga estadounidense que invita a Alejandra a conocer a su familia. Alejandra quiere ser educada, pero trae el ritual colombiano de negar una vez antes de aceptar.",
         what: "Una merienda en casa, donde aceptar una taza de té requiere decir sí con claridad en vez de esperar una segunda o tercera oferta.",
         when: "Una tarde fría de domingo, después de entrar de la calle con las manos heladas.",
-        where: "Houston, Canadá, en la sala de la casa de la familia de Emily.",
+        where: "Houston, Texas, en la sala de la casa de la familia de Emily.",
         why: "Porque en inglés la cortesía no siempre incluye insistir. Si usted dice “no, thank you”, muchas personas creen que ya cuidaron su comodidad respetando ese no."
       },
       address: {
@@ -952,7 +952,7 @@ lessons.push(
           useWhen: "Aceptar ayuda, comida o un plan: “that would be great, thanks”.",
           avoidWhen: "Necesita responder a una regla formal; puede sonar demasiado casual.",
           register: "friendly informal",
-          region: "Inglés universal; “lovely” es muy común en Reino Unido y Canadá.",
+          region: "Inglés universal; “lovely” es muy común en Reino Unido y Estados Unidos.",
           related: ["great", "lovely", "thanks", "I'd love that"],
           example: {
             target: "That would be lovely, thank you.",
@@ -1052,7 +1052,7 @@ lessons.push(
         {
           form: "That would be lovely.",
           register: "polite warm",
-          region: "Canadá y Reino Unido; también entendido en otros lugares",
+          region: "Estados Unidos y Reino Unido; también entendido en otros lugares",
           whenToUse: "Aceptar una oferta con calidez."
         },
         {

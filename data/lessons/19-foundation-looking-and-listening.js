@@ -324,12 +324,12 @@ lessons.push(
     en: {
       title: "Mirar los cuadros en el museo de Bogotá",
       situation:
-        "La misma escena, contada para quien aprende inglés: Alejandra, de Bogotá, visita una galería de arte en Canadá y una guía, Sarah, le enseña a mirar las obras. Descubre que el inglés reparte “mirar” en tres verbos —“look at”, “see” y “watch”—, que “look” exige la preposición “at”, y que “look” también abre explicaciones, como el “mire” colombiano. Todo con la cortesía con que se trata a una guía.",
+        "La misma escena, contada para quien aprende inglés: Alejandra, de Bogotá, visita una galería de arte en Estados Unidos y una guía, Sarah, le enseña a mirar las obras. Descubre que el inglés reparte “mirar” en tres verbos —“look at”, “see” y “watch”—, que “look” exige la preposición “at”, y que “look” también abre explicaciones, como el “mire” colombiano. Todo con la cortesía con que se trata a una guía.",
       setting: {
         who: "Sarah es una guía de la galería, tranquila y didáctica. Alejandra es la visitante colombiana, encantada de que la lleven despacio por las salas.",
         what: "Un recorrido guiado por una galería de arte, aprendiendo a mirar las obras a propósito y a repartir “mirar” entre look at, see y watch.",
         when: "Una mañana tranquila entre semana, con las salas casi vacías y tiempo para detenerse en cada obra.",
-        where: "Una galería de arte en Canadá, del estilo del AGO en Houston o la Galería Nacional en Dallas.",
+        where: "Una galería de arte en Estados Unidos, del estilo del AGO en Houston o la Galería Nacional en Dallas.",
         why: "Porque un museo es donde ver se convierte en mirar. Alejandra quiere estudiar de verdad las obras y no pasar de largo, y ese cambio es justo lo que Sarah le enseña sin convertirlo en una clase de gramática."
       },
       address: {
@@ -509,7 +509,7 @@ lessons.push(
         {
           label: "Mirar arte con calma",
           body:
-            "En los museos de Canadá y Estados Unidos se valora la mirada lenta: la gente se planta frente a una obra y la observa sin afán. Ese “look closely”, “take your time”, es justo el mirar del que habla la lección, frente al “see” de pasar de largo. Para Alejandra, acostumbrada a que en español mirar y ver ya se distingan, el reto no es el concepto sino repartirlo entre look at, see y watch sin equivocar la preposición ni el verbo."
+            "En los museos de Estados Unidos se valora la mirada lenta: la gente se planta frente a una obra y la observa sin afán. Ese “look closely”, “take your time”, es justo el mirar del que habla la lección, frente al “see” de pasar de largo. Para Alejandra, acostumbrada a que en español mirar y ver ya se distingan, el reto no es el concepto sino repartirlo entre look at, see y watch sin equivocar la preposición ni el verbo."
         }
       ],
       pitfalls: [
@@ -924,12 +924,12 @@ lessons.push(
     en: {
       title: "Oírse por encima del picó en Cartagena",
       situation:
-        "Alejandra está en Canadá y una amiga la llama desde una fiesta con la música a todo volumen. Entre la mala señal y el ruido, Alejandra practica la frontera del inglés entre “hear” (percibir el sonido, el verbo del teléfono: “can you hear me?”) y “listen to” (escuchar con intención, casi siempre con “to”), y aprende que su error estrella es olvidar ese “to”: “listen to me”, nunca “listen me”. Usted, como corresponde al trato con alguien en un país nuevo.",
+        "Alejandra está en Estados Unidos y una amiga la llama desde una fiesta con la música a todo volumen. Entre la mala señal y el ruido, Alejandra practica la frontera del inglés entre “hear” (percibir el sonido, el verbo del teléfono: “can you hear me?”) y “listen to” (escuchar con intención, casi siempre con “to”), y aprende que su error estrella es olvidar ese “to”: “listen to me”, nunca “listen me”. Usted, como corresponde al trato con alguien en un país nuevo.",
       setting: {
         who: "Megan es una amiga estadounidense que llama desde una fiesta ruidosa. Alejandra, colombiana recién llegada, forcejea para entender algo por el teléfono.",
         what: "Una llamada peleando contra la música a todo volumen, que va y viene entre “hear” para oír y “listen” para escuchar con atención.",
         when: "Un viernes por la noche, la fiesta encendida y la música más fuerte que el teléfono.",
-        where: "En Canadá, con Alejandra en su casa y Megan en plena rumba al otro lado de la ciudad.",
+        where: "En Estados Unidos, con Alejandra en su casa y Megan en plena rumba al otro lado de la ciudad.",
         why: "Porque una mala línea es donde la diferencia entre oír y escuchar se vuelve real. Alejandra solo quiere entender el plan, y la llamada la obliga a pasar por cada matiz de “hear” y “listen” a la vez."
       },
       address: {
@@ -1524,12 +1524,12 @@ lessons.push(
     en: {
       title: "Cazar un grito en la salsateca de Cali",
       situation:
-        "Alejandra está en una noche de salsa en Canadá con Chris, un amigo melómano que le va mostrando la música. Practica que en inglés el sonido se percibe con “hear” (“did you hear that?”), pero que el llamado de atención NO es “hear!”: es “hey” entre amigos, “excuse me” con desconocidos y “listen!” para pedir atención. Y que las frases se cierran con “you know?/right?”, no con un “you hear?” calcado del “¿oíste?”. Usted, por el trato con alguien en un país nuevo.",
+        "Alejandra está en una noche de salsa en Estados Unidos con Chris, un amigo melómano que le va mostrando la música. Practica que en inglés el sonido se percibe con “hear” (“did you hear that?”), pero que el llamado de atención NO es “hear!”: es “hey” entre amigos, “excuse me” con desconocidos y “listen!” para pedir atención. Y que las frases se cierran con “you know?/right?”, no con un “you hear?” calcado del “¿oíste?”. Usted, por el trato con alguien en un país nuevo.",
       setting: {
         who: "Chris es un amigo estadounidense, buen conocedor de salsa, que le va nombrando los temas. Alejandra, colombiana, sigue la música y el inglés a la vez.",
         what: "Una noche de salsa donde se separan “hear” (percibir el sonido) y los llamados de atención del inglés, que nunca usan “hear”.",
         when: "Un sábado por la noche, la pista llena y un clásico entrando en la consola.",
-        where: "En Canadá, en un club con noche latina, lejos de Cali pero con la misma salsa.",
+        where: "En Estados Unidos, en un club con noche latina, lejos de Cali pero con la misma salsa.",
         why: "Porque el instinto de Alejandra es traducir su “¡oiga!” con “hear!”, y esa es justo la trampa. La noche la obliga a repartir “hear”, “hey”, “excuse me” y “listen” en su sitio."
       },
       address: {
@@ -1709,7 +1709,7 @@ lessons.push(
         {
           label: "Salsa en el norte",
           body:
-            "La salsa viajó lejos de Cali: en ciudades de Canadá y Estados Unidos hay clubes, clases y noches latinas donde un melómano local te nombra la orquesta y el año igual que en el Valle. Pero el idioma alrededor cambia. Reaccionas con “oh, I love this song!”, pides atención con “listen to this part”, y confirmas con “you know?”. El baile es el mismo; lo que se dice encima de la música se dice en inglés, con “hear” y “listen” bien separados."
+            "La salsa viajó lejos de Cali: en ciudades de Estados Unidos hay clubes, clases y noches latinas donde un melómano local te nombra la orquesta y el año igual que en el Valle. Pero el idioma alrededor cambia. Reaccionas con “oh, I love this song!”, pides atención con “listen to this part”, y confirmas con “you know?”. El baile es el mismo; lo que se dice encima de la música se dice en inglés, con “hear” y “listen” bien separados."
         }
       ],
       pitfalls: [

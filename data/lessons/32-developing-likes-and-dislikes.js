@@ -352,12 +352,12 @@ lessons.push(
     en: {
       title: "Lo que le gusta en un festival de invierno",
       situation:
-        "Usted está en Houston con Natalie en un festival de invierno. Hay esculturas de hielo, música, chocolate caliente y una pregunta con doble sentido: si sólo le gustan las esculturas o si también le gusta alguien del grupo.",
+        "Usted está en Galveston con Natalie en un festival de invierno. Hay esculturas de hielo, música, chocolate caliente y una pregunta con doble sentido: si sólo le gustan las esculturas o si también le gusta alguien del grupo.",
       setting: {
-        who: "Natalie vive en Houston y sabe moverse entre el frío sin volverlo una hazaña. Juliana está de visita y ya puede conversar más allá de lo básico.",
+        who: "Natalie vive en Galveston y sabe moverse entre el gentío sin volverlo una hazaña. Juliana está de visita y ya puede conversar más allá de lo básico.",
         what: "Una conversación sobre gustos: una cosa singular, varias cosas plurales, un “love” enfático y la diferencia delicada entre que alguien le caiga bien y que le guste románticamente.",
-        when: "Una tarde fría de sábado, cuando el festival ya está lleno y la luz empieza a ponerse azul.",
-        where: "Houston, Canadá, en un festival de invierno cerca del lago.",
+        when: "Una tarde de sábado, cuando el festival ya está lleno y la luz empieza a ponerse azul.",
+        where: "Galveston, Texas, en un pabellón de esculturas de hielo junto a la bahía.",
         why: "Porque el inglés no tiene el verbo “gustar” al revés: la persona que siente el gusto es el sujeto. Eso simplifica una parte y crea otras trampas, especialmente con personas."
       },
       address: {

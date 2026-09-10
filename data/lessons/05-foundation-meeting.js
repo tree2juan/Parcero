@@ -388,7 +388,7 @@ lessons.push(
           useWhen: "Hablas de la primera vez que ves a una persona, o de quedar con alguien.",
           avoidWhen: "Quieres decir que ya conoces bien a alguien; eso es “to know,” no “to meet.”",
           register: "neutral",
-          region: "Inglés general; igual en Canadá, Estados Unidos y el Reino Unido.",
+          region: "Inglés general; igual en Estados Unidos y el Reino Unido.",
           related: ["to know", "to meet up", "to get to know", "nice to meet you"],
           example: {
             target: "I'd love to meet your family.",
@@ -402,7 +402,7 @@ lessons.push(
           useWhen: "Justo cuando te presentan a alguien, en cualquier nivel de formalidad.",
           avoidWhen: "Saludas a alguien que ya conoces; ahí basta con “hi” o “hey.”",
           register: "neutral",
-          region: "Universal en inglés; muy usada en Canadá con un apretón de manos.",
+          region: "Universal en inglés; muy usada en Estados Unidos con un apretón de manos.",
           related: ["pleased to meet you", "nice meeting you", "likewise", "hello"],
           example: {
             target: "Nice to meet you, I'm Alejandra.",
@@ -480,11 +480,11 @@ lessons.push(
           }
         }
       ],
-      note: "El truco más útil: el inglés usa “meet” para el primer encuentro y “know” para cuando ya conoces a alguien o algo, sin partirlo en saber y conocer como el español. Cuando te presenten, un “nice to meet you” y un “likewise” de vuelta te sacan de casi cualquier primer saludo en Canadá.",
+      note: "El truco más útil: el inglés usa “meet” para el primer encuentro y “know” para cuando ya conoces a alguien o algo, sin partirlo en saber y conocer como el español. Cuando te presenten, un “nice to meet you” y un “likewise” de vuelta te sacan de casi cualquier primer saludo en Estados Unidos.",
       culture: [
         {
           label: "A ti también te presentan, no te presentas solo",
-          body: "En una reunión en Canadá también es común que quien te llevó te vaya presentando: “this is Alejandra,” cara por cara. Aun así, presentarte tú mismo con un “hi, I'm Alejandra” se ve mucho más normal que en Colombia y no resulta atrevido. Si nadie te presenta, acércate, di tu nombre y da la mano: en ambientes estadounidenses eso se lee como seguridad y no como falta de modales."
+          body: "En una reunión en Estados Unidos también es común que quien te llevó te vaya presentando: “this is Alejandra,” cara por cara. Aun así, presentarte tú mismo con un “hi, I'm Alejandra” se ve mucho más normal que en Colombia y no resulta atrevido. Si nadie te presenta, acércate, di tu nombre y da la mano: en ambientes estadounidenses eso se lee como seguridad y no como falta de modales."
         },
         {
           label: "El tamaño de nice to meet you",
@@ -492,7 +492,7 @@ lessons.push(
         },
         {
           label: "La cadena de amigos también cuenta",
-          body: "En Canadá presentarte como “a friend of Sam's” también te da entrada, aunque la red social suele sentirse un poco menos apretada que la rosca colombiana. Explicar cómo se conocen sigue siendo parte del ritual: how do you two know each other es de las primeras preguntas. Llegar con alguien conocido facilita todo, pero la gente también hace amistades más rápido con desconocidos que en muchos ambientes colombianos, sobre todo entre jóvenes."
+          body: "En Estados Unidos presentarte como “a friend of Sam's” también te da entrada, aunque la red social suele sentirse un poco menos apretada que la rosca colombiana. Explicar cómo se conocen sigue siendo parte del ritual: how do you two know each other es de las primeras preguntas. Llegar con alguien conocido facilita todo, pero la gente también hace amistades más rápido con desconocidos que en muchos ambientes colombianos, sobre todo entre jóvenes."
         },
         {
           label: "Conocer un lugar también se presume",
@@ -1080,7 +1080,7 @@ lessons.push(
         },
         {
           label: "La pelea por la cuenta",
-          body: "Ofrecerse a pagar también existe en Canadá, aunque suele ser menos insistente que en Colombia. Se oye “it's on me,” “my treat” o “I've got this,” y lo común es turnarse: hoy pago yo, la próxima pagas tú. Pelear a fondo por la cuenta puede verse un poco exagerado; basta con ofrecer una vez y aceptar con gracia. Aun así, dejar que el otro pague siempre sin ofrecer nunca también se nota, así que conviene proponer la próxima ronda."
+          body: "Ofrecerse a pagar también existe en Estados Unidos, aunque suele ser menos insistente que en Colombia. Se oye “it's on me,” “my treat” o “I've got this,” y lo común es turnarse: hoy pago yo, la próxima pagas tú. Pelear a fondo por la cuenta puede verse un poco exagerado; basta con ofrecer una vez y aceptar con gracia. Aun así, dejar que el otro pague siempre sin ofrecer nunca también se nota, así que conviene proponer la próxima ronda."
         },
         {
           label: "El inglés no tiene vos ni usted",
@@ -1660,11 +1660,11 @@ lessons.push(
       culture: [
         {
           label: "La hora estadounidense es más estricta",
-          body: "En Canadá la puntualidad pesa más que en Colombia. Si te invitan a cenar a las siete, se espera que llegues muy cerca de esa hora, quizá cinco o diez minutos después, no media hora. Llegar tarde sin avisar puede leerse como descuido o falta de respeto. Por eso un mensaje de “running late, so sorry” es casi obligatorio: avisar reconoce que el tiempo del otro importa, algo que en ambientes estadounidenses se valora mucho."
+          body: "En Estados Unidos la puntualidad pesa más que en Colombia. Si te invitan a cenar a las siete, se espera que llegues muy cerca de esa hora, quizá cinco o diez minutos después, no media hora. Llegar tarde sin avisar puede leerse como descuido o falta de respeto. Por eso un mensaje de “running late, so sorry” es casi obligatorio: avisar reconoce que el tiempo del otro importa, algo que en ambientes estadounidenses se valora mucho."
         },
         {
           label: "Avisar siempre que llegues tarde",
-          body: "En Colombia la hora es elástica y un retraso corto se perdona sin más. En Canadá, en cambio, lo cortés es avisar: un texto rápido diciendo que el metro se retrasó y que ya casi llegas. No hace falta un discurso; basta con “I'm running about ten minutes late.” Ese aviso corto mantiene la confianza y evita que el anfitrión se quede adivinando. Callar y aparecer tarde sin explicación es lo que de verdad molesta."
+          body: "En Colombia la hora es elástica y un retraso corto se perdona sin más. En Estados Unidos, en cambio, lo cortés es avisar: un texto rápido diciendo que el metro se retrasó y que ya casi llegas. No hace falta un discurso; basta con “I'm running about ten minutes late.” Ese aviso corto mantiene la confianza y evita que el anfitrión se quede adivinando. Callar y aparecer tarde sin explicación es lo que de verdad molesta."
         },
         {
           label: "El metro y el METRO de Houston",
@@ -1672,7 +1672,7 @@ lessons.push(
         },
         {
           label: "La cena en casa estadounidense",
-          body: "Que te inviten a cenar a una casa en Canadá es un gesto de cercanía, y conviene cuidarlo. Se agradece llegar puntual, llevar algo pequeño — vino, postre, algo para compartir — y avisar si te retrasas. A diferencia del largo almuerzo dominical colombiano, la cena puede tener una hora de inicio bastante marcada. Cumplir esos detalles dice que valoras la invitación tanto como quien te abrió la puerta de su casa."
+          body: "Que te inviten a cenar a una casa en Estados Unidos es un gesto de cercanía, y conviene cuidarlo. Se agradece llegar puntual, llevar algo pequeño — vino, postre, algo para compartir — y avisar si te retrasas. A diferencia del largo almuerzo dominical colombiano, la cena puede tener una hora de inicio bastante marcada. Cumplir esos detalles dice que valoras la invitación tanto como quien te abrió la puerta de su casa."
         }
       ],
       pitfalls: [

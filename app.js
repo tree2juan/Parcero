@@ -94,7 +94,7 @@ const esc = (value) => (value === null || value === undefined ? "" : String(valu
 const targetLang = () => (state.direction === "es" ? ' lang="es"' : ' lang="en"');
 const supportLang = () => (state.direction === "es" ? ' lang="en"' : ' lang="es"');
 const anchorFor = (field) => `lesson:${currentLesson().id}/${state.direction}/${field}`;
-/* A labelled line that simply disappears when the lesson has nothing to say. */
+/* A labeled line that simply disappears when the lesson has nothing to say. */
 const detail = (key, value, lang) => (value ? `<p class="detail"><strong>${t(key)}</strong> <span${lang || ""}>${esc(value)}</span></p>` : "");
 function save() {
   localStorage.setItem("parcero-direction", state.direction);

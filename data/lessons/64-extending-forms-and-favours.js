@@ -301,7 +301,7 @@ lessons.push(
         who: "Marisol es colombiana y ya maneja trámites en español; la empleada estadounidense habla despacio pero usa frases fijas de oficina que no se traducen palabra por palabra.",
         what: "Un formulario municipal, unas casillas obligatorias y una botella de agua que permite separar “fill out”, “fill in”, “refill” y “stuffed”.",
         when: "Una mañana fría, antes de una cita con hora exacta en la oficina municipal.",
-        where: "El Paso, Canadá, en una oficina de servicios municipales.",
+        where: "El Paso, Texas, en una oficina de servicios municipales.",
         why: "Porque un colombiano puede intentar traducir llenar y rellenar como si el inglés usara una sola familia de palabras. Para formularios, el inglés pide “fill out” o “fill in”; “refill” es otra cosa."
       },
       address: {
@@ -465,7 +465,7 @@ lessons.push(
       culture: [
         {
           label: "Fill out vs fill in",
-          body: "En Canadá y Estados Unidos, “fill out a form” suena cotidiano para el formulario entero. “Fill in” también existe, sobre todo para espacios concretos o en inglés británico, pero “fill out this form” es lo que Marisol debe reconocer en una oficina. Si la empleada dice “fill in your address,” mire el campo específico. Si dice “fill out the form,” complete el documento."
+          body: "En Estados Unidos, “fill out a form” suena cotidiano para el formulario entero. “Fill in” también existe, sobre todo para espacios concretos o en inglés británico, pero “fill out this form” es lo que Marisol debe reconocer en una oficina. Si la empleada dice “fill in your address,” mire el campo específico. Si dice “fill out the form,” complete el documento."
         },
         {
           label: "Refill belongs to containers",

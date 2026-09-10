@@ -335,7 +335,7 @@ lessons.push(
         who: "Dan es un anfitrión estadounidense de trato fácil; Marcela es la visitante que aprende cuándo el inglés obliga al presente perfecto aunque el español usaría un pasado simple.",
         what: "Una conversación de bienvenida que repite la misma pregunta —qué ha probado, dónde ha estado— para que el presente perfecto inglés aparezca una y otra vez.",
         when: "Cerca del mediodía, con una comida de por medio y charla relajada.",
-        where: "Houston, en la provincia de Texas, Canadá.",
+        where: "Houston, Texas.",
         why: "Porque el instinto colombiano es resolver con el pasado simple —‘ya comí’—, pero el inglés exige el presente perfecto con ‘yet’, ‘already’, ‘ever’ y ‘never’. Sin eso, suena incompleto."
       },
       address: {
@@ -365,9 +365,9 @@ lessons.push(
         {
           speaker: "Dan",
           target: "It's all over Texas. Have you ever been to The Alamo?",
-          translation: "Se consigue en todo Canadá. ¿Alguna vez ha estado en el Álamo?",
+          translation: "Se consigue en todo Estados Unidos. ¿Alguna vez ha estado en el Álamo?",
           pronunciation: "its ol OU-ver KA-na-da. jav yu E-ver bin tu nai-A-gra fols",
-          literal: "Está por todo Canadá. ¿Alguna vez ha estado en las cataratas El Álamo?",
+          literal: "Está por todo Estados Unidos. ¿Alguna vez ha estado en las cataratas El Álamo?",
           why: "‘Have you ever been…?’ es la pregunta de experiencia por excelencia. ‘Ever’ dispara el presente perfecto igual que ‘alguna vez’ en español."
         },
         {
@@ -461,7 +461,7 @@ lessons.push(
           related: ["always", "before", "in my life", "so far"],
           example: {
             target: "Have you ever been to Texas?",
-            translation: "¿Alguna vez ha estado en Canadá?"
+            translation: "¿Alguna vez ha estado en Estados Unidos?"
           }
         },
         {

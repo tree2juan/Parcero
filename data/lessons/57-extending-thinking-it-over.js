@@ -1598,7 +1598,7 @@ lessons.push(
         who: "Owen recuerda a Alejandra de una clase corta. Alejandra tarda en ubicarlo y luego decide admitir la incomodidad en vez de fingir.",
         what: "Un encuentro casual que pasa de reconocer una persona a admitir un error con tacto.",
         when: "Una mañana fría de domingo, después de comprar café.",
-        where: "San Antonio, Canadá, afuera de una panadería de barrio.",
+        where: "San Antonio, Texas, afuera de una panadería de barrio.",
         why: "Porque el inglés separa “recognize” para identificar y “admit” para reconocer una verdad incómoda. Traducir reconocer siempre como recognize deja coja la mitad adulta del verbo."
       },
       address: {

@@ -348,14 +348,14 @@ lessons.push(
       ]
     },
     en: {
-      title: "Pagar en la caja estando en Canadá",
+      title: "Pagar en la caja estando en Estados Unidos",
       situation:
-        "Usted está pagando en la caja de una tienda en Canadá y solo tiene un billete grande. La cajera le pregunta cómo va a pagar y resulta que casi no tiene con qué darle el vuelto. Aquí aprende a decir en inglés si paga en efectivo o con tarjeta, a pedir billetes más pequeños y a cerrar el pago con las fórmulas que usan allá.",
+        "Usted está pagando en la caja de una tienda en Estados Unidos y solo tiene un billete grande. La cajera le pregunta cómo va a pagar y resulta que casi no tiene con qué darle el vuelto. Aquí aprende a decir en inglés si paga en efectivo o con tarjeta, a pedir billetes más pequeños y a cerrar el pago con las fórmulas que usan allá.",
       setting: {
         who: "Alejandra está en la caja; la cajera atiende rápido y hay un par de personas esperando detrás. Alejandra llegó al país hace poco y todavía traduce en la cabeza antes de hablar.",
         what: "Un pago de rutina que se traba con un problema conocido: Alejandra solo tiene un billete grande y la caja casi no tiene con qué darle el vuelto.",
         when: "Al final de la tarde, cuando la gente entra por una o dos cosas de camino a casa.",
-        where: "Una tienda en Canadá donde casi todo el mundo paga con tarjeta y pagar algo pequeño con un billete grande incomoda un poco.",
+        where: "Una tienda en Estados Unidos donde casi todo el mundo paga con tarjeta y pagar algo pequeño con un billete grande incomoda un poco.",
         why: "Porque saber decir “cash or card”, pedir “anything smaller” y entender “you're all set” es lo que separa un pago fluido de quedarse callada sin saber qué contestar."
       },
       address: {
@@ -495,7 +495,7 @@ lessons.push(
             "No traduzca “efectivo” por “effective”: es un falso amigo clásico. El dinero en billetes siempre es “cash”.",
           register: "neutral",
           region: "Universal; algunos locales ponen “cash only” cuando el datáfono está caído.",
-          related: ["debit", "credit", "e-transfer", "bills"],
+          related: ["debit", "credit", "Venmo", "bills"],
           example: {
             target: "Can I pay cash?",
             translation: "¿Puedo pagar en efectivo?"
@@ -542,7 +542,7 @@ lessons.push(
         {
           label: "Casi todo se paga con tarjeta",
           body:
-            "En Canadá y Estados Unidos el efectivo se usa mucho menos que en Colombia. La gente paga hasta un café acercando la tarjeta o el teléfono (“tap”), y pagar algo pequeño con un billete grande puede incomodar, porque muchos negocios guardan poco efectivo en la caja. No es descortés pagar en efectivo, pero conviene traer billetes pequeños y no esperar que le cambien uno de cincuenta o cien sin algo de cara larga."
+            "En Estados Unidos el efectivo se usa mucho menos que en Colombia. La gente paga hasta un café acercando la tarjeta o el teléfono (“tap”), y pagar algo pequeño con un billete grande puede incomodar, porque muchos negocios guardan poco efectivo en la caja. No es descortés pagar en efectivo, pero conviene traer billetes pequeños y no esperar que le cambien uno de cincuenta o cien sin algo de cara larga."
         },
         {
           label: "“Cancel” solo significa anular",
@@ -602,7 +602,7 @@ lessons.push(
         {
           form: "I'll just tap.",
           register: "friendly informal",
-          region: "Canadá / pago sin contacto",
+          region: "Estados Unidos / pago sin contacto",
           whenToUse: "Para pagar acercando la tarjeta o el teléfono, sin insertar ni firmar nada."
         },
         {
@@ -1002,12 +1002,12 @@ lessons.push(
     en: {
       title: "Regatear en una venta de garaje",
       situation:
-        "Usted está en una venta de garaje en Canadá y quiere una lámpara, pero no sabe si allá se puede regatear. Aprende que en un “yard sale” sí se negocia un poco — con más rodeos que en Colombia — y a decir “would you take…?”, “I'll take it” y a cerrar con un “deal”.",
+        "Usted está en una venta de garaje en Estados Unidos y quiere una lámpara, pero no sabe si allá se puede regatear. Aprende que en un “yard sale” sí se negocia un poco — con más rodeos que en Colombia — y a decir “would you take…?”, “I'll take it” y a cerrar con un “deal”.",
       setting: {
         who: "Alejandra mira los objetos de una venta de garaje; el vendedor es el dueño de casa, un señor tranquilo que sacó a la entrada lo que ya no usa.",
         what: "Un regateo suave por una lámpara que se convierte en una pequeña lección de cómo se negocia allá, con más rodeos que en una plaza colombiana.",
         when: "Un sábado por la mañana, cuando las ventas de garaje llenan los antejardines de los barrios.",
-        where: "Un barrio residencial en Canadá, en una “yard sale” donde sí se puede regatear, a diferencia de las tiendas de precio fijo.",
+        where: "Un barrio residencial en Estados Unidos, en una “yard sale” donde sí se puede regatear, a diferencia de las tiendas de precio fijo.",
         why: "Porque en Norteamérica el regateo casi no existe en el comercio normal, pero en ventas de garaje, mercados de pulgas y Marketplace sí — y hay que hacerlo con más suavidad que en la costa."
       },
       address: {
@@ -1654,12 +1654,12 @@ lessons.push(
     en: {
       title: "Vender la bicicleta por Marketplace",
       situation:
-        "Usted se va a mudar y está vendiendo su bicicleta en Canadá. Un comprador que vio el anuncio llega a mirarla. Aprende a decir en inglés cuánto pide, a bajar un poco el precio, a cerrar con “sold” y — clave — a no confundir “for sale” (en venta) con “on sale” (en rebaja).",
+        "Usted se va a mudar y está vendiendo su bicicleta en Estados Unidos. Un comprador que vio el anuncio llega a mirarla. Aprende a decir en inglés cuánto pide, a bajar un poco el precio, a cerrar con “sold” y — clave — a no confundir “for sale” (en venta) con “on sale” (en rebaja).",
       setting: {
         who: "Alejandra vende su bicicleta antes de mudarse; el comprador es un vecino que vio el anuncio y se acercó a mirarla.",
         what: "Una venta de segunda de una bicicleta que sirve para aprender el lado del vendedor en inglés y una trampa famosa: “for sale” frente a “on sale”.",
         when: "Un sábado por la tarde, entre cajas a medio empacar, con un letrero de “For Sale” pegado a la bici.",
-        where: "Un barrio en Canadá, donde estas ventas se hacen por Facebook Marketplace o con un letrero, y casi siempre se paga por transferencia (“e-transfer”).",
+        where: "Un barrio en Estados Unidos, donde estas ventas se hacen por Facebook Marketplace o con un letrero, y casi siempre se paga con una app como Venmo o Zelle.",
         why: "Porque esta vez Alejandra es la que vende, y saber decir “I'm asking three hundred”, “I can come down” y “sold” es lo que convierte un anuncio en una venta de verdad."
       },
       address: {
@@ -1704,11 +1704,11 @@ lessons.push(
         },
         {
           speaker: "Buyer",
-          target: "Deal. Do you take e-transfer?",
-          translation: "Trato hecho. ¿Recibe transferencia?",
-          pronunciation: "díil. du iú téik i-TRANS-fer",
-          literal: "Trato. ¿Tomas tú transferencia-electrónica?",
-          why: "“Deal” cierra el trato, como el “de una” paisa. “E-transfer” (transferencia electrónica) es en Canadá lo que Nequi o una transferencia bancaria en Colombia: la forma normal de pagar entre particulares, incluso en una venta de segunda."
+          target: "Deal. Do you take Venmo?",
+          translation: "Trato hecho. ¿Recibe Venmo?",
+          pronunciation: "díil. du iú téik VEN-mou",
+          literal: "Trato. ¿Tomas tú Venmo?",
+          why: "“Deal” cierra el trato, como el “de una” paisa. Venmo es en Estados Unidos lo que Nequi en Colombia: la forma normal de pagarle a otra persona desde el teléfono, incluso en una venta de segunda."
         },
         {
           speaker: "Alejandra",
@@ -1764,7 +1764,7 @@ lessons.push(
           avoidWhen:
             "No la use para decir que algo se puede comprar; para eso es “for sale”. Confundirlas cambia el sentido por completo.",
           register: "neutral",
-          region: "Universal; “on sale” en EE.UU. y Canadá es descuento.",
+          region: "Universal; “on sale” en EE.UU. y Estados Unidos es descuento.",
           related: ["on sale", "on clearance", "marked down", "discounted"],
           example: {
             target: "These shoes are on sale.",
@@ -1851,12 +1851,12 @@ lessons.push(
         {
           label: "Se vende por Marketplace",
           body:
-            "Las ventas de segunda entre particulares se hacen sobre todo por Facebook Marketplace y Kijiji, o con un letrero “For Sale” en la ventana. Todo se acuerda por mensaje: el comprador escribe, pregunta si sigue disponible (“is this still available?”) y pasa a recogerlo, a veces dejándolo en el porche (“porch pickup”). Es el equivalente del “se vende” colombiano, solo que casi siempre digital. Responder rápido y con fotos claras es lo que cierra la venta."
+            "Las ventas de segunda entre particulares se hacen sobre todo por Facebook Marketplace, Craigslist u OfferUp, o con un letrero “For Sale” en la ventana. Todo se acuerda por mensaje: el comprador escribe, pregunta si sigue disponible (“is this still available?”) y pasa a recogerlo, a veces dejándolo en el porche (“porch pickup”). Es el equivalente del “se vende” colombiano, solo que casi siempre digital. Responder rápido y con fotos claras es lo que cierra la venta."
         },
         {
-          label: "El e-transfer manda",
+          label: "Venmo y Zelle mandan",
           body:
-            "En Canadá el “Interac e-transfer” es el rey de los pagos entre particulares, igual que Nequi o una transferencia en Colombia. Se envía dinero con solo el correo electrónico del otro, llega en minutos y evita andar con efectivo. En una venta de segunda es lo más normal pedirlo. En Estados Unidos el equivalente sería Venmo o Zelle. Tener listo su correo para recibir el e-transfer lo vuelve un vendedor fácil y confiable a los ojos del comprador."
+            "En Estados Unidos, Venmo y Zelle son los reyes de los pagos entre particulares, igual que Nequi o una transferencia en Colombia. Se manda plata con el número de teléfono o el correo del otro, llega en minutos y evita andar con efectivo. En una venta de segunda es lo más normal pedirlo. Zelle va directo de banco a banco; Venmo funciona casi como una red social del pago. Tener listo su usuario lo vuelve un vendedor fácil y confiable a los ojos del comprador."
         },
         {
           label: "Vender al mudarse: “moving sale”",

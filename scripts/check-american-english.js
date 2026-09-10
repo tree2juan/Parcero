@@ -51,12 +51,34 @@ const BRITISH = [
   "crisps", "pram", "shopfront", "queueing", "dustbin"
 ];
 
-/* The English track is set in Texas, not Canada. */
+/* The English track is set in Texas, not Canada.
+ *
+ * The food and money terms matter as much as the place names. "Tim Hortons"
+ * was replaced by "Shipley Do-Nuts" in the migration but "double-double" — a
+ * Tim Hortons order code that means nothing at a Texas donut counter — was
+ * left behind, and a whole lesson kept teaching "butter tarts" while calling
+ * the neighbour who bakes them American. A half-migrated scene is worse than
+ * an unmigrated one, because it is internally contradictory. */
 const CANADIAN = [
   "Toronto", "Vancouver", "Montreal", "Montréal", "Halifax", "Ottawa",
   "Calgary", "Winnipeg", "Edmonton", "Banff", "Canada", "Canadá", "Canadian",
   "Canadians", "canadiense", "canadienses", "Niagara", "Niágara", "poutine",
-  "Tim Hortons", "loonie", "toonie", "TTC", "Victoria Day"
+  "Tim Hortons", "loonie", "loonies", "toonie", "toonies", "TTC", "Victoria Day",
+  "butter tart", "butter tarts", "double-double", "Nanaimo", "tourtière",
+  "tourtiere", "Timbits", "back bacon", "ketchup chips", "Saskatoon",
+  "Quebec", "Québec", "Ontario", "Alberta", "Manitoba", "Nova Scotia",
+  "Newfoundland", "Saskatchewan",
+  /*
+   * Institutions and brands, not place names. These are the ones that survive
+   * a place-name sweep untouched: nothing about "Kijiji" or "Interac
+   * e-transfer" looks geographic, so relocating every city still left a
+   * lesson teaching learners to ask a Texan "Do you take e-transfer?" — a
+   * question no American would understand. A corpus can be entirely free of
+   * the word "Canada" and still be set in Canada.
+   */
+  "Kijiji", "Interac", "e-transfer", "e-transfers", "Canadian Tire",
+  "Shoppers Drug Mart", "Loblaws", "Sobeys", "Via Rail", "Air Canada",
+  "chesterfield", "serviette", "serviettes"
 ];
 
 function targetFiles() {
@@ -65,8 +87,11 @@ function targetFiles() {
     const abs = path.join(ROOT, dir);
     if (fs.existsSync(abs)) for (const f of fs.readdirSync(abs)) files.push(`${dir}/${f}`);
   }
-  for (const f of ["data/slang.js", "data/mature.js", "data/structures.js",
-    "data/curriculum.js", "data/taxonomy.js", "i18n.js", "index.html"]) {
+  /* data/lessons.js carries the eight seed lessons and is content like any
+     other block. It was omitted from this list at first, so those lessons
+     were exempt from the ban without anyone saying so. */
+  for (const f of ["data/lessons.js", "data/slang.js", "data/mature.js", "data/structures.js",
+    "data/curriculum.js", "data/taxonomy.js", "app.js", "i18n.js", "index.html"]) {
     if (fs.existsSync(path.join(ROOT, f))) files.push(f);
   }
   return files;
@@ -74,27 +99,50 @@ function targetFiles() {
 
 const escape = (s) => s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 
-/* Returns [{ term, file, context }] for every banned word found. */
-function findViolations() {
-  const all = [...BRITISH, ...CANADIAN];
-  const re = new RegExp(`\\b(${all.map(escape).join("|")})\\b`, "gi");
+/*
+ * Word boundaries that understand accents.
+ *
+ * The obvious `\b(term)\b` is wrong here and silently so. `\b` is defined
+ * against ASCII word characters, so in "Canadá" the trailing boundary sits
+ * between "á" and a space — two non-word characters by that definition — and
+ * matches nothing. The guard therefore reported the corpus clean while
+ * "Canadá" appeared 16 times in a single lesson and across 38 files.
+ *
+ * Unicode property escapes fix it: require that the character either side is
+ * not a letter, digit or underscore, with `u` so \p{L} is legal. This is the
+ * kind of bug that only ever shows up in the language you were not testing in.
+ */
+const boundedPattern = (terms) =>
+  new RegExp(`(?<![\\p{L}\\p{N}_])(${terms.map(escape).join("|")})(?![\\p{L}\\p{N}_])`, "giu");
+
+/* Scan one string. Separated from file reading so the matcher itself can be
+   tested against known-bad text rather than against whatever the corpus
+   happens to contain today. */
+function scanText(text, terms) {
+  const re = boundedPattern(terms || [...BRITISH, ...CANADIAN]);
   const out = [];
-  for (const rel of targetFiles()) {
-    const text = fs.readFileSync(path.join(ROOT, rel), "utf8");
-    let m;
-    re.lastIndex = 0;
-    while ((m = re.exec(text))) {
-      out.push({
-        term: m[1],
-        file: rel,
-        context: text.slice(Math.max(0, m.index - 50), m.index + 50).replace(/\s+/g, " ")
-      });
-    }
+  let m;
+  while ((m = re.exec(text))) {
+    out.push({
+      term: m[1],
+      index: m.index,
+      context: text.slice(Math.max(0, m.index - 50), m.index + 50).replace(/\s+/g, " ")
+    });
   }
   return out;
 }
 
-module.exports = { BRITISH, CANADIAN, findViolations, targetFiles };
+/* Returns [{ term, file, context }] for every banned word found. */
+function findViolations() {
+  const out = [];
+  for (const rel of targetFiles()) {
+    const text = fs.readFileSync(path.join(ROOT, rel), "utf8");
+    for (const hit of scanText(text)) out.push({ term: hit.term, file: rel, context: hit.context });
+  }
+  return out;
+}
+
+module.exports = { BRITISH, CANADIAN, findViolations, targetFiles, scanText };
 
 if (require.main === module) {
   const bad = findViolations();

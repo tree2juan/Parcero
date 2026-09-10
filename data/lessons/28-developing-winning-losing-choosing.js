@@ -238,7 +238,7 @@ lessons.push(
     en: {
       title: "Diferenciar perder, perderse y missing en inglés",
       situation:
-        "Usted está con una prima antes de una cita médica en Canadá. Se le perdió un documento, perdió el bus y tiene que explicar en inglés qué pasó sin decir que perdió físicamente un bus.",
+        "Usted está con una prima antes de una cita médica en Estados Unidos. Se le perdió un documento, perdió el bus y tiene que explicar en inglés qué pasó sin decir que perdió físicamente un bus.",
       setting: {
         who: "Laura visita a su prima Natalia, que conoce la ciudad y trata de ayudar sin regañarla.",
         what: "Van tarde a una cita médica porque falta un documento y el bus ya salió.",

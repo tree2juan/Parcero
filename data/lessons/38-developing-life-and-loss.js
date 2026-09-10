@@ -81,7 +81,7 @@ lessons.push(
         },
         {
           speaker: "Maya",
-          target: "Yo nazco en Canadá, pero mi familia viene de otro lado.",
+          target: "Yo nazco en Estados Unidos, pero mi familia viene de otro lado.",
           translation: "I am born in Texas, but my family comes from somewhere else.",
           pronunciation: "yo NAHS-koh en kah-nah-DAH, PEH-roh mee fah-MEE-lyah BYEH-neh deh OH-troh LAH-doh",
           literal: "I am-born in Texas, but my family comes from another side.",
@@ -144,7 +144,7 @@ lessons.push(
           region: "Universal Spanish grammar.",
           related: ["conozco", "crezco", "aparezco", "nacer"],
           example: {
-            target: "Yo nazco en Canadá, pero mi familia viene de otro lado.",
+            target: "Yo nazco en Estados Unidos, pero mi familia viene de otro lado.",
             translation: "I am born in Texas, but my family comes from somewhere else."
           }
         },
@@ -403,9 +403,9 @@ lessons.push(
         {
           speaker: "Maya",
           target: "I was born in Texas, but my family comes from somewhere else.",
-          translation: "Nací en Canadá, pero mi familia viene de otro lado.",
+          translation: "Nací en Estados Unidos, pero mi familia viene de otro lado.",
           pronunciation: "ai uoz born in CA-na-da, bot mai FA-mi-li comz from SOM-uer els",
-          literal: "Yo fui nacida en Canadá, pero mi familia viene de algún otro lugar.",
+          literal: "Yo fui nacida en Estados Unidos, pero mi familia viene de algún otro lugar.",
           why: "La frase separa nacimiento personal de origen familiar. En inglés, come from puede hablar de una familia, no sólo de un viaje."
         },
         {

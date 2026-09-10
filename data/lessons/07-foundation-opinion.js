@@ -428,7 +428,7 @@ lessons.push(
           avoidWhen:
             "Al dar una orden que en realidad no está abriendo a discusión; ahí “does that work for you?” suena a falsa modestia.",
           register: "polite service",
-          region: "Inglés universal; muy usado en el trato de servicio en Canadá.",
+          region: "Inglés universal; muy usado en el trato de servicio en Estados Unidos.",
           related: ["is that okay with you?", "would that work?", "how does that sound?", "does that suit you?"],
           example: {
             target: "Does Saturday work for you?",
@@ -462,7 +462,7 @@ lessons.push(
           avoidWhen:
             "En una tienda de precio fijo con etiquetas; ahí regatear queda fuera de lugar y “steep” suena a queja vacía.",
           register: "friendly informal",
-          region: "Inglés universal; muy común en Canadá y Estados Unidos.",
+          region: "Inglés universal; muy común en Estados Unidos.",
           related: ["pricey", "expensive", "a bit much", "on the high side"],
           example: {
             target: "It seems a bit steep.",
@@ -544,7 +544,7 @@ lessons.push(
         {
           label: "Regatear casi no existe",
           body:
-            "En Canadá, el precio que le da un pintor o una tienda suele ser el precio, y punto. Decir “it seems a bit steep” está bien como comentario honesto, pero no inicia el tira y afloje que sí abriría en Colombia. Insistir en un descuento, sobre todo en un comercio formal, puede incomodar. Con un trabajador independiente hay algo de margen, pero se pide una sola vez y con suavidad, nunca como parte esperada del trato."
+            "En Estados Unidos, el precio que le da un pintor o una tienda suele ser el precio, y punto. Decir “it seems a bit steep” está bien como comentario honesto, pero no inicia el tira y afloje que sí abriría en Colombia. Insistir en un descuento, sobre todo en un comercio formal, puede incomodar. Con un trabajador independiente hay algo de margen, pero se pide una sola vez y con suavidad, nunca como parte esperada del trato."
         },
         {
           label: "El apellido con “Mr.” marca respeto",
@@ -1002,7 +1002,7 @@ lessons.push(
       ]
     },
     en: {
-      title: "Medirse una chaqueta en una tienda de Canadá",
+      title: "Medirse una chaqueta en una tienda de Estados Unidos",
       situation:
         "Alejandra anda buscando una chaqueta en un centro comercial de Houston. Una vendedora, Megan, la anima a medirse una. En cinco frases se juega la talla, dónde queda la otra tienda y si vuelve o no por ella — todo en un inglés donde “quedar” se dice de cinco maneras distintas.",
       setting: {
@@ -1206,7 +1206,7 @@ lessons.push(
         {
           label: "La cultura de la devolución",
           body:
-            "En Canadá es normal comprar, llevarse la prenda y devolverla en unos días si no convence, siempre con el recibo y dentro del plazo. Guardar el “receipt” es un hábito casi sagrado. Esto cambia la manera de comprar: uno puede arriesgarse con una talla porque devolver es fácil y esperado. En buena parte de Colombia la devolución es más difícil, así que aquí conviene aprovechar esa red de seguridad sin culpa."
+            "En Estados Unidos es normal comprar, llevarse la prenda y devolverla en unos días si no convence, siempre con el recibo y dentro del plazo. Guardar el “receipt” es un hábito casi sagrado. Esto cambia la manera de comprar: uno puede arriesgarse con una talla porque devolver es fácil y esperado. En buena parte de Colombia la devolución es más difícil, así que aquí conviene aprovechar esa red de seguridad sin culpa."
         },
         {
           label: "Las reglas del probador",
@@ -1848,12 +1848,12 @@ lessons.push(
         {
           label: "Los eventos al aire libre y el clima",
           body:
-            "En Canadá, un festival al aire libre tiene su plan para la lluvia: carpas, protocolos y un anuncio oficial si de verdad se cancela, que llega por la app o la página del evento. La gente consulta el radar del clima en el teléfono antes de decidir. Es otra lógica frente al “el Carnaval no se para”: aquí sí se suspende si hay tormenta eléctrica, por seguridad, y nadie lo toma como una traición a la fiesta."
+            "En Estados Unidos, un festival al aire libre tiene su plan para la lluvia: carpas, protocolos y un anuncio oficial si de verdad se cancela, que llega por la app o la página del evento. La gente consulta el radar del clima en el teléfono antes de decidir. Es otra lógica frente al “el Carnaval no se para”: aquí sí se suspende si hay tormenta eléctrica, por seguridad, y nadie lo toma como una traición a la fiesta."
         },
         {
           label: "El clima como tema de charla",
           body:
-            "En Canadá el clima es el tema de conversación por defecto, el lubricante social que rompe el hielo con cualquiera. Comentar “looks like rain” o “crazy weather, eh?” no es quejarse: es una forma amable de conectar. Para un colombiano puede parecer vacío hablar tanto del tiempo, pero dominar ese pequeño ritual — y responder con naturalidad — es una vía rápida para caer bien y sonar local en la fila, el bus o el ascensor."
+            "En Estados Unidos el clima es el tema de conversación por defecto, el lubricante social que rompe el hielo con cualquiera. Comentar “looks like rain” o “crazy weather, eh?” no es quejarse: es una forma amable de conectar. Para un colombiano puede parecer vacío hablar tanto del tiempo, pero dominar ese pequeño ritual — y responder con naturalidad — es una vía rápida para caer bien y sonar local en la fila, el bus o el ascensor."
         },
         {
           label: "“Trust me” con medida",
@@ -1863,7 +1863,7 @@ lessons.push(
         {
           label: "Puntualidad y confirmaciones",
           body:
-            "Los eventos en Canadá suelen empezar a la hora anunciada, y la gente confirma asistencia — el famoso RSVP — y revisa fuentes oficiales antes de moverse. Esa cultura de la puntualidad y la planeación contrasta con la flexibilidad horaria colombiana, donde “ahí nos vemos” admite un margen amplio. Para Alejandra, ajustarse a que “a las siete” significa las siete, y a que un correo de cancelación es la última palabra, es parte de leer bien el país."
+            "Los eventos en Estados Unidos suelen empezar a la hora anunciada, y la gente confirma asistencia — el famoso RSVP — y revisa fuentes oficiales antes de moverse. Esa cultura de la puntualidad y la planeación contrasta con la flexibilidad horaria colombiana, donde “ahí nos vemos” admite un margen amplio. Para Alejandra, ajustarse a que “a las siete” significa las siete, y a que un correo de cancelación es la última palabra, es parte de leer bien el país."
         }
       ],
       pitfalls: [

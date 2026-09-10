@@ -394,7 +394,7 @@ lessons.push(
           useWhen: "Cuando percibes algo, te das cuenta de algo, o mencionas que viste una película o un partido como hecho puntual.",
           avoidWhen: "Cuando hablas de pasar un rato mirando la tele o siguiendo un partido con atención; ahí el inglés prefiere “watch”.",
           register: "neutral",
-          region: "Inglés general; en Canadá y Estados Unidos la diferencia entre “see” y “watch” se mantiene firme en el habla diaria.",
+          region: "Inglés general; en Estados Unidos la diferencia entre “see” y “watch” se mantiene firme en el habla diaria.",
           related: ["watch", "look at", "notice", "realize"],
           example: {
             target: "I saw it on TV.",
@@ -495,7 +495,7 @@ lessons.push(
         },
         {
           label: "El partido también se ve en casa",
-          body: "Que Megan prefiera ver el partido en casa no es raro ni frío en Canadá. El invierno, los precios y la comodidad hacen del televisor de la sala el centro social de muchos partidos, con vecinos que entran y salen. Decir “I watched it on TV” no lleva ninguna disculpa: nadie espera que hayas ido al estadio, y contar la jugada al día siguiente vale tanto como haber estado ahí en persona."
+          body: "Que Megan prefiera ver el partido en casa no es raro ni frío en Estados Unidos. El invierno, los precios y la comodidad hacen del televisor de la sala el centro social de muchos partidos, con vecinos que entran y salen. Decir “I watched it on TV” no lleva ninguna disculpa: nadie espera que hayas ido al estadio, y contar la jugada al día siguiente vale tanto como haber estado ahí en persona."
         },
         {
           label: "“Goodbye” pesa; mejor “see you”",
@@ -986,7 +986,7 @@ lessons.push(
           useWhen: "Al advertir a alguien que no se exponga ni se descuide en un lugar concurrido.",
           avoidWhen: "En contextos donde “target” suene militar o comercial; ahí es más claro decir “don't take unnecessary risks”.",
           register: "friendly informal",
-          region: "Inglés general; en Canadá y Estados Unidos se entiende sin problema en el habla cotidiana.",
+          region: "Inglés general; en Estados Unidos se entiende sin problema en el habla cotidiana.",
           related: ["easy target", "don't take risks", "stay alert", "watch your stuff"],
           example: {
             target: "Don't make yourself a target.",

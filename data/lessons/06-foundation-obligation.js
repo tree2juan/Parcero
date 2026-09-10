@@ -547,7 +547,7 @@ lessons.push(
         {
           label: "El fin de semana largo organiza el calendario",
           body:
-            "En Canadá y en Estados Unidos varios lunes festivos crean “long weekends” — Memorial Day, Labor Day, Thanksgiving. Como los puentes colombianos, mueven a la gente: las autopistas se llenan, las cabañas se reservan, las ciudades se vacían. “Any plans for the long weekend?” es charla estándar de viernes. Saber cuáles lunes son festivos es práctico, porque los bancos y las oficinas cierran, y preguntar por los planes de alguien es cortesía normal, no meterse en lo ajeno."
+            "En Estados Unidos varios lunes festivos crean “long weekends” — Memorial Day, Labor Day, Thanksgiving. Como los puentes colombianos, mueven a la gente: las autopistas se llenan, las cabañas se reservan, las ciudades se vacían. “Any plans for the long weekend?” es charla estándar de viernes. Saber cuáles lunes son festivos es práctico, porque los bancos y las oficinas cierran, y preguntar por los planes de alguien es cortesía normal, no meterse en lo ajeno."
         },
         {
           label: "El inglés marca el registro con palabras, no con pronombres",
@@ -1002,12 +1002,12 @@ lessons.push(
     en: {
       title: "Pagarle a una compañera el almuerzo",
       situation:
-        "Alejandra trabaja en una oficina en Canadá y ayer una compañera, Karen, le prestó plata para el almuerzo. Hoy va a pagarle. Tiene que decir cuánto le debe, entender la diferencia entre “I owe you” (te debo) y “I have to pay” (tengo que pagar), y no calcar del español el clásico “I must to pay”. En inglés estas ideas se reparten entre varios verbos, y ahí es donde a un hispanohablante se le enredan.",
+        "Alejandra trabaja en una oficina en Estados Unidos y ayer una compañera, Karen, le prestó plata para el almuerzo. Hoy va a pagarle. Tiene que decir cuánto le debe, entender la diferencia entre “I owe you” (te debo) y “I have to pay” (tengo que pagar), y no calcar del español el clásico “I must to pay”. En inglés estas ideas se reparten entre varios verbos, y ahí es donde a un hispanohablante se le enredan.",
       setting: {
         who: "Karen es una compañera de oficina estadounidense que ayer le cubrió el almuerzo a Alejandra. Alejandra es la recién llegada de Colombia, todavía afinando el inglés cotidiano.",
         what: "Devolverle a una compañera la plata que le prestó para el almuerzo.",
         when: "A media mañana, junto a la cafetera de la oficina, antes de la reunión.",
-        where: "Una oficina en Canadá, donde las deudas pequeñas entre colegas se pagan rápido y sin drama.",
+        where: "Una oficina en Estados Unidos, donde las deudas pequeñas entre colegas se pagan rápido y sin drama.",
         why: "Porque en un ambiente laboral anglo lo esperado es saldar enseguida y con soltura; demorarse o enredar los verbos hace que Alejandra suene torpe justo donde quiere sonar profesional."
       },
       address: {
@@ -1654,12 +1654,12 @@ lessons.push(
     en: {
       title: "Alistar el apartamento para una cena con amigos",
       situation:
-        "Es fin de semana en Canadá y Alejandra ayuda a su compañera de apartamento, Chloe, a alistar todo para una cena con amigos. Chloe le va diciendo qué hacer: que se ponga algo cómodo, que ponga música, que saque los platos. Lo que en español es siempre “poner/ponerse”, en inglés se reparte entre “put on”, “wear”, “play” y “get”. Ahí es donde Alejandra tiende a calcar y a decir cosas como “I put nervous” o “I put music”.",
+        "Es fin de semana en Estados Unidos y Alejandra ayuda a su compañera de apartamento, Chloe, a alistar todo para una cena con amigos. Chloe le va diciendo qué hacer: que se ponga algo cómodo, que ponga música, que saque los platos. Lo que en español es siempre “poner/ponerse”, en inglés se reparte entre “put on”, “wear”, “play” y “get”. Ahí es donde Alejandra tiende a calcar y a decir cosas como “I put nervous” o “I put music”.",
       setting: {
         who: "Chloe es la compañera de apartamento estadounidense de Alejandra; esta noche reciben a unos amigos. Alejandra es la colombiana recién llegada, afinando el inglés del día a día.",
         what: "Dejar el apartamento listo para una cena informal con amigos.",
         when: "El sábado por la tarde, un rato antes de que lleguen los invitados.",
-        where: "Un apartamento en Canadá, donde una cena entre amigos es relajada y de poca etiqueta.",
+        where: "Un apartamento en Estados Unidos, donde una cena entre amigos es relajada y de poca etiqueta.",
         why: "Porque ayudar a recibir es la forma en que Alejandra se integra, y hacerlo mientras habla un inglés natural — sin calcar “poner” en cada frase — la hace sentir parte y no invitada."
       },
       address: {
@@ -1846,7 +1846,7 @@ lessons.push(
         {
           label: "La cena entre amigos es informal",
           body:
-            "En Canadá y Estados Unidos, una cena entre amigos en casa suele ser relajada y de poca etiqueta: la gente llega en ropa cómoda, trae algo de beber y ayuda en la cocina sin que se lo pidan dos veces. Alejandra encaja bien ofreciéndose a colaborar, pero conviene que baje el nivel de formalidad que traería de una reunión colombiana más arreglada: aquí lo esperado es soltura, no protocolo, y sentirse en casa se valora más que impresionar."
+            "En Estados Unidos, una cena entre amigos en casa suele ser relajada y de poca etiqueta: la gente llega en ropa cómoda, trae algo de beber y ayuda en la cocina sin que se lo pidan dos veces. Alejandra encaja bien ofreciéndose a colaborar, pero conviene que baje el nivel de formalidad que traería de una reunión colombiana más arreglada: aquí lo esperado es soltura, no protocolo, y sentirse en casa se valora más que impresionar."
         },
         {
           label: "El inglés separa lo que el español junta",

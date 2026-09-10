@@ -331,12 +331,12 @@ lessons.push(
     en: {
       title: "Enviar un sobre desde Pereira",
       situation:
-        "Usted está en una oficina de mensajería en Hamilton y necesita aprender a decir en inglés que va a enviar unos documentos. Ya no está en nivel principiante: debe distinguir send de mail y ship, pedir tracking, entender receipt y no traducir mandar como order en el momento equivocado.",
+        "Usted está en una oficina de mensajería en Fort Worth y necesita aprender a decir en inglés que va a enviar unos documentos. Ya no está en nivel principiante: debe distinguir send de mail y ship, pedir tracking, entender receipt y no traducir mandar como order en el momento equivocado.",
       setting: {
         who: "Laura atiende el mostrador de una empresa de mensajería y ya ha explicado tres tarifas esta mañana. Samuel está enviando documentos legales a un familiar en otra ciudad y necesita una promesa clara.",
         what: "Una conversación de mostrador sobre enviar un sobre con rastreo, fecha estimada y recibo.",
         when: "Un miércoles a media mañana, justo cuando empieza a formarse la fila de la hora del almuerzo.",
-        where: "Hamilton, en una oficina de mensajería cerca de la estación, un lugar donde el inglés práctico importa más que sonar elegante.",
+        where: "Fort Worth, en una oficina de mensajería cerca de la estación, un lugar donde el inglés práctico importa más que sonar elegante.",
         why: "Porque send es el verbo amplio que usted necesita dominar. Mail puede sonar a correo postal, ship a paquete o mercancía, y order no traduce mandar cuando mandar significa enviar."
       },
       address: {

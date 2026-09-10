@@ -161,6 +161,39 @@ test("a lesson breaks into study segments of about three minutes", () => {
   assert.ok(checked > 0, "no segments were derived, so this check verifies nothing");
 });
 
+/*
+ * The band above is a floor and a ceiling; this is the shape in between.
+ *
+ * deriveSegments promises "the last segment is the same size as the rest",
+ * and for a long time it quietly did not deliver. Because a segment can only
+ * close on a row boundary, most close a little under target — and against a
+ * fixed target that shortfall was never made up, so it accumulated and was
+ * handed to the tail, which has no close condition to protect it. Three
+ * directions were carrying tails over 1.3x their own mean, and one reached
+ * 533 words (4.1 minutes) against a ~378-word target before the band caught
+ * it. The band only fails once the tail is already absurd; this fails while
+ * it is merely lopsided, which is when it is still cheap to fix.
+ */
+test("no lesson ends with a lopsided remainder segment", () => {
+  const MAX_TAIL_RATIO = 1.3;
+  let worst = { ratio: 0 };
+  for (const lesson of lessons) {
+    for (const direction of directions) {
+      const segments = schema.deriveSegments(lesson[direction]);
+      if (segments.length < 2) continue;
+      const mean = segments.reduce((sum, s) => sum + s.words, 0) / segments.length;
+      const tail = segments[segments.length - 1];
+      const ratio = tail.words / mean;
+      if (ratio > worst.ratio) worst = { ratio, id: lesson.id, direction, words: tail.words, mean };
+    }
+  }
+  assert.ok(
+    worst.ratio <= MAX_TAIL_RATIO,
+    `lesson ${worst.id} (${worst.direction}) ends with a ${worst.words}-word segment against a ` +
+    `${Math.round(worst.mean)}-word average (${worst.ratio.toFixed(2)}x) — the packer is dumping ` +
+    `its remainder in the tail instead of spreading it`);
+});
+
 test("segmenting a lesson loses none of it and reorders none of it", () => {
   for (const lesson of lessons) {
     for (const direction of directions) {

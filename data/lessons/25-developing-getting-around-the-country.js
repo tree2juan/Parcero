@@ -1114,7 +1114,7 @@ lessons.push(
           avoidWhen:
             "Creer que es el nombre fijo de un programa como pico y placa. Es una descripción útil, no necesariamente el título oficial.",
           register: "neutral practical",
-          region: "Comprensible en inglés, aunque las reglas dependen de cada ciudad o provincia.",
+          region: "Comprensible en inglés, aunque las reglas dependen de cada ciudad o estado.",
           related: ["license plate", "restriction", "downtown rules", "parking rules"],
           example: {
             target: "Check the plate rules before you leave downtown.",
@@ -1131,7 +1131,7 @@ lessons.push(
           avoidWhen:
             "Reducirlo a “plate” cuando el contexto no es de carros. “Plate” solo también puede ser un plato.",
           register: "neutral",
-          region: "“License plate” es común en Canadá; “license plate” es la ortografía estadounidense.",
+          region: "“License plate” es común en Estados Unidos; “license plate” es la ortografía estadounidense.",
           related: ["plate number", "last digit", "vehicle", "registration"],
           example: {
             target: "The license plate ends in eight.",

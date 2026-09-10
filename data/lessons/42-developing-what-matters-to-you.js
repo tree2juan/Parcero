@@ -487,7 +487,7 @@ lessons.push(
         {
           label: "Résumé es norteamericano",
           body:
-            "En Canadá y Estados Unidos, résumé es la palabra normal para la hoja de vida laboral. CV existe, pero suele sonar académico, internacional o más formal. En un curso comunitario en Austin, résumé encaja perfectamente."
+            "En Estados Unidos, résumé es la palabra normal para la hoja de vida laboral. CV existe, pero suele sonar académico, internacional o más formal. En un curso comunitario en Austin, résumé encaja perfectamente."
         }
       ],
       pitfalls: [

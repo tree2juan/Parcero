@@ -1723,7 +1723,7 @@ lessons.push(
           avoidWhen:
             "Con “in Fifth Avenue”, un calco del “en” español que suena mal.",
           register: "neutral",
-          region: "Inglés universal; en EE. UU. y Canadá muy frecuente.",
+          region: "Inglés universal; en EE. UU. muy frecuente.",
           related: ["on Fifth Avenue", "on King Street", "just off Main", "around the corner"],
           example: {
             target: "We live on King Street.",

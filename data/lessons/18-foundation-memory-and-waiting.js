@@ -1757,7 +1757,7 @@ lessons.push(
           avoidWhen:
             "En registro muy formal; son coloquiales, no de documento.",
           register: "friendly informal",
-          region: "Inglés universal; muy común en EE. UU. y Canadá.",
+          region: "Inglés universal; muy común en EE. UU..",
           related: ["hang tight", "sit tight", "hold on", "bear with me"],
           example: {
             target: "Hang tight, the line's moving.",
@@ -1774,7 +1774,7 @@ lessons.push(
           avoidWhen:
             "Con “row” para una fila de personas; “row” es una hilera de asientos.",
           register: "neutral",
-          region: "“Line” en EE. UU./Canadá; “queue” en Reino Unido.",
+          region: "“Line” en EE. UU./Estados Unidos; “queue” en Reino Unido.",
           related: ["in line", "the line", "wait in line", "wait your turn"],
           example: {
             target: "The line is moving fast.",

@@ -959,12 +959,12 @@ lessons.push(
     en: {
       title: "Comprando una ruana en Houston",
       situation:
-        "Laura, colombiana instalada en Canadá, entra a una tienda en Houston a comprar ropa de invierno y describe en inglés lo que busca: una ruana azul o verde, una bufanda de rayas, guantes de lana. Con Mike, el vendedor, practica el orden inglés del adjetivo, la falta de concordancia y las trampas de material y color que el hispanohablante siempre pisa.",
+        "Laura, colombiana instalada en Estados Unidos, entra a una tienda en Houston a comprar ropa de invierno y describe en inglés lo que busca: una ruana azul o verde, una bufanda de rayas, guantes de lana. Con Mike, el vendedor, practica el orden inglés del adjetivo, la falta de concordancia y las trampas de material y color que el hispanohablante siempre pisa.",
       setting: {
-        who: "Mike atiende una tienda de ropa en Houston y describe su mercancía por color y material. Laura es colombiana, lleva poco en Canadá y se abriga para su primer invierno de verdad.",
+        who: "Mike atiende una tienda de ropa en Houston y describe su mercancía por color y material. Laura es colombiana, lleva poco en Estados Unidos y se abriga para su primer invierno de verdad.",
         what: "Una charla de compras sobre descripción: el adjetivo antes del sustantivo y sin concordancia, “brown” y no “coffee”, y el patrón y el material en inglés.",
         when: "Una tarde fría de otoño, con la tienda llena de abrigos y bufandas.",
-        where: "Houston, en Canadá, en una tienda de ropa del centro.",
+        where: "Houston, en Estados Unidos, en una tienda de ropa del centro.",
         why: "Describir en inglés invierte las costumbres del español: el color va antes del sustantivo y no cambia nunca, “brown” no es “coffee”, y el patrón y el material se dicen con palabras propias -- “striped”, “leather”, “wool” -- no con el marco “de”."
       },
       address: {

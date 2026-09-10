@@ -368,7 +368,7 @@ lessons.push(
       },
       address: {
         form: "mixed",
-        who: "Josh y Alejandra se tratan por el nombre y con total confianza, como es normal entre compañeros jóvenes en Canadá.",
+        who: "Josh y Alejandra se tratan por el nombre y con total confianza, como es normal entre compañeros jóvenes en Estados Unidos.",
         why: "El inglés no tiene usted ni tú: la cercanía no está en un pronombre, sino en el tono, el nombre de pila y expresiones sueltas como “no worries” o “hey”. La confianza se oye en las palabras, no en la forma de “you”.",
         ifYouSwitch:
           "Si Alejandra buscara marcar respeto cambiando el “you”, no encontraría cómo: en inglés no existe ese cambio. La formalidad, cuando hace falta, se marca con frases más completas y corteses, no con otro pronombre."
@@ -560,7 +560,7 @@ lessons.push(
         {
           label: "Un país sin siesta oficial",
           body:
-            "En Canadá y Estados Unidos la siesta no está tejida en el día como en la costa caribeña. La jornada corre de un tirón, y dormir de día puede verse como pereza en un adulto, aunque el “power nap” de veinte minutos se ha vuelto respetable e incluso algunas empresas lo promueven. El verbo fijo es “take a nap” o simplemente “nap”; decir “sleep a siesta” o “make a nap” delata una traducción demasiado literal del español."
+            "En Estados Unidos la siesta no está tejida en el día como en la costa caribeña. La jornada corre de un tirón, y dormir de día puede verse como pereza en un adulto, aunque el “power nap” de veinte minutos se ha vuelto respetable e incluso algunas empresas lo promueven. El verbo fijo es “take a nap” o simplemente “nap”; decir “sleep a siesta” o “make a nap” delata una traducción demasiado literal del español."
         },
         {
           label: "Trasnochar y amanecer sin un solo verbo",
@@ -1020,7 +1020,7 @@ lessons.push(
       },
       address: {
         form: "mixed",
-        who: "Cody y Alejandra se tratan por el nombre y con confianza total, como es normal entre amigos jóvenes en Canadá.",
+        who: "Cody y Alejandra se tratan por el nombre y con confianza total, como es normal entre amigos jóvenes en Estados Unidos.",
         why: "El inglés no distingue tú de usted: la cercanía se oye en el tono, el nombre de pila y expresiones como “come on” o “alright”. No hay un pronombre que marque respeto o confianza; lo hacen las palabras.",
         ifYouSwitch:
           "Si Alejandra quisiera sonar más formal, no le serviría cambiar el “you”, porque no hay otra forma. Tendría que armar frases más completas y corteses; el pronombre se queda igual pase lo que pase."
@@ -1212,7 +1212,7 @@ lessons.push(
         {
           label: "Invitar la ronda, sin “invite”",
           body:
-            "En inglés uno no “invita” una cerveza: se dice “the beers are on me” o “it's my round”. “I invite you a beer” es un calco de “invitar” que suena raro y hasta puede confundirse con convocar a alguien a un evento. En la cultura de bar de Canadá y el Reino Unido, turnarse las rondas — “my round”, “your round” — es casi un ritual. Para el hispanohablante, el ajuste está en cambiar “invitar” por “it's on me”."
+            "En inglés uno no “invita” una cerveza: se dice “the beers are on me” o “it's my round”. “I invite you a beer” es un calco de “invitar” que suena raro y hasta puede confundirse con convocar a alguien a un evento. En la cultura de bar de Estados Unidos y el Reino Unido, turnarse las rondas — “my round”, “your round” — es casi un ritual. Para el hispanohablante, el ajuste está en cambiar “invitar” por “it's on me”."
         },
         {
           label: "Jugar limpio en todas partes",
@@ -1667,7 +1667,7 @@ lessons.push(
         who: "Ryan es un torontino amable que con gusto orienta a una viajera perdida. Alejandra intenta llegar a un pueblo pequeño y todavía calca los verbos de cortesía del español.",
         what: "Pedir indicaciones y descubrir que el inglés pide favores con “help me out”, “could I have…” y “do me a favour” — y cómo distinguir un pedido de ayuda de uno de plata.",
         when: "Media mañana en una estación concurrida, con buses que entran y salen.",
-        where: "Houston, Canadá.",
+        where: "Houston, Texas.",
         why: "Porque pedir ayuda es de lo primero que uno hace como viajero, y el inglés no tiene los verbos “colaborar” ni “regalar”: la cortesía vive en el modal (“could you”) y en los suavizadores, algo que un hispanohablante tiene que reaprender."
       },
       address: {
@@ -1823,7 +1823,7 @@ lessons.push(
           avoidWhen:
             "No calques “hágame el favor de + verbo” como “do me the favor to…”.",
           register: "polite neutral",
-          region: "Inglés universal; en EE. UU. se escribe “favor” y en Canadá “favour”.",
+          region: "Inglés universal; en EE. UU. se escribe “favor” y en Estados Unidos “favour”.",
           related: ["do me a favour", "could you", "would you mind", "help out"],
           example: {
             target: "Could you do me a favour and wait?",
@@ -1867,9 +1867,9 @@ lessons.push(
             "Igual que en Colombia “una ayudita” o “¿me colabora?” de un desconocido suele ser plata, el inglés tiene su propia fórmula de calle: “can you spare some change?” o, más corto, “spare change?”. Nadie dice “money” de frente; la palabra “change” (monedas) hace el trabajo. Aprender a reconocerla evita malentendidos: si alguien en la calle te pide “spare change” con la mano extendida, está pidiendo dinero, no ayuda para cargar algo o encontrar una dirección."
         },
         {
-          label: "Pedir ayuda a un desconocido en Canadá",
+          label: "Pedir ayuda a un desconocido en Estados Unidos",
           body:
-            "En Canadá y Estados Unidos, acercarse a un desconocido casi siempre empieza con “excuse me” o “sorry to bother you”, y sigue con un “could you…?”. El respeto se marca con esos suavizadores y con un tono breve, no con frases largas. Un “thank you” al final se espera siempre. A un colombiano, acostumbrado a la calidez del “¿me colabora, vecino?”, el estilo puede parecerle algo seco, pero es amable dentro de sus propias reglas."
+            "En Estados Unidos, acercarse a un desconocido casi siempre empieza con “excuse me” o “sorry to bother you”, y sigue con un “could you…?”. El respeto se marca con esos suavizadores y con un tono breve, no con frases largas. Un “thank you” al final se espera siempre. A un colombiano, acostumbrado a la calidez del “¿me colabora, vecino?”, el estilo puede parecerle algo seco, pero es amable dentro de sus propias reglas."
         }
       ],
       pitfalls: [

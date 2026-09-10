@@ -350,12 +350,12 @@ lessons.push(
     en: {
       title: "Aprender a bailar en una fiesta en casa",
       situation:
-        "Es sábado por la noche en Canadá y en casa de una amiga hay fiesta. Alejandra quiere aprender a bailar y le pide ayuda a Emily. Entre risas tiene que manejar en inglés la diferencia entre “learn to” (aprender a), “learn by heart” (aprenderse de memoria) y el “you” impersonal de “you learn by doing”, sin calcar del español cosas como “by memory” o “the letter of the song”.",
+        "Es sábado por la noche en Estados Unidos y en casa de una amiga hay fiesta. Alejandra quiere aprender a bailar y le pide ayuda a Emily. Entre risas tiene que manejar en inglés la diferencia entre “learn to” (aprender a), “learn by heart” (aprenderse de memoria) y el “you” impersonal de “you learn by doing”, sin calcar del español cosas como “by memory” o “the letter of the song”.",
       setting: {
         who: "Emily creció bailando en fiestas y se ofrece a enseñarle a Alejandra. Alejandra es la colombiana recién llegada, que no se quiere quedar sentada mirando.",
         what: "Una clase de baile improvisada en plena fiesta, aprendiendo pasos y la letra a la vez.",
         when: "Un sábado por la noche, ya tarde, cuando alguien sube el volumen y corren los muebles.",
-        where: "Canadá, la casa de una amiga, en una fiesta relajada donde nadie juzga al principiante.",
+        where: "Estados Unidos, la casa de una amiga, en una fiesta relajada donde nadie juzga al principiante.",
         why: "Porque lanzarse a bailar es la forma más rápida de dejar de ser la invitada nueva y volverse parte del grupo, y hacerlo hablando un inglés natural la integra el doble."
       },
       address: {
@@ -557,7 +557,7 @@ lessons.push(
         {
           label: "“Learn by doing” y la fiesta sin jueces",
           body:
-            "En una fiesta en casa en Canadá o Estados Unidos, nadie espera que la principiante baile bien; se valora que se anime y lo intente. Esa actitud de “learn by doing” — lánzate y ya irá saliendo — se parece al “bailando se aprende” colombiano. Para Alejandra es liberador: no la están evaluando, y equivocarse en los pasos es parte del juego. Entender ese ambiente relajado la ayuda a soltarse y a no quedarse pegada a la pared por miedo a fallar."
+            "En una fiesta en casa en Estados Unidos, nadie espera que la principiante baile bien; se valora que se anime y lo intente. Esa actitud de “learn by doing” — lánzate y ya irá saliendo — se parece al “bailando se aprende” colombiano. Para Alejandra es liberador: no la están evaluando, y equivocarse en los pasos es parte del juego. Entender ese ambiente relajado la ayuda a soltarse y a no quedarse pegada a la pared por miedo a fallar."
         }
       ],
       pitfalls: [
@@ -974,15 +974,15 @@ lessons.push(
       ]
     },
     en: {
-      title: "Aprender a hacer ajiaco en una cocina bogotana",
+      title: "Aprender a hacer pecan pie en una cocina estadounidense",
       situation:
-        "La misma escena, contada para quien aprende inglés: Alejandra, de Bogotá, está en Canadá y una vecina mayor, Barb, le enseña a hacer butter tarts, el postre típico de allá. Cocinando descubre que el inglés parte en dos el verbo “enseñar”: “teach” es impartir un conocimiento y “show” es dejar ver algo. Decir “teach me the photo” en vez de “show me the photo” es el resbalón clásico del hispanohablante.",
+        "La escena espejo, contada para quien aprende inglés: Alejandra, de Bogotá, está en Estados Unidos y una vecina mayor, Barb, le enseña a hacer pecan pie, el postre típico de allá. Cocinando descubre que el inglés parte en dos el verbo “enseñar”: “teach” es impartir un conocimiento y “show” es dejar ver algo. Decir “teach me the photo” en vez de “show me the photo” es el resbalón clásico del hispanohablante.",
       setting: {
-        who: "Barb es una vecina estadounidense de toda la vida que lleva décadas horneando butter tarts. Alejandra es su invitada, una colombiana a la que decidió enseñarle porque se lo pidió con muchas ganas.",
-        what: "Una clase de cocina con las manos en la masa para hacer butter tarts, el postre estadounidense de masa crujiente y relleno dulce, aprendiendo los pasos y viendo cómo debe quedar cada cosa.",
+        who: "Barb es una vecina estadounidense de toda la vida que lleva décadas horneando pecan pie. Alejandra es su invitada, una colombiana a la que decidió enseñarle porque se lo pidió con muchas ganas.",
+        what: "Una clase de cocina con las manos en la masa para hacer pecan pie, el postre estadounidense de masa crujiente y relleno dulce de nueces, aprendiendo los pasos y viendo cómo debe quedar cada cosa.",
         when: "Una tarde tranquila entre semana, con el horno ya caliente y tiempo de sobra para hacerlo bien.",
-        where: "Una cocina en Canadá, donde los butter tarts son motivo de orgullo casero y cada familia jura tener la mejor receta.",
-        why: "Porque enseñar una receta de familia es un acto de confianza. Alejandra quiere aprender a hacerlos ella misma y, de paso, entiende que el inglés usa dos verbos, teach y show, donde su español usaba uno solo."
+        where: "Una cocina en Texas, donde el pecan pie es motivo de orgullo casero y cada familia jura tener la mejor receta.",
+        why: "Porque enseñar una receta de familia es un acto de confianza. Alejandra quiere aprender a hacerlo ella misma y, de paso, entiende que el inglés usa dos verbos, teach y show, donde su español usaba uno solo."
       },
       address: {
         form: "mixed",
@@ -993,10 +993,10 @@ lessons.push(
       dialogue: [
         {
           speaker: "Alejandra",
-          target: "Barb, will you teach me to make butter tarts?",
-          translation: "Barb, ¿me enseñas a hacer butter tarts?",
-          pronunciation: "barb, uíl yu tich mi tu méik BÓ-rer tarts",
-          literal: "Barb, ¿(futuro) tú enseñar me hacer tartas-de-mantequilla?",
+          target: "Barb, will you teach me to make pecan pie?",
+          translation: "Barb, ¿me enseñas a hacer pecan pie?",
+          pronunciation: "barb, uíl yu tich mi tu méik pi-KAN pái",
+          literal: "Barb, ¿(futuro) tú enseñar me hacer pastel-de-nueces?",
           why: "“Teach me to + verbo” es la estructura para “enseñar a hacer algo”. En inglés “teach” solo significa impartir un conocimiento, nunca “mostrar”."
         },
         {
@@ -1104,7 +1104,7 @@ lessons.push(
           useWhen: "Cuando alguien mayor te trata con cariño; muy común en cocinas y cafeterías.",
           avoidWhen: "Hacia alguien mayor o un desconocido de tu edad puede sonar condescendiente.",
           register: "friendly informal",
-          region: "Inglés general; “hon” es más de Canadá y del sur de Estados Unidos.",
+          region: "Inglés general; “hon” es más del sur de Estados Unidos.",
           related: ["sweetie", "honey", "hon", "dear"],
           example: {
             target: "Don't worry, sweetie.",
@@ -1126,17 +1126,17 @@ lessons.push(
           }
         },
         {
-          term: "butter tarts",
-          explanation: "Un postre clásico estadounidense: masa crujiente con relleno dulce de mantequilla y azúcar. Es el plato con identidad local, el equivalente al ajiaco.",
-          literal: "tartaletas de mantequilla",
+          term: "pecan pie",
+          explanation: "Un postre clásico estadounidense, muy de Texas y del sur: masa crujiente con relleno dulce de nueces pecanas, mantequilla y azúcar. Es el plato con identidad local, el equivalente al ajiaco.",
+          literal: "pastel de nueces pecanas",
           useWhen: "Al hablar de repostería típica estadounidense.",
           avoidWhen: "Fuera de ese postre; es un plato concreto, no vocabulario general.",
           register: "neutral",
-          region: "Canadá.",
+          region: "Estados Unidos, sobre todo el sur y Texas.",
           related: ["pastry", "filling", "pecan", "dessert"],
           example: {
-            target: "These butter tarts are amazing.",
-            translation: "Estas butter tarts están buenísimas."
+            target: "This pecan pie is amazing.",
+            translation: "Este pecan pie está buenísimo."
           }
         }
       ],
@@ -1156,7 +1156,7 @@ lessons.push(
         {
           label: "Aprender una receta es entrar en confianza",
           body:
-            "Que alguien te enseñe su receta de familia es un gesto de confianza en cualquier cultura, y en Canadá o Estados Unidos suele venir sin protocolo: te tratan por el nombre desde el saludo y te meten a la cocina sin ceremonia. Para Alejandra, acostumbrada al usted y a cierta formalidad con los mayores, esa cercanía inmediata puede sorprender. No es falta de respeto: es la manera anglo de hacer sentir en casa. Aceptarla con naturalidad, sin buscar la distancia del usted, es parte de encajar."
+            "Que alguien te enseñe su receta de familia es un gesto de confianza en cualquier cultura, y en Estados Unidos suele venir sin protocolo: te tratan por el nombre desde el saludo y te meten a la cocina sin ceremonia. Para Alejandra, acostumbrada al usted y a cierta formalidad con los mayores, esa cercanía inmediata puede sorprender. No es falta de respeto: es la manera anglo de hacer sentir en casa. Aceptarla con naturalidad, sin buscar la distancia del usted, es parte de encajar."
         },
         {
           label: "El cariño va en la palabra, no en el usted",
@@ -1576,12 +1576,12 @@ lessons.push(
     en: {
       title: "Hablar de la universidad en el bus de Barranquilla",
       situation:
-        "La misma charla, pero para quien aprende inglés: Alejandra, de Barranquilla, está en Canadá y en el bus conversa con Megan, una estudiante local, sobre qué estudia. Descubre dos falsos amigos peligrosos: “career” no es su carrera de estudios (eso es “degree” o “major”), y “college” es la universidad, no el colegio. Además, en inglés se cuenta por años, no por semestres, y los parciales son “midterms”.",
+        "La misma charla, pero para quien aprende inglés: Alejandra, de Barranquilla, está en Estados Unidos y en el bus conversa con Megan, una estudiante local, sobre qué estudia. Descubre dos falsos amigos peligrosos: “career” no es su carrera de estudios (eso es “degree” o “major”), y “college” es la universidad, no el colegio. Además, en inglés se cuenta por años, no por semestres, y los parciales son “midterms”.",
       setting: {
         who: "Megan es una estudiante estadounidense de medicina, rápida y amable. Alejandra es la colombiana que comparte asiento y se anima a entablar conversación en inglés.",
         what: "Una charla de bus sobre qué estudia cada una, pasando por el falso amigo “career”, por “college” y por cómo se cuentan los años de universidad.",
         when: "Una mañana entre semana, en un trayecto lo bastante largo como para una conversación de verdad.",
-        where: "Una ciudad de Canadá, en un autobús urbano, lejos del calor pero con las mismas ganas de conversar que en la Costa.",
+        where: "Una ciudad de Estados Unidos, en un autobús urbano, lejos del calor pero con las mismas ganas de conversar que en la Costa.",
         why: "Porque la charla sobre estudios es como los jóvenes se ubican entre sí. Para Alejandra es una forma sin riesgo de practicar y de dejar de traducir “carrera” como “career” antes de que el error se le vuelva costumbre."
       },
       address: {
@@ -1657,7 +1657,7 @@ lessons.push(
         },
         {
           term: "do a degree / major in",
-          explanation: "Las formas inglesas de “estudiar una carrera”. “Major in” es sobre todo de Estados Unidos y Canadá.",
+          explanation: "Las formas inglesas de “estudiar una carrera”. “Major in” es sobre todo de Estados Unidos.",
           literal: "hacer un título / especializarse en",
           useWhen: "Al decir qué estudias: “I'm doing a degree in law”, “I major in biology”.",
           avoidWhen: "No digas “study a career”: “career” es la vida profesional, no el título universitario.",
@@ -1718,7 +1718,7 @@ lessons.push(
           useWhen: "Al decir en qué vas: “I'm a first-year”, “she's a sophomore”.",
           avoidWhen: "No cuentes por semestres al hablar en inglés casual; suena raro allá.",
           register: "friendly informal",
-          region: "Estados Unidos y Canadá.",
+          region: "Estados Unidos.",
           related: ["freshman", "sophomore", "junior", "senior"],
           example: {
             target: "I'm in my second year.",
@@ -1756,12 +1756,12 @@ lessons.push(
         {
           label: "Se cuenta por años: freshman, sophomore…",
           body:
-            "En Estados Unidos y Canadá los estudiantes se cuentan por años, y cada año lleva nombre propio: “freshman” (primero), “sophomore” (segundo), “junior” (tercero) y “senior” (cuarto). Donde un colombiano dice “voy en quinto semestre”, un estadounidense dice “I'm a second-year” o “I'm a sophomore”. Los exámenes de mitad de curso son “midterms” y los finales, “finals”. Manejar este vocabulario te deja seguir cualquier conversación de universidad sin perder el hilo ni traducir semestres a años sobre la marcha."
+            "En Estados Unidos los estudiantes se cuentan por años, y cada año lleva nombre propio: “freshman” (primero), “sophomore” (segundo), “junior” (tercero) y “senior” (cuarto). Donde un colombiano dice “voy en quinto semestre”, un estadounidense dice “I'm a second-year” o “I'm a sophomore”. Los exámenes de mitad de curso son “midterms” y los finales, “finals”. Manejar este vocabulario te deja seguir cualquier conversación de universidad sin perder el hilo ni traducir semestres a años sobre la marcha."
         },
         {
           label: "“What are you studying?” como saludo",
           body:
-            "“What are you studying?” y “what do you do?” están entre las primeras preguntas al conocer a alguien en Canadá o Estados Unidos, igual que el “¿estudias o trabajas?” colombiano. No es indiscreción: es la manera de ubicarte y buscar tema. La respuesta “I'm studying medicine” suele abrir un intercambio sobre tu “degree” y tu “year”. Saber el guion le permite a Alejandra sostener la charla: preguntar, responder y devolver la pregunta, que es lo que convierte un viaje en bus en una conversación de verdad."
+            "“What are you studying?” y “what do you do?” están entre las primeras preguntas al conocer a alguien en Estados Unidos, igual que el “¿estudias o trabajas?” colombiano. No es indiscreción: es la manera de ubicarte y buscar tema. La respuesta “I'm studying medicine” suele abrir un intercambio sobre tu “degree” y tu “year”. Saber el guion le permite a Alejandra sostener la charla: preguntar, responder y devolver la pregunta, que es lo que convierte un viaje en bus en una conversación de verdad."
         }
       ],
       pitfalls: [
@@ -1796,7 +1796,7 @@ lessons.push(
         {
           form: "What's your major?",
           register: "friendly informal",
-          region: "Estados Unidos y Canadá",
+          region: "Estados Unidos",
           whenToUse: "Muy norteamericana; pregunta directamente por la especialidad."
         },
         {
@@ -1808,7 +1808,7 @@ lessons.push(
         {
           form: "I major in...",
           register: "friendly informal",
-          region: "Estados Unidos y Canadá",
+          region: "Estados Unidos",
           whenToUse: "El equivalente coloquial norteamericano de “estudio la carrera de...”."
         },
         {

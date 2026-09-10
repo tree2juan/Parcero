@@ -335,18 +335,28 @@ function deriveSegments(content, targetWords) {
    * problem for cards for the same reason. Decide how many segments the
    * lesson deserves first, then aim at that many equal ones, so the last
    * segment is the same size as the rest.
+   *
+   * The target has to be recomputed from what is left, not fixed once. A
+   * segment can only close on a row boundary, so most close a little under
+   * target; against a fixed target that shortfall is never made up, and six
+   * segments each ending 25 words short silently hand 125 extra words to the
+   * tail. That is how one lesson ended up with five ~350-word segments and a
+   * 533-word finale — the very "remainder segment" this function exists to
+   * prevent. Re-averaging over the remaining words and remaining segments is
+   * self-correcting: close short and the next target rises to absorb it.
    */
   var total = 0;
   for (var count = 0; count < units.length; count += 1) total += units[count].words;
   var wanted = Math.max(1, Math.round(total / budget));
-  var even = total / wanted;
 
   var packed = [];
+  var placed = 0;
   var current = { units: [], words: 0 };
   for (var index = 0; index < units.length; index += 1) {
     var unit = units[index];
     var remainingUnits = units.length - index;
     var remainingSegments = wanted - packed.length;
+    var even = (total - placed) / remainingSegments;
     /*
      * Never close so eagerly that the units left cannot fill the segments
      * left, and never run so long that a later segment would be empty.
@@ -357,6 +367,7 @@ function deriveSegments(content, targetWords) {
       var undershoot = even - current.words;
       if (overshoot >= undershoot) {
         packed.push(current);
+        placed += current.words;
         current = { units: [], words: 0 };
       }
     }

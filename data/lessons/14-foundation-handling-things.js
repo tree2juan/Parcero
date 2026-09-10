@@ -351,11 +351,11 @@ lessons.push(
         },
         {
           speaker: "Alejandra",
-          target: "Got it. And could I use the washroom?",
+          target: "Got it. And could I use the restroom?",
           translation: "Entendido. ¿Y podría usar el baño?",
-          pronunciation: "got it. and kud ai yus da UOSH-rum?",
+          pronunciation: "got it. and kud ai yus da REST-rum?",
           literal: "Tenido eso. ¿Y podría yo usar el baño?",
-          why: "En Canadá el baño público es “washroom”; en Estados Unidos, “restroom” o “bathroom”. Volver al “could I…?” mantiene el tono cortés al pedir algo un poco más personal."
+          why: "En Estados Unidos el baño público es “restroom”; en una casa se dice “bathroom”. Volver al “could I…?” mantiene el tono cortés al pedir algo un poco más personal."
         },
         {
           speaker: "Megan",
@@ -374,7 +374,7 @@ lessons.push(
           useWhen: "Casi cualquier pedido de permiso educado: el baño, un enchufe, el wifi, un cargador prestado.",
           avoidWhen: "Entre amigos muy cercanos, donde “can I use…?” o directamente “mind if I…?” suena más natural.",
           register: "polite neutral",
-          region: "Inglés universal; vale en Canadá, Estados Unidos y el Reino Unido por igual.",
+          region: "Inglés universal; vale en Estados Unidos y el Reino Unido por igual.",
           related: ["Can I use…?", "May I use…?", "Do you mind if I use…?", "Is it okay to use…?"],
           example: { target: "Could I use your charger for a minute?", translation: "¿Podría usar tu cargador un momento?" }
         },
@@ -382,7 +382,7 @@ lessons.push(
           term: "outlet",
           explanation: "El enchufe de pared en el inglés norteamericano. En el Reino Unido se dice “socket” o “power point”.",
           literal: "toma / enchufe",
-          useWhen: "Buscar dónde cargar el celular o el portátil en Canadá o en Estados Unidos.",
+          useWhen: "Buscar dónde cargar el celular o el portátil en Estados Unidos.",
           avoidWhen: "Con un británico o un australiano, que entienden mejor “socket”; ojo, “outlet” también nombra una tienda de descuentos.",
           register: "neutral",
           region: "Norteamérica; contrasta con el “socket” británico.",
@@ -390,15 +390,15 @@ lessons.push(
           example: { target: "Is there an outlet near this table?", translation: "¿Hay un enchufe cerca de esta mesa?" }
         },
         {
-          term: "washroom",
-          explanation: "La palabra estadounidense para el baño público. En Estados Unidos se oye más “restroom”; “bathroom” sirve en ambos países.",
-          literal: "cuarto de aseo / baño",
-          useWhen: "Preguntar por el baño en un lugar público en Canadá sin sonar demasiado directo.",
-          avoidWhen: "En una casa, donde “bathroom” es lo normal; “washroom” suena a local comercial.",
+          term: "restroom",
+          explanation: "La palabra estadounidense para el baño público. “Bathroom” también sirve y es lo normal en una casa.",
+          literal: "cuarto de descanso / baño",
+          useWhen: "Preguntar por el baño en un lugar público en Estados Unidos sin sonar demasiado directo.",
+          avoidWhen: "En una casa, donde “bathroom” es lo normal; “restroom” suena a local comercial.",
           register: "polite neutral",
-          region: "Canadá sobre todo; “restroom” en Estados Unidos, “toilet” en el Reino Unido.",
-          related: ["restroom", "bathroom", "toilet", "the facilities"],
-          example: { target: "Excuse me, where's the washroom?", translation: "Disculpe, ¿dónde está el baño?" }
+          region: "Estados Unidos sobre todo; “toilet” en el Reino Unido.",
+          related: ["bathroom", "toilet", "the facilities", "men's room"],
+          example: { target: "Excuse me, where's the restroom?", translation: "Disculpe, ¿dónde está el baño?" }
         },
         {
           term: "password",
@@ -442,7 +442,7 @@ lessons.push(
           register: "friendly informal",
           region: "Inglés universal.",
           related: ["Sure, go for it", "Please proceed", "By all means", "Feel free"],
-          example: { target: "The washroom? Sure, go ahead.", translation: "¿El baño? Claro, siga." }
+          example: { target: "The restroom? Sure, go ahead.", translation: "¿El baño? Claro, siga." }
         }
       ],
       note:
@@ -461,15 +461,15 @@ lessons.push(
           body: "En las ciudades estadounidenses, igual que en Colombia, los cafés funcionan como oficina de freelancers y estudiantes. Pedir algo — un café, un pan — te da derecho a la mesa, al wifi y, sin decirlo, al baño por el tiempo que quieras; nadie te apura. El trato tácito es el mismo: consume algo y el lugar es tuyo. Pedir permiso antes de usar un enchufe o el baño te mantiene del lado amable de ese acuerdo."
         },
         {
-          label: "“Washroom”, “restroom”, “toilet”",
-          body: "La palabra para el baño delata el país. Canadá dice “washroom”; Estados Unidos, “restroom” o “bathroom”; el Reino Unido, “toilet” sin rodeos, que a un norteamericano le suena algo brusco. Ninguna es incorrecta, pero usar la local ayuda a pasar desapercibido. En una casa se dice “bathroom” en casi todas partes; “washroom” y “restroom” son más para locales comerciales. Elegir bien es un detalle pequeño que suena muy natural."
+          label: "“Restroom”, “bathroom”, “toilet”",
+          body: "La palabra para el baño delata el país. Estados Unidos dice “restroom” o “bathroom”; el Reino Unido, “toilet” sin rodeos, que a un estadounidense le suena algo brusco. Ninguna es incorrecta, pero usar la local ayuda a pasar desapercibido. En una casa se dice “bathroom” en casi todas partes; “restroom” es más para locales comerciales. Elegir bien es un detalle pequeño que suena muy natural."
         }
       ],
       pitfalls: [
         {
           mistake: "“Can I use the bath?”",
-          whyItFails: "“Bath” es la tina o el acto de bañarse, no el cuarto. Para el baño público hace falta “washroom”, “restroom” o “bathroom”; “bath” deja a la otra persona imaginando una bañera.",
-          sayInstead: "“Could I use the washroom?”"
+          whyItFails: "“Bath” es la tina o el acto de bañarse, no el cuarto. Para el baño público hace falta “restroom” o “bathroom”; “bath” deja a la otra persona imaginando una bañera.",
+          sayInstead: "“Could I use the restroom?”"
         },
         {
           mistake: "“What is the password of the wifi?”",
@@ -538,7 +538,7 @@ lessons.push(
           tests: "“could” como suavizador de cortesía"
         },
         {
-          prompt: "En Canadá, ¿qué palabra usa Alejandra para el enchufe de la pared?",
+          prompt: "En Estados Unidos, ¿qué palabra usa Alejandra para el enchufe de la pared?",
           choices: [
             "“Socket”, que es la palabra por defecto en Norteamérica para el enchufe de la pared.",
             "“Outlet”, la palabra norteamericana; en el Reino Unido dirían “socket” en su lugar.",
@@ -548,14 +548,14 @@ lessons.push(
           tests: "“outlet” norteamericano frente a “socket”"
         },
         {
-          prompt: "Alejandra pide “the washroom”. ¿Qué está pidiendo exactamente?",
+          prompt: "Alejandra pide “the restroom”. ¿Qué está pidiendo exactamente?",
           choices: [
-            "Un cuarto para lavar la ropa, ya que “wash” se relaciona con lavar prendas y sábanas.",
+            "Un cuarto para descansar, ya que “rest” se relaciona con reposar un rato entre una cosa y otra.",
             "Un lavamanos suelto para enjuagarse las manos rápido antes de volver a la mesa a trabajar.",
-            "El baño público; “washroom” es la palabra estadounidense, frente a “restroom” en Estados Unidos."
+            "El baño público; “restroom” es la palabra estadounidense, frente a “toilet” en el Reino Unido."
           ],
           answer: 2,
-          tests: "“washroom” = baño en inglés estadounidense"
+          tests: "“restroom” = baño en inglés estadounidense"
         },
         {
           prompt: "¿Por qué en inglés se repite “use” sin buscar un verbo más específico?",
@@ -855,7 +855,7 @@ lessons.push(
       situation:
         "Usted entra a una sucursal en Houston para abrir su primera cuenta de ahorros. El asesor es cordial y directo, le explica qué documentos necesita, cuánto se demora y a qué hora abren, por si le toca volver otro día.",
       setting: {
-        who: "Alejandra, abriendo su primera cuenta bancaria en Canadá, y Brian, un asesor cordial de una sucursal de barrio.",
+        who: "Alejandra, abriendo su primera cuenta bancaria en Estados Unidos, y Brian, un asesor cordial de una sucursal de barrio.",
         what: "Alejandra abre una cuenta de ahorros, se entera de qué documentos necesita y pregunta a qué hora abre la sucursal.",
         when: "Una tarde entre semana, con tiempo de sobra antes de que el banco cierre a las cinco.",
         where: "Una pequeña sucursal bancaria en Houston, donde el trato es amable pero más breve que en Medellín.",
@@ -946,7 +946,7 @@ lessons.push(
           explanation: "La cuenta de ahorros. Cuidado con el orden: “savings” va antes de “account”, y no hay “of”.",
           literal: "cuenta de ahorros",
           useWhen: "Nombrar el tipo de cuenta que abres para guardar dinero.",
-          avoidWhen: "Para la cuenta del día a día con tarjeta de débito; en Canadá esa es “chequing account”.",
+          avoidWhen: "Para la cuenta del día a día con tarjeta de débito; en Estados Unidos esa es “chequing account”.",
           register: "neutral",
           region: "Inglés norteamericano; en el Reino Unido “current account” por “chequing”.",
           related: ["chequing account", "current account", "joint account", "term deposit"],
@@ -1006,15 +1006,15 @@ lessons.push(
         },
         {
           label: "“Chequing” y “savings”",
-          body: "En Canadá hay dos cuentas básicas: la “chequing account”, para el día a día y la tarjeta de débito, y la “savings account”, para guardar y ganar algo de interés. En el Reino Unido la del día a día se llama “current account”. Al abrir cuenta te preguntarán cuál quieres, así que conviene tener claras las palabras. Y ojo con la ortografía estadounidense: “chequing” con q, distinta del “checking” estadounidense."
+          body: "En Estados Unidos hay dos cuentas básicas: la “chequing account”, para el día a día y la tarjeta de débito, y la “savings account”, para guardar y ganar algo de interés. En el Reino Unido la del día a día se llama “current account”. Al abrir cuenta te preguntarán cuál quieres, así que conviene tener claras las palabras. Y ojo con la ortografía estadounidense: “chequing” con q, distinta del “checking” estadounidense."
         },
         {
           label: "“Photo ID” y el papeleo",
-          body: "Para abrir una cuenta en Canadá te pedirán “photo ID” — un documento con foto — y a veces “proof of address”, un comprobante de domicilio como un recibo de servicios. Como recién llegada, tu identificación será el pasaporte o la tarjeta de residencia, no una cédula local. Vale la pena aprender estas etiquetas porque aparecen en todos los trámites: banco, arriendo, biblioteca. Llevar los papeles correctos la primera vez te ahorra una segunda vuelta."
+          body: "Para abrir una cuenta en Estados Unidos te pedirán “photo ID” — un documento con foto — y a veces “proof of address”, un comprobante de domicilio como un recibo de servicios. Como recién llegada, tu identificación será el pasaporte o la tarjeta de residencia, no una cédula local. Vale la pena aprender estas etiquetas porque aparecen en todos los trámites: banco, arriendo, biblioteca. Llevar los papeles correctos la primera vez te ahorra una segunda vuelta."
         },
         {
           label: "El tono del banco norteamericano",
-          body: "El empleado de banco en Canadá suele ser cordial y directo, pero sin el “parcero” ni el vos de Medellín: la cercanía se marca con el nombre de pila, una sonrisa y frases como “you're all set” o “have a great day”. No esperes tanta charla, pero tampoco lo tomes por frialdad; es otra manera de ser amable. Devolver un “thanks so much, you too” te pone justo en el tono correcto."
+          body: "El empleado de banco en Estados Unidos suele ser cordial y directo, pero sin el “parcero” ni el vos de Medellín: la cercanía se marca con el nombre de pila, una sonrisa y frases como “you're all set” o “have a great day”. No esperes tanta charla, pero tampoco lo tomes por frialdad; es otra manera de ser amable. Devolver un “thanks so much, you too” te pone justo en el tono correcto."
         }
       ],
       pitfalls: [
@@ -1406,7 +1406,7 @@ lessons.push(
         who: "Alejandra, que quiere comprar un par de cosas a la carrera, y Sam, el dueño de una tienda pequeña que está a punto de cerrar por hoy.",
         what: "Alejandra alcanza la tienda justo antes del cierre, pregunta el horario, pide un pequeño descuento y cierra un trato rápido antes de que apaguen las luces.",
         when: "Un poco antes de las ocho de la noche, justo cuando la tienda está a punto de cerrar.",
-        where: "Una tienda pequeña de barrio en Canadá, donde el trato es informal y directo, y todo se dice con un solo “you.”",
+        where: "Una tienda pequeña de barrio en Estados Unidos, donde el trato es informal y directo, y todo se dice con un solo “you.”",
         why: "La hora de cierre es cuando “close” hace su trabajo más útil: el horario, las puertas y hasta el trato dependen de ese verbo, y conviene no confundirlo con el adjetivo “close,” que significa cerca."
       },
       address: {
@@ -1455,7 +1455,7 @@ lessons.push(
           translation: "Genial. ¿Hay descuento si llevo dos? ¿Lo dejamos en cuatro dólares?",
           pronunciation: "gréit. is der a DÍS-kaunt if ai teik tu? kan uí kol it for DÓ-lars?",
           literal: "Genial. ¿Hay ahí un descuento si yo tomo dos? ¿Podemos nosotros llamarlo cuatro dólares?",
-          why: "En Canadá y Estados Unidos casi no se regatea en las tiendas; pedir un “discount” se puede, pero es poco común. “Can we call it four dollars?” es una manera suave y educada de proponer un precio."
+          why: "En Estados Unidos casi no se regatea en las tiendas; pedir un “discount” se puede, pero es poco común. “Can we call it four dollars?” es una manera suave y educada de proponer un precio."
         },
         {
           speaker: "Sam",
@@ -1507,7 +1507,7 @@ lessons.push(
           useWhen: "Al terminar una negociación o aceptar un precio propuesto.",
           avoidWhen: "Habla de una oferta o promoción de tienda; eso también es “a deal,” pero no cierra nada.",
           register: "friendly informal",
-          region: "Inglés universal; muy común en Estados Unidos y Canadá.",
+          region: "Inglés universal; muy común en Estados Unidos.",
           related: ["to close a deal", "to seal the deal", "we have a deal", "deal!"],
           example: { target: "Okay, it's a deal.", translation: "Listo, cerramos el trato." }
         },
@@ -1550,7 +1550,7 @@ lessons.push(
       culture: [
         {
           label: "El inglés tiene un solo “you”",
-          body: "El inglés no distingue entre usted y tú: hay un único “you” para todo el mundo, del cliente al desconocido. Por eso la cortesía no está en el pronombre, como en español, sino repartida en el verbo y en pequeños suavizadores: “could you,” “would you mind,” “please,” “just.” En Canadá el trato suele ser informal y cálido, pero se apoya mucho en “please” y “thank you.” Para un hispanohablante, la buena noticia es que no hay que elegir pronombre; la mala, que hay que aprender a suavizar con palabras."
+          body: "El inglés no distingue entre usted y tú: hay un único “you” para todo el mundo, del cliente al desconocido. Por eso la cortesía no está en el pronombre, como en español, sino repartida en el verbo y en pequeños suavizadores: “could you,” “would you mind,” “please,” “just.” En Estados Unidos el trato suele ser informal y cálido, pero se apoya mucho en “please” y “thank you.” Para un hispanohablante, la buena noticia es que no hay que elegir pronombre; la mala, que hay que aprender a suavizar con palabras."
         },
         {
           label: "La diferencia entre acción y estado",
@@ -1558,7 +1558,7 @@ lessons.push(
         },
         {
           label: "Comprar sin regatear",
-          body: "En Colombia se regatea con naturalidad en plazas, tiendas de barrio y con los vendedores ambulantes. En Canadá y Estados Unidos, en cambio, el precio de una tienda suele ser fijo, y pedir descuento puede resultar incómodo o fuera de lugar. El regateo se reserva para los mercados de pulgas, las ventas de garaje y algunas compras grandes, como un carro. “It's a deal” se oye más al cerrar un acuerdo que al pelear un precio en una tienda formal, así que conviene medir dónde se usa."
+          body: "En Colombia se regatea con naturalidad en plazas, tiendas de barrio y con los vendedores ambulantes. En Estados Unidos, en cambio, el precio de una tienda suele ser fijo, y pedir descuento puede resultar incómodo o fuera de lugar. El regateo se reserva para los mercados de pulgas, las ventas de garaje y algunas compras grandes, como un carro. “It's a deal” se oye más al cerrar un acuerdo que al pelear un precio en una tienda formal, así que conviene medir dónde se usa."
         },
         {
           label: "Cuando cierran una vía",
@@ -1609,7 +1609,7 @@ lessons.push(
         {
           form: "Okay, it's a deal.",
           register: "friendly informal",
-          region: "Inglés universal; muy usado en Estados Unidos y Canadá",
+          region: "Inglés universal; muy usado en Estados Unidos",
           whenToUse: "Para cerrar un trato o aceptar una oferta."
         },
         {

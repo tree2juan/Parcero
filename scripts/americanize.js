@@ -172,8 +172,24 @@ const TIER_C = [
   ["Canadian", "American"],
   ["canadienses", "estadounidenses"],
   ["canadiense", "estadounidense"],
+  /* Order matters: applyPairs runs these in sequence, so the phrases that
+     mention both countries have to collapse before the bare noun is touched,
+     or "Estados Unidos y Canadá" becomes the redundant "Estados Unidos y
+     Texas". The comma form is listed first because the migration's own city
+     mapping produced "Houston, Canadá" — the city was relocated and the
+     country was left behind. */
+  ["en la provincia de Texas, Canadá", "Texas"],
+  [", Canadá y", " y"],
+  [", Canadá o", " o"],
+  [", Canadá", ", Texas"],
+  ["Canadá y Estados Unidos", "Estados Unidos"],
+  ["Estados Unidos y Canadá", "Estados Unidos"],
+  ["EE. UU. y Canadá", "EE. UU."],
+  ["Canadá y EE. UU.", "EE. UU."],
   ["Canada", "Texas"],
-  ["Canadá", "Texas"],
+  /* Country-level references become the country, not the state: a note that
+     an expression is common "en Canadá y Australia" is comparing nations. */
+  ["Canadá", "Estados Unidos"],
   ["Ontario", "Texas"],
   ["Alberta", "Texas"],
   ["Quebec", "the Rio Grande Valley"],
@@ -212,10 +228,32 @@ function matchCase(source, replacement) {
 
 const escape = (s) => s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 
+/*
+ * Accent-aware word boundaries.
+ *
+ * This used to be `\\b${term}\\b`, which is wrong for exactly the words this
+ * script exists to replace. `\b` is defined against ASCII word characters, so
+ * for "Canadá" the closing boundary falls between "á" and a space — both
+ * non-word by that definition — and never matches. The first migration
+ * therefore replaced "Canada", "Canadian" and "canadiense" while silently
+ * skipping all 173 occurrences of "Canadá", and scripts/check-american-english.js
+ * shared the same bug, so it reported the result clean.
+ *
+ * Two copies of one defect will not catch each other. Both are fixed, and the
+ * guard now tests its matcher against known-bad strings rather than only
+ * against the corpus.
+ */
 function applyPairs(text, pairs, tally) {
   let out = text;
   for (const [from, to] of pairs) {
-    const re = new RegExp(`\\b${escape(from)}\\b`, "gi");
+    /* Only assert a boundary on an edge that is actually a word character.
+       ", Canadá" begins with punctuation, and demanding a non-letter before
+       the comma made it unmatchable in "Houston, Canadá" — the very string it
+       was added to repair. */
+    const word = /[\p{L}\p{N}_]/u;
+    const lead = word.test(from[0]) ? "(?<![\\p{L}\\p{N}_])" : "";
+    const tail = word.test(from[from.length - 1]) ? "(?![\\p{L}\\p{N}_])" : "";
+    const re = new RegExp(`${lead}${escape(from)}${tail}`, "giu");
     out = out.replace(re, (m) => {
       tally.set(from, (tally.get(from) || 0) + 1);
       return matchCase(m, to);

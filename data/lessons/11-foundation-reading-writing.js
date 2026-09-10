@@ -1660,7 +1660,7 @@ lessons.push(
         who: "Karen es una asesora de servicio al cliente, cortés y cuidadosa con sus palabras. Alejandra es colombiana y está reclamando un cobro que no reconoce en su factura.",
         what: "Aclarar un error de facturación en un mostrador de servicio, en el registro formal y medido de las oficinas.",
         when: "A media mañana entre semana, con la oficina lo bastante tranquila para hablarlo con calma.",
-        where: "En Canadá, el mostrador de servicio al cliente de una empresa de servicios públicos.",
+        where: "En Estados Unidos, el mostrador de servicio al cliente de una empresa de servicios públicos.",
         why: "Porque revertir el cobro depende de que todo se entienda con claridad, y el momento es formal: en inglés la cortesía no está en un pronombre, sino en las palabras que se eligen."
       },
       address: {

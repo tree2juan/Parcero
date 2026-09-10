@@ -490,11 +490,11 @@ lessons.push(
             "Una manera de decir que aquello por lo que el otro se disculpó o que acaba de explicar no es ningún problema.",
           literal: "no preocupaciones",
           useWhen:
-            "Para quitarle peso a la preocupación del otro, o cuando se lo quitan a usted. Muy frecuente en Canadá y Australia.",
+            "Para quitarle peso a la preocupación del otro, o cuando se lo quitan a usted. Muy frecuente en Estados Unidos y Australia.",
           avoidWhen:
             "Cuando la otra persona está genuinamente molesta por algo que usted hizo. Ahí suena a que la está despachando, no a amabilidad.",
           register: "friendly informal",
-          region: "Inglés universal; “no worries” abunda en Canadá y Australia, y “no problem” en Estados Unidos.",
+          region: "Inglés universal; “no worries” abunda en Estados Unidos y Australia, y “no problem” en Estados Unidos.",
           related: ["no problem", "don't worry about it", "it's fine", "all good"],
           example: {
             target: "No worries, the dog isn't a bother.",

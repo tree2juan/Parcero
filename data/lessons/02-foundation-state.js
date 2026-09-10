@@ -557,7 +557,7 @@ lessons.push(
         {
           label: "Nombres de pila desde el primer minuto",
           body:
-            "En Canadá el técnico se presenta como “Dave”, no como “Mr. Wilson”, y espera que usted lo llame Dave. El “don Fabio” colombiano no tiene un equivalente cómodo: intentar un “Mister Dave” suena raro. La cercanía por nombre de pila es inmediata y no implica confianza profunda; es simplemente el registro por defecto del trato de servicio en Norteamérica."
+            "En Estados Unidos el técnico se presenta como “Dave”, no como “Mr. Wilson”, y espera que usted lo llame Dave. El “don Fabio” colombiano no tiene un equivalente cómodo: intentar un “Mister Dave” suena raro. La cercanía por nombre de pila es inmediata y no implica confianza profunda; es simplemente el registro por defecto del trato de servicio en Norteamérica."
         }
       ],
       pitfalls: [
@@ -1163,7 +1163,7 @@ lessons.push(
           avoidWhen:
             "Contextos formales o escritos, donde se dice “dollars” y no “bucks”.",
           register: "friendly informal",
-          region: "Norteamérica; en Canadá conviven “bucks” y “loonies/toonies” para las monedas.",
+          region: "Norteamérica; en Estados Unidos conviven “bucks” y “quarters/dimes” para las monedas.",
           related: ["dollars", "dollar coin", "two-dollar bill", "cash"],
           example: {
             target: "That's six bucks.",
@@ -1180,7 +1180,7 @@ lessons.push(
           avoidWhen:
             "Contextos formales o con desconocidos que podrían leerlo como demasiado íntimo o condescendiente.",
           register: "friendly informal",
-          region: "Muy usado en Canadá y el norte/este de EE. UU. en tiendas y cafeterías.",
+          region: "Muy usado en Estados Unidos y el norte/este de EE. UU. en tiendas y cafeterías.",
           related: ["honey", "dear", "sweetie", "bud"],
           example: {
             target: "No worries, hon.",
@@ -1192,14 +1192,14 @@ lessons.push(
         "El inglés reparte lo que el español mete en tener: la posesión va con have, pero la edad, el hambre y el afán van con be. El error estrella del hispanohablante es “how many years do you have?” en vez de “how old are you?”. Aprende esos estados con be como bloques fijos y evitarás el calco.",
       culture: [
         {
-          label: "En Canadá casi no existe el fiado",
+          label: "En Estados Unidos casi no existe el fiado",
           body:
-            "El “take them and pay me tomorrow” de Mike es un gesto de confianza personal, no una costumbre extendida. La tienda de barrio con cuenta fiada, tan normal en Colombia, casi no existe en Canadá: casi todo se paga con tarjeta o débito en el momento. Que un tendero te fíe algo es una excepción amable entre conocidos, no un sistema informal de crédito como el de las tiendas colombianas."
+            "El “take them and pay me tomorrow” de Mike es un gesto de confianza personal, no una costumbre extendida. La tienda de barrio con cuenta fiada, tan normal en Colombia, casi no existe en Estados Unidos: casi todo se paga con tarjeta o débito en el momento. Que un tendero te fíe algo es una excepción amable entre conocidos, no un sistema informal de crédito como el de las tiendas colombianas."
         },
         {
           label: "Con tarjeta, el cambio casi no importa",
           body:
-            "En Colombia quedarse sin sencillo puede trabar una compra; en Canadá el débito y el “tap” de la tarjeta hacen que el efectivo, y por tanto el vuelto, casi no aparezcan. Mucha gente joven carga poco o nada de plata en billetes. Por eso la escena de no tener con qué dar el cambio se siente algo anticuada allá: pasa, pero cada vez menos, sobre todo en tiendas pequeñas que aún reciben efectivo."
+            "En Colombia quedarse sin sencillo puede trabar una compra; en Estados Unidos el débito y el “tap” de la tarjeta hacen que el efectivo, y por tanto el vuelto, casi no aparezcan. Mucha gente joven carga poco o nada de plata en billetes. Por eso la escena de no tener con qué dar el cambio se siente algo anticuada allá: pasa, pero cada vez menos, sobre todo en tiendas pequeñas que aún reciben efectivo."
         },
         {
           label: "El inglés marca el cariño con apodos",
@@ -1209,7 +1209,7 @@ lessons.push(
         {
           label: "“Pop”, “soda” o “coke”",
           body:
-            "Alejandra pide “a pop”, la palabra normal para gaseosa en Canadá y el norte de EE. UU. Más al sur dicen “soda”, y en buena parte del sur estadounidense “coke” sirve para cualquier gaseosa, sea o no Coca-Cola. Es un regionalismo tan marcado como “gaseosa” frente a “refresco” en el mundo hispano, y delata de inmediato de qué zona del continente viene quien habla."
+            "Alejandra pide “a pop”, la palabra normal para gaseosa en Estados Unidos y el norte de EE. UU. Más al sur dicen “soda”, y en buena parte del sur estadounidense “coke” sirve para cualquier gaseosa, sea o no Coca-Cola. Es un regionalismo tan marcado como “gaseosa” frente a “refresco” en el mundo hispano, y delata de inmediato de qué zona del continente viene quien habla."
         }
       ],
       pitfalls: [
@@ -1274,7 +1274,7 @@ lessons.push(
       choices: [
         "Que pague la mitad hoy en efectivo y le lleve el resto del dinero al día siguiente cuando vuelva a pasar por ahí.",
         "Que se lleve las cosas gratis esta vez, como un regalo de bienvenida por ser una clienta nueva de la tienda.",
-        "Que se lleve las cosas ahora y le pague mañana: fiado, algo raro en Canadá y basado en la confianza personal."
+        "Que se lleve las cosas ahora y le pague mañana: fiado, algo raro en Estados Unidos y basado en la confianza personal."
       ],
       answer: 2,
       practiceExtra: [
@@ -1781,7 +1781,7 @@ lessons.push(
           avoidWhen:
             "Diciendo “it makes cold”, calco directo de “hace frío” que no existe en inglés.",
           register: "neutral",
-          region: "Universal; “freezing” para exagerar el frío es muy común en Canadá.",
+          region: "Universal; “freezing” para exagerar el frío es muy común en Estados Unidos.",
           related: ["it's hot", "it's freezing", "it's chilly", "it's sunny"],
           example: {
             target: "It's freezing today.",
@@ -1832,7 +1832,7 @@ lessons.push(
           avoidWhen:
             "Contextos formales o con desconocidos, donde pueden sonar demasiado familiares.",
           register: "friendly informal",
-          region: "Canadá y norte/este de EE. UU.; “bud” es muy estadounidense.",
+          region: "Estados Unidos y norte/este de EE. UU.; “bud” es muy estadounidense.",
           related: ["honey", "bud", "buddy", "dear"],
           example: {
             target: "Oh, hon, it's always cold here.",
@@ -1846,12 +1846,12 @@ lessons.push(
         {
           label: "El “potluck” es el sancocho del norte",
           body:
-            "El guiso de Sarah cumple el papel del sancocho costeño: comida compartida como excusa para reunir a la familia. En Canadá la versión más típica es el “potluck”, donde cada quien lleva un plato y todo se pone en común. No hay la olla única sobre leña, pero sí la misma idea: la comida importa menos que el juntarse. Ofrecerse a llevar algo o a ayudar, como hace Alejandra, es exactamente lo que se espera."
+            "El guiso de Sarah cumple el papel del sancocho costeño: comida compartida como excusa para reunir a la familia. En Estados Unidos la versión más típica es el “potluck”, donde cada quien lleva un plato y todo se pone en común. No hay la olla única sobre leña, pero sí la misma idea: la comida importa menos que el juntarse. Ofrecerse a llevar algo o a ayudar, como hace Alejandra, es exactamente lo que se espera."
         },
         {
           label: "El frío es el rompehielos",
           body:
-            "Si en la costa colombiana el tema es el calor, en Canadá es el frío. “It's freezing”, “cold enough for you?” y quejas cariñosas sobre la nieve son el pegamento social del invierno, igual que el clima en Inglaterra. Seguir la corriente — coincidir en que hace un frío terrible — es amable y esperado. Además es un lugar cómodo para practicar el clima con be, porque lo vas a oír muchísimas veces al día."
+            "Si en la costa colombiana el tema es el calor, en Estados Unidos es el frío. “It's freezing”, “cold enough for you?” y quejas cariñosas sobre la nieve son el pegamento social del invierno, igual que el clima en Inglaterra. Seguir la corriente — coincidir en que hace un frío terrible — es amable y esperado. Además es un lugar cómodo para practicar el clima con be, porque lo vas a oír muchísimas veces al día."
         },
         {
           label: "“You guys”, el ustedes reinventado",
