@@ -188,6 +188,23 @@ node scripts/check-lesson-block.js data/lessons/02-foundation-state.js
 
 Each lesson names the one curriculum verb it is built on, in its `verb` field. It must be a verb that exists in `data/curriculum.js`, no other lesson may claim it, and it has to actually be spoken in the dialogue — coverage used to be inferred by searching prose for verb forms, which credited a verb for turning up in a translation and missed any taught only as a conjugation.
 
+The file must also end by stamping itself, so the review tooling can send a native speaker to the right file:
+
+```js
+markSource(lessons, "data/lessons/02-foundation-state.js");
+```
+
+A lesson's index in the `lessons` array says nothing about where its text is written, so without the stamp every flag raised against a block lesson points at `data/lessons.js` at an index that file does not have. `markSource` is defined in `data/lessons.js` and claims only lessons nobody has claimed yet.
+
+To see what is left to write, and which verbs the next block should cover:
+
+```bash
+node scripts/verb-coverage.js          # summary, plus the next block
+node scripts/verb-coverage.js --list   # every verb still unclaimed
+```
+
+The grouping is derived, never stored — a stored plan goes stale as soon as someone writes a lesson out of order, and a stale plan is worse than none because it hands two authors the same verb.
+
 Every field below except `title`, `situation`, `dialogue`, `vocabulary`, `note`, `prompt`, `choices` and `answer` is optional: [`data/lesson-schema.js`](data/lesson-schema.js) fills in the rest, so a partly written lesson still renders. Rows may be written as objects (preferred) or as the original short tuples.
 
 ```js
@@ -298,6 +315,15 @@ Cross-script API is therefore marked by name, with the `Parcero*` prefix, and da
 
 Regional usage is the part most easily got wrong, so the app is honest about it: every lesson carries a `review` field, and while it is `"pending"` the lesson invites a native speaker to check it. Nothing unverified is presented as settled.
 
+That field is per-lesson, and it is `"pending"` on every lesson, so it cannot say which *fields* nobody has read. [`data/provenance.js`](data/provenance.js) records that at field level, and a lesson holding machine-written Spanish shows a badge saying so with a count. The file is generated, because hand-listing several hundred field paths per lesson is work no one would repeat:
+
+```bash
+node scripts/record-provenance.js          # rewrite the record
+node scripts/record-provenance.js --check  # fail if it is stale
+```
+
+A test runs `--check`, so a new lesson cannot ship its unreviewed Spanish as though a human had approved it. The record errs towards listing too much: overstating how much needs a native speaker's eye is a smaller failure than claiming machine Spanish has already been read.
+
 Review happens at two grains, and both need a reviewer who knows the language, not the codebase.
 
 ### Report an error from the page
@@ -357,7 +383,9 @@ data/curriculum.js  200 verbs and the fluency connectors
 data/slang.js       Colombian slang, each entry marked with how safe it is to say
 data/mature.js      Age-gated recognition reference: insults, adult language, warning signals
 data/flashcards.js  Derives flashcard topics and sets from the content above
-scripts/            Maintainer tools: triage flags, and check a single lesson block
+data/provenance.js  Generated: which fields hold Spanish no native speaker has read
+scripts/            Maintainer tools: triage flags, check a single lesson block,
+                    report verb coverage, and regenerate the provenance record
 .github/workflows/  CI, Pages deploy, and automatic triage of filed flags
 assets/             Favicon, social card, roadmap diagram
 test/               Dependency-free content validation
