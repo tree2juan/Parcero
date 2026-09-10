@@ -279,7 +279,15 @@ const TIER_A = [
   ["waistcoat", "vest"],
   ["wellies", "rain boots"],
   ["fortnight", "two weeks"],
-  ["telly", "TV"]
+  ["telly", "TV"],
+
+  /*
+   * "learnt" is always "learned" in American English. Its irregular-past
+   * siblings are deliberately left alone: "burnt" is standard American as an
+   * adjective (burnt orange is a Texas color), "spelt" is also a grain, and
+   * "dreamt" is a listed American variant. Only the unambiguous one is here.
+   */
+  ["learnt", "learned"]
 ];
 
 /* Tier C: relocate the English track from Canada to Texas.
@@ -360,15 +368,19 @@ const TIER_B = [
   "rubbish", "petrol", "autumn", "nappy", "cooker", "hoover"
 ];
 
-const FILES = [
-  ...fs.readdirSync(path.join(ROOT, "data", "lessons")).map((f) => path.join("data", "lessons", f)),
-  ...fs.readdirSync(path.join(ROOT, "data", "lexicon")).map((f) => path.join("data", "lexicon", f)),
-  "data/curriculum.js", "data/slang.js", "data/mature.js", "data/structures.js",
-  "data/flashcards.js", "data/lexicon.js", "data/taxonomy.js", "data/lessons.js",
-  "i18n.js", "index.html"
-].filter((f) => fs.existsSync(path.join(ROOT, f)));
+/*
+ * Scope comes from the guard, deliberately.
+ *
+ * These were two hand-written lists, and they disagreed: the guard checked
+ * app.js and this file did not, while neither covered progress.js, review.js,
+ * review-ui.js, flashcards.js or styles.css. A migration tool that cannot see
+ * a file the guard checks reports success on work it never did, and a tool
+ * that sees files the guard does not will quietly rewrite things nobody is
+ * verifying. Sharing one definition makes both impossible.
+ */
+const FILES = require("./check-american-english.js").targetFiles();
 
-/* Preserve the capitalisation of whatever was matched, so "Neighbour" at the
+/* Preserve the capitalization of whatever was matched, so "Neighbour" at the
    start of a sentence does not come back as "neighbor". */
 function matchCase(source, replacement) {
   if (source === source.toUpperCase() && source !== source.toLowerCase()) return replacement.toUpperCase();

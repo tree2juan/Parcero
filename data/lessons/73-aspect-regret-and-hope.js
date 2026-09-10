@@ -1466,7 +1466,7 @@ lessons.push(
         {
           mistake: "Traducir el que suelto como un simple that",
           whyItFails:
-            "“Que te vaya bien” is not a sentence with a dangling that. It is a set wish; better learnt as a block, not word by word.",
+            "“Que te vaya bien” is not a sentence with a dangling that. It is a set wish; better learned as a block, not word by word.",
           sayInstead: "Que te vaya bien."
         }
       ],

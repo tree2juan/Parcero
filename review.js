@@ -753,7 +753,7 @@ const ParceroReview = (function () {
     }).join("\n\n");
   }
 
-  function summarise(flags, data) {
+  function summarize(flags, data) {
     const lessons = new Set();
     for (const flag of flags) {
       const parsed = parseAnchor(flag.anchor);
@@ -771,12 +771,12 @@ const ParceroReview = (function () {
   }
 
   function issueTitle(flags, data) {
-    return `Native-speaker flags: ${summarise(flags, data)}`;
+    return `Native-speaker flags: ${summarize(flags, data)}`;
   }
 
   function issueBody(flags, data) {
     return [
-      summarise(flags, data) + ", reported from the Report an error tab.",
+      summarize(flags, data) + ", reported from the Report an error tab.",
       "",
       flagsToMarkdown(flags, data)
     ].join("\n");
@@ -810,7 +810,7 @@ const ParceroReview = (function () {
     ISSUE_TYPES, SEVERITIES, REVIEWER_ROLES, REGION_SUGGESTIONS,
     labelOf, labelKey, regionCodeFor, parseAnchor, isGroupAnchor, groupAnchor, resolveAnchor, partsForAnchor, listAnchors,
     validateFlag, flagKey, buildPayload, payloadBlock, extractPayload,
-    flagsToMarkdown, summarise, issueTitle, issueBody, buildIssueUrl, blankIssueUrl
+    flagsToMarkdown, summarize, issueTitle, issueBody, buildIssueUrl, blankIssueUrl
   };
 })();
 

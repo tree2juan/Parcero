@@ -196,7 +196,7 @@
   }
 
   /*
-   * Label an item by the words it actually contains. A reviewer recognises
+   * Label an item by the words it actually contains. A reviewer recognizes
    * "¿Me regalas un tinto?" instantly; "Dialogue line 3" makes them count.
    */
   function itemLabel(anchor) {
@@ -394,7 +394,7 @@
     const current = data();
     $("#queue-summary").textContent = state.flags.length === 0
       ? t("review.queue.empty")
-      : t("review.queue.notSent", { summary: ParceroReview.summarise(state.flags, current) });
+      : t("review.queue.notSent", { summary: ParceroReview.summarize(state.flags, current) });
     $("#queue-list").innerHTML = state.flags.map((flag, index) => {
       const resolved = ParceroReview.resolveAnchor(flag.anchor, current);
       const drifted = resolved.ok && resolved.text !== flag.original;

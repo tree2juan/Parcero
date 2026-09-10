@@ -529,7 +529,7 @@ main, footer { max-width: var(--wrap); margin: auto; padding-inline: 1.5rem; }
 }
 .deck-expand:focus-visible { outline: 2px solid var(--green-deep); outline-offset: 2px; }
 
-/* Fixed badge colours: these must read the same in light and dark. */
+/* Fixed badge colors: these must read the same in light and dark. */
 .swipe-badge {
   position: absolute; top: 1rem; z-index: 2;
   padding: .3rem .7rem; border-radius: .5rem;

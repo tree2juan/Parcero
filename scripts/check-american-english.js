@@ -97,7 +97,7 @@ const BRITISH = [
   "judgement", "kerbside", "nappy", "nappies", "windscreen", "motorway",
   "motorways", "carriageway", "pushchair", "postbox", "waistcoat", "wellies",
   "nought", "fortnight", "telly", "bloke", "blokes", "cuppa", "whinge",
-  "whinged", "whinging"
+  "whinged", "whinging", "learnt"
 ];
 
 /* The English track is set in Texas, not Canada.
@@ -146,20 +146,37 @@ const CANADIAN = [
  * kind of question that gets re-answered by deleting the lesson.
  */
 
-function targetFiles() {
-  const files = [];
-  for (const dir of ["data/lessons", "data/lexicon"]) {
-    const abs = path.join(ROOT, dir);
-    if (fs.existsSync(abs)) for (const f of fs.readdirSync(abs)) files.push(`${dir}/${f}`);
+/*
+ * Which files get checked.
+ *
+ * This used to be a hand-written list, and a hand-written list of things to
+ * check drifts exactly the way a hand-written list of things to ban does.
+ * data/lessons.js was missing at first, so the eight seed lessons were exempt
+ * from the ban without anyone deciding that. progress.js was never on it
+ * either, and had "coloured a button green" sitting in its header comment
+ * while the guard reported the project clean.
+ *
+ * So the shipped source is discovered rather than enumerated, and any new file
+ * is covered the day it is added instead of the day someone remembers it.
+ *
+ * scripts/ and test/ are excluded deliberately, not accidentally: this file
+ * and americanize.js contain every banned word as data, and the matcher tests
+ * assert against known-bad strings. Scanning them would make the guard fail on
+ * its own definition of failure.
+ */
+const SKIP_DIRS = new Set(["scripts", "test", "node_modules", ".git", ".github"]);
+const CHECKED = /\.(js|html|css)$/;
+
+function targetFiles(dir = "", out = []) {
+  for (const entry of fs.readdirSync(path.join(ROOT, dir), { withFileTypes: true })) {
+    const rel = dir ? `${dir}/${entry.name}` : entry.name;
+    if (entry.isDirectory()) {
+      if (!SKIP_DIRS.has(entry.name)) targetFiles(rel, out);
+    } else if (CHECKED.test(entry.name)) {
+      out.push(rel);
+    }
   }
-  /* data/lessons.js carries the eight seed lessons and is content like any
-     other block. It was omitted from this list at first, so those lessons
-     were exempt from the ban without anyone saying so. */
-  for (const f of ["data/lessons.js", "data/slang.js", "data/mature.js", "data/structures.js",
-    "data/curriculum.js", "data/taxonomy.js", "app.js", "i18n.js", "index.html"]) {
-    if (fs.existsSync(path.join(ROOT, f))) files.push(f);
-  }
-  return files;
+  return out;
 }
 
 const escape = (s) => s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");

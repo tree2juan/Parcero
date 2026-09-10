@@ -2,7 +2,7 @@
  * What the learner actually did, and why none of it used to be kept.
  *
  * The course ships 2,114 practice questions across 226 lessons. Answering one
- * coloured a button green, printed "Correct", and ended there: `practiceView`
+ * colored a button green, printed "Correct", and ended there: `practiceView`
  * was `{ index: 0 }` — a cursor, not a record. The only thing that survived a
  * reload was `state.completed`, a Set of lesson ids, which says a learner
  * arrived at the end of a lesson and nothing whatever about whether they could

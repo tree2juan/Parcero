@@ -67,7 +67,7 @@ lessons.push(
           translation: "I can't connect the gas cylinder. I don't know how it's done.",
           pronunciation: "no PWEH-doh ko-nek-TAR la pee-PEH-ta del gas. no se KO-moh se AH-seh",
           literal: "Not I-can connect the cylinder of-the gas. Not I-know how itself does.",
-          why: "Two different “can'ts” hide in one breath. “No puedo” is being unable in the moment; “no sé cómo” is never having learnt the skill. Spanish keeps poder and saber apart exactly where English collapses both into a single “I can't”."
+          why: "Two different “can'ts” hide in one breath. “No puedo” is being unable in the moment; “no sé cómo” is never having learned the skill. Spanish keeps poder and saber apart exactly where English collapses both into a single “I can't”."
         },
         {
           speaker: "Don Jairo",
@@ -149,7 +149,7 @@ lessons.push(
         {
           term: "saber (hacer algo)",
           explanation:
-            "To know how to do something — a skill you have learnt and kept. Paired with an infinitive, “saber nadar”, “saber manejar”, it is the ability English buries inside “can”.",
+            "To know how to do something — a skill you have learned and kept. Paired with an infinitive, “saber nadar”, “saber manejar”, it is the ability English buries inside “can”.",
           literal: "to know (how to do something)",
           useWhen:
             "Talking about competencies you have acquired: cooking, driving, swimming, fixing things, speaking a language.",
@@ -171,7 +171,7 @@ lessons.push(
           useWhen:
             "Admitting that a physical load or a situation is beyond you right now — the boxes, the heat, the paperwork, a difficult child.",
           avoidWhen:
-            "Saying you lack a skill; that is “no sé”. “No puedo con” is about being overwhelmed by something, not about never having learnt it.",
+            "Saying you lack a skill; that is “no sé”. “No puedo con” is about being overwhelmed by something, not about never having learned it.",
           register: "friendly informal",
           region: "General Colombian and pan-Hispanic; the phrasing works the same across Latin America.",
           related: ["no doy más", "no me da", "me queda grande", "estoy que no puedo"],
@@ -216,7 +216,7 @@ lessons.push(
         }
       ],
       note:
-        "The lesson turns on two verbs English collapses into one. “Can” is poder when it means possibility or permission, but saber when it means a skill you have learnt. “No puedo conectarla” says the cylinder is beating you today; “no sé conectarla” says you never learnt how. Colombians hear the difference at once, so the wrong choice quietly rewrites your story.",
+        "The lesson turns on two verbs English collapses into one. “Can” is poder when it means possibility or permission, but saber when it means a skill you have learned. “No puedo conectarla” says the cylinder is beating you today; “no sé conectarla” says you never learned how. Colombians hear the difference at once, so the wrong choice quietly rewrites your story.",
       culture: [
         {
           label: "Colaborar is how Colombia asks",
@@ -241,7 +241,7 @@ lessons.push(
       ],
       pitfalls: [
         {
-          mistake: "Saying “No puedo cocinar” to mean you never learnt to cook",
+          mistake: "Saying “No puedo cocinar” to mean you never learned to cook",
           whyItFails:
             "“No puedo cocinar” means you are unable to cook right now — the kitchen is closed, your arm is in a cast. The skill you lack is “no sé cocinar”. Swapping them tells Colombians the opposite of what you meant about your own abilities.",
           sayInstead: "No sé cocinar."
@@ -299,7 +299,7 @@ lessons.push(
       ],
       prompt: "Alex says “No puedo conectar la pipeta, no sé cómo se hace.” What two different problems is he naming?",
       choices: [
-        "That he is unable to connect it at this moment, and separately that he never learnt how the connection is done.",
+        "That he is unable to connect it at this moment, and separately that he never learned how the connection is done.",
         "That the cylinder is faulty and dangerous, and that the building has not yet shown him where the valve lives.",
         "That he refuses to connect it himself, and that he would rather the portero take care of it from now on."
       ],
@@ -336,7 +336,7 @@ lessons.push(
           tests: "“ya” and the diminutive as near-future promises"
         },
         {
-          prompt: "Alex wants to say he never learnt to connect a cylinder. Which sentence says exactly that?",
+          prompt: "Alex wants to say he never learned to connect a cylinder. Which sentence says exactly that?",
           choices: [
             "No puedo conectar la pipeta.",
             "No sé conectar la pipeta.",

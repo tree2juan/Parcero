@@ -642,7 +642,7 @@
     try {
       card.releasePointerCapture(event.pointerId);
     } catch {
-      /* Already released, for instance because the gesture was cancelled. */
+      /* Already released, for instance because the gesture was canceled. */
     }
     if (!moved) {
       resetTransform();
