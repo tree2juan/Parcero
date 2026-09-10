@@ -1721,10 +1721,10 @@ lessons.push(
       ],
       vocabulary: [
         {
-          term: "change",
+          term: "to change",
           explanation:
-            "Cambiar, cambiarse o cambio, según la frase. El inglés usa la misma palabra para verbo y sustantivo.",
-          literal: "cambiar / cambio",
+            "Cambiar o cambiarse, según la frase. El inglés usa la misma palabra para el verbo y el sustantivo, y por eso aquí aparece con “to” — para separarla del sustantivo “change”, el cambio o las vueltas.",
+          literal: "cambiar",
           useWhen:
             "Habla de dinero, ropa, planes, opinión, tema o cualquier cosa que se vuelve distinta.",
           avoidWhen:
