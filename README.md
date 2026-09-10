@@ -205,6 +205,23 @@ node scripts/verb-coverage.js --list   # every verb still unclaimed
 
 The grouping is derived, never stored — a stored plan goes stale as soon as someone writes a lesson out of order, and a stale plan is worse than none because it hands two authors the same verb.
 
+### Which language each field is written in
+
+This is the rule most easily got wrong, and getting it wrong leaves every other check passing: the shape is right, the mirroring is exact, and the lesson is simply unreadable by the person it is for. The reader does not yet speak what is being taught, so **explanation is always in the language the reader already has**.
+
+| | `es` direction | `en` direction |
+|---|---|---|
+| Reader | English speaker learning Colombian Spanish | Colombian learning English |
+| Taught material — `dialogue[].target`, `variations[].form`, `vocabulary[].example.target` | Spanish | English |
+| All explanation — `note`, `setting.*`, `address.*`, `dialogue[].translation`/`.why`, `vocabulary[]` prose, `culture[]`, `pitfalls[].whyItFails`, `variations[].whenToUse`, practice prompts | English | Spanish |
+| `title` and `situation` | **Spanish** | **Spanish** |
+
+`title` and `situation` are the exception: they are Spanish in *both* directions, because they name the lesson in the picker and that does not change with direction. The `es` direction addresses the reader as tú, the `en` direction as usted.
+
+`pronunciation` is a respelling and belongs to neither language — English-readable for Spanish in the `es` direction, Spanish-readable for English in the `en` direction. Practice `choices` may hold either, since a question can legitimately ask which of three utterances sounds natural.
+
+`node scripts/check-lesson-block.js` enforces the table above. It refuses to judge anything under eight words and strips quoted runs first, because Spanish explanation quotes the English it is teaching; it reports nothing on the eight hand-written lessons.
+
 Every field below except `title`, `situation`, `dialogue`, `vocabulary`, `note`, `prompt`, `choices` and `answer` is optional: [`data/lesson-schema.js`](data/lesson-schema.js) fills in the rest, so a partly written lesson still renders. Rows may be written as objects (preferred) or as the original short tuples.
 
 ```js
