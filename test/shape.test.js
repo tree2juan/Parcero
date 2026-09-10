@@ -11,7 +11,7 @@ const test = require("node:test");
 const assert = require("node:assert");
 const vm = require("node:vm");
 
-const { dataSource } = require("./data-source.js");
+const { dataSource, lessonBlockFiles, read } = require("./data-source.js");
 
 const bundle = `${dataSource({ schema: true })}\n({ lessons, curriculum, schema: ParceroLessonSchema });`;
 const { lessons, curriculum, schema } = vm.runInNewContext(bundle, {}, { filename: "parcero-shape-bundle.js" });
@@ -261,5 +261,45 @@ test("a lesson's declared verb is actually spoken in its dialogue", () => {
     assert.ok(
       irregular || (root && spoken.includes(root)),
       `lesson ${lesson.id} claims "${lesson.verb}" but no dialogue line contains "${root}"`);
+  }
+});
+
+/*
+ * The tests find block files by globbing the directory; the browser finds them
+ * only if index.html has a script tag. Those two facts can disagree, and when
+ * they do the suite goes green over a page that is missing lessons -- the worst
+ * possible split, because every automated signal says the content shipped.
+ *
+ * Order matters as much as presence. data/lessons.js declares the array the
+ * blocks push onto, so a block tag placed above it throws on load.
+ */
+test("every lesson block is loaded by the page, after the array it pushes onto", () => {
+  const html = read("index.html");
+  const srcs = [...html.matchAll(/<script\s+src="([^"]+)"/g)].map((match) => match[1]);
+  const declaredAt = srcs.indexOf("data/lessons.js");
+
+  assert.ok(declaredAt >= 0, "index.html never loads data/lessons.js, so no block has an array to push onto");
+
+  for (const file of lessonBlockFiles()) {
+    const at = srcs.indexOf(file);
+    assert.ok(
+      at >= 0,
+      `${file} holds lessons that the tests load and the page does not. `
+      + "Add a script tag to index.html, or the content ships only to the test suite.");
+    assert.ok(
+      at > declaredAt,
+      `${file} is loaded before data/lessons.js, so it pushes onto an array that does not exist yet`);
+  }
+});
+
+test("the page loads no lesson block that is not on disk", () => {
+  const html = read("index.html");
+  const srcs = [...html.matchAll(/<script\s+src="(data\/lessons\/[^"]+)"/g)].map((match) => match[1]);
+  const present = new Set(lessonBlockFiles());
+  for (const src of srcs) {
+    assert.ok(
+      present.has(src),
+      `index.html loads ${src}, which does not exist. A renamed or deleted block leaves a 404 `
+      + "that the tests would otherwise never see.");
   }
 });
