@@ -749,7 +749,7 @@ lessons.push(
             "Go ahead, feel free, with trust. A warm permission phrase.",
           literal: "with confidence",
           useWhen:
-            "You want someone to act without feeling awkward about a small favour or movement.",
+            "You want someone to act without feeling awkward about a small favor or movement.",
           avoidWhen:
             "The situation needs firm limits. Con confianza can invite more liberty than you meant.",
           register: "friendly informal",
@@ -1271,7 +1271,7 @@ lessons.push(
             "It is needed or missing. An impersonal way to state a need.",
           literal: "it makes lack",
           useWhen:
-            "You want to say a step, object or condition is necessary without centring one person.",
+            "You want to say a step, object or condition is necessary without centering one person.",
           avoidWhen:
             "You are simply counting how many items are left. Then faltan dos may be sharper.",
           register: "neutral",
@@ -1338,7 +1338,7 @@ lessons.push(
         {
           label: "No faltaba más is courtesy, not logic",
           body:
-            "A Colombian saying ¡no faltaba más! after thanks is not analysing what was missing. It is a warm formula meaning of course or don't mention it. The phrase belongs with con gusto and a la orden more than with arithmetic."
+            "A Colombian saying ¡no faltaba más! after thanks is not analyzing what was missing. It is a warm formula meaning of course or don't mention it. The phrase belongs with con gusto and a la orden more than with arithmetic."
         }
       ],
       pitfalls: [

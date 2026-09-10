@@ -582,7 +582,7 @@ lessons.push(
       address: {
         form: "usted",
         who: "The agent and Alex use usted throughout because they are handling a contract in a professional setting.",
-        why: "A lease is not a casual favour. Usted, “por favor” and careful conditional phrases let Alex ask questions without sounding suspicious or rude.",
+        why: "A lease is not a casual favor. Usted, “por favor” and careful conditional phrases let Alex ask questions without sounding suspicious or rude.",
         ifYouSwitch: "Switching to tú would make the exchange feel too casual for a legal document. In a rental office, usted protects the seriousness of the agreement."
       },
       dialogue: [

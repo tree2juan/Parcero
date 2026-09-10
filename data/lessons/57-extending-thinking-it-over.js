@@ -28,7 +28,7 @@ lessons.push(
       },
       address: {
         form: "usted",
-        who: "Paola and Alex use usted because the conversation is professional and they are discussing a job offer, not a casual favour between friends.",
+        who: "Paola and Alex use usted because the conversation is professional and they are discussing a job offer, not a casual favor between friends.",
         why: "Usted lets Alex stay appreciative without sounding either distant or over-familiar. It also makes “considérelo con calma” and “lo voy a considerar” fit the register.",
         ifYouSwitch:
           "Tú would soften the conversation too much for a first serious job discussion. If they later became colleagues, the address might relax, but here the decision needs respectful distance."

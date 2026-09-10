@@ -838,7 +838,7 @@ lessons.push(
             "“Could I get…?” Literally “will you gift me”, but it is simply the polite Colombian way to ask for something you are buying.",
           literal: "to-me you-gift?",
           useWhen:
-            "Requesting an item in a shop, a favour, or a moment of someone's time.",
+            "Requesting an item in a shop, a favor, or a moment of someone's time.",
           avoidWhen:
             "Expecting it to imply the thing is free — it never does; it is just courtesy.",
           register: "polite friendly",
@@ -1334,7 +1334,7 @@ lessons.push(
           translation: "And what do you think of my car? It can handle the trip, right?",
           pronunciation: "i ke PYEN-sa de mi KA-rro? a-GWAN-ta el BYA-he",
           literal: "And what you-think of my car? It-withstands the trip, or no?",
-          why: "Here it is “pensar DE” — to hold an opinion about something. “Pensar de” asks for a judgement, while “pensar en” is about what fills your mind. The preposition flips the meaning entirely."
+          why: "Here it is “pensar DE” — to hold an opinion about something. “Pensar de” asks for a judgment, while “pensar en” is about what fills your mind. The preposition flips the meaning entirely."
         },
         {
           speaker: "Alex",
@@ -1382,7 +1382,7 @@ lessons.push(
         {
           term: "pensar de",
           explanation:
-            "“To think of / have an opinion about.” Asks for a judgement or verdict, not for what is on your mind.",
+            "“To think of / have an opinion about.” Asks for a judgment or verdict, not for what is on your mind.",
           literal: "to-think of",
           useWhen:
             "Requesting or giving an opinion: “¿qué piensas de la película?”",
@@ -1576,7 +1576,7 @@ lessons.push(
           prompt: "Alex ends with “hoy no lo pienso hacer.” What does “pensar + infinitive” express here?",
           choices: [
             "Intention — “I don't intend to do it today” — since pensar plus a bare infinitive states a plan.",
-            "Opinion — “I don't think it's doable today” — since pensar always introduces a personal judgement.",
+            "Opinion — “I don't think it's doable today” — since pensar always introduces a personal judgment.",
             "Doubt — “I'm not sure I can do it today” — since pensar with an infinitive softens a firm claim."
           ],
           answer: 0,
@@ -1597,7 +1597,7 @@ lessons.push(
           choices: [
             "That Camilo cannot decide how close they are and keeps nervously flip-flopping between formal and casual.",
             "That in Bogotá usted can be the affectionate form, so usted plus “parce” signals closeness, not cold distance.",
-            "That Camilo is quietly correcting Alex for being too informal by modelling the more respectful usted form."
+            "That Camilo is quietly correcting Alex for being too informal by modeling the more respectful usted form."
           ],
           answer: 1,
           tests: "affectionate usted de confianza"

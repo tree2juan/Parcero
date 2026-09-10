@@ -1320,7 +1320,7 @@ lessons.push(
           translation: "Wait; if you add too much lime, the coconut flavor gets lost.",
           pronunciation: "es-PE-ra-te; si le E-chas MU-cho lee-MON, se PYER-de el sa-BOR del KO-ko",
           literal: "Wait-yourself; if to-it you-throw much lime, itself loses the flavor of-the coconut.",
-          why: "Echar measures dosage. Too much of a good ingredient can ruin balance, so the verb belongs to judgement, not just movement."
+          why: "Echar measures dosage. Too much of a good ingredient can ruin balance, so the verb belongs to judgment, not just movement."
         },
         {
           speaker: "Alex",

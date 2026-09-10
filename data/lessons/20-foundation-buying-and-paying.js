@@ -80,10 +80,10 @@ lessons.push(
         {
           speaker: "Alex",
           target: "Deje y miro… No, no tengo más. Mejor le pago con tarjeta, a una sola cuota.",
-          translation: "Let me check… No, I don't have any more. I'd better pay by card then, in one single instalment.",
+          translation: "Let me check… No, I don't have any more. I'd better pay by card then, in one single installment.",
           pronunciation: "DEH-he i MEE-ro… no, no TEN-go mas. me-HOR le PA-go kon tar-HE-ta, a OO-na SO-la KWO-ta",
-          literal: "Let and I-look… No, not I-have more. Better to-you I-pay with card, at one single instalment.",
-          why: "“Le pago con tarjeta” uses the present of “pagar” as a near-future decision — English would say “I'll pay”. “A una cuota” means paying it off in one go; readers here always ask “¿a cuántas cuotas?”, because paying in instalments is routine even for small buys."
+          literal: "Let and I-look… No, not I-have more. Better to-you I-pay with card, at one single installment.",
+          why: "“Le pago con tarjeta” uses the present of “pagar” as a near-future decision — English would say “I'll pay”. “A una cuota” means paying it off in one go; readers here always ask “¿a cuántas cuotas?”, because paying in installments is routine even for small buys."
         },
         {
           speaker: "Marcela",
@@ -183,18 +183,18 @@ lessons.push(
         {
           term: "a cuotas",
           explanation:
-            "Paying in instalments. Every card terminal asks “¿a cuántas cuotas?”, and “a una” means all at once; more than one spreads the cost, sometimes with interest.",
-          literal: "in/at instalments",
+            "Paying in installments. Every card terminal asks “¿a cuántas cuotas?”, and “a una” means all at once; more than one spreads the cost, sometimes with interest.",
+          literal: "in/at installments",
           useWhen:
             "At the terminal or planning a big buy: “a una cuota”, “lo pagué a tres cuotas”, “¿maneja cuotas sin interés?”.",
           avoidWhen:
-            "Don't confuse a “cuota” (instalment) with the “cuenta” (bill). They look alike but the bill is the total and a cuota is one slice of it.",
+            "Don't confuse a “cuota” (installment) with the “cuenta” (bill). They look alike but the bill is the total and a cuota is one slice of it.",
           register: "neutral service",
-          region: "Nationwide; instalment buying is deeply normal, even for modest amounts.",
+          region: "Nationwide; installment buying is deeply normal, even for modest amounts.",
           related: ["a una cuota", "a plazos", "diferido", "cuota inicial"],
           example: {
             target: "Lo pagué a tres cuotas.",
-            translation: "I paid for it in three instalments."
+            translation: "I paid for it in three installments."
           }
         },
         {
@@ -236,7 +236,7 @@ lessons.push(
         {
           label: "Cuotas: paying in slices",
           body:
-            "Card readers in Colombia always ask “¿a cuántas cuotas?” — how many instalments — even for a coffee. Buying on cuotas is woven into daily life, from appliances to plane tickets, and many stores advertise “cuotas sin interés”. For a small purchase you just say “a una”, meaning one payment. The habit surprises visitors, but it explains why the terminal seems to ask an extra question every single time you tap a card."
+            "Card readers in Colombia always ask “¿a cuántas cuotas?” — how many installments — even for a coffee. Buying on cuotas is woven into daily life, from appliances to plane tickets, and many stores advertise “cuotas sin interés”. For a small purchase you just say “a una”, meaning one payment. The habit surprises visitors, but it explains why the terminal seems to ask an extra question every single time you tap a card."
         }
       ],
       pitfalls: [
@@ -953,7 +953,7 @@ lessons.push(
       choices: [
         "He's charging you extra precisely because you asked for two full pounds.",
         "He's telling you the mangoes are already being kept for another buyer.",
-        "He's dropping the price a little as a friendly favour to you."
+        "He's dropping the price a little as a friendly favor to you."
       ],
       answer: 2,
       practiceExtra: [

@@ -612,7 +612,7 @@ lessons.push(
         {
           speaker: "Leo",
           target: "Maira, creo que excluimos a Javi del chat sin darnos cuenta.",
-          translation: "Maira, I think we excluded Javi from the chat without realising it.",
+          translation: "Maira, I think we excluded Javi from the chat without realizing it.",
           pronunciation: "MAI-rah, KREH-oh keh eks-KLOO-ee-mos ah HAH-bee del chat seen DAR-nos KWEN-tah",
           literal: "Maira, I-believe that we-exclude Javi from-the chat without giving-ourselves account.",
           why: "Excluimos has no y because the ending begins with i. The verb is strong, so Leo softens it with sin darnos cuenta."
@@ -1187,7 +1187,7 @@ lessons.push(
           translation: "Formally, the group belongs to the neighborhood cycling club.",
           pronunciation: "for-MAL-men-teh, el GROO-poh per-teh-NEH-seh al kloob deh see-KLEES-moh del BAR-ryoh",
           literal: "Formally, the group belongs to-the club of cycling of-the neighborhood.",
-          why: "Pertenecer a leans formal here: an organisation belongs to a club. That is different from feeling socially accepted."
+          why: "Pertenecer a leans formal here: an organization belongs to a club. That is different from feeling socially accepted."
         },
         {
           speaker: "Cam",
@@ -1226,7 +1226,7 @@ lessons.push(
         {
           term: "pertenecer",
           explanation:
-            "To belong to a group, organisation, category or owner, usually with the preposition a.",
+            "To belong to a group, organization, category or owner, usually with the preposition a.",
           literal: "to belong",
           useWhen:
             "Membership, ownership or formal connection is the point: belong to a club, list, group or institution.",

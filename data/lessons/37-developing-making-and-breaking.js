@@ -31,7 +31,7 @@ lessons.push(
       situation:
         "Estás en Neiva ayudando a una amiga que vende libretas hechas a mano. Quiere dejar de venderlas como favor familiar y crear una marca propia para una feria de emprendimientos.",
       setting: {
-        who: "Paola makes handmade notebooks and wants the project to look less improvised. Morgan is helping her turn a family favour into something that can face customers at a small fair.",
+        who: "Paola makes handmade notebooks and wants the project to look less improvised. Morgan is helping her turn a family favor into something that can face customers at a small fair.",
         what: "A practical planning conversation about creating a name, a short story for the brand and a first catalogue without pretending the business already exists at a large scale.",
         when: "A hot Thursday afternoon, two days before a neighborhood entrepreneurship fair.",
         where: "Neiva, in a shaded patio where the fan is losing against the Huila heat and sample notebooks are spread across a plastic table.",
@@ -774,7 +774,7 @@ lessons.push(
         {
           label: "The y pattern is shared",
           body:
-            "Construir behaves like incluir and huir in the forms that need y: construyo, construye, construyeron. Learning the pattern as a family is better than memorising one form at a time, because the same sound problem keeps returning."
+            "Construir behaves like incluir and huir in the forms that need y: construyo, construye, construyeron. Learning the pattern as a family is better than memorizing one form at a time, because the same sound problem keeps returning."
         }
       ],
       pitfalls: [

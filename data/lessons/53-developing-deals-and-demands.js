@@ -397,7 +397,7 @@ lessons.push(
       prompt: "Marcela says “hoy exijo una respuesta por escrito.” What register is she choosing?",
       choices: [
         "A forceful complaint grounded in a right or obligation.",
-        "A casual request for a normal everyday favour.",
+        "A casual request for a normal everyday favor.",
         "A soft reminder about a friend's birthday."
       ],
       answer: 0,

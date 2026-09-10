@@ -693,7 +693,7 @@ lessons.push(
       },
       address: {
         form: "tú",
-        who: "Natalia and Chris use tú because they are friends doing a practical favour at a kitchen table.",
+        who: "Natalia and Chris use tú because they are friends doing a practical favor at a kitchen table.",
         why: "The decision involves money, but not formal distance. Tú keeps the advice direct and friendly.",
         ifYouSwitch:
           "Usted would make the help sound like customer service. Vos would not be needed in this setting."

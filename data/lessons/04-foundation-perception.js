@@ -142,7 +142,7 @@ lessons.push(
           term: "ya veo",
           explanation: "“I see”, in the sense of “now I understand”. It uses the present tense of ver for the moment comprehension lands, exactly as English borrows the language of sight for understanding.",
           literal: "already I-see",
-          useWhen: "Signalling that an explanation has just clicked into place for you.",
+          useWhen: "Signaling that an explanation has just clicked into place for you.",
           avoidWhen: "You literally mean you can now physically see something; there you would simply say “ya lo veo” with the thing named.",
           register: "neutral",
           region: "Universal Spanish; interchangeable with “ya entiendo” and, more colloquially, “ya caigo”.",
@@ -718,7 +718,7 @@ lessons.push(
         },
         {
           term: "me da pena",
-          explanation: "“It embarrasses me”, using “dar” impersonally. In most of Colombia “pena” is embarrassment or shyness, not grief, so “me da pena” is how you admit you feel awkward — asking a favour, interrupting, or not knowing something.",
+          explanation: "“It embarrasses me”, using “dar” impersonally. In most of Colombia “pena” is embarrassment or shyness, not grief, so “me da pena” is how you admit you feel awkward — asking a favor, interrupting, or not knowing something.",
           literal: "it gives me shame",
           useWhen: "Owning up to shyness or awkwardness, or softening a request you feel sheepish about.",
           avoidWhen: "To express sorrow or condolences; for that Colombians say “qué pesar” or “lo siento”, not “me da pena”.",
@@ -1396,7 +1396,7 @@ lessons.push(
         },
         {
           label: "The friendly shrug: “quién sabe”",
-          body: "Colombians love a graceful way to admit the unknown. “Quién sabe”, often with a smile, closes a question no one can answer, while “que yo sepa” hedges an answer you're only half sure of, and “no saber ni papa” cheerfully confesses total ignorance. Far from evasive, these phrases keep conversation warm and honest, signalling that you'd rather not overstate what you know. Sprinkling them in makes your Spanish sound relaxed and local rather than stiff."
+          body: "Colombians love a graceful way to admit the unknown. “Quién sabe”, often with a smile, closes a question no one can answer, while “que yo sepa” hedges an answer you're only half sure of, and “no saber ni papa” cheerfully confesses total ignorance. Far from evasive, these phrases keep conversation warm and honest, signaling that you'd rather not overstate what you know. Sprinkling them in makes your Spanish sound relaxed and local rather than stiff."
         }
       ],
       pitfalls: [

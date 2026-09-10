@@ -630,7 +630,7 @@ lessons.push(
         "Estás en Montería, frente a una sala donde habrá una audiencia pública sobre el río y las obras del barrio. Te ofreciste a acompañar a una vecina, pero el funcionario te corrige antes de entrar: “asistir a la audiencia” significa estar presente, no ayudarle a cargar los papeles.",
       setting: {
         who: "Rafael is a municipal staff member checking names at the door. Dana is accompanying a neighbor who wants to speak, and she has heard “asistir” but is dangerously close to treating it like English “assist.”",
-        what: "A doorway exchange before a public hearing, centred on the false friend “asistir a” as attend, not help.",
+        what: "A doorway exchange before a public hearing, centered on the false friend “asistir a” as attend, not help.",
         when: "A humid weekday morning, ten minutes before the hearing starts and everyone is trying to enter at once.",
         where: "Montería, Córdoba, outside a municipal meeting room where residents have come to discuss work near the Sinú River.",
         why: "This false friend changes the whole social meaning. Saying you assisted your mother can sound as if you attended her, not helped her, and saying you attended a hearing is not volunteering aid."

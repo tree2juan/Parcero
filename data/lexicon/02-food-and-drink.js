@@ -44,7 +44,7 @@ lexiconItems.push(
   ["la ronda", "round of drinks", "noun", "f", "food-and-drink", "independent", 1, "A round of drinks: 'pedir otra ronda' orders another for the table. The same word is a patrol or a ring game, so the bar sets the sense."],
   ["el azúcar", "sugar", "noun", "m", "food-and-drink", "foundation", 2, "Normally 'el azúcar', yet it also takes feminine adjectives, as in 'azúcar morena'. Health talk pairs it with 'reducir'. Not the same as unrefined 'panela'."],
   ["el aliño", "seasoning", "noun", "m", "food-and-drink", "independent", 1, "The seasoning mix stirred into a dish: garlic, cumin, coloring. 'Aliñar' is to season; on the coast it overlaps with the 'hogao' base."],
-  ["el champús", "champús", "noun", "m", "food-and-drink", "extension", 1, "A cool maize drink with lulo, pineapple and cinnamon, favoured around Cali and Popayán. One letter from 'el champú', shampoo, so keep the final s."],
+  ["el champús", "champús", "noun", "m", "food-and-drink", "extension", 1, "A cool maize drink with lulo, pineapple and cinnamon, favored around Cali and Popayán. One letter from 'el champú', shampoo, so keep the final s."],
   ["el maracuyá", "passion fruit", "noun", "m", "food-and-drink", "independent", 1, "The tart yellow passion fruit, mostly drunk as juice. The fruit is masculine, 'el maracuyá', though the plant is sometimes called feminine."],
   ["el cucharón", "ladle", "noun", "m", "food-and-drink", "independent", 1, "The ladle for serving soup or stew, built from 'cuchara', spoon, with the augmentative '-ón' for the big one."],
   ["el trago", "drink, booze", "noun", "m", "food-and-drink", "independent", 1, "Spirits or drink in general: 'tomar trago' is to drink alcohol, and '¿tomás trago?' asks whether you do. 'Un trago' is also a single mouthful."],
@@ -62,5 +62,5 @@ lexiconItems.push(
   ["el hambre", "hunger", "noun", "f", "food-and-drink", "foundation", 5, "Feminine, but takes 'el' in the singular because it opens with a stressed a-: 'el hambre', yet 'mucha hambre'. Held with 'tener'; 'venga con hambre' means come hungry."],
   ["el helado", "ice cream", "noun", "m", "food-and-drink", "foundation", 4, "Ice cream, and 'helado de paila' is the artisan kind churned by hand over ice. 'Helado' is also an adjective meaning freezing, from 'helar'."],
   ["la gaseosa", "fizzy drink", "noun", "f", "food-and-drink", "foundation", 4, "The everyday word for a soft drink, where others say 'refresco' or 'soda'. Local brands like Postobón and its 'Colombiana' kola are the usual choices."],
-  ["el guiso", "sofrito base", "noun", "m", "food-and-drink", "independent", 4, "The fried tomato-onion-garlic base that starts most savoury dishes, also served and spelled 'hogao'. 'Guisar' is to cook something down in it."]
+  ["el guiso", "sofrito base", "noun", "m", "food-and-drink", "independent", 4, "The fried tomato-onion-garlic base that starts most savory dishes, also served and spelled 'hogao'. 'Guisar' is to cook something down in it."]
 );

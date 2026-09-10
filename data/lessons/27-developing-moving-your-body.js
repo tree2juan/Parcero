@@ -985,7 +985,7 @@ lessons.push(
             "Corra porque ya se hizo tarde."
           ],
           answer: 0,
-          tests: "recognising “correr algo” as moving an object"
+          tests: "recognizing “correr algo” as moving an object"
         },
         {
           prompt: "Why is “correr” not the automatic translation of every English “run”?",

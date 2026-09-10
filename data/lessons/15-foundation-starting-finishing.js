@@ -875,7 +875,7 @@ lessons.push(
         {
           label: "The barbershop is a paisa parliament",
           body:
-            "A Medellín barbershop is less a service than a social club. The haircut is half the point; the other half is the talk — soccer, women, work, the neighborhood's news. A good barber runs the conversation as skilfully as the clippers, and a regular is expected to play along. Alex joking about the brother's break-up is not nosy; it is exactly the kind of easy banter that marks him as one of the shop's own."
+            "A Medellín barbershop is less a service than a social club. The haircut is half the point; the other half is the talk — soccer, women, work, the neighborhood's news. A good barber runs the conversation as skillfully as the clippers, and a regular is expected to play along. Alex joking about the brother's break-up is not nosy; it is exactly the kind of easy banter that marks him as one of the shop's own."
         },
         {
           label: "Vos is the sound of trust",

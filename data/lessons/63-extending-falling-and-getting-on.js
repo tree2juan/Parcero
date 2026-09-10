@@ -92,7 +92,7 @@ lessons.push(
           translation: "And I almost fell going down the stairs, but that one was literal.",
           pronunciation: "ee yoh KAH-see meh kah-EE bah-HAN-doh lah es-kah-LEH-rah, PEH-roh EH-soh see fue lee-teh-RAL",
           literal: "And I almost myself fell going-down the stairs, but that yes was literal.",
-          why: "“Me caí” is the literal fall. The same verb family moves from social impression to real falling to realising; context decides."
+          why: "“Me caí” is the literal fall. The same verb family moves from social impression to real falling to realizing; context decides."
         }
       ],
       vocabulary: [
@@ -121,7 +121,7 @@ lessons.push(
           useWhen:
             "A person feels unpleasant, arrogant, false, intense, or simply not your kind of person.",
           avoidWhen:
-            "You need a serious moral judgement. Caer mal can be just chemistry, not a full accusation.",
+            "You need a serious moral judgment. Caer mal can be just chemistry, not a full accusation.",
           register: "neutral spoken",
           region: "General Colombian.",
           related: ["no caer bien", "chocar", "parecer pesado", "dar mala espina"],
@@ -217,7 +217,7 @@ lessons.push(
         }
       ],
       note:
-        "The social prize here is caer bien and caer mal. Colombian Spanish does not normally use gustar for ordinary liking of people, because “me gusta tu hermano” can sound like attraction. Say “me cae bien tu hermano” for social liking. Keep the other meanings separate: “me caí” is a literal fall, and “caí en cuenta” is realising something.",
+        "The social prize here is caer bien and caer mal. Colombian Spanish does not normally use gustar for ordinary liking of people, because “me gusta tu hermano” can sound like attraction. Say “me cae bien tu hermano” for social liking. Keep the other meanings separate: “me caí” is a literal fall, and “caí en cuenta” is realizing something.",
       culture: [
         {
           label: "Social liking is not attraction",
@@ -227,7 +227,7 @@ lessons.push(
         {
           label: "First impressions are fair conversation",
           body:
-            "Colombians may ask “¿cómo te cayó?” after introducing you to someone. It is not a demand for a deep judgement. It asks whether the social chemistry felt easy, awkward, heavy or pleasant."
+            "Colombians may ask “¿cómo te cayó?” after introducing you to someone. It is not a demand for a deep judgment. It asks whether the social chemistry felt easy, awkward, heavy or pleasant."
         },
         {
           label: "Tumaco is setting, not decoration",
@@ -1296,7 +1296,7 @@ lessons.push(
       situation:
         "Sam se encuentra con una amiga en Girardot después de varios meses sin verse. Ella abre con un “cuénteme” que no pide números: pide la historia. Tú necesitas distinguir contar una historia, contar hasta diez y contar con alguien.",
       setting: {
-        who: "Patricia is an old friend who likes direct catch-ups, and Sam has arrived with a story from the road and too much to summarise.",
+        who: "Patricia is an old friend who likes direct catch-ups, and Sam has arrived with a story from the road and too much to summarize.",
         what: "A warm catch-up: tell me what happened, count people for a table, and say who can be counted on.",
         when: "Sunday afternoon, after the strongest heat has dropped and people are walking near the river.",
         where: "Girardot, near the Magdalena river, at an outdoor table with cold drinks and several friends expected later.",
@@ -1468,7 +1468,7 @@ lessons.push(
             "Count on me. A warm promise of help or support.",
           literal: "count with me",
           useWhen:
-            "You want someone to know they can rely on you for a plan, favour, or difficult moment.",
+            "You want someone to know they can rely on you for a plan, favor, or difficult moment.",
           avoidWhen:
             "You cannot actually help. It is a promise, not just a nice sound.",
           register: "friendly polite",
@@ -1541,7 +1541,7 @@ lessons.push(
           form: "Le cuento rápido qué pasó.",
           register: "friendly neutral",
           region: "General Colombian",
-          whenToUse: "You are about to summarise an event."
+          whenToUse: "You are about to summarize an event."
         },
         {
           form: "Contamos cuántos vienen.",

@@ -320,7 +320,7 @@ lessons.push(
           choices: [
             "That Alex regularly leaves the building alongside Laura, the way a neighbor or a roommate might, with nothing romantic.",
             "That Alex is dating Laura — with one person's name, “salir con alguien” is the ordinary way to say you are seeing someone.",
-            "That Alex goes out to run errands on Laura's behalf, doing her favours around town rather than seeing her socially at all."
+            "That Alex goes out to run errands on Laura's behalf, doing her favors around town rather than seeing her socially at all."
           ],
           answer: 1,
           tests: "salir con as dating, not a casual outing"
@@ -557,7 +557,7 @@ lessons.push(
         {
           label: "“Make plans”, no “do plans”",
           body:
-            "Cuadrar un plan en inglés es “make plans”, con “make”, no con “do”. El hispanohablante duda entre los dos porque el español usa un solo “hacer”, pero el inglés reparte: “make a decision”, “make a plan”, “make an effort”, frente a “do the work”, “do a favour”. Para organizar una salida hay además giros como “sort something out”, “set something up” o “figure out plans”. Elegir “make” con planes es un detalle pequeño que delata de inmediato si uno domina el inglés real o lo está traduciendo del español."
+            "Cuadrar un plan en inglés es “make plans”, con “make”, no con “do”. El hispanohablante duda entre los dos porque el español usa un solo “hacer”, pero el inglés reparte: “make a decision”, “make a plan”, “make an effort”, frente a “do the work”, “do a favor”. Para organizar una salida hay además giros como “sort something out”, “set something up” o “figure out plans”. Elegir “make” con planes es un detalle pequeño que delata de inmediato si uno domina el inglés real o lo está traduciendo del español."
         }
       ],
       pitfalls: [
@@ -1316,7 +1316,7 @@ lessons.push(
         who: "Don Gustavo and Alex use usted with each other, the Bogotá norm between strangers of any age.",
         why: "In Bogotá usted is the default with anyone you do not know, and on public transport it is the courteous, neutral register. It carries respect and a little warmth without presuming familiarity, which is exactly right for a helpful stranger.",
         ifYouSwitch:
-          "Sliding into tú with an older stranger who is doing you a favour could read as too familiar. Bogotanos use usted even with close friends and family, so holding it here is safe and, if anything, the polite default."
+          "Sliding into tú with an older stranger who is doing you a favor could read as too familiar. Bogotanos use usted even with close friends and family, so holding it here is safe and, if anything, the polite default."
       },
       dialogue: [
         {
@@ -1510,7 +1510,7 @@ lessons.push(
         {
           label: "Usted on transport and “bajarle”",
           body:
-            "Bogotá is usted country, and public transport shows it: strangers of every age address each other with usted, courteous and neutral. It is not cold — it is simply the default, used even among family. The city also loves the idiom “bajarle a algo”: to tone something down. “Bájale al genio” (cool your temper), “bájale a la sal” (go easier on the salt), “bájale a la música” (turn the music down). It reframes lowering as a favour you do the situation. Master usted and “bajarle”, and you sound calmly, unmistakably bogotano."
+            "Bogotá is usted country, and public transport shows it: strangers of every age address each other with usted, courteous and neutral. It is not cold — it is simply the default, used even among family. The city also loves the idiom “bajarle a algo”: to tone something down. “Bájale al genio” (cool your temper), “bájale a la sal” (go easier on the salt), “bájale a la música” (turn the music down). It reframes lowering as a favor you do the situation. Master usted and “bajarle”, and you sound calmly, unmistakably bogotano."
         }
       ],
       pitfalls: [

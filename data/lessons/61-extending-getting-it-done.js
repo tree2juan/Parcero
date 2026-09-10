@@ -1537,7 +1537,7 @@ lessons.push(
         {
           label: "The question is useful everywhere",
           body:
-            "“¿De qué se trata?” works for workshops, films, meetings, voice notes, problems, and rumours. It is one of the cleanest ways to ask for the point before committing attention."
+            "“¿De qué se trata?” works for workshops, films, meetings, voice notes, problems, and rumors. It is one of the cleanest ways to ask for the point before committing attention."
         },
         {
           label: "Try to is not treat",

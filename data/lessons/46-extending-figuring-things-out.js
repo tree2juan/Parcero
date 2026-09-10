@@ -1533,7 +1533,7 @@ lessons.push(
         {
           label: "Service Spanish uses indirect objects",
           body:
-            "“Me revisa,” “le reviso,” “revísale” make the check a service done for someone. The grammar sounds small, but it changes the tone from a bare order to a practical favour."
+            "“Me revisa,” “le reviso,” “revísale” make the check a service done for someone. The grammar sounds small, but it changes the tone from a bare order to a practical favor."
         },
         {
           label: "Por encima protects the speaker",

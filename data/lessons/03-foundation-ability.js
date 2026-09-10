@@ -35,7 +35,7 @@ lessons.push(
         what: "A quick request for help connecting the gas cylinder, made at the porter's desk on the way past.",
         when: "A weekday morning, just before Alex wants to make lunch and discovers the stove is dead.",
         where: "Bogotá, a mid-rise block in Chapinero where most apartments cook on a refillable gas cylinder rather than piped gas.",
-        why: "Because the portero is the person Alex will rely on for parcels, keys, leaks and small emergencies for years. How he asks for this first favour sets the tone for all of them."
+        why: "Because the portero is the person Alex will rely on for parcels, keys, leaks and small emergencies for years. How he asks for this first favor sets the tone for all of them."
       },
       address: {
         form: "usted",
@@ -51,7 +51,7 @@ lessons.push(
           translation: "Don Jairo, could you give me a hand with something?",
           pronunciation: "don HAI-roh, me PWEH-deh ko-la-bo-RAR kon OO-na ko-SEE-ta",
           literal: "Don Jairo, me you-can collaborate with a little-thing?",
-          why: "“¿Me puede colaborar?” is the Colombian workhorse for asking a favour. Literally it says “can you collaborate with me”, but it functions as “would you help me” — softer and warmer than a bare “¿me ayuda?”, which can sound like an instruction rather than a request."
+          why: "“¿Me puede colaborar?” is the Colombian workhorse for asking a favor. Literally it says “can you collaborate with me”, but it functions as “would you help me” — softer and warmer than a bare “¿me ayuda?”, which can sound like an instruction rather than a request."
         },
         {
           speaker: "Don Jairo",
@@ -59,7 +59,7 @@ lessons.push(
           translation: "Of course, neighbor. What can I help you with?",
           pronunciation: "KLA-roh ke see, beh-SEE-noh. en ke le ko-la-BO-roh",
           literal: "Clear that yes, neighbor. In what you I-collaborate?",
-          why: "He answers the favour-frame with the same verb, colaborar, now in the yo form. Notice he keeps usted — “le colaboro”, not “te colaboro” — because the portero and a resident almost always hold usted in both directions, however friendly the tone."
+          why: "He answers the favor-frame with the same verb, colaborar, now in the yo form. Notice he keeps usted — “le colaboro”, not “te colaboro” — because the portero and a resident almost always hold usted in both directions, however friendly the tone."
         },
         {
           speaker: "Alex",
@@ -115,7 +115,7 @@ lessons.push(
         {
           term: "¿me puede colaborar?",
           explanation:
-            "The most Colombian way to ask for help or a small favour. “Colaborar” stands in for “ayudar” so the request feels like teamwork instead of a demand on someone's time.",
+            "The most Colombian way to ask for help or a small favor. “Colaborar” stands in for “ayudar” so the request feels like teamwork instead of a demand on someone's time.",
           literal: "can you collaborate with me?",
           useWhen:
             "Asking anyone in a service or neighborly role for a hand — the portero, a shop assistant, a stranger with directions, a clerk behind a counter.",
@@ -135,7 +135,7 @@ lessons.push(
             "A request dressed as a gift. Although “regalar” means “to give as a present”, this asks for something small and expects payment, or nothing, in return — a bag, a number, a minute.",
           literal: "will you gift me…?",
           useWhen:
-            "Asking for a small item or favour in a shop, an office or on the street. It is the polite default right across Colombian service life.",
+            "Asking for a small item or favor in a shop, an office or on the street. It is the polite default right across Colombian service life.",
           avoidWhen:
             "Anywhere outside Colombia, where a listener may take “regalar” literally and think you want a freebie. Say “¿me da…?” or “¿me pasa…?” instead.",
           register: "polite service",
@@ -221,7 +221,7 @@ lessons.push(
         {
           label: "Colaborar is how Colombia asks",
           body:
-            "Across Colombia, favours are framed as collaboration. A traffic officer, a receptionist and your next-door neighbor will all offer to “colaborarle”, and asking “¿me puede colaborar?” signals that you see the other person as a partner doing you a kindness, not a servant obeying an order. The word carries a quiet equality that “ayudar” lacks. Foreigners who master this one verb sound noticeably more polite almost overnight."
+            "Across Colombia, favors are framed as collaboration. A traffic officer, a receptionist and your next-door neighbor will all offer to “colaborarle”, and asking “¿me puede colaborar?” signals that you see the other person as a partner doing you a kindness, not a servant obeying an order. The word carries a quiet equality that “ayudar” lacks. Foreigners who master this one verb sound noticeably more polite almost overnight."
         },
         {
           label: "The regalar that costs money",
@@ -249,7 +249,7 @@ lessons.push(
         {
           mistake: "Reaching for “¿me ayudas?” at every counter, English-style",
           whyItFails:
-            "It is not wrong, but it skips the warmer, more local frame. Colombians reach for “¿me puede colaborar?” first, and defaulting to the bare “ayudar” makes you sound a shade more demanding and less woven into how favours are asked here.",
+            "It is not wrong, but it skips the warmer, more local frame. Colombians reach for “¿me puede colaborar?” first, and defaulting to the bare “ayudar” makes you sound a shade more demanding and less woven into how favors are asked here.",
           sayInstead: "¿Me puede colaborar?"
         },
         {
@@ -320,10 +320,10 @@ lessons.push(
           choices: [
             "Because “ayudar” is grammatically wrong in Colombia and would not be understood at a building desk at all.",
             "Because “colaborar” is the usted form of “ayudar”, and porteros expect the formal conjugation at all times.",
-            "Because “colaborar” frames the favour as teamwork, sounding warmer and more local than the blunter “ayudar”."
+            "Because “colaborar” frames the favor as teamwork, sounding warmer and more local than the blunter “ayudar”."
           ],
           answer: 2,
-          tests: "“colaborar” as the warmer Colombian favour-frame"
+          tests: "“colaborar” as the warmer Colombian favor-frame"
         },
         {
           prompt: "Don Jairo says “Subo en un momentico” and “ya se lo paso.” What is he promising?",
@@ -772,7 +772,7 @@ lessons.push(
           useWhen:
             "Passing on a rumor you don't fully vouch for, or hinting you find a claim dubious: “dizque está enfermo” can gently mean you doubt it.",
           avoidWhen:
-            "Formal writing, or any time you want to sound certain. It is chatty and carries a whiff of scepticism that can undercut you.",
+            "Formal writing, or any time you want to sound certain. It is chatty and carries a whiff of skepticism that can undercut you.",
           register: "friendly informal",
           region: "Pan-Latin American but especially alive in Colombia; heard constantly in everyday speech across every region.",
           related: ["supuestamente", "al parecer", "según dicen", "parece que"],
@@ -873,7 +873,7 @@ lessons.push(
         {
           label: "Dizque: the rumor word",
           body:
-            "“Dizque” is one of the most Colombian words there is, and it does delicate work. It marks the next statement as secondhand — “dizque se casó” is “word is she got married” — and often adds a raised eyebrow. Politicians and gossips alike get “dizque'd”. Foreigners who pick it up sound instantly more fluent, but should notice the scepticism it can carry, because pinning it to someone's sincere claim can sound like you doubt them."
+            "“Dizque” is one of the most Colombian words there is, and it does delicate work. It marks the next statement as secondhand — “dizque se casó” is “word is she got married” — and often adds a raised eyebrow. Politicians and gossips alike get “dizque'd”. Foreigners who pick it up sound instantly more fluent, but should notice the skepticism it can carry, because pinning it to someone's sincere claim can sound like you doubt them."
         },
         {
           label: "The corner shop is the news wire",
@@ -888,7 +888,7 @@ lessons.push(
         {
           label: "Everyone stores water",
           body:
-            "Planned water cuts — “cortes de agua” — are a routine part of Colombian city life, announced by the utility, the tienda, or a neighbor like Marcela. Households keep bottles, buckets and often a rooftop tank precisely for these days. Filling containers the night before is not paranoia; it is basic competence, and a neighbor who warns you is doing a real favour. Passing the warning upstairs, as Alex does, is simply how a building looks after its own."
+            "Planned water cuts — “cortes de agua” — are a routine part of Colombian city life, announced by the utility, the tienda, or a neighbor like Marcela. Households keep bottles, buckets and often a rooftop tank precisely for these days. Filling containers the night before is not paranoia; it is basic competence, and a neighbor who warns you is doing a real favor. Passing the warning upstairs, as Alex does, is simply how a building looks after its own."
         }
       ],
       pitfalls: [

@@ -103,7 +103,7 @@ lessons.push(
             "To allow or permit in a formal, institutional register. It belongs to signs, guards, schools, offices, and regulations more than casual friendship.",
           literal: "to permit",
           useWhen:
-            "A rule, organisation, guard, sign, teacher, or official policy says what is allowed.",
+            "A rule, organization, guard, sign, teacher, or official policy says what is allowed.",
           avoidWhen:
             "You are asking a friend to let you do something in ordinary speech. Colombians usually use dejar there.",
           register: "formal neutral",
@@ -1502,7 +1502,7 @@ lessons.push(
         {
           label: "Not every limit is a ban",
           body:
-            "Permitir and impedir sound like rules and barriers. Evitar often sounds like judgement before trouble starts. That difference lets you hear whether someone is forbidding something or simply helping you choose better."
+            "Permitir and impedir sound like rules and barriers. Evitar often sounds like judgment before trouble starts. That difference lets you hear whether someone is forbidding something or simply helping you choose better."
         }
       ],
       pitfalls: [

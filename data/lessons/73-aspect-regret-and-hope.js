@@ -65,7 +65,7 @@ lessons.push(
           translation: "Got it. I'm going to drive them, but I'll count the cattle again right away.",
           pronunciation: "LIS-to. voi a a-RRYAR, PE-ro de U-na ves VWEL-vo a kon-TAR las RE-ses",
           literal: "Ready. I-go to to-drive, but at once I-return to to-count the head.",
-          why: "Two aspects in one line: “voy a arriar” is ir a for the next task, and “vuelvo a contar” is volver a for doing the count over. “De una vez” is llanero-flavoured for right now, in one go."
+          why: "Two aspects in one line: “voy a arriar” is ir a for the next task, and “vuelvo a contar” is volver a for doing the count over. “De una vez” is llanero-flavored for right now, in one go."
         },
         {
           speaker: "Marcela",

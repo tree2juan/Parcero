@@ -289,7 +289,7 @@ lessons.push(
         {
           form: "Amanecimos en la fiesta.",
           register: "friendly informal",
-          region: "Colombia; coast-flavoured",
+          region: "Colombia; coast-flavored",
           whenToUse: "The night ran all the way to sunrise."
         },
         {
@@ -778,7 +778,7 @@ lessons.push(
             "The full construction for playing a named game, where English uses “play” with no preposition at all.",
           literal: "to play at",
           useWhen:
-            "Careful or Peninsular-flavoured speech, and set games: “jugar a las cartas”, “jugar al ajedrez”.",
+            "Careful or Peninsular-flavored speech, and set games: “jugar a las cartas”, “jugar al ajedrez”.",
           avoidWhen:
             "Fast Colombian speech with sports, where the “a” is usually dropped: “jugar fútbol”, “jugar tejo”.",
           register: "neutral",
@@ -1351,7 +1351,7 @@ lessons.push(
       },
       address: {
         form: "mixed",
-        who: "Alex uses usted with the strangers he approaches; Mateo answers warmly with a paisa-flavoured vos/tú, and the woman who approaches keeps to usted. The register genuinely mixes.",
+        who: "Alex uses usted with the strangers he approaches; Mateo answers warmly with a paisa-flavored vos/tú, and the woman who approaches keeps to usted. The register genuinely mixes.",
         why: "The Eje Cafetero is paisa-adjacent, so voseo is common and easy among locals, while usted stays the safe register with strangers and in service. Hearing both in one exchange is normal here, which is why the lesson is marked mixed.",
         ifYouSwitch:
           "If Alex answered Mateo's friendly vos with stiff usted throughout, nothing breaks, but he would sound a touch formal for someone being done a kindness. Reading which register each speaker offers, and roughly matching it, is the real skill."
@@ -1363,7 +1363,7 @@ lessons.push(
           translation: "Excuse me, could you help me with something (some information)?",
           pronunciation: "dees-KOOL-pe, me ko-la-BO-ra kon OO-na een-for-ma-SYON",
           literal: "Excuse, to-me you-collaborate with an information?",
-          why: "“¿Me colabora?” is the Colombian polite way to say “could you help me?”. It is not the English “collaborate” (work together); it is a softened request for a favour. “Una información” for “a piece of information / directions” is normal here, countable where English keeps it uncountable."
+          why: "“¿Me colabora?” is the Colombian polite way to say “could you help me?”. It is not the English “collaborate” (work together); it is a softened request for a favor. “Una información” for “a piece of information / directions” is normal here, countable where English keeps it uncountable."
         },
         {
           speaker: "Mateo",
@@ -1371,7 +1371,7 @@ lessons.push(
           translation: "Of course, gladly. What can I help you with, man?",
           pronunciation: "KLA-ro ke see, kon GOOS-to. en ke te a-YOO-do, OM-bre",
           literal: "Clear that yes, with pleasure. In what to-you I-help, man?",
-          why: "Mateo shifts to a warm, paisa-flavoured register: “¿en qué te ayudo?” with the object “te”. Here ayudar stands alone (no infinitive yet). “Con gusto” is the standard Colombian “gladly / you're welcome”, heard constantly in the coffee region's easy politeness."
+          why: "Mateo shifts to a warm, paisa-flavored register: “¿en qué te ayudo?” with the object “te”. Here ayudar stands alone (no infinitive yet). “Con gusto” is the standard Colombian “gladly / you're welcome”, heard constantly in the coffee region's easy politeness."
         },
         {
           speaker: "Alex",
@@ -1403,7 +1403,7 @@ lessons.push(
           translation: "That's money, not help. When they say “a little help” to you like that, it's almost always asking for cash.",
           pronunciation: "E-so es PLA-ta, no a-YOO-da. KWAN-do te DEE-sen a-SEE OO-na a-yoo-DEE-ta, KA-si SYEM-pre es PA-ra pe-DEER PLA-ta",
           literal: "That is money, not help. When to-you they-say thus a little-help, almost always is for to-ask money.",
-          why: "Mateo decodes it: from a stranger, “una ayudita” or “¿me colabora?” is usually a euphemism for money. “Plata” is the everyday Colombian word for money (not silver here). Context — who is asking, and how — is what separates a favour from a solicitation."
+          why: "Mateo decodes it: from a stranger, “una ayudita” or “¿me colabora?” is usually a euphemism for money. “Plata” is the everyday Colombian word for money (not silver here). Context — who is asking, and how — is what separates a favor from a solicitation."
         }
       ],
       vocabulary: [
@@ -1444,7 +1444,7 @@ lessons.push(
         {
           term: "colaborar",
           explanation:
-            "In Colombia, the polite everyday verb for “to help” with a favour — softer and more courteous than a bare ayudar.",
+            "In Colombia, the polite everyday verb for “to help” with a favor — softer and more courteous than a bare ayudar.",
           literal: "to collaborate / to help out",
           useWhen:
             "Politely asking or offering: “¿me colabora?”, “¿en qué le colaboro?”, “colabóreme con esto”.",
@@ -1478,10 +1478,10 @@ lessons.push(
         {
           term: "una ayudita",
           explanation:
-            "“A little help” — a genuine small favour, but from a stranger on the street usually a gentle way to ask for money.",
+            "“A little help” — a genuine small favor, but from a stranger on the street usually a gentle way to ask for money.",
           literal: "a little help",
           useWhen:
-            "Real small favours among friends, and, read carefully, street requests: “¿me das una ayudita?”.",
+            "Real small favors among friends, and, read carefully, street requests: “¿me das una ayudita?”.",
           avoidWhen:
             "You assume it is always literal — from an unknown person asking, it commonly means cash, not a hand.",
           register: "friendly informal",
@@ -1495,8 +1495,8 @@ lessons.push(
         {
           term: "hacer el favor",
           explanation:
-            "Another polite request frame — “do me the favour of…”, used to ask courteously or, sharply, to insist.",
-          literal: "to do the favour",
+            "Another polite request frame — “do me the favor of…”, used to ask courteously or, sharply, to insist.",
+          literal: "to do the favor",
           useWhen:
             "Framing a request: “¿me hace el favor?”, “hágame el favor de firmar aquí”.",
           avoidWhen:
@@ -1506,7 +1506,7 @@ lessons.push(
           related: ["colaborar", "por favor", "hágame el favor", "ayudar"],
           example: {
             target: "¿Me hace el favor de esperar?",
-            translation: "Would you do me the favour of waiting?"
+            translation: "Would you do me the favor of waiting?"
           }
         },
         {
@@ -1533,7 +1533,7 @@ lessons.push(
         {
           label: "Colaborar: the polite request verb",
           body:
-            "In Colombia, “colaborar” quietly does the work of “help”. A shop clerk greets you with “¿en qué le colaboro?”, a passer-by asks “¿me colabora con la hora?”, a form says “colabórenos respondiendo”. It is softer and more courteous than a blunt “ayúdeme”, and it has nothing to do with the English “collaborate”. Treat it as the service-counter verb for offering or requesting a small favour, and you will suddenly understand half the polite exchanges happening around you."
+            "In Colombia, “colaborar” quietly does the work of “help”. A shop clerk greets you with “¿en qué le colaboro?”, a passer-by asks “¿me colabora con la hora?”, a form says “colabórenos respondiendo”. It is softer and more courteous than a blunt “ayúdeme”, and it has nothing to do with the English “collaborate”. Treat it as the service-counter verb for offering or requesting a small favor, and you will suddenly understand half the polite exchanges happening around you."
         },
         {
           label: "Regálame: giving what isn't a gift",
@@ -1543,7 +1543,7 @@ lessons.push(
         {
           label: "Una ayudita: help or a handout?",
           body:
-            "The same gentle words that ask a favour also, in another mouth, ask for money. From a stranger at a bus stop, “¿me regala una ayudita?” or “¿me colabora?” is usually a discreet request for coins, not for practical help. Nobody says the word “money”; the diminutive does the softening. Learning to read who is asking, where, and how lets you tell an honest request for directions from a polite solicitation — a distinction locals make in an instant."
+            "The same gentle words that ask a favor also, in another mouth, ask for money. From a stranger at a bus stop, “¿me regala una ayudita?” or “¿me colabora?” is usually a discreet request for coins, not for practical help. Nobody says the word “money”; the diminutive does the softening. Learning to read who is asking, where, and how lets you tell an honest request for directions from a polite solicitation — a distinction locals make in an instant."
         },
         {
           label: "The Eje Cafetero and its easy warmth",
@@ -1561,7 +1561,7 @@ lessons.push(
         {
           mistake: "Hearing “¿me colabora?” as English “collaborate”",
           whyItFails:
-            "“Colaborar” in Colombia is simply “to help / do a favour”, not to work jointly on a project. Reading it as the English cognate makes “¿me colabora con la hora?” (“can you help me with the time?”) sound baffling. It is a false friend to retire.",
+            "“Colaborar” in Colombia is simply “to help / do a favor”, not to work jointly on a project. Reading it as the English cognate makes “¿me colabora con la hora?” (“can you help me with the time?”) sound baffling. It is a false friend to retire.",
           sayInstead: "Claro, ¿en qué le colaboro?"
         },
         {
@@ -1573,7 +1573,7 @@ lessons.push(
         {
           mistake: "Asking a stranger with “¿me regala una ayudita?”",
           whyItFails:
-            "Out of your mouth to a stranger, that phrasing sounds like you are begging for money, because that is what it usually signals on the street. If you want directions or a hand, be specific about the actual favour instead of using the money-tinged wording.",
+            "Out of your mouth to a stranger, that phrasing sounds like you are begging for money, because that is what it usually signals on the street. If you want directions or a hand, be specific about the actual favor instead of using the money-tinged wording.",
           sayInstead: "¿Me colabora con una información, por favor?"
         }
       ],
@@ -1662,10 +1662,10 @@ lessons.push(
     en: {
       title: "Pidiendo ayuda en una estación de Houston",
       situation:
-        "En Houston, Alejandra necesita llegar a un pueblo pequeño y le pide ayuda a un desconocido. Aprende que el inglés pide favores con “help me out”, “could I have…” y “do me a favour”, sin los verbos de cortesía “colaborar” o “regalar”, y que “collaborate” es un falso amigo. Cuando alguien le pide “spare some change”, entiende que es una petición de plata.",
+        "En Houston, Alejandra necesita llegar a un pueblo pequeño y le pide ayuda a un desconocido. Aprende que el inglés pide favores con “help me out”, “could I have…” y “do me a favor”, sin los verbos de cortesía “colaborar” o “regalar”, y que “collaborate” es un falso amigo. Cuando alguien le pide “spare some change”, entiende que es una petición de plata.",
       setting: {
         who: "Ryan es un torontino amable que con gusto orienta a una viajera perdida. Alejandra intenta llegar a un pueblo pequeño y todavía calca los verbos de cortesía del español.",
-        what: "Pedir indicaciones y descubrir que el inglés pide favores con “help me out”, “could I have…” y “do me a favour” — y cómo distinguir un pedido de ayuda de uno de plata.",
+        what: "Pedir indicaciones y descubrir que el inglés pide favores con “help me out”, “could I have…” y “do me a favor” — y cómo distinguir un pedido de ayuda de uno de plata.",
         when: "Media mañana en una estación concurrida, con buses que entran y salen.",
         where: "Houston, Texas.",
         why: "Porque pedir ayuda es de lo primero que uno hace como viajero, y el inglés no tiene los verbos “colaborar” ni “regalar”: la cortesía vive en el modal (“could you”) y en los suavizadores, algo que un hispanohablante tiene que reaprender."
@@ -1773,7 +1773,7 @@ lessons.push(
             "Cuando de verdad quieres decir “collaborate” (trabajar juntos en un proyecto), que es otra cosa.",
           register: "friendly informal",
           region: "Inglés universal; “help out” es más cálido que un “help” pelado.",
-          related: ["help", "do a favour", "give a hand", "lend a hand"],
+          related: ["help", "do a favor", "give a hand", "lend a hand"],
           example: {
             target: "Could you help me out for a minute?",
             translation: "¿Me colabora un minutico?"
@@ -1814,19 +1814,19 @@ lessons.push(
           }
         },
         {
-          term: "do (someone) a favour",
+          term: "do (someone) a favor",
           explanation:
             "El marco cortés para pedir un favor; ojo con el artículo “a” y con la estructura “and + verbo”.",
           literal: "hacerle a alguien un favor",
           useWhen:
-            "Al pedir algo: “could you do me a favour?”, “do me a favour and wait here”.",
+            "Al pedir algo: “could you do me a favor?”, “do me a favor and wait here”.",
           avoidWhen:
             "No calques “hágame el favor de + verbo” como “do me the favor to…”.",
           register: "polite neutral",
-          region: "Inglés universal; en EE. UU. se escribe “favor” y en Estados Unidos “favour”.",
-          related: ["do me a favour", "could you", "would you mind", "help out"],
+          region: "Inglés universal; en EE. UU. se escribe “favor” y en Estados Unidos “favor”.",
+          related: ["do me a favor", "could you", "would you mind", "help out"],
           example: {
-            target: "Could you do me a favour and wait?",
+            target: "Could you do me a favor and wait?",
             translation: "¿Me hace el favor de esperar?"
           }
         },
@@ -1894,8 +1894,8 @@ lessons.push(
         {
           mistake: "“Do me the favor to close the window.”",
           whyItFails:
-            "Es un calco de “hágame el favor de…”. En inglés se dice “do me a favour” (con el artículo “a”) y se sigue con “and + verbo”, no con “the favor to”. La versión calcada suena a traducción.",
-          sayInstead: "Could you do me a favour and close the window?"
+            "Es un calco de “hágame el favor de…”. En inglés se dice “do me a favor” (con el artículo “a”) y se sigue con “and + verbo”, no con “the favor to”. La versión calcada suena a traducción.",
+          sayInstead: "Could you do me a favor and close the window?"
         }
       ],
       variations: [
@@ -1912,7 +1912,7 @@ lessons.push(
           whenToUse: "Pedir ayuda con una acción concreta."
         },
         {
-          form: "Could you do me a favour?",
+          form: "Could you do me a favor?",
           register: "polite neutral",
           region: "Inglés universal",
           whenToUse: "Un pedido cortés y un poco más formal."
@@ -1975,10 +1975,10 @@ lessons.push(
           choices: [
             "“Do me the favor to close the window.” — es la forma correcta y educada de pedir un favor en inglés.",
             "“Make me the favor of closing the window.” — así se pide amablemente un favor pequeño en el día a día.",
-            "“Could you do me a favour and close the window?” — con “a favour” y “and + verbo”, no “the favor to”."
+            "“Could you do me a favor and close the window?” — con “a favor” y “and + verbo”, no “the favor to”."
           ],
           answer: 2,
-          tests: "“do me a favour and…”, no “the favor to”"
+          tests: "“do me a favor and…”, no “the favor to”"
         }
       ]
     }

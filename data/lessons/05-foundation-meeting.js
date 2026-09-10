@@ -88,7 +88,7 @@ lessons.push(
           translation: "It's great to finally meet someone from the group; Santi's the only one I know.",
           pronunciation: "ke BWEH-no por feen ko-no-SEHR a al-GYEN del GROO-po; SAN-tee es el OO-nee-ko ke ko-NOS-ko",
           literal: "What good for end to-know to someone of-the group; Santi is the only that I-know.",
-          why: "The infinitive “conocer” follows “por fin” cleanly. Then the present “conozco” is irregular — it hides a c-to-zc change (conozco, not conoco) that appears only in the yo form, so it rewards memorising."
+          why: "The infinitive “conocer” follows “por fin” cleanly. Then the present “conozco” is irregular — it hides a c-to-zc change (conozco, not conoco) that appears only in the yo form, so it rewards memorizing."
         }
       ],
       vocabulary: [
@@ -195,7 +195,7 @@ lessons.push(
       culture: [
         {
           label: "You are introduced, you don't introduce yourself",
-          body: "At a Colombian gathering the person who brought you does the honours, walking you around and saying “te presento a…” for each new face. Marching up to a stranger and announcing your own name can read as slightly abrupt. The unspoken deal is that your friend vouches for you, so the fastest way into a circle is to arrive with someone who already belongs to it and let them pass you along from person to person."
+          body: "At a Colombian gathering the person who brought you does the honors, walking you around and saying “te presento a…” for each new face. Marching up to a stranger and announcing your own name can read as slightly abrupt. The unspoken deal is that your friend vouches for you, so the fastest way into a circle is to arrive with someone who already belongs to it and let them pass you along from person to person."
         },
         {
           label: "The many sizes of mucho gusto",
@@ -643,7 +643,7 @@ lessons.push(
           target: "Quiero un tinto y un pandebono, por favor.",
           translation: "I'd like a black coffee and a pandebono, please.",
           pronunciation: "KYEH-ro oon TEEN-to ee oon pan-de-BO-no, por fa-VOR",
-          literal: "I-want a black-coffee and a pandebono, for favour.",
+          literal: "I-want a black-coffee and a pandebono, for favor.",
           why: "“Quiero” is the plainest way to order and it is not rude here, especially softened with por favor. A “tinto” in Colombia is a small black coffee, never wine, and a “pandebono” is a cheese-bread staple."
         },
         {
@@ -849,7 +849,7 @@ lessons.push(
           form: "Regáleme un tinto, hágame el favor.",
           register: "polite",
           region: "Paisa",
-          whenToUse: "A paisa-flavoured polite request using usted and regalar."
+          whenToUse: "A paisa-flavored polite request using usted and regalar."
         }
       ],
       prompt: "Manu just told you te quiero. What does he actually mean by it?",

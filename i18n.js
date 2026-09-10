@@ -864,7 +864,7 @@ function applyI18n(direction, root) {
  * Note for callers: `direction` is the *content* direction ("es" = learning
  * Colombian Spanish). It is read here, never written. Interface language is
  * derived from it through uiLanguageFor(); the two are related but not the same
- * concept, and nothing in this file should be used to normalise or collapse the
+ * concept, and nothing in this file should be used to normalize or collapse the
  * direction value that lesson content and review anchors depend on.
  */
 if (typeof window !== "undefined") {

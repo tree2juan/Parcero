@@ -1456,7 +1456,7 @@ lessons.push(
             "“In any case / anyway”. A standalone concessive connector that brushes objections aside: “De todos modos yo la acompaño”. Interchangeable with “de todas formas” and “de todas maneras”.",
           literal: "anyway / in any case",
           useWhen:
-            "Signalling that what follows holds regardless of everything just said.",
+            "Signaling that what follows holds regardless of everything just said.",
           avoidWhen:
             "You want to subordinate a specific clause: that's the job of “aunque”, not this connector.",
           register: "neutral",

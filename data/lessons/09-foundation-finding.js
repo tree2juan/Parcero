@@ -42,7 +42,7 @@ lessons.push(
       address: {
         form: "usted",
         who: "Don Fabio uses usted with Alex, and Alex uses usted back — the default between strangers in Bogotá.",
-        why: "In the capital, usted is the safe, neutral form with anyone you do not know, regardless of age. It is neither cold nor formal here; it is simply what you use with a shopkeeper you have just met while asking a favour.",
+        why: "In the capital, usted is the safe, neutral form with anyone you do not know, regardless of age. It is neither cold nor formal here; it is simply what you use with a shopkeeper you have just met while asking a favor.",
         ifYouSwitch:
           "Tú would not offend Don Fabio, but from a stranger it moves a little fast and can sound like you have decided you are already friends. Vos would mark Alex out instantly as someone who learned his Spanish in Medellín, not Bogotá."
       },
@@ -263,7 +263,7 @@ lessons.push(
         {
           mistake: "Saying “Lo encontré muy difícil” for “I found it very hard”",
           whyItFails:
-            "Using encontrar for a judgement is an English pattern grafted onto Spanish. Colombians express the opinion with parecer or with “se me hizo”, not with encontrar.",
+            "Using encontrar for a judgment is an English pattern grafted onto Spanish. Colombians express the opinion with parecer or with “se me hizo”, not with encontrar.",
           sayInstead: "Me pareció muy difícil. / Se me hizo muy difícil."
         }
       ],
@@ -290,7 +290,7 @@ lessons.push(
           form: "¿Usted sabe dónde queda, por casualidad?",
           register: "polite formal",
           region: "General Colombian, usted country",
-          whenToUse: "Opening the question politely to a stranger you are asking a favour of."
+          whenToUse: "Opening the question politely to a stranger you are asking a favor of."
         },
         {
           form: "¿Por dónde es que queda eso?",
@@ -686,7 +686,7 @@ lessons.push(
         "El internet de Alex se cayó al anochecer y las luces del router están todas raras. No tiene el número del técnico y no le hace ninguna gracia pasar la noche entera sin conexión. Pilla a su vecino Dubán en el pasillo —el que parece saber quién arregla qué en el edificio— y le pide el número para llamar a alguien antes de que se haga tarde.",
       setting: {
         who: "Dubán is a chatty paisa in his thirties who has lived in the block for years and has every useful number saved. Alex is the foreigner two doors down who still does not know who to ring when something breaks.",
-        what: "A quick doorway favour: one neighbor handing another a phone number and offering to smooth the call.",
+        what: "A quick doorway favor: one neighbor handing another a phone number and offering to smooth the call.",
         when: "A weekday evening, after work, when the technician might still answer if you catch him fast.",
         where: "Medellín, a mid-rise block in Belén where neighbors on the same floor know each other by name.",
         why: "Because in a building, the neighbor with the numbers is worth more than any hotline, and tonight Dubán is that neighbor. How Alex asks decides whether he stays that neighbor."

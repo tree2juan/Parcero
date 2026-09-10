@@ -99,7 +99,7 @@ lessons.push(
         {
           term: "pedir",
           explanation:
-            "To ask for or to order — the everyday verb for requesting a thing, a dish, or a favour.",
+            "To ask for or to order — the everyday verb for requesting a thing, a dish, or a favor.",
           literal: "to ask for / to order",
           useWhen: "Ordering food, requesting an object, asking someone for something concrete.",
           avoidWhen: "Asking a question for information — that's “preguntar”, a different verb.",
@@ -129,8 +129,8 @@ lessons.push(
         {
           term: "¿me hace el favor y...?",
           explanation:
-            "“Would you do me the favour and...?” — a warm, slightly more emphatic softener for a request.",
-          literal: "will you do me the favour and...?",
+            "“Would you do me the favor and...?” — a warm, slightly more emphatic softener for a request.",
+          literal: "will you do me the favor and...?",
           useWhen: "Asking someone to do a small task, politely and warmly.",
           avoidWhen: "A brusque, hurried context where a plain “¿me regala?” is faster.",
           register: "polite",
@@ -208,7 +208,7 @@ lessons.push(
         {
           label: "“Gift me” is just how you order",
           body:
-            "The first time you hear “¿me regala un café?” it sounds like you're begging a favour — “regalar” is “to give as a gift”. But in Colombia it's simply the polite, everyday way to request something you fully intend to pay for. Refusing to use it and saying “quiero un café” instead marks you instantly as a foreigner, and a slightly brusque one. Treat “¿me regala...?” as the default and only drop it in the most formal writing."
+            "The first time you hear “¿me regala un café?” it sounds like you're begging a favor — “regalar” is “to give as a gift”. But in Colombia it's simply the polite, everyday way to request something you fully intend to pay for. Refusing to use it and saying “quiero un café” instead marks you instantly as a foreigner, and a slightly brusque one. Treat “¿me regala...?” as the default and only drop it in the most formal writing."
         },
         {
           label: "Lunch is the serious meal",
@@ -692,7 +692,7 @@ lessons.push(
           translation: "Do you want more? I'll serve you a little more, you're too thin.",
           pronunciation: "ke-RES mas? te SEER-vo O-tro po-KEE-to, ke es-TAS mwi FLA-ko",
           literal: "You-want more? To-you I-serve another little-bit, that you-are very thin.",
-          why: "“Querés” is the vos form of “quieres”. Serving seconds “porque estás flaco” is classic paisa care — the pressure is affection, not judgement."
+          why: "“Querés” is the vos form of “quieres”. Serving seconds “porque estás flaco” is classic paisa care — the pressure is affection, not judgment."
         },
         {
           speaker: "Alex",
@@ -1563,7 +1563,7 @@ lessons.push(
         {
           prompt: "On the coast, someone says “se vive sabroso aquí”. What does “sabroso” cover here?",
           choices: [
-            "Only that the local food is tasty; the phrase can't stretch beyond describing meals and flavours.",
+            "Only that the local food is tasty; the phrase can't stretch beyond describing meals and flavors.",
             "That the area is dangerously spicy, so “sabroso” is really warning you about the heat of the food.",
             "A whole easy, pleasurable way of living — on the coast “sabroso” reaches well beyond food."
           ],
@@ -1578,7 +1578,7 @@ lessons.push(
             "Because the vulgar sense is actually the most common everyday meaning of the verb across Colombia."
           ],
           answer: 1,
-          tests: "recognising comer's slang sense without avoiding the verb"
+          tests: "recognizing comer's slang sense without avoiding the verb"
         }
       ]
     },

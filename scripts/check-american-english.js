@@ -48,7 +48,56 @@ const BRITISH = [
   "cancelled", "cancelling", "labelled", "marvellous", "defence", "offence",
   "licence", "storey", "storeys", "kerb", "plough", "programme", "programmes",
   "flatmate", "flatmates", "trousers", "rubbish", "petrol",
-  "crisps", "pram", "shopfront", "queueing", "dustbin"
+  "crisps", "pram", "shopfront", "queueing", "dustbin",
+
+  /*
+   * The families above were written base-word-first and drifted: "favourite"
+   * was banned while "favour" was not, so `Neighborly favours` sat in a lesson
+   * level string through a full American-English migration without tripping
+   * anything. A spelling family is only guarded if every inflection an author
+   * would actually type is listed, so these close the -our, -re, -ise and
+   * doubled-l sets rather than adding new categories.
+   *
+   * Deliberately absent, because the corpus is bilingual and these are real
+   * Spanish words or valid American English:
+   *   cheque   - Spanish for a bank check, used throughout the money lessons
+   *   calibre  - a Spanish noun
+   *   analyses - the American plural of "analysis"
+   *   glamour  - standard American spelling
+   *   queue, mate, roundabout, advertise, exercise, cancellation - all American
+   */
+  "favour", "favours", "favoured", "favouring", "favourable", "favourably",
+  "neighbouring", "behaviours", "behavioural", "harbours", "honours",
+  "honourable", "labours", "laboured", "rumours", "savoury", "flavours",
+  "flavoured", "endeavour", "endeavours", "armour", "parlour", "vapour",
+  "odour", "odours", "splendour", "rigour", "vigour", "valour", "saviour",
+  "demeanour", "candour", "clamour",
+
+  "theatres", "centred", "centring", "millimetre", "millimetres",
+  "centimetre", "centimetres", "manoeuvre", "manoeuvres", "fibre", "fibres",
+  "spectre",
+
+  "organisation", "organisations", "realising", "recognising", "criticising",
+  "criticises", "specialising", "specialises", "specialisation", "memorises",
+  "memorising", "emphasises", "emphasising", "analyse", "analysed",
+  "analysing", "paralyse", "paralysed", "summarise", "summarised",
+  "summarising", "prioritise", "prioritised", "authorise", "authorised",
+  "categorise", "categorised", "familiarise", "minimise", "minimised",
+  "maximise", "maximised", "normalise", "socialise", "socialised", "utilise",
+  "utilised", "visualise", "visualised",
+
+  "labelling", "modelling", "modelled", "signalling", "signalled",
+  "counselling", "counselled", "counsellor", "counsellors", "fuelled",
+  "fuelling", "levelled", "levelling", "quarrelled", "jeweller", "jewellery",
+  "skilful", "skilfully", "wilful", "fulfil", "fulfils", "fulfilment",
+  "instalment", "instalments", "enrolment", "enrolments",
+
+  "pretence", "sceptical", "scepticism", "aluminium", "gaol", "pyjamas",
+  "speciality", "specialities", "draught", "ploughed", "ploughing",
+  "judgement", "kerbside", "nappy", "nappies", "windscreen", "motorway",
+  "motorways", "carriageway", "pushchair", "postbox", "waistcoat", "wellies",
+  "nought", "fortnight", "telly", "bloke", "blokes", "cuppa", "whinge",
+  "whinged", "whinging"
 ];
 
 /* The English track is set in Texas, not Canada.
@@ -80,6 +129,22 @@ const CANADIAN = [
   "Shoppers Drug Mart", "Loblaws", "Sobeys", "Via Rail", "Air Canada",
   "chesterfield", "serviette", "serviettes"
 ];
+
+/*
+ * Deliberately NOT banned: US cities outside Texas.
+ *
+ * The brief was "American English, Texas cities", and the migration moved the
+ * Canadian settings to Texas. It did not move the US settings that were
+ * already there — Miami (15), Florida (5), Chicago (4), Seattle (4), Boston
+ * (3), Portland (2), California (1) — and that was reviewed and kept on
+ * purpose. Texas is the anchor, not a cage: a learner who only ever sees
+ * Houston learns a country the size of one state, and Miami in particular is
+ * one of the most Spanish-speaking cities in the US, which makes it honest
+ * setting for this audience rather than a leftover.
+ *
+ * Recorded here because "why is there a lesson set in Miami?" is exactly the
+ * kind of question that gets re-answered by deleting the lesson.
+ */
 
 function targetFiles() {
   const files = [];

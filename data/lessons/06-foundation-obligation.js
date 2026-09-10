@@ -735,7 +735,7 @@ lessons.push(
           translation: "Great. So I owe you thirty-eight. Here you go, and thanks for the credit.",
           pronunciation: "LEES-to. en-TON-ses le DE-bo TREN-ta i O-cho. a-KEE es-TAN, i GRA-syas por fyar-me",
           literal: "Ready. Then you I-owe thirty and eight. Here they-are, and thanks for to-credit-me.",
-          why: "“Fiar” is to sell on trust; “fiarme” is to extend me credit. Thanking for the fiado honours the trust behind it, which matters more than the sum. Note “le debo” doubling the clitic once again."
+          why: "“Fiar” is to sell on trust; “fiarme” is to extend me credit. Thanking for the fiado honors the trust behind it, which matters more than the sum. Note “le debo” doubling the clitic once again."
         },
         {
           speaker: "Don Fabio",
@@ -750,7 +750,7 @@ lessons.push(
         {
           term: "deber (le debo)",
           explanation:
-            "The “owe” sense of deber — to owe money or a favour. The indirect object doubles with “le”.",
+            "The “owe” sense of deber — to owe money or a favor. The indirect object doubles with “le”.",
           literal: "to owe",
           useWhen:
             "Naming a debt of money or of gratitude: “le debo”, “te debo una”, “¿cuánto le debo?”.",
@@ -852,7 +852,7 @@ lessons.push(
         {
           term: "y ya",
           explanation:
-            "“And that's it.” Closes a matter cleanly, signalling that nothing more needs to be said.",
+            "“And that's it.” Closes a matter cleanly, signaling that nothing more needs to be said.",
           literal: "and already",
           useWhen:
             "Wrapping up an arrangement or a list — you pay, it's done, “y ya”.",
@@ -1630,7 +1630,7 @@ lessons.push(
           tests: "ponerse + adjective = become"
         },
         {
-          prompt: "Alex says “me pongo pilas.” What is he signalling?",
+          prompt: "Alex says “me pongo pilas.” What is he signaling?",
           choices: [
             "That he'll get sharp and get moving — put his energy in and look alive to help out.",
             "That he is going to go and buy some batteries from the shop before the family arrives.",

@@ -345,7 +345,7 @@ lessons.push(
       setting: {
         who: "A local reporter interviews an engineer after a storm disrupted drainage work near a neighborhood street.",
         what: "They explain what the storm produced, what the repairs produced, and why the preterite forms produced by producir are irregular.",
-        when: "The morning after a heavy storm, when people want causes, effects and next steps rather than rumours.",
+        when: "The morning after a heavy storm, when people want causes, effects and next steps rather than rumors.",
         where: "Tumaco, near a coastal neighborhood street, with general Colombian Spanish and careful news-style register.",
         why: "Because producir is formal and useful in reports, but its preterite produjo and produjeron catches learners with the -duj- stem."
       },

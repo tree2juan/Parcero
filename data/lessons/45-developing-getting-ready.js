@@ -1348,7 +1348,7 @@ lessons.push(
         who: "Paula and Jamie use tú as friends planning a weekend together.",
         why: "The conversation is practical but not formal. Tú keeps the planning direct and friendly.",
         ifYouSwitch:
-          "Usted would sound like a meeting or a favour asked at a distance. Vos would not be impossible among some friends, but it is not needed for this setting."
+          "Usted would sound like a meeting or a favor asked at a distance. Vos would not be impossible among some friends, but it is not needed for this setting."
       },
       dialogue: [
         {

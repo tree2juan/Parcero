@@ -53,7 +53,7 @@ lessons.push(
           translation: "Thanks for looking after Lucía tonight; I get out late from the hospital.",
           pronunciation: "GRAH-syahs por kwee-DAR ah loo-SEE-ah ES-tah NOH-che; SAL-goh TAR-deh del os-pee-TAL",
           literal: "Thanks for caring-for Lucía this night; I leave late from-the hospital.",
-          why: "Cuidar a una persona takes personal a. This is not a quick favour like carrying a bag; it is responsibility for a child over several hours."
+          why: "Cuidar a una persona takes personal a. This is not a quick favor like carrying a bag; it is responsibility for a child over several hours."
         },
         {
           speaker: "Andrés",
@@ -105,7 +105,7 @@ lessons.push(
           useWhen:
             "A child, an older relative, a pet, a house, a bag, or a responsibility needs ongoing attention.",
           avoidWhen:
-            "You mean a one-time favour. That may be ayudar, but this lesson is about sustained care and keeping watch.",
+            "You mean a one-time favor. That may be ayudar, but this lesson is about sustained care and keeping watch.",
           register: "neutral warm",
           region: "General Spanish and very common in Colombian family speech.",
           related: ["encargarse", "vigilar", "atender", "proteger"],
@@ -255,7 +255,7 @@ lessons.push(
           sayInstead: "Cuídate mucho."
         },
         {
-          mistake: "Using cuidar when you mean one quick favour",
+          mistake: "Using cuidar when you mean one quick favor",
           whyItFails:
             "Cuidar implies attention over time. If someone only opens a door or carries one bag, cuidar can exaggerate the responsibility.",
           sayInstead: "Use cuidar for sustained responsibility."
@@ -994,7 +994,7 @@ lessons.push(
           choices: [
             "It names safety against a real risk.",
             "It means watching television calmly.",
-            "It describes a one-time friendly favour."
+            "It describes a one-time friendly favor."
           ],
           answer: 0,
           tests: "proteger as risk-focused care"

@@ -118,7 +118,7 @@ lessons.push(
             "Aprender made reflexive, adding a “commit it to memory” force that plain aprender lacks.",
           literal: "to learn (oneself) something",
           useWhen:
-            "Memorising something specific: a song, a poem, a phone number, a name — “me aprendí la letra”.",
+            "Memorizing something specific: a song, a poem, a phone number, a name — “me aprendí la letra”.",
           avoidWhen:
             "You mean learning a skill or subject in general; there plain aprender fits, not the reflexive.",
           register: "neutral",
@@ -276,7 +276,7 @@ lessons.push(
           form: "aprenderse algo",
           register: "neutral",
           region: "Universal Spanish",
-          whenToUse: "When the point is memorising something specific, like a song or a name."
+          whenToUse: "When the point is memorizing something specific, like a song or a name."
         },
         {
           form: "cogerle el tiro",

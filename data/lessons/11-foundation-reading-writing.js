@@ -237,7 +237,7 @@ lessons.push(
         {
           label: "Keeping in touch is a ritual",
           body:
-            "Exchanging numbers in Colombia comes wrapped in set phrases — “nos escribimos”, “no te me pierdas”, “seguimos en contacto”. They do social work well beyond their literal meaning, signalling that a pleasant afternoon should turn into an ongoing friendship. Skipping them can make a goodbye feel abrupt or cold. Learning to close with one of these little formulas matters as much as knowing how to say hello in the first place."
+            "Exchanging numbers in Colombia comes wrapped in set phrases — “nos escribimos”, “no te me pierdas”, “seguimos en contacto”. They do social work well beyond their literal meaning, signaling that a pleasant afternoon should turn into an ongoing friendship. Skipping them can make a goodbye feel abrupt or cold. Learning to close with one of these little formulas matters as much as knowing how to say hello in the first place."
         }
       ],
       pitfalls: [
@@ -771,7 +771,7 @@ lessons.push(
             "The reflexive of leer, used to stress reading something all the way through: “me leí el libro”.",
           literal: "to read oneself (something)",
           useWhen:
-            "Emphasising that you finished the whole thing.",
+            "Emphasizing that you finished the whole thing.",
           avoidWhen:
             "A quick skim; that lighter idea is “hojear”.",
           register: "friendly informal",
@@ -1541,7 +1541,7 @@ lessons.push(
         {
           label: "Colaborar softens the transaction",
           body:
-            "Where other Spanishes ask “¿en qué puedo ayudarle?”, Colombians often say “¿en qué le puedo colaborar?”. “Colaborar” frames help as a shared effort rather than a favour handed down, and it's one of the small verbal warmths that make Colombian service feel personable even inside a formal usted register. Hearing it is a reliable little sign that you're talking to a Colombian rather than anyone else."
+            "Where other Spanishes ask “¿en qué puedo ayudarle?”, Colombians often say “¿en qué le puedo colaborar?”. “Colaborar” frames help as a shared effort rather than a favor handed down, and it's one of the small verbal warmths that make Colombian service feel personable even inside a formal usted register. Hearing it is a reliable little sign that you're talking to a Colombian rather than anyone else."
         }
       ],
       pitfalls: [

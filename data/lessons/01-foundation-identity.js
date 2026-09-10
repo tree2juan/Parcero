@@ -35,7 +35,7 @@ lessons.push(
         what: "A short round of introductions at the start of the meeting, before the agenda about the water tank.",
         when: "A Tuesday evening, seven o'clock, in the ground-floor common room.",
         where: "Medellín, a six-story block in Laureles where most residents have lived for a decade or more.",
-        why: "Because Alex will be asking these people for favours — a signature, a parcel taken in, patience about noise — for as long as he lives here. The introduction is the whole relationship in miniature."
+        why: "Because Alex will be asking these people for favors — a signature, a parcel taken in, patience about noise — for as long as he lives here. The introduction is the whole relationship in miniature."
       },
       address: {
         form: "usted",

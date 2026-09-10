@@ -970,7 +970,7 @@ lessons.push(
           prompt: "Alex says “me olvidé de las llaves.” Why the “de”?",
           choices: [
             "Because reflexive olvidarse always takes “de” before the thing forgotten — the preposition is built into that form of the verb.",
-            "Because “de” here means “from”, signalling that the keys were taken from somewhere rather than simply forgotten by Alex.",
+            "Because “de” here means “from”, signaling that the keys were taken from somewhere rather than simply forgotten by Alex.",
             "Because every version of olvidar needs “de”, including the plain transitive one, so leaving it out would always be an error."
           ],
           answer: 0,

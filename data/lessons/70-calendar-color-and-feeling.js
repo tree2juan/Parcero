@@ -1325,9 +1325,9 @@ lessons.push(
         {
           speaker: "Cami",
           target: "Oiga, y me da pena pedirte el favor, ¿me prestas una chaqueta? Tengo un poco de frío.",
-          translation: "Hey, and I feel bad asking you the favour -- will you lend me a jacket? I'm a bit cold.",
+          translation: "Hey, and I feel bad asking you the favor -- will you lend me a jacket? I'm a bit cold.",
           pronunciation: "OI-ga, i me da PE-na pe-DIR-te el fa-VOR, me PRES-tas U-na cha-KE-ta? TEN-go un PO-ko de FRÍ-o",
-          literal: "Hear, and me it-gives embarrassment to-ask-you the favour, me you-lend a jacket? I-have a little of cold.",
+          literal: "Hear, and me it-gives embarrassment to-ask-you the favor, me you-lend a jacket? I-have a little of cold.",
           why: "“Me da pena” is embarrassment, not pity -- I feel awkward asking. And cold is a state with “tener”: “tengo frío”, I have cold. Say “estoy frío” and you would be talking about your body temperature as an object."
         },
         {
@@ -1431,7 +1431,7 @@ lessons.push(
             "In Colombia “pena” is embarrassment, not pity: “me da pena” means I'm embarrassed, or I feel bad asking. “Qué pena” is a soft sorry, used to excuse yourself.",
           literal: "to-give embarrassment",
           useWhen:
-            "Owning up to shyness or apologizing lightly: asking a favour, squeezing past.",
+            "Owning up to shyness or apologizing lightly: asking a favor, squeezing past.",
           avoidWhen:
             "You mean pity -- that is “lástima”; “me da lástima” is I feel sorry for.",
           register: "friendly informal",
@@ -1476,7 +1476,7 @@ lessons.push(
         {
           label: "Pena is embarrassment, not pity",
           body:
-            "In much of Latin America, and firmly in Colombia, “pena” means embarrassment. “Me da pena” is I'm embarrassed or I feel bad asking, and “qué pena” is a soft apology for troubling you -- squeezing past on a bus, arriving late, asking a favour. It does not mean pity; that is “lástima”. This is one of the warmest, most Colombian turns of phrase, and mixing it up with pity leaves people wondering why you feel sorry for them."
+            "In much of Latin America, and firmly in Colombia, “pena” means embarrassment. “Me da pena” is I'm embarrassed or I feel bad asking, and “qué pena” is a soft apology for troubling you -- squeezing past on a bus, arriving late, asking a favor. It does not mean pity; that is “lástima”. This is one of the warmest, most Colombian turns of phrase, and mixing it up with pity leaves people wondering why you feel sorry for them."
         },
         {
           label: "Tener for states, from Cocora to the cold",
@@ -1555,7 +1555,7 @@ lessons.push(
           tests: "Fear is a state with “tener”: “tengo miedo”, not “estoy miedo” nor the trait “soy miedoso”."
         },
         {
-          prompt: "Cami feels awkward asking a favour. Which uses “pena” in its Colombian sense?",
+          prompt: "Cami feels awkward asking a favor. Which uses “pena” in its Colombian sense?",
           choices: [
             "Me da lástima pedirte el favor, pero, ¿me prestas la chaqueta?",
             "Me da pena pedirte el favor, pero, ¿me prestas la chaqueta?",

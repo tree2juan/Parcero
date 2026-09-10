@@ -637,7 +637,7 @@ lessons.push(
       },
       address: {
         form: "tú",
-        who: "Óscar uses tú because he is a neighbor doing a practical favour, not an official inspector. Mara follows his lead.",
+        who: "Óscar uses tú because he is a neighbor doing a practical favor, not an official inspector. Mara follows his lead.",
         why: "The exchange is serious but not formal. Tú lets Óscar give quick instructions while still sounding like someone helping next door.",
         ifYouSwitch:
           "Usted would be safe if Mara wanted more distance, especially with an older neighbor. Vos would sound marked here and is not needed for the scene."

@@ -1,5 +1,5 @@
 /*
- * Lesson block: extending / forms, keeping things safe and favours.
+ * Lesson block: extending / forms, keeping things safe and favors.
  *
  * Block files push onto the `lessons` array declared in data/lessons.js. They
  * are plain scripts, not modules — `lessons` is already in scope by the time
@@ -12,7 +12,7 @@
  * exists and that no two lessons claim the same one.
  *
  * The verbs here — rellenar, guardar and prestar — sit in ordinary Colombian
- * errands and favours: a counter where forms must be filled in honestly, a
+ * errands and favors: a counter where forms must be filled in honestly, a
  * public place where someone saves a seat and puts belongings away, and a
  * neighborly loan where prestar points in the opposite direction English
  * speakers often expect.
@@ -574,7 +574,7 @@ lessons.push(
       situation:
         "En Zipaquirá, Alex entra con Paula a una cafetería cerca de la plaza antes de una reunión. Ella le pide que le guarde el puesto mientras pide café, y después le recuerda que guarde la mochila debajo de la silla para que no estorbe. En la misma escena, guardar no significa hacer guardia: puede ser poner algo en su lugar, conservar algo por si acaso, guardar silencio durante una llamada y hasta guardar un archivo.",
       setting: {
-        who: "Paula knows the café routine and moves comfortably through small favours; Alex hears guardar and first imagines guarding like a security guard.",
+        who: "Paula knows the café routine and moves comfortably through small favors; Alex hears guardar and first imagines guarding like a security guard.",
         what: "A seat saved for a friend, a backpack put away safely and a quick phone call where people need to keep quiet.",
         when: "Early evening, with office workers arriving for coffee before a community meeting.",
         where: "Zipaquirá, Cundinamarca, in a café a few blocks from the salt cathedral.",
@@ -582,9 +582,9 @@ lessons.push(
       },
       address: {
         form: "tú",
-        who: "Paula and Alex use tú because they are friends doing small favours for each other.",
+        who: "Paula and Alex use tú because they are friends doing small favors for each other.",
         why: "The register is friendly but still considerate. Tú makes “guárdame el puesto” feel like an ordinary request, not an order.",
-        ifYouSwitch: "Usted could work with an older acquaintance or a stranger, but here it would add distance and make a simple favour sound stiff."
+        ifYouSwitch: "Usted could work with an older acquaintance or a stranger, but here it would add distance and make a simple favor sound stiff."
       },
       dialogue: [
         {
@@ -593,7 +593,7 @@ lessons.push(
           translation: "Can you save my seat while I order two black coffees?",
           pronunciation: "meh GWAR-das el PWES-toh MYEN-tras PEE-doh dos TEEN-tos",
           literal: "To-me you-save the place while I-order two black-coffees?",
-          why: "“Guárdame el puesto” means save my seat or spot, not guard it with force. The me marks the favour: save it for me."
+          why: "“Guárdame el puesto” means save my seat or spot, not guard it with force. The me marks the favor: save it for me."
         },
         {
           speaker: "Alex",
@@ -740,8 +740,8 @@ lessons.push(
         "Guardar is not just guard. In Colombian Spanish, it is one of the everyday verbs for keeping life organized: guardar la ropa, guardar el recibo, guardar el puesto, guardar silencio, guardar cambios. “Por si acaso, guárdalo” is a normal way to say keep it safe or put it away in case you need it later. If actual surveillance or protection is the point, cuidar or vigilar may be more precise. If a restaurant formally holds a table, reservar may be better than guardar.",
       culture: [
         {
-          label: "Small favours use guardar",
-          body: "“Guárdame el puesto” is a tiny social contract. Someone keeps a seat, a place in line or a spot at the table while you order, pay or step away. It is not the same as an official reservation. The favour depends on trust and context, which is why it sounds natural among friends and can sound presumptuous with strangers if the place is crowded."
+          label: "Small favors use guardar",
+          body: "“Guárdame el puesto” is a tiny social contract. Someone keeps a seat, a place in line or a spot at the table while you order, pay or step away. It is not the same as an official reservation. The favor depends on trust and context, which is why it sounds natural among friends and can sound presumptuous with strangers if the place is crowded."
         },
         {
           label: "Safety without drama",
@@ -1104,7 +1104,7 @@ lessons.push(
   },
   {
     id: "borrowing-a-neighbors-charger-in-arauca",
-    level: "Extending · Neighborly favours",
+    level: "Extending · Neighborly favors",
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "home-and-neighborhood",
     register: "familiar",
@@ -1124,7 +1124,7 @@ lessons.push(
       },
       address: {
         form: "tú",
-        who: "Diana and Alex use tú because they are neighbors who know each other, but they still use polite wording around a favour.",
+        who: "Diana and Alex use tú because they are neighbors who know each other, but they still use polite wording around a favor.",
         why: "Tú keeps the request neighborly. The courtesy comes from “¿me prestas...?”, “te lo devuelvo” and respecting the object.",
         ifYouSwitch: "Usted would also be possible with an older neighbor or a less familiar one. Here tú matches the friendly hallway relationship without removing the obligation to return what was lent."
       },
@@ -1186,7 +1186,7 @@ lessons.push(
           useWhen: "You give someone temporary use of something: “te presto el cargador”, “me prestó plata”.",
           avoidWhen: "You are the one who wants to borrow; then say “pedir prestado” or ask “¿me prestas...?”",
           register: "neutral",
-          region: "Universal Spanish; very common in Colombian favours.",
+          region: "Universal Spanish; very common in Colombian favors.",
           related: ["pedir prestado", "devolver", "prestado", "prestar atención"],
           example: {
             target: "Te presto el cargador hasta las ocho.",
@@ -1287,11 +1287,11 @@ lessons.push(
         },
         {
           label: "Loans carry trust",
-          body: "Prestar can be casual, but it is never socially empty. A charger, umbrella, drill or small amount of money comes with an expectation: use it carefully and return it when promised. “Te lo devuelvo ahorita” may reassure the owner, but only if you actually do it. In neighborly Colombia, favours build reputation quickly, and so do lost borrowed objects."
+          body: "Prestar can be casual, but it is never socially empty. A charger, umbrella, drill or small amount of money comes with an expectation: use it carefully and return it when promised. “Te lo devuelvo ahorita” may reassure the owner, but only if you actually do it. In neighborly Colombia, favors build reputation quickly, and so do lost borrowed objects."
         },
         {
           label: "The borrowed bathroom",
-          body: "“¿Me presta el baño?” is a very Colombian-feeling courtesy phrase in shops, homes and small offices. Nobody imagines the bathroom leaving the building. It frames bathroom use as a small favour granted by the person responsible for the place. A learner who understands the phrase avoids both confusion and overly literal jokes in a moment that should stay polite."
+          body: "“¿Me presta el baño?” is a very Colombian-feeling courtesy phrase in shops, homes and small offices. Nobody imagines the bathroom leaving the building. It frames bathroom use as a small favor granted by the person responsible for the place. A learner who understands the phrase avoids both confusion and overly literal jokes in a moment that should stay polite."
         }
       ],
       pitfalls: [
@@ -1646,4 +1646,4 @@ lessons.push(
   }
 );
 
-markSource(lessons, "data/lessons/64-extending-forms-and-favours.js");
+markSource(lessons, "data/lessons/64-extending-forms-and-favors.js");

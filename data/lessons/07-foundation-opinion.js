@@ -69,7 +69,7 @@ lessons.push(
           translation: "And this gray for the living room — what do you reckon?",
           pronunciation: "ee ES-te grees PA-ra la SA-la, KO-mo le pa-REH-se",
           literal: "And this gray for the living-room, how to-you it-seems?",
-          why: "“¿Cómo le parece?” asks for an opinion, not a fact — you are inviting judgement. Bogotanos use it constantly to consult the person they are hiring, which flatters the maestro's expertise and keeps the job collaborative."
+          why: "“¿Cómo le parece?” asks for an opinion, not a fact — you are inviting judgment. Bogotanos use it constantly to consult the person they are hiring, which flatters the maestro's expertise and keeps the job collaborative."
         },
         {
           speaker: "Don Fabio",
@@ -205,7 +205,7 @@ lessons.push(
             "A respectful title for a skilled manual tradesman — painter, builder, mechanic — regardless of any formal qualification.",
           literal: "master",
           useWhen:
-            "Addressing or referring to the person doing skilled work in your home. It honours their craft.",
+            "Addressing or referring to the person doing skilled work in your home. It honors their craft.",
           avoidWhen:
             "A professional you would name by their field — a doctor or lawyer is not “maestro”. A woman is usually “maestra” or named directly.",
           register: "polite service",
@@ -284,7 +284,7 @@ lessons.push(
           form: "¿Cómo le parece el gris?",
           register: "polite service",
           region: "Bogotá",
-          whenToUse: "Consulting the person's judgement on a choice, flattering their expertise."
+          whenToUse: "Consulting the person's judgment on a choice, flattering their expertise."
         },
         {
           form: "¿Le nace el sábado?",
@@ -341,7 +341,7 @@ lessons.push(
           prompt: "What does calling the painter “maestro” signal?",
           choices: [
             "That Alex has formally hired him on a written contract and now supervises his daily work on the site.",
-            "Respect for his skilled trade — it treats him as an expert whose judgement is genuinely worth consulting.",
+            "Respect for his skilled trade — it treats him as an expert whose judgment is genuinely worth consulting.",
             "That the painter also teaches at a school during the week and only takes on painting jobs at the weekend."
           ],
           answer: 1,
@@ -880,7 +880,7 @@ lessons.push(
         {
           label: "Quedar mal is a real social wound",
           body:
-            "“Quedarle mal a alguien” carries far more weight than the light English “to let down”. Not turning up, not paying when you said, not delivering the favour — these damage your name in a way Colombians take seriously. Reliability is a form of respect, and “no le quiero quedar mal” is said with genuine feeling. Treating a casual “I'll come back” lightly, and then not returning, can cost you a relationship you did not realize you had."
+            "“Quedarle mal a alguien” carries far more weight than the light English “to let down”. Not turning up, not paying when you said, not delivering the favor — these damage your name in a way Colombians take seriously. Reliability is a form of respect, and “no le quiero quedar mal” is said with genuine feeling. Treating a casual “I'll come back” lightly, and then not returning, can cost you a relationship you did not realize you had."
         },
         {
           label: "El Hueco runs on warmth and haggling",
@@ -890,7 +890,7 @@ lessons.push(
         {
           label: "Vos is the sound of Medellín",
           body:
-            "Paisa Spanish uses vos where other regions use tú: vos tenés, vos sabés, medíte, llevás. It is neither rude nor especially intimate — it is simply the everyday second person in Antioquia, heard from grandmothers and shopkeepers alike. Tú sounds a touch soft or outsiderish there, and usted keeps its distance. Picking up vos, even just recognising it, unlocks how Medellín really talks to you."
+            "Paisa Spanish uses vos where other regions use tú: vos tenés, vos sabés, medíte, llevás. It is neither rude nor especially intimate — it is simply the everyday second person in Antioquia, heard from grandmothers and shopkeepers alike. Tú sounds a touch soft or outsiderish there, and usted keeps its distance. Picking up vos, even just recognizing it, unlocks how Medellín really talks to you."
         }
       ],
       pitfalls: [

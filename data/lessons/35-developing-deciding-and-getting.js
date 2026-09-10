@@ -713,14 +713,14 @@ lessons.push(
           translation: "If there aren't any, we'll get it for you from the neighbor in five minutes.",
           pronunciation: "si no ai, se lo kon-se-GEE-mos kon el ve-SEE-no en SEEN-ko mi-NU-tos",
           literal: "If not there-is, to-you it we-get with the neighbor in five minutes.",
-          why: "“Se lo conseguimos” makes the favour explicit: we will obtain it for you. Conseguir often carries that hidden effort, contact or favour, which is why it is not just comprar."
+          why: "“Se lo conseguimos” makes the favor explicit: we will obtain it for you. Conseguir often carries that hidden effort, contact or favor, which is why it is not just comprar."
         }
       ],
       vocabulary: [
         {
           term: "conseguir",
           explanation:
-            "To get hold of, obtain or manage to find something, often with effort, availability or a favour in the background.",
+            "To get hold of, obtain or manage to find something, often with effort, availability or a favor in the background.",
           literal: "to obtain / get",
           useWhen:
             "Asking where to get something: “¿dónde consigo pilas?”, “conseguí boletas”.",
@@ -848,7 +848,7 @@ lessons.push(
         {
           label: "Getting is not just finding",
           body:
-            "English “find” tempts learners to overuse encontrar. But finding a shop is not the same as obtaining the charger. Conseguir points to the successful outcome: after the calls, questions and small favours, the thing is in your hand. That is why “no conseguí boletas” means the effort failed, even if you looked everywhere and found the ticket office. The verb measures success, not the search."
+            "English “find” tempts learners to overuse encontrar. But finding a shop is not the same as obtaining the charger. Conseguir points to the successful outcome: after the calls, questions and small favors, the thing is in your hand. That is why “no conseguí boletas” means the effort failed, even if you looked everywhere and found the ticket office. The verb measures success, not the search."
         },
         {
           label: "Pasto without costume",
@@ -856,7 +856,7 @@ lessons.push(
             "Pasto gives the errand a real place — a traveler leaving for Las Lajas, a small shop, a practical problem — without needing invented regional slang. Nariño has its own speech and culture, but this lesson stays with general Colombian Spanish because “¿dónde consigo…?” belongs everywhere. The local detail is the situation: time pressure before a trip in the south of the country."
         },
         {
-          label: "The hidden favour in conseguir",
+          label: "The hidden favor in conseguir",
           body:
             "When a shopkeeper says “se lo consigo”, she is offering more than information. She may call a neighbor, check a drawer, send a helper or promise it for later. That small networked effort is common in Colombian errands, where a problem can be solved through someone else's contact. Conseguir carries that social texture better than comprar, which only names the purchase."
         }

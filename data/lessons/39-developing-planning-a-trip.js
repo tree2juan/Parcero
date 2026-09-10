@@ -220,7 +220,7 @@ lessons.push(
         {
           label: "A hold is not always a reservation",
           body:
-            "When someone says “se lo aparto hasta las seis,” they may be doing you a favour, not creating a guaranteed booking. The deposit or confirmation is what changes the social promise into something firmer."
+            "When someone says “se lo aparto hasta las seis,” they may be doing you a favor, not creating a guaranteed booking. The deposit or confirmation is what changes the social promise into something firmer."
         },
         {
           label: "Puentes fill small towns",

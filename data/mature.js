@@ -77,7 +77,7 @@ const matureItems = [
   ["joder", "to mess with; damn", "Medium", "More Peninsular than Colombian, but understood everywhere.", "es", "Usually venting."],
   ["verga", "crude exclamation", "High", "Anatomical. Common on the coast, coarse everywhere.", "es", "Recognition only."],
   ["culicagado/a", "brat, snotty kid", "Medium", "Crude in origin, often said with real affection about children.", "es", "Context decides. Usually not hostile."],
-  ["care… (cara de …)", "insult construction", "Medium", "A productive pattern: “cara de” plus almost anything abusive. Recognising the frame matters more than any single example.", "es", "Recognize the construction and judge by the second word."],
+  ["care… (cara de …)", "insult construction", "Medium", "A productive pattern: “cara de” plus almost anything abusive. Recognizing the frame matters more than any single example.", "es", "Recognize the construction and judge by the second word."],
   ["hijo de …", "insult construction", "High", "Another productive frame. If someone begins it, the conversation is already over.", "es", "Leave the conversation."],
 
   /* Threats and coercion - the category where getting it wrong is dangerous. */
@@ -144,12 +144,12 @@ const matureSignals = [
   ["Diminutives turning sharp", "“Ay, qué bonito, papito.” Affectionate suffixes delivered flatly.", "Sarcasm. Colombian Spanish carries a lot of contempt through diminutives while keeping the words themselves sweet.", "es", "Do not answer the surface meaning. Ask plainly what the problem is."],
   ["Voice getting quieter, not louder", "The other person drops in volume and slows down.", "In Colombian conflict norms this often signals more danger than shouting, not less.", "es", "Take it more seriously than raised volume, not less. Create distance."],
   ["Third person about someone present", "“Aquí el señor dice que…” while looking at you.", "Deliberate exclusion. You have been made a topic rather than a participant.", "es", "Re-enter the conversation directly: “Perdón, prefiero que me lo diga a mí.”"],
-  ["Excessive politeness", "“Con todo el respeto que usted merece…” piled up before a point.", "Almost always precedes an attack. The politeness is armour, not warmth.", "es", "Listen past the framing to the actual claim."],
+  ["Excessive politeness", "“Con todo el respeto que usted merece…” piled up before a point.", "Almost always precedes an attack. The politeness is armor, not warmth.", "es", "Listen past the framing to the actual claim."],
   ["Laughing while insulting", "An insult delivered with a smile and “era chiste”.", "Deniability. The joke frame is there so the speaker can retreat if challenged.", "es", "“No me pareció chistoso” is a complete and sufficient answer."],
   ["Group silence after a remark", "A room that was talking goes quiet.", "Something crossed a line - possibly something you said, and possibly nobody will tell you.", "es", "Ask someone privately afterwards. Colombians will usually explain kindly in private."],
   ["Sarcastic agreement", "“Sure. Absolutely. Whatever you say.”", "Refusal, not agreement. English carries this almost entirely in intonation.", "en", "“That sounded like a no. Is it?”"],
   ["Passive-aggressive politeness", "“Per my last email.” “As I mentioned previously.”", "Documented frustration. Common in English-language workplaces.", "en", "Answer the substance and acknowledge the miss once."],
-  ["Going quiet and formal in writing", "Emails suddenly shorter, no greeting, no name.", "Displeasure signalled by withdrawal - the written form of the usted switch.", "en", "Ask directly, ideally on a call rather than in writing."],
+  ["Going quiet and formal in writing", "Emails suddenly shorter, no greeting, no name.", "Displeasure signaled by withdrawal - the written form of the usted switch.", "en", "Ask directly, ideally on a call rather than in writing."],
   ["Nicknames dropped", "Someone who called you Juanito now uses Juan, or nothing.", "Warmth withdrawn deliberately.", "en", "Worth asking about privately."],
   ["Talking over you repeatedly", "You are interrupted every time you begin.", "A dominance pattern, not an accident, once it has happened three times.", "en", "“I’d like to finish this thought.” Say it every time."],
   ["Compliment with a sting", "“Your English is so good for someone who just arrived.”", "A backhanded compliment that reclassifies you as an outsider.", "en", "You may let it pass or name it. Both are reasonable."],

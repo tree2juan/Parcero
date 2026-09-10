@@ -40,7 +40,7 @@ lessons.push(
       address: {
         form: "usted",
         who: "Alex uses usted with Doña Luz, and she uses usted back — the normal footing between two strangers on the street, especially with someone older.",
-        why: "In Bogotá usted is the safe default with anyone you don't know, and with an older person it is close to obligatory. It is respectful without being stiff, and it keeps a courteous distance while you ask a favour of a stranger's time.",
+        why: "In Bogotá usted is the safe default with anyone you don't know, and with an older person it is close to obligatory. It is respectful without being stiff, and it keeps a courteous distance while you ask a favor of a stranger's time.",
         ifYouSwitch:
           "Jumping to tú with an older stranger would sound presumptuous, as if Alex had decided they were already friends. Vos is not a Bogotá form and would just sound out of place here rather than familiar."
       },
@@ -67,7 +67,7 @@ lessons.push(
           translation: "Do you know how I get to the health center? I'm a bit lost.",
           pronunciation: "SA-be KO-mo YEH-go al SEN-tro de sa-LOOD? es-TOY oon PO-ko per-DEE-do",
           literal: "You-know(usted) how I-arrive to-the center of health? I-am a little lost.",
-          why: "Notice Alex is asking for information — a question — so the verb underneath is “preguntar”, even though the sentence itself leans on “saber”. If he wanted a thing or a favour he would switch to “pedir”. That split between asking and asking-for is the heart of this lesson."
+          why: "Notice Alex is asking for information — a question — so the verb underneath is “preguntar”, even though the sentence itself leans on “saber”. If he wanted a thing or a favor he would switch to “pedir”. That split between asking and asking-for is the heart of this lesson."
         },
         {
           speaker: "Doña Luz",
@@ -103,7 +103,7 @@ lessons.push(
           useWhen:
             "Any time you want facts, directions, a name or the time: “¿puedo preguntar…?”, “pregúntale la hora”, “le pregunté cuánto costaba”.",
           avoidWhen:
-            "When you want someone to give or do something for you — that is “pedir”, not “preguntar”. A favour is asked for, so it takes “pedir”.",
+            "When you want someone to give or do something for you — that is “pedir”, not “preguntar”. A favor is asked for, so it takes “pedir”.",
           register: "neutral",
           region: "Universal Spanish; the split with “pedir” is one of the first things a learner has to internalise.",
           related: ["pedir", "preguntar por", "cuestionar", "hacer una pregunta"],
@@ -115,10 +115,10 @@ lessons.push(
         {
           term: "pedir",
           explanation:
-            "To ask FOR — to request a thing, a favour or an action. This is the verb English buries inside “ask” whenever a request, and not a question, is meant.",
+            "To ask FOR — to request a thing, a favor or an action. This is the verb English buries inside “ask” whenever a request, and not a question, is meant.",
           literal: "to ask for / to request",
           useWhen:
-            "Ordering food, requesting a favour, asking for the bill: “pedir un café”, “pedir ayuda”, “te quiero pedir un favor”.",
+            "Ordering food, requesting a favor, asking for the bill: “pedir un café”, “pedir ayuda”, “te quiero pedir un favor”.",
           avoidWhen:
             "When you only want information; asking a question back is “preguntar”. If nothing changes hands, you are not pedir-ing.",
           register: "neutral",
@@ -171,7 +171,7 @@ lessons.push(
           useWhen:
             "Asking directions or facts politely: “¿me puede decir dónde queda…?”, “¿me puede decir la hora?”.",
           avoidWhen:
-            "For requesting objects or favours; a thing you want handed over stays “pedir”, not “decir”.",
+            "For requesting objects or favors; a thing you want handed over stays “pedir”, not “decir”.",
           register: "polite formal",
           region: "Universal Spanish; pairs naturally with the Bogotá usted.",
           related: ["¿me puede indicar?", "¿sabe usted…?", "¿me colabora con…?", "¿me ayuda?"],
@@ -216,7 +216,7 @@ lessons.push(
         }
       ],
       note:
-        "The trap: English “ask” is two Spanish verbs. “Preguntar” asks a question — you want information back. “Pedir” asks FOR something — you want a thing or a favour. A third sense, “preguntar por”, means to ask after a person or for a place. Get the pair wrong and “te quiero preguntar un favor” sounds off, because favours are always “pedir”. When in doubt: a question is preguntar, a request is pedir.",
+        "The trap: English “ask” is two Spanish verbs. “Preguntar” asks a question — you want information back. “Pedir” asks FOR something — you want a thing or a favor. A third sense, “preguntar por”, means to ask after a person or for a place. Get the pair wrong and “te quiero preguntar un favor” sounds off, because favors are always “pedir”. When in doubt: a question is preguntar, a request is pedir.",
       culture: [
         {
           label: "Ask permission before you ask",
@@ -224,9 +224,9 @@ lessons.push(
             "Colombians, and Bogotanos especially, tend to cushion a question with a little permission first: “¿le puedo preguntar?”, “¿me regala un segundo?”, “disculpe la molestia”. Firing a bare question at a stranger — “where's the bank?” — can feel abrupt, even a touch rude. The frame costs two seconds and instantly reads as respectful. Master one opener and you will sound far more local than a grammatically perfect but blunt question ever could."
         },
         {
-          label: "Preguntar, pedir and the favour trap",
+          label: "Preguntar, pedir and the favor trap",
           body:
-            "The single most common slip is using “preguntar” for a request. You do not “preguntar un favor” — a favour is something you ask FOR, so it is “pedir un favor”. “Preguntar” is only for questions, for information you want back. If a thing or an action changes hands, you reach for “pedir”. Keep that line clear and half of your “ask” mistakes simply vanish, because English never once made you choose between the two."
+            "The single most common slip is using “preguntar” for a request. You do not “preguntar un favor” — a favor is something you ask FOR, so it is “pedir un favor”. “Preguntar” is only for questions, for information you want back. If a thing or an action changes hands, you reach for “pedir”. Keep that line clear and half of your “ask” mistakes simply vanish, because English never once made you choose between the two."
         },
         {
           label: "“Preguntar por” means asking after you",
@@ -243,7 +243,7 @@ lessons.push(
         {
           mistake: "Te quiero preguntar un favor.",
           whyItFails:
-            "A favour is something you ask FOR, not a question you put, so Spanish uses “pedir”. “Preguntar un favor” collapses the very distinction Spanish keeps carefully separate, and it sounds distinctly learner-ish to any Colombian ear.",
+            "A favor is something you ask FOR, not a question you put, so Spanish uses “pedir”. “Preguntar un favor” collapses the very distinction Spanish keeps carefully separate, and it sounds distinctly learner-ish to any Colombian ear.",
           sayInstead: "Te quiero pedir un favor."
         },
         {
@@ -316,14 +316,14 @@ lessons.push(
           tests: "“preguntar por” as ask for / after a place"
         },
         {
-          prompt: "Alex wants to say “I want to ask you (tú) a favour.” Which sentence is correct?",
+          prompt: "Alex wants to say “I want to ask you (tú) a favor.” Which sentence is correct?",
           choices: [
             "Te quiero preguntar un favor.",
             "Te quiero pedir un favor.",
             "Te quiero preguntar por un favor."
           ],
           answer: 1,
-          tests: "favours take pedir, never preguntar"
+          tests: "favors take pedir, never preguntar"
         },
         {
           prompt: "What is the difference between “pregunté a Marta” and “pregunté por Marta”?",
@@ -694,7 +694,7 @@ lessons.push(
         who: "Caro and Alex use tú with each other — the natural footing between roommates and friends of the same age who live together.",
         why: "Between peers who share a home, tú is warm and unremarkable. Usted would suddenly sound stiff or sarcastic, as if Alex were mock-formal or annoyed, so tú keeps the everyday closeness intact.",
         ifYouSwitch:
-          "Switching to usted mid-favour would read as passive-aggressive, a little jab of distance. Vos is not a Bogotá default, so with Caro it would sound like Alex was putting on an accent that isn't his."
+          "Switching to usted mid-favor would read as passive-aggressive, a little jab of distance. Vos is not a Bogotá default, so with Caro it would sound like Alex was putting on an accent that isn't his."
       },
       dialogue: [
         {
@@ -1339,7 +1339,7 @@ lessons.push(
         what: "A short doorway exchange in which Alex asks to borrow a drill and ends up with an offer of hands-on help too.",
         when: "A Saturday afternoon, the classic time for small home jobs and for neighbors to be around and willing.",
         where: "Medellín, a friendly apartment block in a paisa neighborhood where vos is the default and toolboxes get shared.",
-        why: "Because a borrowed drill and a bit of help are how neighbors become allies, and because stating a need too bluntly can sour a first favour before it's even granted."
+        why: "Because a borrowed drill and a bit of help are how neighbors become allies, and because stating a need too bluntly can sour a first favor before it's even granted."
       },
       address: {
         form: "vos",
@@ -1352,10 +1352,10 @@ lessons.push(
         {
           speaker: "Alex",
           target: "¡Vecino, buenas! ¿Me colaborás con un favorcito? Es que necesito un taladro.",
-          translation: "Neighbor, hi! Can you help me out with a little favour? The thing is I need a drill.",
+          translation: "Neighbor, hi! Can you help me out with a little favor? The thing is I need a drill.",
           pronunciation: "beh-SEE-no, BWEH-nas. me ko-la-bo-RAS kon oon fa-vor-SEE-to? es ke ne-se-SEE-to oon ta-LA-dro",
-          literal: "Neighbor, good-ones! Me you-help(vos) with a little-favour? Is that I-need a drill.",
-          why: "Alex wraps his need in “¿me colaborás con un favorcito?” before landing “necesito”. A flat “necesito un taladro” can sound like a demand; Colombians cushion it with a favour frame and the diminutive “favorcito”. “Colaborar” is the local euphemism for helping out."
+          literal: "Neighbor, good-ones! Me you-help(vos) with a little-favor? Is that I-need a drill.",
+          why: "Alex wraps his need in “¿me colaborás con un favorcito?” before landing “necesito”. A flat “necesito un taladro” can sound like a demand; Colombians cushion it with a favor frame and the diminutive “favorcito”. “Colaborar” is the local euphemism for helping out."
         },
         {
           speaker: "Norbey",
@@ -1395,7 +1395,7 @@ lessons.push(
           translation: "Alright then! Hold on while I grab my things and I'll be up — that's what neighbors are for.",
           pronunciation: "LEES-to pwes. es-pe-RA ke KO-ho las KO-sas i ya SOO-bo, ke PA-ra E-so SO-mos los beh-SEE-nos",
           literal: "Ready well! Wait(vos) that I-grab the things and already I-go-up, that for that we-are the neighbors.",
-          why: "“Esperá” is the paisa vos imperative of esperar. “Para eso somos los vecinos” — that's what neighbors are for — frames the favour as ordinary and mutual, the spoken glue of a building where tools and cups of sugar circulate freely."
+          why: "“Esperá” is the paisa vos imperative of esperar. “Para eso somos los vecinos” — that's what neighbors are for — frames the favor as ordinary and mutual, the spoken glue of a building where tools and cups of sugar circulate freely."
         }
       ],
       vocabulary: [
@@ -1407,7 +1407,7 @@ lessons.push(
           useWhen:
             "Stating a genuine requirement: “necesito ayuda”, “necesito un taladro”, “¿qué necesitás?”.",
           avoidWhen:
-            "As a blunt demand to a person; cushion it with a favour frame or a diminutive so it doesn't come across as bossy.",
+            "As a blunt demand to a person; cushion it with a favor frame or a diminutive so it doesn't come across as bossy.",
           register: "neutral",
           region: "Universal Spanish; the softening habit is especially Colombian.",
           related: ["hacer falta", "requerir", "necesitar que", "ocupar"],
@@ -1439,7 +1439,7 @@ lessons.push(
             "The paisa vos form of the iconic Colombian “¿me regala…?” — a need or request dressed up as a small gift, though you'll usually pay for it or give it back.",
           literal: "will you gift me…? (vos)",
           useWhen:
-            "Asking for a small thing or favour warmly, Medellín-style: “¿me regalás un minuto?”, “¿me regalás el taladro?”.",
+            "Asking for a small thing or favor warmly, Medellín-style: “¿me regalás un minuto?”, “¿me regalás el taladro?”.",
           avoidWhen:
             "Outside Colombia, where “regalar” is taken literally and sounds like you are begging for freebies.",
           register: "friendly informal",
@@ -1470,8 +1470,8 @@ lessons.push(
         {
           term: "hacer(le) un favor",
           explanation:
-            "To do someone a favour. “¿Me hacés un favor?” is a warm, direct way to open a need without the bluntness of a bare “necesito”.",
-          literal: "to do (someone) a favour",
+            "To do someone a favor. “¿Me hacés un favor?” is a warm, direct way to open a need without the bluntness of a bare “necesito”.",
+          literal: "to do (someone) a favor",
           useWhen:
             "Opening a request warmly: “¿me hacés un favorcito?”, “hágame el favor”.",
           avoidWhen:
@@ -1481,7 +1481,7 @@ lessons.push(
           related: ["¿me colaborás?", "¿me regalás?", "¿me ayudás?", "hágame el favor"],
           example: {
             target: "¿Me hacés un favorcito?",
-            translation: "Could you do me a little favour?"
+            translation: "Could you do me a little favor?"
           }
         },
         {
@@ -1520,10 +1520,10 @@ lessons.push(
         }
       ],
       note:
-        "“Necesitar” is easy to conjugate and easy to overuse. A bare “necesito que me ayudes” aimed at a neighbor can land like an order, so Colombians soften need into a favour: “¿me colaborás?”, “¿me regalás…?”, “¿me hacés un favorcito?”. Two grammar notes travel with it: “necesitar que” takes the subjunctive, and to “borrow” you flip to “prestar” — you ask the other person to lend, because Spanish has no everyday verb for borrowing.",
+        "“Necesitar” is easy to conjugate and easy to overuse. A bare “necesito que me ayudes” aimed at a neighbor can land like an order, so Colombians soften need into a favor: “¿me colaborás?”, “¿me regalás…?”, “¿me hacés un favorcito?”. Two grammar notes travel with it: “necesitar que” takes the subjunctive, and to “borrow” you flip to “prestar” — you ask the other person to lend, because Spanish has no everyday verb for borrowing.",
       culture: [
         {
-          label: "Need, wrapped as a favour",
+          label: "Need, wrapped as a favor",
           body:
             "Colombians rarely fire a naked “necesito” at another person. A flat “necesito que me ayudes” can sound like an order barked across a counter, so the need gets dressed up: “¿me colaborás?”, “¿me regalás un momentico?”, “¿me hacés un favorcito?”. The requirement underneath is the same; the packaging is what makes it neighborly. Learners who state needs bluntly aren't rude on purpose, but they can come across that way. Softening here is not weakness — it is the ordinary social lubricant."
         },
@@ -1540,7 +1540,7 @@ lessons.push(
         {
           label: "“Para eso estamos los vecinos”",
           body:
-            "Neighborliness in Colombia is spoken aloud. Lend a drill or a cup of sugar and you'll hear “para eso estamos los vecinos” — that's what neighbors are for — or simply “para eso somos”. It frames the favour as ordinary, expected and mutual. Accepting help graciously matters as much as giving it; the right reply is warmth, not over-apology. In a paisa building this small economy of borrowed tools and returned pots is real social glue, and joining in marks you as part of the place."
+            "Neighborliness in Colombia is spoken aloud. Lend a drill or a cup of sugar and you'll hear “para eso estamos los vecinos” — that's what neighbors are for — or simply “para eso somos”. It frames the favor as ordinary, expected and mutual. Accepting help graciously matters as much as giving it; the right reply is warmth, not over-apology. In a paisa building this small economy of borrowed tools and returned pots is real social glue, and joining in marks you as part of the place."
         }
       ],
       pitfalls: [
@@ -1559,7 +1559,7 @@ lessons.push(
         {
           mistake: "Necesito que subás ya.",
           whyItFails:
-            "Grammatically fine, but a bare, command-like “necesito que subás ya” lands as bossy with a neighbor. Colombians cushion it into a favour; the problem here is register, not grammar.",
+            "Grammatically fine, but a bare, command-like “necesito que subás ya” lands as bossy with a neighbor. Colombians cushion it into a favor; the problem here is register, not grammar.",
           sayInstead: "¿Me colaborás subiendo un momentico?"
         },
         {
@@ -1612,12 +1612,12 @@ lessons.push(
         {
           prompt: "Why do Colombians often avoid a flat “necesito que me ayudes” with a neighbor?",
           choices: [
-            "Because a bare need can sound like an order, so they soften it into a favour: “¿me colaborás?”.",
+            "Because a bare need can sound like an order, so they soften it into a favor: “¿me colaborás?”.",
             "Because “necesitar” is considered rude in Colombia and has been quietly replaced everywhere by “colaborar”.",
             "Because neighbors only ever respond to usted, so the tú or vos form of “ayudar” would just be ignored."
           ],
           answer: 0,
-          tests: "softening a need into a favour"
+          tests: "softening a need into a favor"
         },
         {
           prompt: "Which sentence correctly says “I need you (vos) to help me”?",
@@ -1672,11 +1672,11 @@ lessons.push(
       dialogue: [
         {
           speaker: "Alejandra",
-          target: "Hi Mike! Could you do me a small favour? I need a drill.",
+          target: "Hi Mike! Could you do me a small favor? I need a drill.",
           translation: "¡Hola, Mike! ¿Me hacés un favorcito? Necesito un taladro.",
           pronunciation: "jai maik! kud iú du mi a smol FÉI-vor? ai nid a dril",
           literal: "¡Hola, Mike! ¿Podrías hacerme un pequeño favor? Necesito un taladro.",
-          why: "“I need a drill” es directo, pero “Could you do me a small favour?” lo suaviza antes. En inglés la cortesía no cambia el verbo “need”; se apoya en el marco “could you…?”."
+          why: "“I need a drill” es directo, pero “Could you do me a small favor?” lo suaviza antes. En inglés la cortesía no cambia el verbo “need”; se apoya en el marco “could you…?”."
         },
         {
           speaker: "Mike",
@@ -1806,19 +1806,19 @@ lessons.push(
           }
         },
         {
-          term: "do me a favour",
+          term: "do me a favor",
           explanation:
             "Hacer(me) un favor. El abridor cálido para una petición, igual que “¿me hacés un favorcito?”.",
           literal: "hacerme un favor",
           useWhen:
-            "Para abrir un pedido: “Could you do me a favour?”.",
+            "Para abrir un pedido: “Could you do me a favor?”.",
           avoidWhen:
             "En peticiones muy formales, donde va un “Would you be so kind as to…?”.",
           register: "friendly informal",
           region: "Inglés universal.",
-          related: ["could you help me out", "give me a hand", "would you mind", "a quick favour"],
+          related: ["could you help me out", "give me a hand", "would you mind", "a quick favor"],
           example: {
-            target: "Could you do me a small favour?",
+            target: "Could you do me a small favor?",
             translation: "¿Me hacés un favorcito?"
           }
         },
@@ -1861,7 +1861,7 @@ lessons.push(
         {
           label: "Pedir prestado entre vecinos",
           body:
-            "La economía de tazas de azúcar y taladros prestados existe igual en Estados Unidos, sólo que con otras palabras. Se abre con “Could you do me a favour?” o “Do you happen to have…?”, se pide con “Could I borrow…?”, y se cierra con “That's what neighbors are for” o “Anytime”. Devolver a tiempo y con un “thanks so much for lending me this” mantiene la buena vecindad. La calidez es la misma; lo que cambia son las fórmulas fijas, y aprenderte tres o cuatro te integra rápido."
+            "La economía de tazas de azúcar y taladros prestados existe igual en Estados Unidos, sólo que con otras palabras. Se abre con “Could you do me a favor?” o “Do you happen to have…?”, se pide con “Could I borrow…?”, y se cierra con “That's what neighbors are for” o “Anytime”. Devolver a tiempo y con un “thanks so much for lending me this” mantiene la buena vecindad. La calidez es la misma; lo que cambia son las fórmulas fijas, y aprenderte tres o cuatro te integra rápido."
         }
       ],
       pitfalls: [

@@ -1482,7 +1482,7 @@ lessons.push(
         }
       ],
       note:
-        "English “become” is one door; Spanish has several. Convertirse en is a real transformation into a new thing. Ponerse is a passing state: se puso rojo. Hacerse suggests effort or chosen identity: se hizo abogado. Volverse is gradual and often involuntary: se volvió callado. Llegar a ser is an achievement reached over time. This map matters more than memorising one translation.",
+        "English “become” is one door; Spanish has several. Convertirse en is a real transformation into a new thing. Ponerse is a passing state: se puso rojo. Hacerse suggests effort or chosen identity: se hizo abogado. Volverse is gradual and often involuntary: se volvió callado. Llegar a ser is an achievement reached over time. This map matters more than memorizing one translation.",
       culture: [
         {
           label: "A building can change social role",

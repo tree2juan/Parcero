@@ -651,10 +651,10 @@ lessons.push(
         {
           speaker: "Alex",
           target: "Buenas. ¿Me hace el favor y me trae la carta? Todavía no sé qué pedir.",
-          translation: "Hello. Could you do me the favour of bringing the menu? I still don't know what to order.",
+          translation: "Hello. Could you do me the favor of bringing the menu? I still don't know what to order.",
           pronunciation: "BWEH-nas. me A-se el fa-BOR ee me TRAE la KAR-ta? to-da-BEE-a no se ke pe-DEER",
-          literal: "Good. To-me you-do the favour and to-me you-bring the menu? Still not I-know what to-order.",
-          why: "“¿Me hace el favor y me trae…?” is the very Colombian double-softener: rather than a bare command, you wrap the request in “do me the favour and…”. It is warmer and more polite than a plain “tráigame”, and pairs naturally with usted."
+          literal: "Good. To-me you-do the favor and to-me you-bring the menu? Still not I-know what to-order.",
+          why: "“¿Me hace el favor y me trae…?” is the very Colombian double-softener: rather than a bare command, you wrap the request in “do me the favor and…”. It is warmer and more polite than a plain “tráigame”, and pairs naturally with usted."
         },
         {
           speaker: "Mesero",
@@ -720,8 +720,8 @@ lessons.push(
         },
         {
           term: "¿me hace el favor y...?",
-          explanation: "A double-wrapped politeness: literally “will you do me the favour and…”, laid in front of the actual request. It is unmistakably Colombian and turns even a simple ask into something gracious.",
-          literal: "will you do me the favour and...?",
+          explanation: "A double-wrapped politeness: literally “will you do me the favor and…”, laid in front of the actual request. It is unmistakably Colombian and turns even a simple ask into something gracious.",
+          literal: "will you do me the favor and...?",
           useWhen: "Softening a request as much as you politely can: “¿me hace el favor y me trae la cuenta?”.",
           avoidWhen: "Among close friends, where it can sound overly ceremonious; a plain “¿me traes…?” fits better there.",
           register: "polite formal",
@@ -729,7 +729,7 @@ lessons.push(
           related: ["¿me haría el favor de...?", "¿sería tan amable de...?", "por favor", "¿me colabora con...?"],
           example: {
             target: "¿Me hace el favor y me trae servilletas?",
-            translation: "Could you do me the favour of bringing napkins?"
+            translation: "Could you do me the favor of bringing napkins?"
           }
         },
         {

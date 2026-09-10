@@ -123,7 +123,7 @@ lessons.push(
           explanation: "A Bogotá and Andean politeness formula. It literally asks “will you gift me…?”, but it softly requests something small — a password, the bill, a napkin — with no idea of an actual gift.",
           literal: "to-me you-gift…?",
           useWhen: "Asking a server or shopkeeper for something minor you expect for free: “¿me regala la clave del wifi?” or “¿me regala la cuenta?”.",
-          avoidWhen: "You are asking for something costly or a real favour; “regalar” there sounds like you want it handed over for nothing.",
+          avoidWhen: "You are asking for something costly or a real favor; “regalar” there sounds like you want it handed over for nothing.",
           register: "polite service",
           region: "Strong in Bogotá and the Andean interior; heard as charmingly odd on the Caribbean coast.",
           related: ["¿me da…?", "¿me pasa…?", "¿me colabora con…?", "¿me hace el favor de…?"],
@@ -165,7 +165,7 @@ lessons.push(
         {
           term: "utilizar",
           explanation: "The higher-register twin of “usar.” Identical in meaning but heavier; it suits writing, instructions and formal speech, and sounds stiff over a café counter.",
-          literal: "to utilise",
+          literal: "to utilize",
           useWhen: "Formal or written contexts — a manual, an official form, a presentation: “utilice el formulario adjunto.”",
           avoidWhen: "Casual conversation, where it sounds bookish; plain “usar” is warmer and quicker on the tongue.",
           register: "polite formal",
@@ -269,7 +269,7 @@ lessons.push(
         {
           prompt: "Alex needs to type the PIN at the card reader. Which verb is idiomatic?",
           choices: [
-            "“Usar la clave,” since the PIN is a tool he is using to authorise the payment.",
+            "“Usar la clave,” since the PIN is a tool he is using to authorize the payment.",
             "“Regalar la clave,” the same soft verb used to ask the barista for the wifi.",
             "“Meter la clave,” the fixed everyday verb for entering a PIN or password."
           ],
@@ -731,7 +731,7 @@ lessons.push(
       culture: [
         {
           label: "The Medellín vos",
-          body: "In Medellín and across Antioquia, the everyday “you” is neither tú nor usted but vos: “vos sabés,” “vos tenés,” “¿vos qué hacés?” It is warm, not rough, and paisas use it with friends, family and, often, customers. Crucially, it is not the vos of Argentina — the verb endings differ, and so does the music of it. A newcomer need not adopt it, but recognising it is essential, because in Medellín you will hear it constantly, in shops and banks alike."
+          body: "In Medellín and across Antioquia, the everyday “you” is neither tú nor usted but vos: “vos sabés,” “vos tenés,” “¿vos qué hacés?” It is warm, not rough, and paisas use it with friends, family and, often, customers. Crucially, it is not the vos of Argentina — the verb endings differ, and so does the music of it. A newcomer need not adopt it, but recognizing it is essential, because in Medellín you will hear it constantly, in shops and banks alike."
         },
         {
           label: "“Abrir una cuenta,” a welded phrase",
@@ -836,7 +836,7 @@ lessons.push(
             "The ustedes form, addressing Alex and a group of people standing with him at once."
           ],
           answer: 1,
-          tests: "recognising Medellín voseo (tenés)"
+          tests: "recognizing Medellín voseo (tenés)"
         },
         {
           prompt: "Óscar says “te falta bajar la app.” What does “bajar” mean here?",
