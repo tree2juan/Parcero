@@ -802,9 +802,42 @@ footer {
 .wb-key ol { padding-left: 1.2rem; }
 .wb-key-block { margin: .75rem 0; }
 
+/* The course guide: front matter, printed once and kept in the binder. */
+.wb-guide .wb-head h1 { margin-bottom: .2rem; }
+.wb-guide .wb-section { max-width: 68ch; }
+.wb-guide .wb-table { max-width: none; }
+.wb-intro { color: var(--muted); margin: .35rem 0 .9rem; max-width: 62ch; }
+.wb-cycle .wb-step { break-inside: avoid; }
+.wb-steps { list-style: none; padding-left: 0; margin: 0; }
+.wb-step { margin: 0 0 1rem; }
+.wb-step p { margin: .15rem 0; }
+.wb-step-head { display: flex; align-items: baseline; gap: .4rem; flex-wrap: wrap; }
+.wb-step-time { margin-left: auto; color: var(--muted); font-size: .85rem; white-space: nowrap; }
+.wb-map th[scope="row"] { white-space: nowrap; width: 7rem; }
+.wb-map .wb-num { white-space: nowrap; width: 6.5rem; color: var(--muted); }
+.wb-chip { display: inline-block; background: var(--mist); border-radius: 999px; padding: .1rem .55rem; margin: .1rem 0; font-size: .85rem; }
+.wb-code { display: inline-block; font-weight: 700; font-family: ui-monospace, "Cascadia Mono", Menlo, monospace; }
+.wb-codes th[scope="row"] { text-align: center; width: 4rem; }
+.wb-note { display: block; color: var(--muted); margin: .15rem 0; }
+.wb-fix { display: block; margin-top: .3rem; font-size: .9rem; }
+.wb-fix-wrong { display: block; color: var(--clay-ink); text-decoration: line-through; }
+.wb-fix-right { display: block; font-weight: 600; }
+.wb-sounds { list-style: none; padding-left: 0; margin: 0; }
+.wb-sound { margin: 0 0 1rem; padding-bottom: .75rem; border-bottom: 1px solid var(--line); }
+.wb-sound:last-child { border-bottom: 0; }
+.wb-sound p { margin: .15rem 0; }
+.wb-sound-head { display: flex; align-items: baseline; gap: .5rem; flex-wrap: wrap; }
+.wb-letters { font-family: ui-monospace, "Cascadia Mono", Menlo, monospace; background: var(--mist); border-radius: var(--radius); padding: .1rem .45rem; }
+.wb-examples { color: var(--muted); font-size: .9rem; }
+.wb-examples .wb-label { text-transform: uppercase; letter-spacing: .05em; font-size: .75rem; margin-right: .35rem; }
+.wb-tracker .wb-num { text-align: center; width: 4.5rem; }
+.wb-evidence td:first-child { width: 8rem; }
+
 @media (max-width: 680px) {
   .wb-match { grid-template-columns: 1fr; }
   .wb-setting-row { grid-template-columns: 1fr; }
+  .wb-step-time { margin-left: 0; }
+  .wb-map th[scope="row"] { width: auto; }
 }
 
 /*

@@ -55,6 +55,36 @@
     "workbook.sayInstead": "Say instead",
     "workbook.empty": "Pick a module above and the workbook will build itself here.",
     "workbook.lessonCount": "{count} lessons in this module",
+    "nav.workbook": "Workbook",
+    "guide.option": "Course guide (print once)",
+    "guide.title": "How to use this workbook",
+    "guide.subtitle": "Read this once, print it once, and keep it at the front of the binder.",
+    "guide.section.cycle": "A week of study",
+    "guide.section.map": "The study map",
+    "guide.section.correction": "How to mark your own work",
+    "guide.section.sounds": "The sounds of Colombian Spanish",
+    "guide.section.tracker": "Progress tracker",
+    "guide.section.evidence": "Evidence log",
+    "guide.cycleIntro": "One module takes about {minutes} minutes, split six ways. Do them on different days — the gap between them is doing as much work as the exercises are.",
+    "guide.minutes": "{count} min",
+    "guide.mapIntro": "{modules} modules, {lessons} lessons and {vocabulary} words and phrases. At {weekly} minutes a week that is {weeks} weeks. Go slower if you need to — the order matters far more than the pace.",
+    "guide.week": "Week {n}",
+    "guide.lessonsShort": "{count} lessons",
+    "guide.correctionIntro": "Mark in the margin with these, not with ticks and crosses. Naming the kind of mistake is what stops you making it twice.",
+    "guide.code": "Mark",
+    "guide.means": "What it means",
+    "guide.soundsIntro": "You are not aiming to lose your accent. You are aiming to be understood the first time, and these are the places where that is decided.",
+    "guide.asIn": "For example",
+    "guide.trackerIntro": "Fill this in as you go. The score is out of the exercises in that module; the date is the day you finished it, not the day you started.",
+    "guide.module": "Module",
+    "guide.lessonsCol": "Lessons",
+    "guide.words": "Words",
+    "guide.doneOn": "Finished",
+    "guide.score": "Score",
+    "guide.again": "Redo",
+    "guide.evidenceIntro": "A checked box is a claim. This is where you write the proof: what you actually said or wrote in the language, to whom, and what happened. Ten lines is a term's worth.",
+    "guide.date": "Date",
+    "guide.whatIDid": "What I did in Spanish, and how it went",
     "workbook.showAnswers": "Show answer key",
     "workbook.hideAnswers": "Hide answer key",
     "workbook.section.overview": "Before you start",
@@ -362,6 +392,158 @@
     </div>`;
   }
 
+  /* --- the course guide -------------------------------------------------- */
+
+  /*
+   * The front matter. Printed once and kept at the front of the binder, which
+   * is why it is a separate choice in the picker rather than five pages
+   * stapled to the front of all seventy-five modules.
+   */
+
+  const GUIDE_ID = "__guide__";
+
+  function cycleSection(guide) {
+    const steps = guide.cycle.map((step, index) => `<li class="wb-step">
+      <p class="wb-step-head">
+        <span class="wb-activity-n" aria-hidden="true">${index + 1}</span>
+        <strong>${esc(step.title)}</strong>
+        <span class="wb-step-time">${esc(t("guide.minutes", { count: step.minutes }))}</span>
+      </p>
+      <p>${esc(step.text)}</p>
+    </li>`).join("");
+    return `<section class="wb-section wb-cycle">
+      <h3>${esc(t("guide.section.cycle"))}</h3>
+      <p class="wb-intro">${esc(t("guide.cycleIntro", { minutes: guide.pace.perModule }))}</p>
+      <ol class="wb-steps">${steps}</ol>
+    </section>`;
+  }
+
+  function mapSection(guide) {
+    const weeks = guide.map.map((week) => `<tr>
+      <th scope="row">${esc(t("guide.week", { n: week.week }))}</th>
+      <td>${week.modules.map((m) => `<span class="wb-chip">${esc(m.title)}</span>`).join(" ")}</td>
+      <td class="wb-num">${esc(t("guide.lessonsShort", { count: week.lessonCount }))}</td>
+    </tr>`).join("");
+    return `<section class="wb-section wb-break">
+      <h3>${esc(t("guide.section.map"))}</h3>
+      <p class="wb-intro">${esc(t("guide.mapIntro", {
+        modules: guide.totals.modules,
+        lessons: guide.totals.lessons,
+        vocabulary: guide.totals.vocabulary,
+        weekly: guide.pace.weeklyMinutes,
+        weeks: guide.pace.weeks
+      }))}</p>
+      <table class="wb-table wb-map"><tbody>${weeks}</tbody></table>
+    </section>`;
+  }
+
+  function correctionSection(guide) {
+    const rows = guide.correction.map((mark) => `<tr>
+      <th scope="row"><span class="wb-code">${esc(mark.code)}</span></th>
+      <td>
+        <strong>${esc(mark.name)}</strong>
+        <span class="wb-note">${esc(mark.note)}</span>
+        <span class="wb-fix">
+          <span class="wb-fix-wrong" lang="${lang()}">${esc(mark.wrong)}</span>
+          <span class="wb-fix-right" lang="${lang()}">${esc(mark.right)}</span>
+        </span>
+      </td>
+    </tr>`).join("");
+    return `<section class="wb-section wb-break">
+      <h3>${esc(t("guide.section.correction"))}</h3>
+      <p class="wb-intro">${esc(t("guide.correctionIntro"))}</p>
+      <table class="wb-table wb-codes">
+        <thead><tr><th scope="col">${esc(t("guide.code"))}</th><th scope="col">${esc(t("guide.means"))}</th></tr></thead>
+        <tbody>${rows}</tbody>
+      </table>
+    </section>`;
+  }
+
+  function soundsSection(guide) {
+    const rows = guide.sounds.map((sound) => `<li class="wb-sound">
+      <p class="wb-sound-head">
+        <span class="wb-letters" lang="${lang()}">${esc(sound.letters)}</span>
+        <strong>${esc(sound.name)}</strong>
+      </p>
+      <p>${esc(sound.note)}</p>
+      <p class="wb-examples"><span class="wb-label">${esc(t("guide.asIn"))}</span>
+        ${sound.examples.map((word) => `<span lang="${lang()}">${esc(word)}</span>`).join(" · ")}</p>
+    </li>`).join("");
+    return `<section class="wb-section wb-break">
+      <h3>${esc(t("guide.section.sounds"))}</h3>
+      <p class="wb-intro">${esc(t("guide.soundsIntro"))}</p>
+      <ul class="wb-sounds">${rows}</ul>
+    </section>`;
+  }
+
+  function trackerSection(guide) {
+    const rows = guide.tracker.map((entry) => `<tr>
+      <td>${esc(entry.title)}</td>
+      <td class="wb-num">${esc(entry.lessonCount)}</td>
+      <td class="wb-num">${esc(entry.vocabCount)}</td>
+      <td>${writingLine(12)}</td>
+      <td>${writingLine(12)}</td>
+      <td class="wb-num"><span class="wb-box" aria-hidden="true"></span></td>
+    </tr>`).join("");
+    return `<section class="wb-section wb-break">
+      <h3>${esc(t("guide.section.tracker"))}</h3>
+      <p class="wb-intro">${esc(t("guide.trackerIntro"))}</p>
+      <table class="wb-table wb-tracker">
+        <thead><tr>
+          <th scope="col">${esc(t("guide.module"))}</th>
+          <th scope="col">${esc(t("guide.lessonsCol"))}</th>
+          <th scope="col">${esc(t("guide.words"))}</th>
+          <th scope="col">${esc(t("guide.doneOn"))}</th>
+          <th scope="col">${esc(t("guide.score"))}</th>
+          <th scope="col">${esc(t("guide.again"))}</th>
+        </tr></thead>
+        <tbody>${rows}</tbody>
+      </table>
+    </section>`;
+  }
+
+  /*
+   * Ten blank rows. The count is fixed because this is a page to fill in, not
+   * a report: sizing it to the data would give a beginner one line and somebody
+   * halfway through the course a hundred.
+   */
+  function evidenceSection() {
+    const rows = [];
+    for (let i = 0; i < 10; i += 1) {
+      rows.push(`<tr>
+        <td>${writingLine(12)}</td>
+        <td>${writingLine(60)}</td>
+      </tr>`);
+    }
+    return `<section class="wb-section wb-break">
+      <h3>${esc(t("guide.section.evidence"))}</h3>
+      <p class="wb-intro">${esc(t("guide.evidenceIntro"))}</p>
+      <table class="wb-table wb-evidence">
+        <thead><tr>
+          <th scope="col">${esc(t("guide.date"))}</th>
+          <th scope="col">${esc(t("guide.whatIDid"))}</th>
+        </tr></thead>
+        <tbody>${rows.join("")}</tbody>
+      </table>
+    </section>`;
+  }
+
+  function renderGuide(guide) {
+    return `<div class="wb-sheet wb-guide">
+      <header class="wb-head">
+        <p class="eyebrow">${esc(t("nav.workbook"))}</p>
+        <h1 lang="${home()}">${esc(t("guide.title"))}</h1>
+        <p class="wb-meta">${esc(t("guide.subtitle"))}</p>
+      </header>
+      ${cycleSection(guide)}
+      ${mapSection(guide)}
+      ${correctionSection(guide)}
+      ${soundsSection(guide)}
+      ${trackerSection(guide)}
+      ${evidenceSection()}
+    </div>`;
+  }
+
   /* --- wiring ------------------------------------------------------------ */
 
   function modules() {
@@ -395,10 +577,13 @@
     const picker = $("#workbook-module");
     if (!picker) return;
     const chosen = picker.value;
-    picker.innerHTML = modules()
+    /* The guide is not a module and is not in the module data. It is offered
+       first because it is the thing to read before any of them. */
+    const guideOption = `<option value="${GUIDE_ID}">${esc(t("guide.option"))}</option>`;
+    picker.innerHTML = guideOption + modules()
       .map((m) => `<option value="${esc(m.id)}">${esc(m.title[uiLang()] || m.title.en)}</option>`)
       .join("");
-    if (chosen && modules().some((m) => m.id === chosen)) picker.value = chosen;
+    if (chosen === GUIDE_ID || (chosen && modules().some((m) => m.id === chosen))) picker.value = chosen;
   }
 
   function keyVisible() {
@@ -406,25 +591,58 @@
     return Boolean(key) && !key.hidden;
   }
 
+  function guideChosen() {
+    const picker = $("#workbook-module");
+    return Boolean(picker) && picker.value === GUIDE_ID;
+  }
+
+  /*
+   * The answer-key button follows the panel rather than the other way round.
+   * Rebuilding replaces the key element, and the guide has no key at all, so
+   * the button's label, state and very presence are re-derived each time.
+   */
+  function syncToggle() {
+    const toggle = $("#workbook-answers");
+    if (!toggle) return;
+    const key = $("#workbook-key");
+    toggle.hidden = !key;
+    if (!key) return;
+    toggle.textContent = t(keyVisible() ? "workbook.hideAnswers" : "workbook.showAnswers");
+    toggle.setAttribute("aria-expanded", String(keyVisible()));
+  }
+
   function renderPanel(keepKeyOpen) {
     const host = $("#workbook-output");
     if (!host) return;
-    const module = currentModule();
     const api = window.ParceroWorkbook;
-    if (!module || !api) {
+    const empty = () => {
       host.innerHTML = `<p class="assistive-text">${esc(t("workbook.empty"))}</p>`;
+      syncToggle();
+    };
+    if (!api) return empty();
+
+    if (guideChosen()) {
+      const guide = api.buildGuide({
+        modules: modules(),
+        lessons: allLessons(),
+        direction: direction()
+      });
+      if (!guide) return empty();
+      host.innerHTML = renderGuide(guide);
+      syncToggle();
+      localStorage.setItem("parcero-workbook-module", GUIDE_ID);
       return;
     }
+
+    const module = currentModule();
+    if (!module) return empty();
     const group = api.lessonsFor(module, allLessons());
     const book = api.build({ module, lessons: group, direction: direction() });
+    if (!book) return empty();
     host.innerHTML = renderWorkbook(book);
     const key = $("#workbook-key");
     if (key && keepKeyOpen) key.hidden = false;
-    const toggle = $("#workbook-answers");
-    if (toggle) {
-      toggle.textContent = t(keyVisible() ? "workbook.hideAnswers" : "workbook.showAnswers");
-      toggle.setAttribute("aria-expanded", String(keyVisible()));
-    }
+    syncToggle();
     localStorage.setItem("parcero-workbook-module", module.id);
   }
 
@@ -433,7 +651,8 @@
     renderPicker();
     const saved = localStorage.getItem("parcero-workbook-module");
     const picker = $("#workbook-module");
-    if (saved && modules().some((m) => m.id === saved)) picker.value = saved;
+    const known = saved === GUIDE_ID || modules().some((m) => m.id === saved);
+    if (saved && known) picker.value = saved;
     renderPanel(false);
 
     picker.addEventListener("change", () => renderPanel(false));
@@ -468,5 +687,5 @@
     start();
   }
 
-  window.ParceroWorkbookUI = { renderWorkbook, EN };
+  window.ParceroWorkbookUI = { renderWorkbook, renderGuide, EN, GUIDE_ID };
 })();

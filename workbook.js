@@ -393,9 +393,181 @@
     return (lessons || []).filter((lesson) => lesson.sourceFile === module.block);
   }
 
+  /* --- the course guide -------------------------------------------------- */
+
+  /*
+   * Front matter: the things a learner needs once, not once per module.
+   *
+   * Two of the three pieces are authored (data/study-guide.js) and simply
+   * resolved to the reader's language here. The third — the study map — is
+   * computed, because a hand-written schedule is the exact kind of list this
+   * project keeps getting wrong: add a lesson and it silently becomes a lie.
+   */
+
+  function guideContent() {
+    if (typeof STUDY_GUIDE !== "undefined") return STUDY_GUIDE;
+    if (typeof global.STUDY_GUIDE !== "undefined") return global.STUDY_GUIDE;
+    return null;
+  }
+
+  /*
+   * How long the course is, in weeks, worked out rather than claimed.
+   *
+   * The practice cycle already commits to a number of minutes for each of its
+   * steps, so the cost of one module is the sum of those steps and the length
+   * of the course is that cost times the number of modules, divided by
+   * whatever the learner can give it in a week. Stating a round twelve weeks
+   * and letting the arithmetic disagree would teach the learner to distrust
+   * the rest of the book.
+   */
+  function paceOf(moduleCount, weeklyMinutes, cycle) {
+    const perModule = (cycle || []).reduce((total, step) => total + (Number(step.minutes) || 0), 0);
+    const budget = Number(weeklyMinutes) > 0 ? Number(weeklyMinutes) : 300;
+    const totalMinutes = perModule * moduleCount;
+    const weeks = perModule > 0 ? Math.max(1, Math.ceil(totalMinutes / budget)) : Math.max(1, moduleCount);
+    return { perModule, weeklyMinutes: budget, totalMinutes, weeks: Math.min(weeks, moduleCount || 1) };
+  }
+
+  /*
+   * Pack the modules into weeks, in order.
+   *
+   * Order is not negotiable — module 40 assumes module 12 — so this cannot
+   * sort by size. It walks the modules once and closes a week when adding the
+   * next module would land further from the running target than stopping
+   * short, which balances the weeks by lesson count without moving anything.
+   *
+   * The one hard guarantee is that no week comes out empty: a printed
+   * schedule with a blank week in it reads as a bug, so each week reserves one
+   * module for every week still to come.
+   */
+  function packWeeks(entries, weeks) {
+    const count = entries.length;
+    const total = entries.reduce((sum, entry) => sum + entry.lessonCount, 0);
+    const weekCount = Math.max(1, Math.min(weeks, count || 1));
+    const out = [];
+    let index = 0;
+    let used = 0;
+
+    for (let week = 0; week < weekCount; week += 1) {
+      const weeksLeft = weekCount - week;
+      const target = (total - used) / weeksLeft;
+      const bucket = [];
+      let size = 0;
+
+      while (index < count) {
+        /* Taking this module is only safe if every later week can still have
+           one. Entering the week with at least `weeksLeft` modules in hand
+           makes the first take always safe, so this never starves a week. */
+        const enoughLeftAfter = count - index - 1 >= weeksLeft - 1;
+        if (bucket.length && !enoughLeftAfter) break;
+
+        const next = entries[index].lessonCount;
+        const overshootsWorse = Math.abs(size + next - target) > Math.abs(size - target);
+        if (bucket.length && size + next > target && overshootsWorse) break;
+
+        bucket.push(entries[index]);
+        size += next;
+        used += next;
+        index += 1;
+      }
+      out.push({ week: week + 1, modules: bucket, lessonCount: size });
+    }
+
+    /* Defensive: the loop above consumes everything, but a future change to
+       the stopping rule should not silently drop a module off the schedule. */
+    while (index < count) {
+      const last = out[out.length - 1];
+      last.modules.push(entries[index]);
+      last.lessonCount += entries[index].lessonCount;
+      index += 1;
+    }
+
+    return out;
+  }
+
+  function moduleEntry(module, lessons, direction, uiLang) {
+    const group = lessonsFor(module, lessons);
+    /* Vocabulary is per direction — a lesson carries a Spanish list and an
+       English one — so the count has to be read from the side being taught,
+       not from the lesson root, where there is nothing to read. */
+    const vocab = group.reduce((sum, lesson) => sum + ((lesson[direction] || {}).vocabulary || []).length, 0);
+    return {
+      id: module.id,
+      title: module.title[uiLang] || module.title.en,
+      lessonCount: group.length,
+      vocabCount: vocab,
+      tier: unique(group.map(tierOf)).join(" / ")
+    };
+  }
+
+  function buildGuide(options) {
+    const opts = options || {};
+    const direction = opts.direction === "en" ? "en" : "es";
+    const uiLang = direction === "es" ? "en" : "es";
+    const content = guideContent();
+    if (!content) return null;
+
+    /* Only modules that actually have lessons behind them reach the map. An
+       empty module is a data problem, and putting it on a schedule would ask
+       the learner to spend a week on nothing. */
+    const entries = (opts.modules || [])
+      .map((module) => moduleEntry(module, opts.lessons || [], direction, uiLang))
+      .filter((entry) => entry.lessonCount > 0);
+    if (!entries.length) return null;
+
+    const cycle = (content.cycle || []).map((step) => ({
+      id: step.id,
+      minutes: step.minutes,
+      title: (step[uiLang] || step.en || {}).title,
+      text: (step[uiLang] || step.en || {}).text
+    }));
+
+    const correction = (content.correction || []).map((mark) => {
+      const named = mark[uiLang] || mark.en || {};
+      const example = (mark.example || {})[direction] || {};
+      return {
+        code: mark.code,
+        name: named.name,
+        note: named.note,
+        wrong: example.wrong,
+        right: example.right
+      };
+    });
+
+    /* The sound guide describes the language being learned, so it is keyed by
+       direction rather than by the reader's language. */
+    const sounds = ((content.sounds || {})[direction] || []).map((sound) => ({
+      letters: sound.letters,
+      name: sound.name,
+      note: sound.note,
+      examples: (sound.examples || []).slice()
+    }));
+
+    const pace = paceOf(entries.length, opts.weeklyMinutes, content.cycle);
+
+    return {
+      direction,
+      uiLang,
+      pace,
+      cycle,
+      correction,
+      sounds,
+      map: packWeeks(entries, pace.weeks),
+      tracker: entries,
+      totals: {
+        modules: entries.length,
+        lessons: entries.reduce((sum, entry) => sum + entry.lessonCount, 0),
+        vocabulary: entries.reduce((sum, entry) => sum + entry.vocabCount, 0)
+      }
+    };
+  }
+
   global.ParceroWorkbook = {
     build,
+    buildGuide,
     lessonsFor,
+    packWeeks,
+    paceOf,
     seedFrom,
     rngFrom,
     shuffled,

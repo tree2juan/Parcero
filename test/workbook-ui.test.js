@@ -55,6 +55,7 @@ function loadUi(direction) {
   sandbox.global = sandbox;
   vm.createContext(sandbox);
   vm.runInContext(read("i18n.js"), sandbox, { filename: "i18n.js" });
+  vm.runInContext(read("data/study-guide.js"), sandbox, { filename: "study-guide.js" });
   vm.runInContext(read("workbook.js"), sandbox, { filename: "workbook.js" });
   vm.runInContext(uiSource, sandbox, { filename: "workbook-ui.js" });
   return sandbox;
@@ -62,6 +63,7 @@ function loadUi(direction) {
 
 /* Every workbook, rendered once, reused below. */
 const rendered = [];
+const guides = [];
 for (const direction of ["es", "en"]) {
   const sandbox = loadUi(direction);
   const api = sandbox.ParceroWorkbook;
@@ -72,6 +74,9 @@ for (const direction of ["es", "en"]) {
     const book = api.build({ module, lessons: group, direction });
     rendered.push({ module, direction, book, out: ui.renderWorkbook(book) });
   }
+  const guide = api.buildGuide({ modules: MODULES, lessons, direction });
+  assert.ok(guide, `the course guide must build for direction ${direction}`);
+  guides.push({ direction, guide, out: ui.renderGuide(guide) });
 }
 
 test("every module renders in both directions", () => {
@@ -340,5 +345,125 @@ test("the workbook section is marked up for translation", () => {
   assert.ok(section.length > 200, "could not find the workbook section in index.html");
   for (const key of ["workbook.eyebrow", "workbook.title", "workbook.lead", "workbook.pick", "workbook.print"]) {
     assert.ok(section.includes(`data-i18n="${key}"`), `the workbook section never asks for ${key}`);
+  }
+});
+
+/* --- the course guide ---------------------------------------------------- */
+
+test("the course guide renders in both directions", () => {
+  assert.strictEqual(guides.length, 2);
+  for (const { direction, out } of guides) {
+    assert.ok(out && out.length > 5000,
+      `the guide (${direction}) rendered only ${out ? out.length : 0} characters`);
+  }
+});
+
+test("the guide prints no holes and leaks no keys", () => {
+  for (const { direction, out } of guides) {
+    for (const rot of ["undefined", "[object Object]", "NaN", "null"]) {
+      assert.ok(!out.includes(rot), `the guide (${direction}) rendered the literal text "${rot}"`);
+    }
+    const leaked = out.match(/(guide|workbook|nav)\.[a-zA-Z]+(\.[a-zA-Z]+)*/g) || [];
+    const real = leaked.filter((hit) => !/\.(js|html|css)$/.test(hit));
+    assert.deepStrictEqual(Array.from(new Set(real)), [],
+      `the guide (${direction}) printed untranslated key(s)`);
+  }
+});
+
+test("everything the guide was given reaches the page", () => {
+  /*
+   * The generator can promise twenty-five weeks and seventy-five tracker rows
+   * and the template can quietly print five. esc() renders a mistyped field
+   * as nothing at all, so the only way to know the content arrived is to look
+   * for it by name.
+   */
+  const escape = (value) => String(value).replace(/[&<>"]/g, (char) =>
+    ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[char]);
+
+  for (const { direction, guide, out } of guides) {
+    for (const step of guide.cycle) {
+      assert.ok(out.includes(escape(step.title)), `${direction}: cycle step "${step.id}" title missing`);
+      assert.ok(out.includes(escape(step.text)), `${direction}: cycle step "${step.id}" text missing`);
+    }
+    for (const mark of guide.correction) {
+      assert.ok(out.includes(escape(mark.name)), `${direction}: correction ${mark.code} name missing`);
+      assert.ok(out.includes(escape(mark.note)), `${direction}: correction ${mark.code} note missing`);
+      assert.ok(out.includes(escape(mark.wrong)), `${direction}: correction ${mark.code} example missing`);
+      assert.ok(out.includes(escape(mark.right)), `${direction}: correction ${mark.code} fix missing`);
+    }
+    for (const sound of guide.sounds) {
+      assert.ok(out.includes(escape(sound.name)), `${direction}: sound "${sound.letters}" name missing`);
+      assert.ok(out.includes(escape(sound.note)), `${direction}: sound "${sound.letters}" note missing`);
+      for (const word of sound.examples) {
+        assert.ok(out.includes(escape(word)), `${direction}: sound "${sound.letters}" lost example "${word}"`);
+      }
+    }
+    for (const entry of guide.tracker) {
+      assert.ok(out.includes(escape(entry.title)), `${direction}: tracker lost module "${entry.id}"`);
+    }
+  }
+});
+
+test("the whole schedule reaches the page, week by week", () => {
+  for (const { direction, guide, out } of guides) {
+    const rows = (out.match(/<tr>/g) || []).length;
+    assert.ok(rows >= guide.map.length + guide.tracker.length,
+      `${direction}: ${rows} table rows for ${guide.map.length} weeks and ${guide.tracker.length} tracked modules`);
+    for (const week of guide.map) {
+      /* The label is translated, so match the number rather than the word. */
+      assert.ok(new RegExp(`>[^<]*\\b${week.week}\\b[^<]*</th>`).test(out),
+        `${direction}: week ${week.week} never reached the page`);
+    }
+  }
+});
+
+test("the guide gives the learner somewhere to write", () => {
+  for (const { direction, out } of guides) {
+    const lines = (out.match(/wb-write/g) || []).length;
+    /* Ten evidence rows plus two columns on every tracked module. A guide you
+       cannot fill in is a leaflet. */
+    assert.ok(lines >= 20 + 10, `${direction}: only ${lines} ruled lines in the whole guide`);
+    assert.ok(out.includes("wb-box"), `${direction}: the tracker has nothing to check off`);
+  }
+});
+
+test("every section of the guide reaches the page", () => {
+  /*
+   * Counting ruled lines across the whole guide is too coarse to notice a
+   * missing section: the tracker alone contributes a hundred and fifty of
+   * them, so dropping the ten-row evidence log entirely still leaves the
+   * total comfortably above any sane threshold. Each section is therefore
+   * looked for by name, and the evidence log by its exact row count.
+   */
+  for (const { direction, out } of guides) {
+    for (const section of ["wb-cycle", "wb-map", "wb-codes", "wb-sounds", "wb-tracker", "wb-evidence"]) {
+      assert.ok(out.includes(section), `${direction}: the guide never renders its ${section} section`);
+    }
+    const evidence = out.slice(out.indexOf("wb-evidence"));
+    const body = evidence.slice(evidence.indexOf("<tbody>"), evidence.indexOf("</tbody>"));
+    const rows = (body.match(/<tr>/g) || []).length;
+    assert.strictEqual(rows, 10, `${direction}: the evidence log has ${rows} rows to fill in, not 10`);
+  }
+});
+
+test("the guide marks both languages", () => {
+  for (const { direction, out } of guides) {
+    assert.ok(out.includes(`lang="${direction}"`),
+      `${direction}: the guide never marks the language being taught`);
+    assert.ok(out.includes(`lang="${direction === "es" ? "en" : "es"}"`),
+      `${direction}: the guide never marks the learner's own language`);
+  }
+});
+
+test("the guide is not the same page in both directions", () => {
+  assert.notStrictEqual(guides[0].out, guides[1].out);
+  assert.ok(guides[0].out.includes("A week of study"), "the Spanish course reads an English guide");
+  assert.ok(guides[1].out.includes("Una semana de estudio"), "the English course reads a Spanish guide");
+});
+
+test("the guide has no answer key, so the toggle has nothing to hide", () => {
+  for (const { direction, out } of guides) {
+    assert.ok(!out.includes('id="workbook-key"'),
+      `${direction}: the guide rendered an answer key it does not have`);
   }
 });
