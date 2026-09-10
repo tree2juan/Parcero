@@ -76,7 +76,7 @@ They are packed to be **even rather than full**. Filling each segment to a word 
 
 ## The lesson set
 
-Eight lessons spanning starter through extending, mapped onto the roadmap's pathways:
+**208 lessons** spanning starter through extending. Two hundred of them are anchored one-to-one to the verb curriculum — every verb in `data/curriculum.js` has exactly one lesson that teaches it, and no verb has two. The remaining eight are the original hand-written situation lessons, which predate the one-verb-per-lesson rule and are kept because they teach situations rather than a single verb:
 
 | # | Lesson | Level | Teaches |
 | --- | --- | --- | --- |
@@ -88,6 +88,8 @@ Eight lessons spanning starter through extending, mapped onto the roadmap's path
 | 6 | The team stand-up | Developing · Workplace | `quedó`, `pendiente`, `hacer seguimiento`, hedged status updates |
 | 7 | In the seminar | Extending · Academic | `matizar`, `quisiera`, academic hedging in both languages |
 | 8 | The job interview | Extending · Professional | `llevo tres años trabajando`, `con mucho gusto`, concrete examples |
+
+The verb lessons follow the curriculum's own tiers — 70 foundation, 80 independent, 50 extension — and live in `data/lessons/NN-*.js`, roughly three lessons to a file. `node scripts/verb-coverage.js` prints what is taught and what is left; it is the quickest way to see the shape of the course.
 
 Alongside the lessons there is a reference **library**: 200 high-frequency verbs with their most useful forms, a fluency list of connectors and softeners, a **Colombian slang** reference, and an age-gated recognition reference for insulting or adult language — included so learners can *understand* it and de-escalate, never to direct it at anyone.
 
@@ -153,7 +155,7 @@ A kind that current content happens not to produce is still checked for wording,
 
 The surrounding interface follows the direction too. `data/flashcards.js` emits i18n keys rather than sentences — `deck.ask.pronunciation`, not `"How would you say this out loud?"` — and `flashcards.js` resolves them through `i18n.js` at paint time, so the prompts, controls and screen-reader announcements are in the learner's own language. A test derives the key list from the real content, so a new verb level that nobody has translated yet is caught rather than shipped.
 
-Sets are split evenly rather than greedily, so a topic never ends in a stub round — 13 cards become 7 + 6, not 10 + 3. `FLASHCARD_SET_SIZE` in `data/flashcards.js` is the single knob for the target size. Deck size scales with the lessons: the eight lessons here currently yield 314 cards across 38 sets, and richer lesson content raises that to 658 across 71 without a line of flashcard code changing.
+Sets are split evenly rather than greedily, so a topic never ends in a stub round — 13 cards become 7 + 6, not 10 + 3. `FLASHCARD_SET_SIZE` in `data/flashcards.js` is the single knob for the target size. Deck size scales with the lessons without a line of flashcard code changing: the 208 lessons currently yield **22,360 cards across 2,468 sets** in the two directions combined, rising to 22,454 when the age gate is opened. Every lesson produces a deck in both directions — a test asserts it, so a lesson that somehow built no cards would fail rather than quietly go unstudied.
 ## Placement and pathways
 
 The app opens with an optional five-signal placement check: receptive understanding, productive use, grammar, context, and pronunciation. Every question includes **"I don't know"**, which records a genuine knowledge gap instead of forcing a guess — a wrong guess and an honest gap mean different things, and the app treats them differently.
