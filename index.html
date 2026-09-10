@@ -38,6 +38,7 @@
         <a href="#flashcards" data-i18n="nav.flashcards">Flashcards</a>
         <a href="#placement" data-i18n="nav.placement">Placement</a>
         <a href="#library" data-i18n="nav.library">Library</a>
+        <a href="#workbook" data-i18n="nav.workbook">Workbook</a>
         <a class="nav-repo" href="https://github.com/tree2juan/Parcero" data-i18n="nav.github">GitHub</a>
       </nav>
       <button id="reset-progress" class="text-button" type="button" data-i18n="action.reset">Reset progress</button>
@@ -382,6 +383,23 @@
           </div>
         </section>
       </section>
+
+      <section id="workbook" class="workbook" aria-labelledby="workbook-title">
+        <div class="section-head">
+          <p class="eyebrow" data-i18n="workbook.eyebrow">Printable student workbook</p>
+          <h2 id="workbook-title" data-i18n="workbook.title">Take a module off the screen and onto paper.</h2>
+          <p class="section-lead" data-i18n="workbook.lead">Every module becomes a workbook you can print and write in: the dialogue, the words, the exercises, and the answer key at the back. Built from the same lessons, so it can never drift from what you studied.</p>
+        </div>
+        <div class="workbook-controls">
+          <label class="search-label" for="workbook-module"><span data-i18n="workbook.pick">Choose a module</span>
+            <select id="workbook-module"></select>
+          </label>
+          <button id="workbook-answers" class="ghost-button" type="button" aria-expanded="false" aria-controls="workbook-key" data-i18n="workbook.showAnswers">Show answer key</button>
+          <button id="workbook-print" class="primary-button" type="button" data-i18n="workbook.print">Print this workbook</button>
+        </div>
+        <p class="assistive-text" data-i18n="workbook.printHint">Printing gives you the workbook only — the site navigation is left off the page.</p>
+        <div id="workbook-output" class="workbook-output"></div>
+      </section>
     </main>
 
     <footer>
@@ -490,6 +508,7 @@
     <script src="srs.js"></script>
     <script src="progress.js"></script>
 <script src="workbook.js"></script>
+<script src="workbook-ui.js"></script>
     <script src="answer-check.js"></script>
     <script src="flashcards.js"></script>
     <script src="review.js"></script>

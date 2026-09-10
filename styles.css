@@ -724,3 +724,138 @@ footer {
   html { scroll-behavior: auto; }
   *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; }
 }
+
+/* --- Printable workbook --------------------------------------------------
+ *
+ * Two audiences share this markup: someone reading on screen and someone
+ * holding a sheet of paper. The screen rules keep it inside the site's
+ * design; the print rules below strip the site away entirely, because a
+ * workbook that prints the navigation, the hero and the flashcard deck is a
+ * stack of wasted paper rather than a workbook.
+ */
+.workbook-controls { display: flex; flex-wrap: wrap; gap: .75rem; align-items: flex-end; margin-bottom: .5rem; }
+.workbook-controls .search-label { flex: 1 1 22rem; }
+.workbook-controls select { width: 100%; padding: .55rem .7rem; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); color: inherit; font: inherit; }
+.workbook-output { margin-top: 1.5rem; }
+
+.wb-sheet { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: clamp(1rem, 3vw, 2.25rem); box-shadow: var(--shadow); }
+.wb-head { border-bottom: 2px solid var(--green); padding-bottom: .75rem; margin-bottom: 1.5rem; }
+.wb-head h1 { margin: .2rem 0; font-size: clamp(1.4rem, 3vw, 2rem); }
+.wb-meta { color: var(--ink-soft); margin: 0; }
+.wb-section { margin: 1.75rem 0; }
+.wb-section > h3 { border-bottom: 1px solid var(--line); padding-bottom: .3rem; margin-bottom: .75rem; font-size: 1.05rem; }
+.wb-section h4 { margin: 1rem 0 .35rem; font-size: .95rem; }
+.wb-unit { margin: 2.5rem 0; }
+.wb-unit-head h2 { margin: .2rem 0; font-size: 1.25rem; }
+.wb-situation { color: var(--ink-soft); margin: .2rem 0 0; }
+
+/* A box or a rule the learner writes on. Both need to survive the printer,
+   which is why they are borders rather than background images. */
+.wb-box { display: inline-block; width: .95em; height: .95em; border: 1.5px solid var(--ink-soft); border-radius: .15em; margin-right: .5em; vertical-align: -.1em; }
+.wb-write { display: inline-block; border-bottom: 1px solid var(--ink-soft); height: 1.15em; vertical-align: -.25em; }
+.wb-dot { display: inline-block; width: 1.9em; height: 1.9em; line-height: 1.75em; text-align: center; border: 1.5px solid var(--ink-soft); border-radius: 50%; margin-right: .4em; }
+.wb-n { display: inline-block; min-width: 1.6em; font-weight: 700; color: var(--green-deep); }
+.wb-activity-n { display: inline-block; width: 1.6em; height: 1.6em; line-height: 1.6em; text-align: center; border-radius: 50%; background: var(--green); color: #fff; margin-right: .5em; font-size: .85em; }
+
+.wb-checklist, .wb-phrases, .wb-notes, .wb-questions, .wb-order, .wb-bank, .wb-pronounce { margin: .35rem 0; padding-left: 1.2rem; }
+.wb-checklist { list-style: none; padding-left: 0; }
+.wb-checklist li { margin: .35rem 0; }
+.wb-phrases li { margin: .3rem 0; font-weight: 600; }
+.wb-questions > li, .wb-order > li { margin: .6rem 0; }
+.wb-choices { list-style: none; padding-left: .5rem; margin: .3rem 0; }
+.wb-choices li { margin: .2rem 0; }
+.wb-bank { list-style: none; padding-left: 0; }
+.wb-bank li { margin: .55rem 0; display: flex; gap: 1rem; }
+.wb-pronounce { list-style: none; padding-left: 0; }
+.wb-pronounce li { margin: .4rem 0; display: grid; gap: .1rem; }
+.wb-say { color: var(--ink-soft); font-variant: small-caps; letter-spacing: .02em; }
+
+.wb-setting { margin: 0; }
+.wb-setting-row { display: grid; grid-template-columns: minmax(8rem, 14rem) 1fr; gap: .5rem 1rem; padding: .3rem 0; border-bottom: 1px dotted var(--line); }
+.wb-setting dt { font-weight: 600; color: var(--green-deep); }
+.wb-setting dd { margin: 0; }
+
+.wb-dialogue { display: grid; gap: .65rem; }
+.wb-line { border-left: 3px solid var(--mist); padding-left: .75rem; }
+.wb-speaker { margin: 0; font-size: .8rem; text-transform: uppercase; letter-spacing: .06em; color: var(--ink-soft); }
+.wb-target { margin: .1rem 0; font-weight: 600; }
+.wb-translation { margin: 0; color: var(--ink-soft); }
+.wb-wrong { margin: 0 0 .2rem; color: var(--clay-ink); }
+
+.wb-table { width: 100%; border-collapse: collapse; margin: .5rem 0; }
+.wb-table th, .wb-table td { border: 1px solid var(--line); padding: .4rem .55rem; text-align: left; vertical-align: top; font-size: .92rem; }
+.wb-table thead th { background: var(--mist); font-size: .8rem; text-transform: uppercase; letter-spacing: .05em; }
+.wb-checkpoint td { text-align: center; width: 7rem; }
+
+.wb-match { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.wb-match ul { list-style: none; padding-left: 0; margin: 0; }
+.wb-match li { margin: .4rem 0; }
+.wb-match-left li { display: flex; align-items: baseline; gap: .35rem; }
+.wb-match-left .wb-write { flex: 0 0 auto; margin-left: auto; }
+.wb-match-right li { display: flex; align-items: baseline; gap: .35rem; }
+.wb-overview { background: var(--mist); border-radius: var(--radius); padding: 1rem 1.15rem; }
+.wb-overview > h3 { border-bottom-color: var(--green); }
+.wb-tags { display: flex; flex-wrap: wrap; gap: .35rem; margin: .35rem 0; }
+.wb-scale { display: flex; flex-wrap: wrap; gap: .25rem; margin: .35rem 0; }
+.wb-activity { margin: 1.25rem 0; }
+.wb-register .wb-ask { font-weight: 600; margin: .4rem 0; }
+.wb-key ol { padding-left: 1.2rem; }
+.wb-key-block { margin: .75rem 0; }
+
+@media (max-width: 680px) {
+  .wb-match { grid-template-columns: 1fr; }
+  .wb-setting-row { grid-template-columns: 1fr; }
+}
+
+/*
+ * Paper.
+ *
+ * `visibility` rather than `display: none` on the page chrome: hiding an
+ * ancestor with display would take the workbook down with it, so the whole
+ * document is made invisible and only the workbook subtree is switched back
+ * on, then pulled to the top of the sheet.
+ *
+ * The answer key prints whether or not it is open on screen. A printed sheet
+ * has no toggle, and a workbook you cannot mark is half a workbook.
+ */
+@media print {
+  :root { color-scheme: light; }
+  @page { margin: 16mm 14mm; }
+
+  body { background: #fff; color: #000; }
+  body * { visibility: hidden; }
+  #workbook, #workbook * { visibility: visible; }
+
+  #workbook {
+    position: absolute;
+    inset: 0 auto auto 0;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .site-header, .hero, footer, .section-head, .workbook-controls,
+  #workbook > .assistive-text { display: none !important; }
+
+  .wb-sheet { border: 0; border-radius: 0; box-shadow: none; padding: 0; background: #fff; }
+  .wb-overview { background: transparent !important; border: 1px solid #000; padding: .75rem; }
+  .wb-head { border-bottom: 2px solid #000; }
+  .wb-section > h3 { border-bottom: 1px solid #666; }
+
+  /* Show the key on paper even when the screen has it collapsed. */
+  #workbook-key[hidden] { display: block !important; visibility: visible; }
+  #workbook-key[hidden] * { visibility: visible; }
+
+  /* Keep a question and the space to answer it on the same sheet. */
+  .wb-unit, .wb-break { break-before: page; }
+  .wb-activity, .wb-line, .wb-questions > li, .wb-key-block,
+  .wb-setting-row, .wb-table tr { break-inside: avoid; }
+  .wb-section > h3, .wb-section h4, .wb-unit-head { break-after: avoid; }
+
+  .wb-box, .wb-write, .wb-dot { border-color: #000; }
+  .wb-activity-n { background: #000 !important; color: #fff !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .wb-table thead th { background: #eee !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .wb-say, .wb-translation, .wb-speaker, .wb-meta, .wb-situation { color: #444; }
+  .wb-wrong { color: #000; font-style: italic; }
+  a[href]::after { content: ""; }
+}
