@@ -10,16 +10,23 @@ const { dataSource } = require("./data-source.js");
 
 const bundle = [
   dataSource({ schema: false, flashcards: true }),
-  "({ lessons, curriculum, fluencyItems, FLASHCARD_SET_SIZE, flashcardSlug, flashcardSplit, flashcardsFromLesson, flashcardTopics, flashcardSets });"
+  "({ lessons, curriculum, fluencyItems, slangItems, matureItems, matureSignals, FLASHCARD_SET_SIZE, flashcardSlug, flashcardSplit, flashcardsFromLesson, flashcardTopics, flashcardSets });"
 ].join("\n");
 
 const {
-  lessons, curriculum, fluencyItems,
+  lessons, curriculum, fluencyItems, slangItems, matureItems, matureSignals,
   FLASHCARD_SET_SIZE, flashcardSlug, flashcardSplit, flashcardsFromLesson, flashcardTopics, flashcardSets
 } = vm.runInNewContext(bundle, {}, { filename: "parcero-flashcard-bundle.js" });
 
 const directions = ["es", "en"];
-const sources = { lessons, curriculum, fluencyItems };
+
+/*
+ * The default sources deliberately omit matureEnabled, because that is what a
+ * caller who has not thought about the age gate passes. Every test using this
+ * object is therefore also checking that the unsafe default does not exist.
+ */
+const sources = { lessons, curriculum, fluencyItems, slangItems, matureItems, matureSignals };
+const openSources = { ...sources, matureEnabled: true };
 const isText = (value) => typeof value === "string" && value.trim().length > 0;
 const duplicates = (list) => [...new Set(list.filter((item, index) => list.indexOf(item) !== index))];
 
@@ -801,5 +808,130 @@ test("the clamped answer and its control still obey the hidden attribute", () =>
       /display:/,
       `${selector} is expected to set display:, which is what makes the reset load-bearing`
     );
+  }
+});
+
+/* ---------- the age gate ---------- */
+
+test("gated content is absent from the deck, not merely hidden in it", () => {
+  /*
+   * The failure this guards against is not visual. flashcardTopics feeds the
+   * deck picker, the progress counts and the set ids written to localStorage,
+   * so mature cards built but hidden would still be counted, still be pickable
+   * by a stale stored id, and still be one CSS rule away from a reader who
+   * never opened the gate. Nothing is built at all.
+   */
+  for (const direction of directions) {
+    const topics = flashcardTopics(direction, sources);
+    const cards = topics.flatMap((topic) => topic.cards);
+    assert.equal(
+      cards.filter((card) => card.kind === "mature" || card.kind === "signal").length, 0,
+      `${direction}: mature cards were built without the gate being opened`);
+    assert.equal(
+      topics.filter((topic) => topic.groupKey === "deck.group.mature").length, 0,
+      `${direction}: a mature deck was offered without the gate being opened`);
+  }
+});
+
+test("an absent flag is treated as a closed gate, not an open one", () => {
+  /* Every one of these is a caller who forgot. All must fail safe. */
+  for (const careless of [undefined, null, {}, { matureEnabled: undefined }, { matureEnabled: false }, { matureEnabled: "false" }, { matureEnabled: 0 }]) {
+    const merged = careless && typeof careless === "object" ? { ...sources, ...careless } : careless;
+    const cards = flashcardTopics("es", merged).flatMap((topic) => topic.cards);
+    assert.equal(
+      cards.filter((card) => card.kind === "mature" || card.kind === "signal").length, 0,
+      `mature cards leaked for sources ${JSON.stringify(careless)}`);
+  }
+});
+
+test("opening the gate actually produces the decks it promises", () => {
+  for (const direction of directions) {
+    const topics = flashcardTopics(direction, openSources);
+    const mature = topics.filter((topic) => topic.groupKey === "deck.group.mature");
+    assert.ok(mature.length >= 2, `${direction}: expected both a words deck and a signals deck`);
+    const cards = mature.flatMap((topic) => topic.cards);
+    assert.ok(cards.length > 0, `${direction}: the mature decks are empty`);
+    for (const card of cards) {
+      assert.ok(isText(card.front) && isText(card.back), "a mature card is missing a side");
+      assert.ok(isText(card.note), "a mature card carries no guidance, which is the only reason to show it");
+    }
+  }
+});
+
+test("a mature card only ever drills the language the learner is meeting", () => {
+  /*
+   * matureItems mixes directions in one list. A Spanish learner drilling
+   * "asshole -> imbécil" is being taught nothing they came for, so each deck
+   * takes only its own side.
+   */
+  for (const direction of directions) {
+    const ids = flashcardTopics(direction, openSources)
+      .filter((topic) => topic.id === "mature")
+      .flatMap((topic) => topic.cards)
+      .map((card) => Number(card.id.split("/")[1]));
+    assert.ok(ids.length > 0, `${direction}: no mature cards to check`);
+    for (const index of ids) {
+      assert.equal(matureItems[index][4], direction,
+        `${direction} deck contains mature entry "${matureItems[index][0]}", which is ${matureItems[index][4]}`);
+    }
+  }
+});
+
+/* ---------- slang ---------- */
+
+test("slang is drilled for recognition, never for production", () => {
+  /*
+   * Every other deck asks for the language being learned, because production is
+   * the harder half. Slang is the exception on purpose: most of this list is
+   * language a learner should understand and not say, and a prompt asking them
+   * to produce it would drill exactly the wrong reflex.
+   */
+  for (const direction of directions) {
+    const cards = flashcardTopics(direction, sources)
+      .filter((topic) => topic.groupKey === "deck.group.slang")
+      .flatMap((topic) => topic.cards);
+    assert.ok(cards.length > 0, `${direction}: no slang cards were built`);
+    for (const card of cards) {
+      assert.equal(card.frontLang, "es", "the slang phrase itself belongs on the front, in Spanish");
+      assert.ok(isText(card.note), `slang card ${card.id} carries no usage note`);
+    }
+  }
+});
+
+test("every slang card tells the learner whether they may say it", () => {
+  const SAFETY = ["Say it freely", "Say it with friends", "Understand only"];
+  for (const direction of directions) {
+    const cards = flashcardTopics(direction, sources)
+      .filter((topic) => topic.groupKey === "deck.group.slang")
+      .flatMap((topic) => topic.cards);
+    for (const card of cards) {
+      assert.ok(
+        SAFETY.some((safety) => card.note.startsWith(safety)),
+        `slang card ${card.id} does not lead with whether it is safe to say`);
+    }
+  }
+});
+
+test("slang decks are grouped by safety, so the risky ones cannot hide among the rest", () => {
+  for (const direction of directions) {
+    const topics = flashcardTopics(direction, sources).filter((topic) => topic.groupKey === "deck.group.slang");
+    const levels = topics.map((topic) => topic.level);
+    assert.ok(levels.includes("Understand only"), "there is no recognition-only slang deck");
+    assert.equal(new Set(levels).size, levels.length, "two slang decks share a safety level");
+    /* Every entry lands in exactly one deck. */
+    const total = topics.reduce((sum, topic) => sum + topic.cards.length, 0);
+    assert.equal(total, slangItems.length, `${direction}: ${total} slang cards from ${slangItems.length} entries`);
+  }
+});
+
+test("every derived card carries a stable, unique id", () => {
+  for (const direction of directions) {
+    const ids = flashcardTopics(direction, openSources).flatMap((topic) => topic.cards).map((card) => card.id);
+    assert.deepStrictEqual(duplicates(ids), [], `${direction}: duplicate card ids`);
+    for (const id of ids) {
+      assert.ok(
+        id.split("/").includes(direction),
+        `card id "${id}" does not name its direction, so the two decks could collide`);
+    }
   }
 });

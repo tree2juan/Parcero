@@ -54,6 +54,8 @@ function dataSource({ schema = true, flashcards = false } = {}) {
   if (schema) parts.push(read("data/lesson-schema.js"));
   parts.push(lessonSource());
   parts.push(read("data/curriculum.js"));
+  parts.push(read("data/slang.js"));
+  parts.push(read("data/mature.js"));
   if (flashcards) parts.push(read("data/flashcards.js"));
   return parts.join("\n");
 }

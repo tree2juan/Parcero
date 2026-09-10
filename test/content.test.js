@@ -8,8 +8,8 @@ const root = path.join(__dirname, "..");
 const read = (file) => fs.readFileSync(path.join(root, file), "utf8");
 const { dataSource } = require("./data-source.js");
 
-const bundle = `${dataSource()}\n({ lessons, curriculum, fluencyItems, matureItems, schema: ParceroLessonSchema });`;
-const { lessons, curriculum, fluencyItems, matureItems, schema } = vm.runInNewContext(bundle, {}, { filename: "parcero-data-bundle.js" });
+const bundle = `${dataSource()}\n({ lessons, curriculum, fluencyItems, matureItems, matureSignals, slangItems, schema: ParceroLessonSchema });`;
+const { lessons, curriculum, fluencyItems, matureItems, matureSignals, slangItems, schema } = vm.runInNewContext(bundle, {}, { filename: "parcero-data-bundle.js" });
 
 const directions = ["es", "en"];
 const isText = (value) => typeof value === "string" && value.trim().length > 0;
@@ -283,8 +283,62 @@ test("reference lists match the shape the renderers expect", () => {
   }
   assert.ok(matureItems.length > 0);
   for (const item of matureItems) {
-    assert.strictEqual(item.length, 4, "expected [phrase, equivalent, severity, note]");
+    assert.strictEqual(item.length, 6, "expected [phrase, equivalent, severity, note, direction, respond]");
     item.forEach((cell) => assert.ok(isText(cell)));
+  }
+  assert.ok(slangItems.length > 0);
+  for (const item of slangItems) {
+    assert.strictEqual(item.length, 6, "expected [phrase, meaning, register, region, safety, note]");
+    item.forEach((cell) => assert.ok(isText(cell)));
+  }
+  assert.ok(matureSignals.length > 0);
+  for (const item of matureSignals) {
+    assert.strictEqual(item.length, 5, "expected [signal, whatItLooksLike, whatItMeans, direction, respond]");
+    item.forEach((cell) => assert.ok(isText(cell)));
+  }
+});
+
+test("the reference lists say which language they belong to", () => {
+  /*
+   * matureItems has always mixed directions in one list - Spanish insults a
+   * learner will hear in Bogotá alongside English ones a Spanish speaker will
+   * hear abroad. That was invisible while the renderer showed all of them to
+   * everybody. Once these become flashcards it stops being invisible, because a
+   * card drilling "asshole -> imbécil" is useless in a Spanish deck.
+   */
+  for (const item of matureItems) {
+    assert.ok(["es", "en"].includes(item[4]), `mature entry "${item[0]}" has no valid direction`);
+  }
+  for (const item of matureSignals) {
+    assert.ok(["es", "en"].includes(item[3]), `mature signal "${item[0]}" has no valid direction`);
+  }
+  for (const direction of ["es", "en"]) {
+    assert.ok(matureItems.some((item) => item[4] === direction), `no mature entries for ${direction}`);
+    assert.ok(matureSignals.some((item) => item[3] === direction), `no mature signals for ${direction}`);
+  }
+});
+
+test("every slang entry says whether a learner may actually say it", () => {
+  /*
+   * The whole point of the slang list. An entry without a safety value is worse
+   * than no entry: it teaches a phrase and withholds the one thing that stops
+   * the learner using it badly.
+   */
+  const SAFETY = ["Say it freely", "Say it with friends", "Understand only"];
+  for (const [phrase, , , region, safety] of slangItems) {
+    assert.ok(SAFETY.includes(safety), `slang "${phrase}" has an unrecognised safety value: ${safety}`);
+    assert.ok(isText(region), `slang "${phrase}" does not say where it is used`);
+  }
+  assert.ok(
+    slangItems.some(([, , , , safety]) => safety === "Understand only"),
+    "no slang is marked recognition-only, which means the safety field is not being used honestly");
+});
+
+test("no slang phrase is listed twice", () => {
+  const seen = new Map();
+  for (const [phrase] of slangItems) {
+    assert.ok(!seen.has(phrase), `slang phrase "${phrase}" appears more than once`);
+    seen.set(phrase, true);
   }
 });
 

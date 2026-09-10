@@ -42,7 +42,10 @@
     variation: "Another way",
     practice: "In context",
     verb: "Verb",
-    fluency: "Fluency"
+    fluency: "Fluency",
+    slang: "Slang",
+    mature: "Recognition only",
+    signal: "Signal"
   };
 
   /*
@@ -175,12 +178,37 @@
     return Array.isArray(value) ? value : [];
   };
 
+  /*
+   * One reader for the age gate, so the deck and the library cannot disagree
+   * about it. localStorage can be unavailable or throw in private browsing
+   * modes; if we cannot read the switch we treat it as off, because the failure
+   * we can afford is a missing deck, not gated content shown to someone who
+   * never opened the gate.
+   */
+  function matureAllowed() {
+    try {
+      return localStorage.getItem("parcero-mature-enabled") === "true";
+    } catch (error) {
+      return false;
+    }
+  }
+
   function rebuild(preferredSetId) {
     deck.direction = currentDirection();
     deck.sets = flashcardSets(deck.direction, {
       lessons: arrayFrom(() => lessons),
       curriculum: arrayFrom(() => curriculum),
-      fluencyItems: arrayFrom(() => fluencyItems)
+      fluencyItems: arrayFrom(() => fluencyItems),
+      slangItems: arrayFrom(() => slangItems),
+      matureItems: arrayFrom(() => matureItems),
+      matureSignals: arrayFrom(() => matureSignals),
+      /*
+       * The same switch the library gate writes. Read at rebuild time rather
+       * than captured once, so opening the gate and coming back to the deck
+       * shows the new decks without a reload - and so closing it in another tab
+       * removes them again.
+       */
+      matureEnabled: matureAllowed()
     });
     renderTopics();
     const wanted = [preferredSetId, deck.setId, readStore().setId].find((id) => deck.sets.some((set) => set.id === id));
@@ -560,4 +588,12 @@
   }
 
   rebuild();
+
+  /*
+   * The only thing this module exposes. The library's age gate needs to tell
+   * the deck that the answer to matureAllowed() just changed; without this the
+   * new decks would not appear until a reload, which reads as the gate having
+   * silently failed.
+   */
+  window.ParceroFlashcards = { refresh: () => rebuild(deck.setId) };
 })();

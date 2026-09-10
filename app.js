@@ -66,7 +66,25 @@ function renderFluency() {
   $("#fluency-results").innerHTML = fluencyItems.map(([spanish, english, type, region, note], index) => `<article class="reference-card" data-anchor="fluency:${index}"><h3>${spanish}</h3><p><strong>${english}</strong></p><p>${note}</p><span class="tag">${type}</span><span class="tag">${region}</span></article>`).join("");
 }
 function renderMature() {
-  $("#mature-results").innerHTML = matureItems.map(([phrase, equivalent, severity, note], index) => `<article class="reference-card" data-anchor="mature:${index}"><h3>${phrase}</h3><p><strong>${equivalent}</strong></p><p>${note}</p><span class="tag">${t("mature.severity")}: ${severity}</span><span class="tag">${t("mature.tag")}</span></article>`).join("");
+  $("#mature-results").innerHTML = matureItems.map(([phrase, equivalent, severity, note, direction, respond], index) => `<article class="reference-card" data-anchor="mature:${index}"><h3>${esc(phrase)}</h3><p><strong>${esc(equivalent)}</strong></p><p>${esc(note)}</p><p class="detail"><strong>${t("mature.respond")}</strong> ${esc(respond)}</p><span class="tag">${t("mature.severity")}: ${esc(severity)}</span><span class="tag">${esc(direction === "es" ? "Español" : "English")}</span><span class="tag">${t("mature.tag")}</span></article>`).join("");
+  $("#mature-signals").innerHTML = matureSignals.map(([signal, looksLike, means, direction, respond], index) => `<article class="reference-card" data-anchor="signal:${index}"><h3>${esc(signal)}</h3><p><em>${esc(looksLike)}</em></p><p>${esc(means)}</p><p class="detail"><strong>${t("mature.respond")}</strong> ${esc(respond)}</p><span class="tag">${esc(direction === "es" ? "Español" : "English")}</span></article>`).join("");
+}
+/*
+ * Slang is filtered rather than paged. The list is long enough that scrolling it
+ * is useless and short enough that filtering every keystroke costs nothing.
+ */
+function renderSlang() {
+  const query = ($("#slang-search").value || "").trim().toLowerCase();
+  const matches = slangItems
+    .map((item, index) => ({ item, index }))
+    .filter(({ item }) => !query || item.some((cell) => cell.toLowerCase().includes(query)));
+  $("#slang-count").textContent = query
+    ? t("library.slangMatching", { matches: matches.length, total: slangItems.length })
+    : t("library.slangCount", { total: slangItems.length });
+  $("#slang-results").innerHTML = matches.map(({ item, index }) => {
+    const [phrase, meaning, register, region, safety, note] = item;
+    return `<article class="reference-card" data-anchor="slang:${index}"><h3 lang="es">${esc(phrase)}</h3><p><strong>${esc(meaning)}</strong></p><p>${esc(note)}</p><p class="detail"><strong>${t("library.slangSafety")}</strong> ${esc(safety)}</p><span class="tag">${esc(register)}</span><span class="tag">${esc(region)}</span></article>`;
+  }).join("");
 }
 function content() { return ParceroLessonSchema.normalizeContent(currentLesson()[state.direction]); }
 /* Authored content is trusted, but it is still text going into innerHTML. A
@@ -401,16 +419,21 @@ $("#mature-confirm").addEventListener("change", (event) => { $("#mature-open").d
 $("#mature-open").addEventListener("click", () => {
   localStorage.setItem("parcero-mature-enabled", "true");
   $("#mature-gate").hidden = true;
-  $("#mature-results").hidden = false;
+  $("#mature-shown").hidden = false;
   renderMature();
+  /* The deck list changes the moment the gate opens, so rebuild it now
+     rather than waiting for the next reload. */
+  if (typeof ParceroFlashcards === "object" && ParceroFlashcards && typeof ParceroFlashcards.refresh === "function") ParceroFlashcards.refresh();
 });
 if (localStorage.getItem("parcero-mature-enabled") === "true") {
   $("#mature-gate").hidden = true;
-  $("#mature-results").hidden = false;
+  $("#mature-shown").hidden = false;
   renderMature();
 }
 $("#stat-lessons").textContent = lessons.length;
 $("#stat-verbs").textContent = curriculum.length;
 renderVerbs();
 renderFluency();
+renderSlang();
+$("#slang-search").addEventListener("input", renderSlang);
 render();

@@ -69,7 +69,36 @@ const ParceroReview = (function () {
   const VERB_SLOTS = ["spanish", "english", "presentYo", "preteriteYo", "participle", "level", "register", "regionality"];
   const VERB_FORM_SLOTS = ["presentYo", "preteriteYo", "participle"];
   const FLUENCY_SLOTS = ["phrase", "meaning", "type", "region", "note"];
-  const MATURE_SLOTS = ["phrase", "equivalent", "severity", "note"];
+  const MATURE_SLOTS = ["phrase", "equivalent", "severity", "note", "direction", "respond"];
+  const SLANG_SLOTS = ["phrase", "meaning", "register", "region", "safety", "note"];
+  const SIGNAL_SLOTS = ["signal", "whatItLooksLike", "whatItMeans", "direction", "respond"];
+  /*
+   * The four flat reference lists, keyed by the anchor kind that addresses
+   * them. Every one is a list of positional rows, so they all parse, render and
+   * resolve identically - the only thing that differs is the slot names. Adding
+   * a fifth list means adding a row here, not another branch in three places.
+   */
+  const REFERENCE_SLOTS = {
+    fluency: FLUENCY_SLOTS,
+    mature: MATURE_SLOTS,
+    slang: SLANG_SLOTS,
+    signal: SIGNAL_SLOTS
+  };
+  const REFERENCE_KINDS = Object.keys(REFERENCE_SLOTS);
+  /* Which global each reference kind reads from. */
+  const REFERENCE_SOURCES = {
+    fluency: "fluencyItems",
+    mature: "matureItems",
+    slang: "slangItems",
+    signal: "matureSignals"
+  };
+  /* And which file a reviewer would have to open to fix it. */
+  const REFERENCE_FILES = {
+    fluency: "data/curriculum.js",
+    mature: "data/mature.js",
+    slang: "data/slang.js",
+    signal: "data/mature.js"
+  };
 
   /* Practice question 0 is the lesson's original prompt/choices; 1 and up are
      practiceExtra. Keeping that mapping means flags filed against the original
@@ -232,10 +261,10 @@ const ParceroReview = (function () {
       return segments.length === 2 && VERB_SLOTS.includes(slot) ? { kind, id, slot } : null;
     }
 
-    if (kind === "fluency" || kind === "mature") {
+    if (REFERENCE_KINDS.includes(kind)) {
       const [rawIndex, slot] = segments;
       if (!/^\d+$/.test(rawIndex)) return null;
-      const slots = kind === "fluency" ? FLUENCY_SLOTS : MATURE_SLOTS;
+      const slots = REFERENCE_SLOTS[kind];
       if (segments.length === 1) return { kind, index: Number(rawIndex), slot: null };
       return segments.length === 2 && slots.includes(slot) ? { kind, index: Number(rawIndex), slot } : null;
     }
@@ -321,6 +350,9 @@ const ParceroReview = (function () {
 
   function slotLanguage(kind, field, slot, direction) {
     if (kind === "verb") return slot === "english" ? "en" : VERB_FORM_SLOTS.includes(slot) || slot === "spanish" ? "es" : null;
+    /* Slang is Colombian Spanish by definition; the phrase itself is the only
+       slot in that language, and the rest is explanation written for the reader. */
+    if (kind === "slang") return slot === "phrase" ? "es" : null;
     if (kind !== "lesson") return null;
     const target = direction;
     const support = direction === "es" ? "en" : "es";
@@ -490,26 +522,35 @@ const ParceroReview = (function () {
       };
     }
 
-    const listName = parsed.kind === "fluency" ? "fluencyItems" : "matureItems";
+    const listName = REFERENCE_SOURCES[parsed.kind];
     const list = data[listName] || [];
     const row = list[parsed.index];
     if (!row) return { anchor, ok: false, reason: `${listName} has no entry ${parsed.index + 1}` };
-    const slots = parsed.kind === "fluency" ? FLUENCY_SLOTS : MATURE_SLOTS;
+    const slots = REFERENCE_SLOTS[parsed.kind];
     const slotIndex = slots.indexOf(parsed.slot);
     /* These rows are still tuples, so a short one yields undefined rather than
        throwing. Answering ok:true with nothing in it is the worst outcome: every
        caller believes ok, and the part picker just thins out with nothing said. */
     const value = SCHEMA.slotValue(row, slots, parsed.slot);
     if (!isText(value)) return { anchor, ok: false, reason: `${listName} entry ${parsed.index + 1} has no "${parsed.slot}"` };
-    const slotLabels = parsed.kind === "fluency"
-      ? { phrase: "Phrase", meaning: "Meaning", type: "Type label", region: "Region label", note: "Usage note" }
-      : { phrase: "Phrase", equivalent: "Equivalent", severity: "Severity label", note: "Safety note" };
-    const family = parsed.kind === "fluency" ? "Fluency reference" : "Mature-language reference";
+    const slotLabels = {
+      fluency: { phrase: "Phrase", meaning: "Meaning", type: "Type label", region: "Region label", note: "Usage note" },
+      mature: { phrase: "Phrase", equivalent: "Equivalent", severity: "Severity label", note: "Safety note", direction: "Language", respond: "What to do" },
+      slang: { phrase: "Phrase", meaning: "Meaning", register: "Register label", region: "Region label", safety: "Can you say it?", note: "Usage note" },
+      signal: { signal: "Signal", whatItLooksLike: "What it looks like", whatItMeans: "What it means", direction: "Language", respond: "What to do" }
+    }[parsed.kind];
+    const family = {
+      fluency: "Fluency reference",
+      mature: "Mature-language reference",
+      slang: "Colombian slang reference",
+      signal: "Conversation signal"
+    }[parsed.kind];
     return {
-      anchor, ok: true, kind: parsed.kind, source: "data/curriculum.js",
+      anchor, ok: true, kind: parsed.kind, source: REFERENCE_FILES[parsed.kind],
       path: `${listName}[${parsed.index}][${slotIndex}]`,
       text: value, slotLabel: slotLabels[parsed.slot],
-      label: `${family} “${SCHEMA.slotValue(row, slots, slots[0])}” · ${slotLabels[parsed.slot]}`, lang: null
+      label: `${family} “${SCHEMA.slotValue(row, slots, slots[0])}” · ${slotLabels[parsed.slot]}`,
+      lang: slotLanguage(parsed.kind, null, parsed.slot, null)
     };
   }
 
@@ -599,12 +640,11 @@ const ParceroReview = (function () {
       }
     }
     for (const verb of data.curriculum || []) for (const slot of VERB_SLOTS) all.push(`verb:${verb.id}/${slot}`);
-    (data.fluencyItems || []).forEach((_, index) => {
-      for (const slot of FLUENCY_SLOTS) all.push(`fluency:${index}/${slot}`);
-    });
-    (data.matureItems || []).forEach((_, index) => {
-      for (const slot of MATURE_SLOTS) all.push(`mature:${index}/${slot}`);
-    });
+    for (const kind of REFERENCE_KINDS) {
+      (data[REFERENCE_SOURCES[kind]] || []).forEach((_, index) => {
+        for (const slot of REFERENCE_SLOTS[kind]) all.push(`${kind}:${index}/${slot}`);
+      });
+    }
     return all;
   }
 

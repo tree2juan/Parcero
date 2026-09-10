@@ -329,6 +329,7 @@
         <div class="tabs" role="tablist" data-i18n-aria="library.aria" aria-label="Reference library sections">
           <button class="library-tab active" type="button" role="tab" aria-selected="true" data-library="verbs" data-i18n="library.tab.verbs">200 verbs</button>
           <button class="library-tab" type="button" role="tab" aria-selected="false" data-library="fluency" data-i18n="library.tab.fluency">Fluency</button>
+          <button class="library-tab" type="button" role="tab" aria-selected="false" data-library="slang" data-i18n="library.tab.slang">Colombian slang</button>
           <button class="library-tab" type="button" role="tab" aria-selected="false" data-library="mature" data-i18n="library.tab.mature">Mature language</button>
         </div>
         <section id="verbs-library" class="library-panel">
@@ -342,6 +343,12 @@
           <p data-i18n="library.fluencyIntro">These phrases connect ideas and keep conversation moving. They are context notes—not universal replacements.</p>
           <div id="fluency-results" class="reference-grid"></div>
         </section>
+        <section id="slang-library" class="library-panel" hidden>
+          <p data-i18n="library.slangIntro">Slang you will hear long before you can safely use it. Every entry says where it is used and whether you should say it back.</p>
+          <label class="search-label" for="slang-search"><span data-i18n="library.slangSearch">Search slang or meaning</span> <input id="slang-search" type="search" data-i18n-placeholder="library.slangPlaceholder" placeholder="e.g., parcero or friend" autocomplete="off"></label>
+          <p id="slang-count" class="assistive-text"></p>
+          <div id="slang-results" class="reference-grid"></div>
+        </section>
         <section id="mature-library" class="library-panel" hidden>
           <div id="mature-gate" class="mature-gate">
             <h3 data-i18n="mature.title">Recognition and safety reference</h3>
@@ -349,7 +356,13 @@
             <label><input id="mature-confirm" type="checkbox"> <span data-i18n="mature.confirm">I am eligible to view mature educational content.</span></label>
             <button id="mature-open" class="primary-button" type="button" disabled data-i18n="mature.open">View reference</button>
           </div>
-          <div id="mature-results" class="reference-grid" hidden></div>
+          <div id="mature-shown" hidden>
+            <h3 data-i18n="mature.wordsTitle">Words and phrases</h3>
+            <div id="mature-results" class="reference-grid"></div>
+            <h3 data-i18n="mature.signalsTitle">When a conversation turns</h3>
+            <p data-i18n="mature.signalsIntro">These are not words you can look up. A conversation can turn hostile while every word in it stays polite — these are the signals that carry it.</p>
+            <div id="mature-signals" class="reference-grid"></div>
+          </div>
         </section>
       </section>
     </main>
@@ -369,6 +382,8 @@
     <script src="data/lessons.js"></script>
 <script src="data/provenance.js"></script>
     <script src="data/curriculum.js"></script>
+<script src="data/slang.js"></script>
+<script src="data/mature.js"></script>
     <script src="i18n.js"></script>
     <script src="data/flashcards.js"></script>
     <script src="app.js"></script>

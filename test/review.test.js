@@ -44,7 +44,9 @@ test("every reviewable string is addressable, and its anchor resolves back to it
     assert.ok(isText(resolved.text), `${anchor} resolved to empty text`);
     assert.ok(isText(resolved.label), `${anchor} has no human-readable label`);
     assert.ok(isText(resolved.path), `${anchor} has no source path`);
-    assert.ok(["data/lessons.js", "data/curriculum.js"].includes(resolved.source), `${anchor} names an unknown source file`);
+    assert.ok(
+      ["data/lessons.js", "data/curriculum.js", "data/slang.js", "data/mature.js"].includes(resolved.source),
+      `${anchor} names an unknown source file`);
   }
 });
 

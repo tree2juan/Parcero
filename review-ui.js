@@ -46,7 +46,9 @@
     "report.scope.lesson": "The lesson I am reading",
     "report.scope.verb": "A verb in the library",
     "report.scope.fluency": "A fluency phrase",
+    "report.scope.slang": "A slang expression",
     "report.scope.mature": "Mature language",
+    "report.scope.signal": "A conversation signal",
     "report.noLesson": "Open a lesson first and it will show up here.",
     "report.formCleared": "Form cleared.",
     "report.holding": "Still reporting on the line you picked. Clear the form to report on something else.",
@@ -159,7 +161,7 @@
     return parsed && parsed.kind === "lesson" ? { id: parsed.id, direction: parsed.direction } : null;
   }
 
-  const SCOPES = ["lesson", "verb", "fluency", "mature"];
+  const SCOPES = ["lesson", "verb", "fluency", "slang", "mature", "signal"];
 
   /*
    * The group anchors a reviewer can choose from, for one scope.

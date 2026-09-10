@@ -75,8 +75,8 @@ test("the picker reaches every kind of content a reviewer can see", () => {
   const scopes = ui.match(/const SCOPES = \[([^\]]+)\]/);
   assert.ok(scopes, "expected a list of scopes");
   const codes = [...scopes[1].matchAll(/"([\w-]+)"/g)].map((match) => match[1]);
-  assert.deepStrictEqual(codes, ["lesson", "verb", "fluency", "mature"],
-    "the lesson and all three library sections must be reportable");
+  assert.deepStrictEqual(codes, ["lesson", "verb", "fluency", "slang", "mature", "signal"],
+    "the lesson and every library section must be reportable");
   for (const code of codes) {
     for (const language of ["en", "es"]) {
       const key = `report.scope.${code}`;
