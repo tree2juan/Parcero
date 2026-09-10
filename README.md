@@ -64,6 +64,14 @@ Each lesson has five tabs, in the order a real conversation demands them:
 | **Practice** | Several retrieval questions that check meaning-in-context rather than translation, each naming what it is testing. |
 | **Report an error** | Tell a maintainer that something is wrong, without leaving the lesson. See [Native-speaker review](#native-speaker-review). |
 
+### Three-minute study segments
+
+A full lesson is roughly fifteen minutes of reading per direction, which is more than most people sit down to do at once. [`data/lesson-schema.js`](data/lesson-schema.js) therefore derives **study segments** of about three minutes each, at 130 words per minute, from the content itself.
+
+Segments are computed and never authored. A `segments` key checked into a lesson would go stale the first time anyone edited a line of dialogue, and it would go stale silently — so a test rejects one outright.
+
+They are packed to be **even rather than full**. Filling each segment to a word budget in turn leaves whatever is left over as the last segment, which in practice meant tails of thirty words: technically a segment, useless as a sitting. Instead the deriver works out how many segments the content wants, divides evenly, and packs against that target — the same reasoning that splits flashcard sets 7 + 6 rather than 10 + 3. Every segment currently lands between 240 and 520 words, and a test holds that band.
+
 <a id="lessons"></a>
 
 ## The lesson set
@@ -81,7 +89,9 @@ Eight lessons spanning starter through extending, mapped onto the roadmap's path
 | 7 | In the seminar | Extending · Academic | `matizar`, `quisiera`, academic hedging in both languages |
 | 8 | The job interview | Extending · Professional | `llevo tres años trabajando`, `con mucho gusto`, concrete examples |
 
-Alongside the lessons there is a reference **library**: 200 high-frequency verbs with their most useful forms, a fluency list of connectors and softeners, and an age-gated recognition reference for insulting or adult language — included so learners can *understand* it and de-escalate, never to direct it at anyone.
+Alongside the lessons there is a reference **library**: 200 high-frequency verbs with their most useful forms, a fluency list of connectors and softeners, a **Colombian slang** reference, and an age-gated recognition reference for insulting or adult language — included so learners can *understand* it and de-escalate, never to direct it at anyone.
+
+The slang reference carries a field the others do not: **how safe each phrase is for a learner to actually say**. Meaning alone is not enough, because the gap between understanding `parcero` and understanding `gonorrea` is not a gap in translation — it is a gap in what happens to you if you use it. Every entry is marked *Say it freely*, *Say it with friends*, or *Understand only*, and the label is shown before the meaning rather than after it.
 
 The verb list was seeded from published frequency data, so the **level** on each card is real. The **register** and **regionality** fields are not: every entry still carries the same placeholder text, because no Colombian speaker has been over them. Those two labels are therefore **not displayed**. Showing them would have stated the same unverified claim two hundred times in the app's own voice. They stay in `data/curriculum.js`, they remain reportable through the Report an error tab, and each one appears on its card as soon as a real value replaces the placeholder and `reviewStatus` is dropped from that verb.
 
@@ -102,15 +112,21 @@ Answers drawn from prose rather than a single term — a culture note, why a mis
 
 ### Cards are derived, never authored
 
-There is no flashcard content file. `data/flashcards.js` reads the same `lessons`, `curriculum`, and `fluencyItems` that the rest of the app renders, and builds decks from them:
+There is no flashcard content file. `data/flashcards.js` reads the same `lessons`, `curriculum`, `fluencyItems`, `slangItems` and mature reference that the rest of the app renders, and builds decks from them:
 
 | Group | Topic | Cards from |
 | --- | --- | --- |
 | **Situations** | one per lesson | vocabulary, meaning-in-context, pronunciation, worked examples, region and register, culture notes, common mistakes, phrasing variations, the form of address, the practice questions |
 | **Verbs** | one per level (foundation, independent, extension) | each verb, asked in the productive direction |
 | **Fluency** | one | connectors and softeners, asked in the productive direction |
+| **Slang** | one per safety level (say it freely, say it with friends, understand only) | each slang phrase, its meaning, where it is said, and whether you may use it |
+| **Recognition and safety** | two, and only when the age gate is open | insults and adult language, and the warning signals that a conversation is turning |
 
-So adding a lesson to `data/lessons.js` adds a flashcard topic. Adding verbs adds cards to the matching level. Nothing has to be written twice, and no card can drift out of sync with the lesson it came from. The decks follow the language direction toggle, and switching direction keeps your place in the set.
+So adding a lesson to `data/lessons/` adds a flashcard topic. Adding verbs adds cards to the matching level. Nothing has to be written twice, and no card can drift out of sync with the lesson it came from. The decks follow the language direction toggle, and switching direction keeps your place in the set.
+
+Two rules keep the gated decks honest. Gated cards are **absent from the deck, not hidden in it**, so nothing to be unlocked is ever present in the page for a closed gate. And the gate opens only on the boolean `true` — the flag comes from `localStorage`, which returns strings, and the string `"false"` is truthy, so anything less strict would have unlocked on the value that means the opposite.
+
+Slang cards are drilled in the recognition direction only. The safety note rides on the front of every card rather than the back, because a learner meeting `"Understand only"` for the first time needs it before they answer, not after.
 
 ### Reading richer lessons without a second code path
 
@@ -160,7 +176,17 @@ Results stay in browser storage and identify a starting level plus the skills to
 
 ## Adding a lesson
 
-Lessons live in [`data/lessons.js`](data/lessons.js) as plain objects — no build step, no JSON schema to learn. Add an entry to the `lessons` array and it appears in the picker automatically.
+Lessons live in [`data/lessons.js`](data/lessons.js) and in themed block files under [`data/lessons/`](data/lessons) as plain objects — no build step, no JSON schema to learn. Add an entry and it appears in the picker automatically.
+
+`data/lessons.js` declares the `lessons` array; each block file calls `lessons.push(...)` on it. A block is one theme, a handful of lessons, and a file small enough to review in a diff — which a single six-megabyte catalogue is not. Two things must be true of a new block, and both are tested: it needs a `<script>` tag in `index.html` **after** `data/lessons.js`, and the file it names must exist. Without the first, the tests would still find the block by globbing the directory while every actual reader got a page missing those lessons.
+
+While writing one, check it on its own rather than running the whole suite over a catalogue that may not yet parse:
+
+```bash
+node scripts/check-lesson-block.js data/lessons/02-foundation-state.js
+```
+
+Each lesson names the one curriculum verb it is built on, in its `verb` field. It must be a verb that exists in `data/curriculum.js`, no other lesson may claim it, and it has to actually be spoken in the dialogue — coverage used to be inferred by searching prose for verb forms, which credited a verb for turning up in a translation and missed any taught only as a conjugation.
 
 Every field below except `title`, `situation`, `dialogue`, `vocabulary`, `note`, `prompt`, `choices` and `answer` is optional: [`data/lesson-schema.js`](data/lesson-schema.js) fills in the rest, so a partly written lesson still renders. Rows may be written as objects (preferred) or as the original short tuples.
 
@@ -239,12 +265,13 @@ Every field below except `title`, `situation`, `dialogue`, `vocabulary`, `note`,
 
 House rules for content:
 
-- **Both directions, always.** A lesson without its `en` counterpart will fail CI.
+- **Both directions, always.** A lesson without its `en` counterpart will fail CI. The two must also *mirror*: the same number of dialogue turns, vocabulary entries, culture notes, pitfalls, variations and practice questions, and the same optional fields filled on the same rows. Structural parity had been near-perfect and entirely unenforced — each direction was only ever checked against a minimum, so the `related` lists had already drifted in five of the eight original lessons before anything noticed. `address.form` is deliberately exempt: English has one second-person form, so its value is always `"mixed"`.
 - **Answer the five questions.** `setting` is where a learner works out who is speaking and why it is phrased this way. CI fails if any of the five is missing.
 - **Name the address form.** `usted` vs `tú` vs `vos` carries more meaning than most vocabulary does, so say which one is in play and what switching would signal.
 - **Never present a regional expression as universal.** Every vocabulary entry states its `region`. `vos` is paisa and Valle, not Colombian at large.
 - **Say what goes wrong.** A pitfall without `sayInstead` leaves the learner stuck, so all three fields are required.
 - **Do not make the right answer guessable.** `choices` and `answer` are a pair — `answer` is an index, so moving one means moving the other. CI fails if answers cluster at one position, if the correct choice is reliably the longest, if it towers over its distractors, or if a distractor is too short to be worth considering. See [`test/practice.test.js`](test/practice.test.js).
+- **Name the verb.** Each lesson declares the one curriculum verb it is built on. It must exist, no other lesson may claim it, and it has to be spoken in the dialogue rather than merely asserted in metadata.
 - **Leave `review: "pending"`.** The lesson keeps inviting a native speaker to check it until one has.
 
 Nothing else needs touching: the lesson appears in the lesson picker, its anchors become flaggable in review mode, and it becomes a [flashcard topic](#flashcards) on its own.
@@ -277,7 +304,7 @@ Review happens at two grains, and both need a reviewer who knows the language, n
 
 The fastest correction is the one made while looking at the mistake. Every lesson has a **Report an error** tab, next to Dialogue, Understand and Practice. Nothing is added to the lesson itself: no controls hang off individual lines, so a learner reading a lesson never has to see review furniture.
 
-The tab asks two questions to find the string: **what are you reporting on** — the lesson you are reading, a verb, a fluency phrase, or a mature-language entry — and **which one**, listed by its own words rather than by position. Everything a lesson holds is reachable: each line of the situation, the address-form note, every dialogue line, vocabulary entry, context note, pitfall, variation and practice question. It then narrows to the exact part: the Spanish line, the translation, the pronunciation respelling, the speaker's name, and so on. The text you picked is quoted back to you before you say anything about it.
+The tab asks two questions to find the string: **what are you reporting on** — the lesson you are reading, a verb, a fluency phrase, a slang phrase, a mature-language entry, or a warning signal — and **which one**, listed by its own words rather than by position. Everything a lesson holds is reachable: each line of the situation, the address-form note, every dialogue line, vocabulary entry, context note, pitfall, variation and practice question. It then narrows to the exact part: the Spanish line, the translation, the pronunciation respelling, the speaker's name, and so on. The text you picked is quoted back to you before you say anything about it.
 
 From there it asks what is wrong (not natural, wrong region, wrong register, mistranslation, misleading pronunciation, spelling, culture, risky, dated), how much it matters, and — the field that does the real work — **how you would say it instead**. Reports collect in your browser, so you can read a whole lesson and report as you go, and any saved report can be reopened and edited. A half-written report keeps hold of the line it is about: paging to the next lesson or switching language will not quietly re-point it at something else. **Open a GitHub issue with these** then opens a prefilled issue containing both a readable report and a machine-readable payload. Copy-to-clipboard and download-JSON are offered as fallbacks, including when a batch is too large for a URL.
 
@@ -323,11 +350,14 @@ flashcards.js       Swipeable flashcard decks: gestures, round queue, reset
 review.js           Review anchors: parse, resolve, validate, build issue payloads
 review-ui.js        The Report an error tab: content picker, report form, queue, issue export
 styles.css          Design system: light/dark tokens, layout, components
-data/lessons.js     The lessons
-data/lesson-schema.js  The lesson shape: defaults, normalisation, legacy tuples
-data/curriculum.js  200 verbs, fluency connectors, mature-language reference
+data/lessons.js     Declares the lesson array, and the original eight lessons
+data/lessons/       Lesson blocks, one file per theme, pushing onto that array
+data/lesson-schema.js  The lesson shape: defaults, normalisation, legacy tuples, study segments
+data/curriculum.js  200 verbs and the fluency connectors
+data/slang.js       Colombian slang, each entry marked with how safe it is to say
+data/mature.js      Age-gated recognition reference: insults, adult language, warning signals
 data/flashcards.js  Derives flashcard topics and sets from the content above
-scripts/            Maintainer tools: triage flags back to the lines to edit
+scripts/            Maintainer tools: triage flags, and check a single lesson block
 .github/workflows/  CI, Pages deploy, and automatic triage of filed flags
 assets/             Favicon, social card, roadmap diagram
 test/               Dependency-free content validation
