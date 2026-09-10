@@ -190,11 +190,68 @@ test("the direction decides which language is asked for and which is recalled", 
   }
 });
 
+/*
+ * The test above proves the mechanism picks a language for each side. It does
+ * not prove the text in that side is actually in that language, and the two
+ * came apart: fluencyItems is documented as [spanish, english, ...], but two
+ * entries held the English in the Spanish slot, so the deck put the answer on
+ * the front and the prompt on the back -- in BOTH directions, since the builder
+ * just swaps the same two slots. Separately the context card tagged the scene
+ * with `target` when the scene is written in the language the learner already
+ * reads, so Spanish scene-setting was announced as English.
+ *
+ * Nothing structural catches either one; the cards were well-formed and the
+ * ids were unique. Only the words were in the wrong place. So this reads the
+ * words.
+ *
+ * Closed-class Spanish only, and deliberately not diacritics: "Bogotá" and
+ * "Medellín" are correctly spelled inside English sentences. Words that are
+ * also ordinary English are left out on purpose -- con, no, son, lo, ya, a, o
+ * and me would all fire on real English glosses. Verified against every string
+ * the deck tags as English in both directions.
+ */
+const SPANISH_FUNCTION_WORDS = new Set([
+  "el", "la", "los", "las", "un", "una", "unos", "unas", "del", "al",
+  "que", "qué", "y", "en", "por", "para", "su", "sus", "tu", "tus",
+  "te", "se", "es", "está", "están", "estás", "esto", "eso",
+  "como", "más", "menos", "muy", "pues", "bien", "todo", "toda",
+  "sea", "bueno", "hecho", "pa", "voy", "vas", "usted", "ustedes",
+  "pero", "porque", "cuando", "donde", "quiere", "quieres"
+]);
+
+test("text the deck labels English is not actually Spanish", () => {
+  const offenders = [];
+  for (const direction of directions) {
+    for (const set of flashcardSets(direction, sources)) {
+      for (const card of set.cards) {
+        for (const side of ["front", "back"]) {
+          if (card[`${side}Lang`] !== "en") continue;
+          const spanish = String(card[side])
+            .toLowerCase()
+            .split(/[^a-záéíóúñü]+/)
+            .filter(Boolean)
+            .filter((word) => SPANISH_FUNCTION_WORDS.has(word));
+          if (!spanish.length) continue;
+          offenders.push(
+            `[${direction}] ${set.topicId} ${card.kind}.${side} is tagged lang="en" but reads as Spanish ` +
+            `(${spanish.join(", ")}): ${JSON.stringify(card[side])}`
+          );
+        }
+      }
+    }
+  }
+  assert.deepStrictEqual(
+    offenders,
+    [],
+    `a learner is shown this text with the wrong language on it, which is the wrong ` +
+    `side of the card or the wrong lang for a screen reader to speak:\n  ${offenders.join("\n  ")}`
+  );
+});
+
 test("set ids survive a change of direction, so switching keeps your place", () => {
   const [spanish, english] = directions.map((direction) => flashcardSets(direction, sources).map((set) => set.id));
   assert.deepStrictEqual(spanish, english);
 });
-
 test("new content flows into the decks with no edit here", () => {
   const before = flashcardSets("es", sources);
   const extraLesson = JSON.parse(JSON.stringify(lessons[0]));

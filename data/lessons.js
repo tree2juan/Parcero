@@ -8,7 +8,7 @@ const lessons = [{
   review: "pending",
   es: {
     title: "Un café y una conversación",
-    situation: "Pides un café en una tienda de barrio de Bogotá.",
+    situation: "You order a coffee at a corner shop in Bogotá.",
     setting: {
       who: "Camila runs the shop and has served this block for years. Alex moved onto the street a few weeks ago and is still a face rather than a name. Neither outranks the other, and the age gap is not wide enough to force formality.",
       what: "A small cash transaction: one black coffee, drunk standing up, over in ninety seconds. There is no menu, no table service and no tab.",
@@ -142,7 +142,7 @@ const lessons = [{
   review: "pending",
   es: {
     title: "Un taxi hasta el centro",
-    situation: "Tomas un taxi en Medellín y quieres saber el precio antes de subir.",
+    situation: "You take a taxi in Medellín and want to know the price before getting in.",
     setting: {
       who: "Alex is a passenger near a busy street in Medellín. The conductor is working a regular city taxi, not a private tour car. They are strangers, so the exchange starts with respectful distance.",
       what: "Alex wants a ride to el centro and wants to confirm how the fare will be calculated before opening the door. The driver can choose the route, but the price should be clear enough that no one argues at the end.",
@@ -276,7 +276,7 @@ const lessons = [{
   review: "pending",
   es: {
     title: "En la plaza de mercado",
-    situation: "Compras fruta en una plaza de mercado y el vendedor te da algo de más.",
+    situation: "You buy fruit at a market stall and the vendor gives you a little extra.",
     setting: {
       who: "Alex is buying fruit from a vendedora who works the same stall every day. They are not friends, but market talk is warmer than supermarket talk. The vendor leads the rhythm because she knows the product, the price and the queue.",
       what: "A small fruit purchase by weight: mangoes by the libra, a brief price check, and a little extra added at the end. The negotiation is light, more about friendliness than winning.",
@@ -410,7 +410,7 @@ const lessons = [{
   review: "pending",
   es: {
     title: "¿Cuál es el parche?",
-    situation: "Un amigo te escribe para organizar un plan el fin de semana.",
+    situation: "A friend messages you to put together a plan for the weekend.",
     setting: {
       who: "Santiago and Alex are close friends who already have enough trust to joke, leave details open and use local slang. Santiago sounds paisa or at least socially comfortable in Medellín; Alex answers in the same register by using vos.",
       what: "A WhatsApp-style invitation for a Saturday plan that is not fully defined yet. The goal is not to buy tickets in this moment, but to decide whether the plan feels good and then sort out the details.",
@@ -546,7 +546,7 @@ const lessons = [{
   review: "pending",
   es: {
     title: "Una cita médica",
-    situation: "Vas a una cita médica y tienes que describir un síntoma.",
+    situation: "You go to a medical appointment and have to describe a symptom.",
     setting: {
       who: "Alex is the patient and the doctor is the clinical authority. The doctor may be kind and warm, but the relationship is professional and the safest default is usted.",
       what: "A short outpatient appointment for a sore throat that has lasted three days. The task is to describe symptoms accurately, answer screening questions and understand possible next steps such as a fórmula médica or incapacidad.",
@@ -684,7 +684,7 @@ const lessons = [{
   review: "pending",
   es: {
     title: "La reunión de seguimiento",
-    situation: "Cuentas el avance de tu trabajo en una reunión corta de equipo.",
+    situation: "You give a short update on your work in a quick team meeting.",
     setting: {
       who: "Laura coordinates the report and Alex owns the data review. They are friendly colleagues, not strangers, and Laura may be senior in the project without being socially distant.",
       what: "A short stand-up update about the September report: what is done, what is still open, and who needs to act next. The goal is to keep the work moving, not to defend every detail.",
@@ -820,7 +820,7 @@ const lessons = [{
   review: "pending",
   es: {
     title: "En el seminario",
-    situation: "Participas en un seminario universitario y quieres matizar un argumento.",
+    situation: "You take part in a university seminar and want to qualify an argument.",
     setting: {
       who: "A professor is guiding a university seminar and Alex is one of several students discussing a reading. Alex is not trying to defeat a classmate; the goal is to contribute a careful academic point.",
       what: "The group is evaluating the author’s central thesis and the evidence in chapter three. Alex agrees partly but wants to limit the claim, not reject the whole argument.",
@@ -958,7 +958,7 @@ const lessons = [{
   review: "pending",
   es: {
     title: "La entrevista de trabajo",
-    situation: "Estás en una entrevista y te preguntan por tu experiencia.",
+    situation: "You are in an interview and they ask about your experience.",
     setting: {
       who: "Alex is interviewing with a hiring manager for a client-facing role. The interviewer controls the agenda, but the exchange is meant to feel professional rather than intimidating.",
       what: "A first-round interview question about motivation, experience and fit. Alex needs to connect his past work to the open position and support his claims with a concrete example.",

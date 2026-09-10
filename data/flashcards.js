@@ -187,7 +187,13 @@ function flashcardsFromLesson(lesson, direction) {
       kind: "context",
       askKey: "deck.ask.context",
       front: content.situation,
-      frontLang: target,
+      // The scene and the note orient the learner, so both are written in the
+      // language they already read, not the one they are building. The lesson
+      // page has always taken this for granted -- #lesson-situation carries no
+      // lang of its own and inherits the interface language, which is the
+      // support language. Tagging the card with `target` contradicted that and
+      // announced Spanish scene-setting as English to a screen reader.
+      frontLang: support,
       back: content.note,
       backLang: null,
       note: null
