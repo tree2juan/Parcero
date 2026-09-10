@@ -51,6 +51,11 @@ const UI_STRINGS = {
     "lessons.eyebrow": "Lessons",
     "lessons.title": "Pick a situation.",
     "lessons.lead": "Each lesson is one real moment: what is said, why it works, how it sounds, and what it would mean to get it wrong.",
+    "lessons.search": "Search lessons",
+    "lessons.searchPlaceholder": "e.g., pedir, market, or starter",
+    "lessons.count": "Showing all {total} lessons.",
+    "lessons.matching": "{matches} of {total} lessons match.",
+    "lessons.noMatches": "No lesson matches that search. Try a verb, a place, or a level.",
     "progress.eyebrow": "Your path",
     "progress.count": "{explored} of {total} lessons explored",
 
@@ -256,8 +261,7 @@ const UI_STRINGS = {
     "library.slangIntro": "Slang you will hear long before you can safely use it. Every entry says where it is used and whether you should say it back.",
     "library.slangUnverified": "No Colombian native speaker has checked these entries yet. The meanings and the regional labels are a starting point for listening, not a settled rule.",
     "library.slangSearch": "Search slang or meaning",
-    "library.slangPlaceholder": "e.g., parcero or friend",
-    "library.slangCount": "Showing all {total} expressions.",
+    "library.slangPlaceholder": "e.g., parcero or friend",    "library.slangCount": "Showing all {total} expressions.",
     "library.slangMatching": "{matches} of {total} expressions match.",
     "library.slangSafety": "Can you say it?",
 
@@ -396,6 +400,11 @@ const UI_STRINGS = {
     "lessons.eyebrow": "Lecciones",
     "lessons.title": "Elige una situación.",
     "lessons.lead": "Cada lección es un momento real: qué se dice, por qué funciona, cómo suena y qué pasaría si lo dijeras de otra manera.",
+    "lessons.search": "Buscar lecciones",
+    "lessons.searchPlaceholder": "p. ej., pedir, mercado o starter",
+    "lessons.count": "Mostrando las {total} lecciones.",
+    "lessons.matching": "{matches} de {total} lecciones coinciden.",
+    "lessons.noMatches": "Ninguna lección coincide con esa búsqueda. Prueba con un verbo, un lugar o un nivel.",
     "progress.eyebrow": "Tu camino",
     "progress.count": "{explored} de {total} lecciones exploradas",
 

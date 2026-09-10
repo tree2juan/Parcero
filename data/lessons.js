@@ -127,7 +127,7 @@ const lessons = [{
     answer: 2,
     practiceExtra: [
       { prompt: "Un barista dice “Sure” cuando usted pide algo. ¿Cómo debe interpretarlo?", choices: ["Como un sí amable y dispuesto.", "Como un acuerdo algo renuente.", "Como una petición para que repita."], answer: 0, tests: "interpretar el tono en respuestas breves de servicio" },
-      { prompt: "¿Qué solicitud sonaría más grosera en un mostrador?", choices: ["Could I get a coffee, please?", "Give me a coffee.", "I'll have a coffee, thanks."], answer: 1, tests: "el imperativo sin un suavizador" },
+      { prompt: "¿Qué solicitud sonaría más grosera en un mostrador?", choices: ["Could I get a coffee?", "Give me a coffee.", "A coffee, please."], answer: 1, tests: "el imperativo sin un suavizador" },
       { prompt: "Camila pregunta “Regular or decaf?” ¿Sobre qué está preguntando?", choices: ["El tamaño del vaso.", "Si quiere cafeína o no.", "Si va a tomarlo allí o llevarlo."], answer: 1, tests: "vocabulario de café en contexto" },
       { prompt: "¿Por qué “Regular, please.” es una buena respuesta y no una perezosa?", choices: ["Las respuestas cortas son la norma cortés en intercambios rápidos de servicio.", "Es gramaticalmente incompleta, pero se tolera en intercambios rápidos.", "Señala que usted tiene afán y está molesto en ese momento."], answer: 0, tests: "longitud esperada de la respuesta en el inglés de servicio" }
     ]

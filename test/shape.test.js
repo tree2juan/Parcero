@@ -313,6 +313,17 @@ test("a lesson's declared verb is actually spoken in its dialogue", () => {
     swap("e", "ie");
     swap("e", "i");
     swap("u", "ue");
+    /*
+     * -ir stem-changers raise the vowel in the third-person preterite and the
+     * gerund -- "murió", "durmió", "pidió", "sintió" -- and in a scene built
+     * around one event that is very often the only form anybody says. Without
+     * this, the morir lesson fails while containing three correct uses of it.
+     *
+     * Scoped to -ir because o->u does not happen in -ar or -er verbs, and an
+     * unscoped rule would hand "comer" the stem "cum" and let a passing
+     * mention of "cumpleaños" stand in for anybody actually eating.
+     */
+    if (/ir(se)?$/.test(verb)) swap("o", "u");
     return [...variants].map((variant) => variant.slice(0, 4));
   };
   for (const lesson of lessons) {

@@ -333,11 +333,11 @@ lessons.push(
         {
           prompt: "Mariana says “el bus viaja toda la noche.” What is natural about that?",
           choices: [
-            "Spanish can make the bus the subject of the travelling.",
             "Spanish requires every route to mention the driver by name.",
-            "Spanish avoids saying that passengers travel on buses."
+            "Spanish avoids saying that passengers travel on buses.",
+            "Spanish can make the bus the subject of the travelling."
           ],
-          answer: 0,
+          answer: 2,
           tests: "transport itself can be the subject of “viajar”"
         }
       ]
@@ -649,11 +649,11 @@ lessons.push(
         {
           prompt: "Maya dice “the bus travels overnight.” ¿Qué tiene de natural?",
           choices: [
-            "El bus puede ser sujeto de “travels.”",
             "El inglés exige nombrar al conductor.",
-            "El inglés evita que viajen pasajeros."
+            "El inglés evita que viajen pasajeros.",
+            "El bus puede ser sujeto de “travels.”"
           ],
-          answer: 0,
+          answer: 2,
           tests: "el transporte como sujeto posible de “travel”"
         }
       ]
@@ -936,20 +936,20 @@ lessons.push(
       ],
       prompt: "Why does Paola say both “conducir” and “manejar” in the same exchange?",
       choices: [
-        "Because “conducir” fits official paperwork, while “manejar” is normal Colombian speech.",
         "Because the two verbs refer to completely different kinds of vehicles on Colombian roads.",
+        "Because “conducir” fits official paperwork, while “manejar” is normal Colombian speech.",
         "Because “manejar” is only for professional drivers and “conducir” is only for visitors."
       ],
-      answer: 0,
+      answer: 1,
       practiceExtra: [
         {
           prompt: "Which question would a Colombian friend most naturally ask about your ability?",
           choices: [
-            "¿Usted sabe manejar en carretera?",
             "¿Usted sabe conducir oficialmente?",
-            "¿Usted sabe guiar automóviles?"
+            "¿Usted sabe guiar automóviles?",
+            "¿Usted sabe manejar en carretera?"
           ],
-          answer: 0,
+          answer: 2,
           tests: "“manejar” as the everyday verb for driving in Colombian speech"
         },
         {
@@ -965,21 +965,21 @@ lessons.push(
         {
           prompt: "Jordan says “yo conduzco.” What should you notice?",
           choices: [
-            "It is the irregular present-tense yo form of “conducir.”",
             "It is the casual Colombian replacement for “yo manejo.”",
+            "It is the irregular present-tense yo form of “conducir.”",
             "It is the plural command used on road warning signs."
           ],
-          answer: 0,
+          answer: 1,
           tests: "the irregular yo form “conduzco”"
         },
         {
           prompt: "What is the safest way to handle “pico y placa” with a rental car?",
           choices: [
-            "Ask how it works here for this plate today.",
             "Assume every Colombian city uses one schedule.",
-            "Translate the name and ignore the restriction."
+            "Translate the name and ignore the restriction.",
+            "Ask how it works here for this plate today."
           ],
-          answer: 0,
+          answer: 2,
           tests: "pico y placa as a local rule tied to the plate and day"
         }
       ]
@@ -1252,20 +1252,20 @@ lessons.push(
       ],
       prompt: "¿Por qué Paula usa “drive” donde el español colombiano distingue “conducir” y “manejar”?",
       choices: [
-        "Porque “drive” cubre el verbo cotidiano y parte de la familia oficial.",
         "Porque “handle” es obligatorio para carros pequeños y buses urbanos.",
+        "Porque “drive” cubre el verbo cotidiano y parte de la familia oficial.",
         "Porque “conduct” reemplaza a “drive” cuando el viaje cruza montañas."
       ],
-      answer: 0,
+      answer: 1,
       practiceExtra: [
         {
           prompt: "¿Cuál pregunta suena natural para saber si alguien maneja en carretera?",
           choices: [
-            "Can you drive on mountain roads?",
             "Can you handle cars officially?",
-            "Can you conduct small vehicles?"
+            "Can you conduct small vehicles?",
+            "Can you drive on mountain roads?"
           ],
-          answer: 0,
+          answer: 2,
           tests: "“drive” como verbo normal para manejar"
         },
         {
@@ -1281,21 +1281,21 @@ lessons.push(
         {
           prompt: "Jorge dice “I'm the driver today.” ¿Qué debe notar?",
           choices: [
-            "El artículo “the” marca el papel específico de hoy.",
             "La frase evita el verbo “drive” por ser informal.",
+            "El artículo “the” marca el papel específico de hoy.",
             "La palabra “driver” sólo sirve para profesiones."
           ],
-          answer: 0,
+          answer: 1,
           tests: "el artículo necesario antes de un papel singular específico"
         },
         {
           prompt: "¿Cuál es una advertencia natural de seguridad en inglés?",
           choices: [
-            "Drive carefully on that road.",
             "Drive with calm on that road.",
-            "Conduct calmly by that road."
+            "Conduct calmly by that road.",
+            "Drive carefully on that road."
           ],
-          answer: 0,
+          answer: 2,
           tests: "“drive carefully” como advertencia natural"
         }
       ]
@@ -1578,40 +1578,40 @@ lessons.push(
       ],
       prompt: "In the chiva scene, why is “montar” not just one English verb?",
       choices: [
-        "Because the object changes it from boarding to riding, setting up or teasing.",
         "Because it is only correct for horses and never works with vehicles.",
+        "Because the object changes it from boarding to riding, setting up or teasing.",
         "Because it is a formal verb that rural drivers avoid in conversation."
       ],
-      answer: 0,
+      answer: 1,
       practiceExtra: [
         {
           prompt: "Which sentence focuses on the act of getting onto the chiva right now?",
           choices: [
-            "Me subo a la chiva ahora.",
             "Monto un negocio de chiva.",
-            "Me la tienen montada."
+            "Me la tienen montada.",
+            "Me subo a la chiva ahora."
           ],
-          answer: 0,
+          answer: 2,
           tests: "“subirse a” for the immediate boarding action"
         },
         {
           prompt: "Which sentence describes the ride to the farm?",
           choices: [
-            "Montamos en chiva hasta la finca.",
             "Montamos una obra hasta la finca.",
+            "Montamos en chiva hasta la finca.",
             "Montamos el negocio hasta la finca."
           ],
-          answer: 0,
+          answer: 1,
           tests: "“montar en” for riding in transport"
         },
         {
           prompt: "What does “montó un negocio de café” mean?",
           choices: [
-            "He set up a coffee business.",
             "He rode a coffee business.",
-            "He boarded a coffee counter."
+            "He boarded a coffee counter.",
+            "He set up a coffee business."
           ],
-          answer: 0,
+          answer: 2,
           tests: "“montar” as setting up an operation"
         },
         {

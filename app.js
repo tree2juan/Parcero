@@ -148,7 +148,35 @@ function renderLessonList() {
    * that title sits in the list looking like the aprender lesson, which has its
    * own entry.
    */
-  $("#lesson-list").innerHTML = lessons.map((item, index) => {
+  /*
+   * Filtered rather than paged, for the same reason slang is: two hundred
+   * situations is far past the point where scrolling finds anything, and
+   * matching every keystroke over a list this size costs nothing.
+   *
+   * The index shown is the lesson's position in the whole course, not its
+   * position in the filtered view, so a lesson keeps the same number whatever
+   * is typed. Searching covers the title, the verb and the level, which is why
+   * "starter" narrows to the foundation tier without a separate control.
+   */
+  const search = $("#lesson-search");
+  const query = ((search && search.value) || "").trim().toLowerCase();
+  const matches = lessons
+    .map((item, index) => ({ item, index }))
+    .filter(({ item }) => !query || [
+      item[state.direction].title,
+      item[state.direction].situation,
+      item.verb,
+      item.level
+    ].some((field) => field && String(field).toLowerCase().includes(query)));
+  const count = $("#lesson-count");
+  if (count) {
+    count.textContent = query
+      ? t("lessons.matching", { matches: matches.length, total: lessons.length })
+      : t("lessons.count", { total: lessons.length });
+  }
+  const empty = $("#lesson-empty");
+  if (empty) empty.hidden = matches.length > 0;
+  $("#lesson-list").innerHTML = matches.map(({ item, index }) => {
     const done = state.completed.has(item.id);
     const active = item.id === state.lessonId;
     const meta = item.verb ? `${item.level} · ${item.verb}` : item.level;
@@ -447,4 +475,5 @@ renderVerbs();
 renderFluency();
 renderSlang();
 $("#slang-search").addEventListener("input", renderSlang);
+$("#lesson-search").addEventListener("input", renderLessonList);
 render();

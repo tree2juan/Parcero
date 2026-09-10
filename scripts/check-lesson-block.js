@@ -61,6 +61,39 @@ const directions = ["es", "en"];
 const TIER_LABEL = { foundation: "Starter", independent: "Developing", extension: "Extending" };
 
 /*
+ * Verb stems, kept deliberately in step with test/shape.test.js. Colombian
+ * speech nearly always says a conjugated form, so the infinitive's root alone
+ * would fail every stem-changing verb in the curriculum.
+ */
+const STRONG_STEMS = {
+  decir: ["dij", "dic", "dig"], hacer: ["hic", "hiz", "hag"], tener: ["tuv", "tien", "teng"],
+  poder: ["pud", "pued"], poner: ["pus", "pon", "pong"], saber: ["sup", "sep"],
+  querer: ["quis", "quier"], venir: ["vin", "vien", "veng"], traer: ["traj", "traig"],
+  conducir: ["conduj", "conduzc"], conocer: ["conozc", "conoc"], seguir: ["sig", "sigu"],
+  oír: ["oig", "oy"], jugar: ["jueg", "jug"]
+};
+/* Verbs whose conjugations share no stem with the infinitive at all. */
+const SPOKEN_EXEMPT = /^(ser|ir|estar|haber|ver|dar)$/;
+
+function verbStems(verb) {
+  const root = verb.replace(/se$/, "").replace(/[aeiouáéíóú]?[rn]$/, "").toLowerCase();
+  if (!root) return [];
+  const variants = new Set([root, ...(STRONG_STEMS[verb] || [])]);
+  const swap = (from, to) => {
+    const at = root.lastIndexOf(from);
+    if (at !== -1) variants.add(root.slice(0, at) + to + root.slice(at + from.length));
+  };
+  swap("o", "ue");
+  swap("e", "ie");
+  swap("e", "i");
+  swap("u", "ue");
+  /* -ir stem-changers raise the vowel in the third-person preterite and gerund:
+     "murió", "durmió", "pidió". Scoped to -ir, where that change actually happens. */
+  if (/ir(se)?$/.test(verb)) swap("o", "u");
+  return [...variants].map((variant) => variant.slice(0, 4));
+}
+
+/*
  * The stamp that tells the review tooling which file to send a native speaker
  * to. Without it every flag against this block names data/lessons.js, at an
  * index that file does not have.
@@ -220,6 +253,46 @@ for (const lesson of lessons) {
     const es = (esVocab[index].related || []).length;
     const en = (enVocab[index].related || []).length;
     if (es !== en) fail(`${at}: vocabulary ${index} lists ${es} related terms in es and ${en} in en`);
+  }
+
+  /*
+   * Matching row counts is not the same as matching conversations. A three-hand
+   * scene can keep six lines in both directions and still hand line six to a
+   * different person, which is how one lesson ended up with the Colombian host
+   * offering more tea in `es` while the English speaker delivered a note about
+   * register in `en`. The shape test calls that drift, and it is right to: the
+   * two directions are meant to be the same people having the same exchange.
+   *
+   * Speakers are compared as a sequence of first-appearance indexes, not by
+   * name, because the names deliberately differ between directions.
+   */
+  const turnOrder = (content) => {
+    const seen = new Map();
+    return (schema.normalizeContent(content || {}).dialogue || []).map((row) => {
+      const name = (row.speaker || "").trim();
+      if (!seen.has(name)) seen.set(name, seen.size);
+      return seen.get(name);
+    }).join(",");
+  };
+  const esTurns = turnOrder(lesson.es);
+  const enTurns = turnOrder(lesson.en);
+  if (esTurns !== enTurns) {
+    fail(`${at}: the turn order differs between directions (es ${esTurns} vs en ${enTurns}); `
+      + "the same people must have the same conversation in both");
+  }
+
+  /*
+   * Declaring the verb is cheap; putting it in someone's mouth is the lesson.
+   * This mirrors test/shape.test.js so a block fails here, in front of the
+   * person who can still fix it, rather than in the suite an hour later.
+   */
+  if (lesson.verb && !SPOKEN_EXEMPT.test(lesson.verb)) {
+    const spoken = (schema.normalizeContent(lesson.es || {}).dialogue || [])
+      .map((row) => row.target || "").join(" ").toLowerCase();
+    const roots = verbStems(lesson.verb);
+    if (roots.length && !roots.some((root) => spoken.includes(root))) {
+      fail(`${at}: claims "${lesson.verb}" but no es dialogue line contains any of ${roots.join(", ")}`);
+    }
   }
 }
 
