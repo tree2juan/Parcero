@@ -383,6 +383,7 @@ function render() {
   $("#speech-status").textContent = "";
   renderLessonList();
   renderPreview();
+  renderStories();
   updateProgress();
   renderPlacement();
 }
@@ -800,6 +801,144 @@ document.querySelectorAll(".city-tab").forEach((tab) => tab.addEventListener("cl
   });
   renderMature();
 }));
+/* ---------- reading room ----------
+   The one place in this course where the learner meets language in paragraphs
+   instead of turns. Two rules drive every line below:
+
+   1. `state.direction` is the language being STUDIED. So the story text is
+      rendered in `direction`, and every explanation — glossary notes, grammar
+      notes, the labels on them — is rendered in the OTHER language, the one
+      the learner already owns. Getting this backwards produces a page that
+      looks right and teaches nothing, which is why it is computed once here
+      rather than inlined at each use.
+   2. The translation is a crutch the learner must be able to put down. It
+      toggles rather than sitting there permanently, and it is forced back ON
+      each time a story is opened, because a learner who cannot get in at all
+      reads nothing. */
+const STORY_BANDS = ["A1", "A2", "B1", "B2"];
+const storyView = { band: "all", id: null, parallel: true };
+// Sorted so the list always reads easiest-first, whatever order the stories
+// were authored in. The sort is stable, so authored order survives within a band.
+const storyRows = () => (typeof storyItems === "undefined"
+  ? []
+  : storyItems.slice().sort((a, b) => STORY_BANDS.indexOf(a.band) - STORY_BANDS.indexOf(b.band)));
+const storyStudied = () => state.direction;
+const storyHome = () => (state.direction === "es" ? "en" : "es");
+const storyVisible = () => storyRows().filter((story) => storyView.band === "all" || story.band === storyView.band);
+
+function renderStoryList() {
+  const studied = storyStudied();
+  const home = storyHome();
+  const rows = storyVisible();
+  const total = storyRows().length;
+  $("#story-count").textContent = rows.length === total
+    ? t("stories.count", { total })
+    : t("stories.matching", { matches: rows.length, total });
+  $("#story-list").innerHTML = rows.map((story) => `<button class="story-card" type="button" data-story="${esc(story.id)}">
+      <span class="story-card-top"><span class="story-band">${esc(story.band)}</span><span class="story-card-minutes">${t("stories.minutes", { minutes: story.minutes })}</span></span>
+      <span class="story-card-title" lang="${studied}">${esc(story.title[studied])}</span>
+      <span class="story-card-alt" lang="${home}">${esc(story.title[home])}</span>
+      <span class="story-card-blurb" lang="${home}">${esc(story.blurb[home])}</span>
+      <span class="story-card-meta">${esc(story.era)} · ${esc(story.place[home])}</span>
+    </button>`).join("");
+}
+
+/* Paragraphs are the reason this section exists, so they are the only part
+   that changes shape with the toggle: on, the home language sits beside the
+   studied one (below it on a phone); off, it is not in the DOM at all, so a
+   learner cannot read it out of the corner of their eye. */
+function storyParagraphs(story) {
+  const studied = storyStudied();
+  const home = storyHome();
+  return story.paragraphs.map((para, index) => `<div class="story-para${storyView.parallel ? " story-para-parallel" : ""}">
+      <p class="story-line story-line-studied" lang="${studied}"><span class="story-para-number" aria-hidden="true">${index + 1}</span>${esc(para[studied])}</p>
+      ${storyView.parallel ? `<p class="story-line story-line-home" lang="${home}">${esc(para[home])}</p>` : ""}
+    </div>`).join("");
+}
+
+function renderStoryReader() {
+  const story = storyRows().find((item) => item.id === storyView.id);
+  $("#story-reader").hidden = !story;
+  $("#story-list").hidden = Boolean(story);
+  document.querySelector("#stories .tabs").hidden = Boolean(story);
+  $("#story-count").hidden = Boolean(story);
+  if (!story) { $("#story-output").innerHTML = ""; return; }
+  const studied = storyStudied();
+  const home = storyHome();
+  const glossary = story.glossary.map((entry) => `<li class="story-term">
+      <p class="story-term-head"><strong lang="${studied}">${esc(entry[studied])}</strong> <span lang="${home}">${esc(entry[home])}</span></p>
+      <p class="story-term-note" lang="${home}">${esc(entry.note[home])}</p>
+    </li>`).join("");
+  const structures = story.structures.map((item) => `<article class="story-structure">
+      <h4 lang="${home}">${esc(item.label[home])}</h4>
+      <p class="story-quote" lang="${studied}">${esc(item.quote[studied])}</p>
+      <p class="story-structure-note" lang="${home}">${esc(item.note[home])}</p>
+      <span class="tag">${esc(item.key)}</span>
+    </article>`).join("");
+  const questions = story.questions.map((item, index) => `<details class="story-question">
+      <summary lang="${studied}"><span class="story-q-number" aria-hidden="true">${index + 1}</span>${esc(item.q[studied])}</summary>
+      <p lang="${studied}">${esc(item.a[studied])}</p>
+      <p class="story-answer-home" lang="${home}">${esc(item.a[home])}</p>
+    </details>`).join("");
+  $("#story-output").innerHTML = `<header class="story-head">
+      <p class="story-head-meta"><span class="story-band">${esc(story.band)}</span> <span>${esc(story.era)}</span> <span>${esc(story.place[home])}</span> <span>${t("stories.minutes", { minutes: story.minutes })}</span></p>
+      <h3 lang="${studied}">${esc(story.title[studied])}</h3>
+      <p class="story-head-alt" lang="${home}">${esc(story.title[home])}</p>
+      <p class="story-blurb" lang="${home}">${esc(story.blurb[home])}</p>
+    </header>
+    <div class="story-body">${storyParagraphs(story)}</div>
+    <p class="story-caveat" lang="${home}"><strong>${t("stories.caveat")}</strong> ${esc(story.caveat[home])}</p>
+    <section class="story-panel">
+      <h4 class="story-panel-title">${t("stories.glossary")}</h4>
+      <ul class="story-glossary">${glossary}</ul>
+    </section>
+    <section class="story-panel">
+      <h4 class="story-panel-title">${t("stories.structures")}</h4>
+      <p class="story-panel-lead">${t("stories.structuresLead")}</p>
+      <div class="story-structures">${structures}</div>
+    </section>
+    <section class="story-panel">
+      <h4 class="story-panel-title">${t("stories.questions")}</h4>
+      <p class="story-panel-lead">${t("stories.questionsLead")}</p>
+      <div class="story-questions">${questions}</div>
+    </section>`;
+}
+
+function renderStories() {
+  renderStoryList();
+  renderStoryReader();
+  const button = $("#story-parallel");
+  button.setAttribute("aria-pressed", String(storyView.parallel));
+  button.textContent = t(storyView.parallel ? "stories.hideTranslation" : "stories.showTranslation");
+}
+
+document.querySelectorAll(".story-tab").forEach((tab) => tab.addEventListener("click", () => {
+  storyView.band = tab.dataset.band;
+  storyView.id = null;
+  document.querySelectorAll(".story-tab").forEach((item) => {
+    const active = item === tab;
+    item.classList.toggle("active", active);
+    item.setAttribute("aria-selected", active);
+  });
+  renderStories();
+}));
+$("#story-list").addEventListener("click", (event) => {
+  const card = event.target.closest("[data-story]");
+  if (!card) return;
+  storyView.id = card.dataset.story;
+  storyView.parallel = true;
+  renderStories();
+  $("#story-back").focus();
+});
+$("#story-back").addEventListener("click", () => {
+  storyView.id = null;
+  renderStories();
+});
+$("#story-parallel").addEventListener("click", () => {
+  storyView.parallel = !storyView.parallel;
+  renderStories();
+});
+
 renderVerbs();
 renderFluency();
 renderMature();
@@ -813,7 +952,7 @@ render();
    Each module is a view, so only one is on screen at a time. Routing runs off
    the hash the nav already used, which keeps every existing in-page link, the
    back button and any bookmark working without a second link scheme. */
-const VIEWS = ["home", "path", "lessons", "flashcards", "placement", "library", "workbook", "after-dark"];
+const VIEWS = ["home", "path", "lessons", "flashcards", "placement", "library", "workbook", "stories", "after-dark"];
 const ROUTE_FOR_HASH = {
   "": "home", "#top": "home",
   "#path": "path",
@@ -822,6 +961,7 @@ const ROUTE_FOR_HASH = {
   "#placement": "placement", "#roadmap": "placement",
   "#library": "library",
   "#workbook": "workbook",
+  "#stories": "stories", "#reading": "stories",
   "#after-dark": "after-dark"
 };
 function showView(name, options) {

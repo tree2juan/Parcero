@@ -115,6 +115,24 @@ Each task ships **two calibrated answers**, and the weak one is the point. It is
 
 The word counts are enforced by tests rather than by care. A model answer that breaks the rule it is teaching is worse than no model at all, because the learner calibrates against the example instead of the rule — and the first draft of this file did exactly that in one of its eight tasks, with correct Spanish, the right language and clean spelling, invisible to every other check in the repository. `test/exam-tasks.test.js` now measures every sample against its own stated count, and separately checks that every word count cited in the prose is the real one; eight of those citations were wrong on first measurement.
 
+### The reading room
+
+Everything described above is a dialogue. Lessons are exchanges, the workbook drills exchanges, the flashcards test lines from exchanges. That is the right shape for a course about talking to people, and it leaves a real hole: **nothing in it trains sustained reading.** A learner can finish every B2 module and still stall on the second paragraph of an article, because they have never read more than four consecutive sentences of anything.
+
+`data/stories.js` is the answer — short historical pieces in **parallel text**, Spanish and English side by side, at `#stories`. The language being studied runs down the primary column and the language already known runs beside it, and the second column can be switched off once it stops being needed. Parallel text is an old technique and it works for a plain reason: a learner who can glance at the meaning keeps reading, and a learner who has to reach for a dictionary stops.
+
+The subject is history because **history is free.** A reading section needs texts nobody owns, and a course cannot ship copyrighted prose. Facts belong to everybody, so every story here is written fresh for this course from the historical record — nothing is quoted, translated, adapted or paraphrased from an existing text. That also lets each piece be written *to* a band instead of found and hoped over, which no real-world text can be.
+
+Each story carries three things a plain bilingual text does not:
+
+- a **glossary** of words the reader is about to meet, in both languages;
+- **structure notes** that quote a sentence from the story and name the grammar it is doing, joined by `key` to the same 39-point structure catalog the modules use — so a B2 reader meeting a counterfactual in the wild sees it labeled with the same name the lesson gave it;
+- **comprehension questions** with answers, checking that meaning survived the reading rather than checking vocabulary.
+
+Every story also carries a **`caveat`**, in both languages, saying where it simplifies, what is legend rather than record, and what is still disputed. A learner reading for language absorbs the content whether or not they meant to, and shipping tidy history because tidy history is easier to read would be the wrong trade.
+
+The bands are **measured, not asserted**. `test/stories.test.js` computes the mean Spanish sentence length per band and fails unless it strictly increases from A1 through B2 — an A1 story that drifted into B1 prose would otherwise sit there labeled A1 forever. The same file checks that every quoted sentence really appears in the story it cites, and that every glossary headword really appears in the text; the first draft of the B2 story failed both, quoting one sentence that lived in the `caveat` and another that had been reworded after the note was written, and both read perfectly.
+
 Alongside the lessons there is a reference **library**: 200 high-frequency verbs with their most useful forms, a fluency list of connectors and softeners, and a **Colombian slang** reference.
 
 The slang reference carries a field the others do not: **how safe each phrase is for a learner to actually say**. Meaning alone is not enough, because the gap between understanding `parcero` and understanding `gonorrea` is not a gap in translation — it is a gap in what happens to you if you use it. Every entry is marked *Say it freely*, *Say it with friends*, or *Understand only*, and the label is shown before the meaning rather than after it.
@@ -254,6 +272,8 @@ This is the rule most easily got wrong, and getting it wrong leaves every other 
 
 `node scripts/check-lesson-block.js` enforces the table above. It refuses to judge anything under eight words and strips quoted runs first, because Spanish explanation quotes the English it is teaching; it reports nothing on the eight hand-written lessons.
 
+The same split governs [`data/stories.js`](data/stories.js), where it is easier to get backwards because both languages sit in one object. A story's `paragraphs[].es`/`.en`, `title`, `blurb`, `caveat`, `questions[]` and `structures[].quote` are the **same content in two languages** — the renderer shows the studied one and keeps the known one beside it. But `glossary[].note`, `structures[].note` and `structures[].label` are **explanation**, so their `.en` is read by the learner studying *Spanish* and their `.es` by the learner studying *English*. That is inverted from every other field in the file, and it is the first thing to check when a story looks wrong.
+
 Every field below except `title`, `situation`, `dialogue`, `vocabulary`, `note`, `prompt`, `choices` and `answer` is optional: [`data/lesson-schema.js`](data/lesson-schema.js) fills in the rest, so a partly written lesson still renders. Rows may be written as objects (preferred) or as the original short tuples.
 
 ```js
@@ -356,6 +376,8 @@ It checks that every lesson teaches in both directions, that every lesson answer
 
 Cross-script API is therefore marked by name, with the `Parcero*` prefix, and data bundles publish their globals by living in `data/`. That is a rule rather than a preference because no runtime check can replace it: `const` at the top level of a classic script creates a binding in the global *scope* and no property on the global *object*, so `globalThis.curriculum` is `undefined` while bare `curriculum` is the array, and `globalThis.lessons` is not the data but the `<section id="lessons">`, via named access on `window`. Reflection cannot see a `const` global at all, and cannot tell published API from a function declaration.
 
+`test/stories.test.js` guards a different blind spot: content that is *internally* wrong while every field is present and well formed. It classifies each glossary and structure note individually rather than in aggregate — an earlier version joined a story's notes into one string before checking their language, which passed happily with one note written in the wrong language, because a single swapped note cannot move a majority vote. It fails on a wrong verdict, tolerates the classifier abstaining, and caps the abstention rate so the check cannot quietly decay into nothing.
+
 > Pass the glob, not the bare directory. Node 22 and newer resolve `node --test test/` as a *module* path and fail with `Cannot find module`; `test/*.test.js` works on every version.
 
 <a id="native-speaker-review"></a>
@@ -427,6 +449,8 @@ data/slang.js       Colombian slang, each entry marked with how safe it is to sa
 data/after-dark.js  Strong-language reference, 50 entries per city
 data/mature.js      The conversation signals that tell you a room has turned
 data/exam-tasks.js  One exam writing task per band, with two calibrated answers
+data/stories.js     Bilingual historical short stories: parallel text, glossary,
+                    structure notes and comprehension questions
 workbook.js         Derives a printable workbook for each module, and its answer key
 data/study-guide.js The parts of the workbook that cannot be derived
 data/flashcards.js  Derives flashcard topics and sets from the content above
