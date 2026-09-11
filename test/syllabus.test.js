@@ -242,9 +242,9 @@ test("a lesson the path cannot place has no neighbors rather than wrong ones", (
 test("the pager steps through the path, not through the authored array", () => {
   /*
    * The regression this guards is invisible by reading: both orders are the
-   * same 233 lessons, so indexing `lessons` looks correct and quietly delivers
-   * a different course. Only 42 of 233 lessons sit at the same position in
-   * both, so a pager built on the array is wrong for 191 of them.
+   * same 245 lessons, so indexing `lessons` looks correct and quietly delivers
+   * a different course. Only 44 of 245 lessons sit at the same position in
+   * both, so a pager built on the array is wrong for 201 of them.
    */
   const app = read("app.js");
   const walker = app.match(/function pathNeighbors\([^)]*\)[\s\S]*?\n\}/);

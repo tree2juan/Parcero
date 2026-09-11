@@ -406,5 +406,204 @@ const structureItems = [
     domain: "everyday life",
     pathways: ["extension", "collegiate-academic"],
     reviewStatus: "needs Colombian Spanish and English education review"
+  },
+
+  /*
+   * The exam layer, added from a second measurement.
+   *
+   * The first twenty-five structures were chosen because the form was almost
+   * ABSENT from the corpus. These twelve are the opposite problem, and it is
+   * why they went unnoticed: the forms are everywhere, and no lesson explains
+   * any of them. A sweep of 6,478 taught Spanish utterances against the prose
+   * of all 233 lessons found 312 uses of por and para and zero lessons that
+   * contrast them; 811 preverbal object pronouns and no lesson that teaches
+   * the system; ser and estar on nearly every page and not one lesson naming
+   * the choice between them.
+   *
+   * That is the difference between a learner who has SEEN a form and one who
+   * can PRODUCE it under exam conditions. Every item below is on the DELE
+   * A1-B2 and Cambridge A2 Key/B1 Preliminary/B2 First inventories, and each
+   * is a documented failure point for self-study candidates, who absorb these
+   * patterns receptively and then cannot deploy them in a timed writing task.
+   */
+  {
+    id: "structure-26",
+    key: "ser-vs-estar",
+    probe: "\\b(es|son|soy|eres|somos)\\b[^.?!]{0,40}(est[áa]|estoy|estamos)|(est[áa]|estoy|estamos)[^.?!]{0,40}\\b(es|son|soy|eres|somos)\\b",
+    name: "Ser and estar, when the same adjective means two things",
+    example: "Mi hermano es aburrido, pero hoy está aburrido.",
+    english: "to be (permanent) vs. to be (state)",
+    level: "foundation",
+    summary: "The one contrast English cannot signal at all, because English has a single verb. Identity, origin, material, time and possession take ser; location, health, mood and any result of a change take estar. The pairs that flip meaning — ser/estar listo, aburrido, bueno, vivo, rico — are where the exam looks.",
+    gap: "ser and estar appear on nearly every page; no lesson contrasts them",
+    skills: ["grammar", "speaking", "context"],
+    domain: "everyday life",
+    pathways: ["foundation", "year-12"],
+    reviewStatus: "needs Colombian Spanish and English education review"
+  },
+  {
+    id: "structure-27",
+    key: "gender-and-agreement",
+    probe: "\\b(un|una|unos|unas|el|la|los|las)\\s+[a-záéíóúñ]+[oa]s?\\s+[a-záéíóúñ]+[oa]s?\\b|\\bel\\s+(agua|problema|d[ií]a|mapa|clima|tema|idioma)\\b",
+    name: "Making the whole phrase agree",
+    example: "Unas sillas plásticas rojas, no unos vasos plásticos rojos.",
+    english: "gender and number agreement",
+    level: "foundation",
+    summary: "Article, noun and adjective have to match in gender and number, and the exam marks every mismatch. Covers the -o/-a default, the nouns that break it (el problema, la mano, el agua but las aguas), and the -e/-consonant nouns that give no clue at all.",
+    gap: "agreement is modeled constantly and explained nowhere",
+    skills: ["grammar", "writing", "reading"],
+    domain: "everyday life",
+    pathways: ["foundation", "year-12"],
+    reviewStatus: "needs Colombian Spanish and English education review"
+  },
+  {
+    id: "structure-28",
+    key: "articles-and-quantity",
+    probe: "\\b(mucho|mucha|muchos|muchas|poco|poca|pocos|pocas|bastante|bastantes|demasiad[oa]s?|suficiente|algun[oa]s?|ning[úu]n|ninguna|varios|varias|todo el|toda la|otro|otra)\\b",
+    name: "How much, how many, and which article says it",
+    example: "Hay bastante arroz, pero quedan pocas arepas y no hay ninguna gaseosa.",
+    english: "articles and quantifiers",
+    level: "foundation",
+    summary: "mucho/poco/bastante/demasiado agreeing with what they count, the un/el split English does not make, and the places Spanish uses a bare noun where English wants 'some'. Includes ningún/ninguna and the singular-only rule that catches everyone.",
+    gap: "60 quantifier uses, none explained; article choice never taught",
+    skills: ["grammar", "speaking", "vocabulary"],
+    domain: "shopping",
+    pathways: ["foundation", "year-12"],
+    reviewStatus: "needs Colombian Spanish and English education review"
+  },
+  {
+    id: "structure-29",
+    key: "object-pronouns",
+    probe: "\\b(se|me|te|nos)\\s+l[oa]s?\\b|\\b(me|te|le|nos|les)\\s+(lo|la|los|las)\\b",
+    name: "Saying it and to whom without repeating either",
+    example: "¿El recibo? Ya se lo mandé a ella por WhatsApp.",
+    english: "direct, indirect and combined pronouns",
+    level: "independent",
+    summary: "lo/la/los/las for the thing, le/les for the person, and what happens when both land together: le + lo becomes se lo. Also where they attach — before the conjugated verb, or hooked onto an infinitive or gerund — which is the half learners guess at.",
+    gap: "811 preverbal object pronouns and 61 combined pairs, none taught",
+    skills: ["grammar", "speaking", "listening"],
+    domain: "everyday life",
+    pathways: ["independent", "year-12"],
+    reviewStatus: "needs Colombian Spanish and English education review"
+  },
+  {
+    id: "structure-30",
+    key: "preterite-vs-imperfect",
+    probe: "\\b[a-záéíóúñ]{2,}(aba|abas|[áa]bamos|aban|[íi]a|[íi]as|[íi]amos|[íi]an)[^.?!]{0,60}(\\b[a-záéíóúñ]{2,}([óo]|aron|ieron)\\b|\\b(fue|fui|fueron|hizo|dijo|tuvo|estuvo|vino|puso|pudo|supo|quiso|dio|vio)\\b)|(\\b[a-záéíóúñ]{2,}([óo]|aron|ieron)\\b|\\b(fue|fui|fueron|hizo|dijo|tuvo|estuvo|vino|puso|pudo|supo|quiso|dio|vio)\\b)[^.?!]{0,60}\\b[a-záéíóúñ]{2,}(aba|aban|[íi]a|[íi]an)\\b",
+    name: "The background and the thing that happened",
+    example: "Llovía durísimo cuando se fue la luz.",
+    english: "imperfect vs. preterite",
+    level: "independent",
+    summary: "Not two past tenses to choose between but two jobs: the imperfect paints what was going on, the preterite drops the event into it. Covers era/estaba/había/tenía as default scenery, and the verbs that change meaning outright — sabía vs. supe, conocía vs. conocí, quería vs. quise.",
+    gap: "395 imperfects and no lesson contrasting them with the preterite",
+    skills: ["grammar", "listening", "reading"],
+    domain: "everyday life",
+    pathways: ["independent", "year-12"],
+    reviewStatus: "needs Colombian Spanish and English education review"
+  },
+  {
+    id: "structure-31",
+    key: "commands-and-requests",
+    probe: "\\bno\\s+(me\\s+|te\\s+|se\\s+|lo\\s+|la\\s+|les\\s+)?\\w{3,}(es|as|en|an)\\b|\\b(h[áa]gam[eo]|d[íi]gam[e]|p[áa]sem[e]|esp[ée]rem[e]|si[ée]ntese|p[óo]ngase|tr[áa]igam[e]|d[ée]jem[e])\\b",
+    name: "Telling someone what to do without being rude",
+    example: "Hágame un favor y no me traiga la cuenta todavía.",
+    english: "imperative, affirmative and negative",
+    level: "independent",
+    summary: "usted commands (tome, siga, espere) and the tú forms beside them, the negative that switches to the subjunctive (no tomes, no siga), and where pronouns go: glued on the end when affirmative, in front when negative. Plus the Colombian softeners — hágame un favor, regáleme, ¿me colabora? — that keep an order from landing as one.",
+    gap: "65 usted imperatives and 34 negative commands, none taught",
+    skills: ["grammar", "speaking", "culture"],
+    domain: "everyday life",
+    pathways: ["independent", "year-12"],
+    reviewStatus: "needs Colombian Spanish and English education review"
+  },
+  {
+    id: "structure-32",
+    key: "por-vs-para",
+    probe: "\\bpor\\b[^.?!]{0,60}\\bpara\\b|\\bpara\\b[^.?!]{0,60}\\bpor\\b",
+    name: "Por and para, and why English gives no clue",
+    example: "Pasé por la oficina para dejar los papeles.",
+    english: "por vs. para",
+    level: "independent",
+    summary: "English says 'for' for both, so the choice has to be rebuilt from meaning: para points forward to a destination, a deadline, a purpose or a recipient; por points back to a cause, or covers exchange, duration, route and 'on behalf of'. Includes the fixed pairs an exam expects — por fin, por si acaso, para siempre, estar para.",
+    gap: "312 uses of por and para; no lesson contrasts them",
+    skills: ["grammar", "writing", "reading"],
+    domain: "travel",
+    pathways: ["independent", "year-12"],
+    reviewStatus: "needs Colombian Spanish and English education review"
+  },
+  {
+    id: "structure-33",
+    key: "real-conditionals",
+    probe: "\\bsi\\s+[a-záéíóúñ]+[^.?!]{0,60}(\\b[a-záéíóúñ]{2,}(r[ée]|r[áa]s|r[áa]|remos|r[áa]n)\\b|\\b(voy|vas|va|vamos|van)\\s+a\\b)",
+    name: "If this happens, then that will",
+    example: "Si llueve mañana, no vamos a la finca.",
+    english: "real conditionals (si + present)",
+    level: "independent",
+    summary: "The conditional an exam actually tests first: si + present indicative, with the result in present, future or ir a + infinitive. The rule that matters is the one learners break — never a present subjunctive after si — plus cuando + subjunctive for the future event that is not in doubt.",
+    gap: "33 real conditionals, none explained; the si-rule never stated",
+    skills: ["grammar", "speaking", "writing"],
+    domain: "everyday life",
+    pathways: ["independent", "year-12"],
+    reviewStatus: "needs Colombian Spanish and English education review"
+  },
+  {
+    id: "structure-34",
+    key: "relative-basic",
+    probe: "\\b(el|la|los|las)\\s+que\\b|\\blo que\\b|\\b(la|el)\\s+\\w+\\s+donde\\b|\\bcon quien\\b|\\ba quien\\b",
+    name: "Joining two sentences with que",
+    example: "La señora que atiende es la que me guardó el pedido.",
+    english: "relative clauses",
+    level: "independent",
+    summary: "que for almost everything, quien after a preposition for people, donde for places, and lo que for a whole idea with no noun behind it. The exam point is that Spanish never drops que the way English drops 'that', and that a written accent separates qué the question from que the joiner.",
+    gap: "55 relative constructions and no lesson on how to build one",
+    skills: ["grammar", "writing", "reading"],
+    domain: "everyday life",
+    pathways: ["independent", "collegiate-academic"],
+    reviewStatus: "needs Colombian Spanish and English education review"
+  },
+  {
+    id: "structure-35",
+    key: "subjunctive-volition",
+    probe: "\\b(quiero|quiere|queremos|quieren|necesito|necesita|espero|espera|prefiero|prefiere|dile|d[íi]gale|pido|pide|recomiendo|sugiero|es necesario|es importante|es mejor)\\s+que\\s+\\w+",
+    name: "Wanting someone else to do something",
+    example: "Quiero que me llame antes de las cinco.",
+    english: "present subjunctive after wanting and asking",
+    level: "independent",
+    summary: "The rule that unlocks the whole mood: one subject wants, asks, needs or hopes, a DIFFERENT subject acts, and que sits between them. Quiero salir has one subject and takes an infinitive; quiero que salgas has two and takes the subjunctive. Covers the present subjunctive forms including the irregulars sea, vaya, haya, sepa, dé.",
+    gap: "27 volition triggers followed by que; the rule never stated",
+    skills: ["grammar", "speaking", "writing"],
+    domain: "everyday life",
+    pathways: ["independent", "collegiate-academic"],
+    reviewStatus: "needs Colombian Spanish and English education review"
+  },
+  {
+    id: "structure-36",
+    key: "subjunctive-adverbial",
+    probe: "\\b(cuando|para que|antes de que|hasta que|en cuanto|a menos que|sin que|aunque|apenas|despu[ée]s de que)\\s+\\w{2,}(e|es|emos|en|a|as|amos|an)\\b",
+    name: "Clauses that take the subjunctive because nothing has happened yet",
+    example: "Cuando llegue el pago, le aviso; no compre nada hasta que confirme.",
+    english: "subjunctive in time and purpose clauses",
+    level: "extension",
+    summary: "cuando, en cuanto, hasta que and después de que take the subjunctive when they point at something not yet real, and the indicative when they describe a habit or a finished fact. para que, antes de que, sin que and a menos que always take it. This is the single heaviest-marked structure in B2 writing.",
+    gap: "90 adverbial triggers, mood never explained",
+    skills: ["grammar", "writing", "reading"],
+    domain: "workplace",
+    pathways: ["extension", "collegiate-academic"],
+    reviewStatus: "needs Colombian Spanish and English education review"
+  },
+  {
+    id: "structure-37",
+    key: "discourse-connectors",
+    probe: "\\b(sin embargo|por lo tanto|adem[áa]s|en cambio|por otro lado|es decir|de hecho|en resumen|no obstante|por un lado|a pesar de|mientras que|en primer lugar|por [úu]ltimo)\\b",
+    name: "Holding a written argument together",
+    example: "Por un lado es más barato; sin embargo, queda lejísimos.",
+    english: "connectors and discourse markers",
+    level: "extension",
+    summary: "The words a marker looks for first in a B2 composition: sequencing (en primer lugar, por último), contrast (sin embargo, en cambio, no obstante), cause and result (por lo tanto, debido a), and restating (es decir, o sea). Includes which ones are too spoken for an exam essay — o sea, pues, entonces — and what to write instead.",
+    gap: "6 connectors in 6,478 utterances, the thinnest measured slot",
+    skills: ["writing", "reading", "grammar"],
+    domain: "academic",
+    pathways: ["extension", "collegiate-academic"],
+    reviewStatus: "needs Colombian Spanish and English education review"
   }
 ];

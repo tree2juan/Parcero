@@ -16,6 +16,10 @@
  * everyday grammar that the corpus had been stepping around: the English side
  * of the course was written as translations of Spanish lessons, so an English
  * structure with no Spanish trigger never got written down.
+ *
+ * This block now also teaches commands and requests, because the corpus had
+ * usted and negative imperatives everywhere but no explicit rule for forming
+ * them or softening them in Colombian interaction.
  */
 
 lessons.push(
@@ -1135,6 +1139,618 @@ lessons.push(
           ],
           answer: 2,
           tests: "el inglés marca el género del poseedor donde el español no lo hace"
+        }
+      ]
+    }
+  },
+  {
+    id: "soft-commands-at-an-aguachica-shelter",
+    level: "Developing · Obligation and belonging",
+    skills: ["grammar", "speaking", "listening", "culture", "register"],
+    domain: "civic-and-services",
+    register: "courteous",
+    pathways: ["independent", "year-12"],
+    structure: "commands-and-requests",
+    review: "pending",
+    es: {
+      title: "Commands that keep the relationship",
+      situation: "At a temporary community shelter after flooding, a coordinator has real authority to direct volunteers and neighbors, but every instruction has to preserve trust.",
+      setting: {
+        who: "Maribel coordinates a municipal shelter and has worked with emergency families for years. Tom is a visiting volunteer who speaks good Spanish but still sounds too blunt when he gives instructions. Doña Luz is an older neighbor whose family is waiting for mattresses, forms and medicine.",
+        what: "A rushed intake table where forms, supplies and tempers all have to be managed at once. Maribel gives polite usted commands, corrects a negative tú command before Tom copies the affirmative form, and shows how pronouns move around an imperative.",
+        when: "Early evening, after a stormy afternoon, when people are tired and the shelter is filling faster than expected.",
+        where: "Aguachica, Cesar, at the covered court of a neighborhood school used as a temporary shelter.",
+        why: "Commands are the sharp edge of obligation. Maribel has to tell people what to do because the shelter will not function otherwise, but if she sounds bossy the families will feel handled instead of helped. The grammar and the courtesy are one problem, not two."
+      },
+      address: {
+        form: "usted",
+        who: "Maribel uses usted with Doña Luz and with most adults at the shelter. She also explains the tú contrast to Tom because he will hear both forms from younger volunteers.",
+        why: "Usted is the safest default for a learner in Colombia when the relationship is new, stressed or unequal. In this scene it respects age, grief and institutional authority without becoming cold.",
+        ifYouSwitch: "Tú with Doña Luz would sound too familiar while she is asking for help. Bare imperatives with no softener would be grammatically correct and socially rough. Vos commands exist in voseo regions, but this shelter scene calls for the safer national default."
+      },
+      dialogue: [
+        {
+          speaker: "Maribel",
+          target: "Doña Luz, siéntese aquí un momentico y hágame el favor de dejarme la cédula.",
+          translation: "Doña Luz, please sit here for a little moment and do me the favor of leaving me your ID.",
+          pronunciation: "DÓ-nya lus, SYÉN-te-se a-KÍ un mo-men-TÍ-ko i Á-ga-me el fa-BOR de de-JAR-me la SÉ-du-la",
+          literal: "Doña Luz, seat-yourself here a little moment and make-me the favor of leaving-me the ID.",
+          why: "Two usted commands carry the authority softly. “Siéntese” is the command for sitting yourself down, and “hágame” comes from the irregular yo form “hago”. Drop the -o, add -a, then attach “me”. The favor phrase makes the command land as care, not control."
+        },
+        {
+          speaker: "Tom",
+          target: "¿Entonces le digo: firma aquí y no firma todavía la otra hoja?",
+          translation: "So do I tell her: sign here and do not sign the other sheet yet?",
+          pronunciation: "en-TON-ses le DÍ-go: FÍR-ma a-KÍ i no FÍR-ma to-da-BÍ-a la Ó-tra Ó-ja",
+          literal: "Then to-her I-say: sign here and not sign yet the other sheet?",
+          why: "Tom copies the affirmative tú form “firma” into the negative, which is the classic mistake. For tú, affirmative “firma” and negative “no firmes” are not the same form. Spanish changes the command when it turns negative."
+        },
+        {
+          speaker: "Maribel",
+          target: "Con ella diga: firme aquí, pero no firme todavía la otra hoja.",
+          translation: "With her say: sign here, but do not sign the other sheet yet.",
+          pronunciation: "kon É-ya DÍ-ga: FÍR-me a-KÍ, PÉ-ro no FÍR-me to-da-BÍ-a la Ó-tra Ó-ja",
+          literal: "With her say: sign here, but not sign yet the other sheet.",
+          why: "For usted, the affirmative and the negative are identical except for “no”: “firme” and “no firme”. Build it from “yo firmo”, drop -o, add the opposite vowel -e. That one rule gives “hable” from “hablo”, “coma” from “como”, and “escriba” from “escribo”."
+        },
+        {
+          speaker: "Doña Luz",
+          target: "Mija, no me mande de una oficina a otra; mi esposo no puede caminar más.",
+          translation: "My dear, do not send me from one office to another; my husband cannot walk anymore.",
+          pronunciation: "MÍ-ja, no me MÁN-de de Ú-na o-fi-SÍ-na a Ó-tra; mi es-PÓ-so no PWÉ-de ka-mi-NAR mas",
+          literal: "My daughter, not me send from one office to another; my husband not can walk more.",
+          why: "“No me mande” shows the negative command pattern and the pronoun rule together. In a negative command, the pronoun comes before the verb: “no me mande”, never “no mándeme”."
+        },
+        {
+          speaker: "Maribel",
+          target: "Tranquila, no se preocupe; deme el formulario y yo se lo llevo al enfermero.",
+          translation: "Do not worry; give me the form and I will take it to the nurse for you.",
+          pronunciation: "tran-KÍ-la, no se pre-o-KÚ-pe; DÉ-me el for-mu-LÁ-rio i yo se lo YÉ-vo al en-fer-MÉ-ro",
+          literal: "Calm, not yourself worry; give-me the form and I it to-him take to-the nurse.",
+          why: "“Deme” uses one of the genuinely irregular commands, from dar: “dé”. “No se preocupe” is negative, so “se” stays before the command. The line also shows that a command can be firm and protective at the same time."
+        },
+        {
+          speaker: "Tom",
+          target: "¿Y si necesito el recibo, digo: mándemelo por WhatsApp, por favor?",
+          translation: "And if I need the receipt, do I say: send it to me by WhatsApp, please?",
+          pronunciation: "i si ne-se-SÍ-to el re-SÍ-bo, DÍ-go: MÁN-de-me-lo por wats-AP, por fa-BOR",
+          literal: "And if I need the receipt, I-say: send-me-it by WhatsApp, please?",
+          why: "This is the pronoun attachment rule in full. An affirmative command glues pronouns to the end: “mande” plus “me” plus “lo” becomes “mándemelo”, with a written accent because adding two syllables would otherwise move the stress."
+        },
+        {
+          speaker: "Maribel",
+          target: "Sí, pero mejor diga: ¿me hace el favor y me lo manda por WhatsApp? Así suena a ayuda, no a orden.",
+          translation: "Yes, but better say: could you do me the favor and send it to me by WhatsApp? That way it sounds like help, not like an order.",
+          pronunciation: "sí, PÉ-ro me-HOR DÍ-ga: me Á-se el fa-BOR i me lo MÁN-da por wats-AP? a-SÍ SWÉ-na a a-YÚ-da, no a ÓR-den",
+          literal: "Yes, but better say: me make the favor and me it send by WhatsApp? Thus it sounds to help, not to order.",
+          why: "Colombian politeness often turns an imperative into a request frame. “Me lo manda” is not a formal command, but inside “¿me hace el favor y...?” it asks for the same action while protecting the relationship."
+        }
+      ],
+      vocabulary: [
+        {
+          term: "usted command from the yo form",
+          explanation: "The regular rule is wonderfully mechanical. Take the present yo form, remove the final -o, and add the opposite vowel: -ar verbs take -e, while -er and -ir verbs take -a. This is why “hablo” becomes “hable”, “como” becomes “coma”, and “escribo” becomes “escriba”. The same rule also saves many so-called irregulars, because their only irregularity is already visible in the yo form.",
+          literal: "yo form minus -o plus the opposite vowel",
+          useWhen: "Giving a polite or formal command to one person: a patient, a customer, a neighbor, a stranger, or anyone you are treating with usted.",
+          avoidWhen: "You are speaking to a close friend as tú, or to several people. Tú and ustedes use different endings and different social weight.",
+          register: "polite direct",
+          region: "Universal Spanish, and especially safe for learners in Colombia.",
+          related: ["hable", "coma", "escriba", "diga"],
+          example: {
+            target: "Firme aquí, por favor.",
+            translation: "Sign here, please."
+          }
+        },
+        {
+          term: "yo-form irregulars that become commands",
+          explanation: "If the yo form already has a g or another stem change, the usted command keeps it. “Tengo” gives “tenga”, “digo” gives “diga”, “salgo” gives “salga”, “pongo” gives “ponga”, “vengo” gives “venga”, and “hago” gives “haga”. You are not memorizing six new commands. You are trusting the yo form you already know.",
+          literal: "I-have becomes have, formal command",
+          useWhen: "Any time a verb's yo form looks irregular but ends in -o. Drop that -o and add the opposite vowel as usual.",
+          avoidWhen: "The verb belongs to the tiny genuinely irregular group: sea, vaya, dé, esté, sepa. Those must be learned whole.",
+          register: "neutral",
+          region: "Universal Spanish.",
+          related: ["tenga", "diga", "haga", "venga"],
+          example: {
+            target: "Diga su nombre despacio.",
+            translation: "Say your name slowly."
+          }
+        },
+        {
+          term: "the genuinely irregular handful",
+          explanation: "A small set does not fall out of the yo-form rule: “sea” from ser, “vaya” from ir, “dé” from dar, “esté” from estar, and “sepa” from saber. They are frequent because the verbs are frequent, so learn them as a handful rather than as proof that the system is chaotic.",
+          literal: "be, go, give, be, know",
+          useWhen: "For the five verbs ser, ir, dar, estar and saber in usted commands and negative commands.",
+          avoidWhen: "Regularizing them by analogy. “Sabe” as a command means something else in some contexts and is not the usted command for “know”.",
+          register: "neutral",
+          region: "Universal Spanish.",
+          related: ["sea", "vaya", "dé", "esté"],
+          example: {
+            target: "Dé el número de contacto.",
+            translation: "Give the contact number."
+          }
+        },
+        {
+          term: "negative usted commands",
+          explanation: "For usted, the negative command is the same form with “no” in front. “Mande” becomes “no mande”, “firme” becomes “no firme”, and “se preocupe” becomes “no se preocupe”. That sameness is what makes usted commands comparatively easy once the base form is clear.",
+          literal: "no plus the same command",
+          useWhen: "Telling someone politely not to do something, especially in instructions, warnings and service encounters.",
+          avoidWhen: "Attaching the pronoun to a negative command. Spanish places pronouns before negative commands.",
+          register: "polite direct",
+          region: "Universal Spanish.",
+          related: ["no firme", "no mande", "no se preocupe", "no diga"],
+          example: {
+            target: "No me mande a otra fila.",
+            translation: "Do not send me to another line."
+          }
+        },
+        {
+          term: "affirmative tú commands",
+          explanation: "The ordinary affirmative tú command is the third-person present form: “habla”, “come”, “escribe”. It is short, direct and common among friends, family and people who already have a familiar relationship. Eight very common verbs use short irregular commands: di, haz, ve, pon, sal, sé, ten and ven.",
+          literal: "he speaks equals speak, tú command",
+          useWhen: "Giving a direct instruction to someone you address as tú: a friend, a child, a close coworker, or a classmate.",
+          avoidWhen: "The person expects usted, or the instruction is emotionally loaded. In Colombia, a bare tú command can sound sharper than you intended.",
+          register: "familiar direct",
+          region: "Universal Spanish, with local choices between tú, usted and vos.",
+          related: ["habla", "come", "escribe", "haz"],
+          example: {
+            target: "Ven un momento y mira esto.",
+            translation: "Come for a moment and look at this."
+          }
+        },
+        {
+          term: "negative tú commands",
+          explanation: "This is the asymmetry that causes the most mistakes. The negative tú command is not the affirmative form with “no”. It switches to the opposite-vowel form with -s: “habla” but “no hables”, “come” but “no comas”, “escribe” but “no escribas”. If you remember only one warning, remember this one.",
+          literal: "do not speak, not no speaks",
+          useWhen: "Telling a familiar person not to do something: a friend, a sibling, a child, or someone you already address as tú.",
+          avoidWhen: "Saying “no habla” or “no firma” to someone you address as tú. Those are statements, or usted forms, not negative tú commands.",
+          register: "familiar direct",
+          region: "Universal Spanish.",
+          related: ["no hables", "no comas", "no escribas", "no firmes"],
+          example: {
+            target: "No firmes todavía.",
+            translation: "Do not sign yet."
+          }
+        },
+        {
+          term: "pronouns with commands",
+          explanation: "Affirmative commands attach object pronouns to the end: “dígame”, “mándemelo”, “siéntese”. Negative commands put the pronouns before the verb: “no me diga”, “no me lo mande”, “no se siente”. When attachment adds syllables, Spanish writes an accent to keep the original stress: “mande” becomes “mándemelo”.",
+          literal: "tell-me, but do not me tell",
+          useWhen: "Any command involving object pronouns, especially service phrases where the little words pile up and the listener needs to know who receives what.",
+          avoidWhen: "Mixing the two placements. “No dígame” and “no mándemelo” are the kind of errors listeners notice immediately.",
+          register: "neutral",
+          region: "Universal Spanish.",
+          related: ["dígame", "mándemelo", "no me diga", "no se siente"],
+          example: {
+            target: "Mándemelo por WhatsApp, por favor.",
+            translation: "Send it to me by WhatsApp, please."
+          }
+        },
+        {
+          term: "Colombian softeners",
+          explanation: "In Colombia, grammar alone is not enough. Bare imperatives can land hard, even when the form is correct, so people constantly wrap commands in social cushions: “¿Me hace el favor y...?”, “¿Me regala...?”, “Hágame un favor”, “Venga le cuento”, and “Siga” for “come in”. These are part of how commands actually work.",
+          literal: "do me the favor and...",
+          useWhen: "Asking strangers, staff, neighbors or coworkers to do something while keeping warmth and respect in the exchange.",
+          avoidWhen: "Translating every softener literally into English or assuming a bare correct imperative is socially safe. The issue is not only grammar, it is relationship management.",
+          register: "polite Colombian",
+          region: "Colombia-wide; vos commands such as vení, tomá, decime and mirá are ordinary in Medellín and Cali, with stress on the last syllable, but usted is the safest learner default.",
+          related: ["hágame un favor", "me regala", "venga le cuento", "siga"],
+          example: {
+            target: "¿Me hace el favor y me lo manda por WhatsApp?",
+            translation: "Could you do me the favor and send it to me by WhatsApp?"
+          }
+        }
+      ],
+      note: "The usted command has a decidable core. Start from the yo form, drop the final -o, and add the opposite vowel: “hablo” becomes “hable”, “como” becomes “coma”, and “escribo” becomes “escriba”. That same rule gives you most of the forms that look irregular at first glance: “tengo” becomes “tenga”, “digo” becomes “diga”, “salgo” becomes “salga”, “pongo” becomes “ponga”, “vengo” becomes “venga”, and “hago” becomes “haga”. The few true exceptions are worth learning as a short list: “sea”, “vaya”, “dé”, “esté” and “sepa”. Negatives are simpler with usted than with tú: put “no” in front and keep the command form, as in “mande” and “no mande”, “diga” and “no me diga”. Tú is different. Affirmative tú commands are usually the third-person present form, “habla”, “come”, “escribe”, with the eight short irregulars “di”, “haz”, “ve”, “pon”, “sal”, “sé”, “ten” and “ven”. But negative tú commands switch form: “habla” becomes “no hables”, “come” becomes “no comas”, and “escribe” becomes “no escribas”. Pronouns also obey a clean rule: attach them to affirmative commands and place them before negative commands. That is why Colombians say “dígame” but “no me diga”, “mándemelo” but “no me lo mande”. The written accent appears when the attached pronouns would otherwise move the stress. Finally, Colombian reality matters. A bare imperative can be grammatically perfect and socially clumsy. “Hágame un favor”, “¿me regala...?”, “¿me hace el favor y...?”, “venga le cuento” and “siga” are not decorations. They are how obligation is made livable between people.",
+      culture: [
+        {
+          label: "Authority still needs warmth",
+          body: "Maribel has real authority at the shelter. She controls forms, lines, mattresses and access to the nurse, so she cannot avoid commands. What she can control is how they land. “Siéntese aquí” is clear, but “siéntese aquí un momentico y hágame el favor...” tells Doña Luz that the instruction belongs to a process, not to Maribel's ego. Colombian service encounters often work this way: the person in charge gives firm steps while cushioning them with small respectful words. The cushion is not weakness. It is what lets a tired person accept direction without feeling diminished."
+        },
+        {
+          label: "Usted as the learner's safe default",
+          body: "Colombia is not a simple tú country or a simple usted country. Families, regions and even individual speakers vary, and usted can be distant, respectful, affectionate or simply normal. For a learner giving a command, usted is the safest default with adults you do not know well, especially in official, medical, transport or emergency settings. It avoids false intimacy and gives you a command form whose negative is easy to build. Once a Colombian invites tú or vos, you can follow them, but you do not need to lead with it."
+        },
+        {
+          label: "Softeners are grammar in public",
+          body: "A phrase like “¿me regala una firma?” literally sounds strange to an English speaker, because nobody is gifting a signature. In Colombian Spanish it is a routine request frame. The same is true of “¿me hace el favor y...?” and “hágame un favor”. They wrap the action in a small exchange of goodwill. If you learn only the bare command, you can make a correct sentence that still feels abrupt at a counter, a clinic or a shelter. The social wrapper belongs in the grammar lesson because it changes which form a real Colombian would choose."
+        },
+        {
+          label: "Vos commands exist, but do not make them your default",
+          body: "In voseo regions, commands like “vení”, “tomá”, “decime” and “mirá” are ordinary and friendly, with stress on the final syllable. They are not slang and they are not wrong. The problem for a learner is social range. A vos command can be exactly right among friends and sharply wrong with an older stranger at a public desk. In this lesson, Maribel teaches Tom to rely on usted first because the shelter is full of people whose age, region and mood he cannot predict."
+        }
+      ],
+      pitfalls: [
+        {
+          mistake: "No mándemelo por WhatsApp.",
+          whyItFails: "The pronouns are attached as if the command were affirmative. Negative commands put pronouns before the verb, so “no” pulls “me lo” to the front.",
+          sayInstead: "No me lo mande por WhatsApp."
+        },
+        {
+          mistake: "No firma todavía, Tom.",
+          whyItFails: "If Tom is being addressed as tú, the negative command is “no firmes”, not the affirmative form with “no”. “No firma” sounds like a statement about someone else, or an usted command without the expected context.",
+          sayInstead: "No firmes todavía, Tom."
+        },
+        {
+          mistake: "Hablo con la coordinadora ahora.",
+          whyItFails: "That is “I speak”, not the command “speak”. For an usted command, start with “yo hablo”, drop the -o, and add -e: “hable”.",
+          sayInstead: "Hable con la coordinadora ahora."
+        },
+        {
+          mistake: "Mandemelo por WhatsApp.",
+          whyItFails: "When two pronouns attach to “mande”, the stress would move unless Spanish writes an accent. The command is pronounced MÁN-de-me-lo, so it is written “mándemelo”.",
+          sayInstead: "Mándemelo por WhatsApp."
+        }
+      ],
+      variations: [
+        {
+          form: "Firme aquí, por favor.",
+          register: "polite direct",
+          region: "Universal Spanish",
+          whenToUse: "A clear usted instruction in a form, clinic or office setting. The “por favor” helps, but the command still remains direct."
+        },
+        {
+          form: "No firme todavía la otra hoja.",
+          register: "polite direct",
+          region: "Universal Spanish",
+          whenToUse: "The negative usted command: the same “firme” with “no” in front. Use it when a wrong action would create a problem."
+        },
+        {
+          form: "Mándemelo por WhatsApp.",
+          register: "direct",
+          region: "Universal Spanish",
+          whenToUse: "An affirmative command with two attached pronouns. Correct, but often softened in Colombia if the person is not subordinate to you."
+        },
+        {
+          form: "¿Me hace el favor y me lo manda por WhatsApp?",
+          register: "polite Colombian",
+          region: "Colombia-wide",
+          whenToUse: "The same request made socially safer. This is often the best real-life choice with strangers and coworkers."
+        },
+        {
+          form: "Siga, por aquí la atienden.",
+          register: "welcoming polite",
+          region: "Colombia-wide",
+          whenToUse: "A Colombian invitation to come in or move ahead. Literally a command, socially a welcome."
+        }
+      ],
+      prompt: "Maribel wants Tom to tell Doña Luz politely not to sign the second sheet yet. Which sentence has the usted negative command correct?",
+      choices: [
+        "No firme todavía la otra hoja, por favor.",
+        "No firma todavía la otra hoja, por favor.",
+        "No firmes todavía la otra hoja, por favor."
+      ],
+      answer: 0,
+      practiceExtra: [
+        {
+          prompt: "You need the receipt sent to you by WhatsApp, and you are using a direct usted command. Which pronoun placement is correct?",
+          choices: [
+            "Me lo mande por WhatsApp, por favor.",
+            "Mándemelo por WhatsApp, por favor.",
+            "Mande me lo por WhatsApp, por favor."
+          ],
+          answer: 1,
+          tests: "affirmative command pronouns attach, with written accent"
+        },
+        {
+          prompt: "Tom is speaking to a friend as tú. Which negative command is correct?",
+          choices: [
+            "No firma todavía la hoja azul.",
+            "No firmar todavía la hoja azul.",
+            "No firmes todavía la hoja azul."
+          ],
+          answer: 2,
+          tests: "negative tú command differs from affirmative tú command"
+        },
+        {
+          prompt: "Which command comes from the yo form “hago” by dropping -o and adding -a?",
+          choices: [
+            "Haga la fila por este lado.",
+            "Hace la fila por este lado.",
+            "Haz la fila por este lado."
+          ],
+          answer: 0,
+          tests: "usted command generated from irregular yo form hago"
+        }
+      ]
+    },
+    en: {
+      title: "El imperativo inglés y cómo no sonar mandón",
+      situation: "En una biblioteca comunitaria en McAllen, Texas, una coordinadora colombiana aprende que el inglés tiene una sola forma de mandato y que toda la cortesía debe ir alrededor.",
+      setting: {
+        who: "Lucía coordina voluntarios recién llegada de Colombia y traduce mentalmente desde el usted. Mark administra una biblioteca comunitaria en McAllen, Texas, y le explica por qué sus órdenes gramaticalmente correctas suenan demasiado secas en inglés. Mrs. Patel es una vecina mayor que necesita ayuda con un formulario de vivienda.",
+        what: "Un mostrador de orientación con usuarios cansados, voluntarios nuevos y documentos sensibles. Mark modela peticiones inglesas con “could you”, “would you mind” e “if you could just” para que Lucía no traduzca mandatos españoles palabra por palabra.",
+        when: "Una tarde de invierno, justo antes del cierre, cuando la fila avanza despacio y todo el mundo quiere terminar sin pelea.",
+        where: "Una biblioteca comunitaria en McAllen, Texas, cerca de una parada de bus.",
+        why: "En inglés no existe un imperativo de usted que suene respetuoso por sí mismo. La forma desnuda es una orden. Si Lucía traduce “firme aquí” como “sign here”, puede ser correcta y brusca a la vez."
+      },
+      address: {
+        form: "mixed",
+        who: "Mark, Lucía y Mrs. Patel usan “you” para todos, porque el inglés no distingue tú, vos y usted.",
+        why: "La cortesía inglesa se construye con la frase completa, no con una terminación verbal. “Could you sit here?” y “sit here” tienen el mismo destinatario gramatical, pero no el mismo efecto social.",
+        ifYouSwitch: "No hay cambio de pronombre que arregle el tono. Si usted necesita más respeto, agregue marco de petición: “could you”, “would you mind”, “please”, “if you could just”, o explique el motivo."
+      },
+      dialogue: [
+        {
+          speaker: "Mark",
+          target: "Mrs. Patel, could you sit here for a moment and leave your ID with Lucía?",
+          translation: "Señora Patel, ¿podría sentarse aquí un momento y dejarle su documento a Lucía?",
+          pronunciation: "MÍ-sis pa-TEL, kud yu sit jir for a MÓU-ment and liv yor ai-DÍ wid lu-SÍ-a",
+          literal: "Señora Patel, podría usted sentar aquí por un momento y dejar su ID con Lucía?",
+          why: "El inglés usa la misma forma verbal para todos, así que “sit” por sí solo suena a orden. “Could you” convierte la acción en petición. Esa envoltura hace el trabajo que el español reparte entre usted, el favor y el tono."
+        },
+        {
+          speaker: "Lucía",
+          target: "So I should not say: sign here and do not sign the other page yet?",
+          translation: "Entonces no debería decir: firme aquí y no firme todavía la otra página?",
+          pronunciation: "sou ai shud nat sei: sain jir and du nat sain di Ó-der peich yet",
+          literal: "Así yo debería no decir: firme aquí y no firme la otra página todavía?",
+          why: "“Sign here” y “do not sign” son gramaticalmente correctos. El problema es el registro. En inglés, una orden desnuda no se vuelve formal por dirigirse a una persona mayor, porque no hay terminación de usted."
+        },
+        {
+          speaker: "Mark",
+          target: "Better: could you sign here, but please do not sign the other page yet?",
+          translation: "Mejor: ¿podría firmar aquí, pero por favor no firme todavía la otra página?",
+          pronunciation: "BÉ-der: kud yu sain jir, bat plis du nat sain di Ó-der peich yet",
+          literal: "Mejor: podría usted firmar aquí, pero por favor no firme la otra página todavía?",
+          why: "El inglés tiene una sola forma imperativa, así que la cortesía vive alrededor: “could you”, “please” y el orden de la información. “Do not sign” todavía es fuerte, pero el marco lo vuelve una instrucción cuidada."
+        },
+        {
+          speaker: "Mrs. Patel",
+          target: "Please do not send me from one desk to another; my husband cannot walk anymore.",
+          translation: "Por favor no me mande de un escritorio a otro; mi esposo ya no puede caminar más.",
+          pronunciation: "plis du nat send mi from wan desk tu a-NÁ-der; mai JÁS-band KÁ-nat wok É-ni-mor",
+          literal: "Por favor no enviar me de un escritorio a otro; mi esposo no puede caminar más.",
+          why: "La forma “please do not” suena más completa y menos cortante que solo “do not” al comienzo. El inglés no mueve pronombres como el español; “send me” se queda junto, tanto en afirmativo como en negativo."
+        },
+        {
+          speaker: "Mark",
+          target: "Of course. Please give me the form, and I will take it to the nurse for you.",
+          translation: "Claro. Por favor deme el formulario, y yo se lo llevo a la enfermera.",
+          pronunciation: "ov kors. plis giv mi da form, and ai wil teik it tu da ners for yu",
+          literal: "Por supuesto. Por favor darme el formulario, y yo llevaré eso a la enfermera para usted.",
+          why: "“Please give me” sigue siendo una petición directa, pero en inglés “please” antes del verbo suaviza bastante. “For you” añade cuidado, algo parecido al efecto social de “yo se lo llevo” en español."
+        },
+        {
+          speaker: "Lucía",
+          target: "And if I need the receipt, should I say: could you send it to me by text?",
+          translation: "Y si necesito el recibo, ¿debería decir: podría mandármelo por mensaje?",
+          pronunciation: "and if ai nid da ri-SÍT, shud ai sei: kud yu send it tu mi bai tekst",
+          literal: "Y si yo necesito el recibo, debería yo decir: podría usted enviar eso a mí por texto?",
+          why: "El inglés no pega los pronombres al mandato. Dice “send it to me”, con las piezas separadas. La cortesía no está en la forma verbal, sino en “could you”."
+        },
+        {
+          speaker: "Mark",
+          target: "Yes, or even softer: if you could just send it to me by text, that would be great.",
+          translation: "Sí, o incluso más suave: si pudiera mandármelo por mensaje, sería perfecto.",
+          pronunciation: "yes, or Í-ven SÓF-ter: if yu kud yast send it tu mi bai tekst, dat wud bi greit",
+          literal: "Sí, o incluso más suave: si usted pudiera solo enviar eso a mí por texto, eso sería genial.",
+          why: "“If you could just...” es una petición disfrazada de condición. Para un colombiano puede sonar largo, pero en inglés ese rodeo evita que la instrucción parezca una orden seca."
+        }
+      ],
+      vocabulary: [
+        {
+          term: "English imperative",
+          explanation: "El inglés tiene una sola forma de imperativo: el verbo base. “Sit”, “sign”, “send”, “come in” y “wait” sirven para una persona, varias personas, un amigo, una jefa o una desconocida. Esa simplicidad crea el problema social: la forma desnuda suena como una orden porque no tiene marca de usted que la suavice.",
+          literal: "verbo base",
+          useWhen: "Instrucciones rápidas, letreros, recetas, emergencias o cuando la relación permite mucha dirección: “Call 911”, “Press here”, “Come in”.",
+          avoidWhen: "Está pidiéndole algo a un colega, cliente, vecino o adulto desconocido. En esos casos agregue marco de cortesía.",
+          register: "directo",
+          region: "Inglés universal.",
+          related: ["sit", "sign", "send", "wait"],
+          example: {
+            target: "Sign here.",
+            translation: "Firme aquí."
+          }
+        },
+        {
+          term: "Could you...?",
+          explanation: "La herramienta más útil para convertir una instrucción en petición. No pregunta realmente por la capacidad física de la persona; pregunta si acepta hacer la acción. Para un colombiano, suele traducir mejor el efecto de “¿me hace el favor y...?” que un imperativo literal.",
+          literal: "podría usted...?",
+          useWhen: "Peticiones normales en trabajo, servicio, vivienda, salud o estudio: “Could you sign here?”, “Could you send it to me?”.",
+          avoidWhen: "Emergencias donde necesita una orden inmediata. Ahí “move” o “call now” puede ser correcto porque la seguridad pesa más que la cortesía.",
+          register: "cortés",
+          region: "Inglés universal, muy frecuente en Texas y el resto de Estados Unidos.",
+          related: ["would you", "can you", "please", "if you could"],
+          example: {
+            target: "Could you sign here?",
+            translation: "¿Podría firmar aquí?"
+          }
+        },
+        {
+          term: "Would you mind...?",
+          explanation: "Una petición más suave y más larga. La forma que sigue suele ir en -ing: “Would you mind waiting?”, “Would you mind sending it again?”. Literalmente pregunta si le molestaría, pero funciona como una manera educada de pedir una acción.",
+          literal: "le molestaría...?",
+          useWhen: "Cuando la petición invade tiempo, espacio o comodidad de la otra persona.",
+          avoidWhen: "La acción es simple y rutinaria. Usarlo para todo puede sonar demasiado ceremonioso o inseguro.",
+          register: "muy cortés",
+          region: "Inglés universal.",
+          related: ["could you", "do you mind", "would it be possible", "please"],
+          example: {
+            target: "Would you mind waiting here for a moment?",
+            translation: "¿Le molestaría esperar aquí un momento?"
+          }
+        },
+        {
+          term: "Please do not...",
+          explanation: "El negativo directo “do not” puede sonar fuerte. “Please do not” mantiene la prohibición clara, pero le añade el mínimo marco social. En inglés, el pronombre no cambia de lugar: “please do not send me”, no una versión pegada al verbo.",
+          literal: "por favor no...",
+          useWhen: "Advertencias o límites que deben ser claros: “Please do not sign yet”, “Please do not send cash”.",
+          avoidWhen: "Quiere sonar cálido y la situación no es urgente. Entonces conviene explicar: “Could you hold off on signing this page for now?”.",
+          register: "directo cortés",
+          region: "Inglés universal.",
+          related: ["do not", "don't", "hold off", "avoid"],
+          example: {
+            target: "Please do not sign the other page yet.",
+            translation: "Por favor no firme todavía la otra página."
+          }
+        },
+        {
+          term: "If you could just...",
+          explanation: "Un rodeo muy común en inglés de oficina y atención al público. Gramaticalmente parece una condición incompleta, pero socialmente significa “por favor haga esto”. “Just” reduce la carga de la petición, aunque no siempre la haga pequeña de verdad.",
+          literal: "si usted pudiera solo...",
+          useWhen: "Pedir algo sin sonar como si estuviera dando una orden: “If you could just send it to me by text, that would be great.”",
+          avoidWhen: "La persona necesita instrucciones simples o el inglés de la otra persona es básico. La suavidad puede volverse confusión.",
+          register: "cortés indirecto",
+          region: "Muy común en inglés norteamericano.",
+          related: ["could you", "that would be great", "when you get a chance", "please"],
+          example: {
+            target: "If you could just send it to me by text, that would be great.",
+            translation: "Si pudiera mandármelo por mensaje, sería perfecto."
+          }
+        },
+        {
+          term: "Can you...?",
+          explanation: "Más directo que “could you” y muy frecuente entre compañeros. Puede ser perfectamente amable con buen tono, pero a veces suena más práctico que cortés. Para alguien que viene del usted, “could you” es una apuesta más segura con desconocidos.",
+          literal: "puede usted...?",
+          useWhen: "Trabajo diario entre iguales, familia, amigos o cuando la petición es sencilla.",
+          avoidWhen: "La situación tiene tensión, edad, jerarquía o servicio al público. Ahí “could you” reduce el riesgo de brusquedad.",
+          register: "neutro directo",
+          region: "Inglés universal.",
+          related: ["could you", "would you", "please", "can I ask you to"],
+          example: {
+            target: "Can you wait here for a moment?",
+            translation: "¿Puede esperar aquí un momento?"
+          }
+        },
+        {
+          term: "Come in / go ahead",
+          explanation: "El inglés también usa imperativos como invitaciones, no solo órdenes. “Come in” puede equivaler al “siga” colombiano, y “go ahead” da permiso para avanzar o empezar. La diferencia está en el contexto y el tono, no en una forma verbal especial.",
+          literal: "entre / siga adelante",
+          useWhen: "Invitar a entrar, ceder el turno o autorizar una acción: “Come in”, “Go ahead and take a seat”.",
+          avoidWhen: "La persona puede interpretar que la está apurando. En servicio al público, agregue “please” o una sonrisa audible en el tono.",
+          register: "neutral a amable",
+          region: "Inglés universal.",
+          related: ["take a seat", "please come in", "after you", "step inside"],
+          example: {
+            target: "Please come in and take a seat.",
+            translation: "Siga y tome asiento, por favor."
+          }
+        },
+        {
+          term: "Please",
+          explanation: "“Please” ayuda, pero no convierte automáticamente una orden en una petición cálida. “Send me the file, please” sigue siendo más imperativo que “Could you send me the file?”. En inglés la cortesía fuerte se construye con toda la estructura, no con una sola palabra al final.",
+          literal: "por favor",
+          useWhen: "Añadir cortesía mínima a una instrucción clara o acompañar una petición ya suavizada.",
+          avoidWhen: "Cree que basta para compensar un mandato demasiado directo. Con colegas o desconocidos, cambie la frase completa.",
+          register: "variable",
+          region: "Inglés universal.",
+          related: ["could you", "would you mind", "thank you", "please do not"],
+          example: {
+            target: "Could you send it to me, please?",
+            translation: "¿Podría mandármelo, por favor?"
+          }
+        }
+      ],
+      note: "El inglés parece fácil porque tiene un solo imperativo: el verbo base. “Sign here”, “sit here”, “send it to me” y “do not sign” no cambian por tú, usted, ustedes ni vos. Precisamente por eso son peligrosos para un hispanohablante. En español, “firme” ya trae una señal de respeto frente a “firma”, y además usted puede envolverlo con “hágame el favor” o “¿me regala...?”. En inglés, “sign here” no trae nada de eso. Es una orden desnuda. No es grosera en una receta, un letrero, una emergencia o una instrucción muy rápida, pero con una persona real en un mostrador puede sonar brusca. La cortesía inglesa se pone alrededor del imperativo o lo reemplaza: “Could you sign here?”, “Would you mind waiting here?”, “If you could just send it to me, that would be great”, “Please do not sign the other page yet”. “Please” ayuda, pero no hace milagros. “Send me the file, please” todavía puede sonar como una orden con una palabra amable pegada al final. Si usted traduce un mandato de usted directamente, produce inglés correcto y demasiado duro. La solución no es buscar una terminación formal, porque no existe. La solución es cambiar la arquitectura de la frase para que suene a petición, explicación o invitación.",
+      culture: [
+        {
+          label: "El inglés no tiene usted salvavidas",
+          body: "Lucía quiere que “sign here” funcione como “firme aquí”, pero el inglés no le da esa marca de respeto. “You” sirve para todo el mundo, y el verbo no cambia. En Texas, Estados Unidos y muchos otros lugares, una petición a una persona desconocida suele empezar con “could you” o “would you mind” precisamente porque la gramática no ofrece otra herramienta. Para un colombiano, ese rodeo puede parecer excesivo. Para el oído inglés, muchas veces es simplemente el registro normal de tratar bien a alguien."
+        },
+        {
+          label: "La longitud es parte de la cortesía",
+          body: "El español colombiano puede suavizar con fórmulas breves: “me regala”, “hágame un favor”, “siga”. El inglés suele alargar: “If you could just send it to me by text, that would be great.” Esa frase no añade mucha información práctica, pero sí añade espacio social. Le permite a la otra persona aceptar sin sentirse mandada. En atención al público, ese espacio importa, sobre todo cuando la persona llega cansada, mayor, confundida o molesta."
+        },
+        {
+          label: "Please no siempre alcanza",
+          body: "Muchos hispanohablantes aprenden que “please” equivale a “por favor” y lo ponen al final de una orden directa. Es correcto, pero no siempre suficiente. “Open your bag, please” puede sonar como seguridad de aeropuerto, no como ayuda amable. “Could you open your bag for me?” reparte mejor la carga social. La diferencia no está en la traducción palabra por palabra, sino en el tipo de relación que la frase crea durante medio segundo."
+        },
+        {
+          label: "También hay imperativos amables",
+          body: "No todo imperativo inglés es agresivo. “Come in”, “take care”, “have a seat” y “go ahead” pueden sonar cálidos si el contexto los presenta como invitación o permiso. Esto se parece a “siga” en Colombia. La clave es no sacar una regla falsa como “nunca use imperativos”. Úselos para señales, emergencias, instrucciones impersonales e invitaciones rutinarias. Para pedir trabajo, documentos o favores a una persona concreta, cambie a una pregunta cortés."
+        }
+      ],
+      pitfalls: [
+        {
+          mistake: "Sign here and do not sign the other page yet.",
+          whyItFails: "Es gramaticalmente correcto, pero en un mostrador con una persona mayor suena como una orden seca. El inglés no tiene forma de usted que suavice “sign”.",
+          sayInstead: "Could you sign here, but please do not sign the other page yet?"
+        },
+        {
+          mistake: "Send it to me by text, please.",
+          whyItFails: "“Please” ayuda, pero la estructura sigue siendo un mandato directo. Si usted no tiene autoridad clara sobre la persona, puede sonar más exigente de lo que pretende.",
+          sayInstead: "Could you send it to me by text, please?"
+        },
+        {
+          mistake: "Do not send me from one desk to another.",
+          whyItFails: "Como queja puede ser comprensible, pero sin “please” ni explicación inicial suena confrontacional. En inglés de servicio, conviene marcar primero la cooperación que usted quiere recibir.",
+          sayInstead: "Please do not send me from one desk to another."
+        },
+        {
+          mistake: "Would you mind to wait here for a moment?",
+          whyItFails: "Después de “would you mind”, el verbo va en -ing. Es una fórmula fija: “would you mind waiting”, no “would you mind to wait”.",
+          sayInstead: "Would you mind waiting here for a moment?"
+        }
+      ],
+      variations: [
+        {
+          form: "Sign here, please.",
+          register: "directo",
+          region: "Inglés universal",
+          whenToUse: "Instrucción breve cuando la relación o el contexto ya autoriza la dirección. Es correcto, pero no especialmente suave."
+        },
+        {
+          form: "Please do not sign the other page yet.",
+          register: "directo cortés",
+          region: "Inglés universal",
+          whenToUse: "Una prohibición clara que necesita cortesía mínima. Útil cuando un error causaría problemas."
+        },
+        {
+          form: "Could you send it to me by text?",
+          register: "cortés",
+          region: "Inglés universal",
+          whenToUse: "La opción segura para pedir una acción concreta a un colega, vecino, usuario o desconocido."
+        },
+        {
+          form: "If you could just send it to me by text, that would be great.",
+          register: "cortés indirecto",
+          region: "Inglés norteamericano",
+          whenToUse: "Una petición más envuelta, común en oficinas y atención al público cuando quiere evitar cualquier tono de orden."
+        },
+        {
+          form: "Please come in and take a seat.",
+          register: "amable",
+          region: "Inglés universal",
+          whenToUse: "Una invitación que usa forma imperativa sin sonar dura, porque el contexto ofrece bienvenida y permiso."
+        }
+      ],
+      prompt: "Lucía necesita pedirle a Mrs. Patel que firme una página en inglés sin sonar mandona. ¿Cuál opción es más natural?",
+      choices: [
+        "Sign this page here right now, please.",
+        "Could you sign this page here, please?",
+        "You sign this page here, please."
+      ],
+      answer: 1,
+      practiceExtra: [
+        {
+          prompt: "Usted quiere que un vecino le mande una foto por mensaje. ¿Cuál opción evita mejor el tono de orden?",
+          choices: [
+            "Send me the photo by text, please.",
+            "You must send the photo by text.",
+            "Could you send me the photo by text?"
+          ],
+          answer: 2,
+          tests: "could you como petición cortés en vez de imperativo desnudo"
+        },
+        {
+          prompt: "¿Cuál frase usa correctamente “would you mind”?",
+          choices: [
+            "Would you mind waiting here for a moment?",
+            "Would you mind to wait here for a moment?",
+            "Would you mind wait here for a moment?"
+          ],
+          answer: 0,
+          tests: "would you mind plus gerund"
+        },
+        {
+          prompt: "En un aviso urgente de seguridad, ¿cuál imperativo desnudo puede ser apropiado?",
+          choices: [
+            "Could you maybe exit now?",
+            "Leave the building now.",
+            "If you could just leave now."
+          ],
+          answer: 1,
+          tests: "bare imperative acceptable for urgent instructions"
         }
       ]
     }

@@ -76,7 +76,7 @@ They are packed to be **even rather than full**. Filling each segment to a word 
 
 ## The lesson set
 
-**208 lessons** spanning starter through extending. Two hundred of them are anchored one-to-one to the verb curriculum — every verb in `data/curriculum.js` has exactly one lesson that teaches it, and no verb has two. The remaining eight are the original hand-written situation lessons, which predate the one-verb-per-lesson rule and are kept because they teach situations rather than a single verb:
+**245 lessons** spanning starter through extending, of three kinds. Two hundred are anchored one-to-one to the verb curriculum — every verb in `data/curriculum.js` has exactly one lesson that teaches it, and no verb has two. Thirty-seven are anchored the same way to the **grammar curriculum** in `data/structures.js`. The remaining eight are the original hand-written situation lessons, which predate the one-thing-per-lesson rule and are kept because they teach situations rather than a single form:
 
 | # | Lesson | Level | Teaches |
 | --- | --- | --- | --- |
@@ -90,6 +90,18 @@ They are packed to be **even rather than full**. Filling each segment to a word 
 | 8 | The job interview | Extending · Professional | `llevo tres años trabajando`, `con mucho gusto`, concrete examples |
 
 The verb lessons follow the curriculum's own tiers — 70 foundation, 80 independent, 50 extension — and live in `data/lessons/NN-*.js`, roughly three lessons to a file. `node scripts/verb-coverage.js` prints what is taught and what is left; it is the quickest way to see the shape of the course.
+
+### The grammar curriculum
+
+A verb-per-lesson course teaches vocabulary well and grammar only by accident. `data/structures.js` is the closed list that fixes that: 37 grammar points, each taught by exactly one lesson, each carrying a `probe` regex that a test runs against the lesson's own Spanish dialogue. A grammar lesson whose dialogue never uses its grammar fails the build, so the teaching and the example cannot drift apart.
+
+The list was assembled in two passes, and the difference between them is the interesting part.
+
+The first 25 were chosen for **absence** — forms the corpus barely contained, found by running probes over every utterance the course ships. Comparatives appeared 7 times and `tan ... como` not at all, so those became lessons.
+
+The last 12 were chosen for the opposite reason: forms that are **everywhere and explained nowhere**. Measuring 6,478 Spanish utterances turned up `por` and `para` 312 times, 811 preverbal object pronouns, 395 imperfects, 90 adverbial subjunctive triggers — with no lesson anywhere stating the rule behind any of them. A learner met these on nearly every page and was never told how they work, which is precisely the profile of the errors that fossilize in self-study. That pass added `ser` vs `estar`, gender and agreement, articles and quantity, object pronouns, preterite vs imperfect, commands and requests, `por` vs `para`, real conditionals, relative clauses, the volitional and adverbial subjunctive, and discourse connectors — the last being the thinnest slot ever measured here, at 6 connectors in 6,478 utterances, against B2 rubrics that assess cohesion directly.
+
+Structures carry their own tier (`foundation`, `independent`, `extension`) independently of the band of the module they sit in, so a foundation-tier grammar point can appear in an A2 module where it is actually needed.
 
 Alongside the lessons there is a reference **library**: 200 high-frequency verbs with their most useful forms, a fluency list of connectors and softeners, and a **Colombian slang** reference.
 
@@ -161,7 +173,7 @@ A kind that current content happens not to produce is still checked for wording,
 
 The surrounding interface follows the direction too. `data/flashcards.js` emits i18n keys rather than sentences — `deck.ask.pronunciation`, not `"How would you say this out loud?"` — and `flashcards.js` resolves them through `i18n.js` at paint time, so the prompts, controls and screen-reader announcements are in the learner's own language. A test derives the key list from the real content, so a new verb level that nobody has translated yet is caught rather than shipped.
 
-Sets are split evenly rather than greedily, so a topic never ends in a stub round — 13 cards become 7 + 6, not 10 + 3. `FLASHCARD_SET_SIZE` in `data/flashcards.js` is the single knob for the target size. Deck size scales with the lessons without a line of flashcard code changing: the 208 lessons currently yield **22,360 cards across 2,468 sets** in the two directions combined, rising to 22,454 when the age gate is opened. Every lesson produces a deck in both directions — a test asserts it, so a lesson that somehow built no cards would fail rather than quietly go unstudied.
+Sets are split evenly rather than greedily, so a topic never ends in a stub round — 13 cards become 7 + 6, not 10 + 3. `FLASHCARD_SET_SIZE` in `data/flashcards.js` is the single knob for the target size. Deck size scales with the lessons without a line of flashcard code changing: the 245 lessons currently yield **26,802 cards across 2,964 sets** in the two directions combined, rising to 27,117 when the age gate is opened. Every lesson produces a deck in both directions — a test asserts it, so a lesson that somehow built no cards would fail rather than quietly go unstudied.
 ## Placement and pathways
 
 The app opens with an optional five-signal placement check: receptive understanding, productive use, grammar, context, and pronunciation. Every question includes **"I don't know"**, which records a genuine knowledge gap instead of forcing a guess — a wrong guess and an honest gap mean different things, and the app treats them differently.

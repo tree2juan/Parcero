@@ -13,6 +13,10 @@
  * The two directions are mirrors: same number of dialogue turns, same number of
  * vocabulary entries, same number of culture notes, pitfalls, variations and
  * practice questions, and the same optional slots filled on the same rows.
+ *
+ * This block now also includes relative-basic, closing the measured gap of 55
+ * relative constructions with no lesson explaining how Spanish joins and
+ * identifies nouns with que, el que, lo que, donde and cuyo.
  */
 lessons.push(
   {
@@ -1865,6 +1869,604 @@ lessons.push(
           ],
           answer: 2,
           tests: "what you use it for as function"
+        }
+      ]
+    }
+  },
+  {
+    id: "identifying-a-phone-at-a-florencia-repair-counter",
+    level: "Developing · Explaining and showing",
+    skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context", "grammar"],
+    domain: "civic-and-services",
+    register: "courteous",
+    pathways: ["independent", "collegiate-academic"],
+    structure: "relative-basic",
+    review: "pending",
+    es: {
+      title: "Identifying the right phone at a repair counter",
+      situation:
+        "You are at a repair counter in Florencia, Caquetá, where three similar phones are waiting in trays. Outside, the afternoon is hot and humid, and inside the clerk will not release the wrong handset, so you must identify exactly which phone is yours: the phone that you brought, the case it came in, the technician you spoke with, and what he promised. Relative clauses are not decoration here; they are the grammar that lets you point to one item among several without starting over every sentence.",
+      setting: {
+        who: "Sofía works at a small phone repair counter and has to protect customers from mix-ups. Jamie is an English-speaking customer who can describe the phone but does not know all the technical words.",
+        what: "A careful identification of one repaired phone among several similar devices, using relative clauses to say which one, which case, which technician, and which promise.",
+        when: "Late afternoon, when several customers are collecting repairs before the shop closes.",
+        where: "Florencia, Caquetá, at a phone repair counter near the center, with several black phones on the same shelf.",
+        why: "Because relative clauses turn short labels into precise explanations. Instead of saying “the phone. I brought it yesterday,” Spanish lets you say “el celular que traje ayer,” but it never lets you drop the que."
+      },
+      address: {
+        form: "usted",
+        who: "Sofía and Jamie use usted because this is a service counter with a small risk of giving the wrong repaired item to the wrong person.",
+        why: "The tone is helpful but careful. Usted lets Sofía ask exact questions and lets Jamie identify the device without sounding pushy.",
+        ifYouSwitch:
+          "Tú would sound too familiar unless they already knew each other. The grammar of relative clauses would not change, but the service relationship would feel less guarded."
+      },
+      dialogue: [
+        {
+          speaker: "Jamie",
+          target: "Buenas. Vengo por el celular que traje ayer para cambiarle la pantalla.",
+          translation: "Hi. I'm here for the phone that I brought yesterday to have the screen changed.",
+          pronunciation: "BWEH-nas. BEN-goh por el seh-loo-LAR keh TRAH-heh ah-YER PAH-rah kam-BYAR-leh lah pan-TAH-yah",
+          literal: "Good. I-come for the phone that I-brought yesterday for change-to-it the screen.",
+          why: "This is the core pattern: noun plus que plus the identifying information. English can say “the phone I brought,” but Spanish must keep que: “el celular que traje.”"
+        },
+        {
+          speaker: "Sofía",
+          target: "Claro. ¿Es el que tiene una raya en la cámara o el que está sin funda?",
+          translation: "Of course. Is it the one that has a scratch on the camera or the one that is without a case?",
+          pronunciation: "KLAH-roh. es el keh TYEH-neh OO-nah RRAH-yah en lah KAH-mah-rah oh el keh es-TAH sin FOON-dah",
+          literal: "Clear. Is-it the one that has a scratch on the camera or the one that is without case?",
+          why: "“El que” means “the one that” when the noun is understood. It is everywhere in speech and often more natural than repeating “el celular” twice."
+        },
+        {
+          speaker: "Jamie",
+          target: "Es el que está sin funda, pero la funda en la que venía quedó con el técnico.",
+          translation: "It's the one that is without a case, but the case it came in stayed with the technician.",
+          pronunciation: "es el keh es-TAH sin FOON-dah, PEH-roh lah FOON-dah en lah keh beh-NEE-ah keh-DOH kon el TEK-nee-koh",
+          literal: "It-is the one that is without case, but the case in which it-came stayed with the technician.",
+          why: "After a preposition, Spanish puts the preposition first: “en la que.” You cannot strand it at the end the English way, and after a preposition que needs the article: la que."
+        },
+        {
+          speaker: "Sofía",
+          target: "Ya veo. ¿El técnico con el que habló le prometió entrega para hoy?",
+          translation: "I see. Did the technician you spoke with promise you delivery for today?",
+          pronunciation: "yah BEH-oh. el TEK-nee-koh kon el keh ah-BLOH leh proh-meh-TYOH en-TREH-gah PAH-rah oy",
+          literal: "Already I-see. The technician with whom you-spoke to-you promised delivery for today?",
+          why: "“Con el que” is another fronted preposition. For a person, “con quien” is also correct and a little more formal, but everyday Colombian speech often chooses “con el que.”"
+        },
+        {
+          speaker: "Jamie",
+          target: "Sí, y lo que me dijo fue que el repuesto ya estaba pago.",
+          translation: "Yes, and what he told me was that the replacement part was already paid for.",
+          pronunciation: "see, ee loh keh meh DEE-hoh fweh keh el rreh-PWES-toh yah es-TAH-bah PAH-goh",
+          literal: "Yes, and what to-me he-said was that the replacement already was paid.",
+          why: "“Lo que” does not point to a noun. It points to a whole idea: the thing he said, the content of the promise. In formal writing, “lo cual” can do a similar job after a full clause."
+        },
+        {
+          speaker: "Sofía",
+          target: "Perfecto. Aquí está el recibo cuyo número coincide con su orden, y esta es la tienda donde puede reclamar garantía.",
+          translation: "Perfect. Here is the receipt whose number matches your order, and this is the shop where you can claim the warranty.",
+          pronunciation: "pehr-FEK-toh. ah-KEE es-TAH el rreh-SEE-boh KOO-yoh NOO-meh-roh koin-SEE-deh kon soo OR-den, ee ES-tah es lah TYEN-dah DON-deh PWEH-deh rreh-klah-MAR gah-ran-TEE-ah",
+          literal: "Perfect. Here is the receipt whose number matches with your order, and this is the shop where you-can claim warranty.",
+          why: "“Cuyo” is the written-register possession relative and agrees with the thing possessed, here “número,” not with the receipt owner. “Donde” identifies a place."
+        }
+      ],
+      vocabulary: [
+        {
+          term: "que",
+          explanation:
+            "The workhorse relative pronoun. It covers who, whom, which and that for people and things, as subject or object. The rule to memorize is negative: Spanish does not drop it.",
+          literal: "that / which / who",
+          useWhen:
+            "You identify a noun with more information: the phone that I brought, the clerk who called, the part that arrived.",
+          avoidWhen:
+            "Dropping it because English can drop that in “the phone I brought.” Spanish requires “el celular que traje.”",
+          register: "neutral",
+          region: "Universal Spanish; the default in Colombian speech and writing.",
+          related: ["el que", "la que", "quien", "donde"],
+          example: {
+            target: "El celular que traje ayer está listo.",
+            translation: "The phone that I brought yesterday is ready."
+          }
+        },
+        {
+          term: "el que / la que / los que / las que",
+          explanation:
+            "The one that, the ones that, and the required form after many prepositions. The article agrees with the noun you are referring back to.",
+          literal: "the one that / which",
+          useWhen:
+            "The noun is already known, or a preposition comes first: the one without a case, the case it came in.",
+          avoidWhen:
+            "Leaving bare que after a preposition. “La funda en que venía” exists in some formal styles, but learners should control “en la que” first.",
+          register: "neutral spoken",
+          region: "Very common in Colombia; speech often uses el que where textbooks prefer quien for people.",
+          related: ["que", "en la que", "con el que", "la cual"],
+          example: {
+            target: "Es el que está sin funda.",
+            translation: "It's the one that is without a case."
+          }
+        },
+        {
+          term: "preposition + article + que",
+          explanation:
+            "Spanish puts the preposition before the relative clause: en la que, con el que, a la que, de los que. English often leaves the preposition at the end; Spanish cannot.",
+          literal: "in the which / with the who",
+          useWhen:
+            "The relationship needs a preposition: the case it came in, the person I spoke with, the office I went to.",
+          avoidWhen:
+            "Stranding the preposition at the end, as in “la funda que venía en.” That is an English pattern, not Spanish.",
+          register: "neutral to careful",
+          region: "Universal Spanish; Colombians also use these constantly in ordinary speech.",
+          related: ["en la que", "con el que", "a quien", "de la cual"],
+          example: {
+            target: "La funda en la que venía quedó aquí.",
+            translation: "The case it came in stayed here."
+          }
+        },
+        {
+          term: "quien / quienes",
+          explanation:
+            "A relative pronoun for people, especially after a preposition. It is slightly more formal than el que and must be plural as quienes when it refers to more than one person.",
+          literal: "who / whom",
+          useWhen:
+            "You want a careful person reference after a preposition, like the technician I spoke with or the clients they called.",
+          avoidWhen:
+            "Using it for things. A phone or receipt is never quien. Use que, el que, la que or el cual forms for things.",
+          register: "careful / written",
+          region: "General Spanish; everyday Colombian speech often chooses the article plus que option instead.",
+          related: ["con quien", "a quien", "quienes", "el que"],
+          example: {
+            target: "La técnica con quien hablé fue muy clara.",
+            translation: "The technician I spoke with was very clear."
+          }
+        },
+        {
+          term: "lo que",
+          explanation:
+            "What, or the thing that, when there is no noun behind it. It points to an idea, a statement, an action or a whole chunk of meaning.",
+          literal: "the what / what",
+          useWhen:
+            "You refer to the content of a message, promise or situation: lo que me dijo, lo que pasó, lo que necesitamos.",
+          avoidWhen:
+            "Using it for a named noun. For “the phone that,” use “el celular que,” not “lo que.”",
+          register: "neutral",
+          region: "Universal Spanish; in writing, lo cual can refer back to a whole previous clause.",
+          related: ["lo cual", "eso que", "la cosa que", "que"],
+          example: {
+            target: "Lo que me dijo no tiene sentido.",
+            translation: "What he told me makes no sense."
+          }
+        },
+        {
+          term: "cuyo / cuya / cuyos / cuyas",
+          explanation:
+            "The possession relative, similar to whose. Its trap is agreement: it agrees with the thing possessed, not with the possessor.",
+          literal: "whose",
+          useWhen:
+            "Careful writing, exam answers and formal descriptions where whose points to a number, order, cable or other possessed thing.",
+          avoidWhen:
+            "Everyday chat. In speech Colombians usually rephrase, for example “el recibo que tiene el número.”",
+          register: "written / exam-relevant",
+          region: "Universal written Spanish; useful to recognize even if you rarely say it.",
+          related: ["cuyo", "cuya", "de quien", "del cual"],
+          example: {
+            target: "El recibo cuyo número coincide es el suyo.",
+            translation: "The receipt whose number matches is yours."
+          }
+        },
+        {
+          term: "donde",
+          explanation:
+            "The place relative, where. It can identify which place you mean or add extra information about an already identified place.",
+          literal: "where",
+          useWhen:
+            "You identify a shop, room, counter or street by what happens there: la tienda donde arreglan pantallas.",
+          avoidWhen:
+            "Using it for people or abstract ideas that are not places. Use que or lo que instead.",
+          register: "neutral",
+          region: "Universal Spanish.",
+          related: ["adonde", "en la que", "que", "lugar"],
+          example: {
+            target: "Esta es la tienda donde puede reclamar garantía.",
+            translation: "This is the shop where you can claim the warranty."
+          }
+        }
+      ],
+      note:
+        "Relative clauses are the grammar of pointing precisely. “El celular que traje” identifies one phone among several; “la funda en la que venía” identifies a relationship that English might leave hanging at the end; “lo que me dijo” names an entire idea. The two rules English speakers break most are simple and strict: do not drop que, and do not strand prepositions. Spanish says “el libro que compré,” never “el libro compré,” and “la casa en la que vivo,” never a sentence with en stranded at the end. After a preposition, use el que, la que, los que or las que, with quien available for people in a slightly more formal register. Commas matter too: “Los celulares que están reparados están en la caja” means only the repaired phones are in the box. “Los celulares, que están reparados, están en la caja” adds extra information about all the phones. The comma changes which phones you mean.",
+      culture: [
+        {
+          label: "Que does more work than English that",
+          body:
+            "English divides relative clauses among who, whom, which and that, then often drops the word completely. Spanish does the opposite: que covers nearly everything and stays visible. That makes the system easier in one way and stricter in another. You have fewer words to choose from, but you cannot skip the word that joins the sentences."
+        },
+        {
+          label: "Everyday Colombian speech likes el que",
+          body:
+            "In careful textbooks, a person after a preposition often attracts quien: la persona con quien hablé. In ordinary Colombian speech, el que, la que and los que are everywhere: el técnico con el que hablé. That is not lazy Spanish. It is normal speech. What writing will not tolerate as freely is casual doubling and loose que piled onto every explanation."
+        },
+        {
+          label: "Commas are meaning, not decoration",
+          body:
+            "A defining relative clause has no commas because it tells you which one: el celular que está sin funda. A non-defining clause has commas because the noun is already identified: mi celular, que está sin funda. In exams and real paperwork, that comma can change whether you mean one item in a group or the whole group."
+        }
+      ],
+      pitfalls: [
+        {
+          mistake: "Dropping que in “el celular traje ayer”",
+          whyItFails:
+            "English allows “the phone I brought,” but Spanish does not allow the relative pronoun to disappear. The joiner must be spoken or written.",
+          sayInstead: "El celular que traje ayer."
+        },
+        {
+          mistake: "Stranding the preposition in “la funda que venía en”",
+          whyItFails:
+            "Spanish places the preposition before the relative pronoun. English can leave “in” at the end; Spanish cannot leave en hanging there.",
+          sayInstead: "La funda en la que venía."
+        },
+        {
+          mistake: "Using cuyo as if it agreed with the owner",
+          whyItFails:
+            "Cuyo agrees with the possessed thing. It is “el recibo cuyo número” because número is masculine, not because of the receipt or the customer.",
+          sayInstead: "El recibo cuyo número coincide."
+        }
+      ],
+      variations: [
+        {
+          form: "El celular que traje ayer está listo.",
+          register: "neutral",
+          region: "Universal Spanish",
+          whenToUse: "Identifying a noun with a relative clause, keeping the required que."
+        },
+        {
+          form: "La funda en la que venía quedó aquí.",
+          register: "careful neutral",
+          region: "Universal Spanish",
+          whenToUse: "Putting a preposition before the relative pronoun instead of stranding it."
+        },
+        {
+          form: "Lo que me dijo fue claro.",
+          register: "neutral",
+          region: "Universal Spanish",
+          whenToUse: "Referring to a whole idea or message rather than a noun."
+        },
+        {
+          form: "El recibo cuyo número coincide es el suyo.",
+          register: "written / exam",
+          region: "Universal Spanish",
+          whenToUse: "Expressing possession in careful writing, with cuyo agreeing with the possessed thing."
+        }
+      ],
+      prompt: "Which Spanish sentence correctly says “the case it came in”?",
+      choices: [
+        "La funda en la que venía.",
+        "La funda que venía en.",
+        "La funda venía que en."
+      ],
+      answer: 0,
+      practiceExtra: [
+        {
+          prompt: "Which sentence keeps the relative pronoun that Spanish requires?",
+          choices: [
+            "El celular traje ayer está listo.",
+            "El celular que traje ayer está listo.",
+            "El celular lo traje que ayer listo."
+          ],
+          answer: 1,
+          tests: "Spanish requires que in object relative clauses."
+        },
+        {
+          prompt: "Which line uses lo que for a whole idea rather than a noun?",
+          choices: [
+            "Lo que me dijo no tiene sentido.",
+            "El recibo que me dio está aquí.",
+            "La tienda donde fui queda cerca."
+          ],
+          answer: 0,
+          tests: "Lo que points to an idea or statement."
+        },
+        {
+          prompt: "Which sentence uses cuyo with correct agreement?",
+          choices: [
+            "La clienta cuyo orden está lista.",
+            "El recibo cuya número coincide.",
+            "La orden cuyo recibo falta."
+          ],
+          answer: 2,
+          tests: "Cuyo agrees with the possessed noun, here recibo."
+        }
+      ]
+    },
+    en: {
+      title: "Identificar el celular correcto en Laredo",
+      situation:
+        "Usted está en un mostrador de reparación en Laredo, Texas, donde hay varios celulares negros en bandejas parecidas. Necesita identificar en inglés cuál es el suyo sin sonar como si estuviera traduciendo palabra por palabra del español. El alivio para un colombiano es real: el inglés sí puede omitir el pronombre relativo cuando es objeto, como en the phone I brought, y sí puede dejar la preposición al final, como en the technician I spoke with.",
+      setting: {
+        who: "Sofía atiende un mostrador de reparación y debe evitar entregar el equipo equivocado. Jamie es cliente colombiano y puede describir el celular, pero necesita hacerlo con la gramática natural del inglés.",
+        what: "Una identificación precisa de un celular reparado entre varios aparatos parecidos, usando cláusulas relativas inglesas para decir cuál, con cuál funda, con cuál técnico y qué promesa.",
+        when: "Al final de la tarde, cuando varios clientes pasan a recoger arreglos antes de que cierre el local.",
+        where: "Laredo, Texas, en un mostrador de reparación de celulares, porque esta dirección enseña inglés y ocurre fuera de Colombia.",
+        why: "Porque las relativas inglesas hacen lo contrario de lo que exige el español en dos puntos liberadores: a veces se omite that, y la preposición puede quedar al final sin sonar mal."
+      },
+      address: {
+        form: "mixed",
+        who: "Sofía y Jamie usan el mismo you; la relación de servicio se marca con frases completas, tono amable y preguntas claras.",
+        why: "El inglés no cambia el pronombre para marcar usted. En un mostrador, la cortesía vive en could, please, let me check y en no sonar acusatorio.",
+        ifYouSwitch:
+          "No hay tú ni usted que cambiar. Lo que sí cambia el registro es escoger entre una forma natural de habla, the phone I brought, y una forma más rígida, the phone that I brought."
+      },
+      dialogue: [
+        {
+          speaker: "Jamie",
+          target: "Hi. I'm here for the phone I brought in yesterday for a screen replacement.",
+          translation: "Buenas. Vengo por el celular que traje ayer para cambiarle la pantalla.",
+          pronunciation: "jai. aim jir for da foun ai brot in YES-ter-dei for a skrin ri-PLEIS-ment",
+          literal: "Hola. Estoy aquí por el teléfono traje adentro ayer para un reemplazo de pantalla.",
+          why: "Aquí está la gran libertad del inglés: como the phone es el objeto de brought, puede omitir that. The phone that I brought también es correcto, pero the phone I brought suena natural en habla."
+        },
+        {
+          speaker: "Sofía",
+          target: "Sure. Is it the one that has a scratch on the camera, or the one without a case?",
+          translation: "Claro. ¿Es el que tiene una raya en la cámara o el que está sin funda?",
+          pronunciation: "shur. iz it da uan dat jaz a skrach on da KA-me-ra, or da uan wi-DAUT a keis",
+          literal: "Seguro. ¿Es el uno que tiene un rayón en la cámara, o el uno sin una funda?",
+          why: "That sigue siendo muy útil, sobre todo cuando la relativa tiene sujeto propio: the one that has a scratch. Para personas puede aparecer who; para cosas, which o that."
+        },
+        {
+          speaker: "Jamie",
+          target: "It's the one without a case, but the case it came in stayed with the technician.",
+          translation: "Es el que está sin funda, pero la funda en la que venía quedó con el técnico.",
+          pronunciation: "its da uan wi-DAUT a keis, bat da keis it keim in steid with da tek-NI-shan",
+          literal: "Es el uno sin funda, pero la funda vino en quedó con el técnico.",
+          why: "Otro alivio: el inglés deja la preposición al final, the case it came in. Frontarla, the case in which it came, es correcta pero suena rígida en conversación."
+        },
+        {
+          speaker: "Sofía",
+          target: "I see. Did the technician you spoke with promise pickup for today?",
+          translation: "Ya veo. ¿El técnico con el que habló le prometió entrega para hoy?",
+          pronunciation: "ai si. did da tek-NI-shan yu spouk with PRA-mis PIK-ap for tu-DEI",
+          literal: "Ya veo. ¿El técnico usted habló con prometió recogida para hoy?",
+          why: "The technician you spoke with omite whom y deja with al final. En habla diaria eso es normal. The technician with whom you spoke suena formal o escrito."
+        },
+        {
+          speaker: "Jamie",
+          target: "Yes, and what he told me was that the replacement part was already paid for.",
+          translation: "Sí, y lo que me dijo fue que el repuesto ya estaba pago.",
+          pronunciation: "yes, and wat ji tould mi waz dat da ri-PLEIS-ment part waz ol-RE-di peid for",
+          literal: "Sí, y lo que él me dijo fue que la pieza de reemplazo ya estaba pagada por.",
+          why: "What puede funcionar como lo que: what he told me, lo que me dijo. Al final aparece paid for, con for al final, otra preposición final natural en inglés."
+        },
+        {
+          speaker: "Sofía",
+          target: "Perfect. Here's the receipt whose number matches your order, and this is the shop where you can claim the warranty.",
+          translation: "Perfecto. Aquí está el recibo cuyo número coincide con su orden, y esta es la tienda donde puede reclamar garantía.",
+          pronunciation: "PER-fekt. jirz da ri-SIT juz NAM-ber MA-chez yor OR-der, and dis iz da shap wer yu kan kleim da WOR-an-ti",
+          literal: "Perfecto. Aquí está el recibo cuyo número coincide con su orden, y esta es la tienda donde puede reclamar la garantía.",
+          why: "Whose marca posesión y where marca lugar. En una cláusula no definitoria con comas, el inglés no permite that: My phone, which is ready now, is in the box, no “my phone, that is ready.”"
+        }
+      ],
+      vocabulary: [
+        {
+          term: "that",
+          explanation:
+            "Pronombre relativo comodín del inglés. Puede referirse a personas o cosas en cláusulas definitorias, pero no es obligatorio cuando funciona como objeto.",
+          literal: "que",
+          useWhen:
+            "Quiere identificar cuál cosa o persona con una cláusula relativa definitoria y sin comas.",
+          avoidWhen:
+            "La cláusula va entre comas y solo agrega información. En no definitorias el inglés usa which o who, no that.",
+          register: "neutro",
+          region: "Inglés universal.",
+          related: ["who", "which", "zero relative", "where"],
+          example: {
+            target: "The phone that I brought is ready.",
+            translation: "El celular que traje está listo."
+          }
+        },
+        {
+          term: "zero relative",
+          explanation:
+            "La omisión del pronombre relativo cuando el sustantivo anterior es el objeto de la acción. Para un hispanohablante es liberador porque el español no lo permite.",
+          literal: "relativo cero",
+          useWhen:
+            "The phone I brought, the book I bought, the person I called. En todos, el pronombre que se omite sería objeto.",
+          avoidWhen:
+            "El pronombre sería sujeto. The person called me no significa the person who called me de manera segura; ahí diga who o that.",
+          register: "conversacional natural",
+          region: "Muy común en todo el inglés hablado.",
+          related: ["that", "object relative", "who", "which"],
+          example: {
+            target: "The phone I brought in yesterday is ready.",
+            translation: "El celular que traje ayer está listo."
+          }
+        },
+        {
+          term: "preposition stranding",
+          explanation:
+            "Dejar la preposición al final de la cláusula relativa: the case it came in, the technician I spoke with. En conversación es normal, no un error.",
+          literal: "preposición varada",
+          useWhen:
+            "Habla cotidiana y escritura natural cuando una relación pide in, with, to o about al final.",
+          avoidWhen:
+            "Un registro muy formal donde frontar la preposición puede sonar más cuidado: the person with whom I spoke.",
+          register: "neutral spoken",
+          region: "Inglés universal; frontar la preposición suele sonar rígido en habla.",
+          related: ["came in", "spoke with", "talked to", "asked about"],
+          example: {
+            target: "The case it came in stayed here.",
+            translation: "La funda en la que venía quedó aquí."
+          }
+        },
+        {
+          term: "who / whom",
+          explanation:
+            "Who se usa para personas, sobre todo como sujeto. Whom existe para objetos de preposición, pero en habla diaria suele omitirse o reemplazarse por who.",
+          literal: "quien / a quien",
+          useWhen:
+            "Identifica personas con who y reserva whom para un registro más formal después de preposición.",
+          avoidWhen:
+            "Usar who para cosas. Un teléfono no es who; para cosas use which o that.",
+          register: "who neutral, whom formal",
+          region: "Inglés universal; whom es cada vez más formal.",
+          related: ["that", "which", "with whom", "who called"],
+          example: {
+            target: "The technician who called was helpful.",
+            translation: "El técnico que llamó fue amable."
+          }
+        },
+        {
+          term: "which",
+          explanation:
+            "Which se usa para cosas y animales, y es obligatorio en muchas cláusulas no definitorias con comas. En definitorias compite con that.",
+          literal: "que / el cual",
+          useWhen:
+            "Cosas, especialmente cuando la cláusula va entre comas y agrega información extra sobre algo ya identificado.",
+          avoidWhen:
+            "Personas en inglés estándar. Para personas use who o that, según el tipo de cláusula.",
+          register: "neutral to careful",
+          region: "Inglés universal.",
+          related: ["that", "who", "non-defining", "comma"],
+          example: {
+            target: "The receipt, which matches your order, is here.",
+            translation: "El recibo, que coincide con su orden, está aquí."
+          }
+        },
+        {
+          term: "whose",
+          explanation:
+            "El relativo de posesión. A diferencia de cuyo, whose no cambia de forma para concordar con lo poseído.",
+          literal: "cuyo / cuya / cuyos / cuyas",
+          useWhen:
+            "Personas, organizaciones y a veces cosas cuando quiere marcar posesión de manera compacta.",
+          avoidWhen:
+            "Traducirlo como who has dentro de una frase demasiado larga cuando necesita una cláusula compacta y formal.",
+          register: "neutral to formal",
+          region: "Inglés universal.",
+          related: ["who", "which", "belonging to", "possession"],
+          example: {
+            target: "Here's the receipt whose number matches your order.",
+            translation: "Aquí está el recibo cuyo número coincide con su orden."
+          }
+        },
+        {
+          term: "where",
+          explanation:
+            "Where identifica o comenta lugares. Equivale a donde y puede aparecer en cláusulas definitorias y no definitorias.",
+          literal: "donde",
+          useWhen:
+            "Lugares reales o instituciones cuando la cláusula identifica qué tienda, cuarto, oficina o calle.",
+          avoidWhen:
+            "Cosas que no son lugares. Para ideas use what, para objetos use that o which.",
+          register: "neutral",
+          region: "Inglés universal.",
+          related: ["which", "that", "place", "there"],
+          example: {
+            target: "This is the shop where you can claim the warranty.",
+            translation: "Esta es la tienda donde puede reclamar garantía."
+          }
+        }
+      ],
+      note:
+        "El inglés también usa cláusulas relativas para identificar, pero le regala dos libertades que el español no da. Primera: si el pronombre relativo sería objeto, se puede omitir. The book I bought, the phone I brought, the technician I spoke with. En español todos necesitan que, pero en inglés esa ausencia suena natural. Segunda: la preposición puede quedarse al final. The guy I talked to y the case it came in son habla normal; the person to whom I spoke o the case in which it came suenan correctos, pero rígidos en conversación. La selección who, which y that sí exige atención: who para personas, which para cosas, that para personas o cosas en cláusulas definitorias. Con comas, la regla se endurece: las cláusulas no definitorias agregan información y no aceptan that. Diga my phone, which is ready now, no “my phone, that is ready now.”",
+      culture: [
+        {
+          label: "Omitir that no es hablar incompleto",
+          body:
+            "A un colombiano le puede parecer que the phone I brought está cojo porque falta que. Para un angloparlante, si phone es objeto de brought, la frase está completa y natural. De hecho, meter that siempre no es incorrecto, pero puede sonar más pesado en conversación."
+        },
+        {
+          label: "La preposición al final no es una falta",
+          body:
+            "Muchos manuales viejos decían que no se debía terminar una oración en preposición. El inglés real no funciona así. The person I talked to, the room I slept in y the form I asked about son normales. Frontar la preposición puede servir en escritura formal, pero en un mostrador suena tieso."
+        },
+        {
+          label: "Las comas también mandan en inglés",
+          body:
+            "Igual que en español, una relativa sin comas define cuál: the phones that are repaired are in the box. Con comas, añade información sobre algo ya identificado: the phones, which are repaired, are in the box. Además, en inglés that queda prohibido después de esa coma."
+        }
+      ],
+      pitfalls: [
+        {
+          mistake: "“The phone that I brought it yesterday.”",
+          whyItFails:
+            "El sustantivo phone ya ocupa el lugar de objeto dentro de la relativa. No se repite con it. Puede decir that I brought o simplemente I brought.",
+          sayInstead: "The phone I brought yesterday."
+        },
+        {
+          mistake: "“The technician with who I spoke.”",
+          whyItFails:
+            "Si fronta la preposición, el registro formal pide whom. En habla normal es más fácil y más natural dejar with al final.",
+          sayInstead: "The technician I spoke with."
+        },
+        {
+          mistake: "“My phone, that is ready now, is here.”",
+          whyItFails:
+            "Después de una coma la cláusula es no definitoria, y el inglés no permite that allí. Para una cosa use which.",
+          sayInstead: "My phone, which is ready now, is here."
+        }
+      ],
+      variations: [
+        {
+          form: "The phone I brought yesterday is ready.",
+          register: "natural spoken",
+          region: "Universal English",
+          whenToUse: "Para omitir el relativo cuando sería objeto de la acción."
+        },
+        {
+          form: "The case it came in stayed here.",
+          register: "natural spoken",
+          region: "Universal English",
+          whenToUse: "Para dejar la preposición al final en conversación normal."
+        },
+        {
+          form: "What he told me was clear.",
+          register: "neutral",
+          region: "Universal English",
+          whenToUse: "Para expresar lo que, una idea completa y no un sustantivo específico."
+        },
+        {
+          form: "The receipt whose number matches is yours.",
+          register: "careful neutral",
+          region: "Universal English",
+          whenToUse: "Para expresar posesión sin cambiar whose por género o número."
+        }
+      ],
+      prompt: "¿Cuál frase suena más natural en habla para “el técnico con el que hablé”?",
+      choices: [
+        "The technician I spoke with.",
+        "The technician with whom I spoke.",
+        "The technician with who spoke."
+      ],
+      answer: 0,
+      practiceExtra: [
+        {
+          prompt: "¿Cuál frase omite correctamente el relativo porque es objeto?",
+          choices: [
+            "The book I bought was expensive.",
+            "The book bought me was expensive.",
+            "The book who I bought was expensive."
+          ],
+          answer: 0,
+          tests: "Object relatives can drop that in English."
+        },
+        {
+          prompt: "¿Cuál frase respeta la regla de comas en inglés?",
+          choices: [
+            "My phone, that is ready now, is here.",
+            "My phone, which is ready now, is here.",
+            "My phone, who is ready now, is here."
+          ],
+          answer: 1,
+          tests: "Las cláusulas no definitorias con comas usan which para cosas, no that."
+        },
+        {
+          prompt: "¿Cuál frase muestra una preposición final natural?",
+          choices: [
+            "The case in which it came stayed here.",
+            "The case which it came stayed here in.",
+            "The case it came in stayed here."
+          ],
+          answer: 2,
+          tests: "English naturally strands prepositions in speech."
         }
       ]
     }

@@ -5,6 +5,9 @@
  * decisions, errands and offers. The Spanish scenes deliberately use Neiva,
  * Pasto and Leticia, three different places outside the overused Bogotá /
  * Medellín axis, with general Colombian usage rather than invented local color.
+ * The added real-conditionals lesson closes the measured gap of 33 real
+ * conditionals with no stated rule: after si meaning if, Spanish uses present
+ * indicative, not present subjunctive or future.
  */
 lessons.push(
   {
@@ -1902,7 +1905,640 @@ lessons.push(
         }
       ]
     }
+  },
+  {
+    id: "holding-a-cabin-reservation-in-guatape",
+    level: "Developing · Real conditions and decisions",
+    skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context", "grammar"],
+    domain: "plans-and-time",
+    register: "familiar",
+    pathways: ["independent", "year-12"],
+    structure: "real-conditionals",
+    review: "pending",
+    es: {
+      title: "Holding a cabin reservation in Guatapé",
+      situation:
+        "You are in Guatapé with Mateo, a Colombian friend who found a small cabin by the reservoir for the weekend. The owner will hold the booking only until noon, and the trip depends on the deposit, the weather and the last boat across the water. Alex has just learned the subjunctive and wants to say “if it rains” with llueva, but Mateo stops him: after si meaning if, Spanish does not use the present subjunctive and does not use the future tense. Real conditions use present indicative.",
+      setting: {
+        who: "Mateo is a Colombian friend who knows the weekend-cabin routine around Guatapé. Alex is an English speaker making a real decision under time pressure, with a deposit, a deadline, the water level and rain in the forecast.",
+        what: "A booking decision with terms attached: if the deposit arrives before noon, the cabin is held; if it rains, they will change the route; if the family arrives before dark, they still catch the last boat.",
+        when: "Late morning, forty minutes before the owner releases the cabin to another weekend group.",
+        where: "Guatapé, Antioquia, at a small cabin-rental desk near the reservoir dock.",
+        why: "Because real conditionals are decision grammar. The rule is absolute and easy to miss: after si meaning if, Spanish uses present indicative for real conditions, never present subjunctive and never future."
+      },
+      address: {
+        form: "tú",
+        who: "Mateo and Alex use tú because they are friends making a weekend plan together, even though the booking itself is practical.",
+        why: "The grammar belongs in a natural friend conversation, not a formal lecture. Tú lets Mateo correct Alex directly without making the correction feel sharp.",
+        ifYouSwitch:
+          "Switching to usted would make the scene sound more distant, as if Alex were speaking to the owner rather than a friend. The conditional rule would not change: si still takes present indicative in real conditions."
+      },
+      dialogue: [
+        {
+          speaker: "Mateo",
+          target: "Si pagas la mitad antes de las doce, nos van a guardar la cabaña.",
+          translation: "If you pay half before noon, they are going to hold the cabin for us.",
+          pronunciation: "si PA-gas la mi-TAD AN-tes de las DO-se, nos van a gwar-DAR la ka-BA-nya",
+          literal: "If you-pay the half before of the twelve, us they-go to keep the cabin.",
+          why: "This is the core real conditional: si + present indicative, then ir a + infinitive. “Si pagas” is not subjunctive and not future. The result can be “van a guardar” because the future meaning belongs after the condition, not inside the si-clause."
+        },
+        {
+          speaker: "Alex",
+          target: "Entonces, si llueve mañana, ¿no vamos a tomar la lancha a la cabaña?",
+          translation: "So if it rains tomorrow, are we not going to take the boat to the cabin?",
+          pronunciation: "en-TON-ses, si YWE-ve ma-NYA-na, no VA-mos a to-MAR la LAN-cha a la ka-BA-nya",
+          literal: "Then, if it-rains tomorrow, not we-go to take the boat to the cabin?",
+          why: "“Si llueve mañana” is the line learners need to memorize. English speakers who just met the subjunctive want “si llueva” because if feels hypothetical. Spanish says no: after si for a real possibility, use present indicative, llueve."
+        },
+        {
+          speaker: "Mateo",
+          target: "Exacto. Cuando llegue el comprobante, llamo al dueño; si llega antes del mediodía, confirmaremos el plan.",
+          translation: "Exactly. When the receipt arrives, I will call the owner; if it arrives before noon, we will confirm the plan.",
+          pronunciation: "eg-SAK-to. KWAN-do YE-ge el kom-pro-BAN-te, YA-mo al DWE-nyo; si YE-ga AN-tes del me-DYO-dee-a, kon-feer-ma-RE-mos el plan",
+          literal: "Exact. When arrives-subjunctive the receipt, I-call the owner; if it-arrives before noon, we-will-confirm the plan.",
+          why: "This contrast draws the boundary. Future “cuando” takes the subjunctive: “cuando llegue”. Future “si” does not: “si llega”. The main clause may use present or future, here “llamo” and “confirmaremos”."
+        },
+        {
+          speaker: "Alex",
+          target: "¿Y si no hay cupo en la última lancha, esperamos o buscamos otra cabaña?",
+          translation: "And if there is no space on the last boat, do we wait or look for another cabin?",
+          pronunciation: "ee si no ai KOO-po en la UL-ti-ma LAN-cha, es-pe-RA-mos o boos-KA-mos O-tra ka-BA-nya",
+          literal: "And if not there-is space on the last boat, we-wait or we-look-for another cabin?",
+          why: "Here the result is present: “Si no hay cupo, esperamos”. Real conditionals do not require a future form after the comma. The decision can be immediate, habitual or planned, but the si-clause stays present indicative."
+        },
+        {
+          speaker: "Mateo",
+          target: "Si te contesta el dueño, avísame de una; a menos que pida más plata, no cambiamos nada.",
+          translation: "If the owner answers you, let me know right away; unless he asks for more money, we change nothing.",
+          pronunciation: "si te kon-TES-ta el DWE-nyo, a-VEE-sa-me de OO-na; a ME-nos ke PI-da mas PLA-ta, no kam-BYA-mos NA-da",
+          literal: "If to-you answers the owner, tell-me right away; at less that he-asks-subjunctive more money, not we-change nothing.",
+          why: "This line shows the imperative pattern: si + present indicative, then a command, “avísame”. It also shows why the rule matters: alternatives like “a menos que” do take the subjunctive, here “pida”. Si is the exception learners must protect."
+        },
+        {
+          speaker: "Alex",
+          target: "Listo. Si de pronto no alcanza la plata, vamos a pagar con dos tarjetas por si acaso.",
+          translation: "Alright. If maybe the money is not enough, we are going to pay with two cards just in case.",
+          pronunciation: "LEES-to. si de PRON-to no al-KAN-sa la PLA-ta, VA-mos a pa-GAR kon dos tar-HE-tas por si a-KA-so",
+          literal: "Ready. If of suddenly not reaches the money, we-go to pay with two cards for if case.",
+          why: "Colombians often soften a possibility with “si de pronto”, and “por si acaso” means just in case. They are everyday tentative phrases, but the verb after si is still present indicative: “no alcanza”, not “no alcance” and not “no alcanzará”."
+        }
+      ],
+      vocabulary: [
+        {
+          term: "si + presente indicativo",
+          explanation:
+            "The rule for real conditions: after si meaning if, Spanish uses the present indicative. It never uses the present subjunctive and never uses the future tense in that si-clause.",
+          literal: "if + present indicative",
+          useWhen:
+            "A real possibility is open and the result depends on it: “si llueve”, “si llega”, “si pagas”.",
+          avoidWhen:
+            "Do not use present subjunctive after si for a real condition. “Si llueva” is wrong. Do not use future there either: “si lloverá” is wrong.",
+          register: "neutral",
+          region: "Universal Spanish; this rule is absolute in Colombia too.",
+          related: ["presente indicativo", "condición real", "si llueve", "resultado"],
+          example: {
+            target: "Si llueve mañana, no vamos a la finca.",
+            translation: "If it rains tomorrow, we are not going to the country house."
+          }
+        },
+        {
+          term: "si + presente, presente",
+          explanation:
+            "One real-conditional pattern puts the result in the present. The condition is live, and the result is what you do, what happens, or what is true when that condition appears.",
+          literal: "if + present, present",
+          useWhen:
+            "The result is immediate or generally true: “si no hay cupo, esperamos”, “si llaman, contesto”.",
+          avoidWhen:
+            "Do not force a future just because English says will somewhere else. Spanish can keep both sides in the present.",
+          register: "neutral",
+          region: "Universal Spanish.",
+          related: ["presente", "esperamos", "hay", "rutina"],
+          example: {
+            target: "Si no hay cupo, esperamos.",
+            translation: "If there is no space, we wait."
+          }
+        },
+        {
+          term: "si + presente, futuro",
+          explanation:
+            "The most visible first-conditional pattern puts the future meaning in the result, either with the future tense or with ir a + infinitive. The si-clause still stays present.",
+          literal: "if + present, future",
+          useWhen:
+            "A decision points forward: “si paga hoy, le guardarán el cupo” or “si llueve, vamos a cambiar la ruta”.",
+          avoidWhen:
+            "Never move the future into the si-clause. Say “si paga”, not “si pagará”.",
+          register: "neutral",
+          region: "Universal Spanish; ir a + infinitive is extremely common in Colombian speech.",
+          related: ["futuro", "ir a", "vamos a", "guardarán"],
+          example: {
+            target: "Si pagas hoy, nos van a guardar la cabaña.",
+            translation: "If you pay today, they are going to hold the cabin for us."
+          }
+        },
+        {
+          term: "si + presente, imperativo",
+          explanation:
+            "A real condition can lead to a command. The command may be tú or usted, affirmative or negative, but the si-clause still uses present indicative.",
+          literal: "if + present, command",
+          useWhen:
+            "Giving instructions tied to a condition: “si llega temprano, avíseme”, “si ves al dueño, llámame”.",
+          avoidWhen:
+            "Do not make the condition subjunctive because a command follows. “Si llegue temprano” is wrong for this real condition.",
+          register: "neutral to polite",
+          region: "Universal Spanish; choose tú or usted by relationship, not by the conditional.",
+          related: ["imperativo", "avísame", "avíseme", "instrucción"],
+          example: {
+            target: "Si ves al dueño, llámame.",
+            translation: "If you see the owner, call me."
+          }
+        },
+        {
+          term: "cuando + subjuntivo futuro",
+          explanation:
+            "When cuando points to a future event, Spanish uses the subjunctive because the event has not happened yet. This is the clean contrast with si.",
+          literal: "when + subjunctive for the future",
+          useWhen:
+            "The event is expected but still future: “cuando llegue el comprobante”, “cuando confirme el dueño”.",
+          avoidWhen:
+            "Do not copy this mood into si. The pair is “cuando llegue” but “si llega”.",
+          register: "neutral",
+          region: "Universal Spanish.",
+          related: ["cuando llegue", "si llega", "subjuntivo", "futuro"],
+          example: {
+            target: "Cuando llegue el comprobante, llamo al dueño.",
+            translation: "When the receipt arrives, I will call the owner."
+          }
+        },
+        {
+          term: "a menos que / en caso de que",
+          explanation:
+            "These alternatives to si introduce conditions too, but they take the subjunctive. That difference is exactly why the si-rule has to be stated out loud.",
+          literal: "unless / in case that",
+          useWhen:
+            "Adding a boundary or backup condition: “a menos que pida más plata”, “en caso de que llueva”.",
+          avoidWhen:
+            "Do not treat every conditional connector like si. These expressions are followed by subjunctive in live future conditions.",
+          register: "neutral",
+          region: "Universal Spanish; common in Colombian practical planning.",
+          related: ["salvo que", "con tal de que", "siempre y cuando", "subjuntivo"],
+          example: {
+            target: "A menos que pida más plata, seguimos con la reserva.",
+            translation: "Unless he asks for more money, we continue with the booking."
+          }
+        },
+        {
+          term: "si acaso / por si acaso / si de pronto",
+          explanation:
+            "Colombians use these phrases for tentative possibilities and backup plans. “Si acaso” and “por si acaso” mean if by chance or just in case; “si de pronto” softens a maybe.",
+          literal: "if by chance / just in case / if maybe",
+          useWhen:
+            "Making a cautious plan: “lleva efectivo por si acaso”, “si de pronto no alcanza, pagamos con tarjeta”.",
+          avoidWhen:
+            "Do not confuse them with the formal connectors that require subjunctive. The si inside them still behaves like si.",
+          register: "everyday informal",
+          region: "Very common in Colombia, especially “si de pronto” in friendly planning.",
+          related: ["de pronto", "tal vez", "por si las moscas", "plan B"],
+          example: {
+            target: "Lleva efectivo por si acaso.",
+            translation: "Take cash just in case."
+          }
+        }
+      ],
+      note:
+        "The rule is short and absolute: after si meaning if, Spanish never uses the present subjunctive and never uses the future tense. Say “si llueve”, not “si llueva” and not “si lloverá”. A real condition can point to a present result, “si no hay cupo, esperamos”; a future result, “si llueve mañana, no vamos a la finca” or “no iremos”; or a command, “si llega temprano, avíseme”. The unreal pattern is different: “si tuviera plata, lo compraría”, with imperfect subjunctive plus conditional. And the boundary matters because other connectors do take subjunctive: “a menos que llueva”, “en caso de que llegue”, “con tal de que pague”, “siempre y cuando confirme”, “salvo que cambie”. The clearest pair is “cuando llegue” for a future when, but “si llega” for a future if.",
+      culture: [
+        {
+          label: "A condition is a decision with terms",
+          body:
+            "Colombian errands often run on terms: if the transfer arrives, they hold the room; if the part is prepaid, they order it; if the document comes, the job offer stands. The grammar is not abstract. A real conditional tells everyone exactly what must happen for the decision to move. That is why the si-clause stays plain and factual in Spanish, even when the event is still uncertain."
+        },
+        {
+          label: "Why new subjunctive learners overuse it",
+          body:
+            "Once learners discover the subjunctive, if suddenly feels like the perfect place to use it. That instinct is wrong for real conditions. Spanish does use subjunctive after many uncertain connectors, but not after si meaning if in a real condition. “Si llueve” may be uncertain, but the grammar treats it as a possible fact. Save “llueva” for “cuando llueva”, “a menos que llueva” or “en caso de que llueva”."
+        },
+        {
+          label: "The Colombian backup phrases",
+          body:
+            "Everyday Colombian planning is full of small cushions: “si acaso”, “por si acaso” and especially “si de pronto”. They let you name a possibility without sounding dramatic. “Si de pronto no alcanza la plata” means if maybe the money is not enough. “Por si acaso” is the practical just in case that puts cash, a charger or a second card in your pocket."
+        },
+        {
+          label: "Real versus unreal",
+          body:
+            "The real conditional is for a live possibility: “si pagas hoy, nos guardan la cabaña”. The unreal conditional imagines a different world: “si tuviera plata, la pagaría completa”. That contrast matters because both use si, but only the unreal one takes the imperfect subjunctive. Do not let the existence of “si tuviera” tempt you into “si tenga” or “si pague” for real plans."
+        }
+      ],
+      pitfalls: [
+        {
+          mistake: "Saying “si llueva mañana” for a real possibility",
+          whyItFails:
+            "The present subjunctive does not follow si meaning if in a real conditional. Spanish says “si llueve mañana”. The uncertainty is real, but the si-clause uses present indicative. Use “llueva” after cuando for a future event or after a menos que, not after si.",
+          sayInstead: "Si llueve mañana, no vamos a la finca."
+        },
+        {
+          mistake: "Saying “si lloverá mañana” because the event is future",
+          whyItFails:
+            "Spanish does not put the future tense inside the if-clause of a real condition. The future meaning belongs in the result: “si llueve mañana, no iremos” or “no vamos a ir”. The si-clause itself stays present: “si llueve”.",
+          sayInstead: "Si llueve mañana, no iremos."
+        },
+        {
+          mistake: "Treating si like a menos que",
+          whyItFails:
+            "Connectors such as “a menos que”, “en caso de que”, “con tal de que”, “siempre y cuando” and “salvo que” normally take the subjunctive in future conditions. Si does not. The boundary is the lesson: “a menos que llueva” but “si llueve”.",
+          sayInstead: "Si llueve, esperamos. / A menos que llueva, salimos."
+        },
+        {
+          mistake: "Confusing real and unreal conditionals",
+          whyItFails:
+            "“Si tuviera plata, lo compraría” is unreal: if I had money, I would buy it. That pattern uses imperfect subjunctive plus conditional. A live booking decision is real, so it uses present indicative after si: “si tengo plata, lo compro”.",
+          sayInstead: "Si tengo plata, lo compro. / Si tuviera plata, lo compraría."
+        }
+      ],
+      variations: [
+        {
+          form: "Si no hay cupo, esperamos.",
+          register: "neutral",
+          region: "Universal Spanish",
+          whenToUse: "A real condition with a present result."
+        },
+        {
+          form: "Si llueve mañana, no vamos a la finca.",
+          register: "neutral",
+          region: "Universal Spanish",
+          whenToUse: "A real future possibility with ir a + infinitive in the result."
+        },
+        {
+          form: "Si llega temprano, avíseme.",
+          register: "polite neutral",
+          region: "Universal Spanish",
+          whenToUse: "A real condition followed by an usted command."
+        },
+        {
+          form: "Cuando llegue, le aviso; si llega, le aviso.",
+          register: "neutral",
+          region: "Universal Spanish",
+          whenToUse: "Contrasting future cuando + subjunctive with si + present indicative."
+        },
+        {
+          form: "Si de pronto no alcanza, pagamos con tarjeta.",
+          register: "friendly informal",
+          region: "Colombia",
+          whenToUse: "Softening a tentative possibility in everyday Colombian planning."
+        }
+      ],
+      prompt: "Which sentence follows the real si-rule in Spanish?",
+      choices: [
+        "Si llueva mañana, no vamos a la finca.",
+        "Si lloverá mañana, no vamos a la finca.",
+        "Si llueve mañana, no vamos a la finca."
+      ],
+      answer: 2,
+      practiceExtra: [
+        {
+          prompt: "Which pair shows the cuando / si contrast correctly?",
+          choices: [
+            "Cuando llegue el recibo, llamo; si llega antes de las doce, confirmo.",
+            "Cuando llega el recibo, llamo; si llegue antes de las doce, confirmo.",
+            "Cuando llegará el recibo, llamo; si llegará antes de las doce, confirmo."
+          ],
+          answer: 0,
+          tests: "Future cuando takes subjunctive; real si takes present indicative."
+        },
+        {
+          prompt: "Which sentence uses the imperative pattern correctly?",
+          choices: [
+            "Si llegue temprano, avíseme antes de pagar la reserva.",
+            "Si llega temprano, avíseme antes de pagar la reserva.",
+            "Si llegará temprano, avíseme antes de pagar la reserva."
+          ],
+          answer: 1,
+          tests: "A command after the comma does not make the si-clause subjunctive or future."
+        },
+        {
+          prompt: "Which sentence is the unreal counterpart, not the real conditional?",
+          choices: [
+            "Si tengo plata, pago la mitad antes del mediodía.",
+            "Si llega el comprobante, vamos a confirmar la reserva.",
+            "Si tuviera plata, pagaría la cabaña completa."
+          ],
+          answer: 2,
+          tests: "Unreal present uses si + imperfect subjunctive, then conditional."
+        }
+      ]
+    },
+    en: {
+      title: "Reservar una habitación en Corpus Christi",
+      situation:
+        "Usted está en Corpus Christi, Texas, con Camila, una colombiana que necesita reservar una habitación barata antes de una conferencia. El hotel la guarda sólo hasta el mediodía, y la decisión depende de un pago con tarjeta y de un aviso de tormenta en la costa. Camila sabe que el español dice “si llueve” para un if futuro, pero el inglés tiene su propia regla absoluta: nunca use will en el if-clause. Diga “if it rains tomorrow, we won't go”, nunca “if it will rain tomorrow”.",
+      setting: {
+        who: "Camila es colombiana y viaja por trabajo. Noah es un amigo de Texas que la ayuda a llamar al hotel y revisar las condiciones de la reserva.",
+        what: "Una decisión de reserva con condiciones reales: si la tarjeta pasa, guardan la habitación; si llueve fuerte, cambian el plan; cuando llegue la confirmación, salen.",
+        when: "Final de la mañana, poco antes de que el hotel libere la habitación para otra persona.",
+        where: "Corpus Christi, Texas, en una cafetería cerca de la marina.",
+        why: "Porque el inglés también tiene una regla invisible y absoluta: en una condición real de futuro, el if-clause va en presente, no con will. La idea futura aparece en la otra parte."
+      },
+      address: {
+        form: "mixed",
+        who: "Camila y Noah usan “you”; el inglés no cambia de pronombre entre confianza y cortesía.",
+        why: "La cercanía aparece en el nombre, el tono y frases como “no worries”. La gramática de if no cambia por formalidad ni por distancia.",
+        ifYouSwitch:
+          "Si Camila intenta buscar un you formal, no existe. Para sonar más formal tendría que usar frases más largas, pero seguiría diciendo “if it rains”, nunca “if it will rain”."
+      },
+      dialogue: [
+        {
+          speaker: "Noah",
+          target: "If you pay half before noon, they'll hold the room for us.",
+          translation: "Si paga la mitad antes del mediodía, nos guardan la habitación.",
+          pronunciation: "if yu pei jaf bi-FOR nun, deil jould de rum for as",
+          literal: "Si usted paga mitad antes de mediodía, ellos-futuro sostener la habitación para nosotros.",
+          why: "Esta es la primera condicional real del inglés. El if-clause usa presente, “if you pay”, aunque habla del futuro. El futuro va en el resultado: “they'll hold”. Nunca diga “if you will pay” para esta condición."
+        },
+        {
+          speaker: "Camila",
+          target: "So if it rains tomorrow, we won't walk to the hotel with the bags?",
+          translation: "Entonces, si llueve mañana, ¿no caminamos al hotel con las maletas?",
+          pronunciation: "so if it reinz tu-MA-rou, wi wount wok tu de hou-TEL with de bagz",
+          literal: "Así si ello llueve mañana, nosotros no-futuro caminar al hotel con las maletas?",
+          why: "La frase correcta es “if it rains tomorrow”, no “if it will rain tomorrow”. El español permite pensar “si llueve”; el inglés hace lo mismo en el if-clause: presente para tiempo futuro."
+        },
+        {
+          speaker: "Noah",
+          target: "Exactly. When the confirmation comes, I'll call you; if it comes before noon, we'll keep the price.",
+          translation: "Exacto. Cuando llegue la confirmación, la llamo; si llega antes del mediodía, mantenemos el precio.",
+          pronunciation: "eg-ZAKT-li. wen de kon-fer-MEI-shon komz, ail kol yu; if it komz bi-FOR nun, wil kip de prais",
+          literal: "Exactamente. Cuando la confirmación viene, yo-futuro llamar a usted; si ella viene antes de mediodía, nosotros-futuro mantener el precio.",
+          why: "El inglés extiende la misma regla a when para tiempo futuro: “when the confirmation comes”, no “when it will come”. También usa presente después de if: “if it comes”. El will se queda en la cláusula principal."
+        },
+        {
+          speaker: "Camila",
+          target: "And if there is no room later, do we wait or book another place?",
+          translation: "Y si no hay habitación después, ¿esperamos o reservamos otro lugar?",
+          pronunciation: "and if der iz nou rum LEI-ter, du wi weit or buk a-NA-der pleis",
+          literal: "Y si hay no habitación más tarde, hacemos nosotros esperar o reservar otro lugar?",
+          why: "Este es el zero conditional shape for a real result in the present: if + present, present. No siempre necesita will. “If there is no room, we wait” puede ser una regla, una decisión inmediata o un plan acordado."
+        },
+        {
+          speaker: "Noah",
+          target: "If the hotel calls you, answer right away; as soon as they confirm, we'll leave.",
+          translation: "Si el hotel la llama, conteste de una; tan pronto como confirmen, salimos.",
+          pronunciation: "if de hou-TEL kolz yu, AN-ser rait a-WEI; az sun az dei kon-FERM, wil liv",
+          literal: "Si el hotel llama a usted, conteste inmediatamente; tan pronto como ellos confirman, nosotros-futuro salir.",
+          why: "El if-clause toma presente y puede llevar a un mandato: “answer”. La misma regla aparece con “as soon as”: para un evento futuro se dice “as soon as they confirm”, no “as soon as they will confirm”."
+        },
+        {
+          speaker: "Camila",
+          target: "Good. Before we leave, I'll take cash, and until the card works, I won't relax.",
+          translation: "Bien. Antes de salir llevo efectivo, y hasta que la tarjeta funcione no me relajo.",
+          pronunciation: "gud. bi-FOR wi liv, ail teik kash, and an-TIL de kard werks, ai wount ri-LAX",
+          literal: "Bien. Antes de que nosotros salimos, yo-futuro llevar efectivo, y hasta la tarjeta funciona, yo no-futuro relajarme.",
+          why: "Before y until también usan presente para tiempo futuro: “before we leave”, “until the card works”. Lo mismo pasa con after: “after we get the receipt, we'll go”. Esas palabras de tiempo no llevan will en sus cláusulas de futuro."
+        }
+      ],
+      vocabulary: [
+        {
+          term: "if + present, will",
+          explanation:
+            "La primera condicional inglesa para una posibilidad real de futuro: el if-clause va en presente y el resultado suele llevar will o won't.",
+          literal: "si + presente, futuro",
+          useWhen:
+            "Una decisión depende de una condición real: “if you pay today, they'll hold it”, “if it rains, we won't go”.",
+          avoidWhen:
+            "No ponga will después de if. “If it will rain” es el error clásico del hispanohablante.",
+          register: "neutro",
+          region: "Inglés universal.",
+          related: ["if", "will", "won't", "first conditional"],
+          example: {
+            target: "If it rains tomorrow, we won't go.",
+            translation: "Si llueve mañana, no iremos."
+          }
+        },
+        {
+          term: "if + present, present",
+          explanation:
+            "La zero conditional o condición real con resultado presente. Sirve para reglas, hábitos, consecuencias inmediatas y decisiones ya acordadas.",
+          literal: "si + presente, presente",
+          useWhen:
+            "El resultado también está en presente: “if there is no room, we wait”, “if the card fails, we call”.",
+          avoidWhen:
+            "No use will automáticamente. Muchas condiciones reales suenan más limpias con presente en ambos lados.",
+          register: "neutro",
+          region: "Inglés universal.",
+          related: ["zero conditional", "present simple", "rule", "habit"],
+          example: {
+            target: "If there is no room, we wait.",
+            translation: "Si no hay habitación, esperamos."
+          }
+        },
+        {
+          term: "never will after if",
+          explanation:
+            "La regla práctica: en condiciones reales de futuro, no use will dentro del if-clause. Will pertenece al resultado, no a la condición.",
+          literal: "nunca will después de if",
+          useWhen:
+            "Corrigiendo frases como “if it will rain”. La forma correcta es “if it rains”.",
+          avoidWhen:
+            "No confunda esto con preguntas indirectas como “I don't know if it will rain”, donde if significa whether y no introduce una condición.",
+          register: "neutro",
+          region: "Inglés universal.",
+          related: ["if it rains", "if it works", "whether", "main clause"],
+          example: {
+            target: "If the card works, we'll book the room.",
+            translation: "Si la tarjeta funciona, reservamos la habitación."
+          }
+        },
+        {
+          term: "when + present for future time",
+          explanation:
+            "Cuando when habla de un evento futuro dentro de una cláusula de tiempo, el inglés usa presente, no will.",
+          literal: "cuando + presente para futuro",
+          useWhen:
+            "Un evento esperado en el futuro: “when the confirmation comes, I'll call you”.",
+          avoidWhen:
+            "No diga “when the confirmation will come” en esta estructura. Guarde will para la cláusula principal.",
+          register: "neutro",
+          region: "Inglés universal.",
+          related: ["when", "future time", "present simple", "time clause"],
+          example: {
+            target: "When the confirmation comes, I'll call you.",
+            translation: "Cuando llegue la confirmación, la llamo."
+          }
+        },
+        {
+          term: "as soon as / until / before / after",
+          explanation:
+            "Estas palabras de tiempo siguen la misma regla de when: si apuntan al futuro, la cláusula usa presente simple.",
+          literal: "tan pronto como / hasta que / antes / después",
+          useWhen:
+            "Planear pasos: “as soon as they confirm”, “until the card works”, “before we leave”, “after we get the receipt”.",
+          avoidWhen:
+            "No meta will en esas cláusulas: no “until the card will work” ni “before we will leave”.",
+          register: "neutro",
+          region: "Inglés universal.",
+          related: ["as soon as", "until", "before", "after"],
+          example: {
+            target: "As soon as they confirm, we'll leave.",
+            translation: "Tan pronto como confirmen, salimos."
+          }
+        },
+        {
+          term: "will / won't in the result",
+          explanation:
+            "Will y won't sí aparecen en la oración, pero en el resultado: lo que pasará si la condición se cumple.",
+          literal: "will / won't en el resultado",
+          useWhen:
+            "La consecuencia mira al futuro: “if you pay, they'll hold it”, “if it rains, we won't walk”.",
+          avoidWhen:
+            "No los duplique en ambos lados. “If it will rain, we won't walk” tiene will en el lugar equivocado.",
+          register: "neutro",
+          region: "Inglés universal.",
+          related: ["they'll", "we'll", "won't", "main clause"],
+          example: {
+            target: "If you pay now, they'll hold the room.",
+            translation: "Si paga ahora, le guardan la habitación."
+          }
+        },
+        {
+          term: "if vs whether",
+          explanation:
+            "If no siempre introduce una condición. A veces significa whether, si acaso algo es verdad. En ese caso sí puede aparecer will porque no es una if-clause condicional.",
+          literal: "si condicional vs si de pregunta indirecta",
+          useWhen:
+            "Separar “if it rains, we won't go” de “I don't know if it will rain”. El segundo no pone una condición, reporta una duda.",
+          avoidWhen:
+            "No use esta excepción para justificar “if it will rain, we won't go”. Ahí if sí es condicional y no admite will.",
+          register: "neutro",
+          region: "Inglés universal.",
+          related: ["whether", "I don't know", "condition", "doubt"],
+          example: {
+            target: "I don't know if it will rain tomorrow.",
+            translation: "No sé si lloverá mañana."
+          }
+        }
+      ],
+      note:
+        "La regla inglesa es tan absoluta como la española, pero va en dirección contraria al error del hispanohablante: en una condición real de futuro, el if-clause no lleva will. Diga “if it rains tomorrow, we won't go”, nunca “if it will rain tomorrow”. El resultado sí puede llevar will: “we'll leave”, “they'll hold the room”, “we won't walk”. La zero conditional usa presente en ambos lados, “if there is no room, we wait”. La first conditional usa if + present, then will, “if you pay, they'll hold it”. Y la misma lógica de presente para tiempo futuro aparece con when, as soon as, until, before y after: “when the confirmation comes”, “as soon as they confirm”, “until the card works”, “before we leave”, “after we get the receipt”. Una excepción honesta: “I don't know if it will rain” es posible porque if significa whether, no introduce una condición.",
+      culture: [
+        {
+          label: "El error que más se oye",
+          body:
+            "Muchos colombianos traducen “si lloverá” como “if it will rain” porque sienten que mañana exige futuro. En inglés, el tiempo futuro de la idea no basta para usar will en la cláusula con if. La gramática lo trata como una condición presente para decidir el futuro. Por eso la frase natural es “if it rains tomorrow, we won't go”."
+        },
+        {
+          label: "Zero and first conditionals",
+          body:
+            "La zero conditional habla de reglas o resultados directos: “if the card fails, we call the hotel”. La first conditional habla de una posibilidad real de futuro: “if the card works, we'll book the room”. En ambas, el if-clause va en presente. Lo que cambia es el resultado, presente para una regla o decisión inmediata, will para una consecuencia futura."
+        },
+        {
+          label: "Las palabras de tiempo se comportan igual",
+          body:
+            "When, as soon as, until, before y after también usan presente para eventos futuros dentro de sus cláusulas. Para un hispanohablante suena raro porque el español puede decir “cuando llegue” con subjuntivo. El inglés no usa subjuntivo visible aquí ni will: “when she arrives”, “until it works”, “before we leave”. Es una regla de estructura, no de lógica."
+        },
+        {
+          label: "If no siempre es condición",
+          body:
+            "La excepción útil es if con sentido de whether. “I don't know if it will rain” no decide qué haremos si llueve; sólo reporta una duda sobre el futuro. Ahí will es normal. Pero en “if it rains, we'll take a taxi”, if sí pone la condición, y por eso no acepta will. Distinguir esas dos funciones evita corregir de más."
+        }
+      ],
+      pitfalls: [
+        {
+          mistake: "“If it will rain tomorrow, we won't go.”",
+          whyItFails:
+            "En una condición real de futuro, el if-clause usa presente simple. Will pertenece al resultado, no a la condición. La frase correcta es “if it rains tomorrow”.",
+          sayInstead: "If it rains tomorrow, we won't go."
+        },
+        {
+          mistake: "“When the confirmation will come, I'll call you.”",
+          whyItFails:
+            "When, para un evento futuro dentro de una cláusula de tiempo, también toma presente simple. No se usa will allí. Diga “when the confirmation comes”.",
+          sayInstead: "When the confirmation comes, I'll call you."
+        },
+        {
+          mistake: "“Until the card will work, I won't relax.”",
+          whyItFails:
+            "Until sigue la misma regla que when: presente para tiempo futuro. El will puede ir en la cláusula principal, “I won't relax”, pero no en “until the card works”.",
+          sayInstead: "Until the card works, I won't relax."
+        },
+        {
+          mistake: "“Before we will leave, I'll take cash.”",
+          whyItFails:
+            "Before y after no usan will cuando señalan un evento futuro dentro de la cláusula de tiempo. La forma natural es “before we leave” y “after we get the receipt”.",
+          sayInstead: "Before we leave, I'll take cash."
+        }
+      ],
+      variations: [
+        {
+          form: "If it rains tomorrow, we won't go.",
+          register: "neutro",
+          region: "Inglés universal",
+          whenToUse: "Primera condicional: if con presente, will o won't en el resultado."
+        },
+        {
+          form: "If there is no room, we wait.",
+          register: "neutro",
+          region: "Inglés universal",
+          whenToUse: "Zero conditional with present on both sides."
+        },
+        {
+          form: "When the confirmation comes, I'll call you.",
+          register: "neutro",
+          region: "Inglés universal",
+          whenToUse: "When for a future event, using present simple."
+        },
+        {
+          form: "As soon as they confirm, we'll leave.",
+          register: "neutro",
+          region: "Inglés universal",
+          whenToUse: "As soon as with present for future time."
+        },
+        {
+          form: "Before we leave, I'll take cash.",
+          register: "neutro",
+          region: "Inglés universal",
+          whenToUse: "Before con presente simple, no will, para un paso futuro."
+        }
+      ],
+      prompt: "¿Cuál es la forma correcta de la primera condicional en inglés?",
+      choices: [
+        "If it will rain tomorrow, we won't go.",
+        "If it rains tomorrow, we won't go.",
+        "If it rain tomorrow, we won't go."
+      ],
+      answer: 1,
+      practiceExtra: [
+        {
+          prompt: "¿Cuál usa when correctamente para un evento futuro?",
+          choices: [
+            "When the confirmation comes, I'll call you.",
+            "When the confirmation will come, I'll call you.",
+            "When the confirmation came, I'll call you."
+          ],
+          answer: 0,
+          tests: "When para tiempo futuro usa presente simple, no will."
+        },
+        {
+          prompt: "¿Cuál usa until correctamente?",
+          choices: [
+            "Until the card will work, I won't relax.",
+            "Until the card works, I won't relax.",
+            "Until the card worked, I won't relax."
+          ],
+          answer: 1,
+          tests: "Until takes present simple for future time."
+        },
+        {
+          prompt: "¿Cuál muestra la excepción where if means whether?",
+          choices: [
+            "If it will rain, we'll take a taxi.",
+            "If the card will work, we'll book the room.",
+            "I don't know if it will rain tomorrow."
+          ],
+          answer: 2,
+          tests: "If puede llevar will cuando significa whether, no cuando introduce una condición."
+        }
+      ]
+    }
   }
+
 );
 
 markSource(lessons, "data/lessons/35-developing-deciding-and-getting.js");

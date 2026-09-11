@@ -10,6 +10,10 @@
  * `verb` field so the coverage report can prove the curriculum is actually
  * taught rather than merely listed.
  *
+ * This block now also adds the grammar structure object-pronouns, because the
+ * measured corpus has 811 preverbal object pronouns and 61 combined pairs
+ * with no lesson explaining how learners produce them.
+ *
  * The two directions are mirrors: same number of dialogue turns, same number of
  * vocabulary entries, same number of culture notes, pitfalls, variations and
  * practice questions, and the same optional slots filled on the same rows.
@@ -1865,6 +1869,624 @@ lessons.push(
           ],
           answer: 2,
           tests: "share something with someone"
+        }
+      ]
+    }
+  },
+  {
+    id: "object-pronouns-in-a-manizales-family-chat",
+    level: "Developing · Sending and sharing",
+    skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context", "grammar"],
+    domain: "shopping-and-money",
+    register: "courteous",
+    pathways: ["independent", "year-12"],
+    structure: "object-pronouns",
+    review: "pending",
+    es: {
+      title: "Sending it to the right person in Manizales",
+      situation:
+        "You are in Manizales helping Camila rescue a messy family errand. A parcel has to leave by courier, a notarized document is needed urgently, a photo is being passed around the family chat, and a money transfer still has not arrived. This is exactly where Spanish object pronouns stop being decoration and become the shortest way to say who gets what.",
+      setting: {
+        who: "Camila is organizing a family errand from her phone while Andrés, an English-speaking friend, helps at the counter and tries to say the sentences himself instead of pointing at files and receipts.",
+        what: "A live exchange about a parcel, a scanned document, a family photo, and a missing transfer, all of which force direct and indirect object pronouns.",
+        when: "Late Monday afternoon, ten minutes before the courier office closes and while the family chat keeps buzzing.",
+        where: "Manizales, near a small courier office on a steep street, with a phone full of documents and relatives asking for updates.",
+        why: "Because sending and sharing creates the exact grammar English speakers avoid: send it to me, send it to her, forward it to them, do not send it yet. Spanish puts those objects before many verbs, stacks two of them, and changes le to se before lo, la, los or las."
+      },
+      address: {
+        form: "tú",
+        who: "Camila and Andrés use tú because they are friends, even though the counter worker would normally be addressed with usted.",
+        why: "The grammar here is already heavy, so the scene keeps the friendship simple. Tú lets the lesson use te lo, te la and mándamelo while still explaining what changes in usted commands like mándemelo.",
+        ifYouSwitch:
+          "With usted, te becomes le and many commands change shape: mándamelo becomes mándemelo. The order does not change, indirect still comes before direct, and le still becomes se before lo or la."
+      },
+      dialogue: [
+        {
+          speaker: "Camila",
+          target: "Andrés, ¿tienes el documento escaneado? Mándamelo antes de que cierren.",
+          translation: "Andrés, do you have the scanned document? Send it to me before they close.",
+          pronunciation: "an-DRES, TYEH-nes el doh-koo-MEN-toh es-kah-neh-AH-doh. MAN-dah-meh-loh AN-tes deh keh SYE-ren",
+          literal: "Andrés, you-have the document scanned? Send-to-me-it before that they-close.",
+          why: "Mándamelo is one word because affirmative commands attach pronouns to the end. The order is not negotiable: me before lo, the person before the thing. The accent keeps the original stress on mán-."
+        },
+        {
+          speaker: "Andrés",
+          target: "Sí, te lo mando ya. También puedo mandártelo por correo si falla el chat.",
+          translation: "Yes, I'll send it to you now. I can also send it to you by email if the chat fails.",
+          pronunciation: "see, teh loh MAN-doh yah. tam-BYEN PWEH-doh man-DAR-teh-loh por koh-RREH-oh see FAH-yah el chat",
+          literal: "Yes, to-you it I-send now. Also I-can to-send-to-you-it by mail if fails the chat.",
+          why: "Te lo mando puts both pronouns before the conjugated verb. Mandártelo attaches them to the infinitive. With infinitives, both positions are correct: te lo puedo mandar and puedo mandártelo."
+        },
+        {
+          speaker: "Camila",
+          target: "A mi tía ya se lo mandé, pero le mandé el archivo a mi prima también para que lo revise.",
+          translation: "I already sent it to my aunt, but I also sent the file to my cousin so she can review it.",
+          pronunciation: "ah mee TEE-ah yah seh loh man-DEH, PEH-roh leh man-DEH el ar-CHEE-boh ah mee PREE-mah tam-BYEN PAH-rah keh loh rreh-BEE-seh",
+          literal: "To my aunt already to-her it I-sent, but to-her I-sent the file to my cousin also so that it she-checks.",
+          why: "Le lo is impossible, so le becomes se before lo: se lo mandé. The second half shows normal Spanish doubling: le and a mi prima can appear together and the sentence is correct, not a mistake."
+        },
+        {
+          speaker: "Andrés",
+          target: "Entonces no se lo mando otra vez a tu tía; sólo se la reenvío a tus primos cuando confirmes la foto.",
+          translation: "Then I won't send it to your aunt again; I'll only forward it to your cousins when you confirm the photo.",
+          pronunciation: "en-TON-ses noh seh loh MAN-doh OH-trah bes ah too TEE-ah; SOH-loh seh lah rreh-en-BEE-oh ah toos PREE-mos KWAN-doh kon-feer-MES lah FOH-toh",
+          literal: "Then not to-her it I-send again to your aunt; only to-them it I-forward to your cousins when you-confirm the photo.",
+          why: "Negative sentences keep pronouns before the conjugated verb. Se lo and se la can mean to him, to her, to them or to you formal; the noun phrase after it, a tu tía or a tus primos, tells you who."
+        },
+        {
+          speaker: "Camila",
+          target: "Exacto. Y estoy mandándotelo con el recibo, para que veas que la transferencia sí salió.",
+          translation: "Exactly. And I'm sending it to you with the receipt so you can see that the transfer really went out.",
+          pronunciation: "eg-SAK-toh. ee es-TOY man-DAN-doh-teh-loh kon el reh-SEE-boh, PAH-rah keh BEH-as keh lah trans-feh-REN-syah see sah-LYOH",
+          literal: "Exactly. And I-am sending-to-you-it with the receipt, so that you-see that the transfer yes went-out.",
+          why: "Gerunds work like infinitives: you can say estoy mandándotelo or te lo estoy mandando. When the pronouns attach, Spanish writes an accent so the stress does not slide."
+        },
+        {
+          speaker: "Andrés",
+          target: "Listo. Lo vi en el comprobante y ya te lo reenvío; en Colombia digo lo vi, no le vi.",
+          translation: "Done. I saw it on the receipt and I'm forwarding it to you now; in Colombia I say lo vi, not le vi.",
+          pronunciation: "LEES-toh. loh bee en el kom-proh-BAHN-teh ee yah teh loh rreh-en-BEE-oh; en koh-LOM-byah DEE-goh loh bee, noh leh bee",
+          literal: "Ready. It I-saw on the proof and now to-you it I-forward; in Colombia I-say it I-saw, not to-him I-saw.",
+          why: "This line makes the Colombian point explicit. Colombia is overwhelmingly loísta: for a man as a direct object, lo vi is the normal form. Le vi belongs to leísmo, common in parts of Spain, not the Colombian default."
+        }
+      ],
+      vocabulary: [
+        {
+          term: "lo / la / los / las",
+          explanation:
+            "The third-person direct object pronouns: the thing or person directly affected by the verb. They answer what or whom: the document, the photo, the parcel, the receipt, the man you saw.",
+          literal: "it / him / her / them",
+          useWhen:
+            "The object is already known and you do not want to repeat the noun: lo mando, la reenvío, los reviso, las subo.",
+          avoidWhen:
+            "You mean the recipient, the person something goes to. For that role Spanish uses indirect pronouns like le or les, unless the whole pair changes to se lo or se la.",
+          register: "neutral core grammar",
+          region: "General Spanish. In Colombia, lo vi for a man is the ordinary direct-object form, not le vi.",
+          related: ["me", "te", "le", "se"],
+          example: {
+            target: "Lo vi en el comprobante.",
+            translation: "I saw it on the receipt."
+          }
+        },
+        {
+          term: "me / te / le / nos / les",
+          explanation:
+            "The indirect object pronouns: the person who receives, benefits from, or is affected by the action. They answer to me, to you, to her, to us, to them.",
+          literal: "to me / to you / to him or her / to us / to them",
+          useWhen:
+            "Sending, showing, forwarding, lending, giving, telling, or writing something to someone: te mando el archivo, le escribo a mi tía.",
+          avoidWhen:
+            "You mean the thing sent or seen. English learners fail exactly in third person because le is not the same job as lo or la.",
+          register: "neutral core grammar",
+          region: "General Spanish; Colombian speech uses le and les constantly with named recipients.",
+          related: ["lo", "la", "nos", "les"],
+          example: {
+            target: "Le mandé el archivo a mi prima.",
+            translation: "I sent the file to my cousin."
+          }
+        },
+        {
+          term: "te lo / me lo",
+          explanation:
+            "A two-pronoun stack. The indirect pronoun comes first, then the direct pronoun. English says the thing after the verb, but Spanish puts both before a conjugated verb.",
+          literal: "to you it / to me it",
+          useWhen:
+            "You are saying send it to you, send it to me, show it to me, or forward it to you without repeating the nouns.",
+          avoidWhen:
+            "Reversing the order. Lo te mando and lo me mandas sound impossible because direct never comes before indirect in a stack.",
+          register: "neutral spoken",
+          region: "General Spanish; extremely common in Colombian WhatsApp and errand talk.",
+          related: ["se lo", "te la", "me los", "nos las"],
+          example: {
+            target: "Te lo mando ya.",
+            translation: "I'll send it to you now."
+          }
+        },
+        {
+          term: "se lo / se la / se los / se las",
+          explanation:
+            "The required replacement when le or les would stand before lo, la, los or las. Spanish changes le lo into se lo because le lo is not allowed.",
+          literal: "to him or her or them it",
+          useWhen:
+            "The recipient is him, her, them or usted, and the thing is also a pronoun: se lo mandé, se la reenvío, se los llevé.",
+          avoidWhen:
+            "Trying to keep le or les before a direct pronoun. Le lo mandé is the classic learner sentence, and it is wrong.",
+          register: "neutral core grammar",
+          region: "General Spanish; the noun phrase after it often clarifies who se means.",
+          related: ["le", "les", "lo", "la"],
+          example: {
+            target: "A mi tía ya se lo mandé.",
+            translation: "I already sent it to my aunt."
+          }
+        },
+        {
+          term: "mandártelo / mandándotelo",
+          explanation:
+            "Pronouns attached to an infinitive or gerund. Both positions are correct: te lo puedo mandar or puedo mandártelo, te lo estoy mandando or estoy mandándotelo.",
+          literal: "to-send-to-you-it / sending-to-you-it",
+          useWhen:
+            "There is an infinitive after another verb or a gerund after estar, and you want the pronouns to travel attached to that non-conjugated form.",
+          avoidWhen:
+            "Forgetting the written accent. The accent is not decoration; it keeps the stress from moving when the word grows longer.",
+          register: "neutral but careful in writing",
+          region: "General Spanish; very useful in messages because it keeps the action compact.",
+          related: ["te lo puedo mandar", "te lo estoy mandando", "mándamelo", "enviárselo"],
+          example: {
+            target: "Puedo mandártelo por correo.",
+            translation: "I can send it to you by email."
+          }
+        },
+        {
+          term: "mándamelo / mándemelo",
+          explanation:
+            "Affirmative commands with pronouns attached. Mándamelo is tú, and mándemelo is usted. In both, me comes before lo and the written accent keeps the command's stress.",
+          literal: "send-to-me-it",
+          useWhen:
+            "You are asking someone to send you a document, photo, receipt, location, or audio note and you know the object already.",
+          avoidWhen:
+            "Negative commands. Spanish flips placement there: no me lo mandes for tú, no me lo mande for usted.",
+          register: "direct but normal with please or a friendly tone",
+          region: "General Spanish; usted command forms are very common in Colombian service talk.",
+          related: ["envíamelo", "pásamelo", "no me lo mandes", "no me lo mande"],
+          example: {
+            target: "Mándamelo antes de que cierren.",
+            translation: "Send it to me before they close."
+          }
+        },
+        {
+          term: "le mandé el archivo a mi prima",
+          explanation:
+            "Redundant doubling, where Spanish uses both the pronoun le and the named person a mi prima. To English eyes it looks doubled; to Spanish ears it is normal and often clearer.",
+          literal: "to-her I-sent the file to my cousin",
+          useWhen:
+            "You name the recipient but still want the normal Spanish rhythm with le or les: le avisé a mi mamá, les pasé las fotos a mis primos.",
+          avoidWhen:
+            "Deleting every le because English would not repeat to her. That makes many Spanish sentences sound stiff or incomplete.",
+          register: "normal spoken Spanish",
+          region: "General Colombian and Latin American Spanish.",
+          related: ["le avisé a", "les mandé a", "a mi prima", "a mis primos"],
+          example: {
+            target: "Le mandé el archivo a mi prima.",
+            translation: "I sent the file to my cousin."
+          }
+        }
+      ],
+      note:
+        "The decidable core is small, even if the surface feels crowded. Direct objects are me, te, lo, la, nos, los, las. Indirect objects are me, te, le, nos, les. They differ only in the third person, which is exactly where English speakers reach for the wrong form. With one pronoun, place it before a conjugated verb: te mando el archivo, lo vi. With infinitives and gerunds, either position is correct: te lo voy a mandar or voy a mandártelo, te lo estoy mandando or estoy mandándotelo. With commands, attach pronouns to affirmative commands, but put them before negative commands: mándamelo, no me lo mandes. When two pronouns stack, indirect always comes before direct, with no exception worth hedging. And when le or les would come before lo, la, los or las, it becomes se: se lo mandé, never le lo mandé.",
+      culture: [
+        {
+          label: "Spanish doubling is normal, not sloppy",
+          body:
+            "An English speaker sees “le mandé el archivo a mi prima” and thinks one of the two recipient markers must be extra. In Colombian Spanish, the doubling is ordinary, especially with people. The pronoun keeps the sentence's rhythm, and the named person removes ambiguity. Do not correct it out of your Spanish."
+        },
+        {
+          label: "Colombia is not Spain's leísmo zone",
+          body:
+            "Learners who meet peninsular Spanish may hear le vi for a man and assume it is the polite or educated form. In Colombia, the normal direct object is lo vi. Le belongs to the indirect job: le mandé el archivo, le escribí, le dije. That honesty prevents a lot of imported confusion."
+        },
+        {
+          label: "WhatsApp makes the grammar unavoidable",
+          body:
+            "Files, screenshots, voice notes, transfers and receipts move all day through Colombian family chats. Those tiny objects are exactly where full nouns become heavy and pronouns become natural: te lo mando, se la reenvío, mándamelo. The grammar is not academic; it is phone survival."
+        }
+      ],
+      pitfalls: [
+        {
+          mistake: "Saying “le lo mandé”",
+          whyItFails:
+            "Spanish does not allow le or les directly before lo, la, los or las. The indirect pronoun changes to se, even though the meaning is still to him, to her, to them or to you formal.",
+          sayInstead: "Say “se lo mandé” or “se la mandé.”"
+        },
+        {
+          mistake: "Putting the direct pronoun first",
+          whyItFails:
+            "English says the thing before the recipient in “send it to me,” but Spanish stacks the recipient first: indirect before direct, always.",
+          sayInstead: "Say “me lo mandas,” “te la envío,” or “nos los pasan.”"
+        },
+        {
+          mistake: "Avoiding the accent in attached forms",
+          whyItFails:
+            "When pronouns attach, the word gets longer. Spanish writes an accent if needed so the stress stays where the command, infinitive phrase or gerund requires it.",
+          sayInstead: "Write “mándamelo,” “mándemelo,” and “mandándotelo.”"
+        }
+      ],
+      variations: [
+        {
+          form: "Te lo mando ya.",
+          register: "friendly practical",
+          region: "General Colombian",
+          whenToUse: "With a friend when the thing and the recipient are already clear."
+        },
+        {
+          form: "Se lo mandé a mi tía.",
+          register: "neutral spoken",
+          region: "General Spanish",
+          whenToUse: "When le plus lo would collide and the named person clarifies who received it."
+        },
+        {
+          form: "Puedo mandártelo por correo.",
+          register: "neutral practical",
+          region: "General Spanish",
+          whenToUse: "When an infinitive lets you attach both pronouns instead of putting them before the conjugated verb."
+        },
+        {
+          form: "No me lo mandes todavía.",
+          register: "friendly direct",
+          region: "General Spanish",
+          whenToUse: "For a negative command, where the pronouns go before the verb instead of attaching."
+        }
+      ],
+      prompt: "Camila says “A mi tía ya se lo mandé.” Why is it se lo and not le lo?",
+      choices: [
+        "Because le changes to se before lo.",
+        "Because lo must name the recipient.",
+        "Because se always means oneself."
+      ],
+      answer: 0,
+      practiceExtra: [
+        {
+          prompt: "Which sentence puts the two pronouns in the correct order?",
+          choices: [
+            "Te lo mando ya.",
+            "Lo te mando ya.",
+            "Mando te lo ya."
+          ],
+          answer: 0,
+          tests: "indirect pronoun before direct pronoun"
+        },
+        {
+          prompt: "Which form is a correct negative command?",
+          choices: [
+            "No mandes me lo todavía.",
+            "No me lo mandes todavía.",
+            "No mándamelo todavía."
+          ],
+          answer: 1,
+          tests: "pronouns before a negative command"
+        },
+        {
+          prompt: "Which pair shows both correct positions with an infinitive?",
+          choices: [
+            "Te lo puedo mandar / puedo mandártelo.",
+            "Puedo lo te mandar / mandarlo te puedo.",
+            "Le lo puedo mandar / puedo mandarlelo."
+          ],
+          answer: 0,
+          tests: "preverbal or attached placement with infinitives"
+        },
+        {
+          prompt: "In Colombian Spanish, which line is normal for seeing a man?",
+          choices: [
+            "Le vi ayer en el recibo.",
+            "Se vi ayer en el recibo.",
+            "Lo vi ayer en la oficina."
+          ],
+          answer: 2,
+          tests: "Colombian loísmo rather than peninsular leísmo"
+        }
+      ]
+    },
+    en: {
+      title: "Mandar el objeto al lugar correcto en inglés",
+      situation:
+        "Usted está en Dallas, Texas, ayudando a Camila con una diligencia familiar a distancia. Tiene que enviar un documento, devolver una foto al chat correcto, reenviar un recibo y pedir que le manden un comprobante. El reto no es traducir pronombres españoles uno por uno, sino reconstruir la frase inglesa porque English never puts object pronouns before the verb.",
+      setting: {
+        who: "Camila coordina la diligencia desde el celular y Andrew, un colombiano que está aprendiendo inglés práctico, intenta escribir los mensajes sin calcar te lo, se lo y mándamelo.",
+        what: "Una conversación sobre enviar archivos, fotos, recibos y una transferencia mientras Andrew aprende el orden inglés de los objetos.",
+        when: "Un lunes al final de la tarde, con la oficina de envíos a punto de cerrar y el chat familiar preguntando por novedades.",
+        where: "Dallas, Texas, cerca de una oficina de courier, con calor en la acera y demasiadas notificaciones en el celular.",
+        why: "Porque el inglés no permite poner me, you, it o them antes del verbo como hace el español. “Te lo mando” se reconstruye como “I'll send it to you” o, con algunas combinaciones, “I'll send you the file.” Además, los phrasal verbs separables obligan a poner el pronombre en medio: send it back, no send back it."
+      },
+      address: {
+        form: "mixed",
+        who: "Camila y Andrew usan first names y el mismo “you”; la cercanía se oye en contracciones como I'll y en pedidos con please.",
+        why: "El inglés no tiene tú ni usted. Usted no elige una forma verbal de confianza, sino un orden de palabras claro y una cortesía explícita cuando hace falta.",
+        ifYouSwitch:
+          "No hay cambio de pronombre. Lo que cambiaría el tono sería quitar please en un pedido directo o escribir frases demasiado literales como “to you it I send.”"
+      },
+      dialogue: [
+        {
+          speaker: "Camila",
+          target: "Andrew, do you have the scanned document? Send it to me before they close.",
+          translation: "Andrew, ¿tienes el documento escaneado? Mándamelo antes de que cierren.",
+          pronunciation: "AN-dru, du yu hav da skand DA-kyu-ment? send it tu mi bi-FOR dei klouz",
+          literal: "Andrew, ¿tiene usted el documento escaneado? Envíe eso a mí antes de que cierren.",
+          why: "El pronombre it va después del verbo send, no antes. Para el destinatario, to me es claro y siempre posible. Inglés no construye una palabra como mándamelo."
+        },
+        {
+          speaker: "Andrew",
+          target: "Yes, I'll send it to you now. I can also email it to you if the chat fails.",
+          translation: "Sí, te lo mando ya. También puedo mandártelo por correo si falla el chat.",
+          pronunciation: "yes, ail send it tu yu nau. ai kan OL-so I-meil it tu yu if da chat feilz",
+          literal: "Sí, enviaré eso a usted ahora. También puedo correo-electrónico eso a usted si el chat falla.",
+          why: "“Te lo mando” tiene que salir como send it to you. El inglés también permite “send you the file,” pero con un pronombre como it, “send you it” suena raro para muchos hablantes y debe evitarse."
+        },
+        {
+          speaker: "Camila",
+          target: "I already sent it to my aunt, but I sent my cousin the file too so she can check it.",
+          translation: "Ya se lo mandé a mi tía, pero también le mandé el archivo a mi prima para que lo revise.",
+          pronunciation: "ai ol-RE-di sent it tu mai ant, bat ai sent mai KU-zin da fail tu so shi kan chek it",
+          literal: "Yo ya envié eso a mi tía, pero envié a mi prima el archivo también para que ella pueda revisar eso.",
+          why: "Aquí aparecen los dos órdenes ingleses: sent it to my aunt y sent my cousin the file. Si el objeto directo es un sustantivo, send someone something funciona muy bien. Si es it, use send it to someone."
+        },
+        {
+          speaker: "Andrew",
+          target: "Then I won't send it to your aunt again; I'll only forward it to your cousins when you confirm the photo.",
+          translation: "Entonces no se lo mando otra vez a tu tía; sólo se la reenvío a tus primos cuando confirmes la foto.",
+          pronunciation: "den ai wont send it tu yor ant a-GEN; ail ON-li FOR-werd it tu yor KU-zinz wen yu kon-FERM da FOU-tou",
+          literal: "Entonces no enviaré eso a su tía otra vez; sólo reenviaré eso a sus primos cuando confirme la foto.",
+          why: "Forward sigue el mismo patrón básico: forward it to them. El inglés no tiene un cambio como le a se, porque no apila dos pronombres antes del verbo."
+        },
+        {
+          speaker: "Camila",
+          target: "Exactly. And send it back with the receipt so I can see the transfer went through.",
+          translation: "Exacto. Y devuélvemelo con el recibo para ver que la transferencia sí salió.",
+          pronunciation: "eg-ZAKT-li. and send it bak wid da ri-SIT so ai kan si da TRANS-fer went thru",
+          literal: "Exactamente. Y envíe eso de vuelta con el recibo para que yo pueda ver que la transferencia pasó.",
+          why: "Send back es separable. Con un pronombre, el pronombre debe ir en la mitad: send it back. “Send back it” es una señal muy fuerte de traducción desde el español."
+        },
+        {
+          speaker: "Andrew",
+          target: "Done. I saw it on the receipt, and I'll send it back to you now.",
+          translation: "Listo. Lo vi en el comprobante y ya te lo devuelvo.",
+          pronunciation: "dan. ai so it on da ri-SIT, and ail send it bak tu yu nau",
+          literal: "Hecho. Yo vi eso en el recibo, y enviaré eso de vuelta a usted ahora.",
+          why: "La frase vuelve a juntar las dos reglas: it después de saw, y send it back con it en medio del phrasal verb. El inglés obliga a reconstruir, no a mover te lo como bloque."
+        }
+      ],
+      vocabulary: [
+        {
+          term: "send it to me",
+          explanation:
+            "La forma segura para “mándamelo.” El objeto it va después de send, y el destinatario entra con to me.",
+          literal: "enviar eso a mí",
+          useWhen:
+            "Cuando pide un documento, una foto, un recibo, una ubicación o una nota de voz que la otra persona ya sabe identificar.",
+          avoidWhen:
+            "Calcar el orden español y decir “me it send” o “to me it send.” El inglés no pone esos objetos antes del verbo.",
+          register: "neutro práctico",
+          region: "Inglés universal.",
+          related: ["send it to you", "send it to her", "email it to me", "forward it to me"],
+          example: {
+            target: "Send it to me before they close.",
+            translation: "Mándamelo antes de que cierren."
+          }
+        },
+        {
+          term: "send me the file",
+          explanation:
+            "El orden de doble objeto: verbo, persona, cosa. Funciona muy bien cuando la cosa es un sustantivo como the file, the receipt o the photo.",
+          literal: "enviarme el archivo",
+          useWhen:
+            "Quiere sonar natural y el objeto directo no es un pronombre: send me the file, send her the receipt, send them the photos.",
+          avoidWhen:
+            "Usarlo con it como regla principal. “Send me it” existe en algunos lugares, pero para un aprendiz es más seguro decir “send it to me.”",
+          register: "neutro conversacional",
+          region: "Inglés universal, con variación en la aceptación de send me it.",
+          related: ["send the file to me", "send her the receipt", "give me the number", "show me the photo"],
+          example: {
+            target: "Please send me the file.",
+            translation: "Por favor mándeme el archivo."
+          }
+        },
+        {
+          term: "send the file to me",
+          explanation:
+            "El otro orden correcto: verbo, cosa, to + persona. Es más explícito y siempre sirve cuando quiere evitar dudas.",
+          literal: "enviar el archivo a mí",
+          useWhen:
+            "Quiere enfatizar el objeto o necesita usar un pronombre como it: send it to me, send the file to Camila.",
+          avoidWhen:
+            "Creer que es el único orden posible. Con sustantivos, send me the file también es natural.",
+          register: "neutro claro",
+          region: "Inglés universal.",
+          related: ["send me the file", "send it to me", "forward the receipt to her", "email the photo to them"],
+          example: {
+            target: "Send the receipt to me, please.",
+            translation: "Mándeme el recibo a mí, por favor."
+          }
+        },
+        {
+          term: "forward it to them",
+          explanation:
+            "Reenviárselo a ellos. Forward se usa para correos, archivos, mensajes y fotos que pasan de una persona a otra.",
+          literal: "reenviar eso a ellos",
+          useWhen:
+            "Usted recibe algo y lo pasa a otro destinatario sin rehacerlo desde cero.",
+          avoidWhen:
+            "Decir “forward them it” como traducción directa de se lo. Para un pronombre, use forward it to them.",
+          register: "neutro digital",
+          region: "Inglés universal.",
+          related: ["send it on", "pass it along", "email it to them", "share it with them"],
+          example: {
+            target: "I'll forward it to your cousins.",
+            translation: "Se lo reenviaré a tus primos."
+          }
+        },
+        {
+          term: "send it back",
+          explanation:
+            "Devolverlo o mandarlo de vuelta. Es un phrasal verb separable, y con pronombre el objeto debe ir en medio.",
+          literal: "enviar eso de vuelta",
+          useWhen:
+            "Al devolver un archivo corregido, una foto al chat correcto, un recibo firmado o un paquete al remitente.",
+          avoidWhen:
+            "Decir “send back it.” Con it, them, me o her como objeto, el pronombre se mete entre send y back.",
+          register: "neutro práctico",
+          region: "Inglés universal.",
+          related: ["send them back", "give it back", "take it back", "bring it back"],
+          example: {
+            target: "Send it back with the receipt.",
+            translation: "Devuélvemelo con el recibo."
+          }
+        },
+        {
+          term: "email it to you",
+          explanation:
+            "Mandártelo por correo. En inglés email también funciona como verbo, y el objeto it sigue después del verbo.",
+          literal: "correo-electrónico eso a usted",
+          useWhen:
+            "El canal es correo electrónico y quiere decir claramente qué se manda y a quién.",
+          avoidWhen:
+            "Decir “email you it” como primera opción. Algunos hablantes lo aceptan, pero email it to you es más seguro y claro.",
+          register: "neutro de oficina",
+          region: "Inglés universal.",
+          related: ["send it by email", "attach it", "forward it", "copy you"],
+          example: {
+            target: "I can email it to you now.",
+            translation: "Puedo mandártelo por correo ahora."
+          }
+        },
+        {
+          term: "go through",
+          explanation:
+            "Salir o procesarse bien, especialmente una transferencia, pago o trámite digital.",
+          literal: "pasar a través",
+          useWhen:
+            "Quiere decir que un pago, una transferencia, una reserva o un formulario sí quedó procesado.",
+          avoidWhen:
+            "Traducir salir literalmente como go out en una transferencia. “The transfer went out” puede entenderse, pero went through confirma mejor que funcionó.",
+          register: "neutro práctico",
+          region: "Inglés universal.",
+          related: ["process", "clear", "be approved", "show up"],
+          example: {
+            target: "The transfer went through.",
+            translation: "La transferencia sí salió."
+          }
+        }
+      ],
+      note:
+        "La regla inglesa se decide desde el verbo hacia la derecha. Primero va send, email, forward, show o give. Después viene el objeto. Si usa dos sustantivos, puede escoger entre “send me the file” y “send the file to me.” Si el objeto directo es un pronombre como it o them, la ruta segura es “send it to me,” “forward it to her,” “email them to us.” Esa es la reconstrucción de te lo, se la y nos los. Luego aparece una regla adicional que el español no anuncia: muchos phrasal verbs son separables. Con un pronombre, la separación es obligatoria: send it back, fill it out, turn it on. “Send back it” no es una pequeña variante, es un error que se oye traducido.",
+      culture: [
+        {
+          label: "El inglés no apila pronombres antes del verbo",
+          body:
+            "Para un colombiano, te lo mando parece compacto y lógico. En inglés, ese bloque no se mueve junto. Usted reconstruye la frase: I'll send it to you. La información es la misma, pero el orden cambia por completo. Esa es la razón por la que entender la frase española no garantiza producir la inglesa."
+        },
+        {
+          label: "Dos objetos tienen dos caminos",
+          body:
+            "Send me the file y send the file to me son correctas. La primera suena más conversacional cuando the file es un sustantivo. La segunda es más explícita y se vuelve la opción segura con it: send it to me. Aprender esa frontera evita frases raras como send me it."
+        },
+        {
+          label: "Los phrasal verbs mandan al pronombre al centro",
+          body:
+            "Send back, fill out, turn on y pick up parecen dos palabras, pero trabajan como una unidad separable. Si el objeto es a noun, puede decir send back the form o send the form back. Si el objeto es it, sólo send it back es normal."
+        }
+      ],
+      pitfalls: [
+        {
+          mistake: "“To you it I send.”",
+          whyItFails:
+            "Copia el orden de te lo mando. En inglés el sujeto y el verbo van primero, y el objeto it aparece después del verbo.",
+          sayInstead: "I'll send it to you."
+        },
+        {
+          mistake: "“Send back it.”",
+          whyItFails:
+            "Send back es separable. Cuando el objeto es un pronombre, el pronombre debe ir en medio del phrasal verb.",
+          sayInstead: "Send it back."
+        },
+        {
+          mistake: "“Forward them it.”",
+          whyItFails:
+            "Con un pronombre directo como it, el inglés prefiere el orden cosa + to + persona. La frase calcada desde se lo suena muy extraña.",
+          sayInstead: "Forward it to them."
+        }
+      ],
+      variations: [
+        {
+          form: "I'll send it to you now.",
+          register: "amistoso práctico",
+          region: "Inglés universal",
+          whenToUse: "Para traducir te lo mando cuando it ya identifica el archivo, foto o recibo."
+        },
+        {
+          form: "Please send me the file.",
+          register: "cortés práctico",
+          region: "Inglés universal",
+          whenToUse: "Cuando el objeto directo es un sustantivo y quiere usar el orden de doble objeto."
+        },
+        {
+          form: "I'll forward it to your cousins.",
+          register: "neutro digital",
+          region: "Inglés universal",
+          whenToUse: "Cuando reenvía algo a otras personas y el objeto es it."
+        },
+        {
+          form: "Send it back with the receipt.",
+          register: "directo práctico",
+          region: "Inglés universal",
+          whenToUse: "Con phrasal verb separable, donde el pronombre it debe ir en medio."
+        }
+      ],
+      prompt: "Andrew says “I'll send it to you now.” ¿Qué problema resuelve frente a te lo mando?",
+      choices: [
+        "Pone it después del verbo y to you después.",
+        "Pone to you antes del sujeto y del verbo.",
+        "Convierte send en un verbo reflexivo."
+      ],
+      answer: 0,
+      practiceExtra: [
+        {
+          prompt: "¿Cuál frase usa correctamente el orden de dos objetos con sustantivo?",
+          choices: [
+            "Please send me the file.",
+            "Please send it me now.",
+            "Please to me send file."
+          ],
+          answer: 0,
+          tests: "send someone something with a noun object"
+        },
+        {
+          prompt: "¿Cuál frase maneja bien un pronombre con destinatario?",
+          choices: [
+            "I'll forward them it.",
+            "I'll forward it to them.",
+            "I'll to them forward it."
+          ],
+          answer: 1,
+          tests: "pronoun object plus to-recipient order"
+        },
+        {
+          prompt: "¿Cuál es correcta con el phrasal verb separable send back?",
+          choices: [
+            "Send it back with the receipt.",
+            "Send back it with the receipt.",
+            "Back send it with the receipt."
+          ],
+          answer: 0,
+          tests: "pronombre obligatorio en la mitad de un phrasal verb separable"
+        },
+        {
+          prompt: "¿Cuál traduce mejor “puedo mandártelo por correo”?",
+          choices: [
+            "I can email you it now.",
+            "I can to you email it.",
+            "I can email it to you."
+          ],
+          answer: 2,
+          tests: "email it to you como el orden más seguro"
         }
       ]
     }

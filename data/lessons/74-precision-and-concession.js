@@ -6,18 +6,20 @@
  * this file runs, because index.html loads data/lessons.js first. Nothing here
  * declares it, and nothing here reassigns it.
  *
- * These three lessons are GRAMMAR lessons. Each spines on exactly one entry
+ * These four lessons are GRAMMAR lessons. Each spines on exactly one entry
  * from data/structures.js, named in its `structure` field, and carries no
  * `verb`. That is how the coverage report proves the structure curriculum is
  * actually taught rather than merely listed, exactly as test/shape.test.js and
  * scripts/check-lesson-block.js require.
  *
- * The three structures here -- relative-advanced, conjecture and concession --
- * close measured holes in the corpus: zero instances of cuyo and almost no el
- * cual; four future perfects, none of them conjectural; and concession never
- * taught, with aunque used without its mood contrast. The settings sit in
- * Tunja, Pasto and Popayán -- three cities where a formal or academic register
- * is genuinely at home -- rather than the usual Bogotá and Medellín. The two
+ * The four structures here -- relative-advanced, conjecture, concession and
+ * subjunctive-adverbial -- close measured holes in the corpus: zero instances
+ * of cuyo and almost no el cual; four future perfects, none of them
+ * conjectural; concession never taught, with aunque used without its mood
+ * contrast; and 90 adverbial subjunctive triggers whose mood choice is never
+ * explained. The settings sit in Tunja, Pasto, Popayán and Riohacha -- cities
+ * where formal, academic or civic negotiation registers are genuinely at home
+ * -- rather than the usual Bogotá and Medellín. The two
  * directions mirror: same number of dialogue turns, vocabulary entries, culture
  * notes, pitfalls, variations and practice questions, with the taught pattern
  * actually spoken.
@@ -1915,6 +1917,638 @@ lessons.push(
           ],
           answer: 0,
           tests: "“Por más que” es “no matter how much / however much”; “by more that” y “for more than” son calcos sin sentido."
+        }
+      ]
+    }
+  },
+  {
+    id: "holding-the-line-in-riohacha-repairs",
+    level: "Extending · Precision and concession",
+    skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context", "grammar"],
+    domain: "work-and-employment",
+    register: "formal",
+    pathways: ["extension", "collegiate-academic"],
+    structure: "subjunctive-adverbial",
+    review: "pending",
+    es: {
+      title: "When he arrives, I will let you know: time, purpose and concession",
+      situation:
+        "You are in Riohacha, in a small apartment building near the seafront, after a hard night of wind and rain. Marina, a tenant, has water coming through the ceiling. Andrés, the building administrator, has to concede that the damage is real while holding the line on access, quotes and the insurance report. The stakes are practical: if he promises too much before the inspection, the building pays twice; if he sounds evasive, Marina loses trust. Listen for the B2 choice that examiners love: adverbial clauses take the subjunctive when the event is not yet real, and the indicative when it is a fact or a habit.",
+      setting: {
+        who: "Marina rents the top-floor apartment and speaks firmly because water has reached her wardrobe. Andres is the administrator of the building, responsible for repairs, quotes and the insurer. They use courteous usted because this is a formal complaint, not a friendly chat.",
+        what: "A repair negotiation after storm damage: access to the apartment, photos for the claim, temporary sealing, the supplier's visit and the line between a concession and an open-ended promise.",
+        when: "Early morning after a night of rain and strong coastal wind, before the contractor and the insurer have inspected the roof.",
+        where: "Riohacha, on the Guajira coast, in the lobby of a small apartment building close to the seafront.",
+        why: "Adverbial subjunctive is where advanced learners lose marks. The conjunction looks easy, but the mood tells whether the event is not yet real, habitual, or already known. Precision matters when money, damage and responsibility are on the table."
+      },
+      address: {
+        form: "usted",
+        who: "Marina and Andres use usted throughout. They know each other by sight, but a complaint about damage and money calls for administrative courtesy.",
+        why: "In a repair claim, usted keeps the conversation firm without becoming personal. It lets Marina insist and Andres concede points while still protecting the building's process.",
+        ifYouSwitch:
+          "If either switched to tú in this scene, it could sound like pressure or false intimacy. The grammar of concession works better here inside the distance of usted."
+      },
+      dialogue: [
+        {
+          speaker: "Marina",
+          target: "Aunque está lloviendo todavía, necesito que suban hoy para que el daño no crezca.",
+          translation: "Although it is still raining, I need you to come up today so the damage does not grow.",
+          pronunciation: "AUN-ke es-TA yo-BYEN-do to-da-BI-a, ne-se-SI-to ke SU-ban oy pa-RA ke el DA-nyo no KRES-ka",
+          literal: "Although it-is raining still, I-need that you-all go-up today so-that the damage not grow.",
+          why: "“Aunque está lloviendo” uses the indicative because the rain is a known fact. “Para que el daño no crezca” is always subjunctive because it states a purpose, a result being sought, not a fact."
+        },
+        {
+          speaker: "Andrés",
+          target: "Tiene razón: cuando llega una queja así, siempre revisamos fotos; cuando llegue el técnico, le aviso.",
+          translation: "You are right: when a complaint like this comes in, we always review photos; when the technician arrives, I will let you know.",
+          pronunciation: "TYE-ne ra-SON: KWAN-do YE-ga U-na KE-ha a-SI, SYEM-pre re-bi-SA-mos FO-tos; KWAN-do YE-ge el TEK-ni-ko, le a-BI-so",
+          literal: "You-have reason: when arrives a complaint like this, always we-review photos; when arrive the technician, to-you I-notify.",
+          why: "This is the minimal pair. “Cuando llega” is indicative because it describes a habit, every time this happens. “Cuando llegue” is subjunctive because this technician has not arrived yet."
+        },
+        {
+          speaker: "Marina",
+          target: "Entiendo el proceso, pero no puedo esperar hasta que la aseguradora responda si el techo sigue goteando.",
+          translation: "I understand the process, but I cannot wait until the insurer responds if the ceiling keeps dripping.",
+          pronunciation: "en-TYEN-do el pro-SE-so, PE-ro no PWE-do es-pe-RAR AS-ta ke la a-se-gu-ra-DO-ra res-PON-da si el TE-cho SI-ge go-te-AN-do",
+          literal: "I-understand the process, but not I-can wait until that the insurer respond if the roof continues dripping.",
+          why: "“Hasta que responda” takes the subjunctive because the response is not yet realized. If Marina said “hasta que responde”, it would mean a routine pattern, not this pending claim."
+        },
+        {
+          speaker: "Andrés",
+          target: "A menos que el proveedor encuentre una grieta mayor, autorizo un sellado temporal en cuanto tome las medidas.",
+          translation: "Unless the supplier finds a larger crack, I authorize a temporary seal as soon as he takes the measurements.",
+          pronunciation: "a ME-nos ke el pro-be-e-DOR en-KWEN-tre U-na GRI-e-ta ma-YOR, au-to-RI-so un se-YA-do tem-po-RAL en KWAN-to TO-me las me-DI-das",
+          literal: "Unless the supplier find a crack larger, I-authorize a sealing temporary as soon as he take the measurements.",
+          why: "“A menos que” is always subjunctive, because it names the exception that may block the plan. “En cuanto tome” is variable, and here it is subjunctive because the measurements are still future."
+        },
+        {
+          speaker: "Marina",
+          target: "Perfecto. Antes de salir al trabajo, dejo las llaves; antes de que salgas tú, mándame el acta por favor.",
+          translation: "Perfect. Before leaving for work, I will leave the keys; before you leave, please send me the report.",
+          pronunciation: "per-FEK-to. AN-tes de sa-LIR al tra-BA-ho, DE-ho las YA-bes; AN-tes de ke SA-lgas tu, MAN-da-me el AK-ta por fa-BOR",
+          literal: "Perfect. Before to-leave to work, I-leave the keys; before that leave you, send-me the report please.",
+          why: "This line shows the same-subject shortcut. “Antes de salir” uses the infinitive because Marina is the one leaving. “Antes de que salgas” changes subject, so the subjunctive appears."
+        },
+        {
+          speaker: "Andrés",
+          target: "Aunque llueva otra vez, no voy a negar el daño; por más que cueste, debemos documentarlo sin que falte nada.",
+          translation: "Even if it rains again, I am not going to deny the damage; however much it costs, we must document it without anything missing.",
+          pronunciation: "AUN-ke YWE-ba O-tra bes, no boy a ne-GAR el DA-nyo; por MAS ke KWES-te, de-BE-mos do-ku-men-TAR-lo sin ke FAL-te NA-da",
+          literal: "Although it-rain another time, not I-go to deny the damage; for more that it-cost, we-must document-it without that lack anything.",
+          why: "“Aunque llueva” is subjunctive because the next rain is only possible. “Por más que cueste” and “sin que falte nada” also take the subjunctive because they concede or prevent situations not being treated as facts."
+        }
+      ],
+      vocabulary: [
+        {
+          term: "para que",
+          explanation:
+            "An always-subjunctive purpose conjunction: so that. What follows is not a fact but the goal of an action, so Spanish says “para que entre aire”, “para que no se moje”, “para que quede constancia”. It almost always has a new subject after que.",
+          literal: "so that",
+          useWhen:
+            "A person does one thing so that another person or thing can do something: “Subo fotos para que la aseguradora vea el daño.”",
+          avoidWhen:
+            "The subject is the same on both sides. Then strong Spanish uses “para + infinitive”: “Subo para revisar”, not “subo para que yo revise”.",
+          register: "neutral",
+          region: "Universal Spanish; fully normal in Colombian speech and writing.",
+          related: ["a fin de que", "para", "con el fin de", "de modo que"],
+          example: {
+            target: "Tomo fotos para que la aseguradora vea el daño.",
+            translation: "I take photos so the insurer can see the damage."
+          }
+        },
+        {
+          term: "a menos que / con tal de que / en caso de que",
+          explanation:
+            "Three always-subjunctive condition conjunctions. “A menos que” sets an exception, “con tal de que” sets a condition you accept, and “en caso de que” prepares for a possibility. None states a fact, so all take the subjunctive.",
+          literal: "unless / provided that / in case",
+          useWhen:
+            "Managing conditions: “A menos que aparezca otra grieta”, “Con tal de que firme”, “En caso de que vuelva la lluvia”.",
+          avoidWhen:
+            "You are stating an ordinary if-clause. Plain “si” does not normally take the present subjunctive: “si llueve”, not “si llueva”.",
+          register: "neutral to formal",
+          region: "Universal Spanish; “a menos que” and “en caso de que” are common in Colombian administration.",
+          related: ["si", "salvo que", "siempre que", "siempre y cuando"],
+          example: {
+            target: "En caso de que vuelva a gotear, llámeme de inmediato.",
+            translation: "In case it starts dripping again, call me immediately."
+          }
+        },
+        {
+          term: "antes de que / sin que / a fin de que",
+          explanation:
+            "Another always-subjunctive set. “Antes de que” points to something before it happens, “sin que” says something does not happen alongside the main action, and “a fin de que” is a formal version of purpose. They are built for the not-yet-real or not-real.",
+          literal: "before / without / in order that",
+          useWhen:
+            "You need a new subject after the conjunction: “antes de que salgas”, “sin que falte nada”, “a fin de que conste”.",
+          avoidWhen:
+            "The subject stays the same. Then use the infinitive shortcut: “antes de salir”, “sin discutir”, “a fin de dejar constancia”.",
+          register: "neutral to formal",
+          region: "Universal Spanish; “a fin de que” is more written and administrative.",
+          related: ["antes de", "sin", "para que", "para"],
+          example: {
+            target: "Cierro la ventana antes de que entre más agua.",
+            translation: "I close the window before more water comes in."
+          }
+        },
+        {
+          term: "cuando / hasta que / en cuanto / tan pronto como",
+          explanation:
+            "Variable time conjunctions. Use the subjunctive for a specific event that has not happened yet: “cuando llegue”, “hasta que responda”, “en cuanto tome medidas”, “tan pronto como firme”. Use the indicative for habits or completed facts.",
+          literal: "when / until / as soon as",
+          useWhen:
+            "The event is pending or future from the speaker's point of view: “Cuando llegue el técnico, le aviso.”",
+          avoidWhen:
+            "You mean a routine or a known past event. Then use the indicative: “Cuando llega una queja, revisamos fotos”; “cuando llegó, saludó”.",
+          register: "neutral",
+          region: "Universal Spanish; this is a high-value B2 exam contrast.",
+          related: ["mientras", "después de que", "apenas", "luego que"],
+          example: {
+            target: "Tan pronto como firme el acta, enviamos la orden.",
+            translation: "As soon as he signs the report, we send the order."
+          }
+        },
+        {
+          term: "aunque: fact or possibility",
+          explanation:
+            "“Aunque” is the concession conjunction and the mood tells what kind of concession it is. Indicative concedes a known fact: “Aunque está lloviendo”. Subjunctive concedes a possibility: “Aunque llueva”. English splits this into although and even if, but Spanish uses one word with two moods.",
+          literal: "although / even if",
+          useWhen:
+            "You concede a point while holding a line: “Aunque tiene razón, necesitamos el acta”; “Aunque llueva, vamos.”",
+          avoidWhen:
+            "You use one mood for everything. If the fact is known, choose indicative; if it is not realized or not confirmed, choose subjunctive.",
+          register: "neutral",
+          region: "Universal Spanish; central to Colombian polite disagreement.",
+          related: ["a pesar de que", "aun cuando", "por más que", "así"],
+          example: {
+            target: "Aunque está lloviendo, subimos; aunque llueva mañana, volvemos.",
+            translation: "Although it is raining, we go up; even if it rains tomorrow, we come back."
+          }
+        },
+        {
+          term: "para / antes de / sin / después de + infinitivo",
+          explanation:
+            "The same-subject shortcut that makes mature Spanish lighter. If the subject before and after the connector is the same, skip que and the subjunctive: “para revisar”, “antes de salir”, “sin discutir”, “después de firmar”. Learners who only know “para que” sound heavy.",
+          literal: "to / before / without / after + -ing",
+          useWhen:
+            "The same person does both actions: “Antes de salir, dejo las llaves”; “Después de firmar, envío el correo.”",
+          avoidWhen:
+            "The subject changes. Then you need que and usually the subjunctive: “antes de que salgas”, “para que revise el técnico”.",
+          register: "neutral",
+          region: "Universal Spanish; common among strong Colombian writers and speakers.",
+          related: ["para que", "antes de que", "sin que", "después de que"],
+          example: {
+            target: "Antes de salir, dejo las llaves en portería.",
+            translation: "Before leaving, I leave the keys at the front desk."
+          }
+        },
+        {
+          term: "por más que / por mucho que / así",
+          explanation:
+            "Concessive forms for B2 reading and formal speech. “Por más que” and “por mucho que” mean no matter how much and normally take the subjunctive. “Así” can also mean even if in Colombian speech: “así llueva, voy”. It is strong, direct and very common.",
+          literal: "no matter how much / even if",
+          useWhen:
+            "You concede pressure, effort or a condition without changing the decision: “Por más que cueste, se arregla”; “Así llueva, vienen”.",
+          avoidWhen:
+            "You are writing a very formal document and “así” might sound too spoken. Use “aunque” or “aun cuando” there.",
+          register: "neutral to conversational",
+          region: "Universal for “por más que”; “así llueva” is very Colombian and natural in speech.",
+          related: ["aunque", "aun cuando", "de todos modos", "de malas"],
+          example: {
+            target: "Así llueva, el proveedor tiene que revisar el techo.",
+            translation: "Even if it rains, the supplier has to inspect the roof."
+          }
+        }
+      ],
+      note:
+        "The decidable core is simple, but only if you ask the right question: has the event happened, or is it still not fact? Some adverbial conjunctions always take the subjunctive because the clause is by definition not yet real: “para que”, “a menos que”, “antes de que”, “con tal de que”, “en caso de que”, “sin que” and “a fin de que”. Others are variable. With “cuando”, “hasta que”, “mientras”, “en cuanto”, “tan pronto como”, “después de que”, “siempre que” and “aunque”, use the subjunctive for a specific pending event, but the indicative for a habit or a known completed fact. That is why “Cuando llegue, le aviso” means he has not arrived yet, while “Cuando llega, siempre saluda” means every time he arrives, as a habit. “Aunque” deserves special care: “Aunque está lloviendo” concedes a fact; “aunque llueva” concedes a possibility. Strong writers also avoid needless subjunctives when the subject stays the same: “antes de salir”, “para revisar”, “sin discutir”, “después de firmar”. In Colombian speech, concession often closes with “de todas maneras” or “de todos modos”. “Así llueva” is everyday and clear; “de malas” is blunt, almost tough luck; “ni modo” is understood but sounds more Mexican than Colombian.",
+      culture: [
+        {
+          label: "Conceding without giving away the claim",
+          body:
+            "In a Colombian building meeting or repair claim, a concession is not surrender. Andres can say “aunque está lloviendo” and accept the tenant's reality, while still saying “cuando llegue el técnico” because the inspection has not happened. This is why mood matters beyond grammar class. Indicative says, yes, that point is real. Subjunctive says, even if that point becomes real, the procedure remains. In B2 writing, that distinction lets you sound fair without becoming vague."
+        },
+        {
+          label: "The Colombian sound of anyway",
+          body:
+            "Colombians constantly close concessions with “de todas maneras”, “de todos modos” or simply “igual”: “Está caro; igual toca arreglarlo.” These are not subordinate clauses and they do not trigger the subjunctive by themselves. They concede the previous sentence and move on. “Así llueva” is also very common and forceful: even if it rains. “De malas” exists too, but it is blunt, closer to tough luck, so use it carefully in service or housing disputes."
+        },
+        {
+          label: "Why the infinitive sounds more mature",
+          body:
+            "Learners often overproduce “para que yo”, “antes de que yo” and “sin que yo” because they have finally learned the subjunctive. Native speakers usually avoid that weight when the subject does not change. “Antes de salir” is cleaner than “antes de que yo salga”; “para revisar” is cleaner than “para que yo revise”. The subjunctive is not a trophy to display. It appears when the grammar needs a second subject or a not-yet-real clause."
+        },
+        {
+          label: "Riohacha without invented dialect",
+          body:
+            "This lesson is set in Riohacha because the coast and the Guajira wind make the repair scene concrete, not because the subjunctive is local. The mood rules are standard Spanish. A Riohacha administrator may speak faster, warmer or more directly than an Andean one, but “cuando llegue” versus “cuando llega” is the same national grammar. It is better to place ordinary precise Spanish in underused Colombian settings than to decorate the scene with regionalisms you cannot trust."
+        }
+      ],
+      pitfalls: [
+        {
+          mistake: "Cuando llega el técnico, le aviso.",
+          whyItFails:
+            "If you mean this particular technician has not arrived yet, the event is pending and “cuando” needs the subjunctive: “cuando llegue”. The indicative “cuando llega” describes a habit, as in “when he arrives, he always says hello”. The form is correct in isolation but wrong in this context.",
+          sayInstead: "Cuando llegue el técnico, le aviso."
+        },
+        {
+          mistake: "Aunque llueva ahora, el techo ya está goteando.",
+          whyItFails:
+            "If it is raining now and everyone knows it, Spanish treats it as a fact and uses the indicative: “aunque llueve” or “aunque está lloviendo”. The subjunctive “llueva” makes the rain sound possible or unconfirmed, which contradicts “ahora” in this complaint.",
+          sayInstead: "Aunque está lloviendo ahora, el techo ya está goteando."
+        },
+        {
+          mistake: "Antes de que salir, dejo las llaves.",
+          whyItFails:
+            "You cannot put an infinitive after “antes de que”. Choose one structure. Same subject takes “antes de + infinitive”: “antes de salir”. A changed subject takes “antes de que + subjunctive”: “antes de que salgas”. Mixing them gives you neither.",
+          sayInstead: "Antes de salir, dejo las llaves."
+        },
+        {
+          mistake: "Para que revisar el techo, necesito las llaves.",
+          whyItFails:
+            "“Para que” must introduce a conjugated subjunctive with its own subject: “para que el técnico revise”. If the subject is the same, use “para + infinitive”: “para revisar”. This is the exact same split as English “so that” versus “in order to”.",
+          sayInstead: "Para revisar el techo, necesito las llaves."
+        }
+      ],
+      variations: [
+        {
+          form: "Cuando llegue el técnico, le aviso.",
+          register: "neutral",
+          region: "Universal Spanish",
+          whenToUse: "A specific future arrival, not yet realized, so “cuando” takes the subjunctive."
+        },
+        {
+          form: "Cuando llega una queja, revisamos fotos.",
+          register: "neutral",
+          region: "Universal Spanish",
+          whenToUse: "A habitual pattern, so “cuando” takes the indicative."
+        },
+        {
+          form: "Aunque está lloviendo, subimos al apartamento.",
+          register: "neutral",
+          region: "Universal Spanish",
+          whenToUse: "Known fact conceded with the indicative after “aunque”."
+        },
+        {
+          form: "Aunque llueva mañana, volvemos a revisar.",
+          register: "neutral",
+          region: "Universal Spanish",
+          whenToUse: "Possible future rain conceded with the subjunctive after “aunque”."
+        },
+        {
+          form: "Antes de salir, deje las llaves; antes de que salga el técnico, firme el acta.",
+          register: "formal",
+          region: "Universal Spanish",
+          whenToUse: "Infinitive for same subject, subjunctive after que when the subject changes."
+        }
+      ],
+      prompt: "The technician has not arrived yet. Which sentence chooses the correct mood after “cuando”?",
+      choices: [
+        "Cuando llegue el técnico, le aviso y revisamos juntos las fotos del techo.",
+        "Cuando llega el técnico, le aviso y revisamos juntos las fotos del techo.",
+        "Cuando llegó el técnico, le aviso y revisamos juntos las fotos del techo."
+      ],
+      answer: 0,
+      practiceExtra: [
+        {
+          prompt: "Which sentence treats the rain as a known fact and concedes it with “aunque”?",
+          choices: [
+            "Aunque llueva en este momento, el proveedor sube a revisar el apartamento ahora mismo.",
+            "Aunque está lloviendo en este momento, el proveedor sube a revisar el apartamento ahora mismo.",
+            "Aunque lloverá en este momento, el proveedor sube a revisar el apartamento ahora mismo."
+          ],
+          answer: 1,
+          tests: "Known fact after “aunque” takes the indicative: “está lloviendo”. The subjunctive would make it a possibility."
+        },
+        {
+          prompt: "Which sentence uses the same-subject infinitive shortcut naturally?",
+          choices: [
+            "Antes de que salir al trabajo, dejo las llaves en portería para el técnico.",
+            "Antes de que salga al trabajo yo, dejo las llaves en portería para el técnico.",
+            "Antes de salir al trabajo, dejo las llaves en portería para el técnico."
+          ],
+          answer: 2,
+          tests: "Same subject uses “antes de + infinitive”: “antes de salir”."
+        },
+        {
+          prompt: "Which sentence uses an always-subjunctive trigger correctly?",
+          choices: [
+            "A menos que el proveedor encuentre otra grieta, autorizamos el sellado temporal hoy.",
+            "A menos que el proveedor encuentra otra grieta, autorizamos el sellado temporal hoy.",
+            "A menos que el proveedor encontrará otra grieta, autorizamos el sellado temporal hoy."
+          ],
+          answer: 0,
+          tests: "“A menos que” always takes the subjunctive: “encuentre”."
+        }
+      ]
+    },
+    en: {
+      title: "When he arrives: cómo el inglés marca tiempo y concesión",
+      situation:
+        "Imagínese en Galveston, Texas, en una oficina de administración de apartamentos durante una mañana de lluvia costera. Usted acompaña a Marina, una colombiana que alquila un apartamento, mientras habla con Andrew, el administrador del edificio, por una filtración en el techo. En español ella pensaría en subjuntivo: “cuando llegue”, “para que revise”, “aunque llueva”. En inglés no existe ese subjuntivo adverbial productivo. La misma precisión se reparte entre tiempos verbales y palabras distintas: present for future time, unless, so that, in order to, although and even if.",
+      setting: {
+        who: "Marina es una inquilina colombiana que necesita reclamar sin sonar agresiva. Andrew es el administrador texano del edificio, cuidadoso con el seguro y con los permisos de entrada al apartamento.",
+        what: "Una negociación por reparación: fotos, visita del técnico, autorización temporal, reporte para el seguro y una concesión firme que no abre una promesa ilimitada.",
+        when: "Una mañana de temporada de tormentas, después de una noche de lluvia fuerte y viento del Golfo, antes de que el contratista revise el techo.",
+        where: "Galveston, Texas, en la oficina de administración de un edificio de apartamentos.",
+        why: "El inglés no marca estas cláusulas con subjuntivo como el español. Para un colombiano de nivel B2, la precisión está en no poner “will” después de when, elegir although o even if, y distinguir so that de in order to."
+      },
+      address: {
+        form: "mixed",
+        who: "Marina y Andrew se tratan por el nombre, con cortesía profesional. El inglés usa el mismo “you” para tú y usted.",
+        why: "La distancia se marca con tono, fórmulas y claridad, no con un pronombre distinto. Por eso este campo es “mixed”: el inglés no obliga a escoger entre tú y usted.",
+        ifYouSwitch:
+          "Si Marina quisiera sonar más formal, no cambiaría “you”. Diría “could you”, “would it be possible” o “I understand, but...”. El pronombre queda igual."
+      },
+      dialogue: [
+        {
+          speaker: "Marina",
+          target: "Although it is still raining, I need someone to come up today so that the damage doesn't spread.",
+          translation: "Aunque todavía está lloviendo, necesito que alguien suba hoy para que el daño no se extienda.",
+          pronunciation: "ol-DÓU it is stil SNÓU-ing, ai nid SÁM-wan tu kom ap tu-DÉI SOU dat de DÁ-mij DÁ-zent spred",
+          literal: "Aunque ello está todavía lloviendo, yo necesito alguien subir hoy para que el daño no se extienda.",
+          why: "“Although” concede un hecho conocido: está lloviendo. “So that” expresa propósito con sujeto nuevo, como “para que”. El inglés no cambia el verbo a subjuntivo; usa la frase y el tiempo normal."
+        },
+        {
+          speaker: "Andrew",
+          target: "You're right: when a complaint like this comes in, we always review photos; when the technician arrives, I'll let you know.",
+          translation: "Tiene razón: cuando llega una queja así, siempre revisamos fotos; cuando llegue el técnico, le aviso.",
+          pronunciation: "yur RAIT: wen a kom-PLÉINT laik dis komz in, wi ÓL-weiz ri-VIU FÓU-touz; wen de tek-NÍ-shan a-RÁIVZ, ail let yu nóu",
+          literal: "Usted está correcto: cuando una queja como esta entra, siempre revisamos fotos; cuando el técnico llega, yo le haré saber.",
+          why: "El inglés usa presente después de “when” para hablar del futuro: “when the technician arrives”, nunca “when he will arrive”. El hábito también usa presente, así que el contexto, not-yet versus routine, hace el trabajo que el subjuntivo hace en español."
+        },
+        {
+          speaker: "Marina",
+          target: "I understand the process, but I can't wait until the insurer replies if the ceiling keeps dripping.",
+          translation: "Entiendo el proceso, pero no puedo esperar hasta que la aseguradora responda si el techo sigue goteando.",
+          pronunciation: "ai an-der-STAND de PRÓ-ses, bat ai kant weit an-TIL de in-SHÚ-rer ri-PLÁIZ if de SÍ-ling kips DRÍ-ping",
+          literal: "Yo entiendo el proceso, pero no puedo esperar hasta la aseguradora responde si el techo sigue goteando.",
+          why: "Después de “until”, el inglés también usa presente para un futuro pendiente: “until the insurer replies”. No use “will reply” en esa cláusula de tiempo."
+        },
+        {
+          speaker: "Andrew",
+          target: "Unless the contractor finds a larger crack, I'll approve a temporary seal as soon as he takes the measurements.",
+          translation: "A menos que el contratista encuentre una grieta mayor, aprobaré un sellado temporal en cuanto tome las medidas.",
+          pronunciation: "an-LES de kon-TRAK-ter faindz a LAR-jer krak, ail a-PRUV a TÉM-po-rer-i sil az SUN az ji teiks de MÉ-zher-ments",
+          literal: "A menos que el contratista encuentra una grieta más grande, yo aprobaré un sellado temporal tan pronto como él toma las medidas.",
+          why: "“Unless” traduce “a menos que” sin subjuntivo visible. “As soon as he takes” usa presente para tiempo futuro, igual que “when” y “until”. La precisión está en la palabra y en no usar “will”."
+        },
+        {
+          speaker: "Marina",
+          target: "Perfect. Before leaving for work, I'll leave the keys; before you leave, please send me the report.",
+          translation: "Perfecto. Antes de salir al trabajo, dejo las llaves; antes de que usted salga, por favor mándeme el acta.",
+          pronunciation: "PER-fekt. bi-FOR LIV-ing for werk, ail liv de kiz; bi-FOR yu liv, pliz send mi de ri-PORT",
+          literal: "Perfecto. Antes de saliendo para trabajo, dejaré las llaves; antes usted sale, por favor envíeme el reporte.",
+          why: "La primera frase refleja “antes de salir”: mismo sujeto, gerundio y ninguna cláusula completa. La segunda refleja “antes de que salga”: sujeto nuevo y verbo conjugado. El inglés marca la diferencia con gerundio o cláusula, no con subjuntivo."
+        },
+        {
+          speaker: "Andrew",
+          target: "Even if it rains again, I won't deny the damage; however much it costs, we have to document it without missing anything.",
+          translation: "Aunque vuelva a llover, no voy a negar el daño; por mucho que cueste, tenemos que documentarlo sin que falte nada.",
+          pronunciation: "Í-ven if it snouz a-GUEN, ai wont di-NÁI de DÁ-mij; jau-É-ver mach it kosts, wi jav tu DÓ-kiu-ment it wi-DÁUT MÍ-sing É-ni-zing",
+          literal: "Incluso si nieva otra vez, no negaré el daño; sin importar cuánto cuesta, tenemos que documentarlo sin faltar nada.",
+          why: "“Even if” concede una posibilidad, donde el español usa “aunque” con subjuntivo. “However much it costs” es la inversión concesiva formal que traduce “por mucho que cueste”."
+        }
+      ],
+      vocabulary: [
+        {
+          term: "when + present for future time",
+          explanation:
+            "El inglés usa presente después de “when” aunque el sentido sea futuro: “When he arrives, I'll call you.” No diga “when he will arrive”. El español marca la diferencia con subjuntivo o indicativo; el inglés la deja al tiempo presente y al contexto.",
+          literal: "cuando + presente",
+          useWhen:
+            "Una llegada, respuesta o firma pendiente: “when the technician arrives”, “when the insurer replies”, “when she signs”.",
+          avoidWhen:
+            "Poner “will” dentro de la cláusula con when: “when he will arrive” solo sirve en preguntas indirectas sobre información, no en cláusulas de tiempo.",
+          register: "neutro",
+          region: "Inglés universal; regla central de exámenes B2.",
+          related: ["until", "as soon as", "once", "after"],
+          example: {
+            target: "When the technician arrives, I'll let you know.",
+            translation: "Cuando llegue el técnico, le aviso."
+          }
+        },
+        {
+          term: "unless",
+          explanation:
+            "“Unless” reemplaza “a menos que”. No lleva un subjuntivo visible ni necesita “will” para el futuro: “Unless he finds a crack, we'll seal it.” Para un colombiano, la tentación es traducir palabra por palabra y sobrecargar la frase.",
+          literal: "a menos que",
+          useWhen:
+            "Una excepción que bloquea el plan: “unless the contractor finds more damage”, “unless the office refuses the claim”.",
+          avoidWhen:
+            "Combinarlo con “not” sin querer: “unless he doesn't come” puede invertir el sentido. Si quiere decir “si no viene”, diga “if he doesn't come”.",
+          register: "neutro",
+          region: "Inglés universal; muy frecuente en instrucciones, contratos y correos.",
+          related: ["if not", "except if", "provided that", "in case"],
+          example: {
+            target: "Unless the contractor finds another crack, we'll approve the seal.",
+            translation: "A menos que el contratista encuentre otra grieta, aprobaremos el sellado."
+          }
+        },
+        {
+          term: "so that / in order to",
+          explanation:
+            "La misma división que “para que / para”. “So that” introduce propósito con sujeto nuevo: “so that the damage doesn't spread”. “In order to” o “to” usa infinitivo cuando el sujeto es el mismo: “in order to document the claim”.",
+          literal: "para que / para",
+          useWhen:
+            "“So that” si cambia el sujeto; “in order to” si el mismo sujeto hace las dos acciones.",
+          avoidWhen:
+            "Usar “for that” como calco de “para que”. En inglés estándar es “so that”, no “for that the insurer can see it”.",
+          register: "neutro a formal",
+          region: "Inglés universal; “in order to” suena más formal que simple “to”.",
+          related: ["to", "so as to", "so", "in order that"],
+          example: {
+            target: "I took photos so that the insurer could see the damage.",
+            translation: "Tomé fotos para que la aseguradora pudiera ver el daño."
+          }
+        },
+        {
+          term: "although / even if",
+          explanation:
+            "El inglés separa lo que el español une en “aunque”. “Although” o “even though” concede un hecho: “Although it is raining”. “Even if” concede una posibilidad: “Even if it rains”. No hay cambio de modo; cambia la palabra.",
+          literal: "aunque hecho / aunque posibilidad",
+          useWhen:
+            "“Although” para hechos conocidos; “even if” para hipótesis, condiciones futuras o puntos no confirmados.",
+          avoidWhen:
+            "Usar “although” para una posibilidad futura porque en español ambas salen con “aunque”. Si todavía no pasó, piense primero en “even if”.",
+          register: "neutro",
+          region: "Inglés universal; contraste clave para B2.",
+          related: ["even though", "though", "even so", "whether or not"],
+          example: {
+            target: "Although it is raining, we'll come up; even if it rains again, we'll return.",
+            translation: "Aunque está lloviendo, subiremos; aunque vuelva a llover, volveremos."
+          }
+        },
+        {
+          term: "before / after / without + -ing",
+          explanation:
+            "El atajo de mismo sujeto se hace con gerundio: “before leaving”, “after signing”, “without arguing”. Si el sujeto cambia, use una cláusula completa: “before you leave”, “after he signs”. No hay subjuntivo que mostrar.",
+          literal: "antes de / después de / sin + infinitivo",
+          useWhen:
+            "La misma persona hace ambas acciones: “Before leaving, I'll leave the keys”; “After signing, I sent the report”.",
+          avoidWhen:
+            "Cambiar de sujeto sin cambiar a cláusula. “Before you leaving” no funciona; diga “before you leave”.",
+          register: "neutro",
+          region: "Inglés universal; más ligero y natural que una cláusula innecesaria.",
+          related: ["before you leave", "after he signs", "in order to", "while"],
+          example: {
+            target: "Before leaving for work, I'll leave the keys downstairs.",
+            translation: "Antes de salir al trabajo, dejaré las llaves abajo."
+          }
+        },
+        {
+          term: "however hard / however much",
+          explanation:
+            "Concesión formal para “por más que / por mucho que”. “However hard it rains” y “however much it costs” suenan de lectura B2, ensayo y correo formal. El orden parece raro porque “however” arrastra el adjetivo o adverbio al frente.",
+          literal: "por más que / por mucho que",
+          useWhen:
+            "Conceder grado o esfuerzo en registro cuidado: “However hard it rains, we'll inspect it”; “However much it costs, document it.”",
+          avoidWhen:
+            "Calcar “for more that” o “by much that”. En conversación simple, “no matter how hard” puede sonar más natural.",
+          register: "formal",
+          region: "Inglés universal escrito; muy útil en exámenes y lectura académica.",
+          related: ["no matter how", "much as", "even if", "regardless of"],
+          example: {
+            target: "However hard it rains, the contractor has to inspect the roof.",
+            translation: "Por más que llueva, el contratista tiene que revisar el techo."
+          }
+        },
+        {
+          term: "much as + clause",
+          explanation:
+            "Otra inversión concesiva formal: “Much as I'd like to help, I can't approve it yet.” Equivale a “por mucho que quisiera” o “aunque me gustaría”. Es útil para conceder una intención buena mientras mantiene un límite.",
+          literal: "por mucho que / aunque",
+          useWhen:
+            "Quiere sonar cortés y firme: reconocer una razón o deseo antes de negar una acción.",
+          avoidWhen:
+            "Habla informal rápida. En una conversación común, “Even though I'd like to help” es más transparente.",
+          register: "formal",
+          region: "Inglés universal escrito y profesional.",
+          related: ["however much", "although", "even though", "as much as"],
+          example: {
+            target: "Much as I'd like to approve it today, I need the report first.",
+            translation: "Por mucho que quisiera aprobarlo hoy, necesito primero el informe."
+          }
+        }
+      ],
+      note:
+        "El inglés no tiene un subjuntivo adverbial productivo como el español de “cuando llegue”, “hasta que responda” o “aunque llueva”. La precisión se mueve a otros lugares. Primero, en cláusulas de tiempo con “when”, “until”, “as soon as”, “after” y “before”, el inglés usa presente para hablar del futuro: “When he arrives, I'll call you”, no “when he will arrive”. Ese presente sirve también para hábitos, “when he arrives, he always says hello”, así que el contexto decide. Segundo, donde el español usa un solo “aunque” con dos modos, el inglés suele separar: “although / even though” para un hecho conocido, “even if” para una posibilidad. Tercero, “unless” traduce “a menos que” sin añadir subjuntivo visible. Cuarto, “so that” frente a “in order to” copia muy bien “para que” frente a “para”: sujeto nuevo con “so that”, mismo sujeto con infinitivo. Para lectura B2, reconozca las concesiones formales: “however hard it rains”, “however much it costs”, y “Much as I'd like to help”. Todas conceden algo, pero mantienen la línea principal.",
+      culture: [
+        {
+          label: "No diga “when he will arrive”",
+          body:
+            "Esta es una de las correcciones más rentables para un colombiano. En español el subjuntivo marca que la llegada no ha ocurrido: “cuando llegue”. En inglés, la cláusula de tiempo usa presente: “when he arrives”. El “will” queda en la oración principal: “I'll call you.” Solo use “when he will arrive” si “when” significa “cuándo” en una pregunta indirecta, como “I don't know when he will arrive”. Esa es otra estructura."
+        },
+        {
+          label: "Although no es siempre aunque",
+          body:
+            "Como el español usa “aunque” para hechos y posibilidades, muchos estudiantes ponen “although” en los dos casos. El inglés prefiere separar. “Although it is raining” concede un hecho que usted ve por la ventana. “Even if it rains again” concede algo que puede pasar o no. Esa distinción reemplaza el contraste indicativo-subjuntivo de “aunque está lloviendo” frente a “aunque llueva”."
+        },
+        {
+          label: "El mapa exacto de para",
+          body:
+            "“So that” e “in order to” son un espejo muy útil. Si en español diría “para que la aseguradora vea”, en inglés diga “so that the insurer can see”. Si diría “para documentar”, diga “to document” o “in order to document”. No use “for that” como si fuera “para que”. Ese calco se entiende a veces, pero suena extranjero y baja mucho el nivel de escritura."
+        },
+        {
+          label: "Concesión formal de examen",
+          body:
+            "En lectura B2 aparecen formas que no siempre salen en conversación: “However hard it rains”, “However much it costs”, “Much as I'd like to help”. Todas empiezan concediendo algo y luego mantienen la decisión. Son útiles en cartas, quejas y ensayos porque suenan firmes sin sonar bruscas. Si las reconoce, no se pierde cuando el inglés pone la palabra de grado al frente y deja el verbo después."
+        }
+      ],
+      pitfalls: [
+        {
+          mistake: "When the technician will arrive, I will let you know.",
+          whyItFails:
+            "En cláusulas de tiempo, el inglés usa presente para hablar del futuro: “when the technician arrives”. El “will” va en la oración principal. “When he will arrive” solo funciona como pregunta indirecta: “I don't know when he will arrive.”",
+          sayInstead: "When the technician arrives, I will let you know."
+        },
+        {
+          mistake: "Although it rains again tonight, we will inspect the roof.",
+          whyItFails:
+            "La lluvia de esta noche es una posibilidad, no un hecho conocido. En inglés esa concesión pide “even if”, no “although”. El español lo resuelve con subjuntivo después de “aunque”; el inglés lo resuelve cambiando la palabra.",
+          sayInstead: "Even if it rains again tonight, we will inspect the roof."
+        },
+        {
+          mistake: "I took photos for that the insurer can see the damage.",
+          whyItFails:
+            "“For that” calca “para que”, pero no es la forma inglesa. Con sujeto nuevo use “so that”: “so that the insurer can see”. Con el mismo sujeto use “to” o “in order to”: “to document the claim”.",
+          sayInstead: "I took photos so that the insurer can see the damage."
+        },
+        {
+          mistake: "Before you leaving, please send me the report.",
+          whyItFails:
+            "Si el sujeto cambia, el inglés necesita una cláusula completa: “before you leave”. El gerundio sirve para mismo sujeto: “Before leaving, I sent the report.” Mezclar “you” con “leaving” en esta frase suena incorrecto.",
+          sayInstead: "Before you leave, please send me the report."
+        }
+      ],
+      variations: [
+        {
+          form: "When the technician arrives, I'll let you know.",
+          register: "neutro",
+          region: "Inglés universal",
+          whenToUse: "Futuro después de “when”, pero con presente en la cláusula de tiempo."
+        },
+        {
+          form: "Although it is raining, someone will come up today.",
+          register: "neutro",
+          region: "Inglés universal",
+          whenToUse: "Conceder un hecho conocido, equivalente a “aunque” con indicativo."
+        },
+        {
+          form: "Even if it rains again, someone will come up today.",
+          register: "neutro",
+          region: "Inglés universal",
+          whenToUse: "Conceder una posibilidad, equivalente a “aunque” con subjuntivo."
+        },
+        {
+          form: "Before leaving, I'll leave the keys downstairs.",
+          register: "neutro",
+          region: "Inglés universal",
+          whenToUse: "Mismo sujeto, con gerundio después de before."
+        },
+        {
+          form: "Much as I'd like to approve it today, I need the report first.",
+          register: "formal",
+          region: "Inglés universal escrito",
+          whenToUse: "Concesión formal que reconoce una voluntad y mantiene un límite."
+        }
+      ],
+      prompt: "El técnico no ha llegado todavía. ¿Cuál frase inglesa expresa “cuando llegue el técnico” correctamente?",
+      choices: [
+        "When the technician will arrive, I will let you know and send the report.",
+        "When the technician arrives, I will let you know and send the report.",
+        "When the technician arrived, I will let you know and send the report."
+      ],
+      answer: 1,
+      practiceExtra: [
+        {
+          prompt: "La lluvia de mañana es una posibilidad, no un hecho. ¿Cuál concesión es natural?",
+          choices: [
+            "Although it rains again tomorrow, the contractor will inspect the roof in the morning.",
+            "Even it rains again tomorrow, the contractor will inspect the roof in the morning.",
+            "Even if it rains again tomorrow, the contractor will inspect the roof in the morning."
+          ],
+          answer: 2,
+          tests: "Para posibilidad futura, el inglés usa “even if”, no “although”."
+        },
+        {
+          prompt: "¿Cuál oración refleja “para que” con sujeto nuevo sin calcar el español?",
+          choices: [
+            "I took photos so that the insurer can see the damage clearly in the claim.",
+            "I took photos for that the insurer can see the damage clearly in the claim.",
+            "I took photos in order to the insurer can see the damage clearly in the claim."
+          ],
+          answer: 0,
+          tests: "Con sujeto nuevo, use “so that”. “In order to” pide infinitivo con el mismo sujeto."
+        },
+        {
+          prompt: "¿Cuál versión usa una concesión formal de lectura B2?",
+          choices: [
+            "Hard however it rains, the contractor has to inspect the roof before noon today.",
+            "However hard it rains, the contractor has to inspect the roof before noon today.",
+            "However it rains hard, the contractor has to inspect the roof before noon today."
+          ],
+          answer: 1,
+          tests: "La inversión concesiva formal es “however hard it rains”."
         }
       ]
     }

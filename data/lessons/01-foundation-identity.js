@@ -11,6 +11,11 @@
  * taught rather than merely listed. test/shape.test.js checks that the verb
  * exists and that no two lessons claim the same one.
  *
+ * This block now also includes one GRAMMAR lesson on ser-vs-estar, because ser
+ * and estar appear on nearly every page while no lesson contrasts them. It
+ * teaches the decision as identity versus state, with the adjective pairs that
+ * change meaning.
+ *
  * The two directions are mirrors: same number of dialogue turns, same number of
  * vocabulary entries, same number of culture notes, pitfalls, variations and
  * practice questions, and the same optional slots filled on the same rows. That
@@ -665,6 +670,658 @@ lessons.push(
           ],
           answer: 1,
           tests: "el artículo antes de una profesión en singular"
+        }
+      ]
+    }
+  },
+  {
+    id: "choosing-ser-and-estar-at-the-juice-counter",
+    level: "Starter · Who you are",
+    skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context", "grammar"],
+    domain: "everyday-life",
+    register: "familiar",
+    pathways: ["foundation", "year-12"],
+    structure: "ser-vs-estar",
+    review: "pending",
+    es: {
+      title: "Choosing between ser and estar",
+      situation:
+        "Jamie is helping at a neighborhood juice counter in Montería, Córdoba, during a fundraiser for a school trip. The fruit is ripe, the volunteers are tired in the hot morning, and the printed sign has two embarrassing mistakes: 'Estoy americano' and 'Soy cansado'. Luz, the organizer, fixes the sign with him before customers arrive, because the whole morning depends on people sounding clear and welcoming.",
+      setting: {
+        who: "Luz is a parent volunteer who knows the menu, the children, and the rhythm of the fundraiser. Jamie is an English-speaking exchange student who can already say simple Spanish sentences but still treats every English 'am' as the same Spanish verb.",
+        what: "A fast correction at a juice counter: identity, origin, material, job, location, condition, changed result, and the adjective pairs that flip meaning with ser or estar.",
+        when: "Saturday morning before the first rush, while the blenders are clean and the mangoes are being cut.",
+        where: "Montería, Córdoba, at a school fundraiser set up beside a small neighborhood park.",
+        why: "The signs and spoken offers have to be right before real customers arrive. If Jamie says the wrong verb, he may still be understood, but he will say that someone is boring instead of bored, clever instead of ready, or American as a temporary condition instead of an identity."
+      },
+      address: {
+        form: "tú",
+        who: "Luz uses tú with Jamie, and Jamie uses tú with her.",
+        why: "They are working side by side as volunteers, close in age to the students around them, and Luz is coaching rather than interviewing him. Tú keeps the correction friendly and quick.",
+        ifYouSwitch:
+          "Usted would still be polite, but it would slow the scene down and make the coaching feel like a formal class. Vos would be understood in parts of Colombia, but it is not needed here; the grammar lesson is hard enough without adding a local second-person form."
+      },
+      dialogue: [
+        {
+          speaker: "Luz",
+          target: "Antes de abrir, mira el letrero: tú eres americano, no estás americano.",
+          translation: "Before we open, look at the sign: you are American, you are not temporarily American.",
+          pronunciation: "AN-tes deh a-BREER, MEE-ra el leh-TREH-roh: too EH-res a-meh-ree-KAH-noh, no es-TAS a-meh-ree-KAH-noh",
+          literal: "Before of opening, look the sign: you are American, not you-are American.",
+          why: "Nationality is identity, so it takes ser. English uses 'are' for both identity and state, but Spanish does not. 'Estoy americano' sounds as if American were a condition you woke up with today."
+        },
+        {
+          speaker: "Jamie",
+          target: "Entonces digo: soy americano y estoy cansado; no soy cansado.",
+          translation: "So I say: I'm American and I'm tired; I'm not a tiring person.",
+          pronunciation: "en-TON-ses DEE-goh: soy a-meh-ree-KAH-noh ee es-TOY kan-SAH-doh; no soy kan-SAH-doh",
+          literal: "Then I-say: I-am American and I-am tired; not I-am tired/tiring.",
+          why: "This is the English-speaker trap in one line. 'Soy americano' is right because origin and nationality are identity. 'Estoy cansado' is right because tiredness is a condition. 'Soy cansado' says you are tiresome."
+        },
+        {
+          speaker: "Luz",
+          target: "Exacto. ¿Cómo eres? pregunta por tu carácter; ¿cómo estás? pregunta por hoy.",
+          translation: "Exactly. What are you like? asks about your character; how are you? asks about today.",
+          pronunciation: "eg-SAK-toh. KOH-moh EH-res preh-GOON-ta por too ka-RAK-ter; KOH-moh es-TAS preh-GOON-ta por oy",
+          literal: "Exact. How are you? asks for your character; how are you? asks for today.",
+          why: "The two questions are not interchangeable. '¿Cómo eres?' wants an inherent description: serious, funny, shy. '¿Cómo estás?' wants a state the speaker could notice today and not tomorrow."
+        },
+        {
+          speaker: "Jamie",
+          target: "Mi primo es aburrido, pero hoy está aburrido esperando la buseta.",
+          translation: "My cousin is boring, but today he is bored waiting for the bus.",
+          pronunciation: "mee PREE-moh es a-boo-RREE-doh, PEH-roh oy es-TAH a-boo-RREE-doh es-peh-RAN-doh la boo-SEH-ta",
+          literal: "My cousin is boring, but today he-is bored waiting the little bus.",
+          why: "The same adjective flips meaning. With ser, 'aburrido' is a characteristic you assign to the person. With estar, it is the state he is in right now. The line also uses estar plus a gerund: 'está esperando', the everyday progressive."
+        },
+        {
+          speaker: "Luz",
+          target: "Y Carlos es listo, pero todavía no está listo para cobrar.",
+          translation: "And Carlos is clever, but he is still not ready to take payments.",
+          pronunciation: "ee KAR-los es LEES-toh, PEH-roh toh-dah-BEE-ah no es-TAH LEES-toh PA-ra koh-BRAR",
+          literal: "And Carlos is clever, but still not he-is ready for charging.",
+          why: "'Ser listo' praises intelligence. 'Estar listo' means ready. That pair is one of the exam favorites because English says 'is' both times and gives you no warning."
+        },
+        {
+          speaker: "Jamie",
+          target: "El dueño es rico, pero el jugo está rico; el mango es verde y este mango está verde.",
+          translation: "The owner is wealthy, but the juice is delicious; the mango is green and this mango is unripe.",
+          pronunciation: "el DWEH-nyoh es RREE-koh, PEH-roh el HOO-goh es-TAH RREE-koh; el MAN-goh es BER-deh ee ES-teh MAN-goh es-TAH BER-deh",
+          literal: "The owner is rich, but the juice is tasty; the mango is green and this mango is green/unripe.",
+          why: "Two more meaning flips sit back to back. 'Ser rico' usually means wealthy for a person; 'estar rico' means tasty. 'Ser verde' names the color; 'estar verde' says fruit is not ripe yet."
+        },
+        {
+          speaker: "Luz",
+          target: "Si Andrés es malo, no lo invitemos; si está malo, le damos agua. Y ojo: Juan es vivo, pero el pez está vivo.",
+          translation: "If Andrés is bad, let's not invite him; if he is sick, we give him water. And careful: Juan is sharp, but the fish is alive.",
+          pronunciation: "see an-DRES es MAH-loh, no lo een-bee-TEH-mos; see es-TAH MAH-loh, leh DAH-mos AH-gwah. ee OH-hoh: hwan es BEE-boh, PEH-roh el pes es-TAH BEE-boh",
+          literal: "If Andrés is bad, not him let's-invite; if he-is bad/sick, to-him we-give water. And eye: Juan is alive/sharp, but the fish is alive.",
+          why: "'Ser malo' is bad in character or quality. 'Estar malo' usually means sick or in bad condition. 'Ser vivo' can mean sharp, clever, or street-smart; 'estar vivo' means alive."
+        },
+        {
+          speaker: "Jamie",
+          target: "Entonces: Luz es buena organizadora, el salpicón está bueno, la reunión es en el salón y el salón está al lado.",
+          translation: "So: Luz is a good organizer, the fruit salad is tasty, the meeting is in the room, and the room is next door.",
+          pronunciation: "en-TON-ses: loos es BWEH-nah or-gah-nee-sah-DOH-rah, el sal-pee-KON es-TAH BWEH-noh, la rreh-oo-NYON es en el sah-LON ee el sah-LON es-TAH al LAH-doh",
+          literal: "Then: Luz is good organizer, the fruit salad is good/tasty, the meeting is in the room and the room is to-the side.",
+          why: "This final line adds the genuine exception English speakers never guess. The location of an event uses ser: 'la reunión es en el salón'. The location of a thing uses estar: 'el salón está al lado'. 'Ser bueno' is good by character or quality; 'estar bueno' is tasty or attractive."
+        }
+      ],
+      vocabulary: [
+        {
+          term: "ser",
+          explanation:
+            "Ser is the verb for identity and definition. Use it for who or what something is, where someone is from, what something is made of, whose it is, what time or date it is, a profession, and characteristics the speaker presents as inherent. The word 'permanent' is a shortcut, not the rule: a job can change, but Spanish still treats the profession as identity when you say 'soy profesor'.",
+          literal: "to be, as identity",
+          useWhen:
+            "Naming a person, classifying an object, giving origin, material, possession, profession, time, date, or a quality you are presenting as part of what the person or thing is.",
+          avoidWhen:
+            "The idea is location, health, mood, readiness, taste today, or a result of a change. Those are states, and states normally take estar.",
+          register: "neutral",
+          region: "Universal Spanish. In Colombia, 'ser de' is the ordinary way to give origin, as in 'soy de Montería', and also material, as in 'la mesa es de madera'.",
+          related: ["estar", "ser de", "ser para", "es de madera"],
+          example: {
+            target: "Soy americano y la mesa es de madera.",
+            translation: "I'm American and the table is made of wood."
+          }
+        },
+        {
+          term: "estar",
+          explanation:
+            "Estar is the verb for location and state. It covers where a thing is, how someone feels, health, readiness, condition, and the result of a change. It is also the obligatory helper for the progressive: estar plus a gerund, as in 'está esperando' or 'estoy trabajando'. If you can honestly add 'today' or 'right now', estar is probably nearby.",
+          literal: "to be, as state",
+          useWhen:
+            "Saying where a person or thing is, how someone feels, whether food tastes good today, whether fruit is ripe, or what action is in progress.",
+          avoidWhen:
+            "Giving nationality, origin, profession, material, ownership, time, date, or a definition. Those belong to ser even if English uses the same 'is'.",
+          register: "neutral",
+          region: "Universal Spanish. Colombian everyday speech uses estar plus a gerund constantly: 'estoy llegando', 'estamos mirando', 'está lloviendo'.",
+          related: ["estoy", "está", "estar de", "estar + gerundio"],
+          example: {
+            target: "Estoy cansado y Carlos está cobrando.",
+            translation: "I'm tired and Carlos is taking payments."
+          }
+        },
+        {
+          term: "ser de",
+          explanation:
+            "A compact structure for origin and material. With a place, it means someone or something is from there. With a substance, it means something is made of that material. In both uses, Spanish chooses ser because it is classifying the thing, not describing where it happens to be at the moment.",
+          literal: "to be from / to be made of",
+          useWhen:
+            "Saying 'soy de Estados Unidos', 'el jugo es de mango', or 'la mesa es de madera'. It answers what identity or material label belongs to the person or thing.",
+          avoidWhen:
+            "You mean physical location. 'Estoy en Montería' means I am in Montería right now; 'soy de Montería' means Montería is my origin.",
+          register: "neutral",
+          region: "Very common in Colombia for both origin and material, and safer than trying to translate 'from' with a location verb.",
+          related: ["de madera", "de mango", "de Montería", "hecho de"],
+          example: {
+            target: "El vaso es de vidrio, pero está en la mesa.",
+            translation: "The glass is made of glass, but it is on the table."
+          }
+        },
+        {
+          term: "estar de",
+          explanation:
+            "A Colombian-friendly way to name a temporary role: 'está de profesor', 'estoy de cajero', 'ella está de guía'. The person may not be defined by that job, but is filling that role for the moment. It is not the same as 'soy profesor', which presents teaching as a profession or identity.",
+          literal: "to be as / to be serving as",
+          useWhen:
+            "Someone is temporarily acting as cashier, teacher, driver, guide, or organizer. It is especially useful in events, shifts, and family favors.",
+          avoidWhen:
+            "The role is the person's profession or stable identity. Then use ser: 'es profesora', 'soy médico', 'somos estudiantes'.",
+          register: "neutral informal",
+          region: "Natural in Colombian Spanish and widely understood. It sounds practical rather than textbook-like.",
+          related: ["hacer de", "trabajar como", "ser profesor", "estar encargado"],
+          example: {
+            target: "Hoy Carlos está de cajero, pero es estudiante.",
+            translation: "Today Carlos is acting as cashier, but he is a student."
+          }
+        },
+        {
+          term: "estar + gerundio",
+          explanation:
+            "The progressive: a form of estar plus a gerund ending in -ando or -iendo. It is obligatory when you mean an action in progress, not just a habit. 'Estoy esperando' is 'I am waiting'; 'espero' can mean 'I wait', 'I hope', or 'I expect'. The helper is always estar, never ser.",
+          literal: "to be + doing",
+          useWhen:
+            "Describing what is happening now, what someone is in the middle of doing, or what the weather is doing right now.",
+          avoidWhen:
+            "You mean a general routine. 'Trabajo los sábados' is a habit; 'estoy trabajando' is what is happening at this moment.",
+          register: "neutral",
+          region: "Extremely common in everyday Colombian speech, sometimes more common than English speakers expect from textbook Spanish.",
+          related: ["estoy trabajando", "está esperando", "estamos vendiendo", "gerundio"],
+          example: {
+            target: "Mi primo está esperando la buseta.",
+            translation: "My cousin is waiting for the bus."
+          }
+        },
+        {
+          term: "adjectives that change",
+          explanation:
+            "Some adjectives do not merely move from permanent to temporary; they change meaning. 'Aburrido' is boring with ser and bored with estar. 'Listo' is clever with ser and ready with estar. 'Rico' is wealthy with ser and delicious with estar. These pairs are the heart of the lesson because English gives you one verb and hides the contrast.",
+          literal: "adjectives that change",
+          useWhen:
+            "You want to decide whether the adjective is a trait or a state before you speak. Ask whether you mean what the person or thing is like, or how it is today.",
+          avoidWhen:
+            "Memorizing the pairs as random vocabulary without asking the identity-versus-state question. That works for a quiz and fails in conversation.",
+          register: "neutral",
+          region: "Universal Spanish, with Colombian examples like 'el jugo está rico' heard everywhere a drink is being offered.",
+          related: ["aburrido", "listo", "rico", "verde"],
+          example: {
+            target: "Carlos es listo, pero no está listo.",
+            translation: "Carlos is clever, but he is not ready."
+          }
+        },
+        {
+          term: "event with ser, thing with estar",
+          explanation:
+            "Spanish makes one exception that surprises English speakers: the location of an event uses ser, while the location of a thing uses estar. A meeting, class, party, concert, or appointment is treated as scheduled, so 'la reunión es en el salón'. The room itself is a thing, so 'el salón está al lado'.",
+          literal: "event with ser, thing with estar",
+          useWhen:
+            "Giving the place of a scheduled event, then describing where a physical object or room is. This contrast appears constantly in plans.",
+          avoidWhen:
+            "Using estar for every location because you learned 'location equals estar'. That shortcut fails exactly when the located item is an event.",
+          register: "neutral",
+          region: "Universal Spanish and very relevant in Colombian schools, offices, clinics, and apartment buildings where people are always asking where the meeting is.",
+          related: ["la reunión es", "la clase es", "el salón está", "la fiesta es"],
+          example: {
+            target: "La reunión es en el salón y el salón está al lado.",
+            translation: "The meeting is in the room and the room is next door."
+          }
+        }
+      ],
+      note:
+        "A usable rule beats a memorized list. Use ser for identity, definition, origin, material, possession, profession, time, date, and characteristics the speaker presents as inherent. Use estar for location, condition, health, readiness, the result of a change, and anything framed as a state you could notice today and not tomorrow. Then add three high-value details. First, estar is the helper for the progressive: 'estoy trabajando', never 'soy trabajando'. Second, Colombian Spanish uses 'estar de' for a temporary role, such as 'Carlos está de cajero hoy', while 'ser de' gives origin or material. Third, events break the simple location rule: 'la reunión es en el salón', but 'el salón está al lado'.",
+      culture: [
+        {
+          label: "The English trap is real",
+          body:
+            "English gives you one verb, 'to be', then asks context to carry everything. Spanish forces the choice into the verb. That is why 'Estoy americano' and 'Soy cansado' are both wrong for opposite reasons. The first turns identity into a temporary condition. The second turns a temporary condition into a personality trait. Colombians usually understand the intended meaning, but they also hear the wrong frame immediately."
+        },
+        {
+          label: "Food makes estar visible",
+          body:
+            "A juice counter is a perfect place to hear estar because taste, ripeness, and readiness change quickly. 'El jugo está rico' means it tastes good now. 'El mango está verde' means it is not ripe yet. The same words with ser classify: 'es rico' can mean wealthy, and 'es verde' names the color. Food gives learners a daily reason to practice the decision."
+        },
+        {
+          label: "Progressives are everyday speech",
+          body:
+            "Some textbooks make the Spanish progressive sound limited, as if Colombians avoid it unless an action is happening this exact second. Real everyday speech uses it constantly: 'estoy llegando', 'estamos mirando', 'está lloviendo', 'están vendiendo jugo'. Do not replace it with ser. The helper for an action in progress is always estar."
+        },
+        {
+          label: "Temporary roles need their own frame",
+          body:
+            "In a fundraiser, people fill roles that are not their identities. A student can be 'de cajero' for the morning, a parent can be 'de profesora' for one activity, and a neighbor can be 'de conductor' for the trip. 'Estar de' lets you say that cleanly. If you say 'es cajero', you are more likely naming the person's job."
+        }
+      ],
+      pitfalls: [
+        {
+          mistake: "Saying 'Estoy americano.'",
+          whyItFails:
+            "Nationality and origin are identity, not a condition. Estar makes it sound as if being American is a temporary state, like being tired or ready.",
+          sayInstead: "Soy americano."
+        },
+        {
+          mistake: "Saying 'Soy cansado.'",
+          whyItFails:
+            "Tiredness is a condition, not identity. With ser, 'cansado' points toward being tiresome, the kind of person who wears others out.",
+          sayInstead: "Estoy cansado."
+        },
+        {
+          mistake: "Treating '¿Cómo eres?' and '¿Cómo estás?' as the same question",
+          whyItFails:
+            "One asks what you are like as a person; the other asks how you are today. Answering 'soy bien' or 'estoy simpático' misses the question being asked.",
+          sayInstead: "Soy tranquilo. Estoy bien."
+        },
+        {
+          mistake: "Saying 'La reunión está en el salón.'",
+          whyItFails:
+            "Physical things use estar for location, but scheduled events use ser. This is the exception to the beginner shortcut 'location equals estar'.",
+          sayInstead: "La reunión es en el salón."
+        }
+      ],
+      variations: [
+        {
+          form: "Soy de Montería, pero hoy estoy en el colegio.",
+          register: "neutral",
+          region: "General Colombian",
+          whenToUse: "Contrasting origin with current location. This is the cleanest way to feel 'ser de' versus 'estar en'."
+        },
+        {
+          form: "Carlos está de cajero hoy, pero es estudiante.",
+          register: "friendly informal",
+          region: "General Colombian",
+          whenToUse: "Explaining a temporary role at an event without turning it into the person's identity."
+        },
+        {
+          form: "La clase es en el salón grande; el salón está al fondo.",
+          register: "neutral",
+          region: "Universal Spanish",
+          whenToUse: "Giving the location of an event and then the location of the room itself."
+        },
+        {
+          form: "Ese muchacho es vivo, y el pescado todavía está vivo.",
+          register: "friendly informal",
+          region: "General Colombian",
+          whenToUse: "Showing how one adjective can praise a sharp person or describe a living animal, depending on the verb."
+        }
+      ],
+      prompt: "Which sentence correctly separates identity from condition?",
+      choices: [
+        "Soy americano y estoy cansado.",
+        "Estoy americano y soy cansado.",
+        "Estoy cansado y soy listo para salir."
+      ],
+      answer: 0,
+      practiceExtra: [
+        {
+          prompt: "You want to say Carlos is clever, but he is not ready. Which Spanish sentence fits?",
+          choices: [
+            "Carlos está listo, pero no es listo.",
+            "Carlos es listo, pero no está listo.",
+            "Carlos es listo, pero no está verde."
+          ],
+          answer: 1,
+          tests: "ser listo as clever, estar listo as ready"
+        },
+        {
+          prompt: "Which sentence gives an event location and a thing location correctly?",
+          choices: [
+            "La reunión está en el salón y el salón es al lado.",
+            "El salón es en la reunión y la reunión está al lado.",
+            "La reunión es en el salón y el salón está al lado."
+          ],
+          answer: 2,
+          tests: "events use ser for location, things use estar"
+        },
+        {
+          prompt: "What does 'El jugo está rico' mean at the counter?",
+          choices: [
+            "The juice tastes good right now.",
+            "The juice owns a lot of money.",
+            "The juice comes from a rich owner."
+          ],
+          answer: 0,
+          tests: "estar rico as tasty rather than wealthy"
+        }
+      ]
+    },
+    en: {
+      title: "Un solo verbo no resuelve todo",
+      situation:
+        "Mariana está en Houston, Texas, ayudando en una feria universitaria de comida colombiana. Va a hablar con visitantes en inglés y se da cuenta de que 'ser' y 'estar' se vuelven un solo 'be'. Theo, un voluntario local, le muestra la otra mitad del problema: el inglés junta lo que el español separa, pero separa hambre, edad y clima donde el español usa tener o hacer.",
+      setting: {
+        who: "Theo es un voluntario local que organiza la mesa de bebidas. Mariana es una estudiante colombiana que habla buen inglés, pero todavía traduce desde ser, estar, tener y hacer como si cada verbo tuviera una pareja fija.",
+        what: "Una preparación antes de atender visitantes: cómo el inglés colapsa ser y estar en 'be', y cómo luego obliga a decir 'I am hungry', 'I am 30' y 'it is cold' donde el español no usa ser ni estar.",
+        when: "Un sábado por la mañana, antes de que lleguen los primeros visitantes a la feria.",
+        where: "Houston, Texas, en el vestíbulo de una universidad durante una feria multicultural.",
+        why: "Mariana necesita sonar natural al describirse, describir la comida y contestar preguntas básicas. El error no es sólo escoger mal 'be'; es creer que todos los usos españoles de tener y hacer se traducen con have y make."
+      },
+      address: {
+        form: "mixed",
+        who: "Theo y Mariana usan 'you' para todo, sin cambiar de pronombre aunque pasen de una corrección amistosa a una instrucción más seria.",
+        why: "El inglés no tiene contraste productivo entre tú y usted. La cercanía o la formalidad se marca con tono, nombres de pila, 'please', frases completas y modales como 'could', no con otro pronombre.",
+        ifYouSwitch:
+          "No hay un cambio de pronombre que haga el trabajo de usted. Si Mariana quiere sonar más formal, debe alargar la frase: 'Could you help me, please?' en vez de 'Help me'."
+      },
+      dialogue: [
+        {
+          speaker: "Theo",
+          target: "Before we open, remember: you are Colombian, and you are not temporarily Colombian.",
+          translation: "Antes de abrir, recuerde: usted es colombiana, y no está colombiana temporalmente.",
+          pronunciation: "bi-FOR ui OU-pen, ri-MEM-ber: yu ar ko-LOM-bi-an, and yu ar not tem-po-RE-ri-li ko-LOM-bi-an",
+          literal: "Antes de abrir, recuerde: usted es colombiana, y usted no es temporalmente colombiana.",
+          why: "El inglés usa el mismo 'are' para lo que en español sería ser y estar. No hay una forma distinta para identidad; el adjetivo y el contexto hacen el trabajo."
+        },
+        {
+          speaker: "Mariana",
+          target: "So I say: I am Colombian and I am tired, with the same verb.",
+          translation: "Entonces digo: soy colombiana y estoy cansada, con el mismo verbo.",
+          pronunciation: "sou ai sei: ai am ko-LOM-bi-an and ai am TAI-erd, uid da seim verb",
+          literal: "Entonces digo: yo soy colombiana y yo soy cansada, con el mismo verbo.",
+          why: "Aquí el problema se invierte. En español son dos decisiones opuestas; en inglés ambas salen con 'am'. La diferencia la ponen las palabras 'Colombian' y 'tired', no el verbo."
+        },
+        {
+          speaker: "Theo",
+          target: "Exactly. 'What are you like?' and 'How are you?' are different questions.",
+          translation: "Exacto. '¿Cómo es usted?' y '¿Cómo está usted?' son preguntas distintas.",
+          pronunciation: "eg-ZAKT-li. uat ar yu laik? and jau ar yu? ar DIF-rent KUES-chons",
+          literal: "Exactamente. ¿Qué es usted como? y ¿cómo es usted? son preguntas diferentes.",
+          why: "El inglés tampoco deja todo al verbo. 'What are you like?' pregunta por carácter o descripción. 'How are you?' pregunta por estado, saludo o salud."
+        },
+        {
+          speaker: "Mariana",
+          target: "My cousin is boring, but today he is bored waiting for the bus.",
+          translation: "Mi primo es aburrido, pero hoy está aburrido esperando el bus.",
+          pronunciation: "mai KO-sin iz BOR-ing, bat tu-DEI ji iz bord WEI-ting for da bas",
+          literal: "Mi primo es aburridor, pero hoy él es aburrido esperando por el bus.",
+          why: "El inglés no cambia el verbo, pero sí cambia el adjetivo. 'Boring' describe lo que alguien causa en otros; 'bored' describe cómo se siente. Ese par reemplaza una parte de la diferencia ser/estar."
+        },
+        {
+          speaker: "Theo",
+          target: "And Carlos is clever, but he is not ready to take payments yet.",
+          translation: "Y Carlos es listo, pero todavía no está listo para cobrar.",
+          pronunciation: "and KAR-los iz KLE-ver, bat ji iz not RE-di tu teik PEI-ments yet",
+          literal: "Y Carlos es inteligente, pero él no es listo para tomar pagos todavía.",
+          why: "Para 'listo', el inglés prefiere dos palabras distintas: 'clever' para inteligencia y 'ready' para preparación. Otra vez, el verbo 'is' no cambia."
+        },
+        {
+          speaker: "Mariana",
+          target: "The owner is wealthy, but the juice is delicious; the mango is green and this mango is unripe.",
+          translation: "El dueño es rico, pero el jugo está rico; el mango es verde y este mango está verde.",
+          pronunciation: "da OU-ner iz WEL-thi, bat da yus iz di-LI-shos; da MAN-gou iz grin and dis MAN-gou iz an-RAIP",
+          literal: "El dueño es rico, pero el jugo es delicioso; el mango es verde y este mango es inmaduro.",
+          why: "El inglés separa varios sentidos que el español puede expresar con el mismo adjetivo y distinto verbo. 'Wealthy' no sirve para comida, 'delicious' no sirve para una cuenta bancaria, y 'unripe' no es simplemente el color green."
+        },
+        {
+          speaker: "Theo",
+          target: "If Andre is bad, do not invite him; if he is sick, give him water. Juan is sharp, but the fish is alive.",
+          translation: "Si Andrés es malo, no lo invite; si está malo, dele agua. Juan es vivo, pero el pez está vivo.",
+          pronunciation: "if AN-drei iz bad, du not in-VAIT jim; if ji iz sik, giv jim WA-ter. juan iz sharp, bat da fish iz a-LAIV",
+          literal: "Si Andre es malo, no invítelo; si él es enfermo, dele agua. Juan es agudo, pero el pez es vivo.",
+          why: "El inglés conserva el mismo 'is', pero muchas veces escoge vocabulario diferente: 'bad' para malo, 'sick' para enfermo, 'sharp' para vivo como astuto, 'alive' para vivo como con vida."
+        },
+        {
+          speaker: "Mariana",
+          target: "So Luz is a good organizer, the fruit salad is good, the meeting is in the room, and the room is next door.",
+          translation: "Entonces Luz es buena organizadora, el salpicón está bueno, la reunión es en el salón y el salón está al lado.",
+          pronunciation: "sou luz iz a gud OR-ga-nai-zer, da frut SA-lad iz gud, da MI-ting iz in da rum, and da rum iz nekst dor",
+          literal: "Entonces Luz es una buena organizadora, la ensalada de fruta es buena, la reunión es en el salón, y el salón es puerta siguiente.",
+          why: "El inglés usa 'is' tanto para el evento como para el salón. No marca la excepción española con otro verbo. Lo que sí debe aprender Mariana es la expresión fija 'next door' para 'al lado'."
+        }
+      ],
+      vocabulary: [
+        {
+          term: "be",
+          explanation:
+            "El verbo 'be' cubre lo que el español reparte entre ser y estar. Sirve para identidad, origen, profesión, estado, ubicación, descripción, hora y clima. Por eso no conviene buscar dos verbos ingleses para traducir ser y estar. La pregunta útil es qué palabra alrededor de 'be' carga el sentido: 'Colombian', 'tired', 'ready', 'in Houston'.",
+          literal: "ser / estar",
+          useWhen:
+            "Casi siempre que en español pensaría en ser o estar: 'I am Colombian', 'I am tired', 'the room is next door', 'the meeting is in the room'.",
+          avoidWhen:
+            "No lo use solo para acciones. Necesita un complemento o una forma -ing: 'I am working', no 'I am work'.",
+          register: "neutro",
+          region: "Inglés universal. Cambia la contracción, como 'I'm' o 'you're', pero no la regla central.",
+          related: ["am", "is", "are", "was"],
+          example: {
+            target: "I am Colombian and I am tired.",
+            translation: "Soy colombiana y estoy cansada."
+          }
+        },
+        {
+          term: "be from / be made of",
+          explanation:
+            "El inglés usa 'be from' para origen y 'be made of' para material. Las dos ideas caben en el 'ser de' español, pero en inglés no se resuelven con una sola palabra 'of'. Decir 'I am of Colombia' suena antiguo o raro; decir 'the table is of wood' suena literario.",
+          literal: "ser de / estar hecho de",
+          useWhen:
+            "Diga 'I'm from Colombia' para origen y 'the table is made of wood' para material. En conversaciones rápidas, 'it's mango juice' también puede nombrar de qué es el jugo.",
+          avoidWhen:
+            "No traduzca 'de' automáticamente como 'of'. Muchas veces el inglés pide 'from', 'made of', o directamente un sustantivo usado como adjetivo.",
+          register: "neutro",
+          region: "Inglés universal. En Norteamérica se oye mucho 'made of' para material visible y 'made from' cuando el material se transformó.",
+          related: ["from", "made of", "made from", "mango juice"],
+          example: {
+            target: "I'm from Colombia, and the cup is made of paper.",
+            translation: "Soy de Colombia, y el vaso es de papel."
+          }
+        },
+        {
+          term: "ready",
+          explanation:
+            "'Ready' cubre el estar listo de preparación, no el ser listo de inteligencia. Para inteligencia use 'clever', 'smart' o 'sharp', según el matiz. Este es un caso donde el inglés no necesita cambiar el verbo porque cambia el adjetivo.",
+          literal: "listo / preparada",
+          useWhen:
+            "Cuando alguien o algo ya puede empezar: 'I'm ready', 'the food is ready', 'Carlos is ready to take payments'.",
+          avoidWhen:
+            "No lo use para decir que alguien es inteligente. 'He is ready' no significa 'él es listo' como rasgo mental.",
+          register: "neutro",
+          region: "Inglés universal. 'Smart' es más común que 'clever' en Estados Unidos para inteligencia general.",
+          related: ["clever", "smart", "prepared", "all set"],
+          example: {
+            target: "Carlos is clever, but he is not ready.",
+            translation: "Carlos es listo, pero no está listo."
+          }
+        },
+        {
+          term: "hungry / thirty / cold",
+          explanation:
+            "Aquí está la asimetría que sorprende a los colombianos. El inglés dice 'I am hungry', no 'I have hunger'; 'I am 30', no 'I have 30 years'; 'it is cold', no 'it makes cold'. El inglés colapsa ser y estar en 'be', pero también usa 'be' donde el español usa tener y hacer.",
+          literal: "tengo hambre / tengo treinta / hace frío",
+          useWhen:
+            "Para hambre, sed en muchas variedades, edad y clima básico: 'I am hungry', 'I am 30', 'it is cold today'.",
+          avoidWhen:
+            "No traduzca tener y hacer palabra por palabra. 'I have hunger', 'I have 30 years' y 'it makes cold' se entienden como errores de traducción.",
+          register: "neutro",
+          region: "Inglés universal, aunque en inglés conversacional también se oye 'I'm thirsty' para tengo sed y 'it's hot' para hace calor.",
+          related: ["I'm hungry", "I'm 30", "it's cold", "it's hot"],
+          example: {
+            target: "I'm hungry, I'm 30, and it's cold.",
+            translation: "Tengo hambre, tengo 30 años y hace frío."
+          }
+        },
+        {
+          term: "be + -ing",
+          explanation:
+            "El progresivo inglés se forma con 'be' más una forma terminada en -ing: 'I am working', 'she is waiting', 'we are selling juice'. En esto se parece a estar más gerundio, pero no lo confunda con una traducción palabra por palabra de cada presente español.",
+          literal: "estar + gerundio",
+          useWhen:
+            "Para una acción en curso ahora, una acción temporal alrededor de estos días, o planes ya organizados: 'I'm working today', 'we're selling juice', 'I'm meeting Ana at six'.",
+          avoidWhen:
+            "No diga 'I am work' ni use -ing para todos los hábitos. 'I work on Saturdays' es hábito; 'I'm working now' es acción en progreso.",
+          register: "neutro",
+          region: "Inglés universal. Las contracciones 'I'm', 'you're', 'we're' son normales en conversación.",
+          related: ["working", "waiting", "selling", "meeting"],
+          example: {
+            target: "We are selling juice today.",
+            translation: "Estamos vendiendo jugo hoy."
+          }
+        },
+        {
+          term: "boring / bored",
+          explanation:
+            "El inglés suele separar causa y experiencia con terminaciones. 'Boring' describe algo o alguien que aburre. 'Bored' describe a la persona que siente aburrimiento. Ese contraste hace parte del trabajo que en español puede hacer ser frente a estar con 'aburrido'.",
+          literal: "aburrido como rasgo / aburrido como estado",
+          useWhen:
+            "Diga 'the class is boring' si la clase aburre, y 'I am bored' si usted siente aburrimiento. Lo mismo pasa con 'interesting/interested' y 'exciting/excited'.",
+          avoidWhen:
+            "No diga 'I am boring' si quiere decir que está aburrido. Eso confiesa que usted aburre a los demás.",
+          register: "neutro",
+          region: "Inglés universal. Es una de las correcciones más frecuentes para hispanohablantes.",
+          related: ["interesting", "interested", "exciting", "excited"],
+          example: {
+            target: "The class is boring, so I am bored.",
+            translation: "La clase es aburrida, así que estoy aburrida."
+          }
+        },
+        {
+          term: "next door",
+          explanation:
+            "'Next door' significa al lado, especialmente para un salón, oficina, casa o negocio vecino. No traduce puerta por puerta; es una expresión fija. En la frase de la reunión, el inglés usa 'is' para el evento y también 'is' para la ubicación del salón, así que la diferencia española desaparece.",
+          literal: "al lado / en la puerta siguiente",
+          useWhen:
+            "Indicando que un lugar queda junto a otro: 'the room is next door', 'the cafe is next door', 'she lives next door'.",
+          avoidWhen:
+            "No diga 'the room is at the side' para esta ubicación normal. Se entiende, pero no suena idiomático.",
+          register: "neutro",
+          region: "Inglés universal. También se puede decir 'beside it' o 'next to it', pero 'next door' suena más natural para locales y salones.",
+          related: ["next to", "beside", "nearby", "across the hall"],
+          example: {
+            target: "The meeting is in the room, and the room is next door.",
+            translation: "La reunión es en el salón, y el salón está al lado."
+          }
+        }
+      ],
+      note:
+        "Para un colombiano, el reto no es aprender dos verbos ingleses para ser y estar. El reto es aceptar que el inglés juntó esos dos verbos en 'be' y luego repartió otras ideas de manera distinta. Usted dice 'I am Colombian' y 'I am tired' con el mismo verbo. Pero también dice 'I am hungry', 'I am 30' y 'it is cold', aunque en español diga 'tengo hambre', 'tengo 30 años' y 'hace frío'. No busque una pareja fija por verbo español. Busque la frase inglesa completa.",
+      culture: [
+        {
+          label: "El inglés no se siente impreciso para sus hablantes",
+          body:
+            "A un hispanohablante le puede parecer extraño que 'is' cubra ser y estar. Para un angloparlante no hay pérdida, porque el adjetivo, la preposición y el contexto cargan la diferencia. 'She is Colombian' y 'she is tired' no se sienten ambiguas. Lo que sí suena extraño es intentar marcar la diferencia con verbos inventados o traducciones literales."
+        },
+        {
+          label: "La edad y el hambre no se poseen",
+          body:
+            "En español uno tiene años, hambre, sed, sueño y frío. En inglés, muchas de esas experiencias se dicen con 'be': 'I am 30', 'I am hungry', 'I am sleepy', 'I am cold'. Decir 'I have 30 years' o 'I have hunger' revela traducción directa. El oyente entiende, pero oye la estructura española detrás de la frase."
+        },
+        {
+          label: "El clima usa it como sujeto vacío",
+          body:
+            "'It is cold' no significa que una cosa llamada 'it' esté fría. Ese 'it' es un sujeto gramatical vacío que el inglés necesita para hablar del clima, la hora y la distancia: 'it's raining', 'it's late', 'it's far'. El español puede decir 'hace frío' sin sujeto, pero el inglés casi siempre exige uno."
+        },
+        {
+          label: "Las terminaciones también enseñan",
+          body:
+            "Pares como 'boring/bored' ayudan a compensar lo que el verbo 'be' no marca. El español pregunta si va ser o estar; el inglés muchas veces pregunta si la palabra describe la causa o la experiencia. Por eso 'I am bored' y 'I am boring' son tan distintos como 'estoy aburrido' y 'soy aburrido'."
+        }
+      ],
+      pitfalls: [
+        {
+          mistake: "'I have hunger.'",
+          whyItFails:
+            "Es una traducción directa de 'tengo hambre'. En inglés natural, el hambre se expresa como estado con 'be' y el adjetivo 'hungry'.",
+          sayInstead: "I am hungry."
+        },
+        {
+          mistake: "'I have 30 years.'",
+          whyItFails:
+            "La edad no se posee en inglés corriente. 'I have 30 years' suena incompleto, como si faltara decir 30 años de experiencia.",
+          sayInstead: "I am 30."
+        },
+        {
+          mistake: "'It makes cold.'",
+          whyItFails:
+            "Es la traducción palabra por palabra de 'hace frío'. El inglés usa 'it' como sujeto vacío y 'be' para el clima básico.",
+          sayInstead: "It is cold."
+        },
+        {
+          mistake: "'I am boring' para decir que usted está aburrido",
+          whyItFails:
+            "'Boring' describe a quien causa aburrimiento. Si usted siente aburrimiento, necesita 'bored'. La diferencia está en el adjetivo, no en el verbo.",
+          sayInstead: "I am bored."
+        }
+      ],
+      variations: [
+        {
+          form: "I'm from Colombia, but I'm in Houston now.",
+          register: "neutral",
+          region: "Inglés universal",
+          whenToUse: "Para contrastar origen con ubicación actual sin buscar dos verbos diferentes."
+        },
+        {
+          form: "Carlos is acting as cashier today, but he is a student.",
+          register: "neutro amistoso",
+          region: "Inglés universal",
+          whenToUse: "Para traducir la idea de 'está de cajero' sin hacer creer que ese es su oficio permanente."
+        },
+        {
+          form: "The class is in the big room; the room is at the end of the hall.",
+          register: "neutral",
+          region: "Inglés universal",
+          whenToUse: "Para ubicar un evento y luego ubicar el lugar físico con el mismo verbo inglés."
+        },
+        {
+          form: "That guy is sharp, and the fish is still alive.",
+          register: "informal amistoso",
+          region: "Inglés universal",
+          whenToUse: "Para separar dos sentidos de 'vivo' con vocabulario inglés distinto."
+        }
+      ],
+      prompt: "¿Cuál frase traduce naturalmente 'tengo hambre' al inglés?",
+      choices: [
+        "I have hunger.",
+        "I am hungry.",
+        "It makes hunger."
+      ],
+      answer: 1,
+      practiceExtra: [
+        {
+          prompt: "¿Cuál frase expresa la edad de manera natural en inglés?",
+          choices: [
+            "I am 30 years old.",
+            "I have 30 years.",
+            "I make 30 years."
+          ],
+          answer: 0,
+          tests: "la edad en inglés con be, no con have"
+        },
+        {
+          prompt: "¿Cuál frase distingue bien estar aburrido de ser aburrido?",
+          choices: [
+            "I am bored, not boring.",
+            "I am boring, not bored.",
+            "I have bored, not boring."
+          ],
+          answer: 0,
+          tests: "bored para la experiencia, boring para la causa"
+        },
+        {
+          prompt: "¿Cuál frase dice 'hace frío' en inglés natural?",
+          choices: [
+            "It has cold.",
+            "It makes cold.",
+            "It is cold."
+          ],
+          answer: 2,
+          tests: "clima básico con it + be"
         }
       ]
     }
