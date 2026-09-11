@@ -105,6 +105,16 @@ The last 2 came from checking the first two passes against an **external** autho
 
 Structures carry their own tier (`foundation`, `independent`, `extension`) independently of the band of the module they sit in, so a foundation-tier grammar point can appear in an A2 module where it is actually needed.
 
+### Exam readiness
+
+Covering the grammar an exam tests is not the same as being ready to sit one, and the gap between the two is where self-study candidates lose marks they had earned. A learner working alone can drill honestly for a year and still walk in having never written to a word count under a clock, and still not know that a B2 essay which skips the required concession is capped no matter how clean the Spanish is.
+
+So `data/exam-tasks.js` carries one real writing task per band, A1 to B2, in both directions, and every module's workbook prints the task for its own band. The task is authored per band rather than per module because the exam does not change to suit what you happened to be studying; what changes is the material you write it with, so each module hands its own phrases to the task as the raw material for an answer. One authored task per band becomes 78 different pieces of practice without pretending to a specificity the exam does not have.
+
+Each task ships **two calibrated answers**, and the weak one is the point. It is not a strawman full of errors — it is deliberately almost right, because that is what a diligent self-studier actually produces: fluent, on topic, correctly spelled, and failing. The B2 Spanish sample is grammatical throughout and would come back *No apto* for reasons that are all structural — no concession, two phrasings of one argument, and 108 words against a 150–180 range. The notes on each answer say why a rater moved it, which is what a published sample answer gives you and a textbook does not.
+
+The word counts are enforced by tests rather than by care. A model answer that breaks the rule it is teaching is worse than no model at all, because the learner calibrates against the example instead of the rule — and the first draft of this file did exactly that in one of its eight tasks, with correct Spanish, the right language and clean spelling, invisible to every other check in the repository. `test/exam-tasks.test.js` now measures every sample against its own stated count, and separately checks that every word count cited in the prose is the real one; eight of those citations were wrong on first measurement.
+
 Alongside the lessons there is a reference **library**: 200 high-frequency verbs with their most useful forms, a fluency list of connectors and softeners, and a **Colombian slang** reference.
 
 The slang reference carries a field the others do not: **how safe each phrase is for a learner to actually say**. Meaning alone is not enough, because the gap between understanding `parcero` and understanding `gonorrea` is not a gap in translation — it is a gap in what happens to you if you use it. Every entry is marked *Say it freely*, *Say it with friends*, or *Understand only*, and the label is shown before the meaning rather than after it.
@@ -416,6 +426,9 @@ data/curriculum.js  200 verbs and the fluency connectors
 data/slang.js       Colombian slang, each entry marked with how safe it is to say
 data/after-dark.js  Strong-language reference, 50 entries per city
 data/mature.js      The conversation signals that tell you a room has turned
+data/exam-tasks.js  One exam writing task per band, with two calibrated answers
+workbook.js         Derives a printable workbook for each module, and its answer key
+data/study-guide.js The parts of the workbook that cannot be derived
 data/flashcards.js  Derives flashcard topics and sets from the content above
 data/provenance.js  Generated: which fields hold Spanish no native speaker has read
 scripts/            Maintainer tools: triage flags, check a single lesson block,

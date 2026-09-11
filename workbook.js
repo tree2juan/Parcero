@@ -8,7 +8,7 @@
  * retrieved none of it.
  *
  * Everything here is derived rather than authored, and that is a deliberate
- * constraint, not a shortcut. 75 modules times two directions is 150
+ * constraint, not a shortcut. 78 modules times two directions is 156
  * workbooks; hand-writing them would guarantee they drift out of step with the
  * lessons the moment a lesson changes. Deriving them means an edit to a lesson
  * is an edit to its workbook, and the exercises can never quote a line the
@@ -382,6 +382,7 @@
       },
       units,
       glossary,
+      examTask: examTaskFor(module, units, direction),
       answerKey
     };
   }
@@ -408,6 +409,41 @@
     if (typeof STUDY_GUIDE !== "undefined") return STUDY_GUIDE;
     if (typeof global.STUDY_GUIDE !== "undefined") return global.STUDY_GUIDE;
     return null;
+  }
+
+  function examContent() {
+    if (typeof EXAM_TASKS !== "undefined") return EXAM_TASKS;
+    if (typeof global.EXAM_TASKS !== "undefined") return global.EXAM_TASKS;
+    return null;
+  }
+
+  /*
+   * The exam task a module carries, tied back to that module's own material.
+   *
+   * The task itself is authored per band, not per module, and that is the only
+   * honest way to do it: the exam does not change because you happened to be
+   * studying the module about buying things. What changes is what you have to
+   * write it with. So the band supplies the task, the criteria and the two
+   * calibrated answers, and the module supplies `useThese` — its own phrases,
+   * handed to the learner as the raw material for the answer.
+   *
+   * That turns one authored task into seventy-eight different pieces of
+   * practice without pretending to a specificity the exam does not have.
+   */
+  function examTaskFor(module, units, direction) {
+    const all = examContent();
+    const band = module && module.band;
+    if (!all || !band || !all[band]) return null;
+    const task = all[band][direction === "en" ? "en" : "es"];
+    if (!task) return null;
+
+    const useThese = unique(
+      units
+        .map((unit) => (unit.dialogue[0] ? unit.dialogue[0].target : null))
+        .filter(Boolean)
+    ).slice(0, 4);
+
+    return Object.assign({}, task, { band, useThese });
   }
 
   /*

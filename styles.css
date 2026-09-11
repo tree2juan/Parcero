@@ -1050,6 +1050,49 @@ footer {
 .wb-table thead th { background: var(--mist); font-size: .8rem; text-transform: uppercase; letter-spacing: .05em; }
 .wb-checkpoint td { text-align: center; width: 7rem; }
 
+/*
+ * The exam task.
+ *
+ * The weak and strong answers are laid out side by side on a wide screen and
+ * stacked on a narrow one, because the comparison is the whole point of the
+ * section and a learner who has to scroll between them will read only the
+ * second. The color coding is deliberately mild: clay and green edges rather
+ * than filled blocks, so the section still prints legibly in black and white.
+ */
+.wb-exam { background: var(--warm); border-radius: var(--radius); padding: 1rem 1.15rem; }
+.wb-exam > h3 { border-bottom-color: var(--clay); }
+.wb-exam h4 { margin: 1rem 0 .35rem; font-size: .82rem; text-transform: uppercase; letter-spacing: .06em; color: var(--ink-soft); }
+.wb-exam-meta { margin: 0; font-weight: 600; color: var(--clay-ink); }
+.wb-exam-lead { margin: .35rem 0 .75rem; color: var(--ink-soft); }
+.wb-exam-brief { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: .65rem .85rem; }
+.wb-exam-brief h4 { margin-top: 0; }
+.wb-exam-brief p { margin: 0; }
+.wb-exam-bridge { margin-top: .85rem; }
+.wb-exam-phrases { list-style: none; padding-left: 0; margin: 0; display: flex; flex-wrap: wrap; gap: .4rem; }
+.wb-exam-phrases li { background: var(--surface); border: 1px solid var(--line); border-radius: 999px; padding: .2rem .7rem; font-size: .9rem; }
+.wb-exam-criteria, .wb-exam-checklist { margin: 0; padding-left: 1.1rem; }
+.wb-exam-criteria li, .wb-exam-checklist li { margin: .35rem 0; }
+.wb-exam-checklist { list-style: none; padding-left: 0; }
+.wb-exam-checklist li { display: flex; gap: .55rem; align-items: baseline; }
+.wb-exam-write { margin-top: 1rem; }
+.wb-exam-compare { display: grid; gap: 1rem; margin-top: 1rem; }
+.wb-exam-answer { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: .75rem .9rem; }
+.wb-exam-answer h4 { margin-top: 0; }
+.wb-exam-answer blockquote { margin: 0 0 .6rem; padding-left: .8rem; font-style: normal; }
+.wb-exam-answer blockquote p { margin: 0 0 .5rem; }
+.wb-exam-answer blockquote p:last-child { margin-bottom: 0; }
+.wb-exam-weak { border-left: 4px solid var(--clay); }
+.wb-exam-weak blockquote { border-left: 2px solid var(--clay); }
+.wb-exam-weak h4 { color: var(--clay-ink); }
+.wb-exam-strong { border-left: 4px solid var(--green); }
+.wb-exam-strong blockquote { border-left: 2px solid var(--green); }
+.wb-exam-strong h4 { color: var(--green-deep); }
+.wb-exam-notes { margin: 0; padding-left: 1.1rem; color: var(--ink-soft); font-size: .93rem; }
+.wb-exam-notes li { margin: .3rem 0; }
+@media (min-width: 900px) {
+  .wb-exam-compare { grid-template-columns: 1fr 1fr; align-items: start; }
+}
+
 .wb-match { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
 .wb-match ul { list-style: none; padding-left: 0; margin: 0; }
 .wb-match li { margin: .4rem 0; }
@@ -1173,8 +1216,19 @@ footer {
   /* Keep a question and the space to answer it on the same sheet. */
   .wb-unit, .wb-break { break-before: page; }
   .wb-activity, .wb-line, .wb-questions > li, .wb-key-block,
-  .wb-setting-row, .wb-table tr { break-inside: avoid; }
+  .wb-setting-row, .wb-table tr, .wb-exam-answer { break-inside: avoid; }
   .wb-section > h3, .wb-section h4, .wb-unit-head { break-after: avoid; }
+
+  /* The comparison has to stay a comparison on paper, so the two answers sit
+     side by side and the color cues fall back to weight and rule style. */
+  .wb-exam { background: transparent !important; border: 1px solid #000; padding: .75rem; }
+  .wb-exam-compare { grid-template-columns: 1fr 1fr; gap: .75rem; }
+  .wb-exam-brief, .wb-exam-answer { border: 1px solid #666; }
+  .wb-exam-weak { border-left: 3px solid #000; }
+  .wb-exam-strong { border-left: 3px double #000; }
+  .wb-exam-meta, .wb-exam-weak h4, .wb-exam-strong h4 { color: #000; }
+  .wb-exam-lead, .wb-exam-notes { color: #444; }
+  .wb-exam-phrases li { border-color: #666; }
 
   .wb-box, .wb-write, .wb-dot { border-color: #000; }
   .wb-activity-n { background: #000 !important; color: #fff !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }

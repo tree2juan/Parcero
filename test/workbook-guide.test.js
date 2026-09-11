@@ -2,7 +2,7 @@
  * The course guide, and the two ways a study plan goes wrong.
  *
  * The first is arithmetic. A schedule that says "twelve weeks" while the
- * course quietly grows to seventy-five modules is worse than no schedule: the
+ * course quietly grows to seventy-eight modules is worse than no schedule: the
  * learner trusts it, falls behind against a number that was never true, and
  * concludes the problem is them. So the week count here is computed from the
  * practice cycle's own minutes, and these tests check the sums actually add
@@ -12,7 +12,7 @@
  * looks right and drops the last item, or leaves week 19 empty, or quietly
  * reorders things so module 40 arrives before the module it depends on. Each
  * of those is asserted directly, because none of them would be visible on a
- * rendered page — a study map with 74 of 75 modules looks exactly like a
+ * rendered page — a study map with 77 of 78 modules looks exactly like a
  * study map.
  *
  * The rest is the same rule the rest of the workbook follows: every field the
