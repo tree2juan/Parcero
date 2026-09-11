@@ -41,6 +41,7 @@
           <a href="#placement" data-i18n="nav.placement">Placement</a>
           <a href="#library" data-i18n="nav.library">Library</a>
           <a href="#workbook" data-i18n="nav.workbook">Workbook</a>
+          <a href="#stories" data-i18n="nav.stories">Reading</a>
           <a href="#after-dark" data-i18n="nav.afterDark">After Dark</a>
         </div>
       </nav>
@@ -508,6 +509,33 @@
       </section>
       </div>
 
+      <div class="view" id="view-stories" hidden>
+      <section id="stories" class="stories" aria-labelledby="stories-title">
+        <div class="section-head">
+          <p class="eyebrow" data-i18n="stories.eyebrow">Reading room</p>
+          <h2 id="stories-title" data-i18n="stories.title">Real history, in both languages, one paragraph at a time.</h2>
+          <p class="section-lead" data-i18n="stories.lead">Every lesson here is a conversation. This is the opposite: long text you read, not lines you say. Each story appears in both languages, so when a sentence falls apart you can see exactly where — without leaving the page.</p>
+        </div>
+        <p class="story-howto" data-i18n="stories.howto">Read it once in the language you are learning and let the gaps stay gaps. Read it a second time with the translation showing. Then read it a third time with the translation hidden again — the third pass is the one that teaches.</p>
+        <div class="tabs" role="tablist" data-i18n-aria="stories.aria" aria-label="Reading levels">
+          <button class="story-tab active" type="button" role="tab" aria-selected="true" data-band="all" data-i18n="stories.band.all">All levels</button>
+          <button class="story-tab" type="button" role="tab" aria-selected="false" data-band="A1" data-i18n="stories.band.a1">A1</button>
+          <button class="story-tab" type="button" role="tab" aria-selected="false" data-band="A2" data-i18n="stories.band.a2">A2</button>
+          <button class="story-tab" type="button" role="tab" aria-selected="false" data-band="B1" data-i18n="stories.band.b1">B1</button>
+          <button class="story-tab" type="button" role="tab" aria-selected="false" data-band="B2" data-i18n="stories.band.b2">B2</button>
+        </div>
+        <p id="story-count" class="assistive-text"></p>
+        <div id="story-list" class="story-grid"></div>
+        <article id="story-reader" class="story-reader" hidden>
+          <div class="story-reader-controls">
+            <button id="story-back" class="ghost-button" type="button" data-i18n="stories.back">All stories</button>
+            <button id="story-parallel" class="ghost-button" type="button" aria-pressed="true" data-i18n="stories.hideTranslation">Hide translation</button>
+          </div>
+          <div id="story-output"></div>
+        </article>
+      </section>
+      </div>
+
       <div class="view" id="view-after-dark" hidden>
       <section id="after-dark" class="after-dark" aria-labelledby="after-dark-title">
         <div class="section-head">
@@ -638,6 +666,7 @@
     <script src="data/modules.js"></script>
     <script src="data/study-guide.js"></script>
     <script src="data/exam-tasks.js"></script>
+    <script src="data/stories.js"></script>
     <script src="data/cefr.js"></script>
     <script src="i18n.js"></script>
     <script src="data/flashcards.js"></script>

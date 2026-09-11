@@ -469,13 +469,13 @@ main, footer { max-width: var(--wrap); margin: auto; padding-inline: 1.5rem; }
 .review-badge .text-button { padding: .35rem .7rem; color: var(--green-deep); text-decoration: underline; }
 
 .tabs { display: flex; gap: .2rem; padding-top: 1.25rem; border-bottom: 1px solid var(--line); flex-wrap: wrap; }
-.tab, .library-tab {
+.tab, .library-tab, .story-tab {
   border: 0; background: transparent; color: var(--ink-soft);
   padding: .7rem 1rem; border-bottom: 3px solid transparent;
   font-weight: 650;
 }
-.tab:hover, .library-tab:hover { color: var(--ink); }
-.tab.active, .library-tab.active { color: var(--ink); border-bottom-color: var(--green); font-weight: 800; }
+.tab:hover, .library-tab:hover, .story-tab:hover { color: var(--ink); }
+.tab.active, .library-tab.active, .story-tab.active { color: var(--ink); border-bottom-color: var(--green); font-weight: 800; }
 .tab-panel { padding-block: 2rem; }
 
 .dialogue { display: grid; gap: .8rem; margin-bottom: 1.5rem; }
@@ -1163,6 +1163,144 @@ footer {
    * instead of dragging the sticky header sideways with it.
    */
   .wb-table { display: block; width: 100%; overflow-x: auto; }
+}
+
+/*
+ * Reading room.
+ *
+ * This section exists to be READ, not scanned, which is the opposite of every
+ * other panel on the site. So the type here breaks the site's own rules on
+ * purpose: a longer line, a taller line-height, and a measure capped in `ch`
+ * rather than `rem`, because what makes prose readable is the number of
+ * characters per line, not the number of pixels.
+ *
+ * The parallel layout is a two-column grid ONLY where a column can still hold
+ * a sane measure. Below that it stacks, and the translation is indented and
+ * de-emphasized rather than hidden, so a phone reader gets the same "glance
+ * down for help" motion a desktop reader gets by glancing right.
+ */
+.stories { display: grid; gap: 1.1rem; }
+.story-howto {
+  margin: 0;
+  padding: .85rem 1rem;
+  border-left: 3px solid var(--green);
+  background: var(--mist);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  color: var(--ink-soft);
+  max-width: 68ch;
+}
+.story-grid { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fill, minmax(17rem, 1fr)); }
+.story-card {
+  display: grid;
+  gap: .4rem;
+  text-align: left;
+  padding: 1rem 1.1rem 1.15rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+  box-shadow: var(--shadow);
+  cursor: pointer;
+  font: inherit;
+  color: inherit;
+  transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease;
+}
+.story-card:hover, .story-card:focus-visible { transform: translateY(-2px); box-shadow: var(--shadow-lift); border-color: var(--green); }
+.story-card-top { display: flex; align-items: center; justify-content: space-between; gap: .5rem; }
+.story-band {
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .06em;
+  padding: .16rem .5rem;
+  border-radius: 999px;
+  background: var(--green);
+  color: #fff;
+}
+.story-card-minutes { font-size: .78rem; color: var(--ink-soft); }
+.story-card-title { font-size: 1.06rem; font-weight: 650; line-height: 1.3; }
+.story-card-alt { font-size: .85rem; color: var(--ink-soft); font-style: italic; }
+.story-card-blurb { font-size: .9rem; line-height: 1.45; margin-top: .15rem; }
+.story-card-meta { font-size: .76rem; color: var(--ink-soft); margin-top: .2rem; }
+
+.story-reader { display: grid; gap: 1.2rem; }
+.story-reader-controls { display: flex; flex-wrap: wrap; gap: .6rem; }
+.story-head { display: grid; gap: .35rem; }
+.story-head-meta { display: flex; flex-wrap: wrap; align-items: center; gap: .55rem; margin: 0; font-size: .78rem; color: var(--ink-soft); }
+.story-head h3 { margin: .1rem 0 0; font-size: clamp(1.4rem, 4vw, 1.9rem); line-height: 1.2; }
+.story-head-alt { margin: 0; color: var(--ink-soft); font-style: italic; }
+.story-blurb { margin: .35rem 0 0; max-width: 62ch; }
+
+.story-body { display: grid; gap: 1.15rem; }
+.story-para { display: grid; gap: .45rem; }
+.story-line { margin: 0; max-width: 68ch; }
+.story-line-studied { font-size: 1.06rem; line-height: 1.75; }
+.story-para-number {
+  display: inline-block;
+  min-width: 1.6em;
+  font-size: .72rem;
+  font-weight: 700;
+  color: var(--ink-soft);
+  vertical-align: .35em;
+}
+.story-line-home {
+  color: var(--ink-soft);
+  line-height: 1.6;
+  padding-left: 1.6em;
+  border-left: 2px solid var(--line);
+  margin-left: .1rem;
+}
+
+.story-caveat {
+  margin: 0;
+  padding: .8rem 1rem;
+  border-radius: var(--radius);
+  background: var(--warm);
+  color: var(--clay-ink);
+  font-size: .88rem;
+  max-width: 68ch;
+}
+.story-panel { display: grid; gap: .7rem; padding-top: .4rem; border-top: 1px solid var(--line); }
+.story-panel-title { margin: 0; font-size: 1.05rem; }
+.story-panel-lead { margin: -.3rem 0 0; color: var(--ink-soft); font-size: .88rem; max-width: 62ch; }
+
+.story-glossary { list-style: none; margin: 0; padding: 0; display: grid; gap: .65rem; }
+.story-term { padding: .6rem .8rem; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); }
+.story-term-head { margin: 0; }
+.story-term-head span { color: var(--ink-soft); }
+.story-term-note { margin: .25rem 0 0; font-size: .88rem; color: var(--ink-soft); }
+
+.story-structures { display: grid; gap: .8rem; }
+.story-structure { display: grid; gap: .4rem; padding: .85rem 1rem; border: 1px solid var(--line); border-left: 3px solid var(--green); border-radius: var(--radius); background: var(--surface); }
+.story-structure h4 { margin: 0; font-size: .98rem; }
+.story-quote { margin: 0; font-style: italic; color: var(--green-deep); line-height: 1.55; }
+.story-structure-note { margin: 0; font-size: .9rem; line-height: 1.55; }
+
+.story-questions { display: grid; gap: .55rem; }
+.story-question { border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); padding: .6rem .85rem; }
+.story-question summary { cursor: pointer; font-weight: 600; }
+.story-question p { margin: .45rem 0 0; }
+.story-q-number { display: inline-block; min-width: 1.5em; color: var(--ink-soft); font-size: .78rem; }
+.story-answer-home { color: var(--ink-soft); font-size: .88rem; }
+
+@media (min-width: 60rem) {
+  .story-para-parallel { grid-template-columns: 1fr 1fr; gap: 1.4rem; align-items: start; }
+  .story-para-parallel .story-line-home { padding-left: 1rem; margin-left: 0; }
+  .story-glossary { grid-template-columns: 1fr 1fr; }
+  .story-structures { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 32rem) {
+  .story-grid { grid-template-columns: 1fr; }
+  .story-line-studied { font-size: 1.02rem; }
+  /*
+   * The controls are deliberately NOT sticky here. `.site-header` is already
+   * sticky at top:0 with z-index 10, so a sticky control bar at top:0 parks
+   * itself underneath the header and is simply never seen -- and sticking it
+   * below the header means hardcoding a height that changes when the nav
+   * links wrap. A second sticky row would also charge its height against
+   * every screen of a long read, which is the cost the nav-scroll fix above
+   * was written to avoid.
+   */
+  .story-reader-controls { gap: .5rem; }
+  .story-reader-controls .ghost-button { flex: 1 1 auto; text-align: center; }
 }
 
 /*
