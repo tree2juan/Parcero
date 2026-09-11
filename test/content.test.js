@@ -1105,23 +1105,26 @@ test("exactly one view is visible before any script runs", () => {
     "exactly one view may start visible in the markup, and it should be home");
 });
 
-test("the modules menu is built from the lesson list, never hard-coded", () => {
+test("the lesson rail is built from the lesson list, never hard-coded", () => {
   const app = read("app.js");
   /*
-   * The signature is matched loosely on purpose. This check cares that the menu
+   * The signature is matched loosely on purpose. This check cares that the rail
    * is derived, not what arguments it takes -- pinning it to `()` meant that
-   * adding a filter argument failed the test with "must build the menu in
-   * fillModulesMenu()" while the function was sitting right there, which sends
+   * adding a filter argument failed the test with "must build the list in
+   * renderLessonList()" while the function was sitting right there, which sends
    * you looking for the wrong bug.
+   *
+   * This used to guard fillModulesMenu(), the nav dropdown that was a fourth,
+   * redundant way to reach a lesson. The dropdown is gone; the rail inherited
+   * its job, so it inherits the guard. Deleting the test with the dropdown
+   * would have quietly dropped the "never hard-code the catalog" rule.
    */
-  const fill = app.match(/function fillModulesMenu\([^)]*\)[\s\S]*?\n\}/);
-  assert.ok(fill, "app.js must build the modules menu in fillModulesMenu()");
-  assert.match(fill[0], /lessons\.map\(/,
-    "the menu must map over the lesson list, or it goes stale the moment a lesson is added");
-  assert.match(fill[0], /state\.direction/,
-    "menu titles must follow the direction toggle, or they stay in one language");
-  assert.match(fill[0], /COURSE_MODULES/,
-    "lessons must be grouped under their module, or the menu is a flat wall of 200-plus entries");
+  const fill = app.match(/function renderLessonList\([^)]*\)[\s\S]*?\n\}/);
+  assert.ok(fill, "app.js must build the lesson rail in renderLessonList()");
+  assert.match(fill[0], /lessons\b/,
+    "the rail must read the lesson list, or it goes stale the moment a lesson is added");
+  assert.match(fill[0], /state\.direction|content\(/,
+    "rail titles must follow the direction toggle, or they stay in one language");
 });
 
 test("the language toggle is reachable from every view", () => {

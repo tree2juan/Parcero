@@ -43,19 +43,6 @@
           <a href="#workbook" data-i18n="nav.workbook">Workbook</a>
           <a href="#after-dark" data-i18n="nav.afterDark">After Dark</a>
         </div>
-        <div class="nav-modules">
-          <button id="modules-button" class="nav-modules-button" type="button" aria-expanded="false" aria-haspopup="true" aria-controls="modules-menu">
-            <span data-i18n="nav.modules">Modules</span><span class="nav-caret" aria-hidden="true"></span>
-          </button>
-          <div id="modules-menu" class="nav-modules-menu" role="menu" hidden>
-            <div class="modules-search">
-              <input id="modules-filter" type="search" autocomplete="off" spellcheck="false"
-                     data-i18n-placeholder="nav.modulesFilter" placeholder="Filter lessons"
-                     data-i18n-aria="nav.modulesFilter" aria-label="Filter lessons">
-            </div>
-            <div id="modules-list" class="modules-list"></div>
-          </div>
-        </div>
       </nav>
       <fieldset class="direction-picker">
         <legend>
@@ -87,7 +74,7 @@
           <h2 id="hero-title" data-i18n="hero.title">Language belongs in a conversation.</h2>
           <p class="hero-lead" data-i18n="hero.lead">Explore Colombian Spanish and practical English from either point of view — with context, culture, sound, and practice. Nothing to install, nothing to sign up for, and your progress never leaves this device.</p>
           <div class="hero-actions">
-            <a class="primary-button" href="#path" data-i18n="hero.start">Start the course</a>
+            <a class="primary-button" id="hero-start" href="#path" data-i18n="hero.start">Start the course</a>
             <a class="ghost-button" href="#placement" data-i18n="hero.placement">Find my level first</a>
           </div>
         </div>
@@ -151,13 +138,38 @@
           <button id="path-resume-go" class="primary-button" type="button" data-i18n="path.resumeGo">Continue</button>
         </div>
 
-        <div class="progress-panel">
-          <div>
-            <p class="eyebrow" data-i18n="progress.eyebrow">Your path</p>
-            <strong id="path-overall">—</strong>
-            <p class="path-note" id="path-mastered-note"></p>
+        <!--
+          Status lives here, on the path, not above the lesson browser.
+          "Mastered" and "explored" are different counts -- one is recall, the
+          other is clicking -- so both are shown, side by side, where a learner
+          is already asking how far along they are.
+        -->
+        <div class="path-stats">
+          <div class="progress-panel">
+            <div>
+              <p class="eyebrow" data-i18n="progress.mastered">Mastered</p>
+              <strong id="path-overall">—</strong>
+              <p class="path-note" id="path-mastered-note"></p>
+            </div>
+            <div class="progress-track" aria-hidden="true"><div id="path-overall-bar"></div></div>
           </div>
-          <div class="progress-track" aria-hidden="true"><div id="path-overall-bar"></div></div>
+          <div class="progress-panel">
+            <div>
+              <p class="eyebrow" data-i18n="progress.explored">Explored</p>
+              <strong id="progress-label">—</strong>
+              <p class="path-note" data-i18n="progress.exploredNote">Lessons you have opened.</p>
+            </div>
+            <div class="progress-track" aria-hidden="true"><div id="progress-bar"></div></div>
+          </div>
+        </div>
+
+        <div class="level-panel" id="level-panel">
+          <div class="level-head">
+            <p class="eyebrow" data-i18n="level.eyebrow">Your level</p>
+            <strong id="level-reached">—</strong>
+            <p id="level-note" class="level-note"></p>
+          </div>
+          <ol id="level-ladder" class="level-ladder"></ol>
         </div>
 
         <ol id="path-stages" class="path-stages"></ol>
@@ -172,28 +184,26 @@
           <p class="section-lead" data-i18n="lessons.lead">Each lesson is one real moment: what is said, why it works, how it sounds, and what it would mean to get it wrong.</p>
         </div>
 
-        <div class="progress-panel">
-          <div>
-            <p class="eyebrow" data-i18n="progress.eyebrow">Your path</p>
-            <strong id="progress-label">—</strong>
+        <!--
+          Two panes, not one column. The browser used to render all 233 cards
+          above the lesson, which put the thing you just clicked 15,000px down
+          a 21-screen page. The rail is the index; the lesson is the work.
+        -->
+        <div class="lessons-layout">
+          <div class="lessons-rail">
+            <button id="rail-toggle" class="rail-toggle" type="button" aria-expanded="false" aria-controls="rail-body">
+              <span data-i18n="lessons.browse">Browse all lessons</span>
+              <span class="rail-toggle-count" id="rail-toggle-count"></span>
+            </button>
+            <div class="rail-body" id="rail-body">
+              <label class="search-label" for="lesson-search"><span data-i18n="lessons.search">Search lessons</span> <input id="lesson-search" type="search" data-i18n-placeholder="lessons.searchPlaceholder" placeholder="e.g., pedir, market, or starter" autocomplete="off"></label>
+              <p id="lesson-count" class="assistive-text"></p>
+              <ol id="lesson-list" class="lesson-list"></ol>
+              <p id="lesson-empty" class="assistive-text" data-i18n="lessons.noMatches" hidden>No lesson matches that search. Try a verb, a place, or a level.</p>
+            </div>
           </div>
-          <div class="progress-track" aria-hidden="true"><div id="progress-bar"></div></div>
-        </div>
 
-        <div class="level-panel" id="level-panel">
-          <div class="level-head">
-            <p class="eyebrow" data-i18n="level.eyebrow">Your level</p>
-            <strong id="level-reached">—</strong>
-            <p id="level-note" class="level-note"></p>
-          </div>
-          <ol id="level-ladder" class="level-ladder"></ol>
-        </div>
-
-        <label class="search-label" for="lesson-search"><span data-i18n="lessons.search">Search lessons</span> <input id="lesson-search" type="search" data-i18n-placeholder="lessons.searchPlaceholder" placeholder="e.g., pedir, market, or starter" autocomplete="off"></label>
-        <p id="lesson-count" class="assistive-text"></p>
-        <ol id="lesson-list" class="lesson-list"></ol>
-        <p id="lesson-empty" class="assistive-text" data-i18n="lessons.noMatches" hidden>No lesson matches that search. Try a verb, a place, or a level.</p>
-
+          <div class="lessons-main">
         <section id="lesson" class="lesson" aria-live="polite">
           <div class="lesson-heading" id="lesson-heading">
             <p id="lesson-level" class="eyebrow"></p>
@@ -327,12 +337,24 @@
             </div>
           </section>
 
+          <!--
+            The pager walks the path, not the authored array, and it says
+            where it is going. An unnamed "Next lesson" gave no way to notice
+            that it had just handed an A2 learner a B2 lesson.
+          -->
           <div class="lesson-pager">
             <button id="previous-lesson" class="text-button" type="button" data-i18n="pager.previous">← Previous lesson</button>
             <p id="lesson-position" class="assistive-text"></p>
-            <button id="next-lesson" class="text-button" type="button" data-i18n="pager.next">Next lesson →</button>
+            <div class="pager-next">
+              <p class="eyebrow" data-i18n="pager.upNext">Up next</p>
+              <p class="pager-next-title" id="pager-next-title"></p>
+              <p class="pager-next-where" id="pager-next-where"></p>
+              <button id="next-lesson" class="primary-button" type="button" data-i18n="pager.next">Next lesson →</button>
+            </div>
           </div>
         </section>
+          </div>
+        </div>
       </section>
       </div>
 

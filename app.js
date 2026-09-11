@@ -177,24 +177,15 @@ function completePlacement() {
 }
 function renderLessonList() {
   /*
-   * The meta line carries the verb as well as the level. The curriculum is
-   * anchored one lesson per verb, so the verb is the thing a learner looks a
-   * lesson up by -- and four lessons are legitimately titled after a different
-   * verb than they teach, because the title describes the situation and the
-   * situation belongs to whoever is speaking. "Aprender a hacer ajiaco" is the
-   * enseñar lesson: the reader is the one being taught. Without the verb shown,
-   * that title sits in the list looking like the aprender lesson, which has its
-   * own entry.
-   */
-  /*
    * Filtered rather than paged, for the same reason slang is: two hundred
    * situations is far past the point where scrolling finds anything, and
    * matching every keystroke over a list this size costs nothing.
    *
    * The index shown is the lesson's position in the whole course, not its
    * position in the filtered view, so a lesson keeps the same number whatever
-   * is typed. Searching covers the title, the verb and the level, which is why
-   * "starter" narrows to the foundation tier without a separate control.
+   * is typed. Searching still covers lesson.level, which is why "starter"
+   * narrows to the foundation tier without a separate control, even though
+   * the meta line now prints the band instead.
    */
   const search = $("#lesson-search");
   const query = ((search && search.value) || "").trim().toLowerCase();
@@ -214,10 +205,23 @@ function renderLessonList() {
   }
   const empty = $("#lesson-empty");
   if (empty) empty.hidden = matches.length > 0;
+  /*
+   * The meta line shows the band and module the path places this lesson in,
+   * not lesson.level. lesson.level is an English-only "Starter · Everyday life"
+   * string that the build scripts parse, so it stays in the data and stays
+   * searchable -- but printing it here put a third, untranslated level
+   * vocabulary on screen next to the A1-B2 bands the path, the pager and the
+   * badges all use, in a rail the learner reads two hundred times.
+   */
+  const railApi = syllabusApi();
+  const railModules = railApi && typeof COURSE_MODULES !== "undefined"
+    ? railApi.moduleIndex(lessons, COURSE_MODULES)
+    : null;
   $("#lesson-list").innerHTML = matches.map(({ item, index }) => {
     const done = state.completed.has(item.id);
     const active = item.id === state.lessonId;
-    const meta = item.verb ? `${item.level} · ${item.verb}` : item.level;
+    const entry = railModules ? railModules.get(item.id) : null;
+    const meta = entry ? `${entry.band} · ${moduleTitle(entry)}` : item.level;
     return `<li><button class="lesson-link${active ? " active" : ""}" type="button" data-lesson="${item.id}" aria-current="${active ? "true" : "false"}"><span class="lesson-link-index">${index + 1}</span><span class="lesson-link-body"><strong>${item[state.direction].title}</strong><span class="lesson-link-meta">${meta}</span></span><span class="lesson-link-state">${done ? t("lesson.explored") : ""}</span></button></li>`;
   }).join("");
 }
@@ -232,6 +236,7 @@ function selectLesson(id) {
     item.setAttribute("aria-selected", active);
     $(`#${item.dataset.panel}`).hidden = !active;
   });
+  collapseRailAfterPick();
   $("#lesson").scrollIntoView({ behavior: "smooth", block: "start" });
 }
 function renderPreview() {
@@ -493,20 +498,70 @@ function renderLevel() {
     .join("");
 }
 
+/*
+ * Where the current lesson sits on the path, not in the authored array.
+ *
+ * Returns null when the path cannot place the lesson, which is a content bug
+ * (a block with no module entry) rather than a zero -- so the pager hides
+ * itself instead of offering a step to nowhere.
+ */
+function pathNeighbors() {
+  const api = syllabusApi();
+  if (!api || typeof api.neighbors !== "function" || typeof COURSE_MODULES === "undefined") return null;
+  return api.neighbors(currentLesson(), lessons, COURSE_MODULES);
+}
+
 function updateProgress() {
   const lesson = currentLesson();
-  const index = lessonIndex();
   const completed = state.completed.has(lesson.id);
   const total = lessons.length;
   const explored = lessons.filter((item) => state.completed.has(item.id)).length;
   $("#progress-label").textContent = t("progress.count", { explored, total });
   $("#progress-bar").style.width = `${Math.round((explored / total) * 100)}%`;
   $("#complete-lesson").textContent = completed ? t("action.completed") : t("action.complete");
-  $("#lesson-position").textContent = t("pager.position", { index: index + 1, total });
-  $("#previous-lesson").disabled = index === 0;
-  $("#next-lesson").disabled = index === total - 1;
+  renderPager();
   renderLevel();
   renderPath();
+}
+
+/*
+ * The pager walks the path, and says where it is going.
+ *
+ * It used to step through `lessons`, the authored array, which is not the
+ * order the course is taught in: 23 of those steps cross a CEFR stage, 10 run
+ * backwards, and the worst jumps 112 positions. Naming the destination is the
+ * other half of the fix -- an unlabeled "Next lesson" gave a learner no way to
+ * notice they had just been handed a B2 dialogue.
+ */
+function renderPager() {
+  const spot = pathNeighbors();
+  const previous = $("#previous-lesson");
+  const next = $("#next-lesson");
+  const title = $("#pager-next-title");
+  const where = $("#pager-next-where");
+
+  if (!spot) {
+    previous.disabled = true;
+    next.disabled = true;
+    title.textContent = "";
+    where.textContent = "";
+    $("#lesson-position").textContent = "";
+    return;
+  }
+
+  previous.disabled = !spot.previous;
+  next.disabled = !spot.next;
+  $("#lesson-position").textContent = t("pager.position", { index: spot.index + 1, total: spot.total });
+
+  if (spot.next) {
+    const api = syllabusApi();
+    const entry = api ? api.moduleIndex(lessons, COURSE_MODULES).get(spot.next.id) : null;
+    title.textContent = spot.next[state.direction].title;
+    where.textContent = entry ? `${entry.band} · ${moduleTitle(entry)}` : "";
+  } else {
+    title.textContent = t("pager.endTitle");
+    where.textContent = "";
+  }
 }
 
 /*
@@ -564,6 +619,28 @@ function renderPath() {
   } else {
     resume.hidden = true;
   }
+
+  /* The home page's first button names the lesson it opens, so a returning
+     learner has one obvious action instead of thirteen links to weigh. It
+     still points at the path, which is where "start the course" belongs when
+     there is no progress to resume. */
+  const heroStart = $("#hero-start");
+  if (heroStart) {
+    const resumeLesson = report.next && lessons.find((item) => item.id === report.next.lessonId);
+    const started = report.done > 0;
+    if (started && resumeLesson) {
+      heroStart.textContent = t("hero.continue", { title: resumeLesson[state.direction].title });
+      heroStart.setAttribute("href", "#lessons");
+      heroStart.dataset.goto = resumeLesson.id;
+    } else {
+      heroStart.textContent = t("hero.start");
+      heroStart.setAttribute("href", "#path");
+      delete heroStart.dataset.goto;
+    }
+  }
+
+  const railCount = $("#rail-toggle-count");
+  if (railCount) railCount.textContent = String(lessons.length);
 
   /* Re-rendering on every answered question would otherwise slam shut every
      module the learner had opened, so the open set is carried across. */
@@ -679,8 +756,14 @@ $("#lesson-list").addEventListener("click", (event) => {
   const button = event.target.closest("[data-lesson]");
   if (button) selectLesson(button.dataset.lesson);
 });
-$("#previous-lesson").addEventListener("click", () => selectLesson(lessons[Math.max(0, lessonIndex() - 1)].id));
-$("#next-lesson").addEventListener("click", () => selectLesson(lessons[Math.min(lessons.length - 1, lessonIndex() + 1)].id));
+$("#previous-lesson").addEventListener("click", () => {
+  const spot = pathNeighbors();
+  if (spot && spot.previous) selectLesson(spot.previous.id);
+});
+$("#next-lesson").addEventListener("click", () => {
+  const spot = pathNeighbors();
+  if (spot && spot.next) selectLesson(spot.next.id);
+});
 $("#reset-progress").addEventListener("click", () => { state.completed.clear(); state.placement = null; state.question = 0; state.responses = []; const api = progressApi(); if (api) progressState = api.clear(); save(); render(); });
 $("#listen-dialogue").addEventListener("click", () => {
   if (!("speechSynthesis" in window)) { $("#speech-status").textContent = t("speech.unsupported"); return; }
@@ -759,82 +842,58 @@ const viewForHash = () => ROUTE_FOR_HASH[location.hash] || "home";
 window.addEventListener("hashchange", () => showView(viewForHash()));
 showView(viewForHash(), { scroll: false });
 
-/* ---------- modules menu ---------- */
-const modulesButton = $("#modules-button");
-const modulesMenu = $("#modules-menu");
-const modulesList = $("#modules-list");
-const modulesFilter = $("#modules-filter");
+/* ---------- lesson rail ---------- */
 
 /*
- * The menu is named "Modules" but used to be a flat list of every lesson. At
- * eight lessons that was a menu; at 233 it is a wall, and on a phone it is a
- * wall you scroll blind. So the list is grouped under the module each lesson
- * belongs to, and filtered from the box at the top.
+ * The rail is the index; the lesson beside it is the work.
  *
- * Grouping is derived from `sourceFile`, the same key the workbook uses, so a
- * lesson lands in the right module by construction. COURSE_MODULES supplies
- * only the human title. A block with no title still renders, under its own
- * file name, because a lesson you cannot reach is worse than an ugly heading.
+ * This replaces a nav dropdown that listed all 233 lessons grouped by module.
+ * That menu duplicated the path, disagreed with it about order, and was a
+ * fourth way to reach a lesson in an app that already had three. The search
+ * box it wrapped survives here, next to the list it filters.
+ *
+ * On a narrow screen the rail collapses, because an index above the lesson is
+ * the exact layout that pushed lesson content 15,000px down the page.
  */
-function fillModulesMenu(query) {
-  const needle = String(query == null ? modulesFilter.value : query).trim().toLowerCase();
-  const titles = new Map(COURSE_MODULES.map((module) => [module.block, moduleTitle(module)]));
-  const groups = new Map();
-  lessons.map((lesson, index) => ({
-    id: lesson.id,
-    number: index + 1,
-    heading: titles.get(lesson.sourceFile) || lesson.sourceFile,
-    title: lesson[state.direction].title,
-    level: lesson.level
-  })).forEach((entry) => {
-    const hit = !needle ||
-      entry.title.toLowerCase().includes(needle) ||
-      entry.level.toLowerCase().includes(needle) ||
-      entry.heading.toLowerCase().includes(needle);
-    if (!hit) return;
-    if (!groups.has(entry.heading)) groups.set(entry.heading, []);
-    groups.get(entry.heading).push(entry);
-  });
+const railToggle = $("#rail-toggle");
+const railBody = $("#rail-body");
+const RAIL_WIDE = window.matchMedia("(min-width: 60rem)");
 
-  if (!groups.size) {
-    modulesList.innerHTML = `<p class="modules-empty">${esc(t("nav.modulesEmpty"))}</p>`;
-    return;
-  }
-  modulesList.innerHTML = [...groups].map(([heading, entries]) =>
-    `<div class="modules-group" role="group" aria-label="${esc(heading)}">` +
-    `<p class="modules-group-title">${esc(heading)}</p>` +
-    entries.map((entry) =>
-      `<button type="button" role="menuitem" data-goto="${esc(entry.id)}">` +
-      `<span class="modules-index">${entry.number}</span>` +
-      `<span class="modules-body"><strong>${esc(entry.title)}</strong>` +
-      `<small>${esc(entry.level)}</small></span></button>`).join("") +
-    `</div>`).join("");
+function setRailOpen(open) {
+  railBody.hidden = !open;
+  railToggle.setAttribute("aria-expanded", String(open));
+  railToggle.classList.toggle("is-open", open);
 }
-function setModulesOpen(open) {
-  if (open) {
-    modulesFilter.value = "";
-    fillModulesMenu("");
+
+/* Wide screens show both panes at once, so the toggle is meaningless there;
+   it is hidden by CSS and the body forced open, or a resize could leave the
+   rail permanently closed with no control to reopen it. */
+function syncRail() {
+  if (RAIL_WIDE.matches) {
+    railBody.hidden = false;
+    railToggle.setAttribute("aria-expanded", "true");
+  } else {
+    setRailOpen(false);
   }
-  modulesMenu.hidden = !open;
-  modulesButton.setAttribute("aria-expanded", String(open));
-  modulesButton.parentElement.classList.toggle("is-open", open);
-  if (open) modulesFilter.focus();
 }
-modulesFilter.addEventListener("input", () => fillModulesMenu());
-modulesButton.addEventListener("click", (event) => {
-  event.stopPropagation();
-  setModulesOpen(modulesMenu.hidden);
+railToggle.addEventListener("click", () => {
+  if (RAIL_WIDE.matches) return;
+  setRailOpen(railBody.hidden);
 });
-modulesMenu.addEventListener("click", (event) => {
-  const item = event.target.closest("[data-goto]");
-  if (!item) return;
-  setModulesOpen(false);
-  if (location.hash !== "#lessons") location.hash = "#lessons";
-  else showView("lessons");
-  /* hashchange is queued, not synchronous, so its scroll-to-top would land
-     after a direct call and undo the jump to the chosen lesson. */
-  setTimeout(() => selectLesson(item.dataset.goto), 0);
-});
+RAIL_WIDE.addEventListener("change", syncRail);
+syncRail();
+
+/*
+ * Picking from the index means you are done with the index. On a narrow screen
+ * the open rail sits above the lesson, so leaving it open after a pick puts the
+ * lesson 13,000px down the page -- the same defect the two-pane layout was
+ * built to remove, just triggered a click later. On a wide screen the rail is
+ * a sibling column and costs the lesson nothing, so it stays.
+ */
+function collapseRailAfterPick() {
+  if (typeof RAIL_WIDE === "undefined" || RAIL_WIDE.matches) return;
+  setRailOpen(false);
+}
 
 /*
  * Both entry points into the path lead to the same place, so they share one
@@ -854,10 +913,11 @@ $("#path-stages").addEventListener("click", (event) => {
 $("#path-resume-go").addEventListener("click", (event) => {
   goToLesson(event.currentTarget.dataset.goto);
 });
-document.addEventListener("click", (event) => {
-  if (!modulesButton.parentElement.contains(event.target)) setModulesOpen(false);
-});document.addEventListener("keydown", (event) => {
-  if (event.key !== "Escape" || modulesMenu.hidden) return;
-  setModulesOpen(false);
-  modulesButton.focus();
+/* The hero button doubles as "resume" once there is progress, so it carries a
+   lesson id the same way the path's own resume button does. */
+$("#hero-start").addEventListener("click", (event) => {
+  const id = event.currentTarget.dataset.goto;
+  if (!id) return;
+  event.preventDefault();
+  goToLesson(id);
 });

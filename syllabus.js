@@ -198,7 +198,56 @@
     return { stages, next, total, done, share: total ? done / total : 0 };
   }
 
-  const api = { BANDS, PASS, outline, moduleIndex, bandOfLesson, progress };
+  /*
+   * The corpus in the order the path actually presents it.
+   *
+   * This is not the order `lessons` is authored in, and the gap is not small:
+   * only 42 of 233 lessons sit in the same position in both. A control that
+   * walks the authored array therefore crosses a stage boundary 23 times,
+   * runs backwards along the path 10 times, and at its worst jumps 112
+   * positions -- which is how "Next lesson" came to hand an A2 learner a B2
+   * lesson. Anything offering "next" or "previous" has to walk this instead.
+   *
+   * Cached on the outline object, which is itself cached on the two input
+   * arrays, so this costs one pass the first time the path is built and
+   * nothing afterwards.
+   */
+  const sequenceCache = new WeakMap();
+
+  function sequence(lessons, modules) {
+    const plan = outline(lessons, modules);
+    const cached = sequenceCache.get(plan);
+    if (cached) return cached;
+    const flat = [];
+    for (const stage of plan.stages) {
+      for (const entry of stage.modules) {
+        for (const lesson of entry.lessons) flat.push(lesson);
+      }
+    }
+    const frozen = Object.freeze(flat);
+    sequenceCache.set(plan, frozen);
+    return frozen;
+  }
+
+  /*
+   * Where a lesson sits on the path, and what comes either side of it.
+   * Returns null for a lesson the path cannot place, so a caller can hide the
+   * controls rather than offer a step to nowhere.
+   */
+  function neighbors(lesson, lessons, modules) {
+    if (!lesson) return null;
+    const order = sequence(lessons, modules);
+    const at = order.findIndex((item) => item.id === lesson.id);
+    if (at < 0) return null;
+    return {
+      index: at,
+      total: order.length,
+      previous: at > 0 ? order[at - 1] : null,
+      next: at < order.length - 1 ? order[at + 1] : null
+    };
+  }
+
+  const api = { BANDS, PASS, outline, sequence, neighbors, moduleIndex, bandOfLesson, progress };
 
   global.ParceroSyllabus = api;
   if (typeof module !== "undefined" && module.exports) module.exports = api;
