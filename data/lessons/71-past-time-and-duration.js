@@ -16,7 +16,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context", "grammar"],
     domain: "food-and-drink",
     register: "courteous",
-    pathways: ["independent", "year-12"],
     structure: "present-perfect",
     review: "pending",
     es: {
@@ -648,7 +647,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context", "grammar"],
     domain: "shopping-and-money",
     register: "courteous",
-    pathways: ["independent", "year-12"],
     structure: "pluperfect",
     review: "pending",
     es: {
@@ -1280,7 +1278,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context", "grammar"],
     domain: "shopping-and-money",
     register: "courteous",
-    pathways: ["independent", "year-12"],
     structure: "time-since",
     review: "pending",
     es: {
@@ -1912,7 +1909,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context", "grammar"],
     domain: "everyday-life",
     register: "courteous",
-    pathways: ["independent", "year-12"],
     structure: "preterite-vs-imperfect",
     review: "pending",
     es: {

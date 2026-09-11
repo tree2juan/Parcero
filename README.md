@@ -204,23 +204,20 @@ A kind that current content happens not to produce is still checked for wording,
 The surrounding interface follows the direction too. `data/flashcards.js` emits i18n keys rather than sentences — `deck.ask.pronunciation`, not `"How would you say this out loud?"` — and `flashcards.js` resolves them through `i18n.js` at paint time, so the prompts, controls and screen-reader announcements are in the learner's own language. A test derives the key list from the real content, so a new verb level that nobody has translated yet is caught rather than shipped.
 
 Sets are split evenly rather than greedily, so a topic never ends in a stub round — 13 cards become 7 + 6, not 10 + 3. `FLASHCARD_SET_SIZE` in `data/flashcards.js` is the single knob for the target size. Deck size scales with the lessons without a line of flashcard code changing: the 247 lessons currently yield **27,002 cards across 2,984 sets** in the two directions combined, rising to 27,317 when the age gate is opened. Every lesson produces a deck in both directions — a test asserts it, so a lesson that somehow built no cards would fail rather than quietly go unstudied.
-## Placement and pathways
+## The course path
 
-The app opens with an optional five-signal placement check: receptive understanding, productive use, grammar, context, and pronunciation. Every question includes **"I don't know"**, which records a genuine knowledge gap instead of forcing a guess — a wrong guess and an honest gap mean different things, and the app treats them differently.
+The course is one ordered spine, and `#path` is the whole of it. Four CEFR levels, each holding its modules, each module holding its lessons:
 
 ```mermaid
 flowchart LR
-  A[Placement check<br/>5 signals] --> B[Contextual<br/>foundations]
-  B --> C[Year 12<br/>local mastery]
-  C --> D[Collegiate<br/>academic]
-  C --> E[Professional<br/>pathways]
-  E --> E1[Customer service]
-  E --> E2[Office & technical]
-  E --> E3[Healthcare]
-  E --> E4[Interviews]
+  A[A1<br/>20 modules] --> B[A2<br/>19 modules]
+  B --> C[B1<br/>19 modules]
+  C --> D[B2<br/>20 modules]
 ```
 
-Results stay in browser storage and identify a starting level plus the skills to focus on first.
+Nothing about that arrangement is stored. `syllabus.js` derives it from the lessons and the band authored on each module in `data/modules.js`, so a lesson rewritten into a different module moves itself. The path opens on a resume card that names the next lesson to do, computed from measured practice accuracy rather than a self-report.
+
+There used to be a separate placement quiz here, and a `pathways` vocabulary of eleven study routes carried by every lesson. Both are gone. The quiz answered the same question the resume card already answers, less well — five questions of self-report against real accuracy across the whole course — and every one of its correct answers was option one. The `pathways` list was read by nothing except three hardcoded English blurbs that were never translated, so a Spanish-direction learner saw English; it also collided with the course path on the word "path" while mixing difficulty tiers, audiences and job domains in a single list. A test in `test/shape.test.js` keeps the field from growing back.
 
 <a id="add-a-lesson"></a>
 
@@ -283,7 +280,6 @@ Every field below except `title`, `situation`, `dialogue`, `vocabulary`, `note`,
   skills: ["listening", "speaking", "context"],
   domain: "civic life",
   register: "formal polite",
-  pathways: ["year-12-local-mastery"],
   review: "pending",              // legacy field; not shown to readers
   es: {
     title: "...",
@@ -435,7 +431,7 @@ The After Dark reference needs the most care of anything here — severity label
 
 ```
 index.html          The whole app shell — every element id app.js binds to
-app.js              Rendering, placement scoring, lesson navigation, progress
+app.js              Rendering, the course path, lesson navigation, progress
 i18n.js             Interface strings for both languages, and applyI18n()
 flashcards.js       Swipeable flashcard decks: gestures, round queue, reset
 review.js           Review anchors: parse, resolve, validate, build issue payloads
@@ -458,7 +454,7 @@ data/provenance.js  Generated: which fields hold Spanish no native speaker has r
 scripts/            Maintainer tools: triage flags, check a single lesson block,
                     report verb coverage, and regenerate the provenance record
 .github/workflows/  CI, Pages deploy, and automatic triage of filed flags
-assets/             Favicon, social card, roadmap diagram
+assets/             Favicon and social card
 test/               Dependency-free content validation
 .github/workflows/  CI on every PR, Pages deployment on main
 ```
@@ -466,9 +462,9 @@ test/               Dependency-free content validation
 ## Accessibility and privacy
 
 - Semantic landmarks, a skip link, ARIA tabs, and live regions for the parts that update.
-- Visible focus rings, and full keyboard operation of lessons, tabs, and the placement check.
+- Visible focus rings, and full keyboard operation of lessons, tabs, and the course path.
 - Respects `prefers-color-scheme` (light and dark) and `prefers-reduced-motion`.
-- No analytics, no cookies, no third-party requests. `localStorage` holds your direction, progress, and placement result — "Reset progress" clears all of it.
+- No analytics, no cookies, no third-party requests. `localStorage` holds your direction, your progress and the lesson you were last on — "Reset progress" clears all of it.
 
 ## Deployment
 

@@ -25,7 +25,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "family-and-relationships",
     register: "intimate",
-    pathways: ["foundation", "year-12"],
     verb: "significar",
     review: "pending",
     es: {
@@ -677,7 +676,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "study-and-academia",
     register: "familiar",
-    pathways: ["foundation", "year-12"],
     verb: "desarrollar",
     review: "pending",
     es: {
@@ -1329,7 +1327,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "shopping-and-money",
     register: "courteous",
-    pathways: ["foundation", "year-12"],
     verb: "alcanzar",
     review: "pending",
     es: {

@@ -13,7 +13,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "plans-and-time",
     register: "courteous",
-    pathways: ["extension"],
     verb: "comunicar",
     review: "pending",
     es: {
@@ -677,7 +676,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "family-and-relationships",
     register: "intimate",
-    pathways: ["extension"],
     verb: "conectar",
     review: "pending",
     es: {
@@ -1329,7 +1327,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "family-and-relationships",
     register: "courteous",
-    pathways: ["extension"],
     verb: "continuar",
     review: "pending",
     es: {

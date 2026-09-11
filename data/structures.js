@@ -40,7 +40,6 @@ const structureItems = [
     gap: "7 comparative constructions in the whole corpus",
     skills: ["grammar", "speaking", "context"],
     domain: "shopping",
-    pathways: ["foundation", "year-12"],
     reviewStatus: "needs Colombian Spanish and English education review"
   },
   {
@@ -55,7 +54,6 @@ const structureItems = [
     gap: "zero instances of tan ... como in the corpus",
     skills: ["grammar", "speaking", "context"],
     domain: "everyday life",
-    pathways: ["foundation", "year-12"],
     reviewStatus: "needs Colombian Spanish and English education review"
   },
   {
@@ -70,7 +68,6 @@ const structureItems = [
     gap: "14 -ísimo forms, and superlatives otherwise unexplained",
     skills: ["grammar", "speaking", "culture"],
     domain: "food and drink",
-    pathways: ["foundation", "year-12"],
     reviewStatus: "needs Colombian Spanish and English education review"
   },
   {
@@ -85,7 +82,6 @@ const structureItems = [
     gap: "3 month names and zero full dates in the corpus",
     skills: ["grammar", "listening", "context"],
     domain: "everyday life",
-    pathways: ["foundation", "year-12"],
     reviewStatus: "needs Colombian Spanish and English education review"
   },
   {
@@ -100,7 +96,6 @@ const structureItems = [
     gap: "18 color words across 208 lessons",
     skills: ["grammar", "speaking", "context"],
     domain: "shopping",
-    pathways: ["foundation", "year-12"],
     reviewStatus: "needs Colombian Spanish and English education review"
   },
   {
@@ -115,7 +110,6 @@ const structureItems = [
     gap: "6 emotion words in the corpus, in a course about talking to people",
     skills: ["grammar", "speaking", "culture"],
     domain: "social life",
-    pathways: ["foundation", "year-12"],
     reviewStatus: "needs Colombian Spanish and English education review"
   },
 
@@ -132,7 +126,6 @@ const structureItems = [
     gap: "26 present perfects, unexplained, in 4,461 utterances",
     skills: ["grammar", "listening", "culture"],
     domain: "everyday life",
-    pathways: ["independent", "year-12"],
     reviewStatus: "needs Colombian Spanish and English education review"
   },
   {
@@ -147,7 +140,6 @@ const structureItems = [
     gap: "2 pluperfects in the whole corpus",
     skills: ["grammar", "reading", "context"],
     domain: "everyday life",
-    pathways: ["independent", "year-12"],
     reviewStatus: "needs Colombian Spanish and English education review"
   },
   {
@@ -162,7 +154,6 @@ const structureItems = [
     gap: "8 hace-ago constructions and 2 llevar-plus-gerund",
     skills: ["grammar", "speaking", "context"],
     domain: "everyday life",
-    pathways: ["independent", "year-12"],
     reviewStatus: "needs Colombian Spanish and English education review"
   },
   {
@@ -177,7 +168,6 @@ const structureItems = [
     gap: "20 reported clauses, none taught explicitly",
     skills: ["grammar", "listening", "context"],
     domain: "workplace",
-    pathways: ["independent", "year-12"],
     reviewStatus: "needs Colombian Spanish and English education review"
   },
   {
@@ -192,7 +182,6 @@ const structureItems = [
     gap: "9 si-clauses with a subjunctive, most of them hubiera",
     skills: ["grammar", "speaking", "context"],
     domain: "plans and decisions",
-    pathways: ["independent", "year-12"],
     reviewStatus: "needs Colombian Spanish and English education review"
   },
   {
@@ -207,7 +196,6 @@ const structureItems = [
     gap: "3 true passives against 263 se-passives, with no explanation of the difference",
     skills: ["grammar", "reading", "register"],
     domain: "public life",
-    pathways: ["independent", "collegiate-academic"],
     reviewStatus: "needs Colombian Spanish and English education review"
   },
   {
@@ -222,7 +210,6 @@ const structureItems = [
     gap: "6 acabar de and 10 volver a, never taught as a set",
     skills: ["grammar", "speaking", "context"],
     domain: "everyday life",
-    pathways: ["independent", "year-12"],
     reviewStatus: "needs Colombian Spanish and English education review"
   },
 
@@ -239,7 +226,6 @@ const structureItems = [
     gap: "4 conditional perfects, no counterfactual pattern taught",
     skills: ["grammar", "speaking", "register"],
     domain: "relationships and honesty",
-    pathways: ["extension", "collegiate-academic"],
     reviewStatus: "needs Colombian Spanish and English education review"
   },
   {
@@ -254,7 +240,6 @@ const structureItems = [
     gap: "zero instances of ojalá, one of the most common words in spoken Spanish",
     skills: ["grammar", "speaking", "culture"],
     domain: "social life",
-    pathways: ["extension", "year-12"],
     reviewStatus: "needs Colombian Spanish and English education review"
   },
   {
@@ -269,7 +254,6 @@ const structureItems = [
     gap: "zero instances of cuyo; el cual and la cual essentially absent",
     skills: ["grammar", "reading", "register"],
     domain: "academic",
-    pathways: ["extension", "collegiate-academic"],
     reviewStatus: "needs Colombian Spanish and English education review"
   },
   {
@@ -284,7 +268,6 @@ const structureItems = [
     gap: "4 future perfects, none of them conjectural",
     skills: ["grammar", "listening", "register"],
     domain: "everyday life",
-    pathways: ["extension", "year-12"],
     reviewStatus: "needs Colombian Spanish and English education review"
   },
   {
@@ -299,7 +282,6 @@ const structureItems = [
     gap: "concession never taught; aunque used without its mood contrast",
     skills: ["grammar", "speaking", "register"],
     domain: "plans and decisions",
-    pathways: ["extension", "collegiate-academic"],
     reviewStatus: "needs Colombian Spanish and English education review"
   },
   {
@@ -314,7 +296,6 @@ const structureItems = [
     gap: "1 English obligation with must; tocar in this sense never taught",
     skills: ["grammar", "speaking", "context"],
     domain: "everyday life",
-    pathways: ["foundation", "professional-office"],
     reviewStatus: "needs Colombian Spanish and English education review"
   },
   {
@@ -329,7 +310,6 @@ const structureItems = [
     gap: "4 lessons use a standalone possessive in English; the Spanish form is never taught",
     skills: ["grammar", "speaking", "vocabulary"],
     domain: "everyday life",
-    pathways: ["foundation", "professional-customer-service"],
     reviewStatus: "needs Colombian Spanish and English education review"
   },
   {
@@ -344,7 +324,6 @@ const structureItems = [
     gap: "1 English 'used to' in the whole corpus",
     skills: ["grammar", "speaking", "listening"],
     domain: "everyday life",
-    pathways: ["independent", "year-12"],
     reviewStatus: "needs Colombian Spanish and English education review"
   },
   {
@@ -359,7 +338,6 @@ const structureItems = [
     gap: "1 English question tag in the whole corpus",
     skills: ["grammar", "listening", "register"],
     domain: "social life",
-    pathways: ["independent", "professional-customer-service"],
     reviewStatus: "needs Colombian Spanish and English education review"
   },
   {
@@ -374,7 +352,6 @@ const structureItems = [
     gap: "0 English causatives in the whole corpus",
     skills: ["grammar", "speaking", "context"],
     domain: "everyday life",
-    pathways: ["extension", "professional-technical"],
     reviewStatus: "needs Colombian Spanish and English education review"
   },
   {
@@ -389,7 +366,6 @@ const structureItems = [
     gap: "2 English so/such ... that results",
     skills: ["grammar", "speaking", "reading"],
     domain: "social life",
-    pathways: ["extension", "collegiate-academic"],
     reviewStatus: "needs Colombian Spanish and English education review"
   },
   {
@@ -404,7 +380,6 @@ const structureItems = [
     gap: "1 perfect subjunctive in the whole corpus",
     skills: ["grammar", "listening", "reading"],
     domain: "everyday life",
-    pathways: ["extension", "collegiate-academic"],
     reviewStatus: "needs Colombian Spanish and English education review"
   },
 
@@ -438,7 +413,6 @@ const structureItems = [
     gap: "ser and estar appear on nearly every page; no lesson contrasts them",
     skills: ["grammar", "speaking", "context"],
     domain: "everyday life",
-    pathways: ["foundation", "year-12"],
     reviewStatus: "needs Colombian Spanish and English education review"
   },
   {
@@ -453,7 +427,6 @@ const structureItems = [
     gap: "agreement is modeled constantly and explained nowhere",
     skills: ["grammar", "writing", "reading"],
     domain: "everyday life",
-    pathways: ["foundation", "year-12"],
     reviewStatus: "needs Colombian Spanish and English education review"
   },
   {
@@ -468,7 +441,6 @@ const structureItems = [
     gap: "60 quantifier uses, none explained; article choice never taught",
     skills: ["grammar", "speaking", "vocabulary"],
     domain: "shopping",
-    pathways: ["foundation", "year-12"],
     reviewStatus: "needs Colombian Spanish and English education review"
   },
   {
@@ -483,7 +455,6 @@ const structureItems = [
     gap: "811 preverbal object pronouns and 61 combined pairs, none taught",
     skills: ["grammar", "speaking", "listening"],
     domain: "everyday life",
-    pathways: ["independent", "year-12"],
     reviewStatus: "needs Colombian Spanish and English education review"
   },
   {
@@ -498,7 +469,6 @@ const structureItems = [
     gap: "395 imperfects and no lesson contrasting them with the preterite",
     skills: ["grammar", "listening", "reading"],
     domain: "everyday life",
-    pathways: ["independent", "year-12"],
     reviewStatus: "needs Colombian Spanish and English education review"
   },
   {
@@ -513,7 +483,6 @@ const structureItems = [
     gap: "65 usted imperatives and 34 negative commands, none taught",
     skills: ["grammar", "speaking", "culture"],
     domain: "everyday life",
-    pathways: ["independent", "year-12"],
     reviewStatus: "needs Colombian Spanish and English education review"
   },
   {
@@ -528,7 +497,6 @@ const structureItems = [
     gap: "312 uses of por and para; no lesson contrasts them",
     skills: ["grammar", "writing", "reading"],
     domain: "travel",
-    pathways: ["independent", "year-12"],
     reviewStatus: "needs Colombian Spanish and English education review"
   },
   {
@@ -543,7 +511,6 @@ const structureItems = [
     gap: "33 real conditionals, none explained; the si-rule never stated",
     skills: ["grammar", "speaking", "writing"],
     domain: "everyday life",
-    pathways: ["independent", "year-12"],
     reviewStatus: "needs Colombian Spanish and English education review"
   },
   {
@@ -558,7 +525,6 @@ const structureItems = [
     gap: "55 relative constructions and no lesson on how to build one",
     skills: ["grammar", "writing", "reading"],
     domain: "everyday life",
-    pathways: ["independent", "collegiate-academic"],
     reviewStatus: "needs Colombian Spanish and English education review"
   },
   {
@@ -573,7 +539,6 @@ const structureItems = [
     gap: "27 volition triggers followed by que; the rule never stated",
     skills: ["grammar", "speaking", "writing"],
     domain: "everyday life",
-    pathways: ["independent", "collegiate-academic"],
     reviewStatus: "needs Colombian Spanish and English education review"
   },
   {
@@ -588,7 +553,6 @@ const structureItems = [
     gap: "90 adverbial triggers, mood never explained",
     skills: ["grammar", "writing", "reading"],
     domain: "workplace",
-    pathways: ["extension", "collegiate-academic"],
     reviewStatus: "needs Colombian Spanish and English education review"
   },
   {
@@ -603,7 +567,6 @@ const structureItems = [
     gap: "6 connectors in 6,478 utterances, the thinnest measured slot",
     skills: ["writing", "reading", "grammar"],
     domain: "academic",
-    pathways: ["extension", "collegiate-academic"],
     reviewStatus: "needs Colombian Spanish and English education review"
   },
   {
@@ -618,7 +581,6 @@ const structureItems = [
     gap: "34 uses of no creo que and its relatives, no lesson explaining the mood flip",
     skills: ["grammar", "speaking", "register"],
     domain: "academic",
-    pathways: ["extension", "collegiate-academic"],
     reviewStatus: "needs Colombian Spanish and English education review"
   },
   {
@@ -633,7 +595,6 @@ const structureItems = [
     gap: "2 uses in the whole corpus and no lesson, while B2 requires producing it",
     skills: ["grammar", "reading", "speaking"],
     domain: "academic",
-    pathways: ["extension", "collegiate-academic"],
     reviewStatus: "needs Colombian Spanish and English education review"
   }
 ];

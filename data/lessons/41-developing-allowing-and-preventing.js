@@ -25,7 +25,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "study-and-academia",
     register: "courteous",
-    pathways: ["independent"],
     verb: "permitir",
     review: "pending",
     es: {
@@ -669,7 +668,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "everyday-life",
     register: "courteous",
-    pathways: ["independent"],
     verb: "impedir",
     review: "pending",
     es: {
@@ -1313,7 +1311,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "shopping-and-money",
     register: "courteous",
-    pathways: ["independent"],
     verb: "evitar",
     review: "pending",
     es: {

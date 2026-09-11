@@ -724,12 +724,24 @@ test("the English fallback says the same thing as the table it stands in for", (
   }
 });
 
+/*
+ * The section is bounded by its own view container, not by whatever section
+ * happened to follow it. An earlier version sliced from `id="flashcards"` to
+ * `id="placement"`; when the placement view was deleted that indexOf returned
+ * -1, the slice silently ran to the end of the document, and the test began
+ * reporting the page footer as untranslated flashcards markup. A boundary that
+ * belongs to another feature is a boundary that moves without warning.
+ */
 test("the flashcards section is marked up for translation", () => {
   const html = read("index.html");
-  const section = html.slice(html.indexOf('id="flashcards"'), html.indexOf('id="placement"'));
+  const start = html.indexOf('id="view-flashcards"');
+  assert.notStrictEqual(start, -1, "the flashcards view container has been renamed or removed");
+  const after = html.indexOf('class="view"', start);
+  const section = html.slice(start, after === -1 ? html.length : after);
   const untranslated = [...section.matchAll(/<(h2|h3|h4|p|span|button|strong|li)\b([^>]*)>([^<]+)</g)]
     .filter(([, , attrs, text]) => text.trim() && !attrs.includes("data-i18n"))
     .map(([, tag, , text]) => `<${tag}> ${text.trim()}`);
+  assert.ok(section.includes('id="flashcards"'), "the flashcards section is no longer inside its own view");
   assert.deepStrictEqual(untranslated, [], "authored text in the flashcards section needs a data-i18n key");
 });
 

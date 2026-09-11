@@ -23,7 +23,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "home-and-neighborhood",
     register: "courteous",
-    pathways: ["foundation"],
     verb: "estar",
     review: "pending",
     es: {
@@ -675,7 +674,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "shopping-and-money",
     register: "intimate",
-    pathways: ["foundation"],
     verb: "tener",
     review: "pending",
     es: {
@@ -1327,7 +1325,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "food-and-drink",
     register: "intimate",
-    pathways: ["foundation"],
     verb: "hacer",
     review: "pending",
     es: {

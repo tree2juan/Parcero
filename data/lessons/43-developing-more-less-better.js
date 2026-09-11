@@ -21,7 +21,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "health-and-body",
     register: "familiar",
-    pathways: ["foundation", "year-12"],
     verb: "mejorar",
     review: "pending",
     es: {
@@ -639,7 +638,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "home-and-neighborhood",
     register: "courteous",
-    pathways: ["foundation", "year-12"],
     verb: "aumentar",
     review: "pending",
     es: {
@@ -1257,7 +1255,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "health-and-body",
     register: "courteous",
-    pathways: ["foundation", "year-12"],
     verb: "reducir",
     review: "pending",
     es: {

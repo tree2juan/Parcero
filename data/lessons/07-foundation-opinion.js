@@ -25,7 +25,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "work-and-employment",
     register: "courteous",
-    pathways: ["foundation"],
     verb: "parecer",
     review: "pending",
     es: {
@@ -677,7 +676,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "shopping-and-money",
     register: "familiar",
-    pathways: ["foundation"],
     verb: "quedar",
     review: "pending",
     es: {
@@ -1329,7 +1327,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "plans-and-time",
     register: "familiar",
-    pathways: ["foundation"],
     verb: "creer",
     review: "pending",
     es: {

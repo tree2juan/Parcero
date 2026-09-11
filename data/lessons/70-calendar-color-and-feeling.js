@@ -28,7 +28,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context", "grammar"],
     domain: "home-and-neighborhood",
     register: "courteous",
-    pathways: ["foundation", "year-12"],
     structure: "dates-and-calendar",
     review: "pending",
     es: {
@@ -648,7 +647,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context", "grammar"],
     domain: "food-and-drink",
     register: "neutral",
-    pathways: ["foundation", "year-12"],
     structure: "color-and-description",
     review: "pending",
     es: {
@@ -1268,7 +1266,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context", "grammar"],
     domain: "social-life",
     register: "neutral",
-    pathways: ["foundation", "year-12"],
     structure: "feelings-and-states",
     review: "pending",
     es: {

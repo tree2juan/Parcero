@@ -25,7 +25,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "family-and-relationships",
     register: "courteous",
-    pathways: ["independent"],
     verb: "nacer",
     review: "pending",
     es: {
@@ -689,7 +688,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "family-and-relationships",
     register: "intimate",
-    pathways: ["independent"],
     verb: "morir",
     review: "pending",
     es: {
@@ -1341,7 +1339,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "food-and-drink",
     register: "intimate",
-    pathways: ["independent"],
     verb: "matar",
     review: "pending",
     es: {

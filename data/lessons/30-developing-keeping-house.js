@@ -23,7 +23,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "family-and-relationships",
     register: "intimate",
-    pathways: ["foundation", "year-12"],
     verb: "limpiar",
     review: "pending",
     es: {
@@ -483,7 +482,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "home-and-neighborhood",
     register: "courteous",
-    pathways: ["foundation", "year-12"],
     verb: "lavar",
     review: "pending",
     es: {
@@ -655,7 +653,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "shopping-and-money",
     register: "familiar",
-    pathways: ["foundation", "year-12"],
     verb: "arreglar",
     review: "pending",
     es: {

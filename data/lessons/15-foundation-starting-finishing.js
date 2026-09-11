@@ -25,7 +25,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "study-and-academia",
     register: "familiar",
-    pathways: ["foundation"],
     verb: "empezar",
     review: "pending",
     es: {
@@ -677,7 +676,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "family-and-relationships",
     register: "intimate",
-    pathways: ["foundation"],
     verb: "terminar",
     review: "pending",
     es: {
@@ -1329,7 +1327,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "work-and-employment",
     register: "courteous",
-    pathways: ["foundation"],
     verb: "entrar",
     review: "pending",
     es: {

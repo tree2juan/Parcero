@@ -25,7 +25,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "social-life",
     register: "familiar",
-    pathways: ["foundation", "year-12"],
     verb: "gustar",
     review: "pending",
     es: {
@@ -677,7 +676,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "social-life",
     register: "familiar",
-    pathways: ["foundation", "year-12"],
     verb: "preferir",
     review: "pending",
     es: {
@@ -1329,7 +1327,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "home-and-neighborhood",
     register: "courteous",
-    pathways: ["foundation", "year-12"],
     verb: "odiar",
     review: "pending",
     es: {

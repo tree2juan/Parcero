@@ -27,7 +27,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "shopping-and-money",
     register: "courteous",
-    pathways: ["foundation"],
     verb: "pagar",
     review: "pending",
     es: {
@@ -679,7 +678,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "shopping-and-money",
     register: "familiar",
-    pathways: ["foundation"],
     verb: "comprar",
     review: "pending",
     es: {
@@ -1331,7 +1329,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "home-and-neighborhood",
     register: "familiar",
-    pathways: ["foundation"],
     verb: "vender",
     review: "pending",
     es: {
@@ -1983,7 +1980,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context", "grammar"],
     domain: "shopping-and-money",
     register: "courteous",
-    pathways: ["foundation", "year-12"],
     structure: "articles-and-quantity",
     review: "pending",
     es: {

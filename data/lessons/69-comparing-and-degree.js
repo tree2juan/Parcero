@@ -28,7 +28,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context", "grammar"],
     domain: "shopping-and-money",
     register: "familiar",
-    pathways: ["foundation", "year-12"],
     structure: "comparison-inequality",
     review: "pending",
     es: {
@@ -648,7 +647,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context", "grammar"],
     domain: "food-and-drink",
     register: "familiar",
-    pathways: ["foundation", "year-12"],
     structure: "comparison-equality",
     review: "pending",
     es: {
@@ -1268,7 +1266,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context", "grammar"],
     domain: "food-and-drink",
     register: "familiar",
-    pathways: ["foundation", "year-12"],
     structure: "superlatives",
     review: "pending",
     es: {

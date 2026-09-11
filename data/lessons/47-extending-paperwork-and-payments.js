@@ -23,7 +23,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "home-and-neighborhood",
     register: "courteous",
-    pathways: ["extension"],
     verb: "entregar",
     review: "pending",
     es: {
@@ -565,7 +564,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "work-and-employment",
     register: "formal",
-    pathways: ["extension"],
     verb: "firmar",
     review: "pending",
     es: {
@@ -1107,7 +1105,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "transport-and-travel",
     register: "courteous",
-    pathways: ["extension"],
     verb: "cobrar",
     review: "pending",
     es: {

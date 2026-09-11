@@ -12,7 +12,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "food-and-drink",
     register: "courteous",
-    pathways: ["extension"],
     verb: "cortar",
     review: "pending",
     es: {
@@ -644,7 +643,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "study-and-academia",
     register: "courteous",
-    pathways: ["extension"],
     verb: "mezclar",
     review: "pending",
     es: {
@@ -1276,7 +1274,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "food-and-drink",
     register: "intimate",
-    pathways: ["extension"],
     verb: "echar",
     review: "pending",
     es: {

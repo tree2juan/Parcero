@@ -25,7 +25,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "work-and-employment",
     register: "courteous",
-    pathways: ["independent"],
     verb: "discutir",
     review: "pending",
     es: {
@@ -677,7 +676,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "transport-and-travel",
     register: "familiar",
-    pathways: ["independent"],
     verb: "comparar",
     review: "pending",
     es: {
@@ -1329,7 +1327,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "transport-and-travel",
     register: "courteous",
-    pathways: ["independent"],
     verb: "depender",
     review: "pending",
     es: {

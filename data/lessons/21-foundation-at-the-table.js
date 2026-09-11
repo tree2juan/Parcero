@@ -24,7 +24,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "food-and-drink",
     register: "courteous",
-    pathways: ["foundation"],
     verb: "pedir",
     review: "pending",
     es: {
@@ -648,7 +647,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "food-and-drink",
     register: "intimate",
-    pathways: ["foundation"],
     verb: "servir",
     review: "pending",
     es: {
@@ -1272,7 +1270,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "family-and-relationships",
     register: "familiar",
-    pathways: ["foundation"],
     verb: "comer",
     review: "pending",
     es: {

@@ -23,7 +23,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "home-and-neighborhood",
     register: "courteous",
-    pathways: ["foundation"],
     verb: "poder",
     review: "pending",
     es: {
@@ -675,7 +674,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "home-and-neighborhood",
     register: "familiar",
-    pathways: ["foundation"],
     verb: "decir",
     review: "pending",
     es: {
@@ -1327,7 +1325,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "food-and-drink",
     register: "intimate",
-    pathways: ["foundation"],
     verb: "venir",
     review: "pending",
     es: {

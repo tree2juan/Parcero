@@ -24,7 +24,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "food-and-drink",
     register: "familiar",
-    pathways: ["independent"],
     verb: "invitar",
     review: "pending",
     es: {
@@ -566,7 +565,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "family-and-relationships",
     register: "courteous",
-    pathways: ["independent"],
     verb: "aceptar",
     review: "pending",
     es: {
@@ -1109,7 +1107,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "social-life",
     register: "familiar",
-    pathways: ["independent"],
     verb: "rechazar",
     review: "pending",
     es: {

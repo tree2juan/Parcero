@@ -23,7 +23,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "study-and-academia",
     register: "familiar",
-    pathways: ["foundation", "year-12"],
     verb: "presentar",
     review: "pending",
     es: {
@@ -621,7 +620,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "home-and-neighborhood",
     register: "courteous",
-    pathways: ["foundation", "year-12"],
     verb: "asistir",
     review: "pending",
     es: {
@@ -1231,7 +1229,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "study-and-academia",
     register: "familiar",
-    pathways: ["foundation", "year-12"],
     verb: "participar",
     review: "pending",
     es: {

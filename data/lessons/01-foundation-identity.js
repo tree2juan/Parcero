@@ -28,7 +28,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "home-and-neighborhood",
     register: "courteous",
-    pathways: ["foundation"],
     verb: "ser",
     review: "pending",
     es: {
@@ -680,7 +679,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context", "grammar"],
     domain: "everyday-life",
     register: "familiar",
-    pathways: ["foundation", "year-12"],
     structure: "ser-vs-estar",
     review: "pending",
     es: {

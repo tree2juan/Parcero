@@ -25,7 +25,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "transport-and-travel",
     register: "familiar",
-    pathways: ["independent"],
     verb: "levantar",
     review: "pending",
     es: {
@@ -657,7 +656,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "study-and-academia",
     register: "courteous",
-    pathways: ["independent"],
     verb: "sentar",
     review: "pending",
     es: {
@@ -1289,7 +1287,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "social-life",
     register: "familiar",
-    pathways: ["independent"],
     verb: "vestir",
     review: "pending",
     es: {

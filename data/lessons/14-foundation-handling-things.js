@@ -24,7 +24,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "food-and-drink",
     register: "courteous",
-    pathways: ["foundation"],
     verb: "usar",
     review: "pending",
     es: {
@@ -576,7 +575,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "shopping-and-money",
     register: "familiar",
-    pathways: ["foundation"],
     verb: "abrir",
     review: "pending",
     es: {
@@ -1128,7 +1126,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "shopping-and-money",
     register: "familiar",
-    pathways: ["foundation"],
     verb: "cerrar",
     review: "pending",
     es: {

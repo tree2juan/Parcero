@@ -23,7 +23,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "work-and-employment",
     register: "familiar",
-    pathways: ["foundation", "year-12"],
     verb: "soler",
     review: "pending",
     es: {
@@ -587,7 +586,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "transport-and-travel",
     register: "courteous",
-    pathways: ["foundation", "year-12"],
     verb: "caber",
     review: "pending",
     es: {
@@ -1151,7 +1149,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "transport-and-travel",
     register: "courteous",
-    pathways: ["foundation", "year-12"],
     verb: "valer",
     review: "pending",
     es: {

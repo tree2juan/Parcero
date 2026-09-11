@@ -12,7 +12,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "work-and-employment",
     register: "courteous",
-    pathways: ["extension"],
     verb: "considerar",
     review: "pending",
     es: {
@@ -644,7 +643,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "transport-and-travel",
     register: "familiar",
-    pathways: ["extension"],
     verb: "imaginar",
     review: "pending",
     es: {
@@ -1276,7 +1274,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "study-and-academia",
     register: "intimate",
-    pathways: ["extension"],
     verb: "reconocer",
     review: "pending",
     es: {

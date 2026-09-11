@@ -33,7 +33,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "everyday-life",
     register: "familiar",
-    pathways: ["foundation"],
     verb: "salir",
     review: "pending",
     es: {
@@ -665,7 +664,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "home-and-neighborhood",
     register: "familiar",
-    pathways: ["foundation"],
     verb: "subir",
     review: "pending",
     es: {
@@ -1297,7 +1295,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "transport-and-travel",
     register: "courteous",
-    pathways: ["foundation"],
     verb: "bajar",
     review: "pending",
     es: {

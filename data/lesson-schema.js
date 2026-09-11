@@ -220,7 +220,6 @@ function normalizeLesson(lesson) {
     domain: text(lesson.domain),
     register: text(lesson.register),
     skills: list(lesson.skills),
-    pathways: list(lesson.pathways),
     review: lesson.review,
     es: normalizeContent(lesson.es),
     en: normalizeContent(lesson.en)

@@ -24,7 +24,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "family-and-relationships",
     register: "intimate",
-    pathways: ["extension"],
     verb: "caer",
     review: "pending",
     es: {
@@ -656,7 +655,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "family-and-relationships",
     register: "courteous",
-    pathways: ["extension"],
     verb: "llevarse",
     review: "pending",
     es: {
@@ -1288,7 +1286,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "social-life",
     register: "courteous",
-    pathways: ["extension"],
     verb: "contar",
     review: "pending",
     es: {

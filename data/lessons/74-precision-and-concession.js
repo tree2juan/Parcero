@@ -31,7 +31,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context", "grammar"],
     domain: "study-and-academia",
     register: "formal",
-    pathways: ["extension", "collegiate-academic"],
     structure: "relative-advanced",
     review: "pending",
     es: {
@@ -663,7 +662,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context", "grammar"],
     domain: "food-and-drink",
     register: "courteous",
-    pathways: ["extension", "year-12"],
     structure: "conjecture",
     review: "pending",
     es: {
@@ -1295,7 +1293,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context", "grammar"],
     domain: "study-and-academia",
     register: "formal",
-    pathways: ["extension", "collegiate-academic"],
     structure: "concession",
     review: "pending",
     es: {
@@ -1927,7 +1924,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context", "grammar"],
     domain: "work-and-employment",
     register: "formal",
-    pathways: ["extension", "collegiate-academic"],
     structure: "subjunctive-adverbial",
     review: "pending",
     es: {

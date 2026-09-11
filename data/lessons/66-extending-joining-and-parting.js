@@ -12,7 +12,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "shopping-and-money",
     register: "courteous",
-    pathways: ["extension"],
     verb: "pesar",
     review: "pending",
     es: {
@@ -654,7 +653,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "home-and-neighborhood",
     register: "courteous",
-    pathways: ["extension"],
     verb: "unir",
     review: "pending",
     es: {
@@ -1272,7 +1270,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "family-and-relationships",
     register: "intimate",
-    pathways: ["extension"],
     verb: "separar",
     review: "pending",
     es: {

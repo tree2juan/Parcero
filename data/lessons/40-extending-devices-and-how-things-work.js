@@ -23,7 +23,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "family-and-relationships",
     register: "courteous",
-    pathways: ["foundation", "year-12"],
     verb: "encender",
     review: "pending",
     es: {
@@ -621,7 +620,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "home-and-neighborhood",
     register: "familiar",
-    pathways: ["foundation", "year-12"],
     verb: "apagar",
     review: "pending",
     es: {
@@ -1219,7 +1217,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "health-and-body",
     register: "courteous",
-    pathways: ["foundation", "year-12"],
     verb: "funcionar",
     review: "pending",
     es: {
