@@ -183,6 +183,85 @@ test("missing data produces an empty path rather than an exception", () => {
   assert.equal(report.next, null);
 });
 
+/* ---------- the order the learner actually walks ---------- */
+
+test("the sequence holds every lesson the path places, exactly once", () => {
+  const order = syllabus.sequence(lessons, MODULES);
+  const placed = allOf(syllabus.outline(lessons, MODULES));
+  assert.equal(order.length, placed.length);
+  assert.equal(new Set(order.map((lesson) => lesson.id)).size, order.length);
+});
+
+test("the sequence never steps back down the scale", () => {
+  /*
+   * This is the whole reason the sequence exists. Walking the authored array
+   * instead crossed a stage boundary 23 times and ran backwards 10 times --
+   * one step handed an A2 learner a B2 lesson.
+   *
+   * bandOfLesson takes (lesson, lessons, modules). Calling it with two
+   * arguments returns null for every lesson, indexOf(null) is -1 for every
+   * lesson, and the comparison then passes without comparing anything -- so
+   * the band is asserted non-null first, or this test guards nothing.
+   */
+  const order = syllabus.sequence(lessons, MODULES);
+  const bands = order.map((lesson) => syllabus.bandOfLesson(lesson, lessons, MODULES));
+  assert.ok(bands.every((band) => syllabus.BANDS.includes(band)),
+    "every lesson on the path must report a real band, or the check below is empty");
+
+  for (let i = 1; i < order.length; i += 1) {
+    const before = syllabus.BANDS.indexOf(bands[i - 1]);
+    const after = syllabus.BANDS.indexOf(bands[i]);
+    assert.ok(after >= before,
+      `step ${i} goes ${bands[i - 1]} -> ${bands[i]}; the pager would demote the learner`);
+  }
+});
+
+test("neighbors walks the sequence, and stops at both ends", () => {
+  const order = syllabus.sequence(lessons, MODULES);
+  const first = syllabus.neighbors(order[0], lessons, MODULES);
+  assert.equal(first.index, 0);
+  assert.equal(first.total, order.length);
+  assert.equal(first.previous, null, "there is nothing before the first lesson");
+  assert.equal(first.next.id, order[1].id);
+
+  const last = syllabus.neighbors(order[order.length - 1], lessons, MODULES);
+  assert.equal(last.index, order.length - 1);
+  assert.equal(last.next, null, "there is nothing after the last lesson");
+  assert.equal(last.previous.id, order[order.length - 2].id);
+
+  const middle = syllabus.neighbors(order[5], lessons, MODULES);
+  assert.equal(middle.previous.id, order[4].id);
+  assert.equal(middle.next.id, order[6].id);
+});
+
+test("a lesson the path cannot place has no neighbors rather than wrong ones", () => {
+  assert.equal(syllabus.neighbors(null, lessons, MODULES), null);
+  assert.equal(syllabus.neighbors({ id: "no-such-lesson" }, lessons, MODULES), null);
+});
+
+test("the pager steps through the path, not through the authored array", () => {
+  /*
+   * The regression this guards is invisible by reading: both orders are the
+   * same 233 lessons, so indexing `lessons` looks correct and quietly delivers
+   * a different course. Only 42 of 233 lessons sit at the same position in
+   * both, so a pager built on the array is wrong for 191 of them.
+   */
+  const app = read("app.js");
+  const walker = app.match(/function pathNeighbors\([^)]*\)[\s\S]*?\n\}/);
+  assert.ok(walker, "app.js must resolve pager steps in pathNeighbors()");
+  assert.match(walker[0], /neighbors\(/,
+    "the pager must ask the syllabus for neighbors instead of doing its own arithmetic");
+
+  for (const id of ["previous-lesson", "next-lesson"]) {
+    const handler = app.match(new RegExp(`\\$\\("#${id}"\\)\\.addEventListener\\([\\s\\S]*?\\n\\}\\);`));
+    assert.ok(handler, `app.js must wire #${id}`);
+    assert.match(handler[0], /pathNeighbors\(/,
+      `#${id} must step along the path; indexing the lesson array skips stages`);
+    assert.doesNotMatch(handler[0], /lessonIndex\(\)/,
+      `#${id} went back to the authored order, which crosses CEFR stages`);
+  }
+});
+
 /* ---------- the view ---------- */
 
 function pathSource() {
