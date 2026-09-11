@@ -35,6 +35,7 @@
       </a>
       <nav class="site-nav" data-i18n-aria="nav.sections" aria-label="Sections">
         <div class="site-nav-links">
+          <a href="#path" data-i18n="nav.path">Path</a>
           <a href="#lessons" data-i18n="nav.lessons">Lessons</a>
           <a href="#flashcards" data-i18n="nav.flashcards">Flashcards</a>
           <a href="#placement" data-i18n="nav.placement">Placement</a>
@@ -86,7 +87,7 @@
           <h2 id="hero-title" data-i18n="hero.title">Language belongs in a conversation.</h2>
           <p class="hero-lead" data-i18n="hero.lead">Explore Colombian Spanish and practical English from either point of view — with context, culture, sound, and practice. Nothing to install, nothing to sign up for, and your progress never leaves this device.</p>
           <div class="hero-actions">
-            <a class="primary-button" href="#lessons" data-i18n="hero.start">Start the first lesson</a>
+            <a class="primary-button" href="#path" data-i18n="hero.start">Start the course</a>
             <a class="ghost-button" href="#placement" data-i18n="hero.placement">Find my level first</a>
           </div>
         </div>
@@ -100,9 +101,14 @@
       </section>
 
       <nav class="module-hub" data-i18n-aria="hub.aria" aria-label="Modules">
+        <a href="#path" class="module-hub-lead">
+          <strong data-i18n="hub.path.title">Your path</strong>
+          <span id="hub-path-blurb" data-i18n="hub.path.blurb">The whole course in order. Start here.</span>
+          <span class="module-hub-go" data-i18n="hub.open">Open</span>
+        </a>
         <a href="#lessons">
-          <strong data-i18n="hub.lessons.title">Lessons</strong>
-          <span data-i18n="hub.lessons.blurb">Eight guided modules: dialogue, culture, pitfalls and practice.</span>
+          <strong data-i18n="hub.lessons.title">All lessons</strong>
+          <span data-i18n="hub.lessons.blurb">Browse or search every lesson: dialogue, culture, pitfalls and practice.</span>
           <span class="module-hub-go" data-i18n="hub.open">Open</span>
         </a>
         <a href="#flashcards">
@@ -128,6 +134,36 @@
       </nav>
       </div>
 
+      <div class="view" id="view-path" hidden>
+      <section id="path" class="path-section" aria-labelledby="path-title">
+        <div class="section-head">
+          <p class="eyebrow" data-i18n="path.eyebrow">Your course</p>
+          <h2 id="path-title" data-i18n="path.title">One path, four stages.</h2>
+          <p class="section-lead" data-i18n="path.lead">Work top to bottom. Each module teaches one verb or one structure, and each stage takes you to the next level of the scale.</p>
+        </div>
+
+        <div class="path-resume" id="path-resume" hidden>
+          <div class="path-resume-copy">
+            <p class="eyebrow" id="path-resume-label" data-i18n="path.startLabel">Start here</p>
+            <strong id="path-resume-lesson">—</strong>
+            <p class="path-resume-where" id="path-resume-where"></p>
+          </div>
+          <button id="path-resume-go" class="primary-button" type="button" data-i18n="path.resumeGo">Continue</button>
+        </div>
+
+        <div class="progress-panel">
+          <div>
+            <p class="eyebrow" data-i18n="progress.eyebrow">Your path</p>
+            <strong id="path-overall">—</strong>
+            <p class="path-note" id="path-mastered-note"></p>
+          </div>
+          <div class="progress-track" aria-hidden="true"><div id="path-overall-bar"></div></div>
+        </div>
+
+        <ol id="path-stages" class="path-stages"></ol>
+      </section>
+      </div>
+
       <div class="view" id="view-lessons" hidden>
       <section id="lessons" class="lessons-section" aria-labelledby="lesson-nav-title">
         <div class="section-head">
@@ -139,7 +175,7 @@
         <div class="progress-panel">
           <div>
             <p class="eyebrow" data-i18n="progress.eyebrow">Your path</p>
-            <strong id="progress-label">0 of 8 lessons explored</strong>
+            <strong id="progress-label">—</strong>
           </div>
           <div class="progress-track" aria-hidden="true"><div id="progress-bar"></div></div>
         </div>
@@ -161,7 +197,10 @@
         <section id="lesson" class="lesson" aria-live="polite">
           <div class="lesson-heading" id="lesson-heading">
             <p id="lesson-level" class="eyebrow"></p>
-            <p id="lesson-band" class="band-badge" hidden></p>
+            <div class="lesson-badges">
+              <p id="lesson-teaches" class="band-badge band-badge-teaches" hidden></p>
+              <p id="lesson-band" class="band-badge" hidden></p>
+            </div>
             <h2 id="lesson-title"></h2>
             <p id="lesson-situation"></p>
             <p id="lesson-review" class="review-badge">
@@ -580,9 +619,14 @@
     <script src="i18n.js"></script>
     <script src="data/flashcards.js"></script>
     <script src="cefr.js"></script>
-    <script src="app.js"></script>
+    <script src="syllabus.js"></script>
+    <!-- srs.js and progress.js load before app.js for the same reason cefr.js
+         does: app.js renders the first lesson while the page is still parsing,
+         so a ParceroProgress that arrives afterwards arrives too late and every
+         progress readout paints zero until something forces a redraw. -->
     <script src="srs.js"></script>
     <script src="progress.js"></script>
+    <script src="app.js"></script>
     <script src="workbook.js"></script>
     <script src="workbook-ui.js"></script>
     <script src="answer-check.js"></script>

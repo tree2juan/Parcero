@@ -389,7 +389,42 @@ function render() {
  */
 const cefrApi = () => (typeof ParceroCEFR === "object" ? ParceroCEFR : null);
 
+/*
+ * Why a lesson carries two bands, and why they are allowed to disagree.
+ *
+ * "Teaches" is the syllabus level: the stage the course puts this module at.
+ * "Language used" is the content level: the hardest grammar the dialogue
+ * actually contains. They differ on purpose, because a real conversation at a
+ * Bogotá counter carries a relative clause whether or not the lesson is about
+ * one, and flattening the two would either overstate what the learner has been
+ * taught or force the dialogue to stop sounding Colombian.
+ *
+ * Unlabeled, that difference reads as a contradiction — stage A1, badge B1. So
+ * each badge names the claim it makes, and this comment is here because the
+ * next person to see them will otherwise "fix" one of them.
+ */
+function renderTeaches(lesson) {
+  const badge = $("#lesson-teaches");
+  const api = syllabusApi();
+  if (!badge) return;
+  if (!api || typeof COURSE_MODULES === "undefined") {
+    badge.hidden = true;
+    return;
+  }
+  const entry = api.moduleIndex(lessons, COURSE_MODULES).get(lesson.id);
+  if (!entry) {
+    badge.hidden = true;
+    return;
+  }
+  badge.textContent = t("level.teaches", {
+    band: entry.band,
+    module: entry.title[state.direction]
+  });
+  badge.hidden = false;
+}
+
 function renderBand(lesson) {
+  renderTeaches(lesson);
   const badge = $("#lesson-band");
   const api = cefrApi();
   if (!badge) return;
@@ -409,18 +444,22 @@ function renderBand(lesson) {
   badge.hidden = false;
 }
 
+/* Accuracy in 0..1 for one lesson in the current direction, or null when it
+   has never been practiced. Shared by the level ladder and the path so the two
+   can never disagree about what counts as finished. */
+function lessonAccuracy(lesson) {
+  const api = progressApi();
+  if (!api) return null;
+  const score = api.lessonScore(progress(), state.direction, lesson.id);
+  return score ? score.accuracy : null;
+}
+
 function renderLevel() {
   const panel = $("#level-panel");
   const api = cefrApi();
-  const progressApiRef = progressApi();
   if (!panel || !api) return;
 
-  const scoreOf = (lesson) => {
-    if (!progressApiRef) return null;
-    const score = progressApiRef.lessonScore(progress(), state.direction, lesson.id);
-    return score ? score.accuracy : null;
-  };
-  const result = api.attainment(lessons, state.direction, scoreOf);
+  const result = api.attainment(lessons, state.direction, lessonAccuracy);
 
   $("#level-reached").textContent = result.reached || t("level.none");
   const next = result.bands.find((band) => band.taught && !band.met);
@@ -452,7 +491,108 @@ function updateProgress() {
   $("#previous-lesson").disabled = index === 0;
   $("#next-lesson").disabled = index === total - 1;
   renderLevel();
+  renderPath();
 }
+
+/*
+ * The path: the course as a route, not a menu.
+ *
+ * The Lessons view answers "show me everything"; this answers "what do I do
+ * next". It reads the authored stage on each module rather than detecting
+ * grammar, because the two measure different things — see syllabus.js. A
+ * module is a `details` so the page opens as four readable stages instead of
+ * 233 rows, and so expanding needs no script to be keyboard accessible.
+ */
+const syllabusApi = () => (typeof ParceroSyllabus === "object" ? ParceroSyllabus : null);
+
+function renderPath() {
+  const host = $("#path-stages");
+  const api = syllabusApi();
+  if (!host || !api || typeof COURSE_MODULES === "undefined") return;
+
+  const plan = api.outline(lessons, COURSE_MODULES);
+  const report = api.progress(lessons, COURSE_MODULES, lessonAccuracy);
+  const lessonsOf = new Map();
+  for (const stage of plan.stages) {
+    for (const entry of stage.modules) lessonsOf.set(entry.id, entry.lessons);
+  }
+
+  $("#path-overall").textContent = t("path.overall", { done: report.done, total: report.total });
+  $("#path-overall-bar").style.width = `${Math.round(report.share * 100)}%`;
+  $("#path-mastered-note").textContent = t("path.mastered", { percent: Math.round(api.PASS * 100) });
+
+  /* Counted, never typed. The home page claimed "eight guided modules" for as
+     long as there were eight; it went on claiming it at seventy-eight. */
+  const blurb = $("#hub-path-blurb");
+  if (blurb) {
+    blurb.textContent = t("hub.path.blurb", {
+      modules: COURSE_MODULES.length,
+      lessons: lessons.length
+    });
+  }
+
+  /* Where to resume. Null once everything is mastered, and the card goes with
+     it rather than pointing at a lesson that does not exist. */
+  const resume = $("#path-resume");
+  const resumeGo = $("#path-resume-go");
+  if (report.next) {
+    const lesson = lessons.find((item) => item.id === report.next.lessonId);
+    const stage = report.stages.find((item) => item.band === report.next.band);
+    const entry = stage && stage.modules.find((item) => item.id === report.next.moduleId);
+    $("#path-resume-label").textContent = report.done ? t("path.resumeLabel") : t("path.startLabel");
+    $("#path-resume-lesson").textContent = lesson ? lesson[state.direction].title : report.next.lessonId;
+    $("#path-resume-where").textContent = entry
+      ? `${report.next.band} · ${entry.title[state.direction]}`
+      : report.next.band;
+    resumeGo.dataset.goto = report.next.lessonId;
+    resume.hidden = false;
+  } else {
+    resume.hidden = true;
+  }
+
+  /* Re-rendering on every answered question would otherwise slam shut every
+     module the learner had opened, so the open set is carried across. */
+  const open = new Set();
+  host.querySelectorAll("details[open][data-module]").forEach((node) => open.add(node.dataset.module));
+  if (report.next) open.add(report.next.moduleId);
+
+  host.innerHTML = report.stages.map((stage) => {
+    const width = Math.round(stage.share * 100);
+    const modules = stage.modules.map((entry) => {
+      const items = lessonsOf.get(entry.id) || [];
+      const rows = items.map((lesson) => {
+        const value = lessonAccuracy(lesson);
+        const done = typeof value === "number" && value >= api.PASS;
+        const isNext = report.next && report.next.lessonId === lesson.id;
+        const classes = `path-lesson${done ? " is-done" : ""}${isNext ? " is-next" : ""}`;
+        return `<li><button type="button" class="${classes}" data-goto="${esc(lesson.id)}">` +
+          `<span class="path-lesson-mark" aria-hidden="true"></span>` +
+          `<span>${esc(lesson[state.direction].title)}</span></button></li>`;
+      }).join("");
+      const label = entry.title[state.direction];
+      return `<li class="path-module${entry.complete ? " is-complete" : ""}">` +
+        `<details data-module="${esc(entry.id)}"${open.has(entry.id) ? " open" : ""}>` +
+        `<summary><span class="path-module-mark" aria-hidden="true"></span>` +
+        `<span class="path-module-title">${esc(label)}</span>` +
+        `<span class="path-module-count">${esc(entry.complete
+          ? t("path.complete")
+          : t("path.moduleCount", { done: entry.done, total: entry.total }))}</span></summary>` +
+        `<ol class="path-lessons">${rows}</ol></details></li>`;
+    }).join("");
+
+    return `<li class="path-stage${stage.complete ? " is-complete" : ""}">` +
+      `<div class="path-stage-head">` +
+      `<span class="path-stage-band">${esc(stage.band)}</span>` +
+      `<div class="path-stage-copy"><strong>${esc(t(`path.stage.${stage.band}.name`))}</strong>` +
+      `<p>${esc(t(`path.stage.${stage.band}.blurb`))}</p></div>` +
+      `<span class="path-stage-count">${esc(t("path.stageCount", {
+        done: stage.modulesComplete, total: stage.moduleCount
+      }))}</span></div>` +
+      `<div class="path-stage-track" aria-hidden="true"><span style="width:${width}%"></span></div>` +
+      `<ol class="path-modules">${modules}</ol></li>`;
+  }).join("");
+}
+
 
 /*
  * Grade the answer just given and keep it.
@@ -575,9 +715,10 @@ render();
    Each module is a view, so only one is on screen at a time. Routing runs off
    the hash the nav already used, which keeps every existing in-page link, the
    back button and any bookmark working without a second link scheme. */
-const VIEWS = ["home", "lessons", "flashcards", "placement", "library", "workbook", "after-dark"];
+const VIEWS = ["home", "path", "lessons", "flashcards", "placement", "library", "workbook", "after-dark"];
 const ROUTE_FOR_HASH = {
   "": "home", "#top": "home",
+  "#path": "path",
   "#lessons": "lessons", "#lesson": "lessons",
   "#flashcards": "flashcards",
   "#placement": "placement", "#roadmap": "placement",
@@ -679,10 +820,28 @@ modulesMenu.addEventListener("click", (event) => {
      after a direct call and undo the jump to the chosen lesson. */
   setTimeout(() => selectLesson(item.dataset.goto), 0);
 });
+
+/*
+ * Both entry points into the path lead to the same place, so they share one
+ * jump. The hash is set first so the back button returns to the path rather
+ * than to whatever was on screen before it.
+ */
+function goToLesson(id) {
+  if (!id) return;
+  if (location.hash !== "#lessons") location.hash = "#lessons";
+  else showView("lessons");
+  setTimeout(() => selectLesson(id), 0);
+}
+$("#path-stages").addEventListener("click", (event) => {
+  const item = event.target.closest("[data-goto]");
+  if (item) goToLesson(item.dataset.goto);
+});
+$("#path-resume-go").addEventListener("click", (event) => {
+  goToLesson(event.currentTarget.dataset.goto);
+});
 document.addEventListener("click", (event) => {
   if (!modulesButton.parentElement.contains(event.target)) setModulesOpen(false);
-});
-document.addEventListener("keydown", (event) => {
+});document.addEventListener("keydown", (event) => {
   if (event.key !== "Escape" || modulesMenu.hidden) return;
   setModulesOpen(false);
   modulesButton.focus();

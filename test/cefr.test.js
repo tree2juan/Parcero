@@ -28,7 +28,7 @@
  *
  * The other half of the file guards the aggregation. A band that is computed
  * correctly and then attributed to the wrong lesson, or an attainment rule that
- * hands out C1 for opening a page, would both look fine on screen.
+ * hands out B2 for opening a page, would both look fine on screen.
  */
 const test = require("node:test");
 const assert = require("node:assert");
@@ -203,9 +203,9 @@ test("a lesson is banded by the highest thing it demonstrates, with the line to 
     }
   };
   const result = cefr.lessonBand(lesson, "es");
-  /* "si hubiera sabido, habría llamado" is a past si-clause, which this course
-     places at C1 — the highest band any lesson reaches. */
-  assert.strictEqual(result.band, "C1");
+  /* "si hubiera sabido, habría llamado" carries an imperfect subjunctive and a
+     conditional perfect, both B2 -- the highest band this course teaches. */
+  assert.strictEqual(result.band, "B2");
   const ids = result.features.map((f) => f.id);
   assert.ok(ids.includes("es-ser-estar"), "the A1 feature is still reported");
   for (const feature of result.features) {
@@ -260,8 +260,8 @@ test("the course is a beginner course, and the numbers say so", () => {
      assertion checks, and B2 is now genuinely populated rather than
      decorative, which is what the second one locks in so it cannot rot back.
 
-     If content is added that genuinely reaches C1 in bulk, update this the
-     same way: change the number and say why, rather than deleting the test
+     If content is added that genuinely reaches a new band in bulk, update this
+     the same way: change the number and say why, rather than deleting the test
      because it went red. */
   for (const direction of DIRECTIONS) {
     const profile = cefr.corpusProfile(lessons, direction);
@@ -274,7 +274,27 @@ test("the course is a beginner course, and the numbers say so", () => {
       profile.counts.B2 >= 20,
       `${direction}: B2 holds only ${profile.counts.B2} lessons, so the course cannot claim to reach it`
     );
-    assert.strictEqual(profile.counts.C2, 0, `${direction} claims to teach C2`);
+  }
+});
+
+test("the scale stops where the course stops", () => {
+  /* C1 and C2 were measured and removed: coverage reported 0 of 3 C1 features
+     taught in Spanish, 1 of 3 in English, and 0 of 1 at C2 in both. All they
+     did was label eight lessons above the level they teach -- six of them on
+     the English cleft probe alone -- and hang two permanently empty rungs off
+     the level ladder, which app.js renders one per band.
+
+     This is the guard against them coming back by accident. A probe may only
+     carry a band the scale admits, and the scale may only admit a band the
+     course is written to. */
+  assert.deepStrictEqual(Array.from(CEFR_BANDS), ["A1", "A2", "B1", "B2"]);
+  for (const direction of DIRECTIONS) {
+    for (const feature of CEFR_FEATURES[direction]) {
+      assert.ok(
+        CEFR_BANDS.includes(feature.band),
+        `${direction}: ${feature.id} claims band ${feature.band}, which the scale does not admit`
+      );
+    }
   }
 });
 
@@ -315,22 +335,24 @@ test("opening every lesson proves nothing", () => {
 });
 
 test("answering the whole course well reaches the top band the course teaches", () => {
-  /* B2, not C1. The course teaches all nine B2 features to the floor and none
-     of the three C1 ones, so C1 is not a band a learner can be awarded here --
-     even though two Spanish lessons happen to band C1 on an incidental future
-     perfect. Attainment asks coverage that question now, which is what stops
-     the two measures in cefr.js from contradicting each other. */
+  /* B2 is the top of the scale and the course teaches all nine of its features
+     to the floor, so a learner who answers everything well earns it outright.
+
+     This test used to assert the opposite shape: that C1 existed, held lessons,
+     and still could not be awarded because coverage reported its features
+     untaught. Removing C1 and C2 from the scale removed that case, and the
+     honest replacement is to check that every band now offered is one the
+     course actually teaches -- a ladder with no dead rungs on it. */
   const result = cefr.attainment(lessons, "es", () => 1);
-  assert.strictEqual(result.reached, "B2", "C1 is not taught, so it cannot be reached");
+  assert.strictEqual(result.reached, "B2", "B2 is taught in full, so it is reachable");
 
-  const c1 = result.bands.find((b) => b.band === "C1");
-  assert.ok(c1.lessons > 0, "the fixture for this test is that C1 has lessons but is not taught");
-  assert.strictEqual(c1.taught, false, "a band the course does not teach must say so");
-  assert.strictEqual(c1.met, false, "a band that is not taught cannot be met");
-
-  const c2 = result.bands.find((b) => b.band === "C2");
-  assert.strictEqual(c2.taught, false, "a band the course does not teach must say so");
-  assert.strictEqual(c2.met, false);
+  for (const entry of result.bands) {
+    assert.strictEqual(
+      entry.taught,
+      true,
+      `${entry.band} is on the ladder but the course does not teach it`
+    );
+  }
 });
 
 test("a band is not reached by skipping the one below it", () => {
@@ -369,24 +391,29 @@ test("a band needs most of its lessons, not one", () => {
 });
 
 test("a band the course does not teach cannot be awarded", () => {
-  /* Ten lessons, all in C1, all answered perfectly -- and C1 is still not
-     awarded, because they demonstrate one of the three C1 features and coverage
-     reports the other two as untaught. This is the rule that stopped the two
-     measures in cefr.js from contradicting each other in public: the real
-     corpus had exactly this shape at C1, with two lessons carrying an
-     incidental future perfect, and attainment handed out the band anyway. */
+  /* Ten lessons, all banding B2, all answered perfectly -- and B2 is still not
+     awarded, because between them they demonstrate one of the nine B2 features
+     and coverage reports the other eight as untaught.
+
+     This is the rule that stopped the two measures in cefr.js from
+     contradicting each other in public. The real corpus had exactly this shape
+     at C1, with a couple of lessons carrying an incidental future perfect while
+     attainment handed out the band anyway. C1 is gone, so the case is built
+     here instead -- the rule outlives the band that exposed it, and has to keep
+     working if the corpus ever drifts thin at a band that is still on the
+     scale. */
   const corpus = [];
   for (let i = 0; i < 10; i += 1) {
-    corpus.push(lessonWith("es", ["Habrá terminado para el viernes."]));
+    corpus.push(lessonWith("es", ["La casa en la que vivo es vieja."]));
   }
-  assert.strictEqual(cefr.lessonBand(corpus[0], "es").band, "C1", "the fixture must sit in C1");
+  assert.strictEqual(cefr.lessonBand(corpus[0], "es").band, "B2", "the fixture must sit in B2");
 
   const result = cefr.attainment(corpus, "es", () => 1);
-  const c1 = result.bands.find((b) => b.band === "C1");
-  assert.strictEqual(c1.lessons, 10, "the lessons are there");
-  assert.strictEqual(c1.strong, 10, "and every one of them was answered well");
-  assert.strictEqual(c1.taught, false, "one feature out of three is not a band");
-  assert.strictEqual(c1.met, false, "so it cannot be met, however well it was answered");
+  const b2 = result.bands.find((b) => b.band === "B2");
+  assert.strictEqual(b2.lessons, 10, "the lessons are there");
+  assert.strictEqual(b2.strong, 10, "and every one of them was answered well");
+  assert.strictEqual(b2.taught, false, "one feature out of nine is not a band");
+  assert.strictEqual(b2.met, false, "so it cannot be met, however well it was answered");
 });
 
 test("the report explains itself for every band", () => {
@@ -429,7 +456,7 @@ test("the bands are ordered, and that order is the only thing ranking them", () 
   assert.strictEqual(cefr.higher("A2", "B1"), "B1");
   assert.strictEqual(cefr.higher("B1", "A2"), "B1");
   assert.strictEqual(cefr.higher(null, "A1"), "A1");
-  assert.strictEqual(cefr.higher("C1", "C1"), "C1");
+  assert.strictEqual(cefr.higher("B2", "B2"), "B2");
   for (let i = 1; i < CEFR_BANDS.length; i += 1) {
     assert.ok(cefr.rankOf(CEFR_BANDS[i]) > cefr.rankOf(CEFR_BANDS[i - 1]));
   }
@@ -490,7 +517,7 @@ test("every class the level panel paints is styled", () => {
 test("index.html loads the level scripts after what they read", () => {
   const markup = readRoot("index.html");
   const at = (file) => markup.indexOf(`src="${file}"`);
-  for (const file of ["data/cefr.js", "cefr.js", "progress.js", "app.js"]) {
+  for (const file of ["data/cefr.js", "cefr.js", "srs.js", "progress.js", "app.js"]) {
     assert.ok(at(file) > -1, `index.html does not load ${file}`);
   }
   assert.ok(at("data/cefr.js") < at("cefr.js"), "cefr.js loads before its data");
@@ -499,6 +526,15 @@ test("index.html loads the level scripts after what they read", () => {
      and the ladder stays empty until something else forces a redraw. This
      ordering is the fix, and it is invisible on any screen that redraws. */
   assert.ok(at("cefr.js") < at("app.js"), "app.js runs before ParceroCEFR exists");
+  /*
+   * The same argument, which this test originally failed to finish making.
+   * progress.js used to load after app.js, so that first render asked an
+   * undefined ParceroProgress for every score and got null: the ladder said
+   * "not measured yet" and the path painted every bar at zero, for a learner
+   * whose history was sitting in localStorage the whole time.
+   */
+  assert.ok(at("progress.js") < at("app.js"), "app.js runs before ParceroProgress exists");
+  assert.ok(at("srs.js") < at("progress.js"), "progress.js loads before the scheduler it reads");
 });
 
 test("the level panel is marked up for translation", () => {
@@ -572,9 +608,6 @@ test("every feature the course claims to reach is either taught or admitted", ()
     const taught = new Set(report.features.filter((f) => f.met).map((f) => f.id));
 
     for (const feature of report.features) {
-      /* C1 and C2 are honestly out of scope, so they are not held to the floor.
-         Claiming otherwise would be the overstatement this whole file guards. */
-      if (feature.band === "C1" || feature.band === "C2") continue;
       if (pending.has(feature.id)) continue;
       assert.ok(
         feature.met,
