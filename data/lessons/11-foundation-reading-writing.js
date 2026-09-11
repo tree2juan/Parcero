@@ -11,6 +11,10 @@
  * `verb` field and spoken in the dialogue, so the coverage report can prove the
  * curriculum is taught rather than merely listed.
  *
+ * One grammar lesson now adds gender-and-agreement because the course models
+ * article, noun and adjective agreement constantly but had no explicit lesson
+ * explaining the rule, its productive exceptions, or the el agua case.
+ *
  * The two directions are mirrors: same number of dialogue turns, vocabulary
  * entries, culture notes, pitfalls, variations and practice questions, and the
  * same optional slots filled on the same rows. title and situation are Spanish
@@ -1970,6 +1974,638 @@ lessons.push(
           ],
           answer: 1,
           tests: "desajuste de registro: comprehend suena rigido con amigos"
+        }
+      ]
+    }
+  },
+  {
+    id: "correcting-the-library-inventory-list",
+    level: "Starter · Reading and writing",
+    skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context", "grammar", "reading"],
+    domain: "everyday-life",
+    register: "courteous",
+    pathways: ["foundation", "year-12"],
+    structure: "gender-and-agreement",
+    review: "pending",
+    es: {
+      title: "Correcting the library inventory list",
+      situation:
+        "You are helping at a community library in Ocaña, Norte de Santander, after a reading workshop. Before the donated supplies can be stored, Lucía checks the handwritten inventory you made. The conversation is practical, not abstract: labels for chairs, notebooks, pencils, maps, water bottles and signs all have to match because a tiny agreement error on paper is visible forever.",
+      setting: {
+        who: "Lucía coordinates the library's children's reading table and catches writing errors with patient precision. Alex is a foreign volunteer who speaks enough Spanish to help, but whose written labels still carry English habits.",
+        what: "A handwritten inventory of donated classroom materials, corrected line by line so every article, noun and adjective agrees in gender and number.",
+        when: "Early evening, after the workshop ends and before the supplies are boxed for the next morning's school visit.",
+        where: "Ocaña, Norte de Santander, at a community library near a neighborhood school, in a calm general Colombian register.",
+        why: "Agreement is where speech can hide a learner's uncertainty but writing exposes it. A sign that says “la problema” or “silla plástico rojo” is not a small accent mistake; it tells the reader the agreement chain broke."
+      },
+      address: {
+        form: "tú",
+        who: "Lucía and Alex use tú because they have spent the afternoon volunteering together and she is correcting a peer, not serving a stranger at a counter.",
+        why: "Tú keeps the correction friendly. Lucía is precise about grammar, but the relationship is cooperative, so she can say “mira” and “corrige” without sounding severe.",
+        ifYouSwitch:
+          "Switching to usted would still be polite, but it would make the exchange feel like a formal lesson rather than two volunteers fixing a list before the boxes go out."
+      },
+      dialogue: [
+        {
+          speaker: "Lucía",
+          target: "Mira la lista: escribiste unas sillas plásticas rojas, y eso sí está perfecto.",
+          translation: "Look at the list: you wrote some red plastic chairs, and that is perfect.",
+          pronunciation: "MEE-ra la LEES-ta: es-kree-BEES-te OO-nas SEE-yas PLAS-tee-kas RO-has, i EH-so see es-TA per-FEK-to",
+          literal: "Look the list: you-wrote some chairs plastic red, and that yes is perfect.",
+          why: "This is the full agreement chain: unas + sillas + plásticas + rojas. The article, noun and both adjectives are feminine plural. English says “red plastic chairs” with no endings to copy; Spanish makes every link match."
+        },
+        {
+          speaker: "Alex",
+          target: "Entonces también escribo los cuadernos nuevos y los lápices negros, ¿cierto?",
+          translation: "So I also write the new notebooks and the black pencils, right?",
+          pronunciation: "en-TON-ses tam-BYEN es-KREE-bo los kwa-DER-nos NWE-vos i los LA-pee-ses NE-gros, SYER-to",
+          literal: "Then also I-write the notebooks new and the pencils black, true?",
+          why: "“Los cuadernos nuevos” is masculine plural from beginning to end. “Lápiz” becomes “lápices” in the plural: after a consonant add -es, and z changes to c before the ending."
+        },
+        {
+          speaker: "Lucía",
+          target: "Sí, pero cambia esta línea: el problema grande, no la problema grande.",
+          translation: "Yes, but change this line: the big problem, not the big problem with la.",
+          pronunciation: "see, PE-ro KAM-bya ES-ta LEE-nya: el pro-BLE-ma GRAN-de, no la pro-BLE-ma GRAN-de",
+          literal: "Yes, but change this line: the problem big, not the problem big.",
+          why: "Nouns ending in -ma from Greek are masculine: el problema, el tema, el sistema, el idioma, el clima, el programa. Do not let the final -a fool you. The adjective “grande” has one form for masculine and feminine, but the article still shows the gender."
+        },
+        {
+          speaker: "Alex",
+          target: "Ah, y aquí puse el agua fría para la mesa, aunque agua es femenina.",
+          translation: "Ah, and here I put the cold water for the table, even though agua is feminine.",
+          pronunciation: "a, i a-KEE POO-se el A-gwa FREE-a PA-ra la ME-sa, AUN-ke A-gwa es fe-me-NEE-na",
+          literal: "Ah, and here I-put the water cold for the table, although water is feminine.",
+          why: "This is the case many books explain badly. “Agua” is feminine, but because its first a is stressed, singular “la agua” changes to “el agua” only for pronunciation. The noun stays feminine, so the adjective is “fría”, not “frío”."
+        },
+        {
+          speaker: "Lucía",
+          target: "Exacto: el agua fría, las aguas frías; también el aula limpia y las aulas limpias.",
+          translation: "Exactly: the cold water, the cold waters; also the clean classroom and the clean classrooms.",
+          pronunciation: "eg-SAK-to: el A-gwa FREE-a, las A-gwas FREE-as; tam-BYEN el AU-la LEEM-pya i las AU-las LEEM-pyas",
+          literal: "Exact: the water cold, the waters cold; also the classroom clean and the classrooms clean.",
+          why: "The singular article changes to “el” before stressed a or ha for sound only. In the plural, the normal feminine article returns: “las aguas frías”, “las aulas limpias”. The adjective never turns masculine."
+        },
+        {
+          speaker: "Alex",
+          target: "También corrijo un viejo amigo por un amigo viejo, porque no quiero cambiar el sentido.",
+          translation: "I also change an old friend to a friend who is old, because I do not want to change the meaning.",
+          pronunciation: "tam-BYEN ko-RREE-ho un VYE-ho a-MEE-go por un a-MEE-go VYE-ho, POR-ke no KYE-ro kam-BYAR el sen-TEE-do",
+          literal: "Also I-correct an old friend for a friend old, because not I-want to-change the meaning.",
+          why: "Most descriptive adjectives follow the noun. Some change meaning by position: “un viejo amigo” is a longtime friend, while “un amigo viejo” is a friend who is elderly. Agreement still holds in both phrases."
+        }
+      ],
+      vocabulary: [
+        {
+          term: "agreement",
+          explanation:
+            "Agreement means the article and adjective copy the noun's gender and number. The noun controls the chain, and the other words must match it.",
+          literal: "matching",
+          useWhen:
+            "Checking any noun phrase in writing, especially labels where the article, noun and adjective all have to point to the same thing.",
+          avoidWhen:
+            "Do not treat the adjective as independent. In Spanish it changes because the noun tells it what shape to take.",
+          register: "neutral grammar term",
+          region: "Universal Spanish; the rule is the same in Colombia.",
+          related: ["género", "número", "artículo", "adjetivo"],
+          example: {
+            target: "Unas sillas plásticas rojas van en la lista.",
+            translation: "Some red plastic chairs go on the list."
+          }
+        },
+        {
+          term: "masculine and feminine nouns",
+          explanation:
+            "Spanish nouns carry grammatical gender. Many nouns ending in -o are masculine and many ending in -a are feminine, but gender belongs to the noun, not to the object in real life.",
+          literal: "masculine / feminine",
+          useWhen:
+            "Learning every new noun together with its article: el cuaderno, la silla, el problema, la mano.",
+          avoidWhen:
+            "Do not guess from English meaning. English has no article or adjective gender, so it gives you no help here.",
+          register: "neutral grammar term",
+          region: "Universal Spanish.",
+          related: ["el", "la", "un", "una"],
+          example: {
+            target: "La silla es roja, pero el cuaderno es rojo.",
+            translation: "The chair is red, but the notebook is red."
+          }
+        },
+        {
+          term: "feminine endings",
+          explanation:
+            "The endings -ción, -sión, -dad, -tad, -tud and -umbre are productive feminine signals. They cover huge families of abstract nouns, not a handful of trivia words.",
+          literal: "endings that point to la",
+          useWhen:
+            "Reading or writing abstract nouns in those families, where the ending gives you a reliable reason to choose the feminine article.",
+          avoidWhen:
+            "Do not extend the rule to every final consonant. These endings are reliable because they are specific.",
+          register: "neutral grammar term",
+          region: "Universal Spanish.",
+          related: ["la información", "la decisión", "la ciudad", "la costumbre"],
+          example: {
+            target: "La información nueva está en el aviso.",
+            translation: "The new information is on the notice."
+          }
+        },
+        {
+          term: "-ma masculine nouns",
+          explanation:
+            "Many common nouns ending in -ma from Greek are masculine: el problema, el tema, el sistema, el idioma, el clima and el programa. Treat this as a real pattern.",
+          literal: "the -ma exception group",
+          useWhen:
+            "Writing the article and adjective for these words: el problema serio, el tema nuevo, el clima frío.",
+          avoidWhen:
+            "Do not say “la problema” just because it ends in -a. That is one of the most visible beginner errors.",
+          register: "neutral grammar term",
+          region: "Universal Spanish.",
+          related: ["el tema", "el sistema", "el idioma", "el programa"],
+          example: {
+            target: "El problema grande está en la primera línea.",
+            translation: "The big problem is on the first line."
+          }
+        },
+        {
+          term: "el agua fría",
+          explanation:
+            "A feminine noun beginning with a stressed a or ha takes el in the singular for pronunciation only. The noun remains feminine, so the adjective stays feminine too.",
+          literal: "the water cold",
+          useWhen:
+            "Words like el agua fría, el aula limpia, el hambre fuerte, then las aguas frías and las aulas limpias in the plural.",
+          avoidWhen:
+            "Do not make the adjective masculine. “El agua frío” is wrong because agua did not become masculine.",
+          register: "neutral grammar term",
+          region: "Universal Spanish; especially important because many textbooks oversimplify it.",
+          related: ["el aula", "el hambre", "las aguas", "las aulas"],
+          example: {
+            target: "El agua fría está lista para la mesa.",
+            translation: "The cold water is ready for the table."
+          }
+        },
+        {
+          term: "plural endings",
+          explanation:
+            "Add -s after a vowel and -es after a consonant. If a word ends in z, the z changes to c before -es: lápiz becomes lápices.",
+          literal: "more-than-one endings",
+          useWhen:
+            "Making written labels plural: silla/sillas, cuaderno/cuadernos, papel/papeles, lápiz/lápices.",
+          avoidWhen:
+            "Do not leave the noun singular because English adjectives do not change. In Spanish the noun and its partners all need the plural marking.",
+          register: "neutral grammar term",
+          region: "Universal Spanish.",
+          related: ["-s", "-es", "lápices", "papeles"],
+          example: {
+            target: "Los lápices negros van en esta caja.",
+            translation: "The black pencils go in this box."
+          }
+        },
+        {
+          term: "adjective position",
+          explanation:
+            "Most descriptive adjectives follow the noun in Spanish. A small group can stand before the noun and change meaning when they move.",
+          literal: "where the describing word goes",
+          useWhen:
+            "Writing ordinary descriptions after the noun: sillas rojas, agua fría, aviso nuevo. Learn fixed meaning shifts like gran/grande and viejo.",
+          avoidWhen:
+            "Do not copy English order automatically. “Red chairs” becomes “sillas rojas”, not “rojas sillas” in ordinary description.",
+          register: "neutral grammar term",
+          region: "Universal Spanish.",
+          related: ["un viejo amigo", "un amigo viejo", "un gran hombre", "un hombre grande"],
+          example: {
+            target: "Un viejo amigo no es lo mismo que un amigo viejo.",
+            translation: "A longtime friend is not the same as a friend who is old."
+          }
+        }
+      ],
+      note:
+        "Spanish agreement starts with the noun. First decide its gender and number, then make the article and adjective copy both: una silla roja, unas sillas rojas, un cuaderno rojo, unos cuadernos rojos. The -o and -a endings are useful first guesses, but the productive feminine endings -ción, -sión, -dad, -tad, -tud and -umbre matter just as much, and the Greek -ma group is masculine. The special “el agua” pattern is only about sound: agua stays feminine, so write “el agua fría” and “las aguas frías”.",
+      culture: [
+        {
+          label: "Writing makes agreement visible",
+          body:
+            "In speech, a learner can sometimes blur an ending and keep the conversation moving. On a handwritten inventory, a school notice or a WhatsApp correction, every ending sits there for the reader to judge. Colombian teachers and office workers will often forgive a foreign accent faster than a repeated written “la problema” because the written error looks like the rule was never learned. Agreement is not ornament. It is the basic proofreading system that tells a reader which words belong together."
+        },
+        {
+          label: "Learn the article with the noun",
+          body:
+            "The safest habit is to memorize nouns with el or la from the first day. Learning “problema” alone invites the English-speaking brain to guess from the final vowel and write “la problema”. Learning “el problema” stores the useful information. Colombians do not think of a chair as biologically feminine or a notebook as masculine; they simply know that the grammar of “silla” calls for la and roja, while “cuaderno” calls for el and rojo."
+        },
+        {
+          label: "The el agua myth",
+          body:
+            "Many learners are told that “agua” is masculine because it takes “el”. That shortcut creates the next mistake, “el agua frío”. The real rule is narrower and cleaner: feminine nouns that begin with a stressed a or ha take “el” in the singular to avoid an awkward sound. Everything else proves the noun is still feminine: “el agua fría”, “las aguas frías”, “mucha agua fría”. Treat “el” here as a pronunciation patch, not a gender change."
+        },
+        {
+          label: "Mixed groups use the masculine plural",
+          body:
+            "When a group contains masculine and feminine nouns or people, standard Spanish uses the masculine plural agreement: “los niños y las niñas cansados”, “los cuadernos y las sillas nuevos” if the adjective covers the whole mixed set. This can feel culturally loaded, and inclusive alternatives exist in public writing, but the exam and the basic grammar rule still expect the masculine plural for a mixed group. Recognizing that convention helps you read notices without treating the ending as accidental."
+        }
+      ],
+      pitfalls: [
+        {
+          mistake: "Writing “la problema” because problema ends in -a",
+          whyItFails:
+            "The common Greek -ma group is masculine, so the article must be el or un. The final -a is not enough when the word belongs to this pattern.",
+          sayInstead: "El problema grande está aquí."
+        },
+        {
+          mistake: "Writing “el agua frío” because the article is el",
+          whyItFails:
+            "Agua is still feminine. The singular article changes for pronunciation before a stressed a, but the adjective must stay feminine.",
+          sayInstead: "El agua fría está en la mesa."
+        },
+        {
+          mistake: "Leaving plurals unmarked in the phrase",
+          whyItFails:
+            "Spanish marks number on the article, noun and adjective. If there is more than one chair, every link becomes plural: unas sillas rojas.",
+          sayInstead: "Unas sillas plásticas rojas."
+        },
+        {
+          mistake: "Putting every adjective before the noun like English",
+          whyItFails:
+            "Most descriptive adjectives follow the noun in Spanish, and some change meaning when moved. “Un viejo amigo” and “un amigo viejo” are not the same.",
+          sayInstead: "Un aviso nuevo, un viejo amigo."
+        }
+      ],
+      variations: [
+        {
+          form: "Una silla roja.",
+          register: "neutral",
+          region: "Universal Spanish",
+          whenToUse: "A singular feminine noun with a matching article and adjective."
+        },
+        {
+          form: "Unas sillas rojas.",
+          register: "neutral",
+          region: "Universal Spanish",
+          whenToUse: "The same feminine noun in the plural, with every link plural too."
+        },
+        {
+          form: "El problema serio.",
+          register: "neutral",
+          region: "Universal Spanish",
+          whenToUse: "A masculine -ma noun whose ending might trick an English speaker."
+        },
+        {
+          form: "El agua fría.",
+          register: "neutral",
+          region: "Universal Spanish",
+          whenToUse: "A feminine stressed-a noun taking el in the singular for sound only."
+        },
+        {
+          form: "Las aguas frías.",
+          register: "neutral",
+          region: "Universal Spanish",
+          whenToUse: "The plural proves the noun is feminine and brings back las."
+        }
+      ],
+      prompt: "Which written phrase keeps the full Spanish agreement chain correct?",
+      choices: [
+        "Unas sillas plásticas rojas para la biblioteca.",
+        "Unas silla plástico roja para la biblioteca.",
+        "Unos sillas plásticos rojos para la biblioteca."
+      ],
+      answer: 0,
+      practiceExtra: [
+        {
+          prompt: "Lucía corrects “la problema grande.” Why is the article wrong?",
+          choices: [
+            "Because problema belongs to the masculine -ma group, despite ending in -a.",
+            "Because every noun ending in -a must take a plural article in writing.",
+            "Because grande can only describe feminine nouns when it follows them."
+          ],
+          answer: 0,
+          tests: "the masculine Greek -ma pattern: el problema"
+        },
+        {
+          prompt: "Which phrase handles the agua case correctly?",
+          choices: [
+            "La agua fría está lista para servir.",
+            "El agua fría está lista para servir.",
+            "El agua frío está listo para servir."
+          ],
+          answer: 1,
+          tests: "el agua with feminine adjective because the noun stays feminine"
+        },
+        {
+          prompt: "What is the correct plural of “el lápiz negro”?",
+          choices: [
+            "Los lápiz negros de la caja.",
+            "Las lápices negras de la caja.",
+            "Los lápices negros de la caja."
+          ],
+          answer: 2,
+          tests: "-es after a consonant and z to c in lápices"
+        }
+      ]
+    },
+    en: {
+      title: "Corregir una lista de inventario en inglés",
+      situation:
+        "Usted está ayudando en una biblioteca comunitaria en San Antonio, Texas, después de un taller de lectura. Antes de guardar las donaciones, Noah revisa la lista que usted escribió en inglés. La escena sirve para soltar un hábito muy español: en inglés los adjetivos nunca concuerdan, nunca toman plural y nunca cambian por género. La precisión va en el orden de las palabras, en a/an por sonido y en marcar el plural en el sustantivo.",
+      setting: {
+        who: "Noah coordina la mesa infantil de lectura y corrige con paciencia. Alejandra es una voluntaria colombiana que escribe bien, pero a veces le agrega al inglés marcas de concordancia que el inglés no tiene.",
+        what: "Una lista escrita a mano con materiales donados, corregida línea por línea para quitar plurales falsos en adjetivos y poner los artículos y sustantivos donde corresponde.",
+        when: "Al caer la tarde, después del taller y antes de empacar las cajas para la visita escolar del día siguiente.",
+        where: "San Antonio, Texas, en una biblioteca comunitaria de barrio, con inglés cotidiano y claro.",
+        why: "Porque el español entrena a usted a hacer concordar todo, pero el inglés simplifica esa parte: el adjetivo no cambia jamás. Lo que sí exige es elegir a/an por sonido y marcar el plural en el sustantivo."
+      },
+      address: {
+        form: "mixed",
+        who: "Noah y Alejandra se tratan por el nombre y usan el único “you” del inglés; no hay cambio de pronombre para marcar confianza o respeto.",
+        why: "La corrección puede ser amable o formal por el tono, no por una forma tipo tú o usted. En inglés el mismo “you” sirve para un compañero voluntario y para una persona desconocida.",
+        ifYouSwitch:
+          "No hay pronombre que cambiar. Si quiere sonar más formal, cambie frases como “can you fix this?” por “could you correct this line?”, pero “you” se queda igual."
+      },
+      dialogue: [
+        {
+          speaker: "Noah",
+          target: "Look at this line: the red plastic chairs. That is perfect English.",
+          translation: "Mire esta línea: las sillas plásticas rojas. Ese inglés está perfecto.",
+          pronunciation: "luk at dis lain: da red PLAS-tik chers. dat iz PER-fekt ING-glish",
+          literal: "Mira esta línea: las rojo plástico sillas. Eso es perfecto inglés.",
+          why: "En inglés el adjetivo no copia ni género ni número. “Red” y “plastic” quedan iguales aunque “chairs” sea plural. No diga “reds plastics chairs”."
+        },
+        {
+          speaker: "Alejandra",
+          target: "So I should write the new notebooks and the black pencils, not the blacks pencils?",
+          translation: "Entonces debo escribir los cuadernos nuevos y los lápices negros, no los negros con plural en el adjetivo.",
+          pronunciation: "sou ai shud rait da nu NOOT-buks and da blak PEN-sils, nat da blaks PEN-sils",
+          literal: "Entonces yo debería escribir los nuevo cuadernos y los negro lápices, no los negros lápices.",
+          why: "Exacto: el plural va en el sustantivo, “notebooks” y “pencils”. El adjetivo se queda sin -s: “new notebooks”, “black pencils”."
+        },
+        {
+          speaker: "Noah",
+          target: "Right. English has no masculine or feminine nouns, so problem is just a problem.",
+          translation: "Correcto. El inglés no tiene sustantivos masculinos ni femeninos, así que problem es simplemente a problem.",
+          pronunciation: "rait. ING-glish jaz nou MAS-kyu-lin or FE-mi-nin nouns, sou PRA-blem iz yast a PRA-blem",
+          literal: "Correcto. Inglés tiene no masculinos o femeninos sustantivos, así que problema es solo un problema.",
+          why: "El inglés no clasifica “problem” como masculino o femenino. El artículo “a” no marca género, solo indefinido singular."
+        },
+        {
+          speaker: "Alejandra",
+          target: "And I write an old map, but a useful map, because a and an depend on sound.",
+          translation: "Y escribo un mapa viejo como “an old map”, pero un mapa útil como “a useful map”, porque a y an dependen del sonido.",
+          pronunciation: "and ai rait an old map, bat a YUS-ful map, bi-KOZ a and an di-PEND on saund",
+          literal: "Y yo escribo un viejo mapa, pero un útil mapa, porque a y an dependen de sonido.",
+          why: "Inglés no tiene género gramatical, pero sí obliga a escoger “a” o “an” por sonido: “an old” empieza con sonido vocálico, “a useful” empieza con sonido de y."
+        },
+        {
+          speaker: "Noah",
+          target: "Exactly: an hour, a university, and three clean classrooms.",
+          translation: "Exacto: una hora, una universidad y tres salones limpios.",
+          pronunciation: "eg-ZAKT-li: an AU-er, a yu-ni-VER-si-ti, and thri klin KLAS-rums",
+          literal: "Exactamente: un hora, un universidad y tres limpio salones.",
+          why: "“Hour” lleva “an” porque la h no suena. “University” lleva “a” porque empieza con sonido de y. Y “clean” no cambia aunque “classrooms” sea plural."
+        },
+        {
+          speaker: "Alejandra",
+          target: "Good. I will write a great man for admiration, and a big man for size.",
+          translation: "Bien. Voy a escribir “a great man” para admiración y “a big man” para tamaño.",
+          pronunciation: "gud. ai wil rait a greit man for ad-mi-REI-shon, and a big man for saiz",
+          literal: "Bien. Yo escribiré un gran hombre para admiración, y un grande hombre para tamaño.",
+          why: "Aquí el espejo no es concordancia sino posición y significado. “A great man” habla de admiración; “a big man” habla de tamaño. El adjetivo sigue sin cambiar por género o número."
+        }
+      ],
+      vocabulary: [
+        {
+          term: "adjectives never agree",
+          explanation:
+            "En inglés los adjetivos nunca cambian por género ni por número. “Red” es igual con chair, chairs, notebook, notebooks, man o woman.",
+          literal: "los adjetivos nunca concuerdan",
+          useWhen:
+            "Cada vez que describa un sustantivo en inglés: the red chair, the red chairs, a red notebook.",
+          avoidWhen:
+            "No agregue -s al adjetivo por influencia del español. El plural va en el sustantivo, no en el adjetivo.",
+          register: "término gramatical neutro",
+          region: "Inglés universal.",
+          related: ["red chairs", "new notebooks", "black pencils", "clean classrooms"],
+          example: {
+            target: "The red plastic chairs are ready.",
+            translation: "Las sillas plásticas rojas están listas."
+          }
+        },
+        {
+          term: "no grammatical gender",
+          explanation:
+            "El inglés no divide los sustantivos comunes en masculino y femenino. “Problem”, “chair” y “notebook” no obligan a cambiar el artículo ni el adjetivo por género.",
+          literal: "sin género gramatical",
+          useWhen:
+            "Cuando sienta la tentación de buscar el equivalente de el o la. En inglés “the” sirve para ambos.",
+          avoidWhen:
+            "No confunda esto con género natural de personas o animales. Pronombres como he, she y they sí importan, pero los objetos no tienen género gramatical.",
+          register: "término gramatical neutro",
+          region: "Inglés universal.",
+          related: ["the", "a", "problem", "chair"],
+          example: {
+            target: "A problem is not masculine or feminine in English.",
+            translation: "Un problema no es masculino ni femenino en inglés."
+          }
+        },
+        {
+          term: "a / an by sound",
+          explanation:
+            "El inglés sí obliga a escoger “a” o “an”, pero la regla depende del sonido inicial de la palabra siguiente, no de la letra ni del género.",
+          literal: "a / an por sonido",
+          useWhen:
+            "Antes de un singular contable indefinido: a book, an old book, a university, an hour.",
+          avoidWhen:
+            "No use solo la letra escrita. “Hour” empieza con sonido vocálico porque la h no suena; “university” empieza con sonido de y.",
+          register: "término gramatical neutro",
+          region: "Inglés universal.",
+          related: ["a book", "an old map", "a university", "an hour"],
+          example: {
+            target: "Write an old map, but a useful map.",
+            translation: "Escriba an old map, pero a useful map."
+          }
+        },
+        {
+          term: "plural on the noun",
+          explanation:
+            "El inglés marca el plural principalmente en el sustantivo. El adjetivo se queda quieto, pero el sustantivo normalmente necesita -s o -es.",
+          literal: "plural en el sustantivo",
+          useWhen:
+            "Hablar de más de uno: two notebooks, three boxes, black pencils, clean classrooms.",
+          avoidWhen:
+            "No deje el sustantivo singular cuando hay cantidad plural. “Three classroom” suena tan mal como “three clean” sin noun.",
+          register: "término gramatical neutro",
+          region: "Inglés universal.",
+          related: ["chairs", "notebooks", "boxes", "pencils"],
+          example: {
+            target: "Three clean classrooms need new signs.",
+            translation: "Tres salones limpios necesitan avisos nuevos."
+          }
+        },
+        {
+          term: "word order for adjectives",
+          explanation:
+            "El inglés normalmente pone los adjetivos antes del sustantivo: red chairs, cold water, new information. No los pone después como el español.",
+          literal: "orden de palabras para adjetivos",
+          useWhen:
+            "Describir algo en una lista o un aviso: new notebooks, black pencils, clean rooms.",
+          avoidWhen:
+            "No copie el orden español “chairs red” o “water cold”, salvo poesía o nombres especiales.",
+          register: "término gramatical neutro",
+          region: "Inglés universal.",
+          related: ["red chairs", "cold water", "new signs", "old maps"],
+          example: {
+            target: "The cold water is on the table.",
+            translation: "El agua fría está en la mesa."
+          }
+        },
+        {
+          term: "meaning shifts",
+          explanation:
+            "Algunos adjetivos ingleses también cambian el sentido según la palabra exacta que se elija, no por concordancia. “Great” no es solo “big”.",
+          literal: "cambios de significado",
+          useWhen:
+            "Contrastar ideas como a great man (admiración) y a big man (tamaño), o an old friend (amistad de hace tiempo) y an elderly friend (edad).",
+          avoidWhen:
+            "No traduzca “gran” y “grande” siempre como “big”. El contexto decide la palabra inglesa.",
+          register: "término gramatical neutro",
+          region: "Inglés universal.",
+          related: ["a great man", "a big man", "an old friend", "an elderly friend"],
+          example: {
+            target: "A great man is not the same as a big man.",
+            translation: "Un gran hombre no es lo mismo que un hombre grande."
+          }
+        },
+        {
+          term: "the red chairs",
+          explanation:
+            "La frase modelo para soltar la sobrecorrección: the no cambia, red no cambia, y solo chairs marca el plural.",
+          literal: "las sillas rojas",
+          useWhen:
+            "Corregir listas, avisos o mensajes donde usted iba a escribir “the reds chairs”.",
+          avoidWhen:
+            "No ponga plural al adjetivo ni trate “the” como si fuera el, la, los y las a la vez por forma. Es una sola palabra fija.",
+          register: "modelo neutro",
+          region: "Inglés universal.",
+          related: ["the black pencils", "the new notebooks", "the clean rooms", "the old maps"],
+          example: {
+            target: "Please stack the red chairs by the door.",
+            translation: "Por favor apile las sillas rojas junto a la puerta."
+          }
+        }
+      ],
+      note:
+        "El espejo real de esta lección es una simplificación: en inglés los adjetivos nunca concuerdan. Nunca. “The red chair”, “the red chairs”, “the red notebook” y “the red notebooks” conservan el mismo “red”. El inglés tampoco tiene género gramatical en los sustantivos comunes, de modo que “the” no equivale a escoger entre el, la, los y las. Pero no todo desaparece: a/an se escoge por sonido, no por género, y el plural sí debe aparecer en el sustantivo, “three clean classrooms”, no “three clean classroom”.",
+      culture: [
+        {
+          label: "La sobrecorrección viene del español",
+          body:
+            "Un hispanohablante aprende desde niño a hacer concordar artículo, sustantivo y adjetivo. Ese reflejo es útil en español, pero en inglés produce errores muy visibles: “the reds chairs”, “the chairs reds”, “three clean classroom”. La buena noticia es que la regla inglesa es radicalmente estable. Si la palabra describe, se queda igual. El esfuerzo no está en memorizar terminaciones, sino en recordar no agregarlas cuando el español de su cabeza las pide."
+        },
+        {
+          label: "A/an no es género escondido",
+          body:
+            "Como el inglés no tiene el y la, algunos estudiantes buscan una diferencia parecida en “a” y “an”. No la hay. La elección no habla del sustantivo ni de su género; habla del sonido que viene inmediatamente después. Por eso “an hour” lleva an aunque empiece con h escrita, y “a university” lleva a aunque empiece con vocal escrita. Es una regla de pronunciación, más parecida al “el agua” español que a la concordancia."
+        },
+        {
+          label: "El plural sí importa",
+          body:
+            "Que el adjetivo no cambie no significa que el plural desaparezca. El inglés suele exigir una marca clara en el sustantivo contable: one pencil, two pencils; one box, two boxes. El error contrario al de “reds chairs” es dejar el sustantivo en singular después de un número, como “three classroom”. En una lista escrita, esa falta se nota de inmediato porque el número promete plural y el sustantivo no lo cumple."
+        },
+        {
+          label: "El orden carga la claridad",
+          body:
+            "En español muchos adjetivos descriptivos van después del sustantivo, y algunos cambian de significado por posición. En inglés el orden básico es anterior: red chairs, old maps, clean rooms. Como no hay terminaciones de concordancia que ayuden a conectar las palabras, el orden hace más trabajo. Cambiarlo a “chairs red” no suena poético en una lista de biblioteca; suena a traducción palabra por palabra desde el español."
+        }
+      ],
+      pitfalls: [
+        {
+          mistake: "“The reds chairs are ready.”",
+          whyItFails:
+            "El adjetivo “red” no toma plural en inglés. El plural ya está en el sustantivo “chairs”.",
+          sayInstead: "The red chairs are ready."
+        },
+        {
+          mistake: "“Three clean classroom.”",
+          whyItFails:
+            "El adjetivo no cambia, pero el sustantivo contable sí necesita plural después de three: classrooms.",
+          sayInstead: "Three clean classrooms."
+        },
+        {
+          mistake: "“An university is nearby.”",
+          whyItFails:
+            "“University” empieza con sonido de y, no con sonido vocálico. La regla de a/an depende del sonido, no de la letra escrita.",
+          sayInstead: "A university is nearby."
+        },
+        {
+          mistake: "“The chairs red are by the door.”",
+          whyItFails:
+            "El inglés normal pone el adjetivo antes del sustantivo. Copiar el orden español hace que la frase suene traducida y torpe.",
+          sayInstead: "The red chairs are by the door."
+        }
+      ],
+      variations: [
+        {
+          form: "A red chair.",
+          register: "neutro",
+          region: "Inglés universal",
+          whenToUse: "Un sustantivo singular con un adjetivo que no marca género."
+        },
+        {
+          form: "The red chairs.",
+          register: "neutro",
+          region: "Inglés universal",
+          whenToUse: "Plural marcado solo en el sustantivo, no en el adjetivo."
+        },
+        {
+          form: "A problem.",
+          register: "neutro",
+          region: "Inglés universal",
+          whenToUse: "Un sustantivo sin género gramatical, con a por indefinido singular."
+        },
+        {
+          form: "An old map.",
+          register: "neutro",
+          region: "Inglés universal",
+          whenToUse: "An antes de sonido vocálico, aunque la regla no tenga nada que ver con género."
+        },
+        {
+          form: "A useful map.",
+          register: "neutro",
+          region: "Inglés universal",
+          whenToUse: "A antes del sonido de y en useful, aunque la palabra empiece con vocal escrita."
+        }
+      ],
+      prompt: "¿Cuál frase muestra la regla inglesa de que el adjetivo nunca concuerda?",
+      choices: [
+        "The red plastic chairs are ready.",
+        "The reds plastics chairs are ready.",
+        "The chairs red plastics are ready."
+      ],
+      answer: 0,
+      practiceExtra: [
+        {
+          prompt: "¿Por qué “the blacks pencils” está mal?",
+          choices: [
+            "Porque el adjetivo no toma plural; el plural ya está en “pencils”.",
+            "Porque todos los colores deben ir después del sustantivo en inglés.",
+            "Porque “pencil” es femenino y necesita otro artículo definido."
+          ],
+          answer: 0,
+          tests: "adjetivos sin plural en inglés"
+        },
+        {
+          prompt: "¿Cuál usa bien a/an por sonido?",
+          choices: [
+            "An useful map is on the table.",
+            "A useful map is on the table.",
+            "A old map is on the table."
+          ],
+          answer: 1,
+          tests: "a/an depende del sonido inicial, no de género ni letra"
+        },
+        {
+          prompt: "¿Cuál corrige “three clean classroom”?",
+          choices: [
+            "Three cleans classroom.",
+            "Three clean classroom.",
+            "Three clean classrooms."
+          ],
+          answer: 2,
+          tests: "plural obligatorio en el sustantivo contable"
         }
       ]
     }

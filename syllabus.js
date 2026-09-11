@@ -202,9 +202,9 @@
    * The corpus in the order the path actually presents it.
    *
    * This is not the order `lessons` is authored in, and the gap is not small:
-   * only 42 of 233 lessons sit in the same position in both. A control that
+   * only 44 of 245 lessons sit in the same position in both. A control that
    * walks the authored array therefore crosses a stage boundary 23 times,
-   * runs backwards along the path 10 times, and at its worst jumps 112
+   * runs backwards along the path 10 times, and at its worst jumps 119
    * positions -- which is how "Next lesson" came to hand an A2 learner a B2
    * lesson. Anything offering "next" or "previous" has to walk this instead.
    *

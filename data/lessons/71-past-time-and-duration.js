@@ -5,6 +5,9 @@
  * verbs at all: the present perfect Colombians usually skip, the pluperfect that
  * barely appears in the corpus, and the hace / desde / llevar family for saying
  * how long. These three grammar lessons close them, set across the Santanderes.
+ * This block also adds the preterite versus imperfect decision, because the
+ * corpus has 395 imperfect forms and no lesson contrasting the two narrative
+ * pasts that learners must choose between at B1.
  */
 lessons.push(
   {
@@ -1899,6 +1902,704 @@ lessons.push(
           ],
           answer: 1,
           tests: "presente perfecto donde el español usa presente"
+        }
+      ]
+    }
+  },
+  {
+    id: "preterite-and-imperfect-during-a-blackout-in-ibague",
+    level: "Developing · Past time and duration",
+    skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context", "grammar"],
+    domain: "everyday-life",
+    register: "courteous",
+    pathways: ["independent", "year-12"],
+    structure: "preterite-vs-imperfect",
+    review: "pending",
+    es: {
+      title: "When the power went out: choosing preterite or imperfect",
+      situation:
+        "In Ibagué, Norma tells Mateo what happened at her cousin's wedding when a storm hit during the first dance. The story keeps making the same decision: the imperfect paints the frame, what was going on, what people felt, what the night was like; the preterite names the event that moved the story forward. Listen for “llovía cuando se fue la luz”, “estábamos bailando cuando sonó la alarma”, and the verbs whose meaning changes with the aspect.",
+      setting: {
+        who: "Norma is the cousin who helped run the wedding and still tells the story with nervous laughter. Mateo missed the party and asks for the full version, so she has to narrate scene, interruption, habit and consequence clearly.",
+        what: "A wedding-night story built around a blackout, a false alarm and a frantic search for the breaker box. It naturally repeats the contrast between background in the imperfect and completed events in the preterite.",
+        when: "Late on a rainy Saturday night, after the couple's first dance had begun and everyone thought the hardest part of the reception was over.",
+        where: "Ibagué, Tolima, in a small reception hall near the music school district.",
+        why: "The preterite and imperfect are not two decorative past tenses. They are the central decision in storytelling: the event that advances the plot versus the frame that was true around it."
+      },
+      address: {
+        form: "tú",
+        who: "Norma and Mateo are cousins close in age, so tú is natural and warm. The story is detailed, but the relationship is familiar.",
+        why: "Tú lets the narration sound like family gossip after the party, not a formal report. It also keeps the examples in the second person friendly when Mateo checks the story.",
+        ifYouSwitch:
+          "If Norma switched to usted with Mateo, it would sound playful, annoyed or suddenly distant. In this family scene, tú is the plain choice."
+      },
+      dialogue: [
+        {
+          speaker: "Norma",
+          target: "Llovía durísimo cuando se fue la luz, y todos nos quedamos quietos en la pista.",
+          translation: "It was raining really hard when the power went out, and we all froze on the dance floor.",
+          pronunciation: "yo-VEE-a du-REE-see-mo KWAN-do se fwe la loos, ee TO-dos nos ke-DA-mos KYE-tos en la PEES-ta",
+          literal: "It-was-raining very-hard when itself went the light, and all of-us stayed still on the floor.",
+          why: "This is the key pattern. “Llovía” is imperfect because it sets the weather frame; “se fue” and “nos quedamos” are preterite because they are completed events that push the story forward."
+        },
+        {
+          speaker: "Mateo",
+          target: "¿Ustedes estaban bailando cuando sonó la alarma del salón?",
+          translation: "Were you all dancing when the hall alarm went off?",
+          pronunciation: "oos-TE-des es-TA-ban bai-LAN-do KWAN-do so-NO la a-LAR-ma del sa-LON",
+          literal: "You-all were dancing when sounded the alarm of-the hall?",
+          why: "“Estaban bailando” gives the action in progress, the frame. “Sonó” is the single interruption. English often says this with ‘were dancing when…’; Spanish does it with imperfect plus preterite."
+        },
+        {
+          speaker: "Norma",
+          target: "Sí, antes ensayábamos todos los jueves, pero esa noche empezamos tarde y nadie oyó al portero.",
+          translation: "Yes, before that we used to rehearse every Thursday, but that night we started late and nobody heard the doorman.",
+          pronunciation: "see, AN-tes en-sa-ya-BA-mos TO-dos los HWE-ves, PE-ro E-sa NO-che em-pe-SA-mos TAR-de ee NA-dye o-YO al por-TE-ro",
+          literal: "Yes, before we-rehearsed every Thursday, but that night we-started late and nobody heard the doorman.",
+          why: "A habit takes the imperfect: “ensayábamos todos los jueves” means ‘we used to rehearse’. One specific night takes the preterite: “empezamos” and “oyó”."
+        },
+        {
+          speaker: "Mateo",
+          target: "¿Y tú conocías al técnico, o lo conociste esa noche por la emergencia?",
+          translation: "And did you already know the technician, or did you meet him that night because of the emergency?",
+          pronunciation: "ee too ko-no-SEE-as al TEK-nee-ko, o lo ko-no-SEES-te E-sa NO-che por la e-mer-HEN-sya",
+          literal: "And you knew the technician, or him you-met that night by the emergency?",
+          why: "This is one of the meaning-changing verbs. “Conocías” means you already knew him or knew of him. “Conociste” means you met him, a first encounter viewed as an event."
+        },
+        {
+          speaker: "Norma",
+          target: "Lo conocía de vista, pero lo conocí de verdad cuando nos abrió el cuarto de los tacos.",
+          translation: "I knew him by sight, but I really met him when he opened the breaker room for us.",
+          pronunciation: "lo ko-no-SEE-a de VEES-ta, PE-ro lo ko-no-SEE de ver-DAD KWAN-do nos a-BRYO el KWAR-to de los TA-kos",
+          literal: "Him I-knew by sight, but him I-met of truth when to-us he-opened the room of the breakers.",
+          why: "The same verb changes job with aspect. Imperfect “conocía” is existing familiarity. Preterite “conocí” is the moment of meeting. “Abrió” is preterite because the door-opening happened and was complete."
+        },
+        {
+          speaker: "Mateo",
+          target: "¿Alguien sabía qué pasaba, o supieron después que era solo un taco quemado?",
+          translation: "Did anyone know what was going on, or did they find out later it was just a burned breaker?",
+          pronunciation: "AL-gyen sa-BEE-a ke pa-SA-ba, o su-PYE-ron des-PWES ke E-ra SO-lo un TA-ko ke-MA-do",
+          literal: "Someone knew what was-happening, or they-found-out later that it was only a breaker burned?",
+          why: "“Sabía” is a state, knew. “Supieron” is the event of finding out. Also notice “pasaba” and “era”, imperfects for what was going on and what was true."
+        },
+        {
+          speaker: "Norma",
+          target: "Mi papá podía arreglarlo, y al final pudo calmar a la novia porque no quiso prender velas.",
+          translation: "My dad knew how to fix it, and in the end he managed to calm the bride because she refused to light candles.",
+          pronunciation: "mi pa-PA po-DEE-a a-rre-GLAR-lo, ee al fi-NAL PU-do kal-MAR a la NO-vya por-KE no KEE-so pren-DER VE-las",
+          literal: "My dad was-able to-fix-it, and in the end he-managed to calm the bride because not she-wanted to-light candles.",
+          why: "Three aspect-sensitive verbs: “podía” means he had the ability; “pudo” means he managed to do it; “no quiso” means she refused, not merely that she did not feel like it."
+        },
+        {
+          speaker: "Mateo",
+          target: "Entonces tenían que evacuar, pero cuando volvió la luz tuvieron que seguir la fiesta.",
+          translation: "So you were supposed to evacuate, but when the power came back you had to keep the party going.",
+          pronunciation: "en-TON-ses te-NEE-an ke e-va-KWAR, PE-ro KWAN-do vol-VYO la loos tu-VYE-ron ke se-GEER la FYES-ta",
+          literal: "Then they-had to evacuate, but when returned the light they-had to continue the party.",
+          why: "“Tenían que” can mean the obligation or plan in the background, ‘they were supposed to’. “Tuvieron que” is preterite, the obligation became an event they actually carried out."
+        }
+      ],
+      vocabulary: [
+        {
+          term: "el pretérito",
+          explanation:
+            "The preterite is the event tense. It presents an action as complete and whole, even if it lasted a long time: “viví seis años en Ibagué” is preterite because those six years are closed.",
+          literal: "the preterite",
+          useWhen:
+            "A completed action moves the story forward: “se fue la luz”, “sonó la alarma”, “empezamos tarde”.",
+          avoidWhen:
+            "You are describing what was going on, what someone felt, the weather, the time, age or a repeated habit. Those usually want the imperfect.",
+          register: "neutral",
+          region: "Universal Spanish; Colombia also uses this simple past where Spain might use the present perfect.",
+          related: ["ayer", "anoche", "entonces", "de repente"],
+          example: {
+            target: "Anoche se fue la luz durante el baile.",
+            translation: "Last night the power went out during the dance."
+          }
+        },
+        {
+          term: "el imperfecto",
+          explanation:
+            "The imperfect is the frame tense. It describes the background: weather, time, age, ongoing action, description, habit and mental or emotional states that were simply true while the story happened.",
+          literal: "the imperfect",
+          useWhen:
+            "Setting the scene: “llovía”, “estábamos bailando”, “la novia estaba nerviosa”, “ensayábamos todos los jueves”.",
+          avoidWhen:
+            "You mean the completed incident itself. “Se iba la luz” sounds habitual or ongoing; “se fue la luz” is the actual outage.",
+          register: "neutral",
+          region: "Universal Spanish.",
+          related: ["mientras", "siempre", "todos los días", "generalmente"],
+          example: {
+            target: "Llovía y la música sonaba bajito.",
+            translation: "It was raining and the music was playing softly."
+          }
+        },
+        {
+          term: "imperfecto + pretérito",
+          explanation:
+            "The storytelling pattern: the imperfect sets the scene, then the preterite interrupts it. This is the contrast that makes the choice useful instead of abstract.",
+          literal: "frame + event",
+          useWhen:
+            "A background action is interrupted: “llovía cuando se fue la luz”, “estábamos bailando cuando sonó la alarma”.",
+          avoidWhen:
+            "Both actions are completed steps in a sequence; then both can be preterite: “entré, saludé y bailé”.",
+          register: "neutral",
+          region: "Universal Spanish.",
+          related: ["cuando", "mientras", "de repente", "en ese momento"],
+          example: {
+            target: "Estábamos bailando cuando sonó la alarma.",
+            translation: "We were dancing when the alarm went off."
+          }
+        },
+        {
+          term: "solía + infinitivo",
+          explanation:
+            "A clear way to say ‘used to’. It is built from the imperfect of “soler” plus an infinitive: “solíamos ensayar” means we used to rehearse.",
+          literal: "used to + infinitive",
+          useWhen:
+            "You want to make a past habit explicit, especially when contrasting it with a one-time event.",
+          avoidWhen:
+            "The event happened once. “Solíamos empezar tarde esa noche” is wrong because “esa noche” points to one occasion.",
+          register: "neutral",
+          region: "Universal Spanish; common in educated and careful speech.",
+          related: ["antes", "cada vez que", "generalmente", "todos los jueves"],
+          example: {
+            target: "Antes solíamos ensayar todos los jueves.",
+            translation: "Before, we used to rehearse every Thursday."
+          }
+        },
+        {
+          term: "sabía / supe",
+          explanation:
+            "With “saber”, aspect changes the meaning. “Sabía” means knew, had the information or ability already. “Supe” means found out, the moment the information arrived.",
+          literal: "I knew / I found out",
+          useWhen:
+            "Use imperfect for existing knowledge and preterite for discovery: “sabía la dirección”, “supe la verdad anoche”.",
+          avoidWhen:
+            "Translating every English ‘knew’ as “supe”. If there was no discovery event, use “sabía”.",
+          register: "neutral",
+          region: "Universal Spanish.",
+          related: ["saber", "enterarse", "darse cuenta", "averiguar"],
+          example: {
+            target: "No sabía qué pasaba, pero después supe la verdad.",
+            translation: "I didn't know what was happening, but later I found out the truth."
+          }
+        },
+        {
+          term: "conocía / conocí",
+          explanation:
+            "“Conocía” means knew a person or place already. “Conocí” means met or encountered for the first time. This is one of the most important silent errors for learners.",
+          literal: "I knew / I met",
+          useWhen:
+            "Existing familiarity takes imperfect; first meeting takes preterite: “lo conocía de vista”, “lo conocí esa noche”.",
+          avoidWhen:
+            "Saying “conocí a mi profesor” when you mean you already knew him during that period, not that you met him then.",
+          register: "neutral",
+          region: "Universal Spanish.",
+          related: ["ver de vista", "presentarse", "encontrarse", "reconocer"],
+          example: {
+            target: "La conocía del barrio, pero la conocí mejor en la fiesta.",
+            translation: "I knew her from the neighborhood, but I got to know her better at the party."
+          }
+        },
+        {
+          term: "quería / quiso / no quiso",
+          explanation:
+            "“Quería” is a want or intention in the background. “Quiso” often means tried or was willing. “No quiso” usually means refused, a completed decision not to do it.",
+          literal: "wanted / tried or agreed / refused",
+          useWhen:
+            "Describing a state of wanting with imperfect, or a decisive attempt or refusal with preterite.",
+          avoidWhen:
+            "Flattening all three into ‘wanted’. “No quiso abrir” is not just ‘didn't want to open’; it means refused to open.",
+          register: "neutral",
+          region: "Universal Spanish.",
+          related: ["intentar", "negarse", "aceptar", "preferir"],
+          example: {
+            target: "La novia quería seguir, pero el portero no quiso abrir.",
+            translation: "The bride wanted to continue, but the doorman refused to open."
+          }
+        },
+        {
+          term: "podía / pudo / tenía que / tuvo que",
+          explanation:
+            "“Podía” is ability or possibility; “pudo” is managed to. “Tenía que” is an obligation in the frame, often was supposed to; “tuvo que” is had to and did.",
+          literal: "could / managed to / was supposed to / had to",
+          useWhen:
+            "You need the difference between capacity and successful event, or between a plan and an obligation that actually happened.",
+          avoidWhen:
+            "Using “podía” for a successful result. “Pudo calmarla” means he managed to calm her; “podía calmarla” only says he was able to.",
+          register: "neutral",
+          region: "Universal Spanish.",
+          related: ["lograr", "ser capaz", "deber", "obligarse"],
+          example: {
+            target: "Mi papá podía ayudar y al final pudo arreglarlo.",
+            translation: "My dad was able to help, and in the end he managed to fix it."
+          }
+        }
+      ],
+      note:
+        "Make one decision every time: preterite equals the event, imperfect equals the frame. A completed action that advances the story takes the preterite, even when it lasted years: “viví seis años en Ibagué” is closed, so it is preterite. Background, description, weather, time, age, habits and states take the imperfect: “llovía”, “era tarde”, “tenía miedo”, “solíamos bailar”. The most useful pattern is interlocking: imperfect sets the scene, preterite interrupts it. “Llovía durísimo cuando se fue la luz.” Time markers help but do not replace meaning. “Ayer, anoche, el año pasado, de repente, entonces” often point to preterite. “Siempre, todos los días, mientras, cada vez que, generalmente” often point to imperfect. In Colombia, remember the neighboring present-perfect lesson: people commonly say “¿ya comiste?” where Spain might say “¿has comido?”. That is a separate choice; here the axis is preterite versus imperfect.",
+      culture: [
+        {
+          label: "Ibagué tells stories through music",
+          body:
+            "Ibagué is known as Colombia's music city, so a wedding reception with live musicians is a natural scene rather than decoration. The grammar fits the place: a storyteller needs the imperfect for the mood, the rain and the ongoing song, then the preterite for the blackout and the alarm."
+        },
+        {
+          label: "Colombian past time is simple, but not simplistic",
+          body:
+            "Colombian Spanish often chooses the simple preterite where peninsular Spanish might choose a present perfect: “¿ya comiste?” is normal. That does not erase the imperfect. Once the story is clearly in the past, Colombians still make the same narrative contrast between the event and the frame."
+        },
+        {
+          label: "Time markers are clues, not laws",
+          body:
+            "Words like “ayer” and “de repente” often travel with the preterite because they point to events. Words like “mientras” and “siempre” often travel with the imperfect because they point to background or habit. But the speaker's view wins: a long period can be preterite if it is closed, and a short moment can be imperfect if it is scenery."
+        },
+        {
+          label: "Aspect-changing verbs carry real consequences",
+          body:
+            "The dangerous mistakes are often invisible. “No quiso ayudar” means refused to help, not merely lacked desire. “Pudo salir” means managed to leave, not simply could leave. These are not advanced decorations; they are everyday meanings that change what happened in the story."
+        }
+      ],
+      pitfalls: [
+        {
+          mistake: "Choosing by length of time",
+          whyItFails:
+            "Length does not decide the tense. “Vivía en Ibagué” describes a period as background; “viví seis años en Ibagué” treats the six years as a closed event.",
+          sayInstead: "Viví seis años en Ibagué, pero antes vivía en Armenia."
+        },
+        {
+          mistake: "Using preterite for scenery",
+          whyItFails:
+            "“Llovió cuando se fue la luz” sounds like it rained as an event, not that rain was the background. For weather already in progress, use the imperfect.",
+          sayInstead: "Llovía cuando se fue la luz."
+        },
+        {
+          mistake: "Using imperfect for the interruption",
+          whyItFails:
+            "“Se iba la luz” sounds ongoing or habitual. If the power went out once and the story moved forward, use the preterite.",
+          sayInstead: "Se fue la luz mientras bailábamos."
+        },
+        {
+          mistake: "Missing the meaning change in “no quiso”",
+          whyItFails:
+            "“No quería abrir” means he did not want to open, a state. “No quiso abrir” means he refused to open, a completed decision.",
+          sayInstead: "El portero no quiso abrir la puerta."
+        }
+      ],
+      variations: [
+        {
+          form: "Llovía cuando se fue la luz.",
+          register: "neutral",
+          region: "Universal Spanish",
+          whenToUse: "The core story pattern: background in imperfect, interruption in preterite."
+        },
+        {
+          form: "Antes solíamos ensayar todos los jueves.",
+          register: "neutral",
+          region: "Universal Spanish",
+          whenToUse: "A past habit, the Spanish equivalent of ‘used to’."
+        },
+        {
+          form: "Anoche empezamos tarde.",
+          register: "neutral",
+          region: "Universal Spanish",
+          whenToUse: "A completed event at a specific past time."
+        },
+        {
+          form: "No sabía nada, pero después supe la verdad.",
+          register: "neutral",
+          region: "Universal Spanish",
+          whenToUse: "Existing knowledge versus finding out."
+        },
+        {
+          form: "No quiso prender velas.",
+          register: "neutral",
+          region: "Universal Spanish",
+          whenToUse: "A refusal, not just a lack of desire."
+        }
+      ],
+      prompt: "You are telling a story: the rain was already happening, then the power went out. Which sentence chooses the tenses well?",
+      choices: [
+        "Llovió durísimo cuando se iba la luz.",
+        "Llovía durísimo cuando se fue la luz.",
+        "Llovía durísimo cuando se iba la luz."
+      ],
+      answer: 1,
+      practiceExtra: [
+        {
+          prompt: "Which sentence clearly describes a past habit?",
+          choices: [
+            "Ensayamos todos los jueves esa noche.",
+            "Ensayamos anoche a las ocho.",
+            "Solíamos ensayar todos los jueves."
+          ],
+          answer: 2,
+          tests: "habitual past with solía"
+        },
+        {
+          prompt: "You found out the truth last night. Which verb form carries that meaning?",
+          choices: [
+            "Anoche supe la verdad.",
+            "Anoche sabía la verdad.",
+            "Anoche solía saber la verdad."
+          ],
+          answer: 0,
+          tests: "supe means found out"
+        },
+        {
+          prompt: "Which sentence says he managed to calm the bride, not just that he had the ability?",
+          choices: [
+            "Mi papá podía calmar a la novia.",
+            "Mi papá solía calmar a la novia.",
+            "Mi papá pudo calmar a la novia."
+          ],
+          answer: 2,
+          tests: "pudo means managed to"
+        }
+      ]
+    },
+    en: {
+      title: "Past simple, past continuous and ‘used to’: narrar en inglés",
+      situation:
+        "En Amarillo, Elena le cuenta a Mark lo que pasó durante una recepción en un salón estilo rancho cuando una tormenta apagó las luces. Usted ya conoce la diferencia española entre pretérito e imperfecto; aquí aprende cómo el inglés la reparte sin cambiar tanto el verbo. El marco suele ir con pasado continuo, ‘it was raining when the lights went out’. Los hábitos se dicen con ‘used to’ o ‘would’. Los eventos cerrados usan pasado simple.",
+      setting: {
+        who: "Elena es colombiana y está contando una historia en inglés. Mark no estuvo en la recepción y le pide detalles, así que ella tiene que distinguir el fondo de los hechos sin confiar en terminaciones como “-aba” o “-ía”.",
+        what: "El relato de una recepción en la que se fue la luz, sonó una alarma y alguien tuvo que calmar a la novia. La escena obliga a escoger entre pasado simple, pasado continuo y “used to”.",
+        when: "Un sábado lluvioso por la noche, durante el primer baile, cuando todo parecía bajo control hasta que falló la electricidad.",
+        where: "Amarillo, Texas, en un salón estilo rancho cerca del borde del Panhandle.",
+        why: "Porque el inglés no marca el mismo contraste en una pareja de tiempos como pretérito e imperfecto. Lo reparte entre ‘was doing’, ‘used to / would’ y el pasado simple."
+      },
+      address: {
+        form: "mixed",
+        who: "Elena y Mark se dicen ‘you’. El inglés no tiene tú y usted, así que la cercanía viene del tono de la conversación y de que son amigos.",
+        why: "La lección se concentra en tiempo y aspecto, no en tratamiento. ‘You’ sirve igual para una amiga, un desconocido o un jefe.",
+        ifYouSwitch:
+          "No hay otro pronombre para cambiar. Si quiere más distancia, cambie el vocabulario o agregue cortesía, no cambie ‘you’."
+      },
+      dialogue: [
+        {
+          speaker: "Elena",
+          target: "It was raining hard when the lights went out, and everyone froze on the dance floor.",
+          translation: "Llovía durísimo cuando se fue la luz, y todos se quedaron quietos en la pista.",
+          pronunciation: "it was REI-ning jard wen de laits went aut, and EV-ri-wan frouz on de dans flor",
+          literal: "Estaba lloviendo duro cuando las luces salieron, y todos se congelaron en la pista.",
+          why: "El inglés usa ‘was raining’ para el marco en progreso y ‘went out’ para el evento. No existe una terminación verbal única que equivalga al imperfecto español."
+        },
+        {
+          speaker: "Mark",
+          target: "Were you dancing when the hall alarm went off?",
+          translation: "¿Ustedes estaban bailando cuando sonó la alarma del salón?",
+          pronunciation: "wer yu DAN-sing wen de jol a-LARM went of",
+          literal: "¿Estaban ustedes bailando cuando la alarma del salón se fue encendida?",
+          why: "‘Were you dancing’ traduce bien “estaban bailando”. ‘Went off’ es pasado simple porque la alarma sonó como hecho puntual."
+        },
+        {
+          speaker: "Elena",
+          target: "Yes. We used to rehearse every Thursday, but that night we started late and nobody heard the doorman.",
+          translation: "Sí. Antes ensayábamos todos los jueves, pero esa noche empezamos tarde y nadie oyó al portero.",
+          pronunciation: "yes. wi yust tu ri-JERS EV-ri THERZ-dei, bat dat nait wi STAR-ted leit and NOU-ba-di herd de DOR-man",
+          literal: "Sí. Usábamos ensayar cada jueves, pero esa noche empezamos tarde y nadie oyó al portero.",
+          why: "Para hábitos pasados, el inglés natural dice ‘used to rehearse’. El error colombiano es usar demasiado ‘we were rehearsing’ cuando quiere decir “ensayábamos” como costumbre."
+        },
+        {
+          speaker: "Mark",
+          target: "Did you know the technician already, or did you meet him that night?",
+          translation: "¿Ya conocías al técnico, o lo conociste esa noche?",
+          pronunciation: "did yu nou de tek-NI-shan ol-RE-di, or did yu mit jim dat nait",
+          literal: "¿Sabías/conocías al técnico ya, o lo encontraste esa noche?",
+          why: "El inglés no cambia de tiempo para ‘conocía’ y ‘conocí’. Cambia el verbo: ‘know’ para conocer de antes, ‘meet’ para conocer por primera vez."
+        },
+        {
+          speaker: "Elena",
+          target: "I knew him by sight, but I really met him when he opened the breaker room for us.",
+          translation: "Lo conocía de vista, pero lo conocí de verdad cuando nos abrió el cuarto de los tacos.",
+          pronunciation: "ai nu jim bai sait, bat ai RI-li met jim wen ji OU-pend de BREI-ker rum for as",
+          literal: "Lo sabía por vista, pero realmente lo conocí cuando abrió el cuarto de interruptores para nosotros.",
+          why: "‘Knew’ cubre la familiaridad previa; ‘met’ cubre el encuentro. Para un hispanohablante, esta pareja es la forma inglesa de resolver “conocía” frente a “conocí”."
+        },
+        {
+          speaker: "Mark",
+          target: "Did anyone know what was happening, or did you find out later it was just a burned breaker?",
+          translation: "¿Alguien sabía qué pasaba, o supieron después que era solo un taco quemado?",
+          pronunciation: "did EN-i-wan nou wat was JA-pe-ning, or did yu faind aut LEI-ter it was yust a bernd BREI-ker",
+          literal: "¿Alguien sabía qué estaba pasando, o encontraron afuera después que era solo un interruptor quemado?",
+          why: "El contraste español “sabía / supe” se expresa en inglés con verbos distintos: ‘know’ para saber y ‘find out’ para enterarse."
+        },
+        {
+          speaker: "Elena",
+          target: "My dad could fix it, and in the end he managed to calm the bride because she refused to light candles.",
+          translation: "Mi papá podía arreglarlo, y al final pudo calmar a la novia porque ella se negó a prender velas.",
+          pronunciation: "mai dad kud fiks it, and in di end ji MA-nijd tu kam de braid bi-KOZ shi ri-FIUZD tu lait KAN-dlz",
+          literal: "Mi papá podía arreglarlo, y al final logró calmar a la novia porque ella rechazó prender velas.",
+          why: "El inglés debe escoger palabras, no solo tiempos: ‘could’ es capacidad, ‘managed to’ es logró, y ‘refused to’ traduce el sentido fuerte de “no quiso”."
+        },
+        {
+          speaker: "Mark",
+          target: "So you were supposed to evacuate, but when the lights came back, you had to keep the party going.",
+          translation: "Entonces tenían que evacuar, pero cuando volvió la luz tuvieron que seguir la fiesta.",
+          pronunciation: "sou yu wer su-POUZD tu i-VA-kiu-eit, bat wen de laits keim bak, yu jad tu kip de PAR-ti GOU-ing",
+          literal: "Entonces se suponía que evacuaran, pero cuando las luces volvieron, tuvieron que mantener la fiesta andando.",
+          why: "‘Were supposed to’ traduce la obligación como marco o plan. ‘Had to’ presenta la obligación cumplida. Es el equivalente práctico de “tenían que” frente a “tuvieron que”."
+        }
+      ],
+      vocabulary: [
+        {
+          term: "past simple",
+          explanation:
+            "El pasado simple inglés cuenta el evento cerrado: ‘the lights went out’, ‘we started late’, ‘he opened the door’. Sirve para casi todo hecho completo de una narración.",
+          literal: "pasado simple",
+          useWhen:
+            "Un hecho avanza la historia o pertenece a una secuencia terminada: ‘I arrived, I called, he opened’.",
+          avoidWhen:
+            "Necesita mostrar una acción en progreso que fue interrumpida; ahí suele ir ‘was/were + -ing’.",
+          register: "neutro",
+          region: "Inglés universal.",
+          related: ["went", "started", "opened", "heard"],
+          example: {
+            target: "The lights went out during the dance.",
+            translation: "Se fue la luz durante el baile."
+          }
+        },
+        {
+          term: "past continuous",
+          explanation:
+            "‘Was/were + -ing’ muestra una acción en progreso: ‘it was raining’, ‘we were dancing’. Es una de las formas inglesas de traducir el marco imperfecto.",
+          literal: "estaba + -ando/-iendo",
+          useWhen:
+            "Algo estaba pasando cuando ocurrió otra cosa: ‘we were dancing when the alarm went off’.",
+          avoidWhen:
+            "Un hábito pasado. Para “ensayábamos todos los jueves”, diga ‘we used to rehearse’, no ‘we were rehearsing every Thursday’.",
+          register: "neutro",
+          region: "Inglés universal.",
+          related: ["was raining", "were dancing", "was happening", "while"],
+          example: {
+            target: "We were dancing when the alarm went off.",
+            translation: "Estábamos bailando cuando sonó la alarma."
+          }
+        },
+        {
+          term: "used to + verb",
+          explanation:
+            "La forma principal para un hábito pasado que ya no es el foco presente: ‘we used to rehearse’. No significa ‘usar’ en este caso.",
+          literal: "solía / antes + imperfecto",
+          useWhen:
+            "Traducir “solía” o un imperfecto habitual: ‘we used to go’, ‘she used to call every day’.",
+          avoidWhen:
+            "Un evento único. ‘We used to start late that night’ no funciona porque ‘that night’ es una sola ocasión.",
+          register: "neutro",
+          region: "Inglés universal.",
+          related: ["would", "every Thursday", "back then", "usually"],
+          example: {
+            target: "We used to rehearse every Thursday.",
+            translation: "Antes ensayábamos todos los jueves."
+          }
+        },
+        {
+          term: "would for past habits",
+          explanation:
+            "‘Would’ también puede marcar hábito pasado: ‘Every summer, we would visit my aunt’. Es más narrativo y necesita un contexto habitual claro.",
+          literal: "solía / hacía algo repetidamente",
+          useWhen:
+            "Ya está claro que habla del pasado y describe una repetición: ‘Every Friday, we would dance after dinner’.",
+          avoidWhen:
+            "Estados como ‘know’, ‘live’ o ‘be’. Para esos, ‘used to’ suele ser mejor: ‘I used to know him’, no ‘I would know him’.",
+          register: "narrativo",
+          region: "Inglés universal.",
+          related: ["used to", "usually", "every Friday", "back then"],
+          example: {
+            target: "Every Friday, we would dance after dinner.",
+            translation: "Todos los viernes bailábamos después de comer."
+          }
+        },
+        {
+          term: "know / find out",
+          explanation:
+            "El inglés no usa una sola pareja de tiempos para “sabía / supe”. Usa dos verbos: ‘know’ para saber y ‘find out’ para enterarse.",
+          literal: "saber / enterarse",
+          useWhen:
+            "‘I knew the address’ para conocimiento previo; ‘I found out later’ para el momento de descubrirlo.",
+          avoidWhen:
+            "Traducir ‘supe’ como ‘I knew’ cuando significa ‘me enteré’. Eso borra el evento de descubrimiento.",
+          register: "neutro",
+          region: "Inglés universal.",
+          related: ["knew", "found out", "realized", "learned"],
+          example: {
+            target: "I didn't know, but later I found out.",
+            translation: "No sabía, pero después supe."
+          }
+        },
+        {
+          term: "know / meet",
+          explanation:
+            "Para “conocía / conocí”, el inglés cambia de verbo. ‘Know’ es conocer de antes; ‘meet’ es conocer por primera vez.",
+          literal: "conocer / conocer por primera vez",
+          useWhen:
+            "‘I knew him’ si ya había familiaridad; ‘I met him’ si fue el primer encuentro.",
+          avoidWhen:
+            "Decir ‘I knew him last night’ cuando quiere decir que lo conoció anoche. Lo natural es ‘I met him last night’.",
+          register: "neutro",
+          region: "Inglés universal.",
+          related: ["knew", "met", "by sight", "introduced"],
+          example: {
+            target: "I knew him by sight, but I met him that night.",
+            translation: "Lo conocía de vista, pero lo conocí esa noche."
+          }
+        },
+        {
+          term: "could / managed to / refused to",
+          explanation:
+            "Estas palabras cubren cambios de aspecto que el español marca con “podía / pudo / no quiso”. ‘Could’ es capacidad, ‘managed to’ es logró, ‘refused to’ es se negó.",
+          literal: "podía / logró / se negó a",
+          useWhen:
+            "Quiere distinguir entre habilidad, éxito real y negativa: ‘could fix it’, ‘managed to fix it’, ‘refused to open’.",
+          avoidWhen:
+            "Usar solo ‘could’ para todo. ‘He could fix it’ no confirma que lo arregló; ‘he managed to fix it’ sí.",
+          register: "neutro",
+          region: "Inglés universal.",
+          related: ["could", "managed", "refused", "was able to"],
+          example: {
+            target: "He could help, and he managed to fix it.",
+            translation: "Podía ayudar, y logró arreglarlo."
+          }
+        },
+        {
+          term: "was supposed to / had to",
+          explanation:
+            "‘Was supposed to’ traduce una obligación o plan de fondo. ‘Had to’ traduce una obligación que se volvió hecho y normalmente se cumplió.",
+          literal: "tenía que / tuvo que",
+          useWhen:
+            "Contrastar plan con acción: ‘we were supposed to leave, but we had to stay’.",
+          avoidWhen:
+            "Usar ‘had to’ si solo habla de una expectativa que no se cumplió. Ahí ‘was supposed to’ es más preciso.",
+          register: "neutro",
+          region: "Inglés universal.",
+          related: ["supposed to", "had to", "needed to", "was expected to"],
+          example: {
+            target: "We were supposed to leave, but we had to stay.",
+            translation: "Teníamos que salir, pero tuvimos que quedarnos."
+          }
+        }
+      ],
+      note:
+        "El inglés no tiene una oposición verbal tan limpia como pretérito frente a imperfecto. Por eso usted debe traducir la función, no la terminación. Si en español el imperfecto marca una acción en progreso interrumpida, el inglés suele usar pasado continuo: “it was raining when the lights went out”. Si marca hábito, use “used to” o, con contexto claro, “would”: “we used to rehearse every Thursday”, “every summer we would travel”. Si el hecho está completo y mueve la historia, use pasado simple: “the alarm went off”, “we started late”. Los hispanohablantes suelen producir demasiado ‘was doing’ porque ven “-aba / -ía” y traducen mecánicamente, y producen muy poco ‘used to’. Recuerde además que varios contrastes españoles se expresan con vocabulario inglés: “supe” es “found out”, “conocí” es “met”, “pudo” es “managed to” y “no quiso” es “refused to”.",
+      culture: [
+        {
+          label: "El inglés pone el aspecto en varias cajas",
+          body:
+            "En español usted mira una forma verbal y sabe mucho: “llovía” no funciona igual que “llovió”. En inglés, parte de esa información va al tiempo verbal, parte a expresiones como ‘used to’ y parte al verbo escogido. Por eso traducir palabra por palabra falla."
+        },
+        {
+          label: "‘Was doing’ no traduce todos los imperfectos",
+          body:
+            "“I was dancing” sirve para “estaba bailando”, pero no para cada “bailaba”. Si “bailaba” significa hábito, el inglés natural es ‘I used to dance’ o ‘I would dance’. Este es uno de los errores más persistentes de hablantes de español en B1."
+        },
+        {
+          label: "Amarillo como escena tejana",
+          body:
+            "La escena está fuera de Colombia porque esta dirección enseña inglés a una persona colombiana. En una recepción cerca de Amarillo, la historia no necesita vocabulario raro; necesita el inglés normal para narrar clima, interrupciones, hábitos y decisiones."
+        },
+        {
+          label: "El pasado simple hace más trabajo de lo que parece",
+          body:
+            "Muchos estudiantes evitan el pasado simple porque sienten que una historia necesita formas más largas. Pero el inglés usa el pasado simple para la columna vertebral del relato: ‘the lights went out, the alarm went off, he opened the door’. Lo largo se reserva para el marco."
+        }
+      ],
+      pitfalls: [
+        {
+          mistake: "Decir ‘we were rehearsing every Thursday’ por hábito",
+          whyItFails:
+            "El pasado continuo suena como una acción en progreso, no como una costumbre estable. Para “ensayábamos todos los jueves”, use ‘used to’.",
+          sayInstead: "We used to rehearse every Thursday."
+        },
+        {
+          mistake: "Traducir ‘supe’ como ‘I knew’",
+          whyItFails:
+            "‘I knew’ describe conocimiento previo. Si la idea es que se enteró en ese momento, el inglés pide ‘found out’.",
+          sayInstead: "I found out later."
+        },
+        {
+          mistake: "Usar ‘could’ cuando sí logró hacerlo",
+          whyItFails:
+            "‘He could calm her’ dice que tenía la capacidad, pero no confirma el resultado. Para “pudo calmarla”, diga ‘managed to’.",
+          sayInstead: "He managed to calm her."
+        },
+        {
+          mistake: "Decir ‘I knew him last night’ por ‘lo conocí anoche’",
+          whyItFails:
+            "Para conocer a alguien por primera vez, el inglés usa ‘meet’. ‘Knew him last night’ suena a que ya lo conocía durante esa noche.",
+          sayInstead: "I met him last night."
+        }
+      ],
+      variations: [
+        {
+          form: "It was raining when the lights went out.",
+          register: "neutro",
+          region: "Inglés universal",
+          whenToUse: "Marco en progreso más evento que interrumpe."
+        },
+        {
+          form: "We used to rehearse every Thursday.",
+          register: "neutro",
+          region: "Inglés universal",
+          whenToUse: "Un hábito pasado, equivalente a “solíamos” o “ensayábamos”."
+        },
+        {
+          form: "That night we started late.",
+          register: "neutro",
+          region: "Inglés universal",
+          whenToUse: "Un evento único y cerrado en el pasado."
+        },
+        {
+          form: "I didn't know, but later I found out.",
+          register: "neutro",
+          region: "Inglés universal",
+          whenToUse: "Distinguir “sabía” de “supe” en inglés."
+        },
+        {
+          form: "She refused to light candles.",
+          register: "neutro",
+          region: "Inglés universal",
+          whenToUse: "Traducir “no quiso” como negativa clara."
+        }
+      ],
+      prompt: "Quiere decir que la lluvia era el marco y luego se apagaron las luces. ¿Cuál suena natural en inglés?",
+      choices: [
+        "It rained hard when the lights were going out.",
+        "It was raining hard when the lights went out.",
+        "It used to rain hard when the lights went out."
+      ],
+      answer: 1,
+      practiceExtra: [
+        {
+          prompt: "¿Cuál traduce bien el hábito “ensayábamos todos los jueves”?",
+          choices: [
+            "We were rehearsing every Thursday.",
+            "We rehearsed right now every Thursday.",
+            "We used to rehearse every Thursday."
+          ],
+          answer: 2,
+          tests: "used to for habitual past"
+        },
+        {
+          prompt: "¿Cómo dice en inglés que se enteró de la verdad anoche?",
+          choices: [
+            "I found out the truth last night.",
+            "I knew the truth last night.",
+            "I was knowing the truth last night."
+          ],
+          answer: 0,
+          tests: "found out for supe"
+        },
+        {
+          prompt: "¿Cuál dice que logró calmar a la novia, no solo que podía hacerlo?",
+          choices: [
+            "He could calm the bride.",
+            "He used to calm the bride.",
+            "He managed to calm the bride."
+          ],
+          answer: 2,
+          tests: "managed to for pudo"
         }
       ]
     }

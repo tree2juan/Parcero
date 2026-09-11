@@ -6,9 +6,11 @@
  * this file runs, because index.html loads data/lessons.js first. Nothing here
  * declares it, and nothing here reassigns it.
  *
- * Every lesson spines on exactly one verb from data/curriculum.js, named in its
- * `verb` field so the coverage report can prove the curriculum is actually
- * taught rather than merely listed.
+ * Most lessons here spine on exactly one verb from data/curriculum.js, named in
+ * their `verb` field so the coverage report can prove the curriculum is
+ * actually taught rather than merely listed. The added grammar lesson spines on
+ * `por-vs-para` from data/structures.js instead, closing the measured gap of
+ * 312 corpus uses with no lesson contrasting the two.
  */
 lessons.push(
   {
@@ -1963,6 +1965,770 @@ lessons.push(
           ],
           answer: 0,
           tests: "plan, not planificate"
+        }
+      ]
+    }
+  },
+  {
+    id: "choosing-por-or-para-at-buenaventura-cargo-counter",
+    level: "Developing · Planning a trip",
+    skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context", "grammar"],
+    domain: "transport-and-travel",
+    register: "neutral",
+    pathways: ["independent", "year-12"],
+    structure: "por-vs-para",
+    review: "pending",
+    es: {
+      title: "Choosing por or para at the cargo counter",
+      situation:
+        "You are at a cargo counter in Buenaventura arranging a short trip toward Cali, sending a small package ahead, and buying something for a host. The clerk keeps using both por and para. You need one deciding question: is the phrase pointing forward to an aim, or backward and through the path that gets you there?",
+      setting: {
+        who: "Claudia works at a port cargo counter and is used to travelers mixing routes, per-kilo charges, deadlines and favors into one nervous conversation. Alex is planning a two-day trip and wants to stop choosing por or para by guessing.",
+        what: "A shipping-counter scene where destination, route, deadline, duration, motive, fare, recipient, purpose, fixed expressions and a passive sentence all appear because the travel plan makes them useful.",
+        when: "A Thursday afternoon in December, with the weekend close enough that shipping cutoffs and package deadlines matter.",
+        where: "Buenaventura, Valle del Cauca, at a port cargo counter that receives small packages and coordinates inland routes.",
+        why: "A port shipment naturally separates forward aim from backward or through movement: a package goes toward Cali, travels by the road inland, leaves by a deadline, waits for two days, costs a per-kilo charge, and is marked for someone. That frame makes por versus para decidable instead of a coin toss."
+      },
+      address: {
+        form: "usted",
+        who: "Claudia and Alex use usted because they do not know each other and the conversation is a practical service exchange at a transport counter.",
+        why: "Usted keeps the counter talk respectful while still warm. The grammar lesson is not about intimacy, so the polite service register lets the contrast between por and para stay in focus.",
+        ifYouSwitch:
+          "Tú would sound too familiar with a clerk you have just met. Vos would be distracting here. In Colombia, usted is normal, efficient and friendly enough for sending cargo and confirming prices."
+      },
+      dialogue: [
+        {
+          speaker: "Alex",
+          target: "Buenas tardes. Salgo para Cali mañana, pero paso por Cali otra vez el domingo.",
+          translation: "Good afternoon. I'm leaving for Cali tomorrow, but I pass through Cali again on Sunday.",
+          pronunciation: "BWEH-nas TAR-des. SAL-goh PAH-rah KAH-lee mah-NYAH-nah, PEH-roh PAH-soh por KAH-lee OH-trah bes el doh-MEEN-goh",
+          literal: "Good afternoons. I-leave for Cali tomorrow, but I-pass through Cali another time on Sunday.",
+          why: "This is the travel rule in one breath. “Para Cali” points forward to the destination Alex is aiming at. “Por Cali” treats the city as a route or point passed through. Same city, different mental arrow."
+        },
+        {
+          speaker: "Claudia",
+          target: "Listo. Si viaja por la vía al mar, el trayecto dura por dos días con parada, y compra hoy para ahorrar.",
+          translation: "All right. If you travel along the road to the sea, the trip lasts for two days with a stop, and you buy today to save money.",
+          pronunciation: "LEES-toh. see BYAH-hah por lah BEE-ah al mar, el trah-YEK-toh DOO-rah por dos DEE-ahs kon pah-RAH-dah, ee KOM-prah oy PAH-rah ah-oh-RRAR",
+          literal: "Ready. If you-travel through the road to-the sea, the route lasts through two days with stop, and you-buy today for to-save.",
+          why: "“Por la vía al mar” is the route you move through. “Por dos días” is time you pass through. “Para ahorrar” points forward to a purpose, and purpose with a verb uses an infinitive."
+        },
+        {
+          speaker: "Alex",
+          target: "Perfecto. Necesito el tiquete para el viernes y este sobre es para usted en la oficina de carga.",
+          translation: "Perfect. I need the ticket for Friday, and this envelope is for you at the cargo office.",
+          pronunciation: "per-FEK-toh. neh-seh-SEE-toh el tee-KEH-teh PAH-rah el BYER-nes ee ES-teh SOH-breh es PAH-rah oos-TED en lah oh-fee-SEE-nah deh KAR-gah",
+          literal: "Perfect. I-need the ticket for the Friday and this envelope is for you in the office of cargo.",
+          why: "“Para el viernes” is a deadline, the time you are aiming to have something ready. “Para usted” is the recipient, the person the item is meant to reach. Both point forward."
+        },
+        {
+          speaker: "Claudia",
+          target: "Gracias por todo, pero el retraso fue por la lluvia. Por eso mandamos avisos por WhatsApp.",
+          translation: "Thanks for everything, but the delay was because of the rain. That's why we send notices by WhatsApp.",
+          pronunciation: "GRAH-syahs por TOH-doh, PEH-roh el rreh-TRAH-soh fweh por lah YOO-byah. por EH-soh man-DAH-mos ah-BEE-sohs por WAH-tsap",
+          literal: "Thanks for everything, but the delay was for the rain. For that we-send notices by WhatsApp.",
+          why: "“Gracias por” is a fixed thank-you frame and a cause frame. “Por la lluvia” names the reason behind the delay. “Por WhatsApp” is the means or channel used to send the message."
+        },
+        {
+          speaker: "Alex",
+          target: "Entonces trabajo para mi tío cuando llego, pero hoy trabajo por mi tío y cubro su turno.",
+          translation: "So I work for my uncle when I arrive, but today I work for my uncle by covering his shift.",
+          pronunciation: "en-TON-ses trah-BAH-hoh PAH-rah mee TEE-oh KWAN-doh YEH-goh, PEH-roh oy trah-BAH-hoh por mee TEE-oh ee KOO-broh soo TOOR-noh",
+          literal: "Then I-work for my uncle when I-arrive, but today I-work for my uncle and I-cover his shift.",
+          why: "This minimal pair proves the rule. “Trabajo para mi tío” points to the employer or person I serve. “Trabajo por mi tío” points backward to substitution, I am doing it in his place or on his behalf."
+        },
+        {
+          speaker: "Claudia",
+          target: "Exacto. Lo hice para ti si era un regalo; lo hice por ti si usted era la razón o si lo reemplacé.",
+          translation: "Exactly. I did it for you if it was a gift; I did it for you if you were the reason or if I replaced you.",
+          pronunciation: "eg-SAK-toh. loh EE-seh PAH-rah tee see EH-rah oon rreh-GAH-loh; loh EE-seh por tee see oos-TED EH-rah lah rrah-SON oh see loh rreh-em-plah-SEH",
+          literal: "Exact. It I-did for you if it-was a gift; it I-did because-of you if you were the reason or if I replaced you.",
+          why: "The English word “for” hides two ideas. “Para ti” aims the action at a recipient or benefit. “Por ti” looks back to motive, cause, or substitution. Ask where the arrow points."
+        },
+        {
+          speaker: "Alex",
+          target: "¿Y el envío? Me lo dejan por cincuenta mil, dos veces por semana, y puede ir por avión si hay afán.",
+          translation: "And the shipment? You'll leave it for me for fifty thousand, twice per week, and it can go by plane if it's urgent.",
+          pronunciation: "ee el en-BEE-oh. meh loh DEH-han por seen-KWEN-tah meel, dos BEH-ses por seh-MAH-nah, ee PWEH-deh eer por ah-BYON see eye ah-FAN",
+          literal: "And the sending? For-me it they-leave for fifty thousand, two times per week, and it-can go by plane if there-is hurry.",
+          why: "Price and exchange take “por”: the package goes for fifty thousand pesos. Rates also take “por”: twice per week. Means of transport can take “por”: by plane."
+        },
+        {
+          speaker: "Claudia",
+          target: "Por supuesto. El paquete fue revisado por la empresa, queda por ahora aquí y sale para Cali por la noche.",
+          translation: "Of course. The package was checked by the company, it stays here for now and leaves for Cali at night.",
+          pronunciation: "por soo-PWES-toh. el pah-KEH-teh fweh rreh-bee-SAH-doh por lah em-PREH-sah, KEH-dah por ah-OH-rah ah-KEE ee SAH-leh PAH-rah KAH-lee por lah NOH-cheh",
+          literal: "Of course. The package was checked by the company, it-stays for now here and leaves for Cali through the night.",
+          why: "A passive agent takes “por”: who did the checking. “Por supuesto” and “por ahora” are fixed expressions. “Sale para Cali” points to destination; “por la noche” is the time frame the departure passes through."
+        },
+        {
+          speaker: "Alex",
+          target: "Para mí, para ser diciembre está barato. Por favor, guárdelo por si acaso; por fin entiendo.",
+          translation: "To me, for December, it's cheap. Please, keep it just in case; I finally understand.",
+          pronunciation: "PAH-rah mee, PAH-rah ser dee-SYEM-breh es-TAH bah-RAH-toh. por fah-BOR, GWAR-deh-loh por see ah-KAH-soh; por feen en-TYEN-doh",
+          literal: "For me, for being December it-is cheap. By favor, keep-it for if case; by end I-understand.",
+          why: "“Para mí” frames an opinion. “Para ser diciembre” compares against expectation: considering that it is December, the price is cheap. “Por favor”, “por si acaso” and “por fin” are fixed traveler expressions."
+        },
+        {
+          speaker: "Claudia",
+          target: "Listo. Reconozca pa' la casa y pa' que sepa cuando le hablen, pero escriba para nada y para siempre completos.",
+          translation: "Done. Recognize pa' la casa and pa' que sepa when people say them, but write para nada and para siempre in full.",
+          pronunciation: "LEES-toh. rreh-koh-NOS-kah pah lah KAH-sah ee pah keh SEH-pah KWAN-doh leh AH-blen, PEH-roh es-KREE-bah PAH-rah NAH-dah ee PAH-rah SYEM-preh kom-PLEH-tohs",
+          literal: "Ready. Recognize pa' the house and pa' that you-know when to-you they-speak, but write for nothing and for always complete.",
+          why: "Colombians routinely reduce “para” to “pa” in speech. Learners should recognize it in phrases like “pa' la casa” and “pa' que sepa”, but write the full “para” in careful Spanish. “Para nada” and “para siempre” are fixed expressions to learn whole."
+        }
+      ],
+      vocabulary: [
+        {
+          term: "para as forward aim",
+          explanation:
+            "Para points forward to the thing an action is aimed at: a destination, deadline, recipient, purpose, opinion frame, or expectation frame. If the sentence feels like an arrow toward an endpoint, para is usually the first guess to test.",
+          literal: "toward / for",
+          useWhen:
+            "Use it for where you are headed, when something must be ready, who receives it, and what an action is meant to achieve.",
+          avoidWhen:
+            "Do not use it just because English says for. If the sentence names the route, cause, exchange, duration, means, or person acting in someone else's place, test por instead.",
+          register: "neutral",
+          region: "Universal Spanish; the pa reduction is common in Colombian speech, not formal writing.",
+          related: ["destino", "plazo", "destinatario", "propósito"],
+          example: {
+            target: "Salgo para Cali mañana.",
+            translation: "I'm leaving for Cali tomorrow."
+          }
+        },
+        {
+          term: "por as backward or through",
+          explanation:
+            "Por looks backward to a cause or moves through a path, time span, exchange, channel, rate, or substitution. If the idea explains what lies behind the action or what space or time it passes through, por is the safer test.",
+          literal: "through / because of / by",
+          useWhen:
+            "Use it for reasons, routes, durations, prices, rates, means, passive agents, and doing something on behalf of someone.",
+          avoidWhen:
+            "Do not use it for a clean endpoint like a destination, deadline, recipient, or purpose with an infinitive.",
+          register: "neutral",
+          region: "Universal Spanish; Colombian travel talk uses these meanings constantly in routes and fares.",
+          related: ["causa", "ruta", "duración", "medio"],
+          example: {
+            target: "Paso por Cali el domingo.",
+            translation: "I pass through Cali on Sunday."
+          }
+        },
+        {
+          term: "para + destination, deadline, recipient",
+          explanation:
+            "Three common para uses share the same forward aim. “Para Cali” aims movement at a place. “Para el viernes” aims completion at a deadline. “Para usted” aims an object or message at its recipient.",
+          literal: "for / to / by a deadline",
+          useWhen:
+            "Use it when the place, date, or person is the intended endpoint of the action.",
+          avoidWhen:
+            "A place can take por if you pass through it rather than head there. A time can take por if it is a duration rather than a deadline.",
+          register: "neutral",
+          region: "Universal Spanish; extremely common at terminals, hotels and cargo offices.",
+          related: ["para Cali", "para el viernes", "para usted", "destino"],
+          example: {
+            target: "El paquete es para usted.",
+            translation: "The package is for you."
+          }
+        },
+        {
+          term: "para + infinitive, opinion, expectation",
+          explanation:
+            "Para also points forward into an intended result: “para ahorrar”, in order to save. It can frame a viewpoint, “para mí”, or measure against expectation, “para ser diciembre”, considering it is December.",
+          literal: "in order to / for me / considering",
+          useWhen:
+            "Use it when an infinitive names the purpose, when you mark your own opinion, or when you compare something with what you would expect from a situation.",
+          avoidWhen:
+            "Do not use para for the cause that made something happen. Purpose is aimed ahead; cause stands behind the action and takes por.",
+          register: "neutral",
+          region: "Universal Spanish; “para mí” is everyday speech, not a heavy formal phrase.",
+          related: ["para ahorrar", "para mí", "para ser", "propósito"],
+          example: {
+            target: "Compro hoy para ahorrar.",
+            translation: "I buy today to save money."
+          }
+        },
+        {
+          term: "por + cause and route",
+          explanation:
+            "Cause and route are the easiest por meanings to feel. “Por la lluvia” names the reason behind a delay. “Por la carretera” names the road you move through, not the endpoint you are aiming for.",
+          literal: "because of / along",
+          useWhen:
+            "Use it for motives and reasons, thanks after gracias, and movement through a road, neighborhood, city center, or channel.",
+          avoidWhen:
+            "Do not use por when the place is the destination. “Salgo para Cali” and “paso por Cali” are not interchangeable.",
+          register: "neutral",
+          region: "Universal Spanish; “por el centro” is a normal Colombian way to say through downtown.",
+          related: ["por la lluvia", "por la carretera", "por el centro", "gracias por"],
+          example: {
+            target: "Gracias por todo.",
+            translation: "Thanks for everything."
+          }
+        },
+        {
+          term: "por + duration, exchange, rate, means",
+          explanation:
+            "Por covers spans and transactions: “por dos días” for duration, “por cincuenta mil” for price, “dos veces por semana” for rate, and “por WhatsApp” or “por avión” for the channel or means.",
+          literal: "for / for the price of / per / by",
+          useWhen:
+            "Use it when time is something passed through, money is exchanged, frequency is measured, or a channel carries the action.",
+          avoidWhen:
+            "Do not confuse duration with deadline. “Por dos días” is for two days; “para el viernes” is by Friday.",
+          register: "neutral",
+          region: "Universal Spanish; “por WhatsApp” is very common Colombian service Spanish.",
+          related: ["por dos días", "por cincuenta mil", "por semana", "por WhatsApp"],
+          example: {
+            target: "Viajo por dos días.",
+            translation: "I'm traveling for two days."
+          }
+        },
+        {
+          term: "por + substitution and passive agent",
+          explanation:
+            "Por can mean on behalf of or in place of someone: “trabajo por mi tío”. It also introduces the agent in a passive sentence: “fue revisado por la empresa”, the company did the checking.",
+          literal: "for / on behalf of / by",
+          useWhen:
+            "Use it when someone acts in another person's place, or when a passive sentence names who performed the action.",
+          avoidWhen:
+            "Do not use por for the employer or recipient. “Trabajo para mi tío” means he is my employer or beneficiary, not that I am covering his shift.",
+          register: "neutral",
+          region: "Universal Spanish; the passive agent is more common in writing but useful on receipts and notices.",
+          related: ["en lugar de", "por mi tío", "voz pasiva", "agente"],
+          example: {
+            target: "El paquete fue revisado por la empresa.",
+            translation: "The package was checked by the company."
+          }
+        },
+        {
+          term: "minimal pairs",
+          explanation:
+            "The shortest way to learn the contrast is to hold pairs still. “Trabajo para mi tío” names the person I work for as employer. “Trabajo por mi tío” means I am doing it for him, in his place, because of him, or on his behalf.",
+          literal: "meaning-changing pairs",
+          useWhen:
+            "Use pairs to test the arrow: “Salgo para Cali” versus “paso por Cali”, and “lo hice para ti” versus “lo hice por ti”.",
+          avoidWhen:
+            "Do not memorize the pair as two English words. English often says for in both halves, which is exactly why guessing fails.",
+          register: "neutral",
+          region: "Universal Spanish; Colombians hear these differences clearly even when English translations blur them.",
+          related: ["trabajar para", "trabajar por", "salir para", "pasar por"],
+          example: {
+            target: "Lo hice para ti, no por ti.",
+            translation: "I did it for you as the recipient, not because of you."
+          }
+        },
+        {
+          term: "fixed expressions with por and para",
+          explanation:
+            "Some traveler phrases are learned whole because the preposition is fixed: por favor, por fin, por eso, por supuesto, por ahora, por si acaso, para nada and para siempre. The arrow idea still helps, but the phrase is stored as a chunk.",
+          literal: "set phrases",
+          useWhen:
+            "Use them constantly in travel talk: asking politely, reacting to delays, agreeing, buying time, and keeping a backup plan.",
+          avoidWhen:
+            "Do not swap the preposition inside a fixed expression. “Para favor” and “por siempre” may exist in other contexts, but they do not replace these travel chunks.",
+          register: "neutral to conversational",
+          region: "Universal Spanish; all are understood in Colombia.",
+          related: ["por favor", "por fin", "por supuesto", "para nada"],
+          example: {
+            target: "Por favor, guárdelo por si acaso.",
+            translation: "Please, keep it just in case."
+          }
+        }
+      ],
+      note:
+        "Do not learn por and para as two lists that both mean “for”. Ask one question: does the phrase point forward to an aim, or backward and through the path, cause, time, exchange or substitute that got you there? Para points forward to destination, deadline, recipient, purpose, opinion and expectation. Por points back or through for cause, route, duration, price, rate, means, passive agent and substitution. Colombian speech often reduces para to pa, as in “pa' la casa” or “pa' que sepa”. Recognize it with your ear, but write para in careful Spanish.",
+      culture: [
+        {
+          label: "The cargo counter makes the contrast visible",
+          body:
+            "A port cargo counter is almost a diagram of por and para. The label says the package is para Cali because that is its destination. The truck may go por la vía al mar because that is the route. The dispatch can be para el viernes because that is the deadline, while the wait lasts por dos días because those are the days you pass through. The charge is paid por kilo, notices arrive por WhatsApp, and a package is para a recipient. Nothing here is decorative grammar; it is the working language of a shipment."
+        },
+        {
+          label: "Why English speakers keep guessing wrong",
+          body:
+            "English says for in too many places: for Friday, for two days, for my uncle, for you, for fifty thousand. Spanish hears different jobs in those phrases. A destination, deadline or recipient is an aim, so para. A duration, reason, price or substitution is behind or through the action, so por. If you translate word by word, every sentence feels like a fifty percent guess. If you ask what job the phrase is doing, the choice becomes much less mysterious."
+        },
+        {
+          label: "Pa is for listening, not for your formal writing",
+          body:
+            "In Colombia you will hear para reduced constantly: “pa' la casa”, “pa' que sepa”, “pa' mañana”. This is ordinary speech, not a separate grammar rule. Learners need to recognize it because it comes fast in buses, shops and family talk. But in messages to a hotel, homework, forms and any careful writing, keep the full para. Understanding a reduction is not the same as needing to imitate it everywhere."
+        },
+        {
+          label: "Fixed phrases are luggage tags",
+          body:
+            "Some por and para phrases are so common that they become luggage tags you grab without opening the suitcase. Por favor, por supuesto, por fin, por ahora, por eso and por si acaso will follow you through any trip. Para nada and para siempre are equally fixed. Learn them as whole chunks, then let the arrow rule handle the live choices around them."
+        }
+      ],
+      pitfalls: [
+        {
+          mistake: "Using para for every English for",
+          whyItFails:
+            "English hides several meanings under one word. “For two days” is duration and takes por; “for Friday” is a deadline and takes para. The English word is not enough evidence.",
+          sayInstead: "Ask whether the phrase is an aim or a path, cause, span, exchange or substitute."
+        },
+        {
+          mistake: "Treating route and destination as the same place",
+          whyItFails:
+            "A city can be either the goal or a point on the way. “Salgo para Cali” means I am headed there. “Paso por Cali” means I go through it.",
+          sayInstead: "Salgo para Cali, but paso por Cali."
+        },
+        {
+          mistake: "Missing the meaning change in trabajo para and trabajo por",
+          whyItFails:
+            "“Trabajo para mi tío” makes your uncle the employer or beneficiary. “Trabajo por mi tío” means you are covering him, replacing him, or acting on his behalf.",
+          sayInstead: "Trabajo para mi tío if he is the employer; trabajo por mi tío if I cover his shift."
+        },
+        {
+          mistake: "Writing pa in careful Spanish because you hear it everywhere",
+          whyItFails:
+            "Pa is a speech reduction of para, common and useful to recognize. It is not the form you want in a hotel message, school answer, receipt note or formal request.",
+          sayInstead: "Listen for pa, but write para."
+        }
+      ],
+      variations: [
+        {
+          form: "Salgo para Cali.",
+          register: "neutral",
+          region: "Universal Spanish",
+          whenToUse: "Naming the destination you are headed toward."
+        },
+        {
+          form: "Paso por Cali.",
+          register: "neutral",
+          region: "Universal Spanish",
+          whenToUse: "Naming a route or place you pass through."
+        },
+        {
+          form: "Lo hice para ti.",
+          register: "neutral",
+          region: "Universal Spanish",
+          whenToUse: "The person is the recipient or intended beneficiary."
+        },
+        {
+          form: "Lo hice por ti.",
+          register: "neutral",
+          region: "Universal Spanish",
+          whenToUse: "The person is the reason, motive or person you acted on behalf of."
+        },
+        {
+          form: "Para ser diciembre, está barato.",
+          register: "neutral conversational",
+          region: "Universal Spanish",
+          whenToUse: "Comparing something with what you expected for the situation."
+        }
+      ],
+      prompt: "Alex says “Salgo para Cali” but “paso por Cali.” What changes?",
+      choices: [
+        "Para makes Cali the destination, while por makes it a place on the route.",
+        "Por makes Cali the destination, while para makes it a place on the route.",
+        "Both phrases mean the same thing because English can translate both with for."
+      ],
+      answer: 0,
+      practiceExtra: [
+        {
+          prompt: "Which sentence correctly gives a purpose?",
+          choices: [
+            "Compro hoy para ahorrar dinero en el viaje.",
+            "Compro hoy por ahorrar dinero en el viaje.",
+            "Compro hoy para la lluvia en el viaje."
+          ],
+          answer: 0,
+          tests: "Purpose with an infinitive points forward and takes para."
+        },
+        {
+          prompt: "Which sentence correctly gives a duration?",
+          choices: [
+            "Me quedo para dos días cerca del muelle.",
+            "Me quedo por dos días cerca del muelle.",
+            "Me quedo por el viernes cerca del muelle."
+          ],
+          answer: 1,
+          tests: "A time span passed through takes por; a deadline takes para."
+        },
+        {
+          prompt: "Which sentence names a passive agent?",
+          choices: [
+            "El paquete fue revisado para la empresa.",
+            "El paquete fue revisado durante la empresa.",
+            "El paquete fue revisado por la empresa."
+          ],
+          answer: 2,
+          tests: "The agent in a passive sentence is introduced with por."
+        }
+      ]
+    },
+    en: {
+      title: "Escoger for, to, by y through en una terminal de Fort Worth",
+      situation:
+        "Usted está en una terminal de buses en Fort Worth organizando un viaje corto, enviando un paquete y comprando algo para un anfitrión. En español muchas frases usan por o para, y ambas pueden sonar como for. En inglés, en cambio, debe escoger for, to, by, through, during, because of, per or in order to según la función real.",
+      setting: {
+        who: "Claire trabaja en un mostrador de buses y encomiendas. Alejandro es colombiano, planea un viaje de dos días y necesita dejar de traducir por y para siempre como for.",
+        what: "Una escena de terminal donde destino, ruta, fecha límite, duración, motivo, tarifa, destinatario, medio y agente pasivo obligan a escoger la preposición inglesa correcta.",
+        when: "Un jueves por la tarde en diciembre, con el fin de semana cerca y la hora de cierre de la oficina encima.",
+        where: "Fort Worth, Texas, en una terminal interurbana con mostrador de tiquetes y envíos pequeños.",
+        why: "Porque el problema se invierte para el hispanohablante. Español junta muchas relaciones bajo por y para, pero inglés las reparte entre palabras diferentes. Decir for para todo suena lógico desde el español y falla justo en viajes, fechas y medios."
+      },
+      address: {
+        form: "mixed",
+        who: "Claire y Alejandro no se conocen. En inglés ambos usan you; la cortesía sale de could, please, I need y frases completas, no de un pronombre distinto.",
+        why: "El inglés no distingue tú y usted. Por eso esta dirección se enfoca en elegir preposiciones, no tratamientos. Un tono claro y educado reemplaza el cambio de pronombre que el español sí tiene.",
+        ifYouSwitch:
+          "No hay otro pronombre que cambiar. Si Alejandro quiere sonar más formal, debe usar “Could you”, “I would like” y “please”, no inventar una forma equivalente a usted."
+      },
+      dialogue: [
+        {
+          speaker: "Alejandro",
+          target: "Good afternoon. I'm leaving for Fort Worth tomorrow, but I pass through Waco again on Sunday.",
+          translation: "Buenas tardes. Salgo para Fort Worth mañana, pero paso por Waco otra vez el domingo.",
+          pronunciation: "gud af-ter-NUN. aim LI-vin for fort werth tu-MA-rou, bat ai pas thru WEI-kou a-GEN on SAN-dei",
+          literal: "Buenas tardes. Estoy saliendo para Fort Worth mañana, pero paso a través de Waco otra vez el domingo.",
+          why: "Aquí inglés separa lo que español resuelve con para y por. El destino usa “for” después de “leave”: leaving for Fort Worth. La ruta usa “through”: pass through Waco. No traduzca ambos como “for Waco”."
+        },
+        {
+          speaker: "Claire",
+          target: "Sure. If you go by bus through the old highway, the trip lasts for two days with a stop.",
+          translation: "Claro. Si va en bus por la carretera vieja, el viaje dura por dos días con una parada.",
+          pronunciation: "shur. if yu gou bai bas thru di ould JAI-wei, da trip lasts for tu deiz with a stap",
+          literal: "Claro. Si usted va por bus a través de la carretera vieja, el viaje dura por dos días con una parada.",
+          why: "El medio de transporte usa “by”: by bus. La ruta usa “through”. La duración sí usa “for”: for two days. Para el hispanohablante, el riesgo es decir “for bus” y “during two days”."
+        },
+        {
+          speaker: "Alejandro",
+          target: "I need the ticket by Friday, and this envelope is for you at the cargo desk.",
+          translation: "Necesito el tiquete para el viernes, y este sobre es para usted en la oficina de carga.",
+          pronunciation: "ai nid da TI-ket bai FRAI-dei, and dis EN-ve-loup is for yu at da KAR-gou desk",
+          literal: "Necesito el tiquete por el viernes, y este sobre es para usted en el escritorio de carga.",
+          why: "La fecha límite en inglés usa “by”: by Friday. El destinatario sí puede usar “for”: this envelope is for you. Mucho ojo: “for Friday” puede sonar como uso o evento de viernes, no como fecha límite."
+        },
+        {
+          speaker: "Claire",
+          target: "Thanks for everything, but the delay was because of the snow. That's why we send notices by text.",
+          translation: "Gracias por todo, pero el retraso fue por la nieve. Por eso mandamos avisos por mensaje.",
+          pronunciation: "thanks for EV-ri-thing, bat da di-LEI waz bi-KOZ av da snou. dats wai wi send NOU-tis-iz bai tekst",
+          literal: "Gracias por todo, pero el retraso fue debido a la nieve. Esa es la razón por la que mandamos avisos por texto.",
+          why: "“Thanks for” sí es fijo con for. Pero una causa externa suele decirse “because of”: because of the snow. El medio o canal usa “by”: by text, by email, by WhatsApp."
+        },
+        {
+          speaker: "Alejandro",
+          target: "So I work for my uncle when I arrive, but today I work in place of my uncle and cover his shift.",
+          translation: "Entonces trabajo para mi tío cuando llego, pero hoy trabajo por mi tío y cubro su turno.",
+          pronunciation: "so ai werk for mai AN-kol wen ai a-RAIV, bat tu-DEI ai werk in pleis av mai AN-kol and KA-ver hiz shift",
+          literal: "Entonces trabajo para mi tío cuando llego, pero hoy trabajo en lugar de mi tío y cubro su turno.",
+          why: "El primer caso sí usa “for”: work for my uncle, él es el jefe o beneficiario. El segundo no suena natural como “work for my uncle” si quiere decir reemplazarlo; diga “in place of” o “cover his shift”."
+        },
+        {
+          speaker: "Claire",
+          target: "Right. I did it for you if it was a gift; I did it because of you if you were the reason.",
+          translation: "Exacto. Lo hice para ti si era un regalo; lo hice por ti si usted era la razón.",
+          pronunciation: "rait. ai did it for yu if it waz a gift; ai did it bi-KOZ av yu if yu wer da RI-zon",
+          literal: "Correcto. Lo hice para usted si era un regalo; lo hice debido a usted si usted era la razón.",
+          why: "“For you” funciona para destinatario o beneficio. Para causa o motivo, inglés prefiere “because of you”. Si traduce “por ti” siempre como “for you”, borra una diferencia que en inglés sí puede ser obligatoria."
+        },
+        {
+          speaker: "Alejandro",
+          target: "And the shipment? You can charge it per pound, twice per week, and it can go by plane.",
+          translation: "¿Y el envío? Me lo cobran por libra, dos veces por semana, y puede ir por avión.",
+          pronunciation: "and da SHIP-ment? yu kan charj it per paund, twais per wik, and it kan gou bai plein",
+          literal: "¿Y el envío? Usted puede cobrarlo por libra, dos veces por semana, y puede ir por avión.",
+          why: "La tarifa por unidad usa “per”: per pound. La frecuencia también usa “per”: twice per week. El medio usa “by”: by plane. No diga “for pound”, “two times for week” ni “for plane”."
+        },
+        {
+          speaker: "Claire",
+          target: "Of course. The package was checked by the company, stays here for now, and leaves for Fort Worth at night.",
+          translation: "Por supuesto. El paquete fue revisado por la empresa, queda por ahora aquí y sale para Fort Worth por la noche.",
+          pronunciation: "av kors. da PA-kej waz chekt bai da KAM-pa-ni, steiz jir for nau, and livz for fort werth at nait",
+          literal: "Por supuesto. El paquete fue revisado por la compañía, se queda aquí por ahora, y sale para Fort Worth en la noche.",
+          why: "El agente pasivo usa “by”: checked by the company. “For now” es una frase fija. Después de “leave”, el destino puede ser “for Fort Worth”. Para la hora general de salida, inglés dice “at night”."
+        },
+        {
+          speaker: "Alejandro",
+          target: "To me, for December, it's cheap. Please keep it just in case; I finally understand.",
+          translation: "Para mí, para ser diciembre está barato. Por favor, guárdelo por si acaso; por fin entiendo.",
+          pronunciation: "tu mi, for di-SEM-ber, its chip. pliz kip it yast in keis; ai FAI-na-li an-der-STAND",
+          literal: "Para mí, para diciembre, está barato. Por favor guárdelo solo en caso; finalmente entiendo.",
+          why: "Opinión personal usa “to me” o “for me”, según frase. Expectativa con mes o situación suele usar “for”: for December, it's cheap. “Please”, “just in case” y “finally” traducen frases fijas que en español llevan por."
+        },
+        {
+          speaker: "Claire",
+          target: "Great. Use in order to for purpose: buy early in order to save, but by Friday for a deadline.",
+          translation: "Muy bien. Use in order to para propósito: comprar temprano para ahorrar, pero by Friday para una fecha límite.",
+          pronunciation: "greit. yuz in OR-der tu for PUR-pes: bai ER-li in OR-der tu seiv, bat bai FRAI-dei for a DED-lain",
+          literal: "Genial. Use en orden a para propósito: comprar temprano para ahorrar, pero por viernes para una fecha límite.",
+          why: "Para + infinitivo puede traducirse como “to” o “in order to”. La fecha límite no usa “for” en inglés cuidadoso: “by Friday”. Esa diferencia corrige dos sobreusos típicos de for."
+        }
+      ],
+      vocabulary: [
+        {
+          term: "for",
+          explanation:
+            "“For” no es la traducción automática de por y para. Sirve para destinatario, beneficio, duración, precio, algunos destinos después de “leave”, y frases fijas como “thanks for” y “for now”. Pero muchas relaciones exigen otra palabra.",
+          literal: "por / para, solo en algunos usos",
+          useWhen:
+            "Use “for” en “this is for you”, “for two days”, “for fifty dollars”, “thanks for everything”, “leaving for Fort Worth” y “for now”.",
+          avoidWhen:
+            "No lo use para medios, fechas límite, rutas, causas externas claras ni frecuencias. Ahí suelen entrar by, through, because of o per.",
+          register: "neutro",
+          region: "Inglés universal; los ejemplos de terminal suenan naturales en Norteamérica.",
+          related: ["to", "by", "through", "because of"],
+          example: {
+            target: "This envelope is for you.",
+            translation: "Este sobre es para usted."
+          }
+        },
+        {
+          term: "to / in order to",
+          explanation:
+            "Cuando para introduce propósito con infinitivo, el inglés muchas veces usa “to”: to save money. Si quiere sonar más explícito o formal, use “in order to”. No diga “for save”.",
+          literal: "para + infinitivo",
+          useWhen:
+            "Use “to” o “in order to” antes de un verbo que nombra el propósito: buy early to save, call to confirm, leave now in order to arrive on time.",
+          avoidWhen:
+            "No confunda propósito con destinatario. “For you” es para usted, pero “to help you” es para ayudarle.",
+          register: "neutro; “in order to” es un poco más explícito",
+          region: "Inglés universal.",
+          related: ["purpose", "to save", "in order to", "so that"],
+          example: {
+            target: "Buy early to save money.",
+            translation: "Compre temprano para ahorrar dinero."
+          }
+        },
+        {
+          term: "by for deadline and means",
+          explanation:
+            "“By” hace dos trabajos que al hispanohablante le chocan: fecha límite y medio. “By Friday” significa a más tardar el viernes. “By bus”, “by plane” y “by text” nombran el medio o canal.",
+          literal: "para una fecha límite / por medio de",
+          useWhen:
+            "Use “by” para deadlines y medios: by Friday, by noon, by bus, by plane, by WhatsApp, by email.",
+          avoidWhen:
+            "No lo use para duración. “By two days” no significa por dos días. Duración es “for two days”.",
+          register: "neutro",
+          region: "Inglés universal; “by WhatsApp” se entiende aunque también se diga “on WhatsApp”.",
+          related: ["deadline", "means", "by Friday", "by bus"],
+          example: {
+            target: "I need the ticket by Friday.",
+            translation: "Necesito el tiquete para el viernes."
+          }
+        },
+        {
+          term: "through",
+          explanation:
+            "“Through” marca ruta o movimiento por dentro de un lugar, una ciudad o una carretera. Es el equivalente de por cuando por significa pasar por, atravesar o ir por una vía.",
+          literal: "por / a través de",
+          useWhen:
+            "Use “through” para rutas: pass through Waco, drive through town, go through the highway area.",
+          avoidWhen:
+            "No lo use para destino. Si Fort Worth es la meta, diga “to Fort Worth” o “leaving for Fort Worth”, no “leaving through Fort Worth”.",
+          register: "neutro",
+          region: "Inglés universal.",
+          related: ["route", "pass through", "via", "across"],
+          example: {
+            target: "We pass through Waco on Sunday.",
+            translation: "Pasamos por Waco el domingo."
+          }
+        },
+        {
+          term: "for duration, during for event frame",
+          explanation:
+            "Duración medida toma “for”: for two days, for three hours. “During” no mide cuánto dura algo; ubica algo dentro de un evento o periodo: during the trip, during December.",
+          literal: "por una duración / durante un evento",
+          useWhen:
+            "Use “for” con cantidad de tiempo y “during” con el periodo que contiene la acción.",
+          avoidWhen:
+            "No diga “during two days” para duración normal. Suena como calco de durante y debe ser “for two days”.",
+          register: "neutro",
+          region: "Inglés universal.",
+          related: ["for two days", "during the trip", "time span", "period"],
+          example: {
+            target: "The trip lasts for two days.",
+            translation: "El viaje dura por dos días."
+          }
+        },
+        {
+          term: "because of / thanks for",
+          explanation:
+            "Para causa externa, inglés suele usar “because of”: because of the snow. Pero agradecer sí usa la frase fija “thanks for”. No todo por de causa entra en la misma palabra inglesa.",
+          literal: "por causa de / gracias por",
+          useWhen:
+            "Use “because of” para motivos externos y “thanks for” para agradecer: because of the rain, thanks for everything.",
+          avoidWhen:
+            "No diga “the delay was for the snow” si quiere explicar la causa. Eso suena incompleto o incorrecto.",
+          register: "neutro",
+          region: "Inglés universal.",
+          related: ["reason", "cause", "thanks for", "due to"],
+          example: {
+            target: "The delay was because of the snow.",
+            translation: "El retraso fue por la nieve."
+          }
+        },
+        {
+          term: "per for rate",
+          explanation:
+            "La tarifa o frecuencia que en español usa por muchas veces en inglés usa “per”: per pound, twice per week, sixty miles per hour, one bag per passenger. También se oye “a week” en habla común.",
+          literal: "por cada / por frecuencia",
+          useWhen:
+            "Use “per” en tarifas, reglas y frecuencias claras: per pound, twice per week, dollars per night, one ticket per person.",
+          avoidWhen:
+            "No diga “two times for week”. Si quiere algo más conversacional, diga “twice a week”.",
+          register: "neutro; “per” suena más escrito que “a week”",
+          region: "Inglés universal.",
+          related: ["rate", "frequency", "twice a week", "per person"],
+          example: {
+            target: "They charge per pound.",
+            translation: "Cobran por libra."
+          }
+        },
+        {
+          term: "by for passive agent",
+          explanation:
+            "En una pasiva, el agente que hizo la acción usa “by”: checked by the company, written by the clerk, sent by the office. Es uno de los por que nunca debe traducirse como for.",
+          literal: "por + agente pasivo",
+          useWhen:
+            "Use “by” cuando una oración pasiva nombra quién hizo la acción.",
+          avoidWhen:
+            "No diga “checked for the company” si quiere decir que la empresa revisó el paquete. Eso suena como beneficio, no agente.",
+          register: "neutro; más común en avisos y escritura que en charla casual",
+          region: "Inglés universal.",
+          related: ["passive", "agent", "checked by", "written by"],
+          example: {
+            target: "The package was checked by the company.",
+            translation: "El paquete fue revisado por la empresa."
+          }
+        },
+        {
+          term: "fixed expressions",
+          explanation:
+            "Muchas expresiones viajeras no se traducen palabra por palabra: por favor es “please”, por fin es “finally”, por eso es “that's why”, por supuesto es “of course”, por ahora es “for now”, por si acaso es “just in case”, para nada es “not at all”, y para siempre es “forever”.",
+          literal: "frases fijas",
+          useWhen:
+            "Apréndalas como bloques completos para pedir, reaccionar, explicar, aceptar y proteger un plan.",
+          avoidWhen:
+            "No arme “by favor”, “for if case” o “for nothing” cuando quiere la frase fija. Algunas palabras existen, pero no forman la expresión correcta.",
+          register: "neutro a conversacional",
+          region: "Inglés universal; algunas opciones tienen equivalentes más formales, pero estas son seguras.",
+          related: ["please", "finally", "of course", "just in case"],
+          example: {
+            target: "Please keep it just in case.",
+            translation: "Por favor, guárdelo por si acaso."
+          }
+        }
+      ],
+      note:
+        "Para un colombiano, el problema no es escoger entre por y para, sino dejar de meter ambos dentro de “for”. Inglés reparte el trabajo: destino puede ser “to” o “for” según el verbo, fecha límite es “by Friday”, medio es “by bus” o “by text”, ruta es “through”, duración es “for two days”, causa es “because of”, frecuencia es “per week”, propósito es “to” o “in order to”, y agente pasivo es “by”. “For” existe, pero no puede hacerlo todo.",
+      culture: [
+        {
+          label: "El inglés obliga a separar lo que el español junta",
+          body:
+            "En español usted puede resolver muchísimas relaciones con por y para. En inglés, la pregunta cambia: ¿es destino, medio, fecha límite, duración, causa, frecuencia, ruta o propósito? Cada respuesta empuja a una palabra distinta. “For” sí aparece en frases importantes, pero no manda sobre todo el sistema. Por eso un viajero colombiano puede sonar avanzado en vocabulario y aun así decir “for bus”, “for Friday” o “for the snow”. El oyente entiende parte, pero la preposición revela el calco."
+        },
+        {
+          label: "By es más importante de lo que parece",
+          body:
+            "“By” merece atención especial porque traduce dos ideas que el español no junta de la misma manera: medio y fecha límite. “By bus” es el medio. “By Friday” es a más tardar el viernes. Además, “by the company” marca agente pasivo. Tres usos muy distintos, una sola palabra inglesa. Si usted solo asocia by con “al lado de”, se pierde justo las frases de viaje y de oficina que más necesita."
+        },
+        {
+          label: "For y during no compiten como por y durante",
+          body:
+            "El español permite decir “por dos días” y también usa durante en muchos contextos. El inglés separa más: una cantidad de tiempo normalmente toma “for”, como “for two days”. “During” ubica algo dentro de un periodo o evento, como “during the trip” o “during December”. Decir “during two days” suena a calco. La prueba práctica es simple: si puede responder “how long?”, use “for”."
+        },
+        {
+          label: "Las frases fijas no se desarman",
+          body:
+            "“Please” no contiene favor, “finally” no contiene fin, y “just in case” no parece por si acaso palabra por palabra. Eso no importa. Las frases fijas se aprenden como señales completas. En una terminal, esas señales ahorran tiempo: please, of course, for now, just in case, that's why. Úselas como las oye, no como las armaría desde el diccionario."
+        }
+      ],
+      pitfalls: [
+        {
+          mistake: "“I need it for Friday.”",
+          whyItFails:
+            "Puede entenderse, pero para fecha límite clara el inglés estándar prefiere “by Friday”. “For Friday” puede sonar como destinado a usarse el viernes, no terminado a más tardar ese día.",
+          sayInstead: "I need it by Friday."
+        },
+        {
+          mistake: "“I travel for bus.”",
+          whyItFails:
+            "El medio de transporte usa “by”, no “for”. El español por avión o en bus empuja al calco, pero en inglés la forma compacta es by bus, by plane, by train.",
+          sayInstead: "I travel by bus."
+        },
+        {
+          mistake: "“The delay was for the snow.”",
+          whyItFails:
+            "Para causa externa, “for” no es la opción natural. Use “because of” o, en un registro más formal, “due to”.",
+          sayInstead: "The delay was because of the snow."
+        },
+        {
+          mistake: "“The package was checked for the company.”",
+          whyItFails:
+            "Esa frase suena como si alguien revisó el paquete en beneficio de la empresa. Si la empresa hizo la revisión, la pasiva necesita “by”.",
+          sayInstead: "The package was checked by the company."
+        }
+      ],
+      variations: [
+        {
+          form: "I'm leaving for Fort Worth.",
+          register: "neutro",
+          region: "Inglés universal",
+          whenToUse: "Destino después del verbo “leave”."
+        },
+        {
+          form: "We pass through Waco.",
+          register: "neutro",
+          region: "Inglés universal",
+          whenToUse: "Ruta o punto atravesado, no destino final."
+        },
+        {
+          form: "I need it by Friday.",
+          register: "neutro",
+          region: "Inglés universal",
+          whenToUse: "Fecha límite, a más tardar ese día."
+        },
+        {
+          form: "The trip lasts for two days.",
+          register: "neutro",
+          region: "Inglés universal",
+          whenToUse: "Duración medida, respuesta a “how long?”."
+        },
+        {
+          form: "The notice came by text.",
+          register: "neutro",
+          region: "Inglés universal",
+          whenToUse: "Medio o canal de comunicación."
+        }
+      ],
+      prompt: "Claire says “by Friday” and “by bus.” ¿Qué tienen en común esas frases?",
+      choices: [
+        "Both use by, but one is a deadline and the other is a means of travel.",
+        "Both use for, because Spanish would allow para or por in those places.",
+        "Both use through, because Friday and bus are routes you pass inside."
+      ],
+      answer: 0,
+      practiceExtra: [
+        {
+          prompt: "¿Cuál frase expresa correctamente una fecha límite?",
+          choices: [
+            "I need the ticket by Friday before the office closes.",
+            "I need the ticket for Friday before the office closes.",
+            "I need the ticket through Friday before the office closes."
+          ],
+          answer: 0,
+          tests: "Una fecha límite usa “by Friday”, no “for Friday”."
+        },
+        {
+          prompt: "¿Cuál frase expresa correctamente una duración?",
+          choices: [
+            "The trip lasts by two days with one stop.",
+            "The trip lasts for two days with one stop.",
+            "The trip lasts per two days with one stop."
+          ],
+          answer: 1,
+          tests: "Una cantidad de tiempo toma “for”: for two days."
+        },
+        {
+          prompt: "¿Cuál frase expresa correctamente la causa?",
+          choices: [
+            "The delay was for the snow last night.",
+            "The delay was by the snow last night.",
+            "The delay was because of the snow last night."
+          ],
+          answer: 2,
+          tests: "Causa externa suele expresarse con “because of”, no con “for”."
         }
       ]
     }

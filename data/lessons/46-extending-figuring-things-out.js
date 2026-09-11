@@ -13,7 +13,9 @@
  *
  * The three verbs here — descubrir, resolver and revisar — are adult tools for
  * working things out: finding out what was hidden, solving what is stuck, and
- * checking over what may fail if nobody inspects it. The two directions are
+ * checking over what may fail if nobody inspects it. The added grammar lesson
+ * teaches discourse-connectors because formal connectors appear only 6 times in
+ * 6,478 utterances, the thinnest measured cohesion gap in the course. The two directions are
  * mirrors: same number of dialogue turns, vocabulary entries, culture notes,
  * pitfalls, variations and practice questions, and the same optional slots
  * filled on the same rows. That is enforced by test/shape.test.js, not by good
@@ -1972,6 +1974,673 @@ lessons.push(
           ],
           answer: 2,
           tests: "review a document, not oil or studying"
+        }
+      ]
+    }
+  }
+  ,
+  {
+    id: "connecting-a-missing-order-in-armenia",
+    level: "Extending · Figuring things out",
+    skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context", "grammar", "reading"],
+    domain: "work-and-employment",
+    register: "neutral",
+    pathways: ["extension", "collegiate-academic", "year-12"],
+    structure: "discourse-connectors",
+    review: "pending",
+    es: {
+      title: "Connecting the clues in Armenia",
+      situation:
+        "You are in Armenia at a small coffee roastery where an export sample box has reached the wrong client. Marta, the operations coordinator, and Alex, a visiting trainee, reconstruct what happened from the invoice, the route sheet and the packing photos. The lesson is not about memorizing fancy words. It is about using connectors to show the shape of your reasoning while you figure out a real problem.",
+      setting: {
+        who: "Marta coordinates shipments for a cooperative roastery and has to explain mistakes without blaming the first person she sees. Alex is an advanced learner helping compare the papers and learning how professional Colombian Spanish links evidence, contrast and conclusion.",
+        what: "A missing order investigation: the box label, route sheet, invoice and photos disagree, so the speakers have to add evidence, contrast it, name causes, draw consequences and summarize the next step.",
+        when: "Late afternoon, after the delivery route has closed and before Marta must email the client with a clear explanation.",
+        where: "Armenia, Quindío, in the dispatch room of a small coffee roastery.",
+        why: "B2 writing and speaking rubrics judge cohesion explicitly. Without connectors, even accurate sentences read like a list. This scene makes connectors do real diagnostic work, not decorative work."
+      },
+      address: {
+        form: "usted",
+        who: "Marta and Alex use usted because they are working in a professional setting and Alex is a trainee, not a close friend.",
+        why: "Usted keeps the reasoning calm and procedural. The point is to diagnose the shipment, not to sound chatty or accuse anyone.",
+        ifYouSwitch:
+          "Tú would be possible if they worked together every day, but here it would make the exchange sound too familiar for a mistake involving a client. The connectors still work; the register around them changes."
+      },
+      dialogue: [
+        {
+          speaker: "Marta",
+          target: "En primer lugar, revisemos la orden; además, comparemos la etiqueta con la foto del empaque.",
+          translation: "First, let's review the order; also, let's compare the label with the packing photo.",
+          pronunciation: "en pree-MER loo-GAR, rreh-bee-SEH-mos lah OR-den; ah-deh-MAHS, kom-pah-REH-mos lah eh-tee-KEH-tah kon lah FOH-toh del em-PAH-keh",
+          literal: "In first place, let-us-review the order; besides, let-us-compare the label with the photo of-the packing.",
+          why: "“En primer lugar” sequences the investigation and normally takes a comma after it. “Además” adds a second action. The semicolon before “además” prevents a comma splice because both sides could stand as sentences."
+        },
+        {
+          speaker: "Alex",
+          target: "Sin embargo, la factura dice cliente B; en cambio, la guía de ruta dice cliente A.",
+          translation: "However, the invoice says client B; on the other hand, the route sheet says client A.",
+          pronunciation: "seen em-BAR-goh, lah fak-TOO-rah DEE-seh KLYEN-teh beh; en KAM-byo, lah GEE-ah deh ROO-tah DEE-seh KLYEN-teh ah",
+          literal: "However, the invoice says client B; in change, the guide of route says client A.",
+          why: "This is real contrast. “Sin embargo” pushes against the previous expectation, while “en cambio” sets two pieces of evidence side by side. Both sound normal in professional speech and writing."
+        },
+        {
+          speaker: "Marta",
+          target: "Debido a que cambiaron el turno, el auxiliar imprimió la guía vieja; por lo tanto, el paquete salió con datos cruzados.",
+          translation: "Because they changed the shift, the assistant printed the old route sheet; therefore, the package went out with crossed data.",
+          pronunciation: "deh-BEE-doh ah keh kam-BYAH-ron el TOOR-noh, el owk-see-LYAR eem-pree-MYOH lah GEE-ah BYEH-hah; por loh TAN-toh, el pah-KEH-teh sah-LYOH kon DAH-tos kroo-SAH-dos",
+          literal: "Due to that they-changed the shift, the assistant printed the old guide; therefore, the package left with crossed data.",
+          why: "“Debido a que” gives the cause and is more written than “porque.” “Por lo tanto” gives the consequence. Notice the punctuation again: full stop or semicolon before a result connector, then a comma after it."
+        },
+        {
+          speaker: "Alex",
+          target: "No obstante, la caja sí llegó a tiempo; aun así, el cliente recibió la muestra equivocada.",
+          translation: "Nevertheless, the box did arrive on time; even so, the client received the wrong sample.",
+          pronunciation: "noh ohb-STAN-teh, lah KAH-hah see yeh-GOH ah TYEM-poh; own ah-SEE, el KLYEN-teh rreh-see-BYOH lah MWEHS-trah eh-kee-boh-KAH-dah",
+          literal: "Nevertheless, the box yes arrived on time; even so, the client received the sample mistaken.",
+          why: "“No obstante” is formal and belongs especially to careful writing; “aun así” is softer and works in speech. Together they show concession: one good fact does not erase the problem."
+        },
+        {
+          speaker: "Marta",
+          target: "Es decir, no falló el transporte, sino la versión del documento; de ahí que tengamos que corregir el proceso.",
+          translation: "That is to say, transport did not fail, but the document version did; that is why we have to correct the process.",
+          pronunciation: "es deh-SEER, noh fah-YOH el trans-POR-teh, SEE-noh lah ber-SYON del doh-koo-MEN-toh; deh ah-EE keh ten-GAH-mos keh kor-rreh-HEER el proh-SEH-soh",
+          literal: "That is to say, not failed the transport, but the version of-the document; from there that we-have to correct the process.",
+          why: "“Es decir” reformulates the diagnosis. “De ahí que” introduces a consequence and takes the subjunctive, so Marta says “tengamos,” not “tenemos.” This is exactly the kind of connector B2 exams reward."
+        },
+        {
+          speaker: "Alex",
+          target: "En resumen, avisamos al cliente hoy; por último, dejamos una nota para que no se repita.",
+          translation: "In summary, we notify the client today; finally, we leave a note so it does not happen again.",
+          pronunciation: "en rreh-soo-MEN, ah-bee-SAH-mos al KLYEN-teh oy; por OOL-tee-moh, deh-HAH-mos OO-nah NOH-tah PAH-rah keh noh seh rreh-PEE-tah",
+          literal: "In summary, we notify the client today; for last, we leave a note so that it not repeats itself.",
+          why: "“En resumen” closes the reasoning, and “por último” marks the final practical step. They are not decoration; they tell the listener what stage the explanation has reached."
+        }
+      ],
+      vocabulary: [
+        {
+          term: "además / asimismo / cabe añadir",
+          explanation:
+            "These are adding connectors. “Además” is the safest all-purpose choice for adding another point. “Asimismo” and “cabe añadir” are written and more formal; they are useful in essays and reports, but they can sound pompous in ordinary speech.",
+          literal: "besides / likewise / it is fitting to add",
+          useWhen:
+            "You need to add evidence or a second reason: first the invoice, then the photo, then another fact that supports the same line of reasoning.",
+          avoidWhen:
+            "You are chatting casually. In spoken Colombian Spanish, “también,” “y además,” or even “pues” may sound more natural than “asimismo.”",
+          register: "from neutral to formal written",
+          region: "Universal Spanish; in Colombia, “además” is normal everywhere, while “asimismo” and “cabe añadir” belong to careful writing.",
+          related: ["también", "por otra parte", "cabe señalar", "igualmente"],
+          example: {
+            target: "Además, comparemos la etiqueta con la foto.",
+            translation: "Also, let's compare the label with the photo."
+          }
+        },
+        {
+          term: "en primer lugar / por otra parte / por último",
+          explanation:
+            "These organize sequence. “En primer lugar” opens a planned explanation, “por otra parte” adds a different angle, and “por último” signals the final point. They are especially useful when you need the reader to follow the path of your thinking.",
+          literal: "in first place / on another part / for last",
+          useWhen:
+            "You are presenting steps, reasons or options in order, especially in a report, presentation or exam answer.",
+          avoidWhen:
+            "You only have one point. A sequencing connector promises structure, so using it for a single loose sentence feels artificial.",
+          register: "neutral to formal",
+          region: "Universal Spanish; clear and appropriate in Colombian academic and workplace writing.",
+          related: ["primero", "luego", "finalmente", "por un lado"],
+          example: {
+            target: "En primer lugar, revisemos la orden.",
+            translation: "First, let's review the order."
+          }
+        },
+        {
+          term: "sin embargo / no obstante / en cambio / ahora bien",
+          explanation:
+            "These mark contrast, but not all with the same flavor. “Sin embargo” is the workhorse for however. “No obstante” is more formal. “En cambio” contrasts two items side by side. “Ahora bien” shifts to a qualification: yes, that is true, now here is the important limit.",
+          literal: "without embargo / not withstanding / in change / now well",
+          useWhen:
+            "Evidence points one way and another fact pushes back, or two options need to be separated cleanly.",
+          avoidWhen:
+            "You mean a simple “but” in relaxed speech. “Pero” or “aunque” may sound more human than a row of formal connectors.",
+          register: "neutral to formal written",
+          region: "Universal Spanish; in Colombia, “sin embargo” works in speech, while “no obstante” is mostly written.",
+          related: ["pero", "por el contrario", "aun así", "mientras que"],
+          example: {
+            target: "Sin embargo, la factura dice cliente B.",
+            translation: "However, the invoice says client B."
+          }
+        },
+        {
+          term: "debido a que / ya que / puesto que / dado que / a causa de",
+          explanation:
+            "These introduce cause. “Ya que,” “puesto que,” and “dado que” all mean because or given that, with a more reasoned tone than plain “porque.” “Debido a que” is common in reports. “A causa de” takes a noun, as in “a causa del cambio de turno.”",
+          literal: "due to that / since / given that / because of",
+          useWhen:
+            "You need to identify why something happened, especially when the cause is part of an investigation or explanation.",
+          avoidWhen:
+            "You want quick spoken Colombian reasoning. People often say “porque,” “es que,” or “como” instead, and those may fit better in conversation.",
+          register: "mostly neutral to formal",
+          region: "Universal Spanish; “es que” is a spoken Colombian workhorse but not an exam-essay connector.",
+          related: ["porque", "como", "la causa", "por motivo de"],
+          example: {
+            target: "Debido a que cambiaron el turno, imprimieron la guía vieja.",
+            translation: "Because they changed the shift, they printed the old route sheet."
+          }
+        },
+        {
+          term: "por lo tanto / en consecuencia / de ahí que / así que / por eso",
+          explanation:
+            "These introduce consequence. “Por lo tanto” is the reliable therefore. “En consecuencia” is written and formal. “Así que” and “por eso” are natural in speech. “De ahí que” is advanced and takes the subjunctive: “de ahí que tengamos,” not “tenemos.”",
+          literal: "for the so much / in consequence / from there that / so that / for that",
+          useWhen:
+            "A cause has been established and you now need to state the result, decision or required action.",
+          avoidWhen:
+            "You have not actually shown the cause. A consequence connector claims logic, so it sounds false if the previous sentence has not earned it.",
+          register: "from spoken to formal written",
+          region: "Universal Spanish; “así que” and “por eso” are very normal in Colombian speech.",
+          related: ["entonces", "por consiguiente", "resultado", "de modo que"],
+          example: {
+            target: "Por lo tanto, el paquete salió con datos cruzados.",
+            translation: "Therefore, the package went out with crossed data."
+          }
+        },
+        {
+          term: "es decir / o sea / en otras palabras / por ejemplo / tal como",
+          explanation:
+            "These reformulate or exemplify. “Es decir” and “en otras palabras” clarify the same idea more precisely. “O sea” is the spoken Colombian workhorse, excellent in conversation and too casual for most essays. “Por ejemplo” and “tal como” introduce examples.",
+          literal: "that is to say / or be / in other words / for example / such as",
+          useWhen:
+            "Your listener may not see the connection yet, so you restate the diagnosis or give a concrete example.",
+          avoidWhen:
+            "You are using “o sea” repeatedly in formal writing. In an exam essay, choose “es decir” or “en otras palabras.”",
+          register: "spoken informal to formal neutral",
+          region: "Universal Spanish; “o sea” is extremely common in Colombian speech.",
+          related: ["mejor dicho", "dicho de otro modo", "como", "incluido"],
+          example: {
+            target: "Es decir, no falló el transporte.",
+            translation: "That is to say, transport did not fail."
+          }
+        },
+        {
+          term: "en resumen / en conclusión / en definitiva / a fin de cuentas",
+          explanation:
+            "These close or summarize. “En resumen” condenses what has been said. “En conclusión” suits academic and report endings. “En definitiva” gives a firm final judgment. “A fin de cuentas” is more conversational, like when all is said and done.",
+          literal: "in summary / in conclusion / in definitive / at end of accounts",
+          useWhen:
+            "You need to gather the reasoning into a final diagnosis, recommendation or decision.",
+          avoidWhen:
+            "The explanation is not actually finished. A closing connector tells the reader to expect a final synthesis, not a new branch of evidence.",
+          register: "neutral to formal, with one conversational option",
+          region: "Universal Spanish; “a fin de cuentas” is widely understood and slightly warmer than “en conclusión.”",
+          related: ["para cerrar", "en suma", "total", "finalmente"],
+          example: {
+            target: "En resumen, avisamos al cliente hoy.",
+            translation: "In summary, we notify the client today."
+          }
+        },
+        {
+          term: "aunque / a pesar de que / si bien",
+          explanation:
+            "These concede. They admit one fact while showing that it does not cancel the main point. “Aunque” is flexible and common. “A pesar de que” is heavier. “Si bien” is formal and very useful in written argument.",
+          literal: "although / in spite of that / if well",
+          useWhen:
+            "One part of the evidence is true, but your conclusion still stands: the box arrived on time, although the sample was wrong.",
+          avoidWhen:
+            "You mean direct opposition between two alternatives. Then “en cambio” or “por el contrario” may be clearer.",
+          register: "neutral to formal written",
+          region: "Universal Spanish; “aunque” is the everyday Colombian option.",
+          related: ["aun así", "de todas maneras", "pese a", "igual"],
+          example: {
+            target: "Aunque la caja llegó a tiempo, la muestra era equivocada.",
+            translation: "Although the box arrived on time, the sample was wrong."
+          }
+        }
+      ],
+      note:
+        "Formal connectors are not decoration; they are the grammar of visible reasoning. For B2, organize them by job. To add or sequence, use “además,” “asimismo,” “por otra parte,” “en primer lugar,” “por último,” and “cabe añadir.” To contrast, use “sin embargo,” “no obstante,” “en cambio,” “ahora bien,” “por el contrario,” and “aun así.” To give cause, use “debido a que,” “ya que,” “puesto que,” “dado que,” and “a causa de.” To show consequence, use “por lo tanto,” “en consecuencia,” “de ahí que” with the subjunctive, “así que,” and “por eso.” To reformulate, use “es decir,” “o sea,” “en otras palabras,” “por ejemplo,” and “tal como.” To conclude, use “en resumen,” “en conclusión,” “en definitiva,” and “a fin de cuentas.” The register split is real: “o sea,” “entonces,” “pues,” “es que,” and “de todas maneras” are spoken Colombian workhorses; “no obstante,” “asimismo,” “cabe señalar,” and “en consecuencia” belong to writing. Punctuation is part of the skill. Most connectors take a comma after them, and many need a full stop or semicolon before them. Do not join two complete sentences with only a comma before “sin embargo” or “por lo tanto.”",
+      culture: [
+        {
+          label: "Cohesion is graded, not optional",
+          body:
+            "B2 and C1 rubrics do not only ask whether your verbs are correct. They ask whether the argument holds together. A learner can produce accurate sentences and still lose marks if every sentence arrives separately. Connectors make the relationship visible: addition, contrast, cause, consequence, example, concession and conclusion. That is why this thin slot matters so much."
+        },
+        {
+          label: "Colombian speech has its own workhorses",
+          body:
+            "In a real Colombian conversation, people reason with “entonces,” “pues,” “es que,” “o sea,” and “de todas maneras” all the time. They are not bad Spanish. They are spoken Spanish. The problem is moving them unchanged into a formal essay, where “o sea” may look careless and “pues” may sound like filler rather than structure."
+        },
+        {
+          label: "Writing connectors can sound pompous out loud",
+          body:
+            "The opposite mistake is also common. Saying “asimismo” or “no obstante” in every spoken turn can make a simple explanation sound like a legal memo. In a meeting, one or two careful connectors are fine; in relaxed speech, mix them with “pero,” “también,” “por eso,” and “entonces.” Register is part of meaning."
+        },
+        {
+          label: "The comma splice is a real exam problem",
+          body:
+            "Many connectors are not little commas with words attached. If both sides are complete sentences, write a period or semicolon before “sin embargo,” “por lo tanto,” “en consecuencia,” or “no obstante,” then put a comma after the connector. “La guía era vieja; por lo tanto, el paquete salió mal” is clean. A comma alone before “por lo tanto” is weak punctuation."
+        }
+      ],
+      pitfalls: [
+        {
+          mistake: "Writing two full sentences with only a comma before “sin embargo”",
+          whyItFails:
+            "“Sin embargo” is a sentence connector, not a magic patch for a comma splice. If the clause before it can stand alone, use a full stop or semicolon before the connector, then a comma after it.",
+          sayInstead: "La caja llegó a tiempo; sin embargo, la muestra era equivocada."
+        },
+        {
+          mistake: "Using “o sea” throughout an exam essay",
+          whyItFails:
+            "“O sea” is natural spoken Colombian Spanish, but in formal writing it often reads like filler. For a written reformulation, “es decir” or “en otras palabras” carries the same job with the right register.",
+          sayInstead: "Es decir, el transporte no falló."
+        },
+        {
+          mistake: "Forgetting the subjunctive after “de ahí que”",
+          whyItFails:
+            "“De ahí que” introduces a consequence with subjunctive. The learner instinct is to say “de ahí que tenemos,” but standard formal Spanish wants “de ahí que tengamos.”",
+          sayInstead: "De ahí que tengamos que corregir el proceso."
+        },
+        {
+          mistake: "Choosing a formal connector for a casual repair conversation",
+          whyItFails:
+            "“No obstante” and “asimismo” are correct, but too many of them in casual speech sound stiff. If you are reasoning aloud with a friend, “pero,” “también,” “entonces,” and “por eso” usually fit better.",
+          sayInstead: "La caja llegó, pero la muestra salió mal; por eso llamamos hoy."
+        }
+      ],
+      variations: [
+        {
+          form: "Además, comparemos la etiqueta con la foto.",
+          register: "neutral",
+          region: "Universal Spanish",
+          whenToUse: "Adding another piece of evidence or another step in the same line of reasoning."
+        },
+        {
+          form: "Sin embargo, la factura dice otra cosa.",
+          register: "neutral to formal",
+          region: "Universal Spanish",
+          whenToUse: "Introducing a fact that contrasts with what the previous sentence led you to expect."
+        },
+        {
+          form: "Por lo tanto, el paquete salió con datos cruzados.",
+          register: "neutral to formal",
+          region: "Universal Spanish",
+          whenToUse: "Naming the logical consequence after you have established a cause."
+        },
+        {
+          form: "De ahí que tengamos que corregir el proceso.",
+          register: "formal written",
+          region: "Universal Spanish",
+          whenToUse: "Drawing an advanced consequence with “de ahí que” plus the subjunctive."
+        },
+        {
+          form: "O sea, la guía vieja fue el problema.",
+          register: "spoken informal",
+          region: "General Colombian",
+          whenToUse: "Reformulating aloud in everyday Colombian speech, not in a formal essay."
+        }
+      ],
+      prompt: "Marta writes “La guía era vieja; por lo tanto, el paquete salió mal.” What is “por lo tanto” doing?",
+      choices: [
+        "It adds a second example with the same weight as the first detail.",
+        "It marks the consequence that follows from the old route sheet.",
+        "It introduces a casual spoken filler with no logical function."
+      ],
+      answer: 1,
+      practiceExtra: [
+        {
+          prompt: "Which sentence handles punctuation around a contrast connector best?",
+          choices: [
+            "La caja llegó a tiempo; sin embargo, la muestra era equivocada.",
+            "La caja llegó a tiempo, sin embargo la muestra era equivocada.",
+            "La caja llegó a tiempo sin embargo, la muestra era equivocada."
+          ],
+          answer: 0,
+          tests: "A full stop or semicolon before “sin embargo,” then a comma after it."
+        },
+        {
+          prompt: "Which version uses “de ahí que” correctly?",
+          choices: [
+            "De ahí que tenemos que corregir el proceso antes del lunes.",
+            "De ahí que corregimos el proceso antes del lunes.",
+            "De ahí que tengamos que corregir el proceso antes del lunes."
+          ],
+          answer: 2,
+          tests: "“De ahí que” takes the subjunctive: “tengamos.”"
+        },
+        {
+          prompt: "Which reformulation fits formal writing better than “o sea”?",
+          choices: [
+            "Pues, la guía vieja fue el problema principal del envío.",
+            "Es decir, la guía vieja fue el problema principal del envío.",
+            "Es que la guía vieja fue el problema principal del envío."
+          ],
+          answer: 1,
+          tests: "“Es decir” is the written reformulation; “o sea,” “pues,” and “es que” are spoken."
+        }
+      ]
+    },
+    en: {
+      title: "Conectar las pistas en Lubbock",
+      situation:
+        "Usted está en Lubbock, Texas, en una imprenta pequeña que prepara muestras para una feria de café. Una caja llegó al cliente equivocado y Nadia, la coordinadora, reconstruye el error con Samuel, un practicante colombiano. El objetivo es el mismo que en español: usar conectores para que el razonamiento se entienda y para no sonar ni demasiado informal en un texto ni demasiado pomposo en una conversación.",
+      setting: {
+        who: "Nadia coordina envíos para una imprenta texana y necesita explicar el error sin culpar a nadie antes de revisar la evidencia. Samuel es colombiano, habla inglés avanzado y está aprendiendo a escoger conectores con el registro correcto.",
+        what: "Una investigación de despacho: la etiqueta de la caja, la orden, la factura y la foto de empaque no coinciden, así que los hablantes tienen que añadir evidencia, contrastarla, nombrar causas, sacar consecuencias y resumir el plan.",
+        when: "Al final de la tarde, después de cerrar la ruta de entregas y antes de escribirle al cliente.",
+        where: "Lubbock, Texas, en el área de despacho de una imprenta pequeña.",
+        why: "Los exámenes y correos profesionales en inglés califican la cohesión. Para un hispanohablante, el peligro doble es usar conectores demasiado formales en charla casual o usar puntuación española donde el inglés exige punto o punto y coma."
+      },
+      address: {
+        form: "mixed",
+        who: "Nadia y Samuel usan el mismo “you” del inglés en un contexto profesional. La distancia se marca con tono, claridad y frases completas, no con otro pronombre.",
+        why: "El inglés no distingue tú de usted. En esta escena, la cortesía sale de organizar bien la explicación y evitar acusaciones rápidas.",
+        ifYouSwitch:
+          "No hay pronombre que cambiar. Si Samuel quiere sonar más formal, cambia el registro de los conectores y de las frases, no el “you.”"
+      },
+      dialogue: [
+        {
+          speaker: "Nadia",
+          target: "First, let's review the order; in addition, let's compare the label with the packing photo.",
+          translation: "En primer lugar, revisemos la orden; además, comparemos la etiqueta con la foto del empaque.",
+          pronunciation: "ferst, lets ri-VIU di OR-der; in a-DI-shon, lets kom-PER da LEI-bel wid da PA-king FO-tou",
+          literal: "Primero, revisemos la orden; en adición, comparemos la etiqueta con la foto de empaque.",
+          why: "“First” organiza el primer paso. “In addition” añade otro dato con registro neutro. Si las dos partes son oraciones completas, el punto y coma antes del conector es más seguro que una coma."
+        },
+        {
+          speaker: "Samuel",
+          target: "However, the invoice says client B; on the other hand, the route sheet says client A.",
+          translation: "Sin embargo, la factura dice cliente B; en cambio, la guía de ruta dice cliente A.",
+          pronunciation: "jau-EV-er, di IN-voice sez KLAI-ent bi; on di O-der jand, da rut shit sez KLAI-ent ei",
+          literal: "Sin embargo, la factura dice cliente B; en la otra mano, la hoja de ruta dice cliente A.",
+          why: "“However” contradice la expectativa anterior y lleva coma cuando abre la oración. “On the other hand” compara dos lados de la evidencia. No basta con poner una coma entre dos oraciones independientes."
+        },
+        {
+          speaker: "Nadia",
+          target: "Given that the shift changed, the assistant printed the old sheet; therefore, the box left with crossed data.",
+          translation: "Dado que cambió el turno, el auxiliar imprimió la guía vieja; por lo tanto, la caja salió con datos cruzados.",
+          pronunciation: "GI-ven dat da shift cheinjd, di a-SIS-tant PRIN-ted di old shit; DER-for, da boks left wid krost DEI-ta",
+          literal: "Dado que el turno cambió, el asistente imprimió la hoja vieja; por eso, la caja salió con datos cruzados.",
+          why: "“Given that” presenta la causa con tono razonado. “Therefore” marca la consecuencia. En inglés formal, “therefore” necesita punto o punto y coma antes si une dos oraciones independientes, y coma después cuando inicia la segunda."
+        },
+        {
+          speaker: "Samuel",
+          target: "Nevertheless, the box arrived on time; even so, the client received the wrong sample.",
+          translation: "No obstante, la caja llegó a tiempo; aun así, el cliente recibió la muestra equivocada.",
+          pronunciation: "ne-ver-da-LES, da boks a-RAIVD on taim; I-ven so, da KLAI-ent ri-SIVD da rong SAM-pel",
+          literal: "No obstante, la caja llegó a tiempo; incluso así, el cliente recibió la muestra equivocada.",
+          why: "“Nevertheless” es formal y escrito. “Even so” suena más conversacional. Los dos conceden: aceptan un dato positivo, pero muestran que la conclusión principal sigue siendo negativa."
+        },
+        {
+          speaker: "Nadia",
+          target: "That is to say, shipping did not fail; rather, the document version failed. Consequently, we need to correct the process.",
+          translation: "Es decir, no falló el transporte, sino la versión del documento. En consecuencia, debemos corregir el proceso.",
+          pronunciation: "dat is tu sei, SHI-ping did not feil; RA-der, da DOK-yu-ment VER-shon feild. KON-se-kwent-li, wi nid tu ko-REKT da PRO-ses",
+          literal: "Eso es decir, el envío no falló; más bien, la versión del documento falló. En consecuencia, necesitamos corregir el proceso.",
+          why: "“That is to say” reformula. “Consequently” es una consecuencia escrita y más formal que “so.” En conversación normal, repetir “consequently” puede sonar como ensayo leído en voz alta."
+        },
+        {
+          speaker: "Samuel",
+          target: "In short, we notify the client today; finally, we leave a note so it doesn't happen again.",
+          translation: "En resumen, avisamos al cliente hoy; por último, dejamos una nota para que no se repita.",
+          pronunciation: "in short, wi NO-ti-fai da KLAI-ent tu-DEI; FAI-nal-li, wi liv a nout so it DO-zent JA-pen a-GEN",
+          literal: "En corto, notificamos al cliente hoy; finalmente, dejamos una nota para que no pase otra vez.",
+          why: "“In short” resume the reasoning and “finally” marks the last step. Para cerrar un texto formal, “in conclusion” también sirve; para hablar, “so” y “in short” suelen sonar más naturales."
+        }
+      ],
+      vocabulary: [
+        {
+          term: "moreover / furthermore / in addition",
+          explanation:
+            "Son conectores para añadir. “In addition” es el más seguro y neutro. “Moreover” y “furthermore” son correctos, pero suelen sonar escritos y pesados en conversación. Muchos hispanohablantes los usan demasiado porque parecen elegantes.",
+          literal: "además / asimismo",
+          useWhen:
+            "Usted añade una razón, evidencia o punto que empuja en la misma dirección que el anterior.",
+          avoidWhen:
+            "Está hablando casualmente. En charla diaria, “also,” “plus,” o “and” suelen sonar mejor que “moreover.”",
+          register: "neutro a formal escrito",
+          region: "Inglés universal; en Texas y Estados Unidos, “moreover” en conversación común puede sonar pomposo.",
+          related: ["also", "plus", "as well", "another point"],
+          example: {
+            target: "In addition, let's compare the label with the photo.",
+            translation: "Además, comparemos la etiqueta con la foto."
+          }
+        },
+        {
+          term: "first / finally / on the other hand",
+          explanation:
+            "Estos conectores organizan el orden o cambian de lado. “First” abre una secuencia, “finally” marca el último paso y “on the other hand” presenta otro ángulo. No todos son igual de formales, pero todos ayudan a que el lector no se pierda.",
+          literal: "primero / finalmente / por otra parte",
+          useWhen:
+            "Está enumerando pasos, razones u opciones en un correo, informe, presentación o respuesta de examen.",
+          avoidWhen:
+            "Sólo tiene una idea suelta. Si dice “first,” el lector espera un segundo punto o un cierre claro.",
+          register: "neutro",
+          region: "Inglés universal; “on the other hand” es común, pero no debe usarse como traducción automática de cualquier “por otra parte.”",
+          related: ["second", "next", "last", "another angle"],
+          example: {
+            target: "First, let's review the order.",
+            translation: "En primer lugar, revisemos la orden."
+          }
+        },
+        {
+          term: "however / nevertheless / on the other hand / whereas",
+          explanation:
+            "Estos marcan contraste. “However” es el equivalente más útil de “sin embargo.” “Nevertheless” es más formal. “On the other hand” compara dos lados. “Whereas” contrasta dentro de una oración y suele sonar escrito o legal si se abusa de él.",
+          literal: "sin embargo / no obstante / en cambio / mientras que",
+          useWhen:
+            "Una evidencia empuja contra otra, o necesita comparar dos datos de manera explícita.",
+          avoidWhen:
+            "Está hablando de forma relajada. “But” es normal y no es inferior; a veces es el conector más natural.",
+          register: "neutro a formal escrito",
+          region: "Inglés universal; “nevertheless” y “whereas” pertenecen sobre todo a escritura cuidadosa.",
+          related: ["but", "yet", "rather", "even so"],
+          example: {
+            target: "However, the invoice says client B.",
+            translation: "Sin embargo, la factura dice cliente B."
+          }
+        },
+        {
+          term: "given that / because / due to / since",
+          explanation:
+            "Estos introducen causa. “Because” es claro y sirve en casi todo. “Given that” suena razonado y formal. “Due to” funciona antes de un sustantivo o frase nominal, y “since” puede significar como o desde, según contexto.",
+          literal: "dado que / porque / debido a / ya que",
+          useWhen:
+            "Necesita explicar por qué ocurrió algo o justificar una conclusión con una causa concreta.",
+          avoidWhen:
+            "Quiere sonar natural en una conversación rápida. “Because” casi siempre es mejor que llenar la charla de “given that.”",
+          register: "neutro a formal",
+          region: "Inglés universal; “given that” es común en escritura académica y profesional.",
+          related: ["as", "the reason", "because of", "since"],
+          example: {
+            target: "Given that the shift changed, the old sheet was printed.",
+            translation: "Dado que cambió el turno, se imprimió la guía vieja."
+          }
+        },
+        {
+          term: "therefore / consequently / so / that is why",
+          explanation:
+            "Estos introducen consecuencia. “Therefore” es formal pero muy útil. “Consequently” es todavía más escrito. “So” y “that is why” son los caballos de batalla de la conversación. Elija según el contexto, no por ganas de sonar avanzado.",
+          literal: "por lo tanto / en consecuencia / así que / por eso",
+          useWhen:
+            "Ya mostró una causa y ahora necesita decir el resultado, la decisión o la acción lógica.",
+          avoidWhen:
+            "No ha demostrado la causa. “Therefore” promete lógica; si la frase anterior no la sostiene, el texto suena inflado.",
+          register: "de hablado a formal escrito",
+          region: "Inglés universal; “so” es normal en inglés hablado de todos los días.",
+          related: ["as a result", "for that reason", "then", "it follows"],
+          example: {
+            target: "Therefore, the box left with crossed data.",
+            translation: "Por lo tanto, la caja salió con datos cruzados."
+          }
+        },
+        {
+          term: "that is to say / in other words / for example / such as",
+          explanation:
+            "Estos reformulan o ejemplifican. “That is to say” es claro pero formal. “In other words” es más común. “For example” introduce un caso concreto, y “such as” mete ejemplos dentro de la frase.",
+          literal: "es decir / en otras palabras / por ejemplo / tal como",
+          useWhen:
+            "El lector necesita que usted diga la misma idea con más precisión o que le dé un ejemplo concreto.",
+          avoidWhen:
+            "Quiere hablar casualmente y rápido. En conversación, “I mean” muchas veces ocupa el lugar de “that is to say.”",
+          register: "neutro a formal",
+          region: "Inglés universal; “I mean” es muy hablado y no sirve para la mayoría de ensayos.",
+          related: ["I mean", "namely", "for instance", "to clarify"],
+          example: {
+            target: "That is to say, shipping did not fail.",
+            translation: "Es decir, no falló el transporte."
+          }
+        },
+        {
+          term: "in short / in conclusion / in summary / ultimately",
+          explanation:
+            "Estos cierran o resumen. “In short” condensa de manera bastante natural. “In conclusion” es de ensayo o presentación. “In summary” es neutro. “Ultimately” da una conclusión final parecida a “en definitiva.”",
+          literal: "en resumen / en conclusión / en definitiva",
+          useWhen:
+            "Necesita reunir las pruebas en un diagnóstico, una recomendación o una decisión final.",
+          avoidWhen:
+            "Todavía va a abrir otra rama de evidencia. Un cierre falso confunde al lector porque promete terminar y luego sigue agregando puntos.",
+          register: "neutro a formal",
+          region: "Inglés universal; “in conclusion” puede sonar escolar si se usa en conversación.",
+          related: ["to sum up", "finally", "overall", "bottom line"],
+          example: {
+            target: "In short, we notify the client today.",
+            translation: "En resumen, avisamos al cliente hoy."
+          }
+        },
+        {
+          term: "although / even though / whereas",
+          explanation:
+            "Estos conceden o contrastan. “Although” y “even though” aceptan un hecho que no destruye la conclusión principal. “Whereas” contrasta dos realidades dentro de una misma oración y es más escrito.",
+          literal: "aunque / a pesar de que / mientras que",
+          useWhen:
+            "Un dato es verdadero, pero no cambia la conclusión: the box arrived on time, although the sample was wrong.",
+          avoidWhen:
+            "Sólo necesita un “but” sencillo. En inglés natural, no todo contraste merece “whereas” o “nevertheless.”",
+          register: "neutro a formal escrito",
+          region: "Inglés universal; “although” es seguro en habla y escritura.",
+          related: ["even so", "despite", "but", "still"],
+          example: {
+            target: "Although the box arrived on time, the sample was wrong.",
+            translation: "Aunque la caja llegó a tiempo, la muestra estaba equivocada."
+          }
+        }
+      ],
+      note:
+        "Los conectores ingleses también se aprenden por trabajo. Para añadir y secuenciar: “moreover,” “furthermore,” “in addition,” “first,” “finally,” y “on the other hand.” Para contrastar: “however,” “nevertheless,” “whereas,” “on the other hand,” y “even so.” Para causa: “given that,” “because,” “since,” y “due to.” Para consecuencia: “therefore,” “consequently,” “so,” y “that is why.” Para reformular y ejemplificar: “that is to say,” “in other words,” “for example,” y “such as.” Para concluir: “in short,” “in conclusion,” “in summary,” y “ultimately.” El registro importa muchísimo. “Moreover” y “furthermore” pueden sonar exagerados en una charla normal; “also,” “plus,” “but,” “so,” y “I mean” hacen mucho trabajo hablado. En escritura formal, en cambio, “however,” “therefore,” “consequently,” y “in addition” son herramientas legítimas. La puntuación inglesa se califica: si un conector une dos oraciones independientes, use punto y coma o punto, no una coma. Escriba “The sheet was old; therefore, the box left with crossed data.” Si “however” empieza una oración, lleva coma después: “However, the invoice says client B.”",
+      culture: [
+        {
+          label: "El inglés no premia sonar más largo siempre",
+          body:
+            "Muchos colombianos avanzados sienten que “moreover” y “furthermore” elevan cualquier texto. A veces sí, pero en una conversación pueden sonar como una tesis leída en voz alta. El inglés profesional valora claridad. Si “also” hace el trabajo, no es menos inteligente por ser corto."
+        },
+        {
+          label: "However necesita buena puntuación",
+          body:
+            "En inglés, “however” no arregla una coma entre dos oraciones completas. “The label was right, however the invoice was wrong” queda mal puntuado. Mejor: “The label was right; however, the invoice was wrong” o dos oraciones: “The label was right. However, the invoice was wrong.” Esa regla se marca en exámenes y correos revisados."
+        },
+        {
+          label: "So no es enemigo del inglés formal moderado",
+          body:
+            "“So” es el caballo de batalla hablado para consecuencia. No siempre hay que reemplazarlo por “therefore.” En un ensayo, conviene variar y usar “therefore” cuando el paso lógico es importante. En una reunión, “so we need to call the client” puede ser exactamente lo natural."
+        },
+        {
+          label: "That is to say no es lo mismo que I mean",
+          body:
+            "“I mean” es excelente para corregirse o aclarar en habla cotidiana. En un correo formal, puede verse flojo. “That is to say” o “in other words” muestran una reformulación deliberada. La diferencia no es de significado básico, sino de contexto y expectativa."
+        }
+      ],
+      pitfalls: [
+        {
+          mistake: "“The sheet was old, therefore the box went wrong.”",
+          whyItFails:
+            "Dos oraciones independientes no deben unirse con una coma antes de “therefore.” En inglés formal, use punto y coma o punto antes del conector, y coma después del conector.",
+          sayInstead: "The sheet was old; therefore, the box went wrong."
+        },
+        {
+          mistake: "“Moreover, I called you because the box is wrong.”",
+          whyItFails:
+            "La frase puede ser correcta en papel si añade un punto, pero en una llamada cotidiana “moreover” suena demasiado formal. Para hablar, “also” o “plus” suele encajar mejor.",
+          sayInstead: "Also, I called because the box is wrong."
+        },
+        {
+          mistake: "“However the invoice says client B.”",
+          whyItFails:
+            "Cuando “however” abre la oración, necesita coma después. Sin la coma, la frase se lee tropezada y parece descuidada en escritura evaluada.",
+          sayInstead: "However, the invoice says client B."
+        },
+        {
+          mistake: "“Given that the label, the client got the wrong box.”",
+          whyItFails:
+            "“Given that” necesita una cláusula completa con verbo. Si sólo tiene un sustantivo, use “given” o “because of”: “because of the label error.”",
+          sayInstead: "Given that the label was wrong, the client got the wrong box."
+        }
+      ],
+      variations: [
+        {
+          form: "In addition, let's compare the label with the photo.",
+          register: "neutro",
+          region: "Inglés universal",
+          whenToUse: "Añadir otra evidencia o paso dentro de la misma línea de razonamiento."
+        },
+        {
+          form: "However, the invoice says something different.",
+          register: "neutro a formal",
+          region: "Inglés universal",
+          whenToUse: "Introducir una evidencia que contrasta con lo anterior, con coma después de “however.”"
+        },
+        {
+          form: "Therefore, the box left with crossed data.",
+          register: "formal claro",
+          region: "Inglés universal",
+          whenToUse: "Marcar la consecuencia lógica después de establecer una causa."
+        },
+        {
+          form: "That is to say, shipping did not fail.",
+          register: "formal escrito",
+          region: "Inglés universal",
+          whenToUse: "Reformular una conclusión con precisión en un texto o presentación."
+        },
+        {
+          form: "So, the old sheet was the problem.",
+          register: "hablado informal",
+          region: "Inglés universal",
+          whenToUse: "Resumir una conclusión en conversación sin sonar como un ensayo."
+        }
+      ],
+      prompt: "Nadia escribe “The sheet was old; therefore, the box left with crossed data.” ¿Qué hace “therefore”?",
+      choices: [
+        "Añade otro ejemplo con el mismo peso que el primer detalle.",
+        "Introduce una muletilla hablada sin función lógica real.",
+        "Marca la consecuencia que sale de la guía vieja."
+      ],
+      answer: 2,
+      practiceExtra: [
+        {
+          prompt: "¿Cuál frase puntúa mejor el conector de contraste?",
+          choices: [
+            "The box arrived on time; however, the sample was wrong.",
+            "The box arrived on time, however the sample was wrong.",
+            "The box arrived on time however, the sample was wrong."
+          ],
+          answer: 0,
+          tests: "Punto o punto y coma antes de “however,” y coma después."
+        },
+        {
+          prompt: "¿Cuál opción suena más natural en conversación casual que “moreover”?",
+          choices: [
+            "Moreover, I checked the label and called the client.",
+            "Also, I checked the label and called the client.",
+            "Consequently, I checked the label and called the client."
+          ],
+          answer: 1,
+          tests: "“Also” es más conversacional; “moreover” y “consequently” son más escritos."
+        },
+        {
+          prompt: "¿Cuál frase usa bien “given that”?",
+          choices: [
+            "Given that the label, the client got the wrong box.",
+            "Given that wrong, the client got the box yesterday.",
+            "Given that the label was wrong, the client got the wrong box."
+          ],
+          answer: 2,
+          tests: "“Given that” necesita una cláusula completa con verbo."
         }
       ]
     }

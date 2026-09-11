@@ -15,6 +15,9 @@
  * vocabulary entries, same number of culture notes, pitfalls, variations and
  * practice questions, and the same optional slots filled on the same rows. That
  * is enforced by test/shape.test.js, not by good intentions.
+ *
+ * This block now also adds the grammar structure subjunctive-volition, closing
+ * the measured gap of 27 volition triggers followed by que with no stated rule.
  */
 lessons.push(
   {
@@ -1705,6 +1708,682 @@ lessons.push(
           ],
           answer: 2,
           tests: "not at all as courtesy response"
+        }
+      ]
+    }
+  },
+  {
+    id: "wanting-support-for-a-move-in-girardot",
+    level: "Developing · What matters",
+    skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context", "grammar"],
+    domain: "family-and-relationships",
+    register: "familiar",
+    pathways: ["independent", "year-12", "collegiate-academic"],
+    structure: "subjunctive-volition",
+    review: "pending",
+    es: {
+      title: "Wanting support for a move in Girardot",
+      situation:
+        "You are in Girardot telling your dad that you want to move into a small apartment closer to work. He wants you to be careful, you want him to trust you, and both of you need the grammar for wanting someone else to do something without turning the subjunctive into a mystery.",
+      setting: {
+        who: "Mateo is an adult son with a new job and a signed budget. Lucía is his father, loving but worried, and he needs to keep the disagreement warm while they talk about rent, safety, timing and trust.",
+        what: "A kitchen-table negotiation about a move: one person wants to leave, another wants him to wait, and each sentence shows whether the subject stays the same or changes after que.",
+        when: "A hot Sunday afternoon, after lunch, while a fan moves warm air and the family calendar is open on the table.",
+        where: "Girardot, Cundinamarca, in a lowland apartment kitchen near the Magdalena River, with a fan running beside the table.",
+        why: "Because what matters to you is exactly where this structure lives: wanting, hoping, advising, objecting and caring what another person does. The grammar is mechanical, not mystical."
+      },
+      address: {
+        form: "tú",
+        who: "Mateo and Lucía use tú because they are close family members having a serious but affectionate conversation.",
+        why: "Tú lets them disagree without sounding distant. The respect comes from listening, reasons and softening phrases, not from usted.",
+        ifYouSwitch:
+          "Usted would add distance and might sound wounded or formal between parent and adult child in this kitchen. Vos is heard in parts of Colombia, but tú is the safest neutral choice for this lesson."
+      },
+      dialogue: [
+        {
+          speaker: "Mateo",
+          target: "Quiero mudarme cerca del trabajo, pero también quiero que confíes en mí.",
+          translation: "I want to move close to work, but I also want you to trust me.",
+          pronunciation: "KYEH-roh moo-DAR-meh SER-kah del trah-BAH-hoh, PEH-roh tahm-BYEN KYEH-roh keh kon-FYEH-es en mee",
+          literal: "I-want to-move-myself close to-the work, but also I-want that you trust in me.",
+          why: "This is the spine of the lesson. Same subject, quiero mudarme, takes an infinitive. Different subject, quiero que confíes, takes que plus subjunctive. The shape is trigger verb plus que plus different subject plus subjunctive."
+        },
+        {
+          speaker: "Lucía",
+          target: "Yo quiero ayudarte, pero necesito que me muestres el presupuesto completo.",
+          translation: "I want to help you, but I need you to show me the full budget.",
+          pronunciation: "yoh KYEH-roh ah-yoo-DAR-teh, PEH-roh neh-seh-SEE-toh keh meh MWEHS-trehs el preh-soo-PWES-toh kom-PLEH-toh",
+          literal: "I want to-help-you, but I-need that you show me the budget complete.",
+          why: "The contrast repeats. Lucía does the helping, so ayudar stays infinitive. Mateo does the showing, so necesito que me muestres uses the subjunctive form muestres."
+        },
+        {
+          speaker: "Mateo",
+          target: "Te lo muestro; espero que veas que no estoy improvisando.",
+          translation: "I'll show it to you. I hope you see that I'm not making this up as I go.",
+          pronunciation: "teh loh MWEHS-troh; ehs-PEH-roh keh VEH-ahs keh noh ehs-TOY eem-proh-vee-SAN-doh",
+          literal: "To-you it I-show; I-hope that you see that not I-am improvising.",
+          why: "Espero que veas is another trigger plus que plus different subject. Veas comes from the present yo form veo, drop the -o and add the opposite vowel ending."
+        },
+        {
+          speaker: "Lucía",
+          target: "Tu tía dice que el barrio es tranquilo, pero dice que vayas de día a mirar la ruta.",
+          translation: "Your aunt says the neighborhood is calm, but she says you should go during the day to check the route.",
+          pronunciation: "too TEE-ah DEE-seh keh el BAR-ryoh ehs trahn-KEE-loh, PEH-roh DEE-seh keh VAH-yahs deh DEE-ah ah mee-RAR lah ROO-tah",
+          literal: "Your aunt says that the neighborhood is calm, but says that you go by day to look at the route.",
+          why: "Here is the trap. Dice que el barrio es tranquilo reports a fact, so it uses indicative es. Dice que vayas gives an instruction, so it uses subjunctive vayas. Same words, two moods, two meanings."
+        },
+        {
+          speaker: "Mateo",
+          target: "Me parece justo. Prefiero visitar el edificio contigo y prefiero que hablemos con el portero.",
+          translation: "That seems fair. I prefer to visit the building with you, and I prefer that we talk with the doorman.",
+          pronunciation: "meh pah-REH-seh HOOS-toh. preh-FYEH-roh bee-see-TAR el eh-dee-FEE-syoh kon-TEE-goh ee preh-FYEH-roh keh ah-BLEH-mohs kon el por-TEH-roh",
+          literal: "To-me it-seems fair. I-prefer to-visit the building with-you and I-prefer that we talk with the doorman.",
+          why: "Visitar has the same subject as prefiero, so it is an infinitive. Hablemos has a different shared action after que, so it is subjunctive from hablo to hable, hablemos."
+        },
+        {
+          speaker: "Lucía",
+          target: "Te recomiendo que revises el contrato y que no firmes nada con afán.",
+          translation: "I recommend that you review the lease and not sign anything in a rush.",
+          pronunciation: "teh rreh-koh-MYEN-doh keh rreh-BEE-sehs el kon-TRAH-toh ee keh noh FEER-mehs NAH-dah kon ah-FAHN",
+          literal: "To-you I-recommend that you review the contract and that not you sign anything with rush.",
+          why: "Recomendar que is in the advising family. Revises and firmes are regular present subjunctives built from reviso and firmo, drop -o and add the opposite vowel."
+        },
+        {
+          speaker: "Mateo",
+          target: "Ojalá que me acompañes el sábado; me alegra que quieras mirar esto conmigo.",
+          translation: "I hope you come with me on Saturday. I'm glad you want to look at this with me.",
+          pronunciation: "oh-hah-LAH keh meh ah-kom-PAH-nyehs el SAH-bah-doh; meh ah-LEH-grah keh KYEH-rahs mee-RAR EHS-toh kon-MEE-goh",
+          literal: "Hopefully that you accompany me Saturday; to-me gladdens that you want to look at this with me.",
+          why: "Ojalá is one of the most common triggers in Colombian speech and needs no other verb before it. Me alegra que also triggers the subjunctive because it comments emotionally on another person's action."
+        },
+        {
+          speaker: "Lucía",
+          target: "Bueno, es importante que seas cuidadoso y que sepas pedir ayuda. Que te vaya bien, hijo.",
+          translation: "All right, it's important that you be careful and know how to ask for help. May things go well for you, son.",
+          pronunciation: "BWEH-noh, ehs eem-por-TAHN-teh keh SEH-ahs kwee-dah-DOH-soh ee keh SEH-pahs peh-DEER ah-YOO-dah. keh teh VAH-yah byen, EE-hoh",
+          literal: "Good, it-is important that you be careful and that you know to-ask for help. That to-you it-go well, son.",
+          why: "Es importante que adds an impersonal judgment trigger, and seas and sepas are two of the genuine irregular subjunctives. Que te vaya bien is an everyday Colombian softened wish, and it is subjunctive too."
+        }
+      ],
+      vocabulary: [
+        {
+          term: "[trigger] + que + different subject + subjunctive",
+          explanation:
+            "The mechanical shape for this lesson. A verb or phrase expresses wanting, asking, advising, emotion or judgment. Que opens a new clause. A different subject does the second action, so the second verb goes into the subjunctive.",
+          literal: "trigger + that + new subject + subjunctive",
+          useWhen:
+            "One person wants, needs, asks, recommends, hopes or cares that another person do something: quiero que salgas, necesito que vengas, es mejor que esperes.",
+          avoidWhen:
+            "The subject stays the same. Then Spanish normally uses an infinitive: quiero salir, necesito llamar, prefiero esperar.",
+          register: "neutral",
+          region: "Universal Spanish and completely alive in everyday Colombian speech.",
+          related: ["que", "infinitivo", "presente de subjuntivo", "sujeto distinto"],
+          example: { target: "Quiero que confíes en mí.", translation: "I want you to trust me." }
+        },
+        {
+          term: "quiero salir / quiero que salgas",
+          explanation:
+            "The decisive contrast. Quiero salir has one subject, I want and I leave, so salir is an infinitive. Quiero que salgas has two subjects, I want and you leave, so salgas is subjunctive.",
+          literal: "I-want to-leave / I-want that you leave",
+          useWhen:
+            "You need to decide whether a sentence takes an infinitive or que plus subjunctive. Ask who does the second action.",
+          avoidWhen:
+            "Do not choose the subjunctive because the sentence feels emotional. Choose it because the trigger, que and subject change are all present.",
+          register: "neutral",
+          region: "General Spanish.",
+          related: ["querer", "salir", "salga", "sujeto"],
+          example: { target: "Quiero mudarme, pero quiero que me apoyes.", translation: "I want to move, but I want you to support me." }
+        },
+        {
+          term: "yo form, drop -o, opposite vowel",
+          explanation:
+            "Build most present subjunctives from the present indicative yo form. Take hablo, como, tengo, salgo, digo, conozco. Drop the final -o and add the opposite vowel endings: hable, coma, tenga, salga, diga, conozca.",
+          literal: "yo form minus -o plus the other vowel",
+          useWhen:
+            "You need a regular-looking subjunctive, including many forms that textbooks call irregular. The yo-form origin explains tenga, salga, diga and conozca.",
+          avoidWhen:
+            "A small handful is truly irregular and must be memorized: sea, vaya, dé, esté, sepa, haya.",
+          register: "grammar explanation",
+          region: "Universal Spanish.",
+          related: ["hable", "coma", "tenga", "conozca"],
+          example: { target: "Necesito que tengas paciencia.", translation: "I need you to have patience." }
+        },
+        {
+          term: "querer que, necesitar que, pedir que",
+          explanation:
+            "The wanting and asking family. Querer que, necesitar que and pedir que all set up another person's action, so they naturally take the subjunctive when the subject changes.",
+          literal: "to want that, to need that, to ask that",
+          useWhen:
+            "You want someone else to call, wait, bring something, sign something or explain a decision.",
+          avoidWhen:
+            "You are reporting a fact rather than asking for action. The subjunctive belongs to the request, not to every que after these verbs.",
+          register: "neutral",
+          region: "General Spanish, very common in Colombian family and work talk.",
+          related: ["esperar que", "preferir que", "decir que", "solicitar que"],
+          example: { target: "Te pido que revises el contrato.", translation: "I'm asking you to review the lease." }
+        },
+        {
+          term: "recomendar que, sugerir que, permitir que",
+          explanation:
+            "The advising and allowing family. Recommending, suggesting, allowing and prohibiting all try to shape what another person does, so recomendar que, sugerir que, aconsejar que, dejar que, permitir que and prohibir que take the subjunctive.",
+          literal: "to recommend that, suggest that, allow that",
+          useWhen:
+            "You give advice, set a boundary, allow a plan or forbid a risky action.",
+          avoidWhen:
+            "The advice has the same subject and can be cleaner as an infinitive, especially after querer, necesitar or preferir.",
+          register: "neutral to courteous",
+          region: "General Spanish.",
+          related: ["aconsejar que", "dejar que", "prohibir que", "recomendar"],
+          example: { target: "Te recomiendo que revises todo.", translation: "I recommend that you review everything." }
+        },
+        {
+          term: "me alegra que, me molesta que, qué pena que",
+          explanation:
+            "The emotion family. The first clause reacts to another person's action or situation, so the action after que appears in the subjunctive: me alegra que vengas, me molesta que cancelen, qué pena que no puedas.",
+          literal: "it gladdens me that, it bothers me that, what a pity that",
+          useWhen:
+            "You are glad, bothered, sorry or relieved about what someone else does or what happens.",
+          avoidWhen:
+            "You are simply reporting information with no trigger of reaction or influence. Then the indicative often appears.",
+          register: "neutral conversational",
+          region: "Very common in Colombia, especially for softening disagreement.",
+          related: ["me encanta que", "siento que", "qué bueno que", "me preocupa que"],
+          example: { target: "Me alegra que quieras hablar.", translation: "I'm glad you want to talk." }
+        },
+        {
+          term: "es importante que, es mejor que, es raro que",
+          explanation:
+            "The impersonal judgment family. Spanish often judges an action first, then puts the action after que in the subjunctive: es importante que seas cuidadoso, es mejor que esperes, es raro que no llamen.",
+          literal: "it is important that, it is better that, it is strange that",
+          useWhen:
+            "You say an action is important, better, necessary, strange, good or bad before naming who does it.",
+          avoidWhen:
+            "The phrase only reports certainty, like es verdad que or es claro que. Those usually take the indicative because they present facts.",
+          register: "neutral",
+          region: "General Spanish.",
+          related: ["es necesario que", "qué bueno que", "es malo que", "es urgente que"],
+          example: { target: "Es importante que sepas pedir ayuda.", translation: "It's important that you know how to ask for help." }
+        },
+        {
+          term: "dice que viene / dice que venga",
+          explanation:
+            "The famous trap. Decir que takes the indicative when it reports a fact: dice que viene, he says he is coming. It takes the subjunctive when it means tell someone to: dice que venga, he says for him or her to come.",
+          literal: "says that he comes / says that he come",
+          useWhen:
+            "You must separate a report from an instruction. Same decir que, different meaning, different mood.",
+          avoidWhen:
+            "Do not memorize decir que as always subjunctive or always indicative. Decide what decir is doing in that sentence.",
+          register: "neutral",
+          region: "Universal Spanish and essential in Colombian everyday messages.",
+          related: ["indicativo", "mandato indirecto", "venir", "venga"],
+          example: { target: "Mi tía dice que vayas de día.", translation: "My aunt says you should go during the day." }
+        },
+        {
+          term: "ojalá que",
+          explanation:
+            "A very common hope trigger in real Colombian speech. Ojalá means I hope or hopefully, and it does not need another verb before it. Ojalá que me acompañes is already a full trigger for the subjunctive.",
+          literal: "hopefully that",
+          useWhen:
+            "You hope something happens, especially when you cannot control it fully: ojalá que llueva, ojalá que salga bien, ojalá que puedas venir.",
+          avoidWhen:
+            "Do not add quiero before it because you think every subjunctive needs a first verb. Ojalá alone can do the triggering.",
+          register: "neutral conversational",
+          region: "Extremely common in Colombia.",
+          related: ["esperar que", "quiera Dios", "ojalá", "que te vaya bien"],
+          example: { target: "Ojalá que me acompañes.", translation: "I hope you come with me." }
+        }
+      ],
+      note:
+        "Do not learn the present subjunctive as a cloud of doubt and emotion. For this lesson, use a visible three-part test: a trigger verb or phrase, que, and a different subject. All three are required. Quiero salir has one subject, so Spanish uses the infinitive. Quiero que salgas has a new subject after que, so Spanish uses the subjunctive. Build most forms from the present indicative yo form: hablo to hable, como to coma, tengo to tenga, salgo to salga, digo to diga, conozco to conozca. That means many so-called irregulars are just yo-form logic. The true handful to memorize is sea, vaya, dé, esté, sepa and haya. The mood is fully alive in everyday Colombian speech. Que le vaya bien and que esté muy bien are not literary flourishes; they are ordinary softened wishes.",
+      culture: [
+        {
+          label: "The subjunctive is everyday, not fancy",
+          body:
+            "Colombians use the subjunctive at home, at work, in voice notes and in quick goodbyes. A parent saying quiero que me avises, a coworker saying es mejor que llamemos, and a cashier saying que le vaya bien are all using the same living grammar. It is not a formal decoration and it is not a mood you save for essays. The more you hear it as a mechanical response to a trigger, the less mysterious it becomes."
+        },
+        {
+          label: "Ojalá carries hope by itself",
+          body:
+            "Ojalá is one of the most frequent hope words in Colombian speech. It does not need quiero, espero or any other verb in front of it. Ojalá que puedas venir, ojalá salga bien, ojalá no llueva all go straight into the subjunctive because ojalá itself is the trigger. Learners often look for a verb before que and miss the easiest trigger in the room."
+        },
+        {
+          label: "Soft wishes are real subjunctives",
+          body:
+            "Goodbyes like que te vaya bien, que descanses and que esté muy bien are small acts of care. Grammatically, they are subjunctive clauses with the first part left unsaid, something like I hope that things go well for you. They sound warm because they avoid commanding reality. The speaker is wishing a good result for another person, exactly the semantic home of this structure."
+        }
+      ],
+      pitfalls: [
+        {
+          mistake: "Using que plus subjunctive when the subject does not change",
+          whyItFails:
+            "Spanish does not normally say quiero que yo salga for the basic meaning I want to leave. If the same person wants and leaves, the second verb is an infinitive.",
+          sayInstead: "Quiero salir temprano."
+        },
+        {
+          mistake: "Building forms from the infinitive instead of the yo form",
+          whyItFails:
+            "The present subjunctive usually comes from the present yo form, not the infinitive stem. That is why tener gives tenga, salir gives salga, decir gives diga and conocer gives conozca.",
+          sayInstead: "Necesito que tengas paciencia."
+        },
+        {
+          mistake: "Treating decir que as one fixed mood",
+          whyItFails:
+            "Decir que reports facts with the indicative and gives instructions with the subjunctive. Dice que viene and dice que venga are not interchangeable; they mean different things.",
+          sayInstead: "Dice que viene. / Dice que venga."
+        }
+      ],
+      variations: [
+        {
+          form: "Quiero salir temprano.",
+          register: "neutral",
+          region: "General Spanish",
+          whenToUse: "The same subject wants and leaves, so the second verb is an infinitive."
+        },
+        {
+          form: "Quiero que salgas temprano.",
+          register: "neutral",
+          region: "General Spanish",
+          whenToUse: "One subject wants and a different subject leaves, so que plus subjunctive appears."
+        },
+        {
+          form: "Dice que viene.",
+          register: "neutral",
+          region: "General Spanish",
+          whenToUse: "Decir reports a fact, so the reported verb stays indicative."
+        },
+        {
+          form: "Dice que venga.",
+          register: "neutral",
+          region: "General Spanish",
+          whenToUse: "Decir gives an instruction, so the instructed action is subjunctive."
+        },
+        {
+          form: "Ojalá que te vaya bien.",
+          register: "warm conversational",
+          region: "Very common in Colombia",
+          whenToUse: "You make a soft wish for another person's good outcome."
+        }
+      ],
+      prompt: "Mateo says “quiero mudarme” but “quiero que confíes.” What decides the change?",
+      choices: [
+        "The second action has a new subject after que.",
+        "The sentence happens in a family conversation.",
+        "The verb querer always avoids infinitives."
+      ],
+      answer: 0,
+      practiceExtra: [
+        {
+          prompt: "Which sentence keeps the same subject and uses the infinitive?",
+          choices: [
+            "Quiero salir temprano para revisar todo.",
+            "Quiero que salgas temprano a revisar.",
+            "Quiero que salga temprano mi hermano."
+          ],
+          answer: 0,
+          tests: "same subject after quiero takes an infinitive"
+        },
+        {
+          prompt: "Which sentence correctly asks another person to wait?",
+          choices: [
+            "Necesito esperar diez minutos más.",
+            "Necesito que esperes diez minutos.",
+            "Necesito que esperas diez minutos."
+          ],
+          answer: 1,
+          tests: "different subject after necesito que takes subjunctive"
+        },
+        {
+          prompt: "Which sentence reports a fact instead of giving an order?",
+          choices: [
+            "Dice que venga temprano mañana.",
+            "Dice que vengas temprano mañana.",
+            "Dice que viene temprano mañana."
+          ],
+          answer: 2,
+          tests: "decir que with a factual report uses indicative"
+        },
+        {
+          prompt: "Which phrase is a natural Colombian soft wish?",
+          choices: [
+            "Que le vaya bien en el viaje.",
+            "Que le va bien en el viaje.",
+            "Que le ir bien en el viaje."
+          ],
+          answer: 0,
+          tests: "que le vaya bien uses subjunctive as a soft wish"
+        }
+      ]
+    },
+    en: {
+      title: "Pedir apoyo para mudarse en Austin",
+      situation:
+        "Usted está en Austin, Texas, hablando con su papá por videollamada sobre mudarse a un apartamento más cerca del trabajo. En español saldría quiero que confíes, pero en inglés el arreglo más útil no es want that you trust. Es want you to trust me, con objeto más infinitivo.",
+      setting: {
+        who: "Mateo es un colombiano adulto con trabajo nuevo y presupuesto listo. Lucía, su papá, está en Colombia y quiere cuidarlo sin cerrarle la puerta. La conversación exige afecto, límites y frases claras en inglés.",
+        what: "Una negociación familiar sobre una mudanza en otro país: una persona quiere irse, otra quiere que espere, y el inglés resuelve casi todo con want someone to do something.",
+        when: "Una tarde de domingo en Austin, con calor en la ventana y una videollamada abierta después del almuerzo en Colombia.",
+        where: "Austin, Texas, en un cuarto alquilado cerca de una ruta de bus, con avisos de apartamentos abiertos en el portátil.",
+        why: "Porque el inglés casi no conserva el subjuntivo común. Para querer, pedir, aconsejar y recomendar, usted necesita patrones ingleses propios, no una copia de que."
+      },
+      address: {
+        form: "mixed",
+        who: "Mateo y Lucía usan you en inglés; la cercanía familiar va en dad, please, I know y el tono, no en un pronombre distinto.",
+        why: "El inglés no diferencia tú y usted. En una conversación familiar seria, la cortesía se marca con frases completas y modales suaves, no con cambiar you.",
+        ifYouSwitch:
+          "No hay otro you para cambiar. Si Mateo agrega sir o father en medio de esta escena, sonaría rígido o dramático, no más respetuoso."
+      },
+      dialogue: [
+        {
+          speaker: "Mateo",
+          target: "I want to move closer to work, but I also want you to trust me.",
+          translation: "Quiero mudarme más cerca del trabajo, pero también quiero que confíes en mí.",
+          pronunciation: "ai want tu muv KLOU-ser tu werk, bat ai OL-sou want yu tu trost mi",
+          literal: "Yo quiero moverme más cerca del trabajo, pero también quiero tú confiar en mí.",
+          why: "Este es el arreglo central: same subject, I want to move, usa to plus verbo. Different subject, I want you to trust me, usa objeto más to-infinitive. No diga I want that you trust me."
+        },
+        {
+          speaker: "Lucía",
+          target: "I want to help you, but I need you to show me the full budget.",
+          translation: "Quiero ayudarte, pero necesito que me muestres el presupuesto completo.",
+          pronunciation: "ai want tu jelp yu, bat ai nid yu tu shou mi da ful BUD-yet",
+          literal: "Yo quiero ayudar tú, pero necesito tú mostrarme el presupuesto completo.",
+          why: "I want to help you mantiene el mismo sujeto para want y help. I need you to show me cambia de persona: yo necesito, usted muestra. El inglés no pone that; pone you to show."
+        },
+        {
+          speaker: "Mateo",
+          target: "I'll show you. I hope you see that I'm not making this up as I go.",
+          translation: "Te lo muestro. Espero que veas que no estoy improvisando.",
+          pronunciation: "ail shou yu. ai joup yu si dat aim not MEI-king dis op az ai gou",
+          literal: "Te mostraré. Espero tú ver que no estoy inventando esto mientras voy.",
+          why: "Hope sí puede ir con una cláusula normal: I hope you see. No necesita should ni subjuntivo visible. El inglés común prefiere esa sencillez donde el español usa espero que veas."
+        },
+        {
+          speaker: "Lucía",
+          target: "Your aunt says the neighborhood is calm, but she says you should go during the day.",
+          translation: "Tu tía dice que el barrio es tranquilo, pero dice que vayas de día.",
+          pronunciation: "yor ant sez da NEI-ber-jud iz kam, bat shi sez yu shud gou DUR-ing da dei",
+          literal: "Tu tía dice que el barrio es calmado, pero ella dice tú deberías ir durante el día.",
+          why: "El inglés separa el reporte y el consejo por sentido, no por un subjuntivo común. Says the neighborhood is calm reporta un hecho. Says you should go da una instrucción suave."
+        },
+        {
+          speaker: "Mateo",
+          target: "That sounds fair. I'd prefer to visit the building with you, and I'd prefer us to talk to the doorman.",
+          translation: "Me parece justo. Prefiero visitar el edificio contigo y prefiero que hablemos con el portero.",
+          pronunciation: "dat saundz fer. aid pri-FER tu VIZ-it da BIL-ding with yu, and aid pri-FER os tu tok tu da DOR-man",
+          literal: "Eso suena justo. Preferiría visitar el edificio contigo, y preferiría nosotros hablar con el portero.",
+          why: "Prefer sigue el mismo arreglo. Mismo sujeto: I'd prefer to visit. Otro sujeto con acción compartida: I'd prefer us to talk. En conversación, us to talk suele sonar más claro que that we talk."
+        },
+        {
+          speaker: "Lucía",
+          target: "I recommend that you check the lease, and I suggest that you not sign anything in a rush.",
+          translation: "Te recomiendo que revises el contrato y sugiero que no firmes nada con afán.",
+          pronunciation: "ai reh-kuh-MEND dat yu chek da lis, and ai sug-YEST dat yu not sain EN-i-thing in a rush",
+          literal: "Recomiendo que tú revises el contrato, y sugiero que tú no firmar nada de afán.",
+          why: "Después de recommend y suggest, el inglés cuidadoso usa that más verbo base: that you check, that you not sign. En habla diaria también se oye should: I suggest you should not sign."
+        },
+        {
+          speaker: "Mateo",
+          target: "I hope you can come with me on Saturday. I'm glad you want to look at this with me.",
+          translation: "Ojalá puedas acompañarme el sábado. Me alegra que quieras mirar esto conmigo.",
+          pronunciation: "ai joup yu kan kom with mi on SA-ter-dei. aim glad yu want tu luk at dis with mi",
+          literal: "Espero tú puedes venir conmigo el sábado. Estoy contento tú quieres mirar esto conmigo.",
+          why: "El inglés usa I hope you can para ojalá puedas, con can en vez de un subjuntivo visible. I'm glad you want to es el patrón emocional común, no I'm glad that you want that."
+        },
+        {
+          speaker: "Lucía",
+          target: "All right. It's important for you to be careful and to know how to ask for help. We ask that Mateo be present at the lease meeting.",
+          translation: "Bueno. Es importante que seas cuidadoso y que sepas pedir ayuda. Pedimos que Mateo esté presente en la cita del contrato.",
+          pronunciation: "ol rait. its im-POR-tant for yu tu bi KER-ful and tu nou jau tu ask for jelp. wi ask dat mah-TEI-oh bi PRE-zent at da lis MI-ting",
+          literal: "Está bien. Es importante para ti ser cuidadoso y saber cómo pedir ayuda. Pedimos que Mateo esté presente en la reunión del contrato.",
+          why: "Para consejo cotidiano, el inglés dice it's important for you to be careful. El viejo subjuntivo mandativo sobrevive en frases formales como we ask that Mateo be present, con be, no is."
+        }
+      ],
+      vocabulary: [
+        {
+          term: "want someone to do something",
+          explanation:
+            "El patrón más importante para reparar el calco quiero que. En inglés cotidiano se dice want plus objeto plus to-infinitive: I want you to leave, I want her to call, I want them to wait.",
+          literal: "querer a alguien hacer algo",
+          useWhen:
+            "Una persona quiere que otra haga algo. Es la traducción normal de quiero que salgas, queremos que llamen, ella quiere que esperes.",
+          avoidWhen:
+            "No copie I want that you leave. Esa frase viene del español y suena incorrecta o muy extranjera en inglés normal.",
+          register: "neutro",
+          region: "Inglés universal.",
+          related: ["need someone to", "ask someone to", "would like someone to", "tell someone to"],
+          example: { target: "I want you to trust me.", translation: "Quiero que confíes en mí." }
+        },
+        {
+          term: "I want to leave / I want you to leave",
+          explanation:
+            "El contraste que más vale dominar. I want to leave tiene un solo sujeto: yo quiero y yo me voy. I want you to leave tiene dos participantes: yo quiero, usted se va. El objeto you marca el cambio.",
+          literal: "quiero irme / quiero que usted se vaya",
+          useWhen:
+            "Necesita decidir entre to plus verbo para su propia acción y objeto plus to plus verbo para la acción de otra persona.",
+          avoidWhen:
+            "No agregue that para imitar que. El puente inglés después de want no es that, es someone to.",
+          register: "neutro",
+          region: "Inglés universal.",
+          related: ["same subject", "object", "to-infinitive", "leave"],
+          example: { target: "I want to move, but I want you to help me.", translation: "Quiero mudarme, pero quiero que me ayudes." }
+        },
+        {
+          term: "need someone to do something",
+          explanation:
+            "Need sigue el mismo camino que want. I need you to show me the budget traduce necesito que me muestres el presupuesto. El objeto you va antes de to show.",
+          literal: "necesitar a alguien hacer algo",
+          useWhen:
+            "Usted necesita que otra persona mande, firme, espere, traiga o explique algo.",
+          avoidWhen:
+            "No diga I need that you show me en conversación normal. Puede entenderse, pero no es el patrón vivo para esta idea.",
+          register: "neutro",
+          region: "Inglés universal.",
+          related: ["want someone to", "ask someone to", "expect someone to", "need to"],
+          example: { target: "I need you to show me the budget.", translation: "Necesito que me muestres el presupuesto." }
+        },
+        {
+          term: "ask / tell someone to",
+          explanation:
+            "Para pedir o mandar, el inglés usa ask someone to y tell someone to. She asked me to wait, he told us to come early. Es una forma muy común de traducir pedir que y decir que cuando decir significa ordenar.",
+          literal: "pedir / decir a alguien hacer algo",
+          useWhen:
+            "Alguien solicita o instruye a otra persona para que haga una acción concreta.",
+          avoidWhen:
+            "No confunda tell con reportar información. He says he is coming reporta un hecho; he told me to come da una instrucción.",
+          register: "neutro",
+          region: "Inglés universal.",
+          related: ["request", "order", "say", "instruction"],
+          example: { target: "She told me to go during the day.", translation: "Ella me dijo que fuera de día." }
+        },
+        {
+          term: "suggest / recommend that someone should",
+          explanation:
+            "Con suggest y recommend, el inglés conversacional usa mucho should: I suggest that you should wait, I recommend that he should call. En inglés estadounidense también es natural quitar should y dejar el verbo base.",
+          literal: "sugerir / recomendar que alguien debería",
+          useWhen:
+            "Usted aconseja sin mandar directamente, especialmente en trabajo, estudio o decisiones delicadas.",
+          avoidWhen:
+            "No use suggest someone to en inglés estándar. Diga suggest that someone should, suggest that someone do, o suggest doing si el sujeto queda claro.",
+          register: "neutro a cuidadoso",
+          region: "Inglés universal, con should muy común fuera de Estados Unidos y el verbo base frecuente en inglés formal estadounidense.",
+          related: ["should", "recommend", "suggest doing", "advice"],
+          example: { target: "I suggest that you should wait.", translation: "Sugiero que esperes." }
+        },
+        {
+          term: "formal mandative subjunctive",
+          explanation:
+            "El inglés conserva un subjuntivo formal en frases como we ask that he be present, the rules require that she sign, I recommend that he wait. El verbo va en forma base: be, sign, wait.",
+          literal: "subjuntivo formal de mandato",
+          useWhen:
+            "Escribe correos formales, reglas, actas, solicitudes o instrucciones institucionales.",
+          avoidWhen:
+            "No lo fuerce en toda conversación. I want you to be present suena normal; I want that you be present suena raro para el mismo sentido cotidiano.",
+          register: "formal",
+          region: "Más visible en inglés estadounidense formal, entendido en todo el inglés.",
+          related: ["bare verb", "be present", "require that", "ask that"],
+          example: { target: "We ask that he be present.", translation: "Pedimos que él esté presente." }
+        },
+        {
+          term: "hope and be glad",
+          explanation:
+            "Hope y be glad no suelen necesitar un patrón especial con subjuntivo visible. I hope you can come, I'm glad you want to help, I'm sorry you can't join. El sentido coincide con ojalá y me alegra que, pero la forma inglesa es más simple.",
+          literal: "esperar y alegrarse",
+          useWhen:
+            "Usted expresa esperanza, alegría, pena o molestia sobre lo que otra persona hace.",
+          avoidWhen:
+            "No traduzca palabra por palabra como I am glad that you want that you help. Quite el segundo that y use want to o can.",
+          register: "neutro conversacional",
+          region: "Inglés universal.",
+          related: ["I hope", "I'm glad", "I'm sorry", "can"],
+          example: { target: "I'm glad you want to help.", translation: "Me alegra que quieras ayudar." }
+        },
+        {
+          term: "say reports, tell instructs",
+          explanation:
+            "Para la trampa de decir que, el inglés ayuda separando verbos. Say suele reportar palabras o hechos: she says he is coming. Tell someone to da una instrucción: she told him to come.",
+          literal: "say reporta, tell instruye",
+          useWhen:
+            "Necesita distinguir entre informar algo y ordenar o pedir una acción.",
+          avoidWhen:
+            "No traduzca dice que venga como she says that he comes. Si es instrucción, use she says he should come o she told him to come.",
+          register: "neutro",
+          region: "Inglés universal.",
+          related: ["say", "tell", "should", "come"],
+          example: { target: "She says he is coming, but she told him to come early.", translation: "Ella dice que él viene, pero le dijo que viniera temprano." }
+        },
+        {
+          term: "It's important for someone to",
+          explanation:
+            "Para juicios impersonales cotidianos, el inglés prefiere el molde con for someone to: it is important for someone to, it is better for someone to, it is strange for someone to. Ese molde reemplaza muchas frases con es importante que.",
+          literal: "es importante para alguien hacer",
+          useWhen:
+            "Usted juzga una acción de otra persona como importante, mejor, raro, útil o necesario.",
+          avoidWhen:
+            "No copie it is important that you are careful si quiere sonar más natural en conversación. It's important for you to be careful es más directo.",
+          register: "neutro",
+          region: "Inglés universal.",
+          related: ["for you to", "better for", "necessary for", "important that"],
+          example: { target: "It's important for you to be careful.", translation: "Es importante que seas cuidadoso." }
+        }
+      ],
+      note:
+        "El inglés moderno casi no usa un subjuntivo visible en la conversación diaria. Para los significados de querer, pedir, necesitar y preferir, el arreglo de más valor es objeto más to-infinitive: I want you to leave, I need her to call, we'd prefer them to wait. No hay paralelo directo en español, y por eso el error I want that you leave aparece tanto. Con suggest y recommend, use should o una cláusula formal con verbo base: I suggest that you should wait, I recommend that he wait. En registros formales queda el subjuntivo mandativo: we ask that he be present, not he is present. Para esperanza y emoción, el inglés suele ser más llano: I hope you can come, I'm glad you want to help.",
+      culture: [
+        {
+          label: "El gran arreglo: objeto más to",
+          body:
+            "Para un hispanohablante, want someone to do something se siente extraño porque parece faltar que. En realidad, ese es el puente inglés normal. I want you to call, I need you to wait, I'd like them to come. Aprenderlo como bloque evita el calco I want that you call, que delata de inmediato que usted está traduciendo desde quiero que llames."
+        },
+        {
+          label: "Should suaviza consejos",
+          body:
+            "Suggest y recommend no se comportan como want. En inglés estándar no diga I suggest you to wait. Diga I suggest that you should wait, I recommend that she should call, o en un registro más formal, I suggest that you wait. Should suena natural porque presenta el consejo sin convertirlo en orden."
+        },
+        {
+          label: "El subjuntivo inglés sobrevivió en oficinas",
+          body:
+            "El subjuntivo inglés no desapareció del todo. Vive en frases institucionales como we ask that he be present, the policy requires that she sign, the judge ordered that the file remain sealed. La señal es el verbo base, be, sign, remain, incluso con he o she. Pero para la vida diaria, I want him to be present es mucho más común."
+        }
+      ],
+      pitfalls: [
+        {
+          mistake: "I want that you leave.",
+          whyItFails:
+            "Es el calco directo de quiero que salgas. El inglés normal no usa that después de want para esta idea. Usa objeto más to-infinitive.",
+          sayInstead: "I want you to leave."
+        },
+        {
+          mistake: "I suggest you to wait.",
+          whyItFails:
+            "Suggest no toma objeto más to como want. Para consejo, use that plus should, o that plus verbo base en un registro más formal.",
+          sayInstead: "I suggest that you should wait."
+        },
+        {
+          mistake: "We ask that he is present.",
+          whyItFails:
+            "En el mandative subjunctive formal, el verbo va en forma base. Con he no es is, sino be.",
+          sayInstead: "We ask that he be present."
+        }
+      ],
+      variations: [
+        {
+          form: "I want to leave early.",
+          register: "neutro",
+          region: "Inglés universal",
+          whenToUse: "La misma persona quiere y se va, así que usa want to más verbo."
+        },
+        {
+          form: "I want you to leave early.",
+          register: "neutro",
+          region: "Inglés universal",
+          whenToUse: "Una persona quiere que otra haga la acción, con objeto más to-infinitive."
+        },
+        {
+          form: "She says he is coming.",
+          register: "neutro",
+          region: "Inglés universal",
+          whenToUse: "Say reporta un hecho o unas palabras, sin instrucción."
+        },
+        {
+          form: "She told him to come.",
+          register: "neutro",
+          region: "Inglés universal",
+          whenToUse: "Tell someone to da una instrucción o pedido indirecto."
+        },
+        {
+          form: "We ask that he be present.",
+          register: "formal",
+          region: "Inglés formal universal",
+          whenToUse: "Una solicitud institucional usa el subjuntivo mandativo con verbo base."
+        }
+      ],
+      prompt: "Mateo says “I want you to trust me.” ¿Qué corrige frente al calco español?",
+      choices: [
+        "Uses object plus to, not want that you.",
+        "Uses a plural verb after the word trust.",
+        "Uses should after every form of want."
+      ],
+      answer: 0,
+      practiceExtra: [
+        {
+          prompt: "¿Cuál frase traduce bien “quiero que salgas”?",
+          choices: [
+            "I want you to leave before noon.",
+            "I want that you leave before noon.",
+            "I want you leaving before noon."
+          ],
+          answer: 0,
+          tests: "want plus object plus to-infinitive"
+        },
+        {
+          prompt: "¿Cuál frase usa bien need con otra persona?",
+          choices: [
+            "I need to show you the budget.",
+            "I need you to show me the budget.",
+            "I need that you show me the budget."
+          ],
+          answer: 1,
+          tests: "need someone to do something"
+        },
+        {
+          prompt: "¿Cuál frase reporta un hecho, no una instrucción?",
+          choices: [
+            "She told him to come early.",
+            "She says he should come early.",
+            "She says he is coming early."
+          ],
+          answer: 2,
+          tests: "say plus indicative-style content reports a fact"
+        },
+        {
+          prompt: "¿Cuál frase muestra el subjuntivo formal inglés?",
+          choices: [
+            "We ask that he be present.",
+            "We ask that he is present.",
+            "We ask him is present."
+          ],
+          answer: 0,
+          tests: "mandative subjunctive uses the bare verb be"
         }
       ]
     }

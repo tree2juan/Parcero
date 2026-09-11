@@ -15,6 +15,10 @@
  * vocabulary entries, same number of culture notes, pitfalls, variations and
  * practice questions, and the same optional slots filled on the same rows. That
  * is enforced by test/shape.test.js, not by good intentions.
+ *
+ * This block now also adds articles-and-quantity, because quantifiers appear
+ * across the corpus and articles are constant, but neither system had a direct
+ * grammar lesson.
  */
 lessons.push(
   {
@@ -1969,6 +1973,816 @@ lessons.push(
           ],
           answer: 0,
           tests: "“sells itself” = se vende solo"
+        }
+      ]
+    }
+  },
+  {
+    id: "articles-and-quantities-at-the-sincelejo-market",
+    level: "Starter · Buying and paying",
+    skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context", "grammar"],
+    domain: "shopping-and-money",
+    register: "courteous",
+    pathways: ["foundation", "year-12"],
+    structure: "articles-and-quantity",
+    review: "pending",
+    es: {
+      title: "Buying exact amounts at the market",
+      situation:
+        "You are at a morning stall in Sincelejo buying food for a youth-center breakfast. The budget is tight, the seller is running out of some things, and every choice depends on articles and quantity words: the rice, some arepas, another coffee, half a kilo, no large bags, a little cilantro, and the ñapa that helps the meal stretch.",
+      setting: {
+        who: "Marta is an English speaker volunteering at a youth center; Don Álvaro is an older market seller who knows she is shopping for children and tries not to let her overbuy.",
+        what: "A real food order with a small budget: rice, cheese, eggs, panela, coffee, cilantro and bananas for children who will arrive hungry before class.",
+        when: "Early Monday morning, before the delivery truck comes and before the youth center opens.",
+        where: "Sincelejo, at a covered market stall near the bus stands, with sacks of rice on the floor and prices taped to the counter.",
+        why: "Because quantity is not decoration here. Choosing mucho, muchos, poco, algunas, ninguna, medio, una libra, otro and al changes what Marta receives and whether the money lasts."
+      },
+      address: {
+        form: "usted",
+        who: "Marta and Don Álvaro use usted, the safe, respectful form between a customer and an older seller in a market stall.",
+        why: "Usted keeps the transaction courteous without making it stiff. It lets Marta ask for corrections and quantities clearly, and it lets Don Álvaro guide her without sounding bossy.",
+        ifYouSwitch:
+          "Tú would not be impossible in a warm coastal market, but it would make Marta sound more familiar than she means to be. Usted is the dependable choice when you are negotiating money with someone older."
+      },
+      dialogue: [
+        {
+          speaker: "Marta",
+          target: "Buenos días. Necesito un kilo de arroz, una libra de queso y algunas arepas para el lunes.",
+          translation: "Good morning. I need a kilo of rice, a pound of cheese, and some arepas for Monday.",
+          pronunciation: "BWEH-nos DEE-as. neh-seh-SEE-to oon KEE-lo de a-ROS, OO-na LEE-bra de KEH-so i al-GOO-nas a-REH-pas PA-ra el LOON-es",
+          literal: "Good days. I-need a kilo of rice, a pound of cheese and some arepas for the Monday.",
+          why: "This line already shows three article jobs. Spanish uses measure phrases with “de”: “un kilo de arroz”, “una libra de queso”. “Algunas arepas” means some arepas, and “el lunes” means on Monday, with the definite article where English drops it."
+        },
+        {
+          speaker: "Don Álvaro",
+          target: "Le tengo bastante arroz del bueno, pero quedan pocas arepas y no hay ninguna bolsa grande.",
+          translation: "I have plenty of the good rice for you, but there are few arepas left and there is no large bag.",
+          pronunciation: "le TEN-go bas-TAN-te a-ROS del BWEH-no, PE-ro KE-dan PO-kas a-REH-pas i no ai neen-GOO-na BOL-sa GRAN-de",
+          literal: "For-you I-have plenty rice of-the good, but remain few arepas and not there-is no large bag.",
+          why: "“Bastante” can mean enough or quite a lot. “Pocas” agrees with plural feminine “arepas”. “Ninguna” stays singular in Spanish even when English says no bags, and “del” is mandatory: “de + el” becomes “del”, never “de el”."
+        },
+        {
+          speaker: "Marta",
+          target: "Entonces deme medio kilo, una docena de huevos y otro café para mi mamá.",
+          translation: "Then give me half a kilo, a dozen eggs, and another coffee for my mom.",
+          pronunciation: "en-TON-ses DEH-me MEH-dyo KEE-lo, OO-na do-SEH-na de WEH-bos i O-tro ka-FEH PA-ra mi ma-MA",
+          literal: "Then give-me half kilo, a dozen of eggs and another coffee for my mom.",
+          why: "“Medio kilo” drops the article after medio, and “una docena de huevos” is the everyday dozen frame. The crucial learner trap is “otro café”: Spanish never says “un otro café”. After “otro”, English keeps an article inside another, but Spanish drops it completely."
+        },
+        {
+          speaker: "Don Álvaro",
+          target: "Listo. ¿Lleva mucho café o solo un poco de panela? A las tres llega el camión.",
+          translation: "All right. Are you taking a lot of coffee or just a little panela? The truck arrives at three.",
+          pronunciation: "LEES-to. YEH-ba MOO-cho ka-FEH o SO-lo oon PO-ko de pa-NEH-la. a las TRES YEH-ga el ka-MYON",
+          literal: "Ready. You-take much coffee or only a little of panela? At the three arrives the truck.",
+          why: "Coffee is a mass noun here, so it is “mucho café”, not “muchos cafés” unless you mean separate cups. “Un poco de” is a small amount of a mass item. Time takes an article too: “a las tres” means at three o'clock."
+        },
+        {
+          speaker: "Marta",
+          target: "Un paquete de panela, una bolsa pequeña y lo que sea de cilantro. Me gusta el café sin azúcar.",
+          translation: "A package of panela, a small bag, and whatever cilantro you have. I like coffee without sugar.",
+          pronunciation: "oon pa-KEH-te de pa-NEH-la, OO-na BOL-sa peh-KEH-nya i lo ke SEH-a de seel-AN-tro. me GOOS-ta el ka-FEH seen a-SOO-kar",
+          literal: "A package of panela, a small bag and whatever it-may-be of cilantro. To-me pleases the coffee without sugar.",
+          why: "“Lo que sea” is perfect when the amount is unspecified: whatever there is, whatever works. Then comes the English-speaker article mistake: generic Spanish often says “el café” where English says coffee, not the coffee. “Me gusta el café” is I like coffee."
+        },
+        {
+          speaker: "Don Álvaro",
+          target: "Claro. Toda la panela está fresca, todos los huevos son de la finca y cada bolsa trae suficiente.",
+          translation: "Of course. All the panela is fresh, all the eggs are from the farm, and each bag brings enough.",
+          pronunciation: "KLA-ro. TO-da la pa-NEH-la es-TA FRES-ka, TO-dos los WEH-bos son de la FEEN-ka i KA-da BOL-sa TRA-eh soo-fee-SYEN-te",
+          literal: "Clear. All the panela is fresh, all the eggs are of the farm and each bag brings enough.",
+          why: "“Todo” agrees when it stands with a noun: “toda la panela”, “todos los huevos”. “Cada” never changes, even before a feminine noun. “Suficiente” means enough and can stand after the noun phrase without becoming a long list."
+        },
+        {
+          speaker: "Marta",
+          target: "Soy profesora, no chef; con varios niños esperando, demasiado mercado me deja sin plata.",
+          translation: "I am a teacher, not a chef; with several children waiting, too much shopping leaves me without money.",
+          pronunciation: "soy pro-feh-SO-ra, no chef; kon BA-ryos NEEN-yos es-peh-RAN-do, deh-ma-SYA-do mer-KA-do me DEH-ha seen PLA-ta",
+          literal: "I-am teacher, not chef; with several children waiting, too-much shopping leaves me without money.",
+          why: "Spanish drops the indefinite article with unmodified professions: “soy profesora”, never “soy una profesora” unless you add a modifier like “una profesora nueva”. “Varios niños” is several children. “Demasiado mercado” treats the shopping as a mass amount, too much shopping."
+        },
+        {
+          speaker: "Don Álvaro",
+          target: "No se preocupe. Le pongo unos cuantos bananos de ñapa y un poquitico de cilantro; al final son treinta mil.",
+          translation: "Do not worry. I will put in a few bananas as a free extra and a tiny bit of cilantro; in the end it is thirty thousand.",
+          pronunciation: "no se preh-o-KOO-pe. le PON-go OO-nos KWAN-tos ba-NA-nos de NYA-pa i oon po-kee-TEE-ko de seel-AN-tro; al fee-NAL son TREIN-ta meel",
+          literal: "Do not worry. For-you I-put a-few bananas of extra and a tiny-bit of cilantro; to-the end they-are thirty thousand.",
+          why: "“Unos cuantos” is a useful middle quantity: a few, more than algunos but still not many. “Ñapa” is the small extra a seller adds. Colombians say “poquito” and “un poquitico” constantly where a textbook would say “un poco”. “Al” is mandatory: “a + el” becomes “al”."
+        }
+      ],
+      vocabulary: [
+        {
+          term: "el/la/los/las for generics",
+          explanation:
+            "Spanish often uses the definite article for a whole category where English uses no article. “Me gusta el café” means I like coffee in general, not one specific cup. The same happens with languages, titles, days, times, and body parts when the possessor is obvious.",
+          literal: "the, used for a category",
+          useWhen:
+            "Generic likes and claims (“el café es caro”), days (“el lunes”), times (“a las tres”), languages (“el español”), titles (“la doctora Rojas”), and clear body parts or clothing (“me duele la cabeza”, “me quité los zapatos”).",
+          avoidWhen:
+            "Do not translate it automatically as the. In English, the generic is often bare: coffee, Spanish, Monday. The article is Spanish grammar, not always English meaning.",
+          register: "neutral",
+          region: "Universal Spanish; the generic article is one of the strongest English-speaker traps.",
+          related: ["el lunes", "a las tres", "la cabeza", "el español"],
+          example: {
+            target: "Me gusta el café, pero no tomo mucho.",
+            translation: "I like coffee, but I do not drink much."
+          }
+        },
+        {
+          term: "un/una/unos/unas",
+          explanation:
+            "The indefinite article marks one item or an approximate plural, but Spanish uses it less than English. You say “un kilo”, “una libra” and “unos cuantos”, but you drop it after otro and before an unmodified profession.",
+          literal: "a, an, some",
+          useWhen:
+            "One countable thing (“una bolsa”), measures (“un kilo”), and approximate plurals (“unos bananos”, “unas arepas”).",
+          avoidWhen:
+            "Never after “otro”: “otro café”, not “un otro café”. Never before a bare job: “soy profesora”, not “soy una profesora”.",
+          register: "neutral",
+          region: "Universal Spanish; the overuse of un/una is a predictable English-speaker error.",
+          related: ["una bolsa", "un kilo", "unos cuantos", "unas arepas"],
+          example: {
+            target: "Soy profesora y compro otro café.",
+            translation: "I am a teacher and I am buying another coffee."
+          }
+        },
+        {
+          term: "otro/otra/otros/otras",
+          explanation:
+            "“Otro” already contains the idea of another. Spanish does not add an indefinite article in front of it. This is the single most common English-speaker article error in this area: saying “un otro”.",
+          literal: "another / other",
+          useWhen:
+            "Asking for one more or a different one: “otro café”, “otra bolsa”, “otros huevos”, “otras arepas”.",
+          avoidWhen:
+            "Do not say “un otro” or “una otra”. If you hear yourself wanting a/an before another, stop and use only “otro/otra”.",
+          register: "neutral",
+          region: "Universal Spanish; corrected instantly by native speakers because the error is so recognizable.",
+          related: ["otro café", "otra libra", "otros dos", "el otro"],
+          example: {
+            target: "Deme otro café para llevar.",
+            translation: "Give me another coffee to go."
+          }
+        },
+        {
+          term: "al / del",
+          explanation:
+            "Two contractions are mandatory, not a style choice: “a + el” becomes “al”, and “de + el” becomes “del”. If the article is really part of a title or name, it may stay separate, but normal nouns contract.",
+          literal: "to the / from or of the",
+          useWhen:
+            "Movement or destination with el (“voy al mercado”), source or description with el (“arroz del bueno”), and fixed phrases like “al final”.",
+          avoidWhen:
+            "Do not write “a el mercado” or “de el puesto”. Spanish does not leave these apart in ordinary speech or writing.",
+          register: "neutral",
+          region: "Universal Spanish; these are required standard contractions everywhere.",
+          related: ["a el", "de el", "al mercado", "del puesto"],
+          example: {
+            target: "Voy al mercado por arroz del bueno.",
+            translation: "I am going to the market for the good rice."
+          }
+        },
+        {
+          term: "mucho / poco",
+          explanation:
+            "These are quantity words that agree when they sit before a noun: mucho café, mucha panela, muchos huevos, pocas arepas. The count or mass nature of the noun decides whether the form is singular mass or plural count.",
+          literal: "much, many / little, few",
+          useWhen:
+            "Any high or low amount: “mucho arroz”, “mucha gente”, “muchos niños”, “pocas bolsas”.",
+          avoidWhen:
+            "Do not freeze them as mucho. If the noun is plural, the quantity word must be plural too: “muchos huevos”, not “mucho huevos”.",
+          register: "neutral",
+          region: "Universal Spanish; agreement is the rule, even when English changes the word instead.",
+          related: ["mucha", "muchos", "poca", "pocas"],
+          example: {
+            target: "Hay mucho café, pero quedan pocas arepas.",
+            translation: "There is a lot of coffee, but few arepas are left."
+          }
+        },
+        {
+          term: "demasiado / bastante / suficiente",
+          explanation:
+            "This middle of the scale says too much, quite a lot or enough. “Demasiado” agrees before a noun; “bastante” can be plural as “bastantes”; “suficiente” means enough and is the calm practical target.",
+          literal: "too much/many / quite a lot / enough",
+          useWhen:
+            "Judging whether the amount works: “demasiado mercado”, “demasiadas bolsas”, “bastante arroz”, “suficiente para todos”.",
+          avoidWhen:
+            "Do not use “muy” before nouns. “Muy” intensifies adjectives, not quantities: “muy caro” but “mucho café” or “demasiado café”.",
+          register: "neutral",
+          region: "Universal Spanish; “bastante” in Colombia often means plenty, not merely barely enough.",
+          related: ["demasiada", "bastantes", "suficientes", "muy"],
+          example: {
+            target: "No compre demasiadas bolsas; hay suficiente arroz.",
+            translation: "Do not buy too many bags; there is enough rice."
+          }
+        },
+        {
+          term: "todo / algunos / varios / ningún",
+          explanation:
+            "This row gives you a usable scale: todo is all, algunos is some, unos cuantos is a few, varios is several, ningún/ninguna is none or no. “Ningún” is used before masculine singular nouns; “ninguna” before feminine singular nouns.",
+          literal: "all / some / several / no",
+          useWhen:
+            "Sorting the amount quickly: “toda la panela”, “algunos bananos”, “unos cuantos huevos”, “varias bolsas”, “ningún paquete”.",
+          avoidWhen:
+            "Do not make “ningún” plural in ordinary negative noun phrases. Spanish says “no hay ninguna bolsa”, singular, where English may say no bags.",
+          register: "neutral",
+          region: "Universal Spanish; the singular “ningún/ninguna” is a major exam point.",
+          related: ["toda", "todos", "algunas", "varias"],
+          example: {
+            target: "No hay ninguna bolsa grande, pero quedan varios paquetes.",
+            translation: "There are no large bags, but several packages remain."
+          }
+        },
+        {
+          term: "nada de / un poco de / cada",
+          explanation:
+            "“Nada de” is none of a mass or category; “un poco de” is a little of it; “cada” is each or every and never changes. Together they let you move from zero to a little to one-by-one.",
+          literal: "none of / a little of / each",
+          useWhen:
+            "Market amounts that are not neat counts: “nada de cilantro”, “un poco de sal”, “cada bolsa trae suficiente”.",
+          avoidWhen:
+            "Do not make “cada” agree. It is always “cada bolsa”, “cada huevo”, “cada libra”, not “cadas”.",
+          register: "neutral",
+          region: "Universal Spanish; “un poquitico de” is the Colombian street version of “un poco de”.",
+          related: ["nada", "algo de", "poquito", "cada uno"],
+          example: {
+            target: "Póngame un poco de cilantro en cada bolsa.",
+            translation: "Put a little cilantro in each bag."
+          }
+        },
+        {
+          term: "una libra / un kilo / una docena",
+          explanation:
+            "These are the market measures that make quantity concrete. Colombia still uses “una libra” constantly for produce and cheese, “un kilo” for larger amounts, and “una docena” for eggs, rolls or arepas.",
+          literal: "a pound / a kilo / a dozen",
+          useWhen:
+            "Buying by weight or set count: “una libra de queso”, “un kilo de arroz”, “una docena de huevos”, “media libra”.",
+          avoidWhen:
+            "Do not attach the food directly without “de”. The measure phrase is “una libra de queso”, not “una libra queso”.",
+          register: "market neutral",
+          region: "Very Colombian in everyday shopping; libra remains alive beside kilo.",
+          related: ["media libra", "medio kilo", "gramos", "por libra"],
+          example: {
+            target: "Deme una libra de queso y una docena de huevos.",
+            translation: "Give me a pound of cheese and a dozen eggs."
+          }
+        },
+        {
+          term: "un paquete / una bolsa / medio / lo que sea",
+          explanation:
+            "Packages, bags and halves are everyday container quantities, while “lo que sea” covers an unspecified amount when you will accept whatever is available. They are practical buying words, not abstract grammar labels.",
+          literal: "a package / a bag / half / whatever",
+          useWhen:
+            "At a counter: “un paquete de panela”, “una bolsa de arroz”, “medio kilo”, “lo que sea de cilantro”.",
+          avoidWhen:
+            "Do not use “lo que sea” when the amount matters exactly; it gives control to the seller and says you are flexible.",
+          register: "neutral spoken",
+          region: "Universal Spanish, with “bolsa” and “paquete” central to Colombian corner-shop shopping.",
+          related: ["paquetico", "bolsita", "medio kilo", "cualquier cantidad"],
+          example: {
+            target: "Póngame una bolsa pequeña y lo que sea de cilantro.",
+            translation: "Give me a small bag and whatever cilantro you have."
+          }
+        }
+      ],
+      note:
+        "The decidable core is this: Spanish uses articles more often than English with whole categories, days, clock times, languages, titles, and body parts or clothing when the owner is clear. That is why “me gusta el café” means I like coffee, “el lunes” means on Monday, “a las tres” means at three, and “me duele la cabeza” means my head hurts, not the head hurts. But Spanish uses articles less often in two places English speakers over-mark: unmodified jobs and “otro”. Say “soy profesora”, not “soy una profesora”, and “otro café”, never “un otro café”. Add the non-optional contractions “al” and “del”, then attach quantity to countability: mucho café for a mass, muchos huevos for countable plurals. A market makes the system visible because every purchase forces a choice: una libra, medio kilo, algunas arepas, ninguna bolsa, un poco de cilantro, varios niños, cada paquete, suficiente arroz. In Colombia, listen also for “ñapa”, the little extra, and for “poquito” or “un poquitico”, the everyday spoken version of “un poco”.",
+      culture: [
+        {
+          label: "Articles are not little translations",
+          body:
+            "English speakers often treat el and la as small words to translate, so they remove them whenever English has no the. Spanish does not work that way. In “me gusta el café”, the article points to coffee as a category, not a particular cup. In “a las tres”, it is part of the time expression. In “me duele la cabeza”, the possessor is obvious from “me”, so Spanish says the head, not my head. Once you stop translating the article word by word, the pattern becomes much less mysterious."
+        },
+        {
+          label: "The predictable English-speaker error",
+          body:
+            "The strongest English pull is to add un where Spanish refuses it. Professions do not take it when unmodified: “soy profesora”, “él es vendedor”, “ella es doctora”. Add a description and the article can return: “soy una profesora nueva”. The other famous trap is “otro”. English hides an article inside another, so learners produce “un otro café”. Spanish hears that instantly as foreign. The correct phrase is always “otro café”, plain and direct."
+        },
+        {
+          label: "How a Colombian stall measures things",
+          body:
+            "A Colombian market still thinks in concrete containers and weights: una libra de queso, un kilo de arroz, una docena de huevos, una bolsa pequeña, un paquete de panela, medio kilo. The grammar follows the thing. Rice and coffee behave like masses, so you ask for mucho café or un poco de arroz. Eggs and arepas are countable, so you hear muchos huevos, pocas arepas, varios paquetes. The stall is the classroom because the seller has to understand exactly how much to put in the bag."
+        },
+        {
+          label: "Ñapa, poquito and poquitico",
+          body:
+            "The ñapa is the little extra a seller throws in after the sale, a few bananas, an extra lime, a handful of cilantro. It is not a guaranteed right, but a warm sign that the transaction went well. And the amount is rarely called “un poco” in living Colombian speech. People say “un poquito” constantly, and many Colombians make it even smaller and warmer as “un poquitico”. A textbook may write “un poco de cilantro”; a seller is more likely to say “un poquitico”."
+        }
+      ],
+      pitfalls: [
+        {
+          mistake: "“Me gusta café.”",
+          whyItFails:
+            "English says I like coffee with no article, so learners drop it. Spanish normally uses the definite article for generic likes and claims. Without “el”, the sentence sounds clipped and foreign.",
+          sayInstead: "Me gusta el café."
+        },
+        {
+          mistake: "“Soy una profesora.”",
+          whyItFails:
+            "For an unmodified profession, Spanish drops the indefinite article. “Soy una profesora” is not impossible if you add a modifier or contrast, but as a plain identity it over-translates English “I am a teacher”.",
+          sayInstead: "Soy profesora."
+        },
+        {
+          mistake: "“Quiero un otro café.”",
+          whyItFails:
+            "This is the classic article error. Spanish “otro” already means another or other and never takes “un” before it. English hides the article inside another; Spanish does not.",
+          sayInstead: "Quiero otro café."
+        },
+        {
+          mistake: "“Hay mucho huevos.”",
+          whyItFails:
+            "“Mucho” must agree with the noun when it modifies one. Eggs are plural countable, so the quantity word is plural too: “muchos huevos”. Use “mucho” for a mass like café or arroz.",
+          sayInstead: "Hay muchos huevos."
+        },
+        {
+          mistake: "“Voy a el mercado de el barrio.”",
+          whyItFails:
+            "The contractions are mandatory. “A + el” becomes “al” and “de + el” becomes “del”. Leaving them separate is not a formal style; it is simply wrong in ordinary Spanish.",
+          sayInstead: "Voy al mercado del barrio."
+        }
+      ],
+      variations: [
+        {
+          form: "Me gusta el café.",
+          register: "neutral",
+          region: "Universal Spanish",
+          whenToUse: "Generic likes and general statements, where English often has no article."
+        },
+        {
+          form: "El lunes a las tres.",
+          register: "neutral",
+          region: "Universal Spanish",
+          whenToUse: "Days and clock times, both of which need the article in Spanish."
+        },
+        {
+          form: "Soy profesora.",
+          register: "neutral",
+          region: "Universal Spanish",
+          whenToUse: "Unmodified professions, with no “un/una” before the job."
+        },
+        {
+          form: "Otro café, por favor.",
+          register: "neutral service",
+          region: "Universal Spanish",
+          whenToUse: "Asking for another one. This is never “un otro”."
+        },
+        {
+          form: "Hay mucho arroz y pocas arepas.",
+          register: "market neutral",
+          region: "Universal Spanish",
+          whenToUse: "Showing the count and mass split: mass singular “mucho arroz”, plural count “pocas arepas”."
+        },
+        {
+          form: "Le pongo un poquitico de cilantro de ñapa.",
+          register: "warm informal service",
+          region: "General Colombian",
+          whenToUse: "A Colombian seller adding a tiny free extra after the purchase."
+        }
+      ],
+      prompt: "Which Spanish sentence avoids the most common English-speaker article error with “otro”?",
+      choices: [
+        "Quiero otro café para llevar.",
+        "Quiero un otro café para llevar.",
+        "Quiero una otra taza para llevar."
+      ],
+      answer: 0,
+      practiceExtra: [
+        {
+          prompt: "You want to say you like coffee in general. Which is right?",
+          choices: [
+            "Me gusta café sin azúcar.",
+            "Me gusta el café sin azúcar.",
+            "Me gusta un café sin azúcar."
+          ],
+          answer: 1,
+          tests: "Generic Spanish uses the definite article: “el café”."
+        },
+        {
+          prompt: "You are saying “I am a teacher” as a plain profession. Which is correct?",
+          choices: [
+            "Soy profesora en el colegio.",
+            "Soy una profesora en el colegio.",
+            "Estoy profesora en el colegio."
+          ],
+          answer: 0,
+          tests: "Unmodified professions drop “un/una”: “soy profesora”."
+        },
+        {
+          prompt: "The seller has rice as a mass and arepas as countable items. Which sentence fits?",
+          choices: [
+            "Hay muchos arroz y poca arepas.",
+            "Hay mucha arroz y poco arepas.",
+            "Hay mucho arroz y pocas arepas."
+          ],
+          answer: 2,
+          tests: "Mass singular takes “mucho arroz”; plural count takes “pocas arepas”."
+        },
+        {
+          prompt: "Which sentence uses the mandatory contractions correctly?",
+          choices: [
+            "Voy al mercado por arroz del bueno.",
+            "Voy a el mercado por arroz de el bueno.",
+            "Voy al mercado por arroz de el bueno."
+          ],
+          answer: 0,
+          tests: "“A + el” becomes “al”; “de + el” becomes “del”."
+        }
+      ]
+    },
+    en: {
+      title: "Comprando cantidades exactas en El Paso",
+      situation:
+        "Usted está en una tienda latina de El Paso, Texas, comprando comida para un desayuno comunitario. El presupuesto es pequeño, el tendero se está quedando sin algunas cosas, y el inglés le obliga a decidir entre a, the, some, much, many, little, few, a pound, a dozen, another y no article. La compra real se vuelve una clase de artículos y cantidades.",
+      setting: {
+        who: "Marta es colombiana y coordina un desayuno para niños recién llegados; Sam es el tendero de una tienda latina que mezcla medidas de Texas con productos familiares.",
+        what: "Una compra con lista y presupuesto: arroz, queso, huevos, panela, café, cilantro y bananos para que el desayuno alcance sin gastar de más.",
+        when: "Un lunes temprano en la mañana, antes de que llegue el pedido y antes de que abra el centro comunitario.",
+        where: "El Paso, Texas, en una tienda latina de barrio donde se venden productos colombianos, pero la caja, las medidas y la conversación funcionan en inglés.",
+        why: "Porque el inglés decide los artículos de otra manera, y en El Paso la compra además mezcla pounds, ounces, kilos y libras en una ciudad de frontera."
+      },
+      address: {
+        form: "mixed",
+        who: "Marta y Sam usan el mismo “you”. El inglés no distingue entre usted y tú, así que el respeto se marca con el tono y con fórmulas como “could I” o “I'll take”.",
+        why: "Para un colombiano, la tentación es buscar un pronombre de respeto. No existe. En una tienda, la cortesía vive en frases completas, please, thanks, would you, could I, y no en cambiar la palabra “you”.",
+        ifYouSwitch:
+          "No hay cambio de pronombre posible. Lo que cambiaría el tono es pasar de “Could I get a pound?” a “Give me a pound”, que suena más brusco aunque use el mismo “you”."
+      },
+      dialogue: [
+        {
+          speaker: "Marta",
+          target: "Good morning. I need a kilo of rice, a pound of cheese, and some rolls for Monday.",
+          translation: "Buenos días. Necesito un kilo de arroz, una libra de queso y algunos panes para el lunes.",
+          pronunciation: "gud MOR-ning. ai nid a KÍ-lo ov ráis, a páund ov chís, and som róuls for MON-dei",
+          literal: "Buena mañana. Yo necesito un kilo de arroz, una libra de queso y algunos panes para lunes.",
+          why: "En inglés las medidas llevan “of”: “a kilo of rice”, “a pound of cheese”. Para plural indefinido no existe un plural de “a”: se dice “some rolls” o simplemente “rolls”. Y los días no llevan artículo: “for Monday”, no “for the Monday”."
+        },
+        {
+          speaker: "Sam",
+          target: "I have plenty of good rice, but only a few rolls and no large bags.",
+          translation: "Tengo bastante arroz bueno, pero solo unos pocos panes y ninguna bolsa grande.",
+          pronunciation: "ai jav PLEN-ti ov gud ráis, bot ÓUN-li a fiu róuls and nóu larj bags",
+          literal: "Yo tengo abundancia de buen arroz, pero solo unos pocos panes y no bolsas grandes.",
+          why: "“Plenty of” es bastante, incluso de sobra. “A few” se usa con contables en plural, como rolls. “No large bags” muestra otra diferencia: inglés usa plural después de “no” si piensa en bolsas contables; el español suele decir “ninguna bolsa” en singular."
+        },
+        {
+          speaker: "Marta",
+          target: "Then I'll take half a kilo, a dozen eggs, and another coffee for my mother.",
+          translation: "Entonces llevo medio kilo, una docena de huevos y otro café para mi mamá.",
+          pronunciation: "den ail téik jaf a KÍ-lo, a DO-zen egz, and a-NO-der KO-fi for mai MO-der",
+          literal: "Entonces yo tomaré medio un kilo, una docena huevos y un-otro café para mi madre.",
+          why: "Aquí sí aparece artículo en inglés: “a dozen eggs” y “another coffee”. “Another” viene de “an other”, pero hoy es una sola palabra. El error colombiano sería copiar el español y decir “other coffee” cuando se pide uno más."
+        },
+        {
+          speaker: "Sam",
+          target: "Sure. Do you need much coffee or just a little panela? The delivery comes at three.",
+          translation: "Claro. ¿Necesita mucho café o solo un poco de panela? El pedido llega a las tres.",
+          pronunciation: "shur. du iu nid moch KO-fi or yost a LI-tel pa-NE-la? de de-LI-ve-ri komz at zri",
+          literal: "Seguro. ¿Necesita mucho café o solo una pequeña panela? La entrega viene a tres.",
+          why: "“Much” va con incontables como coffee. “A little” también va con incontables y significa un poco. La hora en inglés no lleva artículo: “at three”, no “at the three”. El español sí dice “a las tres”."
+        },
+        {
+          speaker: "Marta",
+          target: "A package of panela, a small bag, and whatever cilantro you have. Coffee is expensive here.",
+          translation: "Un paquete de panela, una bolsa pequeña y el cilantro que tenga. El café es caro aquí.",
+          pronunciation: "a PA-kej ov pa-NE-la, a smol bag, and wot-EV-er si-LAN-tro iu jav. KO-fi is eks-PEN-siv jir",
+          literal: "Un paquete de panela, una pequeña bolsa y cualquier cilantro que usted tenga. Café es caro aquí.",
+          why: "Este es el espejo difícil: el inglés habla de categorías sin artículo. “Coffee is expensive” significa “el café es caro”. Decir “the coffee is expensive” solo sirve si habla de un café específico que ambos ven o ya mencionaron."
+        },
+        {
+          speaker: "Sam",
+          target: "Of course. All the panela is fresh, all the eggs are local, and each bag has enough.",
+          translation: "Claro. Toda la panela está fresca, todos los huevos son locales y cada bolsa tiene suficiente.",
+          pronunciation: "ov kors. ol de pa-NE-la is fresh, ol de egz ar LÓU-kal, and ich bag jaz i-NOF",
+          literal: "Por supuesto. Toda la panela está fresca, todos los huevos son locales y cada bolsa tiene suficiente.",
+          why: "“All the” corresponde a “todo/toda/todos/todas” cuando el grupo es conocido: all the eggs. “Each” es cada y no cambia. “Enough” funciona como suficiente, sin obligarlo a elegir much o many."
+        },
+        {
+          speaker: "Marta",
+          target: "I'm a teacher, not a chef; with several kids waiting, too many groceries will empty my wallet.",
+          translation: "Soy profesora, no chef; con varios niños esperando, demasiado mercado me va a dejar sin plata.",
+          pronunciation: "aim a TI-cher, not a chef; wiz SEV-ral kids WÉI-ting, tu ME-ni GRÓU-ser-iz wil EMP-ti mai WA-let",
+          literal: "Yo soy una profesora, no una chef; con varios niños esperando, demasiados víveres vaciarán mi billetera.",
+          why: "A diferencia del español, el inglés normalmente conserva el artículo con profesiones: “I'm a teacher”. Luego aparece “too many groceries”, porque groceries es plural contable. Con coffee sería “too much coffee”."
+        },
+        {
+          speaker: "Sam",
+          target: "Don't worry. I'll throw in a few bananas, and a tiny bit of cilantro. In the end, it's thirty dollars.",
+          translation: "No se preocupe. Le pongo unos cuantos bananos y un poquitico de cilantro. Al final son treinta dólares.",
+          pronunciation: "dont WOR-i. ail zróu in a fiu ba-NA-naz, and a TÁI-ni bit ov si-LAN-tro. in di end, its TER-ti DO-larz",
+          literal: "No se preocupe. Yo lanzaré adentro unos pocos bananos y un diminuto pedazo de cilantro. En el fin, es treinta dólares.",
+          why: "“A few” es unos cuantos con contables, y “a tiny bit of” es un poquitico de con incontables o masas pequeñas. No es una ñapa colombiana como costumbre fija, pero “throw in” sí significa añadir algo sin cobrarlo."
+        }
+      ],
+      vocabulary: [
+        {
+          term: "the with specific things, no article with generics",
+          explanation:
+            "El inglés usa “the” cuando la cosa es específica o ya conocida, pero lo quita para hablar de una categoría en general. Por eso “Coffee is expensive” traduce “el café es caro”. “The coffee is expensive” habla de ese café específico, no del café como producto.",
+          literal: "the específico, cero artículo genérico",
+          useWhen:
+            "Use “the” con la bolsa del mostrador, el arroz ya mencionado o el pedido específico. Quítelo con coffee, Spanish, Monday, breakfast o rice como categoría.",
+          avoidWhen:
+            "No copie el artículo genérico del español. “The coffee is expensive” no significa automáticamente “el café es caro” en general.",
+          register: "neutro",
+          region: "Inglés universal; esta es una de las diferencias más visibles para colombianos.",
+          related: ["the bag", "coffee", "Monday", "Spanish"],
+          example: {
+            target: "Coffee is expensive here.",
+            translation: "El café es caro aquí."
+          }
+        },
+        {
+          term: "a / an",
+          explanation:
+            "El artículo indefinido singular es obligatorio con muchos sustantivos contables: “a teacher”, “a bag”, “an egg”. Pero no tiene plural. Para plural, el inglés usa “some” o deja el sustantivo solo.",
+          literal: "un / una",
+          useWhen:
+            "Una cosa contable singular y profesiones: “a small bag”, “an apple”, “I'm a teacher”.",
+          avoidWhen:
+            "No lo ponga ante plurales ni incontables: no “a rice”, no “a eggs”. Para arroz como producto diga “rice”; para huevos en plural, “eggs” o “some eggs”.",
+          register: "neutro",
+          region: "Inglés universal; las profesiones con “a/an” son el espejo de “soy profesora”.",
+          related: ["a bag", "an egg", "a teacher", "some eggs"],
+          example: {
+            target: "I'm a teacher, not a chef.",
+            translation: "Soy profesora, no chef."
+          }
+        },
+        {
+          term: "another / other",
+          explanation:
+            "“Another” se usa para uno más de algo singular: another coffee, another bag. “Other” acompaña plurales o un nombre con otro determinante: other bags, the other coffee. No diga “an other” separado en la compra normal.",
+          literal: "otro / otros",
+          useWhen:
+            "Pedir uno más: “another coffee”, “another pound”, “another bag”. Para plural: “other bags” o “some other rolls”.",
+          avoidWhen:
+            "No copie “otro café” como “other coffee” si quiere uno más. Y no escriba “an other coffee” como dos palabras.",
+          register: "neutro",
+          region: "Inglés universal; “another” es una sola palabra aunque históricamente venga de “an other”.",
+          related: ["another coffee", "other bags", "the other", "one more"],
+          example: {
+            target: "I'll take another coffee.",
+            translation: "Llevo otro café."
+          }
+        },
+        {
+          term: "some / bare plurals",
+          explanation:
+            "Como no existe plural de “a/an”, el inglés dice “some books” o simplemente “books”. “Unos libros” puede ser “some books” si importa la cantidad vaga, o “books” si habla de la categoría.",
+          literal: "unos / algunas, o plural sin artículo",
+          useWhen:
+            "Plural indefinido: “some rolls”, “some eggs”, “I need books for class”.",
+          avoidWhen:
+            "No invente “a books” ni “ones books”. El plural indefinido inglés no tiene una palabra equivalente obligatoria a “unos/unas”.",
+          register: "neutro",
+          region: "Inglés universal; punto clave para escribir bien desde A1.",
+          related: ["some rolls", "eggs", "books", "a few"],
+          example: {
+            target: "I need some rolls for Monday.",
+            translation: "Necesito unos panes para el lunes."
+          }
+        },
+        {
+          term: "much / many",
+          explanation:
+            "El inglés no solo hace concordancia, cambia de palabra. “Much” va con incontables como coffee, rice, money, time. “Many” va con contables en plural como eggs, bags, kids, books.",
+          literal: "mucho / muchos",
+          useWhen:
+            "Preguntas, negativos y cantidades grandes: “much coffee”, “many eggs”, “too much money”, “too many bags”.",
+          avoidWhen:
+            "No diga “much eggs” ni “many coffee” salvo que hable de cafés como tazas individuales: many coffees ordered at a café.",
+          register: "neutro",
+          region: "Inglés universal; en afirmativo cotidiano se prefiere a lot of, pero la división sigue viva.",
+          related: ["a lot of", "too much", "too many", "plenty of"],
+          example: {
+            target: "Do you need much coffee or many eggs?",
+            translation: "¿Necesita mucho café o muchos huevos?"
+          }
+        },
+        {
+          term: "little / few",
+          explanation:
+            "El par pequeño repite la misma división: “little” para incontables y “few” para contables plurales. “A little” es un poco; “a few” es unos cuantos. Sin “a”, little/few suenan más negativos, casi insuficientes.",
+          literal: "poco / pocos",
+          useWhen:
+            "Cantidades pequeñas: “a little panela”, “a few rolls”, “little money left”, “few bags left”.",
+          avoidWhen:
+            "No mezcle la clase del sustantivo: no “few rice” y no “little eggs” si habla de varios huevos.",
+          register: "neutro",
+          region: "Inglés universal; la diferencia entre “a few” y “few” importa mucho en tono.",
+          related: ["a little", "a few", "few", "little"],
+          example: {
+            target: "I only need a little panela and a few rolls.",
+            translation: "Solo necesito un poco de panela y unos pocos panes."
+          }
+        },
+        {
+          term: "all / every / each / no / none",
+          explanation:
+            "Este grupo cubre la escala de todo a nada. “All the eggs” es todos los huevos conocidos; “every bag” y “each bag” miran los elementos uno por uno; “no bags” niega el plural; “none of the rice” niega una cantidad de algo conocido.",
+          literal: "todo / cada / ningún / nada de",
+          useWhen:
+            "Compras y listas: “all the eggs”, “each bag”, “every package”, “no large bags”, “none of the rice”.",
+          avoidWhen:
+            "No diga “no bag” si piensa en bolsas en general disponibles en la tienda; lo natural es plural: “no bags”.",
+          register: "neutro",
+          region: "Inglés universal; “no” suele ir con plural contable donde el español usa singular con ningún/ninguna.",
+          related: ["all the", "each", "every", "none of"],
+          example: {
+            target: "Each bag has enough, but there are no large bags.",
+            translation: "Cada bolsa tiene suficiente, pero no hay ninguna bolsa grande."
+          }
+        },
+        {
+          term: "enough / too much / too many / plenty of",
+          explanation:
+            "La parte práctica de la escala: “enough” es suficiente, “too much” es demasiado con incontables, “too many” es demasiados con plurales contables, y “plenty of” es bastante o de sobra.",
+          literal: "suficiente / demasiado / bastante",
+          useWhen:
+            "Decidir si alcanza: “enough rice”, “too much coffee”, “too many groceries”, “plenty of eggs”.",
+          avoidWhen:
+            "No use “too much” con plurales contables: “too much bags” falla porque bags se cuenta. Diga “too many bags”.",
+          register: "neutro",
+          region: "Inglés universal; “plenty of” es muy común en tiendas y casas.",
+          related: ["enough", "too much", "too many", "plenty"],
+          example: {
+            target: "There is enough rice, but too many bags cost too much.",
+            translation: "Hay suficiente arroz, pero demasiadas bolsas cuestan demasiado."
+          }
+        },
+        {
+          term: "a pound / a kilo / a dozen",
+          explanation:
+            "Las medidas de mercado en inglés llevan artículo y normalmente “of” antes del producto: a pound of cheese, a kilo of rice. “A dozen eggs” puede ir sin “of”, pero “a dozen of eggs” suena raro en la compra normal.",
+          literal: "una libra / un kilo / una docena",
+          useWhen:
+            "Comprar por medida: “a pound of cheese”, “half a kilo”, “a dozen eggs”, “two kilos of rice”.",
+          avoidWhen:
+            "No quite “of” con pound/kilo: “a pound cheese” suena telegráfico. Y no meta “of” después de dozen en la frase corriente “a dozen eggs”.",
+          register: "neutro de tienda",
+          region: "En Texas dominan pounds y ounces, pero en El Paso una tienda latina también entiende kilo y libra por la vida de frontera.",
+          related: ["half a pound", "half a kilo", "grams", "per pound"],
+          example: {
+            target: "Could I get a pound of cheese and a dozen eggs?",
+            translation: "¿Me da una libra de queso y una docena de huevos?"
+          }
+        },
+        {
+          term: "a package / a bag / half / whatever",
+          explanation:
+            "Los contenedores también toman artículo: a package, a bag. “Half” puede combinarse como “half a kilo” o “half a pound”. “Whatever” cubre “lo que sea” cuando la cantidad exacta no importa.",
+          literal: "un paquete / una bolsa / medio / lo que sea",
+          useWhen:
+            "En la caja o el mostrador: “a package of panela”, “a small bag”, “half a kilo”, “whatever cilantro you have”.",
+          avoidWhen:
+            "No use “whatever” si necesita una cantidad exacta. En inglés también entrega el control al vendedor y suena flexible, no preciso.",
+          register: "neutro hablado",
+          region: "Inglés universal; en El Paso una tienda latina puede entender panela, cilantro, kilo, libra y pound en la misma conversación.",
+          related: ["a packet", "a small bag", "half a kilo", "any amount"],
+          example: {
+            target: "I'll take a small bag and whatever cilantro you have.",
+            translation: "Llevo una bolsa pequeña y lo que tenga de cilantro."
+          }
+        }
+      ],
+      note:
+        "El núcleo decidible para el inglés va al revés del español en varios puntos. Para una categoría general, quite el artículo: “Coffee is expensive”, “Spanish is useful”, “Monday is busy”. Use “the” solo cuando el café, el español o el lunes son específicos en la conversación. Para singular contable, el inglés suele exigir “a/an”, incluso con profesiones: “I'm a teacher”, no solo “I'm teacher”. Pero no existe plural de “a/an”: “unos libros” se vuelve “some books” o simplemente “books”, según si habla de cantidad vaga o de la categoría. En cantidad, el inglés separa por contabilidad con palabras distintas: much/little para incontables como coffee, rice, money y time; many/few para plurales contables como eggs, bags, books y kids. Encima de eso van enough, too much, too many, plenty of, all, each, every, no y none. En una tienda, el sistema se vuelve concreto: a pound of cheese, half a kilo, a dozen eggs, a package of panela, a small bag, another coffee, whatever cilantro you have.",
+      culture: [
+        {
+          label: "El inglés no traduce el artículo genérico español",
+          body:
+            "Para un colombiano, “el café es caro” parece pedir “the coffee is expensive”. En inglés, eso solo funciona si habla del café específico que acaba de comprar o de una marca ya mencionada. Si habla del producto en general, se quita el artículo: “Coffee is expensive”. Lo mismo pasa con “Spanish is useful”, “Monday is busy” y “breakfast is important”. Esta ausencia no es informalidad ni descuido; es la forma estándar de hablar de categorías."
+        },
+        {
+          label: "No hay plural de a/an",
+          body:
+            "El español tiene un/una y también unos/unas. El inglés no. “A book” existe, pero “a books” no. Para plural indefinido se escoge entre “some books”, si importa una cantidad vaga, y “books”, si habla de la categoría o de objetos sin precisar. Por eso “compré unos libros” puede ser “I bought some books”, mientras “necesito libros para la clase” puede ser “I need books for class”. Aprender esta ausencia evita muchísimos plurales raros."
+        },
+        {
+          label: "Much/many y little/few son una prueba de contabilidad",
+          body:
+            "El español le deja hacer concordancia: mucho café, muchos huevos, poca plata, pocos niños. El inglés cambia la palabra. Coffee, rice, money, time y cilantro se comportan como masas: much coffee, a little rice, too much money. Eggs, bags, books y kids se cuentan uno por uno: many eggs, a few bags, too many kids. Si puede poner un número directo delante en plural, use many/few. Si necesita medirlo por libra, kilo, taza o paquete, probablemente use much/little."
+        },
+        {
+          label: "Comprar en El Paso con medidas mezcladas",
+          body:
+            "Una tienda latina en El Paso puede vender panela y arepas, pero la conversación salta entre sistemas: a pound of cheese, eight ounces, half a kilo of rice, a dozen eggs, a small bag, a package. En Texas el mostrador suele pensar en pounds y ounces, mientras muchos compradores fronterizos piensan también en kilos y libras. Además, no espere una ñapa como costumbre cultural. Un tendero puede “throw in” a few bananas as a kindness or promotion, pero no es el ritual social colombiano de pedir “¿y la ñapa?”."
+        }
+      ],
+      pitfalls: [
+        {
+          mistake: "“The coffee is expensive” para hablar del café en general.",
+          whyItFails:
+            "Con “the”, el inglés entiende un café específico. Para la categoría completa se usa el sustantivo sin artículo. El español exige “el café”; el inglés lo borra.",
+          sayInstead: "Coffee is expensive."
+        },
+        {
+          mistake: "“I'm teacher.”",
+          whyItFails:
+            "Las profesiones contables en singular normalmente necesitan “a/an” en inglés. El español dice “soy profesora” sin artículo, pero el inglés conserva “a teacher”.",
+          sayInstead: "I'm a teacher."
+        },
+        {
+          mistake: "“I need a books.”",
+          whyItFails:
+            "No existe plural de “a/an”. Para plural indefinido use “some books” si quiere marcar cantidad vaga, o “books” si habla en general.",
+          sayInstead: "I need some books."
+        },
+        {
+          mistake: "“Do you have much eggs?”",
+          whyItFails:
+            "Eggs es plural contable, así que necesita “many”, no “much”. Reserve “much” para incontables como coffee, rice, money o time.",
+          sayInstead: "Do you have many eggs?"
+        },
+        {
+          mistake: "“At the three” para decir la hora.",
+          whyItFails:
+            "El español dice “a las tres” con artículo, pero el inglés no: las horas van como “at three”, “at five thirty”. “At the three” suena a calco.",
+          sayInstead: "At three."
+        }
+      ],
+      variations: [
+        {
+          form: "Coffee is expensive here.",
+          register: "neutro",
+          region: "Inglés universal",
+          whenToUse: "Categorías generales, donde el inglés quita el artículo que el español sí usa."
+        },
+        {
+          form: "Monday at three.",
+          register: "neutro",
+          region: "Inglés universal",
+          whenToUse: "Días y horas, normalmente sin artículo en inglés."
+        },
+        {
+          form: "I'm a teacher.",
+          register: "neutro",
+          region: "Inglés universal",
+          whenToUse: "Profesiones singulares, donde el inglés conserva “a/an”."
+        },
+        {
+          form: "Another coffee, please.",
+          register: "neutro de servicio",
+          region: "Inglés universal",
+          whenToUse: "Pedir uno más. En inglés es “another”, no “other coffee” para este sentido."
+        },
+        {
+          form: "There is much rice and few rolls left.",
+          register: "careful / grammatical",
+          region: "Inglés universal",
+          whenToUse: "Mostrar la división: incontable con “much”, contable plural con “few”. En conversación diría más a menudo “a lot of rice”."
+        },
+        {
+          form: "I'll throw in a tiny bit of cilantro.",
+          register: "amistoso informal",
+          region: "Norteamérica",
+          whenToUse: "Añadir una pequeña cantidad gratis o sin darle importancia, parecido a una ñapa pero sin la costumbre colombiana."
+        }
+      ],
+      prompt: "Quiere decir que el café es caro en general, no este café específico. ¿Cuál frase funciona?",
+      choices: [
+        "Coffee is expensive here.",
+        "The coffee is expensive here.",
+        "A coffee is expensive here."
+      ],
+      answer: 0,
+      practiceExtra: [
+        {
+          prompt: "Quiere decir “soy profesora” en inglés. ¿Cuál es correcto?",
+          choices: [
+            "I'm teacher at the center.",
+            "I'm a teacher at the center.",
+            "I'm the teacher at the center."
+          ],
+          answer: 1,
+          tests: "Profesión singular en inglés: “a teacher”."
+        },
+        {
+          prompt: "Necesita un plural indefinido para “unos libros”. ¿Cuál sirve?",
+          choices: [
+            "I need some books for class.",
+            "I need a books for class.",
+            "I need an books for class."
+          ],
+          answer: 0,
+          tests: "No existe plural de “a/an”; use “some books” o “books”."
+        },
+        {
+          prompt: "Quiere preguntar por huevos, que son contables en plural. ¿Cuál frase encaja?",
+          choices: [
+            "Do you have much eggs today?",
+            "Do you have little eggs today?",
+            "Do you have many eggs today?"
+          ],
+          answer: 2,
+          tests: "Plural contable: “many eggs”; incontable: “much coffee”."
+        },
+        {
+          prompt: "Quiere decir que el pedido llega a las tres. ¿Cuál es natural?",
+          choices: [
+            "The delivery comes at three.",
+            "The delivery comes at the three.",
+            "The delivery comes in the three."
+          ],
+          answer: 0,
+          tests: "Las horas en inglés van sin artículo: “at three”."
         }
       ]
     }
