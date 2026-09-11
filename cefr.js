@@ -336,12 +336,17 @@
    *
    * A band also has to be one the course teaches. This used to ask only
    * whether any lesson had landed in the band, and that let the two measures
-   * in this file contradict each other: coverage reported Spanish C1 as 0 of 3
-   * features taught, while attainment handed a perfect learner C1 anyway,
-   * because two lessons happened to contain a future perfect and a past
-   * si-clause. Two incidental sentences are not a C1 syllabus, and telling
-   * somebody they have reached C1 on that evidence is the exact overstatement
-   * this file exists to prevent. `taught` now asks coverage instead.
+   * in this file contradict each other: a band with almost none of its
+   * features taught was handed to a perfect learner anyway, because a couple
+   * of lessons happened to carry one stray advanced structure. Two incidental
+   * sentences are not a syllabus, and telling somebody they have reached a
+   * band on that evidence is the exact overstatement this file exists to
+   * prevent. `taught` now asks coverage instead.
+   *
+   * The bands that exposed this were C1 and C2, which have since been dropped
+   * from the scale for the same reason -- see data/cefr.js. The rule stays:
+   * it is what keeps a thinly taught band from being awarded if the corpus
+   * ever drifts that way again.
    */
   function attainment(lessons, direction, scoreOf, options) {
     const opts = options || {};
@@ -351,8 +356,8 @@
     const floor = typeof opts.floor === "number" ? opts.floor : 5;
 
     const covered = coverageFor(lessons, direction, floor);
-    /* Most of a band's features, not one of them: English C1 would otherwise
-       count as taught on the strength of cleft sentences alone. */
+    /* Most of a band's features, not one of them: a band would otherwise count
+       as taught on the strength of a single loose probe. */
     const teaches = (band) => {
       const group = covered.bands[band];
       return Boolean(group) && group.total > 0 && group.met * 2 >= group.total;
@@ -373,10 +378,12 @@
       const group = byBand[band];
       const scored = group.map((lesson) => scoreOf(lesson)).filter((n) => typeof n === "number");
       const strong = scored.filter((n) => n >= pass).length;
-      /* The minimum cannot exceed what the course actually offers. C1 is two
-         lessons long, and requiring three of them made the band unreachable
-         with a perfect score — a threshold nobody could ever cross, which is
-         the same defect as a guard that can never fire. */
+      /* The minimum cannot exceed what the course actually offers. A band that
+         holds two lessons while the minimum asks for three is unreachable even
+         with a perfect score -- a threshold nobody could ever cross, which is
+         the same defect as a guard that can never fire. The band that first
+         exposed this is gone, but small bands are not: Spanish A1 holds two
+         lessons. */
       const needed = Math.max(Math.min(minimum, group.length), Math.ceil(group.length * share));
       /* A band nobody can reach because the course does not teach it is not
          a failure by the learner, and must not be reported as one. */

@@ -28,8 +28,19 @@
  * must not read as an imperfect subjunctive, "todavía" is not an imperfect,
  * and "la policía" is not a verb at all.
  *
- * The bands run A1 to C2 in the order below, and that order is the only thing
+ * The bands run A1 to B2 in the order below, and that order is the only thing
  * that decides which of two detected features is "higher".
+ *
+ * The scale stops at B2 because the course does. C1 and C2 probes used to sit
+ * at the end of both lists, and measuring them is what proved they did not
+ * belong: coverage reported 0 of 3 C1 features taught in Spanish, 1 of 3 in
+ * English, and 0 of 1 at C2 in both directions. What they did produce was
+ * eight lessons labeled above the level they actually teach, each on a single
+ * stray match -- the English cleft probe alone pulled six otherwise-B1
+ * lessons up to C1. A band nothing teaches cannot be earned, so all it can do
+ * is overstate a lesson and hang two permanently empty rungs off the end of
+ * the level ladder. If the course is ever written up to C1, add the probes
+ * back behind the lessons that teach them, not ahead of them.
  *
  * One asymmetry is deliberate. A feature's `name` is written in the language
  * of the person reading it, not the language it describes: the `es` features
@@ -38,7 +49,7 @@
  * reason in reverse. Naming both halves in both languages would mean writing
  * strings nobody is ever shown.
  */
-const CEFR_BANDS = ["A1", "A2", "B1", "B2", "C1", "C2"];
+const CEFR_BANDS = ["A1", "A2", "B1", "B2"];
 
 /*
  * Fragments that more than one probe needs.
@@ -614,42 +625,6 @@ const CEFR_FEATURES = {
       probe: "\\b(en|con|de|a|por|para|sobre|desde)\\s+(el|la|los|las)\\s+(que|cual|cuales)\\b|\\b(con|a|de|para|por|sobre)\\s+(quien|quienes)\\b|\\bcuy[oa]s?\\b",
       yes: ["La casa en la que vivo es vieja.", "El señor con quien hablé.", "El vecino cuyo perro ladra."],
       no: ["El que quiera, que venga.", "Con el tiempo se aprende."]
-    },
-
-    /* ---------------- C1: the shapes an argument needs -------------------- */
-    {
-      id: "es-future-perfect",
-      band: "C1",
-      name: "Saying what will have happened",
-      probe: "\\b(habr[ée]|habr[áa]s|habr[áa]|habremos|habr[áa]n)\\s+{ES_PART}\\b",
-      yes: ["Para junio habré terminado.", "Ya habrán salido."],
-      no: ["Habría terminado.", "He terminado."]
-    },
-    {
-      id: "es-si-clause-past",
-      band: "C1",
-      name: "Regretting something that cannot be changed",
-      probe: "\\bsi\\s+(hubiera|hubiese)\\w*\\s+{ES_PART}\\b",
-      yes: ["Si hubiera sabido, no habría venido.", "Si hubiese estudiado más..."],
-      no: ["Si tuviera tiempo, iría.", "Si puedo, voy."]
-    },
-    {
-      id: "es-formal-connector",
-      band: "C1",
-      name: "Formal and academic linking",
-      probe: "\\b(en cuanto a|cabe (se[ñn]alar|destacar|mencionar)|dado que|siempre y cuando|con tal de que|a medida que|por consiguiente|en la medida en que|habida cuenta)\\b",
-      yes: ["En cuanto a los costos, son altos.", "Dado que no hay tiempo, seguimos."],
-      no: ["Por lo tanto, seguimos.", "Sin embargo, no."]
-    },
-
-    /* ---------------- C2: the register a course like this does not reach -- */
-    {
-      id: "es-literary-register",
-      band: "C2",
-      name: "Literary and highly formal register",
-      probe: "\\b(huelga decir|a la saz[óo]n|otrora|am[ée]n de|so pena de|por cuanto|ende|menester)\\b",
-      yes: ["Huelga decir que fue un error.", "Otrora fue una ciudad rica."],
-      no: ["Es decir, no vino.", "Además de eso."]
     }
   ],
 
@@ -1158,42 +1133,6 @@ const CEFR_FEATURES = {
       probe: "\\b(was|were|been|be)\\s+{EN_PART}\\s+by\\b|\\b(was|were)\\s+(delayed|canceled|built|founded|stolen|arrested|fined|towed|charged|denied|approved|rejected|delivered|installed|repaired|replaced|invited|hired|fired|promoted|elected|published|released|discovered|introduced)\\b",
       yes: ["The subway was delayed.", "The car was towed by the city.", "It was built in 1920."],
       no: ["I was tired.", "She was worried."]
-    },
-
-    /* ---------------- C1 -------------------------------------------------- */
-    {
-      id: "en-inversion",
-      band: "C1",
-      name: "Inversión para dar énfasis",
-      probe: "\\b(never before|not only|rarely|seldom|hardly|no sooner|little did|under no circumstances)\\s+(had|did|have|has|was|were|do|does|is|are)\\b",
-      yes: ["Never before had I seen that.", "Not only did he refuse, he left."],
-      no: ["I had never seen that.", "He did not only refuse."]
-    },
-    {
-      id: "en-cleft",
-      band: "C1",
-      name: "Oraciones escindidas",
-      probe: "\\b(it was|it is|it's)\\s+\\w+[^.?!]*\\bthat\\b|\\bwhat\\s+\\w+\\s+(did|do|does|need|want)[^.?!]*\\bis\\b",
-      yes: ["It was the manager that signed it.", "What I need is more time."],
-      no: ["It is late.", "What do you need?"]
-    },
-    {
-      id: "en-formal-connector",
-      band: "C1",
-      name: "Conectores formales y académicos",
-      probe: "\\b(insofar as|notwithstanding|with regard to|in light of|provided that|albeit|thereby|hitherto|by virtue of)\\b",
-      yes: ["With regard to the costs, they are high.", "Provided that you agree, we proceed."],
-      no: ["About the costs.", "If you agree."]
-    },
-
-    /* ---------------- C2 -------------------------------------------------- */
-    {
-      id: "en-literary-register",
-      band: "C2",
-      name: "Registro literario y muy formal",
-      probe: "\\b(needless to say|be that as it may|inasmuch as|heretofore|whereupon|forthwith|to wit)\\b",
-      yes: ["Needless to say, it was a mistake.", "Be that as it may, we continue."],
-      no: ["That is to say, no.", "In fact, no."]
     }
   ]
 };

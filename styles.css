@@ -243,6 +243,9 @@ main, footer { max-width: var(--wrap); margin: auto; padding-inline: 1.5rem; }
 .module-hub span { color: var(--ink-soft); font-size: .86rem; line-height: 1.45; }
 .module-hub-go { color: var(--green-deep); font-size: .82rem; font-weight: 700; }
 .module-hub-go::after { content: " \2192"; }
+/* The path is the way in; the other four cards are places to go afterwards.
+   Giving it the full first row says which one to press without a label. */
+.module-hub-lead { grid-column: 1 / -1; border-color: var(--green); background: linear-gradient(120deg, var(--mist), var(--surface)); }
 
 .hero-preview {
   position: relative;
@@ -304,7 +307,7 @@ main, footer { max-width: var(--wrap); margin: auto; padding-inline: 1.5rem; }
   border-radius: var(--radius);
 }
 .progress-track { height: .55rem; background: var(--surface); border-radius: 1rem; overflow: hidden; }
-#progress-bar { height: 100%; width: 0; background: linear-gradient(90deg, var(--green), var(--lime)); transition: width .35s ease; }
+#progress-bar, #path-overall-bar { height: 100%; width: 0; background: linear-gradient(90deg, var(--green), var(--lime)); transition: width .35s ease; }
 
 /* ---------- Level (CEFR) ---------- */
 /* The band a lesson teaches, and the ladder of what the learner has shown. */
@@ -345,6 +348,75 @@ main, footer { max-width: var(--wrap); margin: auto; padding-inline: 1.5rem; }
   font-size: .78rem;
   color: var(--muted);
 }
+.lesson-badges { display: flex; flex-wrap: wrap; gap: .4rem; margin: 0 0 .35rem; }
+.lesson-badges .band-badge { margin: 0; }
+/* The stage the course teaches this at, as against the grammar the dialogue
+   happens to contain. Two claims, so two badges — see renderTeaches. */
+.band-badge-teaches { border-color: var(--green); color: var(--green-deep); font-weight: 600; }
+
+/* ---------- Path ---------- */
+/* The course as a route rather than a menu: four stages, each opening into its
+   modules, each module into its lessons. The whole syllabus has to stay
+   readable on a phone, so only the stage headings are open by default. */
+
+.path-section { margin-bottom: 3rem; }
+.path-resume {
+  display: flex; flex-wrap: wrap; gap: 1rem;
+  align-items: center; justify-content: space-between;
+  padding: 1.15rem 1.4rem; margin-bottom: 1.25rem;
+  background: linear-gradient(120deg, var(--mist), var(--surface));
+  border: 1px solid var(--green); border-radius: var(--radius);
+}
+.path-resume-copy { display: grid; gap: .2rem; }
+.path-resume-copy strong { font-size: 1.25rem; line-height: 1.2; }
+.path-resume-where { margin: 0; font-size: .85rem; color: var(--muted); }
+.path-note { margin: .2rem 0 0; font-size: .82rem; color: var(--muted); }
+
+.path-stages { display: grid; gap: 1.1rem; margin: 1.5rem 0 0; padding: 0; list-style: none; }
+.path-stage {
+  padding: 1.15rem 1.3rem;
+  background: var(--surface);
+  border: 1px solid var(--line); border-radius: var(--radius);
+}
+.path-stage-head { display: grid; grid-template-columns: 3rem 1fr auto; align-items: start; gap: .85rem; }
+.path-stage-band {
+  padding: .3rem 0; text-align: center;
+  font-weight: 700; font-size: 1rem; letter-spacing: .04em;
+  background: var(--mist); border-radius: .6rem;
+}
+.path-stage-copy { display: grid; gap: .15rem; }
+.path-stage-copy strong { font-size: 1.1rem; }
+.path-stage-copy p { margin: 0; font-size: .86rem; color: var(--muted); line-height: 1.45; }
+.path-stage-count { font-size: .82rem; color: var(--muted); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.path-stage-track { height: .35rem; margin: .85rem 0 .2rem; background: var(--mist); border-radius: 1rem; overflow: hidden; }
+.path-stage-track span { display: block; height: 100%; width: 0; background: linear-gradient(90deg, var(--green), var(--lime)); transition: width .35s ease; }
+.path-stage.is-complete .path-stage-band { background: var(--green); color: #fff; }
+
+.path-modules { display: grid; gap: .2rem; margin: .7rem 0 0; padding: 0; list-style: none; }
+.path-module > details > summary {
+  display: grid; grid-template-columns: 1rem 1fr auto;
+  align-items: center; gap: .65rem;
+  padding: .5rem .4rem; border-radius: .5rem;
+  font-size: .92rem; cursor: pointer;
+}
+.path-module > details > summary:hover { background: var(--mist); }
+.path-module-mark { width: .8rem; height: .8rem; border: 2px solid var(--line); border-radius: 50%; }
+.path-module.is-complete .path-module-mark { background: var(--green); border-color: var(--green); }
+.path-module-title { font-weight: 600; }
+.path-module-count { font-size: .8rem; color: var(--muted); font-variant-numeric: tabular-nums; }
+
+.path-lessons { display: grid; gap: .1rem; margin: .1rem 0 .55rem; padding: 0 0 0 1.65rem; list-style: none; }
+.path-lesson {
+  display: grid; grid-template-columns: .7rem 1fr; align-items: center; gap: .6rem;
+  width: 100%; padding: .4rem .5rem; text-align: left;
+  background: none; border: 0; border-radius: .45rem;
+  font: inherit; font-size: .87rem; color: inherit; cursor: pointer;
+}
+.path-lesson:hover { background: var(--mist); }
+.path-lesson-mark { width: .45rem; height: .45rem; background: var(--line); border-radius: 50%; }
+.path-lesson.is-done .path-lesson-mark { background: var(--green); }
+/* The single lesson to open next, so the eye finds it without reading the list. */
+.path-lesson.is-next { background: var(--mist); font-weight: 600; box-shadow: inset 2px 0 0 var(--green); }
 
 /* ---------- Lesson list ---------- */
 
