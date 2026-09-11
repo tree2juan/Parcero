@@ -105,6 +105,16 @@
     "workbook.section.answerKey": "Answer key",
     "workbook.section.vocabBank": "Words I want to remember",
     "workbook.section.checkpoint": "Checkpoint",
+    "workbook.section.exam": "Exam task",
+    "workbook.exam.lead": "This is the writing task your level is examined on. Do it under the clock, to the word count, before you read either answer below.",
+    "workbook.exam.minutes": "{count} minutes",
+    "workbook.exam.brief": "The task",
+    "workbook.exam.useThese": "Use at least two of these, from this module",
+    "workbook.exam.criteria": "What the examiner is actually marking",
+    "workbook.exam.yourTurn": "Your answer",
+    "workbook.exam.weak": "An answer that did not pass — and why",
+    "workbook.exam.strong": "An answer that did — and why",
+    "workbook.exam.checklist": "Before you hand it in",
     "workbook.checkpoint.lead": "Come back to this after you have worked through the module.",
     "workbook.checkpoint.notYet": "Not yet",
     "workbook.checkpoint.withSupport": "With support",
@@ -341,6 +351,88 @@
     );
   }
 
+  /*
+   * The exam task.
+   *
+   * Printed with the weak answer above the strong one, and both of them
+   * visible, because the comparison is the teaching. A learner who reads only
+   * a model answer concludes that good writing is a matter of better
+   * vocabulary; a learner who reads a nearly-correct answer that still failed
+   * learns what is actually being marked.
+   *
+   * The blank lines at the end are sized to the task, so the page the student
+   * writes on is the length the exam expects. Writing to a word count is a
+   * physical skill and it is not learnable from a number.
+   */
+  function examSection(book) {
+    const task = book.examTask;
+    if (!task) return "";
+
+    const meta = [
+      esc(task.exam),
+      esc(t("workbook.exam.minutes", { count: task.minutes })),
+      esc(task.words)
+    ].join(" · ");
+
+    const criteria = (task.criteria || [])
+      .map((line) => `<li>${esc(line)}</li>`)
+      .join("");
+
+    const useThese = (task.useThese || []).length
+      ? `<div class="wb-exam-bridge">
+          <h4>${esc(t("workbook.exam.useThese"))}</h4>
+          <ul class="wb-exam-phrases">${(task.useThese || [])
+            .map((phrase) => `<li lang="${lang()}">${esc(phrase)}</li>`)
+            .join("")}</ul>
+        </div>`
+      : "";
+
+    const answer = (entry, kind) => `<div class="wb-exam-answer wb-exam-${kind}">
+      <h4>${esc(t(`workbook.exam.${kind}`))}</h4>
+      <blockquote lang="${lang()}">${entry.text
+        .split("\n\n")
+        .map((para) => `<p>${esc(para)}</p>`)
+        .join("")}</blockquote>
+      <ul class="wb-exam-notes">${(entry.notes || [])
+        .map((note) => `<li>${esc(note)}</li>`)
+        .join("")}</ul>
+    </div>`;
+
+    const checklist = (task.checklist || [])
+      .map((line) => `<li><span class="wb-box" aria-hidden="true"></span> ${esc(line)}</li>`)
+      .join("");
+
+    /* The page a student writes on should be the length the exam expects, so
+       the ruled lines are sized from the task's own word count. Take the
+       highest number in the label — the top of a range, or the minimum when
+       there is only one — at roughly nine words to a 60-character line. */
+    const numbers = (String(task.words).match(/\d+/g) || []).map(Number);
+    const target = numbers.length ? Math.max.apply(null, numbers) : 60;
+    const lines = Array.from({ length: Math.min(24, Math.max(3, Math.ceil(target / 9))) })
+      .map(() => `<li>${writingLine(60)}</li>`)
+      .join("");
+
+    return `<section class="wb-section wb-break wb-exam">
+      <h3>${esc(t("workbook.section.exam"))}</h3>
+      <p class="wb-exam-meta">${meta}</p>
+      <p class="wb-exam-lead">${esc(t("workbook.exam.lead"))}</p>
+      <div class="wb-exam-brief"><h4>${esc(t("workbook.exam.brief"))}</h4><p>${esc(task.brief)}</p></div>
+      ${useThese}
+      <h4>${esc(t("workbook.exam.criteria"))}</h4>
+      <ul class="wb-exam-criteria">${criteria}</ul>
+      <div class="wb-exam-write">
+        <h4>${esc(t("workbook.exam.yourTurn"))}</h4>
+        <ul class="wb-bank">${lines}</ul>
+      </div>
+      <div class="wb-exam-compare">
+        ${answer(task.weak, "weak")}
+        ${answer(task.strong, "strong")}
+      </div>
+      <h4>${esc(t("workbook.exam.checklist"))}</h4>
+      <ul class="wb-exam-checklist">${checklist}</ul>
+    </section>`;
+  }
+
   function checkpointSection(book) {
     const scale = ["notYet", "withSupport", "independently"]
       .map((key) => `<th scope="col">${esc(t(`workbook.checkpoint.${key}`))}</th>`)
@@ -387,6 +479,7 @@
       ${book.units.map(unitBlock).join("")}
       ${glossarySection(book)}
       ${vocabBankSection()}
+      ${examSection(book)}
       ${checkpointSection(book)}
       ${answerKeySection(book)}
     </div>`;
@@ -397,7 +490,7 @@
   /*
    * The front matter. Printed once and kept at the front of the binder, which
    * is why it is a separate choice in the picker rather than five pages
-   * stapled to the front of all seventy-five modules.
+   * stapled to the front of all seventy-eight modules.
    */
 
   const GUIDE_ID = "__guide__";

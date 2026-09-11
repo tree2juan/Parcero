@@ -7,7 +7,7 @@
  * class the stylesheet never heard of would all leave those tests green and
  * hand somebody a broken page.
  *
- * So this file renders every workbook — all 75 modules in both directions —
+ * So this file renders every workbook — all 78 modules in both directions —
  * through the real renderer with the real translation table, and reads the
  * result. Then it checks the things a rendered string cannot show: that the
  * elements the script reaches for exist, that the classes it paints are
