@@ -29,7 +29,7 @@ lessons.push(
     es: {
       title: "Dar una vuelta por Getsemaní",
       situation:
-        "Estás en Cartagena con Lina después de cenar cerca de la Trinidad. La noche está buena, las calles están vivas, y tú quieres proponer caminar un rato sin que suene como una ruta turística ni como un plan de transporte.",
+        "You are in Cartagena with Lina after dinner near La Trinidad. The night feels good, the streets are alive, and you want to suggest walking for a while without making it sound like a tourist route or a transportation plan.",
       setting: {
         who: "Lina grew up in Cartagena and knows which streets stay lively without turning into a souvenir corridor. Sam is visiting but has already learned not to turn every outing into a checklist.",
         what: "A casual decision after dinner: stay seated, order another drink, or walk through Getsemaní and let the night stretch a little.",
@@ -681,7 +681,7 @@ lessons.push(
     es: {
       title: "Correr por el río Cali",
       situation:
-        "Vos quedaste con Julián para trotar temprano por el bulevar del río Cali. El plan empieza como ejercicio, pero entre el calor, la hora y una silla atravesada, la conversación muestra tres sentidos cotidianos de correr.",
+        "You arranged with Julián to jog early along the Cali River boulevard. The plan starts as exercise, but between the heat, the hour, and a chair in the way, the conversation shows three everyday meanings of correr.",
       setting: {
         who: "Julián runs before work whenever he can. Maya is trying to build the habit without pretending she has become an athlete overnight.",
         what: "A short morning run that turns into practical talk about pace, lateness and moving a chair out of the way.",
@@ -1333,7 +1333,7 @@ lessons.push(
     es: {
       title: "Nadar en un charco de los Llanos",
       situation:
-        "Usted va con una familia de Villavicencio a pasar el domingo en un charco de río. El agua se ve tranquila, pero todos hablan con respeto: nadar, meterse al agua, flotar y no confiarse son partes del mismo plan.",
+        "You go with a family from Villavicencio to spend Sunday at a river swimming hole. The water looks calm, but everyone speaks with respect: swimming, getting into the water, floating, and not getting overconfident are all part of the same plan.",
       setting: {
         who: "Don Álvaro knows the river and has brought cousins, food and a cooler. Priya swims well in pools but has never treated a river as the weekend destination.",
         what: "A family day at a natural swimming spot where the invitation to swim comes with warnings about current, depth and confidence.",

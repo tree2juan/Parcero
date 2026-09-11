@@ -7,6 +7,9 @@ const vm = require("node:vm");
 const root = path.join(__dirname, "..");
 const read = (file) => fs.readFileSync(path.join(root, file), "utf8");
 const { dataSource } = require("./data-source.js");
+/* The same judgment the lesson-prose check uses, so "this is Spanish" means
+   one thing in this repo and not two. */
+const { classify } = require("../scripts/prose-language.js");
 
 const bundle = [
   dataSource({ schema: false, flashcards: true }),
@@ -332,8 +335,7 @@ test("the language on each side of each card kind is what it was signed off as",
  * Closed-class Spanish only, and deliberately not diacritics: "Bogotá" and
  * "Medellín" are correctly spelled inside English sentences. Words that are
  * also ordinary English are left out on purpose -- con, no, son, lo, ya, a, o
- * and me would all fire on real English glosses. Verified against every string
- * the deck tags as English in both directions.
+ * and me would all fire on real English glosses.
  */
 const SPANISH_FUNCTION_WORDS = new Set([
   "el", "la", "los", "las", "un", "una", "unos", "unas", "del", "al",
@@ -344,6 +346,78 @@ const SPANISH_FUNCTION_WORDS = new Set([
   "pero", "porque", "cuando", "donde", "quiere", "quieres"
 ]);
 
+/* Enough closed-class English to tell prose from a bare Spanish fragment. */
+const ENGLISH_FUNCTION_WORDS = new Set([
+  "the", "and", "you", "that", "with", "for", "when", "this", "they", "your",
+  "is", "are", "of", "to", "but", "it", "in", "on", "at", "what", "which",
+  "would", "could", "should", "because", "about", "from", "than", "then",
+  "there", "here", "how", "why", "not", "do", "does", "did", "have", "has",
+  "had", "be", "been", "will", "can", "may", "who", "whose", "into", "out",
+  "up", "off", "over", "after", "before", "while", "its", "their", "them",
+  "these", "those", "a", "an", "i", "we", "he", "she", "my", "his", "her",
+  "say", "said", "says", "once", "already", "though", "almost", "never",
+  "so", "by", "if", "as"
+]);
+
+/*
+ * A quoted run is a citation, not the language of the sentence around it, and
+ * neither is a proper noun: "El Hueco", "Valle del Cauca" and "the MÍO" are
+ * place names an English sentence is entitled to use.
+ */
+const stripCitations = (text) => String(text)
+  .replace(/[“"][^”"]*[”"]/g, " ")
+  .replace(/[«][^»]*[»]/g, " ")
+  .replace(/[‘'][^’']{2,}[’']/g, " ")
+  .replace(/\b[A-ZÁÉÍÓÚÑ][\wáéíóúñü]*/g, " ");
+
+const wordsIn = (text) => String(text).toLowerCase().split(/[^a-záéíóúñü]+/).filter(Boolean);
+
+/*
+ * Is this English-labeled text actually Spanish?
+ *
+ * The first version asked a simpler question -- does any Spanish function word
+ * appear at all -- and that held while the only English in the deck was the
+ * eight hand-written lessons. It does not survive the scene lines, which are
+ * English prose *about* Spanish and so name it constantly: "she greets him
+ * with usted", "everything turns around vivir: vivir en, vivir de, vivir
+ * para". Those sentences are correct, and a zero-tolerance rule calls 73 of
+ * them wrong, which is how a guard gets switched off instead of fixed.
+ *
+ * Mentioning a language is not being written in it. So strip the citations and
+ * ask the house classifier -- the same judgment scripts/prose-language.js
+ * applies to lesson prose. Below its eight-word floor it answers "unknown" by
+ * design, and there the fallback is that a real English gloss carries at least
+ * one English function word, while a bare Spanish fragment carries none.
+ */
+function readsAsSpanish(text) {
+  const cleaned = stripCitations(text);
+  if (classify(cleaned) === "spanish") return true;
+  const words = wordsIn(cleaned);
+  if (!words.some((word) => SPANISH_FUNCTION_WORDS.has(word))) return false;
+  return !words.some((word) => ENGLISH_FUNCTION_WORDS.has(word));
+}
+
+/*
+ * The detector has to be able to fail, or the test below passes for the wrong
+ * reason. These are the two shapes the deck actually got wrong once -- a scene
+ * written in Spanish but tagged English, and a bare Spanish fragment sitting
+ * where the gloss belongs -- plus the two sentence shapes that made the old
+ * rule unusable and must not be flagged.
+ */
+test("the wrong-language detector still detects the wrong language", () => {
+  const spanishProse =
+    "Alex acaba de mudarse a un edificio en Medellín y llega a la reunión mensual de residentes. " +
+    "Todavía nadie lo conoce y tiene que decir quién es y en qué apartamento vive.";
+  assert.ok(readsAsSpanish(spanishProse), "a whole paragraph of Spanish was not detected");
+  assert.ok(readsAsSpanish("el tinto de la mañana"), "a bare Spanish fragment was not detected");
+  assert.ok(
+    !readsAsSpanish("She greets him with usted and asks whether he lives in the building."),
+    "an English sentence that names a Spanish word must not be flagged");
+  assert.ok(
+    !readsAsSpanish("In Colombia we say “entrar a”, not “entrar en”."),
+    "an English sentence quoting Spanish must not be flagged");
+});
+
 test("text the deck labels English is not actually Spanish", () => {
   const offenders = [];
   for (const direction of directions) {
@@ -351,15 +425,10 @@ test("text the deck labels English is not actually Spanish", () => {
       for (const card of set.cards) {
         for (const side of ["front", "back"]) {
           if (card[`${side}Lang`] !== "en") continue;
-          const spanish = String(card[side])
-            .toLowerCase()
-            .split(/[^a-záéíóúñü]+/)
-            .filter(Boolean)
-            .filter((word) => SPANISH_FUNCTION_WORDS.has(word));
-          if (!spanish.length) continue;
+          if (!readsAsSpanish(card[side])) continue;
           offenders.push(
-            `[${direction}] ${set.topicId} ${card.kind}.${side} is tagged lang="en" but reads as Spanish ` +
-            `(${spanish.join(", ")}): ${JSON.stringify(card[side])}`
+            `[${direction}] ${set.topicId} ${card.kind}.${side} is tagged lang="en" but reads as Spanish: ` +
+            JSON.stringify(card[side])
           );
         }
       }

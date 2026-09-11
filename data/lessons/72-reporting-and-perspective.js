@@ -37,7 +37,7 @@ lessons.push(
     es: {
       title: "Lo que dijo la profe",
       situation:
-        "Andrés y Marcela atienden la recepción de una academia de salsa en el barrio San Fernando, en Cali. La profe Yolanda no va a llegar y toca reorganizar las clases del día. Entre alumnos que preguntan y razones que dejar, los dos se ponen al día repitiendo lo que dijo cada quien: quién no viene, qué pidió y qué hay que avisar.",
+        "Andrés and Marcela work the front desk at a salsa academy in the San Fernando neighborhood of Cali. Profe Yolanda is not going to make it, and the classes for the day have to be reorganized. Between students asking questions and reasons to leave behind, the two catch each other up by repeating what each person said: who is not coming, what they asked for, and what has to be announced.",
       setting: {
         who: "Andrés and Marcela run the front desk of a salsa academy in Cali; Yolanda is the instructor whose message they are passing around.",
         what: "The instructor has called in sick, so the two of them reorganise the day's classes by relaying what everyone said, asked and requested.",
@@ -657,7 +657,7 @@ lessons.push(
     es: {
       title: "Si tuviéramos la lancha",
       situation:
-        "Yeison y Marta crecieron en Buenaventura, frente al Pacífico. Sentados en un mirador sobre la bahía, con el puerto lleno de barcos a un lado y la lluvia amenazando al otro, sueñan con montar paseos en lancha a Juanchaco para la temporada de ballenas. Todo el rato hablan en condicional: lo que harían si tuvieran plata, si no lloviera tanto, si de verdad se decidieran.",
+        "Yeison and Marta grew up in Buenaventura, facing the Pacific. Sitting at a lookout over the bay, with the port full of ships on one side and rain threatening on the other, they dream about running boat trips to Juanchaco for whale season. The whole time they speak in the conditional: what they would do if they had money, if it did not rain so much, if they really decided to go for it.",
       setting: {
         who: "Yeison and Marta are childhood friends from Buenaventura, both weighing whether to start a small boat-tour business.",
         what: "Over a view of the bay they daydream out loud, trading everything they would do if the money, the weather and the paperwork all lined up.",
@@ -1277,7 +1277,7 @@ lessons.push(
     es: {
       title: "Lo que se hizo en Quibdó",
       situation:
-        "Nilson nunca se ha ido de Quibdó; Yeimy volvió después de años en Estados Unidos. Se encuentran cerca del río Atrato y se ponen al día sobre las obras: la vía que por fin arreglaron, el puente nuevo, las casas del barrio. Todo el rato hablan en pasiva y en impersonal: lo que se anuncia, lo que fue construido, lo que uno ve y lo que no.",
+        "Nilson has never left Quibdó; Yeimy has come back after years in the United States. They meet near the Atrato River and catch up on the public works: the road they finally fixed, the new bridge, the neighborhood houses. The whole time they speak in the passive and the impersonal: what is announced, what was built, what one sees and what one does not.",
       setting: {
         who: "Nilson has never left Quibdó; Yeimy has just come back after years in the United States. They're old friends catching up.",
         what: "They trade news about local public works — a road, a new bridge, the neighborhood's wooden houses — and who did or didn't do them.",

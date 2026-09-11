@@ -29,7 +29,7 @@ lessons.push(
     es: {
       title: "Crear una marca pequeña en Neiva",
       situation:
-        "Estás en Neiva ayudando a una amiga que vende libretas hechas a mano. Quiere dejar de venderlas como favor familiar y crear una marca propia para una feria de emprendimientos.",
+        "You are in Neiva helping a friend who sells handmade notebooks. She wants to stop selling them as a family favor and create her own brand for an entrepreneurship fair.",
       setting: {
         who: "Paola makes handmade notebooks and wants the project to look less improvised. Morgan is helping her turn a family favor into something that can face customers at a small fair.",
         what: "A practical planning conversation about creating a name, a short story for the brand and a first catalogue without pretending the business already exists at a large scale.",
@@ -593,7 +593,7 @@ lessons.push(
     es: {
       title: "Construir una huerta elevada en Tunja",
       situation:
-        "Estás en Tunja con un grupo de vecinos que quiere una huerta elevada para que el frío y los perros no dañen las matas. Tienes que hablar de construirla bien, no sólo poner tablas al azar.",
+        "You are in Tunja with a group of neighbors who want a raised garden bed so the cold and the dogs do not damage the plants. You have to talk about building it well, not just putting boards down at random.",
       setting: {
         who: "Rosa coordinates the neighbors' courtyard project. Eli has built small things before and is helping turn loose boards into a raised bed that will survive weather and daily use.",
         what: "A hands-on planning conversation about building a raised garden bed: measurements, supports, who builds what, and why the structure matters.",
@@ -1157,7 +1157,7 @@ lessons.push(
     es: {
       title: "Reportar un vidrio roto en Quibdó",
       situation:
-        "Estás hospedado en Quibdó durante un aguacero fuerte. Se cae una ventana pequeña, se rompe un vidrio y además el ventilador deja de funcionar. Necesitas reportar el daño sin sonar culpable ni impreciso.",
+        "You are staying in Quibdó during a heavy downpour. A small window falls, a pane breaks, and the fan also stops working. You need to report the damage without sounding guilty or imprecise.",
       setting: {
         who: "Nora manages a small guesthouse and knows the rain can turn minor defects into urgent repairs. Alex is a guest who needs to report exactly what happened before leaving for the day.",
         what: "A careful front-desk conversation distinguishing a smashed pane from an appliance that simply stopped working.",

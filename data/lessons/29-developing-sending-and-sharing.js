@@ -27,7 +27,7 @@ lessons.push(
     es: {
       title: "Enviar un sobre desde Pereira",
       situation:
-        "Estás en una oficina de Servientrega en Pereira y necesitas enviar unos documentos a Cúcuta antes del viernes. Ya hablas bastante español para no limitarte a frases sueltas: tienes que preguntar por el tiempo, el costo, el comprobante y la diferencia entre decir enviar y mandar.",
+        "You are at a Servientrega office in Pereira and need to send some documents to Cúcuta before Friday. You already speak enough Spanish not to limit yourself to loose phrases: you have to ask about the time, the cost, the tracking receipt, and the difference between saying enviar and mandar.",
       setting: {
         who: "Laura works the Servientrega counter and has already handled three impatient customers this morning. Sam is sending legal papers to a relative in Cúcuta and cannot afford a vague promise.",
         what: "A counter exchange about sending an envelope with tracking, delivery time and a receipt.",
@@ -645,7 +645,7 @@ lessons.push(
     es: {
       title: "Recibir en Cúcuta sin enredarte",
       situation:
-        "Llegas a Cúcuta para visitar a una amiga y ella te espera con varias cosas a la vez: recibirte en el terminal, recibir un paquete que viene de Pereira y confirmar si en una cafetería reciben tarjeta. Como ya no estás empezando, tienes que oír cómo un solo verbo se mueve entre personas, objetos, pagos y hasta graduaciones.",
+        "You arrive in Cúcuta to visit a friend, and she is waiting for you with several things at once: meeting you at the terminal, receiving a package coming from Pereira, and confirming whether a café accepts cards. Since you are no longer just starting out, you have to hear how one verb moves among people, objects, payments, and even graduations.",
       setting: {
         who: "Valeria lives in Cúcuta and speaks to Sam as a close friend. Sam has arrived tired from the bus and is trying to keep track of people, packages and payment.",
         what: "A practical conversation about being met at the terminal, picking up a package and asking whether a café accepts cards.",
@@ -1263,7 +1263,7 @@ lessons.push(
     es: {
       title: "Compartir en un colegio de Cali",
       situation:
-        "Estás ayudando en un colegio de Cali donde el equipo organiza un pequeño compartir después de una reunión. La conversación mezcla comida, un enlace para las fotos y el trato de vos. Como ya estás en nivel Developing, no basta con traducir share: tienes que notar cuándo compartir es social, digital y hasta un sustantivo.",
+        "You are helping at a school in Cali where the team is organizing a small compartir after a meeting. The conversation mixes food, a link for the photos, and vos. Since you are already at the Developing level, translating share is not enough: you have to notice when compartir is social, digital, and even a noun.",
       setting: {
         who: "Mariana coordinates the school office and uses Cali vos with Diego, a volunteer who has helped often enough to be treated like part of the team.",
         what: "A quick plan for a small gathering with food, plus a link and photos to share afterward.",

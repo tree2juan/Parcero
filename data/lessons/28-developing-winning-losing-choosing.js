@@ -30,7 +30,7 @@ lessons.push(
     es: {
       title: "Ganar sin agrandarse en Cali",
       situation:
-        "Estás en una tertulia de fútbol en Cali después de una final local. Tu equipo ganó, pero también hablas de lo que se gana trabajando y de ganarse el respeto sin sonar creído.",
+        "You are at a soccer tertulia in Cali after a local final. Your team won, but you also talk about what people earn by working and about earning respect without sounding full of yourself.",
       setting: {
         who: "Paula supports América de Cali, Mateo supports Deportivo Cali, and both are adult friends who know how to tease without ruining the night.",
         what: "They discuss a close final, prize money, a coach's reputation, and a student's school year in one quick street conversation.",
@@ -172,7 +172,7 @@ lessons.push(
     es: {
       title: "Perder el bus en Bucaramanga",
       situation:
-        "Estás con una prima en Bucaramanga antes de una cita médica. Se te perdió la cédula, perdiste el bus y ahora tienes que explicar el enredo sin sonar como si todo fuera culpa de otros.",
+        "You are with a cousin in Bucaramanga before a medical appointment. Your ID card has gone missing, you missed the bus, and now you have to explain the mess without making it sound as if everything were someone else’s fault.",
       setting: {
         who: "Laura is visiting her cousin Natalia, who knows the city and is trying to help without scolding her.",
         what: "They are late for a medical appointment because an ID card is missing and the bus has already gone.",
@@ -326,7 +326,7 @@ lessons.push(
     es: {
       title: "Elegir candidato en Pereira",
       situation:
-        "Estás en Pereira antes de una elección local. En una reunión barrial, comparas candidatos y aprendes cuándo decir elegir, cuándo escoger suena más natural y por qué votar no es lo mismo que elegir.",
+        "You are in Pereira before a local election. At a neighborhood meeting, you compare candidates and learn when to say elegir, when escoger sounds more natural, and why voting is not the same as choosing.",
       setting: {
         who: "Camila volunteers at a neighborhood forum, and Don Álvaro is a resident who asks sharp but fair questions.",
         what: "They discuss how people choose a candidate, how the community elects representatives, and why escoger is often the everyday verb.",

@@ -31,7 +31,7 @@ lessons.push(
     es: {
       title: "Preguntar dónde nació la abuela",
       situation:
-        "Estás en Neiva, en el cumpleaños de la abuela de una familia amiga. Alguien saca fotos antiguas y un árbol familiar, y tú quieres preguntar con cuidado dónde nació ella, dónde nacieron sus hijos y cómo se cuenta esa historia sin sonar como un formulario.",
+        "You are in Neiva at the birthday of the grandmother of a friend. Someone brings out old photos and a family tree, and you want to ask carefully where she was born, where her children were born, and how that story is told without sounding like a form.",
       setting: {
         who: "Doña Elvira is turning eighty and enjoying the rare chance to correct everyone else's version of the family story. Maya is a foreign family friend who has been invited to help label old photos.",
         what: "A birthday afternoon that turns into a family-history session, with names, towns, dates, and a grandmother who remembers more than the labels do.",
@@ -695,7 +695,7 @@ lessons.push(
     es: {
       title: "Acompañar a una amiga en el novenario",
       situation:
-        "Estás en Mompox, en el novenario del papá de una amiga. No vienes a explicar nada ni a llenar el silencio; vienes a saludar, escuchar y decir una frase sencilla de pésame sin convertir el dolor de la familia en una escena.",
+        "You are in Mompox at the novenario for the father of a friend. You are not there to explain anything or fill the silence; you are there to greet people, listen, and say a simple condolence without turning the grief of the family into a scene.",
       setting: {
         who: "Laura has lost her father after an illness, and Andrés is a close friend who wants to be present without taking over the moment.",
         what: "A short condolence exchange before the prayers begin, with chairs in the living room and neighbors arriving quietly.",
@@ -1347,7 +1347,7 @@ lessons.push(
     es: {
       title: "Decir que el hambre te mata",
       situation:
-        "Estás en Popayán ayudando a ordenar fotos para una reunión familiar. Nadie está hablando de violencia: todos están cansados, con hambre y riéndose. Tienes que entender por qué matar aparece todo el tiempo como exageración cotidiana.",
+        "You are in Popayán helping organize photos for a family gathering. Nobody is talking about violence: everyone is tired, hungry, and laughing. You have to understand why matar keeps appearing as everyday exaggeration.",
       setting: {
         who: "Camilo and Jo are friends sorting family photos before relatives arrive. They are hungry, behind schedule, and using big words for small discomforts.",
         what: "A messy table, photo envelopes, labels, and a search for lunch before hunger ruins everyone's patience.",

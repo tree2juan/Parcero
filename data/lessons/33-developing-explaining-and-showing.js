@@ -27,7 +27,7 @@ lessons.push(
     es: {
       title: "Explicar el desvío en Neiva",
       situation:
-        "Estás en Neiva con una compañera que no entiende por qué la ruta cambió cerca del malecón. Tú sí hablaste con el conductor y tienes que explicarle el desvío, repetir lo esencial sin sonar impaciente y luego contar que ya se lo explicaste a otra persona.",
+        "You are in Neiva with a coworker who does not understand why the route changed near the malecón. You did talk with the driver, so you have to explain the detour, repeat the essential point without sounding impatient, and then say that you already explained it to someone else.",
       setting: {
         who: "Camila is a Colombian coworker who knows Neiva better than Alex but missed the driver's announcement. Alex understood enough of the route change to help, but needs to make the explanation clear.",
         what: "A short but layered explanation of a detour, the stop they need, and who has already been told.",
@@ -645,7 +645,7 @@ lessons.push(
     es: {
       title: "Mostrar una mochila en Pasto",
       situation:
-        "Estás en una tienda pequeña de Pasto buscando una mochila resistente. La vendedora te muestra varios modelos, tú le pides que te muestre los bolsillos y ella reconoce algo importante: en Colombia mucha gente diría enseñar en esta misma escena, pero mostrar sigue siendo el verbo exacto para poner algo ante tus ojos.",
+        "You are in a small shop in Pasto looking for a sturdy backpack. The seller shows you several models, you ask her to show you the pockets, and she points out something important: in Colombia many people would say enseñar in this same scene, but mostrar is still the exact verb for putting something before your eyes.",
       setting: {
         who: "Marisol runs a small outdoor-gear shop and knows which customers want to browse and which ones need details. Jordan is choosing a backpack for a trip and wants to see pockets, straps and seams before paying.",
         what: "A shop exchange where the seller shows products physically and the customer asks to see specific features.",
@@ -1263,7 +1263,7 @@ lessons.push(
     es: {
       title: "Describir una pieza en Leticia",
       situation:
-        "Estás en Leticia tratando de comprar una pieza cuyo nombre no sabes. En vez de quedarte bloqueado, describes la cosa por su forma, su función y una comparación: una cosa para ajustar una manguera, como una abrazadera pequeña. La lección te da lenguaje para sobrevivir cuando no tienes el sustantivo exacto.",
+        "In Leticia, you are trying to buy a part whose name you do not know. Instead of freezing, you describe the thing by its shape, its function, and a comparison: something for tightening a hose, like a small clamp. The lesson gives you language for getting by when you do not have the exact noun.",
       setting: {
         who: "Rosa works in a small hardware shop and is used to customers arriving with half a description instead of the exact word. Alex needs a small part for a hose but does not know its name.",
         what: "A repair-shop exchange where the customer describes an unknown object by use, shape and comparison until the seller recognizes it.",

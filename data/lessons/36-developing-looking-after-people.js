@@ -31,7 +31,7 @@ lessons.push(
     es: {
       title: "Cuidar a una sobrina en Neiva",
       situation:
-        "Estás en Neiva cuidando a tu sobrina mientras tu hermana trabaja de noche. También cuidas la casa, das una advertencia con cuidado y cierras la llamada con un cuídate que suena natural entre familia.",
+        "You are in Neiva taking care of your niece while your sister works overnight. You also look after the house, give a warning with care, and end the call with a cuídate that sounds natural among family.",
       setting: {
         who: "Mariana is leaving for a night shift, and her brother Andrés is staying with her seven-year-old daughter, Lucía.",
         what: "They agree on bedtime, the locked gate, medicine, snacks, and the words that turn care into a normal family handoff.",
@@ -683,7 +683,7 @@ lessons.push(
     es: {
       title: "Proteger a los vecinos en Quibdó",
       situation:
-        "Estás en Quibdó durante un aguacero fuerte y organizas con vecinos cómo proteger a niños y adultos mayores sin crear pánico. También practicas protejo y proteja, donde la g cambia a j.",
+        "You are in Quibdó during a heavy downpour and organize with neighbors how to protect children and older adults without creating panic. You also practice protejo and proteja, where the g changes to j.",
       setting: {
         who: "Diana coordinates a neighborhood response, and Óscar helps move children and older neighbors away from a flooded corner.",
         what: "They decide who watches the doorway, who walks with the children, and how to speak about protection without sounding theatrical.",
@@ -1335,7 +1335,7 @@ lessons.push(
     es: {
       title: "Apoyar a una amiga en Pasto",
       situation:
-        "Estás en Pasto con una amiga que va a denunciar un problema en la junta del barrio. Quieres apoyarla sin prometer pagarle los gastos, y también distingues el apoyo moral del apoyo físico de una pared o una mesa.",
+        "You are in Pasto with a friend who is going to report a problem at the neighborhood board meeting. You want to support her without promising to pay her expenses, and you also distinguish moral support from the physical support of a wall or a table.",
       setting: {
         who: "Sofía is nervous before speaking at a neighborhood meeting, and Julián is a close friend who knows the story.",
         what: "They talk through moral support, public backing, expenses, and the literal meaning of leaning something against a wall.",

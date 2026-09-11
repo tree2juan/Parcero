@@ -37,7 +37,7 @@ lessons.push(
     es: {
       title: "Se me fue la lancha por quedarme dormido",
       situation:
-        "Alex está de mochilero en Santa Marta y anoche trasnochó en la playa con Wílmer, un amigo costeño. La idea era madrugar para coger la lancha al Parque Tayrona, pero Alex se quedó dormido y no oyó la alarma. Wílmer lo molesta mientras Alex, medio dormido, cuenta cómo se le fue la mañana.",
+        "Alex is backpacking in Santa Marta, and last night he stayed out late on the beach with Wílmer, a coastal friend. The plan was to wake up early to catch the boat to Parque Tayrona, but Alex overslept and did not hear the alarm. Wílmer teases him while Alex, half asleep, explains how the morning got away from him.",
       setting: {
         who: "Wílmer is a laid-back samario who knows every boatman on the beach. Alex is a backpacker who wanted to see Tayrona but reckoned without a Caribbean night out.",
         what: "A morning-after debrief: Alex has missed the early boat because he overslept, and the two of them work out what to do with the day instead.",
@@ -689,7 +689,7 @@ lessons.push(
     es: {
       title: "Una tarde de tejo en Santander",
       situation:
-        "Fabián, un amigo santandereano, lleva a Alex a una cancha de tejo a las afueras de Bucaramanga. Alex nunca ha jugado y confunde jugar con tocar cuando habla de música. Entre lanzamientos, pólvora y cervezas, Fabián le explica cómo se juega, qué es jugar limpio y por qué el que pierde paga las polas.",
+        "Fabián, a santandereano friend, takes Alex to a tejo court outside Bucaramanga. Alex has never played and mixes up jugar with tocar when talking about music. Between throws, gunpowder, and beers, Fabián explains how the game is played, what jugar limpio means, and why the loser pays for the polas.",
       setting: {
         who: "Fabián is a santandereano who grew up throwing tejo on weekends. Alex has never played and barely knows the game involves gunpowder.",
         what: "A first go at tejo: learning the rules, the vocabulary of play, and the tradition that the loser buys the beer.",
@@ -1341,7 +1341,7 @@ lessons.push(
     es: {
       title: "Pidiendo el favor en el Eje Cafetero",
       situation:
-        "En Pereira, Alex necesita llegar a un pueblo cafetero y le pide ayuda a Mateo, un local. Aprende que en Colombia “colaborar” y “regalar” son verbos de cortesía para pedir un favor, y que “ayudar” quiere una “a” antes del infinitivo. Cuando una señora se acerca a pedir “una ayudita”, descubre que la misma palabra puede significar plata.",
+        "In Pereira, Alex needs to get to a coffee town and asks Mateo, a local, for help. He learns that in Colombia “colaborar” and “regalar” are courtesy verbs for asking a favor, and that “ayudar” takes an “a” before the infinitive. When a woman comes over to ask for “una ayudita”, he discovers that the same word can mean money.",
       setting: {
         who: "Mateo is a friendly pereirano who is happy to point a lost traveler the right way. Alex is trying to reach a coffee town and does not yet know the local politeness verbs.",
         what: "Asking for directions, and learning that colaborar and regalar are courtesy verbs — plus how to tell a genuine request for help from a request for money.",

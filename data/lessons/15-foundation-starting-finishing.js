@@ -31,7 +31,7 @@ lessons.push(
     es: {
       title: "Empezar la clase de salsa en Cali",
       situation:
-        "Alex llega a su primera clase de salsa en una academia de Cali. La profe, Marcela, lo recibe, le pregunta si ya ha bailado antes y arrancan con el paso básico. Todo se juega en si Alex se anima a empezar y a soltar el cuerpo.",
+        "Alex arrives for his first salsa class at an academy in Cali. The teacher, Marcela, welcomes him, asks whether he has danced before, and they start with the basic step. Everything depends on whether Alex dares to begin and loosen up his body.",
       setting: {
         who: "Marcela has taught salsa in Cali for fifteen years and can spot a nervous beginner from across the room. Alex is a foreigner with two left feet who has always wanted to dance but never dared to start.",
         what: "A first salsa lesson: sizing up the student, agreeing where to begin, and getting the basic step going.",
@@ -683,7 +683,7 @@ lessons.push(
     es: {
       title: "Terminar el corte en la barbería",
       situation:
-        "Alex está en una barbería de Medellín rematando su corte de pelo. Mientras el barbero, Andrés, termina de perfilarle la barba, cae la típica charla paisa: que si ya casi acaba, que si el hermano terminó con la novia, que si vuelve la otra semana.",
+        "Alex is in a Medellín barbershop finishing up his haircut. While the barber, Andrés, finishes shaping his beard, the usual paisa chatter drops in: whether he is almost done, whether his brother broke up with his girlfriend, whether Alex is coming back next week.",
       setting: {
         who: "Andrés cuts hair in a small barbershop in Envigado and keeps up a steady, funny patter while he works. Alex is a regular now, comfortable enough to joke back, still catching the fast paisa slang.",
         what: "The last few minutes of a haircut: finishing the beard line-up, settling the bill, and planning the next visit.",
@@ -1335,7 +1335,7 @@ lessons.push(
     es: {
       title: "Entrar el primer día a la oficina",
       situation:
-        "Es el primer día de Alex en un nuevo trabajo en Bogotá. En la recepción, Marta, de talento humano, lo hace seguir, le explica a qué hora entra, cómo marcar el ingreso y por dónde se entra al edificio. Alex, nervioso, pide que le repitan lo que no le entra del todo.",
+        "It is Alex’s first day at a new job in Bogotá. At reception, Marta from HR shows him in, explains what time he starts, how to clock in and which way to enter the building. Nervous, Alex asks her to repeat what does not quite sink in.",
       setting: {
         who: "Marta works in HR and has walked dozens of new hires through their first morning. Alex is starting his first office job in Colombia and is anxious about doing everything right.",
         what: "A first-day onboarding: being shown in, learning the start time, the sign-in, and where to go.",

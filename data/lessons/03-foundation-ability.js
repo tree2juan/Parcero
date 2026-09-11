@@ -29,7 +29,7 @@ lessons.push(
     es: {
       title: "Pedirle una mano al portero",
       situation:
-        "Alex acaba de mudarse a un apartamento en Bogotá y no logra conectar la pipeta del gas para cocinar. Baja a la portería a pedirle ayuda a Don Jairo, el portero, que lleva años en el edificio. Tiene que pedir el favor con cortesía, explicar qué no puede hacer y agradecer — todo en un par de minutos, sin sonar mandón.",
+        "Alex has just moved into an apartment in Bogotá and cannot manage to connect the gas cylinder for cooking. He goes down to the portería to ask Don Jairo, the portero who has worked in the building for years, for help. He has to ask politely, explain what he cannot do, and say thanks — all in a couple of minutes, without sounding bossy.",
       setting: {
         who: "Don Jairo has been the daytime portero for eleven years and knows every pipe and valve in the building. Alex moved in four days ago and has barely unpacked.",
         what: "A quick request for help connecting the gas cylinder, made at the porter's desk on the way past.",
@@ -681,7 +681,7 @@ lessons.push(
     es: {
       title: "Pasar el chisme del corte de agua",
       situation:
-        "Alex está en el pasillo de su edificio en Cali cuando Marcela, una vecina, le cuenta un rumor: dizque van a cortar el agua mañana. Alex tiene que entender de dónde viene la noticia, sacar la conclusión práctica y ofrecer avisarles a otros vecinos — todo relatando lo que unos y otros dijeron.",
+        "Alex is in the hallway of his building in Cali when Marcela, a neighbor, tells him a rumor: supposedly they are going to cut the water tomorrow. Alex has to understand where the news comes from, draw the practical conclusion, and offer to warn other neighbors — all while reporting what different people said.",
       setting: {
         who: "Marcela has lived on Alex's floor for six years and hears everything first. Alex is still new and depends on neighbors like her to know what is going on.",
         what: "A quick corridor exchange in which Marcela passes on a rumor about the water being cut, and Alex works out what to do about it.",
@@ -1333,7 +1333,7 @@ lessons.push(
     es: {
       title: "Un sancocho paisa el sábado",
       situation:
-        "Alex lleva unas semanas en Medellín y su amigo Memo lo invita a un sancocho el sábado en la casa de la familia. Entre el ¡venga! paisa, el voseo y la pregunta de qué llevar, Alex tiene que aceptar, entender a qué hora caer y no confundir venir con ir cuando hable de moverse hacia la casa de Memo.",
+        "Alex has been in Medellín for a few weeks, and his friend Memo invites him to a sancocho on Saturday at the house of his family. Between the paisa ¡venga!, the voseo, and the question of what to bring, Alex has to accept, understand what time to show up, and not confuse coming with going when he talks about moving toward the house where Memo lives.",
       setting: {
         who: "Memo is a paisa friend Alex met through work — warm, funny, and quick to invite. Alex is the newcomer, still tuning his ear to the Medellín accent and the voseo.",
         what: "A quick, happy invitation to a Saturday sancocho, the all-afternoon pot stew that anchors a paisa weekend.",

@@ -27,7 +27,7 @@ lessons.push(
     review: "pending",
     es: {
       title: "Conocer a la amiga de un amigo",
-      situation: "Es viernes por la noche en una terraza de Chapinero, en Bogotá. Alex llegó con Santi, un amigo del intercambio, y Santi lo presenta con Laura, una compañera de la universidad. Es la primera vez que Alex y Laura se ven, así que toca saludar, decir “mucho gusto” y explicar de dónde se conocen todos. Todo pasa en un tono relajado, de tú, entre gente joven.",
+      situation: "It is Friday night on a terrace in Chapinero, Bogotá. Alex arrived with Santi, a friend from the language exchange, and Santi introduces him to Laura, a university classmate. It is the first time Alex and Laura have seen each other, so they need to greet each other, say “mucho gusto,” and explain how everyone knows everyone. It all happens in a relaxed, tú tone among young people.",
       setting: {
         who: "Alex, an English speaker new to Bogotá, meets Laura, a university friend of Santi, the person who brought Alex along tonight.",
         what: "A first introduction at a party: names, a handshake or a single cheek kiss, and the small ritual of explaining how everyone knows each other.",
@@ -615,7 +615,7 @@ lessons.push(
     review: "pending",
     es: {
       title: "Un tinto en la panadería",
-      situation: "Es media mañana en una panadería de Medellín. Alex entra con Manu, un amigo paisa, a tomarse un tinto. Manu le pregunta qué va a querer, insiste en invitar y todo pasa en voseo, con parce y quiubo por todas partes. Es una charla corta y cálida sobre pedir, ofrecer y esa forma paisa de querer a los amigos sin que suene romántico.",
+      situation: "Midmorning finds Alex in a Medellín bakery with Manu, a paisa friend, getting a tinto. Manu asks what Alex is going to want, insists on treating him, and everything happens in voseo, with parce and quiubo everywhere. It is a short, warm chat about ordering, offering, and that paisa way of loving your friends without making it sound romantic.",
       setting: {
         who: "Alex, learning Colombian Spanish, is out with Manu, an easy-going paisa friend from Medellín who insists on paying.",
         what: "A quick coffee run: ordering a tinto and a snack, turning down and then accepting a treat, and the warm tussle over who pays.",
@@ -1203,7 +1203,7 @@ lessons.push(
     review: "pending",
     es: {
       title: "Ya casi llego al almuerzo",
-      situation: "Es domingo al mediodía en Cali. Alex va tarde al almuerzo de Doña Marta, la mamá de su amigo Andrés, que preparó sancocho. El MÍO, el bus de la ciudad, se demoró, y Alex la llama para avisar que ya casi llega. Todo es por teléfono, en usted, con el respeto cariñoso que se le tiene a la mamá de un amigo. Es una charla sobre llegar, la hora colombiana y el arte de decir “ya casi.”",
+      situation: "It is Sunday at noon in Cali. Alex is late to lunch at the home of Doña Marta, the mother of his friend Andrés, who has made sancocho. The MÍO, the city bus, was delayed, and Alex calls her to say he is almost there. Everything is by phone, in usted, with the affectionate respect owed to the mother of a friend. It is a conversation about arriving, Colombian time, and the art of saying “ya casi.”",
       setting: {
         who: "Alex, running late, calls Doña Marta, the mother of a friend, Andrés, who has cooked a big Sunday sancocho for everyone.",
         what: "A phone call to warn the host you're late, promise you're close, and blame the delay on the city bus.",

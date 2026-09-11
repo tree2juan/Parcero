@@ -29,7 +29,7 @@ lessons.push(
     es: {
       title: "Aprender a bailar en la parranda familiar",
       situation:
-        "Es sábado por la noche en Medellín y en casa de una familia paisa hay parranda. Alex quiere aprender a bailar y le pide ayuda a Manuela, una amiga de la casa. Entre risas tiene que entender la diferencia entre aprender a hacer algo, aprenderse la letra de una canción y eso de que “bailando se aprende”, todo mientras un tío pone la música cada vez más duro.",
+        "It is Saturday night in Medellín, and there is a parranda at a paisa family’s house. Alex wants to learn to dance and asks Manuela, a family friend, for help. Between laughs, he has to understand the difference between learning to do something, learning the lyrics to a song by heart, and the idea that “bailando se aprende”, all while an uncle keeps turning the music up louder.",
       setting: {
         who: "Manuela grew up in this house and has danced since she could walk. Alex is the foreign friend who was dragged onto the floor and is now determined not to embarrass himself.",
         what: "An impromptu dancing lesson in the middle of a family party, learning steps and song lyrics at once.",
@@ -681,7 +681,7 @@ lessons.push(
     es: {
       title: "Aprender a hacer ajiaco en una cocina bogotana",
       situation:
-        "En Bogotá, Doña Miriam, una rola de toda la vida, le da a Alex una clase para hacer ajiaco santafereño. Entre la papa criolla, las mazorcas y las guascas, Alex descubre que “enseñar” en español sirve para dos cosas: enseñarle a uno a hacer algo y enseñarle una foto de cómo debe quedar. Todo en usted, con el respeto con que un bogotano trata a quien le está pasando su receta.",
+        "In Bogotá, Doña Miriam, a lifelong rola, gives Alex a lesson in making ajiaco santafereño. Among the papa criolla, ears of corn and guascas, Alex discovers that “enseñar” in Spanish does two jobs: teaching someone how to do something and showing someone a photo of how it should turn out. All in usted, with the respect a bogotano uses for someone handing over her recipe.",
       setting: {
         who: "Doña Miriam is a lifelong bogotana — a rola — who has made ajiaco for family lunches for forty years. Alex is her guest, a foreigner she decided to teach because he asked so earnestly.",
         what: "A hands-on cooking lesson for ajiaco santafereño, the classic Bogotá chicken-and-potato soup, learning the steps and being shown what each thing should look like.",
@@ -1281,7 +1281,7 @@ lessons.push(
     es: {
       title: "Hablar de la universidad en el bus de Barranquilla",
       situation:
-        "En un Transmetro de Barranquilla, Alex se pone a conversar con Yuranis, una estudiante costeña, sobre qué estudia. Entre el calor y el acento cantado del Caribe, Alex tiene que entender que “estudiar una carrera” no es “career”, que “estoy estudiando” suele querer decir “estoy en la universidad” y que aquí se cuenta por semestres y se sufre por los parciales. Todo en tú, como se habla en la Costa.",
+        "On a Transmetro bus in Barranquilla, Alex starts talking with Yuranis, a coastal student, about what she studies. Between the heat and the Caribbean singsong accent, Alex has to understand that “estudiar una carrera” is not “career”, that “estoy estudiando” usually means “I’m in university”, and that here people count by semesters and suffer over midterms. All in tú, the way people speak on the coast.",
       setting: {
         who: "Yuranis is a barranquillera studying medicine, quick and warm the way the coast talks. Alex is the foreigner sharing a seat who decides to strike up a conversation.",
         what: "A friendly bus chat about what each of them studies, sliding through the false friend carrera, the meaning of estoy estudiando, and student life.",

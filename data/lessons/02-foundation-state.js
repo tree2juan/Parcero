@@ -29,7 +29,7 @@ lessons.push(
     es: {
       title: "Esperando al técnico de la lavadora",
       situation:
-        "A Alex se le dañó la lavadora en su apartamento de Bogotá y el técnico quedó de venir en una ventana de dos horas que ya casi se acaba. Lo llama para saber por dónde va. El apartamento está sin agua, Alex tiene un viaje de trabajo en dos días y necesita que la máquina quede lista hoy.",
+        "The washing machine in the Bogotá apartment where Alex lives has broken, and the technician was supposed to come in a two-hour window that is almost over. Alex calls to find out where he is. The apartment has no water, Alex has a work trip in two days, and he needs the machine fixed today.",
       setting: {
         who: "Don Fabio is the repair technician the building administrator recommended. Alex is an American tenant who has been in Bogotá three months and still finds phone calls harder than face-to-face Spanish.",
         what: "A phone call to find out where the technician is and whether he is still coming this morning.",
@@ -681,7 +681,7 @@ lessons.push(
     es: {
       title: "Sin sencillo en la tienda de la esquina",
       situation:
-        "Alex entra a la tienda de don Norbey en Medellín a comprar unas cosas rápidas, pero sólo tiene un billete de cincuenta mil y anda de afán porque tiene que recoger a su hija del colegio. El tendero tampoco tiene con qué darle el vuelto, y hay que resolverlo entre los dos.",
+        "Alex walks into the shop run by don Norbey in Medellín to buy a few quick things, but he only has a fifty-thousand-peso bill and is in a hurry because he has to pick up his daughter from school. The shopkeeper does not have change either, so the two of them have to work it out.",
       setting: {
         who: "Don Norbey has run the corner shop on this block for twenty years and knows most customers by sight. Alex is a nearly-regular foreigner who still gets flustered handling cash quickly.",
         what: "A quick purchase that stalls because Alex only has a big note and the shop has no change.",
@@ -1333,7 +1333,7 @@ lessons.push(
     es: {
       title: "Planeando un sancocho en la playa",
       situation:
-        "Alex se topa en la calle con Yuranis, su vecina costeña en Barranquilla, bajo un sol tremendo. Entre el calor y las vueltas que él tiene que hacer, la charla se convierte en una invitación: el sábado la familia de ella va a hacer un sancocho en la playa por el cumpleaños de la mamá, y Alex se ofrece a ayudar.",
+        "Alex runs into Yuranis, his costeña neighbor in Barranquilla, on the street under a brutal sun. Between the heat and the errands he has to run, the chat turns into an invitation: on Saturday her family is making sancocho on the beach for the birthday of her mother, and Alex offers to help.",
       setting: {
         who: "Yuranis is a costeña neighbor who has more or less adopted Alex, folding him into family plans. Alex is settling into coast life and its fast, warm street talk.",
         what: "A chance street encounter that turns into an invitation to a family beach sancocho.",

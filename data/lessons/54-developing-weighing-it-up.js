@@ -31,7 +31,7 @@ lessons.push(
     es: {
       title: "Hablar de un proyecto sin discutir",
       situation:
-        "Estás en Ibagué ayudando a una fundación con un afiche para una feria de barrio. Quieres pedir una reunión tranquila para revisar el diseño, pero alguien dice discutir y la sala oye pelea. Tienes que aprender la diferencia antes de sonar agresivo.",
+        "You are in Ibagué helping a foundation with a poster for a neighborhood fair. You want to ask for a calm meeting to review the design, but someone says discutir and the room hears fight. You have to learn the difference before you sound aggressive.",
       setting: {
         who: "Carolina coordinates a small neighborhood foundation, and Ben is the foreign volunteer helping with a poster. Both want the poster improved, not a fight.",
         what: "A design check that starts calmly, almost tips into a row over a phrase, and then gets pulled back into a normal review.",
@@ -683,7 +683,7 @@ lessons.push(
     es: {
       title: "Comparar dos planes de celular",
       situation:
-        "Estás en Florencia ayudando a una amiga a escoger entre dos planes de celular antes de un viaje por carretera. Hay datos, cobertura y precio sobre la mesa. Tienes que comparar con, usar comparado con y decir no hay comparación cuando una opción gana claramente.",
+        "You are in Florencia helping a friend choose between two cell phone plans before a road trip. Data, coverage, and price are on the table. You have to compare with, use comparado con, and say no hay comparación when one option clearly wins.",
       setting: {
         who: "Natalia is choosing a phone plan before traveling outside the city. Chris is helping her read the small print without pretending the cheapest plan is always best.",
         what: "A comparison of two phone plans: monthly price, data, coverage on the road, and whether the contract is flexible.",
@@ -1335,7 +1335,7 @@ lessons.push(
     es: {
       title: "Responder depende antes de escoger la ruta",
       situation:
-        "Estás en Arauca planeando cómo llegar a una finca al día siguiente. Hay dos rutas, clima cambiante y un carro prestado. Cuando te preguntan cuál es mejor, la respuesta honesta es depende. Tienes que usar depender de y no olvidar la preposición.",
+        "You are in Arauca planning how to get to a farm the next day. There are two routes, changing weather, and a borrowed car. When they ask which one is better, the honest answer is depende. You have to use depender de and not forget the preposition.",
       setting: {
         who: "Maribel knows the roads outside town, and Owen is the guest trying to understand why nobody gives a simple yes-or-no answer.",
         what: "A route decision with weather, road condition, time, luggage, and a borrowed car all affecting the answer.",

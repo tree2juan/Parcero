@@ -29,7 +29,7 @@ lessons.push(
     es: {
       title: "Hacer aseo en la casa de la playa",
       situation:
-        "Estás pasando unos días en una casa familiar cerca de Santa Marta. La brisa trae arena, la humedad mancha los vidrios y tu prima propone organizar el aseo antes de que llegue la visita.",
+        "You are spending a few days in a family house near Santa Marta. The breeze brings in sand, the humidity stains the windows, and your cousin suggests organizing the cleaning before the guests arrive.",
       setting: {
         who: "Marce owns the beach house and knows how quickly salt air makes everything feel sticky. Sam is staying with relatives and wants to help without sounding like a helpless guest.",
         what: "A practical morning plan for cleaning the living room, porch chairs, windows and bathroom before cousins arrive after lunch.",
@@ -489,7 +489,7 @@ lessons.push(
     es: {
       title: "Lavar ropa en la lavandería del barrio",
       situation:
-        "Estás en Bucaramanga con una bolsa de ropa húmeda después de varios días de lluvia. Entras a una lavandería de barrio y necesitas explicar qué se lava, qué no se mezcla y cuándo puedes recoger todo.",
+        "You are in Bucaramanga with a bag of damp clothes after several rainy days. You walk into a neighborhood laundry and need to explain what gets washed, what must not be mixed, and when you can pick everything up.",
       setting: {
         who: "Don Álvaro runs a small laundry that also receives delicate items. Dana has been traveling through Santander and has damp clothes that cannot sit another night.",
         what: "A practical counter conversation about washing clothes, separating colors and asking whether the laundry can handle sneakers.",
@@ -661,7 +661,7 @@ lessons.push(
     es: {
       title: "Arreglar la bisagra y el plan",
       situation:
-        "Estás en Pereira cuidando un apartamento prestado. Una puerta del clóset no cierra, la visita llega esta noche y llamas a un taller del barrio para pedir precio sin comprar nada nuevo.",
+        "You are in Pereira looking after a borrowed apartment. A closet door will not close, the guest arrives tonight, and you call a neighborhood repair shop to ask the price without buying anything new.",
       setting: {
         who: "Lina is looking after her aunt's apartment in Pereira. Jhon works at a small repair shop and is used to people arriving with a photo and a worried deadline.",
         what: "A call and quick workshop visit about repairing a closet hinge, settling the price and sorting out the evening plan around the repair.",

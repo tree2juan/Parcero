@@ -31,7 +31,7 @@ lessons.push(
     es: {
       title: "Levantarse para el bus de la mañana",
       situation:
-        "Alex está en Neiva, alojado en la casa de una amiga, y tiene que salir temprano hacia el desierto de la Tatacoa. Hace calor desde la mañana y el bus no espera. Tú necesitas entender cuándo levantar es alzar algo y cuándo levantarse es salir de la cama.",
+        "Alex is in Neiva, staying at the home of a friend, and has to leave early for the Tatacoa Desert. It is hot from the morning on, and the bus will not wait. You need to understand when levantar means lifting something and when levantarse means getting out of bed.",
       setting: {
         who: "María José is hosting Alex for one night, and her father already checked the bus time before leaving for work.",
         what: "A sleepy kitchen exchange about getting up, raising a hand to stop the bus, and lifting a backpack without mixing those actions.",
@@ -663,7 +663,7 @@ lessons.push(
     es: {
       title: "Sentarse en un taller en Pasto",
       situation:
-        "Priya llega tarde a un taller de tejido en Pasto. Hay pocas sillas libres y una señora mayor acaba de entrar detrás de ella. Tú necesitas distinguir sentar a alguien, sentarse uno mismo y sentir, que no pertenece a esta escena.",
+        "Priya arrives late to a weaving workshop in Pasto. There are only a few free chairs, and an older woman has just come in behind her. You need to distinguish seating someone, sitting down yourself, and sentir, which does not belong in this scene.",
       setting: {
         who: "Doña Elvira is helping organize the workshop, and Priya is a new participant who wants to be polite about the last chairs.",
         what: "A small seating negotiation: who sits where, who is seated first, and how to offer a place without sounding bossy.",
@@ -1295,7 +1295,7 @@ lessons.push(
     es: {
       title: "Vestirse para un festival en Yopal",
       situation:
-        "Maya está en Yopal para un festival llanero y no sabe qué ponerse para salir sin sufrir el calor ni llegar demasiado informal. Su prima le presta una camisa liviana. Tú necesitas ver la diferencia entre vestir a alguien, vestirse y llevar ropa puesta.",
+        "Maya is in Yopal for a llanero festival and does not know what to wear so she can go out without suffering in the heat or arriving too informal. Her cousin lends her a light shirt. You need to see the difference between dressing someone, getting dressed, and wearing clothes.",
       setting: {
         who: "Carolina grew up in Yopal and is lending clothes; Maya is visiting family and wants to look appropriate without pretending to be local.",
         what: "A getting-dressed conversation before leaving for music and food outdoors.",

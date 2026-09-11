@@ -29,7 +29,7 @@ lessons.push(
     es: {
       title: "Saludar a un vecino antes del puente",
       situation:
-        "Es viernes por la tarde y viene un puente. Alex se cruza en la escalera con Andrés, un vecino paisa de toda la vida que va de salida. Tiene treinta segundos para saludar bien, entender que le preguntan por sus planes y aceptar — o no — una invitación a sancocho, sin sonar a extranjero recién bajado del avión.",
+        "It is Friday afternoon, and a long weekend is coming. Alex crosses paths on the stairs with Andrés, a lifelong paisa neighbor who is heading out. He has thirty seconds to greet him properly, understand that he is being asked about his plans, and accept — or not — an invitation to sancocho, without sounding like a foreigner fresh off the plane.",
       setting: {
         who: "Andrés has lived on the same floor for twenty years, greets everyone, and treats the stairwell as a social club. Alex is the foreigner from down the hall who is still learning that a thirty-second chat is not optional here.",
         what: "A quick stairwell encounter as both head out, the Friday before a long-weekend Monday holiday.",
@@ -681,7 +681,7 @@ lessons.push(
     es: {
       title: "Pagar el fiado en la tienda",
       situation:
-        "Es fin de mes y Alex va a la tienda de la esquina a pagar el fiado — lo que le fue anotando Don Fabio durante el mes en un cuaderno. Tiene que preguntar cuánto debe, entender la diferencia entre lo que debe pagar y lo que la cuenta debe de ser, y agradecer el fiado sin que la plata enfríe una relación de barrio que le conviene mantener caliente.",
+        "It is the end of the month, and Alex goes to the corner shop to pay the fiado — what Don Fabio has been writing down for him in a notebook all month. He has to ask how much he owes, understand the difference between what he must pay and what the bill is likely to be, and thank Don Fabio for the credit without letting money cool down a neighborhood relationship he needs to keep warm.",
       setting: {
         who: "Don Fabio has run the corner shop for decades and has let Alex buy on credit for a month. Alex is the foreign renter from the building across the street, still learning how a barrio tab works.",
         what: "Paying off a month's fiado — a running credit tab — at the shop counter.",
@@ -1333,7 +1333,7 @@ lessons.push(
     es: {
       title: "Alistar la casa para el almuerzo del domingo",
       situation:
-        "Es domingo en Barranquilla y en casa de la Tía Nubia se prepara el almuerzo familiar. Alex, que se hospeda con ellos, quiere ayudar. La tía lo pone a alistar todo: que se ponga una camisa limpia, que ponga el vallenato, que se ponga pilas con los platos. En seis líneas Alex oye el verbo poner estirarse por media docena de sentidos — vestirse, poner música, animarse, volverse — que en inglés serían verbos distintos.",
+        "Sunday in Barranquilla means family lunch is being prepared at the house of Tía Nubia. Alex, who is staying with them, wants to help. His aunt puts him to work getting everything ready: put on a clean shirt, put on the vallenato, get moving with the plates. In six lines Alex hears the verb poner stretch across half a dozen meanings — getting dressed, putting on music, perking up, becoming — that would be different verbs in English.",
       setting: {
         who: "Tía Nubia is the warm costeña aunt hosting Sunday lunch; Alex is the foreign lodger she treats like another nephew. The rest of the family is about to arrive.",
         what: "Getting the house ready for the big Sunday family lunch — clothes, music and the table.",

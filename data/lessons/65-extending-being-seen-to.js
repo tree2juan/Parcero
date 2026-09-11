@@ -27,7 +27,7 @@ lessons.push(
     es: {
       title: "Esperar a que lo atiendan en Florencia",
       situation:
-        "Estás en Florencia, Caquetá, en la sala de espera de un centro médico pequeño. La recepcionista no te pregunta si vas a asistir a algo: te pregunta si ya te atendieron. Tienes que entender que atender es ver, servir o hacerse cargo de una persona.",
+        "You are in Florencia, Caquetá, in the waiting room of a small medical center. The receptionist is not asking whether you are going to attend something; she is asking whether you have already been seen. You have to understand that atender means to see, serve, or take care of a person.",
       setting: {
         who: "María works reception at a small medical center and is trying to keep the waiting room moving. Alex has already checked in, but nobody has called him yet.",
         what: "A waiting-room exchange about whether Alex has been seen, who will see him next, and how to praise good service afterward.",
@@ -645,7 +645,7 @@ lessons.push(
     es: {
       title: "Entender una operación en Buenaventura",
       situation:
-        "Estás en Buenaventura acompañando a una amiga cuyo hermano salió de cirugía. La familia habla rápido: lo operaron del apéndice, la operación salió bien y ahora sólo queda esperar. Necesitas entender operar de + la parte o condición sin convertir la escena en lenguaje frío.",
+        "You are in Buenaventura accompanying a friend whose brother just came out of surgery. The family talks quickly: he had his appendix operated on, the operation went well, and now all that is left is to wait. You need to understand operar de + the body part or condition without turning the scene into cold language.",
       setting: {
         who: "Nora is waiting for news about her brother, and Alex is the friend helping her understand the updates. The nurse is calm but direct because the family is anxious.",
         what: "A post-surgery explanation: who was operated on, what he was operated for, and what operating can mean outside surgery.",
@@ -1263,7 +1263,7 @@ lessons.push(
     es: {
       title: "Medirse bien en Zipaquirá",
       situation:
-        "Estás en Zipaquirá antes de una cita de salud ocupacional y una enfermera necesita medir tu estatura, tu peso y tu cintura. Después pasas por una tienda donde también te miden para un uniforme. La escena termina con una frase más fina: medir las palabras.",
+        "You are in Zipaquirá before an occupational-health appointment, and a nurse needs to measure your height, weight, and waist. Afterward you stop by a shop where they also measure you for a uniform. The scene ends with a subtler phrase: medir las palabras.",
       setting: {
         who: "Paola is a nurse doing intake measurements before an occupational-health appointment. Alex needs the form completed and then a uniform adjusted next door.",
         what: "A measuring sequence: height, waist and clothes, plus the figurative warning to measure your words in a sensitive conversation.",

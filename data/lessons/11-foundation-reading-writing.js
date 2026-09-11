@@ -30,7 +30,7 @@ lessons.push(
     es: {
       title: "Pasar el número para escribirse después",
       situation:
-        "Acabas de conocer a alguien buena gente en Barranquilla y quieres seguir en contacto. En la Costa la gente dice “escríbeme” y quiere decir un mensajito de WhatsApp, no una carta. Vas a intercambiar números y a quedar en escribirte luego, con el calor costeño y la confianza del tú.",
+        "You have just met someone kind in Barranquilla and want to stay in touch. On the coast, people say “escríbeme” and mean a little WhatsApp message, not a letter. You are going to trade numbers and agree to message later, with coastal warmth and the easy trust of tú.",
       setting: {
         who: "Nélida is a warm barranquillera in her forties who has just spent an afternoon chatting with Alex, a foreigner she has taken a liking to.",
         what: "Swapping phone numbers so they can keep in touch on WhatsApp — the way almost every new friendship in Colombia gets sealed.",
@@ -682,7 +682,7 @@ lessons.push(
     es: {
       title: "Escoger un libro en el puesto de usados",
       situation:
-        "Estás en un puesto de libros usados en el centro de Medellín, y el que atiende es un lector de esos que recomiendan con el alma. Vas a contar qué leíste, a hablar de leerte un libro entero de una sentada y de leer entre líneas, todo con el voseo paisa: “vos leés”, “¿vos qué contás?”.",
+        "You are at a secondhand book stall in downtown Medellín, and the man running it is one of those readers who recommends books with his whole heart. You are going to say what you read, talk about reading a whole book in one sitting and reading between the lines, all with paisa voseo: “vos leés”, “¿vos qué contás?”.",
       setting: {
         who: "Don Aníbal runs a second-hand book stall and is the kind of vendor who has read everything he sells. Alex is a regular now, back for another recommendation.",
         what: "Trading impressions of a book and picking up the next one — the easy literary chat of a used-book stall.",
@@ -1334,7 +1334,7 @@ lessons.push(
     es: {
       title: "Aclarar un cobro raro en la factura",
       situation:
-        "Te llegó una factura con un cobro que no reconoces y vas a la oficina de servicios en Bogotá a reclamar. La asesora es amable pero formal: te dice que comprende tu situación y que va a revisarla. Aquí vas a oír “comprender”, el primo formal de “entender” — el de las oficinas, los trámites y la empatía.",
+        "You received a bill with a charge you do not recognize, and you go to the service office in Bogotá to dispute it. The agent is kind but formal: she says she understands your situation and will review it. Here you will hear “comprender,” the formal cousin of “entender” — the one used in offices, paperwork, and empathy.",
       setting: {
         who: "Marcela is a customer-service agent in her thirties, courteous and careful with her words. Alex is a foreigner disputing a charge he doesn't recognize on his bill.",
         what: "Sorting out a billing error at a service counter, in the measured, formal register that officialdom runs on.",

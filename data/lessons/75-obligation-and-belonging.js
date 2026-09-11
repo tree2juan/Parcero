@@ -30,7 +30,7 @@ lessons.push(
     review: "pending",
     es: {
       title: "Toca madrugar: la obligación sin dueño",
-      situation: "Una compañera te cuenta qué tiene que quedar listo antes de la inspección del lunes, sin decir de quién es la tarea.",
+      situation: "A coworker tells you what has to be ready before the Monday inspection, without saying whose task it is.",
       setting: {
         who: "Paola has worked in this small import office in Medellín for six years and knows the inspection routine by heart. Andrés joined four months ago and has never seen one. Neither manages the other, and the six-year gap in experience is doing more work here than any difference in rank.",
         what: "A five-minute handover at the end of a Friday: a list of things that must be ready by Monday morning, delivered as a run of impersonal obligations rather than as instructions to a named person.",
@@ -590,7 +590,7 @@ lessons.push(
     review: "pending",
     es: {
       title: "El mío, el tuyo, el de ella",
-      situation: "Después de un almuerzo familiar en Cali, dos primas separan los platos y las cosas que quedaron revueltas.",
+      situation: "After a family lunch in Cali, two cousins separate the plates and the things that ended up mixed together.",
       setting: {
         who: "Valentina and her cousin Sara grew up in the same house and now live twenty minutes apart. They see each other most weekends, so nothing here is being negotiated politely — they are cousins sorting out clutter.",
         what: "Untangling belongings after a family lunch: containers, a charger, an umbrella and a set of keys, all of which look like several other people's. The nouns are already known, so nobody repeats them.",

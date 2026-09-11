@@ -27,7 +27,7 @@ lessons.push(
     es: {
       title: "Contar lo que ocurrió en Ibagué",
       situation:
-        "Estás en Ibagué después de que se dañó el plan de subir al mirador por una lluvia fuerte. Tienes que contar lo que ocurrió sin sonar como informe de policía, admitir que en la calle todos dirían qué pasó, y usar la frase más útil del verbo: se me ocurrió una salida.",
+        "You are in Ibagué after the plan to go up to the lookout was ruined by heavy rain. You have to explain what happened without sounding like a police report, admit that on the street everyone would ask “qué pasó”, and use the verb’s most useful phrase: “se me ocurrió una salida”.",
       setting: {
         who: "Carolina organized a small afternoon outing and is trying to keep the group calm. Alex noticed the problem first and came up with an alternate plan.",
         what: "A careful retelling of a small mishap: what happened, what idea occurred to Alex, and what option might still work.",
@@ -645,7 +645,7 @@ lessons.push(
     es: {
       title: "Contar lo que sucedió en Montería",
       situation:
-        "Estás en Montería ayudando a escribir un relato corto para el grupo del barrio después de que una rifa terminó en confusión. Nadie quiere sonar alarmista: hay que contar lo que sucedió, admitir que en la conversación normal todos preguntaron qué pasó, y ordenar la historia sin culpar de más.",
+        "You are in Montería helping write a short account for the neighborhood group after a raffle ended in confusion. No one wants to sound alarmist: you have to tell what happened, admit that in normal conversation everyone asked “qué pasó”, and put the story in order without overblaming anyone.",
       setting: {
         who: "Lucía keeps the neighborhood group's notes and wants the account to be fair. Jordan saw the raffle confusion from the back of the room and can separate rumor from sequence.",
         what: "A careful retelling of a small public mix-up: what happened first, what happened later, and why the written account chooses suceder.",
@@ -1263,7 +1263,7 @@ lessons.push(
     es: {
       title: "Contar cómo resultó el plan en Arauca",
       situation:
-        "Estás en Arauca después de una vuelta que parecía fácil y terminó distinta: la cita no existía, el trámite resultó más largo de lo esperado y a tu amigo le resulta raro que nadie lo hubiera avisado. Tienes que contar cómo salió todo y cómo te resultó la experiencia.",
+        "You are in Arauca after an errand that looked easy and turned out differently: the appointment did not exist, the process turned out longer than expected, and it seems strange to your friend that no one warned him. You have to explain how everything went and how the experience turned out for you.",
       setting: {
         who: "Mateo lives in Arauca and helped Alex plan a document errand. Alex has returned from the office with a story that changed shape halfway through.",
         what: "A conversation about how a plan turned out: the appointment did not exist, the process was harder than expected, and the ending surprised both people.",

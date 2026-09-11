@@ -34,7 +34,7 @@ lessons.push(
     es: {
       title: "¿Cuál ventilador es más barato?",
       situation:
-        "Emma está de compras en un San Andresito de Barranquilla, con un calor de mediodía que no da tregua. Quiere un ventilador y Dani, el muchacho que atiende el puesto, le muestra dos: uno de marca y uno corriente. Entre el ruido del mercado van comparando precio, calidad y tamaño para que ella decida cuál se lleva.",
+        "Emma is shopping in a San Andresito in Barranquilla, in a relentless midday heat. She wants a fan, and Dani, the young man running the stall, shows her two: a name-brand one and a basic one. Over the noise of the market, they compare price, quality, and size so she can decide which one to take.",
       setting: {
         who: "Dani runs an appliance stall and knows his stock cold; he sells with the fast, teasing warmth of the coast. Emma is a US student a few weeks into living in Barranquilla, buying her first fan and her first real dose of costeño Spanish.",
         what: "A buying decision built entirely on comparisons: which of two fans is cheaper, which is better made, which is smaller, and whether the price is really more than twenty thousand pesos.",
@@ -654,7 +654,7 @@ lessons.push(
     es: {
       title: "¿Cuál comedor es tan bueno como el otro?",
       situation:
-        "Hannah lleva pocos días en Santa Marta y a la hora del almuerzo no sabe dónde comer. Marlon, un amigo samario, la lleva al mercado y le muestra dos comedores pegados, uno al lado del otro. Entre el bullicio del mediodía van comparando cuál es igual de bueno, cuál sirve tanta comida como el otro y cuál atiende más rápido, para que ella escoja dónde sentarse.",
+        "Hannah has been in Santa Marta only a few days, and at lunchtime she does not know where to eat. Marlon, a samario friend, takes her to the market and shows her two comedores side by side. In the midday bustle, they compare which one is just as good, which serves as much food as the other, and which serves people faster, so she can choose where to sit.",
       setting: {
         who: "Marlon is a santamarteño who knows every comedor in the market and talks with the quick, teasing warmth of the coast. Hannah is an American on her first week in Santa Marta, learning her lunchtime Spanish one plate at a time.",
         what: "A lunch decision built on equality: which comedor is as good as the other, which serves as much food, which sits just as close to the beach and just as cheap.",
@@ -1274,7 +1274,7 @@ lessons.push(
     es: {
       title: "El mejor sancocho de Valledupar",
       situation:
-        "Kate anda por Valledupar en pleno Festival Vallenato y el hambre la lleva a una caseta de comida. Beto, un cesarense de pura cepa, le jura que ahí sirven el mejor sancocho de la ciudad. Entre acordeones y calor, van comparando cuál plato es el más sabroso, cuál está riquísimo y cuál sale más barato, hasta que Kate se anima a pedir el más grande de todos.",
+        "Kate is wandering through Valledupar in the middle of the Festival Vallenato, and hunger leads her to a food stall. Beto, a born-and-raised cesarense, swears that they serve the best sancocho in the city there. Between accordions and heat, they compare which plate is the tastiest, which is absolutely delicious, and which comes out cheaper, until Kate works up the nerve to order the biggest one of all.",
       setting: {
         who: "Beto is a vallenato-loving cesarense who treats his city's food as a point of pride and talks at full coastal speed. Kate is an Australian passing through Valledupar for the festival, hungry and ready to learn her superlatives at a food stall.",
         what: "A food-stall decision made of superlatives: which sancocho is the tastiest in Valledupar, which is absolutely delicious, which is the cheapest, and which plate is the biggest of all.",

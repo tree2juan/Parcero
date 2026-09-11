@@ -18,7 +18,7 @@ lessons.push(
     es: {
       title: "Girar donde el letrero dice, voltear donde habla el conductor",
       situation:
-        "En Florencia, Alex acompaña a Sandra en carro hacia una vereda cercana y va leyendo las señales mientras ella maneja. Los letreros dicen “gire a la derecha”, pero Sandra le explica que en conversación muchos colombianos dicen “voltee a la izquierda”. Más tarde, una transferencia pendiente muestra el otro sentido de girar: “me giraron el pago”.",
+        "In Florencia, Alex rides with Sandra by car toward a nearby rural lane, reading the signs while she drives. The signs say “gire a la derecha”, but Sandra explains that in conversation many Colombians say “voltee a la izquierda”. Later, a pending transfer shows the other meaning of girar: “me giraron el pago”.",
       setting: {
         who: "Sandra is a local driver who knows the turnoff to the rural road by memory. Alex is navigating from road signs and trying to understand why the formal sign verb is not always the spoken one.",
         what: "Following directions by car, contrasting girar on signs and maps with voltear in everyday spoken directions, then noticing girar as a money-transfer verb.",
@@ -650,7 +650,7 @@ lessons.push(
     es: {
       title: "Empuje, hale y no empuje a la gente",
       situation:
-        "En Tumaco, Alex llega con Maritza a una entrada llena después del mercado. La puerta tiene letreros de EMPUJE y HALE, alguien intenta tirar donde debería jalar, y un vigilante repite “no empuje” porque la fila está apretada. Más tarde, Maritza usa empujar figuradamente: hay que empujar el proyecto para que no se quede quieto.",
+        "In Tumaco, Alex arrives with Maritza at a crowded entrance after the market. The door has EMPUJE and HALE signs, someone tries to use tirar where they should use jalar, and a guard repeats “no empuje” because the line is packed tight. Later, Maritza uses empujar figuratively: they need to push the project forward so it does not stall.",
       setting: {
         who: "Maritza works with a community food project and knows the crowded entrance routine. Alex is carrying boxes and reading door signs too literally.",
         what: "Getting through a busy entrance with push and pull signs, avoiding shoving people and then using empujar figuratively for moving a project forward.",

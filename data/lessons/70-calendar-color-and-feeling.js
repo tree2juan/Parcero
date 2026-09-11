@@ -34,7 +34,7 @@ lessons.push(
     es: {
       title: "Reservando la visita a la finca",
       situation:
-        "Sara, una estudiante que lleva poco en el Eje Cafetero, quiere conocer una finca cafetera cerca de Pereira. Llama a don Aníbal, el dueño, para cuadrar el día. Entre los dos van fijando la fecha exacta: el mes, el día de la semana, los festivos que se atraviesan y hasta el año en que se fundó la finca.",
+        "Sara, a student who has only been in the Coffee Axis a short time, wants to visit a coffee farm near Pereira. She calls don Aníbal, the owner, to settle on a day. Together they pin down the exact date: the month, the day of the week, the holidays that get in the way, and even the year the farm was founded.",
       setting: {
         who: "Don Aníbal is a paisa coffee-grower in his sixties who runs farm tours; he speaks warmly and formally. Sara is a foreign student a few weeks into life in Pereira, booking her first finca visit and her first real date in Spanish.",
         what: "A booking built entirely on dates: which month, which day of the week, whether a holiday falls on it, and from what year the farm has been running.",
@@ -654,7 +654,7 @@ lessons.push(
     es: {
       title: "Comprando una ruana en Manizales",
       situation:
-        "Laura entra a un almacén de tejidos en Manizales buscando ropa para el frío de la montaña. Con don Jorge, el vendedor, va nombrando colores, materiales y estampados: una ruana azul o verde, una bufanda de rayas, guantes de lana. Cuando no sabe la palabra exacta, describe por el patrón o el material, que es justo lo que hace un hablante real.",
+        "Laura walks into a textile shop in Manizales looking for clothes for the cold mountain weather. With don Jorge, the shopkeeper, she names colors, materials, and patterns: a blue or green ruana, a striped scarf, wool gloves. When she does not know the exact word, she describes by pattern or material, exactly what a real speaker does.",
       setting: {
         who: "Don Jorge is a Manizales shopkeeper who sells wool and leather goods and knows his stock by color and material. Laura is a foreign student kitting herself out for the cold of the coffee highlands.",
         what: "A shopping chat built on description: color and its agreement, the invariable colors, brown as café rather than marrón, and describing by pattern and material when the exact word won't come.",
@@ -1274,7 +1274,7 @@ lessons.push(
     es: {
       title: "Antojándose de un paseo al Cocora",
       situation:
-        "Cami está aburrida un domingo en Armenia y le propone a Dani salir a caminar al Valle de Cocora. Dani llegó de mal genio por algo del trabajo. Entre los dos van nombrando cómo se sienten: aburrida, con rabia, con miedo, emocionado, contento. En el camino aparecen las trampas del español -- estar y ser, y ese “tener” para los estados.",
+        "Cami is bored on a Sunday in Armenia and suggests to Dani that they go walking in the Cocora Valley. Dani has arrived in a bad mood over something at work. Together they name how they feel: bored, angry, afraid, excited, happy. Along the way, the traps of Spanish appear — estar and ser, and that “tener” used for states.",
       setting: {
         who: "Cami and Dani are close friends in Armenia. She is restless and coaxing; he turns up in a mood and thaws over the plan. They talk the way old friends do, blunt and warm at once.",
         what: "A Sunday plan that turns into a tour of feelings: estar plus an adjective for mood, the meaning shift with ser, and tener plus a noun for states like fear, cold and being in a rush.",

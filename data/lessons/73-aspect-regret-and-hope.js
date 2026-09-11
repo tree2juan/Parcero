@@ -19,7 +19,7 @@ lessons.push(
     es: {
       title: "Acabo de llegar, ya vuelve a sonar y estamos a punto de salir",
       situation:
-        "En un hato a las afueras de Villavicencio, Marcela acaba de llegar del pueblo cuando todavía está oscuro. Duban, el mayordomo, ya tiene el tinto listo y el corral abierto. El celular vuelve a sonar cada rato, el ganado está a punto de salir para el llano y los dos hablan rápido antes de que apriete el calor. Entre frase y frase va apareciendo cómo el español marca lo que uno acaba de hacer, lo que vuelve a hacer y lo que está a punto de pasar.",
+        "At a hato outside Villavicencio, Marcela has just arrived from town while it is still dark. Duban, the mayordomo, already has the tinto ready and the corral open. The cell phone keeps ringing again and again, the cattle are about to head out onto the plain, and the two speak quickly before the heat bears down. Sentence by sentence, Spanish shows how it marks what someone has just done, what happens again, and what is about to happen.",
       setting: {
         who: "Marcela runs a small cattle operation and has just driven in from Villavicencio before sunrise. Duban is the mayordomo who lives on the hato and already has the coffee poured and the corral open.",
         what: "A fast dawn conversation on a llanero cattle ranch, using acabar de for what just happened, volver a for what keeps happening again, and estar a punto de and ir a for what is about to happen.",
@@ -629,7 +629,7 @@ lessons.push(
     es: {
       title: "Si hubiera sabido, no habría dicho nada",
       situation:
-        "Después de una tarde de coleo en Yopal, Andrés todavía está caliente por un roce con otro jinete en la manga. Paola, su amiga de toda la vida, se sienta con él a la sombra y lo ayuda a mirarlo con calma. Hablando del asunto aparece una y otra vez la forma con que el español lamenta lo que ya no tiene arreglo: “si hubiera sabido, no habría reaccionado así”. Es la gramática del arrepentimiento, y también la del perdón.",
+        "After an afternoon of coleo in Yopal, Andrés is still heated over a brush with another rider in the arena. Paola, his lifelong friend, sits with him in the shade and helps him look at it calmly. As they talk it over, the form Spanish uses to regret what can no longer be fixed appears again and again: “si hubiera sabido, no habría reaccionado así”. It is the grammar of regret, and also of forgiveness.",
       setting: {
         who: "Andrés has just argued with another coleo rider and is still worked up. Paola has been his friend since school and talks to him openly, without ever dropping the usted between them.",
         what: "An honest conversation about a regret, using the unreal past: si plus the pluperfect subjunctive with the conditional perfect, to imagine what one would have done differently.",
@@ -1239,7 +1239,7 @@ lessons.push(
     es: {
       title: "Ojalá que salga bien: deseos y despedidas en el río",
       situation:
-        "En el malecón de Leticia, sobre el Amazonas, Marina se despide de Dairo, que cruza el río hacia Tabatinga, del lado brasilero. Es una despedida corta pero cargada de deseos: que el río esté calmado, que le vaya bien, que vuelva pronto. En pocos minutos aparece toda la gramática de la esperanza en español: ojalá con subjuntivo, el que suelto de las despedidas, y esperar que frente a esperar más infinitivo.",
+        "On the boardwalk in Leticia, on the Amazon, Marina says goodbye to Dairo, who is crossing the river toward Tabatinga, on the Brazilian side. It is a short goodbye, but full of wishes: may the river be calm, may things go well for him, may he come back soon. In a few minutes, all the grammar of hope in Spanish appears: “ojalá” with the subjunctive, the bare “que” of farewells, and “esperar que” versus “esperar” plus an infinitive.",
       setting: {
         who: "Marina lives in Leticia and works near the port. Dairo often crosses to Tabatinga, on the Brazilian side, and today he is leaving for a few days.",
         what: "A goodbye by the river built on wishes: “ojalá” with the subjunctive for the possible and the impossible, the bare que of Colombian farewells, and esperar que against esperar plus an infinitive.",

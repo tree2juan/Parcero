@@ -35,7 +35,7 @@ lessons.push(
     es: {
       title: "El expediente cuyo autor firmó en 1789",
       situation:
-        "Imagínate en Tunja, la vieja ciudad universitaria de Boyacá, dentro del Archivo Histórico Regional. Acompañas a Valeria, una estudiante de historia, mientras consulta un legajo colonial y don Hernando, el archivista, la orienta con el trato ceremonioso que allí es la norma. Entre los dos van precisando de qué documento hablan, cuyo autor, cuyas páginas y sobre cuál se apoya cada cita, en el español cuidado de la escritura.",
+        "Imagine yourself in Tunja, the old university city of Boyacá, inside the Regional Historical Archive. You accompany Valeria, a history student, as she consults a colonial file and don Hernando, the archivist, guides her with the ceremonious treatment that is the norm there. Together they specify which document they mean, whose author, whose pages, and which source each citation rests on, in the careful Spanish of writing.",
       setting: {
         who: "Don Hernando is the archivist at Tunja's regional historical archive, courteous and exact in the formal register the city is known for. Valeria is a history undergraduate a few months into handling colonial documents and the careful written Spanish they demand.",
         what: "A research consultation built on relative clauses: pinning down which file they mean, whose author signed it, whose pages have faded, and which source a citation actually rests on.",
@@ -667,7 +667,7 @@ lessons.push(
     es: {
       title: "¿Ya habrá llegado? Adivinando en voz alta",
       situation:
-        "Estás en una cocina de Pasto, en el altiplano nariñense, muy cerca ya de la frontera con Ecuador. Doña Rosa y su sobrino Mateo esperan a un hermano que viene en bus y, mientras el agua hierve para el café, se ponen a adivinar en voz alta: qué hora será, si ya habrá llegado, si debe de estar en camino. Fíjate en cómo el futuro no habla del futuro, sino de lo probable.",
+        "You are in a kitchen in Pasto, on the Nariño plateau, already very close to the border with Ecuador. Doña Rosa and her nephew Mateo are waiting for a brother who is coming by bus, and while the water boils for coffee, they start guessing out loud: what time it must be, whether he may have arrived already, whether he must be on his way. Notice how the future is not talking about the future, but about what is probable.",
       setting: {
         who: "Doña Rosa keeps the kitchen in a Pasto household and speaks in the courteous, unhurried way of Nariño. Mateo is her nephew, home for the weekend, guessing along with her about a relative who is running late.",
         what: "A kitchen full of out-loud guesses: what time it must be, whether the brother has arrived yet, whether he must be on his way, and who could be at the door.",
@@ -1299,7 +1299,7 @@ lessons.push(
     es: {
       title: "Aunque llovió, salimos: conceder un punto",
       situation:
-        "Estás en Popayán, la ciudad blanca, en plena Semana Santa. Acompañas a Marcela, una estudiante de visita, y a don Efraín, un caucano de voz pausada, mientras esperan que salga la procesión por el centro histórico. Fíjate bien en cómo don Efraín concede: cuando algo ya pasó y es un hecho, dice “aunque” con indicativo; cuando es apenas una posibilidad, salta al subjuntivo. Ese cambio mínimo de modo lo cambia todo.",
+        "You are in Popayán, the white city, in the middle of Holy Week. You accompany Marcela, a visiting student, and don Efraín, a caucano with a slow voice, as they wait for the procession to leave through the historic center. Pay close attention to how don Efraín concedes a point: when something already happened and is a fact, he says “aunque” with the indicative; when it is only a possibility, he jumps to the subjunctive. That tiny shift in mood changes everything.",
       setting: {
         who: "Marcela is a visiting student, curious and courteous; don Efrain is an older payanes who has walked these Holy Week processions all his life. Between them the talk stays formal and warm, the way strangers speak in Popayan.",
         what: "A conversation on a packed sidewalk about whether the procession will go out despite the rain, and how the city concedes to the weather without ever giving up its ritual.",

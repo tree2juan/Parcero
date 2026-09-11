@@ -74,8 +74,7 @@ function classify(text) {
  * The language each slot must be written in, per direction.
  *
  * Derived from the eight hand-written lessons rather than assumed, because two
- * assumptions turned out to be wrong. `situation` is Spanish in *both*
- * directions -- it is the scene-setting line, not an explanation. And `literal`,
+ * assumptions turned out to be wrong. `literal`,
  * `pronunciation` and the practice options vary by design: a pronunciation
  * respelling is neither language, and a question may deliberately offer three
  * English utterances to choose between. Those slots are left out entirely
@@ -88,7 +87,10 @@ const EXPECTED = {
   // Teaching Colombian Spanish to an English reader: explanation is English.
   es: {
     "title": "spanish",
-    "situation": "spanish",
+    /* The scene-setting line is prose about the situation, not a line of the
+       language being taught, so it is written in the language the reader
+       already reads -- English here, Spanish on the en side below. */
+    "situation": "english",
     "dialogue[].target": "spanish",
     "variations[].form": "spanish",
     "vocabulary[].example.target": "spanish",

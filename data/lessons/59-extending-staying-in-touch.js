@@ -19,7 +19,7 @@ lessons.push(
     es: {
       title: "Comunicarse con una guía en Florencia",
       situation:
-        "Estás en Florencia y necesitas confirmar una salida al río con una guía que no ha respondido mensajes. Llamas a la recepción del hostal para que te comuniquen con ella sin sonar impaciente.",
+        "You are in Florencia and need to confirm a river outing with a guide who has not answered messages. You call the hostel reception desk so they can put you through to her without making you sound impatient.",
       setting: {
         who: "Rosa works the front desk of a small hostel and knows the local guides. Alex has sent messages to one guide, but the plan depends on getting a real answer before evening.",
         what: "A phone call that moves through three meanings: trying to get hold of someone, being put through by reception, and being informed of a change.",
@@ -683,7 +683,7 @@ lessons.push(
     es: {
       title: "Conectarse a una videollamada en Buenaventura",
       situation:
-        "Estás en Buenaventura intentando entrar a una videollamada familiar antes de que empiece una reunión. El wifi no conecta, la señal se cae y alguien dice que ustedes conectaron de una cuando por fin pudieron hablar.",
+        "You are in Buenaventura trying to join a family video call before a meeting starts. The Wi-Fi will not connect, the signal drops, and someone says that you all “conectaron de una” once you could finally talk.",
       setting: {
         who: "Natalia is hosting the family video call from her apartment. Alex is nearby with a laptop, a cable and just enough patience to troubleshoot without turning into tech support.",
         what: "Patchy connectivity interrupts a family call: cable, Wi-Fi, online status, dropped signal and the human feeling of clicking with someone immediately.",
@@ -1335,7 +1335,7 @@ lessons.push(
     es: {
       title: "Continuar una conversación después de una llamada caída en Zipaquirá",
       situation:
-        "Estás coordinando por teléfono una visita familiar en Zipaquirá y la llamada se corta varias veces. Necesitas decidir si continúan, si vuelven a llamar y cuándo seguir suena más natural que continuar.",
+        "You are coordinating a family visit in Zipaquirá by phone, and the call drops several times. You need to decide whether you continue, whether you call back, and when seguir sounds more natural than continuar.",
       setting: {
         who: "Claudia is organizing a family lunch and likes clear agreements. Alex is on the call, losing signal, and trying to keep the conversation from starting over each time.",
         what: "A stop-start phone conversation: the call drops, they decide whether to continue, and they compare formal “continuar” with more everyday “seguir.”",

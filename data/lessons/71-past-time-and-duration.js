@@ -19,7 +19,7 @@ lessons.push(
     es: {
       title: "‘He comido’ o ‘comí’: el presente perfecto y cuándo el colombiano lo evita",
       situation:
-        "En Bucaramanga, Yaneth recibe a Alex en un almuerzo santandereano y le pregunta, muy directa, qué ha probado y qué le falta por conocer. Vas a oír el presente perfecto de verdad —‘¿ya has probado?’, ‘nunca he ido’— y a la vez la costumbre bumanguesa de resolver lo mismo con el pretérito: ‘¿ya probó?’. Fíjate cuándo cada uno suena natural.",
+        "In Bucaramanga, Yaneth welcomes Alex to a Santander-style lunch and asks him, very directly, what he has tried and what he still needs to get to know. You will hear the real present perfect — “¿ya has probado?”, “nunca he ido” — and also the bumanguesa habit of handling the same idea with the preterite: “¿ya probó?”. Notice when each one sounds natural.",
       setting: {
         who: "Yaneth is a bumanguesa host with the blunt, direct manner the region is known for. Alex is a guest learning when the present perfect is natural in Colombia and when a local would just use the simple past.",
         what: "A lunch conversation that keeps circling the same question — what have you tried, where have you been — so the present perfect and the preterite land side by side.",
@@ -651,7 +651,7 @@ lessons.push(
     es: {
       title: "‘Ya habían cerrado’: el pluscuamperfecto para ordenar una historia en Cúcuta",
       situation:
-        "En Cúcuta, junto a la frontera, Marleny le cuenta a Édinson un madrugón perdido en el puente internacional. Para que la historia se entienda, tiene que decir qué había pasado antes de que ella llegara: ‘ya habían cerrado’, ‘todavía no había contestado’. Ese es el pluscuamperfecto —‘había’ más participio— y sirve para marcar el más antiguo de dos hechos pasados.",
+        "In Cúcuta, by the border, Marleny tells Édinson about a wasted early morning at the international bridge. For the story to make sense, she has to say what had happened before she arrived: “ya habían cerrado”, “todavía no había contestado”. That is the pluperfect — “había” plus a participle — and it marks the earlier of two past events.",
       setting: {
         who: "Marleny is a cucuteña who crosses the border often; Édinson is a neighbor who asks what went wrong. She narrates a chain of past events, so she needs the pluperfect to say which happened first.",
         what: "A retelling of a failed morning at the border bridge, where the order of events is the whole point.",
@@ -1283,7 +1283,7 @@ lessons.push(
     es: {
       title: "‘Llevo tres años acá’: hace, desde y llevar para decir cuánto tiempo",
       situation:
-        "En Barichara, Laura conversa con don Hernando, un tallador de piedra, y quiere saber cuánto tiempo lleva en el pueblo y en el oficio. Aquí aparecen las tres herramientas del tiempo: “hace” para ‘hace tanto’, “desde” y “desde hace” para ‘desde’, y “llevar” más gerundio para un tramo en curso, ‘llevo veinte años tallando’. Ojo con el gran contraste: el inglés usa un perfecto donde el español usa un presente.",
+        "In Barichara, Laura talks with don Hernando, a stone carver, and wants to know how long he has been in the town and in the trade. Here the three time tools appear: “hace” for how long ago, “desde” and “desde hace” for since, and “llevar” plus a gerund for an ongoing stretch, “llevo veinte años tallando”. Watch the big contrast: English uses a perfect tense where Spanish uses a present tense.",
       setting: {
         who: "Laura is a visitor charmed by the town; don Hernando is a stone carver who has lived and worked there for decades. She asks how long, so the whole time-duration toolkit comes out.",
         what: "A relaxed street conversation about how long he has lived in Barichara and how long he has been carving stone.",

@@ -27,7 +27,7 @@ lessons.push(
     es: {
       title: "Mejorarse en Riohacha",
       situation:
-        "Estás en Riohacha recuperándote de una fiebre que te dañó dos días del viaje. Una amiga pasa a dejarte suero y sopa, te pregunta si ya estás mejor y se despide con la frase que de verdad necesitas cuando alguien está enfermo: que te mejores.",
+        "You are in Riohacha recovering from a fever that ruined two days of your trip. A friend stops by with oral rehydration drink and soup, asks whether you are already feeling better, and leaves you with the phrase you really need when someone is sick: que te mejores.",
       setting: {
         who: "Daniela is a friend from Riohacha who has checked on Alex since the fever started. Alex is better than yesterday but still weak and embarrassed about needing care.",
         what: "A caring visit about recovery: how Alex feels, what has improved, and how to wish someone well without sounding like a translation.",
@@ -645,7 +645,7 @@ lessons.push(
     es: {
       title: "Aumentar el arriendo en Manizales",
       situation:
-        "Vives en Manizales y la administradora te avisa que el arriendo va a aumentar el próximo mes. En la calle mucha gente diría que el arriendo sube, pero en el aviso y en la conversación formal aparece aumentar: precios, arriendo, salario, porcentajes.",
+        "You live in Manizales, and the building manager tells you the rent is going to increase next month. On the street, many people would say the rent sube, but in the notice and in formal conversation you see aumentar: prices, rent, salary, percentages.",
       setting: {
         who: "Patricia manages a small apartment building and needs to explain the rent increase without making it sound arbitrary. Alex rents one of the units and wants the amount, the date and the reason.",
         what: "A practical conversation about a rent increase, the percentage, and the difference between aumentar and everyday subir.",
@@ -1263,7 +1263,7 @@ lessons.push(
     es: {
       title: "Reducir el azúcar en San Andrés",
       situation:
-        "Estás en San Andrés hablando con una nutricionista después de unos exámenes. Ella no te dice simplemente que bajes el azúcar: te propone reducirlo poco a poco, reducir las bebidas dulces y revisar cuánto redujiste en dos semanas.",
+        "You are in San Andrés talking with a nutritionist after some lab tests. She does not simply tell you to lower your sugar: she proposes reducing it little by little, cutting back on sweet drinks, and checking how much you reduced it after two weeks.",
       setting: {
         who: "Natalia is a nutritionist giving practical advice after routine lab results. Alex is not in an emergency, but the numbers are high enough to require changes.",
         what: "A grounded conversation about cutting back on sugar, tracking drinks, and using reducir in deliberate health advice.",

@@ -26,7 +26,7 @@ lessons.push(
     review: "pending",
     es: {
       title: "Mandar a arreglar: el trabajo que uno no hace",
-      situation: "Dos vecinos comparan la lista de arreglos que cada uno mandó a hacer antes de que empezara el invierno.",
+      situation: "Two neighbors compare the list of repairs each one had done before the rainy season started.",
       setting: {
         who: "Marcela and Hernán live on the same block in Laureles, Medellín, and have known each other long enough to compare bills without embarrassment.",
         what: "A five-minute comparison of household jobs: a roof, a car, a set of keys, a haircut. Not one of these was done by the person talking about it, and that is the whole grammatical point.",
@@ -586,7 +586,7 @@ lessons.push(
     review: "pending",
     es: {
       title: "Tan lleno que no cupimos: la causa y su consecuencia",
-      situation: "Dos amigas cuentan por qué el plan del fin de semana se les dañó, y cada explicación es una causa con su consecuencia.",
+      situation: "Two friends explain why their weekend plan fell apart, and every explanation is a cause with its consequence.",
       setting: {
         who: "Tatiana and Juliana are cousins in their late twenties who went to Cartagena for a long weekend and came back with a story rather than a good time.",
         what: "A five-minute account of everything that went wrong: a bar too full to get into, heat that stopped them walking, a hotel far enough out that they gave up on taxis.",
@@ -1146,7 +1146,7 @@ lessons.push(
     review: "pending",
     es: {
       title: "Espero que haya llegado: dudar de lo que ya pasó",
-      situation: "Una coordinadora y su proveedor revisan por teléfono un pedido que debió llegar el viernes y del que nadie tiene confirmación.",
+      situation: "A coordinator and her supplier review an order by phone that was supposed to arrive Friday and that no one has confirmed.",
       setting: {
         who: "Paola coordinates supplies for a clinic in Bogotá. Ramiro runs the small distributor that serves her. They have worked together for three years and are on good terms without being friends.",
         what: "A five-minute call about a delivery that may or may not have arrived on Friday. Neither of them can confirm anything, which is precisely why almost every sentence is in the subjunctive.",

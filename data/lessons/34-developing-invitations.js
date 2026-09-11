@@ -30,7 +30,7 @@ lessons.push(
     es: {
       title: "Cuando “yo invito” quiere decir que paga la otra persona",
       situation:
-        "En Sincelejo, Alex sale de una tarde de diligencias con Carolina, una amiga sucreña. Ella le dice “te invito a un tinto” y Alex entiende que solo lo está llamando a acompañarla, no que ella va a pagar. En la mesa aprende que en Colombia invitar casi siempre toca el bolsillo: “yo invito” quiere decir “esto va por mi cuenta”, y pelear la cuenta puede sonar menos agradecido de lo que uno cree.",
+        "In Sincelejo, Alex is coming out of an afternoon of errands with Carolina, a friend from Sucre. She tells him “te invito a un tinto”, and Alex understands that she is only asking him to come along, not that she is going to pay. At the table he learns that in Colombia invitar almost always touches the wallet: “yo invito” means “this is on me”, and fighting over the bill can sound less grateful than you think.",
       setting: {
         who: "Carolina is a relaxed friend from Sincelejo who likes treating visitors to small things. Alex is the foreign friend who knows the dictionary meaning of invitar but not the social weight it carries around a bill.",
         what: "A coffee stop after errands, where a simple “te invito a un tinto” becomes a lesson in who is expected to pay and how to accept without turning the moment awkward.",
@@ -572,7 +572,7 @@ lessons.push(
     es: {
       title: "Aceptar sin sonar tragón en una casa de Popayán",
       situation:
-        "En Popayán, Alex visita a la familia de Natalia después de caminar por el centro histórico. Doña Marta le ofrece champús y empanaditas de pipián. Alex dice que no por educación y se queda confundido cuando todos insisten. Aprende a aceptar con gracia: un primer “no, gracias” puede ser cortesía, pero si sí quiere algo, tiene que dejarlo claro con “bueno, acepto”, “con mucho gusto” o “sí, gracias”.",
+        "In Popayán, Alex visits the family of Natalia after walking through the historic center. Doña Marta offers him champús and empanaditas de pipián. Alex says no out of politeness and gets confused when everyone insists. He learns to accept gracefully: a first “no, gracias” can be courtesy, but if he does want something, he has to make that clear with “bueno, acepto”, “con mucho gusto”, or “sí, gracias”.",
       setting: {
         who: "Doña Marta is Natalia's aunt, proud of feeding guests well. Alex is a visitor trying not to impose, and Natalia is the friend who explains the ritual before he accidentally refuses what he wants.",
         what: "A visit at a family table, focused on accepting food or drink without sounding greedy and without making the host guess forever.",
@@ -1115,7 +1115,7 @@ lessons.push(
     es: {
       title: "Decir que no sin decir “rechazo tu invitación”",
       situation:
-        "En Ibagué, Lucía invita a Alex a un cumpleaños después de un ensayo de música. Alex no puede ir y, queriendo sonar correcto, dice “rechazo tu invitación”. La frase cae helada. Lucía le enseña que rechazar es un verbo duro y más bien escrito o formal; en conversación se dice “uy, no puedo”, “me queda difícil”, “de pronto la próxima” o incluso “ahí te cuento”, que muchas veces es un no amable, no una promesa real de confirmar.",
+        "In Ibagué, Lucía invites Alex to a birthday after music rehearsal. Alex cannot go and, trying to sound correct, says “rechazo tu invitación”. The phrase lands ice cold. Lucía teaches him that rechazar is a harsh verb, more written or formal; in conversation people say “uy, no puedo”, “me queda difícil”, “de pronto la próxima”, or even “ahí te cuento”, which is often a kind no, not a real promise to confirm.",
       setting: {
         who: "Lucía is an Ibagué friend organizing a birthday gathering after rehearsal. Alex genuinely cannot go and wants to refuse without hurting her feelings.",
         what: "A birthday invitation and a refusal, focused on the spoken softeners Colombians use instead of the blunt verb rechazar.",

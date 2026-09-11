@@ -31,7 +31,7 @@ lessons.push(
     es: {
       title: "Leer el aviso de la biblioteca",
       situation:
-        "Alex entra a una biblioteca pública de Sincelejo con una botella de agua, un portátil y una empanada en la mano. En la puerta hay un aviso con varias reglas. Tú necesitas entender qué se permite, qué no se permite y por qué permitir no suena como la manera normal de pedirle algo a un amigo.",
+        "Alex enters a public library in Sincelejo with a water bottle, a laptop, and an empanada in hand. At the door there is a notice with several rules. You need to understand what is allowed, what is not allowed, and why permitir does not sound like the normal way to ask a friend for something.",
       setting: {
         who: "Rosa works at the front desk, and Alex is a visitor who wants to study without breaking the posted rules.",
         what: "A quick reading of a public sign: food, water, laptops, and where the formal verb permitir belongs.",
@@ -675,7 +675,7 @@ lessons.push(
     es: {
       title: "Quedarse bloqueado en el malecón",
       situation:
-        "Maya camina por el malecón de Riohacha y encuentra una cinta que cierra una parte del paso mientras arreglan unas tablas. Un funcionario le explica la regla sin pelear. Tú necesitas reconocer impedir como verbo formal para lo que bloquea o no deja que algo pase.",
+        "Maya is walking along the Riohacha boardwalk when she finds tape closing off part of the path while some boards are being repaired. A city worker explains the rule without arguing. You need to recognize impedir as a formal verb for what blocks something or keeps it from happening.",
       setting: {
         who: "A municipal worker watches the temporary closure, and Maya is trying to reach the beach without crossing the taped-off section.",
         what: "A polite refusal at a public barrier: the tape, the repair, and the formal verb that says something prevents passage.",
@@ -1319,7 +1319,7 @@ lessons.push(
     es: {
       title: "Evitar el trancón cerca de la plaza",
       situation:
-        "Sam está en Manizales y quiere llegar a una cita sin meterse en el trancón de la plaza. Una recepcionista del hotel le recomienda otra ruta y le advierte sobre una cuadra sola de noche. Tú necesitas darle peso a evitar, el verbo más útil de este bloque en la conversación diaria.",
+        "Sam is in Manizales and wants to get to an appointment without getting caught in the traffic jam around the square. A hotel receptionist recommends another route and warns him about a lonely block at night. You need to give weight to evitar, the most useful verb in this set for everyday conversation.",
       setting: {
         who: "Claudia works at a small hotel desk, and Sam is a guest trying to get across town without losing half an hour.",
         what: "Practical advice about avoiding traffic, avoiding a street at night, and avoiding getting stuck in a crowd.",

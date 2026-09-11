@@ -29,7 +29,7 @@ lessons.push(
     es: {
       title: "Encender el ventilador cuando vuelve la luz",
       situation:
-        "Estás en una casa de huéspedes en Sincelejo, con el calor metido en las paredes y un ventilador que no arranca después de un bajón de luz. La dueña te explica qué botón tocar, cuándo decir “prender” como todo el mundo y cuándo “encender” suena mejor en un aviso o una instrucción escrita.",
+        "You are in a guesthouse in Sincelejo, with heat sunk into the walls and a fan that will not start after a power dip. The owner explains which button to press, when to say “prender” like everyone else, and when “encender” sounds better on a notice or in written instructions.",
       setting: {
         who: "Doña Elvira runs a small guesthouse with the calm of someone who has survived many power cuts. Nina is staying for a few nights and wants the fan, the router and the switches to behave without making a ceremony of every sentence.",
         what: "A practical exchange about turning a fan and a router back on after the power flickers, with an explicit split between everyday “prender” and more formal “encender.”",
@@ -627,7 +627,7 @@ lessons.push(
     es: {
       title: "Apagar el breaker antes de revisar la nevera",
       situation:
-        "Estás en Riohacha, en una casa cerca del malecón, y una nevera vieja empezó a sonar raro después de otro parpadeo de luz. El vecino que sabe de instalaciones te pide apagar el breaker antes de mirar cualquier cosa, mientras tu celular también se apaga justo cuando ibas a grabar el ruido.",
+        "You are in Riohacha, in a house near the malecón, and an old refrigerator started making a strange noise after another power flicker. The neighbor who knows wiring asks you to turn off the breaker before looking at anything, while your cell phone also turns off just as you were about to record the noise.",
       setting: {
         who: "Óscar is the neighbor everyone calls before they call a technician. Mara is renting the house for a month and knows enough to be cautious but not enough to touch a breaker box confidently.",
         what: "A safety-first conversation about turning off a breaker and appliances, plus the everyday use of “se apagó” for a phone that dies.",
@@ -1225,7 +1225,7 @@ lessons.push(
     es: {
       title: "Preguntar cómo funciona el medidor del hostal",
       situation:
-        "Estás en un hostal pequeño en San Andrés y el router se cae cada vez que el medidor prepago queda sin saldo. En recepción, el encargado te explica cómo funciona el sistema, pero también te corrige con cariño: cuando algo no trabaja, en Colombia vas a oír mucho más “no sirve” o “está dañado” que “no funciona”.",
+        "You are at a small hostel in San Andrés, and the router drops every time the prepaid meter runs out of credit. At reception, the clerk explains how the system works, but also gently corrects you: when something is not working, in Colombia you will hear “no sirve” or “está dañado” much more than “no funciona”.",
       setting: {
         who: "Kevin runs reception at a small hostel and knows which devices fail because of the meter, the weather or the router itself. Priya needs internet for a call and wants to understand the system without turning the conversation into a repair request.",
         what: "A front-desk conversation about whether the router works and how the prepaid meter operates.",

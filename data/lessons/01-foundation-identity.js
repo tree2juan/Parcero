@@ -29,7 +29,7 @@ lessons.push(
     es: {
       title: "Presentarse en la reunión del edificio",
       situation:
-        "Alex acaba de mudarse a un edificio en Medellín y llega a la reunión mensual de residentes. Todavía nadie lo conoce. Tiene que decir quién es, en qué apartamento vive y a qué se dedica — en unas cuatro frases, ante una sala que sólo está medio escuchando.",
+        "Alex has just moved into a building in Medellín and arrives at the monthly residents meeting. Nobody knows him yet. He has to say who he is, which apartment he lives in, and what he does — in about four sentences, in front of a room that is only half listening.",
       setting: {
         who: "Doña Ruth has chaired the residents' meeting for nine years and knows every apartment by number. Alex is the newest resident and has spoken to nobody in the building except the porter.",
         what: "A short round of introductions at the start of the meeting, before the agenda about the water tank.",

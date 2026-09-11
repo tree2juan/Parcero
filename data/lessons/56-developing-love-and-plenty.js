@@ -28,7 +28,7 @@ lessons.push(
     es: {
       title: "Decir “te quiero” sin correr a “te amo”",
       situation:
-        "En Barichara, Alex se despide de Camila después de pasar varias semanas ayudando en un taller de cerámica. Ella le dice “te quiero mucho” con cariño de amiga, y Alex, creyendo que querer es apenas “like”, contesta “yo también te amo”. El momento se pone raro. Camila le explica que en Colombia querer es la palabra cotidiana para el amor entre pareja, familia y amigos cercanos; amar existe, pero “te amo” pesa más, suele sonar romántico o muy solemne, aunque “amo este pueblo” o “amo esa idea” sí sale sin drama.",
+        "In Barichara, Alex says goodbye to Camila after spending several weeks helping in a ceramics workshop. She says “te quiero mucho” with the warmth of a friend, and Alex, thinking querer is only “like”, answers “yo también te amo”. The moment turns awkward. Camila explains that in Colombia querer is the everyday word for love between partners, family, and close friends; amar exists, but “te amo” carries more weight and often sounds romantic or very solemn, though “amo este pueblo” or “amo esa idea” can come out with no drama.",
       setting: {
         who: "Camila is a close Colombian friend who speaks warmly but not romantically; Alex is the learner who knows querer from textbooks and thinks amar must be the only real verb for love.",
         what: "A goodbye after several weeks of friendship, where the emotional weight of te quiero, te quiero mucho and te amo has to be sorted out without embarrassing either person.",
@@ -570,7 +570,7 @@ lessons.push(
     es: {
       title: "Cuando sobra comida después del almuerzo",
       situation:
-        "En Florencia, Alex almuerza en casa de la familia de Juliana después de una mañana de lluvia. Prepararon demasiada comida y, al recoger la mesa, todos hablan de lo que sobró: arroz, ensalada, tiempo para tomar café y hasta una silla que está de sobra en la cocina. Alex aprende que sobrar funciona como gustar: la cosa que sobra es el sujeto. “Me sobra tiempo” no significa que yo haga sobrar el tiempo, sino que tengo tiempo de más. También aprende que “estás de sobra” dicho a una persona puede sonar cruel, porque la vuelve innecesaria o estorbosa.",
+        "In Florencia, Alex has lunch at Juliana’s family’s house after a rainy morning. They made too much food, and as they clear the table, everyone talks about what was left over: rice, salad, time for coffee, and even a chair that is extra in the kitchen. Alex learns that sobrar works like gustar: the thing left over is the subject. “Me sobra tiempo” does not mean that I make time be left over, but that I have extra time. He also learns that “estás de sobra”, said to a person, can sound cruel because it makes that person unnecessary or in the way.",
       setting: {
         who: "Juliana's family has just fed Alex generously; Juliana is clearing plates, and Alex is trying to describe leftovers without turning the grammar inside out.",
         what: "A family lunch cleanup, where food, time, chairs and phrases like “sobra decir que” show how sobrar works as the mirror image of faltar.",

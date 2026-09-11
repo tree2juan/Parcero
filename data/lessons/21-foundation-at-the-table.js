@@ -30,7 +30,7 @@ lessons.push(
     es: {
       title: "Pedir el corrientazo a la hora del almuerzo",
       situation:
-        "Es mediodía y entras a un restaurante de menú del día cerca de las oficinas en Bogotá. Pides el corrientazo — la sopa, el seco y el jugo del día — y aprendes que en Colombia pedir no se dice “quiero”: se envuelve en un “¿me regala?” o en un “¿me hace el favor?”. Con la mesera te tratas de usted.",
+        "It is noon, and you walk into a menú del día restaurant near the offices in Bogotá. You order the corrientazo - soup, the seco, and the juice of the day - and learn that in Colombia you do not phrase ordering as “quiero”: you wrap it in “¿me regala?” or “¿me hace el favor?”. With the waitress, you use usted.",
       setting: {
         who: "Alex, a foreigner on a lunch break, and Patricia, a busy waitress at a set-menu lunch place who has maybe forty minutes to turn every table.",
         what: "Ordering the corrientazo — the fixed lunch of soup, a main with rice, and a fresh juice — and learning to phrase the request the Colombian way.",
@@ -654,7 +654,7 @@ lessons.push(
     es: {
       title: "Repetir en un almuerzo paisa de domingo",
       situation:
-        "Es domingo y estás almorzando donde la familia de un amigo en Medellín. Doña Miriam sirve sancocho y, apenas ves el fondo del plato, te pregunta si querés que te sirva más. Acá vas a ver las dos vidas del verbo servir: servir la comida y “servir” de ser útil, además de la presión cariñosa de repetir.",
+        "It is Sunday, and you are having lunch at the family home of a friend in Medellín. Doña Miriam serves sancocho, and as soon as you can see the bottom of the bowl, she asks whether you want her to serve you more. Here you will see the two lives of servir: serving food and “servir” as being useful, along with the affectionate pressure to have seconds.",
       setting: {
         who: "Alex, a guest at a friend's family lunch, and Doña Miriam, the paisa matriarch who measures affection in ladlefuls.",
         what: "A Sunday sancocho where refusing a second helping is the real test, and where “servir” turns out to mean two different things.",
@@ -1278,7 +1278,7 @@ lessons.push(
     es: {
       title: "Caer donde una tía en la Costa",
       situation:
-        "Estás de visita en Barranquilla y caes sin avisar donde una tía costeña. Lo primero que hace, antes que cualquier saludo largo, es preguntarte si ya comiste — que en la Costa es puro cariño, no una pregunta literal. Vas a ver comer en su salsa: “¿ya comiste?” como forma de querer, comerse algo con ganas, y un aviso sobre un sentido de comer que conviene reconocer.",
+        "You are visiting Barranquilla and drop by the home of a coastal aunt without warning. Before any long greeting, the first thing she does is ask whether you have eaten - which on the Coast is pure affection, not a literal question. You will see comer in its element: “¿ya comiste?” as a way to show care, eating something with real appetite, and one meaning of comer worth recognizing.",
       setting: {
         who: "Alex, dropping in on a friend's aunt, and Tía Nubia, a warm coastal aunt for whom feeding you is greeting you.",
         what: "An unannounced visit that turns, within seconds, into being fed an arepa de huevo whether you're hungry or not.",

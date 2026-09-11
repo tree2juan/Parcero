@@ -29,7 +29,7 @@ lessons.push(
     es: {
       title: "Recibir un paquete en la portería de Montería",
       situation:
-        "En Montería, Alex está esperando un paquete que pidió a domicilio para el apartamento donde se hospeda. El domiciliario llega a la portería, pero el nombre en la guía está incompleto y el vigilante no quiere recibir nada hasta que Alex baje con la cédula. Entre la guía, la firma de recibido y la frase “ya lo entregué”, Alex aprende que entregar sirve tanto para repartir un paquete como para radicar papeles, y que en pretérito cambia a “entregué” para conservar el sonido de la g.",
+        "In Montería, Alex is waiting for a package he ordered for delivery to the apartment where he is staying. The delivery rider reaches the front desk, but the name on the shipping label is incomplete and the guard does not want to receive anything until Alex comes down with his ID. Between the label, the received signature, and the phrase “ya lo entregué”, Alex learns that entregar works both for delivering a package and for filing paperwork, and that in the preterite it changes to “entregué” to preserve the g sound.",
       setting: {
         who: "The delivery rider is trying to finish a route before the afternoon heat breaks; the building guard is protecting the logbook; Alex is the foreign resident who must prove the package is really his.",
         what: "A package handover at the front desk, with the vocabulary of deliveries, receipts, IDs and the moment when something is officially delivered rather than merely left somewhere.",
@@ -571,7 +571,7 @@ lessons.push(
     es: {
       title: "Firmar el contrato de arriendo en Manizales",
       situation:
-        "En Manizales, Alex va a firmar un contrato de arriendo para un apartaestudio. La asesora de la inmobiliaria le pide la cédula, una copia del recibo de servicios y la firma en cada hoja; además le explica que, como falta autenticar una firma en notaría, el contrato no queda completo hasta que el codeudor lo haga. Alex descubre que firmar es regular, pero que todo lo que lo rodea —firma, recibo, factura, autenticación, notaría— es el verdadero vocabulario de la vida adulta.",
+        "In Manizales, Alex is going to sign a rental contract for a studio apartment. The real-estate agent asks for his ID, a copy of a utility bill, and a signature on every page; she also explains that, because one signature still has to be notarized, the contract is not complete until the co-signer does it. Alex discovers that firmar is regular, but everything around it — signature, receipt, bill, authentication, notary office — is the real vocabulary of adult life.",
       setting: {
         who: "The real-estate agent is careful because a lease can create real legal trouble; Alex wants the room but does not want to sign anything he does not understand.",
         what: "A rental contract appointment, moving through signatures, IDs, service bills, receipts and the notary step that makes a signature formally valid.",
@@ -1113,7 +1113,7 @@ lessons.push(
     es: {
       title: "Preguntar cuánto cobra el mecánico en Riohacha",
       situation:
-        "En Riohacha, el carro alquilado de Alex empezó a sonar raro después de un viaje por la carretera. Entra a un taller y quiere preguntar “¿cuánto cuesta?”, pero el mecánico no está vendiendo un objeto sino cotizando una revisión y una reparación. Aprende que para servicios se pregunta “¿cuánto me cobra?”, que “me cobraron de más” sirve para reclamar un sobrecosto, que “cóbreme” puede cerrar una cuenta y que cobrar también aparece en “cobrar el sueldo”. Este es el verbo que le evita quedarse mudo frente a plomeros, taxistas, modistas y mecánicos.",
+        "In Riohacha, the rental car Alex has started making a strange sound after a road trip. He goes into a repair shop and wants to ask “¿cuánto cuesta?”, but the mechanic is not selling an object; he is quoting an inspection and a repair. Alex learns that for services you ask “¿cuánto me cobra?”, that “me cobraron de más” works for disputing an overcharge, that “cóbreme” can close out a bill, and that cobrar also appears in “cobrar el sueldo”. This is the verb that keeps him from going silent in front of plumbers, taxi drivers, dressmakers, and mechanics.",
       setting: {
         who: "The mechanic runs a small workshop and wants to quote honestly after seeing the car; Alex needs the repair but also needs to know what he is being charged for.",
         what: "A service quote at a mechanic's shop, moving through labor, parts, diagnostic fees, overcharging and how to ask for an invoice or receipt.",

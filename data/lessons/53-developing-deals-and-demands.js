@@ -41,7 +41,7 @@ lessons.push(
     es: {
       title: "Acordar el arreglo en Ibagué",
       situation:
-        "Estás en Ibagué hablando con un maestro de obra sobre una gotera. Acordar precio y fecha no es lo mismo que estar de acuerdo con una opinión, y acordarse de algo cambia el verbo por completo.",
+        "You are in Ibagué talking with a tradesperson about a roof leak. Agreeing on a price and date is not the same as agreeing with an opinion, and acordarse de algo changes the verb completely.",
       setting: {
         who: "Daniel rents a small apartment, and don Rubén is the tradesperson who has come to look at a roof leak.",
         what: "They settle a price, a date, materials, and how to confirm the agreement without confusing agreement with memory.",
@@ -203,7 +203,7 @@ lessons.push(
     es: {
       title: "Cumplir treinta en Montería",
       situation:
-        "Estás en Montería organizando un cumpleaños sencillo. Cumplir años es el uso más cotidiano, pero también necesitas cumplir con una hora, cumplir una promesa y no vender como promesa lo que sólo es una intención.",
+        "You are in Montería organizing a simple birthday. Cumplir años is the most everyday use, but you also need to meet a time, keep a promise, and not sell as a promise what is only an intention.",
       setting: {
         who: "Paola is turning thirty, and her cousin Iván is helping coordinate a small family gathering.",
         what: "They talk about age, arrival time, a cake promise, and the difference between celebrating and keeping a commitment.",
@@ -353,7 +353,7 @@ lessons.push(
     es: {
       title: "Exigir respuesta en Buenaventura",
       situation:
-        "Estás en Buenaventura reclamando por un servicio que no cumplieron. Exigir suena fuerte, así que lo usas sólo cuando hay derecho y evidencia, no cuando bastaría pedir o solicitar algo normal.",
+        "You are in Buenaventura filing a complaint about a service they did not deliver. Exigir sounds strong, so you use it only when there is a right and evidence, not when asking or requesting something ordinary would be enough.",
       setting: {
         who: "Marcela paid for a delivery that never arrived, and the office clerk is trying to move the complaint to another day.",
         what: "She asks for the complaint book, insists on a written response, and chooses firm language without shouting.",

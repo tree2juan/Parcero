@@ -29,7 +29,7 @@ lessons.push(
     es: {
       title: "Viajar de Armenia a Santa Marta sin perder el hilo",
       situation:
-        "Estás en la terminal de Armenia, con una mochila, un tinto a medio tomar y la idea ambiciosa de llegar a Santa Marta sin pagar un vuelo. Necesitas comprar el tiquete, escoger un puesto que no te destruya la espalda y entender si el bus sale de verdad a la hora que promete la pantalla.",
+        "You are in the terminal in Armenia with a backpack, a half-finished tinto, and the ambitious idea of reaching Santa Marta without paying for a flight. You need to buy the ticket, choose a seat that will not destroy your back, and understand whether the bus really leaves at the time the screen promises.",
       setting: {
         who: "Mariana works the counter for an intercity bus company and has already answered the same five questions all morning. Sam is traveling north after a week in the Eje Cafetero and needs practical answers, not a tour brochure.",
         what: "A ticket-counter exchange about buying a long-distance bus ticket, choosing a seat and estimating the real travel time.",
@@ -671,7 +671,7 @@ lessons.push(
     es: {
       title: "Conducir por la vía Bucaramanga-Cúcuta con pico y placa",
       situation:
-        "Llegas a Bucaramanga con un carro alquilado y la intención de cruzar hacia Cúcuta temprano. En el mostrador, la asesora revisa tu licencia, mira la placa y te advierte que la palabra oficial es “conducir”, pero que en la calle todo el mundo te va a preguntar si sabes manejar.",
+        "You arrive in Bucaramanga with a rental car and the intention of crossing toward Cúcuta early. At the counter, the agent checks your license, looks at the plate, and warns you that the official word is “conducir”, but that on the street everyone is going to ask whether you know how to manejar.",
       setting: {
         who: "Paola works for a rental agency near Bucaramanga's transport corridor. Jordan has driven in several countries, but not on Colombian mountain roads or under local traffic restrictions.",
         what: "A rental-car handover where the paperwork says “conducir,” the spoken advice says “manejar,” and the route includes pico y placa.",
@@ -1313,7 +1313,7 @@ lessons.push(
     es: {
       title: "Montar en chiva por la montaña de Salento",
       situation:
-        "Estás en Salento, frente a una chiva colorida que sube por una carretera estrecha hacia una finca cafetera. La conductora no vende una postal: te explica dónde montarte, cuándo es mejor subirse, por qué no debes pararte en la curva y cómo la misma palabra “montar” también aparece lejos del transporte.",
+        "You are in Salento, in front of a colorful chiva that climbs a narrow road toward a coffee farm. The driver is not selling a postcard: she explains where to board, when it is better to get on, why you should not stand on the curve, and how the same word “montar” also appears far from transportation.",
       setting: {
         who: "Lina drives a chiva that carries visitors and locals up a rural road outside Salento. Casey wants the ride, but also wants to understand the verb that keeps appearing in different places.",
         what: "A boarding conversation around a mountain chiva, with side notes on “montar en,” “subirse a,” and the non-transport meanings of “montar.”",

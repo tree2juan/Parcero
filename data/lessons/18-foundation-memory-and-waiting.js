@@ -38,7 +38,7 @@ lessons.push(
     es: {
       title: "Reencontrarse con una amiga y recordar viejos tiempos",
       situation:
-        "Alex se encuentra por casualidad en la calle con Diana, una amiga caleña del colegio que no ve hace años. Se ponen a recordar las fiestas, los profesores y los apodos de entonces, y Alex le pide que le recuerde un par de nombres que se le escapan. Toda la charla gira en torno a recordar y acordarse: acordarse de algo, recordar en el sentido de traer a la memoria, y ese recordar que en realidad quiere decir hacerle acordar algo a alguien.",
+        "Alex runs into Diana by chance on the street, an old school friend from Cali whom he has not seen in years. They start remembering the parties, teachers and nicknames from back then, and Alex asks her to remind him of a couple of names that escape him. The whole chat turns on recordar and acordarse: remembering something, recordar in the sense of bringing something to mind, and the recordar that really means reminding someone of something.",
       setting: {
         who: "Diana is an old school friend from Cali whom Alex has not seen in years — warm, quick and full of voseo.",
         what: "A spontaneous catch-up on the street, dredging up shared memories, teachers and half-forgotten names.",
@@ -670,7 +670,7 @@ lessons.push(
     es: {
       title: "Reconocer que se te olvidó un mandado",
       situation:
-        "Alex llega a una comida en casa de Yina, una amiga cartagenera, sin la torta que había prometido traer, y encima se dio cuenta de que también dejó las llaves. Le toca reconocer, algo apenado, que se le olvidó todo. La escena vive de las tres formas de olvidar: el neutro “olvidé”, el reflexivo “me olvidé de”, y sobre todo el maravillosamente inocente “se me olvidó”, que reparte la culpa como si el olvido le pasara a uno solito.",
+        "Alex arrives for a meal at the home of Yina, a friend from Cartagena, without the cake he had promised to bring, and on top of that he realizes he also left his keys behind. He has to admit, a little embarrassed, that he forgot everything. The scene lives on the three ways to forget: the neutral “olvidé”, the reflexive “me olvidé de”, and above all the wonderfully innocent “se me olvidó”, which spreads the blame as if forgetting happened all by itself.",
       setting: {
         who: "Yina is a warm, easygoing friend from Cartagena hosting lunch; Alex is the guest who dropped the ball.",
         what: "Owning up to forgetting the cake and the keys, and being let off the hook with coastal good humor.",
@@ -1302,7 +1302,7 @@ lessons.push(
     es: {
       title: "Esperar el turno en la clínica",
       situation:
-        "Alex llega a una EPS en Bogotá y le pregunta a la recepcionista cuánto le toca esperar para que lo atiendan. La recepcionista lo hace esperar un momentico, calcula media hora y espera que la fila no se demore más. Toda la escena descansa sobre un solo verbo, esperar, que en español cubre tres ideas que el inglés separa: esperar de aguardar, esperar de tener esperanza, y esperar de suponer o contar con algo.",
+        "Alex arrives at an EPS clinic in Bogotá and asks the receptionist how long he has to wait to be seen. The receptionist asks him to wait a moment, estimates half an hour and hopes the line will not take longer. The whole scene rests on a single verb, esperar, which in Spanish covers three ideas English separates: waiting, hoping, and expecting or counting on something.",
       setting: {
         who: "The receptionist at an EPS clinic is polite, efficient and busy; Alex is a patient asking about the wait.",
         what: "Asking how long the wait is and being told to take a seat, all built on the one verb esperar.",

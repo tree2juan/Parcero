@@ -32,7 +32,7 @@ lessons.push(
     es: {
       title: "Descubrir otra historia en San Andrés",
       situation:
-        "Tú estás en San Andrés con Mariana, que te muestra una casa antigua cerca de La Loma. Al principio crees que sólo vas a oír datos turísticos, pero descubres que el lugar tiene dos nombres, dos memorias y una historia familiar que nadie puso en el letrero.",
+        "You are in San Andrés with Mariana, who shows you an old house near La Loma. At first you think you are only going to hear tourist facts, but you discover that the place has two names, two memories, and a family story that no one put on the sign.",
       setting: {
         who: "Mariana is a San Andrés resident who switches comfortably between family memory and public history. Owen is already conversational and can ask follow-up questions without turning the afternoon into an interview.",
         what: "A walk past an old house becomes a conversation about finding out what a place means beyond the first explanation.",
@@ -684,7 +684,7 @@ lessons.push(
     es: {
       title: "Resolver un cobro raro en Montería",
       situation:
-        "Usted está en Montería y acompaña a Laura a preguntar por una factura de agua que llegó altísima. Nadie quiere pelear, pero todos necesitan que el caso se resuelva, o al menos entender por qué no se ha resuelto nada todavía.",
+        "You are in Montería and go with Laura to ask about a water bill that arrived extremely high. No one wants to fight, but everyone needs the case to be resolved, or at least to understand why nothing has been resolved yet.",
       setting: {
         who: "Laura rents a small apartment and knows the usual water bill by heart. The clerk is patient but has to follow the utility company's procedure.",
         what: "A service-counter conversation about sorting out an unusually high bill, checking whether there was a reading error, and deciding what remains pending.",
@@ -1336,7 +1336,7 @@ lessons.push(
     es: {
       title: "Revisar el aceite antes de salir de Riohacha",
       situation:
-        "Tú vas a salir de Riohacha por carretera y paras en una estación de servicio. El carro suena raro, el viaje es largo y necesitas pedir que revisen el aceite, las llantas y un recibo, sin confundir revisar con reescribir ni con estudiar para un examen.",
+        "You are about to leave Riohacha by road and stop at a service station. The car sounds strange, the trip is long, and you need to ask someone to check the oil, the tires, and a receipt, without confusing revisar with rewriting or with studying for an exam.",
       setting: {
         who: "Carolina is driving out of Riohacha and does not want to gamble on a long hot road. The attendant is used to quick checks before people leave town.",
         what: "A practical service-station check: oil, tire pressure, a warning light and a receipt that may have the wrong plate number.",

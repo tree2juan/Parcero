@@ -43,7 +43,7 @@ lessons.push(
     es: {
       title: "Que no te contesten en San Andrés",
       situation:
-        "Estás en San Andrés organizando una salida con amigos. Alguien no contesta el teléfono, deja mensajes en visto y tú aprendes la diferencia entre contestar un mensaje y responder con una explicación más pensada.",
+        "You are in San Andrés organizing an outing with friends. Someone does not answer the phone, leaves messages on read, and you learn the difference between contestar a message and responder with a more thought-out explanation.",
       setting: {
         who: "Carolina is coordinating a small group plan, and Nico is the friend who has been left waiting for a reply.",
         what: "They try to confirm whether another friend is coming, while distinguishing a missed call, a message left on read, and a considered response.",
@@ -205,7 +205,7 @@ lessons.push(
     es: {
       title: "Avisar cuando llegues a Sincelejo",
       situation:
-        "Estás en Sincelejo coordinando una visita familiar. Todos dicen me avisas, yo te aviso y avíseme cuando llegue, pero aprendes que yo te aviso a veces es una forma suave de aplazar, no una promesa firme.",
+        "You are in Sincelejo coordinating a family visit. Everyone says me avisas, yo te aviso, and avíseme cuando llegue, but you learn that yo te aviso is sometimes a gentle way to put something off, not a firm promise.",
       setting: {
         who: "Valeria is arriving to visit relatives, and her aunt Marta is coordinating keys, lunch, transport, and timing.",
         what: "They arrange how Valeria will let people know she has arrived, whether lunch is happening, and when a vague deferral is not the same as a promise.",
@@ -355,7 +355,7 @@ lessons.push(
     es: {
       title: "Prometer después de una demora en Manizales",
       situation:
-        "Estás en Manizales después de quedar mal con una amiga. Necesitas prometer sólo cuando de verdad vas a cumplir, y notar cuándo los colombianos prefieren suavizar con yo miro a ver, si Dios quiere o de una.",
+        "You are in Manizales after letting a friend down. You need to promise only when you truly are going to follow through, and notice when Colombians prefer to soften things with yo miro a ver, si Dios quiere, or de una.",
       setting: {
         who: "Laura missed an important update, and Camilo is the friend who waited and now wants clarity rather than excuses.",
         what: "They talk through apology, a strong promise, a formal usted-style promise, and softer ways Colombians avoid overpromising.",

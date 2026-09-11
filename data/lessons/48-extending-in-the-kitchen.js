@@ -18,7 +18,7 @@ lessons.push(
     es: {
       title: "Cortar pescado cuando se corta la luz",
       situation:
-        "En Buenaventura, Alex ayuda a doña Elvira a preparar pescado para un almuerzo familiar. La conversación no se queda en la tabla de picar: mientras ella le pide que corte el plátano más delgado, se corta la luz, se le corta una llamada y aparece la advertencia de que la leche de coco se puede cortar si la tratan mal.",
+        "In Buenaventura, Alex helps Doña Elvira prepare fish for a family lunch. The conversation does not stay on the cutting board: while she asks him to slice the plantain thinner, the power goes out, a call drops, and a warning appears that coconut milk can split if it is handled badly.",
       setting: {
         who: "Doña Elvira is an older host who cooks for a large family without turning the kitchen into a class. Alex is a guest who wants to help and to understand the phrases that suddenly stop being about knives.",
         what: "A shared kitchen job: slicing fish and plantain, then dealing with a power outage, a dropped call and the warning that coconut milk can split.",
@@ -650,7 +650,7 @@ lessons.push(
     es: {
       title: "Mezclar la masa sin volverla engrudo",
       situation:
-        "En Ibagué, Alex entra a un taller de cocina donde Clara enseña a armar tamales tolimenses. La clase no recita una receta: Clara lo corrige mientras conversa, le pide “mézclelo despacio”, le advierte “no lo mezcle con el guiso todavía” y le muestra que mezclar no es lo mismo que revolver a lo loco.",
+        "In Ibagué, Alex enters a cooking workshop where Clara teaches people to assemble Tolima-style tamales. The class does not recite a recipe: Clara corrects him while chatting, asks him “mézclelo despacio”, warns him “no lo mezcle con el guiso todavía”, and shows him that mezclar is not the same as stirring wildly.",
       setting: {
         who: "Clara teaches practical cooking workshops and has no patience for students who rush texture. Alex can follow a conversation, but he still needs precise commands with attached pronouns.",
         what: "Mixing masa, seasoning and filling at the right moment, with negative commands and warnings about what not to combine yet.",
@@ -1282,7 +1282,7 @@ lessons.push(
     es: {
       title: "Échele sal y échele ganas",
       situation:
-        "En San Andrés, Alex cocina con Mariana antes de que llegue la familia. Ella le dice “échele sal”, pero la conversación abre otros usos: echar una mano cuando falta ayuda, echarse a perder cuando el pescado espera demasiado y el colombiano “échele ganas” cuando alguien necesita seguir intentando sin rendirse.",
+        "In San Andrés, Alex cooks with Mariana before the family arrives. She tells him “échele sal”, but the conversation opens up other uses: echar una mano when help is needed, echarse a perder when fish waits too long, and the Colombian “échele ganas” when someone needs to keep trying without giving up.",
       setting: {
         who: "Mariana is hosting relatives and cooking while answering messages. Alex is helping, but he keeps hearing echar in places where “throw” would make no sense in English.",
         what: "A busy kitchen conversation about adding seasoning, helping with a task, keeping fish from spoiling and encouraging someone to keep trying.",

@@ -29,7 +29,7 @@ lessons.push(
     es: {
       title: "Mirar los cuadros en el museo de Bogotá",
       situation:
-        "En La Candelaria, en Bogotá, Alex recorre el Museo Botero con Don Hernán, un guía voluntario que le muestra las salas. Entre las figuras redondas de Botero, Alex tiene que entender que mirar no es lo mismo que ver, que “mire, le explico” no es una orden de mirar nada, y que en español uno mira los cuadros pero ve televisión. Todo en usted, como se habla con un guía mayor en Bogotá.",
+        "In La Candelaria, in Bogotá, Alex walks through the Museo Botero with Don Hernán, a volunteer guide who shows him the galleries. Among Botero’s round figures, Alex has to understand that mirar is not the same as ver, that “mire, le explico” is not an order to look at anything, and that in Spanish you mirar paintings but ver television. All in usted, the way you speak with an older guide in Bogotá.",
       setting: {
         who: "Don Hernán is a retired teacher who volunteers as a museum guide and loves a patient explanation. Alex is the foreign visitor happy to be walked slowly through the rooms.",
         what: "A guided walk through the Botero museum, learning to look deliberately at art and to tell mirar from ver along the way.",
@@ -629,7 +629,7 @@ lessons.push(
     es: {
       title: "Oírse por encima del picó en Cartagena",
       situation:
-        "Alex está en Cartagena y su amiga Valentina lo llama desde una verbena en la calle, con el picó sonando durísimo. Entre la mala señal y la champeta a todo volumen, Alex tiene que entender que en Colombia “escuchar” sirve para “oír” en el teléfono (“¿me escuchas?”), que escuchar es transitivo (escuchar música, sin “a”) y que “escúchame bien” es más “pon atención” que “oye mi voz”. Todo en tú, como se habla en la Costa.",
+        "Alex is in Cartagena and his friend Valentina calls him from a street party, with the picó blasting. Between the bad signal and champeta at full volume, Alex has to understand that in Colombia “escuchar” works for hearing on the phone, as in “¿me escuchas?”, that escuchar is transitive, as in escuchar música with no “a”, and that “escúchame bien” is more “pay attention” than “hear my voice”. All in tú, the way people speak on the coast.",
       setting: {
         who: "Valentina is a cartagenera calling from a street party, all warmth and volume. Alex is her friend on the other end, straining to make out a word.",
         what: "A phone call fighting a blasting sound system, sliding between escuchar for hearing and escuchar for deliberate listening.",
@@ -1229,7 +1229,7 @@ lessons.push(
     es: {
       title: "Cazar un grito en la salsateca de Cali",
       situation:
-        "Alex está en una salsateca de Cali con Manuel, un melómano vallecaucano que le va mostrando la música. Entre el voseo caleño y el volumen, Alex aprende que oír es “percibir el sonido”, que su verdadero tesoro son los llamados de atención — “oiga”, “oís”, “óyeme” — y las coletillas “¿oíste?/¿oyó?”, y que nada de eso es una pregunta real sobre el oído. El contraste con escuchar (poner atención a propósito) cierra la lección.",
+        "Alex is at a salsateca in Cali with Manuel, a melómano from Valle del Cauca who is showing him the music. Between Cali voseo and the volume, Alex learns that oír is “percibir el sonido”, that its real treasure is the attention-getters — “oiga”, “oís”, “óyeme” — and the tags “¿oíste?/¿oyó?”, and that none of them is a real question about the ear. The contrast with escuchar, paying attention on purpose, closes the lesson.",
       setting: {
         who: "Manuel is a Cali melómano — a devoted salsa buff — walking Alex through the records. Alex is his friend, half-deafened and trying to keep up.",
         what: "A night at a salsateca, spinning through oír for catching sound and the attention-getters and tags built from it, with escuchar as the deliberate contrast.",

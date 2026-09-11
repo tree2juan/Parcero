@@ -29,7 +29,7 @@ lessons.push(
     es: {
       title: "Hablar de rutinas de madrugada en Ibagué",
       situation:
-        "Estás en Ibagué preparando una caminata temprano con una amiga. Ella pregunta por tus rutinas, lo que sueles hacer ahora y lo que solías hacer cuando vivías en una ciudad más fría.",
+        "You are in Ibagué getting ready for an early walk with a friend. She asks about your routines, what you usually do now, and what you used to do when you lived in a colder city.",
       setting: {
         who: "Lina organizes weekend walks and knows the heat changes everyone's schedule. Theo has moved recently and is trying to describe both current habits and old routines without overusing simple present.",
         what: "A conversation about what someone usually does, what they used to do, and why soler is useful but grammatically limited.",
@@ -593,7 +593,7 @@ lessons.push(
     es: {
       title: "Caber todos en el carro en Zipaquirá",
       situation:
-        "Estás en Zipaquirá saliendo hacia una finca cercana. Hay cinco personas, morrales y un carro pequeño, y el grupo necesita decidir si caben todos o si alguien debe ir en taxi.",
+        "You are in Zipaquirá heading out to a nearby farm. There are five people, backpacks, and a small car, and the group needs to decide whether everyone fits or whether someone should go by taxi.",
       setting: {
         who: "Patricia is coordinating the ride to a family lunch. Noah is the tallest passenger and has to admit when the seating plan is physically impossible.",
         what: "A concrete car-packing conversation about people and bags fitting, the irregular forms quepo and cupo, and the idiom no cabe duda.",
@@ -1157,7 +1157,7 @@ lessons.push(
     es: {
       title: "Decidir si vale la pena en Guatapé",
       situation:
-        "Estás en Guatapé mirando un paseo en lancha y unas artesanías. Necesitas preguntar cuánto vale, decidir si vale la pena y oír una advertencia con más vale que antes de que se llene el muelle.",
+        "You are in Guatapé looking at a boat ride and some crafts. You need to ask how much it costs, decide whether it is worth it, and hear a warning with más vale que before the dock fills up.",
       setting: {
         who: "Diana sells boat tickets and small crafts near the waterfront. Riley is trying to spend carefully without reducing every decision to the cheapest option.",
         what: "A price-and-worth conversation: how much something costs, whether it is worth it, and why vale is not the Colombian way to say OK.",

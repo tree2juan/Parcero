@@ -19,7 +19,7 @@ lessons.push(
     es: {
       title: "Calmar a un niño que llora en Sincelejo",
       situation:
-        "Estás en un cumpleaños familiar en Sincelejo cuando un niño pequeño empieza a llorar porque se le cayó el helado. Quieres consolarlo sin regañarlo, y después bromear cuando todos terminan llorando de la risa.",
+        "You are at a family birthday party in Sincelejo when a small child starts crying because his ice cream fell. You want to comfort him without scolding him, and later joke when everyone ends up crying with laughter.",
       setting: {
         who: "Marta is the aunt who has seen every birthday disaster. Alex is a guest helping with the children and trying not to make the crying louder.",
         what: "A small emotional emergency: a dropped ice cream, a tired toddler, adults negotiating comfort, and a joke that turns tears into laughter.",
@@ -671,7 +671,7 @@ lessons.push(
     es: {
       title: "Reírse con un amigo, no de él, en Ibagué",
       situation:
-        "Estás en Ibagué después de una función de teatro aficionado. Un amigo contó un chiste sobre su propio olvido y todos se rieron; ahora necesitas distinguir reírse con alguien de reírse de alguien.",
+        "You are in Ibagué after an amateur theater performance. A friend told a joke about her own forgetfulness and everyone laughed; now you need to distinguish reírse con alguien from reírse de alguien.",
       setting: {
         who: "Paula acted in the amateur performance and is comfortable laughing at her own mistake. Alex is learning how to join the laughter without sounding cruel.",
         what: "A post-show conversation about a joke that landed, the difference between laughing with and laughing at, and the more natural Colombian phrase “me da risa.”",
@@ -1323,7 +1323,7 @@ lessons.push(
     es: {
       title: "Sonreír para una foto en San Andrés",
       situation:
-        "Estás en San Andrés con unos amigos y una fotógrafa les toma una foto antes de que se vaya la luz. Ella necesita decir sonría sin sonar mecánica, y tú quieres comentar quién salió sonriendo y quién sonrió tarde.",
+        "You are in San Andrés with some friends, and a photographer takes your picture before the power goes out. She needs to say sonría without sounding mechanical, and you want to comment on who came out smiling and who smiled late.",
       setting: {
         who: "Claudia is a photographer used to guiding nervous groups quickly. Alex is in the group and notices every awkward smile once the photo appears.",
         what: "A short photo session: the photographer gives directions, people adjust their faces, someone laughs, and the final picture catches one late smile.",

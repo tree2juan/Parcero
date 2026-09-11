@@ -29,7 +29,7 @@ lessons.push(
     es: {
       title: "Sacar plata y papeles antes del trámite",
       situation:
-        "Estás en Ibagué, entre un cajero que cobra comisión, una papelería llena y una oficina donde piden fotocopias de la cédula. Necesitas sacar plata, sacar copias, sacar cita y entender por qué el mismo verbo sirve también para sacar buenas notas o sacar un pasaporte.",
+        "You are in Ibagué, between an ATM that charges a fee, a crowded copy shop, and an office that asks for photocopies of your cédula. You need to withdraw cash, make copies, get an appointment, and understand why the same verb also works for getting good grades or getting a passport.",
       setting: {
         who: "Julián works at a copy shop beside a bank branch and spends the morning translating errands into plain instructions. Emma is trying to finish several Colombian paperwork tasks before the office closes.",
         what: "A practical errand conversation about withdrawing cash, making copies, booking an appointment and using sacar for documents and grades.",
@@ -627,7 +627,7 @@ lessons.push(
     es: {
       title: "Saltarse la fila antes de la lancha",
       situation:
-        "Estás en Buenaventura, esperando una lancha, y alguien intenta meterse delante de una fila que ya lleva media hora bajo el sol. La encargada no grita, pero marca el límite: aquí nadie se salta la fila, nadie se salta el paso del registro y saltarse un semáforo tampoco es una viveza.",
+        "You are in Buenaventura, waiting for a boat, and someone tries to push ahead of a line that has already been standing under the sun for half an hour. The person in charge does not shout, but she sets the boundary: here nobody skips the line, nobody skips the registration step, and running a red light is not clever either.",
       setting: {
         who: "Marisol manages passengers at a dock with patience sharpened by long lines. Leo is traveling with a small group and notices a man edging toward the front as if nobody were watching.",
         what: "A line-management conversation that moves from literal jumping to the figurative and socially loaded “saltarse la fila.”",
@@ -1237,7 +1237,7 @@ lessons.push(
     es: {
       title: "Cruzar la avenida y cruzarse con medio mundo",
       situation:
-        "Estás en Arauca, buscando una entrevista en una emisora comunitaria, y una periodista te da indicaciones que incluyen cruzar la avenida, cruzar los dedos para que el puente no esté cerrado y reírse cuando se cruza con un colega que no veía desde otra cobertura.",
+        "You are in Arauca, looking for an interview at a community radio station, and a journalist gives you directions that include crossing the avenue, crossing your fingers that the bridge is not closed, and laughing when she runs into a colleague she had not seen since another assignment.",
       setting: {
         who: "Paula is a local journalist who gives directions while answering messages from her editor. Jonah has an interview at the station and needs to get across a busy avenue without missing the idioms along the way.",
         what: "A directions conversation that covers crossing the street, hoping with crossed fingers and running into someone by chance.",

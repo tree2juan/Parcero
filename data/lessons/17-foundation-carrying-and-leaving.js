@@ -33,7 +33,7 @@ lessons.push(
     es: {
       title: "Qué llevar al sancocho del domingo",
       situation:
-        "Alex se encuentra a Yina, una amiga costeña, en la puerta del edificio en Barranquilla. El domingo hay sancocho donde Wilmer, un amigo del barrio, y Yina le confirma que él también está invitado. Alex no sabe si debe aparecer con algo ni cómo vestirse, así que aprovecha para preguntarle a Yina, que se sabe todas las reglas de la costa.",
+        "Alex runs into Yina, a coastal friend, at the door of the building in Barranquilla. On Sunday there is sancocho at Wilmer’s, a friend from the barrio, and Yina confirms that Alex is invited too. Alex does not know whether he should show up with something or how to dress, so he takes the chance to ask Yina, who knows all the rules of the coast.",
       setting: {
         who: "Yina grew up in Barranquilla and treats everyone on the block like family. Alex arrived three months ago for work and is still learning how coastal invitations work — who to greet, what to bring, how late is late.",
         what: "A quick doorway chat about a Sunday sancocho at a mutual friend's place, and what Alex should turn up with.",
@@ -625,7 +625,7 @@ lessons.push(
     es: {
       title: "Pedir el almuerzo y la cuenta en Bogotá",
       situation:
-        "Alex entra a un restaurante de almuerzo ejecutivo en el centro de Bogotá a la hora pico. Un mesero lo atiende de usted, con la cortesía formal pero cálida de la capital. Alex tiene que pedir la carta, un café mientras decide y, al final, la cuenta, todo con las fórmulas colombianas de “¿me trae?” y “¿me regala?”, y sin caer en el falso amigo del tinto.",
+        "Alex walks into a set-lunch restaurant in downtown Bogotá at rush hour. A waiter serves him with usted, with the formal but warm courtesy of the capital. Alex has to ask for the menu, a coffee while he decides and, at the end, the bill, all with the Colombian formulas “¿me trae?” and “¿me regala?”, and without falling for the false friend tinto.",
       setting: {
         who: "A waiter in a busy set-lunch spot, brisk but courteous, and Alex, ordering alone on a workday. Neither knows the other; the whole exchange runs on the polite formulas of the capital.",
         what: "Ordering lunch: getting the menu, a coffee to sip while deciding, and finally the bill, in a hurry.",
@@ -1217,7 +1217,7 @@ lessons.push(
     es: {
       title: "La despedida en la casa de un amigo paisa",
       situation:
-        "Estás de visita en la casa de un amigo en Medellín y ya te vas a ir. Entre el «dejá eso ahí» para que no laves los platos, el «dejame contarte» de una historia, la chaqueta que dejaste en el cuarto y el «deje así» final, el verbo dejar aparece con cuatro sentidos distintos en una sola conversación. Todo en voseo paisa, con parce, pues y bien pueda.",
+        "You are visiting a friend’s place in Medellín and are about to leave. Between “dejá eso ahí” so you do not wash the dishes, “dejame contarte” before a story, the jacket you left in the room and the final “deje así”, the verb dejar appears with four different meanings in one conversation. All in paisa voseo, with parce, pues and bien pueda.",
       setting: {
         who: "Alex, an English speaker who has spent the evening at a paisa friend's place, and Samuel, the host, who speaks the warm, vos-heavy Spanish of Medellín. They are close friends, so everything is informal.",
         what: "Saying goodbye at the end of a visit: offering to help clean up, catching up on Samuel quitting smoking, retrieving a forgotten jacket, and reading the paisa sign-off “deje así”.",

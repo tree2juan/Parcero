@@ -26,7 +26,7 @@ lessons.push(
     review: "pending",
     es: {
       title: "Antes esto era otra cosa",
-      situation: "Un vecino mayor le cuenta cómo era el barrio antes, y qué cosas ya no se hacen.",
+      situation: "An older neighbor tells Marcela what the neighborhood used to be like and which things people do not do anymore.",
       setting: {
         who: "Don Hernando is seventy-four and has lived on this block in Chapinero since 1979. Marcela moved into the building four months ago and is thirty-one. The age gap is wide enough that usted is automatic in both directions, and neither of them will drop it.",
         what: "A doorway conversation that neither person planned: Marcela asked one question about a closed shop and got fifteen years of neighborhood history. It stays friendly and slightly wistful throughout.",
@@ -586,7 +586,7 @@ lessons.push(
     review: "pending",
     es: {
       title: "¿Cierto? Confirmar sin preguntar de nuevo",
-      situation: "Dos amigos cierran los detalles de un viaje y cada uno confirma lo que cree que ya quedó claro.",
+      situation: "Two friends wrap up the details of a trip, and each one confirms what they think has already been made clear.",
       setting: {
         who: "Kelly and Duván have been friends since school and are organizing a weekend trip with four other people. Neither is in charge, which is exactly why so much confirming is going on.",
         what: "A five-minute check-through of arrangements already half-agreed in a group chat: who is driving, what time, who is paying for the cabin. Nothing new is decided; everything is confirmed.",

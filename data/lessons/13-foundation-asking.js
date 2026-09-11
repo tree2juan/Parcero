@@ -29,7 +29,7 @@ lessons.push(
     es: {
       title: "Preguntarle el camino a un desconocido",
       situation:
-        "Alex está perdido en Bogotá buscando el centro de salud y para a una señora en la calle para preguntarle cómo llegar. Tiene que pedir permiso para preguntar, hacer la pregunta con claridad y agradecer — todo en un par de minutos, sin sonar brusco. En el camino aprende que “preguntar” no es lo mismo que “pedir”.",
+        "Alex is lost in Bogotá looking for the health center and stops a woman on the street to ask how to get there. He has to ask permission to ask, put the question clearly and say thank you — all in a couple of minutes, without sounding abrupt. Along the way, he learns that “preguntar” is not the same as “pedir”.",
       setting: {
         who: "The passerby is Doña Luz, a woman in her sixties who lives nearby and is in no hurry. Alex has been walking in circles for ten minutes with a dying phone battery.",
         what: "A quick street exchange in which Alex asks the way to the health center and gets both directions and a small lesson in courtesy.",
@@ -681,7 +681,7 @@ lessons.push(
     es: {
       title: "Contestar el teléfono por la compañera",
       situation:
-        "Alex está en el apartamento que comparte con Caro, en Bogotá, cuando suenan a la vez el teléfono de ella y el timbre. Caro le pide que conteste mientras ella termina algo. Alex tiene que atender la llamada, responder lo que sabe y dejar claro que hay cosas que no puede decidir por ella — todo sin meter la pata.",
+        "Alex is in the apartment he shares with Caro in Bogotá when her phone and the doorbell ring at the same time. Caro asks him to answer while she finishes something. Alex has to take the call, answer what he knows and make clear that there are things he cannot decide for her — all without putting his foot in it.",
       setting: {
         who: "Caro and Alex have shared the apartment for a year and split chores easily. Caro is in the middle of something with her hands full when everything starts ringing at once.",
         what: "A quick domestic scramble in which Alex answers Caro's phone and the door, fields a couple of questions, and works out what he can and can't decide for her.",
@@ -1333,7 +1333,7 @@ lessons.push(
     es: {
       title: "Pedirle prestado el taladro al vecino",
       situation:
-        "Alex vive en Medellín y necesita colgar una repisa, pero no tiene taladro. Toca la puerta de Norbey, el vecino paisa del frente, para pedírselo prestado y, de paso, una mano con la pared. Tiene que plantear la necesidad sin sonar mandón, pedir prestado bien y aceptar la ayuda — todo en vos, como se habla en el barrio.",
+        "Alex lives in Medellín and needs to hang a shelf, but he does not have a drill. He knocks on Norbey’s door, the paisa neighbor across the hall, to ask to borrow it and, while he is at it, for a hand with the wall. He has to explain the need without sounding bossy, ask to borrow it properly and accept the help — all in vos, the way people speak in the barrio.",
       setting: {
         who: "Norbey has lived across the hall for years, keeps a full toolbox and enjoys a chat. Alex moved to Medellín recently and is still finding his feet with the paisa way of speaking.",
         what: "A short doorway exchange in which Alex asks to borrow a drill and ends up with an offer of hands-on help too.",

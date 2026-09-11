@@ -29,7 +29,7 @@ lessons.push(
     es: {
       title: "Preguntar qué incluye la tarifa en Montería",
       situation:
-        "Estás en Montería reservando una habitación sencilla cerca del río. La tarifa parece buena, pero necesitas saber si incluye desayuno, aire acondicionado, impuestos y transporte desde el terminal.",
+        "You are in Montería booking a simple room near the river. The rate looks good, but you need to know whether it includes breakfast, air conditioning, taxes, and transportation from the bus terminal.",
       setting: {
         who: "Sandra runs reception at a small hotel used by families and salespeople. Oliver has arrived after a long bus ride and wants the real price before handing over his card.",
         what: "A hotel counter conversation about what a rate includes, what is included already, and what has an extra charge.",
@@ -605,7 +605,7 @@ lessons.push(
     es: {
       title: "Excluido del chat del equipo en Buenaventura",
       situation:
-        "Estás en Buenaventura ayudando a organizar un torneo barrial. Un jugador quedó por fuera del chat del equipo y hay que distinguir entre una regla que excluye y una invitación que simplemente no llegó.",
+        "You are in Buenaventura helping organize a neighborhood tournament. One player was left out of the team chat, and you have to distinguish between a rule that excludes someone and an invitation that simply never arrived.",
       setting: {
         who: "Maira coordinates a neighborhood soccer team. Leo helps manage the player list and has to explain why one player missed the group chat without making the situation sound colder than it is.",
         what: "A careful conversation about formal exclusions, accidental omissions and the more everyday Colombian ways to say someone was left out.",
@@ -1169,7 +1169,7 @@ lessons.push(
     es: {
       title: "Pertenecer al grupo de bici en Arauca",
       situation:
-        "Estás en Arauca saliendo con un grupo de ciclistas que se reúne los domingos. Quieres saber si ya perteneces al grupo o si simplemente te sientes parte de él aunque todavía no estés inscrito.",
+        "You are in Arauca going out with a cycling group that meets on Sundays. You want to know whether you already belong to the group, or whether you simply feel part of it even though you are not registered yet.",
       setting: {
         who: "Nidia organizes a Sunday cycling group. Cam has joined three rides and wants to understand whether membership is formal, emotional or just a matter of being in the chat.",
         what: "A post-ride conversation about belonging to a group, feeling part of a team, and the formal flavor of pertenecer a.",

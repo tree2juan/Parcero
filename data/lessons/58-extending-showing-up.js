@@ -29,7 +29,7 @@ lessons.push(
     es: {
       title: "Presentar a la ponente antes de la charla",
       situation:
-        "Estás en Barichara, en una charla pequeña sobre oficios locales, y la organizadora te pide que presentes a una arquitecta que nadie conoce todavía. Antes de empezar, también te toca presentarte tú, presentar una queja breve sobre el sonido y aclarar que presentar un examen no es lo mismo que prepararlo.",
+        "You are in Barichara, at a small talk about local trades, and the organizer asks you to introduce an architect no one knows yet. Before starting, you also have to introduce yourself, file a brief complaint about the sound, and clarify that presentar un examen is not the same as preparing for it.",
       setting: {
         who: "Claudia organizes cultural talks with more goodwill than staff. Ben is helping at the door, has met the speaker five minutes ago, and now has to introduce her without sounding like a wedding announcer.",
         what: "A pre-talk exchange about introducing a person, introducing yourself, filing a small complaint and the broader Colombian uses of “presentar.”",
@@ -627,7 +627,7 @@ lessons.push(
     es: {
       title: "Asistir a la audiencia sin ofrecer ayuda",
       situation:
-        "Estás en Montería, frente a una sala donde habrá una audiencia pública sobre el río y las obras del barrio. Te ofreciste a acompañar a una vecina, pero el funcionario te corrige antes de entrar: “asistir a la audiencia” significa estar presente, no ayudarle a cargar los papeles.",
+        "You are in Montería, outside a room where there will be a public hearing about the river and the neighborhood works. You offered to accompany a neighbor, but the official corrects you before you go in: “asistir a la audiencia” means being present, not helping her carry the papers.",
       setting: {
         who: "Rafael is a municipal staff member checking names at the door. Dana is accompanying a neighbor who wants to speak, and she has heard “asistir” but is dangerously close to treating it like English “assist.”",
         what: "A doorway exchange before a public hearing, centered on the false friend “asistir a” as attend, not help.",
@@ -1237,7 +1237,7 @@ lessons.push(
     es: {
       title: "Participar en el taller sin quedarse mirando",
       situation:
-        "Estás en Florencia, en un taller comunitario sobre preparación para crecientes y cortes de servicio. No fuiste sólo a escuchar: te invitaron a participar en un simulacro, hacer preguntas y contar después que tuviste la oportunidad de participar sin sonar como si hubieras dirigido todo el evento.",
+        "You are in Florencia, in a community workshop about preparing for floods and service outages. You did not go just to listen: you were invited to participate in a drill, ask questions, and later say that you had the opportunity to participate without sounding as if you had led the whole event.",
       setting: {
         who: "Juliana facilitates a community workshop with residents from several neighborhoods. Omar came because his landlord insisted, but he is beginning to see that participation means more than signing the attendance sheet.",
         what: "A workshop exchange about taking part, asking whether one can participate, and using the phrase “tuve la oportunidad de participar.”",

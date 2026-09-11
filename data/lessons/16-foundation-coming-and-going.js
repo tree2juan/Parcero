@@ -39,7 +39,7 @@ lessons.push(
     es: {
       title: "Cuadrar un plan para salir el sábado",
       situation:
-        "Alex y su amiga costeña Valeria cuadran por chat un plan para salir el sábado por la noche en Barranquilla. Tienen que ponerse de acuerdo en a qué hora se ve cada uno, adónde ir, y de paso se molestan un poco por las citas recientes de cada uno. Toda la charla gira en torno a salir: salir a divertirse, salir del trabajo, salir con alguien, y esa vez que todo salió carísimo.",
+        "Alex and his coastal friend Valeria work out a plan by chat to go out Saturday night in Barranquilla. They have to agree on what time each one is free, where to go, and along the way they tease each other a little about their recent dates. The whole chat turns on salir: going out for fun, leaving work, dating someone, and that time everything came out wildly expensive.",
       setting: {
         who: "Valeria is Alex's friend from the coast — warm, quick and direct, the kind who plans the whole night in three messages.",
         what: "They pin down Saturday: what time each finishes work, where to go, and a bit of teasing about who is dating whom.",
@@ -671,7 +671,7 @@ lessons.push(
     es: {
       title: "Subir en el metrocable hasta el barrio de un amigo",
       situation:
-        "Alex sube a visitar a su amigo paisa Sebastián, que vive en un barrio alto de Medellín al que se llega en metrocable. Se montan en la cabina, suben la loma sobre los tejados, hablan de la vista, suben el volumen a la música y Alex ofrece subir las fotos del paseo. Todo gira en torno a subir: subirse a un transporte, subir una cuesta, subir el volumen y el precio, y ese subir moderno que es cargar algo a internet.",
+        "Alex goes up to visit his paisa friend Sebastián, who lives in a high neighborhood of Medellín reached by metrocable. They get into the cabin, ride up the hill over the rooftops, talk about the view, turn the music up and Alex offers to upload the photos from the outing. Everything turns on subir: getting onto transportation, going up a hill, turning up the volume and the price, and the modern subir of uploading something to the internet.",
       setting: {
         who: "Sebastián is Alex's paisa friend, who lives up in a hillside barrio reached by the metrocable cable car.",
         what: "Riding the cabin up over the rooftops, talking about the climb and the view, turning the music up, and uploading the photos.",
@@ -1303,7 +1303,7 @@ lessons.push(
     es: {
       title: "Bajarse del bus en la parada correcta",
       situation:
-        "Alex va en un bus lleno en Bogotá y no sabe dónde bajarse. Un pasajero mayor, don Gustavo, lo ve perdido y lo ayuda con usted: le dice dónde bajarse, comentan si ya bajó el precio del pasaje, y don Gustavo le recomienda bajar la app del transporte. Todo gira en torno a bajar: bajarse del bus, bajar de precio, bajar el volumen y ese bajar moderno que es descargar algo de internet.",
+        "Alex is on a packed bus in Bogotá and does not know where to get off. An older passenger, don Gustavo, sees that he looks lost and helps him with usted: he tells him where to get off, they talk about whether the fare has gone down yet, and don Gustavo recommends downloading the transit app. Everything turns on bajar: getting off the bus, lowering a price, turning down the volume and the modern bajar of downloading something from the internet.",
       setting: {
         who: "Don Gustavo is an older passenger who notices Alex looks lost and helps him find his stop, using usted throughout.",
         what: "Alex asks where to get off; they talk about the next stop, the fare, and a route app to download.",

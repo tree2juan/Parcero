@@ -31,7 +31,7 @@ lessons.push(
     es: {
       title: "Acordar la pintada con el maestro",
       situation:
-        "Alex quiere que le repinten el apartamento y un pintor, don Fabio, vino a darle el presupuesto. Tienen que ponerse de acuerdo en el día, el color y el precio. Alex casi no conoce a don Fabio, así que todo se negocia con cuidado: cada propuesta se ofrece, no se impone.",
+        "Alex wants to have his apartment repainted, and a painter, don Fabio, has come to give him an estimate. They have to agree on the day, the color, and the price. Alex hardly knows don Fabio, so everything is negotiated carefully: each proposal is offered, not imposed.",
       setting: {
         who: "Don Fabio has spent thirty years painting apartments in Bogotá and works alone, with his own ladder. Alex is a foreigner who has never hired anyone for a job like this and isn't sure what it should cost.",
         what: "A short visit to settle the day, the color and the price for painting the living room and one bedroom.",
@@ -683,7 +683,7 @@ lessons.push(
     es: {
       title: "Medirse una chaqueta en El Hueco",
       situation:
-        "Alex anda en El Hueco, la zona de comercio popular del centro de Medellín, buscando una chaqueta. Una vendedora, Yésica, lo engancha desde la puerta y lo hace medirse una. En cinco frases se juega el precio, la talla y si vuelve o no por ella más tarde.",
+        "Alex is walking through El Hueco, the popular shopping district in downtown Medellín, looking for a jacket. A vendor named Yésica hooks him from the doorway and gets him to try one on. In five sentences, the price, the size, and whether he comes back for it later are all on the line.",
       setting: {
         who: "Yésica runs a clothing stall in El Hueco and sells by talking non-stop, with the paisa gift for making anyone feel like one of the family. Alex is a foreigner who still gets lost among so many stalls and so many offers.",
         what: "Trying on a jacket, hearing the price, and arranging to come back for it if it fits.",
@@ -1335,7 +1335,7 @@ lessons.push(
     es: {
       title: "Dudar si se cancela el desfile",
       situation:
-        "Es Carnaval en Barranquilla y Alex está en la calle esperando la Batalla de Flores con su amiga Kelly. El cielo se pone negro y Alex teme que se dañe el desfile. Kelly, costeña y curtida en carnavales, no cree que pase nada. Todo se juega entre lo que uno cree y lo que otro duda.",
+        "It is Carnival in Barranquilla, and Alex is on the street waiting for the Batalla de Flores with his friend Kelly. The sky turns black, and Alex worries the parade will be spoiled. Kelly, costeña and seasoned by years of Carnival, does not think anything will happen. Everything plays out between what one person believes and what another doubts.",
       setting: {
         who: "Kelly was born in Barranquilla and has not missed a Carnival in her life; to her the rain is part of the scenery. Alex is her foreign friend, at his first Carnival and unsure whether to stay or run for cover.",
         what: "A chat at the edge of the parade route while they wait for it to start and a downpour threatens.",

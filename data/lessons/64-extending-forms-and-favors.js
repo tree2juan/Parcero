@@ -30,7 +30,7 @@ lessons.push(
     es: {
       title: "Rellenar no siempre es llenar un formulario",
       situation:
-        "En Girardot, Alex llega a una ventanilla para actualizar unos datos de una afiliación. La funcionaria le dice “llene este formulario”, no “rellénelo”, y luego le ofrece agua porque hace calor. Cuando Alex pregunta si debe “rellenar” todos los espacios, ella aprovecha para corregir con cuidado: en Colombia llenar es el verbo normal para formularios; rellenar se entiende, pero suena más natural para volver a llenar un vaso, completar un hueco o hablar de una arepa rellena.",
+        "In Girardot, Alex arrives at a counter to update some membership information. The clerk tells him “llene este formulario”, not “rellénelo”, and then offers him water because it is hot. When Alex asks whether he should “rellenar” every space, she uses the chance to correct him carefully: in Colombia, llenar is the normal verb for forms; rellenar is understood, but it sounds more natural for filling a glass again, filling a hole, or talking about an arepa rellena.",
       setting: {
         who: "A patient but busy clerk is managing a line of people with forms; Alex has enough Spanish to ask a precise question but still trusts the dictionary too much.",
         what: "A paperwork exchange at a counter, plus a small cup of water that makes the contrast between llenar and rellenar concrete.",
@@ -584,7 +584,7 @@ lessons.push(
     es: {
       title: "Guardar el puesto y guardar las cosas",
       situation:
-        "En Zipaquirá, Alex entra con Paula a una cafetería cerca de la plaza antes de una reunión. Ella le pide que le guarde el puesto mientras pide café, y después le recuerda que guarde la mochila debajo de la silla para que no estorbe. En la misma escena, guardar no significa hacer guardia: puede ser poner algo en su lugar, conservar algo por si acaso, guardar silencio durante una llamada y hasta guardar un archivo.",
+        "In Zipaquirá, Alex walks into a café near the plaza with Paula before a meeting. She asks him to save her seat while she orders coffee, and then reminds him to put his backpack under the chair so it is not in the way. In the same scene, guardar does not mean standing guard: it can mean putting something in its place, keeping something just in case, staying quiet during a call, and even saving a file.",
       setting: {
         who: "Paula knows the café routine and moves comfortably through small favors; Alex hears guardar and first imagines guarding like a security guard.",
         what: "A seat saved for a friend, a backpack put away safely and a quick phone call where people need to keep quiet.",
@@ -1126,7 +1126,7 @@ lessons.push(
     es: {
       title: "Pedir prestado sin invertir prestar",
       situation:
-        "En Arauca, Alex llega donde su vecina Diana porque se quedó sin batería y necesita cargar el celular antes de llamar un taxi. Quiere decir que necesita “prestar” un cargador, pero Diana le muestra la dirección correcta: ella se lo presta, él lo pide prestado. También aparece prestar atención, porque ella le explica que su cargador no es de carga rápida, y la frase colombiana prestar el baño, que no significa llevarse el baño prestado sino permitir usarlo.",
+        "In Arauca, Alex arrives at his neighbor Diana's place because his battery died and he needs to charge his cell phone before calling a taxi. He wants to say he needs to “prestar” a charger, but Diana shows him the right direction: she lends it to him, he asks to borrow it. Prestar atención also appears, because she explains that her charger is not fast-charging, as does the Colombian phrase prestar el baño, which does not mean taking the bathroom away on loan but allowing someone to use it.",
       setting: {
         who: "Diana is a neighbor who is generous but careful with her things; Alex is trying to ask for help without sounding entitled or reversing who lends what.",
         what: "A phone charger borrowed for a short time, with a promise to return it and a side explanation of prestar atención and prestar el baño.",

@@ -30,7 +30,7 @@ lessons.push(
     es: {
       title: "Instalándose a trabajar en el café",
       situation:
-        "Llegas a un café de barrio en Bogotá para trabajar un par de horas y necesitas lo básico: una mesa, el wifi, un enchufe para el portátil y, en algún momento, el baño. La barista te atiende de usted y te explica las reglas de la casa mientras te acomodas.",
+        "You arrive at a neighborhood café in Bogotá to work for a couple of hours and need the basics: a table, the wifi, an outlet for your laptop and, at some point, the bathroom. The barista uses usted with you and explains the house rules while you get settled.",
       setting: {
         who: "Alex, a newcomer settling into remote work in Bogotá, and Daniela, the barista running the counter at a small neighborhood café.",
         what: "Alex asks to use the café's wifi, a power outlet and the bathroom while he sets up to work for a couple of hours.",
@@ -582,7 +582,7 @@ lessons.push(
     es: {
       title: "Abriendo una cuenta en el banco",
       situation:
-        "Entras a una sucursal en Medellín para abrir tu primera cuenta de ahorros. El asesor es paisa, te trata de vos con toda la calidez del caso y te explica qué necesitas, cuánto se demora y a qué hora abren, por si te toca volver.",
+        "You walk into a branch in Medellín to open your first savings account. The adviser is paisa, treats you with vos and all the warmth called for, and explains what you need, how long it takes and what time they open, in case you have to come back.",
       setting: {
         who: "Alex, opening his first Colombian bank account, and Óscar, a friendly paisa account adviser at a neighborhood branch.",
         what: "Alex opens a savings account, learns which documents he needs, and asks about the branch's opening hours.",
@@ -1134,7 +1134,7 @@ lessons.push(
     es: {
       title: "Antes de que bajen la reja",
       situation:
-        "Llegas a una tienda de barrio en Barranquilla casi a la hora del cierre y tratas de comprar algo rápido antes de que cierren y bajen la reja.",
+        "You reach a corner shop in Barranquilla just before closing time and try to buy something quickly before they close and pull down the grille.",
       setting: {
         who: "Alex, hurrying to grab a couple of things, and Wilmer, the costeño owner of a corner shop who is minutes from closing up for the night.",
         what: "Alex catches the shop just before closing, asks the hours, haggles a little and seals a small deal before the grille comes down.",

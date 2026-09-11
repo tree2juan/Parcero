@@ -18,7 +18,7 @@ lessons.push(
     es: {
       title: "Pesar pescado y hablar de lo que pesa en Arauca",
       situation:
-        "Estás en una plaza de mercado en Arauca comprando pescado para un almuerzo. Preguntas cuánto pesa, bromeas con pesarte todas las mañanas y luego usas a pesar de y me pesa para hablar de una invitación que aceptaste tarde.",
+        "You are at a market plaza in Arauca buying fish for lunch. You ask how much it weighs, joke about weighing yourself every morning, and then use a pesar de and me pesa to talk about an invitation you accepted late.",
       setting: {
         who: "Nora sells fish and knows the regular customers by the meals they are planning. Alex is buying for friends and trying to sound relaxed while checking the price.",
         what: "A market exchange that begins with literal weight and then moves into two figurative uses: in spite of and regret.",
@@ -660,7 +660,7 @@ lessons.push(
     es: {
       title: "Unirse a una jornada comunitaria en Guatapé",
       situation:
-        "Estás en Guatapé y unos vecinos organizan una jornada para limpiar la orilla antes de una actividad del barrio. Quieres unirte al grupo, unir fuerzas sin sonar grandilocuente y entender por qué una familia unida es un cumplido cálido.",
+        "You are in Guatapé, and some neighbors are organizing a cleanup day along the shore before a neighborhood activity. You want to join the group, join forces without sounding grandiose, and understand why una familia unida is a warm compliment.",
       setting: {
         who: "Teresa coordinates the neighborhood group and knows which tasks need people. Alex is new in town for a few weeks and wants to help without acting like he is in charge.",
         what: "A sign-up conversation: joining a group, joining efforts, keeping people together and using unido as a warm adjective.",
@@ -1278,7 +1278,7 @@ lessons.push(
     es: {
       title: "Separar puestos y hablar de una pareja en Tumaco",
       situation:
-        "Estás en Tumaco ayudando a organizar una reunión familiar pequeña. Hay que separar puestos para los primos, separar a dos niños que pelean y hablar con cuidado de una pareja que se separó el año pasado.",
+        "You are in Tumaco helping organize a small family gathering. Seats need to be set aside for the cousins, two children who are fighting need to be separated, and a couple who separated last year needs to be discussed carefully.",
       setting: {
         who: "Elena is organizing the family gathering. Alex is helping with chairs and hears a delicate update about relatives without turning it into gossip.",
         what: "A gentle planning conversation: reserved seats, physical separation, and the everyday expression for a couple who split up.",

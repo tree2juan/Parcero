@@ -29,7 +29,7 @@ lessons.push(
     es: {
       title: "Beber agua de panela después del sol",
       situation:
-        "Estás en Santa Marta, en la casa de una amiga, después de caminar bajo un sol fuerte. Te ofrecen agua de panela fría y luego café. Tienes que sonar natural y aprender cuándo beber sirve, aunque la gente normalmente dice tomar.",
+        "You are in Santa Marta, at the home of a friend, after walking under a strong sun. They offer you cold agua de panela and then coffee. You have to sound natural and learn when beber works, even though people usually say tomar.",
       setting: {
         who: "Maritza is hosting a friend's visitor, Daniel, who has arrived hot, thirsty, and nervous about sounding too much like a textbook.",
         what: "A kitchen welcome: one cold drink now, coffee later, and a small correction before the phrase becomes a habit.",
@@ -681,7 +681,7 @@ lessons.push(
     es: {
       title: "Cocinar sancocho antes de que llegue la familia",
       situation:
-        "Estás en una finca cerca de Armenia una mañana de domingo. La familia llega al mediodía y alguien te pone a ayudar con el sancocho. Tienes que decir qué sabes cocinar y entender por qué todos también dicen hacer almuerzo.",
+        "You are on a finca near Armenia on a Sunday morning. The family arrives at noon, and someone puts you to work helping with the sancocho. You have to say what you know how to cook and understand why everyone also says hacer almuerzo.",
       setting: {
         who: "Luz Marina is running the kitchen before the family arrives. Mateo is a visitor who wants to help without pretending he knows more than he does.",
         what: "Preparing sancocho in a finca kitchen, with several people doing small jobs around one big pot.",
@@ -1333,7 +1333,7 @@ lessons.push(
     es: {
       title: "Despertarse temprano para alcanzar el bus",
       situation:
-        "Vas a salir de Bucaramanga hacia una finca en Santander antes de que caliente el día. Te quedas en casa de un amigo y tienes que hablar del despertador, de despertarte temprano y de esa palabra colombiana inevitable: madrugar.",
+        "You are going to leave Bucaramanga for a finca in Santander before the day heats up. You are staying at the home of a friend and have to talk about the alarm, waking up early, and that inevitable Colombian word: madrugar.",
       setting: {
         who: "Nicolás is hosting Sam before an early ride to a family finca. Sam is worried about missing the bus and waking the whole house.",
         what: "Planning the morning before a pre-dawn departure, with alarms, coffee, and quiet movement through the apartment.",

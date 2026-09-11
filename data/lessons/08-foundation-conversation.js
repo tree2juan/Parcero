@@ -32,7 +32,7 @@ lessons.push(
     es: {
       title: "Llamar a una amiga para cuadrar un encuentro",
       situation:
-        "Alex está en Cali y quiere organizar un intercambio de idiomas con Valentina, una amiga que conoció en la clase de salsa. En vez de escribirle, la llama por teléfono. Tiene que saludar, decir quién es, proponer el plan y despedirse — todo por una línea en la que no se ven las caras y donde las fórmulas telefónicas importan.",
+        "Alex is in Cali and wants to set up a language exchange with Valentina, a friend he met in salsa class. Instead of texting her, he calls her on the phone. He has to greet her, say who it is, propose the plan, and say goodbye — all over a line where they cannot see each other and phone formulas matter.",
       setting: {
         who: "Valentina is a caleña friend Alex met at a salsa class. They have chatted a few times but never made a real plan, and this is the first time Alex has actually phoned her.",
         what: "A short phone call to fix a day and a place for a language-exchange coffee.",
@@ -664,7 +664,7 @@ lessons.push(
     es: {
       title: "Que lo inviten a entrar a una tienda de barrio paisa",
       situation:
-        "Alex anda perdido en un barrio de Medellín buscando el metro y para en una tienda de esquina a comprar agua y pedir indicaciones. Don Fabio, el tendero, lo recibe con el “¡siga!” que a todo extranjero confunde: parece “follow me”, pero significa “entre”. Alex tiene que entender la invitación, comprar, pedir la dirección y despedirse, todo en pleno vos paisa.",
+        "Alex is lost in a Medellín neighborhood looking for the metro, and he stops at a corner shop to buy water and ask for directions. Don Fabio, the shopkeeper, greets him with the “¡siga!” that confuses every foreigner: it sounds like “follow me,” but it means “come in.” Alex has to understand the invitation, buy something, ask for directions, and say goodbye, all in full paisa vos.",
       setting: {
         who: "Don Fabio is the paisa shopkeeper of a tiny corner store, the kind who calls every customer mijo and knows the block by heart.",
         what: "A quick stop to buy water and ask the way to the nearest metro station.",
@@ -1296,7 +1296,7 @@ lessons.push(
     es: {
       title: "Convencerse de no seguir un plan arriesgado",
       situation:
-        "En un café de Bogotá, Camilo, un amigo cercano, le propone a Alex irse ya mismo, a medianoche, a manejar hasta Villavicencio “por la aventura”. Alex tiene que pensarlo en voz alta, sopesar el riesgo de esa carretera de noche y decir que no sin romper la amistad. Todo gira en torno a pensar: pensar en, pensar de, pensar que, y el rotundo “ni de riesgos”.",
+        "In a Bogotá café, Camilo, a close friend, proposes that he and Alex leave right now, at midnight, to drive to Villavicencio “for the adventure.” Alex has to think it through out loud, weigh the risk of that road at night, and say no without damaging the friendship. Everything turns around pensar: pensar en, pensar de, pensar que, and the firm “ni de riesgos.”",
       setting: {
         who: "Camilo is a close bogotano friend who mixes an affectionate usted with “parce”, and who loves an impulsive plan.",
         what: "A late-night pitch to drive to Villavicencio on the spot, and Alex's careful refusal.",

@@ -31,7 +31,7 @@ lessons.push(
     es: {
       title: "Lo que te gusta del carnaval en Pasto",
       situation:
-        "Vos estás en Pasto con Natalia durante el Carnaval de Negros y Blancos. Hay carrozas, música, helado de paila y una amiga que te pregunta con picardía si sólo te gustan las carrozas o si también te gusta alguien del grupo.",
+        "You are in Pasto with Natalia during Carnaval de Negros y Blancos. There are floats, music, helado de paila, and a friend who mischievously asks whether you only like the floats or whether you also like someone in the group.",
       setting: {
         who: "Natalia is from Pasto and is proud without turning the afternoon into a lecture. Jordan is visiting the carnival and can follow more than survival Spanish now.",
         what: "A conversation about what the visitor likes: one singular thing, several plural things, an emphatic “me encanta,” and the delicate difference between liking a person generally and liking someone romantically.",
@@ -683,7 +683,7 @@ lessons.push(
     es: {
       title: "Preferir la sombra en Neiva",
       situation:
-        "Tú estás en Neiva con Camila durante las fiestas de San Pedro. Hay música, sol fuerte y dos sitios para sentarse. Tienes que decir qué prefieres sin sonar exigente, y entender por qué todos prefirieron moverse cuando el calor apretó.",
+        "You are in Neiva with Camila during the San Pedro celebrations. There is music, strong sun, and two places to sit. You have to say what you prefer without sounding demanding, and understand why everyone preferred to move when the heat got intense.",
       setting: {
         who: "Camila knows the San Pedro celebrations and is trying to keep the group cheerful in serious heat. Taylor wants to say a preference clearly without sounding demanding.",
         what: "Choosing between seats in the sun and seats in the shade, then revising the plan when an older aunt already chose the wiser option.",
@@ -1335,7 +1335,7 @@ lessons.push(
     es: {
       title: "Suavizar lo que no soportas en Quibdó",
       situation:
-        "Usted acompaña a Marcela a un ensayo comunitario en Quibdó. El sonido está muy alto, un vecino cae pesado y alguien pregunta si usted odia la música. Necesita expresar rechazo sin sonar cruel ni exagerado.",
+        "You go with Marcela to a community rehearsal in Quibdó. The sound is very loud, one neighbor rubs people the wrong way, and someone asks whether you hate the music. You need to express dislike without sounding cruel or exaggerated.",
       setting: {
         who: "Marcela helps organize a community rehearsal and knows everyone enough to be careful with names. Chris is a guest who dislikes the volume but does not want to insult the room.",
         what: "A conversation about strong dislike: when odiar is honest, when it is too heavy, and which softer Colombian phrases keep the peace.",

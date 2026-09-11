@@ -18,7 +18,7 @@ lessons.push(
     es: {
       title: "Considerar una oferta sin comprometerse todavía",
       situation:
-        "En Arauca, Alex habla con Paola sobre una oferta de trabajo que implicaría mudarse y cambiar de ritmo. No quiere decir que sí ni cerrar la puerta, así que aprende a usar “lo voy a considerar”, “considero que…” y alternativas más conversacionales como “lo pienso” o “déjame ver” cuando necesita ganar tiempo con elegancia.",
+        "In Arauca, Alex talks with Paola about a job offer that would mean moving and changing his pace. He does not want to say yes or close the door, so he learns to use “lo voy a considerar”, “considero que…”, and more conversational alternatives like “lo pienso” or “déjame ver” when he needs to buy time gracefully.",
       setting: {
         who: "Paola coordinates a small environmental project and knows the job would be useful but demanding. Alex has the skills, but he has to think through distance, salary and whether the move fits his life.",
         what: "A professional but warm conversation about not committing too quickly: how to state a view, delay a decision and keep the relationship open.",
@@ -650,7 +650,7 @@ lessons.push(
     es: {
       title: "Imaginar el plan que pudo haber sido",
       situation:
-        "En Girardot, Alex espera con Lina a que baje el calor antes de viajar. Entre planes y mensajes, ella le suelta “¡imagínate!” y lo lleva a frases más complejas: “imagínate que llegara sin avisar”, “imagina que no hubiera pasado” y el colombiano “me imagino que sí” para aceptar algo sin sonar totalmente seguro.",
+        "In Girardot, Alex waits with Lina for the heat to drop before traveling. Between plans and messages, she throws him “¡imagínate!” and leads him into more complex phrases: “imagínate que llegara sin avisar”, “imagina que no hubiera pasado”, and the Colombian “me imagino que sí” for accepting something without sounding completely sure.",
       setting: {
         who: "Lina is a friend who likes turning every plan into a what-if. Alex understands ordinary plans, but counterfactual imagining still takes effort.",
         what: "A waiting conversation about a possible move, a surprise arrival and how things would feel if an awkward message had never happened.",
@@ -1282,7 +1282,7 @@ lessons.push(
     es: {
       title: "Reconocer una cara y reconocer un error",
       situation:
-        "En Zipaquirá, Alex se cruza con Andrés, un conocido de un taller anterior, pero no lo reconoce de entrada porque lleva ruana y gafas. La incomodidad se vuelve una conversación más adulta: “no te reconocí”, “reconozco que me equivoqué” y la diferencia entre reconocer una cara y admitir un error.",
+        "In Zipaquirá, Alex runs into Andrés, someone he knows from an earlier workshop, but he does not recognize him at first because Andrés is wearing a ruana and glasses. The awkwardness becomes a more adult conversation: “no te reconocí”, “reconozco que me equivoqué”, and the difference between recognizing a face and admitting a mistake.",
       setting: {
         who: "Andrés remembers Alex from a workshop, while Alex needs a second to place him. Both are friendly enough to laugh, but honest enough to talk about the awkward moment.",
         what: "A chance encounter that moves from recognizing a person to admitting a mistake and repairing the tone.",

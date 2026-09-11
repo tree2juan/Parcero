@@ -38,7 +38,7 @@ lessons.push(
     es: {
       title: "Hacer un plan para salir a tomar algo",
       situation:
-        "Es viernes por la tarde y Daniela, una amiga bogotana, invita a Alex a salir a tomar algo después del trabajo. En pocos minutos tienen que decidir cómo llegar, si van a tomar trago o no, y por dónde coger. Todo el plan se arma alrededor del verbo tomar, que en Colombia sirve para el taxi, para el trago, para las decisiones y hasta para la avenida por la que se van.",
+        "It is Friday afternoon, and Daniela, a bogotana friend, invites Alex to go out for a drink after work. In a few minutes they have to decide how to get there, whether they are drinking alcohol or not, and which way to take. The whole plan is built around the verb tomar, which in Colombia works for the taxi, the drink, the decisions, and even the avenue they take.",
       setting: {
         who: "Daniela is a bogotana friend from Alex's office, close enough to make weekend plans but not an old friend.",
         what: "A quick back-and-forth to agree on going out for a drink: how to get there, whether there will be alcohol, and which way to go.",
@@ -670,7 +670,7 @@ lessons.push(
     es: {
       title: "Decirle a un amigo paisa que uno se siente mal",
       situation:
-        "Alex amaneció maluco en Medellín y su amigo paisa Sebastián se da cuenta y le pregunta cómo está. Alex tiene que explicar qué siente, desde cuándo y qué tan mal, y Sebastián le ofrece ayuda. Toda la conversación gira en torno a sentir: sentirse mal, sentir un dolor, sentir que algo va a pasar, y el “lo siento” que no significa lo que un inglés cree.",
+        "Alex wakes up feeling maluco in Medellín, and his paisa friend Sebastián notices and asks how he is. Alex has to explain what he feels, since when, and how bad it is, while Sebastián offers help. The whole conversation turns around sentir: sentirse mal, sentir un dolor, sentir que something is going to happen, and the “lo siento” that does not mean what an English speaker thinks.",
       setting: {
         who: "Sebastián is a paisa friend from Alex's building, the kind who checks on you and switches into caretaker mode fast.",
         what: "A short, worried exchange about Alex feeling ill: what hurts, since when, and whether to go to the pharmacy.",
@@ -1302,7 +1302,7 @@ lessons.push(
     es: {
       title: "Contarle a una vecina nueva dónde vive uno",
       situation:
-        "Alex se acaba de mudar a un edificio en Bogotá y se encuentra en la portería con Doña Rosa, la administradora, que también vive ahí. Ella lo saluda con usted y le pregunta si vive en el edificio o está de visita. Alex tiene que decir dónde vive, de dónde se mudó y desde cuándo, mientras Doña Rosa cuenta que vive de arrendar apartamentos. Todo gira en torno a vivir: vivir en, vivir sobre, vivir hace, vivir de y vivir para.",
+        "Alex has just moved into a building in Bogotá and meets Doña Rosa, the administradora, in the portería; she also lives there. She greets him with usted and asks whether he lives in the building or is visiting. Alex has to say where he lives, where he moved from, and since when, while Doña Rosa explains that she lives off renting apartments. Everything turns around vivir: vivir en, vivir sobre, vivir hace, vivir de, and vivir para.",
       setting: {
         who: "Doña Rosa is the building's administradora — part manager, part unofficial mayor — who lives on the ground floor and knows everyone.",
         what: "A first-meeting chat in the lobby about where Alex lives, where he came from, and how long Rosa has been there.",

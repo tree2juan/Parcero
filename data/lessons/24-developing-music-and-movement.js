@@ -13,7 +13,7 @@ lessons.push(
     review: "pending",
     es: {
       title: "Sacar a alguien a bailar en Cartagena",
-      situation: "Estás en una boda en Cartagena; suena champeta después de la cena y quieres invitar a bailar sin presionar, o admitir que no sabes bailar sin dañar el ambiente.",
+      situation: "You are at a wedding in Cartagena; champeta comes on after dinner, and you want to invite someone to dance without applying pressure, or admit that you do not know how to dance without spoiling the mood.",
       setting: {
         who: "Camila is the bride's cousin and knows half the room; Sam is a foreign guest who has rhythm but not the champeta steps.",
         what: "A dance invitation beside the speakers, with relatives watching and joking while the next song starts.",
@@ -143,7 +143,7 @@ lessons.push(
     review: "pending",
     es: {
       title: "Cantar vallenato en un karaoke de Valledupar",
-      situation: "Vas con compañeros a un karaoke en Valledupar después de una capacitación. Te pasan el micrófono, piden un vallenato conocido y necesitas bromear con tu mala voz y entender el doble sentido de cantar.",
+      situation: "You go with coworkers to a karaoke place in Valledupar after a training session. They hand you the microphone, ask for a well-known vallenato, and you need to joke about your bad voice and understand the double meaning of cantar.",
       setting: {
         who: "Nicolás grew up in Valledupar and treats vallenato lyrics like shared memory; Priya knows the chorus but not the verses.",
         what: "A karaoke turn where the group wants participation more than vocal perfection, plus a joke about confessing who chose the song.",
@@ -273,7 +273,7 @@ lessons.push(
     review: "pending",
     es: {
       title: "A quién le toca abrir para el ensayo de joropo",
-      situation: "Estás en Villavicencio con un grupo que ensaya joropo. En diez minutos aparecen cuatro usos de tocar: tocar el cuatro, no tocar un cable, tocar la puerta y decidir a quién le toca madrugar.",
+      situation: "You are in Villavicencio with a group rehearsing joropo. In ten minutes, four uses of tocar show up: playing the cuatro, not touching a cable, knocking on the door, and deciding whose turn it is to wake up early.",
       setting: {
         who: "Lina coordinates the community rehearsal and plays cuatro; Mateo helps with sound, still gets lost in the changes, and has tomorrow's key.",
         what: "A practical conversation before rehearsal about instruments, wet cables, a locked door and the schedule for opening early.",

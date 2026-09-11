@@ -29,7 +29,7 @@ lessons.push(
     es: {
       title: "Interesarse por un curso en Sincelejo",
       situation:
-        "Estás en Sincelejo mirando un curso corto de edición de audio en una casa cultural. Te interesa el tema, pero no sabes si el horario, el costo y el proyecto final realmente te llaman la atención.",
+        "You are in Sincelejo looking at a short audio-editing course at a cultural center. The subject interests you, but you do not know whether the schedule, the cost, and the final project really catch your attention.",
       setting: {
         who: "Marta coordinates short courses at a cultural center. Jamie records family stories and is considering an audio-editing course but needs to sound interested without promising enrollment too early.",
         what: "A desk conversation about what genuinely interests Jamie, what parts do not grab attention, and how the course subject becomes the grammatical subject.",
@@ -593,7 +593,7 @@ lessons.push(
     es: {
       title: "Pedir permiso sin molestar en Riohacha",
       situation:
-        "Estás en Riohacha compartiendo una mesa larga en un hostal. Quieres mover una silla, abrir espacio para tu maleta y preguntar si a los demás les importa sin contestar al revés.",
+        "You are in Riohacha sharing a long table at a hostel. You want to move a chair, make space for your suitcase, and ask whether the others mind without answering in the opposite direction.",
       setting: {
         who: "Claudia is organizing breakfast space at a small guesthouse. Sam needs to shift a chair and a bag without making the shared table feel like his private office.",
         what: "A polite negotiation about whether a small action matters, how to say never mind, and how to answer do you mind without reversing the meaning.",
@@ -1157,7 +1157,7 @@ lessons.push(
     es: {
       title: "Faltar cinco minutos en Florencia",
       situation:
-        "Estás en Florencia esperando una lancha turística por el río. Al grupo le faltan firmas, falta una persona y faltan cinco minutos para salir, así que necesitas hablar de lo que todavía no está listo.",
+        "You are in Florencia waiting for a tourist boat on the river. The group is missing signatures, one person is missing, and there are five minutes left before departure, so you need to talk about what still is not ready.",
       setting: {
         who: "Yuri coordinates a small river outing. Dana is helping check the group list and needs to report what is missing without turning every sentence into I need.",
         what: "A pre-departure check: missing signatures, one absent passenger, two life jackets still needed and five minutes left before departure.",

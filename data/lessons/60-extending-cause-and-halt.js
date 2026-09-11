@@ -41,7 +41,7 @@ lessons.push(
     es: {
       title: "Parar el taxi en Arauca",
       situation:
-        "Estás en un taxi en Arauca y necesitas decir dónde parar sin sonar brusco. También oyes sin parar, pararse para levantarse y parar bolas como una forma muy colombiana de decir prestar atención.",
+        "You are in a taxi in Arauca and need to say where to stop without sounding abrupt. You also hear sin parar, pararse for getting up, and parar bolas as a very Colombian way to say pay attention.",
       setting: {
         who: "Maya is riding with a taxi driver who knows the town, and she needs to stop near the riverfront without overshooting the corner.",
         what: "They handle the exact stop, a nonstop phone, standing up to check a sign, and the Colombian idiom parar bolas.",
@@ -191,7 +191,7 @@ lessons.push(
     es: {
       title: "Explicar qué causó la falla en Florencia",
       situation:
-        "Estás en Florencia cuando una máquina de una panadería se apaga y retrasa los pedidos. El técnico explica qué causó el daño, pero también muestra que en conversación cotidiana muchos colombianos dirían me dio susto, no me causó susto.",
+        "You are in Florencia when a bakery machine shuts off and delays the orders. The technician explains what caused the damage, but also shows that in everyday conversation many Colombians would say me dio susto, not me causó susto.",
       setting: {
         who: "Rosa runs a small bakery, and Edwin is the technician checking why the mixer stopped during a busy morning.",
         what: "They identify what caused the breakdown, what problems it caused, and when causar sounds formal compared with me dio.",
@@ -353,7 +353,7 @@ lessons.push(
     es: {
       title: "Informar qué produjo la tormenta en Tumaco",
       situation:
-        "Estás en Tumaco leyendo una nota local sobre una tormenta. La noticia dice qué produjo el aguacero, qué produjeron las obras y por qué produjo y produjeron tienen la raíz irregular -duj- sin tilde ni -jieron.",
+        "You are in Tumaco reading a local note about a storm. The news says what the downpour produced, what the repairs produced, and why produjo and produjeron have the irregular root -duj- with no accent mark and no -jieron.",
       setting: {
         who: "A local reporter interviews an engineer after a storm disrupted drainage work near a neighborhood street.",
         what: "They explain what the storm produced, what the repairs produced, and why the preterite forms produced by producir are irregular.",

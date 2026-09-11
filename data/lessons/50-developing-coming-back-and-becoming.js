@@ -31,7 +31,7 @@ lessons.push(
     es: {
       title: "Regresar a Ibagué después de años fuera",
       situation:
-        "Alex regresa a Ibagué después de vivir varios años lejos. Una prima lo espera frente a la casa de la familia y nota que él reconoce unas cosas y otras no. Tú necesitas oír el matiz de regresar sin olvidar que volver es la palabra más común en conversación rápida.",
+        "Alex returns to Ibagué after living away for several years. A cousin waits for him in front of the family house and notices that he recognizes some things and not others. You need to hear the nuance of regresar while remembering that volver is the more common word in quick conversation.",
       setting: {
         who: "Diana is Alex's cousin and stayed close to the family house; Alex left years ago and is arriving with a suitcase and a nervous smile.",
         what: "A first conversation on the doorstep about coming back to a hometown, not just returning an object or doing something again.",
@@ -675,7 +675,7 @@ lessons.push(
     es: {
       title: "Permanecer sentado durante el cruce",
       situation:
-        "Maya cruza el río Sinú en Montería en una lancha pequeña. Antes de salir, el encargado da una instrucción formal por seguridad. Tú necesitas reconocer permanecer en avisos e instrucciones, pero también saber que quedarse es la palabra diaria para quedarse en un lugar.",
+        "Maya crosses the Sinú River in Montería in a small boat. Before they leave, the attendant gives a formal safety instruction. You need to recognize permanecer in notices and instructions, while also knowing that quedarse is the everyday word for staying in a place.",
       setting: {
         who: "A boat attendant gives safety instructions, and Maya is a passenger sitting near the front with a bag under the seat.",
         what: "A short public announcement about staying seated, keeping a bag in place, and waiting until the boat has stopped.",
@@ -1307,7 +1307,7 @@ lessons.push(
     es: {
       title: "Convertirse en taller comunitario",
       situation:
-        "Sam visita Arauca y una vecina le muestra una bodega vieja que ahora funciona como taller comunitario. El edificio no sólo cambió de color: se transformó en otra cosa. Tú necesitas entender por qué convertirse en es la pieza difícil de la familia de “become”.",
+        "Sam visits Arauca, and a neighbor shows him an old warehouse that now works as a community workshop. The building did not just change color; it turned into something else. You need to understand why convertirse en is the tricky piece in the “become” family.",
       setting: {
         who: "Nidia helped organize the neighborhood project, and Sam is visiting with a notebook because he wants to understand what changed.",
         what: "A walk through a former storage building that became a community workshop, with examples of different kinds of becoming.",

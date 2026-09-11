@@ -19,7 +19,7 @@ lessons.push(
     es: {
       title: "Decidirse por el plan del río en Neiva",
       situation:
-        "Estás en Neiva con Laura, una amiga huilense, y el calor obliga a escoger bien el plan de la tarde. Hay paseo al río, cine con aire acondicionado o quedarse tomando algo. Alex entiende que decidir no es sólo elegir: puede decir “no me decido”, “estoy decidido” y “me decidí por…” cuando por fin se inclina por una opción.",
+        "You are in Neiva with Laura, a friend from Huila, and the heat makes it important to choose the afternoon plan well. There is a trip to the river, a movie with air conditioning, or staying somewhere for a drink. Alex understands that decidir is not just choosing: he can say “no me decido”, “estoy decidido”, and “me decidí por…” when he finally leans toward one option.",
       setting: {
         who: "Laura is a Neiva friend who knows how the city slows down when the heat is heavy. Alex is visiting Huila and wants to make a plan without sounding blunt or indecisive.",
         what: "A small afternoon decision: river, cinema or a quiet drink, with the language for hesitating, settling on an option and sounding firm once the choice is made.",
@@ -651,7 +651,7 @@ lessons.push(
     es: {
       title: "Conseguir un cargador en Pasto",
       situation:
-        "Estás en Pasto y Alex se quedó sin cargador antes de subir a las Lajas. En una papelería pregunta “¿dónde consigo un cargador?”, que en Colombia suena más natural que traducir “where can I buy…?”. Aprende que buscar es mirar, encontrar es dar con algo y conseguir es lograr obtenerlo, a veces con ayuda o esfuerzo.",
+        "You are in Pasto, and Alex ended up without a charger before going up to Las Lajas. In a stationery shop he asks “¿dónde consigo un cargador?”, which sounds more natural in Colombia than translating “where can I buy…?”. He learns that buscar is looking, encontrar is finding, and conseguir is managing to obtain something, sometimes with help or effort.",
       setting: {
         who: "Maritza is a patient shopkeeper near Pasto's center. Alex is a traveler with a dying phone and a practical problem to solve before leaving town.",
         what: "An errand to get hold of a phone charger, distinguishing conseguir from buscar and encontrar while noticing the irregular forms consigo and consigue.",
@@ -1283,7 +1283,7 @@ lessons.push(
     es: {
       title: "Ofrecer el asiento en una lancha de Leticia",
       situation:
-        "Estás en Leticia, a punto de subir a una lancha por el Amazonas. Alex ve a una señora con bolsas y quiere ofrecerle el asiento sin sonar raro ni demasiado solemne. Aprende “le ofrezco mi puesto”, “se ofrece ayuda” y la forma clave “ofrezco”, con -zc- como en conocer.",
+        "You are in Leticia, about to board a boat on the Amazon. Alex sees a woman with bags and wants to offer her the seat without sounding odd or too solemn. He learns “le ofrezco mi puesto”, “se ofrece ayuda”, and the key form “ofrezco”, with -zc- as in conocer.",
       setting: {
         who: "Rosa is a Leticia local traveling with shopping bags. Alex is a visitor boarding the same river boat and trying to be helpful without overdoing the wording.",
         what: "A polite offer of a seat and help with bags, teaching ofrecer, ofrezco and the difference between offering something and offering to do something.",

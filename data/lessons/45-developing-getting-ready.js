@@ -31,7 +31,7 @@ lessons.push(
     es: {
       title: "Probar la comida y probarse la camisa",
       situation:
-        "Estás en Sincelejo antes de un bautizo familiar. Primero te ofrecen probar un sancocho de gallina en la cocina y después necesitas probarte una camisa clara para la ceremonia. Tienes que distinguir probar comida, probarse ropa e intentar una acción difícil.",
+        "You are in Sincelejo before a family baptism. First they offer you a taste of chicken sancocho in the kitchen, and later you need to try on a light-colored shirt for the ceremony. You have to distinguish probar food, probarse clothing, and intentar a difficult action.",
       setting: {
         who: "Nora is helping her cousin's foreign guest, Alex, get ready for a family baptism. Alex wants to be polite in the kitchen and practical in the clothing shop.",
         what: "A morning split between tasting the food at home and checking whether a shirt fits before the family leaves.",
@@ -683,7 +683,7 @@ lessons.push(
     es: {
       title: "Preparar café y prepararte para salir",
       situation:
-        "Estás en San Andrés y vas a salir temprano a una vuelta en lancha con una familia local. Hay café, bloqueador, gorras y una mochila por armar. Tienes que distinguir preparar algo, prepararte tú y el uso más casero de hacer café.",
+        "You are in San Andrés and are leaving early for a boat errand with a local family. There is coffee, sunscreen, caps, and a backpack to get ready. You have to distinguish preparar something, prepararte yourself, and the more home-style use of hacer café.",
       setting: {
         who: "Ruth is coordinating a family boat outing, and Sam is the guest who wants to help without slowing everyone down.",
         what: "Getting coffee, sunscreen, hats, water, and a small bag ready before everyone walks to the dock.",
@@ -1335,7 +1335,7 @@ lessons.push(
     es: {
       title: "Organizar el plan del fin de semana",
       situation:
-        "Estás en Girardot con amigos que quieren hacer un paseo corto al río. Hay horarios, comida, transporte y plata por aclarar. Tienes que organizar el plan, entender cuándo la gente diría cuadrar algo y recordar que organicé cambia z por c.",
+        "You are in Girardot with friends who want to take a short trip to the river. Schedules, food, transportation, and money all need to be clarified. You have to organize the plan, understand when people would say cuadrar algo, and remember that organicé changes z to c.",
       setting: {
         who: "Paula is the friend who keeps the plan from becoming pure talk. Jamie is willing to help but needs the organizing verbs and the casual alternative.",
         what: "A practical planning conversation: who brings food, who confirms transport, what time everyone meets, and what still needs arranging.",

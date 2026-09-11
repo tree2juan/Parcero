@@ -29,7 +29,7 @@ lessons.push(
     es: {
       title: "Pagar en la caja con un billete grande",
       situation:
-        "Estás en la caja de una tienda en Bogotá y solo llevas un billete de cincuenta mil. La cajera te pregunta cómo vas a pagar y resulta que no tiene con qué darte el vuelto. Aprendes a moverte entre el efectivo y la tarjeta, a preguntar por el “sencillo” y a cerrar el pago sin que se te note tan de turista.",
+        "You are at the checkout in a Bogotá shop and only have a fifty-thousand-peso bill. The cashier asks how you are going to pay, and it turns out she has no way to give you change. You learn to move between cash and card, ask for “sencillo” and finish the payment without looking quite so much like a tourist.",
       setting: {
         who: "Alex is at the till; the cashier is Marcela, who has run this neighborhood shop's register for years and has seen every kind of customer. A short line is forming behind him.",
         what: "A routine checkout that snags on a very Colombian problem: Alex has only a big note and the register has no change to break it.",
@@ -681,7 +681,7 @@ lessons.push(
     es: {
       title: "Regatear por unos mangos en el mercado",
       situation:
-        "Estás en un puesto de frutas en Cartagena y quieres unos mangos, pero el primer precio nunca es el último. Aprendes a preguntar “¿a cómo?”, a pedir que te lo dejen más barato y a cerrar el trato con un “de una”, todo con el tuteo caribeño y sin ofender a nadie.",
+        "You are at a fruit stall in Cartagena and want some mangoes, but the first price is never the last. You learn to ask “¿a cómo?”, to ask for a lower price and to close the deal with “de una”, all with Caribbean tú and without offending anyone.",
       setting: {
         who: "Alex is browsing a fruit stall; the vendor is Yeison, a coast seller in his thirties who banters with every customer and expects a bit of back-and-forth over the price.",
         what: "A friendly haggle over a couple of pounds of mango that turns into a small lesson in how buying really works at a plaza.",
@@ -1333,7 +1333,7 @@ lessons.push(
     es: {
       title: "Vender la bicicleta antes de mudarse",
       situation:
-        "Estás vendiendo tu bicicleta antes de irte de Medellín. Un vecino ve el letrero de “se vende” y se acerca a preguntar. Con el voseo paisa aprendes a poner el precio, a decir “le hago precio”, a cerrar con un “de una” y a notar cómo los paisas mezclan el vos y el usted sin pensarlo.",
+        "You are selling your bike before leaving Medellín. A neighbor sees the “se vende” sign and comes over to ask. With paisa voseo, you learn to set the price, say “le hago precio”, close with “de una” and notice how paisas mix vos and usted without thinking about it.",
       setting: {
         who: "Alex is selling his bike before leaving the country; the buyer is Camilo, a paisa neighbor in his twenties who saw the sign and wandered over.",
         what: "A doorstep sale of a secondhand bike that turns into a quick lesson in the seller's side of a haggle — and in how paisas weave vos and usted together.",

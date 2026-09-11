@@ -31,7 +31,7 @@ lessons.push(
     es: {
       title: "Preguntar qué significa una palabra en Ibagué",
       situation:
-        "Tú estás en Ibagué con Paula durante una muestra de música andina. Oyes la palabra “guabina” en un anuncio y necesitas preguntar qué significa, aclarar lo que quieres decir y no caer en el falso amigo de decir “yo significo”.",
+        "You are in Ibagué with Paula during an Andean music showcase. You hear the word “guabina” in an announcement and need to ask what it means, clarify what you mean, and avoid the false friend of saying “yo significo”.",
       setting: {
         who: "Paula studies music in Ibagué and likes explaining local references without showing off. Ben is no longer a beginner, but still stops when a word carries more culture than the dictionary gives.",
         what: "A learner asks what an unfamiliar word means, then corrects himself when he tries to translate English “I mean” too literally.",
@@ -683,7 +683,7 @@ lessons.push(
     es: {
       title: "Desarrollar un taller en Buenaventura",
       situation:
-        "Vos estás en Buenaventura con Lina, que ayuda a montar un taller de fotografía para jóvenes. El proyecto todavía está verde: hay que desarrollar materiales, desarrollar habilidades y hablar con cuidado de cómo se desarrolla el plan sin usar el verbo para decir que alguien creció.",
+        "You are in Buenaventura with Lina, who is helping set up a photography workshop for young people. The project is still raw: materials need to be developed, skills need to be developed, and you need to talk carefully about how the plan develops without using the verb to say someone grew up.",
       setting: {
         who: "Lina coordinates a small youth photography workshop with a community group. Maya is helping for the week and wants to talk about growth without sounding like a grant application.",
         what: "Planning a workshop that is not ready yet: materials, skills, timeline and the difference between developing a project and growing up as a person.",
@@ -1335,7 +1335,7 @@ lessons.push(
     es: {
       title: "Que alcance la plata en Arauca",
       situation:
-        "Usted está en Arauca con Diego al final de mes. Hay que comprar mercado, pagar una carrera corta y llegar a tiempo a una llamada. La palabra clave es alcanzar: la plata no alcanza, el tiempo no alcanzó y usted no alcanzó a llamar.",
+        "You are in Arauca with Diego at the end of the month. You need to buy groceries, pay for a short cab ride, and make it to a call on time. The key word is alcanzar: the money is not enough, there was not enough time, and you did not manage to call.",
       setting: {
         who: "Diego knows the household numbers and is trying to avoid turning a tight week into a crisis. Claire is visiting family and learning the money-and-time meanings that dictionaries hide under “reach.”",
         what: "A practical end-of-month conversation about whether money is enough, whether time was enough, and whether someone managed to do something before the chance passed.",

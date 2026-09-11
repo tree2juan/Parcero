@@ -31,7 +31,7 @@ lessons.push(
     es: {
       title: "Buscar una ferretería que cambió de local",
       situation:
-        "Alex necesita dos tornillos y un bombillo, y un amigo le juró que la ferretería quedaba en esta esquina. No queda. Lleva media hora dando vueltas a la manzana con el mapa del celular, que insiste en que el sitio está justo donde él está parado, y ahí claramente no hay nada. No encuentra la tienda por ningún lado, así que se rinde y le pregunta al señor que barre la entrada del local de al lado.",
+        "Alex needs two screws and a lightbulb, and a friend swore the hardware store was on this corner. It is not. He has spent half an hour circling the block with his cell phone map, which insists the place is exactly where he is standing, and there is clearly nothing there. He cannot find the shop anywhere, so he gives up and asks the man sweeping the entrance of the place next door.",
       setting: {
         who: "Don Fabio has run the corner stationery shop for twenty years and knows every business that has come and gone on the block. Alex is a newcomer who trusts his phone more than the street, which is exactly the wrong way round here.",
         what: "A short exchange on the sidewalk: one lost foreigner, one shopkeeper who has given these directions a hundred times.",
@@ -683,7 +683,7 @@ lessons.push(
     es: {
       title: "Lograr que llamen al técnico",
       situation:
-        "El internet de Alex se cayó al anochecer y las luces del router están todas raras. No tiene el número del técnico y no le hace ninguna gracia pasar la noche entera sin conexión. Pilla a su vecino Dubán en el pasillo —el que parece saber quién arregla qué en el edificio— y le pide el número para llamar a alguien antes de que se haga tarde.",
+        "Alex has lost internet at dusk, and the router lights all look strange. He does not have the number for the technician and is not thrilled about spending the whole night without a connection. He catches his neighbor Dubán in the hallway — the one who seems to know who fixes what in the building — and asks him for the number so he can call someone before it gets late.",
       setting: {
         who: "Dubán is a chatty paisa in his thirties who has lived in the block for years and has every useful number saved. Alex is the foreigner two doors down who still does not know who to ring when something breaks.",
         what: "A quick doorway favor: one neighbor handing another a phone number and offering to smooth the call.",
@@ -1335,7 +1335,7 @@ lessons.push(
     es: {
       title: "Volver al puestico de almuerzo",
       situation:
-        "Alex se encontró ayer un puestico de corrientazo —de esos que hacen un solo almuerzo casero al día— y la comida estaba tan buena que ya volvió al día siguiente, antes incluso de haber decidido que es su sitio de siempre. La cocinera, Doña Marta, lo reconoce apenas se agacha bajo la puerta bajita, y le encanta que haya vuelto.",
+        "Yesterday Alex found a little corrientazo spot — one of those places that makes a single home-style lunch each day — and the food was so good that he has already come back the next day, before even deciding it is his regular place. The cook, Doña Marta, recognizes him as soon as he ducks under the low doorway, and she loves that he came back.",
       setting: {
         who: "Doña Marta cooks and serves a single set lunch a day from a cramped kitchen she has run for fifteen years. Alex is a foreigner who came once, loved it, and has already come back — the surest compliment a corrientazo can get.",
         what: "A returning customer's second visit, greeted like a small event, with the usual banter over what is on today.",

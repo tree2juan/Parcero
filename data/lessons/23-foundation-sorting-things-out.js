@@ -29,7 +29,7 @@ lessons.push(
     es: {
       title: "Buscar un sombrero en el Centro Histórico",
       situation:
-        "Alex camina por una calle del Centro Histórico de Cartagena antes del sol fuerte de la tarde. Quiere un sombrero sencillo, no un recuerdo caro. Entra a una tienda pequeña y tiene que decir qué busca sin sonar como si ya lo hubiera encontrado.",
+        "Alex walks down a street in the Centro Histórico of Cartagena before the strong afternoon sun. He wants a plain hat, not an expensive souvenir. He goes into a small shop and has to say what he is looking for without sounding as if he has already found it.",
       setting: {
         who: "Marta runs a narrow shop near the city wall, and Alex is a visitor who knows he needs shade more than a souvenir.",
         what: "A quick exchange about looking for a plain hat, the kind a traveler can actually wear all day.",
@@ -681,7 +681,7 @@ lessons.push(
     es: {
       title: "Intentar remar en Taganga",
       situation:
-        "Sam está en la playa de Taganga, cerca de Santa Marta, y mira un kayak con más ganas que seguridad. Un instructor joven le explica cómo entrar al agua. Sam quiere decir que va a intentarlo, aunque todavía le dé nervios.",
+        "Sam is on the beach in Taganga, near Santa Marta, looking at a kayak with more interest than confidence. A young instructor explains how to get into the water. Sam wants to say he is going to try it, even though he is still nervous.",
       setting: {
         who: "Julián rents kayaks on the beach, and Sam is a careful beginner who can swim but has never paddled on open water.",
         what: "A first attempt at taking a kayak past the calm edge of the bay.",
@@ -1333,7 +1333,7 @@ lessons.push(
     es: {
       title: "Cambiar un billete en San Antonio",
       situation:
-        "Nico está en una panadería de San Antonio, en Cali, antes de tomar un bus. Sólo tiene un billete grande y necesita monedas. La panadera le habla con vos y él tiene que pedir cambio sin pedir comprar nada todavía.",
+        "Nico is in a bakery in San Antonio, in Cali, before catching a bus. He only has a large bill and needs coins. The baker uses vos with him, and he has to ask for change without asking to buy anything yet.",
       setting: {
         who: "Lina works the counter at a neighborhood bakery, and Nico is carrying a large bill that will not help on the bus.",
         what: "A small money errand: changing a bill, asking about small change, and not confusing that with changing clothes or changing one's mind.",

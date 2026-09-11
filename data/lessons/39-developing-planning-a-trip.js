@@ -23,7 +23,7 @@ lessons.push(
     es: {
       title: "Reservar cuartos para un fin de semana en Mompox",
       situation:
-        "Quieres pasar un fin de semana en Mompox con dos amigos y llamas a una posada antes de comprar los pasajes. Necesitas reservar con claridad, pero también entender cuándo la gente dice apartar en vez de reservar.",
+        "You want to spend a weekend in Mompox with two friends and call a posada before buying the tickets. You need to reserve clearly, but also understand when people say apartar instead of reservar.",
       setting: {
         who: "Laura runs a small family posada and answers the phone between check-ins. Alex is organizing a weekend with two friends and wants the rooms held before making the rest of the plan.",
         what: "A practical booking call: dates, number of rooms, breakfast, a confirmation message and the difference between a formal reservation and a casual hold.",
@@ -675,7 +675,7 @@ lessons.push(
     es: {
       title: "Visitar a una tía y pasar por un museo en Pasto",
       situation:
-        "Planeas un fin de semana en Pasto y quieres ver a una tía, entrar al Museo del Carnaval y saludar a un amigo si alcanza el tiempo. Necesitas usar visitar sin sonar demasiado turístico cuando lo que quieres es caer un rato.",
+        "You are planning a weekend in Pasto and want to see an aunt, go into the Museo del Carnaval, and say hello to a friend if there is time. You need to use visitar without sounding too touristy when what you mean is to drop by for a while.",
       setting: {
         who: "Mariana is from Pasto and is helping Alex arrange the weekend. Alex wants to be polite with family but relaxed with friends.",
         what: "A planning chat that separates formal visiting, tourist visiting and casual dropping by before the weekend gets too full.",
@@ -1327,7 +1327,7 @@ lessons.push(
     es: {
       title: "Planear un fin de semana junto al río en Honda",
       situation:
-        "Tú y dos amigos quieren pasar un fin de semana en Honda, pero todavía no han decidido fechas, presupuesto ni hospedaje. Necesitas planear sin sonar institucional, y sobre todo aprender a cuadrar el plan con los demás.",
+        "You and two friends want to spend a weekend in Honda, but you still have not decided dates, budget, or lodging. You need to plan without sounding institutional, and above all learn how to cuadrar the plan with the others.",
       setting: {
         who: "Diana is the organized friend with a spreadsheet habit. Alex is flexible but tired of vague ideas that never become dates.",
         what: "A planning call before anything is booked: dates, budget, lodging, who confirms what and how to turn an idea into an agreed plan.",

@@ -30,7 +30,7 @@ lessons.push(
     es: {
       title: "Decir que alguien te cae bien",
       situation:
-        "Alex está en Tumaco, en la terraza de una casa frente al mar, después de conocer al hermano de una amiga. La conversación no es romántica: sólo están comparando primeras impresiones. Tú necesitas decir que una persona te cae bien sin usar una frase que suene a atracción.",
+        "Alex is in Tumaco, on the terrace of a house facing the sea, after meeting a friend's brother. The conversation is not romantic; they are only comparing first impressions. You need to say that a person strikes you well without using a phrase that sounds like attraction.",
       setting: {
         who: "Luisa is Alex's friend and has just introduced him to her brother Andrés. Alex wants to say the meeting felt easy without sounding like he is flirting.",
         what: "A relaxed first-impression conversation: who strikes whom well, who rubs someone the wrong way, and why gustar with a person is dangerous here.",
@@ -662,7 +662,7 @@ lessons.push(
     es: {
       title: "Llevarse bien con los suegros",
       situation:
-        "Maya pasa un fin de semana en Barichara con la familia de su pareja. Después del almuerzo, una tía le pregunta cómo le ha ido con los suegros. Tú necesitas distinguir llevarse bien con alguien, llevar una maleta y llevar tiempo viviendo en un lugar.",
+        "Maya spends a weekend in Barichara with her partner's family. After lunch, an aunt asks how things have gone with the in-laws. You need to distinguish getting along with someone, carrying a suitcase, and having spent time living in a place.",
       setting: {
         who: "Tía Mercedes is friendly but direct, and Maya is the visiting partner who wants to answer warmly without pretending everything is perfect.",
         what: "A family patio conversation about getting on with in-laws, carrying things to the room, and how long someone has been in the relationship.",
@@ -1294,7 +1294,7 @@ lessons.push(
     es: {
       title: "Contar lo que pasó en Girardot",
       situation:
-        "Sam se encuentra con una amiga en Girardot después de varios meses sin verse. Ella abre con un “cuénteme” que no pide números: pide la historia. Tú necesitas distinguir contar una historia, contar hasta diez y contar con alguien.",
+        "Sam meets an old friend in Girardot after several months without seeing each other. She opens with a “cuénteme” that is not asking for numbers; it is asking for the story. You need to distinguish telling a story, counting to ten, and counting on someone.",
       setting: {
         who: "Patricia is an old friend who likes direct catch-ups, and Sam has arrived with a story from the road and too much to summarize.",
         what: "A warm catch-up: tell me what happened, count people for a table, and say who can be counted on.",

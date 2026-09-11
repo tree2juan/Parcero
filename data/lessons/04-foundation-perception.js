@@ -31,7 +31,7 @@ lessons.push(
     es: {
       title: "Repasar el partido en las escaleras",
       situation:
-        "Alex se cruza con don Fabio, su vecino del tercer piso, en las escaleras del edificio en Chapinero. Anoche jugó Millonarios y quedaron dos a dos. Don Fabio quiere comentar cada jugada, y Alex tiene que seguirle la conversación sobre lo que vio — o no vio — por la televisión, aunque va de afán para el trabajo.",
+        "Alex runs into don Fabio, his third-floor neighbor, on the stairs of the building in Chapinero. Millonarios played last night, and the match ended two-two. Don Fabio wants to comment on every play, and Alex has to keep up a conversation about what he saw — or did not see — on TV, even though he is rushing to work.",
       setting: {
         who: "Don Fabio has lived on the third floor for twenty years and never misses a Millonarios match. Alex moved in two months ago and follows soccer only loosely, but has already worked out that don Fabio is the neighbor who knows everyone in the building.",
         what: "A two-minute recap of last night's match, caught on the stairs on the way out the door.",
@@ -623,7 +623,7 @@ lessons.push(
     es: {
       title: "Guardar el celular en el centro de Medellín",
       situation:
-        "Alex camina por el centro de Medellín con Manuela, una amiga paisa, y saca el celular para mirar el mapa en plena calle. Manuela lo frena en seco: en el centro no se anda mostrando el teléfono. Entre el ruido de las busetas y los vendedores, Alex aprende la regla de oro colombiana, “no dar papaya”, y de paso descubre que en Medellín todo el mundo lo trata de vos.",
+        "Alex is walking through downtown Medellín with Manuela, a paisa friend, and pulls out his cell phone to look at the map right there on the street. Manuela stops him cold: downtown is not a place to show your phone. Amid the noise of buses and vendors, Alex learns the golden Colombian rule, “no dar papaya,” and also discovers that in Medellín everyone addresses him with vos.",
       setting: {
         who: "Manuela grew up in Medellín and knows exactly which blocks downtown to keep your phone in your pocket. Alex has been in the city three weeks and still pulls out the map on instinct, the way he would back home.",
         what: "A quick, protective lesson in street smarts, sparked by Alex flashing his phone on a busy downtown corner.",
@@ -1215,7 +1215,7 @@ lessons.push(
     es: {
       title: "La fruta rara en el puesto de jugos",
       situation:
-        "En una plaza de mercado de Bogotá, Alex se para en el puesto de Yésica, una vendedora joven, frente a una fruta que no reconoce: la curuba. Yésica lo anima a probarla y a adivinar a qué sabe. En la charla, Alex tropieza con el gran dúo del español, “saber” y “conocer”, y descubre que “sabe a” es como los colombianos dicen que algo tiene cierto sabor.",
+        "In a Bogotá market plaza, Alex stops at the stall run by Yésica, a young vendor, in front of a fruit he does not recognize: curuba. Yésica encourages him to try it and guess what it tastes like. In the conversation, Alex trips over the big Spanish pair, “saber” and “conocer,” and discovers that “sabe a” is how Colombians say something has a certain flavor.",
       setting: {
         who: "Yésica runs a fruit and juice stall she inherited from her mother and knows every fruit on the table by heart. Alex has been in Bogotá a month and still freezes when a vendor names a fruit he's never heard of.",
         what: "A friendly tasting at a market stall that turns into a lesson on the two Spanish verbs for knowing.",
