@@ -605,5 +605,35 @@ const structureItems = [
     domain: "academic",
     pathways: ["extension", "collegiate-academic"],
     reviewStatus: "needs Colombian Spanish and English education review"
+  },
+  {
+    id: "structure-38",
+    key: "negated-opinion",
+    probe: "\\bno\\s+(creo|pienso|considero|me\\s+parece|es\\s+(cierto|verdad|evidente)|parece)\\s+que\\b",
+    name: "Saying you do not think something is so",
+    example: "No creo que sea tan grave como dicen.",
+    english: "negated opinion takes the subjunctive",
+    level: "extension",
+    summary: "Creo que es grave flips to no creo que sea grave. Asserting an opinion takes the indicative; denying one takes the subjunctive, because the speaker is no longer vouching for the fact. Covers no creo que, no pienso que, no me parece que, no es cierto que, and the asymmetry that trips learners: the affirmative and the negative do not use the same mood.",
+    gap: "34 uses of no creo que and its relatives, no lesson explaining the mood flip",
+    skills: ["grammar", "speaking", "register"],
+    domain: "academic",
+    pathways: ["extension", "collegiate-academic"],
+    reviewStatus: "needs Colombian Spanish and English education review"
+  },
+  {
+    id: "structure-39",
+    key: "future-perfect",
+    probe: "\\b(habr[ée]|habr[áa]s|habremos|habr[áa]n|habr[áa])\\s+[a-z\u00e1\u00e9\u00ed\u00f3\u00fa\u00f1]+(ado|ido|cho|to|so)\\b",
+    name: "Saying it will already be done by then",
+    example: "Para el viernes ya habré terminado el informe.",
+    english: "the future perfect",
+    level: "extension",
+    summary: "Habré terminado sets a deadline and looks back from it: done before some future moment. It also guesses about the recent past — ya habrá llegado for he has probably arrived by now. Colombian speech often replaces it with the simple past or ya llegó, which is natural but leaves a B2 gap, because the form is on the exam inventory and appears in the reading cloze.",
+    gap: "2 uses in the whole corpus and no lesson, while B2 requires producing it",
+    skills: ["grammar", "reading", "speaking"],
+    domain: "academic",
+    pathways: ["extension", "collegiate-academic"],
+    reviewStatus: "needs Colombian Spanish and English education review"
   }
 ];

@@ -12,6 +12,8 @@
  * result appeared twice. And the Spanish perfect subjunctive -- haya llegado --
  * appeared once in two hundred and thirty lessons, even though it is the normal
  * way to doubt something that has already happened.
+ * This block now also teaches negated opinion, because the corpus had 34 uses
+ * of no creo que and relatives with no lesson explaining the mood flip.
  */
 
 lessons.push(
@@ -1691,6 +1693,554 @@ lessons.push(
           ],
           answer: 2,
           tests: "even if hipotético frente a even though factual"
+        }
+      ]
+    }
+  },
+  {
+    id: "disagreeing-about-the-road-to-tunja",
+    level: "Extending · Courteous disagreement",
+    skills: ["grammar", "speaking", "listening", "register", "context"],
+    domain: "transport-and-travel",
+    register: "courteous",
+    pathways: ["extension", "year-12-local-mastery", "professional-customer-service"],
+    structure: "negated-opinion",
+    review: "pending",
+    es: {
+      title: "I do not think it is serious: the mood changes when the opinion is denied",
+      situation: "Two cousins have to decide whether to keep a medical trip after a landslide warning on the road out of town. One wants to cancel the shared taxi, the other disagrees without sounding careless or rude.",
+      setting: {
+        who: "Laura lives in Chiquinquirá and has arranged a shared taxi for her mother's appointment in Tunja. Mateo is her cousin, careful with money and with family obligations, and he knows that canceling today could mean waiting another month.",
+        what: "A real disagreement about risk, money and responsibility. They are not debating grammar; they are deciding whether the road is safe enough, whether the warning is exaggerated, and whether the appointment matters more than the rumor.",
+        when: "Early on a wet weekday morning, with the driver waiting for an answer and the clinic phone already hard to reach.",
+        where: "Chiquinquirá, Boyacá, outside a small bus office near the basilica.",
+        why: "The grammar matters because disagreement needs softness. In Colombian Spanish, saying “no creo que sea” lets Mateo push back while leaving room for Laura's worry, which is exactly the kind of tact a B2 speaker is expected to control."
+      },
+      address: {
+        form: "tú",
+        who: "Laura and Mateo use tú as cousins of the same generation who are close enough to disagree openly but still careful because the decision affects Laura's mother.",
+        why: "Tú keeps the exchange familiar and warm. The politeness is not carried by usted here; it is carried by softened disagreement, phrases like “no creo que” and “no me parece que”, and by giving reasons instead of just saying no.",
+        ifYouSwitch: "Usted would add distance and could make the disagreement sound heavier, almost like a formal warning. Vos would not fit this Boyacá family scene. The useful switch is not the pronoun but the mood after the negated opinion."
+      },
+      dialogue: [
+        {
+          speaker: "Laura",
+          target: "Mateo, creo que la vía está muy peligrosa; mejor cancelamos el viaje.",
+          translation: "Mateo, I think the road is very dangerous; we had better cancel the trip.",
+          pronunciation: "ma-TE-o, KRE-o ke la BI-a es-TA mui pe-li-GRO-sa; me-HOR kan-se-LA-mos el BIA-he",
+          literal: "Mateo, I-believe that the road is very dangerous; better we-cancel the trip.",
+          why: "This is the affirmative side of the contrast. “Creo que” asserts Laura's view, so the verb after “que” stays indicative: “está”. She is presenting the danger as real enough to act on."
+        },
+        {
+          speaker: "Mateo",
+          target: "Yo no creo que sea tan grave como dicen, pero sí tenemos que llamar al conductor.",
+          translation: "I don't think it is as serious as they say, but we do need to call the driver.",
+          pronunciation: "yo no KRE-o ke SE-a tan GRA-be KO-mo DI-sen, PE-ro si te-NE-mos ke ya-MAR al kon-duk-TOR",
+          literal: "I not believe that it-be so serious as they-say, but yes we-have to call the driver.",
+          why: "Here is the mood flip: “no creo que” denies the opinion, so Spanish no longer presents “sea tan grave” as a vouched-for fact. English keeps “is”; Spanish moves to the subjunctive “sea”."
+        },
+        {
+          speaker: "Laura",
+          target: "Pero la señora de la tienda dice que cayó piedra en la curva.",
+          translation: "But the woman at the shop says rocks fell on the curve.",
+          pronunciation: "PE-ro la se-ÑO-ra de la TYEN-da DI-se ke ka-YO PYE-dra en la KUR-ba",
+          literal: "But the lady of the shop says that fell rock on the curve.",
+          why: "“Dice que” reports a claim as information, so the verb is indicative: “cayó”. The subjunctive is not about bad news or doubt in general; it is triggered by how the speaker frames the claim."
+        },
+        {
+          speaker: "Mateo",
+          target: "No me parece que esté cerrada la vía; si estuviera cerrada, ya habría aviso oficial.",
+          translation: "It doesn't seem to me that the road is closed; if it were closed, there would already be an official notice.",
+          pronunciation: "no me pa-RE-se ke es-TE se-RRA-da la BI-a; si es-tu-BYE-ra se-RRA-da, ya a-BRI-a a-BI-so o-fi-SYAL",
+          literal: "Not to-me it-seems that it-be closed the road; if it-were closed, already there-would-be notice official.",
+          why: "“No me parece que” belongs to the same family as “no creo que”. Mateo is not vouching for “está cerrada”, so he says “esté cerrada”. The negative opinion creates the subjunctive."
+        },
+        {
+          speaker: "Laura",
+          target: "¿Crees que mi mamá puede aguantar otra semana sin cita?",
+          translation: "Do you think my mom can hold out another week without the appointment?",
+          pronunciation: "KRE-es ke mi ma-MA PWE-de a-guan-TAR O-tra se-MA-na sin SI-ta",
+          literal: "You-believe that my mom can endure another week without appointment?",
+          why: "A genuine question with “¿crees que...?” often keeps the indicative: “puede”. Laura is asking for Mateo's belief, not denying one. That is why this line is not “pueda”."
+        },
+        {
+          speaker: "Mateo",
+          target: "No pienso que sea buena idea perder la cita; vamos despacio y paramos si llueve más.",
+          translation: "I don't think losing the appointment is a good idea; let's go slowly and stop if it rains harder.",
+          pronunciation: "no PYEN-so ke SE-a BWE-na i-DE-a per-DER la SI-ta; BA-mos des-PA-syo i pa-RA-mos si YWE-be mas",
+          literal: "Not I-think that it-be good idea to-lose the appointment; we-go slowly and we-stop if it-rains more.",
+          why: "“No pienso que” again denies the opinion, so the complement takes “sea”. This is also the register lesson: Mateo disagrees without saying “estás equivocada”. The grammar itself helps him be firm and gentle."
+        }
+      ],
+      vocabulary: [
+        {
+          term: "creo que + indicativo",
+          explanation: "The affirmative opinion frame. When you say “creo que”, “pienso que” or “me parece que” without negation, you are vouching for the idea after “que”, so Spanish presents it as a fact with the indicative.",
+          literal: "I believe that + indicative",
+          useWhen: "You are asserting your view: “Creo que la vía está peligrosa”, “Me parece que está cerrado”.",
+          avoidWhen: "You are denying the opinion. The moment “no” negates the opinion verb, the complement normally flips to the subjunctive.",
+          register: "neutral",
+          region: "Universal Spanish; very common in Colombia for giving an opinion without sounding harsh.",
+          related: ["pienso que", "me parece que", "considero que", "estoy seguro de que"],
+          example: {
+            target: "Creo que la vía está peligrosa.",
+            translation: "I think the road is dangerous."
+          }
+        },
+        {
+          term: "no creo que + subjuntivo",
+          explanation: "The negative opinion frame. The no does not simply translate English word for word; it changes the status of the second verb. You no longer present the idea as a fact you stand behind, so Spanish uses the subjunctive.",
+          literal: "I do not believe that + subjunctive",
+          useWhen: "Disagreeing or doubting tactfully: “No creo que sea tan grave”, “No creo que alcance el tiempo”.",
+          avoidWhen: "You actually assert the idea. “Creo que es grave” stays indicative because you are putting your weight behind it.",
+          register: "neutral to courteous",
+          region: "Universal Spanish; one of the safest ways to disagree in Colombia.",
+          related: ["no pienso que", "no me parece que", "dudo que", "no considero que"],
+          example: {
+            target: "No creo que sea tan grave.",
+            translation: "I don't think it is that serious."
+          }
+        },
+        {
+          term: "no me parece que + subjuntivo",
+          explanation: "A slightly softer cousin of “no creo que”. It sounds like “it doesn't seem to me that...”, which gives the other person room to disagree back. The grammar is the same: negative opinion, then subjunctive.",
+          literal: "not to-me it-seems that + subjunctive",
+          useWhen: "Softening disagreement: “No me parece que esté cerrado”, “No me parece que sea justo”.",
+          avoidWhen: "You want to state a clear perception in the affirmative: “Me parece que está cerrado” uses indicative.",
+          register: "courteous",
+          region: "Very natural in Colombian Spanish, especially when you want to avoid sounding blunt.",
+          related: ["me parece que", "no creo que", "no veo que", "no diría que"],
+          example: {
+            target: "No me parece que esté cerrada la vía.",
+            translation: "It doesn't seem to me that the road is closed."
+          }
+        },
+        {
+          term: "no es cierto que / no es verdad que",
+          explanation: "Impersonal ways to deny a claim. Because the sentence says the claim is not true, Spanish does not present the claim itself as real, and the verb after “que” becomes subjunctive.",
+          literal: "it is not certain/true that + subjunctive",
+          useWhen: "Correcting a rumor or claim: “No es cierto que hayan cerrado”, “No es verdad que toque pagar hoy”.",
+          avoidWhen: "You affirm the truth of the claim. “Es cierto que cerraron” and “Es verdad que toca pagar” take the indicative.",
+          register: "neutral to formal",
+          region: "Universal Spanish; useful in offices, schools and service counters.",
+          related: ["es cierto que", "es verdad que", "no parece que", "no es evidente que"],
+          example: {
+            target: "No es cierto que la vía esté cerrada.",
+            translation: "It is not true that the road is closed."
+          }
+        },
+        {
+          term: "no parece que + subjuntivo",
+          explanation: "An impersonal version of “no me parece que”. It avoids putting the whole disagreement on yourself and can sound measured, especially when you are reading a situation from signs rather than from certainty.",
+          literal: "it does not seem that + subjunctive",
+          useWhen: "Judging from evidence: “No parece que vaya a llover”, “No parece que haya trancón”.",
+          avoidWhen: "The evidence points clearly the other way and you want the affirmative: “Parece que va a llover” uses indicative.",
+          register: "neutral",
+          region: "Universal Spanish, common in reports and careful speech.",
+          related: ["parece que", "no me parece que", "al parecer", "según veo"],
+          example: {
+            target: "No parece que vaya a llover más.",
+            translation: "It doesn't look like it is going to rain more."
+          }
+        },
+        {
+          term: "¿Crees que...? / ¿No crees que...?",
+          explanation: "Questions are the slippery case. A plain information question, “¿Crees que es grave?”, usually keeps the indicative because you are asking what the other person thinks. A negative question, “¿No crees que sea grave?”, often leans subjunctive because it is closer to challenging or inviting agreement, but real usage varies and both moods are heard.",
+          literal: "do you believe that? / don't you believe that?",
+          useWhen: "Use the indicative in a genuine question: “¿Crees que está abierto?”. Use the subjunctive when the negative question carries doubt or pressure: “¿No crees que sea tarde?”.",
+          avoidWhen: "Do not turn every question into subjunctive automatically. The flip belongs most reliably to negated assertions, not to every sentence with a question mark.",
+          register: "neutral",
+          region: "Universal Spanish with real variation by speaker, region and exact intention.",
+          related: ["¿piensas que...?", "¿no te parece que...?", "preguntar", "insinuar"],
+          example: {
+            target: "¿No crees que sea mejor esperar?",
+            translation: "Don't you think it might be better to wait?"
+          }
+        },
+        {
+          term: "discrepar sin sonar brusco",
+          explanation: "Negated opinion is more than a grammar trigger. In Colombian politeness it lets you disagree while making your statement less frontal. You say “no creo que sea buena idea” instead of “eso es mala idea”.",
+          literal: "to disagree without sounding abrupt",
+          useWhen: "B2 speaking exams, family decisions, work meetings and service conversations where you need to push back with reasons.",
+          avoidWhen: "An urgent safety command where clarity matters more than tact. Then a direct “No sigamos” may be better than a softened opinion.",
+          register: "courteous",
+          region: "Especially valuable in Colombia, where softened disagreement often protects the relationship.",
+          related: ["con respeto", "yo diría que", "de pronto", "mejor"],
+          example: {
+            target: "No pienso que sea buena idea perder la cita.",
+            translation: "I don't think losing the appointment is a good idea."
+          }
+        }
+      ],
+      note: "The rule is simple, but it feels backwards if English is your first language. Affirming an opinion takes the indicative: “Creo que es grave”, “Me parece que está cerrado”. You are presenting the idea as something you stand behind. Denying the opinion takes the subjunctive: “No creo que sea grave”, “No me parece que esté cerrado”. You are no longer vouching for the idea as real, so Spanish stops presenting it as a fact. That is why the affirmative and the negative do not use the same mood. English says “I think it is serious” and “I don't think it is serious”; the verb “is” never moves. Spanish does move it, and the word-for-word map “No creo que es grave” is exactly the learner trap this lesson exists to prevent. The family is broad: no creo que, no pienso que, no considero que, no me parece que, no es cierto que, no es verdad que and no parece que all point toward the subjunctive. Questions need a separate note. A genuine question like “¿Crees que es grave?” commonly keeps the indicative because you are simply asking what the other person believes. A negative question like “¿No crees que sea grave?” often takes the subjunctive because it sounds more like doubt, pressure or an invitation to agree, but both moods are heard depending on speaker and intention. For an exam answer, make the safest contrast clear: “Creo que es” against “No creo que sea”.",
+      culture: [
+        {
+          label: "Disagreeing without slamming the door",
+          body: "Colombian disagreement often arrives padded with care. “No creo que sea buena idea” leaves room for the other person to keep talking; “eso es mala idea” can feel like a judgment. The subjunctive is not politeness by itself, but this construction is one of the most practical polite tools a learner can acquire. It lets you push back in a family decision, a work meeting or a B2 speaking exam while sounding thoughtful rather than combative."
+        },
+        {
+          label: "Boyacá, rain and travel decisions",
+          body: "Chiquinquirá sits in the highlands of Boyacá, where rain, curves and rural roads make travel decisions feel less theoretical than they do on a city map. People rely on drivers, shopkeepers, radio warnings and official notices, and those sources do not always agree. That is exactly where “no creo que” earns its keep: it lets a speaker weigh a rumor without either dismissing it rudely or treating it as confirmed fact."
+        },
+        {
+          label: "Why the exam cares",
+          body: "B2 exam tasks often reward the ability to nuance disagreement. You may have to reject a proposal, question a claim or negotiate a plan without sounding aggressive. Negated opinion with the subjunctive is a compact way to do that. It proves more than conjugation; it proves that you can present a claim as unconfirmed, soften your stance and still make a decision. That is why this small mood flip belongs in a speaking syllabus."
+        }
+      ],
+      pitfalls: [
+        {
+          mistake: "No creo que es grave.",
+          whyItFails: "This is the English sentence “I don't think it is serious” copied word for word. Spanish hears the negated opinion and expects the subjunctive, because you are not presenting “it is serious” as a fact you vouch for.",
+          sayInstead: "No creo que sea grave."
+        },
+        {
+          mistake: "Creo que sea grave.",
+          whyItFails: "The subjunctive has been carried over from the negative pattern into the affirmative. But “creo que” asserts the opinion, so the complement is presented as real and takes the indicative.",
+          sayInstead: "Creo que es grave."
+        },
+        {
+          mistake: "No me parece que está cerrado.",
+          whyItFails: "“No me parece que” is a negated opinion expression, not a plain report. Because the speaker is not vouching for the closure, Spanish uses “esté”, not “está”.",
+          sayInstead: "No me parece que esté cerrado."
+        },
+        {
+          mistake: "Treating every question as subjunctive",
+          whyItFails: "A genuine “¿Crees que...?” question commonly keeps the indicative: “¿Crees que está abierto?”. The subjunctive is most reliable after negated assertions, and negative questions vary by intention.",
+          sayInstead: "¿Crees que está abierto?"
+        }
+      ],
+      variations: [
+        {
+          form: "Creo que es grave.",
+          register: "neutral",
+          region: "Universal Spanish",
+          whenToUse: "Affirming an opinion and presenting the idea as real, so the verb is indicative."
+        },
+        {
+          form: "No creo que sea grave.",
+          register: "courteous",
+          region: "Universal Spanish",
+          whenToUse: "Denying the opinion, disagreeing or doubting, so the verb flips to subjunctive."
+        },
+        {
+          form: "No me parece que esté cerrado.",
+          register: "courteous",
+          region: "Colombia-wide",
+          whenToUse: "A softer disagreement, useful when you want to push back without sounding blunt."
+        },
+        {
+          form: "¿No crees que sea mejor esperar?",
+          register: "neutral",
+          region: "Universal Spanish",
+          whenToUse: "A negative question that leans toward doubt or persuasion. Usage varies, and indicative is also heard."
+        }
+      ],
+      prompt: "Mateo wants to disagree with “it is serious” after “no creo que”. Which sentence is correct?",
+      choices: [
+        "No creo que es tan grave como dicen.",
+        "No creo que sea tan grave como dicen.",
+        "Creo que sea tan grave como dicen."
+      ],
+      answer: 1,
+      practiceExtra: [
+        {
+          prompt: "Which minimal pair shows the mood flip correctly?",
+          choices: [
+            "Creo que es grave; no creo que sea grave.",
+            "Creo que sea grave; no creo que es grave.",
+            "Creo que está grave; no creo que está grave."
+          ],
+          answer: 0,
+          tests: "affirmative opinion with indicative against negated opinion with subjunctive"
+        },
+        {
+          prompt: "Laura says “Me parece que está cerrado.” Now make it negative.",
+          choices: [
+            "No me parece que está cerrado.",
+            "No me parece que estará cerrado.",
+            "No me parece que esté cerrado."
+          ],
+          answer: 2,
+          tests: "no me parece que as a negated opinion trigger"
+        },
+        {
+          prompt: "Why is “¿Crees que está abierto?” not automatically subjunctive?",
+          choices: [
+            "Because all questions in Spanish keep the indicative after que.",
+            "Because a genuine question can ask for belief without denying it.",
+            "Because abrir is an irregular verb and has no subjunctive here."
+          ],
+          answer: 1,
+          tests: "question form versus negated assertion"
+        }
+      ]
+    },
+    en: {
+      title: "No creo que sea: por qué el inglés no cambia el segundo verbo",
+      situation: "Dos primos en Waco tienen que decidir si mantienen un viaje médico por la I-35 después de una alerta de tormenta. Una quiere cancelar, el otro no está de acuerdo, pero necesita sonar cuidadoso y no imprudente.",
+      setting: {
+        who: "Lina vive en Waco y organizó el viaje de su mamá a una cita en Temple. Mateo, su primo, es cuidadoso con la plata y con las obligaciones familiares, y sabe que cancelar hoy puede significar esperar semanas.",
+        what: "Un desacuerdo real sobre riesgo, plata y responsabilidad. No discuten gramática; deciden si la carretera está segura, si la alerta está exagerada y si la cita médica pesa más que el miedo.",
+        when: "Una mañana húmeda entre semana, con el conductor esperando respuesta y el teléfono de la clínica ocupado.",
+        where: "Waco, Texas, afuera de una pequeña farmacia cerca de Waco Drive, con los reportes de tráfico de la I-35 sonando en el teléfono. Inglés estadounidense corriente.",
+        why: "La construcción importa porque el inglés discrepa de otra manera. Donde el español cambia “es” a “sea” después de “no creo que”, el inglés mantiene “is” y pone toda la negación en “I don't think”."
+      },
+      address: {
+        form: "mixed",
+        who: "Lina y Mateo se tratan por el nombre, como primos de la misma generación que pueden contradecirse sin formalidad.",
+        why: "El inglés no tiene tú ni usted. La cortesía se construye con el tono y con frases suaves como “I don't think” o “it doesn't look like”, no con un pronombre distinto ni con un subjuntivo visible.",
+        ifYouSwitch: "No hay pronombre que cambiar. Si Mateo quisiera sonar más formal, alargaría la frase, bajaría la seguridad y daría razones; no cambiaría “you”, porque “you” sirve para todo."
+      },
+      dialogue: [
+        {
+          speaker: "Lina",
+          target: "Mateo, I think the highway is too dangerous; we should cancel the trip.",
+          translation: "Mateo, creo que la carretera está muy peligrosa; mejor cancelamos el viaje.",
+          pronunciation: "ma-TÉ-o, ai zink de JÁI-uei is tu DÉIN-yer-es; ui shud KÁN-sel de trip",
+          literal: "Mateo, yo pienso la autopista es demasiado peligrosa; deberíamos cancelar el viaje.",
+          why: "El inglés afirma la opinión con “I think + oración”. El segundo verbo va normal: “is”. En español también hay indicativo en la afirmativa: “creo que está”."
+        },
+        {
+          speaker: "Mateo",
+          target: "I don't think it's that serious, but we do need to call the driver.",
+          translation: "No creo que sea tan grave, pero sí tenemos que llamar al conductor.",
+          pronunciation: "ai dount zink its dat SÍ-ri-es, bat ui du nid tu kol de DRÁI-ver",
+          literal: "Yo no pienso ello-es tan serio, pero sí necesitamos llamar al conductor.",
+          why: "Aquí está la diferencia central. El español cambia a subjuntivo: “no creo que sea”. El inglés no cambia “is”; simplemente niega “think”: “I don't think it's”."
+        },
+        {
+          speaker: "Lina",
+          target: "But the cashier says debris fell near the exit to Temple.",
+          translation: "Pero la cajera dice que cayó escombro cerca de la salida hacia Temple.",
+          pronunciation: "bat de ka-SHÍR sez de-BRÍ fol nir di ÉG-zit tu TÉM-pel",
+          literal: "Pero la cajera dice escombro cayó cerca de la salida a Temple.",
+          why: "“Says” introduce una información reportada y el verbo sigue normal: “fell”. Igual que en español, reportar una afirmación no basta por sí solo para crear subjuntivo."
+        },
+        {
+          speaker: "Mateo",
+          target: "It doesn't look like the road is closed; if it were closed, there would be an official alert.",
+          translation: "No parece que la carretera esté cerrada; si estuviera cerrada, habría una alerta oficial.",
+          pronunciation: "it DÁ-zent luk laik de roud is klouzd; if it uer klouzd, der wud bi an o-FÍ-shal a-LERT",
+          literal: "No parece como la carretera está cerrada; si ella estuviera cerrada, habría una alerta oficial.",
+          why: "“It doesn't look like” traduce bien “no parece que”, pero el inglés mantiene “is closed”. No diga “be closed” aquí por imitar el subjuntivo español."
+        },
+        {
+          speaker: "Lina",
+          target: "Do you think my mom can wait another week without the appointment?",
+          translation: "¿Crees que mi mamá puede esperar otra semana sin la cita?",
+          pronunciation: "du yu zink mai mom kan weit a-NÁ-der uik ui-DÁUT di a-PÓINT-ment",
+          literal: "Piensas tú mi mamá puede esperar otra semana sin la cita?",
+          why: "La pregunta normal en inglés es “Do you think...?” y el segundo verbo sigue normal: “can wait”. Esto se parece al español afirmativo de pregunta, “¿crees que puede?”."
+        },
+        {
+          speaker: "Mateo",
+          target: "I don't think missing the appointment is a good idea; let's drive slowly and stop if the rain gets worse.",
+          translation: "No pienso que perder la cita sea buena idea; vamos despacio y paramos si la lluvia empeora.",
+          pronunciation: "ai dount zink MÍ-sing di a-PÓINT-ment is a gud ai-DÍ-a; lets draiv SLÓU-li and stap if de rein gets uers",
+          literal: "Yo no pienso perder la cita es una buena idea; manejemos despacio y paremos si la lluvia se pone peor.",
+          why: "Otra vez, el inglés no muestra el cambio que exige el español. “No pienso que sea” se vuelve “I don't think ... is”. La cortesía está en el marco “I don't think”, no en una forma especial del verbo."
+        }
+      ],
+      vocabulary: [
+        {
+          term: "I think + statement",
+          explanation: "La afirmación de opinión en inglés. Después de “I think” va una oración normal: “the road is dangerous”, “the office is closed”. No aparece ningún modo especial.",
+          literal: "yo pienso + afirmación",
+          useWhen: "Usted presenta una opinión como su lectura de la realidad: “I think the highway is dangerous”.",
+          avoidWhen: "Quiere discrepar o negar la opinión; entonces la negación va en “don't think”, no en el segundo verbo.",
+          register: "neutro",
+          region: "Inglés estadounidense general; natural en Texas y en todo Estados Unidos.",
+          related: ["I believe", "it seems", "I'm sure", "in my opinion"],
+          example: {
+            target: "I think the highway is dangerous.",
+            translation: "Creo que la carretera está peligrosa."
+          }
+        },
+        {
+          term: "I don't think + statement",
+          explanation: "La forma inglesa de “no creo que”. La negación se queda en “don't think” y el segundo verbo no cambia: “I don't think it is serious”, no una forma especial como si fuera español.",
+          literal: "yo no pienso + afirmación",
+          useWhen: "Discrepar con suavidad: “I don't think it's that serious”, “I don't think we should cancel”.",
+          avoidWhen: "Quiere negar el hecho de manera directa y tajante. “It isn't serious” suena más frontal que “I don't think it's serious”.",
+          register: "neutro a cortés",
+          region: "Inglés estadounidense general; muy útil para sonar diplomático.",
+          related: ["I don't believe", "I doubt", "I'm not sure", "I wouldn't say"],
+          example: {
+            target: "I don't think it's that serious.",
+            translation: "No creo que sea tan grave."
+          }
+        },
+        {
+          term: "it doesn't look like + statement",
+          explanation: "Equivale a “no parece que” o “no se ve que”. Aunque en español aparezca subjuntivo, en inglés la oración sigue normal: “the road is closed”.",
+          literal: "no parece como + afirmación",
+          useWhen: "Usted juzga por evidencia visible o por reportes: “It doesn't look like the road is closed”.",
+          avoidWhen: "Quiere afirmar lo que sí parece cierto. Entonces diga “It looks like the road is closed”.",
+          register: "neutro",
+          region: "Inglés estadounidense general; frecuente en conversación diaria.",
+          related: ["it seems like", "apparently", "from what I see", "it looks as if"],
+          example: {
+            target: "It doesn't look like the road is closed.",
+            translation: "No parece que la carretera esté cerrada."
+          }
+        },
+        {
+          term: "it isn't true that + statement",
+          explanation: "La negación impersonal de una afirmación. En español sería “no es cierto que” con subjuntivo; en inglés se mantiene una oración normal después de “that”.",
+          literal: "no es verdad que + afirmación",
+          useWhen: "Corregir un rumor: “It isn't true that the clinic is closed”, “It isn't true that we have to pay today”.",
+          avoidWhen: "Está afirmando que algo sí es cierto. Entonces diga “It's true that...” y mantenga la oración normal.",
+          register: "neutro a formal",
+          region: "Inglés general; útil en oficinas, clínicas y reclamos.",
+          related: ["that's not true", "it isn't accurate", "it doesn't seem", "I don't think"],
+          example: {
+            target: "It isn't true that the clinic is closed.",
+            translation: "No es cierto que la clínica esté cerrada."
+          }
+        },
+        {
+          term: "don't you think...?",
+          explanation: "La pregunta negativa que suele buscar acuerdo o presionar con suavidad. En inglés tampoco cambia el segundo verbo: “Don't you think it is safer to wait?” En español esa misma intención puede llevar subjuntivo: “¿No crees que sea más seguro esperar?”",
+          literal: "no piensas tú...?",
+          useWhen: "Invitar a la otra persona a ver su punto: “Don't you think we should call first?”",
+          avoidWhen: "Quiere una pregunta completamente abierta. “Do you think...?” suena menos cargada que “Don't you think...?”",
+          register: "neutro",
+          region: "Inglés general; el tono decide si suena amable o insistente.",
+          related: ["do you think", "wouldn't you say", "isn't it", "shouldn't we"],
+          example: {
+            target: "Don't you think it is safer to wait?",
+            translation: "¿No crees que sea más seguro esperar?"
+          }
+        },
+        {
+          term: "that serious / that bad",
+          explanation: "“That” antes de un adjetivo significa “tan” en frases como “that serious”, “that bad”, “that late”. Es muy común después de “I don't think”.",
+          literal: "tan serio / tan malo",
+          useWhen: "Bajar la intensidad de una preocupación: “I don't think it's that bad”.",
+          avoidWhen: "Está señalando una cosa concreta. “That road” sí significa “esa carretera”; “that serious” significa “tan grave”.",
+          register: "familiar a neutro",
+          region: "Inglés estadounidense general.",
+          related: ["so serious", "as serious", "too serious", "not that late"],
+          example: {
+            target: "I don't think it's that serious.",
+            translation: "No creo que sea tan grave."
+          }
+        },
+        {
+          term: "soft disagreement",
+          explanation: "El inglés suaviza el desacuerdo con marcos como “I don't think”, “I'm not sure” y “it doesn't look like”. No necesita cambiar el modo del segundo verbo para sonar cortés.",
+          literal: "desacuerdo suave",
+          useWhen: "Reuniones, familia, servicios y exámenes orales donde usted necesita contradecir sin sonar agresivo.",
+          avoidWhen: "Hay peligro inmediato y necesita una orden clara. En ese caso, “Stop” o “Don't go” vale más que una frase diplomática.",
+          register: "cortés",
+          region: "Muy frecuente en Estados Unidos, incluso cuando la relación es cercana.",
+          related: ["I'm not sure", "maybe", "I see your point", "let's check"],
+          example: {
+            target: "I don't think missing the appointment is a good idea.",
+            translation: "No pienso que perder la cita sea buena idea."
+          }
+        }
+      ],
+      note: "La buena noticia para el colombiano que aprende inglés es que el inglés no hace el cambio de modo que hace el español. En español la diferencia es obligatoria: “creo que es grave” afirma la opinión y usa indicativo, pero “no creo que sea grave” niega la opinión y usa subjuntivo. En inglés las dos frases mantienen el segundo verbo igual: “I think it is serious” y “I don't think it is serious”. El movimiento ocurre en el primer verbo, con “don't”, no en “is”. Por eso no debe inventar un subjuntivo inglés como “I don't think it be serious” ni traducir demasiado literalmente el español como “I don't think that it be”. La forma natural es “I don't think it's that serious”. La familia inglesa es práctica: I don't think, I don't believe, it doesn't seem like, it doesn't look like, it isn't true that. Todas permiten discrepar con suavidad, pero ninguna obliga a cambiar el verbo que sigue. La pregunta también tiene matiz. “Do you think it is serious?” es una pregunta abierta. “Don't you think it is serious?” suele empujar un poco hacia el acuerdo, como “¿no crees que...?”, pero en inglés el verbo sigue “is”. Para sonar cortés, baje la seguridad, dé una razón y use un marco suave; no busque una conjugación especial que el inglés moderno no usa aquí.",
+      culture: [
+        {
+          label: "Discrepar en inglés sin sonar tajante",
+          body: "En Estados Unidos, “I don't think...” es una herramienta diaria para contradecir sin cerrar la conversación. “That road isn't dangerous” suena más frontal; “I don't think it's that dangerous” deja espacio para revisar el reporte, llamar al conductor o aceptar que la otra persona tiene miedo. La cortesía se oye en el marco, en el tono y en la razón que sigue, no en un cambio de modo."
+        },
+        {
+          label: "Waco y la I-35",
+          body: "Waco está sobre la I-35 entre Austin y Dallas, y viajar hacia Temple o hacia Dallas depende mucho del tráfico, las obras y el clima fuerte del centro de Texas. Después de tormentas, la gente revisa alertas, cierres y reportes locales antes de salir. Una conversación sobre si cancelar un viaje médico no es dramática de más; es exactamente el tipo de decisión cotidiana donde hace falta discrepar con cuidado."
+        },
+        {
+          label: "La trampa inversa del subjuntivo",
+          body: "El hispanohablante avanzado puede cometer el error contrario al angloparlante. Como sabe que el español exige “no creo que sea”, intenta mostrar esa duda en inglés con “be” o con una estructura rara. Pero el inglés moderno casi nunca marca subjuntivo en este contexto. Decir “I don't think it is” es correcto, natural y suficientemente cortés."
+        }
+      ],
+      pitfalls: [
+        {
+          mistake: "I don't think it be serious.",
+          whyItFails: "Está importando el subjuntivo español a un contexto donde el inglés no lo usa. Después de “I don't think”, el verbo sigue normal: “it is”, o en contracción, “it's”.",
+          sayInstead: "I don't think it's serious."
+        },
+        {
+          mistake: "I think it be serious.",
+          whyItFails: "La afirmación de opinión tampoco lleva forma especial. “I think” va seguido de una oración normal con sujeto y verbo conjugado: “it is serious”.",
+          sayInstead: "I think it is serious."
+        },
+        {
+          mistake: "It doesn't look like the road be closed.",
+          whyItFails: "Aunque el español tenga “no parece que esté cerrada”, el inglés no cambia el verbo después de “it doesn't look like”. La forma natural es “is closed”.",
+          sayInstead: "It doesn't look like the road is closed."
+        },
+        {
+          mistake: "Using “Don't you think...?” as a neutral question every time",
+          whyItFails: "La pregunta negativa puede sonar como una invitación a estar de acuerdo, no como una pregunta abierta. Si de verdad solo quiere preguntar, “Do you think...?” pesa menos.",
+          sayInstead: "Do you think the road is safe?"
+        }
+      ],
+      variations: [
+        {
+          form: "I think it is serious.",
+          register: "neutro",
+          region: "Inglés general",
+          whenToUse: "Afirmar una opinión. El segundo verbo va normal, igual que en cualquier afirmación."
+        },
+        {
+          form: "I don't think it's serious.",
+          register: "cortés",
+          region: "Inglés estadounidense general",
+          whenToUse: "Discrepar con suavidad. La negación está en “don't think”; “is” no cambia."
+        },
+        {
+          form: "It doesn't look like the road is closed.",
+          register: "neutro",
+          region: "Inglés estadounidense general",
+          whenToUse: "Juzgar por señales o reportes, equivalente a “no parece que”."
+        },
+        {
+          form: "Don't you think it is safer to wait?",
+          register: "neutro",
+          region: "Inglés general",
+          whenToUse: "Pregunta negativa que puede invitar al acuerdo. No es tan abierta como “Do you think...?”"
+        }
+      ],
+      prompt: "En español cambia “es” a “sea” en “no creo que sea”. ¿Qué hace el inglés?",
+      choices: [
+        "It keeps the normal verb: I don't think it's serious.",
+        "It changes the verb: I don't think it be serious.",
+        "It drops the verb: I don't think it serious."
+      ],
+      answer: 0,
+      practiceExtra: [
+        {
+          prompt: "¿Cuál frase afirma una opinión correctamente en inglés?",
+          choices: [
+            "I think it be serious before the appointment.",
+            "I think it is serious before the appointment.",
+            "I think that serious before the appointment."
+          ],
+          answer: 1,
+          tests: "I think seguido de una oración normal"
+        },
+        {
+          prompt: "¿Cuál traduce mejor “No parece que la carretera esté cerrada”?",
+          choices: [
+            "It doesn't look like the road is closed.",
+            "It doesn't look like the road be closed.",
+            "It doesn't look the road is closed."
+          ],
+          answer: 0,
+          tests: "it doesn't look like seguido de verbo normal"
+        },
+        {
+          prompt: "Si quiere una pregunta abierta, sin empujar al acuerdo, ¿cuál conviene?",
+          choices: [
+            "Don't you think the road is safe?",
+            "You don't think the road is safe?",
+            "Do you think the road is safe?"
+          ],
+          answer: 2,
+          tests: "pregunta abierta frente a pregunta negativa sugerente"
         }
       ]
     }
