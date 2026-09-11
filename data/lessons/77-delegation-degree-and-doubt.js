@@ -25,7 +25,7 @@ lessons.push(
     structure: "causative-delegation",
     review: "pending",
     es: {
-      title: "Mandar a arreglar: el trabajo que uno no hace",
+      title: "Having it fixed: the work you do not do yourself",
       situation: "Two neighbors compare the list of repairs each one had done before the rainy season started.",
       setting: {
         who: "Marcela and Hernán live on the same block in Laureles, Medellín, and have known each other long enough to compare bills without embarrassment.",
@@ -585,7 +585,7 @@ lessons.push(
     structure: "degree-result",
     review: "pending",
     es: {
-      title: "Tan lleno que no cupimos: la causa y su consecuencia",
+      title: "So full we did not fit: cause and consequence",
       situation: "Two friends explain why their weekend plan fell apart, and every explanation is a cause with its consequence.",
       setting: {
         who: "Tatiana and Juliana are cousins in their late twenties who went to Cartagena for a long weekend and came back with a story rather than a good time.",
@@ -860,7 +860,7 @@ lessons.push(
       ]
     },
     en: {
-      title: "So full that, such a crowd that: el grado y su consecuencia",
+      title: "‘So full that, such a crowd that’: el grado y su consecuencia",
       situation: "Dos amigas cuentan por qué el plan del fin de semana se les dañó, y cada explicación es una causa con su consecuencia.",
       setting: {
         who: "Tatiana y Julie son primas de casi treinta años que se fueron un fin de semana largo a Galveston y volvieron con una anécdota en vez de con buenos recuerdos.",
@@ -1145,7 +1145,7 @@ lessons.push(
     structure: "perfect-subjunctive",
     review: "pending",
     es: {
-      title: "Espero que haya llegado: dudar de lo que ya pasó",
+      title: "I hope it arrived: doubting what already happened",
       situation: "A coordinator and her supplier review an order by phone that was supposed to arrive Friday and that no one has confirmed.",
       setting: {
         who: "Paola coordinates supplies for a clinic in Bogotá. Ramiro runs the small distributor that serves her. They have worked together for three years and are on good terms without being friends.",

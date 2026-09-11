@@ -27,7 +27,7 @@ lessons.push(
     verb: "sacar",
     review: "pending",
     es: {
-      title: "Sacar plata y papeles antes del trámite",
+      title: "Taking out cash and papers before the errand",
       situation:
         "You are in Ibagué, between an ATM that charges a fee, a crowded copy shop, and an office that asks for photocopies of your cédula. You need to withdraw cash, make copies, get an appointment, and understand why the same verb also works for getting good grades or getting a passport.",
       setting: {
@@ -625,7 +625,7 @@ lessons.push(
     verb: "saltar",
     review: "pending",
     es: {
-      title: "Saltarse la fila antes de la lancha",
+      title: "Cutting the line before the boat",
       situation:
         "You are in Buenaventura, waiting for a boat, and someone tries to push ahead of a line that has already been standing under the sun for half an hour. The person in charge does not shout, but she sets the boundary: here nobody skips the line, nobody skips the registration step, and running a red light is not clever either.",
       setting: {
@@ -1235,7 +1235,7 @@ lessons.push(
     verb: "cruzar",
     review: "pending",
     es: {
-      title: "Cruzar la avenida y cruzarse con medio mundo",
+      title: "Crossing the avenue and running into everyone",
       situation:
         "You are in Arauca, looking for an interview at a community radio station, and a journalist gives you directions that include crossing the avenue, crossing your fingers that the bridge is not closed, and laughing when she runs into a colleague she had not seen since another assignment.",
       setting: {

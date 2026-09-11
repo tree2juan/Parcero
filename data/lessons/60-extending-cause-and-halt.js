@@ -39,7 +39,7 @@ lessons.push(
     verb: "parar",
     review: "pending",
     es: {
-      title: "Parar el taxi en Arauca",
+      title: "Stopping the taxi in Arauca",
       situation:
         "You are in a taxi in Arauca and need to say where to stop without sounding abrupt. You also hear sin parar, pararse for getting up, and parar bolas as a very Colombian way to say pay attention.",
       setting: {
@@ -189,7 +189,7 @@ lessons.push(
     verb: "causar",
     review: "pending",
     es: {
-      title: "Explicar qué causó la falla en Florencia",
+      title: "Explaining what caused the breakdown in Florencia",
       situation:
         "You are in Florencia when a bakery machine shuts off and delays the orders. The technician explains what caused the damage, but also shows that in everyday conversation many Colombians would say me dio susto, not me causó susto.",
       setting: {
@@ -351,7 +351,7 @@ lessons.push(
     verb: "producir",
     review: "pending",
     es: {
-      title: "Informar qué produjo la tormenta en Tumaco",
+      title: "Reporting what the storm caused in Tumaco",
       situation:
         "You are in Tumaco reading a local note about a storm. The news says what the downpour produced, what the repairs produced, and why produjo and produjeron have the irregular root -duj- with no accent mark and no -jieron.",
       setting: {

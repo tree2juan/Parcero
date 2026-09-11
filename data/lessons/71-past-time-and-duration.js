@@ -17,7 +17,7 @@ lessons.push(
     structure: "present-perfect",
     review: "pending",
     es: {
-      title: "‘He comido’ o ‘comí’: el presente perfecto y cuándo el colombiano lo evita",
+      title: "He comido or comí: the present perfect and when Colombians avoid it",
       situation:
         "In Bucaramanga, Yaneth welcomes Alex to a Santander-style lunch and asks him, very directly, what he has tried and what he still needs to get to know. You will hear the real present perfect — “¿ya has probado?”, “nunca he ido” — and also the bumanguesa habit of handling the same idea with the preterite: “¿ya probó?”. Notice when each one sounds natural.",
       setting: {
@@ -649,7 +649,7 @@ lessons.push(
     structure: "pluperfect",
     review: "pending",
     es: {
-      title: "‘Ya habían cerrado’: el pluscuamperfecto para ordenar una historia en Cúcuta",
+      title: "Ya habían cerrado: the past perfect for ordering a story in Cúcuta",
       situation:
         "In Cúcuta, by the border, Marleny tells Édinson about a wasted early morning at the international bridge. For the story to make sense, she has to say what had happened before she arrived: “ya habían cerrado”, “todavía no había contestado”. That is the pluperfect — “había” plus a participle — and it marks the earlier of two past events.",
       setting: {
@@ -1281,7 +1281,7 @@ lessons.push(
     structure: "time-since",
     review: "pending",
     es: {
-      title: "‘Llevo tres años acá’: hace, desde y llevar para decir cuánto tiempo",
+      title: "Llevo tres años acá: hace, desde, and llevar for how long",
       situation:
         "In Barichara, Laura talks with don Hernando, a stone carver, and wants to know how long he has been in the town and in the trade. Here the three time tools appear: “hace” for how long ago, “desde” and “desde hace” for since, and “llevar” plus a gerund for an ongoing stretch, “llevo veinte años tallando”. Watch the big contrast: English uses a perfect tense where Spanish uses a present tense.",
       setting: {

@@ -29,7 +29,7 @@ lessons.push(
     verb: "levantar",
     review: "pending",
     es: {
-      title: "Levantarse para el bus de la mañana",
+      title: "Getting up for the morning bus",
       situation:
         "Alex is in Neiva, staying at the home of a friend, and has to leave early for the Tatacoa Desert. It is hot from the morning on, and the bus will not wait. You need to understand when levantar means lifting something and when levantarse means getting out of bed.",
       setting: {
@@ -661,7 +661,7 @@ lessons.push(
     verb: "sentar",
     review: "pending",
     es: {
-      title: "Sentarse en un taller en Pasto",
+      title: "Finding a seat at a workshop in Pasto",
       situation:
         "Priya arrives late to a weaving workshop in Pasto. There are only a few free chairs, and an older woman has just come in behind her. You need to distinguish seating someone, sitting down yourself, and sentir, which does not belong in this scene.",
       setting: {
@@ -1293,7 +1293,7 @@ lessons.push(
     verb: "vestir",
     review: "pending",
     es: {
-      title: "Vestirse para un festival en Yopal",
+      title: "Getting dressed for a festival in Yopal",
       situation:
         "Maya is in Yopal for a llanero festival and does not know what to wear so she can go out without suffering in the heat or arriving too informal. Her cousin lends her a light shirt. You need to see the difference between dressing someone, getting dressed, and wearing clothes.",
       setting: {

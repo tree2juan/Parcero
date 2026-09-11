@@ -27,7 +27,7 @@ lessons.push(
     verb: "pagar",
     review: "pending",
     es: {
-      title: "Pagar en la caja con un billete grande",
+      title: "Paying with a big bill at the register",
       situation:
         "You are at the checkout in a Bogotá shop and only have a fifty-thousand-peso bill. The cashier asks how you are going to pay, and it turns out she has no way to give you change. You learn to move between cash and card, ask for “sencillo” and finish the payment without looking quite so much like a tourist.",
       setting: {
@@ -679,7 +679,7 @@ lessons.push(
     verb: "comprar",
     review: "pending",
     es: {
-      title: "Regatear por unos mangos en el mercado",
+      title: "Haggling for mangoes at the coastal market",
       situation:
         "You are at a fruit stall in Cartagena and want some mangoes, but the first price is never the last. You learn to ask “¿a cómo?”, to ask for a lower price and to close the deal with “de una”, all with Caribbean tú and without offending anyone.",
       setting: {
@@ -1331,7 +1331,7 @@ lessons.push(
     verb: "vender",
     review: "pending",
     es: {
-      title: "Vender la bicicleta antes de mudarse",
+      title: "Selling the bike before moving out",
       situation:
         "You are selling your bike before leaving Medellín. A neighbor sees the “se vende” sign and comes over to ask. With paisa voseo, you learn to set the price, say “le hago precio”, close with “de una” and notice how paisas mix vos and usted without thinking about it.",
       setting: {

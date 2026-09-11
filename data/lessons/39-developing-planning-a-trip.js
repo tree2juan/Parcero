@@ -21,7 +21,7 @@ lessons.push(
     verb: "reservar",
     review: "pending",
     es: {
-      title: "Reservar cuartos para un fin de semana en Mompox",
+      title: "Booking rooms for a weekend in Mompox",
       situation:
         "You want to spend a weekend in Mompox with two friends and call a posada before buying the tickets. You need to reserve clearly, but also understand when people say apartar instead of reservar.",
       setting: {
@@ -673,7 +673,7 @@ lessons.push(
     verb: "visitar",
     review: "pending",
     es: {
-      title: "Visitar a una tía y pasar por un museo en Pasto",
+      title: "Visiting an aunt and a museum in Pasto",
       situation:
         "You are planning a weekend in Pasto and want to see an aunt, go into the Museo del Carnaval, and say hello to a friend if there is time. You need to use visitar without sounding too touristy when what you mean is to drop by for a while.",
       setting: {
@@ -1325,7 +1325,7 @@ lessons.push(
     verb: "planear",
     review: "pending",
     es: {
-      title: "Planear un fin de semana junto al río en Honda",
+      title: "Planning a weekend by the river in Honda",
       situation:
         "You and two friends want to spend a weekend in Honda, but you still have not decided dates, budget, or lodging. You need to plan without sounding institutional, and above all learn how to cuadrar the plan with the others.",
       setting: {

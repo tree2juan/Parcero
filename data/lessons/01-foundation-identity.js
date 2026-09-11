@@ -27,7 +27,7 @@ lessons.push(
     verb: "ser",
     review: "pending",
     es: {
-      title: "Presentarse en la reunión del edificio",
+      title: "Introducing yourself at the building meeting",
       situation:
         "Alex has just moved into a building in Medellín and arrives at the monthly residents meeting. Nobody knows him yet. He has to say who he is, which apartment he lives in, and what he does — in about four sentences, in front of a room that is only half listening.",
       setting: {

@@ -27,7 +27,7 @@ lessons.push(
     verb: "limpiar",
     review: "pending",
     es: {
-      title: "Hacer aseo en la casa de la playa",
+      title: "Cleaning the beach house",
       situation:
         "You are spending a few days in a family house near Santa Marta. The breeze brings in sand, the humidity stains the windows, and your cousin suggests organizing the cleaning before the guests arrive.",
       setting: {
@@ -487,7 +487,7 @@ lessons.push(
     verb: "lavar",
     review: "pending",
     es: {
-      title: "Lavar ropa en la lavandería del barrio",
+      title: "Doing laundry at the neighborhood laundromat",
       situation:
         "You are in Bucaramanga with a bag of damp clothes after several rainy days. You walk into a neighborhood laundry and need to explain what gets washed, what must not be mixed, and when you can pick everything up.",
       setting: {
@@ -659,7 +659,7 @@ lessons.push(
     verb: "arreglar",
     review: "pending",
     es: {
-      title: "Arreglar la bisagra y el plan",
+      title: "Fixing the hinge and the plan",
       situation:
         "You are in Pereira looking after a borrowed apartment. A closet door will not close, the guest arrives tonight, and you call a neighborhood repair shop to ask the price without buying anything new.",
       setting: {

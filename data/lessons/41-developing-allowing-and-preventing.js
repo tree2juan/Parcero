@@ -29,7 +29,7 @@ lessons.push(
     verb: "permitir",
     review: "pending",
     es: {
-      title: "Leer el aviso de la biblioteca",
+      title: "Reading the sign at the library",
       situation:
         "Alex enters a public library in Sincelejo with a water bottle, a laptop, and an empanada in hand. At the door there is a notice with several rules. You need to understand what is allowed, what is not allowed, and why permitir does not sound like the normal way to ask a friend for something.",
       setting: {
@@ -673,7 +673,7 @@ lessons.push(
     verb: "impedir",
     review: "pending",
     es: {
-      title: "Quedarse bloqueado en el malecón",
+      title: "Blocked off on the boardwalk",
       situation:
         "Maya is walking along the Riohacha boardwalk when she finds tape closing off part of the path while some boards are being repaired. A city worker explains the rule without arguing. You need to recognize impedir as a formal verb for what blocks something or keeps it from happening.",
       setting: {
@@ -1317,7 +1317,7 @@ lessons.push(
     verb: "evitar",
     review: "pending",
     es: {
-      title: "Evitar el trancón cerca de la plaza",
+      title: "Avoiding the traffic jam near the plaza",
       situation:
         "Sam is in Manizales and wants to get to an appointment without getting caught in the traffic jam around the square. A hotel receptionist recommends another route and warns him about a lonely block at night. You need to give weight to evitar, the most useful verb in this set for everyday conversation.",
       setting: {

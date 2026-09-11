@@ -35,7 +35,7 @@ lessons.push(
     structure: "reported-speech",
     review: "pending",
     es: {
-      title: "Lo que dijo la profe",
+      title: "What the teacher said",
       situation:
         "Andrés and Marcela work the front desk at a salsa academy in the San Fernando neighborhood of Cali. Profe Yolanda is not going to make it, and the classes for the day have to be reorganized. Between students asking questions and reasons to leave behind, the two catch each other up by repeating what each person said: who is not coming, what they asked for, and what has to be announced.",
       setting: {
@@ -655,7 +655,7 @@ lessons.push(
     structure: "hypothetical-present",
     review: "pending",
     es: {
-      title: "Si tuviéramos la lancha",
+      title: "If we had the boat",
       situation:
         "Yeison and Marta grew up in Buenaventura, facing the Pacific. Sitting at a lookout over the bay, with the port full of ships on one side and rain threatening on the other, they dream about running boat trips to Juanchaco for whale season. The whole time they speak in the conditional: what they would do if they had money, if it did not rain so much, if they really decided to go for it.",
       setting: {
@@ -1275,7 +1275,7 @@ lessons.push(
     structure: "passive-and-impersonal",
     review: "pending",
     es: {
-      title: "Lo que se hizo en Quibdó",
+      title: "What got built in Quibdó",
       situation:
         "Nilson has never left Quibdó; Yeimy has come back after years in the United States. They meet near the Atrato River and catch up on the public works: the road they finally fixed, the new bridge, the neighborhood houses. The whole time they speak in the passive and the impersonal: what is announced, what was built, what one sees and what one does not.",
       setting: {

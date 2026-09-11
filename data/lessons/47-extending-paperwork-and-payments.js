@@ -27,7 +27,7 @@ lessons.push(
     verb: "entregar",
     review: "pending",
     es: {
-      title: "Recibir un paquete en la portería de Montería",
+      title: "Picking up a package at the front desk in Montería",
       situation:
         "In Montería, Alex is waiting for a package he ordered for delivery to the apartment where he is staying. The delivery rider reaches the front desk, but the name on the shipping label is incomplete and the guard does not want to receive anything until Alex comes down with his ID. Between the label, the received signature, and the phrase “ya lo entregué”, Alex learns that entregar works both for delivering a package and for filing paperwork, and that in the preterite it changes to “entregué” to preserve the g sound.",
       setting: {
@@ -569,7 +569,7 @@ lessons.push(
     verb: "firmar",
     review: "pending",
     es: {
-      title: "Firmar el contrato de arriendo en Manizales",
+      title: "Signing the lease in Manizales",
       situation:
         "In Manizales, Alex is going to sign a rental contract for a studio apartment. The real-estate agent asks for his ID, a copy of a utility bill, and a signature on every page; she also explains that, because one signature still has to be notarized, the contract is not complete until the co-signer does it. Alex discovers that firmar is regular, but everything around it — signature, receipt, bill, authentication, notary office — is the real vocabulary of adult life.",
       setting: {
@@ -1111,7 +1111,7 @@ lessons.push(
     verb: "cobrar",
     review: "pending",
     es: {
-      title: "Preguntar cuánto cobra el mecánico en Riohacha",
+      title: "Asking what the mechanic charges in Riohacha",
       situation:
         "In Riohacha, the rental car Alex has started making a strange sound after a road trip. He goes into a repair shop and wants to ask “¿cuánto cuesta?”, but the mechanic is not selling an object; he is quoting an inspection and a repair. Alex learns that for services you ask “¿cuánto me cobra?”, that “me cobraron de más” works for disputing an overcharge, that “cóbreme” can close out a bill, and that cobrar also appears in “cobrar el sueldo”. This is the verb that keeps him from going silent in front of plumbers, taxi drivers, dressmakers, and mechanics.",
       setting: {

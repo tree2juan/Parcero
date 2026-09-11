@@ -29,7 +29,7 @@ lessons.push(
     verb: "significar",
     review: "pending",
     es: {
-      title: "Preguntar qué significa una palabra en Ibagué",
+      title: "Asking what a word means in Ibagué",
       situation:
         "You are in Ibagué with Paula during an Andean music showcase. You hear the word “guabina” in an announcement and need to ask what it means, clarify what you mean, and avoid the false friend of saying “yo significo”.",
       setting: {
@@ -681,7 +681,7 @@ lessons.push(
     verb: "desarrollar",
     review: "pending",
     es: {
-      title: "Desarrollar un taller en Buenaventura",
+      title: "Developing a workshop in Buenaventura",
       situation:
         "You are in Buenaventura with Lina, who is helping set up a photography workshop for young people. The project is still raw: materials need to be developed, skills need to be developed, and you need to talk carefully about how the plan develops without using the verb to say someone grew up.",
       setting: {
@@ -1333,7 +1333,7 @@ lessons.push(
     verb: "alcanzar",
     review: "pending",
     es: {
-      title: "Que alcance la plata en Arauca",
+      title: "Making the money last in Arauca",
       situation:
         "You are in Arauca with Diego at the end of the month. You need to buy groceries, pay for a short cab ride, and make it to a call on time. The key word is alcanzar: the money is not enough, there was not enough time, and you did not manage to call.",
       setting: {

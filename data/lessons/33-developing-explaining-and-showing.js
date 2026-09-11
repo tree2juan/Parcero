@@ -25,7 +25,7 @@ lessons.push(
     verb: "explicar",
     review: "pending",
     es: {
-      title: "Explicar el desvío en Neiva",
+      title: "Explaining the detour in Neiva",
       situation:
         "You are in Neiva with a coworker who does not understand why the route changed near the malecón. You did talk with the driver, so you have to explain the detour, repeat the essential point without sounding impatient, and then say that you already explained it to someone else.",
       setting: {
@@ -643,7 +643,7 @@ lessons.push(
     verb: "mostrar",
     review: "pending",
     es: {
-      title: "Mostrar una mochila en Pasto",
+      title: "Showing a backpack in Pasto",
       situation:
         "You are in a small shop in Pasto looking for a sturdy backpack. The seller shows you several models, you ask her to show you the pockets, and she points out something important: in Colombia many people would say enseñar in this same scene, but mostrar is still the exact verb for putting something before your eyes.",
       setting: {
@@ -1261,7 +1261,7 @@ lessons.push(
     verb: "describir",
     review: "pending",
     es: {
-      title: "Describir una pieza en Leticia",
+      title: "Describing a part in Leticia",
       situation:
         "In Leticia, you are trying to buy a part whose name you do not know. Instead of freezing, you describe the thing by its shape, its function, and a comparison: something for tightening a hose, like a small clamp. The lesson gives you language for getting by when you do not have the exact noun.",
       setting: {

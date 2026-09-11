@@ -12,7 +12,7 @@ lessons.push(
     verb: "bailar",
     review: "pending",
     es: {
-      title: "Sacar a alguien a bailar en Cartagena",
+      title: "Asking someone to dance in Cartagena",
       situation: "You are at a wedding in Cartagena; champeta comes on after dinner, and you want to invite someone to dance without applying pressure, or admit that you do not know how to dance without spoiling the mood.",
       setting: {
         who: "Camila is the bride's cousin and knows half the room; Sam is a foreign guest who has rhythm but not the champeta steps.",
@@ -142,7 +142,7 @@ lessons.push(
     verb: "cantar",
     review: "pending",
     es: {
-      title: "Cantar vallenato en un karaoke de Valledupar",
+      title: "Singing vallenato at karaoke in Valledupar",
       situation: "You go with coworkers to a karaoke place in Valledupar after a training session. They hand you the microphone, ask for a well-known vallenato, and you need to joke about your bad voice and understand the double meaning of cantar.",
       setting: {
         who: "Nicolás grew up in Valledupar and treats vallenato lyrics like shared memory; Priya knows the chorus but not the verses.",
@@ -272,7 +272,7 @@ lessons.push(
     verb: "tocar",
     review: "pending",
     es: {
-      title: "A quién le toca abrir para el ensayo de joropo",
+      title: "Who has to open up for joropo rehearsal",
       situation: "You are in Villavicencio with a group rehearsing joropo. In ten minutes, four uses of tocar show up: playing the cuatro, not touching a cable, knocking on the door, and deciding whose turn it is to wake up early.",
       setting: {
         who: "Lina coordinates the community rehearsal and plays cuatro; Mateo helps with sound, still gets lost in the changes, and has tomorrow's key.",

@@ -27,7 +27,7 @@ lessons.push(
     verb: "mirar",
     review: "pending",
     es: {
-      title: "Mirar los cuadros en el museo de Bogotá",
+      title: "Looking at the paintings in the Bogotá museum",
       situation:
         "In La Candelaria, in Bogotá, Alex walks through the Museo Botero with Don Hernán, a volunteer guide who shows him the galleries. Among Botero’s round figures, Alex has to understand that mirar is not the same as ver, that “mire, le explico” is not an order to look at anything, and that in Spanish you mirar paintings but ver television. All in usted, the way you speak with an older guide in Bogotá.",
       setting: {
@@ -627,7 +627,7 @@ lessons.push(
     verb: "escuchar",
     review: "pending",
     es: {
-      title: "Oírse por encima del picó en Cartagena",
+      title: "Being heard over the pico in Cartagena",
       situation:
         "Alex is in Cartagena and his friend Valentina calls him from a street party, with the picó blasting. Between the bad signal and champeta at full volume, Alex has to understand that in Colombia “escuchar” works for hearing on the phone, as in “¿me escuchas?”, that escuchar is transitive, as in escuchar música with no “a”, and that “escúchame bien” is more “pay attention” than “hear my voice”. All in tú, the way people speak on the coast.",
       setting: {
@@ -1227,7 +1227,7 @@ lessons.push(
     verb: "oír",
     review: "pending",
     es: {
-      title: "Cazar un grito en la salsateca de Cali",
+      title: "Catching a shout at the Cali salsa club",
       situation:
         "Alex is at a salsateca in Cali with Manuel, a melómano from Valle del Cauca who is showing him the music. Between Cali voseo and the volume, Alex learns that oír is “percibir el sonido”, that its real treasure is the attention-getters — “oiga”, “oís”, “óyeme” — and the tags “¿oíste?/¿oyó?”, and that none of them is a real question about the ear. The contrast with escuchar, paying attention on purpose, closes the lesson.",
       setting: {

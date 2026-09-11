@@ -26,7 +26,7 @@ lessons.push(
     verb: "conocer",
     review: "pending",
     es: {
-      title: "Conocer a la amiga de un amigo",
+      title: "Meeting a friend of a friend",
       situation: "It is Friday night on a terrace in Chapinero, Bogotá. Alex arrived with Santi, a friend from the language exchange, and Santi introduces him to Laura, a university classmate. It is the first time Alex and Laura have seen each other, so they need to greet each other, say “mucho gusto,” and explain how everyone knows everyone. It all happens in a relaxed, tú tone among young people.",
       setting: {
         who: "Alex, an English speaker new to Bogotá, meets Laura, a university friend of Santi, the person who brought Alex along tonight.",
@@ -614,7 +614,7 @@ lessons.push(
     verb: "querer",
     review: "pending",
     es: {
-      title: "Un tinto en la panadería",
+      title: "A tinto at the bakery",
       situation: "Midmorning finds Alex in a Medellín bakery with Manu, a paisa friend, getting a tinto. Manu asks what Alex is going to want, insists on treating him, and everything happens in voseo, with parce and quiubo everywhere. It is a short, warm chat about ordering, offering, and that paisa way of loving your friends without making it sound romantic.",
       setting: {
         who: "Alex, learning Colombian Spanish, is out with Manu, an easy-going paisa friend from Medellín who insists on paying.",
@@ -1202,7 +1202,7 @@ lessons.push(
     verb: "llegar",
     review: "pending",
     es: {
-      title: "Ya casi llego al almuerzo",
+      title: "Almost there for Sunday lunch",
       situation: "It is Sunday at noon in Cali. Alex is late to lunch at the home of Doña Marta, the mother of his friend Andrés, who has made sancocho. The MÍO, the city bus, was delayed, and Alex calls her to say he is almost there. Everything is by phone, in usted, with the affectionate respect owed to the mother of a friend. It is a conversation about arriving, Colombian time, and the art of saying “ya casi.”",
       setting: {
         who: "Alex, running late, calls Doña Marta, the mother of a friend, Andrés, who has cooked a big Sunday sancocho for everyone.",

@@ -29,7 +29,7 @@ lessons.push(
     verb: "probar",
     review: "pending",
     es: {
-      title: "Probar la comida y probarse la camisa",
+      title: "Tasting the food and trying on the shirt",
       situation:
         "You are in Sincelejo before a family baptism. First they offer you a taste of chicken sancocho in the kitchen, and later you need to try on a light-colored shirt for the ceremony. You have to distinguish probar food, probarse clothing, and intentar a difficult action.",
       setting: {
@@ -681,7 +681,7 @@ lessons.push(
     verb: "preparar",
     review: "pending",
     es: {
-      title: "Preparar café y prepararte para salir",
+      title: "Making coffee and getting yourself ready",
       situation:
         "You are in San Andrés and are leaving early for a boat errand with a local family. There is coffee, sunscreen, caps, and a backpack to get ready. You have to distinguish preparar something, prepararte yourself, and the more home-style use of hacer café.",
       setting: {
@@ -1333,7 +1333,7 @@ lessons.push(
     verb: "organizar",
     review: "pending",
     es: {
-      title: "Organizar el plan del fin de semana",
+      title: "Organizing the weekend plan",
       situation:
         "You are in Girardot with friends who want to take a short trip to the river. Schedules, food, transportation, and money all need to be clarified. You have to organize the plan, understand when people would say cuadrar algo, and remember that organicé changes z to c.",
       setting: {

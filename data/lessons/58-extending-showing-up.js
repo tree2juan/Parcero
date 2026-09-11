@@ -27,7 +27,7 @@ lessons.push(
     verb: "presentar",
     review: "pending",
     es: {
-      title: "Presentar a la ponente antes de la charla",
+      title: "Introducing the speaker before the talk",
       situation:
         "You are in Barichara, at a small talk about local trades, and the organizer asks you to introduce an architect no one knows yet. Before starting, you also have to introduce yourself, file a brief complaint about the sound, and clarify that presentar un examen is not the same as preparing for it.",
       setting: {
@@ -625,7 +625,7 @@ lessons.push(
     verb: "asistir",
     review: "pending",
     es: {
-      title: "Asistir a la audiencia sin ofrecer ayuda",
+      title: "Attending the hearing without offering help",
       situation:
         "You are in Montería, outside a room where there will be a public hearing about the river and the neighborhood works. You offered to accompany a neighbor, but the official corrects you before you go in: “asistir a la audiencia” means being present, not helping her carry the papers.",
       setting: {
@@ -1235,7 +1235,7 @@ lessons.push(
     verb: "participar",
     review: "pending",
     es: {
-      title: "Participar en el taller sin quedarse mirando",
+      title: "Taking part in the workshop instead of watching",
       situation:
         "You are in Florencia, in a community workshop about preparing for floods and service outages. You did not go just to listen: you were invited to participate in a drill, ask questions, and later say that you had the opportunity to participate without sounding as if you had led the whole event.",
       setting: {

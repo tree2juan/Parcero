@@ -28,7 +28,7 @@ lessons.push(
     verb: "invitar",
     review: "pending",
     es: {
-      title: "Cuando “yo invito” quiere decir que paga la otra persona",
+      title: "When yo invito means the other person pays",
       situation:
         "In Sincelejo, Alex is coming out of an afternoon of errands with Carolina, a friend from Sucre. She tells him “te invito a un tinto”, and Alex understands that she is only asking him to come along, not that she is going to pay. At the table he learns that in Colombia invitar almost always touches the wallet: “yo invito” means “this is on me”, and fighting over the bill can sound less grateful than you think.",
       setting: {
@@ -570,7 +570,7 @@ lessons.push(
     verb: "aceptar",
     review: "pending",
     es: {
-      title: "Aceptar sin sonar tragón en una casa de Popayán",
+      title: "Accepting without sounding greedy in Popayán",
       situation:
         "In Popayán, Alex visits the family of Natalia after walking through the historic center. Doña Marta offers him champús and empanaditas de pipián. Alex says no out of politeness and gets confused when everyone insists. He learns to accept gracefully: a first “no, gracias” can be courtesy, but if he does want something, he has to make that clear with “bueno, acepto”, “con mucho gusto”, or “sí, gracias”.",
       setting: {
@@ -1113,7 +1113,7 @@ lessons.push(
     verb: "rechazar",
     review: "pending",
     es: {
-      title: "Decir que no sin decir “rechazo tu invitación”",
+      title: "Saying no without saying I decline your invitation",
       situation:
         "In Ibagué, Lucía invites Alex to a birthday after music rehearsal. Alex cannot go and, trying to sound correct, says “rechazo tu invitación”. The phrase lands ice cold. Lucía teaches him that rechazar is a harsh verb, more written or formal; in conversation people say “uy, no puedo”, “me queda difícil”, “de pronto la próxima”, or even “ahí te cuento”, which is often a kind no, not a real promise to confirm.",
       setting: {

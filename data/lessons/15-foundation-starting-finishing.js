@@ -29,7 +29,7 @@ lessons.push(
     verb: "empezar",
     review: "pending",
     es: {
-      title: "Empezar la clase de salsa en Cali",
+      title: "Starting salsa class in Cali",
       situation:
         "Alex arrives for his first salsa class at an academy in Cali. The teacher, Marcela, welcomes him, asks whether he has danced before, and they start with the basic step. Everything depends on whether Alex dares to begin and loosen up his body.",
       setting: {
@@ -681,7 +681,7 @@ lessons.push(
     verb: "terminar",
     review: "pending",
     es: {
-      title: "Terminar el corte en la barbería",
+      title: "Finishing up at the barbershop",
       situation:
         "Alex is in a Medellín barbershop finishing up his haircut. While the barber, Andrés, finishes shaping his beard, the usual paisa chatter drops in: whether he is almost done, whether his brother broke up with his girlfriend, whether Alex is coming back next week.",
       setting: {
@@ -1333,7 +1333,7 @@ lessons.push(
     verb: "entrar",
     review: "pending",
     es: {
-      title: "Entrar el primer día a la oficina",
+      title: "First day walking into the office",
       situation:
         "It is Alex’s first day at a new job in Bogotá. At reception, Marta from HR shows him in, explains what time he starts, how to clock in and which way to enter the building. Nervous, Alex asks her to repeat what does not quite sink in.",
       setting: {

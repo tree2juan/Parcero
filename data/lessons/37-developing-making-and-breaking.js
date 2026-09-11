@@ -27,7 +27,7 @@ lessons.push(
     verb: "crear",
     review: "pending",
     es: {
-      title: "Crear una marca pequeña en Neiva",
+      title: "Starting a small brand in Neiva",
       situation:
         "You are in Neiva helping a friend who sells handmade notebooks. She wants to stop selling them as a family favor and create her own brand for an entrepreneurship fair.",
       setting: {
@@ -591,7 +591,7 @@ lessons.push(
     verb: "construir",
     review: "pending",
     es: {
-      title: "Construir una huerta elevada en Tunja",
+      title: "Building a raised garden bed in Tunja",
       situation:
         "You are in Tunja with a group of neighbors who want a raised garden bed so the cold and the dogs do not damage the plants. You have to talk about building it well, not just putting boards down at random.",
       setting: {
@@ -1155,7 +1155,7 @@ lessons.push(
     verb: "romper",
     review: "pending",
     es: {
-      title: "Reportar un vidrio roto en Quibdó",
+      title: "Reporting a broken window in Quibdó",
       situation:
         "You are staying in Quibdó during a heavy downpour. A small window falls, a pane breaks, and the fan also stops working. You need to report the damage without sounding guilty or imprecise.",
       setting: {

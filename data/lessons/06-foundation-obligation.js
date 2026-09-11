@@ -27,7 +27,7 @@ lessons.push(
     verb: "pasar",
     review: "pending",
     es: {
-      title: "Saludar a un vecino antes del puente",
+      title: "Greeting a neighbor before the long weekend",
       situation:
         "It is Friday afternoon, and a long weekend is coming. Alex crosses paths on the stairs with Andrés, a lifelong paisa neighbor who is heading out. He has thirty seconds to greet him properly, understand that he is being asked about his plans, and accept — or not — an invitation to sancocho, without sounding like a foreigner fresh off the plane.",
       setting: {
@@ -679,7 +679,7 @@ lessons.push(
     verb: "deber",
     review: "pending",
     es: {
-      title: "Pagar el fiado en la tienda",
+      title: "Paying off the tab at the corner shop",
       situation:
         "It is the end of the month, and Alex goes to the corner shop to pay the fiado — what Don Fabio has been writing down for him in a notebook all month. He has to ask how much he owes, understand the difference between what he must pay and what the bill is likely to be, and thank Don Fabio for the credit without letting money cool down a neighborhood relationship he needs to keep warm.",
       setting: {
@@ -1331,7 +1331,7 @@ lessons.push(
     verb: "poner",
     review: "pending",
     es: {
-      title: "Alistar la casa para el almuerzo del domingo",
+      title: "Getting the house ready for Sunday lunch",
       situation:
         "Sunday in Barranquilla means family lunch is being prepared at the house of Tía Nubia. Alex, who is staying with them, wants to help. His aunt puts him to work getting everything ready: put on a clean shirt, put on the vallenato, get moving with the plates. In six lines Alex hears the verb poner stretch across half a dozen meanings — getting dressed, putting on music, perking up, becoming — that would be different verbs in English.",
       setting: {

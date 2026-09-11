@@ -27,7 +27,7 @@ lessons.push(
     verb: "preguntar",
     review: "pending",
     es: {
-      title: "Preguntarle el camino a un desconocido",
+      title: "Asking a stranger for directions",
       situation:
         "Alex is lost in Bogotá looking for the health center and stops a woman on the street to ask how to get there. He has to ask permission to ask, put the question clearly and say thank you — all in a couple of minutes, without sounding abrupt. Along the way, he learns that “preguntar” is not the same as “pedir”.",
       setting: {
@@ -679,7 +679,7 @@ lessons.push(
     verb: "responder",
     review: "pending",
     es: {
-      title: "Contestar el teléfono por la compañera",
+      title: "Answering the phone for your roommate",
       situation:
         "Alex is in the apartment he shares with Caro in Bogotá when her phone and the doorbell ring at the same time. Caro asks him to answer while she finishes something. Alex has to take the call, answer what he knows and make clear that there are things he cannot decide for her — all without putting his foot in it.",
       setting: {
@@ -1331,7 +1331,7 @@ lessons.push(
     verb: "necesitar",
     review: "pending",
     es: {
-      title: "Pedirle prestado el taladro al vecino",
+      title: "Borrowing a drill from the paisa neighbor",
       situation:
         "Alex lives in Medellín and needs to hang a shelf, but he does not have a drill. He knocks on Norbey’s door, the paisa neighbor across the hall, to ask to borrow it and, while he is at it, for a hand with the wall. He has to explain the need without sounding bossy, ask to borrow it properly and accept the help — all in vos, the way people speak in the barrio.",
       setting: {

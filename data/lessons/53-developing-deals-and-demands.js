@@ -39,7 +39,7 @@ lessons.push(
     verb: "acordar",
     review: "pending",
     es: {
-      title: "Acordar el arreglo en Ibagué",
+      title: "Agreeing on the repair in Ibagué",
       situation:
         "You are in Ibagué talking with a tradesperson about a roof leak. Agreeing on a price and date is not the same as agreeing with an opinion, and acordarse de algo changes the verb completely.",
       setting: {
@@ -201,7 +201,7 @@ lessons.push(
     verb: "cumplir",
     review: "pending",
     es: {
-      title: "Cumplir treinta en Montería",
+      title: "Turning thirty in Montería",
       situation:
         "You are in Montería organizing a simple birthday. Cumplir años is the most everyday use, but you also need to meet a time, keep a promise, and not sell as a promise what is only an intention.",
       setting: {
@@ -351,7 +351,7 @@ lessons.push(
     verb: "exigir",
     review: "pending",
     es: {
-      title: "Exigir respuesta en Buenaventura",
+      title: "Demanding an answer in Buenaventura",
       situation:
         "You are in Buenaventura filing a complaint about a service they did not deliver. Exigir sounds strong, so you use it only when there is a right and evidence, not when asking or requesting something ordinary would be enough.",
       setting: {

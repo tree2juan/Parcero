@@ -41,7 +41,7 @@ lessons.push(
     verb: "contestar",
     review: "pending",
     es: {
-      title: "Que no te contesten en San Andrés",
+      title: "When nobody answers you in San Andrés",
       situation:
         "You are in San Andrés organizing an outing with friends. Someone does not answer the phone, leaves messages on read, and you learn the difference between contestar a message and responder with a more thought-out explanation.",
       setting: {
@@ -203,7 +203,7 @@ lessons.push(
     verb: "avisar",
     review: "pending",
     es: {
-      title: "Avisar cuando llegues a Sincelejo",
+      title: "Letting them know when you get to Sincelejo",
       situation:
         "You are in Sincelejo coordinating a family visit. Everyone says me avisas, yo te aviso, and avíseme cuando llegue, but you learn that yo te aviso is sometimes a gentle way to put something off, not a firm promise.",
       setting: {
@@ -353,7 +353,7 @@ lessons.push(
     verb: "prometer",
     review: "pending",
     es: {
-      title: "Prometer después de una demora en Manizales",
+      title: "Making a promise after letting someone down",
       situation:
         "You are in Manizales after letting a friend down. You need to promise only when you truly are going to follow through, and notice when Colombians prefer to soften things with yo miro a ver, si Dios quiere, or de una.",
       setting: {

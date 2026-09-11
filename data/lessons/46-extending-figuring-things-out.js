@@ -30,7 +30,7 @@ lessons.push(
     verb: "descubrir",
     review: "pending",
     es: {
-      title: "Descubrir otra historia en San Andrés",
+      title: "Discovering another history in San Andrés",
       situation:
         "You are in San Andrés with Mariana, who shows you an old house near La Loma. At first you think you are only going to hear tourist facts, but you discover that the place has two names, two memories, and a family story that no one put on the sign.",
       setting: {
@@ -682,7 +682,7 @@ lessons.push(
     verb: "resolver",
     review: "pending",
     es: {
-      title: "Resolver un cobro raro en Montería",
+      title: "Sorting out a strange charge in Montería",
       situation:
         "You are in Montería and go with Laura to ask about a water bill that arrived extremely high. No one wants to fight, but everyone needs the case to be resolved, or at least to understand why nothing has been resolved yet.",
       setting: {
@@ -1334,7 +1334,7 @@ lessons.push(
     verb: "revisar",
     review: "pending",
     es: {
-      title: "Revisar el aceite antes de salir de Riohacha",
+      title: "Checking the oil before leaving Riohacha",
       situation:
         "You are about to leave Riohacha by road and stop at a service station. The car sounds strange, the trip is long, and you need to ask someone to check the oil, the tires, and a receipt, without confusing revisar with rewriting or with studying for an exam.",
       setting: {

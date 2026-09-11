@@ -28,7 +28,7 @@ lessons.push(
     verb: "usar",
     review: "pending",
     es: {
-      title: "Instalándose a trabajar en el café",
+      title: "Settling in to work at the cafe",
       situation:
         "You arrive at a neighborhood café in Bogotá to work for a couple of hours and need the basics: a table, the wifi, an outlet for your laptop and, at some point, the bathroom. The barista uses usted with you and explains the house rules while you get settled.",
       setting: {
@@ -580,7 +580,7 @@ lessons.push(
     verb: "abrir",
     review: "pending",
     es: {
-      title: "Abriendo una cuenta en el banco",
+      title: "Opening an account at the bank",
       situation:
         "You walk into a branch in Medellín to open your first savings account. The adviser is paisa, treats you with vos and all the warmth called for, and explains what you need, how long it takes and what time they open, in case you have to come back.",
       setting: {
@@ -1132,7 +1132,7 @@ lessons.push(
     verb: "cerrar",
     review: "pending",
     es: {
-      title: "Antes de que bajen la reja",
+      title: "Before they pull the shutter down",
       situation:
         "You reach a corner shop in Barranquilla just before closing time and try to buy something quickly before they close and pull down the grille.",
       setting: {

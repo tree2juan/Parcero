@@ -27,7 +27,7 @@ lessons.push(
     verb: "beber",
     review: "pending",
     es: {
-      title: "Beber agua de panela después del sol",
+      title: "Drinking agua de panela after a day in the sun",
       situation:
         "You are in Santa Marta, at the home of a friend, after walking under a strong sun. They offer you cold agua de panela and then coffee. You have to sound natural and learn when beber works, even though people usually say tomar.",
       setting: {
@@ -679,7 +679,7 @@ lessons.push(
     verb: "cocinar",
     review: "pending",
     es: {
-      title: "Cocinar sancocho antes de que llegue la familia",
+      title: "Cooking sancocho before the family arrives",
       situation:
         "You are on a finca near Armenia on a Sunday morning. The family arrives at noon, and someone puts you to work helping with the sancocho. You have to say what you know how to cook and understand why everyone also says hacer almuerzo.",
       setting: {
@@ -1331,7 +1331,7 @@ lessons.push(
     verb: "despertar",
     review: "pending",
     es: {
-      title: "Despertarse temprano para alcanzar el bus",
+      title: "Waking up early to catch the bus",
       situation:
         "You are going to leave Bucaramanga for a finca in Santander before the day heats up. You are staying at the home of a friend and have to talk about the alarm, waking up early, and that inevitable Colombian word: madrugar.",
       setting: {

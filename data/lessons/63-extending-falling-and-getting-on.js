@@ -28,7 +28,7 @@ lessons.push(
     verb: "caer",
     review: "pending",
     es: {
-      title: "Decir que alguien te cae bien",
+      title: "Saying that you like someone",
       situation:
         "Alex is in Tumaco, on the terrace of a house facing the sea, after meeting a friend's brother. The conversation is not romantic; they are only comparing first impressions. You need to say that a person strikes you well without using a phrase that sounds like attraction.",
       setting: {
@@ -660,7 +660,7 @@ lessons.push(
     verb: "llevarse",
     review: "pending",
     es: {
-      title: "Llevarse bien con los suegros",
+      title: "Getting along with the in-laws",
       situation:
         "Maya spends a weekend in Barichara with her partner's family. After lunch, an aunt asks how things have gone with the in-laws. You need to distinguish getting along with someone, carrying a suitcase, and having spent time living in a place.",
       setting: {
@@ -1292,7 +1292,7 @@ lessons.push(
     verb: "contar",
     review: "pending",
     es: {
-      title: "Contar lo que pasó en Girardot",
+      title: "Telling what happened in Girardot",
       situation:
         "Sam meets an old friend in Girardot after several months without seeing each other. She opens with a “cuénteme” that is not asking for numbers; it is asking for the story. You need to distinguish telling a story, counting to ten, and counting on someone.",
       setting: {

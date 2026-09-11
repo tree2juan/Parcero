@@ -27,7 +27,7 @@ lessons.push(
     verb: "interesar",
     review: "pending",
     es: {
-      title: "Interesarse por un curso en Sincelejo",
+      title: "Asking about a course in Sincelejo",
       situation:
         "You are in Sincelejo looking at a short audio-editing course at a cultural center. The subject interests you, but you do not know whether the schedule, the cost, and the final project really catch your attention.",
       setting: {
@@ -591,7 +591,7 @@ lessons.push(
     verb: "importar",
     review: "pending",
     es: {
-      title: "Pedir permiso sin molestar en Riohacha",
+      title: "Asking permission without being a bother in Riohacha",
       situation:
         "You are in Riohacha sharing a long table at a hostel. You want to move a chair, make space for your suitcase, and ask whether the others mind without answering in the opposite direction.",
       setting: {
@@ -1155,7 +1155,7 @@ lessons.push(
     verb: "faltar",
     review: "pending",
     es: {
-      title: "Faltar cinco minutos en Florencia",
+      title: "Five minutes short in Florencia",
       situation:
         "You are in Florencia waiting for a tourist boat on the river. The group is missing signatures, one person is missing, and there are five minutes left before departure, so you need to talk about what still is not ready.",
       setting: {

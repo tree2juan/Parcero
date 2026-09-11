@@ -29,7 +29,7 @@ lessons.push(
     verb: "gustar",
     review: "pending",
     es: {
-      title: "Lo que te gusta del carnaval en Pasto",
+      title: "What you like about Carnival in Pasto",
       situation:
         "You are in Pasto with Natalia during Carnaval de Negros y Blancos. There are floats, music, helado de paila, and a friend who mischievously asks whether you only like the floats or whether you also like someone in the group.",
       setting: {
@@ -681,7 +681,7 @@ lessons.push(
     verb: "preferir",
     review: "pending",
     es: {
-      title: "Preferir la sombra en Neiva",
+      title: "Preferring the shade in Neiva",
       situation:
         "You are in Neiva with Camila during the San Pedro celebrations. There is music, strong sun, and two places to sit. You have to say what you prefer without sounding demanding, and understand why everyone preferred to move when the heat got intense.",
       setting: {
@@ -1333,7 +1333,7 @@ lessons.push(
     verb: "odiar",
     review: "pending",
     es: {
-      title: "Suavizar lo que no soportas en Quibdó",
+      title: "Softening what you cannot stand in Quibdó",
       situation:
         "You go with Marcela to a community rehearsal in Quibdó. The sound is very loud, one neighbor rubs people the wrong way, and someone asks whether you hate the music. You need to express dislike without sounding cruel or exaggerated.",
       setting: {

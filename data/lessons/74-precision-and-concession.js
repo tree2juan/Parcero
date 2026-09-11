@@ -33,7 +33,7 @@ lessons.push(
     structure: "relative-advanced",
     review: "pending",
     es: {
-      title: "El expediente cuyo autor firmó en 1789",
+      title: "The file whose author signed in 1789",
       situation:
         "Imagine yourself in Tunja, the old university city of Boyacá, inside the Regional Historical Archive. You accompany Valeria, a history student, as she consults a colonial file and don Hernando, the archivist, guides her with the ceremonious treatment that is the norm there. Together they specify which document they mean, whose author, whose pages, and which source each citation rests on, in the careful Spanish of writing.",
       setting: {
@@ -665,7 +665,7 @@ lessons.push(
     structure: "conjecture",
     review: "pending",
     es: {
-      title: "¿Ya habrá llegado? Adivinando en voz alta",
+      title: "Has it gotten there yet? Guessing out loud",
       situation:
         "You are in a kitchen in Pasto, on the Nariño plateau, already very close to the border with Ecuador. Doña Rosa and her nephew Mateo are waiting for a brother who is coming by bus, and while the water boils for coffee, they start guessing out loud: what time it must be, whether he may have arrived already, whether he must be on his way. Notice how the future is not talking about the future, but about what is probable.",
       setting: {
@@ -1297,7 +1297,7 @@ lessons.push(
     structure: "concession",
     review: "pending",
     es: {
-      title: "Aunque llovió, salimos: conceder un punto",
+      title: "Even though it rained, we went out: conceding a point",
       situation:
         "You are in Popayán, the white city, in the middle of Holy Week. You accompany Marcela, a visiting student, and don Efraín, a caucano with a slow voice, as they wait for the procession to leave through the historic center. Pay close attention to how don Efraín concedes a point: when something already happened and is a fact, he says “aunque” with the indicative; when it is only a possibility, he jumps to the subjunctive. That tiny shift in mood changes everything.",
       setting: {

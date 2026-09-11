@@ -27,7 +27,7 @@ lessons.push(
     verb: "buscar",
     review: "pending",
     es: {
-      title: "Buscar un sombrero en el Centro Histórico",
+      title: "Looking for a hat in the Old City",
       situation:
         "Alex walks down a street in the Centro Histórico of Cartagena before the strong afternoon sun. He wants a plain hat, not an expensive souvenir. He goes into a small shop and has to say what he is looking for without sounding as if he has already found it.",
       setting: {
@@ -679,7 +679,7 @@ lessons.push(
     verb: "intentar",
     review: "pending",
     es: {
-      title: "Intentar remar en Taganga",
+      title: "Trying to paddle in Taganga",
       situation:
         "Sam is on the beach in Taganga, near Santa Marta, looking at a kayak with more interest than confidence. A young instructor explains how to get into the water. Sam wants to say he is going to try it, even though he is still nervous.",
       setting: {
@@ -1331,7 +1331,7 @@ lessons.push(
     verb: "cambiar",
     review: "pending",
     es: {
-      title: "Cambiar un billete en San Antonio",
+      title: "Breaking a big bill in San Antonio",
       situation:
         "Nico is in a bakery in San Antonio, in Cali, before catching a bus. He only has a large bill and needs coins. The baker uses vos with him, and he has to ask for change without asking to buy anything yet.",
       setting: {
