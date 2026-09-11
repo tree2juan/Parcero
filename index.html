@@ -34,16 +34,26 @@
         </span>
       </a>
       <nav class="site-nav" data-i18n-aria="nav.sections" aria-label="Sections">
-        <a href="#lessons" data-i18n="nav.lessons">Lessons</a>
-        <a href="#flashcards" data-i18n="nav.flashcards">Flashcards</a>
-        <a href="#placement" data-i18n="nav.placement">Placement</a>
-        <a href="#library" data-i18n="nav.library">Library</a>
-        <a href="#after-dark" data-i18n="nav.afterDark">After Dark</a>
+        <div class="site-nav-links">
+          <a href="#lessons" data-i18n="nav.lessons">Lessons</a>
+          <a href="#flashcards" data-i18n="nav.flashcards">Flashcards</a>
+          <a href="#placement" data-i18n="nav.placement">Placement</a>
+          <a href="#library" data-i18n="nav.library">Library</a>
+          <a href="#workbook" data-i18n="nav.workbook">Workbook</a>
+          <a href="#after-dark" data-i18n="nav.afterDark">After Dark</a>
+        </div>
         <div class="nav-modules">
           <button id="modules-button" class="nav-modules-button" type="button" aria-expanded="false" aria-haspopup="true" aria-controls="modules-menu">
             <span data-i18n="nav.modules">Modules</span><span class="nav-caret" aria-hidden="true"></span>
           </button>
-          <div id="modules-menu" class="nav-modules-menu" role="menu" hidden></div>
+          <div id="modules-menu" class="nav-modules-menu" role="menu" hidden>
+            <div class="modules-search">
+              <input id="modules-filter" type="search" autocomplete="off" spellcheck="false"
+                     data-i18n-placeholder="nav.modulesFilter" placeholder="Filter lessons"
+                     data-i18n-aria="nav.modulesFilter" aria-label="Filter lessons">
+            </div>
+            <div id="modules-list" class="modules-list"></div>
+          </div>
         </div>
       </nav>
       <fieldset class="direction-picker">
@@ -66,7 +76,6 @@
           </span>
         </label>
       </fieldset>
-      <button id="reset-progress" class="text-button" type="button" data-i18n="action.reset">Reset progress</button>
     </header>
 
     <main id="top">
@@ -135,11 +144,24 @@
           <div class="progress-track" aria-hidden="true"><div id="progress-bar"></div></div>
         </div>
 
+        <div class="level-panel" id="level-panel">
+          <div class="level-head">
+            <p class="eyebrow" data-i18n="level.eyebrow">Your level</p>
+            <strong id="level-reached">—</strong>
+            <p id="level-note" class="level-note"></p>
+          </div>
+          <ol id="level-ladder" class="level-ladder"></ol>
+        </div>
+
+        <label class="search-label" for="lesson-search"><span data-i18n="lessons.search">Search lessons</span> <input id="lesson-search" type="search" data-i18n-placeholder="lessons.searchPlaceholder" placeholder="e.g., pedir, market, or starter" autocomplete="off"></label>
+        <p id="lesson-count" class="assistive-text"></p>
         <ol id="lesson-list" class="lesson-list"></ol>
+        <p id="lesson-empty" class="assistive-text" data-i18n="lessons.noMatches" hidden>No lesson matches that search. Try a verb, a place, or a level.</p>
 
         <section id="lesson" class="lesson" aria-live="polite">
           <div class="lesson-heading" id="lesson-heading">
             <p id="lesson-level" class="eyebrow"></p>
+            <p id="lesson-band" class="band-badge" hidden></p>
             <h2 id="lesson-title"></h2>
             <p id="lesson-situation"></p>
             <p id="lesson-review" class="review-badge">
@@ -290,6 +312,10 @@
           <label class="field" for="deck-set"><span data-i18n="deck.setLabel">Set</span>
             <select id="deck-set"></select>
           </label>
+          <label class="field deck-type-toggle" for="deck-typed">
+            <input type="checkbox" id="deck-typed">
+            <span data-i18n="deck.typedLabel">Type the answer</span>
+          </label>
         </div>
 
         <div class="deck-status">
@@ -315,6 +341,14 @@
 
         <button id="deck-expand" class="deck-expand" type="button" hidden aria-expanded="false" aria-controls="deck-card-back" data-i18n="deck.readMore">Read the rest</button>
 
+        <form id="deck-type" class="deck-type" hidden>
+          <label class="field" for="deck-answer"><span data-i18n="deck.typedPrompt">Write it from memory</span>
+            <input id="deck-answer" type="text" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false">
+          </label>
+          <button id="deck-check" class="primary-button" type="submit" data-i18n="deck.typedCheck">Check</button>
+          <p id="deck-verdict" class="deck-verdict-note" aria-live="polite"></p>
+        </form>
+
         <div class="deck-actions">
           <button id="deck-known" class="deck-verdict deck-known" type="button" data-i18n="deck.knownButton">← Knew it</button>
           <button id="deck-flip" class="primary-button" type="button" data-i18n="deck.showAnswer">Show answer</button>
@@ -329,7 +363,7 @@
           <h3 class="deck-guide-title" data-i18n="deck.howTitle">How to use these</h3>
           <ol class="deck-guide-steps">
             <li data-i18n="deck.how1">Every card opens in the language you chose to learn. Change that choice at the top of the page and the cards turn around with it.</li>
-            <li data-i18n="deck.how2">Answer out loud before you flip it. Pulling it out of memory is what makes it stick — recognising it once you see it does not.</li>
+            <li data-i18n="deck.how2">Answer out loud before you flip it. Pulling it out of memory is what makes it stick — recognizing it once you see it does not.</li>
             <li data-i18n="deck.how3">Say you did not know it when you did not. Those cards come back later in the set; the ones you wave through do not.</li>
             <li data-i18n="deck.how4">Short and often beats long and once. A set is meant to be finished in one sitting.</li>
           </ol>
@@ -371,6 +405,7 @@
         <div class="tabs" role="tablist" data-i18n-aria="library.aria" aria-label="Reference library sections">
           <button class="library-tab active" type="button" role="tab" aria-selected="true" data-library="verbs" data-i18n="library.tab.verbs">200 verbs</button>
           <button class="library-tab" type="button" role="tab" aria-selected="false" data-library="fluency" data-i18n="library.tab.fluency">Fluency</button>
+          <button class="library-tab" type="button" role="tab" aria-selected="false" data-library="slang" data-i18n="library.tab.slang">Colombian slang</button>
         </div>
         <section id="verbs-library" class="library-panel">
           <label class="search-label" for="verb-search"><span data-i18n="library.search">Search English or Spanish verb</span> <input id="verb-search" type="search" data-i18n-placeholder="library.searchPlaceholder" placeholder="e.g., hablar or speak" autocomplete="off"></label>
@@ -383,6 +418,32 @@
           <p data-i18n="library.fluencyIntro">These phrases connect ideas and keep conversation moving. They are context notes—not universal replacements.</p>
           <div id="fluency-results" class="reference-grid"></div>
         </section>
+        <section id="slang-library" class="library-panel" hidden>
+          <p data-i18n="library.slangIntro">Slang you will hear long before you can safely use it. Every entry says where it is used and whether you should say it back.</p>
+          <p class="review-badge" data-i18n="library.slangUnverified">No Colombian native speaker has checked these entries yet. The meanings and the regional labels are a starting point for listening, not a settled rule.</p>
+          <label class="search-label" for="slang-search"><span data-i18n="library.slangSearch">Search slang or meaning</span> <input id="slang-search" type="search" data-i18n-placeholder="library.slangPlaceholder" placeholder="e.g., parcero or friend" autocomplete="off"></label>
+          <p id="slang-count" class="assistive-text"></p>
+          <div id="slang-results" class="reference-grid"></div>
+        </section>
+      </section>
+      </div>
+
+      <div class="view" id="view-workbook" hidden>
+      <section id="workbook" class="workbook" aria-labelledby="workbook-title">
+        <div class="section-head">
+          <p class="eyebrow" data-i18n="workbook.eyebrow">Printable student workbook</p>
+          <h2 id="workbook-title" data-i18n="workbook.title">Take a module off the screen and onto paper.</h2>
+          <p class="section-lead" data-i18n="workbook.lead">Every module becomes a workbook you can print and write in: the dialogue, the words, the exercises, and the answer key at the back. Built from the same lessons, so it can never drift from what you studied.</p>
+        </div>
+        <div class="workbook-controls">
+          <label class="search-label" for="workbook-module"><span data-i18n="workbook.pick">Choose a module</span>
+            <select id="workbook-module"></select>
+          </label>
+          <button id="workbook-answers" class="ghost-button" type="button" aria-expanded="false" aria-controls="workbook-key" data-i18n="workbook.showAnswers">Show answer key</button>
+          <button id="workbook-print" class="primary-button" type="button" data-i18n="workbook.print">Print this workbook</button>
+        </div>
+        <p class="assistive-text" data-i18n="workbook.printHint">Printing gives you the workbook only — the site navigation is left off the page.</p>
+        <div id="workbook-output" class="workbook-output"></div>
       </section>
       </div>
 
@@ -402,6 +463,10 @@
           <p id="city-note" class="section-lead"></p>
           <p class="after-dark-caution" data-i18n="afterDark.caution">Severity is about the risk of repeating a phrase, not how rude it sounds. The same word can be a joke among friends and a fight between strangers, so when in doubt assume the harsher reading.</p>
           <div id="mature-results" class="reference-grid"></div>
+
+          <h3 id="signals-title" data-i18n="mature.signalsTitle">When a conversation turns</h3>
+          <p data-i18n="mature.signalsIntro">These are not words you can look up. A conversation can turn hostile while every word in it stays polite — these are the signals that carry it.</p>
+          <div id="mature-signals" class="reference-grid"></div>
         </div>
       </section>
       </div>
@@ -413,17 +478,114 @@
         <a href="https://github.com/tree2juan/Parcero" data-i18n="footer.source">Source on GitHub</a>
         <a id="footer-report-link" href="#lessons" data-i18n="footer.flagLine">Report something that is wrong</a>
         <a href="https://github.com/tree2juan/Parcero/issues/new" data-i18n="footer.report">Report a problem</a>
+        <button id="reset-progress" class="text-button" type="button" data-i18n="action.reset">Reset progress</button>
       </p>
       <p class="footer-note" data-i18n="footer.note">Regional usage varies across Colombia; treat every note as a starting point for listening, not a rule — and if something reads wrong to you, flag it where you found it.</p>
     </footer>
 
     <script src="data/lesson-schema.js"></script>
     <script src="data/lessons.js"></script>
+    <script src="data/lessons/01-foundation-identity.js"></script>
+    <script src="data/lessons/02-foundation-state.js"></script>
+    <script src="data/lessons/03-foundation-ability.js"></script>
+    <script src="data/lessons/04-foundation-perception.js"></script>
+    <script src="data/lessons/05-foundation-meeting.js"></script>
+    <script src="data/lessons/06-foundation-obligation.js"></script>
+    <script src="data/lessons/07-foundation-opinion.js"></script>
+    <script src="data/lessons/08-foundation-conversation.js"></script>
+    <script src="data/lessons/09-foundation-finding.js"></script>
+    <script src="data/lessons/10-foundation-daily-life.js"></script>
+    <script src="data/lessons/11-foundation-reading-writing.js"></script>
+    <script src="data/lessons/12-foundation-learning.js"></script>
+    <script src="data/lessons/13-foundation-asking.js"></script>
+    <script src="data/lessons/14-foundation-handling-things.js"></script>
+    <script src="data/lessons/15-foundation-starting-finishing.js"></script>
+    <script src="data/lessons/16-foundation-coming-and-going.js"></script>
+    <script src="data/lessons/17-foundation-carrying-and-leaving.js"></script>
+    <script src="data/lessons/18-foundation-memory-and-waiting.js"></script>
+    <script src="data/lessons/19-foundation-looking-and-listening.js"></script>
+    <script src="data/lessons/20-foundation-buying-and-paying.js"></script>
+    <script src="data/lessons/21-foundation-at-the-table.js"></script>
+    <script src="data/lessons/22-foundation-rest-and-play.js"></script>
+    <script src="data/lessons/23-foundation-sorting-things-out.js"></script>
+    <script src="data/lessons/24-developing-music-and-movement.js"></script>
+    <script src="data/lessons/25-developing-getting-around-the-country.js"></script>
+    <script src="data/lessons/26-foundation-kitchen-and-morning.js"></script>
+    <script src="data/lessons/27-developing-moving-your-body.js"></script>
+    <script src="data/lessons/28-developing-winning-losing-choosing.js"></script>
+    <script src="data/lessons/29-developing-sending-and-sharing.js"></script>
+    <script src="data/lessons/30-developing-keeping-house.js"></script>
+    <script src="data/lessons/31-developing-body-and-routine.js"></script>
+    <script src="data/lessons/32-developing-likes-and-dislikes.js"></script>
+    <script src="data/lessons/33-developing-explaining-and-showing.js"></script>
+    <script src="data/lessons/34-developing-invitations.js"></script>
+    <script src="data/lessons/35-developing-deciding-and-getting.js"></script>
+    <script src="data/lessons/36-developing-looking-after-people.js"></script>
+    <script src="data/lessons/37-developing-making-and-breaking.js"></script>
+    <script src="data/lessons/38-developing-life-and-loss.js"></script>
+    <script src="data/lessons/39-developing-planning-a-trip.js"></script>
+    <script src="data/lessons/40-extending-devices-and-how-things-work.js"></script>
+    <script src="data/lessons/41-developing-allowing-and-preventing.js"></script>
+    <script src="data/lessons/42-developing-what-matters-to-you.js"></script>
+    <script src="data/lessons/43-developing-more-less-better.js"></script>
+    <script src="data/lessons/44-developing-getting-back-to-people.js"></script>
+    <script src="data/lessons/45-developing-getting-ready.js"></script>
+    <script src="data/lessons/46-extending-figuring-things-out.js"></script>
+    <script src="data/lessons/47-extending-paperwork-and-payments.js"></script>
+    <script src="data/lessons/48-extending-in-the-kitchen.js"></script>
+    <script src="data/lessons/49-extending-tears-and-laughter.js"></script>
+    <script src="data/lessons/50-developing-coming-back-and-becoming.js"></script>
+    <script src="data/lessons/51-developing-belonging.js"></script>
+    <script src="data/lessons/52-developing-what-happened.js"></script>
+    <script src="data/lessons/53-developing-deals-and-demands.js"></script>
+    <script src="data/lessons/54-developing-weighing-it-up.js"></script>
+    <script src="data/lessons/55-developing-meaning-and-growth.js"></script>
+    <script src="data/lessons/56-developing-love-and-plenty.js"></script>
+    <script src="data/lessons/57-extending-thinking-it-over.js"></script>
+    <script src="data/lessons/58-extending-showing-up.js"></script>
+    <script src="data/lessons/59-extending-staying-in-touch.js"></script>
+    <script src="data/lessons/60-extending-cause-and-halt.js"></script>
+    <script src="data/lessons/61-extending-getting-it-done.js"></script>
+    <script src="data/lessons/62-extending-habits-and-worth.js"></script>
+    <script src="data/lessons/63-extending-falling-and-getting-on.js"></script>
+    <script src="data/lessons/64-extending-forms-and-favors.js"></script>
+    <script src="data/lessons/65-extending-being-seen-to.js"></script>
+    <script src="data/lessons/66-extending-joining-and-parting.js"></script>
+    <script src="data/lessons/67-extending-out-and-across.js"></script>
+    <script src="data/lessons/68-extending-turn-and-push.js"></script>
+    <script src="data/lessons/69-comparing-and-degree.js"></script>
+    <script src="data/lessons/70-calendar-color-and-feeling.js"></script>
+    <script src="data/lessons/71-past-time-and-duration.js"></script>
+    <script src="data/lessons/72-reporting-and-perspective.js"></script>
+    <script src="data/lessons/73-aspect-regret-and-hope.js"></script>
+    <script src="data/lessons/74-precision-and-concession.js"></script>
+    <script src="data/lessons/75-obligation-and-belonging.js"></script>
+    <script src="data/lessons/76-habits-and-checking.js"></script>
+    <script src="data/lessons/77-delegation-degree-and-doubt.js"></script>
     <script src="data/curriculum.js"></script>
     <script src="data/after-dark.js"></script>
+    <script src="data/structures.js"></script>
+    <script src="data/taxonomy.js"></script>
+    <script src="data/lexicon.js"></script>
+    <script src="data/lexicon/01-everyday-and-home.js"></script>
+    <script src="data/lexicon/02-food-and-drink.js"></script>
+    <script src="data/lexicon/03-transport-and-travel.js"></script>
+    <script src="data/lexicon/04-home-and-family.js"></script>
+    <script src="data/lexicon/05-work-study-and-services.js"></script>
+    <script src="data/slang.js"></script>
+    <script src="data/mature.js"></script>
+    <script src="data/modules.js"></script>
+    <script src="data/study-guide.js"></script>
+    <script src="data/cefr.js"></script>
     <script src="i18n.js"></script>
     <script src="data/flashcards.js"></script>
+    <script src="cefr.js"></script>
     <script src="app.js"></script>
+    <script src="srs.js"></script>
+    <script src="progress.js"></script>
+    <script src="workbook.js"></script>
+    <script src="workbook-ui.js"></script>
+    <script src="answer-check.js"></script>
     <script src="flashcards.js"></script>
     <script src="review.js"></script>
     <script src="review-ui.js"></script>

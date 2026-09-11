@@ -104,7 +104,8 @@ h3 { line-height: 1.25; }
 .brand-text strong { font-size: 1.05rem; letter-spacing: -.01em; }
 .brand-text span { color: var(--ink-soft); font-size: .74rem; }
 
-.site-nav { display: flex; gap: .15rem; margin-left: auto; flex-wrap: wrap; align-items: center; }
+.site-nav { display: flex; gap: .4rem; margin-left: auto; align-items: center; min-width: 0; }
+.site-nav-links { display: flex; gap: .15rem; align-items: center; flex-wrap: wrap; min-width: 0; }
 .site-nav a {
   padding: .45rem .55rem; border-radius: .5rem;
   color: var(--ink); text-decoration: none;
@@ -131,12 +132,32 @@ h3 { line-height: 1.25; }
 .nav-modules.is-open .nav-caret { transform: translateY(1px) rotate(-135deg); }
 .nav-modules-menu {
   position: absolute; top: calc(100% + .4rem); right: 0; z-index: 60;
-  width: min(22rem, 80vw); max-height: 70vh; overflow-y: auto;
-  display: flex; flex-direction: column; gap: .1rem; padding: .35rem;
+  width: min(24rem, calc(100vw - 2rem)); max-height: min(70vh, 32rem);
+  display: flex; flex-direction: column; padding: .35rem;
   background: var(--surface); border: 1px solid var(--line);
   border-radius: var(--radius); box-shadow: var(--shadow-lift);
 }
 .nav-modules-menu[hidden] { display: none; }
+.modules-search { flex: none; padding: .15rem .15rem .4rem; }
+.modules-search input {
+  width: 100%; padding: .45rem .6rem;
+  border: 1px solid var(--line); border-radius: .55rem;
+  background: var(--bg); color: var(--ink); font: inherit; font-size: .88rem;
+}
+.modules-search input:focus-visible { outline: 2px solid var(--green); outline-offset: 1px; }
+.modules-list {
+  flex: 1 1 auto; min-height: 0; overflow-y: auto;
+  display: flex; flex-direction: column; gap: .1rem;
+  overscroll-behavior: contain; -webkit-overflow-scrolling: touch;
+}
+.modules-group + .modules-group { margin-top: .3rem; }
+.modules-group-title {
+  position: sticky; top: 0; z-index: 1; margin: 0;
+  padding: .3rem .55rem; background: var(--surface);
+  color: var(--ink-soft); font-size: .72rem; font-weight: 700;
+  text-transform: uppercase; letter-spacing: .04em;
+}
+.modules-empty { margin: 0; padding: .9rem .55rem; color: var(--ink-soft); font-size: .88rem; }
 .nav-modules-menu button {
   display: flex; align-items: center; gap: .65rem; width: 100%;
   padding: .5rem .55rem; border: 0; border-radius: .55rem;
@@ -284,6 +305,46 @@ main, footer { max-width: var(--wrap); margin: auto; padding-inline: 1.5rem; }
 }
 .progress-track { height: .55rem; background: var(--surface); border-radius: 1rem; overflow: hidden; }
 #progress-bar { height: 100%; width: 0; background: linear-gradient(90deg, var(--green), var(--lime)); transition: width .35s ease; }
+
+/* ---------- Level (CEFR) ---------- */
+/* The band a lesson teaches, and the ladder of what the learner has shown. */
+.level-panel {
+  display: grid; gap: .9rem;
+  padding: 1.25rem 1.4rem;
+  margin-bottom: 1.5rem;
+  background: var(--mist);
+  border-radius: var(--radius);
+}
+.level-head { display: grid; gap: .2rem; }
+.level-head strong { font-size: 1.6rem; line-height: 1.1; }
+.level-note { margin: 0; font-size: .88rem; color: var(--muted); }
+.level-ladder { display: grid; gap: .45rem; margin: 0; padding: 0; list-style: none; }
+.level-step {
+  display: grid;
+  grid-template-columns: 2.4rem 1fr auto;
+  align-items: center;
+  gap: .6rem;
+  font-size: .85rem;
+}
+.level-step-band { font-weight: 700; letter-spacing: .04em; }
+.level-step-bar { height: .4rem; background: var(--surface); border-radius: 1rem; overflow: hidden; }
+.level-step-fill { display: block; height: 100%; width: 0; background: var(--green); transition: width .35s ease; }
+.level-step-count { color: var(--muted); font-variant-numeric: tabular-nums; }
+.level-step.is-met .level-step-band { color: var(--green); }
+.level-step.is-met .level-step-fill { background: linear-gradient(90deg, var(--green), var(--lime)); }
+/* A band the course does not teach is not a failure, and must not read as an
+   empty bar the learner could have filled. */
+.level-step.is-untaught { opacity: .55; grid-template-columns: 2.4rem 1fr; }
+.level-step.is-untaught .level-step-count { grid-column: 2; }
+.band-badge {
+  justify-self: start;
+  margin: 0 0 .35rem;
+  padding: .18rem .55rem;
+  border: 1px solid var(--line);
+  border-radius: 1rem;
+  font-size: .78rem;
+  color: var(--muted);
+}
 
 /* ---------- Lesson list ---------- */
 
@@ -545,9 +606,39 @@ main, footer { max-width: var(--wrap); margin: auto; padding-inline: 1.5rem; }
   cursor: pointer;
 }
 .deck-expand:hover { color: var(--ink); border-color: var(--ink-soft); }
+
+/* Typed production. The toggle sits with the pickers; the form sits under the
+   card, where the answer buttons are, because that is where attention already
+   is once a card has been read. */
+.deck-type-toggle {
+  flex-direction: row; align-items: center; gap: .45rem;
+  align-self: end; padding-bottom: .55rem;
+  font-size: .85rem; font-weight: 600; color: var(--ink-soft);
+  cursor: pointer;
+}
+.deck-type-toggle input { width: auto; margin: 0; cursor: pointer; }
+.deck-type {
+  display: grid; gap: .6rem; margin: 0 auto 1rem; max-width: 34rem;
+  grid-template-columns: 1fr auto; align-items: end;
+}
+.deck-type .field { margin: 0; }
+.deck-type input[type="text"] {
+  width: 100%; padding: .55rem .7rem;
+  border: 1px solid var(--line); border-radius: .5rem;
+  background: var(--surface); color: var(--ink); font: inherit;
+}
+.deck-type input[type="text"]:focus-visible { outline: 2px solid var(--accent, currentColor); outline-offset: 1px; }
+.deck-type button { white-space: nowrap; }
+.deck-verdict-note {
+  grid-column: 1 / -1; margin: 0; min-height: 1.2em;
+  font-size: .88rem; color: var(--ink-soft);
+}
+@media (max-width: 32rem) {
+  .deck-type { grid-template-columns: 1fr; }
+}
 .deck-expand:focus-visible { outline: 2px solid var(--green-deep); outline-offset: 2px; }
 
-/* Fixed badge colours: these must read the same in light and dark. */
+/* Fixed badge colors: these must read the same in light and dark. */
 .swipe-badge {
   position: absolute; top: 1rem; z-index: 2;
   padding: .3rem .7rem; border-radius: .5rem;
@@ -695,7 +786,7 @@ html.midnight body { background: var(--paper); color: var(--ink); }
 .city-tab[aria-selected="true"] { font-weight: 800; }
 
 /* Severity is the one thing a reader must be able to see at a glance, so it
-   is carried by a colour bar as well as by the label text. */
+   is carried by a color bar as well as by the label text. */
 .reference-card.severity-low { border-left: .3rem solid var(--green); }
 .reference-card.severity-medium { border-left: .3rem solid var(--sun); }
 .reference-card.severity-high { border-left: .3rem solid var(--clay); }
@@ -708,7 +799,15 @@ footer {
   color: var(--ink-soft); font-size: .92rem;
   border-top: 1px solid var(--line);
 }
-.footer-links { display: flex; flex-wrap: wrap; gap: 1.25rem; }
+.footer-links { display: flex; flex-wrap: wrap; gap: 1.25rem; align-items: baseline; }
+/* Reset moved out of the sticky header: it is destructive and rarely wanted,
+   so it should not outrank a lesson link on a phone. It reads as a footer
+   link here, so it needs the padding and hover of the header button removed. */
+.footer-links .text-button {
+  padding: 0; border-radius: 0; font: inherit; font-weight: inherit;
+  color: inherit; text-decoration: underline; cursor: pointer;
+}
+.footer-links .text-button:hover:not([disabled]) { background: none; color: var(--green-deep); }
 .footer-note { max-width: 44rem; font-size: .85rem; }
 
 /* ---------- Reporting tab ---------- */
@@ -766,9 +865,40 @@ footer {
 }
 
 @media (max-width: 680px) {
-  .site-header { flex-wrap: wrap; gap: .5rem .75rem; padding-inline: 1rem; }
-  .site-nav { order: 3; width: 100%; margin-left: 0; }
-  .site-nav a { padding: .4rem .55rem; font-size: .88rem; }
+  .site-header { flex-wrap: wrap; gap: .4rem .6rem; padding: .55rem 1rem; }
+  .site-nav { order: 3; width: 100%; margin-left: 0; gap: .5rem; }
+  /*
+   * The links scroll sideways instead of wrapping. Wrapping cost a second and
+   * third row, and the header is sticky, so those rows were charged against
+   * every screen of every page -- 194px of a 375px-wide phone before any
+   * lesson text appeared.
+   *
+   * Only the links scroll. The Modules dropdown is a sibling of the strip, not
+   * inside it, because an absolutely positioned menu inside an overflow
+   * container gets clipped to that container -- which would have hidden all
+   * 233 lessons behind a 40px-tall window.
+   */
+  .site-nav-links {
+    flex: 1 1 auto; flex-wrap: nowrap; min-width: 0;
+    overflow-x: auto; overscroll-behavior-inline: contain;
+    scrollbar-width: none; -ms-overflow-style: none;
+    scroll-snap-type: x proximity;
+  }
+  .site-nav-links::-webkit-scrollbar { display: none; }
+  .site-nav a { flex: none; padding: .6rem .65rem; white-space: nowrap; scroll-snap-align: start; }
+  .nav-modules { flex: none; position: static; }
+  /*
+   * Anchored to the header, not to the button. Hanging a 24rem panel off the
+   * right edge of a button that already sits near the right edge pushed it
+   * past the left edge of the screen. `.site-header` is sticky, so it is a
+   * positioned ancestor and can hold the menu itself: inset by the header's
+   * own padding, the panel lines up with the page instead of with a button.
+   */
+  .nav-modules-menu {
+    left: 1rem; right: 1rem; width: auto;
+    top: calc(100% + .35rem); max-height: min(70vh, 26rem);
+  }
+  .direction-picker { margin-left: auto; }
   .brand-text span { display: none; }
   main, footer { padding-inline: 1rem; }
   .lesson { padding: 1.25rem; }
@@ -782,4 +912,200 @@ footer {
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; }
+}
+
+/* --- Printable workbook --------------------------------------------------
+ *
+ * Two audiences share this markup: someone reading on screen and someone
+ * holding a sheet of paper. The screen rules keep it inside the site's
+ * design; the print rules below strip the site away entirely, because a
+ * workbook that prints the navigation, the hero and the flashcard deck is a
+ * stack of wasted paper rather than a workbook.
+ */
+.workbook-controls { display: flex; flex-wrap: wrap; gap: .75rem; align-items: flex-end; margin-bottom: .5rem; }
+.workbook-controls .search-label { flex: 1 1 22rem; }
+.workbook-controls select { width: 100%; padding: .55rem .7rem; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); color: inherit; font: inherit; }
+.workbook-output { margin-top: 1.5rem; }
+
+.wb-sheet { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: clamp(1rem, 3vw, 2.25rem); box-shadow: var(--shadow); }
+.wb-head { border-bottom: 2px solid var(--green); padding-bottom: .75rem; margin-bottom: 1.5rem; }
+.wb-head h1 { margin: .2rem 0; font-size: clamp(1.4rem, 3vw, 2rem); }
+.wb-meta { color: var(--ink-soft); margin: 0; }
+.wb-section { margin: 1.75rem 0; }
+.wb-section > h3 { border-bottom: 1px solid var(--line); padding-bottom: .3rem; margin-bottom: .75rem; font-size: 1.05rem; }
+.wb-section h4 { margin: 1rem 0 .35rem; font-size: .95rem; }
+.wb-unit { margin: 2.5rem 0; }
+.wb-unit-head h2 { margin: .2rem 0; font-size: 1.25rem; }
+.wb-situation { color: var(--ink-soft); margin: .2rem 0 0; }
+
+/* A box or a rule the learner writes on. Both need to survive the printer,
+   which is why they are borders rather than background images. */
+.wb-box { display: inline-block; width: .95em; height: .95em; border: 1.5px solid var(--ink-soft); border-radius: .15em; margin-right: .5em; vertical-align: -.1em; }
+.wb-write { display: inline-block; border-bottom: 1px solid var(--ink-soft); height: 1.15em; vertical-align: -.25em; }
+.wb-dot { display: inline-block; width: 1.9em; height: 1.9em; line-height: 1.75em; text-align: center; border: 1.5px solid var(--ink-soft); border-radius: 50%; margin-right: .4em; }
+.wb-n { display: inline-block; min-width: 1.6em; font-weight: 700; color: var(--green-deep); }
+.wb-activity-n { display: inline-block; width: 1.6em; height: 1.6em; line-height: 1.6em; text-align: center; border-radius: 50%; background: var(--green); color: #fff; margin-right: .5em; font-size: .85em; }
+
+.wb-checklist, .wb-phrases, .wb-notes, .wb-questions, .wb-order, .wb-bank, .wb-pronounce { margin: .35rem 0; padding-left: 1.2rem; }
+.wb-checklist { list-style: none; padding-left: 0; }
+.wb-checklist li { margin: .35rem 0; }
+.wb-phrases li { margin: .3rem 0; font-weight: 600; }
+.wb-questions > li, .wb-order > li { margin: .6rem 0; }
+.wb-choices { list-style: none; padding-left: .5rem; margin: .3rem 0; }
+.wb-choices li { margin: .2rem 0; }
+.wb-bank { list-style: none; padding-left: 0; }
+.wb-bank li { margin: .55rem 0; display: flex; gap: 1rem; }
+.wb-pronounce { list-style: none; padding-left: 0; }
+.wb-pronounce li { margin: .4rem 0; display: grid; gap: .1rem; }
+.wb-say { color: var(--ink-soft); font-variant: small-caps; letter-spacing: .02em; }
+
+.wb-setting { margin: 0; }
+.wb-setting-row { display: grid; grid-template-columns: minmax(8rem, 14rem) 1fr; gap: .5rem 1rem; padding: .3rem 0; border-bottom: 1px dotted var(--line); }
+.wb-setting dt { font-weight: 600; color: var(--green-deep); }
+.wb-setting dd { margin: 0; }
+
+.wb-dialogue { display: grid; gap: .65rem; }
+.wb-line { border-left: 3px solid var(--mist); padding-left: .75rem; }
+.wb-speaker { margin: 0; font-size: .8rem; text-transform: uppercase; letter-spacing: .06em; color: var(--ink-soft); }
+.wb-target { margin: .1rem 0; font-weight: 600; }
+.wb-translation { margin: 0; color: var(--ink-soft); }
+.wb-wrong { margin: 0 0 .2rem; color: var(--clay-ink); }
+
+.wb-table { width: 100%; border-collapse: collapse; margin: .5rem 0; }
+.wb-table th, .wb-table td { border: 1px solid var(--line); padding: .4rem .55rem; text-align: left; vertical-align: top; font-size: .92rem; }
+.wb-table thead th { background: var(--mist); font-size: .8rem; text-transform: uppercase; letter-spacing: .05em; }
+.wb-checkpoint td { text-align: center; width: 7rem; }
+
+.wb-match { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.wb-match ul { list-style: none; padding-left: 0; margin: 0; }
+.wb-match li { margin: .4rem 0; }
+.wb-match-left li { display: flex; align-items: baseline; gap: .35rem; }
+.wb-match-left .wb-write { flex: 0 0 auto; margin-left: auto; }
+.wb-match-right li { display: flex; align-items: baseline; gap: .35rem; }
+.wb-overview { background: var(--mist); border-radius: var(--radius); padding: 1rem 1.15rem; }
+.wb-overview > h3 { border-bottom-color: var(--green); }
+.wb-tags { display: flex; flex-wrap: wrap; gap: .35rem; margin: .35rem 0; }
+.wb-scale { display: flex; flex-wrap: wrap; gap: .25rem; margin: .35rem 0; }
+.wb-activity { margin: 1.25rem 0; }
+.wb-register .wb-ask { font-weight: 600; margin: .4rem 0; }
+.wb-key ol { padding-left: 1.2rem; }
+.wb-key-block { margin: .75rem 0; }
+
+/* The course guide: front matter, printed once and kept in the binder. */
+.wb-guide .wb-head h1 { margin-bottom: .2rem; }
+.wb-guide .wb-section { max-width: 68ch; }
+.wb-guide .wb-table { max-width: none; }
+.wb-intro { color: var(--muted); margin: .35rem 0 .9rem; max-width: 62ch; }
+.wb-cycle .wb-step { break-inside: avoid; }
+.wb-steps { list-style: none; padding-left: 0; margin: 0; }
+.wb-step { margin: 0 0 1rem; }
+.wb-step p { margin: .15rem 0; }
+.wb-step-head { display: flex; align-items: baseline; gap: .4rem; flex-wrap: wrap; }
+.wb-step-time { margin-left: auto; color: var(--muted); font-size: .85rem; white-space: nowrap; }
+.wb-map th[scope="row"] { white-space: nowrap; width: 7rem; }
+.wb-map .wb-num { white-space: nowrap; width: 6.5rem; color: var(--muted); }
+.wb-chip { display: inline-block; background: var(--mist); border-radius: 999px; padding: .1rem .55rem; margin: .1rem 0; font-size: .85rem; }
+.wb-code { display: inline-block; font-weight: 700; font-family: ui-monospace, "Cascadia Mono", Menlo, monospace; }
+.wb-codes th[scope="row"] { text-align: center; width: 4rem; }
+.wb-note { display: block; color: var(--muted); margin: .15rem 0; }
+.wb-fix { display: block; margin-top: .3rem; font-size: .9rem; }
+.wb-fix-wrong { display: block; color: var(--clay-ink); text-decoration: line-through; }
+.wb-fix-right { display: block; font-weight: 600; }
+.wb-sounds { list-style: none; padding-left: 0; margin: 0; }
+.wb-sound { margin: 0 0 1rem; padding-bottom: .75rem; border-bottom: 1px solid var(--line); }
+.wb-sound:last-child { border-bottom: 0; }
+.wb-sound p { margin: .15rem 0; }
+.wb-sound-head { display: flex; align-items: baseline; gap: .5rem; flex-wrap: wrap; }
+.wb-letters { font-family: ui-monospace, "Cascadia Mono", Menlo, monospace; background: var(--mist); border-radius: var(--radius); padding: .1rem .45rem; }
+.wb-examples { color: var(--muted); font-size: .9rem; }
+.wb-examples .wb-label { text-transform: uppercase; letter-spacing: .05em; font-size: .75rem; margin-right: .35rem; }
+.wb-tracker .wb-num { text-align: center; width: 4.5rem; }
+.wb-evidence td:first-child { width: 8rem; }
+
+@media (max-width: 680px) {
+  .wb-match { grid-template-columns: 1fr; }
+  .wb-setting-row { grid-template-columns: 1fr; }
+  .wb-step-time { margin-left: 0; }
+  .wb-map th[scope="row"] { width: auto; }
+  /*
+   * Each writing rule carries an inline `min-width` in ch, sized so a sheet
+   * printed on letter paper leaves room to actually write the answer. On a
+   * phone that same rule is wider than the screen, and because min-width wins
+   * over max-width it could not shrink -- so the workbook pushed the whole
+   * document sideways and the sticky header scrolled off with it. Here the
+   * rule takes the width it is given and wraps to its own line, which is what
+   * you want on a phone anyway. !important is required to beat the inline
+   * attribute; the print rules below still get the measured widths.
+   */
+  .wb-write { min-width: 0 !important; width: 100%; }
+  .wb-match-left .wb-write { width: 4ch; }
+  /*
+   * A conjugation or vocabulary table has a floor width its columns cannot go
+   * under, so on a phone it is the table that decides how wide the document
+   * is. Letting it scroll inside its own box keeps that decision local
+   * instead of dragging the sticky header sideways with it.
+   */
+  .wb-table { display: block; width: 100%; overflow-x: auto; }
+}
+
+/*
+ * Paper.
+ *
+ * The workbook runs to roughly twenty pages, and that length dictates the
+ * technique. The obvious approach — hide the document with
+ * `visibility: hidden`, switch the workbook back on, and pull it to the top
+ * of the sheet with `position: absolute` — lays out correctly on screen and
+ * then risks losing everything after page one, because an absolutely
+ * positioned box is not reliably fragmented across printed pages.
+ *
+ * So nothing here is taken out of flow. Each level of the ancestor chain
+ * keeps only the child that leads to the workbook and drops its siblings with
+ * `display: none`, which leaves #workbook in normal flow, inheriting the
+ * page box and paginating the way ordinary content does.
+ *
+ * The answer key prints whether or not it is open on screen. A printed sheet
+ * has no toggle, and a workbook you cannot mark is half a workbook.
+ */
+@media print {
+  :root { color-scheme: light; }
+  @page { margin: 16mm 14mm; }
+
+  body { background: #fff; color: #000; }
+
+  /* Keep the chain to the workbook, drop everything beside it. */
+  body > *:not(main) { display: none !important; }
+  main > *:not(#workbook) { display: none !important; }
+  #workbook > .section-head,
+  #workbook > .workbook-controls,
+  #workbook > .assistive-text { display: none !important; }
+
+  main, #workbook, #workbook-output {
+    display: block;
+    max-width: none;
+    width: auto;
+    margin: 0;
+    padding: 0;
+    background: none;
+  }
+
+  .wb-sheet { border: 0; border-radius: 0; box-shadow: none; padding: 0; background: #fff; }
+  .wb-overview { background: transparent !important; border: 1px solid #000; padding: .75rem; }
+  .wb-head { border-bottom: 2px solid #000; }
+  .wb-section > h3 { border-bottom: 1px solid #666; }
+
+  /* Show the key on paper even when the screen has it collapsed. */
+  #workbook-key[hidden] { display: block !important; }
+
+  /* Keep a question and the space to answer it on the same sheet. */
+  .wb-unit, .wb-break { break-before: page; }
+  .wb-activity, .wb-line, .wb-questions > li, .wb-key-block,
+  .wb-setting-row, .wb-table tr { break-inside: avoid; }
+  .wb-section > h3, .wb-section h4, .wb-unit-head { break-after: avoid; }
+
+  .wb-box, .wb-write, .wb-dot { border-color: #000; }
+  .wb-activity-n { background: #000 !important; color: #fff !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .wb-table thead th { background: #eee !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .wb-say, .wb-translation, .wb-speaker, .wb-meta, .wb-situation { color: #444; }
+  .wb-wrong { color: #000; font-style: italic; }
+  a[href]::after { content: ""; }
 }

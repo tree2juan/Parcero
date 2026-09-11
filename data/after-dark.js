@@ -1,7 +1,7 @@
 /*
  * After Dark — recognition reference for strong Colombian language.
  *
- * WHY THIS EXISTS: a learner who cannot recognise this vocabulary cannot tell
+ * WHY THIS EXISTS: a learner who cannot recognize this vocabulary cannot tell
  * a joke from a threat. Every entry is here so it can be UNDERSTOOD when it is
  * heard — in a bar, in a taxi, in a football crowd, in a film — and so the
  * learner can judge whether to laugh, let it go, or leave. None of it is here
@@ -14,7 +14,7 @@
  * repeated per city with the reading that city gives them. Overlap is the
  * point, not duplication to be cleaned up.
  *
- * ACCURACY: force and fashion in slang move fast and vary by neighbourhood,
+ * ACCURACY: force and fashion in slang move fast and vary by neighborhood,
  * age and class. Treat severity as a floor, not a measurement — when in doubt
  * a learner should assume the harsher reading. Corrections belong in the
  * Report an error tab.
@@ -36,15 +36,15 @@ const matureItems = [
   { city: "bogota", phrase: "gonorrea, ¿qué más?", equivalent: "hey you bastard, what's up?", severity: "High", note: "Greeting between very close male friends only. Copying this is the classic way a learner starts a fight." },
   { city: "bogota", phrase: "pirobo/a", equivalent: "lowlife / scumbag", severity: "High", note: "Strongly pejorative in Bogotá and carries a sexual-insult history. Do not use." },
   { city: "bogota", phrase: "ñero/a", equivalent: "street kid / lowlife", severity: "High", note: "A class slur about how someone speaks, dresses or where they live. Common in speech and demeaning in every reading." },
-  { city: "bogota", phrase: "gamín", equivalent: "street urchin", severity: "High", note: "Dated but still heard; describes homeless children and is dehumanising. Recognise it as a marker of the speaker's attitude." },
+  { city: "bogota", phrase: "gamín", equivalent: "street urchin", severity: "High", note: "Dated but still heard; describes homeless children and is dehumanising. Recognize it as a marker of the speaker's attitude." },
   { city: "bogota", phrase: "guiso/a", equivalent: "tacky / trashy person", severity: "Medium", note: "A Bogotá class insult about taste and manners. Sounds jokey and is not." },
-  { city: "bogota", phrase: "lobo/a", equivalent: "tacky, gaudy", severity: "Low", note: "Says something is in poor taste. Applied to a person it is a class judgement, not a compliment on style." },
+  { city: "bogota", phrase: "lobo/a", equivalent: "tacky, gaudy", severity: "Low", note: "Says something is in poor taste. Applied to a person it is a class judgment, not a compliment on style." },
   { city: "bogota", phrase: "gomelo/a", equivalent: "rich preppy kid", severity: "Low", note: "Mocks wealthy, posh speech and dress. Teasing from a friend, sneering from a stranger." },
-  { city: "bogota", phrase: "chanda", equivalent: "rubbish, worthless (lit. 'mange')", severity: "Medium", note: "Says a thing is garbage. Aimed at a person in Bogotá it is contemptuous." },
+  { city: "bogota", phrase: "chanda", equivalent: "trash, worthless (lit. 'mange')", severity: "Medium", note: "Says a thing is garbage. Aimed at a person in Bogotá it is contemptuous." },
   { city: "bogota", phrase: "chichipato/a", equivalent: "cheap, petty, small-time", severity: "Low", note: "Mocks stinginess or small-time dealing. Insulting but rarely escalates." },
   { city: "bogota", phrase: "sapo/a", equivalent: "snitch / busybody", severity: "Medium", note: "A serious accusation, not a joke: in the wrong setting calling someone a snitch is dangerous for them. Handle with care." },
   { city: "bogota", phrase: "lambón/a", equivalent: "bootlicker, suck-up", severity: "Low", note: "Workplace-common and merely rude." },
-  { city: "bogota", phrase: "boleta", equivalent: "embarrassing, tacky, a scene", severity: "Low", note: "'Qué boleta' = how embarrassing. About behaviour rather than a person; among the mildest here." },
+  { city: "bogota", phrase: "boleta", equivalent: "embarrassing, tacky, a scene", severity: "Low", note: "'Qué boleta' = how embarrassing. About behavior rather than a person; among the mildest here." },
   { city: "bogota", phrase: "care-monda", equivalent: "dickhead", severity: "High", note: "Coastal in origin, understood in Bogotá. Crude and confrontational." },
   { city: "bogota", phrase: "carechimba", equivalent: "dickhead / arsehole", severity: "High", note: "Understood countrywide. Insulting in every register." },
   { city: "bogota", phrase: "mierda", equivalent: "shit", severity: "Medium", note: "'Qué mierda' vents at a situation; '¡vete a la mierda!' is aimed and hostile." },
@@ -94,7 +94,7 @@ const matureItems = [
   { city: "medellin", phrase: "nea", equivalent: "lowlife, street kid", severity: "High", note: "Paisa class slur, roughly the local 'ñero'. Demeaning about where someone is from." },
   { city: "medellin", phrase: "gomelo/a", equivalent: "rich preppy kid", severity: "Low", note: "El Poblado stereotype. Teasing between friends, sneering across class lines." },
   { city: "medellin", phrase: "sisas", equivalent: "yeah / yep", severity: "Low", note: "Street affirmative, the opposite of 'nanay'. Informal, not offensive." },
-  { city: "medellin", phrase: "cucha / cucho", equivalent: "mum / dad; old woman / man", severity: "Low", note: "Warm for one's own parents; rude about a stranger." },
+  { city: "medellin", phrase: "cucha / cucho", equivalent: "mom / dad; old woman / man", severity: "Low", note: "Warm for one's own parents; rude about a stranger." },
   { city: "medellin", phrase: "chichipato/a", equivalent: "cheap, small-time", severity: "Low", note: "Mocks stinginess or petty dealing. Insulting, low risk." },
   { city: "medellin", phrase: "sapo/a", equivalent: "snitch", severity: "High", note: "In Medellín this accusation carries history and can be genuinely dangerous for the person named. Never repeat it lightly." },
   { city: "medellin", phrase: "sardino/a", equivalent: "young kid, teenager", severity: "Low", note: "About someone's youth. Dismissive at worst." },
@@ -118,9 +118,9 @@ const matureItems = [
   { city: "medellin", phrase: "prepago", equivalent: "escort", severity: "High", note: "Used as a slur about a woman. Demeaning." },
   { city: "medellin", phrase: "traqueto", equivalent: "narco / trafficker", severity: "High", note: "Names someone as a trafficker. In Medellín this is a loaded accusation with living memory behind it." },
   { city: "medellin", phrase: "duro", equivalent: "boss / kingpin; also 'excellent'", severity: "Medium", note: "Usually praise for skill. In criminal context, a boss." },
-  { city: "medellin", phrase: "oficina", equivalent: "criminal outfit (lit. 'office')", severity: "High", note: "Refers to an organised crime structure. If it is used literally around you, leave the conversation." },
-  { city: "medellin", phrase: "vacuna", equivalent: "extortion payment (lit. 'vaccine')", severity: "High", note: "Protection money. Worth recognising for safety, never for humour." },
-  { city: "medellin", phrase: "plomo", equivalent: "lead — gunfire, violence", severity: "High", note: "'Dar plomo' means shooting. Recognise it as a threat." },
+  { city: "medellin", phrase: "oficina", equivalent: "criminal outfit (lit. 'office')", severity: "High", note: "Refers to an organized crime structure. If it is used literally around you, leave the conversation." },
+  { city: "medellin", phrase: "vacuna", equivalent: "extortion payment (lit. 'vaccine')", severity: "High", note: "Protection money. Worth recognizing for safety, never for humor." },
+  { city: "medellin", phrase: "plomo", equivalent: "lead — gunfire, violence", severity: "High", note: "'Dar plomo' means shooting. Recognize it as a threat." },
   { city: "medellin", phrase: "tombo", equivalent: "cop (derogatory)", severity: "Medium", note: "Disrespectful for police." },
   { city: "medellin", phrase: "guaro", equivalent: "aguardiente (the local spirit)", severity: "Low", note: "Not vulgar. Included because it dominates drinking talk where this vocabulary appears." },
   { city: "medellin", phrase: "prendido/a", equivalent: "tipsy", severity: "Low", note: "Pleasantly drunk. Mild." },
@@ -139,17 +139,17 @@ const matureItems = [
   { city: "barranquilla", phrase: "cipote", equivalent: "huge; also a vulgar noun", severity: "Medium", note: "As an intensifier — 'un cipote lío', a huge mess — it is common coastal speech." },
   { city: "barranquilla", phrase: "vaina", equivalent: "thing, stuff, business", severity: "Low", note: "Constant on the coast and barely rude. '¡Qué vaina!' = what a shame." },
   { city: "barranquilla", phrase: "¡ajá!", equivalent: "so? / well? / right", severity: "Low", note: "Not rude at all, but abrupt to a foreign ear. It invites you to get to the point." },
-  { city: "barranquilla", phrase: "mamar gallo", equivalent: "to joke around, to stall", severity: "Low", note: "Central to coastal humour: teasing and time-wasting. Not sexual despite the literal words." },
+  { city: "barranquilla", phrase: "mamar gallo", equivalent: "to joke around, to stall", severity: "Low", note: "Central to coastal humor: teasing and time-wasting. Not sexual despite the literal words." },
   { city: "barranquilla", phrase: "cachetero", equivalent: "chancer, freeloader", severity: "Low", note: "Someone who takes without giving. Mildly insulting." },
   { city: "barranquilla", phrase: "hijueputa", equivalent: "son of a bitch / exclamation", severity: "High", note: "Common on the coast as punctuation, but aimed at a person it is still a fighting word." },
   { city: "barranquilla", phrase: "malparido/a", equivalent: "utter bastard", severity: "High", note: "Understood and used. No friendly reading between strangers." },
-  { city: "barranquilla", phrase: "gonorrea", equivalent: "vile person", severity: "High", note: "Recognised as paisa in origin and read as harsh on the coast." },
+  { city: "barranquilla", phrase: "gonorrea", equivalent: "vile person", severity: "High", note: "Recognized as paisa in origin and read as harsh on the coast." },
   { city: "barranquilla", phrase: "marica", equivalent: "dude; idiot; homophobic slur", severity: "High", note: "Used as filler among friends and as a slur against gay men. Understand it, do not produce it." },
   { city: "barranquilla", phrase: "güevón", equivalent: "idiot / dude", severity: "Medium", note: "Common, tone-dependent, and softer here than 'mondá'." },
   { city: "barranquilla", phrase: "bacano/a", equivalent: "cool, great", severity: "Low", note: "Positive and safe. Listed because learners often assume coastal slang is rude by default." },
   { city: "barranquilla", phrase: "chévere", equivalent: "nice, cool", severity: "Low", note: "Entirely inoffensive." },
   { city: "barranquilla", phrase: "pelao/pelá", equivalent: "kid, young person; boyfriend/girlfriend", severity: "Low", note: "Everyday coastal word for a young person. Not rude." },
-  { city: "barranquilla", phrase: "ñerda", equivalent: "damn / rubbish", severity: "Medium", note: "Coastal softening of 'mierda'. Crude but low-stakes." },
+  { city: "barranquilla", phrase: "ñerda", equivalent: "damn / trash", severity: "Medium", note: "Coastal softening of 'mierda'. Crude but low-stakes." },
   { city: "barranquilla", phrase: "mierda", equivalent: "shit", severity: "Medium", note: "'Vete pa' la mierda' is aimed and hostile; '¡qué mierda!' merely vents." },
   { city: "barranquilla", phrase: "carechimba", equivalent: "dickhead", severity: "High", note: "Understood countrywide and insulting everywhere." },
   { city: "barranquilla", phrase: "chimba", equivalent: "vulva; also 'great' by context", severity: "High", note: "Read as more anatomically literal on the coast than in Medellín, where it is often praise. The same word, a different risk." },
@@ -178,7 +178,7 @@ const matureItems = [
   { city: "barranquilla", phrase: "tombo", equivalent: "cop (derogatory)", severity: "Medium", note: "Disrespectful for police." },
   { city: "barranquilla", phrase: "atraco", equivalent: "a mugging; a rip-off", severity: "Low", note: "Literal for robbery, figurative for an outrageous price." },
   { city: "barranquilla", phrase: "dar papaya", equivalent: "to make yourself an easy target", severity: "Low", note: "The national safety idiom: do not invite trouble." },
-  { city: "barranquilla", phrase: "chucha", equivalent: "body odour (coastal); vulgar elsewhere", severity: "High", note: "On the coast it usually means armpit smell. In parts of the Andes and in other countries it is explicit anatomy — a genuine regional trap." },
+  { city: "barranquilla", phrase: "chucha", equivalent: "body odor (coastal); vulgar elsewhere", severity: "High", note: "On the coast it usually means armpit smell. In parts of the Andes and in other countries it is explicit anatomy — a genuine regional trap." },
   { city: "barranquilla", phrase: "vergación", equivalent: "wow! / bloody hell!", severity: "Medium", note: "Coastal exclamation built from 'verga'. Everyday locally, crude to outsiders." },
   { city: "barranquilla", phrase: "puñeta", equivalent: "damn (lit. a crude gesture)", severity: "Medium", note: "Exclamation of annoyance. Dated and comic more than aggressive." }
 ];

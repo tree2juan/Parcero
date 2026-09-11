@@ -6,21 +6,30 @@ const vm = require("node:vm");
 
 const root = path.join(__dirname, "..");
 const read = (file) => fs.readFileSync(path.join(root, file), "utf8");
+const { dataSource } = require("./data-source.js");
+/* The same judgment the lesson-prose check uses, so "this is Spanish" means
+   one thing in this repo and not two. */
+const { classify } = require("../scripts/prose-language.js");
 
 const bundle = [
-  read("data/lessons.js"),
-  read("data/curriculum.js"),
-  read("data/flashcards.js"),
-  "({ lessons, curriculum, fluencyItems, FLASHCARD_SET_SIZE, flashcardSlug, flashcardSplit, flashcardsFromLesson, flashcardTopics, flashcardSets });"
+  dataSource({ schema: false, flashcards: true }),
+  "({ lessons, curriculum, fluencyItems, lexiconItems, slangItems, matureItems, matureSignals, FLASHCARD_SET_SIZE, flashcardSlug, flashcardSplit, flashcardsFromLesson, flashcardTopics, flashcardSets });"
 ].join("\n");
 
 const {
-  lessons, curriculum, fluencyItems,
+  lessons, curriculum, fluencyItems, lexiconItems, slangItems, matureItems, matureSignals,
   FLASHCARD_SET_SIZE, flashcardSlug, flashcardSplit, flashcardsFromLesson, flashcardTopics, flashcardSets
 } = vm.runInNewContext(bundle, {}, { filename: "parcero-flashcard-bundle.js" });
 
 const directions = ["es", "en"];
-const sources = { lessons, curriculum, fluencyItems };
+
+/*
+ * The default sources deliberately omit matureEnabled, because that is what a
+ * caller who has not thought about the age gate passes. Every test using this
+ * object is therefore also checking that the unsafe default does not exist.
+ */
+const sources = { lessons, curriculum, fluencyItems, lexiconItems, slangItems, matureItems, matureSignals };
+const openSources = { ...sources, matureEnabled: true };
 const isText = (value) => typeof value === "string" && value.trim().length > 0;
 const duplicates = (list) => [...new Set(list.filter((item, index) => list.indexOf(item) !== index))];
 
@@ -207,7 +216,21 @@ test("every card opens in the language being learned", () => {
   // The context card is the one deliberate exception. It shows a scene and then
   // a note about it, both written in the language the learner already has, so
   // there is no version of it that could open in the language being learned.
-  const opensInSupport = new Set(["context"]);
+  //
+  // The lexicon card is the second, for the opposite reason: it is a production
+  // drill. The prompt is the word the learner already has and the answer is the
+  // one they are building, so opening it in the language being learned would be
+  // printing the answer on the front.
+  const opensInSupport = new Set(["context", "lexicon"]);
+  // The slang card is the third, and it is neither of the above: it does not
+  // pivot on direction at all. Every row of the slang list is a Colombian
+  // phrase glossed into English -- the list is written once, from one side, the
+  // way a glossary is. So the card reads the same way for both learners:
+  // the Colombian phrase is the prompt and the English gloss is the answer.
+  // An English speaker is recognizing the phrase; a Colombian speaker is
+  // recalling how to say their own phrase in English. Neither one is served by
+  // flipping it, so this kind is pinned to Spanish rather than to a direction.
+  const opensInSpanish = new Set(["slang"]);
   const kinds = new Set();
   let checked = 0;
   for (const direction of directions) {
@@ -215,7 +238,8 @@ test("every card opens in the language being learned", () => {
     for (const topic of flashcardTopics(direction, sources)) {
       for (const card of topic.cards) {
         if (!card.frontLang) continue;
-        const expected = opensInSupport.has(card.kind) ? support : direction;
+        let expected = opensInSupport.has(card.kind) ? support : direction;
+        if (opensInSpanish.has(card.kind)) expected = "es";
         assert.strictEqual(
           card.frontLang,
           expected,
@@ -229,7 +253,7 @@ test("every card opens in the language being learned", () => {
   assert.ok(checked > 1000, `only ${checked} cards declared a front language, so this guard is not seeing the deck`);
   assert.deepStrictEqual(
     [...kinds].sort(),
-    ["context", "example", "fluency", "meaning", "pronunciation", "region", "verb", "vocabulary"],
+    ["context", "example", "fluency", "lexicon", "meaning", "pronunciation", "region", "slang", "verb", "vocabulary"],
     "a card kind started or stopped declaring a front language -- confirm it opens in the language being learned"
   );
 });
@@ -239,6 +263,13 @@ test("every card opens in the language being learned", () => {
  * changing any of it has to be deliberate. Read it as: when you are learning
  * `direction`, a card of this kind is tagged this way. `none` means the side is
  * prose in the language the learner already has and carries no lang attribute.
+ *
+ * The two slang rows are identical across directions on purpose, and that is
+ * the one thing here that is not a mirror: the slang list is a glossary written
+ * from the Colombian side, so the phrase is always the prompt and the English
+ * gloss is always the answer. If those two rows ever diverge, someone has made
+ * the slang deck pivot on direction, which the list has no second side to
+ * support.
  */
 test("the language on each side of each card kind is what it was signed off as", () => {
   const actual = [];
@@ -259,11 +290,13 @@ test("the language on each side of each card kind is what it was signed off as",
     "learning en: culture = none / none",
     "learning en: example = en / es",
     "learning en: fluency = en / es",
+    "learning en: lexicon = es / en",
     "learning en: meaning = en / es",
     "learning en: pitfall = none / en",
     "learning en: practice = none / none",
     "learning en: pronunciation = en / none",
     "learning en: region = en / none",
+    "learning en: slang = es / en",
     "learning en: variation = none / en",
     "learning en: verb = en / es",
     "learning en: vocabulary = en / none",
@@ -272,11 +305,13 @@ test("the language on each side of each card kind is what it was signed off as",
     "learning es: culture = none / none",
     "learning es: example = es / en",
     "learning es: fluency = es / en",
+    "learning es: lexicon = en / es",
     "learning es: meaning = es / en",
     "learning es: pitfall = none / es",
     "learning es: practice = none / none",
     "learning es: pronunciation = es / none",
     "learning es: region = es / none",
+    "learning es: slang = es / en",
     "learning es: variation = none / es",
     "learning es: verb = es / en",
     "learning es: vocabulary = es / none"
@@ -300,8 +335,7 @@ test("the language on each side of each card kind is what it was signed off as",
  * Closed-class Spanish only, and deliberately not diacritics: "Bogotá" and
  * "Medellín" are correctly spelled inside English sentences. Words that are
  * also ordinary English are left out on purpose -- con, no, son, lo, ya, a, o
- * and me would all fire on real English glosses. Verified against every string
- * the deck tags as English in both directions.
+ * and me would all fire on real English glosses.
  */
 const SPANISH_FUNCTION_WORDS = new Set([
   "el", "la", "los", "las", "un", "una", "unos", "unas", "del", "al",
@@ -312,6 +346,78 @@ const SPANISH_FUNCTION_WORDS = new Set([
   "pero", "porque", "cuando", "donde", "quiere", "quieres"
 ]);
 
+/* Enough closed-class English to tell prose from a bare Spanish fragment. */
+const ENGLISH_FUNCTION_WORDS = new Set([
+  "the", "and", "you", "that", "with", "for", "when", "this", "they", "your",
+  "is", "are", "of", "to", "but", "it", "in", "on", "at", "what", "which",
+  "would", "could", "should", "because", "about", "from", "than", "then",
+  "there", "here", "how", "why", "not", "do", "does", "did", "have", "has",
+  "had", "be", "been", "will", "can", "may", "who", "whose", "into", "out",
+  "up", "off", "over", "after", "before", "while", "its", "their", "them",
+  "these", "those", "a", "an", "i", "we", "he", "she", "my", "his", "her",
+  "say", "said", "says", "once", "already", "though", "almost", "never",
+  "so", "by", "if", "as"
+]);
+
+/*
+ * A quoted run is a citation, not the language of the sentence around it, and
+ * neither is a proper noun: "El Hueco", "Valle del Cauca" and "the MÍO" are
+ * place names an English sentence is entitled to use.
+ */
+const stripCitations = (text) => String(text)
+  .replace(/[“"][^”"]*[”"]/g, " ")
+  .replace(/[«][^»]*[»]/g, " ")
+  .replace(/[‘'][^’']{2,}[’']/g, " ")
+  .replace(/\b[A-ZÁÉÍÓÚÑ][\wáéíóúñü]*/g, " ");
+
+const wordsIn = (text) => String(text).toLowerCase().split(/[^a-záéíóúñü]+/).filter(Boolean);
+
+/*
+ * Is this English-labeled text actually Spanish?
+ *
+ * The first version asked a simpler question -- does any Spanish function word
+ * appear at all -- and that held while the only English in the deck was the
+ * eight hand-written lessons. It does not survive the scene lines, which are
+ * English prose *about* Spanish and so name it constantly: "she greets him
+ * with usted", "everything turns around vivir: vivir en, vivir de, vivir
+ * para". Those sentences are correct, and a zero-tolerance rule calls 73 of
+ * them wrong, which is how a guard gets switched off instead of fixed.
+ *
+ * Mentioning a language is not being written in it. So strip the citations and
+ * ask the house classifier -- the same judgment scripts/prose-language.js
+ * applies to lesson prose. Below its eight-word floor it answers "unknown" by
+ * design, and there the fallback is that a real English gloss carries at least
+ * one English function word, while a bare Spanish fragment carries none.
+ */
+function readsAsSpanish(text) {
+  const cleaned = stripCitations(text);
+  if (classify(cleaned) === "spanish") return true;
+  const words = wordsIn(cleaned);
+  if (!words.some((word) => SPANISH_FUNCTION_WORDS.has(word))) return false;
+  return !words.some((word) => ENGLISH_FUNCTION_WORDS.has(word));
+}
+
+/*
+ * The detector has to be able to fail, or the test below passes for the wrong
+ * reason. These are the two shapes the deck actually got wrong once -- a scene
+ * written in Spanish but tagged English, and a bare Spanish fragment sitting
+ * where the gloss belongs -- plus the two sentence shapes that made the old
+ * rule unusable and must not be flagged.
+ */
+test("the wrong-language detector still detects the wrong language", () => {
+  const spanishProse =
+    "Alex acaba de mudarse a un edificio en Medellín y llega a la reunión mensual de residentes. " +
+    "Todavía nadie lo conoce y tiene que decir quién es y en qué apartamento vive.";
+  assert.ok(readsAsSpanish(spanishProse), "a whole paragraph of Spanish was not detected");
+  assert.ok(readsAsSpanish("el tinto de la mañana"), "a bare Spanish fragment was not detected");
+  assert.ok(
+    !readsAsSpanish("She greets him with usted and asks whether he lives in the building."),
+    "an English sentence that names a Spanish word must not be flagged");
+  assert.ok(
+    !readsAsSpanish("In Colombia we say “entrar a”, not “entrar en”."),
+    "an English sentence quoting Spanish must not be flagged");
+});
+
 test("text the deck labels English is not actually Spanish", () => {
   const offenders = [];
   for (const direction of directions) {
@@ -319,15 +425,10 @@ test("text the deck labels English is not actually Spanish", () => {
       for (const card of set.cards) {
         for (const side of ["front", "back"]) {
           if (card[`${side}Lang`] !== "en") continue;
-          const spanish = String(card[side])
-            .toLowerCase()
-            .split(/[^a-záéíóúñü]+/)
-            .filter(Boolean)
-            .filter((word) => SPANISH_FUNCTION_WORDS.has(word));
-          if (!spanish.length) continue;
+          if (!readsAsSpanish(card[side])) continue;
           offenders.push(
-            `[${direction}] ${set.topicId} ${card.kind}.${side} is tagged lang="en" but reads as Spanish ` +
-            `(${spanish.join(", ")}): ${JSON.stringify(card[side])}`
+            `[${direction}] ${set.topicId} ${card.kind}.${side} is tagged lang="en" but reads as Spanish: ` +
+            JSON.stringify(card[side])
           );
         }
       }
@@ -952,5 +1053,178 @@ test("the clamped answer and its control still obey the hidden attribute", () =>
       /display:/,
       `${selector} is expected to set display:, which is what makes the reset load-bearing`
     );
+  }
+});
+
+/* ---------- the age gate ---------- */
+
+test("gated content is absent from the deck, not merely hidden in it", () => {
+  /*
+   * The failure this guards against is not visual. flashcardTopics feeds the
+   * deck picker, the progress counts and the set ids written to localStorage,
+   * so mature cards built but hidden would still be counted, still be pickable
+   * by a stale stored id, and still be one CSS rule away from a reader who
+   * never opened the gate. Nothing is built at all.
+   */
+  for (const direction of directions) {
+    const topics = flashcardTopics(direction, sources);
+    const cards = topics.flatMap((topic) => topic.cards);
+    assert.equal(
+      cards.filter((card) => card.kind === "mature" || card.kind === "signal").length, 0,
+      `${direction}: mature cards were built without the gate being opened`);
+    assert.equal(
+      topics.filter((topic) => topic.groupKey === "deck.group.mature").length, 0,
+      `${direction}: a mature deck was offered without the gate being opened`);
+  }
+});
+
+test("an absent flag is treated as a closed gate, not an open one", () => {
+  /* Every one of these is a caller who forgot. All must fail safe. */
+  for (const careless of [undefined, null, {}, { matureEnabled: undefined }, { matureEnabled: false }, { matureEnabled: "false" }, { matureEnabled: 0 }]) {
+    const merged = careless && typeof careless === "object" ? { ...sources, ...careless } : careless;
+    const cards = flashcardTopics("es", merged).flatMap((topic) => topic.cards);
+    assert.equal(
+      cards.filter((card) => card.kind === "mature" || card.kind === "signal").length, 0,
+      `mature cards leaked for sources ${JSON.stringify(careless)}`);
+  }
+});
+
+test("opening the gate actually produces the decks it promises", () => {
+  for (const direction of directions) {
+    const topics = flashcardTopics(direction, openSources);
+    const mature = topics.filter((topic) => topic.groupKey === "deck.group.mature");
+    assert.ok(mature.length >= 2, `${direction}: expected both a words deck and a signals deck`);
+    const cards = mature.flatMap((topic) => topic.cards);
+    assert.ok(cards.length > 0, `${direction}: the mature decks are empty`);
+    for (const card of cards) {
+      assert.ok(isText(card.front) && isText(card.back), "a mature card is missing a side");
+      assert.ok(isText(card.note), "a mature card carries no guidance, which is the only reason to show it");
+    }
+  }
+});
+
+test("a mature card only ever drills the language the learner is meeting", () => {
+  /*
+   * After Dark rows are Colombian phrases glossed into English, so the same row
+   * serves both decks -- but not the same way round. A learner of Spanish is
+   * meeting the Colombian phrase, and a learner of English is meeting the
+   * English gloss, so the front has to follow the direction. Getting this
+   * backwards would put the answer on the front of every card.
+   */
+  for (const direction of directions) {
+    const cards = flashcardTopics(direction, openSources)
+      .filter((topic) => topic.id === "mature")
+      .flatMap((topic) => topic.cards);
+    assert.ok(cards.length > 0, `${direction}: no mature cards to check`);
+    for (const card of cards) {
+      const source = matureItems[Number(card.id.split("/")[1])];
+      const expected = direction === "es" ? source.phrase : source.equivalent;
+      assert.equal(card.front, expected,
+        `${direction} deck fronts "${card.front}", but this learner is meeting "${expected}"`);
+      assert.equal(card.back, direction === "es" ? source.equivalent : source.phrase,
+        `${direction} deck backs "${card.back}", which is not the other side of "${expected}"`);
+      assert.ok(card.note.includes(source.city),
+        "the city decides how hard the phrase lands, so it belongs on the card");
+    }
+  }
+});
+
+/* ---------- slang ---------- */
+
+test("slang is drilled for recognition, never for production", () => {
+  /*
+   * Every other deck asks for the language being learned, because production is
+   * the harder half. Slang is the exception on purpose: most of this list is
+   * language a learner should understand and not say, and a prompt asking them
+   * to produce it would drill exactly the wrong reflex.
+   */
+  for (const direction of directions) {
+    const cards = flashcardTopics(direction, sources)
+      .filter((topic) => topic.groupKey === "deck.group.slang")
+      .flatMap((topic) => topic.cards);
+    assert.ok(cards.length > 0, `${direction}: no slang cards were built`);
+    for (const card of cards) {
+      assert.equal(card.frontLang, "es", "the slang phrase itself belongs on the front, in Spanish");
+      assert.ok(isText(card.note), `slang card ${card.id} carries no usage note`);
+    }
+  }
+});
+
+test("every slang card tells the learner whether they may say it", () => {
+  const SAFETY = ["Say it freely", "Say it with friends", "Understand only"];
+  for (const direction of directions) {
+    const cards = flashcardTopics(direction, sources)
+      .filter((topic) => topic.groupKey === "deck.group.slang")
+      .flatMap((topic) => topic.cards);
+    for (const card of cards) {
+      assert.ok(
+        SAFETY.some((safety) => card.note.startsWith(safety)),
+        `slang card ${card.id} does not lead with whether it is safe to say`);
+    }
+  }
+});
+
+test("slang decks are grouped by safety, so the risky ones cannot hide among the rest", () => {
+  for (const direction of directions) {
+    const topics = flashcardTopics(direction, sources).filter((topic) => topic.groupKey === "deck.group.slang");
+    const levels = topics.map((topic) => topic.level);
+    assert.ok(levels.includes("Understand only"), "there is no recognition-only slang deck");
+    assert.equal(new Set(levels).size, levels.length, "two slang decks share a safety level");
+    /* Every entry lands in exactly one deck. */
+    const total = topics.reduce((sum, topic) => sum + topic.cards.length, 0);
+    assert.equal(total, slangItems.length, `${direction}: ${total} slang cards from ${slangItems.length} entries`);
+  }
+});
+
+test("every derived card carries a stable, unique id", () => {
+  for (const direction of directions) {
+    const ids = flashcardTopics(direction, openSources).flatMap((topic) => topic.cards).map((card) => card.id);
+    assert.deepStrictEqual(duplicates(ids), [], `${direction}: duplicate card ids`);
+    for (const id of ids) {
+      assert.ok(
+        id.split("/").includes(direction),
+        `card id "${id}" does not name its direction, so the two decks could collide`);
+    }
+  }
+});
+
+test("no two decks in a group present themselves with the same name", () => {
+  /*
+   * A topic that splits into several decks distinguishes them with a level -
+   * "Verbs · Foundation", "Slang · Understand only". The level reaches the
+   * label only if the title string has a {level} placeholder to put it in.
+   * Forget that and the picker shows three entries all called "Slang", which is
+   * not a cosmetic problem: the reader cannot tell which deck they are choosing,
+   * and for slang the thing they cannot tell apart is how risky it is to say.
+   */
+  const { UI_STRINGS } = require(path.join(root, "i18n.js"));
+  for (const language of ["en", "es"]) {
+    for (const direction of directions) {
+      const topics = flashcardTopics(direction, openSources);
+      const rendered = topics.map((topic) => {
+        if (!topic.titleKey) return topic.title;
+        const template = UI_STRINGS[language][topic.titleKey];
+        const level = (topic.levelKey && UI_STRINGS[language][topic.levelKey]) || topic.level || "";
+        return String(template).replace("{level}", level);
+      });
+      assert.deepStrictEqual(
+        duplicates(rendered), [],
+        `${language}/${direction}: two decks are labelled identically`);
+    }
+  }
+});
+
+test("a deck that carries a level uses it in its name", () => {
+  const { UI_STRINGS } = require(path.join(root, "i18n.js"));
+  for (const topic of flashcardTopics("es", openSources)) {
+    if (!topic.levelKey) continue;
+    for (const language of ["en", "es"]) {
+      assert.match(
+        String(UI_STRINGS[language][topic.titleKey]), /\{level\}/,
+        `${language}: ${topic.titleKey} takes a level but never shows it`);
+      assert.ok(
+        UI_STRINGS[language][topic.levelKey],
+        `${language}: ${topic.levelKey} is missing, so the deck would name itself in English`);
+    }
   }
 });

@@ -11,8 +11,19 @@ const schema = require("../data/lesson-schema.js");
 
 const root = path.join(__dirname, "..");
 const read = (file) => fs.readFileSync(path.join(root, file), "utf8");
+const { dataSource } = require("./data-source.js");
 
-const bundle = `${read("data/lessons.js")}\n${read("data/curriculum.js")}\n${read("data/after-dark.js")}\n({ lessons, curriculum, fluencyItems, matureItems });`;
+/*
+ * Every global review.js knows how to read, not just the ones the first tests
+ * happened to need. Exporting a subset here made the suite agree with a bug
+ * instead of catching it: the report picker offers a Slang scope and a Signal
+ * scope, both resolve through REFERENCE_SOURCES to globals that were absent
+ * from this bundle and from the snapshot review-ui.js built, and a missing
+ * source yields no anchors rather than an error. So both scopes were
+ * selectable and permanently empty, and the tests walked the same short list
+ * and stayed green.
+ */
+const bundle = `${dataSource({ schema: false })}\n({ lessons, curriculum, fluencyItems, matureItems, slangItems, matureSignals });`;
 const content = vm.runInNewContext(bundle, {}, { filename: "parcero-data-bundle.js" });
 
 const anchors = review.listAnchors(content);
@@ -43,7 +54,45 @@ test("every reviewable string is addressable, and its anchor resolves back to it
     assert.ok(isText(resolved.text), `${anchor} resolved to empty text`);
     assert.ok(isText(resolved.label), `${anchor} has no human-readable label`);
     assert.ok(isText(resolved.path), `${anchor} has no source path`);
-    assert.ok(["data/lessons.js", "data/curriculum.js", "data/after-dark.js"].includes(resolved.source), `${anchor} names an unknown source file`);
+      assert.ok(
+        ["data/lessons.js", "data/curriculum.js", "data/after-dark.js", "data/slang.js", "data/mature.js"].includes(resolved.source)
+          || /^data\/lessons\/[\w-]+\.js$/.test(resolved.source),
+        `${anchor} names an unknown source file`);
+  }
+});
+
+/*
+ * The scope picker in the report tab lists a fixed set of scopes, and each one
+ * filters the anchor list by a prefix. A scope whose backing global never
+ * reaches the resolver produces no anchors and no error -- the reviewer picks
+ * it, gets an empty list, and has no way to tell the content is unreportable
+ * rather than absent. Asserting each scope is non-empty is the check that
+ * would have caught slang and signal being silently unreachable.
+ */
+test("every scope the report picker offers actually has something to report", () => {
+  const scopes = ["lesson", "verb", "fluency", "slang", "mature", "signal"];
+  for (const scope of scopes) {
+    const prefix = `${scope}:`;
+    const found = anchors.filter((anchor) => anchor.startsWith(prefix));
+    assert.ok(found.length > 0, `the "${scope}" scope resolves to no anchors, so the picker shows an empty list`);
+    const resolved = review.resolveAnchor(found[0], content);
+    assert.ok(resolved.ok, `the first "${scope}" anchor did not resolve: ${resolved.reason}`);
+  }
+});
+
+/*
+ * review.js reads its content off whatever object the caller hands it, so a
+ * key the browser snapshot forgets to include is not a crash, just an empty
+ * scope. Tying the two together here means adding a reference kind cannot land
+ * half-wired: review-ui.js has to grow the source before this passes.
+ */
+test("the browser snapshot supplies every global the resolver reads", () => {
+  const ui = read("review-ui.js");
+  const needed = ["lessons", "curriculum", "fluencyItems", "matureItems", "slangItems", "matureSignals"];
+  for (const key of needed) {
+    assert.ok(
+      new RegExp(`\\["${key}",\\s*\\(\\)\\s*=>\\s*${key}\\]`).test(ui),
+      `review-ui.js does not put "${key}" in the data snapshot, so every scope reading it is silently empty`);
   }
 });
 
@@ -164,6 +213,11 @@ test("every leaf anchor maps to a group the page actually renders", () => {
   for (const verb of content.curriculum) rendered.add(`verb:${verb.id}`);
   content.fluencyItems.forEach((_, index) => rendered.add(`fluency:${index}`));
   content.matureItems.forEach((_, index) => rendered.add(`mature:${index}`));
+  /* The library renders the slang glossary and After Dark renders the signal
+     table, so both are as reportable as everything above. They were missing
+     from this list only because the bundle above did not export them. */
+  content.slangItems.forEach((_, index) => rendered.add(`slang:${index}`));
+  content.matureSignals.forEach((_, index) => rendered.add(`signal:${index}`));
 
   for (const anchor of anchors) {
     const group = review.groupAnchor(anchor);
@@ -574,6 +628,26 @@ test("every authored string in a lesson is offered by the report picker", () => 
     "address.form": 'an enum ("usted"/"tú"/"vos"); the page renders t("address.form.*") from i18n.js, so the visible string is the translator\'s, not the author\'s'
   };
 
+  /*
+   * Lesson-level only, and deliberately not in notProse above. That list matches
+   * on key name at any depth, and `register` also exists on vocabulary rows and
+   * variations rows, where it IS rendered (app.js:248 and app.js:267) and has to
+   * stay reportable — putting it above would quietly strip two rendered fields of
+   * their coverage while looking like a one-line fix.
+   *
+   * `lesson.register` itself reaches no page: app.js reads verb.register from the
+   * curriculum, word.register from vocabulary and row.register from variations,
+   * and never the lesson's own. It survived this test for 94 lessons only because
+   * every one of them happened to reuse a string that curriculum.js also uses
+   * ("neutral", "polite"), so the value was reachable through a verb anchor by
+   * coincidence. Two lessons then wrote "polite civic" and "neutral with official
+   * contrast" and the coincidence ran out. The coverage was never real.
+   */
+  const notProseOnLesson = {
+    register: "authored metadata no script renders at lesson level; app.js reads verb/word/row register, never lesson.register",
+    structure: "a grammar key like \"comparison-inequality\", the structure twin of `verb`'s anchor; grep for `.structure` across app.js, flashcards.js, review.js, review-ui.js and data/flashcards.js returns nothing, so no page renders it. Scoped to the lesson root — it occurs 18 times there and nowhere nested — so a future rendered `structure` field on a row would not inherit this exemption"
+  };
+
   // Exactly what review-ui.js does: group the anchors, then ask for each group's parts.
   const groups = [...new Set(anchors.map((anchor) => review.groupAnchor(anchor) || anchor))];
   const reachable = new Set();
@@ -584,6 +658,7 @@ test("every authored string in a lesson is offered by the report picker", () => 
   }
 
   const missed = [];
+  let lessonRoot = "";
   const walk = (node, trail) => {
     if (isText(node)) {
       if (!reachable.has(node.trim())) missed.push(`${trail}: ${JSON.stringify(node.slice(0, 60))}`);
@@ -595,11 +670,15 @@ test("every authored string in a lesson is offered by the report picker", () => 
       const next = trail ? `${trail}.${key}` : key;
       const family = next.replace(/\[\d+\]/g, "").split(".").slice(-2).join(".");
       if (notProse[key] || notProse[family]) continue;
+      if (trail === lessonRoot && notProseOnLesson[key]) continue;
       walk(value, next);
     }
   };
 
-  for (const lesson of content.lessons) walk(lesson, lesson.id);
+  for (const lesson of content.lessons) {
+    lessonRoot = lesson.id;
+    walk(lesson, lesson.id);
+  }
 
   assert.deepStrictEqual(missed, [],
     `${missed.length} authored string(s) are rendered but never offered by the report picker.\n` +

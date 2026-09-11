@@ -82,6 +82,28 @@ function renderMature() {
   }).join("");
   $("#city-note").textContent = t(`afterDark.note.${afterDarkView.city}`);
 }
+/* Signals are national, not per-city, so they render once and stay put while
+   the city tabs swap the word list above them. */
+function renderSignals() {
+  $("#mature-signals").innerHTML = matureSignals.map(([signal, looksLike, means, direction, respond], index) => `<article class="reference-card" data-anchor="signal:${index}"><h3>${esc(signal)}</h3><p><em>${esc(looksLike)}</em></p><p>${esc(means)}</p><p class="detail"><strong>${t("mature.respond")}</strong> ${esc(respond)}</p><span class="tag">${esc(direction === "es" ? "Español" : "English")}</span></article>`).join("");
+}
+/*
+ * Slang is filtered rather than paged. The list is long enough that scrolling it
+ * is useless and short enough that filtering every keystroke costs nothing.
+ */
+function renderSlang() {
+  const query = ($("#slang-search").value || "").trim().toLowerCase();
+  const matches = slangItems
+    .map((item, index) => ({ item, index }))
+    .filter(({ item }) => !query || item.some((cell) => cell.toLowerCase().includes(query)));
+  $("#slang-count").textContent = query
+    ? t("library.slangMatching", { matches: matches.length, total: slangItems.length })
+    : t("library.slangCount", { total: slangItems.length });
+  $("#slang-results").innerHTML = matches.map(({ item, index }) => {
+    const [phrase, meaning, register, region, safety, note] = item;
+    return `<article class="reference-card" data-anchor="slang:${index}"><h3 lang="es">${esc(phrase)}</h3><p><strong>${esc(meaning)}</strong></p><p>${esc(note)}</p><p class="detail"><strong>${t("library.slangSafety")}</strong> ${esc(safety)}</p><span class="tag">${esc(register)}</span><span class="tag">${esc(region)}</span></article>`;
+  }).join("");
+}
 function content() { return ParceroLessonSchema.normalizeContent(currentLesson()[state.direction]); }
 /* Authored content is trusted, but it is still text going into innerHTML. A
    lesson that legitimately needs to show "<" should render it, not break the page. */
@@ -90,7 +112,7 @@ const esc = (value) => (value === null || value === undefined ? "" : String(valu
 const targetLang = () => (state.direction === "es" ? ' lang="es"' : ' lang="en"');
 const supportLang = () => (state.direction === "es" ? ' lang="en"' : ' lang="es"');
 const anchorFor = (field) => `lesson:${currentLesson().id}/${state.direction}/${field}`;
-/* A labelled line that simply disappears when the lesson has nothing to say. */
+/* A labeled line that simply disappears when the lesson has nothing to say. */
 const detail = (key, value, lang) => (value ? `<p class="detail"><strong>${t(key)}</strong> <span${lang || ""}>${esc(value)}</span></p>` : "");
 function save() {
   localStorage.setItem("parcero-direction", state.direction);
@@ -98,6 +120,26 @@ function save() {
   localStorage.setItem("parcero-placement", JSON.stringify(state.placement));
   localStorage.setItem("parcero-lesson", state.lessonId);
 }
+
+/*
+ * Practice history.
+ *
+ * Resolved lazily and cached, because index.html loads app.js before
+ * progress.js — reading ParceroProgress at this point in the file would find
+ * nothing. By the time any handler runs, every script has loaded.
+ *
+ * `progressState` is read through on first use rather than at startup so that
+ * a learner who never opens a practice tab pays nothing for it.
+ */
+let progressState = null;
+const progressApi = () => (typeof ParceroProgress === "object" ? ParceroProgress : null);
+function progress() {
+  const api = progressApi();
+  if (!api) return null;
+  if (!progressState) progressState = api.load();
+  return progressState;
+}
+
 function renderPlacement() {
   const questions = placementQuestions[state.direction];
   if (state.placement?.direction === state.direction) {
@@ -134,10 +176,49 @@ function completePlacement() {
   renderPlacement();
 }
 function renderLessonList() {
-  $("#lesson-list").innerHTML = lessons.map((item, index) => {
+  /*
+   * The meta line carries the verb as well as the level. The curriculum is
+   * anchored one lesson per verb, so the verb is the thing a learner looks a
+   * lesson up by -- and four lessons are legitimately titled after a different
+   * verb than they teach, because the title describes the situation and the
+   * situation belongs to whoever is speaking. "Aprender a hacer ajiaco" is the
+   * enseñar lesson: the reader is the one being taught. Without the verb shown,
+   * that title sits in the list looking like the aprender lesson, which has its
+   * own entry.
+   */
+  /*
+   * Filtered rather than paged, for the same reason slang is: two hundred
+   * situations is far past the point where scrolling finds anything, and
+   * matching every keystroke over a list this size costs nothing.
+   *
+   * The index shown is the lesson's position in the whole course, not its
+   * position in the filtered view, so a lesson keeps the same number whatever
+   * is typed. Searching covers the title, the verb and the level, which is why
+   * "starter" narrows to the foundation tier without a separate control.
+   */
+  const search = $("#lesson-search");
+  const query = ((search && search.value) || "").trim().toLowerCase();
+  const matches = lessons
+    .map((item, index) => ({ item, index }))
+    .filter(({ item }) => !query || [
+      item[state.direction].title,
+      item[state.direction].situation,
+      item.verb,
+      item.level
+    ].some((field) => field && String(field).toLowerCase().includes(query)));
+  const count = $("#lesson-count");
+  if (count) {
+    count.textContent = query
+      ? t("lessons.matching", { matches: matches.length, total: lessons.length })
+      : t("lessons.count", { total: lessons.length });
+  }
+  const empty = $("#lesson-empty");
+  if (empty) empty.hidden = matches.length > 0;
+  $("#lesson-list").innerHTML = matches.map(({ item, index }) => {
     const done = state.completed.has(item.id);
     const active = item.id === state.lessonId;
-    return `<li><button class="lesson-link${active ? " active" : ""}" type="button" data-lesson="${item.id}" aria-current="${active ? "true" : "false"}"><span class="lesson-link-index">${index + 1}</span><span class="lesson-link-body"><strong>${item[state.direction].title}</strong><span class="lesson-link-meta">${item.level}</span></span><span class="lesson-link-state">${done ? t("lesson.explored") : ""}</span></button></li>`;
+    const meta = item.verb ? `${item.level} · ${item.verb}` : item.level;
+    return `<li><button class="lesson-link${active ? " active" : ""}" type="button" data-lesson="${item.id}" aria-current="${active ? "true" : "false"}"><span class="lesson-link-index">${index + 1}</span><span class="lesson-link-body"><strong>${item[state.direction].title}</strong><span class="lesson-link-meta">${meta}</span></span><span class="lesson-link-state">${done ? t("lesson.explored") : ""}</span></button></li>`;
   }).join("");
 }
 function selectLesson(id) {
@@ -279,6 +360,7 @@ function render() {
   const lesson = currentLesson();
   if (window.ParceroI18n) window.ParceroI18n.applyI18n(state.direction);
   $("#lesson-level").textContent = lesson.level;
+  renderBand(lesson);
   $("#lesson-title").textContent = current.title;
   $("#lesson-situation").textContent = current.situation;
   renderSetting(current);
@@ -299,6 +381,64 @@ function render() {
   updateProgress();
   renderPlacement();
 }
+/*
+ * The level a lesson teaches, and the level the learner has shown.
+ *
+ * Both are derived — see cefr.js. Nothing here decides what B1 means; it only
+ * asks and renders the answer, so a rewritten lesson moves its own badge.
+ */
+const cefrApi = () => (typeof ParceroCEFR === "object" ? ParceroCEFR : null);
+
+function renderBand(lesson) {
+  const badge = $("#lesson-band");
+  const api = cefrApi();
+  if (!badge) return;
+  if (!api) {
+    badge.hidden = true;
+    return;
+  }
+  const result = api.lessonBand(lesson, state.direction);
+  /* A floored A1 has no structure to name, so it says what it is instead of
+     pointing at a feature it cannot evidence. */
+  const top = result.features
+    .filter((feature) => feature.band === result.band)
+    .map((feature) => feature.name)[0];
+  badge.textContent = top
+    ? t("level.lessonBand", { band: result.band, feature: top })
+    : t("level.lessonBasic", { band: result.band });
+  badge.hidden = false;
+}
+
+function renderLevel() {
+  const panel = $("#level-panel");
+  const api = cefrApi();
+  const progressApiRef = progressApi();
+  if (!panel || !api) return;
+
+  const scoreOf = (lesson) => {
+    if (!progressApiRef) return null;
+    const score = progressApiRef.lessonScore(progress(), state.direction, lesson.id);
+    return score ? score.accuracy : null;
+  };
+  const result = api.attainment(lessons, state.direction, scoreOf);
+
+  $("#level-reached").textContent = result.reached || t("level.none");
+  const next = result.bands.find((band) => band.taught && !band.met);
+  $("#level-note").textContent = next
+    ? t("level.next", { band: next.band, strong: next.strong, needed: next.needed })
+    : t("level.top");
+
+  $("#level-ladder").innerHTML = result.bands
+    .map((band) => {
+      if (!band.taught) {
+        return `<li class="level-step is-untaught"><span class="level-step-band">${esc(band.band)}</span><span class="level-step-count">${t("level.notTaught")}</span></li>`;
+      }
+      const width = band.needed ? Math.min(100, Math.round((band.strong / band.needed) * 100)) : 0;
+      return `<li class="level-step${band.met ? " is-met" : ""}"><span class="level-step-band">${esc(band.band)}</span><span class="level-step-bar"><span class="level-step-fill" style="width:${width}%"></span></span><span class="level-step-count">${t("level.ofNeeded", { strong: band.strong, needed: band.needed })}</span></li>`;
+    })
+    .join("");
+}
+
 function updateProgress() {
   const lesson = currentLesson();
   const index = lessonIndex();
@@ -311,6 +451,29 @@ function updateProgress() {
   $("#lesson-position").textContent = t("pager.position", { index: index + 1, total });
   $("#previous-lesson").disabled = index === 0;
   $("#next-lesson").disabled = index === total - 1;
+  renderLevel();
+}
+
+/*
+ * Grade the answer just given and keep it.
+ *
+ * Written so that a missing progress.js costs the record and nothing else —
+ * the practice round still runs, exactly as the deck still runs without
+ * srs.js. Storage is written per answer rather than batched at the end of the
+ * round because a learner who closes the tab mid-lesson has still done the
+ * work, and losing it would reproduce the bug this replaces.
+ */
+function recordPractice(correct) {
+  const api = progressApi();
+  const lesson = currentLesson();
+  if (!api || !lesson) return;
+  progressState = api.record(progress(), {
+    direction: state.direction,
+    lessonId: lesson.id,
+    index: practiceView.index,
+    correct
+  });
+  api.save(progressState);
 }
 document.querySelectorAll("input[name=direction]").forEach((input) => {
   input.checked = input.value === state.direction;
@@ -343,6 +506,10 @@ $("#choices").addEventListener("click", (event) => {
   choice.classList.add(correct ? "correct" : "incorrect");
   if (!correct) document.querySelector(`[data-answer="${question.answer}"]`).classList.add("correct");
   $("#practice-feedback").textContent = correct ? t("practice.correct") : t("practice.incorrect");
+  /* The result is the whole point of asking. Recording it is what lets a
+     missed question come back instead of vanishing the moment the learner
+     clicks Next. */
+  recordPractice(correct);
   $("#practice-next").hidden = practiceView.index >= practiceQuestions().length - 1;
 });
 $("#practice-next").addEventListener("click", () => {
@@ -359,7 +526,7 @@ $("#lesson-list").addEventListener("click", (event) => {
 });
 $("#previous-lesson").addEventListener("click", () => selectLesson(lessons[Math.max(0, lessonIndex() - 1)].id));
 $("#next-lesson").addEventListener("click", () => selectLesson(lessons[Math.min(lessons.length - 1, lessonIndex() + 1)].id));
-$("#reset-progress").addEventListener("click", () => { state.completed.clear(); state.placement = null; state.question = 0; state.responses = []; save(); render(); });
+$("#reset-progress").addEventListener("click", () => { state.completed.clear(); state.placement = null; state.question = 0; state.responses = []; const api = progressApi(); if (api) progressState = api.clear(); save(); render(); });
 $("#listen-dialogue").addEventListener("click", () => {
   if (!("speechSynthesis" in window)) { $("#speech-status").textContent = t("speech.unsupported"); return; }
   speechSynthesis.cancel();
@@ -398,19 +565,24 @@ document.querySelectorAll(".city-tab").forEach((tab) => tab.addEventListener("cl
 renderVerbs();
 renderFluency();
 renderMature();
+renderSignals();
+renderSlang();
+$("#slang-search").addEventListener("input", renderSlang);
+$("#lesson-search").addEventListener("input", renderLessonList);
 render();
 
 /* ---------- module navigation ----------
    Each module is a view, so only one is on screen at a time. Routing runs off
    the hash the nav already used, which keeps every existing in-page link, the
    back button and any bookmark working without a second link scheme. */
-const VIEWS = ["home", "lessons", "flashcards", "placement", "library", "after-dark"];
+const VIEWS = ["home", "lessons", "flashcards", "placement", "library", "workbook", "after-dark"];
 const ROUTE_FOR_HASH = {
   "": "home", "#top": "home",
   "#lessons": "lessons", "#lesson": "lessons",
   "#flashcards": "flashcards",
   "#placement": "placement", "#roadmap": "placement",
   "#library": "library",
+  "#workbook": "workbook",
   "#after-dark": "after-dark"
 };
 function showView(name, options) {
@@ -434,19 +606,65 @@ showView(viewForHash(), { scroll: false });
 /* ---------- modules menu ---------- */
 const modulesButton = $("#modules-button");
 const modulesMenu = $("#modules-menu");
-function fillModulesMenu() {
-  modulesMenu.innerHTML = lessons.map((lesson, index) =>
-    `<button type="button" role="menuitem" data-goto="${esc(lesson.id)}">` +
-    `<span class="modules-index">${index + 1}</span>` +
-    `<span class="modules-body"><strong>${esc(lesson[state.direction].title)}</strong>` +
-    `<small>${esc(lesson.level)}</small></span></button>`).join("");
+const modulesList = $("#modules-list");
+const modulesFilter = $("#modules-filter");
+
+/*
+ * The menu is named "Modules" but used to be a flat list of every lesson. At
+ * eight lessons that was a menu; at 233 it is a wall, and on a phone it is a
+ * wall you scroll blind. So the list is grouped under the module each lesson
+ * belongs to, and filtered from the box at the top.
+ *
+ * Grouping is derived from `sourceFile`, the same key the workbook uses, so a
+ * lesson lands in the right module by construction. COURSE_MODULES supplies
+ * only the human title. A block with no title still renders, under its own
+ * file name, because a lesson you cannot reach is worse than an ugly heading.
+ */
+function fillModulesMenu(query) {
+  const needle = String(query == null ? modulesFilter.value : query).trim().toLowerCase();
+  const titles = new Map(COURSE_MODULES.map((module) => [module.block, module.title[state.direction]]));
+  const groups = new Map();
+  lessons.map((lesson, index) => ({
+    id: lesson.id,
+    number: index + 1,
+    heading: titles.get(lesson.sourceFile) || lesson.sourceFile,
+    title: lesson[state.direction].title,
+    level: lesson.level
+  })).forEach((entry) => {
+    const hit = !needle ||
+      entry.title.toLowerCase().includes(needle) ||
+      entry.level.toLowerCase().includes(needle) ||
+      entry.heading.toLowerCase().includes(needle);
+    if (!hit) return;
+    if (!groups.has(entry.heading)) groups.set(entry.heading, []);
+    groups.get(entry.heading).push(entry);
+  });
+
+  if (!groups.size) {
+    modulesList.innerHTML = `<p class="modules-empty">${esc(t("nav.modulesEmpty"))}</p>`;
+    return;
+  }
+  modulesList.innerHTML = [...groups].map(([heading, entries]) =>
+    `<div class="modules-group" role="group" aria-label="${esc(heading)}">` +
+    `<p class="modules-group-title">${esc(heading)}</p>` +
+    entries.map((entry) =>
+      `<button type="button" role="menuitem" data-goto="${esc(entry.id)}">` +
+      `<span class="modules-index">${entry.number}</span>` +
+      `<span class="modules-body"><strong>${esc(entry.title)}</strong>` +
+      `<small>${esc(entry.level)}</small></span></button>`).join("") +
+    `</div>`).join("");
 }
 function setModulesOpen(open) {
-  if (open) fillModulesMenu();
+  if (open) {
+    modulesFilter.value = "";
+    fillModulesMenu("");
+  }
   modulesMenu.hidden = !open;
   modulesButton.setAttribute("aria-expanded", String(open));
   modulesButton.parentElement.classList.toggle("is-open", open);
+  if (open) modulesFilter.focus();
 }
+modulesFilter.addEventListener("input", () => fillModulesMenu());
 modulesButton.addEventListener("click", (event) => {
   event.stopPropagation();
   setModulesOpen(modulesMenu.hidden);

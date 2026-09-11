@@ -13,6 +13,7 @@ const vm = require("node:vm");
 
 const root = path.join(__dirname, "..");
 const read = (file) => fs.readFileSync(path.join(root, file), "utf8");
+const { dataSource } = require("./data-source.js");
 
 const html = read("index.html");
 const ui = read("review-ui.js");
@@ -20,7 +21,7 @@ const css = read("styles.css");
 const { UI_STRINGS } = require("../i18n.js");
 const review = require("../review.js");
 const content = vm.runInNewContext(
-  `${read("data/lesson-schema.js")}\n${read("data/lessons.js")}\n${read("data/curriculum.js")}\n${read("data/after-dark.js")}\n({ lessons, curriculum, fluencyItems, matureItems });`,
+  `${dataSource()}\n({ lessons, curriculum, fluencyItems, matureItems });`,
   {},
   { filename: "parcero-data-bundle.js" }
 );
@@ -74,8 +75,8 @@ test("the picker reaches every kind of content a reviewer can see", () => {
   const scopes = ui.match(/const SCOPES = \[([^\]]+)\]/);
   assert.ok(scopes, "expected a list of scopes");
   const codes = [...scopes[1].matchAll(/"([\w-]+)"/g)].map((match) => match[1]);
-  assert.deepStrictEqual(codes, ["lesson", "verb", "fluency", "mature"],
-    "the lesson and all three library sections must be reportable");
+  assert.deepStrictEqual(codes, ["lesson", "verb", "fluency", "slang", "mature", "signal"],
+    "the lesson and every library section must be reportable");
   for (const code of codes) {
     for (const language of ["en", "es"]) {
       const key = `report.scope.${code}`;

@@ -73,7 +73,43 @@ const ParceroReview = (function () {
   const VERB_SLOTS = ["spanish", "english", "presentYo", "preteriteYo", "participle", "level", "register"];
   const VERB_FORM_SLOTS = ["presentYo", "preteriteYo", "participle"];
   const FLUENCY_SLOTS = ["phrase", "meaning", "type", "region", "note"];
-  const MATURE_SLOTS = ["phrase", "equivalent", "severity", "note"];
+  /* Phrase first, then city: itemLabel previews the first slot, and a picker
+     that lists the city first shows the reviewer the same handful of city
+     names 150 times over. The city still comes second because the same phrase
+     is listed once per city and the reading differs, so the phrase alone does
+     not identify the row. */
+  const MATURE_SLOTS = ["phrase", "city", "equivalent", "severity", "note"];
+  const SLANG_SLOTS = ["phrase", "meaning", "register", "region", "safety", "note"];
+  const SIGNAL_SLOTS = ["signal", "whatItLooksLike", "whatItMeans", "direction", "respond"];
+  /*
+   * The four flat reference lists, keyed by the anchor kind that addresses
+   * them. Three are lists of positional rows and After Dark is a list of
+   * objects, but every slot is read through SCHEMA.slotValue/slotPath, which
+   * take the shape into account, so they all parse, render and resolve
+   * identically - the only thing that differs is the slot names. Adding a
+   * fifth list means adding a row here, not another branch in three places.
+   */
+  const REFERENCE_SLOTS = {
+    fluency: FLUENCY_SLOTS,
+    mature: MATURE_SLOTS,
+    slang: SLANG_SLOTS,
+    signal: SIGNAL_SLOTS
+  };
+  const REFERENCE_KINDS = Object.keys(REFERENCE_SLOTS);
+  /* Which global each reference kind reads from. */
+  const REFERENCE_SOURCES = {
+    fluency: "fluencyItems",
+    mature: "matureItems",
+    slang: "slangItems",
+    signal: "matureSignals"
+  };
+  /* And which file a reviewer would have to open to fix it. */
+  const REFERENCE_FILES = {
+    fluency: "data/curriculum.js",
+    mature: "data/after-dark.js",
+    slang: "data/slang.js",
+    signal: "data/mature.js"
+  };
 
   /* Practice question 0 is the lesson's original prompt/choices; 1 and up are
      practiceExtra. Keeping that mapping means flags filed against the original
@@ -122,7 +158,20 @@ const ParceroReview = (function () {
   ];
 
   const codes = (pairs) => pairs.map(([code]) => code);
-  const labelOf = (pairs, code) => (pairs.find(([value]) => value === code) || [code, code])[1];
+  /*
+   * An unrecognised code still names itself, so a flag filed by a newer build
+   * survives triage on an older checkout instead of being dropped. A *missing*
+   * code has nothing to name itself with, and the old fallback handed back
+   * undefined -- which crashed the triage CLI on `.split()` and, in markdown
+   * mode, rendered a silent "### undefined" heading. Flags arrive as JSON
+   * pasted into GitHub issues by hand, so a field going missing is ordinary
+   * input, not corruption, and losing the report is the worst outcome here.
+   */
+  const labelOf = (pairs, code) => {
+    const found = pairs.find(([value]) => value === code);
+    if (found) return found[1];
+    return typeof code === "string" && code.trim() ? code : "unspecified";
+  };
   const isText = (value) => typeof value === "string" && value.trim().length > 0;
 
   /*
@@ -236,10 +285,10 @@ const ParceroReview = (function () {
       return segments.length === 2 && VERB_SLOTS.includes(slot) ? { kind, id, slot } : null;
     }
 
-    if (kind === "fluency" || kind === "mature") {
+    if (REFERENCE_KINDS.includes(kind)) {
       const [rawIndex, slot] = segments;
       if (!/^\d+$/.test(rawIndex)) return null;
-      const slots = kind === "fluency" ? FLUENCY_SLOTS : MATURE_SLOTS;
+      const slots = REFERENCE_SLOTS[kind];
       if (segments.length === 1) return { kind, index: Number(rawIndex), slot: null };
       return segments.length === 2 && slots.includes(slot) ? { kind, index: Number(rawIndex), slot } : null;
     }
@@ -325,6 +374,9 @@ const ParceroReview = (function () {
 
   function slotLanguage(kind, field, slot, direction) {
     if (kind === "verb") return slot === "english" ? "en" : VERB_FORM_SLOTS.includes(slot) || slot === "spanish" ? "es" : null;
+    /* Slang is Colombian Spanish by definition; the phrase itself is the only
+       slot in that language, and the rest is explanation written for the reader. */
+    if (kind === "slang") return slot === "phrase" ? "es" : null;
     if (kind !== "lesson") return null;
     const target = direction;
     const support = direction === "es" ? "en" : "es";
@@ -359,13 +411,17 @@ const ParceroReview = (function () {
       if (!found) return { anchor, ok: false, reason: `no lesson with id "${parsed.id}"` };
       const content = found.lesson[parsed.direction];
       if (!content) return { anchor, ok: false, reason: `lesson "${parsed.id}" has no "${parsed.direction}" content` };
-      const base = `lessons[${found.index}].${parsed.direction}`;
+      // The file the lesson is written in, and its index within that file -- a
+      // block lesson is not at its global position in any file on disk.
+      const lessonSource = found.lesson.sourceFile || "data/lessons.js";
+      const lessonIndex = found.lesson.sourceIndex ?? found.index;
+      const base = `lessons[${lessonIndex}].${parsed.direction}`;
       const lessonName = content.title || parsed.id;
       const where = `${lessonName} · ${directionName(parsed.direction)}`;
 
       if (LESSON_TEXT_FIELDS.includes(parsed.field)) {
         return {
-          anchor, ok: true, kind: "lesson", source: "data/lessons.js", path: `${base}.${parsed.field}`,
+          anchor, ok: true, kind: "lesson", source: lessonSource, path: `${base}.${parsed.field}`,
           text: content[parsed.field],
           slotLabel: lessonSlotLabel(parsed.field, null, parsed.direction),
           label: `${where} · ${lessonSlotLabel(parsed.field, null, parsed.direction)}`,
@@ -378,8 +434,8 @@ const ParceroReview = (function () {
         if (!isText(value)) return { anchor, ok: false, reason: `lesson "${parsed.id}" has no ${parsed.field}` };
         const slotLabel = lessonSlotLabel(parsed.field, null, parsed.direction);
         return {
-          anchor, ok: true, kind: "lesson", source: "data/lessons.js",
-          path: `lessons[${found.index}].${parsed.field}`,
+          anchor, ok: true, kind: "lesson", source: lessonSource,
+          path: `lessons[${lessonIndex}].${parsed.field}`,
           text: value, slotLabel, label: `${where} · ${slotLabel}`,
           lang: slotLanguage("lesson", parsed.field, null, parsed.direction)
         };
@@ -390,7 +446,7 @@ const ParceroReview = (function () {
         if (choice === undefined) return { anchor, ok: false, reason: `lesson "${parsed.id}" has no choice ${parsed.index + 1}` };
         const slotLabel = `Answer choice ${parsed.index + 1}${content.answer === parsed.index ? " (the correct one)" : ""}`;
         return {
-          anchor, ok: true, kind: "lesson", source: "data/lessons.js", path: `${base}.choices[${parsed.index}]`,
+          anchor, ok: true, kind: "lesson", source: lessonSource, path: `${base}.choices[${parsed.index}]`,
           text: choice, slotLabel, label: `${where} · ${slotLabel}`,
           lang: slotLanguage("lesson", "choices", null, parsed.direction)
         };
@@ -403,7 +459,7 @@ const ParceroReview = (function () {
         const slotLabel = lessonSlotLabel(parsed.field, parsed.slot, parsed.direction);
         const fieldLabel = parsed.field === "setting" ? "The situation" : "Address form";
         return {
-          anchor, ok: true, kind: "lesson", source: "data/lessons.js",
+          anchor, ok: true, kind: "lesson", source: lessonSource,
           path: `${base}.${parsed.field}.${parsed.slot}`,
           text: value, slotLabel, label: `${where} · ${fieldLabel} · ${slotLabel}`,
           lang: slotLanguage("lesson", parsed.field, parsed.slot, parsed.direction)
@@ -418,7 +474,7 @@ const ParceroReview = (function () {
           if (!isText(question.prompt)) return { anchor, ok: false, reason: `practice question ${parsed.index + 1} has no prompt` };
           const slotLabel = `Practice question ${parsed.index + 1}`;
           return {
-            anchor, ok: true, kind: "lesson", source: "data/lessons.js", path: `${holder}.prompt`,
+            anchor, ok: true, kind: "lesson", source: lessonSource, path: `${holder}.prompt`,
             text: question.prompt, slotLabel, label: `${where} · ${slotLabel}`,
             lang: slotLanguage("lesson", "practice", parsed.slot, parsed.direction)
           };
@@ -427,7 +483,7 @@ const ParceroReview = (function () {
           if (!isText(question.tests)) return { anchor, ok: false, reason: `practice question ${parsed.index + 1} has no "tests" note` };
           const slotLabel = `Question ${parsed.index + 1}, what it tests`;
           return {
-            anchor, ok: true, kind: "lesson", source: "data/lessons.js", path: `${holder}.tests`,
+            anchor, ok: true, kind: "lesson", source: lessonSource, path: `${holder}.tests`,
             text: question.tests, slotLabel, label: `${where} · ${slotLabel}`,
             lang: slotLanguage("lesson", "practice", parsed.slot, parsed.direction)
           };
@@ -436,7 +492,7 @@ const ParceroReview = (function () {
         if (!isText(choice)) return { anchor, ok: false, reason: `practice question ${parsed.index + 1} has no choice ${parsed.choice + 1}` };
         const slotLabel = `Question ${parsed.index + 1}, answer choice ${parsed.choice + 1}${question.answer === parsed.choice ? " (the correct one)" : ""}`;
         return {
-          anchor, ok: true, kind: "lesson", source: "data/lessons.js", path: `${holder}.choices[${parsed.choice}]`,
+          anchor, ok: true, kind: "lesson", source: lessonSource, path: `${holder}.choices[${parsed.choice}]`,
           text: choice, slotLabel, label: `${where} · ${slotLabel}`,
           lang: slotLanguage("lesson", "practice", parsed.slot, parsed.direction)
         };
@@ -467,7 +523,7 @@ const ParceroReview = (function () {
         ? `.${parsed.slot}[${parsed.item}]`
         : isNested ? `.${parsed.slot}` : SCHEMA.slotPath(row, slots, parsed.slot);
       return {
-        anchor, ok: true, kind: "lesson", source: "data/lessons.js",
+        anchor, ok: true, kind: "lesson", source: lessonSource,
         path: `${base}.${parsed.field}[${parsed.index}]${suffix}`,
         text: value, slotLabel, label: `${where} · ${rowLabel} · ${slotLabel}`,
         lang: slotLanguage("lesson", parsed.field, parsed.slot, parsed.direction)
@@ -494,29 +550,37 @@ const ParceroReview = (function () {
       };
     }
 
-    const listName = parsed.kind === "fluency" ? "fluencyItems" : "matureItems";
+    const listName = REFERENCE_SOURCES[parsed.kind];
     const list = data[listName] || [];
     const row = list[parsed.index];
     if (!row) return { anchor, ok: false, reason: `${listName} has no entry ${parsed.index + 1}` };
-    const slots = parsed.kind === "fluency" ? FLUENCY_SLOTS : MATURE_SLOTS;
-    /* Fluency rows are still tuples; After Dark rows are objects. A short or
-       missing slot yields undefined rather than throwing, and answering ok:true
-       with nothing in it is the worst outcome: every caller believes ok, and the
-       part picker just thins out with nothing said. */
-    const value = SCHEMA.slotValue(row, slots, parsed.slot);
-    if (!isText(value)) return { anchor, ok: false, reason: `${listName} entry ${parsed.index + 1} has no "${parsed.slot}"` };
-    const slotLabels = parsed.kind === "fluency"
-      ? { phrase: "Phrase", meaning: "Meaning", type: "Type label", region: "Region label", note: "Usage note" }
-      : { phrase: "Phrase", equivalent: "Equivalent", severity: "Severity label", note: "Safety note" };
-    const family = parsed.kind === "fluency" ? "Fluency reference" : "After Dark reference";
-    return {
-      anchor, ok: true, kind: parsed.kind,
-      source: parsed.kind === "fluency" ? "data/curriculum.js" : "data/after-dark.js",
-      /* slotPath, not a hand-built tuple index: an object row's slot lives at
-         .severity, and sending a maintainer to [2] would be a wrong address. */
-      path: `${listName}[${parsed.index}]${SCHEMA.slotPath(row, slots, parsed.slot)}`,
+      const slots = REFERENCE_SLOTS[parsed.kind];
+      /* Fluency, slang and signal rows are still tuples; After Dark rows are
+         objects. A short or missing slot yields undefined rather than throwing,
+         and answering ok:true with nothing in it is the worst outcome: every
+         caller believes ok, and the part picker just thins out with nothing said. */
+      const value = SCHEMA.slotValue(row, slots, parsed.slot);
+      if (!isText(value)) return { anchor, ok: false, reason: `${listName} entry ${parsed.index + 1} has no "${parsed.slot}"` };
+      const slotLabels = {
+        fluency: { phrase: "Phrase", meaning: "Meaning", type: "Type label", region: "Region label", note: "Usage note" },
+        mature: { city: "City", phrase: "Phrase", equivalent: "Equivalent", severity: "Severity label", note: "Safety note" },
+        slang: { phrase: "Phrase", meaning: "Meaning", register: "Register label", region: "Region label", safety: "Can you say it?", note: "Usage note" },
+        signal: { signal: "Signal", whatItLooksLike: "What it looks like", whatItMeans: "What it means", direction: "Language", respond: "What to do" }
+      }[parsed.kind];
+      const family = {
+        fluency: "Fluency reference",
+        mature: "After Dark reference",
+        slang: "Colombian slang reference",
+        signal: "Conversation signal"
+      }[parsed.kind];
+      return {
+        anchor, ok: true, kind: parsed.kind, source: REFERENCE_FILES[parsed.kind],
+        /* slotPath, not a hand-built tuple index: an object row's slot lives at
+           .severity, and sending a maintainer to [2] would be a wrong address. */
+        path: `${listName}[${parsed.index}]${SCHEMA.slotPath(row, slots, parsed.slot)}`,
       text: value, slotLabel: slotLabels[parsed.slot],
-      label: `${family} “${SCHEMA.slotValue(row, slots, slots[0])}” · ${slotLabels[parsed.slot]}`, lang: null
+      label: `${family} “${SCHEMA.slotValue(row, slots, slots[0])}” · ${slotLabels[parsed.slot]}`,
+      lang: slotLanguage(parsed.kind, null, parsed.slot, null)
     };
   }
 
@@ -564,6 +628,19 @@ const ParceroReview = (function () {
   }
 
   function listAnchors(data) {
+    const cached = anchorListCache.get(data);
+    if (cached) return cached;
+    const all = buildAnchors(data);
+    anchorListCache.set(data, all);
+    return all;
+  }
+
+  /* Keyed on the caller's data object, like partsIndex, and for the same
+     reason: enumerating every anchor walks the whole corpus, and the picker
+     asks for them once per item it draws. Callers only ever read the list. */
+  const anchorListCache = new WeakMap();
+
+  function buildAnchors(data) {
     const all = [];
     for (const lesson of data.lessons || []) {
       for (const direction of DIRECTIONS) {
@@ -606,12 +683,11 @@ const ParceroReview = (function () {
       }
     }
     for (const verb of data.curriculum || []) for (const slot of VERB_SLOTS) all.push(`verb:${verb.id}/${slot}`);
-    (data.fluencyItems || []).forEach((_, index) => {
-      for (const slot of FLUENCY_SLOTS) all.push(`fluency:${index}/${slot}`);
-    });
-    (data.matureItems || []).forEach((_, index) => {
-      for (const slot of MATURE_SLOTS) all.push(`mature:${index}/${slot}`);
-    });
+    for (const kind of REFERENCE_KINDS) {
+      (data[REFERENCE_SOURCES[kind]] || []).forEach((_, index) => {
+        for (const slot of REFERENCE_SLOTS[kind]) all.push(`${kind}:${index}/${slot}`);
+      });
+    }
     return all;
   }
 
@@ -703,7 +779,7 @@ const ParceroReview = (function () {
     }).join("\n\n");
   }
 
-  function summarise(flags, data) {
+  function summarize(flags, data) {
     const lessons = new Set();
     for (const flag of flags) {
       const parsed = parseAnchor(flag.anchor);
@@ -721,12 +797,12 @@ const ParceroReview = (function () {
   }
 
   function issueTitle(flags, data) {
-    return `Native-speaker flags: ${summarise(flags, data)}`;
+    return `Native-speaker flags: ${summarize(flags, data)}`;
   }
 
   function issueBody(flags, data) {
     return [
-      summarise(flags, data) + ", reported from the Report an error tab.",
+      summarize(flags, data) + ", reported from the Report an error tab.",
       "",
       flagsToMarkdown(flags, data)
     ].join("\n");
@@ -760,8 +836,9 @@ const ParceroReview = (function () {
     ISSUE_TYPES, SEVERITIES, REVIEWER_ROLES, REGION_SUGGESTIONS,
     labelOf, labelKey, regionCodeFor, parseAnchor, isGroupAnchor, groupAnchor, resolveAnchor, partsForAnchor, listAnchors,
     validateFlag, flagKey, buildPayload, payloadBlock, extractPayload,
-    flagsToMarkdown, summarise, issueTitle, issueBody, buildIssueUrl, blankIssueUrl
+    flagsToMarkdown, summarize, issueTitle, issueBody, buildIssueUrl, blankIssueUrl
   };
 })();
 
 if (typeof module !== "undefined" && module.exports) module.exports = ParceroReview;
+

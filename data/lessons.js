@@ -1,9 +1,9 @@
 const lessons = [{
   id: "greeting-at-the-cafe",
   level: "Starter · Everyday life",
-  skills: ["listening", "speaking", "context", "pronunciation"],
-  domain: "everyday life",
-  register: "friendly informal",
+  skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
+  domain: "food-and-drink",
+  register: "familiar",
   pathways: ["foundation", "professional-customer-service"],
   review: "pending",
   es: {
@@ -20,7 +20,7 @@ const lessons = [{
       form: "tú",
       who: "Camila and Alex use tú with each other from the first line.",
       why: "In a Bogotá corner shop, tú is the ordinary register between a customer and a shopkeeper who see each other regularly. It signals everyday closeness, not disrespect.",
-      ifYouSwitch: "Usted is not wrong and no one would take offence, but it puts a little distance in — the distance you would keep with a bank teller. Some Bogotanos use usted with everyone, including their own children, so hearing it back is not a rebuke."
+      ifYouSwitch: "Usted is not wrong and no one would take offense, but it puts a little distance in — the distance you would keep with a bank teller. Some Bogotanos use usted with everyone, including their own children, so hearing it back is not a rebuke."
     },
     dialogue: [
       { speaker: "Camila", target: "¡Buenas! ¿Cómo estás?", translation: "Hi! How are you?", pronunciation: "BWEH-nas, KOH-moh ehs-TAHS", literal: "Good [ones]! How are you?", why: "“Buenas” is the clipped form of “buenos días / buenas tardes”. Because it drops the time of day, it works at any hour — which is exactly why Colombians reach for it." },
@@ -31,10 +31,10 @@ const lessons = [{
       { speaker: "Alex", target: "Gracias, muy amable.", translation: "Thanks, that's very kind.", pronunciation: "GRAH-syas, mooy ah-MAH-bleh", literal: "Thanks, very kind.", why: "A standard closing courtesy. Colombians tend to close small exchanges with a second thank-you rather than a single one." }
     ],
     vocabulary: [
-      { term: "¿Me regalas...?", explanation: "The ordinary Colombian way to ask for something in a shop or café.", literal: "Will you gift me...?", useWhen: "Ordering, or asking for something small and expected — a coffee, a bag, the bill.", avoidWhen: "Asking for a real favour or something expensive. It is a softener for routine requests, not a way to ask for a discount.", register: "friendly informal", region: "General Colombian; very frequent in Bogotá and the coffee region. In Spain or Argentina it would be heard literally and would confuse.", related: ["¿Me das...?", "¿Me vendes...?", "Regáleme..."], example: { target: "¿Me regalas una bolsa, por favor?", translation: "Could I have a bag, please?" } },
+      { term: "¿Me regalas...?", explanation: "The ordinary Colombian way to ask for something in a shop or café.", literal: "Will you gift me...?", useWhen: "Ordering, or asking for something small and expected — a coffee, a bag, the bill.", avoidWhen: "Asking for a real favor or something expensive. It is a softener for routine requests, not a way to ask for a discount.", register: "friendly informal", region: "General Colombian; very frequent in Bogotá and the coffee region. In Spain or Argentina it would be heard literally and would confuse.", related: ["¿Me das...?", "¿Me vendes...?", "Regáleme..."], example: { target: "¿Me regalas una bolsa, por favor?", translation: "Could I have a bag, please?" } },
       { term: "tinto", explanation: "A small black coffee, usually served in a little cup and often sweetened.", literal: "tinted / dark red", useWhen: "Ordering coffee anywhere in Colombia.", avoidWhen: "Ordering wine. In Spain “vino tinto” is red wine, and asking for “un tinto” in Madrid gets you a glass of it.", register: "neutral", region: "Colombia-wide. This is one of the clearest false friends between Colombian and Peninsular Spanish.", related: ["perico", "pintado", "café con leche"], example: { target: "Un tinto y un pandebono, por favor.", translation: "A black coffee and a pandebono, please." } },
       { term: "ya", explanation: "In Colombian speech this usually means “right now” or “in a moment”, not “already”.", literal: "already", useWhen: "Promising immediate action, or asking whether something has happened yet.", avoidWhen: "Assuming it always means the action is complete — “ya voy” means “I'm on my way”, not “I already went”.", register: "neutral", region: "General Colombian. The stretchiness of “ya” is a running joke about Colombian timekeeping.", related: ["ahorita", "ya mismo", "de una"], example: { target: "Ya te lo traigo.", translation: "I'll bring it right over." } },
-      { term: "Buenas", explanation: "An all-purpose greeting, shortened from “buenos días” or “buenas tardes”.", literal: "Good [ones]", useWhen: "Entering a shop, passing a neighbour, starting almost any casual exchange.", avoidWhen: "Opening a formal meeting or writing an email, where the full “Buenos días” is expected.", register: "friendly informal", region: "General Colombian, extremely frequent.", related: ["¿Quiubo?", "¿Bien o qué?", "Buenos días"], example: { target: "¡Buenas! ¿Me atiende, por favor?", translation: "Hi! Could you help me, please?" } },
+      { term: "Buenas", explanation: "An all-purpose greeting, shortened from “buenos días” or “buenas tardes”.", literal: "Good [ones]", useWhen: "Entering a shop, passing a neighbor, starting almost any casual exchange.", avoidWhen: "Opening a formal meeting or writing an email, where the full “Buenos días” is expected.", register: "friendly informal", region: "General Colombian, extremely frequent.", related: ["¿Quiubo?", "¿Bien o qué?", "Buenos días"], example: { target: "¡Buenas! ¿Me atiende, por favor?", translation: "Hi! Could you help me, please?" } },
       { term: "cargado", explanation: "Strong, said of coffee — more coffee, less water.", literal: "loaded", useWhen: "Specifying how you want your tinto.", avoidWhen: "Describing a person; “cargado” about a person suggests they are carrying something or, in some contexts, armed.", register: "neutral", region: "General Colombian.", related: ["suave", "suavecito", "perico"], example: { target: "Me lo regala bien cargado.", translation: "Make it good and strong for me." } },
       { term: "porfa", explanation: "A clipped, friendly “please”.", literal: "shortened “por favor”", useWhen: "Casual requests among friends, in shops, in chat messages.", avoidWhen: "Formal writing, interviews, or speaking to someone you are addressing as usted for status reasons.", register: "casual", region: "General Colombian, and widespread across Latin America.", related: ["por favor", "porfis", "hágame el favor"], example: { target: "Espérame un momentico, porfa.", translation: "Wait for me just a moment, please." } },
       { term: "Listo", explanation: "A confirmation: “got it”, “done”, “all set”, “agreed”.", literal: "ready", useWhen: "Accepting a plan, confirming an order, closing a small negotiation.", avoidWhen: "Reading it only as “ready”. It is far more often a verbal handshake than a statement about readiness.", register: "neutral", region: "General Colombian, and one of the most frequent words in the whole dialect.", related: ["Dale", "De una", "Hecho"], example: { target: "—Nos vemos a las tres. —Listo.", translation: "“See you at three.” “Sounds good.”" } }
@@ -127,7 +127,7 @@ const lessons = [{
     answer: 2,
     practiceExtra: [
       { prompt: "Un barista dice “Sure” cuando usted pide algo. ¿Cómo debe interpretarlo?", choices: ["Como un sí amable y dispuesto.", "Como un acuerdo algo renuente.", "Como una petición para que repita."], answer: 0, tests: "interpretar el tono en respuestas breves de servicio" },
-      { prompt: "¿Qué solicitud sonaría más grosera en un mostrador?", choices: ["Could I get a coffee, please?", "Give me a coffee.", "I'll have a coffee, thanks."], answer: 1, tests: "el imperativo sin un suavizador" },
+      { prompt: "¿Qué solicitud sonaría más grosera en un mostrador?", choices: ["Could I get a coffee?", "Give me a coffee.", "A coffee, please."], answer: 1, tests: "el imperativo sin un suavizador" },
       { prompt: "Camila pregunta “Regular or decaf?” ¿Sobre qué está preguntando?", choices: ["El tamaño del vaso.", "Si quiere cafeína o no.", "Si va a tomarlo allí o llevarlo."], answer: 1, tests: "vocabulario de café en contexto" },
       { prompt: "¿Por qué “Regular, please.” es una buena respuesta y no una perezosa?", choices: ["Las respuestas cortas son la norma cortés en intercambios rápidos de servicio.", "Es gramaticalmente incompleta, pero se tolera en intercambios rápidos.", "Señala que usted tiene afán y está molesto en ese momento."], answer: 0, tests: "longitud esperada de la respuesta en el inglés de servicio" }
     ]
@@ -135,9 +135,9 @@ const lessons = [{
 }, {
   id: "taxi-to-downtown",
   level: "Starter · Getting around",
-  skills: ["listening", "speaking", "context"],
-  domain: "transport",
-  register: "polite service",
+  skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
+  domain: "transport-and-travel",
+  register: "courteous",
   pathways: ["foundation", "professional-customer-service"],
   review: "pending",
   es: {
@@ -153,7 +153,7 @@ const lessons = [{
     address: {
       form: "usted",
       who: "Alex and the conductor use usted forms: “me lleva”, “me cobra”, “le sirve”.",
-      why: "In a service exchange with a stranger in Medellín, usted is the safest respectful default. Paisas often use vos with friends and neighbours, but that warmth does not automatically transfer to an unknown taxi driver.",
+      why: "In a service exchange with a stranger in Medellín, usted is the safest respectful default. Paisas often use vos with friends and neighbors, but that warmth does not automatically transfer to an unknown taxi driver.",
       ifYouSwitch: "Switching to tú may sound imported from a textbook or Bogotá media rather than local. Switching to vos can sound too familiar unless the driver has clearly opened that register first."
     },
     dialogue: [
@@ -165,10 +165,10 @@ const lessons = [{
       { speaker: "Conductor", target: "Sí señor, yo le aviso. Súbase pues.", translation: "Yes sir, I’ll let you know. Hop in then.", pronunciation: "see seh-NYOR, yoh leh ah-BEE-soh. SOO-bah-seh pwehs", literal: "Yes sir, I advise you. Get up then.", why: "“Súbase” means get into the vehicle. The paisa “pues” softens the instruction and makes it conversational rather than bossy." }
     ],
     vocabulary: [
-      { term: "¿Me lleva a...?", explanation: "The everyday way to ask a taxi driver to take you somewhere.", literal: "Will you carry me to...?", useWhen: "Starting a taxi ride with a destination: a neighbourhood, a landmark, a clinic or el centro.", avoidWhen: "Do not replace it with “¿Puede conducir a...?”; that sounds like asking whether the driver has the physical ability to drive there.", register: "polite service", region: "General Colombian; in Medellín the usted form “lleva” fits a stranger better than vos or tú.", related: ["¿Va para...?", "¿Me acerca a...?", "¿Me deja en...?"], example: { target: "Buenas, ¿me lleva a Laureles?", translation: "Hi, can you take me to Laureles?" } },
+      { term: "¿Me lleva a...?", explanation: "The everyday way to ask a taxi driver to take you somewhere.", literal: "Will you carry me to...?", useWhen: "Starting a taxi ride with a destination: a neighborhood, a landmark, a clinic or el centro.", avoidWhen: "Do not replace it with “¿Puede conducir a...?”; that sounds like asking whether the driver has the physical ability to drive there.", register: "polite service", region: "General Colombian; in Medellín the usted form “lleva” fits a stranger better than vos or tú.", related: ["¿Va para...?", "¿Me acerca a...?", "¿Me deja en...?"], example: { target: "Buenas, ¿me lleva a Laureles?", translation: "Hi, can you take me to Laureles?" } },
       { term: "¿Cuánto me cobra?", explanation: "A practical question about the amount the driver will charge you.", literal: "How much do you charge me?", useWhen: "Before getting in, especially if the route, traffic or meter situation is unclear.", avoidWhen: "Do not say it with an accusing tone after the ride has begun; then it sounds like a complaint rather than a check.", register: "polite neutral", region: "General Colombian, common in taxis, moto-taxis and informal transport.", related: ["¿Cuánto es?", "¿Cuánto vale?", "¿Me dice la tarifa?"], example: { target: "Antes de subir, ¿cuánto me cobra hasta el centro?", translation: "Before I get in, how much will you charge me downtown?" } },
       { term: "taxímetro", explanation: "The meter that calculates the fare during a taxi ride.", literal: "taxi-meter", useWhen: "Confirming that the fare will follow the official meter rather than a guessed price.", avoidWhen: "Do not assume every ride in every town uses one; some smaller places and informal services work with agreed prices.", register: "neutral", region: "Standard Colombian taxi vocabulary; Medellín taxis are expected to use the meter inside the city.", related: ["tarifa", "carrera", "recargo"], example: { target: "¿Vamos con taxímetro?", translation: "Are we using the meter?" } },
-      { term: "por dentro", explanation: "Through inner or side streets instead of the main road.", literal: "by inside", useWhen: "Discussing routes with a driver who knows local traffic.", avoidWhen: "Do not translate it as going inside a place; it refers to the route network, not an indoor space.", register: "neutral", region: "Common Colombian route talk; exact meaning depends on the neighbourhood.", related: ["por la avenida", "por arriba", "por abajo"], example: { target: "Si la avenida está quieta, vámonos por dentro.", translation: "If the avenue is jammed, let’s go through the side streets." } },
+      { term: "por dentro", explanation: "Through inner or side streets instead of the main road.", literal: "by inside", useWhen: "Discussing routes with a driver who knows local traffic.", avoidWhen: "Do not translate it as going inside a place; it refers to the route network, not an indoor space.", register: "neutral", region: "Common Colombian route talk; exact meaning depends on the neighborhood.", related: ["por la avenida", "por arriba", "por abajo"], example: { target: "Si la avenida está quieta, vámonos por dentro.", translation: "If the avenue is jammed, let’s go through the side streets." } },
       { term: "no más", explanation: "A limiting phrase meaning “only that” or “nothing beyond that”.", literal: "no more", useWhen: "Reassuring someone that the meter price is the whole price, or limiting an order.", avoidWhen: "Do not hear it as a refusal by itself. After a noun or clause, it usually narrows the amount.", register: "neutral", region: "Widespread in Colombia and Latin America; the tone depends heavily on delivery.", related: ["solamente", "nada más", "apenas"], example: { target: "Lo que marque el taxímetro, no más.", translation: "Just whatever the meter shows." } },
       { term: "me sirve", explanation: "A natural way to say an option works for you.", literal: "it serves me", useWhen: "Accepting a price, route, time or practical arrangement.", avoidWhen: "Do not use it for liking something emotionally; it is about usefulness or fit.", register: "neutral", region: "General Colombian and very common in service interactions.", related: ["me funciona", "está bien", "listo"], example: { target: "Ese precio me sirve.", translation: "That price works for me." } },
       { term: "pues", explanation: "A small discourse marker that can soften, conclude or add paisa rhythm.", literal: "then / well", useWhen: "After an instruction or confirmation in Antioquia, especially when the tone is friendly.", avoidWhen: "Do not sprinkle it everywhere outside the region; overusing it can sound like imitation.", register: "casual conversational", region: "Strongly associated with Medellín and Antioquia, though heard elsewhere with different force.", related: ["listo", "entonces", "de una"], example: { target: "Súbase pues, que vamos saliendo.", translation: "Hop in then; we’re heading out." } }
@@ -177,7 +177,7 @@ const lessons = [{
     culture: [
       { label: "Asking first prevents awkwardness later", body: "In a Colombian taxi, asking “¿Cuánto me cobra?” before getting in is a normal practical move. It does not accuse the driver of cheating; it sets the frame before the service starts. The smoother version is calm and specific: destination first, price question second. Once the car is moving, the same question can feel more tense because the passenger has less choice." },
       { label: "The meter is the neutral referee", body: "When the driver says “lo que marque el taxímetro”, he is moving the price away from personal bargaining and onto a device. That protects the passenger from a surprise number and protects the driver from haggling. If there is a legitimate extra charge, it should be named clearly, not discovered at the end." },
-      { label: "Medellín is paisa, but the taxi is still usted", body: "Antioquia is famous for vos among friends: “vos tenés”, “vos sabés”. A taxi driver you have just met is not automatically in that circle. Usted is both respectful and locally natural here, while vos may sound too familiar unless the driver first creates a joking, neighbourly tone." },
+      { label: "Medellín is paisa, but the taxi is still usted", body: "Antioquia is famous for vos among friends: “vos tenés”, “vos sabés”. A taxi driver you have just met is not automatically in that circle. Usted is both respectful and locally natural here, while vos may sound too familiar unless the driver first creates a joking, neighborly tone." },
       { label: "Route talk is local knowledge", body: "“Por la avenida” and “por dentro” are not just geography; they ask the driver to weigh traffic, lights, safety and familiarity. A visitor may not know which is faster, so “por donde sea más rápido” hands that judgment back to the professional. It is trusting without giving up the fare boundary." }
     ],
     pitfalls: [
@@ -220,7 +220,7 @@ const lessons = [{
       ifYouSwitch: "Cambiar de “Could you take me downtown?” a “Take me downtown” cambia por completo el significado social. Convierte una solicitud de servicio en una orden."
     },
     dialogue: [
-      { speaker: "Alex", target: "Hi, could you take me downtown?", translation: "Buenas, ¿me lleva al centro?", pronunciation: "hai, kud yu teik mi DAUN-taun", literal: "Hello, would you be able to take me to the city centre?", why: "“Could you” suaviza la petición. “Take me” no es grosero dentro de este marco porque el verbo modal lleva la cortesía." },
+      { speaker: "Alex", target: "Hi, could you take me downtown?", translation: "Buenas, ¿me lleva al centro?", pronunciation: "hai, kud yu teik mi DAUN-taun", literal: "Hello, would you be able to take me to the city center?", why: "“Could you” suaviza la petición. “Take me” no es grosero dentro de este marco porque el verbo modal lleva la cortesía." },
       { speaker: "Driver", target: "Sure. Highway or surface streets?", translation: "Claro. ¿Por la autopista o por calles internas?", pronunciation: "shur. HAI-wei or SER-fis strits", literal: "Certainly. Should we use the highway or ordinary city streets?", why: "El conductor omite la pregunta completa porque el contexto es obvio. En el inglés de servicios se usan fragmentos a menudo cuando las opciones están claras." },
       { speaker: "Alex", target: "Whichever is faster. What’s the fare?", translation: "Por donde sea más rápido. ¿Cuánto es la tarifa?", pronunciation: "wich-EV-er iz FAS-ter. wats dhuh fer", literal: "Use whichever route is faster. What is the ride price?", why: "“What’s the fare?” pregunta por el precio del viaje. Es breve y práctico, no necesariamente una queja." },
       { speaker: "Driver", target: "Just what the meter says.", translation: "Solo lo que marque el taxímetro.", pronunciation: "yast wat dhuh MII-ter sez", literal: "Only the amount displayed by the taxi meter.", why: "La oración omite “It’ll be”. El inglés nativo suele dejar por fuera palabras predecibles en respuestas rápidas de servicio." },
@@ -229,7 +229,7 @@ const lessons = [{
     ],
     vocabulary: [
       { term: "Could you take me to...?", explanation: "Una petición cortés y natural para un taxista.", literal: "Would you be able to transport me to...?", useWhen: "Al dar un destino a un conductor de taxi, transporte compartido o servicio por aplicación.", avoidWhen: "Usar “Drive me to...” como primera frase; suena como una orden si no lleva un suavizador.", register: "cortés neutro", region: "Inglés universal; “take me” es normal en transporte, no posesivo ni físico.", related: ["Could you drop me at...?", "I’m going to...", "Can you take me to...?"], example: { target: "Could you take me to the station?", translation: "¿Me lleva a la estación?" } },
-      { term: "downtown", explanation: "La parte central de negocios o comercio de una ciudad.", literal: "The lower-town or central district sense of the word.", useWhen: "Al nombrar el centro de la ciudad, especialmente en inglés norteamericano.", avoidWhen: "Suponer que todos los lugares de habla inglesa lo usan de la misma manera; el inglés británico suele preferir “the city centre”.", register: "neutro", region: "Muy común en Norteamérica; se entiende más ampliamente por los medios.", related: ["city centre", "central district", "main street"], example: { target: "I’m heading downtown after work.", translation: "Voy para el centro después del trabajo." } },
+      { term: "downtown", explanation: "La parte central de negocios o comercio de una ciudad.", literal: "The lower-town or central district sense of the word.", useWhen: "Al nombrar el centro de la ciudad, especialmente en inglés norteamericano.", avoidWhen: "Suponer que todos los lugares de habla inglesa lo usan de la misma manera; el inglés británico suele preferir “the city centre”.", register: "neutro", region: "Muy común en Norteamérica; se entiende más ampliamente por los medios.", related: ["city center", "central district", "main street"], example: { target: "I’m heading downtown after work.", translation: "Voy para el centro después del trabajo." } },
       { term: "fare", explanation: "El precio que se paga por transporte, especialmente taxis, buses, trenes y aviones.", literal: "A transport charge rather than a store price.", useWhen: "Al preguntar o hablar sobre el costo de un viaje.", avoidWhen: "Usar “price” si quiere la palabra más específica de transporte; “price” se entiende, pero es menos preciso.", register: "neutro", region: "Vocabulario universal de transporte en inglés.", related: ["meter", "rate", "surcharge"], example: { target: "What’s the fare to downtown?", translation: "¿Cuánto es la tarifa hasta el centro?" } },
       { term: "meter", explanation: "El dispositivo que calcula la tarifa del taxi.", literal: "A measuring device; in this context, the fare calculator.", useWhen: "Al confirmar que la tarifa se basa en el cálculo oficial del taxi.", avoidWhen: "Confundirlo con la unidad de distancia; en un taxi, “the meter” significa el dispositivo de tarifa.", register: "neutro", region: "Universal en contextos de taxi.", related: ["fare", "rate", "metered ride"], example: { target: "Can we go by the meter?", translation: "¿Podemos ir con taxímetro?" } },
       { term: "surface streets", explanation: "Calles comunes de la ciudad, no una autopista ni una vía rápida.", literal: "Roads at city level, not elevated or limited-access roads.", useWhen: "Al contrastar calles locales más lentas con una vía principal más rápida.", avoidWhen: "Usarlo para andenes o rutas a pie; es lenguaje de rutas para conductores.", register: "neutro", region: "Común en Norteamérica; “side streets” es más sencillo y más universal.", related: ["side streets", "highway", "main road"], example: { target: "Traffic’s bad, so let’s take surface streets.", translation: "Hay mucho tráfico, entonces vayamos por calles internas." } },
@@ -269,9 +269,9 @@ const lessons = [{
 }, {
   id: "market-and-la-napa",
   level: "Starter · Everyday life",
-  skills: ["listening", "speaking", "context", "culture"],
-  domain: "shopping",
-  register: "friendly informal",
+  skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
+  domain: "shopping-and-money",
+  register: "courteous",
   pathways: ["foundation"],
   review: "pending",
   es: {
@@ -280,7 +280,7 @@ const lessons = [{
     setting: {
       who: "Alex is buying fruit from a vendedora who works the same stall every day. They are not friends, but market talk is warmer than supermarket talk. The vendor leads the rhythm because she knows the product, the price and the queue.",
       what: "A small fruit purchase by weight: mangoes by the libra, a brief price check, and a little extra added at the end. The negotiation is light, more about friendliness than winning.",
-      when: "Morning at a neighbourhood plaza de mercado, when produce is fresh and vendors are calling out prices. The exchange needs to move quickly because other customers are close by.",
+      when: "Morning at a neighborhood plaza de mercado, when produce is fresh and vendors are calling out prices. The exchange needs to move quickly because other customers are close by.",
       where: "A Colombian market stall, not a silent self-service aisle. Prices may shift with season, ripeness and quantity, so asking “¿a cómo está...?” is ordinary.",
       why: "Alex wants to buy naturally without sounding either timid or pushy. The vendedora uses warmth and la ñapa to turn a transaction into repeat-customer goodwill."
     },
@@ -301,9 +301,9 @@ const lessons = [{
     vocabulary: [
       { term: "¿A cómo está...?", explanation: "The market way to ask the current price of something sold by weight or unit.", literal: "At how is...?", useWhen: "Buying fruit, vegetables, grains or anything whose price changes.", avoidWhen: "Do not use it for fixed-price items in a chain store; there “¿cuánto cuesta?” is simpler.", register: "friendly informal", region: "General Colombian market Spanish; heard in plazas and tiendas, not just one city.", related: ["¿Cuánto vale...?", "¿A cómo la libra?", "¿En cuánto está...?"], example: { target: "¿A cómo está la libra de tomate?", translation: "How much is a pound of tomatoes?" } },
       { term: "la libra", explanation: "A pound, the everyday market weight for many foods in Colombia.", literal: "the pound", useWhen: "Buying produce, meat, cheese or grains in small household quantities.", avoidWhen: "Assuming markets always use kilograms in speech; official metric measures exist, but “libra” is deeply common.", register: "neutral", region: "Colombia-wide in everyday food shopping.", related: ["media libra", "kilo", "gramos"], example: { target: "Regáleme una libra de mango.", translation: "Give me a pound of mango, please." } },
-      { term: "Regáleme...", explanation: "A warm usted command used as a soft request in Colombian service encounters.", literal: "Gift me...", useWhen: "Asking a vendor to give, bag or sell you an ordinary item.", avoidWhen: "Asking for an actual gift or a major favour. It is routine politeness, not a claim that the item is free.", register: "friendly polite", region: "Very common in Colombia, including markets, cafés and small shops.", related: ["¿Me regala...?", "deme", "me empaca"], example: { target: "Regáleme dos libras, por favor.", translation: "Two pounds, please." } },
-      { term: "mi amor", explanation: "A warm address term some vendors use with customers.", literal: "my love", useWhen: "Recognising warmth from the vendor without reading it romantically.", avoidWhen: "Using it back to a vendor you do not know; that can sound flirtatious or disrespectful depending on tone.", register: "warm informal", region: "Common in Colombian service speech, especially from vendors; frequency varies by person and region.", related: ["mija", "vecino", "reina"], example: { target: "A tres mil, mi amor.", translation: "Three thousand, dear." } },
-      { term: "la ñapa", explanation: "A small free extra added to a purchase as goodwill.", literal: "the extra bit", useWhen: "Accepting or naming a vendor’s small bonus after you buy something.", avoidWhen: "Treating it as a guaranteed right. Asking too aggressively for ñapa can sound cheap or rude.", register: "friendly informal", region: "Known in Colombia and several Latin American countries; in Colombia it belongs strongly to market and neighbourhood-shop culture.", related: ["de más", "encime", "regalito"], example: { target: "Le eché la ñapa en manguitos.", translation: "I added a little extra in small mangoes." } },
+      { term: "Regáleme...", explanation: "A warm usted command used as a soft request in Colombian service encounters.", literal: "Gift me...", useWhen: "Asking a vendor to give, bag or sell you an ordinary item.", avoidWhen: "Asking for an actual gift or a major favor. It is routine politeness, not a claim that the item is free.", register: "friendly polite", region: "Very common in Colombia, including markets, cafés and small shops.", related: ["¿Me regala...?", "deme", "me empaca"], example: { target: "Regáleme dos libras, por favor.", translation: "Two pounds, please." } },
+      { term: "mi amor", explanation: "A warm address term some vendors use with customers.", literal: "my love", useWhen: "Recognizing warmth from the vendor without reading it romantically.", avoidWhen: "Using it back to a vendor you do not know; that can sound flirtatious or disrespectful depending on tone.", register: "warm informal", region: "Common in Colombian service speech, especially from vendors; frequency varies by person and region.", related: ["mija", "vecino", "reina"], example: { target: "A tres mil, mi amor.", translation: "Three thousand, dear." } },
+      { term: "la ñapa", explanation: "A small free extra added to a purchase as goodwill.", literal: "the extra bit", useWhen: "Accepting or naming a vendor’s small bonus after you buy something.", avoidWhen: "Treating it as a guaranteed right. Asking too aggressively for ñapa can sound cheap or rude.", register: "friendly informal", region: "Known in Colombia and several Latin American countries; in Colombia it belongs strongly to market and neighborhood-shop culture.", related: ["de más", "encime", "regalito"], example: { target: "Le eché la ñapa en manguitos.", translation: "I added a little extra in small mangoes." } },
       { term: "me los deja en...", explanation: "A light bargaining phrase asking whether the seller can leave the items at a certain price.", literal: "you leave them to me at...", useWhen: "Gently asking for a rounded or slightly lower price in an informal market.", avoidWhen: "Using it in supermarkets, pharmacies or places with fixed posted prices.", register: "informal bargaining", region: "General Colombian Spanish in markets; tone matters more than the grammar.", related: ["¿me rebaja?", "¿en cuánto me queda?", "hagámosle"], example: { target: "¿Me los deja en cinco mil?", translation: "Could you do them for five thousand?" } },
       { term: "maduritos", explanation: "Ripe, with a diminutive that makes the offer sound friendly and careful.", literal: "ripe-little", useWhen: "Talking about fruit that is ready to eat soon.", avoidWhen: "Assuming the fruit is physically small. The ending softens the word and helps the vendor sound attentive.", register: "friendly informal", region: "Common Colombian use of diminutives in food and service talk.", related: ["verdecitos", "dulces", "para hoy"], example: { target: "Se los doy maduritos para hoy.", translation: "I’ll give you ripe ones for today." } }
     ],
@@ -403,9 +403,9 @@ const lessons = [{
 }, {
   id: "making-plans-parche",
   level: "Developing · Social life",
-  skills: ["listening", "speaking", "context", "culture"],
-  domain: "social life",
-  register: "close informal",
+  skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
+  domain: "social-life",
+  register: "familiar",
   pathways: ["foundation", "year-12-local-mastery"],
   review: "pending",
   es: {
@@ -422,7 +422,7 @@ const lessons = [{
       form: "vos",
       who: "Alex uses vos with Santiago: “vos qué tenés”. Santiago also uses the informal friend register with “parce” and “¿se le mide?”.",
       why: "Vos with forms like “tenés” and “sabés” is strongly associated with paisa speech in Medellín/Antioquia and with Valle del Cauca, especially Cali. It is not general Colombian Spanish, and using it in Bogotá can sound theatrical or borrowed unless your social circle actually uses it.",
-      ifYouSwitch: "Switching to tú would still be friendly, but less locally paisa. Switching to usted can also be affectionate among Colombian friends, though it changes the flavour from youthful local closeness to a warmer or more teasing distance."
+      ifYouSwitch: "Switching to tú would still be friendly, but less locally paisa. Switching to usted can also be affectionate among Colombian friends, though it changes the flavor from youthful local closeness to a warmer or more teasing distance."
     },
     dialogue: [
       { speaker: "Santiago", target: "¡Quiubo, parce! ¿Cuál es el parche el sábado?", translation: "Hey, buddy! What’s the plan on Saturday?", pronunciation: "KYOO-boh, PAR-seh. kwal es el PAR-cheh el SAH-bah-doh", literal: "What happened, friend! Which is the patch on Saturday?", why: "“Quiubo” and “parce” announce a close, casual relationship before the invitation even arrives. “Parche” means the hangout, the plan or the crew, not a literal patch." },
@@ -439,7 +439,7 @@ const lessons = [{
       { term: "de una", explanation: "A strong, quick yes: “absolutely”, “I’m in”, or “right away” depending on context.", literal: "of one", useWhen: "Accepting a plan, agreeing to help, or saying something can happen immediately.", avoidWhen: "Situations that need careful negotiation or formal confirmation. It can sound too breezy for a clinic, contract or serious apology.", register: "casual", region: "Very common in Colombia; also understood elsewhere, but the Colombian frequency is high.", related: ["listo", "hagámosle", "dale", "me apunto"], example: { target: "—¿Vamos al concierto? —De una.", translation: "“Want to go to the concert?” “Absolutely.”" } },
       { term: "cuadrar", explanation: "To arrange, coordinate or lock in details so a plan actually works.", literal: "to square", useWhen: "Fixing a time, place, route, payment or practical detail with another person.", avoidWhen: "Assuming it means mathematical squaring. In everyday Colombian Spanish it is usually logistical.", register: "neutral casual", region: "General Colombian and widely Latin American, but extremely common in Colombian planning language.", related: ["organizar", "arreglar", "concretar", "definir"], example: { target: "Cuadramos la hora por WhatsApp.", translation: "We’ll sort out the time over WhatsApp." } },
       { term: "vos tenés", explanation: "The vos form of “tú tienes”: “you have”. It marks a regional informal address system, not bad Spanish.", literal: "you have", useWhen: "Speaking with people who use vos with you in Medellín/Antioquia or Valle del Cauca, especially in relaxed peer relationships.", avoidWhen: "Presenting it as standard Colombian Spanish. Bogotá, the Caribbean coast and many other places may prefer tú or usted depending on the relationship.", register: "informal regional", region: "Paisa Medellín/Antioquia and Valle/Cali are the major Colombian zones. It is not a national default.", related: ["vos sabés", "vos querés", "tú tienes", "usted tiene"], example: { target: "¿Vos qué tenés en mente?", translation: "What do you have in mind?" } },
-      { term: "¿Se le mide?", explanation: "A Colombian idiom asking whether someone is willing, game or up for a plan or challenge.", literal: "Do you measure yourself to it?", useWhen: "Inviting someone into something that takes willingness: a concert, a hike, a favour, a slightly risky plan.", avoidWhen: "Literal measurement contexts, or formal invitations where “¿le gustaría asistir?” would be safer.", register: "casual idiomatic", region: "Very Colombian; readily understood in Antioquia and elsewhere, but still informal.", related: ["¿te animás?", "¿te le medís?", "¿vamos?", "¿le jalás?"], example: { target: "Hay caminata el domingo, ¿se le mide?", translation: "There’s a hike on Sunday — are you up for it?" } },
+      { term: "¿Se le mide?", explanation: "A Colombian idiom asking whether someone is willing, game or up for a plan or challenge.", literal: "Do you measure yourself to it?", useWhen: "Inviting someone into something that takes willingness: a concert, a hike, a favor, a slightly risky plan.", avoidWhen: "Literal measurement contexts, or formal invitations where “¿le gustaría asistir?” would be safer.", register: "casual idiomatic", region: "Very Colombian; readily understood in Antioquia and elsewhere, but still informal.", related: ["¿te animás?", "¿te le medís?", "¿vamos?", "¿le jalás?"], example: { target: "Hay caminata el domingo, ¿se le mide?", translation: "There’s a hike on Sunday — are you up for it?" } },
       { term: "caer", explanation: "In social plans, “caer” means to come by or show up.", literal: "to fall", useWhen: "Talking casually about someone arriving at a hangout without making it sound like a formal appointment.", avoidWhen: "Medical or accident contexts unless you really mean someone fell. Context decides everything.", register: "casual", region: "Common in Colombian and broader Latin American informal speech.", related: ["llegar", "pasar", "aparecer", "venir"], example: { target: "De pronto cae Juli más tarde.", translation: "Juli might show up later." } }
     ],
     note: "In and around Medellín, friends often use “vos” (vos tenés, vos sabés) where Bogotá would use “tú” or even “usted”. Colombians also use “usted” affectionately with close friends and family, so a formal-looking pronoun is not always distance.",
@@ -539,9 +539,9 @@ const lessons = [{
 }, {
   id: "at-the-clinic",
   level: "Developing · Health",
-  skills: ["listening", "speaking", "grammar", "context"],
-  domain: "healthcare",
-  register: "formal polite",
+  skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
+  domain: "health-and-body",
+  register: "formal",
   pathways: ["year-12-local-mastery", "professional-healthcare"],
   review: "pending",
   es: {
@@ -552,7 +552,7 @@ const lessons = [{
       what: "A short outpatient appointment for a sore throat that has lasted three days. The task is to describe symptoms accurately, answer screening questions and understand possible next steps such as a fórmula médica or incapacidad.",
       when: "During a scheduled cita médica, likely after check-in through an EPS or affiliated clinic. The time phrase matters because “hace tres días” tells the doctor duration and whether the symptom is still present.",
       where: "A Colombian clinical office or consultation room. Before seeing the doctor, staff may have already asked for ID, EPS affiliation, authorization or appointment details.",
-      why: "Alex needs safe, precise language rather than colourful slang. The doctor needs onset, duration, severity, fever, medication use and warning signs to decide what care is appropriate."
+      why: "Alex needs safe, precise language rather than colorful slang. The doctor needs onset, duration, severity, fever, medication use and warning signs to decide what care is appropriate."
     },
     address: {
       form: "usted",
@@ -595,7 +595,7 @@ const lessons = [{
     variations: [
       { form: "Me duele la garganta.", register: "neutral clinical", region: "General Spanish", whenToUse: "The simplest accurate way to report throat pain." },
       { form: "Tengo dolor de garganta desde hace tres días.", register: "neutral clinical", region: "General Spanish", whenToUse: "A slightly more explicit version that foregrounds duration." },
-      { form: "Llevo tres días con dolor de garganta.", register: "natural conversational", region: "General Spanish, very useful in Colombia", whenToUse: "Emphasising how long you have been dealing with the symptom." },
+      { form: "Llevo tres días con dolor de garganta.", register: "natural conversational", region: "General Spanish, very useful in Colombia", whenToUse: "Emphasizing how long you have been dealing with the symptom." },
       { form: "Me arde la garganta al tragar.", register: "specific clinical", region: "General Spanish", whenToUse: "When the sensation is burning and linked to swallowing." },
       { form: "¿Me puede dar la fórmula médica?", register: "polite usted", region: "Colombia", whenToUse: "Asking for the prescription or medication order after the doctor explains treatment." }
     ],
@@ -677,9 +677,9 @@ const lessons = [{
 }, {
   id: "team-standup",
   level: "Developing · Workplace",
-  skills: ["listening", "speaking", "context", "register"],
-  domain: "workplace",
-  register: "professional neutral",
+  skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
+  domain: "work-and-employment",
+  register: "courteous",
   pathways: ["professional-office", "professional-technical"],
   review: "pending",
   es: {
@@ -813,9 +813,9 @@ const lessons = [{
 }, {
   id: "seminar-discussion",
   level: "Extending · Academic",
-  skills: ["listening", "speaking", "reading", "register"],
-  domain: "academic",
-  register: "formal academic",
+  skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
+  domain: "study-and-academia",
+  register: "formal",
   pathways: ["collegiate-academic"],
   review: "pending",
   es: {
@@ -951,9 +951,9 @@ const lessons = [{
 }, {
   id: "job-interview",
   level: "Extending · Professional",
-  skills: ["speaking", "listening", "register", "culture"],
-  domain: "employment",
-  register: "formal professional",
+  skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
+  domain: "work-and-employment",
+  register: "formal",
   pathways: ["professional-interviews", "collegiate-academic"],
   review: "pending",
   es: {
@@ -1091,3 +1091,30 @@ const lessons = [{
     ]
   }
 }];
+
+
+/*
+ * Which file each lesson lives in.
+ *
+ * Lessons are declared here and pushed on by the block files under
+ * data/lessons/, so a lesson's position in this array says nothing about where
+ * its text is written. The review tooling sends native speakers to a file and
+ * an index to fix wording, and before this it sent every one of them to
+ * data/lessons.js at an index that file does not have.
+ *
+ * Stamped rather than authored, so a block file cannot get it wrong: each file
+ * calls markSource once, after its push, and claims only the lessons nobody has
+ * claimed yet. Non-enumerable because the shape and provenance walkers iterate
+ * lesson objects, and this is bookkeeping, not content.
+ */
+function markSource(items, file) {
+  let index = 0;
+  for (const lesson of items) {
+    if (Object.prototype.hasOwnProperty.call(lesson, "sourceFile")) continue;
+    Object.defineProperty(lesson, "sourceFile", { value: file, enumerable: false });
+    Object.defineProperty(lesson, "sourceIndex", { value: index, enumerable: false });
+    index += 1;
+  }
+}
+
+markSource(lessons, "data/lessons.js");

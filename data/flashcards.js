@@ -339,6 +339,98 @@ function flashcardFromFluency(item, index, direction) {
 }
 
 /*
+ * Slang is drilled the other way round from everything else.
+ *
+ * Every other card here asks for the language you are building, because
+ * production is the harder skill and the one worth practicing. Slang inverts
+ * that on purpose: most of this list is language a learner should recognize and
+ * not produce, so asking them to generate "gonorrea" from a prompt would be
+ * drilling exactly the wrong reflex. The phrase goes on the front, and the back
+ * carries the meaning plus the two things that decide whether it can be used at
+ * all — where it is said, and whether the learner may say it.
+ */
+function flashcardFromSlang(item, index, direction) {
+  const [phrase, meaning, register, region, safety, note] = item;
+  return {
+    id: `slang/${index}/${direction}`,
+    kind: "slang",
+    askKey: "deck.ask.slang",
+    front: phrase,
+    frontLang: "es",
+    back: meaning,
+    backLang: direction === "es" ? "en" : "en",
+    note: `${safety} · ${register} · ${region}. ${note}`
+  };
+}
+
+/*
+ * Mature cards ask only for recognition, never production. There is no version
+ * of this deck that prompts a learner to produce an insult.
+ *
+ * After Dark rows are objects keyed by city, not the tuples the other reference
+ * lists use, and the same term appears once per city with the reading that city
+ * gives it. The city therefore belongs on the card: without it the back of two
+ * cards with the same front would disagree about how bad the phrase is, which
+ * is the one thing this deck exists to get right.
+ */
+function flashcardFromMature(item, index, direction) {
+  const { city, phrase, equivalent, severity, note } = item;
+  return {
+    id: `mature/${index}/${direction}`,
+    kind: "mature",
+    askKey: "deck.ask.mature",
+    front: direction === "es" ? phrase : equivalent,
+    frontLang: direction === "es" ? "es" : "en",
+    back: direction === "es" ? equivalent : phrase,
+    backLang: direction === "es" ? "en" : "es",
+    note: `${severity} · ${city}. ${note}`
+  };
+}
+
+/*
+ * Lexicon cards drill the word the learner is building, in both directions of
+ * the app, because a noun is the one thing here where production is genuinely
+ * the goal. The gender travels *with* the noun on the back — "portero" learned
+ * without "el" is half a word, and the half that is missing is the half that
+ * governs every adjective and article that follows it.
+ *
+ * Being a production drill, the front is always the word the learner already
+ * has and the back is always the one they are building. The language tags used
+ * to be written out per branch and the `en` branch had them backwards: it put
+ * the Spanish term on the front and labeled it English, which is what a screen
+ * reader would then have announced it as. They are named off `support` and
+ * `target` now, so the tag cannot disagree with the side it is on.
+ */
+function flashcardFromLexicon(item, index, direction) {
+  const [term, english, wordClass, gender, , level, seen, note] = item;
+  const { target, support } = flashcardLanguages(direction);
+  return {
+    id: `lexicon/${index}/${direction}`,
+    kind: "lexicon",
+    askKey: "deck.ask.lexicon",
+    front: target === "es" ? english : term,
+    frontLang: support,
+    back: target === "es" ? term : english,
+    backLang: target,
+    note: [gender ? `${wordClass} · ${gender}` : wordClass, note].filter(Boolean).join(". ")
+  };
+}
+
+function flashcardFromSignal(item, index, direction) {
+  const [signal, looksLike, means, , respond] = item;
+  return {
+    id: `signal/${index}/${direction}`,
+    kind: "signal",
+    askKey: "deck.ask.signal",
+    front: looksLike,
+    frontLang: direction === "es" ? "es" : "en",
+    back: means,
+    backLang: direction === "es" ? "en" : "es",
+    note: `${signal} → ${respond}`
+  };
+}
+
+/*
  * Topics, in the order a learner would meet them: the situations they have
  * studied, then the verbs behind them, then the phrases that hold a
  * conversation together. Levels are read from the data rather than listed
@@ -349,7 +441,10 @@ function flashcardFromFluency(item, index, direction) {
  * because that is already authored in both directions.
  */
 function flashcardTopics(direction, sources) {
-  const { lessons = [], curriculum = [], fluencyItems = [] } = sources || {};
+  const {
+    lessons = [], curriculum = [], fluencyItems = [], lexiconItems = [],
+    slangItems = [], matureItems = [], matureSignals = [], matureEnabled = false
+  } = sources || {};
   const topics = [];
 
   for (const lesson of lessons) {
@@ -381,6 +476,30 @@ function flashcardTopics(direction, sources) {
     });
   }
 
+  /*
+   * Words are grouped by theme rather than by part of speech. "Twelve nouns"
+   * is a grammatical fact about a list; "twelve words about getting around"
+   * is a reason to open it, and it puts words next to the situations the
+   * lessons already teach — which is where they will be needed.
+   */
+  for (const theme of [...new Set(lexiconItems.map((item) => item[4]))]) {
+    const cards = lexiconItems
+      .map((item, index) => ({ item, index }))
+      .filter(({ item }) => item[4] === theme)
+      .map(({ item, index }) => flashcardFromLexicon(item, index, direction));
+    if (!cards.length) continue;
+    topics.push({
+      id: `lexicon-${flashcardSlug(theme)}`,
+      groupKey: "deck.group.lexicon",
+      titleKey: "deck.topic.lexicon",
+      levelKey: `deck.theme.${flashcardSlug(theme)}`,
+      level: flashcardSentenceCase(String(theme).replace(/-/g, " ")),
+      metaKey: "deck.meta.lexicon",
+      metaCount: cards.length,
+      cards
+    });
+  }
+
   const fluency = fluencyItems.map((item, index) => flashcardFromFluency(item, index, direction));
   if (fluency.length) {
     topics.push({
@@ -391,6 +510,79 @@ function flashcardTopics(direction, sources) {
       metaCount: fluency.length,
       cards: fluency
     });
+  }
+
+  /*
+   * Slang is split by whether the learner may say it, not by theme. Theme is
+   * how you browse a reference; safety is how you study one. A learner drilling
+   * the "understand only" deck is doing something different from one drilling
+   * the everyday deck, and mixing them would blur the only distinction that
+   * actually protects them.
+   */
+  for (const safety of [...new Set(slangItems.map((item) => item[4]))]) {
+    const cards = slangItems
+      .map((item, index) => ({ item, index }))
+      .filter(({ item }) => item[4] === safety)
+      .map(({ item, index }) => flashcardFromSlang(item, index, direction));
+    if (!cards.length) continue;
+    topics.push({
+      id: `slang-${flashcardSlug(safety)}`,
+      groupKey: "deck.group.slang",
+      titleKey: "deck.topic.slang",
+      levelKey: `deck.safety.${flashcardSlug(safety)}`,
+      level: flashcardSentenceCase(safety),
+      metaKey: "deck.meta.slang",
+      metaCount: cards.length,
+      cards
+    });
+  }
+
+  /*
+   * The gate is a real gate.
+   *
+   * It would have been easy to build these cards always and hide the decks in
+   * CSS, and it would have been wrong: the deck picker, the progress counts and
+   * the review scopes all read this list, so gated content would leak into all
+   * three while looking hidden. Nothing is built unless the caller says the
+   * reader has passed the age check, and the default is off — a caller that
+   * forgets to pass the flag gets the safe answer, not the unsafe one.
+   *
+   * The comparison is strict on purpose. This flag originates in localStorage,
+   * which only ever returns strings, and the string "false" is truthy. A loose
+   * check would open the gate for a caller that passed the value meaning it
+   * should stay shut.
+   */
+  if (matureEnabled === true) {
+    /* Every After Dark row is a Colombian phrase glossed into English, so both
+       directions have something to recognize. There is no per-row language flag
+       to filter on the way the tuple lists have. */
+    const mature = matureItems
+      .map((item, index) => flashcardFromMature(item, index, direction));
+    if (mature.length) {
+      topics.push({
+        id: "mature",
+        groupKey: "deck.group.mature",
+        titleKey: "deck.topic.mature",
+        metaKey: "deck.meta.mature",
+        metaCount: mature.length,
+        cards: mature
+      });
+    }
+
+    const signals = matureSignals
+      .map((item, index) => ({ item, index }))
+      .filter(({ item }) => item[3] === direction)
+      .map(({ item, index }) => flashcardFromSignal(item, index, direction));
+    if (signals.length) {
+      topics.push({
+        id: "mature-signals",
+        groupKey: "deck.group.mature",
+        titleKey: "deck.topic.signals",
+        metaKey: "deck.meta.signals",
+        metaCount: signals.length,
+        cards: signals
+      });
+    }
   }
 
   return topics;

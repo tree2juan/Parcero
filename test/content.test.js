@@ -6,9 +6,11 @@ const vm = require("node:vm");
 
 const root = path.join(__dirname, "..");
 const read = (file) => fs.readFileSync(path.join(root, file), "utf8");
+const { dataSource } = require("./data-source.js");
+const { wrongLanguage } = require("../scripts/prose-language.js");
 
-const bundle = `${read("data/lesson-schema.js")}\n${read("data/lessons.js")}\n${read("data/curriculum.js")}\n${read("data/after-dark.js")}\n({ lessons, curriculum, fluencyItems, matureItems, schema: ParceroLessonSchema });`;
-const { lessons, curriculum, fluencyItems, matureItems, schema } = vm.runInNewContext(bundle, {}, { filename: "parcero-data-bundle.js" });
+const bundle = `${dataSource()}\n({ lessons, curriculum, fluencyItems, matureItems, matureSignals, slangItems, schema: ParceroLessonSchema });`;
+const { lessons, curriculum, fluencyItems, matureItems, matureSignals, slangItems, schema } = vm.runInNewContext(bundle, {}, { filename: "parcero-data-bundle.js" });
 
 const directions = ["es", "en"];
 const isText = (value) => typeof value === "string" && value.trim().length > 0;
@@ -431,6 +433,66 @@ test("reference lists match the shape the renderers expect", () => {
     assert.ok(CITIES.has(item.city), `unknown city "${item.city}" — the view filters on this and would drop the row`);
     assert.ok(SEVERITIES.has(item.severity), `unknown severity "${item.severity}" — the card colour keys off this`);
   }
+  assert.ok(slangItems.length > 0);
+  for (const item of slangItems) {
+    assert.strictEqual(item.length, 6, "expected [phrase, meaning, register, region, safety, note]");
+    item.forEach((cell) => assert.ok(isText(cell)));
+  }
+  assert.ok(matureSignals.length > 0);
+  for (const item of matureSignals) {
+    assert.strictEqual(item.length, 5, "expected [signal, whatItLooksLike, whatItMeans, direction, respond]");
+    item.forEach((cell) => assert.ok(isText(cell)));
+  }
+});
+
+test("the reference lists say which language they belong to", () => {
+  /*
+   * A signal row is a piece of advice about a conversation, and which language
+   * that conversation is in decides who it is for: "Sudden switch to usted" is
+   * nothing to a Spanish speaker learning English. That was invisible while the
+   * renderer showed all of them to everybody. Once these become flashcards it
+   * stops being invisible, because a card drilling an English cue is useless in
+   * a Spanish deck.
+   *
+   * After Dark is deliberately not checked here. Its rows carry a city instead
+   * of a direction, because every one of them is a Colombian phrase glossed
+   * into English -- both directions have something to recognize in the same
+   * row, so there is no language to assign. "After Dark covers every city the
+   * page offers, evenly" is what guards that list.
+   */
+  for (const item of matureSignals) {
+    assert.ok(["es", "en"].includes(item[3]), `mature signal "${item[0]}" has no valid direction`);
+  }
+  for (const item of slangItems) {
+    assert.ok(isText(item[0]) && isText(item[1]), `slang entry "${item[0]}" is missing a phrase or meaning`);
+  }
+  for (const direction of ["es", "en"]) {
+    assert.ok(matureSignals.some((item) => item[3] === direction), `no mature signals for ${direction}`);
+  }
+});
+
+test("every slang entry says whether a learner may actually say it", () => {
+  /*
+   * The whole point of the slang list. An entry without a safety value is worse
+   * than no entry: it teaches a phrase and withholds the one thing that stops
+   * the learner using it badly.
+   */
+  const SAFETY = ["Say it freely", "Say it with friends", "Understand only"];
+  for (const [phrase, , , region, safety] of slangItems) {
+    assert.ok(SAFETY.includes(safety), `slang "${phrase}" has an unrecognised safety value: ${safety}`);
+    assert.ok(isText(region), `slang "${phrase}" does not say where it is used`);
+  }
+  assert.ok(
+    slangItems.some(([, , , , safety]) => safety === "Understand only"),
+    "no slang is marked recognition-only, which means the safety field is not being used honestly");
+});
+
+test("no slang phrase is listed twice", () => {
+  const seen = new Map();
+  for (const [phrase] of slangItems) {
+    assert.ok(!seen.has(phrase), `slang phrase "${phrase}" appears more than once`);
+    seen.set(phrase, true);
+  }
 });
 
 test("nothing reads a lesson row by position", () => {
@@ -755,7 +817,7 @@ test("the withholding mechanism still works, even though nothing is flagged now"
   // reach a learner through a deck either. Verified against cards actually
   // built from a flagged copy of the data rather than by grepping.
   const sources = vm.runInNewContext(
-    `${read("data/lessons.js")}\n${read("data/curriculum.js")}\n${read("data/flashcards.js")}\n({ lessons, curriculum, fluencyItems, flashcardTopics })`,
+    `${dataSource({ schema: false, flashcards: true })}\n({ lessons, curriculum, fluencyItems, flashcardTopics })`,
     {}, { filename: "parcero-flashcard-surface.js" });
   const flaggedCurriculum = sources.curriculum.map((verb) => ({
     ...verb, register: "REGISTER_VALUE", regionality: "REGION_VALUE", reviewStatus: "needs review"
@@ -839,6 +901,32 @@ test("practiceExtra questions hold the same shape guarantees as the main one", (
   assert.deepStrictEqual(outOfRange, [], "choices and answer are a pair; answer indexes into choices");
   assert.deepStrictEqual(towering, [], "lengthen the distractors rather than trimming the answer");
   assert.deepStrictEqual(filler, [], "a distractor nobody could pick is not a distractor");
+});
+
+/*
+ * Every explanatory field is written in the language its reader actually reads.
+ *
+ * This is the one content rule a reviewer cannot spot by reading a diff in the
+ * direction they speak. The `en` direction teaches English to a Colombian, so
+ * its explanations are Spanish and only the English being taught is English;
+ * `es` is the mirror. Eight blocks were authored against a prose description of
+ * that rule and six of them got some part of it wrong, so the rule is checked
+ * by machine here rather than restated in a review checklist.
+ *
+ * `scripts/check-lesson-block.js` runs the same check on a single file so an
+ * author gets the answer before delivering. This test is what stops a later
+ * edit from quietly undoing it.
+ */
+test("explanatory prose is written in the language its reader reads", () => {
+  const wrong = [];
+  for (const lesson of lessons) {
+    for (const direction of directions) {
+      for (const problem of wrongLanguage(lesson[direction], direction)) {
+        wrong.push(`${lesson.id} ${direction}.${problem.trail}: must be ${problem.want}, reads as ${problem.got} - ${JSON.stringify(problem.text.slice(0, 80))}`);
+      }
+    }
+  }
+  assert.deepStrictEqual(wrong, [], "rewrite the field in the language named, rather than relaxing the check");
 });
 
 /*
@@ -958,12 +1046,21 @@ test("exactly one view is visible before any script runs", () => {
 
 test("the modules menu is built from the lesson list, never hard-coded", () => {
   const app = read("app.js");
-  const fill = app.match(/function fillModulesMenu\(\)[\s\S]*?\n\}/);
+  /*
+   * The signature is matched loosely on purpose. This check cares that the menu
+   * is derived, not what arguments it takes -- pinning it to `()` meant that
+   * adding a filter argument failed the test with "must build the menu in
+   * fillModulesMenu()" while the function was sitting right there, which sends
+   * you looking for the wrong bug.
+   */
+  const fill = app.match(/function fillModulesMenu\([^)]*\)[\s\S]*?\n\}/);
   assert.ok(fill, "app.js must build the modules menu in fillModulesMenu()");
   assert.match(fill[0], /lessons\.map\(/,
     "the menu must map over the lesson list, or it goes stale the moment a lesson is added");
   assert.match(fill[0], /state\.direction/,
     "menu titles must follow the direction toggle, or they stay in one language");
+  assert.match(fill[0], /COURSE_MODULES/,
+    "lessons must be grouped under their module, or the menu is a flat wall of 200-plus entries");
 });
 
 test("the language toggle is reachable from every view", () => {

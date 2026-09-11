@@ -26,12 +26,13 @@ const path = require("node:path");
 const vm = require("node:vm");
 const review = require("../review.js");
 const i18n = require("../i18n.js");
+const { dataSource } = require("../test/data-source.js");
 
 const root = path.join(__dirname, "..");
 const read = (file) => fs.readFileSync(path.join(root, file), "utf8");
 
 function loadContent() {
-  const bundle = `${read("data/lessons.js")}\n${read("data/curriculum.js")}\n${read("data/after-dark.js")}\n({ lessons, curriculum, fluencyItems, matureItems });`;
+  const bundle = `${dataSource({ schema: false })}\n({ lessons, curriculum, fluencyItems, matureItems });`;
   return vm.runInNewContext(bundle, {}, { filename: "parcero-data-bundle.js" });
 }
 
