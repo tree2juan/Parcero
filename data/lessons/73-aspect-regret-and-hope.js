@@ -5,6 +5,9 @@
  * how adults regret and apologize; wishes-and-ojala restores ojalá, a word the
  * corpus never once contained. The Spanish scenes move out to the Llanos and
  * the Amazon: Villavicencio, Yopal and Leticia, not the two usual cities.
+ * This update adds future-perfect (habré terminado) for the measured gap: the
+ * corpus had only two occurrences even though B2 requires deadline anteriority
+ * and past conjecture.
  */
 lessons.push(
   {
@@ -1833,6 +1836,616 @@ lessons.push(
           ],
           answer: 1,
           tests: "“hope to” más infinitivo"
+        }
+      ]
+    }
+  },
+  {
+    id: "future-perfect-before-the-film-festival-in-barichara",
+    level: "Extending · Future perfect for deadlines and guesses",
+    skills: ["speaking", "listening", "reading", "vocabulary", "culture", "context", "grammar"],
+    domain: "plans-and-time",
+    register: "courteous",
+    pathways: ["extension", "year-12", "collegiate-academic", "professional-office"],
+    structure: "future-perfect",
+    review: "pending",
+    es: {
+      title: "By Friday I will have finished",
+      situation:
+        "In Barichara, the town museum has promised a small exhibition before a weekend film screening in the plaza. Julia, an English-speaking volunteer, is helping Óscar finish captions, print labels and unlock the old room on time. The deadline is real: by Friday afternoon the mayor, the projection crew and half the neighborhood will be there. Óscar also keeps making careful guesses about what has probably already happened, using the same future-perfect form in a past-facing way.",
+      setting: {
+        who: "Óscar coordinates a community exhibition and knows exactly which boxes, captions and permits are still missing. Julia is an English-speaking volunteer who has strong everyday Spanish but has never been asked to produce the formal future perfect on a deadline.",
+        what: "A deadline conversation about what will already be finished by Friday, plus guesses about what has probably happened already: the printer may have opened, the driver may have arrived, the mayor may have read the program.",
+        when: "Thursday evening, less than twenty-four hours before the screening and the museum opening.",
+        where: "Barichara, Santander, in the small museum room just off the stone streets near the main square.",
+        why: "The future perfect is rare in casual Colombian speech, but B2 grammar expects it. A real event deadline makes the textbook form feel natural, and the same form also unlocks a common speech meaning: a guess about the recent past."
+      },
+      address: {
+        form: "usted",
+        who: "Óscar and Julia use usted because they are cooperating on a public event, not chatting as close friends.",
+        why: "In Santander and in a civic work setting, usted is courteous, clear and normal. It lets Óscar correct timing and responsibility without sounding bossy, and it gives Julia a safe register for written-exam style Spanish.",
+        ifYouSwitch:
+          "Switching to tú would make the exchange warmer but less public. It would not be rude, yet it would soften the museum-work tone and make the exam-style examples feel less deliberate."
+      },
+      dialogue: [
+        {
+          speaker: "Óscar",
+          target: "Para el viernes ya habré terminado las fichas del museo.",
+          translation: "By Friday I will have finished the museum captions.",
+          pronunciation: "PA-ra el VYER-nes ya a-BRE ter-mi-NA-do las FEE-chas del mu-SE-o",
+          literal: "By the Friday already I-will-have finished the cards of-the museum.",
+          why: "This is the deadline reading. Spanish uses the future of haber, “habré”, plus the past participle “terminado” to say an action will be complete before a future point. The frame “para el viernes” makes it practical rather than bookish."
+        },
+        {
+          speaker: "Julia",
+          target: "Perfecto. Cuando llegue la alcaldesa, ¿ya habremos puesto los rótulos?",
+          translation: "Perfect. When the mayor arrives, will we already have put up the labels?",
+          pronunciation: "per-FEK-to. KWAN-do YE-ge la al-kal-DE-sa, ya a-BRE-mos PWES-to los RRO-tu-los",
+          literal: "Perfect. When arrives the mayor, already will-we-have put the labels?",
+          why: "“Cuando llegue” uses the subjunctive because the arrival is future. Pairing it with “ya habremos puesto” is one of the most natural homes for the future perfect: by the time that future event happens, another action is already complete."
+        },
+        {
+          speaker: "Óscar",
+          target: "Sí. Y Camilo ya habrá abierto la imprenta; siempre llega temprano.",
+          translation: "Yes. And Camilo has probably opened the print shop by now; he always arrives early.",
+          pronunciation: "see. i ka-MEE-lo ya a-BRA a-BYER-to la im-PREN-ta; SYEM-pre YE-ga tem-PRA-no",
+          literal: "Yes. And Camilo already will-have opened the print-shop; always he-arrives early.",
+          why: "Now the same form points backward. “Ya habrá abierto” is not a future deadline; it is a conjecture about the recent past, meaning he has probably opened by now. It is the past-facing twin of the simple-future conjecture you already know, like “serán las tres”."
+        },
+        {
+          speaker: "Julia",
+          target: "Entonces para mediodía ya habrán impreso el programa, ¿cierto?",
+          translation: "Then by noon they will have printed the program, right?",
+          pronunciation: "en-TON-ses PA-ra me-DYO-dee-a ya a-BRAN im-PRE-so el pro-GRA-ma, SYER-to",
+          literal: "Then by noon already they-will-have printed the program, true?",
+          why: "“Habrán impreso” uses the irregular participle “impreso”. Many learners can form “terminado” and “salido”, then stumble on participles like hecho, dicho, visto, puesto, escrito, vuelto and abierto. The compound tense depends on those participles."
+        },
+        {
+          speaker: "Óscar",
+          target: "Ojalá. Si no han llamado, habrán tenido otro corte de luz.",
+          translation: "I hope so. If they haven't called, they probably had another power outage.",
+          pronunciation: "o-ja-LA. si no an ya-MA-do, a-BRAN te-NEE-do O-tro KOR-te de looz",
+          literal: "Hopefully. If not they-have called, they-will-have had another cut of light.",
+          why: "This is conjecture again: “habrán tenido” means they probably had, not that they will have later. In speech it is useful when you are reasoning from evidence, such as silence from the print shop."
+        },
+        {
+          speaker: "Julia",
+          target: "En la calle la gente diría “ya lo imprimieron”, pero en el examen escribiré “ya lo habrán impreso”.",
+          translation: "On the street people would say “they already printed it,” but in the exam I'll write “they will have printed it already.”",
+          pronunciation: "en la KA-ye la HEN-te dee-REE-a ya lo im-PREE-mye-ron, PE-ro en el ek-SA-men es-kree-bee-RE ya lo a-BRAN im-PRE-so",
+          literal: "In the street the people would-say already it they-printed, but in the exam I-will-write already it they-will-have printed.",
+          why: "This is the honest Colombian note. The simple past is what you will hear and can safely say: “ya lo imprimieron”, “ya llegó”. The compound form is still on the B2 inventory and appears in reading cloze, so produce it deliberately in writing and recognize it instantly."
+        }
+      ],
+      vocabulary: [
+        {
+          term: "habré / habrás / habrá / habremos / habrán + participio",
+          explanation:
+            "The future perfect is built from haber in the simple future plus a past participle. The useful spoken set is habré, habrás, habrá, habremos and habrán. It says either that something will already be done by a future moment, or that something has probably happened by now.",
+          literal: "will-have + done",
+          useWhen:
+            "Use it with deadline frames like “para el viernes” and “cuando llegue”, and with conjecture frames like “ya habrá llegado”.",
+          avoidWhen:
+            "Do not force it into every casual Colombian sentence. In everyday speech, the simple past often does the job naturally.",
+          register: "neutral to formal",
+          region: "Universal Spanish; more common in formal writing, exams and careful speech than in casual Colombian talk.",
+          related: ["haber", "el participio", "para", "cuando"],
+          example: {
+            target: "Para el viernes ya habré terminado.",
+            translation: "By Friday I will have finished."
+          }
+        },
+        {
+          term: "para + fecha",
+          explanation:
+            "A deadline frame meaning by a date or time. It turns the future perfect from a grammar chart into a practical promise: by Friday, by noon, by the time the room opens, the action is complete.",
+          literal: "by + date",
+          useWhen:
+            "You are naming the limit before which the work must be done: “para mañana”, “para las seis”, “para el viernes”.",
+          avoidWhen:
+            "You simply mean at that time rather than by that time; then Spanish may prefer “a las seis” or “el viernes”.",
+          register: "neutral",
+          region: "Universal Spanish; a natural way to set deadlines in Colombia.",
+          related: ["antes de", "a más tardar", "el plazo", "ya"],
+          example: {
+            target: "Para mediodía ya habrán impreso el programa.",
+            translation: "By noon they will have printed the program."
+          }
+        },
+        {
+          term: "cuando + subjuntivo",
+          explanation:
+            "When “cuando” points to a future event, Spanish uses the subjunctive: cuando llegue, cuando abra, cuando terminemos. The future perfect then names what will already be complete at that future moment.",
+          literal: "when + subjunctive",
+          useWhen:
+            "You mean by the time someone arrives, opens or calls: “cuando llegue la alcaldesa, ya habremos puesto los rótulos”.",
+          avoidWhen:
+            "You are talking about a habitual or past “when”; then the indicative can be right.",
+          register: "neutral",
+          region: "Universal Spanish.",
+          related: ["en cuanto", "apenas", "antes de que", "ya"],
+          example: {
+            target: "Cuando llegue, ya habremos puesto los rótulos.",
+            translation: "When she arrives, we will have put up the labels."
+          }
+        },
+        {
+          term: "ya habrá llegado",
+          explanation:
+            "The conjecture reading: a guess about the recent past. “Ya habrá llegado” means he has probably arrived by now. It does not always point to the future, even though haber is in the future tense.",
+          literal: "already he-will-have arrived",
+          useWhen:
+            "You are guessing from evidence: the lights are on, the phone is quiet, the shop usually opens early.",
+          avoidWhen:
+            "You know the fact for sure; then say it directly with the perfect or the preterite.",
+          register: "neutral",
+          region: "Common in careful Spanish everywhere, and very useful to recognize in Colombian reading and speech.",
+          related: ["serán las tres", "supongo", "seguro", "probablemente"],
+          example: {
+            target: "Camilo ya habrá abierto la imprenta.",
+            translation: "Camilo has probably opened the print shop by now."
+          }
+        },
+        {
+          term: "participios irregulares",
+          explanation:
+            "The tense only works if the participle is right. The forms that matter most are hecho, dicho, visto, puesto, escrito, vuelto and abierto, plus common cousins like impreso. Learners often know the future of haber but lose the sentence at the participle.",
+          literal: "irregular done-forms",
+          useWhen:
+            "Any compound tense with haber: future perfect, present perfect, pluperfect and conditional perfect.",
+          avoidWhen:
+            "Do not regularize them as “hacido”, “decido”, “vido”, “ponido” or “escribido”. Those are learner errors.",
+          register: "neutral",
+          region: "Universal Spanish.",
+          related: ["hecho", "dicho", "visto", "puesto"],
+          example: {
+            target: "Ya habremos puesto los rótulos.",
+            translation: "We will have put up the labels already."
+          }
+        },
+        {
+          term: "simple past in Colombian speech",
+          explanation:
+            "Everyday Colombian Spanish very often says the simple past where a textbook would choose the future perfect: “cuando vengas, ya lo terminé” or “ya llegó”. That is not wrong. It is normal local speech.",
+          literal: "I already finished it",
+          useWhen:
+            "Speaking naturally with Colombians, especially in fast, ordinary conversation where the context already makes the timing clear.",
+          avoidWhen:
+            "A B2 written exam asks for the future perfect, or a reading cloze expects you to recognize it. There you need the compound form.",
+          register: "colloquial",
+          region: "Very common in Colombia and much of Hispanoamérica.",
+          related: ["ya lo terminé", "ya llegó", "el pretérito", "el examen"],
+          example: {
+            target: "En la calle dicen: ya lo terminé.",
+            translation: "On the street people say: I already finished it."
+          }
+        },
+        {
+          term: "producir y reconocer",
+          explanation:
+            "A practical exam strategy: produce the future perfect deliberately when the written task needs it, and recognize it instantly when reading. In ordinary Colombian life, let your ear accept the simple past without correcting anyone.",
+          literal: "produce and recognize",
+          useWhen:
+            "You are moving between real Colombian speech and the formal B2 inventory.",
+          avoidWhen:
+            "You are tempted to sneer at one form as “wrong”. The split is register and exam need, not intelligence or correctness.",
+          register: "learning strategy",
+          region: "Especially useful for Colombian Spanish learners preparing European-style exams.",
+          related: ["B2", "lectura", "cloze", "registro"],
+          example: {
+            target: "En el examen escribiré: ya lo habrán impreso.",
+            translation: "In the exam I will write: they will have printed it already."
+          }
+        }
+      ],
+      note:
+        "The future perfect is “haber” in the simple future plus a past participle: habré terminado, habrás visto, habrá llegado, habremos puesto, habrán abierto. It has two meanings you need at B2. First, deadline anteriority: something will already be done before a future moment, especially with “para + date” and “cuando + subjunctive”. Second, conjecture about the recent past: “ya habrá llegado” means he has probably arrived by now, the past-facing twin of simple-future conjecture like “serán las tres”. The Colombian twist is essential: in ordinary speech you will often hear and can safely say “ya lo terminé” or “ya llegó” where a textbook says “ya lo habré terminado” or “ya habrá llegado”. Do not treat that as an error. For the exam, produce the compound form deliberately and recognize it instantly; for life, understand the simple past as natural Colombian Spanish.",
+      culture: [
+        {
+          label: "Barichara and real deadlines",
+          body:
+            "Barichara's stone streets and whitewashed houses make it feel timeless, but public events there run on very real deadlines: the room must be swept, the captions printed, the chairs counted and the plaza ready before visitors arrive. That is exactly where “para el viernes ya habré terminado” belongs. The form stops sounding like a grammar chart when a community event will embarrass real people if the work is not done."
+        },
+        {
+          label: "The Colombian substitution is not laziness",
+          body:
+            "The PCIC itself notes a Hispanoamérica tendency to use the simple past where peninsular Spanish might use the future perfect. In Colombia, “cuando vengas, ya lo terminé” and “ya llegó” are ordinary, efficient and clear. The lesson is not “Colombians speak wrong”. The lesson is that an exam may demand a form your Colombian ear has learned to route around, so you train both systems on purpose."
+        },
+        {
+          label: "Why English learners under-use it too",
+          body:
+            "English has the close form “I will have finished”, but it is rare in everyday speech. Most people say “I'll be done by Friday” or “I probably arrived by then” instead. That makes English speakers under-use the Spanish future perfect for the same reason Colombians under-use it: the simpler everyday workaround feels more natural. B2 reading, however, rewards the exact compound form."
+        }
+      ],
+      pitfalls: [
+        {
+          mistake: "Using the infinitive after habré",
+          whyItFails:
+            "The future perfect needs a past participle, not an infinitive. “Habré terminar” is broken because “habré” already carries the tense and now needs the done-form: terminado, visto, puesto.",
+          sayInstead: "Para el viernes habré terminado."
+        },
+        {
+          mistake: "Regularizing irregular participles",
+          whyItFails:
+            "Forms like “hacido”, “decido”, “vido” and “ponido” are learner inventions. The correct participles are hecho, dicho, visto, puesto, escrito, vuelto and abierto. The whole tense depends on that final word.",
+          sayInstead: "Ya habremos puesto los rótulos."
+        },
+        {
+          mistake: "Missing the conjecture reading",
+          whyItFails:
+            "“Ya habrá llegado” often means “he has probably arrived by now”, not “he will arrive later”. If you read every future-perfect form as future deadline grammar, B2 cloze and real speech will mislead you.",
+          sayInstead: "Ya habrá llegado: he has probably arrived."
+        },
+        {
+          mistake: "Correcting Colombian simple past as wrong",
+          whyItFails:
+            "“Ya lo terminé” for a future-perfect idea is common Colombian speech and can be perfectly safe to say. The issue is register and exam production, not correctness. Correcting it would sound arrogant and uninformed.",
+          sayInstead: "In speech: ya lo terminé. In the exam: ya lo habré terminado."
+        }
+      ],
+      variations: [
+        {
+          form: "Para el viernes ya habré terminado.",
+          register: "neutral to formal",
+          region: "Universal Spanish",
+          whenToUse: "A deadline: the action will be complete by a named future time."
+        },
+        {
+          form: "Cuando llegue, ya habremos puesto los rótulos.",
+          register: "neutral",
+          region: "Universal Spanish",
+          whenToUse: "By the time a future event happens, another action will already be done."
+        },
+        {
+          form: "Ya habrá llegado.",
+          register: "neutral",
+          region: "Universal Spanish",
+          whenToUse: "A conjecture about the recent past: he has probably arrived by now."
+        },
+        {
+          form: "Cuando vengas, ya lo terminé.",
+          register: "colloquial",
+          region: "Colombia and much of Hispanoamérica",
+          whenToUse: "The natural simple-past substitute you will often hear and can safely say in everyday Colombian speech."
+        }
+      ],
+      prompt: "What does “ya habrá llegado” most naturally mean when Óscar is guessing from evidence?",
+      choices: [
+        "He has probably arrived by now.",
+        "He will arrive much later today.",
+        "He arrived every day this week."
+      ],
+      answer: 0,
+      practiceExtra: [
+        {
+          prompt: "Choose the correct future-perfect deadline sentence.",
+          choices: [
+            "Para el viernes habré terminar el informe.",
+            "Para el viernes habré terminado el informe.",
+            "Para el viernes habré terminando el informe."
+          ],
+          answer: 1,
+          tests: "Future haber plus past participle: habré terminado."
+        },
+        {
+          prompt: "Which sentence uses an irregular participle correctly?",
+          choices: [
+            "Cuando llegue, ya habremos puesto los rótulos.",
+            "Cuando llegue, ya habremos ponido los rótulos.",
+            "Cuando llegue, ya habremos poner los rótulos."
+          ],
+          answer: 0,
+          tests: "Poner has the irregular participle puesto."
+        },
+        {
+          prompt: "What is the honest Colombian exam strategy?",
+          choices: [
+            "Avoid the form because Colombians never understand it.",
+            "Correct Colombians whenever they use the simple past.",
+            "Produce the compound form in exams and recognize it fast."
+          ],
+          answer: 2,
+          tests: "Simple past is natural speech, but B2 expects the future perfect."
+        }
+      ]
+    },
+    en: {
+      title: "El futuro perfecto inglés en Odessa",
+      situation:
+        "En Odessa, Texas, una cuadrilla debe entregar un informe de seguridad antes de que empiece el turno de noche en un taller de mantenimiento petrolero. Camila, colombiana, trabaja con Mark, su supervisor, para hablar en inglés de lo que ya estará listo para cierta hora y de lo que probablemente ya pasó. La presión es concreta: si el informe no queda cerrado, la cuadrilla no puede arrancar a tiempo.",
+      setting: {
+        who: "Mark supervisa un taller de mantenimiento en Odessa y necesita confirmar permisos, fotos y firmas antes del cambio de turno. Camila es colombiana, trabaja en la oficina del taller y quiere decir en inglés, con precisión, lo que estará terminado antes de una hora límite.",
+        what: "Una conversación de trabajo sobre “will have + past participle”: lo que ya estará hecho para las seis, y una lectura de probabilidad sobre lo que alguien seguramente ya hizo.",
+        when: "Jueves por la tarde, con el turno de noche acercándose y el informe de seguridad todavía abierto.",
+        where: "Odessa, Texas, en la oficina de un taller de mantenimiento petrolero cerca de la autopista. Inglés estadounidense de trabajo, cortés y práctico.",
+        why: "Porque el inglés sí tiene “I will have finished”, pero se usa menos en el habla diaria que sus alternativas. Un colombiano puede reconocerlo por parecido con “habré terminado”, pero necesita producirlo sin traducirlo como un futuro simple."
+      },
+      address: {
+        form: "mixed",
+        who: "Mark y Camila usan “you”, el único pronombre de segunda persona en inglés, aunque la relación sea de supervisión y trabajo.",
+        why: "La cortesía en inglés no cambia el pronombre. Se marca con tono, nombres propios, “please”, “could you” y frases completas, no con una oposición tú/usted.",
+        ifYouSwitch:
+          "Si Camila quiere sonar más formal, no busca otro “you”. Suaviza la frase: “Could you check this?” o “Would you mind signing here?” Esa es la versión inglesa del respeto."
+      },
+      dialogue: [
+        {
+          speaker: "Mark",
+          target: "By six, I will have finished the safety report.",
+          translation: "Para las seis, habré terminado el informe de seguridad.",
+          pronunciation: "bai siks, ai wil jav FI-nisht de SEIF-ti ri-PORT",
+          literal: "Para seis, yo habré terminado el seguridad informe.",
+          why: "El molde es “will have” más participio pasado: “will have finished”. Sirve para una acción que estará completa antes de un punto futuro. “By six” es la pista de plazo, igual que “para las seis”."
+        },
+        {
+          speaker: "Camila",
+          target: "When the night crew arrives, will we have posted the permits?",
+          translation: "Cuando llegue la cuadrilla de noche, ¿ya habremos puesto los permisos?",
+          pronunciation: "uen de nait kru a-RAIVS, wil wi jav POS-ted de PER-mits",
+          literal: "Cuando la noche cuadrilla llega, habremos puesto los permisos?",
+          why: "Después de “when” con futuro, el inglés usa presente, “arrives”, no “will arrive”. La otra mitad sí lleva “will have posted”, porque habla de lo que ya estará hecho para ese momento."
+        },
+        {
+          speaker: "Mark",
+          target: "Yes, and Rosa will have opened the gate by now.",
+          translation: "Sí, y Rosa probablemente ya abrió la reja a estas alturas.",
+          pronunciation: "yes, and RO-sa wil jav OU-pend de geit bai nau",
+          literal: "Sí, y Rosa habrá abierto la reja por ahora.",
+          why: "Aquí aparece la lectura de conjetura. “Will have opened by now” puede significar que seguramente ya abrió, no solo que abrirá antes de un momento futuro. El inglés lo usa menos que el español formal, pero la lógica existe."
+        },
+        {
+          speaker: "Camila",
+          target: "So by the inspection, the mechanic will have written the notes.",
+          translation: "Entonces para la inspección, el mecánico habrá escrito las notas.",
+          pronunciation: "so bai di in-SPEK-shon, de me-KA-nik wil jav RI-ten de nouts",
+          literal: "Entonces para la inspección, el mecánico habrá escrito las notas.",
+          why: "“Written” es el participio irregular de “write”. Igual que en español se necesita escrito y no “escribido”, en inglés se necesita written y no “writed”. Los participios son donde suele romperse este tiempo."
+        },
+        {
+          speaker: "Mark",
+          target: "If he hasn't called, he will have seen the old checklist.",
+          translation: "Si no ha llamado, seguramente vio la lista vieja.",
+          pronunciation: "if ji JA-sent kold, ji wil jav sin di ould CHEK-list",
+          literal: "Si él no-ha llamado, él habrá visto la vieja lista.",
+          why: "Otra conjetura: “he will have seen” aquí quiere decir “seguramente vio” o “probablemente ha visto”. No lo lea siempre como futuro puro; el contexto decide si es plazo o deducción."
+        },
+        {
+          speaker: "Camila",
+          target: "In speech I'd say “I'll be done by six,” but the form is “I will have finished.”",
+          translation: "En el habla diría “estaré lista para las seis”, pero la forma es “habré terminado”.",
+          pronunciation: "in spich aid sei ail bi don bai siks, bat de form is ai wil jav FI-nisht",
+          literal: "En habla yo-diría estaré hecho para seis, pero la forma es yo habré terminado.",
+          why: "El contraste con el inglés importa. “I will have finished” existe, pero en la conversación diaria se oye mucho “I'll be done by six”. Por eso los estudiantes la subusan en ambos idiomas: suena formal, aunque sea la forma exacta que un examen puede pedir."
+        }
+      ],
+      vocabulary: [
+        {
+          term: "will have + past participle",
+          explanation:
+            "El futuro perfecto inglés: “will have finished”, “will have seen”, “will have written”. Dice que algo ya estará completo antes de un momento futuro, y a veces expresa una deducción sobre algo que probablemente ya pasó.",
+          literal: "habrá + participio",
+          useWhen:
+            "Con plazos como “by Friday” y “by six”, o al deducir con “by now”: he will have arrived by now.",
+          avoidWhen:
+            "La conversación solo necesita una frase más simple, como “I'll be done by six”. La forma existe, pero no siempre es la más común al hablar.",
+          register: "neutro a formal",
+          region: "Inglés universal; en Estados Unidos se entiende bien, aunque muchas veces se reemplaza por formas más simples al hablar.",
+          related: ["by Friday", "by now", "past participle", "deadline"],
+          example: {
+            target: "I will have finished by six.",
+            translation: "Habré terminado para las seis."
+          }
+        },
+        {
+          term: "by + time",
+          explanation:
+            "La palabra “by” marca el límite: no significa durante ni cerca de, sino antes de esa hora como plazo máximo. Es el equivalente natural de “para” cuando hay fecha límite.",
+          literal: "para / a más tardar",
+          useWhen:
+            "Quiere decir antes de las seis, antes del viernes, antes de la inspección: by six, by Friday, by the inspection.",
+          avoidWhen:
+            "Quiere decir a las seis en punto; ahí use “at six”, no “by six”.",
+          register: "neutro",
+          region: "Inglés universal.",
+          related: ["at", "before", "deadline", "no later than"],
+          example: {
+            target: "By six, I will have finished the report.",
+            translation: "Para las seis, habré terminado el informe."
+          }
+        },
+        {
+          term: "when + present, will have...",
+          explanation:
+            "El inglés no dice “when the crew will arrive” para un futuro normal. Después de “when”, usa presente: “when the crew arrives”. La otra acción puede llevar “will have” porque ya estará completa en ese momento.",
+          literal: "cuando + presente, habrá...",
+          useWhen:
+            "Habla de un futuro punto de referencia: when she arrives, when the shift starts, when the gate opens.",
+          avoidWhen:
+            "Pone “will” en las dos mitades: “when she will arrive, we will have...” suena a traducción literal.",
+          register: "neutro",
+          region: "Inglés universal.",
+          related: ["as soon as", "before", "once", "future time clause"],
+          example: {
+            target: "When the crew arrives, we will have posted the permits.",
+            translation: "Cuando llegue la cuadrilla, habremos puesto los permisos."
+          }
+        },
+        {
+          term: "will have ... by now",
+          explanation:
+            "Con “by now”, el futuro perfecto puede ser una conjetura: “she will have opened by now” significa que probablemente ya abrió. No siempre habla del futuro; a veces razona sobre el pasado reciente.",
+          literal: "seguramente ya habrá...",
+          useWhen:
+            "Deduce algo por horario, costumbre o evidencia: las luces están prendidas, nadie llama, siempre llega temprano.",
+          avoidWhen:
+            "Sabe el dato con certeza. Si lo vio, diga “she opened” o “she has opened”.",
+          register: "neutro",
+          region: "Inglés universal, más frecuente en habla cuidada que en charla rápida.",
+          related: ["probably", "must have", "I bet", "by this time"],
+          example: {
+            target: "Rosa will have opened the gate by now.",
+            translation: "Rosa probablemente ya abrió la reja."
+          }
+        },
+        {
+          term: "irregular participles: done, seen, written",
+          explanation:
+            "Como en español, los participios irregulares son el punto débil. “Do” da done, “see” da seen, “write” da written, “put” se queda put, “make” da made, “say” da said. No basta saber “will have”; falta la forma final.",
+          literal: "participios irregulares",
+          useWhen:
+            "Cualquier tiempo perfecto inglés: present perfect, past perfect, conditional perfect y future perfect.",
+          avoidWhen:
+            "Regulariza con “doed”, “seed”, “writed” o “putted” en este sentido. Esos errores se notan mucho.",
+          register: "neutro",
+          region: "Inglés universal.",
+          related: ["done", "seen", "written", "made"],
+          example: {
+            target: "He will have written the notes by then.",
+            translation: "Él habrá escrito las notas para entonces."
+          }
+        },
+        {
+          term: "I'll be done by six",
+          explanation:
+            "La alternativa de conversación. En vez de “I will have finished by six”, muchos estadounidenses dicen “I'll be done by six”. Significa casi lo mismo para un plazo, pero no enseña ni practica el tiempo compuesto.",
+          literal: "estaré listo para las seis",
+          useWhen:
+            "Habla rápido con colegas y el plazo es lo único importante.",
+          avoidWhen:
+            "Un ejercicio, examen o texto formal está midiendo el futuro perfecto. Ahí conviene producir “will have finished”.",
+          register: "coloquial neutro",
+          region: "Muy común en el inglés estadounidense, incluso en ambientes de trabajo en Texas.",
+          related: ["I'll finish by six", "deadline", "done", "ready"],
+          example: {
+            target: "I'll be done by six.",
+            translation: "Estaré lista para las seis."
+          }
+        },
+        {
+          term: "will have vs. would have",
+          explanation:
+            "“Will have” mira a un plazo futuro o a una deducción fuerte; “would have” pertenece al pasado irreal: I would have called. Para un colombiano, la diferencia entre habré/habrá y habría ayuda a no mezclarlos.",
+          literal: "habrá frente a habría",
+          useWhen:
+            "Use “will have” con “by Friday” o “by now”; use “would have” con una condición irreal como “if I had known”.",
+          avoidWhen:
+            "Cambia uno por otro solo porque ambos llevan “have”. El auxiliar decide toda la relación con la realidad.",
+          register: "neutro",
+          region: "Inglés universal.",
+          related: ["would have", "if I had", "future perfect", "conditional perfect"],
+          example: {
+            target: "By Friday, we will have finished. If we had known, we would have started sooner.",
+            translation: "Para el viernes habremos terminado. Si hubiéramos sabido, habríamos empezado antes."
+          }
+        }
+      ],
+      note:
+        "El futuro perfecto inglés se forma con “will have” más participio pasado: I will have finished, you will have seen, she will have written, we will have posted. Su lectura principal es de plazo: algo ya estará completo antes de un momento futuro, sobre todo con “by + time”. También puede ser conjetura con “by now”: “she will have opened the gate by now” significa que probablemente ya abrió. La forma se parece bastante al español “habré terminado”, pero en el habla cotidiana inglesa es menos frecuente que alternativas como “I'll be done by six”. Esa rareza hace que los estudiantes la eviten en ambos idiomas. Apréndala como forma de reconocimiento y como herramienta de escritura precisa, no como la única manera de hablar de un plazo.",
+      culture: [
+        {
+          label: "Odessa, turnos y plazos",
+          body:
+            "Odessa, en el oeste de Texas, vive muy cerca de la industria petrolera del Permian Basin. En talleres, patios y oficinas de servicio, los cambios de turno importan: una firma tarde o un permiso sin poner puede frenar a toda una cuadrilla. Por eso “by six, I will have finished” no suena académico en este contexto. Es la gramática exacta de un plazo real, con gente esperando para empezar a trabajar."
+        },
+        {
+          label: "La forma existe, pero la calle simplifica",
+          body:
+            "En inglés estadounidense la gente entiende “I will have finished” sin problema, pero muchas veces dice “I'll be done by six” o “I'll finish before six”. Eso no hace inútil el futuro perfecto. Lo vuelve una forma de precisión: aparece en instrucciones, reportes, exámenes y frases donde el hablante quiere subrayar que una cosa queda completa antes de otra."
+        },
+        {
+          label: "El puente con el español formal",
+          body:
+            "Para un colombiano, “will have finished” es una ayuda y una trampa. Ayuda porque calca “habré terminado”. Engaña porque en Colombia se oye muchísimo “ya terminé” en contextos donde el examen espera “ya habré terminado”. Ver la misma rareza en inglés ayuda a entender el problema: las dos lenguas tienen una forma precisa que la conversación diaria a menudo esquiva."
+        }
+      ],
+      pitfalls: [
+        {
+          mistake: "Decir “I will finished”",
+          whyItFails:
+            "Falta el auxiliar “have”. El futuro perfecto no es “will” más participio solo; necesita la cadena completa “will have finished”.",
+          sayInstead: "I will have finished by six."
+        },
+        {
+          mistake: "Usar “when she will arrive”",
+          whyItFails:
+            "En cláusulas de tiempo futuro, el inglés usa presente después de “when”: “when she arrives”. El “will have” va en la otra acción, la que ya estará completa.",
+          sayInstead: "When she arrives, we will have posted the permits."
+        },
+        {
+          mistake: "Leer “will have ... by now” solo como futuro",
+          whyItFails:
+            "Con “by now”, muchas veces es conjetura sobre el pasado reciente: “she will have opened by now” quiere decir probablemente ya abrió. Si lo lee como futuro, pierde la deducción.",
+          sayInstead: "She will have opened by now."
+        },
+        {
+          mistake: "Escribir participios regulares falsos",
+          whyItFails:
+            "“Writed”, “seed” y “doed” no sirven como participios. El inglés necesita written, seen y done, igual que el español necesita escrito, visto y hecho.",
+          sayInstead: "He will have written the notes."
+        }
+      ],
+      variations: [
+        {
+          form: "By six, I will have finished.",
+          register: "neutro a formal",
+          region: "Inglés universal",
+          whenToUse: "Un plazo claro: antes de las seis la acción ya estará completa."
+        },
+        {
+          form: "When the crew arrives, we will have posted the permits.",
+          register: "neutro",
+          region: "Inglés universal",
+          whenToUse: "Una acción ya completada antes de otro evento futuro."
+        },
+        {
+          form: "She will have opened the gate by now.",
+          register: "neutro",
+          region: "Inglés universal",
+          whenToUse: "Una conjetura: probablemente ya abrió la reja."
+        },
+        {
+          form: "I'll be done by six.",
+          register: "coloquial neutro",
+          region: "Inglés estadounidense",
+          whenToUse: "La alternativa conversacional para el plazo, útil pero distinta de la forma examinada."
+        }
+      ],
+      prompt: "¿Qué forma expresa correctamente “habré terminado para las seis” en inglés?",
+      choices: [
+        "I will finished by six.",
+        "I will have finished by six.",
+        "I would have finish by six."
+      ],
+      answer: 1,
+      practiceExtra: [
+        {
+          prompt: "¿Cuál frase usa bien “when” con un futuro de plazo?",
+          choices: [
+            "When she will arrive, we will have posted it.",
+            "When she arrived, we will posted it.",
+            "When she arrives, we will have posted it."
+          ],
+          answer: 2,
+          tests: "Después de when para futuro se usa presente: when she arrives."
+        },
+        {
+          prompt: "¿Qué significa “Rosa will have opened the gate by now”?",
+          choices: [
+            "Rosa probablemente ya abrió la reja.",
+            "Rosa nunca abre la reja temprano.",
+            "Rosa abrirá la reja la próxima semana."
+          ],
+          answer: 0,
+          tests: "Con “by now”, “will have” puede ser conjetura sobre el pasado reciente."
+        },
+        {
+          prompt: "¿Cuál usa bien un participio irregular?",
+          choices: [
+            "He will have writed the notes by then.",
+            "He will have write the notes by then.",
+            "He will have written the notes by then."
+          ],
+          answer: 2,
+          tests: "Write tiene el participio irregular written."
         }
       ]
     }
