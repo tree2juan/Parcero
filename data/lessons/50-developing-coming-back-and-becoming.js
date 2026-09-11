@@ -29,7 +29,7 @@ lessons.push(
     verb: "regresar",
     review: "pending",
     es: {
-      title: "Regresar a Ibagué después de años fuera",
+      title: "Coming back to Ibagué after years away",
       situation:
         "Alex returns to Ibagué after living away for several years. A cousin waits for him in front of the family house and notices that he recognizes some things and not others. You need to hear the nuance of regresar while remembering that volver is the more common word in quick conversation.",
       setting: {
@@ -673,7 +673,7 @@ lessons.push(
     verb: "permanecer",
     review: "pending",
     es: {
-      title: "Permanecer sentado durante el cruce",
+      title: "Staying seated for the crossing",
       situation:
         "Maya crosses the Sinú River in Montería in a small boat. Before they leave, the attendant gives a formal safety instruction. You need to recognize permanecer in notices and instructions, while also knowing that quedarse is the everyday word for staying in a place.",
       setting: {
@@ -1305,7 +1305,7 @@ lessons.push(
     verb: "convertirse",
     review: "pending",
     es: {
-      title: "Convertirse en taller comunitario",
+      title: "Becoming a community workshop",
       situation:
         "Sam visits Arauca, and a neighbor shows him an old warehouse that now works as a community workshop. The building did not just change color; it turned into something else. You need to understand why convertirse en is the tricky piece in the “become” family.",
       setting: {

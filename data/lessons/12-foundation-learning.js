@@ -27,7 +27,7 @@ lessons.push(
     verb: "aprender",
     review: "pending",
     es: {
-      title: "Aprender a bailar en la parranda familiar",
+      title: "Learning to dance at the family parranda",
       situation:
         "It is Saturday night in Medellín, and there is a parranda at a paisa family’s house. Alex wants to learn to dance and asks Manuela, a family friend, for help. Between laughs, he has to understand the difference between learning to do something, learning the lyrics to a song by heart, and the idea that “bailando se aprende”, all while an uncle keeps turning the music up louder.",
       setting: {
@@ -679,7 +679,7 @@ lessons.push(
     verb: "enseñar",
     review: "pending",
     es: {
-      title: "Aprender a hacer ajiaco en una cocina bogotana",
+      title: "Learning to make ajiaco in a Bogotá kitchen",
       situation:
         "In Bogotá, Doña Miriam, a lifelong rola, gives Alex a lesson in making ajiaco santafereño. Among the papa criolla, ears of corn and guascas, Alex discovers that “enseñar” in Spanish does two jobs: teaching someone how to do something and showing someone a photo of how it should turn out. All in usted, with the respect a bogotano uses for someone handing over her recipe.",
       setting: {
@@ -1279,7 +1279,7 @@ lessons.push(
     verb: "estudiar",
     review: "pending",
     es: {
-      title: "Hablar de la universidad en el bus de Barranquilla",
+      title: "Talking about college on the Barranquilla bus",
       situation:
         "On a Transmetro bus in Barranquilla, Alex starts talking with Yuranis, a coastal student, about what she studies. Between the heat and the Caribbean singsong accent, Alex has to understand that “estudiar una carrera” is not “career”, that “estoy estudiando” usually means “I’m in university”, and that here people count by semesters and suffer over midterms. All in tú, the way people speak on the coast.",
       setting: {

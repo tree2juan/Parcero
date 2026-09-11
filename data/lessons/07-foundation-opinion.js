@@ -29,7 +29,7 @@ lessons.push(
     verb: "parecer",
     review: "pending",
     es: {
-      title: "Acordar la pintada con el maestro",
+      title: "Settling the paint job with the maestro",
       situation:
         "Alex wants to have his apartment repainted, and a painter, don Fabio, has come to give him an estimate. They have to agree on the day, the color, and the price. Alex hardly knows don Fabio, so everything is negotiated carefully: each proposal is offered, not imposed.",
       setting: {
@@ -681,7 +681,7 @@ lessons.push(
     verb: "quedar",
     review: "pending",
     es: {
-      title: "Medirse una chaqueta en El Hueco",
+      title: "Trying on a jacket in El Hueco",
       situation:
         "Alex is walking through El Hueco, the popular shopping district in downtown Medellín, looking for a jacket. A vendor named Yésica hooks him from the doorway and gets him to try one on. In five sentences, the price, the size, and whether he comes back for it later are all on the line.",
       setting: {
@@ -1333,7 +1333,7 @@ lessons.push(
     verb: "creer",
     review: "pending",
     es: {
-      title: "Dudar si se cancela el desfile",
+      title: "Wondering if the parade is canceled",
       situation:
         "It is Carnival in Barranquilla, and Alex is on the street waiting for the Batalla de Flores with his friend Kelly. The sky turns black, and Alex worries the parade will be spoiled. Kelly, costeña and seasoned by years of Carnival, does not think anything will happen. Everything plays out between what one person believes and what another doubts.",
       setting: {

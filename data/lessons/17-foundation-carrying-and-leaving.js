@@ -31,7 +31,7 @@ lessons.push(
     verb: "llevar",
     review: "pending",
     es: {
-      title: "Qué llevar al sancocho del domingo",
+      title: "What to bring to Sunday's sancocho",
       situation:
         "Alex runs into Yina, a coastal friend, at the door of the building in Barranquilla. On Sunday there is sancocho at Wilmer’s, a friend from the barrio, and Yina confirms that Alex is invited too. Alex does not know whether he should show up with something or how to dress, so he takes the chance to ask Yina, who knows all the rules of the coast.",
       setting: {
@@ -623,7 +623,7 @@ lessons.push(
     verb: "traer",
     review: "pending",
     es: {
-      title: "Pedir el almuerzo y la cuenta en Bogotá",
+      title: "Ordering lunch and asking for the check",
       situation:
         "Alex walks into a set-lunch restaurant in downtown Bogotá at rush hour. A waiter serves him with usted, with the formal but warm courtesy of the capital. Alex has to ask for the menu, a coffee while he decides and, at the end, the bill, all with the Colombian formulas “¿me trae?” and “¿me regala?”, and without falling for the false friend tinto.",
       setting: {
@@ -1215,7 +1215,7 @@ lessons.push(
     verb: "dejar",
     review: "pending",
     es: {
-      title: "La despedida en la casa de un amigo paisa",
+      title: "Saying goodbye at a paisa friend's place",
       situation:
         "You are visiting a friend’s place in Medellín and are about to leave. Between “dejá eso ahí” so you do not wash the dishes, “dejame contarte” before a story, the jacket you left in the room and the final “deje así”, the verb dejar appears with four different meanings in one conversation. All in paisa voseo, with parce, pues and bien pueda.",
       setting: {

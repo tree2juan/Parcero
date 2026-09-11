@@ -29,7 +29,7 @@ lessons.push(
     verb: "ver",
     review: "pending",
     es: {
-      title: "Repasar el partido en las escaleras",
+      title: "Replaying the match in the stairwell",
       situation:
         "Alex runs into don Fabio, his third-floor neighbor, on the stairs of the building in Chapinero. Millonarios played last night, and the match ended two-two. Don Fabio wants to comment on every play, and Alex has to keep up a conversation about what he saw — or did not see — on TV, even though he is rushing to work.",
       setting: {
@@ -621,7 +621,7 @@ lessons.push(
     verb: "dar",
     review: "pending",
     es: {
-      title: "Guardar el celular en el centro de Medellín",
+      title: "Keeping your phone out of sight downtown",
       situation:
         "Alex is walking through downtown Medellín with Manuela, a paisa friend, and pulls out his cell phone to look at the map right there on the street. Manuela stops him cold: downtown is not a place to show your phone. Amid the noise of buses and vendors, Alex learns the golden Colombian rule, “no dar papaya,” and also discovers that in Medellín everyone addresses him with vos.",
       setting: {
@@ -1213,7 +1213,7 @@ lessons.push(
     verb: "saber",
     review: "pending",
     es: {
-      title: "La fruta rara en el puesto de jugos",
+      title: "The strange fruit at the juice stand",
       situation:
         "In a Bogotá market plaza, Alex stops at the stall run by Yésica, a young vendor, in front of a fruit he does not recognize: curuba. Yésica encourages him to try it and guess what it tastes like. In the conversation, Alex trips over the big Spanish pair, “saber” and “conocer,” and discovers that “sabe a” is how Colombians say something has a certain flavor.",
       setting: {

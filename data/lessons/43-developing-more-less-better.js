@@ -25,7 +25,7 @@ lessons.push(
     verb: "mejorar",
     review: "pending",
     es: {
-      title: "Mejorarse en Riohacha",
+      title: "Getting better in Riohacha",
       situation:
         "You are in Riohacha recovering from a fever that ruined two days of your trip. A friend stops by with oral rehydration drink and soup, asks whether you are already feeling better, and leaves you with the phrase you really need when someone is sick: que te mejores.",
       setting: {
@@ -643,7 +643,7 @@ lessons.push(
     verb: "aumentar",
     review: "pending",
     es: {
-      title: "Aumentar el arriendo en Manizales",
+      title: "A rent increase in Manizales",
       situation:
         "You live in Manizales, and the building manager tells you the rent is going to increase next month. On the street, many people would say the rent sube, but in the notice and in formal conversation you see aumentar: prices, rent, salary, percentages.",
       setting: {
@@ -1261,7 +1261,7 @@ lessons.push(
     verb: "reducir",
     review: "pending",
     es: {
-      title: "Reducir el azúcar en San Andrés",
+      title: "Cutting back on sugar in San Andrés",
       situation:
         "You are in San Andrés talking with a nutritionist after some lab tests. She does not simply tell you to lower your sugar: she proposes reducing it little by little, cutting back on sweet drinks, and checking how much you reduced it after two weeks.",
       setting: {

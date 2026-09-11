@@ -29,7 +29,7 @@ lessons.push(
     verb: "cuidar",
     review: "pending",
     es: {
-      title: "Cuidar a una sobrina en Neiva",
+      title: "Looking after a niece in Neiva",
       situation:
         "You are in Neiva taking care of your niece while your sister works overnight. You also look after the house, give a warning with care, and end the call with a cuídate that sounds natural among family.",
       setting: {
@@ -681,7 +681,7 @@ lessons.push(
     verb: "proteger",
     review: "pending",
     es: {
-      title: "Proteger a los vecinos en Quibdó",
+      title: "Keeping the neighbors safe in Quibdó",
       situation:
         "You are in Quibdó during a heavy downpour and organize with neighbors how to protect children and older adults without creating panic. You also practice protejo and proteja, where the g changes to j.",
       setting: {
@@ -1333,7 +1333,7 @@ lessons.push(
     verb: "apoyar",
     review: "pending",
     es: {
-      title: "Apoyar a una amiga en Pasto",
+      title: "Standing by a friend in Pasto",
       situation:
         "You are in Pasto with a friend who is going to report a problem at the neighborhood board meeting. You want to support her without promising to pay her expenses, and you also distinguish moral support from the physical support of a wall or a table.",
       setting: {

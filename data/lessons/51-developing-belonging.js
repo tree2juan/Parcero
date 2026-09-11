@@ -27,7 +27,7 @@ lessons.push(
     verb: "incluir",
     review: "pending",
     es: {
-      title: "Preguntar qué incluye la tarifa en Montería",
+      title: "Asking what the rate includes in Montería",
       situation:
         "You are in Montería booking a simple room near the river. The rate looks good, but you need to know whether it includes breakfast, air conditioning, taxes, and transportation from the bus terminal.",
       setting: {
@@ -603,7 +603,7 @@ lessons.push(
     verb: "excluir",
     review: "pending",
     es: {
-      title: "Excluido del chat del equipo en Buenaventura",
+      title: "Left out of the team chat in Buenaventura",
       situation:
         "You are in Buenaventura helping organize a neighborhood tournament. One player was left out of the team chat, and you have to distinguish between a rule that excludes someone and an invitation that simply never arrived.",
       setting: {
@@ -1167,7 +1167,7 @@ lessons.push(
     verb: "pertenecer",
     review: "pending",
     es: {
-      title: "Pertenecer al grupo de bici en Arauca",
+      title: "Belonging to the bike group in Arauca",
       situation:
         "You are in Arauca going out with a cycling group that meets on Sundays. You want to know whether you already belong to the group, or whether you simply feel part of it even though you are not registered yet.",
       setting: {

@@ -16,7 +16,7 @@ lessons.push(
     verb: "girar",
     review: "pending",
     es: {
-      title: "Girar donde el letrero dice, voltear donde habla el conductor",
+      title: "Turn where the sign says, turn where the driver says",
       situation:
         "In Florencia, Alex rides with Sandra by car toward a nearby rural lane, reading the signs while she drives. The signs say “gire a la derecha”, but Sandra explains that in conversation many Colombians say “voltee a la izquierda”. Later, a pending transfer shows the other meaning of girar: “me giraron el pago”.",
       setting: {
@@ -648,7 +648,7 @@ lessons.push(
     verb: "empujar",
     review: "pending",
     es: {
-      title: "Empuje, hale y no empuje a la gente",
+      title: "Push, pull, and do not shove people",
       situation:
         "In Tumaco, Alex arrives with Maritza at a crowded entrance after the market. The door has EMPUJE and HALE signs, someone tries to use tirar where they should use jalar, and a guard repeats “no empuje” because the line is packed tight. Later, Maritza uses empujar figuratively: they need to push the project forward so it does not stall.",
       setting: {

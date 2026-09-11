@@ -35,7 +35,7 @@ lessons.push(
     verb: "dormir",
     review: "pending",
     es: {
-      title: "Se me fue la lancha por quedarme dormido",
+      title: "I missed the boat by oversleeping",
       situation:
         "Alex is backpacking in Santa Marta, and last night he stayed out late on the beach with Wílmer, a coastal friend. The plan was to wake up early to catch the boat to Parque Tayrona, but Alex overslept and did not hear the alarm. Wílmer teases him while Alex, half asleep, explains how the morning got away from him.",
       setting: {
@@ -687,7 +687,7 @@ lessons.push(
     verb: "jugar",
     review: "pending",
     es: {
-      title: "Una tarde de tejo en Santander",
+      title: "An afternoon of tejo in Santander",
       situation:
         "Fabián, a santandereano friend, takes Alex to a tejo court outside Bucaramanga. Alex has never played and mixes up jugar with tocar when talking about music. Between throws, gunpowder, and beers, Fabián explains how the game is played, what jugar limpio means, and why the loser pays for the polas.",
       setting: {
@@ -1339,7 +1339,7 @@ lessons.push(
     verb: "ayudar",
     review: "pending",
     es: {
-      title: "Pidiendo el favor en el Eje Cafetero",
+      title: "Asking a favor in the Coffee Region",
       situation:
         "In Pereira, Alex needs to get to a coffee town and asks Mateo, a local, for help. He learns that in Colombia “colaborar” and “regalar” are courtesy verbs for asking a favor, and that “ayudar” takes an “a” before the infinitive. When a woman comes over to ask for “una ayudita”, he discovers that the same word can mean money.",
       setting: {

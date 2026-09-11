@@ -36,7 +36,7 @@ lessons.push(
     verb: "recordar",
     review: "pending",
     es: {
-      title: "Reencontrarse con una amiga y recordar viejos tiempos",
+      title: "Running into an old friend and reminiscing",
       situation:
         "Alex runs into Diana by chance on the street, an old school friend from Cali whom he has not seen in years. They start remembering the parties, teachers and nicknames from back then, and Alex asks her to remind him of a couple of names that escape him. The whole chat turns on recordar and acordarse: remembering something, recordar in the sense of bringing something to mind, and the recordar that really means reminding someone of something.",
       setting: {
@@ -668,7 +668,7 @@ lessons.push(
     verb: "olvidar",
     review: "pending",
     es: {
-      title: "Reconocer que se te olvidó un mandado",
+      title: "Admitting you forgot an errand",
       situation:
         "Alex arrives for a meal at the home of Yina, a friend from Cartagena, without the cake he had promised to bring, and on top of that he realizes he also left his keys behind. He has to admit, a little embarrassed, that he forgot everything. The scene lives on the three ways to forget: the neutral “olvidé”, the reflexive “me olvidé de”, and above all the wonderfully innocent “se me olvidó”, which spreads the blame as if forgetting happened all by itself.",
       setting: {
@@ -1300,7 +1300,7 @@ lessons.push(
     verb: "esperar",
     review: "pending",
     es: {
-      title: "Esperar el turno en la clínica",
+      title: "Waiting your turn at the clinic",
       situation:
         "Alex arrives at an EPS clinic in Bogotá and asks the receptionist how long he has to wait to be seen. The receptionist asks him to wait a moment, estimates half an hour and hopes the line will not take longer. The whole scene rests on a single verb, esperar, which in Spanish covers three ideas English separates: waiting, hoping, and expecting or counting on something.",
       setting: {

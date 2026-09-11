@@ -7,7 +7,7 @@ const lessons = [{
   pathways: ["foundation", "professional-customer-service"],
   review: "pending",
   es: {
-    title: "Un café y una conversación",
+    title: "A coffee and a conversation",
     situation: "You order a coffee at a corner shop in Bogotá.",
     setting: {
       who: "Camila runs the shop and has served this block for years. Alex moved onto the street a few weeks ago and is still a face rather than a name. Neither outranks the other, and the age gap is not wide enough to force formality.",
@@ -141,7 +141,7 @@ const lessons = [{
   pathways: ["foundation", "professional-customer-service"],
   review: "pending",
   es: {
-    title: "Un taxi hasta el centro",
+    title: "A taxi downtown",
     situation: "You take a taxi in Medellín and want to know the price before getting in.",
     setting: {
       who: "Alex is a passenger near a busy street in Medellín. The conductor is working a regular city taxi, not a private tour car. They are strangers, so the exchange starts with respectful distance.",
@@ -275,7 +275,7 @@ const lessons = [{
   pathways: ["foundation"],
   review: "pending",
   es: {
-    title: "En la plaza de mercado",
+    title: "At the market square",
     situation: "You buy fruit at a market stall and the vendor gives you a little extra.",
     setting: {
       who: "Alex is buying fruit from a vendedora who works the same stall every day. They are not friends, but market talk is warmer than supermarket talk. The vendor leads the rhythm because she knows the product, the price and the queue.",
@@ -409,7 +409,7 @@ const lessons = [{
   pathways: ["foundation", "year-12-local-mastery"],
   review: "pending",
   es: {
-    title: "¿Cuál es el parche?",
+    title: "What's the parche?",
     situation: "A friend messages you to put together a plan for the weekend.",
     setting: {
       who: "Santiago and Alex are close friends who already have enough trust to joke, leave details open and use local slang. Santiago sounds paisa or at least socially comfortable in Medellín; Alex answers in the same register by using vos.",
@@ -545,7 +545,7 @@ const lessons = [{
   pathways: ["year-12-local-mastery", "professional-healthcare"],
   review: "pending",
   es: {
-    title: "Una cita médica",
+    title: "A doctor's appointment",
     situation: "You go to a medical appointment and have to describe a symptom.",
     setting: {
       who: "Alex is the patient and the doctor is the clinical authority. The doctor may be kind and warm, but the relationship is professional and the safest default is usted.",
@@ -683,7 +683,7 @@ const lessons = [{
   pathways: ["professional-office", "professional-technical"],
   review: "pending",
   es: {
-    title: "La reunión de seguimiento",
+    title: "The team check-in",
     situation: "You give a short update on your work in a quick team meeting.",
     setting: {
       who: "Laura coordinates the report and Alex owns the data review. They are friendly colleagues, not strangers, and Laura may be senior in the project without being socially distant.",
@@ -819,7 +819,7 @@ const lessons = [{
   pathways: ["collegiate-academic"],
   review: "pending",
   es: {
-    title: "En el seminario",
+    title: "At the seminar",
     situation: "You take part in a university seminar and want to qualify an argument.",
     setting: {
       who: "A professor is guiding a university seminar and Alex is one of several students discussing a reading. Alex is not trying to defeat a classmate; the goal is to contribute a careful academic point.",
@@ -957,7 +957,7 @@ const lessons = [{
   pathways: ["professional-interviews", "collegiate-academic"],
   review: "pending",
   es: {
-    title: "La entrevista de trabajo",
+    title: "The job interview",
     situation: "You are in an interview and they ask about your experience.",
     setting: {
       who: "Alex is interviewing with a hiring manager for a client-facing role. The interviewer controls the agenda, but the exchange is meant to feel professional rather than intimidating.",

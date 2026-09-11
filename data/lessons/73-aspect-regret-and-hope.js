@@ -17,7 +17,7 @@ lessons.push(
     structure: "recent-and-repeated",
     review: "pending",
     es: {
-      title: "Acabo de llegar, ya vuelve a sonar y estamos a punto de salir",
+      title: "Just arrived, ringing again, about to leave",
       situation:
         "At a hato outside Villavicencio, Marcela has just arrived from town while it is still dark. Duban, the mayordomo, already has the tinto ready and the corral open. The cell phone keeps ringing again and again, the cattle are about to head out onto the plain, and the two speak quickly before the heat bears down. Sentence by sentence, Spanish shows how it marks what someone has just done, what happens again, and what is about to happen.",
       setting: {
@@ -627,7 +627,7 @@ lessons.push(
     structure: "counterfactual-past",
     review: "pending",
     es: {
-      title: "Si hubiera sabido, no habría dicho nada",
+      title: "If I had known, I would not have said anything",
       situation:
         "After an afternoon of coleo in Yopal, Andrés is still heated over a brush with another rider in the arena. Paola, his lifelong friend, sits with him in the shade and helps him look at it calmly. As they talk it over, the form Spanish uses to regret what can no longer be fixed appears again and again: “si hubiera sabido, no habría reaccionado así”. It is the grammar of regret, and also of forgiveness.",
       setting: {
@@ -1237,7 +1237,7 @@ lessons.push(
     structure: "wishes-and-ojala",
     review: "pending",
     es: {
-      title: "Ojalá que salga bien: deseos y despedidas en el río",
+      title: "Hope it goes well: wishes and goodbyes on the river",
       situation:
         "On the boardwalk in Leticia, on the Amazon, Marina says goodbye to Dairo, who is crossing the river toward Tabatinga, on the Brazilian side. It is a short goodbye, but full of wishes: may the river be calm, may things go well for him, may he come back soon. In a few minutes, all the grammar of hope in Spanish appears: “ojalá” with the subjunctive, the bare “que” of farewells, and “esperar que” versus “esperar” plus an infinitive.",
       setting: {

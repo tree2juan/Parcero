@@ -17,7 +17,7 @@ lessons.push(
     verb: "comunicar",
     review: "pending",
     es: {
-      title: "Comunicarse con una guía en Florencia",
+      title: "Getting through to a guide in Florencia",
       situation:
         "You are in Florencia and need to confirm a river outing with a guide who has not answered messages. You call the hostel reception desk so they can put you through to her without making you sound impatient.",
       setting: {
@@ -681,7 +681,7 @@ lessons.push(
     verb: "conectar",
     review: "pending",
     es: {
-      title: "Conectarse a una videollamada en Buenaventura",
+      title: "Connecting to a video call in Buenaventura",
       situation:
         "You are in Buenaventura trying to join a family video call before a meeting starts. The Wi-Fi will not connect, the signal drops, and someone says that you all “conectaron de una” once you could finally talk.",
       setting: {
@@ -1333,7 +1333,7 @@ lessons.push(
     verb: "continuar",
     review: "pending",
     es: {
-      title: "Continuar una conversación después de una llamada caída en Zipaquirá",
+      title: "Picking up after a dropped call in Zipaquirá",
       situation:
         "You are coordinating a family visit in Zipaquirá by phone, and the call drops several times. You need to decide whether you continue, whether you call back, and when seguir sounds more natural than continuar.",
       setting: {

@@ -27,7 +27,7 @@ lessons.push(
     verb: "encender",
     review: "pending",
     es: {
-      title: "Encender el ventilador cuando vuelve la luz",
+      title: "Turning on the fan when the power comes back",
       situation:
         "You are in a guesthouse in Sincelejo, with heat sunk into the walls and a fan that will not start after a power dip. The owner explains which button to press, when to say “prender” like everyone else, and when “encender” sounds better on a notice or in written instructions.",
       setting: {
@@ -625,7 +625,7 @@ lessons.push(
     verb: "apagar",
     review: "pending",
     es: {
-      title: "Apagar el breaker antes de revisar la nevera",
+      title: "Shutting off the breaker before checking the fridge",
       situation:
         "You are in Riohacha, in a house near the malecón, and an old refrigerator started making a strange noise after another power flicker. The neighbor who knows wiring asks you to turn off the breaker before looking at anything, while your cell phone also turns off just as you were about to record the noise.",
       setting: {
@@ -1223,7 +1223,7 @@ lessons.push(
     verb: "funcionar",
     review: "pending",
     es: {
-      title: "Preguntar cómo funciona el medidor del hostal",
+      title: "Asking how the hostel meter works",
       situation:
         "You are at a small hostel in San Andrés, and the router drops every time the prepaid meter runs out of credit. At reception, the clerk explains how the system works, but also gently corrects you: when something is not working, in Colombia you will hear “no sirve” or “está dañado” much more than “no funciona”.",
       setting: {

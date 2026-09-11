@@ -28,7 +28,7 @@ lessons.push(
     verb: "rellenar",
     review: "pending",
     es: {
-      title: "Rellenar no siempre es llenar un formulario",
+      title: "Refilling is not always filling out a form",
       situation:
         "In Girardot, Alex arrives at a counter to update some membership information. The clerk tells him “llene este formulario”, not “rellénelo”, and then offers him water because it is hot. When Alex asks whether he should “rellenar” every space, she uses the chance to correct him carefully: in Colombia, llenar is the normal verb for forms; rellenar is understood, but it sounds more natural for filling a glass again, filling a hole, or talking about an arepa rellena.",
       setting: {
@@ -582,7 +582,7 @@ lessons.push(
     verb: "guardar",
     review: "pending",
     es: {
-      title: "Guardar el puesto y guardar las cosas",
+      title: "Saving a seat and putting things away",
       situation:
         "In Zipaquirá, Alex walks into a café near the plaza with Paula before a meeting. She asks him to save her seat while she orders coffee, and then reminds him to put his backpack under the chair so it is not in the way. In the same scene, guardar does not mean standing guard: it can mean putting something in its place, keeping something just in case, staying quiet during a call, and even saving a file.",
       setting: {
@@ -1124,7 +1124,7 @@ lessons.push(
     verb: "prestar",
     review: "pending",
     es: {
-      title: "Pedir prestado sin invertir prestar",
+      title: "Borrowing without mixing up lending",
       situation:
         "In Arauca, Alex arrives at his neighbor Diana's place because his battery died and he needs to charge his cell phone before calling a taxi. He wants to say he needs to “prestar” a charger, but Diana shows him the right direction: she lends it to him, he asks to borrow it. Prestar atención also appears, because she explains that her charger is not fast-charging, as does the Colombian phrase prestar el baño, which does not mean taking the bathroom away on loan but allowing someone to use it.",
       setting: {

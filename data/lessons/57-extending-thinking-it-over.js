@@ -16,7 +16,7 @@ lessons.push(
     verb: "considerar",
     review: "pending",
     es: {
-      title: "Considerar una oferta sin comprometerse todavía",
+      title: "Considering an offer without committing yet",
       situation:
         "In Arauca, Alex talks with Paola about a job offer that would mean moving and changing his pace. He does not want to say yes or close the door, so he learns to use “lo voy a considerar”, “considero que…”, and more conversational alternatives like “lo pienso” or “déjame ver” when he needs to buy time gracefully.",
       setting: {
@@ -648,7 +648,7 @@ lessons.push(
     verb: "imaginar",
     review: "pending",
     es: {
-      title: "Imaginar el plan que pudo haber sido",
+      title: "Imagining the plan that might have been",
       situation:
         "In Girardot, Alex waits with Lina for the heat to drop before traveling. Between plans and messages, she throws him “¡imagínate!” and leads him into more complex phrases: “imagínate que llegara sin avisar”, “imagina que no hubiera pasado”, and the Colombian “me imagino que sí” for accepting something without sounding completely sure.",
       setting: {
@@ -1280,7 +1280,7 @@ lessons.push(
     verb: "reconocer",
     review: "pending",
     es: {
-      title: "Reconocer una cara y reconocer un error",
+      title: "Recognizing a face and admitting a mistake",
       situation:
         "In Zipaquirá, Alex runs into Andrés, someone he knows from an earlier workshop, but he does not recognize him at first because Andrés is wearing a ruana and glasses. The awkwardness becomes a more adult conversation: “no te reconocí”, “reconozco que me equivoqué”, and the difference between recognizing a face and admitting a mistake.",
       setting: {

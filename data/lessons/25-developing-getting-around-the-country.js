@@ -27,7 +27,7 @@ lessons.push(
     verb: "viajar",
     review: "pending",
     es: {
-      title: "Viajar de Armenia a Santa Marta sin perder el hilo",
+      title: "Traveling from Armenia to Santa Marta without losing the thread",
       situation:
         "You are in the terminal in Armenia with a backpack, a half-finished tinto, and the ambitious idea of reaching Santa Marta without paying for a flight. You need to buy the ticket, choose a seat that will not destroy your back, and understand whether the bus really leaves at the time the screen promises.",
       setting: {
@@ -669,7 +669,7 @@ lessons.push(
     verb: "conducir",
     review: "pending",
     es: {
-      title: "Conducir por la vía Bucaramanga-Cúcuta con pico y placa",
+      title: "Driving to Cúcuta with pico y placa",
       situation:
         "You arrive in Bucaramanga with a rental car and the intention of crossing toward Cúcuta early. At the counter, the agent checks your license, looks at the plate, and warns you that the official word is “conducir”, but that on the street everyone is going to ask whether you know how to manejar.",
       setting: {
@@ -1311,7 +1311,7 @@ lessons.push(
     verb: "montar",
     review: "pending",
     es: {
-      title: "Montar en chiva por la montaña de Salento",
+      title: "Riding a chiva up the mountain in Salento",
       situation:
         "You are in Salento, in front of a colorful chiva that climbs a narrow road toward a coffee farm. The driver is not selling a postcard: she explains where to board, when it is better to get on, why you should not stand on the curve, and how the same word “montar” also appears far from transportation.",
       setting: {

@@ -32,7 +32,7 @@ lessons.push(
     structure: "comparison-inequality",
     review: "pending",
     es: {
-      title: "¿Cuál ventilador es más barato?",
+      title: "Which fan is cheaper?",
       situation:
         "Emma is shopping in a San Andresito in Barranquilla, in a relentless midday heat. She wants a fan, and Dani, the young man running the stall, shows her two: a name-brand one and a basic one. Over the noise of the market, they compare price, quality, and size so she can decide which one to take.",
       setting: {
@@ -652,7 +652,7 @@ lessons.push(
     structure: "comparison-equality",
     review: "pending",
     es: {
-      title: "¿Cuál comedor es tan bueno como el otro?",
+      title: "Which lunch spot is as good as the other?",
       situation:
         "Hannah has been in Santa Marta only a few days, and at lunchtime she does not know where to eat. Marlon, a samario friend, takes her to the market and shows her two comedores side by side. In the midday bustle, they compare which one is just as good, which serves as much food as the other, and which serves people faster, so she can choose where to sit.",
       setting: {
@@ -1272,7 +1272,7 @@ lessons.push(
     structure: "superlatives",
     review: "pending",
     es: {
-      title: "El mejor sancocho de Valledupar",
+      title: "The best sancocho in Valledupar",
       situation:
         "Kate is wandering through Valledupar in the middle of the Festival Vallenato, and hunger leads her to a food stall. Beto, a born-and-raised cesarense, swears that they serve the best sancocho in the city there. Between accordions and heat, they compare which plate is the tastiest, which is absolutely delicious, and which comes out cheaper, until Kate works up the nerve to order the biggest one of all.",
       setting: {

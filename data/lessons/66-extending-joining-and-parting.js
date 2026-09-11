@@ -16,7 +16,7 @@ lessons.push(
     verb: "pesar",
     review: "pending",
     es: {
-      title: "Pesar pescado y hablar de lo que pesa en Arauca",
+      title: "Weighing fish and weighing regrets in Arauca",
       situation:
         "You are at a market plaza in Arauca buying fish for lunch. You ask how much it weighs, joke about weighing yourself every morning, and then use a pesar de and me pesa to talk about an invitation you accepted late.",
       setting: {
@@ -658,7 +658,7 @@ lessons.push(
     verb: "unir",
     review: "pending",
     es: {
-      title: "Unirse a una jornada comunitaria en Guatapé",
+      title: "Joining a community cleanup in Guatapé",
       situation:
         "You are in Guatapé, and some neighbors are organizing a cleanup day along the shore before a neighborhood activity. You want to join the group, join forces without sounding grandiose, and understand why una familia unida is a warm compliment.",
       setting: {
@@ -1276,7 +1276,7 @@ lessons.push(
     verb: "separar",
     review: "pending",
     es: {
-      title: "Separar puestos y hablar de una pareja en Tumaco",
+      title: "Saving seats and sharing news in Tumaco",
       situation:
         "You are in Tumaco helping organize a small family gathering. Seats need to be set aside for the cousins, two children who are fighting need to be separated, and a couple who separated last year needs to be discussed carefully.",
       setting: {

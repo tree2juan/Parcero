@@ -16,7 +16,7 @@ lessons.push(
     verb: "cortar",
     review: "pending",
     es: {
-      title: "Cortar pescado cuando se corta la luz",
+      title: "Cutting fish when the power goes out",
       situation:
         "In Buenaventura, Alex helps Doña Elvira prepare fish for a family lunch. The conversation does not stay on the cutting board: while she asks him to slice the plantain thinner, the power goes out, a call drops, and a warning appears that coconut milk can split if it is handled badly.",
       setting: {
@@ -648,7 +648,7 @@ lessons.push(
     verb: "mezclar",
     review: "pending",
     es: {
-      title: "Mezclar la masa sin volverla engrudo",
+      title: "Mixing the masa without turning it to paste",
       situation:
         "In Ibagué, Alex enters a cooking workshop where Clara teaches people to assemble Tolima-style tamales. The class does not recite a recipe: Clara corrects him while chatting, asks him “mézclelo despacio”, warns him “no lo mezcle con el guiso todavía”, and shows him that mezclar is not the same as stirring wildly.",
       setting: {
@@ -1280,7 +1280,7 @@ lessons.push(
     verb: "echar",
     review: "pending",
     es: {
-      title: "Échele sal y échele ganas",
+      title: "Add some salt and put your back into it",
       situation:
         "In San Andrés, Alex cooks with Mariana before the family arrives. She tells him “échele sal”, but the conversation opens up other uses: echar una mano when help is needed, echarse a perder when fish waits too long, and the Colombian “échele ganas” when someone needs to keep trying without giving up.",
       setting: {

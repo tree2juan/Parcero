@@ -29,7 +29,7 @@ lessons.push(
     verb: "lograr",
     review: "pending",
     es: {
-      title: "Lograr que te atiendan en una oficina",
+      title: "Getting someone to help you at the office",
       situation:
         "You are in Montería going with a friend to get an appointment for a family document. The website crashes, the phone goes unanswered, and finally someone at the window helps. You have to say what you managed to do and what you did not manage to understand.",
       setting: {
@@ -693,7 +693,7 @@ lessons.push(
     verb: "reunir",
     review: "pending",
     es: {
-      title: "Reunir gente y papeles para una reunión",
+      title: "Gathering people and papers for a meeting",
       situation:
         "You are in Buenaventura helping prepare a neighbors' meeting about a cultural project. Signatures need to be gathered, the right people need to be brought together, and someone needs to meet with the coordinator. The phrase reunir los requisitos also appears.",
       setting: {
@@ -1345,7 +1345,7 @@ lessons.push(
     verb: "tratar",
     review: "pending",
     es: {
-      title: "Preguntar de qué se trata y cómo te trataron",
+      title: "Asking what it is about and how they treated you",
       situation:
         "You are in Barichara looking at a crafts workshop for visitors. You do not know what it is about, you tried to call earlier, and a woman at the entrance treated you very well. You have to keep tratar de, tratar a, and tratarse de separate without mixing them up.",
       setting: {

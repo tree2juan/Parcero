@@ -27,7 +27,7 @@ lessons.push(
     verb: "caminar",
     review: "pending",
     es: {
-      title: "Dar una vuelta por Getsemaní",
+      title: "A walk through Getsemaní",
       situation:
         "You are in Cartagena with Lina after dinner near La Trinidad. The night feels good, the streets are alive, and you want to suggest walking for a while without making it sound like a tourist route or a transportation plan.",
       setting: {
@@ -679,7 +679,7 @@ lessons.push(
     verb: "correr",
     review: "pending",
     es: {
-      title: "Correr por el río Cali",
+      title: "Running along the Cali River",
       situation:
         "You arranged with Julián to jog early along the Cali River boulevard. The plan starts as exercise, but between the heat, the hour, and a chair in the way, the conversation shows three everyday meanings of correr.",
       setting: {
@@ -1331,7 +1331,7 @@ lessons.push(
     verb: "nadar",
     review: "pending",
     es: {
-      title: "Nadar en un charco de los Llanos",
+      title: "Swimming in a Llanos swimming hole",
       situation:
         "You go with a family from Villavicencio to spend Sunday at a river swimming hole. The water looks calm, but everyone speaks with respect: swimming, getting into the water, floating, and not getting overconfident are all part of the same plan.",
       setting: {

@@ -29,7 +29,7 @@ lessons.push(
     structure: "obligation-impersonal",
     review: "pending",
     es: {
-      title: "Toca madrugar: la obligación sin dueño",
+      title: "Toca madrugar: obligation with no owner",
       situation: "A coworker tells you what has to be ready before the Monday inspection, without saying whose task it is.",
       setting: {
         who: "Paola has worked in this small import office in Medellín for six years and knows the inspection routine by heart. Andrés joined four months ago and has never seen one. Neither manages the other, and the six-year gap in experience is doing more work here than any difference in rank.",
@@ -589,7 +589,7 @@ lessons.push(
     structure: "possessive-standalone",
     review: "pending",
     es: {
-      title: "El mío, el tuyo, el de ella",
+      title: "Mine, yours, and hers",
       situation: "After a family lunch in Cali, two cousins separate the plates and the things that ended up mixed together.",
       setting: {
         who: "Valentina and her cousin Sara grew up in the same house and now live twenty minutes apart. They see each other most weekends, so nothing here is being negotiated politely — they are cousins sorting out clutter.",

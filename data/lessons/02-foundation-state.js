@@ -27,7 +27,7 @@ lessons.push(
     verb: "estar",
     review: "pending",
     es: {
-      title: "Esperando al técnico de la lavadora",
+      title: "Waiting on the washing machine technician",
       situation:
         "The washing machine in the Bogotá apartment where Alex lives has broken, and the technician was supposed to come in a two-hour window that is almost over. Alex calls to find out where he is. The apartment has no water, Alex has a work trip in two days, and he needs the machine fixed today.",
       setting: {
@@ -679,7 +679,7 @@ lessons.push(
     verb: "tener",
     review: "pending",
     es: {
-      title: "Sin sencillo en la tienda de la esquina",
+      title: "Short on change at the corner shop",
       situation:
         "Alex walks into the shop run by don Norbey in Medellín to buy a few quick things, but he only has a fifty-thousand-peso bill and is in a hurry because he has to pick up his daughter from school. The shopkeeper does not have change either, so the two of them have to work it out.",
       setting: {
@@ -1331,7 +1331,7 @@ lessons.push(
     verb: "hacer",
     review: "pending",
     es: {
-      title: "Planeando un sancocho en la playa",
+      title: "Planning a sancocho at the beach",
       situation:
         "Alex runs into Yuranis, his costeña neighbor in Barranquilla, on the street under a brutal sun. Between the heat and the errands he has to run, the chat turns into an invitation: on Saturday her family is making sancocho on the beach for the birthday of her mother, and Alex offers to help.",
       setting: {

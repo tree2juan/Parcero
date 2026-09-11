@@ -29,7 +29,7 @@ lessons.push(
     verb: "nacer",
     review: "pending",
     es: {
-      title: "Preguntar dónde nació la abuela",
+      title: "Asking where grandmother was born",
       situation:
         "You are in Neiva at the birthday of the grandmother of a friend. Someone brings out old photos and a family tree, and you want to ask carefully where she was born, where her children were born, and how that story is told without sounding like a form.",
       setting: {
@@ -693,7 +693,7 @@ lessons.push(
     verb: "morir",
     review: "pending",
     es: {
-      title: "Acompañar a una amiga en el novenario",
+      title: "Sitting with a friend at the novenario",
       situation:
         "You are in Mompox at the novenario for the father of a friend. You are not there to explain anything or fill the silence; you are there to greet people, listen, and say a simple condolence without turning the grief of the family into a scene.",
       setting: {
@@ -1345,7 +1345,7 @@ lessons.push(
     verb: "matar",
     review: "pending",
     es: {
-      title: "Decir que el hambre te mata",
+      title: "Saying the hunger is killing you",
       situation:
         "You are in Popayán helping organize photos for a family gathering. Nobody is talking about violence: everyone is tired, hungry, and laughing. You have to understand why matar keeps appearing as everyday exaggeration.",
       setting: {

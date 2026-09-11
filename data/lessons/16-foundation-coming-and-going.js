@@ -37,7 +37,7 @@ lessons.push(
     verb: "salir",
     review: "pending",
     es: {
-      title: "Cuadrar un plan para salir el sábado",
+      title: "Sorting out a plan for Saturday night",
       situation:
         "Alex and his coastal friend Valeria work out a plan by chat to go out Saturday night in Barranquilla. They have to agree on what time each one is free, where to go, and along the way they tease each other a little about their recent dates. The whole chat turns on salir: going out for fun, leaving work, dating someone, and that time everything came out wildly expensive.",
       setting: {
@@ -669,7 +669,7 @@ lessons.push(
     verb: "subir",
     review: "pending",
     es: {
-      title: "Subir en el metrocable hasta el barrio de un amigo",
+      title: "Riding the metrocable up to a friend's barrio",
       situation:
         "Alex goes up to visit his paisa friend Sebastián, who lives in a high neighborhood of Medellín reached by metrocable. They get into the cabin, ride up the hill over the rooftops, talk about the view, turn the music up and Alex offers to upload the photos from the outing. Everything turns on subir: getting onto transportation, going up a hill, turning up the volume and the price, and the modern subir of uploading something to the internet.",
       setting: {
@@ -1301,7 +1301,7 @@ lessons.push(
     verb: "bajar",
     review: "pending",
     es: {
-      title: "Bajarse del bus en la parada correcta",
+      title: "Getting off the bus at the right stop",
       situation:
         "Alex is on a packed bus in Bogotá and does not know where to get off. An older passenger, don Gustavo, sees that he looks lost and helps him with usted: he tells him where to get off, they talk about whether the fare has gone down yet, and don Gustavo recommends downloading the transit app. Everything turns on bajar: getting off the bus, lowering a price, turning down the volume and the modern bajar of downloading something from the internet.",
       setting: {

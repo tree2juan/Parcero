@@ -32,7 +32,7 @@ lessons.push(
     structure: "dates-and-calendar",
     review: "pending",
     es: {
-      title: "Reservando la visita a la finca",
+      title: "Booking the visit to the coffee farm",
       situation:
         "Sara, a student who has only been in the Coffee Axis a short time, wants to visit a coffee farm near Pereira. She calls don Aníbal, the owner, to settle on a day. Together they pin down the exact date: the month, the day of the week, the holidays that get in the way, and even the year the farm was founded.",
       setting: {
@@ -652,7 +652,7 @@ lessons.push(
     structure: "color-and-description",
     review: "pending",
     es: {
-      title: "Comprando una ruana en Manizales",
+      title: "Buying a ruana in Manizales",
       situation:
         "Laura walks into a textile shop in Manizales looking for clothes for the cold mountain weather. With don Jorge, the shopkeeper, she names colors, materials, and patterns: a blue or green ruana, a striped scarf, wool gloves. When she does not know the exact word, she describes by pattern or material, exactly what a real speaker does.",
       setting: {
@@ -1272,7 +1272,7 @@ lessons.push(
     structure: "feelings-and-states",
     review: "pending",
     es: {
-      title: "Antojándose de un paseo al Cocora",
+      title: "Getting the urge for a trip to Cocora",
       situation:
         "Cami is bored on a Sunday in Armenia and suggests to Dani that they go walking in the Cocora Valley. Dani has arrived in a bad mood over something at work. Together they name how they feel: bored, angry, afraid, excited, happy. Along the way, the traps of Spanish appear — estar and ser, and that “tener” used for states.",
       setting: {

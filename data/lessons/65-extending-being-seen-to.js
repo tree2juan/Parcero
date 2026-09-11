@@ -25,7 +25,7 @@ lessons.push(
     verb: "atender",
     review: "pending",
     es: {
-      title: "Esperar a que lo atiendan en Florencia",
+      title: "Waiting to be seen in Florencia",
       situation:
         "You are in Florencia, Caquetá, in the waiting room of a small medical center. The receptionist is not asking whether you are going to attend something; she is asking whether you have already been seen. You have to understand that atender means to see, serve, or take care of a person.",
       setting: {
@@ -643,7 +643,7 @@ lessons.push(
     verb: "operar",
     review: "pending",
     es: {
-      title: "Entender una operación en Buenaventura",
+      title: "Understanding a surgery in Buenaventura",
       situation:
         "You are in Buenaventura accompanying a friend whose brother just came out of surgery. The family talks quickly: he had his appendix operated on, the operation went well, and now all that is left is to wait. You need to understand operar de + the body part or condition without turning the scene into cold language.",
       setting: {
@@ -1261,7 +1261,7 @@ lessons.push(
     verb: "medir",
     review: "pending",
     es: {
-      title: "Medirse bien en Zipaquirá",
+      title: "Getting measured in Zipaquirá",
       situation:
         "You are in Zipaquirá before an occupational-health appointment, and a nurse needs to measure your height, weight, and waist. Afterward you stop by a shop where they also measure you for a uniform. The scene ends with a subtler phrase: medir las palabras.",
       setting: {

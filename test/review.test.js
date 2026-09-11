@@ -317,7 +317,14 @@ test("an oversized batch is reported as too long instead of building a broken li
 
 test("the issue body names the place a maintainer has to edit", () => {
   const markdown = review.flagsToMarkdown([sampleFlag()], content);
-  assert.match(markdown, /Coffee and a quick chat|Un café y una conversación/);
+  /* Read the title out of the content rather than repeating it here. The
+     literal used to be spelled out, so renaming the lesson turned a passing
+     test red for no reason and told the next person the rename was wrong. */
+  const lesson = content.lessons.find((item) => item.id === "greeting-at-the-cafe");
+  assert.ok(
+    markdown.includes(lesson.es.title),
+    `the flag should name the lesson it points at, "${lesson.es.title}"`
+  );
   assert.match(markdown, /Dialogue line 2/);
   assert.match(markdown, /lesson:greeting-at-the-cafe\/es\/dialogue\/1\/target/);
   assert.strictEqual(review.flagsToMarkdown([], content), "_No flags._");

@@ -27,7 +27,7 @@ lessons.push(
     verb: "soler",
     review: "pending",
     es: {
-      title: "Hablar de rutinas de madrugada en Ibagué",
+      title: "Talking about early morning routines in Ibagué",
       situation:
         "You are in Ibagué getting ready for an early walk with a friend. She asks about your routines, what you usually do now, and what you used to do when you lived in a colder city.",
       setting: {
@@ -591,7 +591,7 @@ lessons.push(
     verb: "caber",
     review: "pending",
     es: {
-      title: "Caber todos en el carro en Zipaquirá",
+      title: "Fitting everyone in the car in Zipaquirá",
       situation:
         "You are in Zipaquirá heading out to a nearby farm. There are five people, backpacks, and a small car, and the group needs to decide whether everyone fits or whether someone should go by taxi.",
       setting: {
@@ -1155,7 +1155,7 @@ lessons.push(
     verb: "valer",
     review: "pending",
     es: {
-      title: "Decidir si vale la pena en Guatapé",
+      title: "Deciding whether it is worth it in Guatapé",
       situation:
         "You are in Guatapé looking at a boat ride and some crafts. You need to ask how much it costs, decide whether it is worth it, and hear a warning with más vale que before the dock fills up.",
       setting: {

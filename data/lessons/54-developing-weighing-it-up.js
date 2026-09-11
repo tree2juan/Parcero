@@ -29,7 +29,7 @@ lessons.push(
     verb: "discutir",
     review: "pending",
     es: {
-      title: "Hablar de un proyecto sin discutir",
+      title: "Talking through a project without arguing",
       situation:
         "You are in Ibagué helping a foundation with a poster for a neighborhood fair. You want to ask for a calm meeting to review the design, but someone says discutir and the room hears fight. You have to learn the difference before you sound aggressive.",
       setting: {
@@ -681,7 +681,7 @@ lessons.push(
     verb: "comparar",
     review: "pending",
     es: {
-      title: "Comparar dos planes de celular",
+      title: "Comparing two cell phone plans",
       situation:
         "You are in Florencia helping a friend choose between two cell phone plans before a road trip. Data, coverage, and price are on the table. You have to compare with, use comparado con, and say no hay comparación when one option clearly wins.",
       setting: {
@@ -1333,7 +1333,7 @@ lessons.push(
     verb: "depender",
     review: "pending",
     es: {
-      title: "Responder depende antes de escoger la ruta",
+      title: "Answering it depends before picking the route",
       situation:
         "You are in Arauca planning how to get to a farm the next day. There are two routes, changing weather, and a borrowed car. When they ask which one is better, the honest answer is depende. You have to use depender de and not forget the preposition.",
       setting: {

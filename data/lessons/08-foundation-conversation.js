@@ -30,7 +30,7 @@ lessons.push(
     verb: "hablar",
     review: "pending",
     es: {
-      title: "Llamar a una amiga para cuadrar un encuentro",
+      title: "Calling a friend to set up a meetup",
       situation:
         "Alex is in Cali and wants to set up a language exchange with Valentina, a friend he met in salsa class. Instead of texting her, he calls her on the phone. He has to greet her, say who it is, propose the plan, and say goodbye — all over a line where they cannot see each other and phone formulas matter.",
       setting: {
@@ -662,7 +662,7 @@ lessons.push(
     verb: "seguir",
     review: "pending",
     es: {
-      title: "Que lo inviten a entrar a una tienda de barrio paisa",
+      title: "Waved into a paisa corner shop",
       situation:
         "Alex is lost in a Medellín neighborhood looking for the metro, and he stops at a corner shop to buy water and ask for directions. Don Fabio, the shopkeeper, greets him with the “¡siga!” that confuses every foreigner: it sounds like “follow me,” but it means “come in.” Alex has to understand the invitation, buy something, ask for directions, and say goodbye, all in full paisa vos.",
       setting: {
@@ -1294,7 +1294,7 @@ lessons.push(
     verb: "pensar",
     review: "pending",
     es: {
-      title: "Convencerse de no seguir un plan arriesgado",
+      title: "Talking yourself out of a risky plan",
       situation:
         "In a Bogotá café, Camilo, a close friend, proposes that he and Alex leave right now, at midnight, to drive to Villavicencio “for the adventure.” Alex has to think it through out loud, weigh the risk of that road at night, and say no without damaging the friendship. Everything turns around pensar: pensar en, pensar de, pensar que, and the firm “ni de riesgos.”",
       setting: {

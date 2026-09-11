@@ -26,7 +26,7 @@ lessons.push(
     verb: "amar",
     review: "pending",
     es: {
-      title: "Decir “te quiero” sin correr a “te amo”",
+      title: "Saying te quiero without rushing to te amo",
       situation:
         "In Barichara, Alex says goodbye to Camila after spending several weeks helping in a ceramics workshop. She says “te quiero mucho” with the warmth of a friend, and Alex, thinking querer is only “like”, answers “yo también te amo”. The moment turns awkward. Camila explains that in Colombia querer is the everyday word for love between partners, family, and close friends; amar exists, but “te amo” carries more weight and often sounds romantic or very solemn, though “amo este pueblo” or “amo esa idea” can come out with no drama.",
       setting: {
@@ -568,7 +568,7 @@ lessons.push(
     verb: "sobrar",
     review: "pending",
     es: {
-      title: "Cuando sobra comida después del almuerzo",
+      title: "When there is food left after lunch",
       situation:
         "In Florencia, Alex has lunch at Juliana’s family’s house after a rainy morning. They made too much food, and as they clear the table, everyone talks about what was left over: rice, salad, time for coffee, and even a chair that is extra in the kitchen. Alex learns that sobrar works like gustar: the thing left over is the subject. “Me sobra tiempo” does not mean that I make time be left over, but that I have extra time. He also learns that “estás de sobra”, said to a person, can sound cruel because it makes that person unnecessary or in the way.",
       setting: {

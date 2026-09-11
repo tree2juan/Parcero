@@ -28,7 +28,7 @@ lessons.push(
     verb: "pedir",
     review: "pending",
     es: {
-      title: "Pedir el corrientazo a la hora del almuerzo",
+      title: "Ordering the corrientazo at lunchtime",
       situation:
         "It is noon, and you walk into a menú del día restaurant near the offices in Bogotá. You order the corrientazo - soup, the seco, and the juice of the day - and learn that in Colombia you do not phrase ordering as “quiero”: you wrap it in “¿me regala?” or “¿me hace el favor?”. With the waitress, you use usted.",
       setting: {
@@ -652,7 +652,7 @@ lessons.push(
     verb: "servir",
     review: "pending",
     es: {
-      title: "Repetir en un almuerzo paisa de domingo",
+      title: "Seconds at a paisa Sunday lunch",
       situation:
         "It is Sunday, and you are having lunch at the family home of a friend in Medellín. Doña Miriam serves sancocho, and as soon as you can see the bottom of the bowl, she asks whether you want her to serve you more. Here you will see the two lives of servir: serving food and “servir” as being useful, along with the affectionate pressure to have seconds.",
       setting: {
@@ -1276,7 +1276,7 @@ lessons.push(
     verb: "comer",
     review: "pending",
     es: {
-      title: "Caer donde una tía en la Costa",
+      title: "Dropping in on an aunt on the coast",
       situation:
         "You are visiting Barranquilla and drop by the home of a coastal aunt without warning. Before any long greeting, the first thing she does is ask whether you have eaten - which on the Coast is pure affection, not a literal question. You will see comer in its element: “¿ya comiste?” as a way to show care, eating something with real appetite, and one meaning of comer worth recognizing.",
       setting: {

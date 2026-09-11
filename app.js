@@ -403,6 +403,21 @@ const cefrApi = () => (typeof ParceroCEFR === "object" ? ParceroCEFR : null);
  * each badge names the claim it makes, and this comment is here because the
  * next person to see them will otherwise "fix" one of them.
  */
+/*
+ * COURSE_MODULES.title is keyed by the language the string is written in, not
+ * by the direction being studied. Those two keys look identical -- both are
+ * "en"/"es" -- which is why every caller here had been indexing it with
+ * state.direction and handing the learner a module name written in the one
+ * language they cannot read yet. workbook.js got this right from the start by
+ * deriving a uiLang first; this is the same derivation, kept next to the
+ * renderers that need it so the next caller copies the correct one.
+ */
+function moduleTitle(entry) {
+  if (!entry || !entry.title) return entry && entry.id ? entry.id : "";
+  const language = state.direction === "es" ? "en" : "es";
+  return entry.title[language] || entry.title.en || entry.id || "";
+}
+
 function renderTeaches(lesson) {
   const badge = $("#lesson-teaches");
   const api = syllabusApi();
@@ -418,7 +433,7 @@ function renderTeaches(lesson) {
   }
   badge.textContent = t("level.teaches", {
     band: entry.band,
-    module: entry.title[state.direction]
+    module: moduleTitle(entry)
   });
   badge.hidden = false;
 }
@@ -542,7 +557,7 @@ function renderPath() {
     $("#path-resume-label").textContent = report.done ? t("path.resumeLabel") : t("path.startLabel");
     $("#path-resume-lesson").textContent = lesson ? lesson[state.direction].title : report.next.lessonId;
     $("#path-resume-where").textContent = entry
-      ? `${report.next.band} · ${entry.title[state.direction]}`
+      ? `${report.next.band} · ${moduleTitle(entry)}`
       : report.next.band;
     resumeGo.dataset.goto = report.next.lessonId;
     resume.hidden = false;
@@ -569,7 +584,7 @@ function renderPath() {
           `<span class="path-lesson-mark" aria-hidden="true"></span>` +
           `<span>${esc(lesson[state.direction].title)}</span></button></li>`;
       }).join("");
-      const label = entry.title[state.direction];
+      const label = moduleTitle(entry);
       return `<li class="path-module${entry.complete ? " is-complete" : ""}">` +
         `<details data-module="${esc(entry.id)}"${open.has(entry.id) ? " open" : ""}>` +
         `<summary><span class="path-module-mark" aria-hidden="true"></span>` +
@@ -763,7 +778,7 @@ const modulesFilter = $("#modules-filter");
  */
 function fillModulesMenu(query) {
   const needle = String(query == null ? modulesFilter.value : query).trim().toLowerCase();
-  const titles = new Map(COURSE_MODULES.map((module) => [module.block, module.title[state.direction]]));
+  const titles = new Map(COURSE_MODULES.map((module) => [module.block, moduleTitle(module)]));
   const groups = new Map();
   lessons.map((lesson, index) => ({
     id: lesson.id,

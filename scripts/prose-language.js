@@ -71,6 +71,45 @@ function classify(text) {
 }
 
 /*
+ * Titles are three to eight words, which is exactly the length classify()
+ * refuses to judge -- so for the whole life of that map, the "title" entries
+ * below have been checked by a function that always answered "unknown". The
+ * guard was decorative, which is how 232 Spanish titles sat in the English
+ * reader's direction without a single test going red.
+ *
+ * This is the same idea scaled down: strip quoted runs, count marker words,
+ * and demand a clear margin before naming a language. It deliberately does not
+ * weight accented characters, because English titles here legitimately carry
+ * Colombian place names -- Bogotá, Montería, San Andrés -- and scoring those as
+ * Spanish would fire on correct content. Inverted punctuation is kept, since
+ * nothing in English uses it.
+ */
+const ENGLISH_TITLE = new Set([
+  ...ENGLISH,
+  "a", "an", "is", "are", "my", "we", "his", "her", "one", "no", "so", "too",
+  "back", "down", "right", "already", "without", "another", "every", "much"
+]);
+
+function titleLanguage(text) {
+  if (typeof text !== "string") return "unknown";
+  const stripped = stripQuotes(text);
+  const words = stripped.toLowerCase().match(/[a-záéíóúüñ]+/g) || [];
+  if (!words.length) return "unknown";
+
+  let spanish = 0;
+  let english = 0;
+  for (const word of words) {
+    if (SPANISH.has(word)) spanish += 1;
+    if (ENGLISH_TITLE.has(word)) english += 1;
+  }
+  if (/[¿¡]/.test(stripped)) spanish += 2;
+
+  if (english >= 2 && english > spanish) return "english";
+  if (spanish >= 2 && spanish > english) return "spanish";
+  return "unknown";
+}
+
+/*
  * The language each slot must be written in, per direction.
  *
  * Derived from the eight hand-written lessons rather than assumed, because two
@@ -86,7 +125,11 @@ function classify(text) {
 const EXPECTED = {
   // Teaching Colombian Spanish to an English reader: explanation is English.
   es: {
-    "title": "spanish",
+    /* The title names the lesson in the course index; it is chrome, not taught
+       material, so it belongs to the reader's own language. This said "spanish"
+       until the titles were audited, which put the one string a learner reads
+       before choosing a lesson in the only language they cannot read yet. */
+    "title": "english",
     /* The scene-setting line is prose about the situation, not a line of the
        language being taught, so it is written in the language the reader
        already reads -- English here, Spanish on the en side below. */
@@ -144,9 +187,12 @@ function wrongLanguage(content, direction) {
   const problems = [];
   const walk = (node, trail) => {
     if (typeof node === "string") {
-      const want = expected[slotOf(trail)];
+      const slot = slotOf(trail);
+      const want = expected[slot];
       if (!want) return;
-      const got = classify(node);
+      /* Titles are too short for classify(), which would answer "unknown" for
+         every one of them and quietly check nothing. */
+      const got = slot === "title" ? titleLanguage(node) : classify(node);
       if (got !== "unknown" && got !== want) {
         problems.push({ trail, want, got, text: node });
       }
@@ -161,5 +207,5 @@ function wrongLanguage(content, direction) {
   return problems;
 }
 
-module.exports = { classify, wrongLanguage, EXPECTED };
+module.exports = { classify, titleLanguage, wrongLanguage, EXPECTED };
 

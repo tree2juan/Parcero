@@ -17,7 +17,7 @@ lessons.push(
     verb: "llorar",
     review: "pending",
     es: {
-      title: "Calmar a un niño que llora en Sincelejo",
+      title: "Calming a crying child in Sincelejo",
       situation:
         "You are at a family birthday party in Sincelejo when a small child starts crying because his ice cream fell. You want to comfort him without scolding him, and later joke when everyone ends up crying with laughter.",
       setting: {
@@ -669,7 +669,7 @@ lessons.push(
     verb: "reír",
     review: "pending",
     es: {
-      title: "Reírse con un amigo, no de él, en Ibagué",
+      title: "Laughing with a friend, not at him, in Ibagué",
       situation:
         "You are in Ibagué after an amateur theater performance. A friend told a joke about her own forgetfulness and everyone laughed; now you need to distinguish reírse con alguien from reírse de alguien.",
       setting: {
@@ -1321,7 +1321,7 @@ lessons.push(
     verb: "sonreír",
     review: "pending",
     es: {
-      title: "Sonreír para una foto en San Andrés",
+      title: "Smiling for a photo in San Andrés",
       situation:
         "You are in San Andrés with some friends, and a photographer takes your picture before the power goes out. She needs to say sonría without sounding mechanical, and you want to comment on who came out smiling and who smiled late.",
       setting: {

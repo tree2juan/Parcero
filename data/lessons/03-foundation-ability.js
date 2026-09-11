@@ -27,7 +27,7 @@ lessons.push(
     verb: "poder",
     review: "pending",
     es: {
-      title: "Pedirle una mano al portero",
+      title: "Asking the doorman for a hand",
       situation:
         "Alex has just moved into an apartment in Bogotá and cannot manage to connect the gas cylinder for cooking. He goes down to the portería to ask Don Jairo, the portero who has worked in the building for years, for help. He has to ask politely, explain what he cannot do, and say thanks — all in a couple of minutes, without sounding bossy.",
       setting: {
@@ -679,7 +679,7 @@ lessons.push(
     verb: "decir",
     review: "pending",
     es: {
-      title: "Pasar el chisme del corte de agua",
+      title: "Passing along the water outage gossip",
       situation:
         "Alex is in the hallway of his building in Cali when Marcela, a neighbor, tells him a rumor: supposedly they are going to cut the water tomorrow. Alex has to understand where the news comes from, draw the practical conclusion, and offer to warn other neighbors — all while reporting what different people said.",
       setting: {
@@ -1331,7 +1331,7 @@ lessons.push(
     verb: "venir",
     review: "pending",
     es: {
-      title: "Un sancocho paisa el sábado",
+      title: "A paisa sancocho on Saturday",
       situation:
         "Alex has been in Medellín for a few weeks, and his friend Memo invites him to a sancocho on Saturday at the house of his family. Between the paisa ¡venga!, the voseo, and the question of what to bring, Alex has to accept, understand what time to show up, and not confuse coming with going when he talks about moving toward the house where Memo lives.",
       setting: {

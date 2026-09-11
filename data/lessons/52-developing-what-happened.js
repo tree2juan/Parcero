@@ -25,7 +25,7 @@ lessons.push(
     verb: "ocurrir",
     review: "pending",
     es: {
-      title: "Contar lo que ocurrió en Ibagué",
+      title: "Telling what happened in Ibagué",
       situation:
         "You are in Ibagué after the plan to go up to the lookout was ruined by heavy rain. You have to explain what happened without sounding like a police report, admit that on the street everyone would ask “qué pasó”, and use the verb’s most useful phrase: “se me ocurrió una salida”.",
       setting: {
@@ -643,7 +643,7 @@ lessons.push(
     verb: "suceder",
     review: "pending",
     es: {
-      title: "Contar lo que sucedió en Montería",
+      title: "Telling what took place in Montería",
       situation:
         "You are in Montería helping write a short account for the neighborhood group after a raffle ended in confusion. No one wants to sound alarmist: you have to tell what happened, admit that in normal conversation everyone asked “qué pasó”, and put the story in order without overblaming anyone.",
       setting: {
@@ -1261,7 +1261,7 @@ lessons.push(
     verb: "resultar",
     review: "pending",
     es: {
-      title: "Contar cómo resultó el plan en Arauca",
+      title: "Telling how the plan turned out in Arauca",
       situation:
         "You are in Arauca after an errand that looked easy and turned out differently: the appointment did not exist, the process turned out longer than expected, and it seems strange to your friend that no one warned him. You have to explain how everything went and how the experience turned out for you.",
       setting: {

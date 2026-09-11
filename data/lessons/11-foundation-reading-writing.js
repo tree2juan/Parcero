@@ -28,7 +28,7 @@ lessons.push(
     verb: "escribir",
     review: "pending",
     es: {
-      title: "Pasar el número para escribirse después",
+      title: "Trading numbers to message later",
       situation:
         "You have just met someone kind in Barranquilla and want to stay in touch. On the coast, people say “escríbeme” and mean a little WhatsApp message, not a letter. You are going to trade numbers and agree to message later, with coastal warmth and the easy trust of tú.",
       setting: {
@@ -680,7 +680,7 @@ lessons.push(
     verb: "leer",
     review: "pending",
     es: {
-      title: "Escoger un libro en el puesto de usados",
+      title: "Picking a book at the used stall",
       situation:
         "You are at a secondhand book stall in downtown Medellín, and the man running it is one of those readers who recommends books with his whole heart. You are going to say what you read, talk about reading a whole book in one sitting and reading between the lines, all with paisa voseo: “vos leés”, “¿vos qué contás?”.",
       setting: {
@@ -1332,7 +1332,7 @@ lessons.push(
     verb: "comprender",
     review: "pending",
     es: {
-      title: "Aclarar un cobro raro en la factura",
+      title: "Clearing up a strange charge on the bill",
       situation:
         "You received a bill with a charge you do not recognize, and you go to the service office in Bogotá to dispute it. The agent is kind but formal: she says she understands your situation and will review it. Here you will hear “comprender,” the formal cousin of “entender” — the one used in offices, paperwork, and empathy.",
       setting: {

@@ -36,7 +36,7 @@ lessons.push(
     verb: "tomar",
     review: "pending",
     es: {
-      title: "Hacer un plan para salir a tomar algo",
+      title: "Making a plan to go out for drinks",
       situation:
         "It is Friday afternoon, and Daniela, a bogotana friend, invites Alex to go out for a drink after work. In a few minutes they have to decide how to get there, whether they are drinking alcohol or not, and which way to take. The whole plan is built around the verb tomar, which in Colombia works for the taxi, the drink, the decisions, and even the avenue they take.",
       setting: {
@@ -668,7 +668,7 @@ lessons.push(
     verb: "sentir",
     review: "pending",
     es: {
-      title: "Decirle a un amigo paisa que uno se siente mal",
+      title: "Telling a paisa friend you feel off",
       situation:
         "Alex wakes up feeling maluco in Medellín, and his paisa friend Sebastián notices and asks how he is. Alex has to explain what he feels, since when, and how bad it is, while Sebastián offers help. The whole conversation turns around sentir: sentirse mal, sentir un dolor, sentir que something is going to happen, and the “lo siento” that does not mean what an English speaker thinks.",
       setting: {
@@ -1300,7 +1300,7 @@ lessons.push(
     verb: "vivir",
     review: "pending",
     es: {
-      title: "Contarle a una vecina nueva dónde vive uno",
+      title: "Telling a new neighbor where you live",
       situation:
         "Alex has just moved into a building in Bogotá and meets Doña Rosa, the administradora, in the portería; she also lives there. She greets him with usted and asks whether he lives in the building or is visiting. Alex has to say where he lives, where he moved from, and since when, while Doña Rosa explains that she lives off renting apartments. Everything turns around vivir: vivir en, vivir sobre, vivir hace, vivir de, and vivir para.",
       setting: {

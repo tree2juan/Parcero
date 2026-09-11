@@ -29,7 +29,7 @@ lessons.push(
     verb: "encontrar",
     review: "pending",
     es: {
-      title: "Buscar una ferretería que cambió de local",
+      title: "Looking for a hardware store that moved",
       situation:
         "Alex needs two screws and a lightbulb, and a friend swore the hardware store was on this corner. It is not. He has spent half an hour circling the block with his cell phone map, which insists the place is exactly where he is standing, and there is clearly nothing there. He cannot find the shop anywhere, so he gives up and asks the man sweeping the entrance of the place next door.",
       setting: {
@@ -681,7 +681,7 @@ lessons.push(
     verb: "llamar",
     review: "pending",
     es: {
-      title: "Lograr que llamen al técnico",
+      title: "Getting them to call the technician",
       situation:
         "Alex has lost internet at dusk, and the router lights all look strange. He does not have the number for the technician and is not thrilled about spending the whole night without a connection. He catches his neighbor Dubán in the hallway — the one who seems to know who fixes what in the building — and asks him for the number so he can call someone before it gets late.",
       setting: {
@@ -1333,7 +1333,7 @@ lessons.push(
     verb: "volver",
     review: "pending",
     es: {
-      title: "Volver al puestico de almuerzo",
+      title: "Back to the little lunch spot",
       situation:
         "Yesterday Alex found a little corrientazo spot — one of those places that makes a single home-style lunch each day — and the food was so good that he has already come back the next day, before even deciding it is his regular place. The cook, Doña Marta, recognizes him as soon as he ducks under the low doorway, and she loves that he came back.",
       setting: {

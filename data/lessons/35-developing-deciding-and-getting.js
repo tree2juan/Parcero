@@ -17,7 +17,7 @@ lessons.push(
     verb: "decidir",
     review: "pending",
     es: {
-      title: "Decidirse por el plan del río en Neiva",
+      title: "Settling on the river plan in Neiva",
       situation:
         "You are in Neiva with Laura, a friend from Huila, and the heat makes it important to choose the afternoon plan well. There is a trip to the river, a movie with air conditioning, or staying somewhere for a drink. Alex understands that decidir is not just choosing: he can say “no me decido”, “estoy decidido”, and “me decidí por…” when he finally leans toward one option.",
       setting: {
@@ -649,7 +649,7 @@ lessons.push(
     verb: "conseguir",
     review: "pending",
     es: {
-      title: "Conseguir un cargador en Pasto",
+      title: "Tracking down a charger in Pasto",
       situation:
         "You are in Pasto, and Alex ended up without a charger before going up to Las Lajas. In a stationery shop he asks “¿dónde consigo un cargador?”, which sounds more natural in Colombia than translating “where can I buy…?”. He learns that buscar is looking, encontrar is finding, and conseguir is managing to obtain something, sometimes with help or effort.",
       setting: {
@@ -1281,7 +1281,7 @@ lessons.push(
     verb: "ofrecer",
     review: "pending",
     es: {
-      title: "Ofrecer el asiento en una lancha de Leticia",
+      title: "Offering your seat on a boat in Leticia",
       situation:
         "You are in Leticia, about to board a boat on the Amazon. Alex sees a woman with bags and wants to offer her the seat without sounding odd or too solemn. He learns “le ofrezco mi puesto”, “se ofrece ayuda”, and the key form “ofrezco”, with -zc- as in conocer.",
       setting: {

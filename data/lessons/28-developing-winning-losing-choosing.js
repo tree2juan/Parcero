@@ -28,7 +28,7 @@ lessons.push(
     verb: "ganar",
     review: "pending",
     es: {
-      title: "Ganar sin agrandarse en Cali",
+      title: "Winning without gloating in Cali",
       situation:
         "You are at a soccer tertulia in Cali after a local final. Your team won, but you also talk about what people earn by working and about earning respect without sounding full of yourself.",
       setting: {
@@ -170,7 +170,7 @@ lessons.push(
     verb: "perder",
     review: "pending",
     es: {
-      title: "Perder el bus en Bucaramanga",
+      title: "Missing the bus in Bucaramanga",
       situation:
         "You are with a cousin in Bucaramanga before a medical appointment. Your ID card has gone missing, you missed the bus, and now you have to explain the mess without making it sound as if everything were someone else’s fault.",
       setting: {
@@ -324,7 +324,7 @@ lessons.push(
     verb: "elegir",
     review: "pending",
     es: {
-      title: "Elegir candidato en Pereira",
+      title: "Choosing a candidate in Pereira",
       situation:
         "You are in Pereira before a local election. At a neighborhood meeting, you compare candidates and learn when to say elegir, when escoger sounds more natural, and why voting is not the same as choosing.",
       setting: {

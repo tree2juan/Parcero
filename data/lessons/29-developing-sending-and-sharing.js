@@ -25,7 +25,7 @@ lessons.push(
     verb: "enviar",
     review: "pending",
     es: {
-      title: "Enviar un sobre desde Pereira",
+      title: "Sending an envelope from Pereira",
       situation:
         "You are at a Servientrega office in Pereira and need to send some documents to Cúcuta before Friday. You already speak enough Spanish not to limit yourself to loose phrases: you have to ask about the time, the cost, the tracking receipt, and the difference between saying enviar and mandar.",
       setting: {
@@ -643,7 +643,7 @@ lessons.push(
     verb: "recibir",
     review: "pending",
     es: {
-      title: "Recibir en Cúcuta sin enredarte",
+      title: "Picking things up in Cúcuta without getting tangled",
       situation:
         "You arrive in Cúcuta to visit a friend, and she is waiting for you with several things at once: meeting you at the terminal, receiving a package coming from Pereira, and confirming whether a café accepts cards. Since you are no longer just starting out, you have to hear how one verb moves among people, objects, payments, and even graduations.",
       setting: {
@@ -1261,7 +1261,7 @@ lessons.push(
     verb: "compartir",
     review: "pending",
     es: {
-      title: "Compartir en un colegio de Cali",
+      title: "Sharing at a school in Cali",
       situation:
         "You are helping at a school in Cali where the team is organizing a small compartir after a meeting. The conversation mixes food, a link for the photos, and vos. Since you are already at the Developing level, translating share is not enough: you have to notice when compartir is social, digital, and even a noun.",
       setting: {

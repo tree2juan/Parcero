@@ -7,7 +7,7 @@ const vm = require("node:vm");
 const root = path.join(__dirname, "..");
 const read = (file) => fs.readFileSync(path.join(root, file), "utf8");
 const { dataSource } = require("./data-source.js");
-const { wrongLanguage } = require("../scripts/prose-language.js");
+const { wrongLanguage, titleLanguage } = require("../scripts/prose-language.js");
 
 const bundle = `${dataSource()}\n({ lessons, curriculum, fluencyItems, matureItems, matureSignals, slangItems, schema: ParceroLessonSchema });`;
 const { lessons, curriculum, fluencyItems, matureItems, matureSignals, slangItems, schema } = vm.runInNewContext(bundle, {}, { filename: "parcero-data-bundle.js" });
@@ -927,6 +927,67 @@ test("explanatory prose is written in the language its reader reads", () => {
     }
   }
   assert.deepStrictEqual(wrong, [], "rewrite the field in the language named, rather than relaxing the check");
+});
+
+/*
+ * The title is the one string a learner reads before they have opened
+ * anything, so it belongs to the language they already speak: English on the
+ * `es` side, Spanish on the `en` side.
+ *
+ * It shipped backwards on the `es` side for the whole life of the corpus --
+ * 232 of 233 lesson titles were Spanish -- while EXPECTED.es.title said
+ * "spanish" and the test above passed on every run. The reason is that
+ * classify() refuses to judge anything under eight words, so it answered
+ * "unknown" for every title ever passed to it. The map named a rule, the walk
+ * consulted the map, and nothing was ever compared.
+ *
+ * So this test does not just check the titles. It first proves the checker can
+ * still fail, because a guard that cannot fail is what produced the bug.
+ */
+test("the title guard can actually fail", () => {
+  // A real title from each side, judged correctly.
+  assert.strictEqual(titleLanguage("Un café y una conversación"), "spanish");
+  assert.strictEqual(titleLanguage("A coffee and a conversation"), "english");
+
+  // Feeding the wrong language into a real direction has to be reported.
+  const swapped = wrongLanguage({ title: "Un café y una conversación" }, "es");
+  assert.strictEqual(swapped.length, 1, "a Spanish title on the es side must be flagged");
+  assert.strictEqual(swapped[0].want, "english");
+  assert.strictEqual(swapped[0].got, "spanish");
+
+  /* Place names carry accents, and weighting those as Spanish would fire on
+     correct English titles. Named here so the exemption is deliberate. */
+  assert.notStrictEqual(titleLanguage("Turning thirty in Montería"), "spanish");
+  assert.notStrictEqual(titleLanguage("Learning to make ajiaco in a Bogotá kitchen"), "spanish");
+});
+
+test("titles are written in the language the learner already reads", () => {
+  const want = { es: "english", en: "spanish" };
+  const wrong = [];
+  let judged = 0;
+
+  for (const lesson of lessons) {
+    for (const direction of directions) {
+      const title = lesson[direction].title;
+      const got = titleLanguage(title);
+      if (got === "unknown") continue;
+      judged += 1;
+      if (got !== want[direction]) {
+        wrong.push(`${lesson.id} ${direction}.title: must be ${want[direction]}, reads as ${got} - ${JSON.stringify(title)}`);
+      }
+    }
+  }
+
+  assert.deepStrictEqual(wrong, [], "write the title in the reader's own language");
+
+  /* Without this, deleting every title would leave the assertion above green.
+     The classifier is deliberately conservative on short strings, so the bar is
+     a majority of the corpus rather than all of it. */
+  const total = lessons.length * directions.length;
+  assert.ok(
+    judged > total / 2,
+    `only ${judged} of ${total} titles were confidently classified; the guard is close to vacuous`
+  );
 });
 
 /*

@@ -25,7 +25,7 @@ lessons.push(
     structure: "past-habits",
     review: "pending",
     es: {
-      title: "Antes esto era otra cosa",
+      title: "This place used to be something else",
       situation: "An older neighbor tells Marcela what the neighborhood used to be like and which things people do not do anymore.",
       setting: {
         who: "Don Hernando is seventy-four and has lived on this block in Chapinero since 1979. Marcela moved into the building four months ago and is thirty-one. The age gap is wide enough that usted is automatic in both directions, and neither of them will drop it.",
@@ -585,7 +585,7 @@ lessons.push(
     structure: "confirmation-tags",
     review: "pending",
     es: {
-      title: "¿Cierto? Confirmar sin preguntar de nuevo",
+      title: "Right? Confirming without asking again",
       situation: "Two friends wrap up the details of a trip, and each one confirms what they think has already been made clear.",
       setting: {
         who: "Kelly and Duván have been friends since school and are organizing a weekend trip with four other people. Neither is in charge, which is exactly why so much confirming is going on.",
