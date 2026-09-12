@@ -35,7 +35,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "shopping-and-money",
     register: "courteous",
-    pathways: ["year-12-local-mastery"],
     verb: "acordar",
     review: "pending",
     es: {
@@ -197,7 +196,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "social-life",
     register: "familiar",
-    pathways: ["year-12-local-mastery"],
     verb: "cumplir",
     review: "pending",
     es: {
@@ -347,7 +345,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "shopping-and-money",
     register: "courteous",
-    pathways: ["year-12-local-mastery"],
     verb: "exigir",
     review: "pending",
     es: {

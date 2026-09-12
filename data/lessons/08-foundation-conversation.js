@@ -26,7 +26,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "study-and-academia",
     register: "familiar",
-    pathways: ["foundation"],
     verb: "hablar",
     review: "pending",
     es: {
@@ -658,7 +657,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "shopping-and-money",
     register: "familiar",
-    pathways: ["foundation"],
     verb: "seguir",
     review: "pending",
     es: {
@@ -1290,7 +1288,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "transport-and-travel",
     register: "courteous",
-    pathways: ["foundation"],
     verb: "pensar",
     review: "pending",
     es: {

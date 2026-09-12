@@ -25,7 +25,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "work-and-employment",
     register: "courteous",
-    pathways: ["extension"],
     verb: "lograr",
     review: "pending",
     es: {
@@ -689,7 +688,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "work-and-employment",
     register: "familiar",
-    pathways: ["extension"],
     verb: "reunir",
     review: "pending",
     es: {
@@ -1341,7 +1339,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "study-and-academia",
     register: "courteous",
-    pathways: ["extension"],
     verb: "tratar",
     review: "pending",
     es: {

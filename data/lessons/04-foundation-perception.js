@@ -25,7 +25,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "social-life",
     register: "courteous",
-    pathways: ["foundation"],
     verb: "ver",
     review: "pending",
     es: {
@@ -617,7 +616,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "family-and-relationships",
     register: "intimate",
-    pathways: ["foundation"],
     verb: "dar",
     review: "pending",
     es: {
@@ -1209,7 +1207,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "shopping-and-money",
     register: "intimate",
-    pathways: ["foundation"],
     verb: "saber",
     review: "pending",
     es: {

@@ -139,7 +139,6 @@ for (const lesson of lessons) {
      Verb lessons stay fully covered: the anchor checks below reject a lesson
      that names neither a verb nor a structure, or an unknown/duplicated verb. */
   if (!lesson.skills?.length) fail(`${at}: missing skills`);
-  if (!lesson.pathways?.length) fail(`${at}: missing pathways`);
   if (!["pending", "reviewed"].includes(lesson.review)) {
     fail(`${at}: review must be the string "pending" or "reviewed", not ${JSON.stringify(lesson.review)}`);
   }

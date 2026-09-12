@@ -23,7 +23,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "shopping-and-money",
     register: "familiar",
-    pathways: ["foundation", "year-12"],
     verb: "sacar",
     review: "pending",
     es: {
@@ -621,7 +620,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "transport-and-travel",
     register: "courteous",
-    pathways: ["foundation", "year-12"],
     verb: "saltar",
     review: "pending",
     es: {
@@ -1231,7 +1229,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "work-and-employment",
     register: "formal",
-    pathways: ["foundation", "year-12"],
     verb: "cruzar",
     review: "pending",
     es: {

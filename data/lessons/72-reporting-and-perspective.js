@@ -31,7 +31,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context", "grammar"],
     domain: "home-and-neighborhood",
     register: "neutral",
-    pathways: ["independent", "year-12"],
     structure: "reported-speech",
     review: "pending",
     es: {
@@ -651,7 +650,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context", "grammar"],
     domain: "transport-and-travel",
     register: "courteous",
-    pathways: ["independent", "year-12"],
     structure: "hypothetical-present",
     review: "pending",
     es: {
@@ -1271,7 +1269,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context", "grammar"],
     domain: "home-and-neighborhood",
     register: "courteous",
-    pathways: ["independent", "collegiate-academic"],
     structure: "passive-and-impersonal",
     review: "pending",
     es: {

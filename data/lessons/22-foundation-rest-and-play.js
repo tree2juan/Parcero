@@ -31,7 +31,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "transport-and-travel",
     register: "familiar",
-    pathways: ["foundation"],
     verb: "dormir",
     review: "pending",
     es: {
@@ -683,7 +682,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "everyday-life",
     register: "courteous",
-    pathways: ["foundation"],
     verb: "jugar",
     review: "pending",
     es: {
@@ -1335,7 +1333,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "food-and-drink",
     register: "neutral",
-    pathways: ["foundation"],
     verb: "ayudar",
     review: "pending",
     es: {

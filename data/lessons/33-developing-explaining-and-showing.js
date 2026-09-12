@@ -25,7 +25,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "transport-and-travel",
     register: "familiar",
-    pathways: ["foundation", "year-12"],
     verb: "explicar",
     review: "pending",
     es: {
@@ -643,7 +642,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "shopping-and-money",
     register: "courteous",
-    pathways: ["foundation", "year-12"],
     verb: "mostrar",
     review: "pending",
     es: {
@@ -1261,7 +1259,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "shopping-and-money",
     register: "neutral",
-    pathways: ["foundation", "year-12"],
     verb: "describir",
     review: "pending",
     es: {
@@ -1879,7 +1876,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context", "grammar"],
     domain: "civic-and-services",
     register: "courteous",
-    pathways: ["independent", "collegiate-academic"],
     structure: "relative-basic",
     review: "pending",
     es: {

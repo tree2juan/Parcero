@@ -28,7 +28,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "family-and-relationships",
     register: "intimate",
-    pathways: ["foundation", "year-12"],
     verb: "descubrir",
     review: "pending",
     es: {
@@ -680,7 +679,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "work-and-employment",
     register: "courteous",
-    pathways: ["foundation", "year-12"],
     verb: "resolver",
     review: "pending",
     es: {
@@ -1332,7 +1330,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "transport-and-travel",
     register: "neutral",
-    pathways: ["foundation", "year-12"],
     verb: "revisar",
     review: "pending",
     es: {
@@ -1985,7 +1982,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context", "grammar", "reading"],
     domain: "work-and-employment",
     register: "neutral",
-    pathways: ["extension", "collegiate-academic", "year-12"],
     structure: "discourse-connectors",
     review: "pending",
     es: {

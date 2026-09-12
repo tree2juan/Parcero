@@ -32,7 +32,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "study-and-academia",
     register: "familiar",
-    pathways: ["foundation"],
     verb: "recordar",
     review: "pending",
     es: {
@@ -664,7 +663,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "food-and-drink",
     register: "familiar",
-    pathways: ["foundation"],
     verb: "olvidar",
     review: "pending",
     es: {
@@ -1296,7 +1294,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "health-and-body",
     register: "formal",
-    pathways: ["foundation"],
     verb: "esperar",
     review: "pending",
     es: {

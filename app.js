@@ -1,31 +1,12 @@
-const placementQuestions = {
-  es: [
-    ["receptive", "At a café, what does “¿Me regalas un tinto?” ask for?", ["A small black coffee, please.", "A free gift.", "A glass of red wine."], 0],
-    ["productive", "Choose the most natural way to greet a neighbor in Colombia.", ["Buenas, ¿cómo estás?", "Yo ser bien.", "Buenos coffee."], 0],
-    ["grammar", "Complete: “Ayer ___ al mercado.”", ["fui", "voy", "ir"], 0],
-    ["context", "A colleague says “ahorita.” What should you check?", ["Whether they mean now, soon, or later in context.", "That they are speaking only about yesterday.", "That they are ending the conversation."], 0],
-    ["pronunciation", "Which helps you be understood when saying “gracias”?", ["Using clear syllables and listening for the local rhythm.", "Spelling each letter aloud.", "Avoiding the word."], 0]
-  ],
-  en: [
-    ["receptive", "At a café, what does “Could I have a black coffee?” mean?", ["A polite request for coffee.", "An offer to make coffee.", "A complaint about coffee."], 0],
-    ["productive", "Choose the most natural greeting for a classmate.", ["Hi, how are you?", "I am fine thank you and you?", "Good morning coffee."], 0],
-    ["grammar", "Complete: “Yesterday I ___ to the market.”", ["went", "go", "going"], 0],
-    ["context", "A teammate says “I’ll get right to it.” What does that usually mean?", ["They will start very soon.", "They are moving to the right.", "They finished last week."], 0],
-    ["pronunciation", "Which helps you be understood in English?", ["Clear word stress and listening to the rhythm.", "Reading every punctuation mark aloud.", "Avoiding unfamiliar words."], 0]
-  ]
-};
-const pathways = [
-  ["Year 12 local mastery", "Independently understand everyday and civic life; speak appropriately across familiar settings; read varied texts; write clear connected ideas; and navigate local, regional, and cultural pragmatics."],
-  ["Collegiate academic", "Build lecture comprehension, academic reading, argumentation, research writing, discipline vocabulary, citation-aware synthesis, and formal register."],
-  ["Professional environments", "Practice customer service, office collaboration, technical work, healthcare, education, and interviews with audience-appropriate language and workplace outcomes."]
-];
+/* A learner who used the app before the placement quiz was removed still has
+   its key sitting in storage. Nothing reads it any more, so drop it rather than
+   leave a dead entry in every returning browser forever. */
+localStorage.removeItem("parcero-placement");
+
 const state = {
   direction: localStorage.getItem("parcero-direction") || "es",
   completed: new Set(JSON.parse(localStorage.getItem("parcero-completed") || "[]")),
-  placement: JSON.parse(localStorage.getItem("parcero-placement") || "null"),
-  lessonId: localStorage.getItem("parcero-lesson") || lessons[0].id,
-  question: 0,
-  responses: []
+  lessonId: localStorage.getItem("parcero-lesson") || lessons[0].id
 };
 if (!lessons.some((item) => item.id === state.lessonId)) state.lessonId = lessons[0].id;
 function lessonIndex() { return lessons.findIndex((item) => item.id === state.lessonId); }
@@ -117,7 +98,6 @@ const detail = (key, value, lang) => (value ? `<p class="detail"><strong>${t(key
 function save() {
   localStorage.setItem("parcero-direction", state.direction);
   localStorage.setItem("parcero-completed", JSON.stringify([...state.completed]));
-  localStorage.setItem("parcero-placement", JSON.stringify(state.placement));
   localStorage.setItem("parcero-lesson", state.lessonId);
 }
 
@@ -140,41 +120,6 @@ function progress() {
   return progressState;
 }
 
-function renderPlacement() {
-  const questions = placementQuestions[state.direction];
-  if (state.placement?.direction === state.direction) {
-    $("#assessment").hidden = true;
-    $("#assessment-next").hidden = true;
-    $("#placement-intro").hidden = true;
-    $("#placement-result").hidden = false;
-    $("#placement-result").innerHTML = `<div class="result-card"><p class="eyebrow">${t("placement.startingPoint")}</p><h3>${state.placement.level}</h3><p>${state.placement.summary}</p><p><strong>${t("placement.focusFirst")}</strong> ${state.placement.focus.join(", ")}</p></div>`;
-    $("#roadmap").hidden = false;
-    $("#focus-summary").textContent = t("roadmap.focus", { focus: listJoin(state.placement.focus) });
-    $("#pathways").innerHTML = pathways.map(([title, description]) => `<article class="pathway"><h3>${title}</h3><p>${description}</p></article>`).join("");
-    return;
-  }
-  const [skill, prompt, options] = questions[state.question];
-  $("#assessment").hidden = false;
-  $("#assessment-next").hidden = false;
-  $("#assessment").innerHTML = `<p class="assessment-progress">${t("placement.question", { number: state.question + 1, total: questions.length, skill })}</p><article class="assessment-card"><h3>${prompt}</h3><div class="assessment-options">${options.map((option, index) => `<button class="assessment-option" type="button" data-choice="${index}">${option}</button>`).join("")}<button class="assessment-option" type="button" data-choice="unknown">${t("placement.dontKnow")}</button></div></article>`;
-  $("#assessment-next").disabled = true;
-  $("#assessment-next").textContent = state.question === questions.length - 1 ? t("placement.finish") : t("placement.next");
-}
-function completePlacement() {
-  const unknown = state.responses.filter((response) => response.choice === "unknown").map((response) => response.skill);
-  const incorrect = state.responses.filter((response) => response.choice !== "unknown" && !response.correct).map((response) => response.skill);
-  const focus = [...new Set([...unknown, ...incorrect])];
-  const correct = state.responses.filter((response) => response.correct).length;
-  const level = correct <= 1 ? t("placement.level.foundations") : correct <= 3 ? t("placement.level.developing") : t("placement.level.ready");
-  state.placement = {
-    direction: state.direction, responses: state.responses, level,
-    confidence: tn("placement.confidence", unknown.length, { correct, total: state.responses.length, gaps: unknown.length }),
-    focus: focus.length ? focus : [t("placement.defaultFocus")],
-    summary: focus.length ? t("placement.summary.focus") : t("placement.summary.strong")
-  };
-  save();
-  renderPlacement();
-}
 function renderLessonList() {
   /*
    * Filtered rather than paged, for the same reason slang is: two hundred
@@ -385,7 +330,6 @@ function render() {
   renderPreview();
   renderStories();
   updateProgress();
-  renderPlacement();
 }
 /*
  * The level a lesson teaches, and the level the learner has shown.
@@ -710,21 +654,7 @@ function recordPractice(correct) {
 }
 document.querySelectorAll("input[name=direction]").forEach((input) => {
   input.checked = input.value === state.direction;
-  input.addEventListener("change", () => { state.direction = input.value; state.question = 0; state.responses = []; save(); render(); });
-});
-$("#assessment").addEventListener("click", (event) => {
-  const button = event.target.closest("[data-choice]");
-  if (!button) return;
-  document.querySelectorAll(".assessment-option").forEach((item) => item.classList.remove("selected"));
-  button.classList.add("selected");
-  const question = placementQuestions[state.direction][state.question];
-  state.responses[state.question] = { skill: question[0], choice: button.dataset.choice, correct: Number(button.dataset.choice) === question[3] };
-  $("#assessment-next").disabled = false;
-});
-$("#assessment-next").addEventListener("click", () => {
-  if (!state.responses[state.question]) return;
-  if (state.question === placementQuestions[state.direction].length - 1) completePlacement();
-  else { state.question += 1; renderPlacement(); }
+  input.addEventListener("change", () => { state.direction = input.value; save(); render(); });
 });
 document.querySelectorAll(".tab").forEach((tab) => tab.addEventListener("click", () => {
   document.querySelectorAll(".tab").forEach((item) => { const active = item === tab; item.classList.toggle("active", active); item.setAttribute("aria-selected", active); $(`#${item.dataset.panel}`).hidden = !active; });
@@ -765,7 +695,7 @@ $("#next-lesson").addEventListener("click", () => {
   const spot = pathNeighbors();
   if (spot && spot.next) selectLesson(spot.next.id);
 });
-$("#reset-progress").addEventListener("click", () => { state.completed.clear(); state.placement = null; state.question = 0; state.responses = []; const api = progressApi(); if (api) progressState = api.clear(); save(); render(); });
+$("#reset-progress").addEventListener("click", () => { state.completed.clear(); const api = progressApi(); if (api) progressState = api.clear(); save(); render(); });
 $("#listen-dialogue").addEventListener("click", () => {
   if (!("speechSynthesis" in window)) { $("#speech-status").textContent = t("speech.unsupported"); return; }
   speechSynthesis.cancel();
@@ -952,13 +882,12 @@ render();
    Each module is a view, so only one is on screen at a time. Routing runs off
    the hash the nav already used, which keeps every existing in-page link, the
    back button and any bookmark working without a second link scheme. */
-const VIEWS = ["home", "path", "lessons", "flashcards", "placement", "library", "workbook", "stories", "after-dark"];
+const VIEWS = ["home", "path", "lessons", "flashcards", "library", "workbook", "stories", "after-dark"];
 const ROUTE_FOR_HASH = {
   "": "home", "#top": "home",
-  "#path": "path",
+  "#path": "path", "#course": "path", "#levels": "path",
   "#lessons": "lessons", "#lesson": "lessons",
   "#flashcards": "flashcards",
-  "#placement": "placement", "#roadmap": "placement",
   "#library": "library",
   "#workbook": "workbook",
   "#stories": "stories", "#reading": "stories",

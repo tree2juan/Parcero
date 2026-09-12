@@ -8,7 +8,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "social-life",
     register: "familiar",
-    pathways: ["independent"],
     verb: "bailar",
     review: "pending",
     es: {
@@ -138,7 +137,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "everyday-life",
     register: "courteous",
-    pathways: ["independent"],
     verb: "cantar",
     review: "pending",
     es: {
@@ -268,7 +266,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "social-life",
     register: "familiar",
-    pathways: ["independent"],
     verb: "tocar",
     review: "pending",
     es: {

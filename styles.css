@@ -237,8 +237,8 @@ main, footer { max-width: var(--wrap); margin: auto; padding-inline: 1.5rem; }
 
 /* ---------- Sections ---------- */
 
-.lessons-section, .flashcards, .placement, .roadmap, .library { padding-block: 4rem 1rem; }
-.placement h2, .roadmap h2, .library h2, .lessons-section h2, .flashcards h2 { font-size: clamp(1.7rem, 3.6vw, 2.6rem); }
+.lessons-section, .flashcards, .library { padding-block: 4rem 1rem; }
+.library h2, .lessons-section h2, .flashcards h2 { font-size: clamp(1.7rem, 3.6vw, 2.6rem); }
 
 .progress-panel {
   display: grid; gap: .8rem;
@@ -774,40 +774,6 @@ main, footer { max-width: var(--wrap); margin: auto; padding-inline: 1.5rem; }
 .deck-guide-title { margin: 0 0 .55rem; font-size: .95rem; }
 .deck-guide-steps { margin: 0; padding-left: 1.2rem; display: grid; gap: .4rem; }
 .deck-guide-steps li { color: var(--ink-soft); font-size: .88rem; line-height: 1.5; }
-
-/* ---------- Placement ---------- */
-
-.assessment-card {
-  padding: 1.5rem; margin-block: 1.5rem;
-  background: var(--surface);
-  border: 1px solid var(--line); border-radius: var(--radius);
-  box-shadow: var(--shadow);
-}
-.assessment-card h3 { margin-top: 0; font-size: 1.2rem; }
-.assessment-options { display: grid; gap: .6rem; }
-.assessment-option {
-  text-align: left; padding: .85rem 1.05rem;
-  background: var(--paper);
-  border: 1px solid var(--line); border-radius: .6rem;
-  transition: border-color .15s, background .15s;
-}
-.assessment-option:hover { border-color: var(--green); }
-.assessment-option.selected { color: var(--paper); background: var(--green); border-color: var(--green); font-weight: 650; }
-.assessment-progress { color: var(--ink-soft); font-weight: 700; font-size: .9rem; }
-.result-card { padding: 1.5rem; background: var(--mist); border-radius: var(--radius); }
-.result-card h3 { margin-top: 0; font-size: 1.4rem; }
-
-/* ---------- Roadmap ---------- */
-
-.flow-image {
-  display: block; width: 100%; margin-block: 1.5rem;
-  background: var(--surface);
-  border: 1px solid var(--line); border-radius: var(--radius);
-}
-.pathways { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 1rem; }
-.pathway { padding: 1.3rem; border-radius: var(--radius); background: var(--warm); }
-.pathway h3 { margin-top: 0; font-size: 1.1rem; }
-.pathway p { margin: 0; font-size: .95rem; }
 
 /* ---------- Library ---------- */
 

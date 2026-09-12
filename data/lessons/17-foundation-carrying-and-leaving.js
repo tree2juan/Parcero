@@ -27,7 +27,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "food-and-drink",
     register: "familiar",
-    pathways: ["foundation"],
     verb: "llevar",
     review: "pending",
     es: {
@@ -619,7 +618,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "food-and-drink",
     register: "courteous",
-    pathways: ["foundation"],
     verb: "traer",
     review: "pending",
     es: {
@@ -1211,7 +1209,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "social-life",
     register: "familiar",
-    pathways: ["foundation"],
     verb: "dejar",
     review: "pending",
     es: {

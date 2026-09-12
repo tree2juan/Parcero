@@ -24,7 +24,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "food-and-drink",
     register: "courteous",
-    pathways: ["extension"],
     verb: "rellenar",
     review: "pending",
     es: {
@@ -578,7 +577,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "food-and-drink",
     register: "familiar",
-    pathways: ["extension"],
     verb: "guardar",
     review: "pending",
     es: {
@@ -1120,7 +1118,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "home-and-neighborhood",
     register: "familiar",
-    pathways: ["extension"],
     verb: "prestar",
     review: "pending",
     es: {

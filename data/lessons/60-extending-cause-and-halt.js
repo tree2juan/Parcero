@@ -35,7 +35,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "transport-and-travel",
     register: "courteous",
-    pathways: ["extension"],
     verb: "parar",
     review: "pending",
     es: {
@@ -185,7 +184,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "food-and-drink",
     register: "courteous",
-    pathways: ["extension"],
     verb: "causar",
     review: "pending",
     es: {
@@ -347,7 +345,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "work-and-employment",
     register: "courteous",
-    pathways: ["extension"],
     verb: "producir",
     review: "pending",
     es: {

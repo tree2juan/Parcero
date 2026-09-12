@@ -24,7 +24,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "study-and-academia",
     register: "familiar",
-    pathways: ["year-12-local-mastery"],
     verb: "ganar",
     review: "pending",
     es: {
@@ -166,7 +165,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "transport-and-travel",
     register: "familiar",
-    pathways: ["year-12-local-mastery"],
     verb: "perder",
     review: "pending",
     es: {
@@ -320,7 +318,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "food-and-drink",
     register: "courteous",
-    pathways: ["year-12-local-mastery"],
     verb: "elegir",
     review: "pending",
     es: {

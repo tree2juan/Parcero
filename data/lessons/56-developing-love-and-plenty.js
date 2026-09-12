@@ -22,7 +22,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "social-life",
     register: "intimate",
-    pathways: ["independent"],
     verb: "amar",
     review: "pending",
     es: {
@@ -564,7 +563,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "food-and-drink",
     register: "intimate",
-    pathways: ["independent"],
     verb: "sobrar",
     review: "pending",
     es: {

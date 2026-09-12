@@ -32,7 +32,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "transport-and-travel",
     register: "familiar",
-    pathways: ["foundation"],
     verb: "tomar",
     review: "pending",
     es: {
@@ -664,7 +663,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "health-and-body",
     register: "familiar",
-    pathways: ["foundation"],
     verb: "sentir",
     review: "pending",
     es: {
@@ -1296,7 +1294,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "home-and-neighborhood",
     register: "courteous",
-    pathways: ["foundation"],
     verb: "vivir",
     review: "pending",
     es: {

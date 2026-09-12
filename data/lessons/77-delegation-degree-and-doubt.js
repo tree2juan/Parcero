@@ -23,7 +23,6 @@ lessons.push(
     skills: ["grammar", "speaking", "listening", "context"],
     domain: "home-and-neighborhood",
     register: "familiar",
-    pathways: ["extension", "professional-technical"],
     structure: "causative-delegation",
     review: "pending",
     es: {
@@ -583,7 +582,6 @@ lessons.push(
     skills: ["grammar", "speaking", "listening", "reading"],
     domain: "social-life",
     register: "familiar",
-    pathways: ["extension", "collegiate-academic"],
     structure: "degree-result",
     review: "pending",
     es: {
@@ -1143,7 +1141,6 @@ lessons.push(
     skills: ["grammar", "speaking", "register", "context"],
     domain: "work-and-employment",
     register: "courteous",
-    pathways: ["extension", "professional-technical"],
     structure: "perfect-subjunctive",
     review: "pending",
     es: {
@@ -1703,7 +1700,6 @@ lessons.push(
     skills: ["grammar", "speaking", "listening", "register", "context"],
     domain: "transport-and-travel",
     register: "courteous",
-    pathways: ["extension", "year-12-local-mastery", "professional-customer-service"],
     structure: "negated-opinion",
     review: "pending",
     es: {

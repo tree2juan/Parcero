@@ -12,7 +12,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "transport-and-travel",
     register: "courteous",
-    pathways: ["extension"],
     verb: "girar",
     review: "pending",
     es: {
@@ -644,7 +643,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "work-and-employment",
     register: "courteous",
-    pathways: ["extension"],
     verb: "empujar",
     review: "pending",
     es: {

@@ -16,7 +16,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "social-life",
     register: "familiar",
-    pathways: ["independent"],
     verb: "decidir",
     review: "pending",
     es: {
@@ -648,7 +647,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "shopping-and-money",
     register: "courteous",
-    pathways: ["independent"],
     verb: "conseguir",
     review: "pending",
     es: {
@@ -1280,7 +1278,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "transport-and-travel",
     register: "courteous",
-    pathways: ["independent"],
     verb: "ofrecer",
     review: "pending",
     es: {
@@ -1912,7 +1909,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context", "grammar"],
     domain: "plans-and-time",
     register: "familiar",
-    pathways: ["independent", "year-12"],
     structure: "real-conditionals",
     review: "pending",
     es: {

@@ -13,7 +13,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "family-and-relationships",
     register: "courteous",
-    pathways: ["extension"],
     verb: "llorar",
     review: "pending",
     es: {
@@ -665,7 +664,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "food-and-drink",
     register: "familiar",
-    pathways: ["extension"],
     verb: "reír",
     review: "pending",
     es: {
@@ -1317,7 +1315,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "social-life",
     register: "neutral",
-    pathways: ["extension"],
     verb: "sonreír",
     review: "pending",
     es: {

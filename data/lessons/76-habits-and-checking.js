@@ -21,7 +21,6 @@ lessons.push(
     skills: ["grammar", "listening", "speaking", "culture", "context"],
     domain: "home-and-neighborhood",
     register: "courteous",
-    pathways: ["independent", "year-12"],
     structure: "past-habits",
     review: "pending",
     es: {
@@ -581,7 +580,6 @@ lessons.push(
     skills: ["grammar", "listening", "speaking", "register", "context"],
     domain: "plans-and-time",
     register: "familiar",
-    pathways: ["independent", "professional-customer-service"],
     structure: "confirmation-tags",
     review: "pending",
     es: {

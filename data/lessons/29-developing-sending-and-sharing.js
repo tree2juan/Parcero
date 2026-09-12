@@ -25,7 +25,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "shopping-and-money",
     register: "courteous",
-    pathways: ["foundation", "year-12"],
     verb: "enviar",
     review: "pending",
     es: {
@@ -643,7 +642,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "food-and-drink",
     register: "familiar",
-    pathways: ["foundation", "year-12"],
     verb: "recibir",
     review: "pending",
     es: {
@@ -1261,7 +1259,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "study-and-academia",
     register: "familiar",
-    pathways: ["foundation", "year-12"],
     verb: "compartir",
     review: "pending",
     es: {
@@ -1879,7 +1876,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context", "grammar"],
     domain: "shopping-and-money",
     register: "courteous",
-    pathways: ["independent", "year-12"],
     structure: "object-pronouns",
     review: "pending",
     es: {

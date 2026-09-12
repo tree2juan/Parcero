@@ -29,7 +29,6 @@ lessons.push(
     skills: ["grammar", "speaking", "listening", "context", "register"],
     domain: "work-and-employment",
     register: "familiar",
-    pathways: ["foundation", "professional-office"],
     structure: "obligation-impersonal",
     review: "pending",
     es: {
@@ -589,7 +588,6 @@ lessons.push(
     skills: ["grammar", "speaking", "vocabulary", "listening", "context"],
     domain: "family-and-relationships",
     register: "familiar",
-    pathways: ["foundation", "professional-customer-service"],
     structure: "possessive-standalone",
     review: "pending",
     es: {
@@ -1149,7 +1147,6 @@ lessons.push(
     skills: ["grammar", "speaking", "listening", "culture", "register"],
     domain: "civic-and-services",
     register: "courteous",
-    pathways: ["independent", "year-12"],
     structure: "commands-and-requests",
     review: "pending",
     es: {

@@ -23,7 +23,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "transport-and-travel",
     register: "familiar",
-    pathways: ["foundation", "year-12"],
     verb: "viajar",
     review: "pending",
     es: {
@@ -665,7 +664,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "transport-and-travel",
     register: "formal",
-    pathways: ["foundation", "year-12"],
     verb: "conducir",
     review: "pending",
     es: {
@@ -1307,7 +1305,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "transport-and-travel",
     register: "familiar",
-    pathways: ["foundation", "year-12"],
     verb: "montar",
     review: "pending",
     es: {

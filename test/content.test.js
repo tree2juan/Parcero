@@ -110,7 +110,6 @@ test("every lesson carries its teaching metadata", () => {
     assert.ok(isText(lesson.domain), `${lesson.id}: missing domain`);
     assert.ok(isText(lesson.register), `${lesson.id}: missing register`);
     assert.ok(lesson.skills?.length, `${lesson.id}: missing skills`);
-    assert.ok(lesson.pathways?.length, `${lesson.id}: missing pathways`);
     assert.ok(["pending", "reviewed"].includes(lesson.review), `${lesson.id}: review must be "pending" or "reviewed"`);
   }
 });

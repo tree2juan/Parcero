@@ -23,7 +23,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "health-and-body",
     register: "courteous",
-    pathways: ["foundation"],
     verb: "preguntar",
     review: "pending",
     es: {
@@ -675,7 +674,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "home-and-neighborhood",
     register: "familiar",
-    pathways: ["foundation"],
     verb: "responder",
     review: "pending",
     es: {
@@ -1327,7 +1325,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "home-and-neighborhood",
     register: "familiar",
-    pathways: ["foundation"],
     verb: "necesitar",
     review: "pending",
     es: {

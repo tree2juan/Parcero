@@ -23,7 +23,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "study-and-academia",
     register: "courteous",
-    pathways: ["foundation"],
     verb: "mirar",
     review: "pending",
     es: {
@@ -623,7 +622,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "social-life",
     register: "familiar",
-    pathways: ["foundation"],
     verb: "escuchar",
     review: "pending",
     es: {
@@ -1223,7 +1221,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "family-and-relationships",
     register: "familiar",
-    pathways: ["foundation"],
     verb: "oír",
     review: "pending",
     es: {

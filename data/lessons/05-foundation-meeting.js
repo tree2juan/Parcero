@@ -22,7 +22,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "work-and-employment",
     register: "familiar",
-    pathways: ["foundation"],
     verb: "conocer",
     review: "pending",
     es: {
@@ -610,7 +609,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "food-and-drink",
     register: "familiar",
-    pathways: ["foundation"],
     verb: "querer",
     review: "pending",
     es: {
@@ -1198,7 +1196,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "food-and-drink",
     register: "courteous",
-    pathways: ["foundation"],
     verb: "llegar",
     review: "pending",
     es: {

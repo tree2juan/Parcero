@@ -26,7 +26,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "study-and-academia",
     register: "courteous",
-    pathways: ["foundation", "year-12"],
     verb: "interesar",
     review: "pending",
     es: {
@@ -590,7 +589,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "transport-and-travel",
     register: "familiar",
-    pathways: ["foundation", "year-12"],
     verb: "importar",
     review: "pending",
     es: {
@@ -1154,7 +1152,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "transport-and-travel",
     register: "familiar",
-    pathways: ["foundation", "year-12"],
     verb: "faltar",
     review: "pending",
     es: {
@@ -1718,7 +1715,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context", "grammar"],
     domain: "family-and-relationships",
     register: "familiar",
-    pathways: ["independent", "year-12", "collegiate-academic"],
     structure: "subjunctive-volition",
     review: "pending",
     es: {

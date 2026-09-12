@@ -21,7 +21,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "health-and-body",
     register: "formal",
-    pathways: ["foundation", "year-12"],
     verb: "atender",
     review: "pending",
     es: {
@@ -639,7 +638,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "health-and-body",
     register: "formal",
-    pathways: ["foundation", "year-12"],
     verb: "operar",
     review: "pending",
     es: {
@@ -1257,7 +1255,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "health-and-body",
     register: "neutral",
-    pathways: ["foundation", "year-12"],
     verb: "medir",
     review: "pending",
     es: {

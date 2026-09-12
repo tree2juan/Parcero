@@ -37,7 +37,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "social-life",
     register: "familiar",
-    pathways: ["year-12-local-mastery"],
     verb: "contestar",
     review: "pending",
     es: {
@@ -199,7 +198,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "family-and-relationships",
     register: "courteous",
-    pathways: ["year-12-local-mastery"],
     verb: "avisar",
     review: "pending",
     es: {
@@ -349,7 +347,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "transport-and-travel",
     register: "familiar",
-    pathways: ["year-12-local-mastery"],
     verb: "prometer",
     review: "pending",
     es: {

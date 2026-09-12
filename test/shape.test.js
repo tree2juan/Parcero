@@ -322,13 +322,6 @@ test("lesson tags come from the closed vocabularies", () => {
     for (const skill of Array.isArray(lesson.skills) ? lesson.skills : []) {
       if (!taxonomy.skills.includes(skill)) offenders.push(`${lesson.id}: skills "${skill}"`);
     }
-    /* `pathways` was omitted from this loop until it was not, and the field
-       drifted in exactly the way the comment above predicts: six values were
-       in use that data/taxonomy.js had never heard of. Closed lists only stay
-       closed if every one of them is checked. */
-    for (const pathway of Array.isArray(lesson.pathways) ? lesson.pathways : []) {
-      if (!taxonomy.pathways.includes(pathway)) offenders.push(`${lesson.id}: pathways "${pathway}"`);
-    }
   }
   assert.deepStrictEqual(offenders, [], "these values are not in data/taxonomy.js");
 });
@@ -350,7 +343,7 @@ test("curriculum tags come from the closed vocabularies", () => {
  * a category that exists on paper, and it will quietly mislead anyone who
  * builds a filter from the list and gets an empty screen.
  */
-test("every domain, register and pathway in the taxonomy is actually used", () => {
+test("every domain and register in the taxonomy is actually used", () => {
   const scalar = (field) => new Set(lessons.map((lesson) => lesson[field]).filter(Boolean));
   for (const field of ["domain", "register"]) {
     const seen = scalar(field);
@@ -358,14 +351,26 @@ test("every domain, register and pathway in the taxonomy is actually used", () =
     /* Array.from for the same vm-realm reason as the structure test above. */
     assert.deepStrictEqual(Array.from(unused), [], `these ${field} values are declared but no lesson uses them`);
   }
+});
 
-  /* Pathways is a list field, so it needs flattening rather than the scalar
-     read above. Three values — "professional", "travel" and "heritage" — were
-     declared here for a long time with no lesson behind any of them, which is
-     precisely the empty-filter screen this test exists to prevent. */
-  const seenPathways = new Set(lessons.flatMap((lesson) => Array.isArray(lesson.pathways) ? lesson.pathways : []));
-  const unusedPathways = taxonomy.pathways.filter((value) => !seenPathways.has(value));
-  assert.deepStrictEqual(Array.from(unusedPathways), [], "these pathways values are declared but no lesson uses them");
+/*
+ * `pathways` was a closed list of eleven study routes carried by every lesson
+ * and read by nothing. It is gone, and this is the test that keeps it gone.
+ *
+ * It earned its removal twice over. The name collided with the course path —
+ * two unrelated meanings of "path" in one app — and the list mixed three
+ * incompatible axes: difficulty tiers that restated the CEFR band a lesson
+ * already carried, an audience split that spelled the same idea two ways
+ * ("year-12" and "year-12-local-mastery"), and job domains. Its only reader
+ * was three hardcoded English blurbs on the placement screen, which were never
+ * translated, so a Spanish-direction learner saw English.
+ */
+test("the retired pathways vocabulary has not grown back", () => {
+  assert.strictEqual(taxonomy.pathways, undefined, "data/taxonomy.js has declared pathways again");
+  const carriers = lessons.filter((lesson) => lesson.pathways !== undefined).map((lesson) => lesson.id);
+  /* Array.from for the same vm-realm reason as the structure test above: an
+     empty vm array and an empty host array differ by prototype alone. */
+  assert.deepStrictEqual(Array.from(carriers), [], "these lessons carry a pathways field that nothing reads");
 });
 
 /*

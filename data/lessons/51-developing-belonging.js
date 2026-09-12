@@ -23,7 +23,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "civic-and-services",
     register: "courteous",
-    pathways: ["foundation", "year-12"],
     verb: "incluir",
     review: "pending",
     es: {
@@ -599,7 +598,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "home-and-neighborhood",
     register: "familiar",
-    pathways: ["foundation", "year-12"],
     verb: "excluir",
     review: "pending",
     es: {
@@ -1163,7 +1161,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "work-and-employment",
     register: "courteous",
-    pathways: ["foundation", "year-12"],
     verb: "pertenecer",
     review: "pending",
     es: {

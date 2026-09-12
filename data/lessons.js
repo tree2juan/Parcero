@@ -4,7 +4,6 @@ const lessons = [{
   skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
   domain: "food-and-drink",
   register: "familiar",
-  pathways: ["foundation", "professional-customer-service"],
   review: "pending",
   es: {
     title: "A coffee and a conversation",
@@ -138,7 +137,6 @@ const lessons = [{
   skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
   domain: "transport-and-travel",
   register: "courteous",
-  pathways: ["foundation", "professional-customer-service"],
   review: "pending",
   es: {
     title: "A taxi downtown",
@@ -272,7 +270,6 @@ const lessons = [{
   skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
   domain: "shopping-and-money",
   register: "courteous",
-  pathways: ["foundation"],
   review: "pending",
   es: {
     title: "At the market square",
@@ -406,7 +403,6 @@ const lessons = [{
   skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
   domain: "social-life",
   register: "familiar",
-  pathways: ["foundation", "year-12-local-mastery"],
   review: "pending",
   es: {
     title: "What's the parche?",
@@ -542,7 +538,6 @@ const lessons = [{
   skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
   domain: "health-and-body",
   register: "formal",
-  pathways: ["year-12-local-mastery", "professional-healthcare"],
   review: "pending",
   es: {
     title: "A doctor's appointment",
@@ -680,7 +675,6 @@ const lessons = [{
   skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
   domain: "work-and-employment",
   register: "courteous",
-  pathways: ["professional-office", "professional-technical"],
   review: "pending",
   es: {
     title: "The team check-in",
@@ -816,7 +810,6 @@ const lessons = [{
   skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
   domain: "study-and-academia",
   register: "formal",
-  pathways: ["collegiate-academic"],
   review: "pending",
   es: {
     title: "At the seminar",
@@ -954,7 +947,6 @@ const lessons = [{
   skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
   domain: "work-and-employment",
   register: "formal",
-  pathways: ["professional-interviews", "collegiate-academic"],
   review: "pending",
   es: {
     title: "The job interview",

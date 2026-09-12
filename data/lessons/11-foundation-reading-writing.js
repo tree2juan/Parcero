@@ -28,7 +28,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "social-life",
     register: "familiar",
-    pathways: ["foundation"],
     verb: "escribir",
     review: "pending",
     es: {
@@ -680,7 +679,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "everyday-life",
     register: "familiar",
-    pathways: ["foundation"],
     verb: "leer",
     review: "pending",
     es: {
@@ -1332,7 +1330,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "work-and-employment",
     register: "courteous",
-    pathways: ["foundation"],
     verb: "comprender",
     review: "pending",
     es: {
@@ -1984,7 +1981,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context", "grammar", "reading"],
     domain: "everyday-life",
     register: "courteous",
-    pathways: ["foundation", "year-12"],
     structure: "gender-and-agreement",
     review: "pending",
     es: {

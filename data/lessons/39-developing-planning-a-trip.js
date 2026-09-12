@@ -19,7 +19,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "social-life",
     register: "courteous",
-    pathways: ["independent"],
     verb: "reservar",
     review: "pending",
     es: {
@@ -671,7 +670,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "family-and-relationships",
     register: "familiar",
-    pathways: ["independent"],
     verb: "visitar",
     review: "pending",
     es: {
@@ -1323,7 +1321,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context"],
     domain: "social-life",
     register: "neutral",
-    pathways: ["independent"],
     verb: "planear",
     review: "pending",
     es: {
@@ -1975,7 +1972,6 @@ lessons.push(
     skills: ["speaking", "listening", "pronunciation", "vocabulary", "culture", "context", "grammar"],
     domain: "transport-and-travel",
     register: "neutral",
-    pathways: ["independent", "year-12"],
     structure: "por-vs-para",
     review: "pending",
     es: {

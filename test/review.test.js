@@ -630,7 +630,6 @@ test("every authored string in a lesson is offered by the report picker", () => 
     review: 'a state key recording whether a lesson has been signed off; no script renders it, and the words on the lesson banner come from i18n',
     domain: "authored metadata no script reads; grep for `.domain` across all four scripts returns nothing, so it reaches no page",
     skills: "authored metadata no script reads; same check as domain",
-    pathways: "authored metadata no script reads; same check as domain",
     answer: "an index into choices, not text",
     "address.form": 'an enum ("usted"/"tú"/"vos"); the page renders t("address.form.*") from i18n.js, so the visible string is the translator\'s, not the author\'s'
   };

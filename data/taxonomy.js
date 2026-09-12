@@ -84,43 +84,8 @@ const LESSON_SKILLS = [
   "context"   /* reading the situation: who is present, and what is expected. */
 ];
 
-/*
- * The study routes the course advertises. Kept here so the README, the
- * curriculum and the lessons cannot drift apart on their spelling.
- *
- * Two shapes live in this one list, deliberately. The first three are the
- * difficulty tiers every lesson passes through. The rest are the named tracks
- * the landing page advertises, and those specialize: a workplace lesson is
- * tagged `professional-healthcare` rather than a bare `professional`, because
- * "professional" spans a ward, a helpdesk and an interview, and a learner
- * filtering for one does not want the other two.
- *
- * `professional`, `travel` and `heritage` used to be declared here and were
- * removed, because no lesson ever carried them. That is the rule the domain
- * and register lists are already held to a few lines below, and pathways were
- * escaping it only because the test that enforces these lists had never been
- * extended to cover this field.
- */
-const LESSON_PATHWAYS = [
-  /* Difficulty tiers. Every lesson carries exactly one of these. */
-  "foundation",
-  "independent",
-  "extension",
-
-  /* Named tracks, with specializations where the broad name would mislead. */
-  "year-12",
-  "year-12-local-mastery",
-  "collegiate-academic",
-  "professional-customer-service",
-  "professional-office",
-  "professional-technical",
-  "professional-healthcare",
-  "professional-interviews"
-];
-
 const TAXONOMY = {
   domain: LESSON_DOMAINS,
   register: LESSON_REGISTERS,
-  skills: LESSON_SKILLS,
-  pathways: LESSON_PATHWAYS
+  skills: LESSON_SKILLS
 };
