@@ -121,7 +121,11 @@ Everything described above is a dialogue. Lessons are exchanges, the workbook dr
 
 `data/stories.js` is the answer — short historical pieces in **parallel text**, Spanish and English side by side, at `#stories`. The language being studied runs down the primary column and the language already known runs beside it, and the second column can be switched off once it stops being needed. Parallel text is an old technique and it works for a plain reason: a learner who can glance at the meaning keeps reading, and a learner who has to reach for a dictionary stops.
 
+There are **forty stories, ten in each band**, and the ten are deliberately not the same size. Within A1 they run from 154 to 213 Spanish words, and within B2 from 375 to 460, because ten texts of identical length teach a learner nothing about coping with a longer one. The bands themselves climb from an average of 176 words to 416, and from 7.7 words per sentence to 20.9.
+
 The subject is history because **history is free.** A reading section needs texts nobody owns, and a course cannot ship copyrighted prose. Facts belong to everybody, so every story here is written fresh for this course from the historical record — nothing is quoted, translated, adapted or paraphrased from an existing text. That also lets each piece be written *to* a band instead of found and hoped over, which no real-world text can be.
+
+Thirty-two of the forty are Colombian and eight are American, two per band, and they are set in Texas because the English side of this course is. A Colombian learner reading about Juneteenth in Galveston or the *Hernández v. Texas* ruling is reading the history of the place whose English they are being taught, and a learner of Spanish gets that history in Spanish. The split runs the same way as the rest of the course: the story is one text in two languages, so neither direction gets the thinner version.
 
 Each story carries three things a plain bilingual text does not:
 
