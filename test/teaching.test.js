@@ -391,9 +391,17 @@ test("a plan is written, not generated", () => {
    * share almost none. A template shares nearly all of them, because the only
    * thing that varies is the slots. On the drafts this was built against, the
    * authored bands scored 0, 8 and 18 percent and the generated one scored 38.
+   *
+   * The limit is 25% rather than something looser because of what turned up
+   * next: a band whose homework step was still one sentence with the verb run
+   * through a thesaurus — "Assign three copied X lines", "Set three copied Y
+   * lines", "Choose three copied Z lines" — peaking at 29% between two modules
+   * and passing a 35% gate comfortably. Accepted content across three bands
+   * never exceeded 4% on any pair, so this leaves six times the headroom real
+   * writing has ever needed and still catches a thesaurus.
    */
   const GRAM = 5;
-  const LIMIT = 0.35;
+  const LIMIT = 0.25;
 
   const gramsOf = (s) => {
     const w = String(s || "").toLowerCase().match(/[\p{L}\p{N}'’?¿!¡]+/gu) || [];
