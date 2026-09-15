@@ -2,6 +2,10 @@
   color-scheme: light dark;
   --ink: #17251f;
   --ink-soft: #526059;
+  /* Thirteen rules already said var(--muted) and nothing defined it, so every
+     one of them inherited body color and quietly stopped being secondary
+     text. Aliasing rather than renaming keeps both names working. */
+  --muted: #526059;
   --paper: #fffdf8;
   --surface: #ffffff;
   --green: #146c4d;
@@ -26,6 +30,7 @@
   :root {
     --ink: #e8f0ea;
     --ink-soft: #a3b3a8;
+    --muted: #a3b3a8;
     --paper: #101713;
     --surface: #18211c;
     --green: #6ec79b;
@@ -369,6 +374,275 @@ main, footer { max-width: var(--wrap); margin: auto; padding-inline: 1.5rem; }
 .path-lesson.is-done .path-lesson-mark { background: var(--green); }
 /* The single lesson to open next, so the eye finds it without reading the list. */
 .path-lesson.is-next { background: var(--mist); font-weight: 600; box-shadow: inset 2px 0 0 var(--green); }
+
+/* Objectives and the checkpoint sit inside an open module, between the
+   heading and the lessons, because the order on screen is the order a learner
+   needs them: what this is for, what it contains, how you prove it. */
+.path-objectives {
+  margin: .1rem 0 .55rem; padding: .7rem .9rem;
+  background: var(--mist); border-radius: .55rem;
+}
+.path-objectives h4 {
+  margin: 0 0 .35rem; font-size: .74rem; font-weight: 700;
+  letter-spacing: .07em; text-transform: uppercase; color: var(--green-deep);
+}
+.path-objectives ul { margin: 0; padding-left: 1.1rem; display: grid; gap: .25rem; }
+.path-objectives li { font-size: .87rem; line-height: 1.45; }
+
+.path-checkpoint {
+  display: flex; flex-wrap: wrap; align-items: center; gap: .6rem;
+  margin: 0 0 .6rem; padding-left: 1.65rem;
+}
+.path-check-score {
+  font-size: .8rem; font-variant-numeric: tabular-nums;
+  padding: .15rem .5rem; border-radius: 1rem;
+  background: var(--warm); color: var(--clay-ink);
+}
+.path-check-score.is-pass { background: var(--mist); color: var(--green-deep); }
+
+.path-exam {
+  display: flex; flex-wrap: wrap; gap: 1rem;
+  align-items: center; justify-content: space-between;
+  margin-top: .9rem; padding: .9rem 1.1rem;
+  background: linear-gradient(120deg, var(--mist), var(--surface));
+  border: 1px solid var(--green); border-radius: .7rem;
+}
+.path-exam-copy { flex: 1 1 18rem; }
+.path-exam-copy strong { display: block; font-size: 1rem; }
+.path-exam-copy p { margin: .15rem 0 0; font-size: .84rem; color: var(--muted); line-height: 1.45; }
+.path-exam-actions { display: flex; align-items: center; gap: .6rem; flex-wrap: wrap; }
+
+/* ---------- Teach ----------
+ * The teacher's view. Denser than anything a learner sees, because a teacher
+ * is scanning a term rather than reading a lesson, and because most of what is
+ * here is going straight to a printer. */
+
+.teach { margin-bottom: 3rem; }
+.teach-actions { display: flex; flex-wrap: wrap; gap: .6rem; margin: 1rem 0 1.4rem; }
+.teach-panel { animation: none; }
+.teach-tab {
+  padding: .5rem .9rem; border: 1px solid var(--line); border-radius: 1.4rem;
+  background: var(--surface); font: inherit; font-size: .88rem; color: inherit; cursor: pointer;
+}
+.teach-tab:hover { border-color: var(--green); }
+.teach-tab.active { background: var(--green); border-color: var(--green); color: #fff; }
+
+.teach-doc { max-width: 62ch; }
+.teach-doc h3, .teach-stage h3 {
+  margin: 2rem 0 .6rem; font-size: 1.15rem;
+  padding-bottom: .3rem; border-bottom: 1px solid var(--line);
+}
+.teach-doc > h3:first-child { margin-top: 0; }
+.teach-doc p { line-height: 1.6; }
+.teach-lead { font-size: 1.02rem; }
+.teach-muted { color: var(--muted); font-size: .85rem; }
+.teach-note {
+  padding: .7rem .9rem; border-left: 3px solid var(--sun);
+  background: var(--warm); border-radius: 0 .5rem .5rem 0; font-size: .89rem;
+}
+.teach-figure { margin: .1rem 0; font-size: 1.8rem; font-weight: 700; color: var(--green-deep); }
+
+.teach-cards { display: grid; gap: .8rem; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); margin: .9rem 0 1.2rem; }
+.teach-card {
+  padding: .9rem 1rem; background: var(--surface);
+  border: 1px solid var(--line); border-radius: .6rem;
+}
+.teach-card h4 { margin: 0 0 .3rem; font-size: .98rem; }
+.teach-card p { margin: .3rem 0 0; font-size: .88rem; line-height: 1.5; }
+.teach-weight {
+  display: inline-block; padding: .1rem .5rem; border-radius: 1rem;
+  background: var(--mist); color: var(--green-deep);
+  font-size: .76rem; font-weight: 700;
+}
+
+.teach-steps { display: grid; gap: .7rem; margin: .7rem 0 1rem; }
+.teach-step { padding: .75rem .9rem; background: var(--mist); border-radius: .55rem; }
+.teach-step h4, .teach-step h5 { margin: 0 0 .25rem; font-size: .9rem; }
+.teach-step h5 {
+  font-size: .72rem; letter-spacing: .07em;
+  text-transform: uppercase; color: var(--green-deep);
+}
+.teach-step p { margin: 0; font-size: .89rem; line-height: 1.55; }
+
+.teach-limits { display: grid; gap: .8rem; margin: .8rem 0 0; padding: 0; list-style: none; }
+.teach-limits > li { padding-left: .9rem; border-left: 3px solid var(--line); }
+.teach-limits p { margin: .2rem 0 0; font-size: .89rem; color: var(--muted); line-height: 1.55; }
+
+.teach-stage { margin-bottom: 2rem; }
+.teach-module { border: 1px solid var(--line); border-radius: .6rem; margin-bottom: .5rem; background: var(--surface); }
+.teach-module > summary {
+  display: grid; grid-template-columns: 2rem 1fr auto;
+  align-items: center; gap: .7rem;
+  padding: .65rem .85rem; cursor: pointer; font-size: .93rem;
+}
+.teach-module > summary:hover { background: var(--mist); }
+.teach-module-n {
+  display: grid; place-items: center; width: 1.7rem; height: 1.7rem;
+  background: var(--mist); border-radius: 50%;
+  font-size: .78rem; font-weight: 700; font-variant-numeric: tabular-nums;
+}
+.teach-module-title { font-weight: 600; }
+.teach-module-meta { font-size: .78rem; color: var(--muted); white-space: nowrap; }
+.teach-module-body { display: grid; gap: 1rem; padding: .3rem 1rem 1.1rem; border-top: 1px solid var(--line); }
+.teach-module-body h5 {
+  margin: 0 0 .3rem; font-size: .72rem; letter-spacing: .07em;
+  text-transform: uppercase; color: var(--green-deep);
+}
+.teach-module-body p { margin: 0; font-size: .9rem; line-height: 1.55; }
+.teach-module-body ul, .teach-module-body ol { margin: 0; padding-left: 1.1rem; display: grid; gap: .3rem; font-size: .9rem; line-height: 1.5; }
+.teach-errors > li { color: var(--clay-ink); }
+.teach-split { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr)); }
+.teach-lesson-list ol { color: var(--muted); }
+
+.teach-scroll { overflow-x: auto; margin: .8rem 0 1.2rem; }
+.teach-table { width: 100%; border-collapse: collapse; font-size: .88rem; }
+.teach-table th, .teach-table td { padding: .5rem .6rem; text-align: left; border-bottom: 1px solid var(--line); vertical-align: top; }
+.teach-table thead th { font-size: .76rem; letter-spacing: .05em; text-transform: uppercase; color: var(--muted); }
+.teach-table tfoot th, .teach-table tfoot td { border-top: 2px solid var(--line); border-bottom: 0; font-weight: 700; }
+.teach-table td { font-variant-numeric: tabular-nums; }
+.teach-rubric { min-width: 46rem; }
+.teach-rubric td { font-variant-numeric: normal; font-size: .84rem; line-height: 1.45; }
+.teach-rubric tbody th { width: 11rem; }
+.teach-rubric tbody th span { display: block; margin-top: .2rem; font-weight: 400; }
+/* The target column, so a marker's eye lands on "meets" rather than "exceeds". */
+.teach-rubric td:nth-child(4) { background: var(--mist); }
+
+.teach-grades { display: grid; gap: .3rem; margin: .5rem 0 0; padding: 0; list-style: none; font-size: .9rem; }
+.teach-grades strong { display: inline-block; min-width: 2.5rem; font-variant-numeric: tabular-nums; }
+
+.teach-pill {
+  display: inline-block; padding: .1rem .55rem; border-radius: 1rem;
+  background: var(--warm); color: var(--clay-ink); font-size: .78rem; font-weight: 600;
+}
+.teach-pill.is-pass { background: var(--mist); color: var(--green-deep); }
+
+/* ---------- Test ----------
+ * A paper, not a practice round. The chrome is deliberately thin: there is no
+ * progress bar racing ahead, no per-question feedback, and nothing to click
+ * except an answer. */
+
+.test { margin-bottom: 3rem; max-width: 46rem; }
+.test-head { margin-bottom: 1.6rem; }
+.test-head .ghost-button { margin-bottom: 1rem; }
+.test-head h2 { margin: .2rem 0 .4rem; }
+
+.test-section { margin-bottom: 2rem; }
+.test-section-title { margin: 0 0 .2rem; font-size: 1.05rem; }
+.test-section-lead { margin: 0 0 1rem; font-size: .88rem; color: var(--muted); }
+
+.test-questions { display: grid; gap: 1.1rem; margin: 0; padding: 0; list-style: none; }
+.test-question, .test-open {
+  padding: 1rem 1.1rem; background: var(--surface);
+  border: 1px solid var(--line); border-radius: .6rem;
+}
+.test-prompt { display: grid; grid-template-columns: 1.7rem 1fr; gap: .6rem; margin: 0 0 .7rem; font-size: .96rem; line-height: 1.5; }
+.test-number {
+  display: grid; place-items: center; width: 1.7rem; height: 1.7rem;
+  background: var(--mist); border-radius: 50%;
+  font-size: .78rem; font-weight: 700; font-variant-numeric: tabular-nums;
+}
+.test-options { display: grid; gap: .4rem; padding-left: 2.3rem; }
+.test-option {
+  display: grid; grid-template-columns: 1.1rem 1fr; gap: .6rem; align-items: start;
+  padding: .55rem .7rem; border: 1px solid var(--line); border-radius: .5rem;
+  font-size: .92rem; line-height: 1.45; cursor: pointer;
+}
+.test-option:hover { border-color: var(--green); background: var(--mist); }
+.test-option input { margin: .2rem 0 0; }
+.test-option:has(input:checked) { border-color: var(--green); background: var(--mist); font-weight: 600; }
+.test-option input:focus-visible { outline: 2px solid var(--green); outline-offset: 2px; }
+
+.test-writing-lines { display: grid; gap: 1.1rem; margin: .2rem 0 .7rem; padding-left: 2.3rem; }
+.test-writing-lines span { display: block; border-bottom: 1px solid var(--line); }
+.test-answer { margin-left: 2.3rem; }
+.test-answer > summary { font-size: .85rem; color: var(--green-deep); cursor: pointer; }
+.test-answer-target { margin: .5rem 0 .2rem; font-weight: 600; }
+.test-answer-gloss { margin: 0; font-size: .86rem; color: var(--muted); }
+
+.test-reading { margin-bottom: 1.5rem; }
+.test-reading h4 { margin: 0 0 .7rem; font-size: .98rem; }
+.test-writing { padding: 1rem 1.1rem; background: var(--mist); border-radius: .6rem; }
+.test-writing-spec { margin: 0 0 .5rem; font-size: .8rem; font-weight: 700; color: var(--green-deep); }
+.test-writing-brief { margin: 0 0 .7rem; line-height: 1.55; }
+.test-writing-criteria { margin: 0; padding-left: 1.1rem; display: grid; gap: .3rem; font-size: .88rem; color: var(--muted); }
+
+.test-foot {
+  position: sticky; bottom: 0; z-index: 2;
+  display: flex; flex-wrap: wrap; gap: 1rem;
+  align-items: center; justify-content: space-between;
+  padding: .9rem 1.1rem; margin-top: 1.5rem;
+  background: var(--surface); border: 1px solid var(--line); border-radius: .7rem;
+  box-shadow: var(--shadow-lift);
+}
+.test-foot p { margin: 0; }
+
+.test-result { display: grid; gap: 1.2rem; margin-top: 2rem; }
+.test-score { padding: 1.2rem 1.3rem; border-radius: .7rem; background: var(--warm); border: 1px solid var(--clay); }
+.test-score.is-pass { background: var(--mist); border-color: var(--green); }
+.test-verdict {
+  margin: 0; font-size: .76rem; font-weight: 700;
+  letter-spacing: .08em; text-transform: uppercase; color: var(--clay-ink);
+}
+.test-score.is-pass .test-verdict { color: var(--green-deep); }
+.test-figure { margin: .2rem 0 0; font-size: 1.9rem; font-weight: 700; font-variant-numeric: tabular-nums; }
+.test-blank-note { margin: .2rem 0 0; font-size: .85rem; color: var(--muted); }
+
+.test-weak { padding: 1rem 1.1rem; border: 1px solid var(--line); border-radius: .6rem; }
+.test-weak h4 { margin: 0 0 .2rem; font-size: 1rem; }
+.test-weak p { margin: 0 0 .7rem; font-size: .87rem; color: var(--muted); }
+.test-weak ul { display: grid; gap: .4rem; margin: 0; padding: 0; list-style: none; }
+.test-weak li { display: flex; flex-wrap: wrap; align-items: center; gap: .6rem; }
+.test-weak-count { font-size: .8rem; color: var(--clay-ink); font-variant-numeric: tabular-nums; }
+.test-clean { padding: 1rem 1.1rem; background: var(--mist); border-radius: .6rem; margin: 0; }
+
+.test-result-actions { display: flex; flex-wrap: wrap; gap: .7rem; }
+.test-review > summary { cursor: pointer; font-weight: 600; }
+.test-review-list { display: grid; gap: .8rem; margin: 1rem 0 0; padding: 0; list-style: none; }
+.test-review-row { padding: .8rem .9rem; border-radius: .55rem; border-left: 3px solid var(--line); background: var(--surface); }
+.test-review-row.is-right { border-left-color: var(--green); }
+.test-review-row.is-wrong { border-left-color: var(--clay); }
+.test-review-row.is-blank { border-left-color: var(--sun); }
+.test-review-row .test-prompt { margin-bottom: .4rem; font-size: .9rem; }
+.test-review-given, .test-review-right { margin: .15rem 0 0; font-size: .87rem; padding-left: 2.3rem; }
+.test-review-right { color: var(--green-deep); }
+
+/* On a phone the two new views are the ones most at risk: a five-column
+   gradebook and a four-level rubric are both wider than the screen, and the
+   sticky submit bar eats a third of a short viewport. */
+@media (max-width: 40rem) {
+  .path-exam, .path-resume { flex-direction: column; align-items: stretch; }
+  .path-exam-actions .primary-button, .path-exam-actions .ghost-button { flex: 1 1 auto; }
+  .path-checkpoint { padding-left: 0; }
+  .path-objectives { padding: .6rem .75rem; }
+
+  .teach-tab { flex: 1 1 auto; text-align: center; }
+  .teach-cards { grid-template-columns: 1fr; }
+  .teach-split { grid-template-columns: 1fr; }
+  .teach-module > summary { grid-template-columns: 1.7rem 1fr; row-gap: .15rem; }
+  .teach-module-meta { grid-column: 2; }
+  .teach-module-body { padding: .3rem .75rem 1rem; }
+  /* Both tables keep their columns and scroll sideways rather than reflowing.
+     A rubric that wraps to one column per row stops being a rubric. */
+  .teach-scroll { margin-inline: -1rem; padding-inline: 1rem; }
+  .teach-table { font-size: .82rem; }
+  .teach-rubric tbody th { width: auto; min-width: 8rem; }
+
+  .test-question, .test-open { padding: .85rem .8rem; }
+  .test-options, .test-writing-lines, .test-answer { padding-left: 0; margin-left: 0; }
+  .test-prompt { grid-template-columns: 1.5rem 1fr; gap: .5rem; }
+  .test-foot { flex-direction: column; align-items: stretch; gap: .6rem; text-align: center; }
+  .test-foot .primary-button { width: 100%; }
+  .test-result-actions .primary-button, .test-result-actions .ghost-button { flex: 1 1 100%; }
+  .test-review-given, .test-review-right { padding-left: 0; }
+}
+
+/* Very small screens: the sticky footer is worth more as a normal block than
+   as a bar covering two answers. */
+@media (max-width: 32rem) {
+  .test-foot { position: static; box-shadow: none; }
+  .teach-figure { font-size: 1.5rem; }
+  .test-figure { font-size: 1.6rem; }
+}
 
 /* ---------- Lessons workspace ----------
  * The lesson is the point of this view, so it gets the main column and starts
@@ -1293,14 +1567,18 @@ footer {
 
   body { background: #fff; color: #000; }
 
-  /* Keep the chain to the workbook, drop everything beside it. */
+  /*
+   * Print whatever view is open.
+   *
+   * This used to name #workbook directly — `main > *:not(#workbook)` — which
+   * was correct until every view was wrapped in a `div.view`. After that, no
+   * child of `main` was `#workbook` any more, so the rule hid all of them and
+   * printing produced a blank page. Scoping to the visible view instead fixes
+   * that and means the teaching pages and a test paper print too, rather than
+   * each new printable surface needing another exception here.
+   */
   body > *:not(main) { display: none !important; }
-  main > *:not(#workbook) { display: none !important; }
-  #workbook > .section-head,
-  #workbook > .workbook-controls,
-  #workbook > .assistive-text { display: none !important; }
-
-  main, #workbook, #workbook-output {
+  main, main > .view {
     display: block;
     max-width: none;
     width: auto;
@@ -1308,6 +1586,21 @@ footer {
     padding: 0;
     background: none;
   }
+  main > .view[hidden] { display: none !important; }
+
+  /* Controls are navigation. None of them mean anything on paper. */
+  .workbook-controls,
+  .teach-actions,
+  .tabs,
+  .assistive-text,
+  .path-checkpoint,
+  .path-exam-actions,
+  .test-head .ghost-button,
+  .test-foot,
+  .test-result-actions { display: none !important; }
+
+  #workbook, #workbook-output { display: block; max-width: none; width: auto; margin: 0; padding: 0; background: none; }
+  #workbook > .section-head { display: none !important; }
 
   .wb-sheet { border: 0; border-radius: 0; box-shadow: none; padding: 0; background: #fff; }
   .wb-overview { background: transparent !important; border: 1px solid #000; padding: .75rem; }
@@ -1340,4 +1633,29 @@ footer {
   .wb-say, .wb-translation, .wb-speaker, .wb-meta, .wb-situation { color: #444; }
   .wb-wrong { color: #000; font-style: italic; }
   a[href]::after { content: ""; }
+
+  /* --- the teaching pages on paper ------------------------------------- */
+
+  .teach-doc, .teach-stage { max-width: none; }
+  .teach-module { border: 1px solid #000; break-inside: avoid; margin-bottom: .6rem; }
+  .teach-module > summary { border-bottom: 1px solid #666; font-weight: 700; }
+  .teach-stage > h3 { break-after: avoid; border-bottom: 2px solid #000; }
+  .teach-step, .teach-card, .teach-limits > li { break-inside: avoid; }
+  .teach-table { border-collapse: collapse; width: 100%; }
+  .teach-table th, .teach-table td { border: 1px solid #666; padding: .3rem .4rem; }
+  .teach-table thead th { background: #eee !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .teach-rubric { font-size: .78rem; }
+  .teach-scroll { overflow: visible !important; }
+  .teach-muted, .teach-note { color: #444; }
+  .teach-pill { border: 1px solid #000; }
+
+  /* --- a test paper on paper ------------------------------------------- */
+
+  .test-question, .test-open, .test-reading, .test-writing { break-inside: avoid; }
+  .test-option {
+    border: 0; background: none; padding: .1rem 0;
+    break-inside: avoid; page-break-inside: avoid;
+  }
+  .test-answer { border: 1px solid #666; padding: .35rem .5rem; }
+  .test-writing-lines span { border-bottom: 1px solid #000; }
 }

@@ -36,6 +36,8 @@ Every lesson is one real situation, taught from both directions:
 - **English speakers** learning Colombian Spanish
 - **Spanish speakers** strengthening practical English
 
+It runs as a course you can teach from or study alone: 247 lessons across A1–B2, grouped into 78 modules, with objectives and a lesson plan per module, a checkpoint at the end of each, and an exam at the end of each band. See [Teaching with it](#teaching-with-it).
+
 It is a single static page. No build step, no framework, no account, no tracking, no network calls. Your progress lives in your own browser's storage and nowhere else.
 
 ## Try it
@@ -222,6 +224,47 @@ flowchart LR
 Nothing about that arrangement is stored. `syllabus.js` derives it from the lessons and the band authored on each module in `data/modules.js`, so a lesson rewritten into a different module moves itself. The path opens on a resume card that names the next lesson to do, computed from measured practice accuracy rather than a self-report.
 
 There used to be a separate placement quiz here, and a `pathways` vocabulary of eleven study routes carried by every lesson. Both are gone. The quiz answered the same question the resume card already answers, less well — five questions of self-report against real accuracy across the whole course — and every one of its correct answers was option one. The `pathways` list was read by nothing except three hardcoded English blurbs that were never translated, so a Spanish-direction learner saw English; it also collided with the course path on the word "path" while mixing difficulty tiers, audiences and job domains in a single list. A test in `test/shape.test.js` keeps the field from growing back.
+
+## Teaching with it
+
+Everything above describes a course. A school also needs a plan, a mark and a record, and `#teach` and `#test` are those.
+
+**`#teach` is the teacher's view**, in four panels:
+
+| Panel | What it holds |
+| --- | --- |
+| Handbook | What the course claims, contact hours derived from the authored session lengths, how the marks are weighted, how to run it in class or alone, and what it does not cover |
+| Scheme of work | Every module, in order, with its objectives, mission, five-step lesson plan, predicted errors, support and stretch notes, and homework |
+| Rubrics | The writing and speaking rubrics, four criteria by four levels, plus the grade bands |
+| Record | Every checkpoint and exam sat on this device, as a table, exportable to CSV |
+
+The whole view prints. `<details>` are forced open before the print dialog and restored after, so a collapsed scheme of work prints as a plan rather than as nineteen headings.
+
+**`#test` is a paper, not a practice round.** A checkpoint is ten questions drawn from one module's own material; a band exam is twenty-four questions sampled across the band, a reading section on stories the student has not been examined on, and a writing task marked by a person against the rubric. Nothing is scored until the paper is submitted, no answer is in the markup before then, and a blank stays distinct from a wrong answer. Papers are never padded: a module that cannot fill one says so.
+
+Three forms exist per module and per band. The form advances with each attempt and stops at C rather than wrapping, so a retake is a different paper and nobody has to remember which one they already sat. Papers are generated from a seeded PRNG keyed on `kind:id:direction:form`, which means a class sits one paper and a printed answer key matches every copy of it.
+
+```mermaid
+flowchart LR
+  L[Lessons<br/>practice, 0%] --> C[Module checkpoint<br/>40%]
+  C --> E[Band exam<br/>60%]
+  C -.retake, form B.-> C
+  E --> R[Record<br/>CSV export]
+```
+
+Practice is deliberately worth nothing. It is the one place a student is supposed to be wrong, and weighting it teaches them to avoid it.
+
+### What the teaching layer does not do
+
+- **It does not score speaking.** There is no audio anywhere in this repo. Speaking is marked by a person, from the rubric, against one unrehearsed exchange.
+- **Checkpoints are not unseen.** They draw on material the student has already met, because that is what an end-of-unit test is. The interface says so. For a mark that cannot have been rehearsed, use the exam's reading section or set the writing task under supervision.
+- **Records are local.** Progress lives in one browser on one device and goes nowhere else. Export at the end of a term, because clearing site data clears the record.
+
+### Where the teaching content lives
+
+`data/teaching.js` carries one entry per module: objectives, mission, a five-step plan, predicted errors, support, stretch and homework. Both language sides are authored, and **they are not translations of each other** — the same inversion the lessons use. `.en` is English prose planning the teaching of *Spanish*; `.es` is Spanish prose planning the teaching of *English*. `presentation.en` says "put *soy, es, somos, son* on the board"; `presentation.es` says "escribe *am, is* y *are* en el tablero". Module titles, missions and can-do statements are the exception: those are genuine translation pairs.
+
+`teaching.js` applies that inversion in one place, so nothing downstream has to remember which side to read.
 
 <a id="add-a-lesson"></a>
 
@@ -453,6 +496,13 @@ data/stories.js     Bilingual historical short stories: parallel text, glossary,
                     structure notes and comprehension questions
 workbook.js         Derives a printable workbook for each module, and its answer key
 data/study-guide.js The parts of the workbook that cannot be derived
+data/teaching.js    Per-module objectives, lesson plans, predicted errors and homework
+teaching.js         Reads the above, applying the direction inversion in one place
+data/course-plan.js The course handbook: claims, hours, weighting, limits
+data/rubrics.js     Writing and speaking rubrics, and the grade bands
+assessment.js       Builds and marks checkpoints and band exams; keeps the record
+assessment-ui.js    The test paper as a page
+teach-ui.js         The teacher's four panels, and the CSV export
 data/flashcards.js  Derives flashcard topics and sets from the content above
 data/provenance.js  Generated: which fields hold Spanish no native speaker has read
 scripts/            Maintainer tools: triage flags, check a single lesson block,
