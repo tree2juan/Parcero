@@ -41,6 +41,7 @@
           <a href="#library" data-i18n="nav.library">Library</a>
           <a href="#workbook" data-i18n="nav.workbook">Workbook</a>
           <a href="#stories" data-i18n="nav.stories">Reading</a>
+          <a href="#teach" data-i18n="nav.teach">Teach</a>
           <a href="#after-dark" data-i18n="nav.afterDark">After Dark</a>
         </div>
       </nav>
@@ -485,6 +486,49 @@
       </section>
       </div>
 
+      <div class="view" id="view-teach" hidden>
+      <section id="teach" class="teach" aria-labelledby="teach-title">
+        <div class="section-head">
+          <p class="eyebrow" data-i18n="teach.eyebrow">For teachers and schools</p>
+          <h2 id="teach-title" data-i18n="teach.title">Everything you need to run this as a course.</h2>
+          <p class="section-lead" data-i18n="teach.lead">A lesson plan for every module, the objectives it is assessed against, the rubric a person marks writing and speaking with, and the record you report from. Printable, and it works the same whether you teach thirty students or one.</p>
+        </div>
+
+        <div class="tabs" role="tablist" data-i18n-aria="teach.aria" aria-label="Teaching resources">
+          <button class="teach-tab active" type="button" role="tab" aria-selected="true" aria-controls="teach-panel-handbook" data-panel="handbook" data-i18n="teach.tab.handbook">Handbook</button>
+          <button class="teach-tab" type="button" role="tab" aria-selected="false" aria-controls="teach-panel-scheme" data-panel="scheme" data-i18n="teach.tab.scheme">Scheme of work</button>
+          <button class="teach-tab" type="button" role="tab" aria-selected="false" aria-controls="teach-panel-rubrics" data-panel="rubrics" data-i18n="teach.tab.rubrics">Rubrics</button>
+          <button class="teach-tab" type="button" role="tab" aria-selected="false" aria-controls="teach-panel-record" data-panel="record" data-i18n="teach.tab.record">Record</button>
+        </div>
+
+        <div class="teach-actions">
+          <button id="teach-print" class="primary-button" type="button" data-i18n="teach.print">Print this section</button>
+        </div>
+
+        <div id="teach-panel-handbook" class="teach-panel" role="tabpanel"></div>
+        <div id="teach-panel-scheme" class="teach-panel" role="tabpanel" hidden></div>
+        <div id="teach-panel-rubrics" class="teach-panel" role="tabpanel" hidden></div>
+        <div id="teach-panel-record" class="teach-panel" role="tabpanel" hidden></div>
+      </section>
+      </div>
+
+      <div class="view" id="view-test" hidden>
+      <section id="test" class="test" aria-labelledby="test-title">
+        <div class="test-head">
+          <button id="test-exit" class="ghost-button" type="button" data-i18n="test.exit">Leave the test</button>
+          <p class="eyebrow" id="test-kind"></p>
+          <h2 id="test-title">—</h2>
+          <p class="section-lead" id="test-lead"></p>
+        </div>
+        <form id="test-paper" class="test-paper"></form>
+        <div class="test-foot" id="test-foot" hidden>
+          <p class="assistive-text" id="test-progress"></p>
+          <button id="test-submit" class="primary-button" type="button" data-i18n="test.submit">Finish and mark</button>
+        </div>
+        <div id="test-result" class="test-result" hidden></div>
+      </section>
+      </div>
+
       <div class="view" id="view-stories" hidden>
       <section id="stories" class="stories" aria-labelledby="stories-title">
         <div class="section-head">
@@ -644,6 +688,9 @@
     <script src="data/exam-tasks.js"></script>
     <script src="data/stories.js"></script>
     <script src="data/cefr.js"></script>
+    <script src="data/rubrics.js"></script>
+    <script src="data/course-plan.js"></script>
+    <script src="data/teaching.js"></script>
     <script src="i18n.js"></script>
     <script src="data/flashcards.js"></script>
     <script src="cefr.js"></script>
@@ -654,6 +701,10 @@
          progress readout paints zero until something forces a redraw. -->
     <script src="srs.js"></script>
     <script src="progress.js"></script>
+    <!-- assessment.js and teaching.js join them: renderPath draws a checkpoint
+         button and a can-do list on its first pass, and both read these. -->
+    <script src="assessment.js"></script>
+    <script src="teaching.js"></script>
     <script src="app.js"></script>
     <script src="workbook.js"></script>
     <script src="workbook-ui.js"></script>
@@ -661,5 +712,7 @@
     <script src="flashcards.js"></script>
     <script src="review.js"></script>
     <script src="review-ui.js"></script>
+    <script src="assessment-ui.js"></script>
+    <script src="teach-ui.js"></script>
   </body>
 </html>

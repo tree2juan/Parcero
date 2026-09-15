@@ -614,7 +614,10 @@ function renderPath() {
         `<span class="path-module-count">${esc(entry.complete
           ? t("path.complete")
           : t("path.moduleCount", { done: entry.done, total: entry.total }))}</span></summary>` +
-        `<ol class="path-lessons">${rows}</ol></details></li>`;
+        objectivesBlock(entry.id) +
+        `<ol class="path-lessons">${rows}</ol>` +
+        checkpointBlock(entry, items.length) +
+        `</details></li>`;
     }).join("");
 
     return `<li class="path-stage${stage.complete ? " is-complete" : ""}">` +
@@ -626,8 +629,66 @@ function renderPath() {
         done: stage.modulesComplete, total: stage.moduleCount
       }))}</span></div>` +
       `<div class="path-stage-track" aria-hidden="true"><span style="width:${width}%"></span></div>` +
-      `<ol class="path-modules">${modules}</ol></li>`;
+      `<ol class="path-modules">${modules}</ol>` +
+      examBlock(stage) +
+      `</li>`;
   }).join("");
+}
+
+/*
+ * "By the end of this module I can..." — the authored version.
+ *
+ * The workbook has printed this heading for a long time and filled it with the
+ * first sentence of each lesson's scene description, which produced settings
+ * rather than capabilities. The objectives now come from data/teaching.js, and
+ * a module without an entry renders nothing at all rather than a heading with
+ * a gap under it.
+ */
+function objectivesBlock(moduleId) {
+  const teach = typeof ParceroTeaching === "object" ? ParceroTeaching : null;
+  if (!teach) return "";
+  const canDo = teach.canDo(moduleId, state.direction);
+  if (!canDo.length) return "";
+  return `<div class="path-objectives">` +
+    `<h4>${esc(t("path.canDo"))}</h4>` +
+    `<ul>${canDo.map((line) => `<li>${esc(line)}</li>`).join("")}</ul></div>`;
+}
+
+/*
+ * The checkpoint button, and whatever the learner has already scored on it.
+ *
+ * Hidden when the module cannot supply a paper, because a button that opens an
+ * alert saying "not enough questions" is worse than no button. The threshold
+ * matches assessment.js's floor rather than guessing.
+ */
+function checkpointBlock(entry, lessonCount) {
+  const A = typeof ParceroAssessment === "object" ? ParceroAssessment : null;
+  if (!A || !lessonCount) return "";
+  const prior = A.bestFor(A.load(), "checkpoint", entry.id, state.direction);
+  const badge = prior
+    ? `<span class="path-check-score${prior.passed ? " is-pass" : ""}">` +
+      esc(t(prior.passed ? "path.checkPassed" : "path.checkScore", { percent: prior.best })) + `</span>`
+    : "";
+  return `<div class="path-checkpoint">` +
+    `<button type="button" class="ghost-button" data-checkpoint="${esc(entry.id)}">` +
+    esc(t(prior ? "path.checkRetake" : "path.checkStart")) + `</button>${badge}</div>`;
+}
+
+/* The band exam, offered at the foot of its stage. */
+function examBlock(stage) {
+  const A = typeof ParceroAssessment === "object" ? ParceroAssessment : null;
+  if (!A) return "";
+  const prior = A.bestFor(A.load(), "exam", stage.band, state.direction);
+  const badge = prior
+    ? `<span class="path-check-score${prior.passed ? " is-pass" : ""}">` +
+      esc(t(prior.passed ? "path.checkPassed" : "path.checkScore", { percent: prior.best })) + `</span>`
+    : "";
+  return `<div class="path-exam">` +
+    `<div class="path-exam-copy"><strong>${esc(t("path.examTitle", { band: stage.band }))}</strong>` +
+    `<p>${esc(t("path.examLead"))}</p></div>` +
+    `<div class="path-exam-actions">` +
+    `<button type="button" class="primary-button" data-exam="${esc(stage.band)}">` +
+    esc(t(prior ? "path.examRetake" : "path.examStart")) + `</button>${badge}</div></div>`;
 }
 
 
@@ -882,7 +943,7 @@ render();
    Each module is a view, so only one is on screen at a time. Routing runs off
    the hash the nav already used, which keeps every existing in-page link, the
    back button and any bookmark working without a second link scheme. */
-const VIEWS = ["home", "path", "lessons", "flashcards", "library", "workbook", "stories", "after-dark"];
+const VIEWS = ["home", "path", "lessons", "flashcards", "library", "workbook", "stories", "teach", "test", "after-dark"];
 const ROUTE_FOR_HASH = {
   "": "home", "#top": "home",
   "#path": "path", "#course": "path", "#levels": "path",
@@ -891,6 +952,8 @@ const ROUTE_FOR_HASH = {
   "#library": "library",
   "#workbook": "workbook",
   "#stories": "stories", "#reading": "stories",
+  "#teach": "teach",
+  "#test": "test",
   "#after-dark": "after-dark"
 };
 function showView(name, options) {
@@ -975,7 +1038,40 @@ function goToLesson(id) {
   else showView("lessons");
   setTimeout(() => selectLesson(id), 0);
 }
+
+/*
+ * Two hooks for the files that load after this one.
+ *
+ * assessment-ui.js needs to send a learner back to a lesson their checkpoint
+ * flagged, and needs the course view to repaint once a mark is recorded.
+ * Exporting these is smaller than moving the path renderer or the lesson
+ * router into a shared module, and it keeps the direction of dependency
+ * pointing one way: app.js knows nothing about assessment-ui.js beyond the
+ * optional call sites already guarded above.
+ */
+window.ParceroGoToLesson = goToLesson;
+window.ParceroRefreshPath = renderPath;
 $("#path-stages").addEventListener("click", (event) => {
+  /* Checkpoint and exam buttons live inside the same list as the lesson
+     buttons, and a lesson button is an ancestor of nothing, so these are
+     tested first — otherwise a click on "Sit the checkpoint" inside an open
+     module would fall through to the nearest [data-goto] and open a lesson. */
+  const check = event.target.closest("[data-checkpoint]");
+  if (check) {
+    event.preventDefault();
+    if (typeof ParceroAssessmentUI === "object") {
+      ParceroAssessmentUI.open({ kind: "checkpoint", id: check.dataset.checkpoint, direction: state.direction });
+    }
+    return;
+  }
+  const exam = event.target.closest("[data-exam]");
+  if (exam) {
+    event.preventDefault();
+    if (typeof ParceroAssessmentUI === "object") {
+      ParceroAssessmentUI.open({ kind: "exam", id: exam.dataset.exam, direction: state.direction });
+    }
+    return;
+  }
   const item = event.target.closest("[data-goto]");
   if (item) goToLesson(item.dataset.goto);
 });

@@ -92,6 +92,22 @@
     return String(lesson.level || "").split("·")[0].trim();
   }
 
+  /*
+   * The module's authored objectives, or null when it has none yet.
+   *
+   * Read through ParceroTeaching rather than out of MODULE_TEACHING directly,
+   * so the inversion rule — an English-speaking learner reads the `.en` side,
+   * a Spanish-speaking one the `.es` side — is applied in exactly one place.
+   * Returns null rather than an empty array so the caller can tell "no notes
+   * for this module" apart from "notes that list nothing".
+   */
+  function authoredCanDo(moduleId, direction) {
+    const teaching = global.ParceroTeaching;
+    if (!teaching || typeof teaching.canDo !== "function") return null;
+    const list = teaching.canDo(moduleId, direction);
+    return Array.isArray(list) && list.length ? list : null;
+  }
+
   function themeOf(lesson) {
     const parts = String(lesson.level || "").split("·");
     return parts.length > 1 ? parts[1].trim() : "";
@@ -371,10 +387,19 @@
       themes: unique(units.map((u) => u.theme)),
       lessonIds: units.map((u) => u.lessonId),
       overview: {
-        /* The mission is the module's lessons stated as tasks. `setting.what`
-           is already a one-line description of what the exchange achieves, so
-           the can-do list is authored content re-pointed, not invented. */
-        canDo: units.map((u) => firstSentence((u.setting || {}).what, 150) || u.title),
+        /*
+         * The page prints "By the end of this module I can…", so this list has
+         * to be objectives. When data/teaching.js has them, they are authored:
+         * one can-do statement per objective, written for this module.
+         *
+         * The fallback is what this always did — `setting.what` re-pointed,
+         * which is a description of a scene rather than a claim about the
+         * learner, so it produces lines like "Two friends meet outside a
+         * bakery" under a heading that promised "I can…". It stays only so a
+         * module with no teaching notes yet still prints something true.
+         */
+        canDo: authoredCanDo(module.id, direction)
+          || units.map((u) => firstSentence((u.setting || {}).what, 150) || u.title),
         corePhrases: units
           .map((u) => (u.dialogue[0] ? u.dialogue[0].target : null))
           .filter(Boolean),

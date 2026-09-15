@@ -278,8 +278,10 @@ test("the English fallback says the same thing as the table it stands in for", (
   }
 });
 
-test("printing removes the site and keeps the workbook", () => {
-  const print = css.slice(css.indexOf("@media print"));
+test("printing removes the site and keeps the view that is open", () => {
+  /* Comments come out first: this test is about the rules, and the rules are
+     explained in prose that quotes the selector it replaced. */
+  const print = css.slice(css.indexOf("@media print")).replace(/\/\*[\s\S]*?\*\//g, "");
   assert.ok(print.includes("@media print"), "styles.css has no print rules at all");
   /*
    * The workbook runs to about twenty pages, so it has to stay in normal flow
@@ -291,8 +293,20 @@ test("printing removes the site and keeps the workbook", () => {
     "taking the workbook out of flow risks losing every page after the first");
   assert.match(print, /body > \*:not\(main\)\s*\{[^}]*display:\s*none/,
     "the page around <main> is not hidden for print");
-  assert.match(print, /main > \*:not\(#workbook\)\s*\{[^}]*display:\s*none/,
-    "the other sections are not hidden for print");
+  /*
+   * This used to require `main > *:not(#workbook)`, which was right when the
+   * workbook was a direct child of <main>. Once every view was wrapped in a
+   * `div.view`, nothing under <main> matched #workbook, so that rule hid all
+   * of them and printing gave you a blank sheet. The check now pins the shape
+   * that actually works — lay out the views, hide the ones the router has
+   * closed — so printing follows whatever is on screen.
+   */
+  assert.match(print, /main > \.view\[hidden\]\s*\{[^}]*display:\s*none/,
+    "the views the router has closed are not hidden for print");
+  assert.ok(/main,\s*main > \.view\s*\{/.test(print),
+    "the open view is never laid out for print");
+  assert.ok(!/main > \*:not\(#workbook\)/.test(print),
+    "print is scoped to #workbook again, which no longer matches any child of <main>");
   for (const chrome of [".section-head", ".workbook-controls", ".assistive-text"]) {
     assert.ok(print.includes(chrome), `print styles never deal with ${chrome}`);
   }
