@@ -72,14 +72,14 @@ const ParceroReview = (function () {
      nothing — these slots are matched by name. */
   const VERB_SLOTS = ["spanish", "english", "presentYo", "preteriteYo", "participle", "level", "register"];
   const VERB_FORM_SLOTS = ["presentYo", "preteriteYo", "participle"];
-  const FLUENCY_SLOTS = ["phrase", "meaning", "type", "region", "note"];
+  const FLUENCY_SLOTS = ["phrase", "meaning", "type", "region", "note", "direction"];
   /* Phrase first, then city: itemLabel previews the first slot, and a picker
      that lists the city first shows the reviewer the same handful of city
      names 150 times over. The city still comes second because the same phrase
      is listed once per city and the reading differs, so the phrase alone does
      not identify the row. */
   const MATURE_SLOTS = ["phrase", "city", "equivalent", "severity", "note"];
-  const SLANG_SLOTS = ["phrase", "meaning", "register", "region", "safety", "note"];
+  const SLANG_SLOTS = ["phrase", "meaning", "register", "region", "safety", "note", "direction"];
   const SIGNAL_SLOTS = ["signal", "whatItLooksLike", "whatItMeans", "direction", "respond"];
   /*
    * The four flat reference lists, keyed by the anchor kind that addresses
@@ -374,9 +374,12 @@ const ParceroReview = (function () {
 
   function slotLanguage(kind, field, slot, direction) {
     if (kind === "verb") return slot === "english" ? "en" : VERB_FORM_SLOTS.includes(slot) || slot === "spanish" ? "es" : null;
-    /* Slang is Colombian Spanish by definition; the phrase itself is the only
-       slot in that language, and the rest is explanation written for the reader. */
-    if (kind === "slang") return slot === "phrase" ? "es" : null;
+    /* One slot per reference row is in the language being learned and the rest
+       is explanation written for the reader, so the row's own direction slot
+       decides. It used to be hardcoded to Spanish, which was true only while
+       these lists were Colombian-only. */
+    if (kind === "slang" || kind === "fluency") return slot === "phrase" ? direction || null : null;
+    if (kind === "signal") return slot === "whatItLooksLike" ? direction || null : null;
     if (kind !== "lesson") return null;
     const target = direction;
     const support = direction === "es" ? "en" : "es";
@@ -562,17 +565,21 @@ const ParceroReview = (function () {
       const value = SCHEMA.slotValue(row, slots, parsed.slot);
       if (!isText(value)) return { anchor, ok: false, reason: `${listName} entry ${parsed.index + 1} has no "${parsed.slot}"` };
       const slotLabels = {
-        fluency: { phrase: "Phrase", meaning: "Meaning", type: "Type label", region: "Region label", note: "Usage note" },
+        fluency: { phrase: "Phrase", meaning: "Meaning", type: "Type label", region: "Region label", note: "Usage note", direction: "Language" },
         mature: { city: "City", phrase: "Phrase", equivalent: "Equivalent", severity: "Severity label", note: "Safety note" },
-        slang: { phrase: "Phrase", meaning: "Meaning", register: "Register label", region: "Region label", safety: "Can you say it?", note: "Usage note" },
+        slang: { phrase: "Phrase", meaning: "Meaning", register: "Register label", region: "Region label", safety: "Can you say it?", note: "Usage note", direction: "Language" },
         signal: { signal: "Signal", whatItLooksLike: "What it looks like", whatItMeans: "What it means", direction: "Language", respond: "What to do" }
       }[parsed.kind];
       const family = {
         fluency: "Fluency reference",
         mature: "After Dark reference",
-        slang: "Colombian slang reference",
+        slang: "Slang reference",
         signal: "Conversation signal"
       }[parsed.kind];
+      /* Every list except After Dark carries its direction in a slot. After Dark
+         carries it in the city, which resolveAnchor has no map for, so its
+         phrases stay untagged rather than being tagged wrongly. */
+      const rowDirection = slots.includes("direction") ? SCHEMA.slotValue(row, slots, "direction") : null;
       return {
         anchor, ok: true, kind: parsed.kind, source: REFERENCE_FILES[parsed.kind],
         /* slotPath, not a hand-built tuple index: an object row's slot lives at
@@ -580,7 +587,7 @@ const ParceroReview = (function () {
         path: `${listName}[${parsed.index}]${SCHEMA.slotPath(row, slots, parsed.slot)}`,
       text: value, slotLabel: slotLabels[parsed.slot],
       label: `${family} “${SCHEMA.slotValue(row, slots, slots[0])}” · ${slotLabels[parsed.slot]}`,
-      lang: slotLanguage(parsed.kind, null, parsed.slot, null)
+      lang: slotLanguage(parsed.kind, null, parsed.slot, rowDirection)
     };
   }
 

@@ -139,11 +139,27 @@ Every story also carries a **`caveat`**, in both languages, saying where it simp
 
 The bands are **measured, not asserted**. `test/stories.test.js` computes the mean Spanish sentence length per band and fails unless it strictly increases from A1 through B2 — an A1 story that drifted into B1 prose would otherwise sit there labeled A1 forever. The same file checks that every quoted sentence really appears in the story it cites, and that every glossary headword really appears in the text; the first draft of the B2 story failed both, quoting one sentence that lived in the `caveat` and another that had been reworded after the note was written, and both read perfectly.
 
-Alongside the lessons there is a reference **library**: 200 high-frequency verbs with their most useful forms, a fluency list of connectors and softeners, and a **Colombian slang** reference.
+Alongside the lessons there is a reference **library**: the alphabet, 200 high-frequency verbs with their most useful forms, a fluency list of connectors and softeners, and a **slang** reference.
+
+### Both directions, everywhere
+
+The lesson set has always been mirrored — every lesson exists once for the learner of Spanish and once for the learner of English, and three tests enforce it. The reference lists were not. Slang, fluency and After Dark held Colombian material only, so a Colombian studying English opened the library and found the wrong half of the app: a slang tab explaining `parcero` to someone who grew up saying it.
+
+Every reference list now carries a direction. `slangItems` and `fluencyItems` gained an explicit final slot, `"es"` or `"en"`; After Dark derives its direction from the entry's city through `MATURE_CITIES`, because a row cannot be in Dallas and in Spanish at once. `test/content.test.js` fails if any reference list is empty for either direction, which is what makes this hard to regress.
+
+The same inversion rule governs the new material as the lessons: **the explanation is written in the language the reader already has**. A Colombian entry is a Spanish phrase with an English gloss and an English note; a US entry is an English phrase with a Spanish gloss and a Spanish note. The seven English-direction warning signals predated the rule and were written entirely in English — correct-looking, and useless to the reader they were for. They are Spanish now.
+
+### The alphabet
+
+`data/alphabet.js` is the first thing in the library, because it is the first thing that trips people and the last thing anyone writes down. It is not a recitation: each letter carries its name, its sound, and an example, and each direction closes with a list of **contrasts** — the places the two alphabets disagree.
+
+Spanish gets 27 letters and nine contrasts: `ñ` as a letter in its own right, `ch` and `ll` dropped as letters in 2010 but alive as sounds, *seseo*, *yeísmo*, `b` and `v` sharing one sound, what a written accent actually does, the diéresis, and the fact that a Spanish letter reliably predicts its sound. English gets 26 letters and twelve, including the one that matters most: **English spelling does not predict pronunciation**. Five vowel letters cover roughly fifteen vowel sounds, `h` is pronounced, both `th` sounds are real and distinct, and there is no epenthetic `e-` before `sp-` or `st-` — `school` is not *eschool*.
+
+A gate in `test/content.test.js` checks the contrasts against a five-gram overlap limit, so a contrast cannot be another contrast with the nouns swapped.
 
 The slang reference carries a field the others do not: **how safe each phrase is for a learner to actually say**. Meaning alone is not enough, because the gap between understanding `parcero` and understanding `gonorrea` is not a gap in translation — it is a gap in what happens to you if you use it. Every entry is marked *Say it freely*, *Say it with friends*, or *Understand only*, and the label is shown before the meaning rather than after it.
 
-**After Dark** is its own area, in its own midnight theme: 150 entries of strong Colombian language, 50 each for Bogotá, Medellín and Barranquilla. Most Colombian profanity is national, but its *force* is not — the same word can be affectionate filler among paisa friends and a fighting word between strangers in Bogotá. That is why shared terms repeat per city with the reading that city gives them; the overlap is the point. Each entry carries a severity that rates the risk of *repeating* the phrase rather than how rude it sounds. It is there so learners can **understand** what they hear and judge a room — never to direct it at anyone.
+**After Dark** is its own area, in its own midnight theme: 150 entries of strong Colombian language, 50 each for Bogotá, Medellín and Barranquilla, and 150 of strong American English, 50 each for Los Angeles, Dallas and New York. Most profanity in either language is national, but its *force* is not — the same word can be affectionate filler among paisa friends and a fighting word between strangers in Bogotá, and `bro` in Los Angeles is not `bro` in a Dallas parking lot. That is why shared terms repeat per city with the reading that city gives them; the overlap is the point. Which three cities you see follows your direction of study, because a learner of English has no use for a Medellín severity rating. Each entry carries a severity that rates the risk of *repeating* the phrase rather than how rude it sounds. It is there so learners can **understand** what they hear and judge a room — never to direct it at anyone.
 
 The verb list was seeded from published frequency data, so the **level** on each card is real. **Register** is published as a general guide; the Report an error tab is where corrections start, and it accepts a report against that field on any verb.
 
@@ -510,8 +526,9 @@ data/lessons.js     Declares the lesson array, and the original eight lessons
 data/lessons/       Lesson blocks, one file per theme, pushing onto that array
 data/lesson-schema.js  The lesson shape: defaults, normalisation, legacy tuples, study segments
 data/curriculum.js  200 verbs and the fluency connectors
-data/slang.js       Colombian slang, each entry marked with how safe it is to say
-data/after-dark.js  Strong-language reference, 50 entries per city
+data/alphabet.js    Both alphabets, letter by letter, plus where they disagree
+data/slang.js       Slang for both directions, each entry marked with how safe it is to say
+data/after-dark.js  Strong-language reference, 50 entries per city, and the city-to-direction map
 data/mature.js      The conversation signals that tell you a room has turned
 data/exam-tasks.js  One exam writing task per band, with two calibrated answers
 data/stories.js     Bilingual historical short stories: parallel text, glossary,

@@ -247,6 +247,7 @@
       slangItems: arrayFrom(() => slangItems),
       matureItems: arrayFrom(() => matureItems),
       matureSignals: arrayFrom(() => matureSignals),
+      matureCities: (typeof MATURE_CITIES === "undefined" ? {} : MATURE_CITIES),
       /*
        * The same switch the library gate writes. Read at rebuild time rather
        * than captured once, so opening the gate and coming back to the deck

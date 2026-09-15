@@ -65,6 +65,7 @@ function dataSource({ schema = true, flashcards = false } = {}) {
   if (schema) parts.push(read("data/lesson-schema.js"));
   parts.push(lessonSource());
   parts.push(read("data/curriculum.js"));
+  parts.push(read("data/alphabet.js"));
   parts.push(read("data/structures.js"));
   parts.push(read("data/taxonomy.js"));
   parts.push(read("data/lexicon.js"));
