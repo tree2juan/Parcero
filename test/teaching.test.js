@@ -300,6 +300,75 @@ test("a step is written, not pasted", () => {
     `${failures.length} pair(s) of steps share pasted text:\n  ` + failures.slice(0, 25).join("\n  "));
 });
 
+test("two modules are two different classes, not one template", () => {
+  /*
+   * The same measurement as the test above, one level out, and it exists
+   * because bounding repetition inside a module moved the boilerplate instead
+   * of removing it. The round that fixed the within-module pasting came back
+   * with every module's presentation built from a single sentence with the
+   * quoted forms swapped in:
+   *
+   *   42: "For me interesa and me interesan, use one model line first. Write
+   *        the forms on the board, underline the part that carries the
+   *        relationship clearly today, and ask what changes if that part
+   *        disappears."
+   *   44: "For contestar and dejar en visto, use one model line first. Write
+   *        the forms on the board, underline the part that carries the
+   *        relationship clearly today, and ask what changes if that part
+   *        disappears."
+   *
+   * Every within-module check passes that, because module 42's eight steps do
+   * differ from each other. The boilerplate check passes it too: it compares
+   * the first eight words, and the swapped forms sit inside them. Measured
+   * across one band, `support.en` shared thirty-one identical consecutive
+   * words between every pair of modules — nineteen copies of one sentence.
+   *
+   * A house style for how an exit ticket gets collected is fine, and that is
+   * what the allowance is for. A whole pasted sentence is not.
+   */
+  const LIMIT = 12;
+
+  const wordsOf = (s) => String(s || "").toLowerCase().match(/[\p{L}\p{N}'’?¿!¡]+/gu) || [];
+  const sharedRun = (a, b) => {
+    const A = wordsOf(a);
+    const B = wordsOf(b);
+    const dp = new Array(B.length + 1).fill(0);
+    let best = 0;
+    let endsAt = 0;
+    for (let i = 1; i <= A.length; i += 1) {
+      let prev = 0;
+      for (let j = 1; j <= B.length; j += 1) {
+        const tmp = dp[j];
+        dp[j] = A[i - 1] === B[j - 1] ? prev + 1 : 0;
+        if (dp[j] > best) { best = dp[j]; endsAt = i; }
+        prev = tmp;
+      }
+    }
+    return { n: best, text: A.slice(Math.max(0, endsAt - best), endsAt).join(" ") };
+  };
+
+  const rows = entries();
+  const failures = [];
+  for (const field of PROSE) {
+    for (const lang of ["en", "es"]) {
+      for (let i = 0; i < rows.length; i += 1) {
+        for (let j = i + 1; j < rows.length; j += 1) {
+          const a = rows[i][1].teaching[field][lang];
+          const b = rows[j][1].teaching[field][lang];
+          if (!a || !b) continue;
+          const run = sharedRun(a, b);
+          if (run.n > LIMIT) {
+            failures.push(`${rows[i][0]}/${rows[j][0]}.${field}.${lang}: ${run.n} identical words in a row — "${run.text.slice(0, 70)}"`);
+          }
+        }
+      }
+    }
+  }
+
+  assert.deepStrictEqual(failures, [],
+    `${failures.length} module pair(s) share a pasted step:\n  ` + failures.slice(0, 25).join("\n  "));
+});
+
 test("mission and can-do ARE translation pairs", () => {
   /* The deliberate exception. The task is the same in both classrooms, so
      these two must track each other; if they have drifted apart, one
