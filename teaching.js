@@ -24,8 +24,25 @@
 
   const BANDS = ["A1", "A2", "B1", "B2"];
 
+  /*
+   * The authored table, read as a bare name rather than off the global object.
+   *
+   * data/teaching.js declares `const MODULE_TEACHING = {...}`, and in a classic
+   * script a top-level const goes into the global *lexical* environment, not
+   * onto window. So `global.MODULE_TEACHING` is undefined in a browser no
+   * matter how much content is loaded, and every caller here degrades politely
+   * to empty: blank lesson plans, a scheme of work with no minutes in it, and
+   * an hours table reading "—" in every row.
+   *
+   * Nothing caught it, because the tests load the data through its
+   * module.exports tail while the browser loads it as a script. Same file,
+   * two completely different bindings.
+   *
+   * The bare name resolves in both, which is why the rest of this codebase
+   * reads `lessons`, `storyItems`, `COURSE_PLAN` and `RUBRICS` the same way.
+   */
   const table = () =>
-    (typeof global.MODULE_TEACHING === "object" && global.MODULE_TEACHING) || {};
+    (typeof MODULE_TEACHING === "object" && MODULE_TEACHING) || {};
 
   /* The authored entry for a module, or null. Null is a normal answer. */
   function forModule(id) {

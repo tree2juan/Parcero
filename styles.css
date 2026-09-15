@@ -464,6 +464,20 @@ main, footer { max-width: var(--wrap); margin: auto; padding-inline: 1.5rem; }
 }
 .teach-step p { margin: 0; font-size: .89rem; line-height: 1.55; }
 
+/* The objectives a module is marked against. Checkboxes rather than bullets:
+   a teacher reads this column down the page deciding met / not met, and the
+   marker is what makes it scannable as a list of claims about the student. */
+.teach-cando { margin: 0; padding: 0; list-style: none; display: grid; gap: .4rem; }
+.teach-cando li {
+  position: relative; padding-left: 1.4rem;
+  font-size: .89rem; line-height: 1.5;
+}
+.teach-cando li::before {
+  content: ""; position: absolute; left: 0; top: .3rem;
+  width: .78rem; height: .78rem;
+  border: 1.5px solid var(--green-deep); border-radius: .2rem;
+}
+
 .teach-limits { display: grid; gap: .8rem; margin: .8rem 0 0; padding: 0; list-style: none; }
 .teach-limits > li { padding-left: .9rem; border-left: 3px solid var(--line); }
 .teach-limits p { margin: .2rem 0 0; font-size: .89rem; color: var(--muted); line-height: 1.55; }

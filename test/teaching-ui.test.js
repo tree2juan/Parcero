@@ -682,6 +682,36 @@ test("the whole page boots: every script in index.html, in order, without throwi
   ]) {
     assert.ok(sandbox[name], `${name} never reached the page`);
   }
+
+  /*
+   * Arriving is not the same as being wired up.
+   *
+   * ParceroTeaching was present on the page for a whole round of review while
+   * reading nothing at all, because it looked the table up as
+   * global.MODULE_TEACHING and data/teaching.js declares it as a top-level
+   * const — which in a classic script lands in the global lexical environment
+   * and never on window. The engine therefore saw {} and every caller degraded
+   * quietly: empty plans, a scheme with no minutes, an hours table of dashes.
+   *
+   * The whole suite stayed green because every other test reaches the data
+   * through the module.exports tail of the same file. Only booting it the way
+   * a browser does shows the difference, so assert on content here, not just
+   * on the presence of the global.
+   */
+  const anyModule = MODULES[0];
+  assert.ok(anyModule, "no course modules to check the teaching table against");
+  assert.ok(
+    sandbox.ParceroTeaching.has(anyModule.id),
+    `ParceroTeaching loaded but cannot see module ${anyModule.id}: the data file is
+     published under a binding the engine does not read`
+  );
+
+  const detail = sandbox.ParceroTeaching.plan(anyModule.id, "es");
+  assert.ok(detail, `no plan came back for ${anyModule.id} after a real page boot`);
+  assert.ok(detail.minutes > 0,
+    "the plan has no session length, so the scheme of work totals nothing");
+  assert.ok(detail.steps.length > 0,
+    "the plan has no steps, so the handbook renders an empty lesson");
 });
 
 function escapeHtml(text) {

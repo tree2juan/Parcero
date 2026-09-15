@@ -73,6 +73,7 @@
     "teach.limits.title": "What this course does not do",
     "teach.scheme.lead": "Every module in order, with what it is for and how to teach it. Print this and you have the term.",
     "teach.scheme.minutes": "{minutes} min",
+    "teach.scheme.hours": "{hours} taught hours",
     "teach.scheme.lessons": "{count} lessons",
     "teach.scheme.mission": "What it is for",
     "teach.scheme.canDo": "By the end, students can",
@@ -316,7 +317,7 @@
 
       return `<section class="teach-stage">
         <h3>${esc(stage.band)} · ${esc(t(`path.stage.${stage.band}.name`))}</h3>
-        <p class="teach-muted">${esc(t("teach.scheme.minutes", { minutes: stage.minutes }))} · ${esc(t("teach.scheme.lessons", { count: stage.lessons }))}</p>
+        <p class="teach-muted">${esc(t("teach.scheme.hours", { hours: Math.round((stage.minutes / 60) * 10) / 10 }))} · ${esc(t("teach.scheme.lessons", { count: stage.lessons }))}</p>
         ${rows}
       </section>`;
     }).join("");

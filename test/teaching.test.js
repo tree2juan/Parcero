@@ -369,6 +369,64 @@ test("two modules are two different classes, not one template", () => {
     `${failures.length} module pair(s) share a pasted step:\n  ` + failures.slice(0, 25).join("\n  "));
 });
 
+test("a plan is written, not generated", () => {
+  /*
+   * The version of the test above that a generated draft cannot slip past.
+   *
+   * Both run-length tests ask how many words two fields share back to back.
+   * A draft built from a template defeats them by interpolating a token every
+   * ten words or so: the runs stay just under the limit while the text is,
+   * literally, one string with slots in it. One band of the first authoring
+   * round came back as a table of tokens and a for-loop —
+   *
+   *   `${tag} warm-up: set one corner as ${primaryEn}. Ask what the class can
+   *    already say; mark the first breakdown in ${tema}. Hold ${s1} until the
+   *    need surfaces.`
+   *
+   * — which passed every other check in this file and is not teaching.
+   *
+   * So this measures overlap rather than contiguity: of all the five-word
+   * sequences in one module's step, how many also occur in another module's
+   * version of that step? Two people writing about two different lessons
+   * share almost none. A template shares nearly all of them, because the only
+   * thing that varies is the slots. On the drafts this was built against, the
+   * authored bands scored 0, 8 and 18 percent and the generated one scored 38.
+   */
+  const GRAM = 5;
+  const LIMIT = 0.35;
+
+  const gramsOf = (s) => {
+    const w = String(s || "").toLowerCase().match(/[\p{L}\p{N}'’?¿!¡]+/gu) || [];
+    const out = new Set();
+    for (let i = 0; i + GRAM <= w.length; i += 1) out.add(w.slice(i, i + GRAM).join(" "));
+    return out;
+  };
+
+  const rows = entries();
+  const failures = [];
+  for (const field of PROSE) {
+    for (const lang of ["en", "es"]) {
+      const sets = rows.map(([id, entry]) => [id, gramsOf(entry.teaching[field][lang])]);
+      for (let i = 0; i < sets.length; i += 1) {
+        for (let j = i + 1; j < sets.length; j += 1) {
+          const [idA, a] = sets[i];
+          const [idB, b] = sets[j];
+          if (!a.size || !b.size) continue;
+          let hit = 0;
+          for (const g of a) if (b.has(g)) hit += 1;
+          const share = hit / Math.min(a.size, b.size);
+          if (share > LIMIT) {
+            failures.push(`${idA}/${idB}.${field}.${lang}: ${Math.round(share * 100)}% of five-word sequences shared`);
+          }
+        }
+      }
+    }
+  }
+
+  assert.deepStrictEqual(failures, [],
+    `${failures.length} module pair(s) are one template with the slots changed:\n  ` + failures.slice(0, 25).join("\n  "));
+});
+
 test("mission and can-do ARE translation pairs", () => {
   /* The deliberate exception. The task is the same in both classrooms, so
      these two must track each other; if they have drifted apart, one
@@ -420,6 +478,9 @@ test("the plan comes back in teaching order", () => {
   const [id] = entries()[0] || [];
   if (!id) return;
   const detail = T.plan(id, "es");
-  assert.deepStrictEqual(detail.steps.map((s) => s.id), STEPS,
+  /* Joined rather than deepStrictEqual against STEPS: .map() inside the vm
+     realm returns that realm's Array, which deep-equal rejects on prototype
+     identity even when every element matches. */
+  assert.strictEqual(detail.steps.map((s) => s.id).join(","), STEPS.join(","),
     "the five steps must arrive in the order they are run, not in object-key order");
 });
