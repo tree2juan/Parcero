@@ -171,7 +171,10 @@
       <td>${row.weeksAtTwoPerWeek}</td>
     </tr>`).join("");
 
-    const hoursTable = hours.length ? `<table class="teach-table">
+    /* Wrapped like every other wide table here: five columns will not fit a
+       phone, and without the wrapper the table widens the whole document
+       rather than scrolling inside it. */
+    const hoursTable = hours.length ? `<div class="teach-scroll"><table class="teach-table">
       <thead><tr>
         <th scope="col">${esc(t("teach.hours.band"))}</th>
         <th scope="col">${esc(t("teach.hours.sessions"))}</th>
@@ -187,7 +190,7 @@
         <td>${totals.assessmentSessions}</td>
         <td>${totals.weeks}</td>
       </tr></tfoot>
-    </table>` : "";
+    </table></div>` : "";
 
     const pieces = plan.assessment.pieces.map((piece) => `<article class="teach-card">
       <h4>${esc(say(piece.label))}</h4>

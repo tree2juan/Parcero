@@ -405,6 +405,29 @@ test("every class the teaching layer paints is styled", () => {
   assert.deepStrictEqual(missing, [], "these classes are painted but never styled");
 });
 
+test("every wide table can scroll instead of widening the page", () => {
+  /*
+   * A five-column table does not fit a phone. Wrapped in .teach-scroll it
+   * scrolls sideways inside its own box; unwrapped it widens the document,
+   * and then the whole page slides under the thumb and the sticky header
+   * drifts off the side.
+   *
+   * The hours table shipped unwrapped while the rubric and record tables
+   * next to it were fine, so the layer looked correct everywhere it was
+   * checked. Assert on the markup rather than on a rendered width, because
+   * there is no layout engine here to measure with.
+   */
+  const rendered = panels.map((p) => p.out).concat(sheets.map((s) => s.out));
+  const offenders = [];
+  for (const out of rendered) {
+    /* Strip the wrapped ones, then anything still holding a <table> is bare. */
+    const bare = out.replace(/<div class="[^"]*teach-scroll[^"]*">[\s\S]*?<\/table>/g, "");
+    for (const tag of bare.match(/<table[^>]*>/g) || []) offenders.push(tag.trim());
+  }
+  assert.deepStrictEqual(offenders, [],
+    "these tables are not inside .teach-scroll and will widen the page on a phone");
+});
+
 test("index.html loads the teaching scripts in dependency order", () => {
   /*
    * teaching.js reads data/teaching.js, the UI files read both plus
