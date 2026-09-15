@@ -263,9 +263,22 @@ function scanArticles(text) {
  * everywhere would gut the guard, so each excuse is the exact sentence it
  * appears in, and an excuse that no longer matches anything is itself an
  * error — otherwise a stale entry quietly widens the hole it was cut for.
+ *
+ * The Texas entries are not a contrast at all: a homecoming mum is a giant
+ * chrysanthemum corsage worn to a high-school game, so "mum" there is ordinary
+ * American English that collides with the British word for mother. The excuse
+ * is the compound and the one sentence that pluralizes it, not the bare word.
+ *
+ * "double-double" collides the same way: the Canadian sense is a Tim Hortons
+ * coffee, but the Los Angeles entry is the In-N-Out burger, which is about as
+ * Californian as a word gets. The excuse carries the gloss so it cannot drift
+ * into covering the coffee.
  */
 const QUOTED_CONTRASTS = [
-  "el inglés británico suele preferir “the city centre”"
+  "el inglés británico suele preferir “the city centre”",
+  "homecoming mum",
+  "las estudiantes llevan mums gigantes con cintas, campanas y nombres",
+  "\"double-double\", \"hamburguesa de In-N-Out con doble carne y queso\""
 ];
 
 /* Returns [{ term, file, context }] for every banned word found. */

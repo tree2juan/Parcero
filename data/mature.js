@@ -18,18 +18,12 @@
  * never a comeback. A learner trading insults in a second language loses that
  * exchange every time.
  *
- * Slots: signal, whatItLooksLike, whatItMeans, direction, respond.
- */
-/*
- * Conversation-level signals.
- *
- * Every entry above is a word you can look up. These are not. A conversation
- * can turn hostile without a single word in it being rude, and that is the case
- * learners miss - especially across languages, where the cues that carry the
- * meaning are exactly the ones a textbook never teaches. Formality is the clearest
- * example: in Colombia a sudden switch from tú to usted mid-argument is a door
- * closing, and a learner who has been taught that usted is simply "polite" will
- * read the most hostile moment in the exchange as the friendliest.
+ * BOTH DIRECTIONS, AND THE SAME RULE AS EVERYWHERE ELSE: the "es" rows are read
+ * by someone learning Spanish, so the label, the reading and the advice are in
+ * English and only the quoted line is Spanish. The "en" rows are read by a
+ * Colombian learning English, so those same three are in Spanish and only the
+ * quoted line is English. Explanation always sits in the language the reader
+ * already has; the two halves are mirrors, not translations.
  *
  * Slots: signal, whatItLooksLike, whatItMeans, direction, respond.
  */
@@ -42,11 +36,14 @@ const matureSignals = [
   ["Excessive politeness", "“Con todo el respeto que usted merece…” piled up before a point.", "Almost always precedes an attack. The politeness is armor, not warmth.", "es", "Listen past the framing to the actual claim."],
   ["Laughing while insulting", "An insult delivered with a smile and “era chiste”.", "Deniability. The joke frame is there so the speaker can retreat if challenged.", "es", "“No me pareció chistoso” is a complete and sufficient answer."],
   ["Group silence after a remark", "A room that was talking goes quiet.", "Something crossed a line - possibly something you said, and possibly nobody will tell you.", "es", "Ask someone privately afterwards. Colombians will usually explain kindly in private."],
-  ["Sarcastic agreement", "“Sure. Absolutely. Whatever you say.”", "Refusal, not agreement. English carries this almost entirely in intonation.", "en", "“That sounded like a no. Is it?”"],
-  ["Passive-aggressive politeness", "“Per my last email.” “As I mentioned previously.”", "Documented frustration. Common in English-language workplaces.", "en", "Answer the substance and acknowledge the miss once."],
-  ["Going quiet and formal in writing", "Emails suddenly shorter, no greeting, no name.", "Displeasure signaled by withdrawal - the written form of the usted switch.", "en", "Ask directly, ideally on a call rather than in writing."],
-  ["Nicknames dropped", "Someone who called you Juanito now uses Juan, or nothing.", "Warmth withdrawn deliberately.", "en", "Worth asking about privately."],
-  ["Talking over you repeatedly", "You are interrupted every time you begin.", "A dominance pattern, not an accident, once it has happened three times.", "en", "“I’d like to finish this thought.” Say it every time."],
-  ["Compliment with a sting", "“Your English is so good for someone who just arrived.”", "A backhanded compliment that reclassifies you as an outsider.", "en", "You may let it pass or name it. Both are reasonable."],
-  ["Questions that are accusations", "“Why would you do it that way?”", "Not a request for information. The answer wanted is an apology.", "en", "Answer the question literally first. It defuses more often than it escalates."]
+  ["Acuerdo sarcástico", "“Sure. Absolutely. Whatever you say.”", "Es un no, no un sí. El inglés carga esto casi todo en la entonación, y las palabras por sí solas no lo delatan.", "en", "Nómbrelo sin acusar: “That sounded like a no. Is it?”"],
+  ["Cortesía pasivo-agresiva", "“Per my last email.” “As I mentioned previously.”", "Molestia dejada por escrito a propósito. Frecuente en oficinas anglosajonas, donde el correo hace las veces de expediente.", "en", "Responda al fondo y reconozca el olvido una sola vez: “You're right, I missed that. Here's where it stands.”"],
+  ["Silencio y formalidad por escrito", "Los correos se acortan de golpe: sin saludo, sin nombre, sin despedida.", "Disgusto expresado por retirada. Es la versión escrita del cambio a usted, y en inglés no hay otra pista.", "en", "Pregunte de frente, mejor en una llamada que por escrito: “Did something go wrong on my end?”"],
+  ["Se cae el apodo", "Quien le decía Juanito ahora le dice Juan, o no le dice nada.", "Cercanía retirada a propósito. El inglés no tiene el par tú/usted, así que el nombre hace ese trabajo.", "en", "Vale la pena preguntar en privado: “Are we okay?”"],
+  ["Le hablan encima todo el tiempo", "Lo interrumpen cada vez que empieza una frase.", "A la tercera vez deja de ser casualidad y es un patrón de dominio. En reuniones le puede costar el crédito de su propio trabajo.", "en", "Repítalo todas las veces, sin subir la voz: “I'd like to finish this thought.”"],
+  ["Elogio con aguijón", "“Your English is so good for someone who just arrived.”", "Un cumplido que en realidad lo reclasifica como alguien de afuera. Suele decirse sin mala intención y duele igual.", "en", "Dejarlo pasar o nombrarlo son opciones igual de válidas: “Thanks — I've been at it a while.”"],
+  ["Preguntas que son acusaciones", "“Why would you do it that way?”", "No busca información. La respuesta que se espera es una disculpa.", "en", "Contéstela literal primero. Desactiva más veces de las que agrava: “Because of X. Happy to change it.”"],
+  ["Lenguaje de oficina que cierra el tema", "“Let's take this offline.” “I'll circle back.” “Noted.”", "Fórmulas de aplazamiento. A veces son logística real y a veces significan que el asunto no se va a volver a tocar.", "en", "Pida fecha en el momento: “Sure — when works for you?” Sin fecha, no hubo aplazamiento."],
+  ["Educación acumulada antes del golpe", "“With all due respect…” “I hear you, but…” “No offense, but…”", "Casi siempre anuncia un ataque. La cortesía es blindaje, no calidez, igual que en español.", "en", "Escuche por debajo de la fórmula y responda al reclamo real, no al preámbulo."],
+  ["Se acabó el nombre propio", "Deja de dirigirse a usted por su nombre y pasa a “you people”, “someone”, “certain people”.", "Lo sacaron de la conversación y lo convirtieron en tema. El plural impersonal es el aviso.", "en", "Vuelva a entrar en primera persona: “If that's about me, I'd rather you say it to me.”"]
 ];

@@ -442,11 +442,20 @@
           <p class="section-lead" data-i18n="library.lead">Look things up when you need them. These lists are references, not memorization drills.</p>
         </div>
         <div class="tabs" role="tablist" data-i18n-aria="library.aria" aria-label="Reference library sections">
-          <button class="library-tab active" type="button" role="tab" aria-selected="true" data-library="verbs" data-i18n="library.tab.verbs">200 verbs</button>
+          <button class="library-tab active" type="button" role="tab" aria-selected="true" data-library="alphabet" data-i18n="library.tab.alphabet">The alphabet</button>
+          <button class="library-tab" type="button" role="tab" aria-selected="false" data-library="verbs" data-i18n="library.tab.verbs">200 verbs</button>
           <button class="library-tab" type="button" role="tab" aria-selected="false" data-library="fluency" data-i18n="library.tab.fluency">Fluency</button>
           <button class="library-tab" type="button" role="tab" aria-selected="false" data-library="slang" data-i18n="library.tab.slang">Colombian slang</button>
         </div>
-        <section id="verbs-library" class="library-panel">
+        <section id="alphabet-library" class="library-panel">
+          <p data-i18n="library.alphabetIntro">Start here. Both languages use almost the same letters and disagree about what they sound like, and that disagreement causes more early mistakes than vocabulary ever does.</p>
+          <h3 id="alphabet-contrasts-title" data-i18n="library.alphabetContrasts">What is actually different</h3>
+          <div id="alphabet-contrasts" class="reference-grid"></div>
+          <h3 id="alphabet-letters-title" data-i18n="library.alphabetLetters">Letter by letter</h3>
+          <p id="alphabet-count" class="assistive-text"></p>
+          <div id="alphabet-letters" class="alphabet-grid"></div>
+        </section>
+        <section id="verbs-library" class="library-panel" hidden>
           <label class="search-label" for="verb-search"><span data-i18n="library.search">Search English or Spanish verb</span> <input id="verb-search" type="search" data-i18n-placeholder="library.searchPlaceholder" placeholder="e.g., hablar or speak" autocomplete="off"></label>
           <p id="verb-count" class="assistive-text"></p>
           <div id="verb-results" class="reference-grid"></div>
@@ -565,9 +574,12 @@
         </div>
         <div id="after-dark-body">
           <div class="tabs" role="tablist" data-i18n-aria="afterDark.aria" aria-label="Cities">
-            <button class="city-tab active" type="button" role="tab" aria-selected="true" data-city="bogota" data-i18n="afterDark.city.bogota">Bogotá</button>
-            <button class="city-tab" type="button" role="tab" aria-selected="false" data-city="medellin" data-i18n="afterDark.city.medellin">Medellín</button>
-            <button class="city-tab" type="button" role="tab" aria-selected="false" data-city="barranquilla" data-i18n="afterDark.city.barranquilla">Barranquilla</button>
+            <button class="city-tab active" type="button" role="tab" aria-selected="true" data-city="bogota" data-direction="es" data-i18n="afterDark.city.bogota">Bogotá</button>
+            <button class="city-tab" type="button" role="tab" aria-selected="false" data-city="medellin" data-direction="es" data-i18n="afterDark.city.medellin">Medellín</button>
+            <button class="city-tab" type="button" role="tab" aria-selected="false" data-city="barranquilla" data-direction="es" data-i18n="afterDark.city.barranquilla">Barranquilla</button>
+            <button class="city-tab" type="button" role="tab" aria-selected="false" data-city="losangeles" data-direction="en" data-i18n="afterDark.city.losangeles" hidden>Los Angeles</button>
+            <button class="city-tab" type="button" role="tab" aria-selected="false" data-city="dallas" data-direction="en" data-i18n="afterDark.city.dallas" hidden>Dallas</button>
+            <button class="city-tab" type="button" role="tab" aria-selected="false" data-city="newyork" data-direction="en" data-i18n="afterDark.city.newyork" hidden>New York</button>
           </div>
           <p id="city-note" class="section-lead"></p>
           <p class="after-dark-caution" data-i18n="afterDark.caution">Severity is about the risk of repeating a phrase, not how rude it sounds. The same word can be a joke among friends and a fight between strangers, so when in doubt assume the harsher reading.</p>
@@ -672,6 +684,7 @@
     <script src="data/lessons/76-habits-and-checking.js"></script>
     <script src="data/lessons/77-delegation-degree-and-doubt.js"></script>
     <script src="data/curriculum.js"></script>
+    <script src="data/alphabet.js"></script>
     <script src="data/after-dark.js"></script>
     <script src="data/structures.js"></script>
     <script src="data/taxonomy.js"></script>

@@ -324,17 +324,17 @@ function flashcardFromVerb(verb, direction) {
 }
 
 function flashcardFromFluency(item, index, direction) {
-  const [spanish, english, type, region, note] = item;
+  const [phrase, meaning, type, region] = item;
   const { target, support } = flashcardLanguages(direction);
   return {
     id: `fluency/${index}/${direction}`,
     kind: "fluency",
     askKey: "deck.ask.fluency",
-    front: target === "es" ? spanish : english,
+    front: phrase,
     frontLang: target,
-    back: target === "es" ? english : spanish,
+    back: meaning,
     backLang: support,
-    note: `${note} (${type} · ${region})`
+    note: `${item[4]} (${type} · ${region})`
   };
 }
 
@@ -351,14 +351,15 @@ function flashcardFromFluency(item, index, direction) {
  */
 function flashcardFromSlang(item, index, direction) {
   const [phrase, meaning, register, region, safety, note] = item;
+  const { target, support } = flashcardLanguages(direction);
   return {
     id: `slang/${index}/${direction}`,
     kind: "slang",
     askKey: "deck.ask.slang",
     front: phrase,
-    frontLang: "es",
+    frontLang: target,
     back: meaning,
-    backLang: direction === "es" ? "en" : "en",
+    backLang: support,
     note: `${safety} · ${register} · ${region}. ${note}`
   };
 }
@@ -375,14 +376,15 @@ function flashcardFromSlang(item, index, direction) {
  */
 function flashcardFromMature(item, index, direction) {
   const { city, phrase, equivalent, severity, note } = item;
+  const { target, support } = flashcardLanguages(direction);
   return {
     id: `mature/${index}/${direction}`,
     kind: "mature",
     askKey: "deck.ask.mature",
-    front: direction === "es" ? phrase : equivalent,
-    frontLang: direction === "es" ? "es" : "en",
-    back: direction === "es" ? equivalent : phrase,
-    backLang: direction === "es" ? "en" : "es",
+    front: phrase,
+    frontLang: target,
+    back: equivalent,
+    backLang: support,
     note: `${severity} · ${city}. ${note}`
   };
 }
@@ -418,14 +420,20 @@ function flashcardFromLexicon(item, index, direction) {
 
 function flashcardFromSignal(item, index, direction) {
   const [signal, looksLike, means, , respond] = item;
+  const { support } = flashcardLanguages(direction);
+  /* Both sides are in the reader's own language, and that is not an oversight.
+     A signal is a situation, not an utterance: some of these have no line to
+     quote at all, and the ones that do carry it inside a sentence of
+     description. Tagging that description as the language being learned told a
+     screen reader to pronounce English prose as Spanish. */
   return {
     id: `signal/${index}/${direction}`,
     kind: "signal",
     askKey: "deck.ask.signal",
     front: looksLike,
-    frontLang: direction === "es" ? "es" : "en",
+    frontLang: support,
     back: means,
-    backLang: direction === "es" ? "en" : "es",
+    backLang: support,
     note: `${signal} → ${respond}`
   };
 }
@@ -443,7 +451,8 @@ function flashcardFromSignal(item, index, direction) {
 function flashcardTopics(direction, sources) {
   const {
     lessons = [], curriculum = [], fluencyItems = [], lexiconItems = [],
-    slangItems = [], matureItems = [], matureSignals = [], matureEnabled = false
+    slangItems = [], matureItems = [], matureSignals = [], matureEnabled = false,
+    matureCities = {}
   } = sources || {};
   const topics = [];
 
@@ -500,7 +509,10 @@ function flashcardTopics(direction, sources) {
     });
   }
 
-  const fluency = fluencyItems.map((item, index) => flashcardFromFluency(item, index, direction));
+  const fluency = fluencyItems
+    .map((item, index) => ({ item, index }))
+    .filter(({ item }) => item[5] === direction)
+    .map(({ item, index }) => flashcardFromFluency(item, index, direction));
   if (fluency.length) {
     topics.push({
       id: "fluency",
@@ -519,9 +531,11 @@ function flashcardTopics(direction, sources) {
    * the everyday deck, and mixing them would blur the only distinction that
    * actually protects them.
    */
-  for (const safety of [...new Set(slangItems.map((item) => item[4]))]) {
-    const cards = slangItems
-      .map((item, index) => ({ item, index }))
+  const slangHere = slangItems
+    .map((item, index) => ({ item, index }))
+    .filter(({ item }) => item[6] === direction);
+  for (const safety of [...new Set(slangHere.map(({ item }) => item[4]))]) {
+    const cards = slangHere
       .filter(({ item }) => item[4] === safety)
       .map(({ item, index }) => flashcardFromSlang(item, index, direction));
     if (!cards.length) continue;
@@ -553,11 +567,14 @@ function flashcardTopics(direction, sources) {
    * should stay shut.
    */
   if (matureEnabled === true) {
-    /* Every After Dark row is a Colombian phrase glossed into English, so both
-       directions have something to recognize. There is no per-row language flag
-       to filter on the way the tuple lists have. */
+    /* After Dark rows carry their direction in the city rather than in a slot,
+       because a row cannot be in Dallas and in Spanish. matureCities is the same
+       map the page uses, passed in rather than duplicated here. A caller that
+       omits it gets nothing, which is the safe answer for this deck. */
     const mature = matureItems
-      .map((item, index) => flashcardFromMature(item, index, direction));
+      .map((item, index) => ({ item, index }))
+      .filter(({ item }) => matureCities[item.city] === direction)
+      .map(({ item, index }) => flashcardFromMature(item, index, direction));
     if (mature.length) {
       topics.push({
         id: "mature",

@@ -47,26 +47,88 @@ function renderVerbs() {
   $("#verb-more").textContent = t("library.moreCount", { count: Math.min(VERB_PAGE_SIZE, matches.length - visible.length) });
 }
 function renderFluency() {
-  $("#fluency-results").innerHTML = fluencyItems.map(([spanish, english, type, region, note], index) => `<article class="reference-card" data-anchor="fluency:${index}"><h3>${spanish}</h3><p><strong>${english}</strong></p><p>${note}</p><span class="tag">${type}</span><span class="tag">${region}</span></article>`).join("");
+  const rows = fluencyItems
+    .map((item, index) => ({ item, index }))
+    .filter(({ item }) => item[5] === state.direction);
+  $("#fluency-results").innerHTML = rows.map(({ item, index }) => {
+    const [phrase, gloss, type, region, note] = item;
+    return `<article class="reference-card" data-anchor="fluency:${index}"><h3${targetLang()}>${esc(phrase)}</h3><p><strong>${esc(gloss)}</strong></p><p>${esc(note)}</p><span class="tag">${esc(type)}</span><span class="tag">${esc(region)}</span></article>`;
+  }).join("");
+}
+/*
+ * The alphabet is the one reference that cannot be a translation of itself.
+ * "H is silent" is only worth saying to someone whose language pronounces it,
+ * so each direction is written against the alphabet the reader already owns and
+ * the two sides share nothing but a shape. See data/alphabet.js.
+ */
+function renderAlphabet() {
+  const set = ALPHABET[state.direction];
+  $("#alphabet-contrasts").innerHTML = set.contrasts.map((row, index) => {
+    const examples = row.examples.map((example) => `<li${targetLang()}>${esc(example)}</li>`).join("");
+    return `<article class="reference-card" data-anchor="alphabet:${state.direction}/contrast/${index}"><h3>${esc(row.title)}</h3><p>${esc(row.detail)}</p><ul class="alphabet-examples">${examples}</ul></article>`;
+  }).join("");
+  $("#alphabet-letters").innerHTML = set.letters.map((row, index) => `<article class="reference-card alphabet-card" data-anchor="alphabet:${state.direction}/letter/${index}"><h3${targetLang()}>${esc(row.letter)}</h3><p class="detail"><strong>${t("library.alphabetName")}</strong> <span${targetLang()}>${esc(row.name)}</span></p><p class="detail"><strong>${t("library.alphabetSound")}</strong> ${esc(row.sound)}</p><p>${esc(row.note)}</p></article>`).join("");
+  $("#alphabet-count").textContent = t("library.alphabetCount", { count: set.letterCount });
 }
 /* After Dark rows are objects keyed by city. The list is filtered rather than
    paged: a learner reads one city's set, because the whole point is that the
-   same word carries a different charge in each. */
+   same word carries a different charge in each.
+
+   The city also carries the direction. Bogotá, Medellín and Barranquilla are
+   for someone learning Spanish; Los Angeles, Dallas and New York are for
+   someone learning English. Nothing is tagged twice, because a row cannot be
+   in Dallas and in Spanish. MATURE_CITIES in data/after-dark.js owns the map. */
 const afterDarkView = { city: "bogota" };
+function citiesFor(direction) {
+  return Object.keys(MATURE_CITIES).filter((city) => MATURE_CITIES[city] === direction);
+}
+/* Swapping direction swaps which three tabs exist, so the selected city has to
+   move with it or the panel renders an empty list for a city this reader cannot
+   see. */
+function syncAfterDarkCities() {
+  const available = citiesFor(state.direction);
+  if (!available.includes(afterDarkView.city)) afterDarkView.city = available[0];
+  document.querySelectorAll(".city-tab").forEach((tab) => {
+    const mine = tab.dataset.direction === state.direction;
+    tab.hidden = !mine;
+    const active = mine && tab.dataset.city === afterDarkView.city;
+    tab.classList.toggle("active", active);
+    tab.setAttribute("aria-selected", active);
+  });
+}
+/* Severity and safety are stored as fixed English enum values because decks,
+   review anchors and test gates all key off them. They are labels shown to a
+   reader, though, so they are translated on the way out rather than in the data
+   — a Colombian reading "Severidad: High" is looking at a half-finished page. */
+function enumLabel(prefix, value, fallback) {
+  const slug = String(value || "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+  if (!slug) return fallback;
+  const label = t(`${prefix}.${slug}`);
+  return label === `${prefix}.${slug}` ? fallback : label;
+}
 function renderMature() {
   const rows = matureItems
     .map((item, index) => ({ item, index }))
     .filter((entry) => entry.item.city === afterDarkView.city);
   $("#mature-results").innerHTML = rows.map(({ item, index }) => {
     const level = String(item.severity || "").toLowerCase();
-    return `<article class="reference-card severity-${esc(level)}" data-anchor="mature:${index}"><h3 lang="es">${esc(item.phrase)}</h3><p><strong>${esc(item.equivalent)}</strong></p><p>${esc(item.note)}</p><span class="tag tag-severity">${t("mature.severity")}: ${esc(item.severity)}</span><span class="tag">${t("mature.tag")}</span></article>`;
+    const severity = enumLabel("mature.severityValue", item.severity, item.severity);
+    return `<article class="reference-card severity-${esc(level)}" data-anchor="mature:${index}"><h3${targetLang()}>${esc(item.phrase)}</h3><p><strong>${esc(item.equivalent)}</strong></p><p>${esc(item.note)}</p><span class="tag tag-severity">${t("mature.severity")}: ${esc(severity)}</span><span class="tag">${t("mature.tag")}</span></article>`;
   }).join("");
   $("#city-note").textContent = t(`afterDark.note.${afterDarkView.city}`);
 }
-/* Signals are national, not per-city, so they render once and stay put while
-   the city tabs swap the word list above them. */
+/* Signals are national rather than per-city, so they render once and stay put
+   while the city tabs swap the word list above them — but they are still
+   direction-specific, because how a Bogotá conversation goes cold is not how a
+   New York one does. */
 function renderSignals() {
-  $("#mature-signals").innerHTML = matureSignals.map(([signal, looksLike, means, direction, respond], index) => `<article class="reference-card" data-anchor="signal:${index}"><h3>${esc(signal)}</h3><p><em>${esc(looksLike)}</em></p><p>${esc(means)}</p><p class="detail"><strong>${t("mature.respond")}</strong> ${esc(respond)}</p><span class="tag">${esc(direction === "es" ? "Español" : "English")}</span></article>`).join("");
+  const rows = matureSignals
+    .map((item, index) => ({ item, index }))
+    .filter(({ item }) => item[3] === state.direction);
+  $("#mature-signals").innerHTML = rows.map(({ item, index }) => {
+    const [signal, looksLike, means, , respond] = item;
+    return `<article class="reference-card" data-anchor="signal:${index}"><h3>${esc(signal)}</h3><p><em${targetLang()}>${esc(looksLike)}</em></p><p>${esc(means)}</p><p class="detail"><strong>${t("mature.respond")}</strong> ${esc(respond)}</p></article>`;
+  }).join("");
 }
 /*
  * Slang is filtered rather than paged. The list is long enough that scrolling it
@@ -74,15 +136,17 @@ function renderSignals() {
  */
 function renderSlang() {
   const query = ($("#slang-search").value || "").trim().toLowerCase();
-  const matches = slangItems
+  const mine = slangItems
     .map((item, index) => ({ item, index }))
-    .filter(({ item }) => !query || item.some((cell) => cell.toLowerCase().includes(query)));
+    .filter(({ item }) => item[6] === state.direction);
+  const matches = mine.filter(({ item }) => !query || item.some((cell) => cell.toLowerCase().includes(query)));
   $("#slang-count").textContent = query
-    ? t("library.slangMatching", { matches: matches.length, total: slangItems.length })
-    : t("library.slangCount", { total: slangItems.length });
+    ? t("library.slangMatching", { matches: matches.length, total: mine.length })
+    : t("library.slangCount", { total: mine.length });
   $("#slang-results").innerHTML = matches.map(({ item, index }) => {
     const [phrase, meaning, register, region, safety, note] = item;
-    return `<article class="reference-card" data-anchor="slang:${index}"><h3 lang="es">${esc(phrase)}</h3><p><strong>${esc(meaning)}</strong></p><p>${esc(note)}</p><p class="detail"><strong>${t("library.slangSafety")}</strong> ${esc(safety)}</p><span class="tag">${esc(register)}</span><span class="tag">${esc(region)}</span></article>`;
+    const safetyLabel = enumLabel("deck.safety", safety, safety);
+    return `<article class="reference-card" data-anchor="slang:${index}"><h3${targetLang()}>${esc(phrase)}</h3><p><strong>${esc(meaning)}</strong></p><p>${esc(note)}</p><p class="detail"><strong>${t("library.slangSafety")}</strong> ${esc(safetyLabel)}</p><span class="tag">${esc(register)}</span><span class="tag">${esc(region)}</span></article>`;
   }).join("");
 }
 function content() { return ParceroLessonSchema.normalizeContent(currentLesson()[state.direction]); }
@@ -329,7 +393,19 @@ function render() {
   renderLessonList();
   renderPreview();
   renderStories();
+  renderReference();
   updateProgress();
+}
+/* The reference lists are direction-specific, so they cannot render once at
+   startup the way they used to. Grouped here so the direction switch has one
+   thing to call and nothing can be forgotten. */
+function renderReference() {
+  renderAlphabet();
+  renderFluency();
+  syncAfterDarkCities();
+  renderMature();
+  renderSignals();
+  renderSlang();
 }
 /*
  * The level a lesson teaches, and the level the learner has shown.
@@ -785,11 +861,7 @@ document.querySelectorAll(".library-tab").forEach((tab) => tab.addEventListener(
 }));
 document.querySelectorAll(".city-tab").forEach((tab) => tab.addEventListener("click", () => {
   afterDarkView.city = tab.dataset.city;
-  document.querySelectorAll(".city-tab").forEach((item) => {
-    const active = item === tab;
-    item.classList.toggle("active", active);
-    item.setAttribute("aria-selected", active);
-  });
+  syncAfterDarkCities();
   renderMature();
 }));
 /* ---------- reading room ----------
@@ -931,10 +1003,6 @@ $("#story-parallel").addEventListener("click", () => {
 });
 
 renderVerbs();
-renderFluency();
-renderMature();
-renderSignals();
-renderSlang();
 $("#slang-search").addEventListener("input", renderSlang);
 $("#lesson-search").addEventListener("input", renderLessonList);
 render();

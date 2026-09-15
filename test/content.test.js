@@ -7,14 +7,29 @@ const vm = require("node:vm");
 const root = path.join(__dirname, "..");
 const read = (file) => fs.readFileSync(path.join(root, file), "utf8");
 const { dataSource } = require("./data-source.js");
-const { wrongLanguage, titleLanguage } = require("../scripts/prose-language.js");
+const { wrongLanguage, titleLanguage, classify } = require("../scripts/prose-language.js");
 
-const bundle = `${dataSource()}\n({ lessons, curriculum, fluencyItems, matureItems, matureSignals, slangItems, schema: ParceroLessonSchema });`;
-const { lessons, curriculum, fluencyItems, matureItems, matureSignals, slangItems, schema } = vm.runInNewContext(bundle, {}, { filename: "parcero-data-bundle.js" });
+const bundle = `${dataSource()}\n({ lessons, curriculum, fluencyItems, matureItems, matureSignals, slangItems, MATURE_CITIES, ALPHABET, schema: ParceroLessonSchema });`;
+const { lessons, curriculum, fluencyItems, matureItems, matureSignals, slangItems, MATURE_CITIES, ALPHABET, schema } = vm.runInNewContext(bundle, {}, { filename: "parcero-data-bundle.js" });
 
 const directions = ["es", "en"];
 const isText = (value) => typeof value === "string" && value.trim().length > 0;
 const duplicates = (list) => [...new Set(list.filter((item, index) => list.indexOf(item) !== index))];
+/* Shared wording between two pieces of prose, as a fraction of the shorter one.
+   Five words is long enough that ordinary phrases do not collide and short
+   enough to catch a sentence skeleton with the nouns swapped. */
+const grams = (text, size) => {
+  const words = String(text).toLowerCase().match(/[a-z0-9áéíóúüñ']+/g) || [];
+  const out = new Set();
+  for (let i = 0; i + size <= words.length; i += 1) out.add(words.slice(i, i + size).join(" "));
+  return out;
+};
+const overlap = (a, b) => {
+  if (!a.size || !b.size) return 0;
+  let shared = 0;
+  for (const gram of a) if (b.has(gram)) shared += 1;
+  return shared / Math.min(a.size, b.size);
+};
 
 /*
  * Blank out everything that is not executable code, preserving offsets so line
@@ -413,16 +428,18 @@ test("both directions of a lesson teach the same amount", () => {
 });
 
 test("reference lists match the shape the renderers expect", () => {
+  const DIRECTIONS = new Set(["es", "en"]);
   assert.ok(fluencyItems.length > 0);
   for (const item of fluencyItems) {
-    assert.strictEqual(item.length, 5, "expected [phrase, meaning, type, region, note]");
+    assert.strictEqual(item.length, 6, "expected [phrase, meaning, type, region, note, direction]");
     item.forEach((cell) => assert.ok(isText(cell)));
+    assert.ok(DIRECTIONS.has(item[5]), `unknown fluency direction "${item[5]}" — the renderer filters on this and would drop the row`);
   }
   assert.ok(matureItems.length > 0);
   /* After Dark rows moved from tuples to named objects when the set grew to
      three cities: a 5-slot tuple with two labels at the end is unreadable, and
      the city has to be addressable by name for the view to filter on it. */
-  const CITIES = new Set(["bogota", "medellin", "barranquilla"]);
+  const CITIES = new Set(Object.keys(MATURE_CITIES));
   const SEVERITIES = new Set(["Low", "Medium", "High"]);
   for (const item of matureItems) {
     assert.ok(!Array.isArray(item), "After Dark rows are objects, not tuples");
@@ -432,16 +449,49 @@ test("reference lists match the shape the renderers expect", () => {
     assert.ok(CITIES.has(item.city), `unknown city "${item.city}" — the view filters on this and would drop the row`);
     assert.ok(SEVERITIES.has(item.severity), `unknown severity "${item.severity}" — the card colour keys off this`);
   }
+  /* The city is the only thing that says which direction an After Dark row is
+     for, so an unmapped city is not a label problem — it is a row no reader
+     ever sees. */
+  for (const direction of Object.values(MATURE_CITIES)) {
+    assert.ok(DIRECTIONS.has(direction), `MATURE_CITIES maps a city to "${direction}", which is not a direction`);
+  }
   assert.ok(slangItems.length > 0);
   for (const item of slangItems) {
-    assert.strictEqual(item.length, 6, "expected [phrase, meaning, register, region, safety, note]");
+    assert.strictEqual(item.length, 7, "expected [phrase, meaning, register, region, safety, note, direction]");
     item.forEach((cell) => assert.ok(isText(cell)));
+    assert.ok(DIRECTIONS.has(item[6]), `unknown slang direction "${item[6]}" — the renderer filters on this and would drop the row`);
   }
   assert.ok(matureSignals.length > 0);
   for (const item of matureSignals) {
     assert.strictEqual(item.length, 5, "expected [signal, whatItLooksLike, whatItMeans, direction, respond]");
     item.forEach((cell) => assert.ok(isText(cell)));
+    assert.ok(DIRECTIONS.has(item[3]), `unknown signal direction "${item[3]}"`);
   }
+});
+
+/*
+ * Every reference list is now read by two different people, and each of them
+ * must find something there. A list that is 100% one direction renders an empty
+ * panel for the other reader with no error anywhere — the failure this repo has
+ * shipped before, and the reason the check is a count rather than a spot check.
+ */
+test("both directions get every reference list, not just the lessons", () => {
+  const empty = [];
+  const check = (name, counts) => {
+    for (const direction of directions) {
+      if (!counts[direction]) empty.push(`${name} has nothing for a learner whose direction is "${direction}"`);
+    }
+  };
+  const tally = (rows, directionOf) => rows.reduce((totals, row) => {
+    const direction = directionOf(row);
+    totals[direction] = (totals[direction] || 0) + 1;
+    return totals;
+  }, {});
+  check("fluencyItems", tally(fluencyItems, (row) => row[5]));
+  check("slangItems", tally(slangItems, (row) => row[6]));
+  check("matureSignals", tally(matureSignals, (row) => row[3]));
+  check("matureItems", tally(matureItems, (row) => MATURE_CITIES[row.city]));
+  assert.deepStrictEqual(empty, [], `a whole reference panel is blank in one direction:\n${empty.join("\n")}`);
 });
 
 test("the reference lists say which language they belong to", () => {
@@ -1144,21 +1194,155 @@ test("the language toggle is reachable from every view", () => {
     "a second copy of the toggle inside a view would drift out of sync with the header one");
 });
 
+/* ---------- the alphabet ---------- */
+
+/*
+ * The alphabet is the only reference in this repo that is not a translation of
+ * itself, and that is the whole reason it needs its own tests. "H is silent" is
+ * a fact about Spanish that is only worth printing because English pronounces
+ * it; the English side says the opposite thing to the opposite reader. So the
+ * two halves cannot be checked against each other. They can only be checked
+ * against the alphabet each one describes, and against the rule that decides
+ * which language every field is written in.
+ */
+test("the alphabet is complete in both directions, and the letters are the right letters", () => {
+  assert.deepStrictEqual(Object.keys(ALPHABET).sort(), ["en", "es"]);
+  for (const direction of directions) {
+    const set = ALPHABET[direction];
+    assert.ok(Array.isArray(set.letters) && set.letters.length > 0, `${direction}: no letters`);
+    assert.strictEqual(set.letters.length, set.letterCount,
+      `${direction}: letterCount says ${set.letterCount} but there are ${set.letters.length} letters`);
+    const initials = set.letters.map((row) => row.letter.trim()[0]);
+    assert.deepStrictEqual(duplicates(initials), [], `${direction}: a letter is listed twice`);
+    for (const row of set.letters) {
+      for (const slot of ["letter", "name", "sound", "note"]) {
+        assert.ok(isText(row[slot]), `${direction}: letter "${row.letter}" is missing "${slot}"`);
+      }
+    }
+  }
+  /* The counts are the headline fact and the reason the two lists differ at
+     all, so they are asserted literally rather than derived from the data they
+     are meant to be checking. */
+  assert.strictEqual(ALPHABET.es.letterCount, 27, "Spanish has 27 letters");
+  assert.strictEqual(ALPHABET.en.letterCount, 26, "English has 26 letters");
+  const spanishLetters = ALPHABET.es.letters.map((row) => row.letter);
+  const englishLetters = ALPHABET.en.letters.map((row) => row.letter);
+  assert.ok(spanishLetters.some((letter) => letter.includes("Ñ")), "the Spanish alphabet must include ñ");
+  assert.ok(!englishLetters.some((letter) => letter.includes("Ñ")), "the English alphabet must not include ñ");
+});
+
+test("the alphabet says what is different, not just what the letters are", () => {
+  for (const direction of directions) {
+    const { contrasts } = ALPHABET[direction];
+    assert.ok(Array.isArray(contrasts) && contrasts.length >= 8,
+      `${direction}: ${(contrasts || []).length} contrasts is not enough to cover a writing system`);
+    for (const row of contrasts) {
+      assert.ok(isText(row.title), `${direction}: a contrast has no title`);
+      assert.ok(isText(row.detail) && row.detail.length > 120,
+        `${direction}: the contrast "${row.title}" is too short to explain anything`);
+      assert.ok(Array.isArray(row.examples) && row.examples.length >= 2,
+        `${direction}: the contrast "${row.title}" shows fewer than two examples`);
+      row.examples.forEach((example) => assert.ok(isText(example)));
+    }
+    assert.deepStrictEqual(duplicates(contrasts.map((row) => row.title)), [],
+      `${direction}: two contrasts carry the same title`);
+  }
+});
+
+test("the alphabet explains itself in the language the reader already has", () => {
+  /*
+   * The inversion rule, applied to the one file where getting it backwards is
+   * least visible: an alphabet table looks equally plausible in either
+   * language, because the letters are the same shapes. A Spanish explanation on
+   * the Spanish side would read as thorough and be useless.
+   */
+  const wrong = [];
+  for (const direction of directions) {
+    const expected = direction === "es" ? "english" : "spanish";
+    const set = ALPHABET[direction];
+    for (const row of set.letters) {
+      const verdict = classify(row.note);
+      if (verdict !== "unknown" && verdict !== expected) {
+        wrong.push(`${direction}: the note on "${row.letter}" reads as ${verdict}, not ${expected}`);
+      }
+    }
+    for (const row of set.contrasts) {
+      const verdict = classify(row.detail);
+      if (verdict !== "unknown" && verdict !== expected) {
+        wrong.push(`${direction}: the contrast "${row.title}" reads as ${verdict}, not ${expected}`);
+      }
+    }
+  }
+  assert.deepStrictEqual(wrong, [],
+    `the alphabet is explained in the language the reader is still learning:\n${wrong.join("\n")}`);
+});
+
+test("every letter earns its own note", () => {
+  /*
+   * A twenty-seven row table is exactly the shape that invites a template, and
+   * a templated alphabet is worse than no alphabet: it looks like coverage. The
+   * limit is set against what the file actually does, not against a safe floor.
+   */
+  const worst = [];
+  for (const direction of directions) {
+    const notes = ALPHABET[direction].letters.map((row) => ({ letter: row.letter, grams: grams(row.note, 5) }));
+    for (let i = 0; i < notes.length; i += 1) {
+      for (let j = i + 1; j < notes.length; j += 1) {
+        const share = overlap(notes[i].grams, notes[j].grams);
+        if (share > 0.2) {
+          worst.push(`${direction}: "${notes[i].letter}" and "${notes[j].letter}" share ${Math.round(share * 100)}% of their wording`);
+        }
+      }
+    }
+  }
+  assert.deepStrictEqual(worst, [], `these notes were generated, not written:\n${worst.join("\n")}`);
+});
+
+test("nothing in the alphabet panel prints as a raw i18n key", () => {
+  const { UI_STRINGS } = require("../i18n.js");
+  /*
+   * These four are built inside template strings in renderAlphabet(), so the
+   * i18n sweep over index.html cannot see them. A missing one renders the key
+   * name to the reader, which is how afterDark.note.* was caught before.
+   */
+  const fromJs = ["library.alphabetName", "library.alphabetSound", "library.alphabetCount", "library.tab.alphabet"];
+  for (const key of fromJs) {
+    for (const language of Object.keys(UI_STRINGS)) {
+      assert.ok(isText(UI_STRINGS[language][key]), `${key} is missing in "${language}"`);
+    }
+  }
+  assert.match(UI_STRINGS.en["library.alphabetCount"], /\{count\}/, "the letter count must be a placeholder, not a number");
+  assert.match(UI_STRINGS.es["library.alphabetCount"], /\{count\}/, "the letter count must be a placeholder, not a number");
+});
+
 /* ---------- After Dark ---------- */
 
 test("After Dark covers every city the page offers, evenly", () => {
   const html = read("index.html");
-  const tabs = [...html.matchAll(/class="city-tab[^"]*"[^>]*data-city="([\w-]+)"/g)].map((match) => match[1]);
+  const tabs = [...html.matchAll(/class="city-tab[^"]*"[^>]*data-city="([\w-]+)"[^>]*data-direction="(\w+)"/g)]
+    .map((match) => ({ city: match[1], direction: match[2] }));
   assert.ok(tabs.length > 0, "index.html must offer city tabs");
 
   const counts = new Map();
   for (const item of matureItems) counts.set(item.city, (counts.get(item.city) || 0) + 1);
 
-  assert.deepStrictEqual([...counts.keys()].sort(), [...tabs].sort(),
+  assert.deepStrictEqual([...counts.keys()].sort(), tabs.map((tab) => tab.city).sort(),
     "the cities in the data and the tabs on the page must be the same set, or a tab renders an empty list");
-  for (const city of tabs) {
+  assert.deepStrictEqual(Object.keys(MATURE_CITIES).sort(), tabs.map((tab) => tab.city).sort(),
+    "every city tab must be in MATURE_CITIES, or the page cannot tell which direction it belongs to");
+  for (const { city, direction } of tabs) {
     assert.strictEqual(counts.get(city), 50,
       `${city} has ${counts.get(city)} entries; each city is meant to carry 50`);
+    assert.strictEqual(MATURE_CITIES[city], direction,
+      `the ${city} tab is marked direction "${direction}" but the data calls it "${MATURE_CITIES[city]}", so it would be shown to the wrong reader`);
+  }
+  /* Three cities per direction. An uneven split is not a style question: the
+     reader with fewer cities gets a visibly thinner section for no stated
+     reason, which is how the English side went missing entirely. */
+  for (const direction of directions) {
+    const mine = tabs.filter((tab) => tab.direction === direction);
+    assert.strictEqual(mine.length, 3,
+      `direction "${direction}" offers ${mine.length} cities; each direction carries three`);
   }
 });
 

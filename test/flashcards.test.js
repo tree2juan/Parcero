@@ -13,11 +13,11 @@ const { classify } = require("../scripts/prose-language.js");
 
 const bundle = [
   dataSource({ schema: false, flashcards: true }),
-  "({ lessons, curriculum, fluencyItems, lexiconItems, slangItems, matureItems, matureSignals, FLASHCARD_SET_SIZE, flashcardSlug, flashcardSplit, flashcardsFromLesson, flashcardTopics, flashcardSets });"
+  "({ lessons, curriculum, fluencyItems, lexiconItems, slangItems, matureItems, matureSignals, MATURE_CITIES, FLASHCARD_SET_SIZE, flashcardSlug, flashcardSplit, flashcardsFromLesson, flashcardTopics, flashcardSets });"
 ].join("\n");
 
 const {
-  lessons, curriculum, fluencyItems, lexiconItems, slangItems, matureItems, matureSignals,
+  lessons, curriculum, fluencyItems, lexiconItems, slangItems, matureItems, matureSignals, MATURE_CITIES,
   FLASHCARD_SET_SIZE, flashcardSlug, flashcardSplit, flashcardsFromLesson, flashcardTopics, flashcardSets
 } = vm.runInNewContext(bundle, {}, { filename: "parcero-flashcard-bundle.js" });
 
@@ -28,7 +28,7 @@ const directions = ["es", "en"];
  * caller who has not thought about the age gate passes. Every test using this
  * object is therefore also checking that the unsafe default does not exist.
  */
-const sources = { lessons, curriculum, fluencyItems, lexiconItems, slangItems, matureItems, matureSignals };
+const sources = { lessons, curriculum, fluencyItems, lexiconItems, slangItems, matureItems, matureSignals, matureCities: MATURE_CITIES };
 const openSources = { ...sources, matureEnabled: true };
 const isText = (value) => typeof value === "string" && value.trim().length > 0;
 const duplicates = (list) => [...new Set(list.filter((item, index) => list.indexOf(item) !== index))];
@@ -222,15 +222,15 @@ test("every card opens in the language being learned", () => {
   // one they are building, so opening it in the language being learned would be
   // printing the answer on the front.
   const opensInSupport = new Set(["context", "lexicon"]);
-  // The slang card is the third, and it is neither of the above: it does not
-  // pivot on direction at all. Every row of the slang list is a Colombian
-  // phrase glossed into English -- the list is written once, from one side, the
-  // way a glossary is. So the card reads the same way for both learners:
-  // the Colombian phrase is the prompt and the English gloss is the answer.
-  // An English speaker is recognizing the phrase; a Colombian speaker is
-  // recalling how to say their own phrase in English. Neither one is served by
-  // flipping it, so this kind is pinned to Spanish rather than to a direction.
-  const opensInSpanish = new Set(["slang"]);
+  // The slang card is the third, and it used to be the exception: the slang list
+  // was written once, from one side, the way a glossary is, so every row held a
+  // Colombian phrase glossed into English and the card was pinned to Spanish for
+  // both learners. That premise died when the list gained a direction. A row is
+  // now either a Colombian phrase glossed into Spanish-speakers' English or an
+  // American phrase glossed into Spanish, so the phrase is always in the language
+  // being learned and the card pivots like every other kind. Pinning it to
+  // Spanish now would tag "y'all" as Spanish for the reader who needs it most.
+  const opensInSpanish = new Set();
   const kinds = new Set();
   let checked = 0;
   for (const direction of directions) {
@@ -264,12 +264,11 @@ test("every card opens in the language being learned", () => {
  * `direction`, a card of this kind is tagged this way. `none` means the side is
  * prose in the language the learner already has and carries no lang attribute.
  *
- * The two slang rows are identical across directions on purpose, and that is
- * the one thing here that is not a mirror: the slang list is a glossary written
- * from the Colombian side, so the phrase is always the prompt and the English
- * gloss is always the answer. If those two rows ever diverge, someone has made
- * the slang deck pivot on direction, which the list has no second side to
- * support.
+ * The two slang rows used to be identical across directions, because the slang
+ * list was a Colombian glossary with no second side: the Spanish phrase was the
+ * prompt in both directions and the English gloss was always the answer. It has
+ * a second side now, so they mirror like everything else. If they ever collapse
+ * back into being identical, the English half of the list has gone missing.
  */
 test("the language on each side of each card kind is what it was signed off as", () => {
   const actual = [];
@@ -296,7 +295,7 @@ test("the language on each side of each card kind is what it was signed off as",
     "learning en: practice = none / none",
     "learning en: pronunciation = en / none",
     "learning en: region = en / none",
-    "learning en: slang = es / en",
+    "learning en: slang = en / es",
     "learning en: variation = none / en",
     "learning en: verb = en / es",
     "learning en: vocabulary = en / none",
@@ -370,7 +369,16 @@ const stripCitations = (text) => String(text)
   .replace(/[‘'][^’']{2,}[’']/g, " ")
   .replace(/\b[A-ZÁÉÍÓÚÑ][\wáéíóúñü]*/g, " ");
 
-const wordsIn = (text) => String(text).toLowerCase().split(/[^a-záéíóúñü]+/).filter(Boolean);
+/* An apostrophe inside a word is part of the word. Splitting on it turned
+   "y'all" into "y" + "all" and the deck reported Texas English as Spanish,
+   because "y" is the Spanish for "and". Only letter-apostrophe-letter is
+   joined, so a quoted fragment still breaks apart the way it should. */
+const wordsIn = (text) =>
+  String(text)
+    .toLowerCase()
+    .replace(/([a-záéíóúñü])['’]([a-záéíóúñü])/g, "$1$2")
+    .split(/[^a-záéíóúñü]+/)
+    .filter(Boolean);
 
 /*
  * Is this English-labeled text actually Spanish?
@@ -442,9 +450,66 @@ test("text the deck labels English is not actually Spanish", () => {
   );
 });
 
+/*
+ * Switching direction must not strand a learner, but it cannot mean identical
+ * decks any more. The slang and After Dark lists are now authored once per
+ * direction rather than once in total, and the two corpora do not have the same
+ * shape: American regional vocabulary is overwhelmingly safe to say (freeway
+ * names, sandwiches, neighborhoods) while Colombian slang carries more that only
+ * works among friends. Demanding the same number of sets per safety level would
+ * be demanding that one of the two corpora lie about itself.
+ *
+ * So the guarantee is stated where it is real. Every topic exists in both
+ * directions, and every deck built from mirrored content is identical set for
+ * set. Only the three independently authored reference decks may differ in
+ * length, and the test names them, so a lesson deck that lost a set still fails
+ * here instead of hiding behind an exemption.
+ */
+const topicOf = (setId) => String(setId).split("/")[0];
+const INDEPENDENTLY_AUTHORED = /^(slang|mature|signal|fluency)-/;
+
 test("set ids survive a change of direction, so switching keeps your place", () => {
-  const [spanish, english] = directions.map((direction) => flashcardSets(direction, sources).map((set) => set.id));
-  assert.deepStrictEqual(spanish, english);
+  const [spanish, english] = directions.map((direction) =>
+    flashcardSets(direction, sources).map((set) => set.id)
+  );
+
+  assert.deepStrictEqual(
+    [...new Set(spanish.map(topicOf))],
+    [...new Set(english.map(topicOf))],
+    "a topic appears in one direction and not the other, so switching drops the learner out of it"
+  );
+
+  const mirrored = (ids) => ids.filter((id) => !INDEPENDENTLY_AUTHORED.test(topicOf(id)));
+  assert.deepStrictEqual(
+    mirrored(spanish),
+    mirrored(english),
+    "a deck built from mirrored content changed shape with direction"
+  );
+
+  /* The exemption has to be earned: if the reference decks ever do line up, the
+     allowance above is dead weight and should be deleted rather than left to
+     cover something else later. */
+  const reference = (ids) => ids.filter((id) => INDEPENDENTLY_AUTHORED.test(topicOf(id)));
+  assert.notDeepStrictEqual(
+    reference(spanish),
+    reference(english),
+    "the reference decks now match across directions, so this exemption is stale — delete it"
+  );
+
+  for (const ids of [spanish, english]) {
+    const counts = {};
+    for (const id of ids) counts[topicOf(id)] = (counts[topicOf(id)] || 0) + 1;
+    for (const [topic, count] of Object.entries(counts)) {
+      const numbers = ids.filter((id) => topicOf(id) === topic).map((id) => Number(id.split("/")[1]));
+      /* Joined rather than compared as arrays: the deck is built inside a vm, so
+         its arrays have that realm's prototype and never deep-equal a literal. */
+      assert.strictEqual(
+        [...numbers].join(","),
+        Array.from({ length: count }, (_, i) => i + 1).join(","),
+        `${topic} does not number its sets 1..${count}, so a stored set id can point at a gap`
+      );
+    }
+  }
 });
 test("new content flows into the decks with no edit here", () => {
   const before = flashcardSets("es", sources);
@@ -1117,11 +1182,12 @@ test("opening the gate actually produces the decks it promises", () => {
 
 test("a mature card only ever drills the language the learner is meeting", () => {
   /*
-   * After Dark rows are Colombian phrases glossed into English, so the same row
-   * serves both decks -- but not the same way round. A learner of Spanish is
-   * meeting the Colombian phrase, and a learner of English is meeting the
-   * English gloss, so the front has to follow the direction. Getting this
-   * backwards would put the answer on the front of every card.
+   * After Dark rows are direction-specific: the Colombian cities hold Spanish
+   * phrases glossed into English, and the US cities hold English phrases
+   * glossed into Spanish. So the phrase is always what the learner is meeting
+   * and the gloss is always the answer -- but only because the deck filters by
+   * city first. A deck that skipped that filter would front the answer for half
+   * its cards while this test still passed on the other half.
    */
   for (const direction of directions) {
     const cards = flashcardTopics(direction, openSources)
@@ -1130,11 +1196,12 @@ test("a mature card only ever drills the language the learner is meeting", () =>
     assert.ok(cards.length > 0, `${direction}: no mature cards to check`);
     for (const card of cards) {
       const source = matureItems[Number(card.id.split("/")[1])];
-      const expected = direction === "es" ? source.phrase : source.equivalent;
-      assert.equal(card.front, expected,
-        `${direction} deck fronts "${card.front}", but this learner is meeting "${expected}"`);
-      assert.equal(card.back, direction === "es" ? source.equivalent : source.phrase,
-        `${direction} deck backs "${card.back}", which is not the other side of "${expected}"`);
+      assert.equal(MATURE_CITIES[source.city], direction,
+        `${direction} deck includes a ${source.city} card, which is written for the other reader`);
+      assert.equal(card.front, source.phrase,
+        `${direction} deck fronts "${card.front}", but this learner is meeting "${source.phrase}"`);
+      assert.equal(card.back, source.equivalent,
+        `${direction} deck backs "${card.back}", which is not the other side of "${source.phrase}"`);
       assert.ok(card.note.includes(source.city),
         "the city decides how hard the phrase lands, so it belongs on the card");
     }
@@ -1156,7 +1223,8 @@ test("slang is drilled for recognition, never for production", () => {
       .flatMap((topic) => topic.cards);
     assert.ok(cards.length > 0, `${direction}: no slang cards were built`);
     for (const card of cards) {
-      assert.equal(card.frontLang, "es", "the slang phrase itself belongs on the front, in Spanish");
+      assert.equal(card.frontLang, direction,
+        "the slang phrase itself belongs on the front, in the language being learned");
       assert.ok(isText(card.note), `slang card ${card.id} carries no usage note`);
     }
   }
@@ -1182,9 +1250,10 @@ test("slang decks are grouped by safety, so the risky ones cannot hide among the
     const levels = topics.map((topic) => topic.level);
     assert.ok(levels.includes("Understand only"), "there is no recognition-only slang deck");
     assert.equal(new Set(levels).size, levels.length, "two slang decks share a safety level");
-    /* Every entry lands in exactly one deck. */
+    /* Every entry for this direction lands in exactly one deck. */
+    const mine = slangItems.filter((item) => item[6] === direction);
     const total = topics.reduce((sum, topic) => sum + topic.cards.length, 0);
-    assert.equal(total, slangItems.length, `${direction}: ${total} slang cards from ${slangItems.length} entries`);
+    assert.equal(total, mine.length, `${direction}: ${total} slang cards from ${mine.length} entries`);
   }
 });
 
