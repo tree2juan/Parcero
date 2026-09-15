@@ -236,6 +236,70 @@ test("no field plans a lesson in the language it is supposed to be teaching", ()
     `${failures.length} field(s) plan the wrong class:\n  ` + failures.slice(0, 25).join("\n  "));
 });
 
+test("a step is written, not pasted", () => {
+  /*
+   * The companion to the test above, and the one that catches the failure the
+   * first round of drafts actually had.
+   *
+   * Another test in this file requires every plan to name its own material,
+   * because a plan that would fit any module teaches nothing. The cheapest way
+   * to satisfy that is to paste the module's entire target-form list into all
+   * ten fields, and that is what came back: "Put A, B, C on the board", "three
+   * answers using A, B, C", "Mark every use of A, B, C", "right side has A, B,
+   * C", ten times, in both languages. Every field named its material. Every
+   * field opened differently, so the boilerplate check saw ten distinct
+   * fields. The result was one sentence with a variable in it, printed ten
+   * times, and a teacher could not use it.
+   *
+   * A five-step plan is a sequence — find out what they have, show them the
+   * new thing, constrain it, release it, check one thing — and each step
+   * should name the forms that step is about. Quoting a form twice is normal
+   * teaching. Sharing a dozen consecutive words is pasting.
+   */
+  const LIMIT = 10;
+
+  const wordsOf = (s) => String(s || "").toLowerCase().match(/[\p{L}\p{N}'’?¿!¡]+/gu) || [];
+
+  /* Longest run of identical consecutive words shared by two strings. */
+  const sharedRun = (a, b) => {
+    const A = wordsOf(a);
+    const B = wordsOf(b);
+    const dp = new Array(B.length + 1).fill(0);
+    let best = 0;
+    let endsAt = 0;
+    for (let i = 1; i <= A.length; i += 1) {
+      let prev = 0;
+      for (let j = 1; j <= B.length; j += 1) {
+        const tmp = dp[j];
+        dp[j] = A[i - 1] === B[j - 1] ? prev + 1 : 0;
+        if (dp[j] > best) { best = dp[j]; endsAt = i; }
+        prev = tmp;
+      }
+    }
+    return { n: best, text: A.slice(Math.max(0, endsAt - best), endsAt).join(" ") };
+  };
+
+  const failures = [];
+  for (const [id, entry] of entries()) {
+    for (const lang of ["en", "es"]) {
+      const fields = PROSE
+        .map((key) => [key, entry.teaching[key][lang]])
+        .filter(([, text]) => text);
+      for (let i = 0; i < fields.length; i += 1) {
+        for (let j = i + 1; j < fields.length; j += 1) {
+          const run = sharedRun(fields[i][1], fields[j][1]);
+          if (run.n > LIMIT) {
+            failures.push(`${id}.${fields[i][0]}/${fields[j][0]}.${lang}: ${run.n} identical words in a row — "${run.text.slice(0, 70)}"`);
+          }
+        }
+      }
+    }
+  }
+
+  assert.deepStrictEqual(failures, [],
+    `${failures.length} pair(s) of steps share pasted text:\n  ` + failures.slice(0, 25).join("\n  "));
+});
+
 test("mission and can-do ARE translation pairs", () => {
   /* The deliberate exception. The task is the same in both classrooms, so
      these two must track each other; if they have drifted apart, one
