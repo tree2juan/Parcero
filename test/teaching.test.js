@@ -435,6 +435,76 @@ test("a plan is written, not generated", () => {
     `${failures.length} module pair(s) are one template with the slots changed:\n  ` + failures.slice(0, 25).join("\n  "));
 });
 
+test("objectives describe this module, not any module", () => {
+  /*
+   * The test above skips canDo and mission, because those are translation
+   * pairs rather than two independent plans. That exclusion left the
+   * objectives as the one place a generator could survive a rewrite, and it
+   * did: a band came back with all eight prose steps genuinely rewritten and
+   * its objectives still reading, across all twenty modules,
+   *
+   *   Use the {topic} situation to make a defensible B2 decision when routine
+   *   steps stop working.
+   *   {topic}: handle the main scene with a concrete outcome
+   *   {topic}: defend one choice against a reasonable objection
+   *
+   * This matters more than boilerplate in a lesson plan. Objectives are what
+   * the checkpoint claims to measure and what the scheme of work publishes to
+   * a teacher, and "handle the main scene with a concrete outcome" cannot be
+   * marked by anyone, about anything.
+   *
+   * Compared slot for slot, because a three-slot template shows up as
+   * objective one matching objective one. Four-word sequences rather than
+   * five because objectives are a single line. Authored bands score zero.
+   */
+  const GRAM = 4;
+  const LIMIT = 0.3;
+
+  const gramsOf = (s) => {
+    const w = String(s || "").toLowerCase().match(/[\p{L}\p{N}'’]+/gu) || [];
+    const out = new Set();
+    for (let i = 0; i + GRAM <= w.length; i += 1) out.add(w.slice(i, i + GRAM).join(" "));
+    return out;
+  };
+  const share = (a, b) => {
+    if (!a.size || !b.size) return 0;
+    let hit = 0;
+    for (const g of a) if (b.has(g)) hit += 1;
+    return hit / Math.min(a.size, b.size);
+  };
+
+  const rows = entries();
+  const failures = [];
+
+  for (const lang of ["en", "es"]) {
+    const slots = rows.reduce((max, [, e]) => Math.max(max, e.canDo.length), 0);
+    for (let slot = 0; slot < slots; slot += 1) {
+      const sets = rows.map(([id, e]) => [id, gramsOf((e.canDo[slot] || {})[lang])]);
+      for (let i = 0; i < sets.length; i += 1) {
+        for (let j = i + 1; j < sets.length; j += 1) {
+          const value = share(sets[i][1], sets[j][1]);
+          if (value > LIMIT) {
+            failures.push(`${sets[i][0]}/${sets[j][0]}.canDo[${slot}].${lang}: ${Math.round(value * 100)}% shared`);
+          }
+        }
+      }
+    }
+
+    const missions = rows.map(([id, e]) => [id, gramsOf(e.mission[lang])]);
+    for (let i = 0; i < missions.length; i += 1) {
+      for (let j = i + 1; j < missions.length; j += 1) {
+        const value = share(missions[i][1], missions[j][1]);
+        if (value > LIMIT) {
+          failures.push(`${missions[i][0]}/${missions[j][0]}.mission.${lang}: ${Math.round(value * 100)}% shared`);
+        }
+      }
+    }
+  }
+
+  assert.deepStrictEqual(failures, [],
+    `${failures.length} objective(s) are one sentence with the topic swapped:\n  ` + failures.slice(0, 25).join("\n  "));
+});
+
 test("mission and can-do ARE translation pairs", () => {
   /* The deliberate exception. The task is the same in both classrooms, so
      these two must track each other; if they have drifted apart, one

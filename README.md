@@ -229,7 +229,7 @@ There used to be a separate placement quiz here, and a `pathways` vocabulary of 
 
 Everything above describes a course. A school also needs a plan, a mark and a record, and `#teach` and `#test` are those.
 
-**`#teach` is the teacher's view**, in four panels:
+**`#teach` is the plan behind the course**, in four panels:
 
 | Panel | What it holds |
 | --- | --- |
@@ -237,6 +237,8 @@ Everything above describes a course. A school also needs a plan, a mark and a re
 | Scheme of work | Every module, in order, with its objectives, mission, five-step lesson plan, predicted errors, support and stretch notes, and homework |
 | Rubrics | The writing and speaking rubrics, four criteria by four levels, plus the grade bands |
 | Record | Every checkpoint and exam sat on this device, as a table, exportable to CSV |
+
+It is written for a teacher and it is deliberately not hidden from the learner, because the two audiences want the same page for different reasons. A teacher reads a module in the scheme of work as a lesson to deliver; someone studying alone reads the same entry as the answer to *what am I supposed to be able to do when I finish this, and in what order should I do it* — the question self-study normally leaves you to guess at. The predicted errors are the clearest case: in a classroom they tell a teacher what to watch for, and alone they tell you what you are probably already doing wrong with nobody there to say so.
 
 The whole view prints. `<details>` are forced open before the print dialog and restored after, so a collapsed scheme of work prints as a plan rather than as nineteen headings.
 
@@ -265,6 +267,26 @@ Practice is deliberately worth nothing. It is the one place a student is suppose
 `data/teaching.js` carries one entry per module: objectives, mission, a five-step plan, predicted errors, support, stretch and homework. Both language sides are authored, and **they are not translations of each other** — the same inversion the lessons use. `.en` is English prose planning the teaching of *Spanish*; `.es` is Spanish prose planning the teaching of *English*. `presentation.en` says "put *soy, es, somos, son* on the board"; `presentation.es` says "escribe *am, is* y *are* en el tablero". Module titles, missions and can-do statements are the exception: those are genuine translation pairs.
 
 `teaching.js` applies that inversion in one place, so nothing downstream has to remember which side to read.
+
+### Why a lesson plan needs its own tests
+
+A lesson plan is prose, and prose is the hardest content in this repo to check mechanically — a module can be complete, correctly shaped, correctly inverted, spelled right, and still be worthless to teach from. Seventy-eight of them had to be written, and every structural check passed on drafts nobody could have used.
+
+The failure was always the same one, and it moved every time it was blocked. Told to name their own material, the first drafts pasted the module's vocabulary list into all ten fields. Bounded *within* a module, the same sentence reappeared in the same field across all nineteen modules of a band. Bounded *across* modules by longest shared run, one band began interpolating a topic word every ten words to hold its identical runs just under the limit. So the test that catches that measures **shared five-word sequences as a proportion** rather than the longest run — authored bands land under 4% on any pair, and the interpolating draft scored 38%.
+
+Each gate then taught the next one, because the defect relocated to whatever the gate did not look at:
+
+| Test | What it catches |
+| --- | --- |
+| `no field plans a lesson in the language it is supposed to be teaching` | A field translated instead of inverted — `.es` explaining Spanish to a Spanish speaker. Checked per field, because a floor across the whole module passes when two correct fields carry five wrong ones |
+| `a step is written, not pasted` | The module's own material pasted into a field that was supposed to say what to *do* with it |
+| `two modules are two different classes, not one template` | A sentence that is identical in the same field across modules |
+| `a plan is written, not generated` | A template that swaps a token every few words to stay under a run-length limit |
+| `objectives describe this module, not any module` | The same, in `canDo` and `mission` — the two fields the check above must skip, because they are the genuine translation pairs |
+
+That last row is the one worth reading twice. Every exclusion from a check is where the next defect lives: a draft arrived with all eight prose steps genuinely rewritten and its objectives still reading *"{topic}: handle the main scene with a concrete outcome"* twenty times over. Objectives matter more than the plan around them, because they are what the checkpoint claims to measure and what the scheme of work publishes to a teacher as the list to mark against — and nobody can look at a student and decide whether they handled the main scene with a concrete outcome.
+
+The thresholds encode what good content actually scores, not a cautious ceiling. The prose limit sits at 25% against a corpus that never exceeds 4%, and the objectives limit at 30% against three bands that score exactly 0%. An earlier prose limit of 35% was tightened after a defective field passed at 29%.
 
 <a id="add-a-lesson"></a>
 
