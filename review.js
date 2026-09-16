@@ -79,7 +79,7 @@ const ParceroReview = (function () {
      is listed once per city and the reading differs, so the phrase alone does
      not identify the row. */
   const MATURE_SLOTS = ["phrase", "city", "equivalent", "severity", "note"];
-  const SLANG_SLOTS = ["phrase", "meaning", "register", "region", "safety", "note", "direction"];
+  const SLANG_SLOTS = ["phrase", "meaning", "register", "region", "note", "direction"];
   const SIGNAL_SLOTS = ["signal", "whatItLooksLike", "whatItMeans", "direction", "respond"];
   /*
    * The four flat reference lists, keyed by the anchor kind that addresses
@@ -567,7 +567,7 @@ const ParceroReview = (function () {
       const slotLabels = {
         fluency: { phrase: "Phrase", meaning: "Meaning", type: "Type label", region: "Region label", note: "Usage note", direction: "Language" },
         mature: { city: "City", phrase: "Phrase", equivalent: "Equivalent", severity: "Severity label", note: "Safety note" },
-        slang: { phrase: "Phrase", meaning: "Meaning", register: "Register label", region: "Region label", safety: "Can you say it?", note: "Usage note", direction: "Language" },
+        slang: { phrase: "Phrase", meaning: "Meaning", register: "Register label", region: "Region label", note: "Usage note", direction: "Language" },
         signal: { signal: "Signal", whatItLooksLike: "What it looks like", whatItMeans: "What it means", direction: "Language", respond: "What to do" }
       }[parsed.kind];
       const family = {

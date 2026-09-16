@@ -343,14 +343,15 @@ function flashcardFromFluency(item, index, direction) {
  *
  * Every other card here asks for the language you are building, because
  * production is the harder skill and the one worth practicing. Slang inverts
- * that on purpose: most of this list is language a learner should recognize and
+ * that on purpose: much of this list is language a learner should recognize and
  * not produce, so asking them to generate "gonorrea" from a prompt would be
  * drilling exactly the wrong reflex. The phrase goes on the front, and the back
- * carries the meaning plus the two things that decide whether it can be used at
- * all — where it is said, and whether the learner may say it.
+ * carries the meaning plus the context that decides whether it can be used at
+ * all — how casual it is, where it is said, and the note that spells out the
+ * conditions the first two cannot.
  */
 function flashcardFromSlang(item, index, direction) {
-  const [phrase, meaning, register, region, safety, note] = item;
+  const [phrase, meaning, register, region, note] = item;
   const { target, support } = flashcardLanguages(direction);
   return {
     id: `slang/${index}/${direction}`,
@@ -360,7 +361,7 @@ function flashcardFromSlang(item, index, direction) {
     frontLang: target,
     back: meaning,
     backLang: support,
-    note: `${safety} · ${register} · ${region}. ${note}`
+    note: `${register} · ${region}. ${note}`
   };
 }
 
@@ -525,29 +526,32 @@ function flashcardTopics(direction, sources) {
   }
 
   /*
-   * Slang is split by whether the learner may say it, not by theme. Theme is
-   * how you browse a reference; safety is how you study one. A learner drilling
-   * the "understand only" deck is doing something different from one drilling
-   * the everyday deck, and mixing them would blur the only distinction that
-   * actually protects them.
+   * One slang deck per direction, not three.
+   *
+   * These decks used to be split by whether the learner may say it, and that was
+   * the only split worth making: theme is how you browse a reference, risk is how
+   * you study one. The split died with the `safety` slot it read — see the header
+   * of data/slang.js for why that slot could not be kept honest.
+   *
+   * Nothing else in the row is a fit replacement. `register` is two-thirds
+   * "casual" and would leave one deck holding a single card; `region` has over a
+   * hundred distinct values. Splitting on either would keep the old shape while
+   * asserting a distinction the data does not make, which is the failure that
+   * just got removed. So the deck is one list, and FLASHCARD_SET_SIZE does the
+   * dividing it was already there to do.
    */
-  const slangHere = slangItems
+  const slangCards = slangItems
     .map((item, index) => ({ item, index }))
-    .filter(({ item }) => item[6] === direction);
-  for (const safety of [...new Set(slangHere.map(({ item }) => item[4]))]) {
-    const cards = slangHere
-      .filter(({ item }) => item[4] === safety)
-      .map(({ item, index }) => flashcardFromSlang(item, index, direction));
-    if (!cards.length) continue;
+    .filter(({ item }) => item[5] === direction)
+    .map(({ item, index }) => flashcardFromSlang(item, index, direction));
+  if (slangCards.length) {
     topics.push({
-      id: `slang-${flashcardSlug(safety)}`,
+      id: "slang",
       groupKey: "deck.group.slang",
       titleKey: "deck.topic.slang",
-      levelKey: `deck.safety.${flashcardSlug(safety)}`,
-      level: flashcardSentenceCase(safety),
       metaKey: "deck.meta.slang",
-      metaCount: cards.length,
-      cards
+      metaCount: slangCards.length,
+      cards: slangCards
     });
   }
 

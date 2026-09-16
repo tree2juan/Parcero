@@ -157,7 +157,9 @@ Spanish gets 27 letters and nine contrasts: `ñ` as a letter in its own right, `
 
 A gate in `test/content.test.js` checks the contrasts against a five-gram overlap limit, so a contrast cannot be another contrast with the nouns swapped.
 
-The slang reference carries a field the others do not: **how safe each phrase is for a learner to actually say**. Meaning alone is not enough, because the gap between understanding `parcero` and understanding `gonorrea` is not a gap in translation — it is a gap in what happens to you if you use it. Every entry is marked *Say it freely*, *Say it with friends*, or *Understand only*, and the label is shown before the meaning rather than after it.
+The slang reference used to carry a field the others do not: a three-way verdict on how safe each phrase was for a learner to say. It was removed, and the reasoning is worth recording. Whether you may say a word is not a property of the word — it depends on who is in the room, how long they have known you, and whether you are obviously a visitor — so one stored value was wrong for somebody no matter which of the three it held. Three hundred-odd confident answers to a question with no context-free answer is worse than not answering, because a learner who trusts *Say it freely* and is wrong has been misled by the app rather than merely unserved by it.
+
+The warning did not go away; it moved somewhere it can keep its conditions. The **note** is written per entry and says things a fixed value cannot — *"Recognize it; do not apply it to anyone"*, *"not for your boss on day one"*, *"no se la digas a desconocidas"* — and the **register** tag carries the blunt part. Every entry that had been marked *Understand only* already spelled the warning out in its own prose, which is how the field turned out to be removable without losing anything. A gate in `test/content.test.js` keeps it that way: an entry tagged anything other than plain casual or neutral must carry a note long enough to say what to do about it.
 
 **After Dark** is its own area, in its own midnight theme: 150 entries of strong Colombian language, 50 each for Bogotá, Medellín and Barranquilla, and 150 of strong American English, 50 each for Los Angeles, Dallas and New York. Most profanity in either language is national, but its *force* is not — the same word can be affectionate filler among paisa friends and a fighting word between strangers in Bogotá, and `bro` in Los Angeles is not `bro` in a Dallas parking lot. That is why shared terms repeat per city with the reading that city gives them; the overlap is the point. Which three cities you see follows your direction of study, because a learner of English has no use for a Medellín severity rating. Each entry carries a severity that rates the risk of *repeating* the phrase rather than how rude it sounds. It is there so learners can **understand** what they hear and judge a room — never to direct it at anyone.
 
@@ -191,14 +193,14 @@ There is no flashcard content file. `data/flashcards.js` reads the same `lessons
 | **Situations** | one per lesson | vocabulary, meaning-in-context, pronunciation, worked examples, region and register, culture notes, common mistakes, phrasing variations, the form of address, the practice questions |
 | **Verbs** | one per level (foundation, independent, extension) | each verb, asked in the productive direction |
 | **Fluency** | one | connectors and softeners, asked in the productive direction |
-| **Slang** | one per safety level (say it freely, say it with friends, understand only) | each slang phrase, its meaning, where it is said, and whether you may use it |
+| **Slang** | one | each slang phrase, its meaning, where it is said, how casual it is, and the note that says how to use it |
 | **Recognition and safety** | two, and only when the age gate is open | insults and adult language, and the warning signals that a conversation is turning |
 
 So adding a lesson to `data/lessons/` adds a flashcard topic. Adding verbs adds cards to the matching level. Nothing has to be written twice, and no card can drift out of sync with the lesson it came from. The decks follow the language direction toggle, and switching direction keeps your place in the set.
 
 Two rules keep the gated decks honest. Gated cards are **absent from the deck, not hidden in it**, so nothing to be unlocked is ever present in the page for a closed gate. And the gate opens only on the boolean `true` — the flag comes from `localStorage`, which returns strings, and the string `"false"` is truthy, so anything less strict would have unlocked on the value that means the opposite.
 
-Slang cards are drilled in the recognition direction only. The safety note rides on the front of every card rather than the back, because a learner meeting `"Understand only"` for the first time needs it before they answer, not after.
+Slang cards are drilled in the recognition direction only — the phrase on the front, the meaning on the back — because much of this list is language to recognize rather than produce, and prompting a learner to generate it would drill exactly the wrong reflex. The register, the region and the usage note ride along on every card, since the phrase on its own does not say how to use it. There is one slang deck per direction rather than three: the split that existed was by safety level, and when that field went there was no honest axis left to split on. `register` is two-thirds *casual* and would have left a deck holding a single card; `region` has over a hundred distinct values.
 
 ### Reading richer lessons without a second code path
 
@@ -527,7 +529,7 @@ data/lessons/       Lesson blocks, one file per theme, pushing onto that array
 data/lesson-schema.js  The lesson shape: defaults, normalisation, legacy tuples, study segments
 data/curriculum.js  200 verbs and the fluency connectors
 data/alphabet.js    Both alphabets, letter by letter, plus where they disagree
-data/slang.js       Slang for both directions, each entry marked with how safe it is to say
+data/slang.js       Slang for both directions, with register, region and a usage note
 data/after-dark.js  Strong-language reference, 50 entries per city, and the city-to-direction map
 data/mature.js      The conversation signals that tell you a room has turned
 data/exam-tasks.js  One exam writing task per band, with two calibrated answers
