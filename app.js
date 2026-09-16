@@ -96,10 +96,10 @@ function syncAfterDarkCities() {
     tab.setAttribute("aria-selected", active);
   });
 }
-/* Severity and safety are stored as fixed English enum values because decks,
-   review anchors and test gates all key off them. They are labels shown to a
-   reader, though, so they are translated on the way out rather than in the data
-   — a Colombian reading "Severidad: High" is looking at a half-finished page. */
+/* Severity is stored as a fixed English enum value because decks, review anchors
+   and test gates all key off it. It is a label shown to a reader, though, so it
+   is translated on the way out rather than in the data — a Colombian reading
+   "Severidad: High" is looking at a half-finished page. */
 function enumLabel(prefix, value, fallback) {
   const slug = String(value || "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
   if (!slug) return fallback;
@@ -138,15 +138,14 @@ function renderSlang() {
   const query = ($("#slang-search").value || "").trim().toLowerCase();
   const mine = slangItems
     .map((item, index) => ({ item, index }))
-    .filter(({ item }) => item[6] === state.direction);
+    .filter(({ item }) => item[5] === state.direction);
   const matches = mine.filter(({ item }) => !query || item.some((cell) => cell.toLowerCase().includes(query)));
   $("#slang-count").textContent = query
     ? t("library.slangMatching", { matches: matches.length, total: mine.length })
     : t("library.slangCount", { total: mine.length });
   $("#slang-results").innerHTML = matches.map(({ item, index }) => {
-    const [phrase, meaning, register, region, safety, note] = item;
-    const safetyLabel = enumLabel("deck.safety", safety, safety);
-    return `<article class="reference-card" data-anchor="slang:${index}"><h3${targetLang()}>${esc(phrase)}</h3><p><strong>${esc(meaning)}</strong></p><p>${esc(note)}</p><p class="detail"><strong>${t("library.slangSafety")}</strong> ${esc(safetyLabel)}</p><span class="tag">${esc(register)}</span><span class="tag">${esc(region)}</span></article>`;
+    const [phrase, meaning, register, region, note] = item;
+    return `<article class="reference-card" data-anchor="slang:${index}"><h3${targetLang()}>${esc(phrase)}</h3><p><strong>${esc(meaning)}</strong></p><p>${esc(note)}</p><span class="tag">${esc(register)}</span><span class="tag">${esc(region)}</span></article>`;
   }).join("");
 }
 function content() { return ParceroLessonSchema.normalizeContent(currentLesson()[state.direction]); }

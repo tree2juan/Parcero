@@ -457,9 +457,9 @@ test("reference lists match the shape the renderers expect", () => {
   }
   assert.ok(slangItems.length > 0);
   for (const item of slangItems) {
-    assert.strictEqual(item.length, 7, "expected [phrase, meaning, register, region, safety, note, direction]");
+    assert.strictEqual(item.length, 6, "expected [phrase, meaning, register, region, note, direction]");
     item.forEach((cell) => assert.ok(isText(cell)));
-    assert.ok(DIRECTIONS.has(item[6]), `unknown slang direction "${item[6]}" — the renderer filters on this and would drop the row`);
+    assert.ok(DIRECTIONS.has(item[5]), `unknown slang direction "${item[5]}" — the renderer filters on this and would drop the row`);
   }
   assert.ok(matureSignals.length > 0);
   for (const item of matureSignals) {
@@ -488,7 +488,7 @@ test("both directions get every reference list, not just the lessons", () => {
     return totals;
   }, {});
   check("fluencyItems", tally(fluencyItems, (row) => row[5]));
-  check("slangItems", tally(slangItems, (row) => row[6]));
+  check("slangItems", tally(slangItems, (row) => row[5]));
   check("matureSignals", tally(matureSignals, (row) => row[3]));
   check("matureItems", tally(matureItems, (row) => MATURE_CITIES[row.city]));
   assert.deepStrictEqual(empty, [], `a whole reference panel is blank in one direction:\n${empty.join("\n")}`);
@@ -520,20 +520,35 @@ test("the reference lists say which language they belong to", () => {
   }
 });
 
-test("every slang entry says whether a learner may actually say it", () => {
+test("every slang entry carries the context that decides how to use it", () => {
   /*
-   * The whole point of the slang list. An entry without a safety value is worse
-   * than no entry: it teaches a phrase and withholds the one thing that stops
-   * the learner using it badly.
+   * This used to check a `safety` slot: three fixed values telling the learner
+   * whether they could say the phrase. The slot is gone, because whether you may
+   * say a word is not a property of the word — it depends on who is listening —
+   * and one stored value was wrong for somebody no matter which one it held.
+   *
+   * What replaced it is not nothing, and that is what this checks. `register`
+   * carries the blunt signal and the note carries the conditions, so the pairing
+   * is the thing worth guarding: a register that flags risk next to a note too
+   * short to say anything about it is exactly the gap the enum used to hide.
+   * Forty characters is not a style rule — it is the width of a bare gloss like
+   * "Closes an argument.", which is fine for an ordinary word and not fine for
+   * one tagged vulgar.
    */
-  const SAFETY = ["Say it freely", "Say it with friends", "Understand only"];
-  for (const [phrase, , , region, safety] of slangItems) {
-    assert.ok(SAFETY.includes(safety), `slang "${phrase}" has an unrecognised safety value: ${safety}`);
+  const REGISTERS = ["casual", "very casual", "neutral", "regional", "dated", "vulgar"];
+  const PLAIN = ["casual", "neutral"];
+  for (const [phrase, , register, region, note] of slangItems) {
+    assert.ok(REGISTERS.includes(register), `slang "${phrase}" has an unrecognised register: ${register}`);
     assert.ok(isText(region), `slang "${phrase}" does not say where it is used`);
+    assert.ok(isText(note), `slang "${phrase}" has no usage note, which is now the only place its conditions can live`);
+    if (PLAIN.includes(register)) continue;
+    assert.ok(
+      note.trim().length >= 40,
+      `slang "${phrase}" is tagged "${register}" but its note is too short to say what to do about it: "${note}"`);
   }
   assert.ok(
-    slangItems.some(([, , , , safety]) => safety === "Understand only"),
-    "no slang is marked recognition-only, which means the safety field is not being used honestly");
+    slangItems.some(([, , register]) => !PLAIN.includes(register)),
+    "every slang entry is plain casual or neutral, so register has stopped distinguishing anything");
 });
 
 test("no slang phrase is listed twice", () => {

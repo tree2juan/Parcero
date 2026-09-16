@@ -452,21 +452,22 @@ test("text the deck labels English is not actually Spanish", () => {
 
 /*
  * Switching direction must not strand a learner, but it cannot mean identical
- * decks any more. The slang and After Dark lists are now authored once per
- * direction rather than once in total, and the two corpora do not have the same
- * shape: American regional vocabulary is overwhelmingly safe to say (freeway
- * names, sandwiches, neighborhoods) while Colombian slang carries more that only
- * works among friends. Demanding the same number of sets per safety level would
- * be demanding that one of the two corpora lie about itself.
+ * decks. Slang is authored once per direction rather than once in total, and the
+ * two corpora are not the same size — 161 Colombian entries against 156 American
+ * ones — because each was written to cover its own ground rather than to match
+ * the other. Demanding equal set counts would be demanding that one of them pad
+ * or cut to fit.
  *
  * So the guarantee is stated where it is real. Every topic exists in both
  * directions, and every deck built from mirrored content is identical set for
- * set. Only the three independently authored reference decks may differ in
- * length, and the test names them, so a lesson deck that lost a set still fails
- * here instead of hiding behind an exemption.
+ * set. The exemption names whole topic ids, because it used to be a prefix
+ * pattern ending in a hyphen and that quietly stopped covering slang the moment
+ * the deck stopped being split three ways — an exemption that narrows by
+ * accident does not announce itself, it just surfaces as a failure that looks
+ * like it is about something else.
  */
 const topicOf = (setId) => String(setId).split("/")[0];
-const INDEPENDENTLY_AUTHORED = /^(slang|mature|signal|fluency)-/;
+const INDEPENDENTLY_AUTHORED = new Set(["slang"]);
 
 test("set ids survive a change of direction, so switching keeps your place", () => {
   const [spanish, english] = directions.map((direction) =>
@@ -479,7 +480,7 @@ test("set ids survive a change of direction, so switching keeps your place", () 
     "a topic appears in one direction and not the other, so switching drops the learner out of it"
   );
 
-  const mirrored = (ids) => ids.filter((id) => !INDEPENDENTLY_AUTHORED.test(topicOf(id)));
+  const mirrored = (ids) => ids.filter((id) => !INDEPENDENTLY_AUTHORED.has(topicOf(id)));
   assert.deepStrictEqual(
     mirrored(spanish),
     mirrored(english),
@@ -489,7 +490,7 @@ test("set ids survive a change of direction, so switching keeps your place", () 
   /* The exemption has to be earned: if the reference decks ever do line up, the
      allowance above is dead weight and should be deleted rather than left to
      cover something else later. */
-  const reference = (ids) => ids.filter((id) => INDEPENDENTLY_AUTHORED.test(topicOf(id)));
+  const reference = (ids) => ids.filter((id) => INDEPENDENTLY_AUTHORED.has(topicOf(id)));
   assert.notDeepStrictEqual(
     reference(spanish),
     reference(english),
@@ -1230,30 +1231,45 @@ test("slang is drilled for recognition, never for production", () => {
   }
 });
 
-test("every slang card tells the learner whether they may say it", () => {
-  const SAFETY = ["Say it freely", "Say it with friends", "Understand only"];
+test("every slang card carries the register and region the phrase cannot carry alone", () => {
+  /*
+   * The note used to lead with a safety verdict. That verdict is gone, so the
+   * back of the card now opens with the two tags that survived it, and this
+   * rebuilds the expected string from the row rather than pattern-matching it —
+   * a regex would still pass if the builder silently dropped a field.
+   */
   for (const direction of directions) {
     const cards = flashcardTopics(direction, sources)
       .filter((topic) => topic.groupKey === "deck.group.slang")
       .flatMap((topic) => topic.cards);
+    assert.ok(cards.length > 0, `${direction}: no slang cards were built`);
     for (const card of cards) {
-      assert.ok(
-        SAFETY.some((safety) => card.note.startsWith(safety)),
-        `slang card ${card.id} does not lead with whether it is safe to say`);
+      const index = Number(card.id.split("/")[1]);
+      const [, , register, region, note] = slangItems[index];
+      assert.equal(
+        card.note, `${register} · ${region}. ${note}`,
+        `slang card ${card.id} does not carry its row's register, region and note`);
     }
   }
 });
 
-test("slang decks are grouped by safety, so the risky ones cannot hide among the rest", () => {
+test("slang is one deck per direction, holding every entry for that direction", () => {
+  /*
+   * There were three decks, split by whether the learner may say it, and that
+   * split went when the `safety` slot did. The risk this guards is the inverse of
+   * the one the old test watched: not that risky entries hide among the rest, but
+   * that entries go missing when a split is collapsed and the filter rewritten.
+   */
   for (const direction of directions) {
     const topics = flashcardTopics(direction, sources).filter((topic) => topic.groupKey === "deck.group.slang");
-    const levels = topics.map((topic) => topic.level);
-    assert.ok(levels.includes("Understand only"), "there is no recognition-only slang deck");
-    assert.equal(new Set(levels).size, levels.length, "two slang decks share a safety level");
-    /* Every entry for this direction lands in exactly one deck. */
-    const mine = slangItems.filter((item) => item[6] === direction);
-    const total = topics.reduce((sum, topic) => sum + topic.cards.length, 0);
-    assert.equal(total, mine.length, `${direction}: ${total} slang cards from ${mine.length} entries`);
+    assert.equal(topics.length, 1, `${direction}: expected exactly one slang deck, got ${topics.length}`);
+    const mine = slangItems.filter((item) => item[5] === direction);
+    assert.equal(
+      topics[0].cards.length, mine.length,
+      `${direction}: ${topics[0].cards.length} slang cards from ${mine.length} entries`);
+    assert.ok(
+      !topics[0].levelKey && !topics[0].level,
+      "the slang deck still advertises a level, but there is no longer anything to put in it");
   }
 });
 
@@ -1272,11 +1288,11 @@ test("every derived card carries a stable, unique id", () => {
 test("no two decks in a group present themselves with the same name", () => {
   /*
    * A topic that splits into several decks distinguishes them with a level -
-   * "Verbs · Foundation", "Slang · Understand only". The level reaches the
+   * "Verbs · Foundation", "Words · Food and drink". The level reaches the
    * label only if the title string has a {level} placeholder to put it in.
-   * Forget that and the picker shows three entries all called "Slang", which is
-   * not a cosmetic problem: the reader cannot tell which deck they are choosing,
-   * and for slang the thing they cannot tell apart is how risky it is to say.
+   * Forget that and the picker shows three entries all called "Verbs", which is
+   * not a cosmetic problem: the reader cannot tell which deck they are choosing.
+   * Decks that do not split carry no level and must still be uniquely named.
    */
   const { UI_STRINGS } = require(path.join(root, "i18n.js"));
   for (const language of ["en", "es"]) {
